@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13056667@</identifier>
+        <datestamp>2020-11-09T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CF version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CF</TSK>
+                    <LIR hint="Livello">P</LIR>
+                    <CCF hint="Codice contenitore fisico">1478826914798</CCF>
+                    <ESC hint="Ente schedatore">S251</ESC>
+                </CD>
+                <CF hint="CONTENITORE FISICO">
+                    <LUC hint="Luogo della cultura">no</LUC>
+                    <CFT hint="Tipologia">palazzo</CFT>
+                    <CFQ hint="Qualificazione">comunale</CFQ>
+                    <CFN hint="Denominazione attuale">Palazzo Vittone</CFN>
+                    <CFU hint="Uso">museo</CFU>
+                    <CFD hint="Descrizione">Il palazzo fu eretto nel 1740 per incarico del Re Carlo Emanuele III su progetto dell’architetto Bernardo Vittone. Dal 1978 ospita il Museo Etnografico Pinerolese e la Collezione Civica d'Arte</CFD>
+                    <CFG hint="Condizione giuridica">proprietà Ente pubblico territoriale</CFG>
+                    <CFW hint="Sito web">http://www.comune.pinerolo.to.it/web/index.php/turismo/visitare-pinerolo/musei/33-turismo/musei/83-collezione-civica-d-arte-di-palazzo-vittone</CFW>
+                </CF>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO - AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Piemonte</PVCR>
+                        <PVCP hint="Provincia">TO</PVCP>
+                        <PVCC hint="Comune">Pinerolo</PVCC>
+                        <PVCI hint="Indirizzo">Piazza Vittorio Veneto, 8</PVCI>
+                    </PVC>
+                </LC>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione puntuale</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">7.333664</GECX>
+                        <GECY hint="Coordinata y">44.887036</GECY>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia senza sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">Google Maps</GPBB>
+                    </GPB>
+                </GE>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">New_1567354746909</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAK hint="Nome file originale">Pinerolo, Palazzo Vittone.jpg</FTAK>
+                    </FTA>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2018</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">Piavento, Orso Maria</CMPN>
+                    </CMP>
+                    <RSR hint="Referente verifica scientifica">Martinella, Stefano</RSR>
+                    <FUR hint="Funzionario responsabile">Pratissoli, Manuela</FUR>
+                </CM>
+            </CF>
+            <harvesting>
+                <geocoding>
+                    <x>7.333174</x>
+                    <y>44.886434</y>
+                </geocoding>
+                <idProgetto>ICCD1060052</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

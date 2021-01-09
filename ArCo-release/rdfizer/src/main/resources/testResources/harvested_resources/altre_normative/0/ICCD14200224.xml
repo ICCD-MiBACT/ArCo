@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14200224@</identifier>
+        <datestamp>2020-11-06T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MODI version="4.00_ICCD0">
+                <CD hint="IDENTIFICAZIONE">
+                    <TSK hint="Tipo modulo">MODI</TSK>
+                    <CDR hint="Codice Regione">03</CDR>
+                    <CDM hint="Codice Modulo">ICCD_MODI_8852525237651</CDM>
+                    <ESC hint="Ente schedatore">S287</ESC>
+                    <ECP hint="Ente competente per tutela">S287</ECP>
+                </CD>
+                <OG hint="ENTITA'">
+                    <AMB hint="Ambito di tutela MiBACT">architettonico e paesaggistico</AMB>
+                    <AMA hint="Ambito di applicazione">censimento parchi e giardini</AMA>
+                    <CTG hint="Categoria">ARCHITETTURA DEI PARCHI E GIARDINI</CTG>
+                    <OGD hint="Definizione">viale</OGD>
+                    <OGT hint="Tipologia">commemorativo/ ai caduti della prima e seconda guerra mondiale</OGT>
+                    <OGN hint="Denominazione">Viale della Rimembranza di Busto Garolfo</OGN>
+                </OG>
+                <LC hint="LOCALIZZAZIONE">
+                    <LCS hint="Stato">ITALIA</LCS>
+                    <LCR hint="Regione">Lombardia</LCR>
+                    <LCP hint="Provincia">MI</LCP>
+                    <LCC hint="Comune">Busto Garolfo</LCC>
+                    <LCL hint="Località">BUSTO GAROLFO</LCL>
+                    <LCI hint="Indirizzo">viale dei Tigli (già viale Rimembranze)</LCI>
+                    <LCV hint="Altri percorsi/specifiche">il viale costeggia il cimitero comunale</LCV>
+                    <ACB hint="ACCESSIBILITA'">
+                        <ACBA hint="Accessibilità">si</ACBA>
+                    </ACB>
+                </LC>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">viale</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il Viale venne costruito dal Comune con il consenso dei privati nel 1928 grazie all'iniziativa dell'Associazione Combattenti. Il viale circondava completamente il cimitero e cippi in marmo ricordavano il nome dei singoli caduti</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">prima metà</DTG>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1928/00/00</DTSI>
+                        <DTSF hint="A">1928/00/00</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione/fonte">comunicazione orale</DTM>
+                </DT>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">viale</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">rimaneggiamenti</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Originariamente il viale era individuato da trofei di bombarde e proiettili; nel centro del viale c'era una lapide con l'iscrizione: CON RICONOSCENZA / E FIEREZZA ROMANA / BUSTO GAROLFO / RICORDA I SUOI FIGLI / MORTI PER LA PATRIA / OTTOBRE 1933 A. XII e erano inseriti cippi a ricordo dei caduti che non sono più presenti</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">metà</DTG>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1950/00/00</DTSI>
+                        <DTSF hint="A">1950/00/00</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMR hint="Responsabile dei contenuti">Bentivoglio Ravasio, Raffaella</CMR>
+                    <CMC hint="Responsabile ricerca e redazione">Minnucci, Ramona</CMC>
+                    <CMA hint="Anno di redazione">2019</CMA>
+                    <CMM hint="Motivo della redazione del MODI">Censimento all’interno del Progetto “Narrando i territori della Grande Guerra attraverso i monumenti, le lapidi, i parchi e i viali della rimembranza”</CMM>
+                    <IMD hint="MIGRAZIONE DATI NELLE SCHEDE DI CATALOGO">
+                        <IMDT hint="Tipo scheda">PG</IMDT>
+                    </IMD>
+                    <ADP hint="Profilo di accesso">1</ADP>
+                </CM>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="Descrizione">Il viale carrabile, a due corsie, che accompagna chi arriva dal centro storico e si dirige verso il cimitero, è asfaltato con parcheggio laterale è individuato da un doppio filare di Tigli</DES>
+                </DA>
+                <UT hint="UTILIZZAZIONI">
+                    <CNU hint="CONDIZIONE D'USO">
+                        <CNUV hint="Visitabile">aperto al pubblico</CNUV>
+                        <CNUS hint="Specifiche">uso saltuario</CNUS>
+                    </CNU>
+                </UT>
+                <CO hint="CONSERVAZIONE E INTERVENTI">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">viale</STCP>
+                        <STCC hint="Stato di conservazione">mediocre</STCC>
+                        <STCN hint="Note">posizionare un pannello informativo con le foto e le nostizie storiche del viale</STCN>
+                    </STC>
+                </CO>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione lineare</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.883388</GECX>
+                        <GECY hint="Coordinata y">45.541850</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.885458</GECX>
+                        <GECY hint="Coordinata y">45.543051</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2019</GPBT>
+                        <GPBU hint="Indirizzo web (URL)">(4341792) www.google.it/maps</GPBU>
+                    </GPB>
+                </GE>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTS hint="DATI CATASTALI">
+                        <CTSC hint="Comune">Busto Garolfo</CTSC>
+                        <CTST hint="Tipo catasto">catasto misto</CTST>
+                        <CTSF hint="Foglio/data">24/2019</CTSF>
+                        <CTSN hint="Particelle">s.n.m</CTSN>
+                        <CTSP hint="Proprietari">Comune di Busto Garolfo</CTSP>
+                    </CTS>
+                </CS>
+                <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+                        <CDGS hint="Indicazione specifica">Comune di Busto Garolfo</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Buto Garolfo_1</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale verso Via XXIV Maggio</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/08/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Buto Garolfo_1.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Buto Garolfo_2</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale con l'ingresso al cimitero sulla destra</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/08/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Buto Garolfo_2.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Buto Garolfo_3</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale da via XXIV Maggio</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/08/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Buto Garolfo_3.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Buto Garolfo_4</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale da via XXIV Maggio</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/08/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Buto Garolfo_4.JPG</FTAK>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Buto Garolfo_C1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F.24, s.n.m</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/08/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Buto Garolfo_C1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Buto Garolfo_A1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/08/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Buto Garolfo_A1.pdf</DRAK>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Buto Garolfo_5</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">riproduzione da bibliografia</FNTP>
+                        <FNTS hint="Collocazione">COMUNE BUSTA GAROLFO, s.d</FNTS>
+                        <FNTK hint="Nome file digitale">MI_Buto Garolfo_5.pdf</FNTK>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">CAZZANI 2012</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Cazzani Alberta, I monumenti e i giardini celebrativi della grande guerra in Lombardia, Pieve Emanuele, 2012</BIBM>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">COMUNE BUSTA GAROLFO, s.d</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">opuscolo</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Opuscolo_L’amministrazione di Busto Garolfo nei primi dodici anni dell’era fascista, p.20</BIBM>
+                    </BIB>
+                </DO>
+            </MODI>
+            <harvesting>
+                <geocoding>
+                    <x>8.884217</x>
+                    <y>45.544896</y>
+                </geocoding>
+                <idProgetto>ICCD1063423</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

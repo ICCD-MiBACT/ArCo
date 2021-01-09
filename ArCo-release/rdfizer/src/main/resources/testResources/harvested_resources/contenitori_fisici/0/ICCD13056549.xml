@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13056549@</identifier>
+        <datestamp>2020-10-27T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CF version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CF</TSK>
+                    <LIR hint="Livello">I</LIR>
+                    <CCF hint="Codice contenitore fisico">1478819201386</CCF>
+                    <ESC hint="Ente schedatore">S279</ESC>
+                </CD>
+                <CF hint="CONTENITORE FISICO">
+                    <LUC hint="Luogo della cultura">no</LUC>
+                    <CFT hint="Tipologia">palazzo</CFT>
+                    <CFQ hint="Qualificazione">museo</CFQ>
+                    <CFN hint="Denominazione attuale">Museo Civico Irico</CFN>
+                </CF>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO - AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Piemonte</PVCR>
+                        <PVCP hint="Provincia">VC</PVCP>
+                        <PVCC hint="Comune">Trino</PVCC>
+                        <PVCL hint="Località">TRINO</PVCL>
+                        <PVCI hint="Indirizzo">piazza Garibaldi, 7</PVCI>
+                    </PVC>
+                </LC>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione puntuale</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.298149</GECX>
+                        <GECY hint="Coordinata y">45.193907</GECY>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da satellite</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                </GE>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">vc_trino_museo</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAK hint="Nome file originale">vc_trino_palmuseo.jpg</FTAK>
+                        <FTAT hint="Note">Fermo immagine da Google Street View</FTAT>
+                    </FTA>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2018</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">Martinella, Stefano</CMPN>
+                    </CMP>
+                    <RSR hint="Referente verifica scientifica">Piavento, Orso Maria</RSR>
+                    <FUR hint="Funzionario responsabile">Caldera, Massimiliano</FUR>
+                </CM>
+            </CF>
+            <harvesting>
+                <geocoding>
+                    <x>8.298227</x>
+                    <y>45.193286</y>
+                </geocoding>
+                <idProgetto>ICCD1060052</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

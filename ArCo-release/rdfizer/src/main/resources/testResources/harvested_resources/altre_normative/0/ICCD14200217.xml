@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14200217@</identifier>
+        <datestamp>2020-11-06T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MODI version="4.00_ICCD0">
+                <CD hint="IDENTIFICAZIONE">
+                    <TSK hint="Tipo modulo">MODI</TSK>
+                    <CDR hint="Codice Regione">03</CDR>
+                    <CDM hint="Codice Modulo">ICCD_MODI_8611774237651</CDM>
+                    <ESC hint="Ente schedatore">S287</ESC>
+                    <ECP hint="Ente competente per tutela">S287</ECP>
+                </CD>
+                <OG hint="ENTITA'">
+                    <AMB hint="Ambito di tutela MiBACT">architettonico e paesaggistico</AMB>
+                    <AMA hint="Ambito di applicazione">censimento parchi e giardini</AMA>
+                    <CTG hint="Categoria">ARCHITETTURA DEI PARCHI E GIARDINI</CTG>
+                    <OGD hint="Definizione">viale</OGD>
+                    <OGT hint="Tipologia">commemorativo/ ai caduti della prima e seconda guerra mondiale</OGT>
+                    <OGN hint="Denominazione">Viale della Rimembranza di Bareggio</OGN>
+                </OG>
+                <LC hint="LOCALIZZAZIONE">
+                    <LCS hint="Stato">ITALIA</LCS>
+                    <LCR hint="Regione">Lombardia</LCR>
+                    <LCP hint="Provincia">MI</LCP>
+                    <LCC hint="Comune">Bareggio</LCC>
+                    <LCL hint="Località">BAREGGIO</LCL>
+                    <LCI hint="Indirizzo">viale Don Fracassi</LCI>
+                    <LCV hint="Altri percorsi/specifiche">Viale situato davanti al cimitero, nell’angolo sx rispetto all’ingresso dello stesso</LCV>
+                    <ACB hint="ACCESSIBILITA'">
+                        <ACBA hint="Accessibilità">si</ACBA>
+                    </ACB>
+                </LC>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">Viale</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il comune di Bareggio come molti altri comuni d’Italia, agli inizi degli anni venti intitolarono un viale della Rimembranza per ricordare i propri caduti, vista la circolare del Ministero della Pubblica Istruzione per l’istituzione di Viali e Parchi della Rimembranza e le circolari del 17-12-1922 e 25-1-1923 dell’Ispettorato Scolastico di Milano per la costruzione di un Comitato locale “per l’attuazione della nobilissima iniziativa di onorare i caduti in battaglia e dispersi dopo i fatti d’arme durante la grande guerra, piantando un albero per ogni caduto lungo una strada o parco del paese”</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">prima metà</DTG>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMR hint="Responsabile dei contenuti">Bentivoglio Ravasio, Raffaella</CMR>
+                    <CMC hint="Responsabile ricerca e redazione">Minnucci, Ramona</CMC>
+                    <CMA hint="Anno di redazione">2019</CMA>
+                    <CMM hint="Motivo della redazione del MODI">Censimento all’interno del Progetto “Narrando i territori della Grande Guerra attraverso i monumenti, le lapidi, i parchi e i viali della rimembranza”</CMM>
+                    <IMD hint="MIGRAZIONE DATI NELLE SCHEDE DI CATALOGO">
+                        <IMDT hint="Tipo scheda">PG</IMDT>
+                    </IMD>
+                    <ADP hint="Profilo di accesso">1</ADP>
+                </CM>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="Descrizione">Il piccolo viale posto davanti al cimitero, nell’angolo sx, , venendo dal centro di Bareggio, parallelo alla strada che lo costeggia, è composto da un doppio filare di cipressi, il quale conduce ad un ingresso secondario del cimitero, attualmente chiuso. Oltrepassandolo, alla dx, sulla parete del secondo blocco di tombe funerarie, sono posizionate due alte lapidi, con affiancate nell’interno, altre due più piccole, in marmo. Tutte e quattro sono separate a metà da una croce in marmo. Continuando a percorrere il viale all’interno del cimitero, parallelo al blocco di tombe, si arriva ad una cappella sacrario con grande frontone e portale rettangolare strombato, inserita all’interno della stecca di tombe, con al di sopra del portale d’accesso una targa in marmo con dedica ed un’ apertura a cruciforme, mentre all’interno, sulle tre delle quattro pareti della stessa, è visibile un dipinto realizzato dall’ Arch.Gianpiero Lazzaroni, Saverio Colombo (pittore), Adolfo Montani (pittore) nel 1985, dedicato ai caduti di tutte le guerre. Infatti, su entrambi i lati della parete frontale, sono riportati i nomi dei caduti e dei dispersi</DES>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Lapidi con iscrizione</AIDI>
+                        <AIDD hint="Descrizione">All’interno del cimitero, sulla parete del secondo blocco di tombe funerarie, sono posizionate due alte lapidi, con affiancate nell’interno, altre due più piccole, in marmo. Tutte e quattro sono separate a metà da una croce in marmo, con al di sotto una targa metallica che ricorda le località dove sono caduti i ragazzi di Bareggio nella prima Guerra Mondiale, poggiante, a sua volta, su una mensola sorretta da due piedini, in marmo</AIDD>
+                    </AID>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Sacrario, affresco</AIDI>
+                        <AIDD hint="Descrizione">All’interno del cimitero è situata a metà di un lungo blocco di tombe, una cappella sacrario con grande frontone e portale rettangolare strombato, con al di sopra del portale d’accesso una targa in marmo con dedica ed un’ apertura a cruciforme, mentre all’interno, sulle tre delle quattro pareti della stessa, è visibile un dipinto realizzato da diversi artisti</AIDD>
+                    </AID>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Interno cimitero</ISER>
+                        <ISEP hint="Posizione">Parete corta del secondo blocco funerario</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti, anno 1913</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">targa in marmo inserita all’interno della parete</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">BAREGGIO AI SUOI FIGLLI CADUTI/1858/GALIMBERTI ANGELO/1913/OLDANI GIUSEPPE 16-5/1915/GRASSI LUIGI/CISLAGHI GUIDO 9-6/BEOLCHI FERMO 12-6/BARTEZAGHI GAETANO 18-6/COZZI VITTORIO 19-6/BARONI GUIDO 15-7/ TERRANEO GUIDO 23-7/PIROVANO ENRICO 17-8/BARONI GUIDO 19-8/IMBOLDI MARIO 15-9/AIRAGHI ALESSANDRO 19-10/RESTELLI CESARE 22-10/PIGLIAFREDDO ENRICO 7-11/GARAVAGLIA PAOLO 12-11/PIROVANO GIUSEPPE 20-11/MAESTRONI RICCARDO 1-12/MARNATI ANGELO 10-12/RESTELLI MARIO 20-12/1916/NICOLA PAOLO 20-2/TERRANEO EDOARDO 9-3/TERRANEO EMILIO 25-5/CICERI PIETRO 29-6/PIROTA ERNESTO 1-7/LONATI ALFONSO 2-7/PIROVANO ERNESTO 15-9/COZZI ROMEO 16-9/PANIGO ERNESTO 21-9/LONATI VIRGILIO 26-9/MAESTRONI OTTORINO 15-6/PRINA SEVERINO 25-6/CALATI ANGELO 28-6/SISTI ENRICO 4-10/PIROVANO ENRICO 12-10/RIVA GIOVANNI 24-10/BELTRAMI GUIDO 1-11/PERI PIETRO 2-11/BARZAGHI ALFONSO 20-12/1917/MAGISTRELLI ERCOLE 19-1/FOLLI LUIGI 22-1/PIROVANO MASSIMO 12-3/MEDA FRANCESCO 9-5/BARONI LODOVICO 15-5/BIGATTI LEONE 23-5/PIROVANO ALESSANDRO 3-6/RESTELLI ERNESTO 11-7/CALCIAGO PAOLO 14-8/CONFALONIERI BENIAMINO 18-8/LONATI VITTORIO 20-8/PIROVANO CESARE 21-8/PIROVANO ENRICO 21-8/DE ANDREIS ENRICO 22-8/SISTI PIERINO 28-8/BARATTE’ ROMOLO 23-9/COSTA ENRICO 27-10/GALLI ANTONIO 29-11/MARNATI ERCOLE 17-12/1918/BONIARDI MANFREDO/NEBULONI CARLO 14-1/CISLAGHI CLEMENTE 16-1/RADICE CARLO 19-2/BARONI CESARE 28-2/CASALCHINI VITTORIO 9-5/LAZZARONI GIOV.BATT. 27-5/BEOLCHI ALBERGO 15-6/TREZZI VITTORIO 24-6/PIROVANO ENRICO 5-7/DE ANDREIS ARCANGELO 16-7/LONATI GIOVANNI 15-8</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Interno cimitero</ISER>
+                        <ISEP hint="Posizione">Parete corta del secondo blocco funerario</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti, anno 1915, 1916</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">targa in marmo inchiodata alla parete</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">MONTANI ANGELO/BARONI EUGENIO/1915/COZZI ANGELO 19-6/MAZZATORTA LODOVICO A. 14-9/ORSENIGO CLEMENTE 22-10/RIVA PIERINO 6-11/1916/COSTA MARCELLO 20-4/BAGGINI FEDERICO 20-5/TERRANEO ARTURO 1-7/COSTA MARSILIO 11-10/BAGGINI CARLO 2-11/1917/FANCHIN ANTONIO 9-3/CASSANI LUIGI 27-3/BAZZONI FELICE 17-5/SCURATI ANGELO 31-5/LEVA ALESSANDRO 2-8/BRIVIO FRANCESCO 13-8/CONFALONIERI BENIAMINO 18-8/MARNATI VINC. GIACOMO 12-9/COLPI GIOVANNI 24-10/LODI ARMANDO 19-117BOSONI BASILIO 22-11</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Interno cimitero</ISER>
+                        <ISEP hint="Posizione">Parete corta del secondo blocco funerario</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti, anno 1918, 1919, 1920</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">targa in marmo inchiodata alla parete</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">GAMBINI ENRICO 26-12/1918/COVA CARLO 24-4/VENEGONI LUIGI 3-6/LO IACONO FRANCESCO 15-6/PIROVANO LUIGI 5-7/COLOMBO SEVERINO 14-7/COLOMBO ENRICO 15-7/COLOMBO ALESSANDRO 22-8/PETTIROSSI WALTER 29-8/FOLLI EMILIO 10-9/BAGGINI EDOARDO 6-10/BAGGINI ALFONSO 16-10/CONTARDO FRANCESCO 21-10/MEDA ANGELO 21-10/MONTANI EUGENIO 1-12/MEDA FERDINANDO 3-12/FONTANA ABRAMO 4-12/1919/RESTELLI VITTORIO 2-1/CRIBIORI ERNESTO 19-1/RE GIUSEPPE 15-3/MEDA ANTONIO 22-7/1920/COSTA ACHILLE 23-7</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Interno cimitero</ISER>
+                        <ISEP hint="Posizione">Parete corta del secondo blocco funerario</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti, anno 1918,1919,1940, 1941,1943,1944,1945,1946,1950</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">targa in marmo inserita all’interno della parete</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1918/FOLLI SPIRITO 2-9/FOLLI EMILIO 12-9/MAESTRONI GIUSEPPE 13-9/CICERI MARCELLO 19-9/GIANELLI ANTONIO 22-9/CATTANEO MODESTO 7-10/LANDINI GUIDO 16-10/BOLLINI GIUSEPPE 27-10/GARAVAGLIA EGIDIO 2-11/ TERRANEO GIUSEPPE 3-11/GIANELLI ANSELMO 4-11/LONATI GIOV.BATT. 16-11/MARNATI NATALE 18-11/MAGSTRELLI UMBERTO 19-11/BONIARDI AURELIO 29-11/MONTANI EUGENIO 1-12/MEDA FERDINANDO 3-12/MEDA ANGELO 7-12/DELL’ACQUA GUIDO 11-12/1919/CRIBIORI ERNESTO 19-1/1940/MEDA CARLO 24-6/PORRO VINCENZO 9-9/1941/BRAMBILLA FRANCESCO 13-3/LOMBARDI MARIO 14-11/1943/PEDROLI VIRGINIO 9-5/GIROTTI GIUSEPPE 3-8/RAVELLI ANGELO 17-8/GRASSI PIERINO 29-8/PIGLIAFREDDO UGO 18-9/RE GIUSEPPE 21-10/1944/BARONI VALENTINO 18-8/LUNGHI SOLVES STAZIO 19-12/1945/FAGNANI PIERO LUIGI 17-1/GALETTI GIUSEPPE 27-2/PIROVANO GUIDO 8-4/1946/VIGANO’ MARIO 5-10/1950/LOMBARDO UMBERTO 18-1</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Interno cimitero</ISER>
+                        <ISEP hint="Posizione">Sopra portale cappella sacrario</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">frase</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">targa in marmo inchiodata alla parete</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CESSATE DI UCCIDERE I MORTI - NON GRIDATE PIU' NON GRIDATE / SE LI VOLETE ANCORA UDIRE - SE SPERATE DI NON PERIRE / HANNO L'IMPERECETTIBILE SUSSURRO - NON FANNO PIU' RUMORE / DEL CRESCERE DELL'ERBA - LIETA DOVE NON PASSA L'UOMO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Interno sacrario</ISER>
+                        <ISEP hint="Posizione">Lato sx parete centrale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti, anno 1913,1915, 1917,1918</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Dipinto su muro</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEM hint="Materia e tecnica">a pennello</ISEM>
+                        <ISEI hint="Trascrizione">CADUTI PER LA LIBERTA’/1913/ OLDANI GIUSEPPE/1915/GRASSI LUIGI/CISLAGHI GUIDO /BEOLCHI FERMO/BARTEZAGHI GAETANO/COZZI VITTORIO/BARONI GUIDO / TERRANEO GUIDO/PIROVANO ENRICO /BARONI GUIDO/IMBOLDI MARIO /AIRAGHI ALESSANDRO /RESTELLI CESARE/PIGLIAFREDDO ENRICO /GARAVAGLIA PAOLO /PIROVANO GIUSEPPE /MAESTRONI RICCARDO/MARNATI ANGELO 10-12/RESTELLI MARIO/NICOLA PAOLO /TERRANEO EDOARDO /TERRANEO EMILIO/CICERI PIETRO/PIROTA ERNESTO /LONATI ALFONSO/PIROVANO ERNESTO/COZZI ROMEO/PANIGO ERNESTO/LONATI VIRGILIO 2/MAESTRONI OTTORINO /PRINA SEVERINO /CALATI ANGELO/SISTI ENRICO/PIROVANO ENRICO/RIVA GIOVANNI /BELTRAMI GUIDO/PERI PIETRO/BARZAGHI ALFONSO /1917/MAGISTRELLI ERCOLE /FOLLI LUIGI /PIROVANO MASSIMO /MEDA FRANCESCO/BARONI LODOVICO/BIGATTI LEONE/PIROVANO ALESSANDRO /RESTELLI ERNESTO/CALCIAGO PAOLO/CONFALONIERI BENIAMINO/LONATI VITTORIO /PIROVANO CESARE /PIROVANO ENRICO/DE ANDREIS ENRICO/SISTI PIERINO/BARATTE’ ROMOLO/COSTA ENRICO/GALLI ANTONIO/MARNATI ERCOLE /1918/BONIARDI MANFREDO/NEBULONI CARLO /CISLAGHI CLEMENTE /RADICE CARLO/BARONI CESARE/CASALCHINI VITTORIO/LAZZARONI GIOV.BATT./BEOLCHI ALBERGO/TREZZI VITTORIO /PIROVANO ENRICO/DE ANDREIS ARCANGELO /LONATI GIOVANNI / FOLLI EMILIO/ FOLLI SPIRITO /MAESTRONI GIUSEPPE/CICERI MARCELLO/GIANELLI ANTONIO/CATTANEO MODESTO/LANDINI GUIDO /BOLLINI GIUSEPPE /GARAVAGLIA EGIDIO/ TERRANEO GIUSEPPE/GIANELLI ANSELMO /LONATI GIOV.BATT. /MARNATI NATALE /MAGSTRELLI UMBERTO /BONIARDI AURELIO /MONTANI EUGENIO/MEDA FERDINANDO/MEDA ANGELO /DELL’ACQUA GUIDO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Interno sacrario</ISER>
+                        <ISEP hint="Posizione">Lato dx parete centrale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti, anno 1919, 1940, 1943,1944, 1945, 1946, 1950/elenco dispersi</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Dipinto su muro</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEM hint="Materia e tecnica">a pennello</ISEM>
+                        <ISEI hint="Trascrizione">1919/CRIBIORI ERNESTO /1940/MEDA CARLO/PORRO VINCENZO/1941/BRAMBILLA FRANCESCO/LOMBARDI MARIO /1943/PEDROLI VIRGINIO/GIROTTI GIUSEPPE/RAVELLI ANGELO /GRASSI PIERINO/PIGLIAFREDDO UGO/RE GIUSEPPE/1944/BARONI VALENTINO/LUNGHI SOLVES STAZIO /1945/FAGNANI PIERO LUIGI/GALETTI GIUSEPPE/PIROVANO GUIDO /1946/VIGANO’ MARIO /1950/LOMBARDO UMBERTO/DISPERSI/BARONI AGOSTINO/BARONI CARLO/BARONI LUIGI/BELTRAMI CALISTO/BEOLCHI GIUSEPPINO/CALATI I ANGELI/CAMPI MARIO/ CICERI ALFONSO/CICERI EMILIO/CISTAGHI BRUNO/CISTAGHI GIUSEPPE/CISTAGHI MARIO/COLOMBO GIANFRANCO/DE ANDREIS ACHILLE/DE ANDREIS ERNESTO/FAGNANI CESARE/GAMBINI MARIO/GRASSI LUIGI/LAZZARONI ALESSANDRO/LAZZARONI PAOLO/MAGGIOLINI LUIGI/MARNATI PIERO/MEDA ATTILIO/MERENGHETTI LUIGI/PEDROTI EUGENIO/PETTINARI LUIGI/PIGLIAFREDDO LUIGI/PIROVANO SIGIFRIDO/PROVETTONI GIUSEPPE/PRINA GIOVANNI/SISTI MARIO/BRAMBILLA FRANCESCO/FAGNANI PIERLUIGI/DEPORTATI/TAGLIAFREDDO UMBERTO/CIAVETTONI ALFREDO</ISEI>
+                    </ISE>
+                </DA>
+                <UT hint="UTILIZZAZIONI">
+                    <UTU hint="DATI DI USO">
+                        <UTUR hint="Riferimento alla parte">viale</UTUR>
+                        <UTUT hint="Tipo">attuale</UTUT>
+                        <UTUF hint="Funzione">viale pedonale</UTUF>
+                    </UTU>
+                    <CNU hint="CONDIZIONE D'USO">
+                        <CNUV hint="Visitabile">aperto al pubblico</CNUV>
+                        <CNUS hint="Specifiche">uso saltuario</CNUS>
+                    </CNU>
+                </UT>
+                <CO hint="CONSERVAZIONE E INTERVENTI">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">Intero viale</STCP>
+                        <STCC hint="Stato di conservazione">mediocre</STCC>
+                        <STCS hint="Specifiche">presenza di vegetazione</STCS>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">Targhe</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">Sacrario</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                    </STC>
+                </CO>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione lineare</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.59502</GECX>
+                        <GECY hint="Coordinata y">45.28234</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale. La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.59502</GECX>
+                        <GECY hint="Coordinata y">45.28234</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale. La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2019</GPBT>
+                        <GPBU hint="Indirizzo web (URL)">(4341767) www.google.it/maps</GPBU>
+                    </GPB>
+                </GE>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTS hint="DATI CATASTALI">
+                        <CTSC hint="Comune">Bareggio</CTSC>
+                        <CTST hint="Tipo catasto">catasto misto</CTST>
+                        <CTSF hint="Foglio/data">12/2019</CTSF>
+                        <CTSN hint="Particelle">s.n.m</CTSN>
+                        <CTSP hint="Proprietari">Comune di Bareggio</CTSP>
+                    </CTS>
+                </CS>
+                <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+                        <CDGS hint="Indicazione specifica">Comune di Bareggio</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Bareggio_1</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale all'esterno del cimitero</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Bareggio_1.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Bareggio_2</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta delle lapidi poste all'interno del cimitero</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Bareggio_2.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Bareggio_3</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del fronte del sacrario posto all'interno del cimitero</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Bareggio_3.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Bareggio_4</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAC hint="Collocazione">Veduta dell'interno del sacrario ampiamente decorato con affreschi realizzati da diversi pittori</FTAC>
+                        <FTAK hint="Nome file digitale">MI_Bareggio_4.JPG</FTAK>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Bareggio_C1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F.12, s.n.m</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/08/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Bareggio_C2.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Bareggio_A1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/08/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Bareggio_A1.pdf</DRAK>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Bareggio_5</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Bareggio_5.pdf</FNTK>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">CAZZANI 2012</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Cazzani Alberta, I monumenti e i giardini celebrativi della grande guerra in Lombardia, Pieve Emanuele, 2012</BIBM>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">Associazione Nazionale Combattenti e Reduci, 1990</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Ai caduti di tutte le guerre, Associazione Nazionale Combattenti e Reduci, Milano, 1990, pp. 58, 158</BIBM>
+                    </BIB>
+                </DO>
+            </MODI>
+            <harvesting>
+                <geocoding>
+                    <x>8.997606</x>
+                    <y>45.472816</y>
+                </geocoding>
+                <idProgetto>ICCD1063423</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

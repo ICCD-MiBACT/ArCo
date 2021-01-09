@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14200262@</identifier>
+        <datestamp>2020-11-06T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MODI version="4.00_ICCD0">
+                <CD hint="IDENTIFICAZIONE">
+                    <TSK hint="Tipo modulo">MODI</TSK>
+                    <CDR hint="Codice Regione">03</CDR>
+                    <CDM hint="Codice Modulo">ICCD_MODI_3980897237651</CDM>
+                    <ESC hint="Ente schedatore">S287</ESC>
+                    <ECP hint="Ente competente per tutela">S287</ECP>
+                </CD>
+                <OG hint="ENTITA'">
+                    <AMB hint="Ambito di tutela MiBACT">architettonico e paesaggistico</AMB>
+                    <AMA hint="Ambito di applicazione">censimento parchi e giardini</AMA>
+                    <CTG hint="Categoria">ARCHITETTURA DEI PARCHI E GIARDINI</CTG>
+                    <OGD hint="Definizione">viale</OGD>
+                    <OGT hint="Tipologia">commemorativo/ ai caduti della prima e seconda guerra mondiale</OGT>
+                    <OGN hint="Denominazione">Viale della Rimembranza di Nerviano</OGN>
+                </OG>
+                <LC hint="LOCALIZZAZIONE">
+                    <LCS hint="Stato">ITALIA</LCS>
+                    <LCR hint="Regione">Lombardia</LCR>
+                    <LCP hint="Provincia">MI</LCP>
+                    <LCC hint="Comune">Nerviano</LCC>
+                    <LCL hint="Località">NERVIANO</LCL>
+                    <LCI hint="Indirizzo">via Rimembranze</LCI>
+                    <LCV hint="Altri percorsi/specifiche">Viale di accesso al cimitero da via Cadorna</LCV>
+                    <ACB hint="ACCESSIBILITA'">
+                        <ACBA hint="Accessibilità">si</ACBA>
+                    </ACB>
+                </LC>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">viale</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il comune di Nerviano come molti altri comuni d’Italia, agli inizi degli anni venti intitolarono un viale della Rimembranza per ricordare i propri caduti, vista la circolare del Ministero della Pubblica Istruzione per l’istituzione di Viali e Parchi della Rimembranza e le circolari del 17-12-1922 e 25-1-1923 dell’Ispettorato Scolastico di Milano per la costruzione di un Comitato locale “per l’attuazione della nobilissima iniziativa di onorare i caduti in battaglia e dispersi dopo i fatti d’arme durante la grande guerra, piantando un albero per ogni caduto lungo una strada o parco del paese”</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">prima metà</DTG>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">Monumento cimitero</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il monumento fù realizzato il 25 Aprile del 1974 per commemorare i caduti nervianesi</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">seconda metà</DTG>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1974/04/25</DTSI>
+                        <DTSF hint="A">1974/04/25</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione/fonte">iscrizione</DTM>
+                </DT>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">monumento piazza Vittoria</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il monumento fu commissionato dai Sigg. Gaio Felice e Finizio Giuseppe facenti parte di un Comitato del luogo allo scultore Edmondo Furlan, che lo realizzò nel 1922</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1922/00/00</DTSI>
+                        <DTSF hint="A">1922/00/00</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione/fonte">comunicazione orale</DTM>
+                </DT>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">monumento piazza Vittoria</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">modifiche</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il monumento fu modificato e riposizionato negli anni ’90 nell’ambito della sistemazione della piazza con la sostituzione delle parti in pietra con quelle in cemento</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">seconda metà</DTG>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1990/00/00</DTSI>
+                        <DTSF hint="A">1990/00/00</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMR hint="Responsabile dei contenuti">Bentivoglio Ravasio, Raffaella</CMR>
+                    <CMC hint="Responsabile ricerca e redazione">Minnucci, Ramona</CMC>
+                    <CMA hint="Anno di redazione">2019</CMA>
+                    <CMM hint="Motivo della redazione del MODI">Censimento all’interno del Progetto “Narrando i territori della Grande Guerra attraverso i monumenti, le lapidi, i parchi e i viali della rimembranza”</CMM>
+                    <IMD hint="MIGRAZIONE DATI NELLE SCHEDE DI CATALOGO">
+                        <IMDT hint="Tipo scheda">PG</IMDT>
+                    </IMD>
+                    <ADP hint="Profilo di accesso">1</ADP>
+                </CM>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="Descrizione">Il viale delle Rimembranze, è situato all’esterno del centro di Nerviano, accessibile da via Cadorna, il quale conduce al cimitero. Si tratta di un viale pedonale asfaltato, affiancato da due ulteriori accessi al cimitero, carrabili, delimitato su entrambi i lati da piante di faggio. Alla fine di quest’ultimo, sul fianco sx in un area verde, è posto un monumento ai caduti, uno scultura a forma di vela, scanalata con iscrizione in rilievo. All’interno del centro abitato, invece, in piazza Vittoria, è posto il monumento ai caduti alle due grandi guerre, circondato da una recinzione bassa, e funge da ingresso ad un piccolo parco retrostante</DES>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Monumento scultoreo</AIDI>
+                        <AIDD hint="Descrizione">Alla fine di quest’ultimo, sul fianco sx in un area verde, è posto un monumento ai caduti, uno scultura a forma di vela, scanalata con iscrizione in rilievo e targa in ottone riportante i nomi dei caduti</AIDD>
+                    </AID>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Monumento scultoreo</AIDI>
+                        <AIDD hint="Descrizione">All’interno del centro abitato, invece, in piazza Vittoria, è posto il monumento ai caduti alle due grandi guerre, circondato da una recinzione bassa, e funge da ingresso ad un piccolo parco retrostante. Il monumento è composto da un obelisco e piedistallo in cemento su cui è posizionata una scultura in bronzo a tuttotondo rappresentante un soldato con braccio alzato che impugna un coltello, ai cui piedi è prostrata una donna con bambino che tiene in mano una corona di alloro. Facenti parte del monumento sono quattro targhe in bronzo, due delle quali posizionate sul fondale e due poggianti su un basamento ai piedi del gruppo scultoreo</AIDD>
+                    </AID>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento posto alla sx dell’ingresso al cimitero</ISER>
+                        <ISEP hint="Posizione">fronte</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">frase commemorativa</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Monumento con lettere in bronzo in rilievo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">AI PARTIGIANI NERVIANESI CADUTI PER LA LIBERTA’ 40-45/25 APRILE 1974</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento posto alla sx dell’ingresso al cimitero</ISER>
+                        <ISEP hint="Posizione">fronte</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, elenco caduti nella guerra del 1940-1945</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone incisa fissata con bulloni piramidali</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">COMUNE DI NERVIANO/CARLO COZZI/FEDERICO BARBIANO DI BELGIOIOSO/ENRICO RONDANINI/GIOVANNI ROVELLINI/CADUTI PER LA LIBERTA’/25 aprile 1945 – 25 aprile 1995</ISEI>
+                    </ISE>
+                </DA>
+                <UT hint="UTILIZZAZIONI">
+                    <UTU hint="DATI DI USO">
+                        <UTUR hint="Riferimento alla parte">viale</UTUR>
+                        <UTUT hint="Tipo">attuale</UTUT>
+                        <UTUF hint="Funzione">viale pedonale</UTUF>
+                    </UTU>
+                    <CNU hint="CONDIZIONE D'USO">
+                        <CNUV hint="Visitabile">aperto al pubblico</CNUV>
+                        <CNUS hint="Specifiche">uso saltuario</CNUS>
+                    </CNU>
+                </UT>
+                <CO hint="CONSERVAZIONE E INTERVENTI">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">viale</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">monumento</STCP>
+                        <STCC hint="Stato di conservazione">mediocre</STCC>
+                        <STCS hint="Specifiche">presenza di vegetazione, presenza di depositi superficiali</STCS>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">monumento in piazza Vittoria</STCP>
+                        <STCC hint="Stato di conservazione">mediocre</STCC>
+                        <STCN hint="Note">le targhe non sono leggibili</STCN>
+                    </STC>
+                </CO>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione lineare</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.978939</GECX>
+                        <GECY hint="Coordinata y">45.558558</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.977288</GECX>
+                        <GECY hint="Coordinata y">45.559604</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2019</GPBT>
+                        <GPBU hint="Indirizzo web (URL)">(4341890) www.google.it/maps</GPBU>
+                    </GPB>
+                </GE>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTS hint="DATI CATASTALI">
+                        <CTSC hint="Comune">Nerviano</CTSC>
+                        <CTST hint="Tipo catasto">catasto misto</CTST>
+                        <CTSF hint="Foglio/data">8/2019</CTSF>
+                        <CTSF hint="Foglio/data">7/2019</CTSF>
+                        <CTSN hint="Particelle">s.n.m</CTSN>
+                        <CTSN hint="Particelle">C</CTSN>
+                        <CTSP hint="Proprietari">Comune di Nerviano</CTSP>
+                    </CTS>
+                    <CTS hint="DATI CATASTALI">
+                        <CTSC hint="Comune">Nerviano</CTSC>
+                        <CTST hint="Tipo catasto">catasto misto</CTST>
+                        <CTSF hint="Foglio/data">7/2019</CTSF>
+                        <CTSN hint="Particelle">C</CTSN>
+                        <CTSP hint="Proprietari">Comune di Nerviano</CTSP>
+                    </CTS>
+                </CS>
+                <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+                        <CDGS hint="Indicazione specifica">Comune di Nerviano</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Nerviano_1</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta dell'ingresso del viale</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Nerviano_1.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Nerviano_2</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale dal cimitero</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Nerviano_2.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Nerviano_3</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del monumento posto all'esterno del cimitero</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Nerviano_3.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Nerviano_4</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del monumento ai caduti posto in piazza Vittoria</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Nerviano_4.JPG</FTAK>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Nerviano_C1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F. 7, s.n.m</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Nerviano_C1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Nerviano_A1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAP hint="Specifiche">Viale</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Nerviano_A1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Nerviano_C2</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F. 8, C</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Nerviano_C2.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Nerviano_A2</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAP hint="Specifiche">Monumento</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Nerviano_A2.pdf</DRAK>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Nerviano_5</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTN hint="Nome archivio">Documentazione fotografica integrativa del viale</FNTN>
+                        <FNTK hint="Nome file digitale">MI_Nerviano_5.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Nerviano_6</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa del monumento ai caduti in piazza Vittoria</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Nerviano_6.pdf</FNTK>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">CAZZANI 2012</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Cazzani Alberta, I monumenti e i giardini celebrativi della grande guerra in Lombardia. Il censimento per le province di Brescia, Milano e Monza Brianza, Udine 2012</BIBM>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">ASSOCIAZIONE NAZIONALE COMBATTENTI E REDUCI 1990</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">rivista</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Ai caduti di tutte le guerre, Associazione Nazionale Combattenti e Reduci, Milano 1990, p. 133</BIBM>
+                    </BIB>
+                </DO>
+            </MODI>
+            <harvesting>
+                <geocoding>
+                    <x>8.978227</x>
+                    <y>45.558969</y>
+                </geocoding>
+                <idProgetto>ICCD1063423</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

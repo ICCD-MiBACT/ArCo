@@ -73,10 +73,10 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">Version 0.2</owl:versionInfo>
         <owl:versionInfo xml:lang="it">Versione 0.2</owl:versionInfo>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -84,70 +84,70 @@ In this module the following Ontology Design Patterns have been used:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://ontologydesignpatterns.org/opla/isNativeTo -->
 
     <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/isNativeTo"/>
-    
+
 
 
     <!-- http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate -->
 
     <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate"/>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/language -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/issued -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/modified -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/catalogue/iccdNormTag -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -155,13 +155,13 @@ In this module the following Ontology Design Patterns have been used:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/context-description/hasCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCollection"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/context-description/isAgentRelatedTo -->
@@ -169,31 +169,31 @@ In this module the following Ontology Design Patterns have been used:
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
     </rdf:Description>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/context-description/isCollectionIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCollectionIn"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/core/hasLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasLocation"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/core/hasSituation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasSituation"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/core/hasType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasType"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/core/isClassifiedBy -->
@@ -204,49 +204,49 @@ In this module the following Ontology Design Patterns have been used:
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/hasTaxon"/>
         </owl:propertyChainAxiom>
     </rdf:Description>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/core/isLocationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isLocationOf"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/core/isSituationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isSituationOf"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/core/isTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTypeOf"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/hasFontStyle -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasFontStyle"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/hasOrientation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasOrientation"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasAccession -->
@@ -265,7 +265,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: SB/ABC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasAnisotropy -->
@@ -284,7 +284,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>SM/SMM/SMMA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasAssociatedPreparation -->
@@ -302,7 +302,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: DB/DBR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasCalculatedDensity -->
@@ -321,7 +321,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasChemicalFormula -->
@@ -340,7 +340,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: SM/SMS/SMSE, SMSF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasCleavage -->
@@ -359,7 +359,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: SM/SMF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasCloseIndividual -->
@@ -376,7 +376,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIV</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasCompatibilityIndex -->
@@ -395,7 +395,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasCrystal -->
@@ -411,7 +411,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasCrystalClass -->
@@ -430,7 +430,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMC/SMCL</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasCrystalHabit -->
@@ -449,7 +449,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: SM/SMA/SMAA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology -->
@@ -468,7 +468,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAB</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasCrystalSystem -->
@@ -487,7 +487,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMC/SMCS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasCrystalTwinning -->
@@ -506,7 +506,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: SM/SMA/SMAG</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasCrystallographicCharacteristic -->
@@ -524,7 +524,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasDiaphaneity -->
@@ -543,7 +543,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank -->
@@ -561,7 +561,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank -->
@@ -578,7 +578,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasFluidDynamism -->
@@ -597,7 +597,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRID</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasFluorescence -->
@@ -616,7 +616,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFL</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasFracture -->
@@ -635,7 +635,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFU</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasGeochronology -->
@@ -654,7 +654,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMC/SMCL</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasGeologicalContext -->
@@ -672,7 +672,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasGladstone-DaleRelation -->
@@ -691,7 +691,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFG</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasHarvestingMethod -->
@@ -710,7 +710,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">Normativa Beni naturalistici: LR/LRI/LRIW</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasHarvestingMotivation -->
@@ -721,7 +721,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/HarvestingMotivation"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasHarvestingOperator -->
@@ -732,7 +732,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasHarvestingResponsible -->
@@ -743,7 +743,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasHarvestingSponsor -->
@@ -754,7 +754,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasHigherRank -->
@@ -771,7 +771,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasHostIndividual -->
@@ -788,7 +788,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasHostRock -->
@@ -806,7 +806,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: IM/IMA/IMAO</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasIncline -->
@@ -824,7 +824,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRII</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasInclusion -->
@@ -842,7 +842,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: SM/SMA/SMAI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasLabel -->
@@ -860,25 +860,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
 
-
-    <!-- https://w3id.org/arco/ontology/movable-property/hasLanguage -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasLanguage">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isLanguageOf"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Language"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una cosa alla lingua</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property realtes a thing to the language</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">ha lingua</rdfs:label>
-        <rdfs:label xml:lang="en">has language</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEL</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasLowerRank -->
@@ -894,7 +876,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasLustre -->
@@ -913,7 +895,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFB</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasMagnetism -->
@@ -932,7 +914,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasMeasuredDensity -->
@@ -951,7 +933,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasMineralDeposit -->
@@ -969,7 +951,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasMohsHardness -->
@@ -988,7 +970,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFH</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasOpticCharacteristic -->
@@ -1006,7 +988,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasOpticalPhenomena -->
@@ -1025,7 +1007,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFO</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasOutcrop -->
@@ -1043,7 +1025,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAF, IMAD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasParamorphosis -->
@@ -1062,7 +1044,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: SM/SMA/SMAS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasPhosphorescence -->
@@ -1081,7 +1063,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasPhysicalCharacteristic -->
@@ -1100,7 +1082,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasPleochroism -->
@@ -1119,7 +1101,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>SM/SMM/SMMP. SM/SMO/SMOP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasPointGroup -->
@@ -1138,7 +1120,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMC/SMCP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasPreservationType -->
@@ -1157,7 +1139,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: DB/DBC/DBCX</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasPseudomorphosis -->
@@ -1176,7 +1158,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: SM/SMA/SMAP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasRadioactivity -->
@@ -1195,7 +1177,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFV</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasReflectance -->
@@ -1213,7 +1195,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasRefraction -->
@@ -1231,7 +1213,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasRelatedSample -->
@@ -1249,7 +1231,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: DB/DBC, DB/DBX, DB/DBS, DB/DBP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasShadeTolerance -->
@@ -1267,7 +1249,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: LR/LRI/LRIS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasSpaceGroup -->
@@ -1286,7 +1268,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMC/SMCG</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasSpecimenHarvesting -->
@@ -1305,7 +1287,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRD, LR/LRD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasStreak -->
@@ -1324,7 +1306,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasSubstrate -->
@@ -1343,7 +1325,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasTaxon -->
@@ -1361,7 +1343,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. BNB: SB/SBS/SBSA, SB/NBN/NBNA, SB/NAA, SB/TBI/TBIN, SB/NAT, RB/RBR/RBRN, RB/RBN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasTenacity -->
@@ -1380,7 +1362,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasTypeOfTypeSpecimen -->
@@ -1398,7 +1380,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>BNM: SM/SMT/SMTT. BNB: SB/TBI/TBIT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasTypeSpecimenIdentification -->
@@ -1417,7 +1399,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI. BNM: SM/SMT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasUnitCell -->
@@ -1434,7 +1416,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasVhnHardness -->
@@ -1453,7 +1435,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isAccessionOf -->
@@ -1469,7 +1451,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isAnisotropyOf -->
@@ -1487,7 +1469,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>SM/SMM/SMMA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isAssociatedPreparationOf -->
@@ -1503,7 +1485,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isCalculatedDensity -->
@@ -1520,7 +1502,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isChemicalFormulaOf -->
@@ -1537,7 +1519,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isClassificationSystemOf -->
@@ -1555,7 +1537,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMSD/SMSC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isClassifiedByCurrentTaxon -->
@@ -1572,7 +1554,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isClassifiedByOriginalTaxon -->
@@ -1589,7 +1571,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isCleavageOf -->
@@ -1606,7 +1588,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isCloseIndivisualOf -->
@@ -1622,7 +1604,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isCompatibilityIndexOf -->
@@ -1639,7 +1621,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isCrystalClassOf -->
@@ -1656,7 +1638,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf -->
@@ -1673,7 +1655,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf -->
@@ -1690,7 +1672,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isCrystalOf -->
@@ -1705,7 +1687,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isCrystalSystemOf -->
@@ -1722,7 +1704,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isCrystalTwinningOf -->
@@ -1739,7 +1721,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isCrystallographicCharacteristicOf -->
@@ -1756,7 +1738,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isDiaphaneityOf -->
@@ -1773,7 +1755,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isFluidDynamismOf -->
@@ -1788,7 +1770,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isFluorescenceOf -->
@@ -1805,7 +1787,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isFractureOf -->
@@ -1822,7 +1804,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isGeochronologyOf -->
@@ -1838,7 +1820,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isGeologicalContextOf -->
@@ -1854,7 +1836,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isGladstone-DaleRelation -->
@@ -1871,7 +1853,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isHarvestingMethodOf -->
@@ -1888,7 +1870,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isHarvestingMotivation -->
@@ -1898,7 +1880,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/HarvestingMotivation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isHarvestingOperatorOf -->
@@ -1907,7 +1889,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isHarvestingResponsibleOf -->
@@ -1917,7 +1899,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isHarvestingSponsorOf -->
@@ -1927,7 +1909,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isHostIndividualOf -->
@@ -1942,7 +1924,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isHostRock -->
@@ -1958,7 +1940,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isInclineOf -->
@@ -1973,7 +1955,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isInclusionOf -->
@@ -1989,7 +1971,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isLabelOf -->
@@ -2004,23 +1986,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
 
-
-    <!-- https://w3id.org/arco/ontology/movable-property/isLanguageOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isLanguageOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Language"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la lingua con una cosa</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property realtes a language to a thing</rdfs:comment>
-        <rdfs:label xml:lang="en">is language of</rdfs:label>
-        <rdfs:label xml:lang="it">è lingua di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEL</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isLustreOf -->
@@ -2037,7 +2003,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isMagnetismOf -->
@@ -2054,7 +2020,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isMeasuredDensity -->
@@ -2071,7 +2037,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isMineralDepositOf -->
@@ -2087,7 +2053,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isMohsHardnessOf -->
@@ -2104,7 +2070,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isOpticCharacteristicOf -->
@@ -2121,7 +2087,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isOpticalPhenomenaOf -->
@@ -2138,7 +2104,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isOutcropOf -->
@@ -2154,7 +2120,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isParamorphosisOf -->
@@ -2171,7 +2137,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isPhosphorescenceOf -->
@@ -2188,7 +2154,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isPhysicalCharacteristicOf -->
@@ -2205,7 +2171,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isPleochroismOf -->
@@ -2222,7 +2188,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isPointGroupOf -->
@@ -2239,7 +2205,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isPreservationTypeOf -->
@@ -2256,7 +2222,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isPseudomorphosisOf -->
@@ -2273,7 +2239,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isRadioactivityOf -->
@@ -2290,7 +2256,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isReflectanceOf -->
@@ -2307,7 +2273,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isRefractionOf -->
@@ -2324,7 +2290,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isRelatedSampleOf -->
@@ -2340,7 +2306,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isShadeToleranceOf -->
@@ -2356,7 +2322,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isSpaceGroupOf -->
@@ -2373,7 +2339,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isSpecimenHarvestingOf -->
@@ -2389,7 +2355,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isStreakOf -->
@@ -2406,7 +2372,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isSubstrateOf -->
@@ -2423,7 +2389,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isTaxonOf -->
@@ -2439,7 +2405,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isTaxonProducedBy -->
@@ -2455,7 +2421,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isTenacityOf -->
@@ -2472,7 +2438,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isTypeOfTypeSpecimenFor -->
@@ -2487,7 +2453,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isTypeSpecimenIdentificationOf -->
@@ -2505,7 +2471,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isUnitCellOf -->
@@ -2521,7 +2487,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/isVhnHardnessOf -->
@@ -2538,7 +2504,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/producesTaxon -->
@@ -2553,7 +2519,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/refersToClassificationSystem -->
@@ -2569,10 +2535,10 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -2580,13 +2546,13 @@ In this module the following Ontology Design Patterns have been used:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/transcript -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/transcript"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/bodyTranscript -->
@@ -2604,7 +2570,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBET</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/cleavageDirection -->
@@ -2621,7 +2587,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMF/SMFZ</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/cleavageGrade -->
@@ -2638,7 +2604,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMF/SMFA</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/containerSequence -->
@@ -2655,7 +2621,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: AC/ACZ</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/currentClassification -->
@@ -2672,7 +2638,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">SM/SMN</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/dateOfLastChangePreservative -->
@@ -2690,7 +2656,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="en">Normativa BNB: DB/DBC/DBCE</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/genusNumber -->
@@ -2707,7 +2673,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSN</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/graphicSymbols -->
@@ -2724,7 +2690,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEG</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/handWriting -->
@@ -2741,7 +2707,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEA</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/headingTranscript -->
@@ -2759,7 +2725,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEI</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/imaCode -->
@@ -2776,7 +2742,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMS/SMSG</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/internalReflection -->
@@ -2793,7 +2759,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMM/SMMR</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/manufacturingDate -->
@@ -2811,7 +2777,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBR/DBRD, DB/DBX/DBXO, DB/DBS/DBSD, DB/DB/DBP/DBPD.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/newDanaCode -->
@@ -2828,7 +2794,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMS/SMSK</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/numberOfEnvelopes -->
@@ -2845,7 +2811,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPB</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/numberOfLabels -->
@@ -2862,7 +2828,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPE</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/originalClassification -->
@@ -2879,7 +2845,7 @@ In this module the following Ontology Design Patterns have been used:
         <a-cat:iccdNormTag xml:lang="it">SB/NBN/NBNA
 SB/NAA</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/paramorph -->
@@ -2896,7 +2862,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMA/SMAS</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/polytype -->
@@ -2913,7 +2879,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMN/SMNP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/pseudomorph -->
@@ -2930,7 +2896,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMA/SMAP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/radioactivity -->
@@ -2947,7 +2913,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMF/SMFR</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/sampleLocation -->
@@ -2964,7 +2930,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBC/DBCC, DB/DBX/DBXC, DB/DBS/DBSC, DB/DB/DBP/DBPC.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/strunzCode -->
@@ -2981,7 +2947,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMS/SMSX</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/taxonomicNumber -->
@@ -2998,7 +2964,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSG</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/zoning -->
@@ -3015,16 +2981,16 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMA/SMAZ</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/TI/date -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/TI/date"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -3032,13 +2998,13 @@ SB/NAA</a-cat:iccdNormTag>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://dati.beniculturali.it/cis/CulturalEntity -->
 
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/context-description/LaboratoryTest -->
@@ -3051,7 +3017,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/core/ClassificationInTime -->
@@ -3082,37 +3048,37 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/core/TimeIndexedEvent -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/TimeIndexedEvent"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/core/Type -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Type"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/AffixedElement -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/FontStyle -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/MeasurementCollection -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment -->
@@ -3137,13 +3103,13 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/Orientation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation -->
@@ -3162,7 +3128,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Accession -->
@@ -3197,7 +3163,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/ABC</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/BiologicalTaxon -->
@@ -3222,7 +3188,7 @@ SB/NAA</a-cat:iccdNormTag>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicTaxon"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicTaxon"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un taxon biologico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a biological taxon.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -3232,7 +3198,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. - Normativa BNB: SB/SBS, SB/TBI, RB/RBN. Normativa PG: FV/FV/FVED</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/BotanicalForm -->
@@ -3249,7 +3215,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNH; SB/NAA/NAAH; SB/NAT/NATH</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/ChemicalFormula -->
@@ -3265,7 +3231,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSE</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Chron -->
@@ -3273,7 +3239,7 @@ SB/NAA</a-cat:iccdNormTag>
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Chron">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeochronologicalClass"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/ChronostratigraphicClass -->
@@ -3281,7 +3247,7 @@ SB/NAA</a-cat:iccdNormTag>
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicClass">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSeries -->
@@ -3295,7 +3261,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/ChronostratigraphicStage -->
@@ -3309,7 +3275,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSubstage -->
@@ -3323,7 +3289,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSystem -->
@@ -3337,7 +3303,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Chronozone -->
@@ -3345,7 +3311,7 @@ SB/NAA</a-cat:iccdNormTag>
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Chronozone">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicClass"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Class -->
@@ -3403,7 +3369,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/ClassificationSystem -->
@@ -3419,7 +3385,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSG, SMSD, SMSC, SMSS</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Cleavage -->
@@ -3447,7 +3413,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/CloseIndividual -->
@@ -3469,7 +3435,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIV</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/CrystalHabit -->
@@ -3485,7 +3451,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAA</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/CrystalMorphology -->
@@ -3501,7 +3467,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAB</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/CrystalTwinning -->
@@ -3517,7 +3483,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAG</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic -->
@@ -3533,7 +3499,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Cultivar -->
@@ -3549,7 +3515,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNL; SB/NAA/NAAL; SB/NAT/NATL</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/EmpiricalChemicalFormula -->
@@ -3565,7 +3531,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSF</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Eon -->
@@ -3579,7 +3545,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Eonthem -->
@@ -3593,7 +3559,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Erathem -->
@@ -3607,7 +3573,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Family -->
@@ -3674,7 +3640,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSF</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/FluidDynamism -->
@@ -3695,7 +3661,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRID</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/FruitSample -->
@@ -3723,7 +3689,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBC</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Genus -->
@@ -3794,7 +3760,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG. - Normativa BNB: RB/RBN/RBNA; SB/NAA/NAAA; SB/NAT/NATA</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/GeochronologicalAge -->
@@ -3808,7 +3774,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/GeochronologicalClass -->
@@ -3816,7 +3782,7 @@ SB/NAA</a-cat:iccdNormTag>
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalClass">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/GeochronologicalEpoch -->
@@ -3830,7 +3796,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/GeochronologicalEra -->
@@ -3844,7 +3810,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/GeochronologicalPeriod -->
@@ -3858,7 +3824,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/GeochronologicalSubage -->
@@ -3872,7 +3838,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/GeologicalContext -->
@@ -3900,7 +3866,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAC</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Geotope -->
@@ -3916,7 +3882,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAT</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/HarvestingMethod -->
@@ -3932,7 +3898,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: LR/LRI/LRIW</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/HarvestingMotivation -->
@@ -3948,7 +3914,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: LR/LRI/LRIU</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Herbarium -->
@@ -3967,7 +3933,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/HostIndividual -->
@@ -3989,7 +3955,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIM</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/HostRock -->
@@ -4005,7 +3971,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAO</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Incline -->
@@ -4027,7 +3993,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRII</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Inclusion -->
@@ -4043,7 +4009,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAI</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/InorganicClass -->
@@ -4059,7 +4025,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSC, SMSD</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/InorganicSpecies -->
@@ -4075,7 +4041,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/InorganicSubclass -->
@@ -4097,23 +4063,77 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSS</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/InorganicTaxon -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/InorganicTaxon">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicTaxon"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia geologica, ovvero la classe mineralogica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a geologic taxon, the mineral class.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="it">Classe geologica</rdfs:label>
+        <rdfs:label xml:lang="en">Geologic class</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSC, SMSD</a-cat:iccdNormTag>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GeologicSpecies -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicSpecies">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicTaxon"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia geologica, ovvero la specie mineralogica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of an geologic taxon, the mineral species.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Geologic species</rdfs:label>
+        <rdfs:label xml:lang="it">Specie geologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GeologicSubclass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicSubclass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia geologica, ovvero la sottoclasse mineralogica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a geologic taxon, the mineral class.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Geologic subclass</rdfs:label>
+        <rdfs:label xml:lang="it">Sottoclasse geologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSS</a-cat:iccdNormTag>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GeologicTaxon -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicTaxon">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/Taxon"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un taxon di esemplari inorganici.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a taxon for inorganic specimen.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un taxon di esemplari geologici.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a taxon for geologic specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">Inorganic taxon</rdfs:label>
-        <rdfs:label xml:lang="it">Taxon inorganico</rdfs:label>
+        <rdfs:label xml:lang="en">Geologic taxon</rdfs:label>
+        <rdfs:label xml:lang="it">Taxon geologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMN/SMNA, SMNI, SMNP</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Kingdom -->
@@ -4144,7 +4164,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Label -->
@@ -4161,12 +4181,6 @@ SB/NAA</a-cat:iccdNormTag>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFontStyle"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLanguage"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Language"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4202,22 +4216,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">untable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE</a-cat:iccdNormTag>
     </owl:Class>
-    
 
-
-    <!-- https://w3id.org/arco/ontology/movable-property/Language -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Language">
-        <rdfs:comment xml:lang="en">A natural or artificial language, provided with an alphabet (or vocabulary) and combinatorial rules.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Un linguaggio artificiale o naturale, con un alfabeto (o vocabolario) e delle regole per combinare i simboli/suoni.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">Language</rdfs:label>
-        <rdfs:label xml:lang="it">Lingua</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEL</a-cat:iccdNormTag>
-    </owl:Class>
-    
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicBed -->
@@ -4225,7 +4224,7 @@ SB/NAA</a-cat:iccdNormTag>
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicBed">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/LithostratigraphicClass"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicClass -->
@@ -4233,7 +4232,7 @@ SB/NAA</a-cat:iccdNormTag>
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicClass">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicComplex -->
@@ -4247,7 +4246,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicFormation -->
@@ -4261,7 +4260,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicGroup -->
@@ -4275,7 +4274,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicMember -->
@@ -4289,7 +4288,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicSupergroup -->
@@ -4303,7 +4302,7 @@ SB/NAA</a-cat:iccdNormTag>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/MetallicSpecimen -->
@@ -4332,7 +4331,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Mine -->
@@ -4348,7 +4347,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAM</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/MineralDeposit -->
@@ -4370,7 +4369,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAR</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/MineralDepositType -->
@@ -4386,7 +4385,7 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAP, IMAE</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/NaturalHeritageCollection -->
@@ -4409,7 +4408,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/NewDanaClassificationSystem -->
@@ -4425,7 +4424,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSD</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/NotMetallicSpecimen -->
@@ -4447,7 +4446,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/OpticCharacteristic -->
@@ -4462,7 +4461,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Order -->
@@ -4521,7 +4520,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Outcrop -->
@@ -4549,7 +4548,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAF, IMAD</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/OutcropType -->
@@ -4565,7 +4564,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAF</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Paramorphosis -->
@@ -4581,7 +4580,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAS</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Phylum -->
@@ -4631,7 +4630,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/PhysicalCharacteristic -->
@@ -4646,7 +4645,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/PollenSample -->
@@ -4668,7 +4667,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBP</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Preparation -->
@@ -4702,7 +4701,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBR</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/PreparationType -->
@@ -4718,7 +4717,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBR/DBRT</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/PreservationType -->
@@ -4732,7 +4731,7 @@ erbario.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di conservazione</rdfs:label>
         <a-cat:iccdNormTag xml:lang="en">Normativa ICCD BNB: DB/DBC/DBCX</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Pseudomorphosis -->
@@ -4748,7 +4747,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAP</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Reflectance -->
@@ -4763,7 +4762,7 @@ erbario.</rdfs:comment>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/movable-property/Refraction"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Refraction -->
@@ -4784,7 +4783,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Sample -->
@@ -4823,7 +4822,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/SeedSample -->
@@ -4839,7 +4838,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBS</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/ShadeTolerance -->
@@ -4861,7 +4860,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="en">ICCD Normativa BNB: LR/LRI/LRIS</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/SimplifiedChemicalFormula -->
@@ -4877,7 +4876,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSE</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Species -->
@@ -4940,7 +4939,7 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Specimen -->
@@ -5070,7 +5069,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/SpecimenContainer -->
@@ -5103,7 +5102,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting -->
@@ -5167,7 +5166,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa BNB: LR/LRD. BNM: LR</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/StrunzClassificationSystem -->
@@ -5183,7 +5182,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSC, SMSS</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Subspecies -->
@@ -5199,7 +5198,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGST. -  Normativa BNB: RB/RBN/RBND; SB/NAA/NAAD; SB/NAT/NATD</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Substrate -->
@@ -5227,7 +5226,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIR</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/SubstrateType -->
@@ -5243,7 +5242,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIJ</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Taxon -->
@@ -5264,7 +5263,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/TaxonSpecification -->
@@ -5279,7 +5278,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/TypeOfTypeSpecimen -->
@@ -5295,7 +5294,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI/TBIT. BNM: SM/SMT/SMTT</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/TypeSpecimenIdentification -->
@@ -5329,7 +5328,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI. BNM: SM/SMT</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/UnitCell -->
@@ -5356,7 +5355,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Variety -->
@@ -5372,7 +5371,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNF; SB/NAA/NAAF; SB/NAT/NATF. Normativa BNM: SM/SMN/SMNV</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/WoodSample -->
@@ -5394,22 +5393,22 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBX</a-cat:iccdNormTag>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/l0/Characteristic -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/l0/Object -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -5417,7 +5416,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/AlfaRefractiveIndex -->
@@ -5428,7 +5427,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Biassico alfa</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOA</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Anisotropy -->
@@ -5439,7 +5438,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Anisotropy</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMA</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/BetaRefractiveIndex -->
@@ -5450,7 +5449,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Biassico beta</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOB</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Bireflectance -->
@@ -5461,7 +5460,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Biriflettanza</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMB</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Birefringence -->
@@ -5472,7 +5471,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Birifrangenza</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOR</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/CalcualtedDensity -->
@@ -5483,7 +5482,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Densità calcolata</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFF</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/CompatibilityIndex -->
@@ -5494,7 +5493,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Indice di compatibilità</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFI</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/CrystalClass -->
@@ -5505,7 +5504,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Crystal class</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCL</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/CrystalSystem -->
@@ -5516,7 +5515,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Sistema cristallino</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCS</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Diaphaneity -->
@@ -5527,7 +5526,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Diaphaneity</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFP</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Dispersion -->
@@ -5538,7 +5537,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Dispersione</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOD</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/EpsilonRefractiveIndex -->
@@ -5549,7 +5548,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Uniassico epsilon</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOE</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Fluorescence -->
@@ -5560,7 +5559,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Fluorescenza</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFL</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Fracture -->
@@ -5571,7 +5570,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Frattura</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFU</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/GammaRefractiveIndex -->
@@ -5582,7 +5581,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Gamma refractive index</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOG</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Gladstone-DaleRelation -->
@@ -5593,7 +5592,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Relazione Gladstone-Dale</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFG</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Lustre -->
@@ -5604,7 +5603,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Lustre</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFB</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Magnetism -->
@@ -5615,7 +5614,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Magnetismo</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFM</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/MeasuredDensity -->
@@ -5626,7 +5625,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Measured density</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFD</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/MohsHardness -->
@@ -5637,7 +5636,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Hardness (Mohs)</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFH</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/OmegaRefractiveIndex -->
@@ -5648,7 +5647,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Uniassico omega</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOO</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/OpticalPhenomena -->
@@ -5659,7 +5658,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Optical phenomena</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFO</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Phosphorescence -->
@@ -5670,7 +5669,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Phosphorescence</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFS</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Pleochroism -->
@@ -5681,7 +5680,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Pleocroismo</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOP, SM/SMM/SMMP</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/PointGroup -->
@@ -5692,7 +5691,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Point group</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCP</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Radioactivity -->
@@ -5703,7 +5702,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Radioattività</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFV</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Reflectance -->
@@ -5711,7 +5710,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Reflectance">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/RefractiveIndex -->
@@ -5722,7 +5721,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Refractive index</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOI</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/SpaceGroup -->
@@ -5733,7 +5732,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Space group</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCG</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Streak -->
@@ -5744,7 +5743,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Streak</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFT</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/Tenacity -->
@@ -5755,7 +5754,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Tenacità</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFE</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/VhnHardness -->
@@ -5766,7 +5765,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Hardness (VHN)</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFN</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/aParameter -->
@@ -5777,7 +5776,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">a parameter</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCA</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/alfaParameter -->
@@ -5788,7 +5787,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Parametro alfa</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCF</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/bParameter -->
@@ -5799,7 +5798,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">b parameter</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCB</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/betaParameter -->
@@ -5810,7 +5809,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Parametro beta</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCE</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/cParameter -->
@@ -5821,7 +5820,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">c parameter</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCC</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/gammaParameter -->
@@ -5832,7 +5831,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Parametro gamma</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCM</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/zParameter -->
@@ -5843,7 +5842,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">z parameter</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCZ</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/movable-property/2vAngle -->
@@ -5854,10 +5853,10 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Biassico 2V</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOV</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotations
@@ -5872,13 +5871,13 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la riflettanza</rdfs:comment>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
     </rdf:Description>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
@@ -5975,4 +5974,3 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-

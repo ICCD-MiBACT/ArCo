@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13083955@</identifier>
+        <datestamp>2017-12-13T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CG version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CG</TSK>
+                    <LIR hint="Livello">I</LIR>
+                    <CCG hint="Codice contenitore giuridico">DBunicoCG20232</CCG>
+                    <CCF hint="Codice contenitore fisico">ICCD_CF_5156383429941</CCF>
+                    <ESC hint="Ente schedatore">ICCD</ESC>
+                    <ACC hint="ALTRA IDENTIFICAZIONE">
+                        <ACCE hint="Ente/soggetto responsabile">MIBACT. DG Organizzazione. Servizio I</ACCE>
+                        <ACCC hint="Codice identificativo">20232</ACCC>
+                        <ACCP hint="Progetto di riferimento">DBUnico 2.0</ACCP>
+                    </ACC>
+                </CD>
+                <CG hint="CONTENITORE GIURIDICO">
+                    <LUC hint="Luogo della cultura">si</LUC>
+                    <CGT hint="Tipologia">museo</CGT>
+                    <CGN hint="Denominazione raccolta">Museo nazionale romano-raccolta di Palazzo Altemps</CGN>
+                    <CGC hint="Complesso giuridico di appartenenza">Museo nazionale romano</CGC>
+                    <CGD hint="Descrizione">All’interno del tardorinascimentale palazzo del cardinale Altemps, nel cuore di Roma, a due passi da Piazza Navona, si conservano alcune fra le più importanti collezioni storiche di scultura antica, comprendenti anche pregevoli testimonianze egizie. Fra di esse, la più famosa è la raccolta seicentesca di scultura antica della famiglia Boncompagni Ludovisi, che annovera capolavori dalla Magna Grecia come il celeberrimo Trono Ludovisi del V secolo a.C. La collezione comprende anche opere di età ellenistica come l’Ares e il gruppo con il Galata Suicida, creazioni romane come la colossale testa di Giunone tanto apprezzata da Goethe o il grandioso sarcofago noto come "Grande Ludovisi" che celebra mirabilmente la vittoria sui barbari. Altre sculture d’età repubblicana e imperiale, integrate spesso da importanti scultori dell’epoca barocca come Bernini e Algardi, campeggiano al centro di ampie sale affrescate che si affacciano sulla loggia dipinta come un giardino segreto delle delizie, arricchita da una galleria di ritratti dei Cesari. Il percorso si conclude nel cortile interno, esempio dell’equilibrio architettonico cinquecentesco, dove è stata mantenuta la collocazione originale delle statue sotto le arcate del portico</CGD>
+                    <CGE hint="ENTE">
+                        <CGET hint="Tipo">proprietà Stato</CGET>
+                    </CGE>
+                </CG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Lazio</PVCR>
+                        <PVCP hint="Provincia">RM</PVCP>
+                        <PVCC hint="Comune">Roma</PVCC>
+                    </PVC>
+                </LC>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2016</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">ICCD</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">ICCD</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">Scheda prodotta da ICCD tramite migrazione dati da DB Unico</OSS>
+                </AN>
+            </CG>
+            <harvesting>
+                <idProgetto>ICCD1038112</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

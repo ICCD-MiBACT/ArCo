@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD12368838@</identifier>
+        <datestamp>2020-11-09T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CF version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CF</TSK>
+                    <LIR hint="Livello">I</LIR>
+                    <CCF hint="Codice contenitore fisico">1467408534887</CCF>
+                    <ESC hint="Ente schedatore">S321</ESC>
+                </CD>
+                <CF hint="CONTENITORE FISICO">
+                    <CFT hint="Tipologia">chiesa</CFT>
+                    <CFN hint="Denominazione attuale">Chiesa di Santa Maria delle Grazie</CFN>
+                    <CFD hint="Descrizione">Chiesa risalente alla seconda metà del XVI secolo, presenta nella facciata affreschi raffiguranti la visione di Alberico da Settefrati, il giovane che con i suoi sogni sull'aldilà probabilmente ispirò anche lo stesso Dante. L'interno è suddiviso in tre navate e presenta tele settecentesche in quella centrale, mentre nelle laterali sono presenti un'opera di Marco Mazzaroppi (fine XVI- inizio XVII sec.), raffigurante la Pentecoste e un quadro seicentesco di autore anonimo. Notevole è il soffitto ligneo seicentesco mirabilmente lavorato, con al centro l'immagine della Madonna delle Grazie: purtroppo il tutto versa in condizioni pessime, con le tavole dipinte quasi completamente rovinate dall'umidità</CFD>
+                </CF>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO - AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Lazio</PVCR>
+                        <PVCP hint="Provincia">FR</PVCP>
+                        <PVCC hint="Comune">Settefrati</PVCC>
+                    </PVC>
+                </LC>
+                <GE hint="GEOREFERENZIAZIONE"/>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">New_1555409552734</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                    </FTA>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">3</ADSP>
+                        <ADSM hint="Motivazione">scheda di bene non adeguatamente sorvegliabile</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2018</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">Fabio Cafagna</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Marco D'Attanasio</FUR>
+                </CM>
+            </CF>
+            <harvesting>
+                <geocoding>
+                    <x>13.866208</x>
+                    <y>41.688173</y>
+                </geocoding>
+                <idProgetto>ICCD1060052</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13077076@</identifier>
+        <datestamp>2020-10-02T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CG version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CG</TSK>
+                    <LIR hint="Livello">I</LIR>
+                    <CCG hint="Codice contenitore giuridico">DBunicoCG105056</CCG>
+                    <CCF hint="Codice contenitore fisico">DBunicoCF111474</CCF>
+                    <ESC hint="Ente schedatore">ICCD</ESC>
+                    <ACC hint="ALTRA IDENTIFICAZIONE">
+                        <ACCE hint="Ente/soggetto responsabile">MIBACT. DG Organizzazione. Servizio I</ACCE>
+                        <ACCC hint="Codice identificativo">105056</ACCC>
+                        <ACCP hint="Progetto di riferimento">DBUnico 2.0</ACCP>
+                    </ACC>
+                </CD>
+                <CG hint="CONTENITORE GIURIDICO">
+                    <LUC hint="Luogo della cultura">si</LUC>
+                    <CGT hint="Tipologia">archivio</CGT>
+                    <CGN hint="Denominazione raccolta">Archivio storico comunale</CGN>
+                    <CGD hint="Descrizione">Conserva i documenti prodotti o acquisiti dal Comune di San Benedetto del Tronto (secondo l'attuale denominazione attribuita nel 1862) nel corso della sua attività dal XVII al XX secolo (1970 circa). Il documento più antico conservato è il Catasto della Comunità di San Benedetto del 1652 e poi il primo registro della serie dei Consigli (1696-1710). Tra i fondi aggregati si segnalano: l'Archivio della Società Operaia di Mutuo Soccorso, l'Archivio dell'Azienda Autonoma di Cura e Soggiorno, l'Archivio dell'ECA (già Congregazione di Carità), l'Archivio (con Biblioteca) della famiglia Piacentini-Rinaldi ed altri</CGD>
+                    <CGE hint="ENTE">
+                        <CGET hint="Tipo">proprietà Ente pubblico territoriale</CGET>
+                    </CGE>
+                </CG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Marche</PVCR>
+                        <PVCP hint="Provincia">AP</PVCP>
+                        <PVCC hint="Comune">San Benedetto del Tronto</PVCC>
+                    </PVC>
+                </LC>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2016</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">ICCD</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">ICCD</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">Scheda prodotta da ICCD tramite migrazione dati da DB Unico</OSS>
+                </AN>
+            </CG>
+            <harvesting>
+                <idProgetto>ICCD1038112</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

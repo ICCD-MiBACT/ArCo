@@ -29,25 +29,31 @@ import it.cnr.istc.stlab.arco.xsltextension.Utilities;
 
 public class Preprocessor {
 
-	private String recordsFolder, resourcePrefix, multimediaRecordsFolder;
+	private String recordsFolder, contenitoreFisicoFolder, resourcePrefix, multimediaRecordsFolder,
+			contenitoreGiuridicoFolder;
 
 	private static final Logger logger = Logger.getLogger(Preprocessor.class);
 	private AtomicInteger countRecords = new AtomicInteger(0);
 	private AtomicInteger countMultimediaRecords = new AtomicInteger(0);
-	private Map<String, String> ftan2URL, catalogueRecordIdentifier2URI;
+	private Map<String, String> ftan2URL, catalogueRecordIdentifier2URI, contenitoreFisicoSystemRecordCode2CCF,
+			contenitoreGiuridicoSystemRecordCode2CCG;
 	private Map<String, List<String>> uniqueIdentifier2URIs;
 	private PreprocessedData pd;
 
-	public Preprocessor(String recordsFolder, String multimediaRecordsFolder, String resourcePrefix)
-			throws MalformedURLException, IOException {
+	public Preprocessor(String recordsFolder, String multimediaRecordsFolder, String contenitoreFisicoFolder,
+			String contenitoreGiuridicoFolder, String resourcePrefix) throws MalformedURLException, IOException {
 		super();
 		this.recordsFolder = recordsFolder;
+		this.contenitoreFisicoFolder = contenitoreFisicoFolder;
+		this.contenitoreGiuridicoFolder = contenitoreGiuridicoFolder;
 		this.resourcePrefix = resourcePrefix;
 		this.multimediaRecordsFolder = multimediaRecordsFolder;
 		this.pd = PreprocessedData.getInstance(false);
 		this.uniqueIdentifier2URIs = pd.getUniqueIdentifier2URIs();
 		this.ftan2URL = pd.getFtan2URL();
 		this.catalogueRecordIdentifier2URI = pd.getCatalogueRecordIdentifier2URI();
+		this.contenitoreFisicoSystemRecordCode2CCF = pd.getContenitoreFisicoSystemRecordCode2CCF();
+		this.contenitoreGiuridicoSystemRecordCode2CCG = pd.getContenitoreGiuridicoSystemRecordCode2CCG();
 	}
 
 	public void run() {
@@ -56,13 +62,20 @@ public class Preprocessor {
 			Files.walk(Paths.get(recordsFolder)).parallel()
 					.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
 					.forEach(f -> preprocessRecord(f));
-
+			this.countRecords = new AtomicInteger(0);
 			Files.walk(Paths.get(multimediaRecordsFolder)).parallel()
 					.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
 					.forEach(f -> preprocessMultimediaRecord(f));
+			this.countRecords = new AtomicInteger(0);
+			Files.walk(Paths.get(contenitoreFisicoFolder)).parallel()
+					.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
+					.forEach(f -> preprocessContenitoreFisico(f));
+			this.countRecords = new AtomicInteger(0);
+			Files.walk(Paths.get(contenitoreGiuridicoFolder)).parallel()
+					.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
+					.forEach(f -> preprocessContenitoreGiuridico(f));
 
 			pd.commit();
-			pd.close();
 
 			logger.info("Preprocessing ended");
 
@@ -149,6 +162,66 @@ public class Preprocessor {
 
 	}
 
+	private void preprocessContenitoreFisico(Path f) {
+
+		if (this.countRecords.get() % 10000 == 0) {
+			logger.info("Processed " + this.countRecords);
+		}
+
+		this.countRecords.incrementAndGet();
+
+		try {
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			DocumentBuilder db = dbf.newDocumentBuilder();
+			Document xml = db.parse(f.toFile());
+
+			// Get XPath
+			XPathFactory xpf = XPathFactory.newInstance();
+			XPath xpath = xpf.newXPath();
+
+			this.contenitoreFisicoSystemRecordCode2CCF.put(FilenameUtils.getBaseName(f.toFile().getName()),
+					getCCF(xpath, xml));
+
+		} catch (SAXException | IOException | ParserConfigurationException | XPathExpressionException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			logger.info("Error while processing " + f.toFile().getAbsolutePath() + " " + e.getMessage());
+
+		}
+
+	}
+
+	private void preprocessContenitoreGiuridico(Path f) {
+
+		if (this.countRecords.get() % 10000 == 0) {
+			logger.info("Processed " + this.countRecords);
+		}
+
+		this.countRecords.incrementAndGet();
+
+		try {
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			DocumentBuilder db = dbf.newDocumentBuilder();
+			Document xml = db.parse(f.toFile());
+
+			// Get XPath
+			XPathFactory xpf = XPathFactory.newInstance();
+			XPath xpath = xpf.newXPath();
+
+			logger.trace("Adding CG map " + FilenameUtils.getBaseName(f.toFile().getName()) + " -> " + getCCG(xpath, xml));
+
+			this.contenitoreGiuridicoSystemRecordCode2CCG.put(FilenameUtils.getBaseName(f.toFile().getName()),
+					getCCG(xpath, xml));
+
+		} catch (SAXException | IOException | ParserConfigurationException | XPathExpressionException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			logger.info("Error while processing " + f.toFile().getAbsolutePath() + " " + e.getMessage());
+
+		}
+
+	}
+
 	private String getFTANFromEMM(XPath xpath, Document xml) throws XPathExpressionException {
 		return (String) xpath.evaluate("//FTAN", xml, XPathConstants.STRING);
 	}
@@ -179,6 +252,18 @@ public class Preprocessor {
 
 			return getCulturalPropertyURI(xpath, xml);
 		}
+
+	}
+
+	private String getCCF(XPath xpath, Document xml) throws XPathExpressionException {
+		String CCF = (String) xpath.evaluate("/record/metadata/schede/CF/CD/CCF", xml, XPathConstants.STRING);
+		return CCF;
+
+	}
+
+	private String getCCG(XPath xpath, Document xml) throws XPathExpressionException {
+		String CCF = (String) xpath.evaluate("/record/metadata/schede/CG/CD/CCG", xml, XPathConstants.STRING);
+		return CCF;
 
 	}
 
@@ -226,8 +311,9 @@ public class Preprocessor {
 
 	public static void main(String[] args) throws MalformedURLException, IOException {
 		logger.info("ArCo Preprocessor");
-		Preprocessor p = new Preprocessor(args[0], args[1], args[2]);
+		Preprocessor p = new Preprocessor(args[0], args[1], args[2], args[3], args[4]);
 		p.run();
+		PreprocessedData.getInstance().close();
 	}
 
 }

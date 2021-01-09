@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14200250@</identifier>
+        <datestamp>2020-11-06T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MODI version="4.00_ICCD0">
+                <CD hint="IDENTIFICAZIONE">
+                    <TSK hint="Tipo modulo">MODI</TSK>
+                    <CDR hint="Codice Regione">03</CDR>
+                    <CDM hint="Codice Modulo">ICCD_MODI_0794347237651</CDM>
+                    <ESC hint="Ente schedatore">S287</ESC>
+                    <ECP hint="Ente competente per tutela">S287</ECP>
+                </CD>
+                <OG hint="ENTITA'">
+                    <AMB hint="Ambito di tutela MiBACT">architettonico e paesaggistico</AMB>
+                    <AMA hint="Ambito di applicazione">censimento parchi e giardini</AMA>
+                    <CTG hint="Categoria">ARCHITETTURA DEI PARCHI E GIARDINI</CTG>
+                    <OGD hint="Definizione">viale</OGD>
+                    <OGT hint="Tipologia">commemorativo/ ai caduti della prima e seconda guerra mondiale</OGT>
+                    <OGN hint="Denominazione">Viale della Rimembranza di Lacchiarella</OGN>
+                </OG>
+                <LC hint="LOCALIZZAZIONE">
+                    <LCS hint="Stato">ITALIA</LCS>
+                    <LCR hint="Regione">Lombardia</LCR>
+                    <LCP hint="Provincia">MI</LCP>
+                    <LCC hint="Comune">Lacchiarella</LCC>
+                    <LCI hint="Indirizzo">via della Pace (via delle Rimembranze)</LCI>
+                    <LCV hint="Altri percorsi/specifiche">Viale pedonale posto sul fianco sx, parallelo all’accesso carrabile al cimitero</LCV>
+                    <ACB hint="ACCESSIBILITA'">
+                        <ACBA hint="Accessibilità">si</ACBA>
+                    </ACB>
+                </LC>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">viale</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il comune di Lacchiarella come molti altri comuni d’Italia, agli inizi degli anni venti intitolarono un viale della Rimembranza per ricordare i propri caduti, vista la circolare del Ministero della Pubblica Istruzione per l’istituzione di Viali e Parchi della Rimembranza e le circolari del 17-12-1922 e 25-1-1923 dell’Ispettorato Scolastico di Milano per la costruzione di un Comitato locale “per l’attuazione della nobilissima iniziativa di onorare i caduti in battaglia e dispersi dopo i fatti d’arme durante la grande guerra, piantando un albero per ogni caduto lungo una strada o parco del paese”</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">prima metà</DTG>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">cippi</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Cippi donato il 4 Novembre 2001 dal Gr. A.N.A. Lacchiarella in collaborazione con il Comune di Lacchiarella</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XXI</DTR>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">2001/11/04</DTSI>
+                        <DTSF hint="A">2001/11/04</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione/fonte">iscrizione</DTM>
+                </DT>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMR hint="Responsabile dei contenuti">Bentivoglio Ravasio, Raffaella</CMR>
+                    <CMC hint="Responsabile ricerca e redazione">Minnucci, Ramona</CMC>
+                    <CMA hint="Anno di redazione">2019</CMA>
+                    <CMM hint="Motivo della redazione del MODI">Censimento all’interno del Progetto “Narrando i territori della Grande Guerra attraverso i monumenti, le lapidi, i parchi e i viali della rimembranza”</CMM>
+                    <IMD hint="MIGRAZIONE DATI NELLE SCHEDE DI CATALOGO">
+                        <IMDT hint="Tipo scheda">PG</IMDT>
+                    </IMD>
+                    <ADP hint="Profilo di accesso">1</ADP>
+                </CM>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="Descrizione">Denominato via della Pace, il viale pedonale asfaltato, piantumato con doppio filare di tigli, chiuso da una bassa cancellata in ferro poggiante su due piccoli obelischi e un terzo a delimitare l’accesso pedonale. All’inizio del viale, sul fianco sx, è posto un cippo con doppia targa in bronzo, una posta in cima con frase commemorativa, e una sul fianco dx riportante il nome che donò i cippi posti lungo il viale con sovrastante piccolo bassorilievo raffigurante un soldato. I n.22 cippi funerari, di cui n 11 a sx e n. 11 a dx presentano una targa in bronzo su cui sono incisi a piccoli gruppi i nomi dei caduti delle due guerre mondiali, delimitato a terra da un piccolo muretto a formare di C. All’interno del cimitero, in asse con l’ingresso, è posta una cappella con all’interno lapidi con foto in memoria dei caduti. Poco distante dal viale, in piazza Risorgimento è posto il monumento ai caduti</DES>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Ceppo con elenco dei soldati</AIDI>
+                        <AIDD hint="Descrizione">Lungo il viale sono posti n.22 cippi funerari, di cui n.11 a sx in memoria dei caduti della guerra del 1940-1945 e n. 11 a dx in memoria dei caduti della guerra del 1915-1918, presentano una targa in bronzo su cui sono incisi a piccoli gruppi i nomi dei caduti delle due guerre mondiali, delimitato a terra da un piccolo muretto a formare di C</AIDD>
+                    </AID>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Cappella</AIDI>
+                        <AIDD hint="Descrizione">All’interno del cimitero, in asse con l’ingresso, è posta una cappella funeraria intonacata in giallo chiaro; sulla parte superiore alta trabeazione e finti triglifi dipinti sormontati da copertura in cemento sulla quale spiccano due statue di angeli ai lati e una croce centrale. L'ingresso è chiuso da un'alta porta vetrata e all'interno sono visibili l'altare e alcune targhe in marmo rettangolari, poste in verticale, con i nomi dei caduti delle due guerre mondiali, affiancati dalla fotografia e al centro un dipinto raffigurante Gesù con la Madonna e gli apostoli</AIDD>
+                    </AID>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Monumento scultoreo</AIDI>
+                        <AIDD hint="Descrizione">Il monumento scultoreo posto in piazza Risorgimento, di fronte a Villa Litta, raffigura una statua in bronzo raffigurante un fiero soldato posto su una roccia scolpita nella pietra. La scultura si erge su un alto basamento in marmo, a parallelepipedo, su pavimentazione in ciottoli delimitata da paletti in ferro collegati con catena. Sul fronte anteriore è fissato il bassorilievo raffigurante una dea, in bronzo. Del medesimo materiale è la corona d’alloro fissata sul fronte posteriore, e quelle poste in cima del monumento, una per fronte. Quest’ultime poggiano su cornice in rame come le foglie in bassorilievo poste alla base del basamento</AIDD>
+                    </AID>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">I Obelisco ingresso viale</ISER>
+                        <ISEP hint="Posizione">fronte</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Frase commemorativa</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone incisa</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">PER NON DIMENTICARE/Associazione Nazionale Alpini/Gruppo di Lacchiarella</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">II Obelisco ingresso viale</ISER>
+                        <ISEP hint="Posizione">fronte</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Racconto</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone incisa</ISES>
+                        <ISEC hint="Classe di appartenenza">descrittiva</ISEC>
+                        <ISEI hint="Trascrizione">TUTTI AVEVANO LA FACCIA DEL CRISTO. NELLA LIVIDA AUREOLA DELL’ELMETTO. TUTTI PORTAVANO L’INSEGNA DEL SUPPLIZIO. NELLA CROCE DELLA BAIONETTA. E NELLE TASCHE IL PANE DELL’ULTIMA CENA… E NELLA GOLA IL PIANTO DELL’ULTIMO ADDIO. /Tofane 1915-18 Anonimo</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">III Obelisco ingresso viale</ISER>
+                        <ISEP hint="Posizione">fronte</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Frase commemorativa</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone incisa</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">PER NON DIMENTICARE/Associazione Nazionale Alpini/Gruppo di Lacchiarella</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo ingresso viale</ISER>
+                        <ISEP hint="Posizione">testa</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Frase commemorativa</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">A memoria delle forze dell’ordine cadute nell’adempimento del dovere delle vittime del terrorismo nel mondo</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo ingresso viale</ISER>
+                        <ISEP hint="Posizione">fronte dx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">ringraziamento</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">descrittiva</ISEC>
+                        <ISEI hint="Trascrizione">“Cippi ai caduti” donati dal Gr. A.N.A. Lacchiarella in collaborazione con il Comune di Lacchiarella 4 novembre 2001</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato sx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1940-1945/Abbiati Giuseppe/Antibelli Angelo/Asti Domenico/Bisoni Carlo/Bizzarini Bruno/Bollani Giuseppe/Borioni Anacleto</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato sx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1940-1945/Bosetti Andrea/ Bosini Carlo/Bossoni Francesco/Brandoardi Francesco/Branduardi Attilio/Branduardi Giovanni/Bronzi Luigi</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato sx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1940-1945/Calzati Alberto/Campanari Pietro/Capella Mario/Cavallotti Giuseppe/Cigolini Umberto/ Cipolla Angelo/Colombi Anselmo</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato sx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1940-1945/Dallu Giuseppe/Dallu Luigi/Frigoni Ernesto/Galli Carlo/Gilardi Luigi/Granata Luigi/Lampugnani Oreste</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato sx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1940-1945/Lecchi Giovanni/Lupi Ettore/Maggi Carlo/Maggi Ettore Giov./Mapelli Giuseppe/Marchioni Pietro/Mensi Lino</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato sx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1940-1945/Merati Carlo/Migliavacca Michele/Migliavacca Pietro/Morganti Ambrogio/Morganti Luigi/Moroni Angelo/Moroni Luigi</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato sx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1940-1945/Moroni Luigi fu Giov./Omini Giovanni/Orlandi Carlo/Paccalini Battista/Paravelli Erminio/Pavesi Angelo/Pennati Giovanni</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato sx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1940-1945/Perolfi Enrico/Piontini Luigi/Pozzi Alfredo/Pozzi Ambrogio/Protti Pietro/Rizzini Attilio/Refaldi Francesco</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato sx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1940-1945/Repossi Luigi/Rizzotti Giovanni/Rona Giuseppe/Sacchi Carlo/Scotti Mario/Tessena Angelo</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato sx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1 1940-1945/Tibaldi Pietro/Uggé Alberto/Uggé Emilio/ Vertuani Carlo/ Vitali Nicola/ Zambieri Giuseppe</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato sx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei cadutiData, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1935-1936/ Pelizza Bernardino/Caduto nella campagna d’Etiopia</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato dx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1915-1918/Alberti Emilio/Archinti Carlo/Astolfi Carlo/Barisioni Ambrogio/Beretta Angelo/Bologna Paolo/Borroni Carlo Eugenio</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato dx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1915-1918/Borroni Pietro Ambrogio/Borroni Pietro/Brandovardi Giuseppe/Brandovardi Battista/Branduardi Carlo/Branduardi Giovanni/Bussola Angelo</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato dx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1915-1918/Campari Luigi/Campari Pietro/Curti Giovanni/Dallu’ Battista/De Amici Angelo/Frati Simmaco/Galli Giuseppe</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato dx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1915-1918/Gambarini Angelo/Gambarini Filippo/Gambarini Michele/Gambarini Natale/Gandini Giovanni/Garibaldi Carlo/Garibaldi Rosolino</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato dx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1915-1918/Garlaschelli Giuseppe/Garlaschelli Giovanni/Gaviglio Mario/Giani Ferdinando/Gianuzzi Pietro/Locchini Emilio/Magenta Giovanni</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato dx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1915-1918/Maggi Luigi/Mascherpa Giuseppe/Medici Angelo/Migliavacca Angelo/Migliavacca Angelo/Migliavacca Celso/Migliavacca Giovanni/Migliavacca Mario</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato dx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1915-1918/Morandotti Giovanni/Morganti Giovanni/Morganti Luigi/Morosini Edoardo/Muggesti Attilio/Oliviero Luigi</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato dx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1915-1918/Oliviero Paolo/Paccalini Angelo/Paccalini Antonio/Paccalini Pietro/Piontini Luigi/Podini Alfredo</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato dx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1915-1918/Podini Angelo/Podini Giovanni/Pozzi Ernesta/Rattazzi Giovanni/Rattazzi Giuseppe/Ravazza Giacomo</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato dx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Data, elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1915-1918/Ravazza Paolo/Regalia Angelo/Regalia Arturo/Rapetti Natale/Sacchi Giuseppe/Sacchi Pietro</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cippo</ISER>
+                        <ISEP hint="Posizione">lato dx viale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1915-1918/Sacchetti Angelo G. /Sacchetti Pietro/Tessera Natale/Tibaldi Stefano/Zibaldi Pietro/Zuffada Giuseppe</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella_I lapide</ISER>
+                        <ISEP hint="Posizione">parete sx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Foto, con elenco dei caduti, data</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra fissata alla parete con bulloni a punta</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">PEROLFI ENRICO 29.3.1941/PIONTINI LUIGI 28.2.1943/POZZI AMBROGIO 27.12.1941/PROTTI PIETRO 22.8.1942/REFALDI FRANCESCO 24.7.1943/REPOSSI LUIGI 24.6.1940/RIZZOTTI GIOVANNI 17.12.1942/RONA GIUSEPPE 16.12.1942/SACCHI CARLO 17.12.1942/SCOTTI MARIO 13.10.1945/TESSERA ANGELO 9.9.1943/ TIBALDI PIETRO 12.11.1941/UGGE’ ALBERTO 26.8.1942/UGGE’ EMILIO 24.8.1942/VERTUANI CARLO 7.9.1943/VITALI NICOLA 25.1.1943</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella_I lapide</ISER>
+                        <ISEP hint="Posizione">parete sx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Foto, con elenco dei caduti, data</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra fissata alla parete con bulloni a punta</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CADUTI E DISPERSI GUERRA 1940-1945/MARELLI GIUSEPPE 26.8.1942/MARCHIONI PIETRO 22.11.1944/MENSI LINO 23.8.1941/MERATI CARLO RODOLFO 17.12.1942/MIGLIAVACCA MICHELE 29.7.1943/MIGLIAVACCA PIETRO 16.12.1942/MORGANTI LUIGI GENNAIO 1943/MORONI ANGELO 16.12.1942/MORONI LUIGI 17.12.1942/OMINI GIOVANNI 7.12.1942/ORLANDI CARLO 6.1.1943/PACCALINI BATTISTA DICEMBRE 1942/PAVESI ANGELO 11.11.1944/PENNATI GIOVANNI 28.4.1944</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella_Targa</ISER>
+                        <ISEP hint="Posizione">parete sx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">nominativo del caduto, data</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra fissata con lettere in bronzo a rilievo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">A RICORDO DEL DR. GIOVANNI TIMOSSI CHE PER QUARANTA ANNI DEDICO’ A LACCHIARELLA LA SUA CAPACE OPERA DI MEDICO CON PROFONDO SENSO UMANO/ 25 APRILE 1975 LA CITTADINANZA RICONOSCENTE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella_I lapide</ISER>
+                        <ISEP hint="Posizione">parete frontale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Foto, con elenco dei caduti, data</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con incisione colorata di nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">BORRONI EUGENIO 8 MAGGIO 1918/MIGLIAVACCA MARIO 8 7MBRE 1916/MORANDOTTI GIOVANNI 24 MARZO 1917/MORGANTI LUIGI 19 9MBRE 1915/OLIVIERI LUIGI 16 MAGGIO 1916/OLIVIERI PAOLO 16 9MBRE 1916/PACALINI ANGELO 19 DICEMBRE 1918/PACALINI ANTONIO 15 MAGGIO 1916/PACALINI PIETRO 14 FEBBRA 1919/PIONTINI’ LUIGI 11 7MBRE 1915/POZZI ERNESTO 28 9MBRE 1915/RATTAZZI GIUSEPPE 14 7MBRE 1916/RATTAZZI LUIGI 21 7MBRE 1917/REGALIA ANGELO 19 LUGLIO 1918/ (tre nomi non più leggibili)/ZIBALDI PIETRO 1 LUGLIO 1916/ZEFFADA GIUSEPPE 16 APRILE 1917/ CELSO MIGLIAVACCA 24 OTTOBRE 1918/PAPETTI NATALE 11 AGOSTO 1916/TASCHERPA GIUSEPPE 21 GENNAIO 1918/CAMPARI LUIGI 21 AGOSTO 1917</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella_II lapide</ISER>
+                        <ISEP hint="Posizione">parete frontale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Foto, con elenco dei caduti, data</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con incisione colorata di nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">TRESERV NATALE 5 NOVEMBRE 1918/ASTOLFI CARLO 10 8BRE 1916/BORRONI MARIO 25 8BRE 1915/BORRONI PIETRO 2 LUGLIO 1916/BRANDUARDI BATTISTA 13 LUGLIO 1916/BARNDUARDI GIUSEPPE 17 GIUGNO 1916/BUSSOLA ANGELO 26 8BRE 1917/CURTI GIOVANNI 18 8BRE 1916/DALLU BATTISTA 24 8BRE 1915/DE AMICI ANGELO 26 APRILE 1916/FRATI SIMMACO 12 8BRE 1916/GALLI GIUSEPPE 24 DICEMBRE 1917/GAMBARINI ANGELO 24 MAGGIO 1917/GAMBARINI MICHELE 25 LUGLIO 1913/ GAMBARINI FILIPPO 24 MARZO 1917/GAMBARINI NATALE 17 9MBRE 1919/GARIBOLDI CARLO 19 AGOSTO 1915/GARIBLODI ROSOLINO 27 LUGLIO 1918/GARLASCHELLI GIOVANNI 19 AGOSTO 1916/GARLASCHELLI GIUSEPPE 29 9MBRE 1915/GIANAZZI PIETRO 29 GIUGNO 1914/MAGENTA GIOVANNI 8 LUGLIO 1918/MIGLIAVACCA ANGELO 1 9MBRE 1917</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella_targa</ISER>
+                        <ISEP hint="Posizione">parete frontale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Foto, nominativo del caduto, grado, data</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con incisione colorata di nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">DOTT. FEDERICO TESSERA PRODE SOLDATO DEI MILLE DI MARSALA MEDICO DISTINTO A 1840 Ω 1894</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella_I lapide</ISER>
+                        <ISEP hint="Posizione">parete dx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Foto, con elenco dei caduti, dei dispersi, data</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con incisione colorata di nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CADUTI DISPERSI GUERRA 1940-1945/CAVALLOTTI GIUSEPPE DICEMBRE 1942/CIGOLINI UMBERTO 7.9.1944/CIPOLLA ANGELO GENNAIO 1943/COLOMBI ANSELMO 21.12.1942/DALLU’ GIUSEPPE 1.11.1941/DALLU’ LUIGI 17.12.1942/FIOCCHI CESARE 28.4.1945/FRIGONI ERNESTO DICEMBRE 1942/ GALLI CARLO 25.1.1943/GILARDI LUIGI 28.9.1942/ GRANATA LUIGI 17.12.1942/LAMPUGNANI ORESTE OLIMPIO 5.12.1944/LECCHI GIOVANNI 24.8.1942/MAGGI CARLO 8.11.1944/MAGGI ETTORE GIOVANNI 14.8.1944</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella_Targa</ISER>
+                        <ISEP hint="Posizione">parete frontale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">dedica</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in pietra con lettere in ottone in rilievo</ISES>
+                        <ISEC hint="Classe di appartenenza">celebrativa</ISEC>
+                        <ISEI hint="Trascrizione">ALLA MEMORIA DEL DOTT. ANTONIO ZERBINI CHE PER OLTRE 25 ANNI PROFUSE, CON GRANDE CAPACITA’, DEDIZIONE ED IMPEGNO, LA PROPRIA OPERA DI MEDICO A FAVORE DI LACCHIARELLA, LA CITTADINANZA RICONOSCENTE POSE. 25 APRILE 1983</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella_II lapide</ISER>
+                        <ISEP hint="Posizione">parete frontale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Foto con elenco dei caduti e dispersi, data</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con incisione colorata di nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CADUTI DISPERSI GUERRA 1940-1945/ANTIBELLI ANGELO 23.1.1943/ASTI DOMENICO 23.2.1943/BISONI CARLO GUIDO 6.4.1945/BOLLANI GIUSEPPE 17.12.1942/BORRONI ANCLETO 20.12.1942/BOSETTI ANDREA 18.12.1942/BOSINI CARLO 23.6.1943/ BOSSONI FRANCESCO 6.11.1944/BRANDOARDI FRANCESCO 7.1.1943/BRANDUARDI ATTILIO 17.12.1942/BRANDUARDI GIOVANNI 26.5.1945/BRONZI LUIGI 21.1.1943/CALZATI ALBERTO 25.6.1940/CAMPARI PIETRO 9.9.1943/CAPPELLA MARIO 26.9.1943</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento</ISER>
+                        <ISEP hint="Posizione">fronte anteriore-lato sx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1915-1918</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lettere in ottone in rilievo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Alberti Emilio/Archinti Carlo/Astolfi Carlo/Barisioni Ambrogio/Beretta Angelo/Bologna Paolo/Borroni Carlo Eugenio/Borroni Pietro Ambrogio/Borroni Pietro/Brandovardi Giuseppe/Brandovardi Battista/Branduardi Carlo/Branduardi Giovanni/Bussola Angelo/Campari Luigi/Campari Pietro/Curti Giovanni/Dallu’ Battista/De Amici Angelo/Frati Simmaco/Galli Giuseppe/Gambarini Angelo/Gambarini Filippo/Gambarini Michele/Gambarini Natale/Gandini Giovanni/Garibaldi Carlo/Garibaldi Rosolino/Garlaschelli Giuseppe/Garlaschelli Giovanni/Gaviglio Mario/Giani Ferdinando/Gianuzzi Pietro/Locchini Emilio/Magenta Giovanni/Maggi Luigi/Mascherpa Giuseppe/Medici Angelo</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento</ISER>
+                        <ISEP hint="Posizione">fronte anteriore-lato dx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1915-1918</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lettere in ottone in rilievo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Migliavacca/Angelo/Migliavacca/Angelo/Migliavacca Celso/Migliavacca Giovanni/Migliavacca Mario/Morandotti Giovanni/Morganti Giovanni/Morganti Luigi/Morosini Edoardo/Muggesti Attilio/Oliviero Luigi/Oliviero Paolo/Paccalini Angelo/Paccalini Antonio/Paccalini Pietro/Piontini Luigi/Podini Alfredo/Podini Angelo/Podini Giovanni/Pozzi Ernesta/Rattazzi Giovanni/Rattazzi Giuseppe/Ravazza Giacomo/Ravazza Paolo/Regalia Angelo/Regalia Arturo/Rapetti Natale/Sacchi Giuseppe/Sacchi Pietro/Sacchetti Angelo G. /Sacchetti Pietro/Tessera Natale/Tibaldi Stefano/Zibaldi Pietro/Zuffada Giuseppe</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento-fronte anteriore</ISER>
+                        <ISEP hint="Posizione">basamento</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Frase commemorativa</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">targa in pietra</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">AI SUOI FIGLI PER LA PATRIA EROICAMENTE CADUTI PERCHE’ RIVIVANO NEL RICORDO E NELL’EMULAZIONE DELLE FUTURE GENERAZIONI LACCHIARELLA MEMORE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento-fronte anteriore</ISER>
+                        <ISEP hint="Posizione">basamento</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Frase commemorativa</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">targa in pietra</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">I LACCHIARELLESI/ A PERENNE RICORDO DEI CADUTI IN QUELLA IMMANE TRAGEDIA CHE SI E’ ABBATTUTA SULLA NOSTRA SVENTURATA PATRIA GIUGNO 1940 APRILE 1945</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento-fronte anteriore</ISER>
+                        <ISEP hint="Posizione">Basamento angolo sx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">data</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">data incisa su pietra</ISES>
+                        <ISEC hint="Classe di appartenenza">didascalica</ISEC>
+                        <ISEI hint="Trascrizione">1915</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento-fronte anteriore</ISER>
+                        <ISEP hint="Posizione">Basamento angolo dx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">data</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">data incisa su pietra</ISES>
+                        <ISEC hint="Classe di appartenenza">didascalica</ISEC>
+                        <ISEI hint="Trascrizione">1918</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento</ISER>
+                        <ISEP hint="Posizione">lato sx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">titolo</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in pietra con lettere in ottone in rilievo</ISES>
+                        <ISEC hint="Classe di appartenenza">di titolazione</ISEC>
+                        <ISEI hint="Trascrizione">MILITARI IRREPERIBILI</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento</ISER>
+                        <ISEP hint="Posizione">lato sx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Elenco dispersi</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in pietra con lettere in ottone in rilievo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">ASTI DOMENICO/BISONI CARLO/BOLLANI GIUSEPPE/BORRONI ANACLETO/BOSETTI ANDREA/BOSINI CARLO/BRANDOARDI FRANCESCO/BRADUARDI ATTILIO/BRONZI LUIGI/CAMPARI PIETRO/CAVALLOTTI GIUSEPPE/CIPOLLA ANGELO/COLOMBI ANSELMO/DALLU’ LUIGI/FRICONI ERNESTO/GALLI CARLO/GILARDI LUIGI/GRANATA LUIGI/MAGGI CARLO/MAGGI ETTORE GIOV./MERATI CARLO/MIGLIAVACCA PIETRO/MORGANTI LUIGI/MORGANTI LUIGI F. GIU’/MORONI LUIGI/OMINI Giovanni/ORLANDI CARLO/PACCALINI BATTISTA/PEROLFI ENRICO/PIONTINI LUIGI/PROTTI PIETRO/RIZZOTTI GIOVANNI/RONA GIUSEPPE/SACCHI CARLO/TESSERA ANGELO/UGGE’ ALBERTO/VERTUANI CARLO/VITALI NICOLA</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento</ISER>
+                        <ISEP hint="Posizione">lato dx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">titolo</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in pietra con lettere in ottone in rilievo</ISES>
+                        <ISEC hint="Classe di appartenenza">di titolazione</ISEC>
+                        <ISEI hint="Trascrizione">MILITARI DECEDUTI</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento</ISER>
+                        <ISEP hint="Posizione">lato dx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Elenco deceduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">ISES Targa in pietra con lettere in ottone in rilievo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">ANTIBELLI ANGELO/BOSSONI FRANCESCO/BRANDUARDI GIOVANNI/CALZATI ALBERTO/CAPPELLA MARIO/DALLU’ GIUSEPPE/CICOLINI UMBERTO/LECCHI GIOVANNI/MAPELLI GIUSEPPE/MARCHIONI PIETRO/MENSI LINO/MIGLIAVAA MICHELE/MORONI ANGELO/PAVESI ANGELO/PENNATI GIOVANNI/POZZI AMBROGIO/REFALDI FRANCESCO/REPOSSI LUIGI/SCOTTI MARIO/TIBALDI PIETRO/UGGE’ EMILIO/ZAMBLERA GIUSEPPE</ISEI>
+                    </ISE>
+                </DA>
+                <UT hint="UTILIZZAZIONI">
+                    <UTU hint="DATI DI USO">
+                        <UTUR hint="Riferimento alla parte">viale</UTUR>
+                        <UTUT hint="Tipo">attuale</UTUT>
+                        <UTUF hint="Funzione">viale pedonale</UTUF>
+                    </UTU>
+                    <CNU hint="CONDIZIONE D'USO">
+                        <CNUV hint="Visitabile">aperto al pubblico</CNUV>
+                        <CNUS hint="Specifiche">uso saltuario</CNUS>
+                    </CNU>
+                </UT>
+                <CO hint="CONSERVAZIONE E INTERVENTI">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">viale</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">targhe cippi</STCP>
+                        <STCC hint="Stato di conservazione">cattivo</STCC>
+                        <STCS hint="Specifiche">Problemi di umidità, macchia, incisioni non leggibili</STCS>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">Cappella_lapidi</STCP>
+                        <STCC hint="Stato di conservazione">cattivo</STCC>
+                        <STCS hint="Specifiche">incisioni non leggibili, Problemi di umidità</STCS>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">monumento</STCP>
+                        <STCC hint="Stato di conservazione">mediocre</STCC>
+                        <STCS hint="Specifiche">macchia, Problemi di umidità, presenza di depositi superficiali, incisioni non leggibili</STCS>
+                    </STC>
+                </CO>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione lineare</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">9.140932</GECX>
+                        <GECY hint="Coordinata y">45.319632</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">9.142209</GECX>
+                        <GECY hint="Coordinata y">45.319787</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale. La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2019</GPBT>
+                        <GPBU hint="Indirizzo web (URL)">(4341847) www.google.it/maps</GPBU>
+                    </GPB>
+                </GE>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTS hint="DATI CATASTALI">
+                        <CTSC hint="Comune">Lacchiarella</CTSC>
+                        <CTST hint="Tipo catasto">catasto misto</CTST>
+                        <CTSF hint="Foglio/data">16/2019</CTSF>
+                        <CTSF hint="Foglio/data">15/2019</CTSF>
+                        <CTSN hint="Particelle">s.n.m</CTSN>
+                        <CTSN hint="Particelle">A</CTSN>
+                        <CTSP hint="Proprietari">Comune di Lacchiarella</CTSP>
+                    </CTS>
+                </CS>
+                <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+                        <CDGS hint="Indicazione specifica">Comune di Lacchiarella</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Lacchiarella_1</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta dell'ingresso del viale</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Lacchiarella_1.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Lacchiarella_2</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale dal cimitero</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Lacchiarella_2.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Lacchiarella_3</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta di uno dei cippi commemorativi posti lungo il viale</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Lacchiarella_3.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Lacchiarella_4</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta della cappella con lapidi commemorative posta all'interno del cimitero</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Lacchiarella_4.JPG</FTAK>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Lacchiarella_C1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F.16, s.n.m</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Lacchiarella_C1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Lacchiarella_A1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Lacchiarella_A1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Lacchiarella_C2</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F.15, A</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Lacchiarella_C2.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Lacchiarella_A2</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Lacchiarella_A2.pdf</DRAK>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Lacchiarella_5</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTN hint="Nome archivio">Documentazione fotografica integrativa del viale</FNTN>
+                        <FNTK hint="Nome file digitale">MI_Lacchiarella_5.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Lacchiarella_6</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Lacchiarella_6.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Lacchiarella_7</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa dei cippi del lato sx</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Lacchiarella_7.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Lacchiarella_8</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa della cappella</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Lacchiarella_8.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Lacchiarella_9</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa del monumento ai caduti</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Lacchiarella_9.pdf</FNTK>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">CAZZANI 2012</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Cazzani Alberta, I monumenti e i giardini celebrativi della grande guerra in Lombardia. Il censimento per le province di Brescia, Milano e Monza Brianza, Udine 2012</BIBM>
+                    </BIB>
+                </DO>
+            </MODI>
+            <harvesting>
+                <geocoding>
+                    <x>9.157402</x>
+                    <y>45.321394</y>
+                </geocoding>
+                <idProgetto>ICCD1063423</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

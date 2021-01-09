@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14545056@</identifier>
+        <datestamp>2020-11-09T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CG version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CG</TSK>
+                    <LIR hint="Livello">I</LIR>
+                    <CCG hint="Codice contenitore giuridico">ICCD_CG_8987218797851</CCG>
+                    <CCF hint="Codice contenitore fisico">ICCD_CF_6419958797851</CCF>
+                    <ESC hint="Ente schedatore">S87</ESC>
+                </CD>
+                <CG hint="CONTENITORE GIURIDICO">
+                    <LUC hint="Luogo della cultura">si</LUC>
+                    <CGT hint="Tipologia">museo</CGT>
+                    <CGQ hint="Qualificazione">regionale</CGQ>
+                    <CGN hint="Denominazione raccolta">Museo Interdisciplinare Regionale di Messina</CGN>
+                    <CGE hint="ENTE">
+                        <CGET hint="Tipo">ente pubblico territoriale</CGET>
+                        <CGER hint="Ruolo">proprietario</CGER>
+                        <CGED hint="Denominazione">Regione Sicilia</CGED>
+                    </CGE>
+                </CG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Sicilia</PVCR>
+                        <PVCP hint="Provincia">ME</PVCP>
+                        <PVCC hint="Comune">Messina</PVCC>
+                    </PVC>
+                </LC>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2020</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">Giuliano, Agostino</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Ruggeri, Irene</FUR>
+                </CM>
+            </CG>
+            <harvesting>
+                <idProgetto>ICCD1007384</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

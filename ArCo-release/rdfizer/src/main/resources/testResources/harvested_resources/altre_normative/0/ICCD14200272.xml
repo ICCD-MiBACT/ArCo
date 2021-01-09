@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14200272@</identifier>
+        <datestamp>2020-11-06T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MODI version="4.00_ICCD0">
+                <CD hint="IDENTIFICAZIONE">
+                    <TSK hint="Tipo modulo">MODI</TSK>
+                    <CDR hint="Codice Regione">03</CDR>
+                    <CDM hint="Codice Modulo">ICCD_MODI_0048258237651</CDM>
+                    <ESC hint="Ente schedatore">S287</ESC>
+                    <ECP hint="Ente competente per tutela">S287</ECP>
+                </CD>
+                <OG hint="ENTITA'">
+                    <AMB hint="Ambito di tutela MiBACT">architettonico e paesaggistico</AMB>
+                    <AMA hint="Ambito di applicazione">censimento parchi e giardini</AMA>
+                    <CTG hint="Categoria">ARCHITETTURA DEI PARCHI E GIARDINI</CTG>
+                    <OGD hint="Definizione">viale</OGD>
+                    <OGT hint="Tipologia">commemorativo/ ai caduti della prima guerra mondiale</OGT>
+                    <OGN hint="Denominazione">Viale della Rimembranza di Rescaldina</OGN>
+                </OG>
+                <LC hint="LOCALIZZAZIONE">
+                    <LCS hint="Stato">ITALIA</LCS>
+                    <LCR hint="Regione">Lombardia</LCR>
+                    <LCP hint="Provincia">MI</LCP>
+                    <LCC hint="Comune">Rescaldina</LCC>
+                    <LCL hint="Località">RESCALDINA</LCL>
+                    <LCI hint="Indirizzo">via Rimembranze</LCI>
+                    <LCV hint="Altri percorsi/specifiche">Il viale collega il centro con il cimitero e ne inquadra l'ingresso</LCV>
+                    <ACB hint="ACCESSIBILITA'">
+                        <ACBA hint="Accessibilità">si</ACBA>
+                    </ACB>
+                </LC>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">viale</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il comune di Rescaldina come molti altri comuni d’Italia, agli inizi degli anni venti intitolarono un viale della Rimembranza per ricordare i propri caduti, vista la circolare del Ministero della Pubblica Istruzione per l’istituzione di Viali e Parchi della Rimembranza e le circolari del 17-12-1922 e 25-1-1923 dell’Ispettorato Scolastico di Milano per la costruzione di un Comitato locale “per l’attuazione della nobilissima iniziativa di onorare i caduti in battaglia e dispersi dopo i fatti d’arme durante la grande guerra, piantando un albero per ogni caduto lungo una strada o parco del paese”</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">prima metà</DTG>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">monumento</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il monumento in memoria dei caduti della prima guerra mondiale fù realizzato nel 1922</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">prima metà</DTG>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1922/00/00</DTSI>
+                        <DTSF hint="A">1922/00/00</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMR hint="Responsabile dei contenuti">Bentivoglio Ravasio, Raffaella</CMR>
+                    <CMC hint="Responsabile ricerca e redazione">Minnucci, Ramona</CMC>
+                    <CMA hint="Anno di redazione">2019</CMA>
+                    <CMM hint="Motivo della redazione del MODI">Censimento all’interno del Progetto “Narrando i territori della Grande Guerra attraverso i monumenti, le lapidi, i parchi e i viali della rimembranza”</CMM>
+                    <IMD hint="MIGRAZIONE DATI NELLE SCHEDE DI CATALOGO">
+                        <IMDT hint="Tipo scheda">PG</IMDT>
+                    </IMD>
+                    <ADP hint="Profilo di accesso">1</ADP>
+                </CM>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="Descrizione">Il viale è posto alla fine del centro abitato, costituisce la continuazione della strada che conduce al cimitero inquadrandone l’ingresso. Lo stesso, carrabile, è affiancato da due percorsi pedonali ognuno con doppio filare di gelsi di grandi dimensioni, che creano una cortina verde compatta ed omogenea. Il monumento è ubicato in un area a verde adiacente al parcheggio, ben visibile dall'ingresso del cimitero</DES>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Monumento</AIDI>
+                        <AIDD hint="Descrizione">Il monumento, ubicato in un area a verde adiacente al parcheggio, ben visibile dall'ingresso del cimitero, delimitato da dissuasori e catene, con pavimentazione in pietra, è costituito da un ampio basamento decorato poggiante su gradinata, sormontato da una lanterna in bronzo con fiamma</AIDD>
+                    </AID>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">monumento</ISER>
+                        <ISEP hint="Posizione">Lato frontale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">data guerra</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lettere in rilievo in bronzo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">RESCALDINA AI SUOI CADUTI 1913-1915</ISEI>
+                    </ISE>
+                </DA>
+                <UT hint="UTILIZZAZIONI">
+                    <UTU hint="DATI DI USO">
+                        <UTUR hint="Riferimento alla parte">viale</UTUR>
+                        <UTUT hint="Tipo">attuale</UTUT>
+                        <UTUF hint="Funzione">viale carrabile</UTUF>
+                    </UTU>
+                    <CNU hint="CONDIZIONE D'USO">
+                        <CNUV hint="Visitabile">aperto al pubblico</CNUV>
+                        <CNUS hint="Specifiche">uso saltuario</CNUS>
+                    </CNU>
+                </UT>
+                <CO hint="CONSERVAZIONE E INTERVENTI">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">viale</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">monumento_basamento</STCP>
+                        <STCC hint="Stato di conservazione">cattivo</STCC>
+                        <STCS hint="Specifiche">incrostazioni</STCS>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">monumento-iscrizioni</STCP>
+                        <STCC hint="Stato di conservazione">cattivo</STCC>
+                        <STCN hint="Note">perdita di alcune lettere che compongono l'iscrizione dedicatoria</STCN>
+                    </STC>
+                </CO>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione lineare</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.948910</GECX>
+                        <GECY hint="Coordinata y">45.615091</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.947863</GECX>
+                        <GECY hint="Coordinata y">45.614446</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2019</GPBT>
+                        <GPBU hint="Indirizzo web (URL)">(4341922) www.google.it/maps</GPBU>
+                    </GPB>
+                </GE>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTS hint="DATI CATASTALI">
+                        <CTSC hint="Comune">Rescaldina</CTSC>
+                        <CTST hint="Tipo catasto">catasto misto</CTST>
+                        <CTSF hint="Foglio/data">12/2019</CTSF>
+                        <CTSN hint="Particelle">s.n.m</CTSN>
+                        <CTSP hint="Proprietari">Comune di Rescaldina</CTSP>
+                    </CTS>
+                </CS>
+                <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+                        <CDGS hint="Indicazione specifica">Comune di Rescaldina</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Rescaldina_1</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale verso l'ingresso del cimitero</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/08/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Rescaldina_1.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Rescaldina_3</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale da metà altezza verso l'ingresso al cimitero</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/08/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Rescaldina_3.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Rescaldina_4</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale dall'ingresso del cimitero verso il centro di Rescaldina</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/08/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Rescaldina_4.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Rescaldina_5</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del monumento</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/08/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Rescaldina_5.jpg</FTAK>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Rescaldina_C1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F.12, s.n.m</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/08/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Rescaldina_C1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Rescaldina_A1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/08/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Rescaldina_A1.pdf</DRAK>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Rescaldina_6</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/08/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Rescaldina_6.pdf</FNTK>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">CAZZANI 2012</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Cazzani Alberta, I monumenti e i giardini celebrativi della grande guerra in Lombardia. Il censimento per le province di Brescia, Milano e Monza Brianza, Udine 2012</BIBM>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">ASSOCIAZIONE NAZIONALE COMBATTENTI E REDUCI 1990</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Associazione Nazionale Combattenti e Reduci, Ai caduti di tutte le guerre,Milano 1990, p. 148</BIBM>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">MARUBI 1989</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">M. Marubbi, I boschi della Rescaldina, Ed. Amministrazione Comunale di Rescaldina, Corbetta 1989, p. 126</BIBM>
+                    </BIB>
+                </DO>
+            </MODI>
+            <harvesting>
+                <geocoding>
+                    <x>8.948131</x>
+                    <y>45.614605</y>
+                </geocoding>
+                <idProgetto>ICCD1063423</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

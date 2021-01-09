@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13814917@</identifier>
+        <datestamp>2020-10-23T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <IMR version="3.00_ICCD0">
+                <MC hint="METADATI DI CATALOGAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAD hint="Data">2017</FTAD>
+                        <FTAE hint="Ente proprietario">Segretariato Regionale per i Beni e le attività Culturali_Ufficio Danni Sisma</FTAE>
+                        <FTAC hint="Collocazione">ID UCCR MARCHE_2276</FTAC>
+                        <FTAN hint="Codice identificativo">3975</FTAN>
+                        <FTAT hint="Note">Veduta dei danni causati dal sisma del 2016</FTAT>
+                    </FTA>
+                </MC>
+                <MM hint="METADATI DATO MULTIMEDIALE">
+                    <MMT hint="METADATI TECNICI DATO MULTIMEDIALE">
+                        <MMTO hint="Nome file originale">F3_sisma.jpg</MMTO>
+                    </MMT>
+                </MM>
+            </IMR>
+            <harvesting>
+                <linkEmm>http://www.sigecweb.beniculturali.it/images/fullsize/ICCD1060938/ICCD13814917_F3_sisma.jpg</linkEmm>
+                <idProgetto>ICCD1060052</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13614132@</identifier>
+        <datestamp>2017-12-13T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CG version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CG</TSK>
+                    <LIR hint="Livello">I</LIR>
+                    <CCG hint="Codice contenitore giuridico">ICCD_CG_9098171611051</CCG>
+                    <CCF hint="Codice contenitore fisico">ICCD_CF_8235207701051</CCF>
+                    <ESC hint="Ente schedatore">ICCD</ESC>
+                </CD>
+                <CG hint="CONTENITORE GIURIDICO">
+                    <CGT hint="Tipologia">antiquarium</CGT>
+                    <CGQ hint="Qualificazione">statale</CGQ>
+                    <CGN hint="Denominazione raccolta">Antiquarium di Lucrezia Romana</CGN>
+                    <CGD hint="Descrizione">I materiali in esposizione provengono dalle indagini archeologiche preventive effettuate nell’ex Municipio X (ora parte del VII) negli ultimi venticinque anni, in gran parte da terreni ai lati dell’antica Via Latina ed al suo percorso naturale più antico, conosciuto con il nome moderno di Via Castrimeniense. Sono state messe in luce presenze risalenti fino all’età preistorica: necropoli dell’età del rame (III millennio a.C.); insediamenti dell’età del bronzo (II millennio a.C.); necropoli relative alla Civiltà Laziale (XI–VI sec. a.C.); testimonianze di apprestamenti di bonifica agraria di età repubblicana; corredi di tombe a camera di età medio repubblicana (fine IV-inizio III sec. a.C.), riconducibili a sepolture di carattere gentilizio. Da ville, edifici e sepolcri dell’ultima età repubblicana e della prima età imperiale provengono diverse sculture in marmo. La maggior parte del materiale di età imperiale proviene dalle necropoli. Lo studio dei corredi deposti nelle tombe ci introduce nella vita privata romana, facendoci conoscere un artigianato specializzato attraverso gli oggetti offerti: vasi, lucerne, monili, materiali da lavoro e per la toletta femminile, giocattoli, fornendo informazioni sulla moda e il costume (fonte: http://archeoroma.beniculturali.it/musei/antiquarium-lucrezia-romana)</CGD>
+                </CG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Lazio</PVCR>
+                        <PVCP hint="Provincia">RM</PVCP>
+                        <PVCC hint="Comune">Roma</PVCC>
+                    </PVC>
+                </LC>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2017</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">ICCD</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">ICCD</FUR>
+                </CM>
+            </CG>
+        </schede>
+    </metadata>
+</record>

@@ -8,3 +8,7 @@
 /SICCDPG.xml
 /log/
 /db
+/ttls
+/error.log
+/generated
+/test_db.gz

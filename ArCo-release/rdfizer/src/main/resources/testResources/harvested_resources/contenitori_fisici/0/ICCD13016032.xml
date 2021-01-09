@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13016032@</identifier>
+        <datestamp>2020-11-09T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CF version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CF</TSK>
+                    <LIR hint="Livello">I</LIR>
+                    <CCF hint="Codice contenitore fisico">1477241097301</CCF>
+                    <ESC hint="Ente schedatore">S258</ESC>
+                    <CBC hint="Identificativo scheda bene culturale">0800243338</CBC>
+                </CD>
+                <CF hint="CONTENITORE FISICO">
+                    <LUC hint="Luogo della cultura">si</LUC>
+                    <CFT hint="Tipologia">palazzo</CFT>
+                    <CFN hint="Denominazione attuale">Palazzo della Riserva o delle Poste</CFN>
+                    <CFU hint="Uso">museo, università, posta</CFU>
+                    <CFD hint="Descrizione">Oggi il Palazzo è sede delle Poste centrali, della Società parmense di Lettura, del Museo Glauco Lombardi e della Cattedra di Storia del Teatro e dello Spettacolo dell'Università di Parma</CFD>
+                    <CFG hint="Condizione giuridica">proprietà Stato</CFG>
+                </CF>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO - AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Emilia-Romagna</PVCR>
+                        <PVCP hint="Provincia">PR</PVCP>
+                        <PVCC hint="Comune">Parma</PVCC>
+                    </PVC>
+                </LC>
+                <GE hint="GEOREFERENZIAZIONE"/>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">New_1539526899105</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                    </FTA>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">3</ADSP>
+                        <ADSM hint="Motivazione">scheda di bene non adeguatamente sorvegliabile</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2018</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">Salimbeni, Barbara</CMPN>
+                    </CMP>
+                    <RSR hint="Referente verifica scientifica">Burgio, Chiara</RSR>
+                    <FUR hint="Funzionario responsabile">Burgio, Chiara</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">CBC-Identificativo scheda bene culturale: 0800125743-0800125407</OSS>
+                </AN>
+            </CF>
+            <harvesting>
+                <geocoding>
+                    <x>10.327702</x>
+                    <y>44.803633</y>
+                </geocoding>
+                <idProgetto>ICCD1060052</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

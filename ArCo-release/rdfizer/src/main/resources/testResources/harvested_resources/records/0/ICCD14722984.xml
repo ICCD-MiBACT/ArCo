@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14722984@</identifier>
+        <datestamp>2020-11-02T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <A version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">A</TSK>
+                    <LIR hint="Livello ricerca">I</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">05</NCTR>
+                        <NCTN hint="Numero catalogo generale">00354073</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S234</ESC>
+                    <ECP hint="Ente competente">S234</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione tipologica">villa</OGTD>
+                        <OGTN hint="Denominazione">Villa De Rossi</OGTN>
+                    </OGT>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Veneto</PVCR>
+                        <PVCP hint="Provincia">TV</PVCP>
+                        <PVCC hint="Comune">San Biagio di Callalta</PVCC>
+                        <PVCL hint="Località">Cavriè</PVCL>
+                        <PVCI hint="Indirizzo">Via Borgo Cattanei, 15</PVCI>
+                    </PVC>
+                </LC>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTL hint="Tipo di localizzazione">localizzazione fisica</CTL>
+                    <CTS hint="LOCALIZZAZIONE CATASTALE">
+                        <CTSC hint="Comune">San Biagio di Callalta</CTSC>
+                        <CTSF hint="Foglio/Data">17/ 2020</CTSF>
+                    </CTS>
+                </CS>
+                <GP hint="GEOREFERENZIAZIONE TRAMITE PUNTO">
+                    <GPI hint="Identificativo Punto">1</GPI>
+                    <GPL hint="Tipo di localizzazione">localizzazione fisica</GPL>
+                    <GPD hint="DESCRIZIONE DEL PUNTO">
+                        <GPDP hint="PUNTO">
+                            <GPDPX hint="Coordinata X">12.370452</GPDPX>
+                            <GPDPY hint="Coordinata Y">45.705529</GPDPY>
+                        </GPDP>
+                    </GPD>
+                    <GPM hint="Metodo di georeferenziazione">punto esatto</GPM>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da foto aerea con sopralluogo</GPT>
+                    <GPP hint="Proiezione e Sistema di riferimento">WGS84</GPP>
+                    <GPB hint="BASE DI RIFERIMENTO">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2020</GPBT>
+                        <GPBO hint="Note">https://www.google.com/maps</GPBO>
+                    </GPB>
+                </GP>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <ATB hint="AMBITO CULTURALE">
+                        <ATBR hint="Riferimento all'intervento">costruzione</ATBR>
+                        <ATBD hint="Denominazione">Architettura del XVIII secolo</ATBD>
+                        <ATBM hint="Fonte dell'attribuzione">fonte archivistica</ATBM>
+                    </ATB>
+                </AU>
+                <RE hint="NOTIZIE STORICHE">
+                    <REN hint="NOTIZIA">
+                        <RENR hint="Riferimento">intero bene</RENR>
+                    </REN>
+                    <REL hint="CRONOLOGIA, ESTREMO REMOTO">
+                        <RELS hint="Secolo">XVIII</RELS>
+                        <RELI hint="Data">1790</RELI>
+                    </REL>
+                    <REV hint="CRONOLOGIA, ESTREMO RECENTE">
+                        <REVS hint="Secolo">XVIII</REVS>
+                        <REVI hint="Data">1790</REVI>
+                    </REV>
+                </RE>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà privata</CDGG>
+                    </CDG>
+                    <NVC hint="PROVVEDIMENTI DI TUTELA">
+                        <NVCT hint="Tipo provvedimento">DLgs n. 490/1999, art. 6, co. 1</NVCT>
+                        <NVCE hint="Estremi provvedimento">2002/02/13</NVCE>
+                    </NVC>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Bellomo, Giorgia</FTAA>
+                        <FTAD hint="Data">2020/10/17</FTAD>
+                        <FTAN hint="Codice identificativo">00354073_foto</FTAN>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Bellomo, Giorgia</FTAA>
+                        <FTAD hint="Data">2020/10/17</FTAD>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Bellomo, Giorgia</FTAA>
+                        <FTAD hint="Data">2020/10/17</FTAD>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Bellomo, Giorgia</FTAA>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA">
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAD hint="Data">2020</DRAD>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTP hint="Tipo">riproduzione del provvedimento di tutela</FNTP>
+                        <FNTD hint="Data">2002/02/13</FNTD>
+                    </FNT>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">2</ADSP>
+                        <ADSM hint="Motivazione">scheda di bene di proprietà privata</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2020</CMPD>
+                        <CMPN hint="Nome">Bellomo, Giorgia</CMPN>
+                    </CMP>
+                    <RSR hint="Referente scientifico">Panzani, Laura</RSR>
+                    <FUR hint="Funzionario responsabile">Majoli, Luca</FUR>
+                </CM>
+            </A>
+            <harvesting>
+                <idProgetto>ICCD1064593</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

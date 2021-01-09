@@ -46,15 +46,23 @@
 		</xsl:choose>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:choose>
-				<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
-					<xsl:value-of select="record/metadata/schede/*/AC/ACC/ACCC" />
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="record/metadata/schede/*/AC/ACC" />
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:otherwise>
+			<xsl:variable name="accc-space" select="record/metadata/schede/*/AC/ACC/ACCC" />
+			<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
+			<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
+			<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC" />
+			<xsl:variable name="acc-nospace" select="translate($acc-space, ' ', '')" />
+			<xsl:variable name="acc" select="translate($acc-nospace, '/', '_')" />
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
+						<xsl:value-of
+							select="$accc" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of
+							select="$acc" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:otherwise>
 	</xsl:choose>
 	</xsl:variable>
 	<!-- xsl:variable name="sheetType" select="record/metadata/schede/*/CD/TSK/text()"></xsl:variable -->
@@ -62,8 +70,9 @@
 		select="record/metadata/schede/*/@version" />
 	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)" />
 	<xsl:variable name="cp-name" select="''" />
-	<xsl:variable name="NS"
-		select="'https://w3id.org/arco/resource/'" />
+	<!-- xsl:variable name="NS"
+		select="'https://w3id.org/arco/resource/'" /-->
+	<xsl:param name="NS" />
 
 	<!-- xsl:import href="./prova.xsl" / -->
 
@@ -81,28 +90,22 @@
 		                	</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of
-								select="'https://w3id.org/arco/ontology/location/CadastralIdentity'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/location/CadastralIdentity'" />
 	                    </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of
-							select="concat('Identità catastale ', position(), ' del bene: ', $itemURI)" />
+						<xsl:value-of select="concat('Identità catastale ', position(), ' del bene: ', $itemURI)" />
 					</rdfs:label>
 					<rdfs:label xml:lang="en">
-						<xsl:value-of
-							select="concat('Cadastral identity ', position(), ' of cultural property: ', $itemURI)" />
+						<xsl:value-of select="concat('Cadastral identity ', position(), ' of cultural property: ', $itemURI)" />
 					</rdfs:label>
 					<l0:name xml:lang="it">
-						<xsl:value-of
-							select="concat('Identità catastale ', position(), ' del bene: ', $itemURI)" />
+						<xsl:value-of select="concat('Identità catastale ', position(), ' del bene: ', $itemURI)" />
 					</l0:name>
 					<l0:name xml:lang="en">
-						<xsl:value-of
-							select="concat('Cadastral identity ', position(), ' of cultural property: ', $itemURI)" />
+						<xsl:value-of select="concat('Cadastral identity ', position(), ' of cultural property: ', $itemURI)" />
 					</l0:name>
-					<xsl:if
-						test="./LGCC and (not(starts-with(lower-case(normalize-space(./LGCC)), 'nr')) and not(starts-with(lower-case(normalize-space(./LGCC)), 'n.r')))">
+					<xsl:if test="./LGCC and (not(starts-with(lower-case(normalize-space(./LGCC)), 'nr')) and not(starts-with(lower-case(normalize-space(./LGCC)), 'n.r')))">
 						<arco-location:hasCadastralCity>
 							<xsl:attribute name="rdf:resource">
 									<xsl:value-of

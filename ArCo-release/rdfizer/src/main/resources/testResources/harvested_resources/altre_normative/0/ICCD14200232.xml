@@ -1,0 +1,1655 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14200232@</identifier>
+        <datestamp>2020-11-06T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MODI version="4.00_ICCD0">
+                <CD hint="IDENTIFICAZIONE">
+                    <TSK hint="Tipo modulo">MODI</TSK>
+                    <CDR hint="Codice Regione">03</CDR>
+                    <CDM hint="Codice Modulo">ICCD_MODI_5263926237651</CDM>
+                    <ESC hint="Ente schedatore">S287</ESC>
+                    <ECP hint="Ente competente per tutela">S287</ECP>
+                </CD>
+                <OG hint="ENTITA'">
+                    <AMB hint="Ambito di tutela MiBACT">architettonico e paesaggistico</AMB>
+                    <AMA hint="Ambito di applicazione">censimento parchi e giardini</AMA>
+                    <CTG hint="Categoria">ARCHITETTURA DEI PARCHI E GIARDINI</CTG>
+                    <OGD hint="Definizione">viale</OGD>
+                    <OGT hint="Tipologia">commemorativo/ ai caduti della prima e seconda guerra mondiale</OGT>
+                    <OGN hint="Denominazione">Viale della Rimembranza di Cerro Maggiore</OGN>
+                </OG>
+                <LC hint="LOCALIZZAZIONE">
+                    <LCS hint="Stato">ITALIA</LCS>
+                    <LCR hint="Regione">Lombardia</LCR>
+                    <LCP hint="Provincia">MI</LCP>
+                    <LCC hint="Comune">Cerro Maggiore</LCC>
+                    <LCL hint="Località">CERRO MAGGIORE</LCL>
+                    <LCI hint="Indirizzo">viale delle Rimembranze</LCI>
+                    <LCV hint="Altri percorsi/specifiche">Viale carrabile situato davanti al cimitero, come proseguimento di via Monte Grappa</LCV>
+                    <ACB hint="ACCESSIBILITA'">
+                        <ACBA hint="Accessibilità">si</ACBA>
+                    </ACB>
+                </LC>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">viale</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il comune di Cerro Maggiore come molti altri comuni d’Italia, agli inizi degli anni venti intitolarono un viale della Rimembranza per ricordare i propri caduti, vista la circolare del Ministero della Pubblica Istruzione per l’istituzione di Viali e Parchi della Rimembranza e le circolari del 17-12-1922 e 25-1-1923 dell’Ispettorato Scolastico di Milano per la costruzione di un Comitato locale “per l’attuazione della nobilissima iniziativa di onorare i caduti in battaglia e dispersi dopo i fatti d’arme durante la grande guerra, piantando un albero per ogni caduto lungo una strada o parco del paese”</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">prima metà</DTG>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMR hint="Responsabile dei contenuti">Bentivoglio Ravasio, Raffaella</CMR>
+                    <CMC hint="Responsabile ricerca e redazione">Minnucci, Ramona</CMC>
+                    <CMA hint="Anno di redazione">2019</CMA>
+                    <CMM hint="Motivo della redazione del MODI">Censimento all’interno del Progetto “Narrando i territori della Grande Guerra attraverso i monumenti, le lapidi, i parchi e i viali della rimembranza”</CMM>
+                    <IMD hint="MIGRAZIONE DATI NELLE SCHEDE DI CATALOGO">
+                        <IMDT hint="Tipo scheda">PG</IMDT>
+                    </IMD>
+                    <ADP hint="Profilo di accesso">1</ADP>
+                </CM>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="Descrizione">Il viale delle Rimembranze, situato davanti al cimitero, carrabile, pavimentato con porfido, con doppio filare di giovani cipressi. Quest’ultimi lo separano da due ulteriori viali che lo affiancano, anch’essi pavimentati in porfico. Il viale viene tagliato a circa metà altezza da un ulteriore strada che conduce da un lato al parcheggio, dall’altro in un area verde, via Berchet. La seconda porzione centrale del viale, è caratterizzata dalla presenza di n.143 targhette commemorative inserite all’interno del cordolo che delimitata il viale. All’interno del cimitero, sulla sx, è presente una cappella con all’interno lapide commemorative ai caduti delle due guerre.Un ulteriore elemento commemorativo, è inserito in piazza Concordia, all’ingresso del centro di Cerro Maggiore, in un'area pedonale pavimentata e contornata da un giardino piantumato con Cedri di grosse dimensioni, di fronte alle storiche scuole dell'Ente Morale Asilo Infantile, si tratta di un monumento scultoreo</DES>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Targhe in ottone</AIDI>
+                        <AIDD hint="Descrizione">La seconda porzione centrale del viale, è caratterizzata dalla presenza di n. 143 targhette commemorative in ottone, di cui n.72 sul lato sx (n.4 mancanti) n.71 sul lato dx (n.9 mancanti), inserite all’interno del cordolo in granito che delimitata il viale, con il nome del caduto e la data della prima o della seconda guerra mondiale</AIDD>
+                    </AID>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Cappella</AIDI>
+                        <AIDD hint="Descrizione">La cappella realizzata in mattoni intonacati, aperta su tre lati con grande arco a tutto sesto sorretto da colonne doriche in marmo. Copertura in lamiera con piccola scultura in pietra raffigurante una fiamma posta sulla sommità. All'interno, sulla parete centrale, e sulle due laterali sono fissate n.7 targhe commemorative in pietra, con i nomi dei caduti delle due guerre mondiali, di cui quelle sulla parete centrale sormontate da un bassorilievo raffigurante due frecce intrecciate con al centro lo stemma del comune con corona d’alloro, mentre quelle laterali da due corone d’alloro in ottone. Sull’ultima lastra della parete dx, è inserita una targa in ottone con bassorilievo raffigurante una scena di battaglia</AIDD>
+                    </AID>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Monumento scultoreo</AIDI>
+                        <AIDD hint="Descrizione">Il monumento è situato in piazza Concordia, si tratta di una scultura in bronzo che rappresenta la vittoria alata che porge una corona d'alloro e siede su un cannone su cui è sdraiato un soldato morente a torso nudo. L'opera poggia su un alto basamento di marmo a forma di parallelepipedo sul quale sono incisi la dedica (lato anteriore) e i nomi dei caduti, rialzato rispetto al suolo e raggiungibile mediante una serie di gradini. Ai quattro angoli sono posti degli arbusti bassi e sul fianco vi è l'asta con la bandiera d'Italia</AIDD>
+                    </AID>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/ALBERTI GIUSEPPE/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/ALBERTI LUIGI CARLO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/ALBERTI PIETRO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/AGRATI EMILIO/Caduti 1940-1945/GRANDE INVALIDO DI GUERRA</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/BELUZZI ANGELO/Caduti 1940-1945/CAPORALE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/BERTANI DANIELE/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/CASTALDI ALVARO/Caduti 1940-1945/CAPORALE MAGGIORE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/CERIANI ATTILIO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COLOMBO AGOSTINO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COLOMBO PIETRO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COZZI LUIGI/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COZZI NATALE/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COZZI SANTINO/Caduti 1940-1945/CAPORALE MAGGIORE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/CRESPI FAUSTINO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/CRIBIU’ AMBROGIO/Caduti 1940-1945/MARINAIO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/CROCI PIETRO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/DE MAESTRI GIOVANNI/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/DELLA VEDOVA ANTONIO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/FERRARIO ANGELO/Caduti 1940-1945/SOTTOTENENTE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/GADDA ANTONIO/Caduti 1940-1945/CAPORALE MAGGIORE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/GARBAGNATI MARIO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/GIANAZZA CINZIO/Caduti 1940-1945/SERGENTE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/GIANAZZA FORTUNATO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/GIANAZZA GIUSEPPE/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/GIANAZZA LODOVICO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/GUERZONI ERVEN/Caduti 1940-1945/MARINAIO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LAVAZZA AMBROGIO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LAVAZZA FRANCESCO/Caduti 1940-1945/CAPORALE MAGGIORE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LAVAZZA LUIGI/Caduti 1940-1945/SERGENTE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LAZZATI LUIGI/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LAZZATI LUIGI/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LECCHI GIUSEPPE/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LEGNATI PIETRO/Caduti 1940-1945/MARINAIO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/MARINI FAUSTO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/MATTAVELLI GINO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/MORELLI PAOLO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PALEANDRI CLAUDIO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/ALEARI GIUSEPPE/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PEDRONI GIUSEPPE/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/MARIANI ANGELO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PISONI PIETRO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PORTA CARLO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PREVETTONI GUIDO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PROVASI CARLO/Caduti 1940-1945/CAPORALE MAGGIORE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PROVERBIO FELICE/Caduti 1940-1945/SERGENTE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PROVERBIO GIUSEPPE/Caduti 1940-1945/CAPORALE MAGGIORE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PROVERBIO LUIGI/Caduti 1940-1945/SERGENTE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PROVERBIO MARTINO/Caduti 1940-1945/MARINAIO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/RABAIOLI ANGELO/Caduti 1940-1945/CAPORALE MAGGIORE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/FARIOLI AGOSTINO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/RE VIRGINIO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/ROTONDI CAMILLO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/ROTTONDI LUIGI/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/RUSCONI ANGELO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/SCHIAVINI ANTONIO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/SCIOCCO GIOVANNI/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/SCIUCCATI FELICE/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/SEREGNI GIUSEPPE/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/TESTA AUGUSTO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/TURCONI GINO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/TURRI GIUSEPPE/Caduti 1940-1945/CAPORALE MAGGIORE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/VAGHI EMILIO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/AGRATI AGOSTINO/Caduti 1940-1945/CAPORALE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/BANFI ERMENEGILDO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/BORGHI NATALE/Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/BORSANI LUIGI/Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LAZZATI ENRICO/Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato sx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COLOMBO ANTONIO/Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PATRUNO PASQUALE/1945/GUERRA DI LIBERAZIONE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/CERANI LUIGI/1945/GUERRA DI LIBERAZIONE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LAVAZZA FAUSTINO/1945/GUERRA DI LIBERAZIONE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PESSINA NATALE/1945/GUERRA DI LIBERAZIONE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COLOMBO ANGELO/1945/GUERRA DI LIBERAZIONE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/MORELLI GIOVANNI/Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PATTANI ENRICO/1945/GUERRA DI LIBERAZIONE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/UBOLDI BRUNO/1940-1945/DEPORTATO POLITICO MAUTHAUSEN</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/SCIUCCIATI ANGELO/1940-1945/DEPORTATO POLITICO MAUTHAUSEN</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/GIANAZZA LUIGI/1940-1945/DEPORTATO POLITICO MAUTHAUSEN</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COZZI PIETRO/Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/FRONTINI RAFFAELE/Guerra Libica/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COLOMBO ADELCHI/1940-1945/GRANDE INVALIDO DI GUERRA</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COLOMBO TARCISIO/1915-1918/GRANDE INVALIDO DI GUERRA</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COLLETTO UMBERTO/Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/FERRARIO NATALE/1915-1918/GRANDE INVALIDO DI GUERRA</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/MAZZA ENRICO/1915-1918/GRANDE INVALIDO DI GUERRA</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PROVERBIO FELICE/Guerra Africa Orientale/CAPORALE MAGGIORE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/AGRATI VINCENZO/ Guerra Africa Orientale/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/GIANAZZA FORTUNATO/ Guerra Libica/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/ALLIERI MARIO/Caduti 1940-1945/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COZZI ENRICO/ Guerra Libica/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/ZAVATI MICHELE/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/TONELLI CARLO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/SIGNO’ NATALE/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/SCIUCCATI GIOVANNI/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/SCIOCCO GIOVANNI/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/ROVEDA GIUSEPPE/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/RIVA ANGELO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/RIBOLDI ANGELO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/RE CLEMENTE/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/RAMPOLDI AMEDEO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PROVERBIO GIUSEPPE/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PROVERBIO GASPARE/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PRAVETTONI PIETRO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PRAVETTONI GIUSEPPE/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/DELLA FOGLIA LUIGI/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PESSINA FRANCESCO/ Caduti 1915-1918/CAPORALE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PEDROTTI PIETRO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PALEARI LUIGI/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PALEARI GIUSEPPE/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PALEARI GIOVANNI/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/PALEARI CARLO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/BERTANI LUIGI/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/MORELLI AGOSTINO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/MAZZI GIUSEPPE/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/MARIANI PIETRO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/MARELLI LUIGI/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LAVAZZA LUIGI/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LAZZATI CARLO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LAZZATI AQUILINO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LAZZATI ANOTNIO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/DELL’ACQUA BATTISTA/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/LAVAZZA AMBROGIO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/DELL’ACQUA GIUSEPPE/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/DELLA VECCHIA ACQUILINO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/DELLA VEDOVA ANGELO ANTONIO/ Caduti 1915-1918/GRANDE INVALIDO DI GUERRA</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/DELL’ACQUA ALBERTO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/DELL’ACQUA CARLO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/DELLA FOGLIA GUGLIELMO/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COZZI CESARE/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Lato dx viale</ISER>
+                        <ISEP hint="Posizione">Interno del cordolo in granito</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Comune, denominazione caduto,data, grado</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in ottone</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">Comune di Cerro Maggiore/COLOMBO LUIGI/ Caduti 1915-1918/SOLDATO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella-I lapide</ISER>
+                        <ISEP hint="Posizione">parete sx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei dispersi e dei deportati politici del 1940</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con scritta incise di color nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1940/DISPERSI/SOLD. GARBAGNATI MARIO/SERG. GIANAZZA CINZIO/SOLD. GIANAZZA FORTUNATO/” GIANAZZA LODOVICO/MARIN. GUERZONI ERVEN/SERG. LAVAZZA LUIGI/SOLD. LAZZATI LUIGI/” LAZZATI LUIGI/” MARINI FAUSTO/ “ MORELLI PAOLO/ “ PALEARI GIUSEPPE/ “ PEDRONI GIUSEPPE/ “ PORTA CARLO/ “ BERTANI DANIELE///DEPORTATI POLITICI-MAUTHAUSEN-/GIANAZZA LUIGI/SCIUCCATI ANGELO/UBOLDI BRUNO/GUERRA DI LIBERAZIONE/PATTANI ENRICO/SCIUCCATI PIERINO/COLOMBO ANGELO/PESSINA NATALE/LAVAZZA FAUSTINO/CERANI LUIGI/PATRUNO PASQUALE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella-II lapide</ISER>
+                        <ISEP hint="Posizione">parete sx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei dispersi, dei caduti e dei grandi invalidi del 1945</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con scritta incise di color nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1945/DISPERSI/SOLD. PREVETTONI GUIDO/CAP. M. PROVASI CARLO/” PROVERBIO GIUSEPPE/SERG. PROVERBIO LUIGI/MARIN. PROVERBIO MARTINO/ CAP. M. RABAIOLI ANGELO/SOLD. RE VIRGINIO/” ROTONDI CAMILLO/” RUSCONI ANGELO/” SCIOCCO GIOVANNI/” SCIUCCATI FELICE/” SEREGNI GIUSEPPE/CAP.LE TURRI GIUSEPPE///CADUTI/CAP. M. CASTALDI ALVARO/SERG. PROVERBIO FELICE/ALBETI LUIGI CARLO/ GRANDI INVALIDI DI GUERRA/ COLOMBO ADELCHI/ROSSETTI VIRGINIO/AGRATI EMILIO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella-I lapide</ISER>
+                        <ISEP hint="Posizione">parete frontale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti e dei dispersi nella guerra del 1940-1945</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con scritta incise di color nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1940-1945/SOLD. ALBERTI GIUSEPPE/” CERIANI ATTILIO/ “ COLOMBO AGOSTINO/ “ COLOMBO PIETRO/ “ COZZI LUIGI/ CAP. M. COZZI SANTINO/SOLD. CROCI PIETRO/ “ DE MAESTRI GIOVANNI/ S. TEN. FERRARIO ANGELO/ SOLD. GIANAZZA GIUSEPPE/ “ LAVAZZA AMBROGIO/ CAP. LAVAZZA FRANCESCO/ SOLD. LECCHI GIUSEPPE/ MARIN. LEGNANI PIETRO/ SOLD. MATTAVELLI GINO/ “ PALEARI CLAUDIO/ “ PISONI PIETRO/ CAP. LE RAIMONDI CANDIDO/ CAP. M. RAVELLI EMILIO/SOLD. ROTONDI LUIGI/” SCHIAVINI ANTONIO/ “ TESTA AUGUSTO/ “ TURCONI GINO/ “ VAGHI EMILIO//DISPERSI/SOLD. ALBERTI PIETRO/” ALLIERI MARIO/ CAP.LE BELUZZI ANGELO/ SOLD. COZZI NATALE/ MARIN. CRIBU AMBROGIO/ SOLD. CRESPI FAUSTINO/ “ DELLA VEDOVA ANTONIO/ CAP. M. GADDA ANTONIO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella-II lapide</ISER>
+                        <ISEP hint="Posizione">parete frontale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con scritta incise di color nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">FERRARIO NATALE 1896-1952/SCHIAVINI ANTONIO 1908-1941/DE MAESTRI GIOVANNI 1911-1940/CAP. LE RAIMONDI FELICE CANDIDO 1916-1943 IN TUNISIA/ SOLD. ROTONDI LUIGI 1915-1941 FRONTE GRECO/ CAP. M. LAVAZZA FRANCESCO 1912-1941 IN GRECIA/ CAP. M. RAVELLI EMILIO 1916-1942 IN GRECIA/ SOLD. PISONI LUCIANO 1913-1941 AD ATENE/ SOLD. GIANAZZA GIUSEPPE 1914-1941 A ETOLIRON/ SOLD. PALEARI CLAUDIO 1919-1941 A GIANNINA</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella-III lapide</ISER>
+                        <ISEP hint="Posizione">parete frontale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1915-1918</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con scritta incise di color nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1915-1918/CAP. LE AGRATI AGOSTINO/SOLD. BANFI ERMENEGILDO/” BERTANI LUIGI/ “ BORGHI NATALE/ “ BORSANI LUIGI/ S. TEN. CARUGATI ABBONDIO/ SOLD. COLLETTO UMBERTO/ “ COLOMBO ANTONIO/ “ COLOMBO GIUSEPPE/ “ COLOMBO LUIGI/ “ COZZI CESARE/ “ COZZI PIETRO/ “ DELL’ACQUA ALBERTO/ “ DELL’ACQUA BATTISTA/ “ DELL’ACQUA CARLO/ “ DELL’ACQUAGIUSEPPE/ “ DELL’ACQUA GIUSEPPE/ “ DELLA FOGLIA LUIGI/ “ DELLA VECCHIA ADUILINO/ “ FARIOLI AGOSTINO/ CAP.LE FORLONI GIOVANNI/ SOLD. LAVAZZA GIUSEPPE/ “ LAVAZZA LUIGI/ “ LAVAZZA AMBROGIO/ “ LAZZATI ANTONIO/ “ LAZZATI AQUILINO/ “ LAZZATI CARLO/ “ LAZZATI ENRICO/ “ MARIANI ANGELO/ “ MARIANI PIETRO/ “ MARINI GIOVANNI/ “ MARTIGNONI GIOVANNI</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella-I lapide</ISER>
+                        <ISEP hint="Posizione">parete dx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1915 e della guerra libica e dell’africa orientale</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con scritta incise di color nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1915/SOLD. MAZZA GIUSEPPE/” MORELLI AGOSTINO/”MARELLI LUIGI/”PALEARI CARLO/”PALEARI GIOVANNI/”PALEARI GIUSEPPE/”PALEARI LUIGI/”PEDROTTI PIETRO/”CAP.LE PESSINA FRANCESCO/ SOLD. PRAVETTONI CARLO/”PRAVETTONI GIUSEPPE/”PRAVETTONI PIETRO///GUERRA LIBICA/COZZI ENRICO/GIANAZZA FORTUNATO/FRONTINI RAFFAELE///GUERRA AFRICA ORIENTALE/CAP. M. PROVERBIO FELICE/AGRATI VINCENZO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella-II lapide</ISER>
+                        <ISEP hint="Posizione">parete dx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1918 e dei grandi invalidi di guerra</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con scritta incise di color nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">1918/SOLD. PROVERBIO GASPARE/” PROVERBIO GIUSEPPE/”RAMPOLDI AMEDEO/”RE CLEMENTE/”RIBOLDI ANGELO/”RIVA ANGELO/”ROVEDA GIUSEPPE/”SCIOCCO GIOVANNI/”SCIOCCATI GIOVANNI/”SIGNO’ NATALE/”TONELLI CARLO/” ZAVATI MICHELE/”MORELLI GIOVANNI///GRANDI INVALIDI DI GUERRA/MAZZA ENRICO/FERRARIO NATALE/DELLA VEDOVA ANGELO ANTONIO/COLOMBO TARCISIO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento scultore-lapide</ISER>
+                        <ISEP hint="Posizione">fronte</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Frase commemorativa</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con scritta incise di color nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CERRO MAGGIORE AI SUOI CADUTI PER LA PATRIA MCMXV MCMXVIII</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento scultore-lapide</ISER>
+                        <ISEP hint="Posizione">fronte dx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1915-1918</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con scritta incise di color nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">MARIANI PIETRO soldato/ MARINI GIOVANNI “/ MARTIGNONI GIOVANNI “/ MAZZA GIUSEPPE “/MORELLI AGOSTINO “ /MARELLI LUIGI sergente/PALEARI CARLO soldato/PALEARI GIOVANNI “/PALEARI GIUSEPPE “/PALEARI LUIGI “/PEDROTTI PIETRO “/ PESSINA FRANCESCO caporale/PRAVETTONI CARLO soldato/PRAVETTONI GIUSEPPE “/PRAVETTONI PIETRO “/PROVERBIO GASPARE “/PROVERBIO GIUSEPPE “/RAMPOLDI AMEDEO “/RE CLEMENTE “/RIBOLDI ANGELO “/SCIOCCO GIOVANNI “/SCIUCCATI GIOVANNI “/SIGNO NATALE “/TONELLI CARLO “/ZAVATI MICHELE “</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento scultore-Lapide</ISER>
+                        <ISEP hint="Posizione">retro</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra in Libia 1911-1912, della guerra orientale 1935, della guerra del 1940-1945</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con scritta incise di color nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">GUERRA LIBICA 1911-1912/ SOLD. COZZI ENRICO/ SOLD. FRONTINI RAFFAELE /SOLD. GIANAZZA FORTUNATO///GUERRA AFRICA ORIENTALE 1935/SOLD. AGRATI VINCENZO 1908 / SOLD. PROVERBIO FELICE 1911///SOLD. ALBERTI GIUSEPPE 1903/ SOLD. ALBERTI PIETRO DISPERSO 1922/ SOLD. ALBERI MARIO DISPERSO 1918/SOLD. BELLUZZI ANGELO DISPERSO 1920/SOLD. CERIANI ATTILIO 1910/ SOLD. COLOMBO AGOSTINO 1920/ SOLD. COLOMBO PIETRO 1912/ SOLD. COZZI LUIGI 1921/ SOLD. COZZI NATALE DISPERSO 1912/CAP. M. COZZI SANTINO 1914/SOLD. CROCI PIETRO 1918/ SOLD. DELLAVEDOVA ANTONIO DISPERSO 1921/SOLD. DE MAESTRI GIOVANNI 1911/ S. TEN. FERRARIO ANGELO 1915/ SOLD. GADDA ANTONIO DISPERSO 1911/ SOLD. BARBAGLIATI MARIO DISPERSO 1915/ SOLD. GIANNAZZA FORTUNATO DISPERSO 1912/ SOLD. GIANAZZA GIUSEPPE 1914/SOLD. GIANAZZA LODOVICO DISPERSO 1917/ SOLD. GUERZONI ERVEN DISPERSO 1921/ SOLD. LAVAZZA AMBROGIO 1914/ CAP. LAVAZZA FRANCESCO 1912/ SERG. LAVAZZA LUIGI DISPERSO 1915/SOLD. LAVAZZA LUIGI DISPERSO 1915/ SOLD. LAZZATI LUIGI DISPERSO /SOLD. LECCHI GIUSEPPE 1922/ MARIN. LEGNANI PIETRO 1922/ /SOLD. MARINI FAUSTO/SOLD. MATTAVELLI GINO 1921/ SOLD. PALEARI CLAUDIO 1919/ SOLD. PALEANDRI GIUSEPPE DISPERSO 1919/ SOLD.PEDRONI GIUSEPPE /SOLD. PISONI PIETRO/ CAP. LE RAIMONDI CANDIDO/ CAP. M. RAVELLI EMILIO/SOLD. ROTONDI LUIGI/ SOLD. SCHIAVINI ANTONIO/ SOLD. TESTA AUGUSTO/ SOLD. TURCONI GINO/ SOLD. VAGHI EMILIO (alcuni dati non sono più leggibili)</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento scultore-lapide</ISER>
+                        <ISEP hint="Posizione">retro</ISEP>
+                        <ISEZ hint="Descrizione">elenco dei caduti della guerra del 1915-1918</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra con scritta incise di color nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">AGRATI AGOSTINO GIOVANNI soldato/ BANFI ERMENEGILDO soldato/BERTANI LUIGI “/ BORGHI NATALE “/ BORSANI LUIGI ROBERTO “/ CARUGATI ABBONDIO sottoten./ COLLETTO UMBERTO soldato/ COLOMBO ANTONIO “/ COLOMBO GIUSEPPE “/ COLOMBO LUIGI “/ COZZI CESARE “/ COZZI PIETRO “/ DELL’ACQUA ALBERTO “/ DELL’ACQUA BATTISTA “/ DELL’ACQUA CARLO “/ DELL’ACQUA GIUSEPPE “/ DELL’ACQUA GIUSEPPE “/ DELLA FOGLIA LUIGI “/ DELLA VECCHIA ADUILINO “/ FARIOLI AGOSTINO “/ FORLONI GIOVANNI caporale/ LAVAZZA GIUSEPPE LUIGI soldato/ LAVAZZA LUIGI CARLO “/ LAVAZZA AMBROGIO “/ LAZZATI ANTONIO “/ LAZZATI AQUILINO”/ LAZZATI CARLO “/ LAZZATI ENRICO “/ MARIANI ANGELO “</ISEI>
+                    </ISE>
+                </DA>
+                <UT hint="UTILIZZAZIONI">
+                    <UTU hint="DATI DI USO">
+                        <UTUR hint="Riferimento alla parte">viale</UTUR>
+                        <UTUT hint="Tipo">attuale</UTUT>
+                        <UTUF hint="Funzione">viale carrabile</UTUF>
+                    </UTU>
+                    <CNU hint="CONDIZIONE D'USO">
+                        <CNUV hint="Visitabile">aperto al pubblico</CNUV>
+                        <CNUS hint="Specifiche">uso saltuario</CNUS>
+                    </CNU>
+                </UT>
+                <CO hint="CONSERVAZIONE E INTERVENTI">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">viale</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">targhette</STCP>
+                        <STCC hint="Stato di conservazione">cattivo</STCC>
+                        <STCS hint="Specifiche">incisioni non leggibili, Problemi di umidità, atti vandalici</STCS>
+                        <STCN hint="Note">Mancano n.4 targhette sul lato sx e n.9 sul lato dx</STCN>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">cappella</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                        <STCS hint="Specifiche">presenza di depositi superficiali</STCS>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">monumento</STCP>
+                        <STCC hint="Stato di conservazione">cattivo</STCC>
+                        <STCS hint="Specifiche">Problemi di umidità, presenza di depositi superficiali, mancanza di finitura superficiale, incisioni non leggibili</STCS>
+                    </STC>
+                </CO>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione lineare</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.948157</GECX>
+                        <GECY hint="Coordinata y">45.595655</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.946936</GECX>
+                        <GECY hint="Coordinata y">45.596602</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2019</GPBT>
+                        <GPBU hint="Indirizzo web (URL)">(4341798) www.google.it/maps</GPBU>
+                    </GPB>
+                </GE>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTS hint="DATI CATASTALI">
+                        <CTSC hint="Comune">Cerro Maggiore</CTSC>
+                        <CTST hint="Tipo catasto">catasto misto</CTST>
+                        <CTSF hint="Foglio/data">4/2019</CTSF>
+                        <CTSN hint="Particelle">s.n.m</CTSN>
+                        <CTSP hint="Proprietari">Comune di Cerro Maggiore</CTSP>
+                    </CTS>
+                </CS>
+                <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+                        <CDGS hint="Indicazione specifica">Comune di Cerro Maggiore</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Cerro Maggiore_1</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale in asse con l'ingresso del cimitero</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Cerro Maggiore_1.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Cerro Maggiore_2</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta di una delle targhette poste lungo il muretto che delimita la seconda parte del viale</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Cerro Maggiore_2.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Cerro Maggiore_3</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta della cappella all'interno del cimitero al cui interno sono poste alcune lapidi commemorative</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Cerro Maggiore_3.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Cerro Maggiore_4</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del monumento ai caduti posto in Piazza Concordia</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Cerro Maggiore_4.JPG</FTAK>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Cerro Maggiore_C1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F.4, s.n.m</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Cerro Maggiore_C1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Cerro Maggiore_A1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Cerro Maggiore_A1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Cerro Maggiore_C2</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F. 5, A</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Cerro Maggiore_C2.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Cerro Maggiore_A2</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Cerro Maggiore_A2.pdf</DRAK>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Cerro Maggiore_5</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa del viale</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Cerro Maggiore_5.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Cerro Maggiore_6</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa delle targhette del lato sx</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Cerro Maggiore_6.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Cerro Maggiore_7</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa delle targhette del lato dx</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Cerro Maggiore_7.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Cerro Maggiore_8</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa della cappella all'interno del cimitero con lapidi commemorative</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Cerro Maggiore_8.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Cerro Maggiore_9</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa del monumento ai caduti</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Cerro Maggiore_9.pdf</FNTK>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">CAZZANI 2012</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Cazzani Alberta, I monumenti e i giardini celebrativi della grande guerra in Lombardia. Il censimento per le province di Brescia, Milano e Monza Brianza,Udine 2012</BIBM>
+                    </BIB>
+                </DO>
+            </MODI>
+            <harvesting>
+                <geocoding>
+                    <x>8.947582</x>
+                    <y>45.596161</y>
+                </geocoding>
+                <idProgetto>ICCD1063423</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

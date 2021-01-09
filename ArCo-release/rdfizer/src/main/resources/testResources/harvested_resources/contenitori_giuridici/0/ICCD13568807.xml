@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13568807@</identifier>
+        <datestamp>2017-12-19T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CG version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CG</TSK>
+                    <LIR hint="Livello">I</LIR>
+                    <CCG hint="Codice contenitore giuridico">ICCD_CG_0818790768941</CCG>
+                    <CCF hint="Codice contenitore fisico">ICCD_CF_9109150668941</CCF>
+                    <ESC hint="Ente schedatore">S234</ESC>
+                </CD>
+                <CG hint="CONTENITORE GIURIDICO">
+                    <LUC hint="Luogo della cultura">si</LUC>
+                    <CGN hint="Denominazione raccolta">Museo dei Grandi Fiumi</CGN>
+                </CG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Veneto</PVCR>
+                        <PVCP hint="Provincia">RO</PVCP>
+                        <PVCC hint="Comune">Rovigo</PVCC>
+                    </PVC>
+                </LC>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2017</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">Baldo, Michele</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Vallicelli, Maria Cristina</FUR>
+                </CM>
+            </CG>
+            <harvesting>
+                <idProgetto>ICCD1038650</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

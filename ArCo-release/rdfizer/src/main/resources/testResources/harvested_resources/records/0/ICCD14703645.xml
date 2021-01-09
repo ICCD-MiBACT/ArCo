@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14703645@</identifier>
+        <datestamp>2020-11-09T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <OA version="3.00">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo Scheda">OA</TSK>
+                    <LIR hint="Livello ricerca">I</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">16</NCTR>
+                        <NCTN hint="Numero catalogo generale">00168546</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S114</ESC>
+                    <ECP hint="Ente competente">S114</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">lapide</OGTD>
+                    </OGT>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+                        <PVCS hint="Stato">Italia</PVCS>
+                        <PVCR hint="Regione">Puglia</PVCR>
+                        <PVCP hint="Provincia">BA</PVCP>
+                        <PVCC hint="Comune">Modugno</PVCC>
+                    </PVC>
+                    <LDC hint="COLLOCAZIONE SPECIFICA">
+                        <LDCT hint="Tipologia">chiesa</LDCT>
+                        <LDCQ hint="Qualificazione">conventuale (ex)</LDCQ>
+                        <LDCN hint="Denominazione attuale">Chiesa di S. Giuseppe, gia' S. Maria della Purita'</LDCN>
+                        <LDCS hint="Specifiche">controfacciata</LDCS>
+                    </LDC>
+                </LC>
+                <DT hint="CRONOLOGIA">
+                    <DTZ hint="CRONOLOGIA GENERICA">
+                        <DTZG hint="Secolo">sec. XVIII</DTZG>
+                    </DTZ>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1765</DTSI>
+                        <DTSF hint="A">1765</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione cronologia">data</DTM>
+                </DT>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <ATB hint="AMBITO CULTURALE">
+                        <ATBD hint="Denominazione">ambito pugliese</ATBD>
+                        <ATBM hint="Motivazione dell'attribuzione">analisi stilistica</ATBM>
+                    </ATB>
+                </AU>
+                <MT hint="DATI TECNICI">
+                    <MTC hint="Materia e tecnica">marmo bianco/ incisione</MTC>
+                    <MIS hint="MISURE">
+                        <MISU hint="Unità">cm</MISU>
+                        <MISA hint="Altezza">80</MISA>
+                        <MISL hint="Larghezza">126</MISL>
+                    </MIS>
+                </MT>
+                <CO hint="CONSERVAZIONE">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCC hint="Stato di conservazione">discreto</STCC>
+                    </STC>
+                </CO>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="DESCRIZIONE">
+                        <DESO hint="Indicazioni sull'oggetto">Lapide</DESO>
+                    </DES>
+                    <ISR hint="ISCRIZIONI">
+                        <ISRC hint="Classe di appartenenza">documentaria</ISRC>
+                        <ISRS hint="Tecnica di scrittura">a pennello/ a solchi</ISRS>
+                        <ISRT hint="Tipo di caratteri">lettere capitali</ISRT>
+                        <ISRP hint="Posizione">a tutto campo</ISRP>
+                        <ISRI hint="Trascrizione">D.O.M./ CLEMENTE XIII P.M. SEDENTE FERDINANDO/ IV REGNANTE ALOYSIO DE ALE XANDRO/ ARCHIEPATUM BAREN: MODERANTE/ PETRUS RUGGIERI EPIS: RUBEN: TEMPLU M/ HOC SUB TITULO S. PATRIARCHAE JOSEPH/ ET ALTARE MAJUS IN HONOREM B.M.V ./ ANGELORUM DICAVIT ET CONSECRAVIT/ DIE VII JUNY MDCCLXV</ISRI>
+                    </ISR>
+                </DA>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+                        <CDGS hint="Indicazione specifica">Ministero dell'Interno - Fondo Edifici di Culto</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia b/n</FTAP>
+                        <FTAN hint="Codice identificativo">SBAAAS BA 189993/D</FTAN>
+                    </FTA>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">1995</CMPD>
+                        <CMPN hint="Nome">Picca F</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Di Capua M.G</FUR>
+                    <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
+                        <RVMD hint="Data">1997</RVMD>
+                        <RVMN hint="Nome">Caliandro G</RVMN>
+                    </RVM>
+                    <AGG hint="AGGIORNAMENTO - REVISIONE">
+                        <AGGD hint="Data">2006</AGGD>
+                        <AGGN hint="Nome">ARTPAST/ Perchiazzi M</AGGN>
+                    </AGG>
+                </CM>
+            </OA>
+            <harvesting>
+                <geocoding>
+                    <x>16.784569</x>
+                    <y>41.083558</y>
+                </geocoding>
+                <idContenitoreFisico>ICCD12410454</idContenitoreFisico>
+                <idProgetto>ICCD1007384</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

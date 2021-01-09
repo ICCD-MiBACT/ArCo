@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11157508@</identifier>
+        <datestamp>2018-07-14T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <BIB version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">BIB</TSK>
+                    <ESC hint="Ente schedatore">BR</ESC>
+                    <ECP hint="Ente competente">S63</ECP>
+                </CD>
+                <BI hint="BIBLIOGRAFIA">
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBA hint="Autore">D'Andria R</BIBA>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBG hint="Titolo libro o rivista">Via Appia. Sulle ruine della magnificenza antica</BIBG>
+                        <BIBT hint="Titolo contributo">Brindisi. Le ceramiche romane della zona del porto</BIBT>
+                        <BIBL hint="Luogo di edizione">Venezia</BIBL>
+                        <BIBD hint="Anno di edizione">1997</BIBD>
+                        <BIBH hint="Sigla per citazione">00000536</BIBH>
+                    </BIB>
+                </BI>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2014</CMPD>
+                        <CMPN hint="Nome">Spedicati, Daniele</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Cocchiaro, Assunta</FUR>
+                </CM>
+            </BIB>
+        </schede>
+    </metadata>
+</record>

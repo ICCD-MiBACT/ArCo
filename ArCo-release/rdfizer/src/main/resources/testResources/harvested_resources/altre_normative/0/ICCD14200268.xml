@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14200268@</identifier>
+        <datestamp>2020-10-01T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MODI version="4.00_ICCD0">
+                <CD hint="IDENTIFICAZIONE">
+                    <TSK hint="Tipo modulo">MODI</TSK>
+                    <CDR hint="Codice Regione">03</CDR>
+                    <CDM hint="Codice Modulo">ICCD_MODI_4460628237651</CDM>
+                    <ESC hint="Ente schedatore">S287</ESC>
+                    <ECP hint="Ente competente per tutela">S287</ECP>
+                </CD>
+                <OG hint="ENTITA'">
+                    <AMB hint="Ambito di tutela MiBACT">architettonico e paesaggistico</AMB>
+                    <AMA hint="Ambito di applicazione">censimento parchi e giardini</AMA>
+                    <CTG hint="Categoria">ARCHITETTURA DEI PARCHI E GIARDINI</CTG>
+                    <OGD hint="Definizione">viale</OGD>
+                    <OGT hint="Tipologia">commemorativo/ ai caduti della prima e seconda guerra mondiale</OGT>
+                    <OGN hint="Denominazione">Viale della Rimembranza di Peschiera Borromeo</OGN>
+                </OG>
+                <LC hint="LOCALIZZAZIONE">
+                    <LCS hint="Stato">ITALIA</LCS>
+                    <LCR hint="Regione">Lombardia</LCR>
+                    <LCP hint="Provincia">MI</LCP>
+                    <LCC hint="Comune">Peschiera Borromeo</LCC>
+                    <LCL hint="Località">PESCHIERA BORROMEO</LCL>
+                    <LCI hint="Indirizzo">viale delle Rimembranze</LCI>
+                    <LCV hint="Altri percorsi/specifiche">Viale situato a Linate, tra via Baracca e via Archimede</LCV>
+                    <ACB hint="ACCESSIBILITA'">
+                        <ACBA hint="Accessibilità">si</ACBA>
+                    </ACB>
+                </LC>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">viale</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il comune di Peschiera Borromeo come molti altri comuni d’Italia, agli inizi degli anni venti intitolarono un viale della Rimembranza per ricordare i propri caduti, vista la circolare del Ministero della Pubblica Istruzione per l’istituzione di Viali e Parchi della Rimembranza e le circolari del 17-12-1922 e 25-1-1923 dell’Ispettorato Scolastico di Milano per la costruzione di un Comitato locale “per l’attuazione della nobilissima iniziativa di onorare i caduti in battaglia e dispersi dopo i fatti d’arme durante la grande guerra, piantando un albero per ogni caduto lungo una strada o parco del paese”</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">prima metà</DTG>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">monumento</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il monumento fu realizzato nel 1980</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">seconda metà</DTG>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1980/00/00</DTSI>
+                        <DTSF hint="A">1980/00/00</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMR hint="Responsabile dei contenuti">Bentivoglio Ravasio, Raffaella</CMR>
+                    <CMC hint="Responsabile ricerca e redazione">Minnucci, Ramona</CMC>
+                    <CMA hint="Anno di redazione">2019</CMA>
+                    <CMM hint="Motivo della redazione del MODI">Censimento all’interno del Progetto “Narrando i territori della Grande Guerra attraverso i monumenti, le lapidi, i parchi e i viali della rimembranza”</CMM>
+                    <IMD hint="MIGRAZIONE DATI NELLE SCHEDE DI CATALOGO">
+                        <IMDT hint="Tipo scheda">PG</IMDT>
+                    </IMD>
+                    <ADP hint="Profilo di accesso">1</ADP>
+                </CM>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="Descrizione">Il lungo viale delle Rimembranze, situato a Linate, tra via Baracca e via Archimede, delimitato solo in alcune porzioni da filari di tigli, mentre le restanti porzioni è delimitato da alcuni edifici come Cascina Castello (ex municipio del comune di Linate al Lambro, dell’Arch. A. Paleotti) e la chiesa di S. Ambrogio o dalle loro recinzioni. Si tratta di un viale carrabile, a doppia corsia, che all’incrocio con via G. Pascoli, delimita l’area dove è posto il monumento ai caduti. Quest’ultimo, inserito in un area a parco, con piante di tiglio, abeti, lecci, ecc…è costituito da una serie di massi di pietra rosa adagiati su un prato. Uno in particolare svetta in verticale e sul quale sono affisse le targhe, in bronzo ossidato, dei caduti della prima e seconda guerra mondiale. Le targhe presentano scritte in rilievo e decorazione con rametto di quercia e alloro sul fondo</DES>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Monumento</AIDI>
+                        <AIDD hint="Descrizione">Il monumento è costituito da una serie di massi di pietra rosa adagiati su un prato. Uno in particolare svetta in verticale e sul quale sono affisse le targhe, in bronzo ossidato, dei caduti della prima e seconda guerra mondiale. Le targhe presentano scritte in rilievo e decorazione con rametto di quercia e alloro sul fondo</AIDD>
+                    </AID>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento_I targa</ISER>
+                        <ISEP hint="Posizione">prima roccia di sx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">nominativo del caduto</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo ossidato con scritte in rilievo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CADUTI PER LA LIBERTA’ /GARIBOLDI ANTONIO/VIGENTINI ANSELMO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento_II targa</ISER>
+                        <ISEP hint="Posizione">seconda roccia, lato sx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1915-1918</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo ossidato con scritte in rilievo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CADUTI GUERRA 1915-1918//S.TEN. CORONELLI EMILIO/CAP. BADAINI MARCELLO/” MAZZUCCHI GIUSEPPE/ SOLD. ABBA’ SPIRITO/ “ AMBERI AMBROGIO/ “ BADAINI SANTO/ “ BALDINI MARIO/ “ BERETTA GAETANO/ “ BERTOLESI CARLO/ “ BONCIANA GIOVANNI/ “ BONVINI ATTILIO/ “ BORELLA AMBROGIO/ “ BOSIO ATTILIO/ “ BRAMBILLA LUIGI/ “ BRAMBILLA MARTINO/ “ BRUSCHI EMILIO/ “ CAFFERONI CARLO/ “ CAMPARI ATTILIO/ “ CASTELLAZZI GAETANO/ “ CONCA FRANCESCO/ “ DE CARLI SANTO/ “ DE FRANCESCHI ANGELO/ “ DE GRADI SANTO/ “ DEL MIGLIO FRANCESCO/ “ FERRARI GIUSEPPE/ “ FERRI GIOVANNI/ “ FIORENTINI FRANCESCO/ “ GALLI MARIO SANTO/ “ GALLIANI AUGUSTO/ “ GARAVELLI ALVISE/” GAZZOLA AMBROGIO/ “ GURANI LUIGI/ “ GRANATA SANTO/ “ GROSSI ARNALDO/ “ LARDELLI PIETRO/ “ LESTI LEONE/ “ LOCATELLI GIOVANNI// SOLD. LODIGIANI PIETRO/ “ LORE’ GIOVANNI/ “ MANDELLI GIULIO/ “ MANZONI FRANCESCO/ “ MASSARI FRANCESCO/ “ MELONI NINO/ “ MINERA GIUSEPPE/ “ NEGRINI LUIGI/ “ ORTORINI PIETRO/ “ PANZERI ANGELO/ “ PARAVELLI CESARE/ “ PISATI ANTONIO/ “ PIZZINI MARIO/ “ POGGI GUIDO/ “ POLLARI CARLO/ “ PREMOLI BASSANO / “ PUTELLI ANTONIO/ “ RE’ GIOVANNI/ “ REPOSSI ERNESTO/ “ RICEPUTI FILIPPO/ “ RONCHI GIUSEPPE/ “ ROZZA BASSANO/ “ SACCHI ERNESTO/ “ SAVIONI FERDINANDO/ “ SECCHI PIETRO/ “ SEGALINI ANGELO/ “ SFONDRINI GIUSEPPE/ “ SGONFIETTI ANGELO/ “ STELLA ANGELO/ “ TORTI FRANCESCO/ “ UBERTIO GIUSEPPE/ “ VALENTINI GIOVANNI/ “ VARESI BATTISTA/ “ VIGNATI LUIGI/ “ VIRTUANI FRANCESCO/ “ ZONCADA FRANCESCO/ “ ZAMIRATO DOMENICO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento_III targa</ISER>
+                        <ISEP hint="Posizione">seconda roccia, fronte</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1940-1945</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo ossidato con scritte in rilievo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CADUTI GUERRA 1940-1945// SOLD. AIROLA ARTURO/ “ BENZI LIBERO/BERGONTI ANGELO/ “ BERGONTI MARIO/ “ BERGONTI PIETRO/ “ BERNIERI LUIGI/ “ CAPPELLINI PIETRO/ “ CAPUZZONI ERCOLE/ “ CAPUZZONI PIETRO/ “ CARATI ANGELO/ “ CARELLA VITTORIO/ “ CATTANI ANGELO/ “ CERRI ERNESTO/ “ CERRI LUIGI/ “ CONTI ANTONIO/ “ CURTI FEDERICO/ “ FERLA ATTILIO/ “ FERRRAI ANTONIO/FERRARI GIUSEPPE/FERRARI LUIGI/ “ FUGAZZA LUIGI/ “ GALLONI GIUSEPPE/GALLONI PIETRO/ “ GANDINI VITTORIO/ “ GARIBOLDI ANTONIO/ “ GARLASCHE EMILIO/ “ CAROTTA ANGELO/ “ GRASSI GIUSEPPE/ “ GRIFFINI PIETRO/INVERNIZZI GIOVANNI//SOLD. LAZZARI GIUSEPPE/ “ LUCCA EMILIO/ “ MADINI ARSENIO/ “ MAFFINI ANTONIO/ “ MAGGI DINO/ “ MAGNANI PIETRO/“ MANGIAROTTI LUIGI/ “ MAURO ATTILIO/“ MAURI RICCARDO/“ MEAZZA ETTORE/ “ MEAZZA GIOVANNI/“ MEDRI GIUSEPPE/“ MORONI LUIGI/NEGRI LINO/“ OTTONELLI NATALE/“ PEZZALI FRANCESCO/“ PIZZINI STEFANO/“ PIZZOCRI LIVIO/ “ PODINI LIIGI/ “ POLEANDRI ANGELO/ “ POZZI GIOVANNI/“ PUTILLI GUIDO/“ PUTILLI TULLIO/ “ REDUZZI MICHELE/ SALVATORI EMILIO/“ TERNI BATTISTA/“ TORRIANI MARIO/ “ TORTI ETTORE/“ VALCARENGHI GIOVANNI/“ VIGENTINI ANSELMO/“ VOLPI GIOVANNI</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento_IV targa</ISER>
+                        <ISEP hint="Posizione">seconda roccia, lato dx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei dispersi nella guerra del 1940-1945</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo ossidato con scritte in rilievo</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">DISPERSI NELLA GUERRA 1940 1945/ SOLD. BALLERINI ANGELO/BALLERINI GIUSEPPE/BOCCOLI GIOVANNI/COLOMBI ANGELO/EUFILI GUERRINO/FELISI MARIO/FORTI MARIO/GIROLI MARIO/GUATTA GIOVANNI/MAROCCHI GIUSEPPE/MORONI GIOVANNI/RUZZA PAOLO/SIRONI LUIGI/TABACCHI FRANCESCO</ISEI>
+                    </ISE>
+                </DA>
+                <UT hint="UTILIZZAZIONI">
+                    <UTU hint="DATI DI USO">
+                        <UTUR hint="Riferimento alla parte">viale</UTUR>
+                        <UTUT hint="Tipo">attuale</UTUT>
+                        <UTUF hint="Funzione">strada carrabile</UTUF>
+                    </UTU>
+                    <CNU hint="CONDIZIONE D'USO">
+                        <CNUV hint="Visitabile">aperto al pubblico</CNUV>
+                        <CNUS hint="Specifiche">uso frequente</CNUS>
+                    </CNU>
+                </UT>
+                <CO hint="CONSERVAZIONE E INTERVENTI">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">viale</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                        <STCN hint="Note">Inserire degli elementi commemorativi come targhe o cippi o cartellonistica che documenti la presenza del viale delle Rimembranze</STCN>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">monuemnto</STCP>
+                        <STCC hint="Stato di conservazione">mediocre</STCC>
+                        <STCS hint="Specifiche">macchia, presenza di depositi superficiali, Problemi di umidità</STCS>
+                    </STC>
+                </CO>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione lineare</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">9.272034</GECX>
+                        <GECY hint="Coordinata y">45.445232</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">9.272358</GECX>
+                        <GECY hint="Coordinata y">45.449184</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2019</GPBT>
+                        <GPBU hint="Indirizzo web (URL)">(4341905) www.google.it/maps</GPBU>
+                    </GPB>
+                </GE>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTS hint="DATI CATASTALI">
+                        <CTSC hint="Comune">Peschiera Borromeo</CTSC>
+                        <CTST hint="Tipo catasto">catasto misto</CTST>
+                        <CTSF hint="Foglio/data">21/2019</CTSF>
+                        <CTSN hint="Particelle">s.n.m</CTSN>
+                        <CTSP hint="Proprietari">Comune di Peschiera Borromeo</CTSP>
+                    </CTS>
+                </CS>
+                <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+                        <CDGS hint="Indicazione specifica">Comune di Peschiera Borromeo</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Peschiera Borromeo_1</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAC hint="Collocazione">Veduta del viale da via Archimede</FTAC>
+                        <FTAK hint="Nome file digitale">MI_Peschiera Borromeo_1.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Peschiera Borromeo_2</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale da via Baracca</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Peschiera Borromeo_2.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Peschiera Borromeo_3</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Vista frontale del monumento ai caduti</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Peschiera Borromeo_3.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Peschiera Borromeo_4</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Vista posteriore del monumento ai caduti</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Peschiera Borromeo_4.JPG</FTAK>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Peschiera Borromeo_C1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">perimetrazione area</DRAT>
+                        <DRAP hint="Specifiche">F.21, s.n.m</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Peschiera Borromeo_C1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Peschiera Borromeo_A1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">perimetrazione area</DRAT>
+                        <DRAP hint="Specifiche">viale</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Peschiera Borromeo_A1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Peschiera Borromeo_A2</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAP hint="Specifiche">monumento</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Peschiera Borromeo_A2.pdf</DRAK>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Peschiera Borromeo_5</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa del viale</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Peschiera Borromeo_5.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Peschiera Borromeo_6</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa del monumento ai caduti</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">CAZZANI 2012</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Cazzani Alberta, I monumenti e i giardini celebrativi della grande guerra in Lombardia. Il censimento per le province di Brescia, Milano e Monza Brianza, Udine 2012</BIBM>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">MONUMENTIGRANDEGUERRA</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">sito web</BIBF>
+                        <BIBW hint="Indirizzo web (URL)">http://www.monumentigrandeguerra.it/(2019/09/00)</BIBW>
+                    </BIB>
+                </DO>
+            </MODI>
+            <harvesting>
+                <geocoding>
+                    <x>9.272336</x>
+                    <y>45.447176</y>
+                </geocoding>
+                <idProgetto>ICCD1063423</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

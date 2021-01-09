@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13721881@</identifier>
+        <datestamp>2018-04-17T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CG version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CG</TSK>
+                    <LIR hint="Livello">I</LIR>
+                    <CCG hint="Codice contenitore giuridico">ICCD_CG_6261077881151</CCG>
+                    <CCF hint="Codice contenitore fisico">ICCD_CF_6371287881151</CCF>
+                    <ESC hint="Ente schedatore">S32</ESC>
+                </CD>
+                <CG hint="CONTENITORE GIURIDICO">
+                    <LUC hint="Luogo della cultura">si</LUC>
+                    <CGT hint="Tipologia">museo</CGT>
+                    <CGN hint="Denominazione raccolta">Museo del Cenedese</CGN>
+                </CG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Veneto</PVCR>
+                        <PVCP hint="Provincia">TV</PVCP>
+                        <PVCC hint="Comune">Vittorio Veneto</PVCC>
+                    </PVC>
+                </LC>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2017</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">Fioratto, Giulia</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Prosdocimi, Benedetta</FUR>
+                </CM>
+            </CG>
+            <harvesting>
+                <idProgetto>ICCD1038650</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

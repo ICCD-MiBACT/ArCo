@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14715178@</identifier>
+        <datestamp>2020-11-09T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <A version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">A</TSK>
+                    <LIR hint="Livello ricerca">I</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">05</NCTR>
+                        <NCTN hint="Numero catalogo generale">00365495</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S234</ESC>
+                    <ECP hint="Ente competente">S234</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione tipologica">canonica</OGTD>
+                        <OGTN hint="Denominazione">Casa Canonica</OGTN>
+                    </OGT>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Veneto</PVCR>
+                        <PVCP hint="Provincia">TV</PVCP>
+                        <PVCC hint="Comune">Castello di Godego</PVCC>
+                        <PVCL hint="Località">Castello di Godego</PVCL>
+                        <PVCI hint="Indirizzo">via Nunzio Quirini, 1</PVCI>
+                    </PVC>
+                </LC>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTL hint="Tipo di localizzazione">localizzazione fisica</CTL>
+                    <CTS hint="LOCALIZZAZIONE CATASTALE">
+                        <CTSC hint="Comune">Castello di Godego</CTSC>
+                        <CTSF hint="Foglio/Data">12/ 2020</CTSF>
+                        <CTSN hint="Particelle">126, 127, 1386</CTSN>
+                    </CTS>
+                </CS>
+                <GP hint="GEOREFERENZIAZIONE TRAMITE PUNTO">
+                    <GPI hint="Identificativo Punto">1</GPI>
+                    <GPL hint="Tipo di localizzazione">localizzazione fisica</GPL>
+                    <GPD hint="DESCRIZIONE DEL PUNTO">
+                        <GPDP hint="PUNTO">
+                            <GPDPX hint="Coordinata X">11.883173</GPDPX>
+                            <GPDPY hint="Coordinata Y">45.691131</GPDPY>
+                        </GPDP>
+                    </GPD>
+                    <GPM hint="Metodo di georeferenziazione">punto esatto</GPM>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da foto aerea con sopralluogo</GPT>
+                    <GPP hint="Proiezione e Sistema di riferimento">WGS84</GPP>
+                    <GPB hint="BASE DI RIFERIMENTO">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2020</GPBT>
+                        <GPBO hint="Note">https://www.google.com/maps</GPBO>
+                    </GPB>
+                </GP>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <ATB hint="AMBITO CULTURALE">
+                        <ATBR hint="Riferimento all'intervento">costruzione</ATBR>
+                        <ATBD hint="Denominazione">Architettura del XVIII secolo</ATBD>
+                        <ATBM hint="Fonte dell'attribuzione">fonte archivistica</ATBM>
+                    </ATB>
+                </AU>
+                <RE hint="NOTIZIE STORICHE">
+                    <REN hint="NOTIZIA">
+                        <RENR hint="Riferimento">intero bene</RENR>
+                        <RENN hint="Notizia">Sobria dimora del parroco, ricollegabile alla tipologia del palazzetto nobiliare, sorta con tutta probabilità nella seconda metà del XVIII secolo</RENN>
+                        <RENF hint="Fonte">Provvedimento di tutela</RENF>
+                    </REN>
+                    <REL hint="CRONOLOGIA, ESTREMO REMOTO">
+                        <RELS hint="Secolo">XVIII</RELS>
+                        <RELF hint="Frazione di secolo">seconda metà</RELF>
+                    </REL>
+                    <REV hint="CRONOLOGIA, ESTREMO RECENTE">
+                        <REVS hint="Secolo">XVIII</REVS>
+                        <REVF hint="Frazione di secolo">seconda metà</REVF>
+                    </REV>
+                </RE>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente religioso cattolico</CDGG>
+                    </CDG>
+                    <NVC hint="PROVVEDIMENTI DI TUTELA">
+                        <NVCT hint="Tipo provvedimento">DLgs n. 42/2004, art.10</NVCT>
+                        <NVCE hint="Estremi provvedimento">2017/08/28</NVCE>
+                    </NVC>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Bellomo, Giorgia</FTAA>
+                        <FTAD hint="Data">2020/10/04</FTAD>
+                        <FTAC hint="Collocazione">SABAP VE MET</FTAC>
+                        <FTAN hint="Codice identificativo">00365495_foto</FTAN>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Bellomo, Giorgia</FTAA>
+                        <FTAD hint="Data">2020/10/04</FTAD>
+                        <FTAC hint="Collocazione">SABAP VE MET</FTAC>
+                        <FTAN hint="Codice identificativo">00365495_foto01</FTAN>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Bellomo, Giorgia</FTAA>
+                        <FTAD hint="Data">2020/10/04</FTAD>
+                        <FTAC hint="Collocazione">SABAP VE MET</FTAC>
+                        <FTAN hint="Codice identificativo">00365495_foto02</FTAN>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA">
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAN hint="Codice identificativo">00365495_sc</DRAN>
+                        <DRAD hint="Data">2020</DRAD>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTP hint="Tipo">riproduzione del provvedimento di tutela</FNTP>
+                        <FNTD hint="Data">2017/8/28</FNTD>
+                        <FNTN hint="Nome archivio">SABAP VE MET</FNTN>
+                        <FNTS hint="Posizione">Archivio vincoli</FNTS>
+                        <FNTI hint="Codice identificativo">00365495_provv</FNTI>
+                    </FNT>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2020</CMPD>
+                        <CMPN hint="Nome">Bellomo, Giorgia</CMPN>
+                    </CMP>
+                    <RSR hint="Referente scientifico">Panzani, Laura</RSR>
+                    <FUR hint="Funzionario responsabile">Majoli, Luca</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">La scheda è stata digitalizzata a livello inventariale</OSS>
+                </AN>
+            </A>
+            <harvesting>
+                <idProgetto>ICCD1064593</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

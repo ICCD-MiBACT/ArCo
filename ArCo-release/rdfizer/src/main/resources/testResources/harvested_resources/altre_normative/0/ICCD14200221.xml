@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14200221@</identifier>
+        <datestamp>2020-11-06T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MODI version="4.00_ICCD0">
+                <CD hint="IDENTIFICAZIONE">
+                    <TSK hint="Tipo modulo">MODI</TSK>
+                    <CDR hint="Codice Regione">03</CDR>
+                    <CDM hint="Codice Modulo">ICCD_MODI_5150205237651</CDM>
+                    <ESC hint="Ente schedatore">S287</ESC>
+                    <ECP hint="Ente competente per tutela">S287</ECP>
+                </CD>
+                <OG hint="ENTITA'">
+                    <AMB hint="Ambito di tutela MiBACT">architettonico e paesaggistico</AMB>
+                    <AMA hint="Ambito di applicazione">censimento parchi e giardini</AMA>
+                    <CTG hint="Categoria">ARCHITETTURA DEI PARCHI E GIARDINI</CTG>
+                    <OGD hint="Definizione">parco</OGD>
+                    <OGT hint="Tipologia">commemorativo/ ai caduti della prima e seconda guerra mondiale</OGT>
+                    <OGN hint="Denominazione">Parco della Rimembranza di Bernate Ticino</OGN>
+                </OG>
+                <LC hint="LOCALIZZAZIONE">
+                    <LCS hint="Stato">ITALIA</LCS>
+                    <LCR hint="Regione">Lombardia</LCR>
+                    <LCP hint="Provincia">MI</LCP>
+                    <LCC hint="Comune">Bernate Ticino</LCC>
+                    <LCL hint="Località">BERNATE TICINO</LCL>
+                    <LCI hint="Indirizzo">via Roma</LCI>
+                    <LCV hint="Altri percorsi/specifiche">Parco individuato da Via Roma/Via S. Giorgio, situato all’uscita del centro del comune, sulla strada per Mesero</LCV>
+                    <ACB hint="ACCESSIBILITA'">
+                        <ACBA hint="Accessibilità">in parte</ACBA>
+                        <ACBS hint="Note">Il parco risulta completamente accessibile ad eccezione delal cappella chiusa da cancellata</ACBS>
+                    </ACB>
+                </LC>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">cappella</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">La cappella del cimitero risalente al 1700 adibita a monumento ai caduti della I e II guerra mondiale</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XVIII</DTR>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1700/00/00</DTSI>
+                        <DTSF hint="A">1700/00/00</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">parco</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il parco è sorto sull'area del vecchio cimitero ed era contornato da un filare di alberi</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XVIII</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">seconda metà</DTG>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMR hint="Responsabile dei contenuti">Bentivoglio Ravasio, Raffaella</CMR>
+                    <CMC hint="Responsabile ricerca e redazione">Minnucci, Ramona</CMC>
+                    <CMA hint="Anno di redazione">2019</CMA>
+                    <CMM hint="Motivo della redazione del MODI">Censimento all’interno del Progetto “Narrando i territori della Grande Guerra attraverso i monumenti, le lapidi, i parchi e i viali della rimembranza”</CMM>
+                    <IMD hint="MIGRAZIONE DATI NELLE SCHEDE DI CATALOGO">
+                        <IMDT hint="Tipo scheda">PG</IMDT>
+                    </IMD>
+                    <ADP hint="Profilo di accesso">1</ADP>
+                </CM>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="Descrizione">Il parco di forma triangolare, individuato da Via Roma e Via S. Giorgio, accessibile dalla punta di quest’ultimo, diviso in più aree a prato o con piccoli arbusti ad accezione del pino posto all’ingresso e dell’abate sul fianco sx, individuate dal percorso pedonale in porfido ad "opus incertum", con al centro una piccola cappella intonacata, con frontone e arco a tutto sesto in facciata. L'ingresso, chiuso da una bassa recinzione in ferro battuto, presenta sulla parete frontale un altare con sovrastante affresco e sulle pareti laterali sono affisse delle targhe in marmo con giustapposti i nomi dei caduti e dispersi delle due guerre mondiali preceduti dal grado militare</DES>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Interno della cappella</AIDI>
+                        <AIDD hint="Descrizione">All’interno della cappella, sulle pareti laterali sono affisse delle targhe in marmo con giustapposti i nomi dei caduti e dispersi delle due guerre mondiali preceduti dal grado militare e una stampa che raffigura tutti i caduti della Prima Guerra Mondiale con fotografie associate al nome</AIDD>
+                    </AID>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella</ISER>
+                        <ISEP hint="Posizione">Parete sx altare</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">data, nome brigata</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in granito</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">25 APRILE 1915/ALLA BRIGATA GASPAROTTO CHE OSPITO’ E SOSTENNE FINO ALLA LIBERAZIONE LA CITTADINANZA DI BERNATE TICINO NEL 40 ANNIVERSARIO PONE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella</ISER>
+                        <ISEP hint="Posizione">Parete sx altare</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">nome defunto</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">METTICA ANTONIO MARIA D’ANNI 67 MORTO IL 23 LUGLIO 1842 LA MOGLIE E I FIGLIOLI PREGANDO L’ETERNO RIPOSO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella</ISER>
+                        <ISEP hint="Posizione">Parete sx altare</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1915-1918</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in granito affissa al muro</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CADUTI NELLA GUERRA 1915-1918/CAP. M. ROSSI ERNESTO DI EMILIO/CAP. BERTANI CARLO DI GIOVANNI/CAP. BONFIGLIO EMILIO DI ERCOLE/CAP. MERLO GAETANO DI GIUSEPPE/SOL. BAROLI ANGELO DI LUIGI/SOL. BERRA GIUSEPPE FU FRANCESCO/ SOL. BERRA AUGUSTO FU NATALE/SOL. BERTANI CESARE DI GIOVANNI/SOL. CALCATERRA PIETRO DI GIUSEPPE/SOL. CARUGHI ENRICO DI PAOLO/SOL. CASSANI PIETRO DI ROMEO/SOL. COLOMBINI CARLO DI PIETRO/SOL. COLOMBO ANGELO DI ALESSANDRO/COLOMBO RINALDO FU ANGELO/SOL. CRESPI CESARE DI GIUSEPPE/ SOL. FRATTINI ALBERTO DI ANGELO/SOL. GARAVAGLIA ANTONIO DI GIOVANNI/ SOL. GARAVAGLIA CARLO DI GIOVANNI/ SOL. GARAVAGLIA ARTURO DI GIOVANNI/ SOL. GARAVAGLIA GAETANO DI GIOVANNI/ SOL. GARAVAGLIA GIUSEPPE DI ALESSANDRO/ SOL. GARAVAGLIA GIUSEPPE DI ANTONIO/ SOL. PINCIROLI CARLO DI GAETANO/ SOL. PINCIROLI CARLO DI GIOVANNI/SOL. PRADA GIUSEPPE FU RANIERO/SOL. RESCALDINA CARLO FU CARLO/SOL. RESCALDINA CESARE DI ANDREA/SOL. ROGNONI GUERINO FU ANTONIO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella</ISER>
+                        <ISEP hint="Posizione">Parete dx altare</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1915-1918/elenco dei caduti nella guerra del 1940-1945</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in granito affissa al muro</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CADUTI NELLA GUERRA 1915-1918/SOL. ROSSI ANGELO DI FRANCESCO/SOL. VANZAGHI ORESTE DI ANTONIO/SOL. VENTURINI ALESSANDRO DI ANDREA/ SOL. VENTURINI CARLO DI ANDREA/SOL. ZOIA DOMENICO FU ANTONIO/SOL. ZOIA PIETRO DI FRANCESCO/SOL. ZOIA MARIO DI FRANCESCO//CADUTI NELLA GUERRA 1940-1945/CAP. M. CARNAGHI PIETRO FU CARLO/SOL. CARNAGHI PIETRO DI EDOARDO/SOL. COLOMBO COSTANTINO FU ANGELO/SOL. GAFAVAGLIA SILVIO DI ENRICO/SOL. PONCIROLI ANDREA DI RINALDO/SOL. PONCIROLI CARLO DI SANTINO/SOL. ZARINELLI EGISIO DI ENRICO//DISPERSI NELLA GUERRA 1940-1945/SOL. CRESPI ANTONIO FU ERCOLE/SOL. GARAVAGLIA CARLO DI GIUSEPPE/SOL. OTTOLINI ORLANDO DI ERNESTO/SOL. PONCIROLI ALFREDO DI RINALDO/SOL. VANZAGHI MARIO DI PAOLO/SOL. FRATTINI AUGUSTO DI FRANCESCO/SOL. ROSSI LUIGI DI LUIGI</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Cappella</ISER>
+                        <ISEP hint="Posizione">Parete dx altare</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">preghiera</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Lapide in pietra</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">PREGATE LA PACE DEI GIUSTI AL RETTORE PARROCO E VICARIO FORANEO GIUSEPPE INNOCENZO GALLI NATO IN UBOI DO NEI 1785 CHE SPREZZANDO ONERI E DIGNITA’ CON TUTTI EUGUALE SEMPRE IMPARZIALE FU PER 26 ANNI ALLE AMATE SUE PECORELLE IL PIU’ GENEROSO FRA I PADRI IL PIU’ SINCERO FRA GLI AMICI GUIDA SICURA PASTORE AMOROSISSIMO DA IMPROVVISA MORTE RAPITO IL GIRONO 8 LUGLIO 1857 LEGANDO UN REGNO D’AFFITTO IL FRATELLO GAETANO EREDE CHE CON LUI DIVISE LE FATICHE LE SPERANZE I TIMORI/O.M.P</ISEI>
+                    </ISE>
+                </DA>
+                <UT hint="UTILIZZAZIONI">
+                    <UTU hint="DATI DI USO">
+                        <UTUR hint="Riferimento alla parte">parco</UTUR>
+                        <UTUT hint="Tipo">attuale</UTUT>
+                        <UTUF hint="Funzione">giardino pubblico</UTUF>
+                    </UTU>
+                    <CNU hint="CONDIZIONE D'USO">
+                        <CNUV hint="Visitabile">aperto al pubblico</CNUV>
+                        <CNUS hint="Specifiche">uso saltuario</CNUS>
+                    </CNU>
+                </UT>
+                <CO hint="CONSERVAZIONE E INTERVENTI">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">parco</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                        <STCN hint="Note">si consiglia di segnalare con un pannello informativo la storia dell'area in oggetto, facendone emergere il suo ruolo commemorativo</STCN>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">cappella</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                    </STC>
+                </CO>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione puntuale</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.816314</GECX>
+                        <GECY hint="Coordinata y">45.479764</GECY>
+                        <GECS hint="Note">Le coordinate geografiche sono state al centro del parco</GECS>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2019</GPBT>
+                        <GPBU hint="Indirizzo web (URL)">(4341777) www.google.it/maps</GPBU>
+                    </GPB>
+                </GE>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTS hint="DATI CATASTALI">
+                        <CTSC hint="Comune">Bernate Ticino</CTSC>
+                        <CTST hint="Tipo catasto">catasto misto</CTST>
+                        <CTSF hint="Foglio/data">9/2019</CTSF>
+                        <CTSN hint="Particelle">A</CTSN>
+                        <CTSP hint="Proprietari">Comune di Bernate Ticino</CTSP>
+                    </CTS>
+                </CS>
+                <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+                        <CDGS hint="Indicazione specifica">Comune di Bernate Ticino</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Bernate Ticino_1</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del parco della memoria</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Bernate Ticino_1.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Bernate Ticino_2</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta della piccola cappella posta all'interno del parco</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Bernate Ticino_2.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Bernate Ticino_3</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta di alcune delle targhe in marmo con i nomi dei caduti e dispersi delle due guerre mondiali poste sulle pareti interne della cappella</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Bernate Ticino_3.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Bernate Ticino_4</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del parco verso Via S. Giorgio Martire</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Bernate Ticino_4.JPG</FTAK>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Bernate Ticino_C1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F.9, part. A</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/08/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Bernate Ticino_C1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Bernate Ticino_A1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/08/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Bernate Ticino_A1.pdf</DRAK>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Bernate Ticino_5</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa del parco</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Bernate Ticino_5.pdf</FNTK>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">CAZZANI 2012</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Cazzani Alberta, I monumenti e i giardini celebrativi della grande guerra in Lombardia, Pieve Emanuele, 2012</BIBM>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">Associazione Nazionale Combattenti e Reduci, 1990</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Ai caduti di tutte le guerre, Associazione Nazionale Combattenti e Reduci, Milano, 1990, pp. 58, 158</BIBM>
+                    </BIB>
+                </DO>
+            </MODI>
+            <harvesting>
+                <geocoding>
+                    <x>8.818298</x>
+                    <y>45.482884</y>
+                </geocoding>
+                <idProgetto>ICCD1063423</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

@@ -29,6 +29,8 @@ import org.apache.log4j.Logger;
 import it.cnr.istc.stlab.arco.xsltextension.Arcofy;
 import it.cnr.istc.stlab.arco.xsltextension.CatalogueRecordIdentifierToCulturalProperty;
 import it.cnr.istc.stlab.arco.xsltextension.CataloguingEntityFinder;
+import it.cnr.istc.stlab.arco.xsltextension.ContenitoreFisicoFinder;
+import it.cnr.istc.stlab.arco.xsltextension.ContenitoreGiuridicoFinder;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForASheet;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForRASheet;
 import it.cnr.istc.stlab.arco.xsltextension.ExtractUnit;
@@ -198,6 +200,8 @@ public class Converter {
 		proc.registerExtensionFunction(LinkEMMFinder.getInstance());
 		proc.registerExtensionFunction(CatalogueRecordIdentifierToCulturalProperty.getInstance());
 		proc.registerExtensionFunction(NameCleaner.getInstance());
+		proc.registerExtensionFunction(ContenitoreFisicoFinder.getInstance());
+		proc.registerExtensionFunction(ContenitoreGiuridicoFinder.getInstance());
 
 		XsltCompiler comp = proc.newXsltCompiler();
 
@@ -245,7 +249,19 @@ public class Converter {
 		 */
 	}
 
-	public Model convert(String item, InputStream sourceXml) throws Exception {
+	public void addXSTLConverter(Path path) {
+		XsltExecutable exp;
+		XsltCompiler comp = proc.newXsltCompiler();
+		try {
+			System.out.println("-- " + path.toString());
+			exp = comp.compile(new StreamSource(Files.newInputStream(path)));
+			exps.add(new XSLTConverter(path.toString(), exp));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public Model convert(String item, String prefix, String sourcePrefix, InputStream sourceXml) throws Exception {
 
 		Model model = ModelFactory.createDefaultModel();
 
@@ -262,6 +278,8 @@ public class Converter {
 			QName qName = new QName("item");
 			XdmValue value = new XdmAtomicValue(item);
 			trans.setParameter(qName, value);
+			trans.setParameter(new QName("NS"), new XdmAtomicValue(prefix));
+			trans.setParameter(new QName("SOURCE"), new XdmAtomicValue(sourcePrefix));
 			trans.setInitialContextNode(source);
 			trans.setDestination(out);
 			trans.transform();

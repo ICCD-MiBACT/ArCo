@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14721796@</identifier>
+        <datestamp>2020-10-23T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <A version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">A</TSK>
+                    <LIR hint="Livello ricerca">I</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">18</NCTR>
+                        <NCTN hint="Numero catalogo generale">00167486</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S285</ESC>
+                    <ECP hint="Ente competente">S179</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione tipologica">palazzo</OGTD>
+                        <OGTQ hint="Qualificazione">per uffici</OGTQ>
+                        <OGTN hint="Denominazione">Palazzo degli Uffici</OGTN>
+                    </OGT>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Calabria</PVCR>
+                        <PVCP hint="Provincia">RC</PVCP>
+                        <PVCC hint="Comune">Taurianova</PVCC>
+                        <PVCI hint="Indirizzo">Via Cavour</PVCI>
+                        <PVCV hint="Altre vie di comunicazione">Via XXIV maggio</PVCV>
+                    </PVC>
+                </LC>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTL hint="Tipo di localizzazione">localizzazione fisica</CTL>
+                    <CTS hint="LOCALIZZAZIONE CATASTALE">
+                        <CTSC hint="Comune">Taurianova</CTSC>
+                        <CTSF hint="Foglio/Data">58/ 2020</CTSF>
+                        <CTSN hint="Particelle">41 subb. 1-2</CTSN>
+                        <CTSP hint="Proprietari">Agenzia Demanio dello Stato</CTSP>
+                    </CTS>
+                </CS>
+                <GP hint="GEOREFERENZIAZIONE TRAMITE PUNTO">
+                    <GPI hint="Identificativo Punto">2</GPI>
+                    <GPL hint="Tipo di localizzazione">localizzazione fisica</GPL>
+                    <GPD hint="DESCRIZIONE DEL PUNTO">
+                        <GPDP hint="PUNTO">
+                            <GPDPX hint="Coordinata X">16.013137</GPDPX>
+                            <GPDPY hint="Coordinata Y">38.353182</GPDPY>
+                        </GPDP>
+                    </GPD>
+                    <GPM hint="Metodo di georeferenziazione">punto esatto</GPM>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPP hint="Proiezione e Sistema di riferimento">WGS84</GPP>
+                    <GPB hint="BASE DI RIFERIMENTO">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2020</GPBT>
+                        <GPBO hint="Note">www.googlemaps.it</GPBO>
+                    </GPB>
+                </GP>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <ATB hint="AMBITO CULTURALE">
+                        <ATBR hint="Riferimento all'intervento">costruzione</ATBR>
+                        <ATBD hint="Denominazione">maestranze locali</ATBD>
+                        <ATBM hint="Fonte dell'attribuzione">analisi stilistica</ATBM>
+                    </ATB>
+                </AU>
+                <RE hint="NOTIZIE STORICHE">
+                    <REN hint="NOTIZIA">
+                        <RENR hint="Riferimento">intero bene</RENR>
+                        <RENN hint="Notizia">Non si conosce l'anno esatto di costruzione dell'immobile, tuttavia, l'edificio ricalca gli stilemi dei palazzi pubblici, proposti nei principali centri della Calabria Meridionale dopo il terremoto del 1908</RENN>
+                        <RENF hint="Fonte">"n.d.c" per mancanza di materiale edito</RENF>
+                    </REN>
+                    <REL hint="CRONOLOGIA, ESTREMO REMOTO">
+                        <RELS hint="Secolo">XX</RELS>
+                        <RELI hint="Data">1908</RELI>
+                        <RELX hint="Validità">post</RELX>
+                    </REL>
+                    <REV hint="CRONOLOGIA, ESTREMO RECENTE">
+                        <REVS hint="Secolo">XX</REVS>
+                    </REV>
+                </RE>
+                <PN hint="PIANTA">
+                    <PNR hint="Riferimento alla parte">intero bene</PNR>
+                    <PNT hint="PIANTA">
+                        <PNTS hint="Schema">longitudinale</PNTS>
+                        <PNTF hint="Forma">rettangolare</PNTF>
+                    </PNT>
+                </PN>
+                <SV hint="STRUTTURE VERTICALI">
+                    <SVC hint="TECNICA COSTRUTTIVA">
+                        <SVCU hint="Ubicazione">prospetti</SVCU>
+                        <SVCT hint="Tipo di struttura">parete</SVCT>
+                        <SVCC hint="Genere">in muratura</SVCC>
+                        <SVCM hint="Materiali">cemento armato</SVCM>
+                    </SVC>
+                </SV>
+                <CP hint="COPERTURE">
+                    <CPU hint="Ubicazione">intero bene</CPU>
+                    <CPF hint="CONFIGURAZIONE ESTERNA">
+                        <CPFG hint="Genere">piana</CPFG>
+                    </CPF>
+                </CP>
+                <CO hint="CONSERVAZIONE">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCR hint="Riferimento alla parte">intero bene</STCR>
+                        <STCC hint="Stato di conservazione">mediocre</STCC>
+                    </STC>
+                </CO>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+                        <CDGS hint="Indicazione specifica">Agenzia Demanio dello Stato</CDGS>
+                    </CDG>
+                    <NVC hint="PROVVEDIMENTI DI TUTELA">
+                        <NVCT hint="Tipo provvedimento">revoca DLgs n. 490/1999, art. 6, co. 2</NVCT>
+                        <NVCE hint="Estremi provvedimento">2004/02/20</NVCE>
+                    </NVC>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Spanò, Lucia</FTAA>
+                        <FTAD hint="Data">2020/07/03</FTAD>
+                        <FTAN hint="Codice identificativo">IMG_1800167486_01</FTAN>
+                        <FTAT hint="Note">prospetto principale</FTAT>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Spanò, Lucia</FTAA>
+                        <FTAD hint="Data">2020/07/03</FTAD>
+                        <FTAN hint="Codice identificativo">IMG_1800167486_02</FTAN>
+                        <FTAT hint="Note">prospetto Sud</FTAT>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA">
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">planimetria catastale</DRAT>
+                        <DRAS hint="Scala">f.s</DRAS>
+                        <DRAC hint="Collocazione">www.formaps.it</DRAC>
+                        <DRAN hint="Codice identificativo">CAT_1800167486</DRAN>
+                        <DRAD hint="Data">2020</DRAD>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTP hint="Tipo">riproduzione del provvedimento di tutela</FNTP>
+                        <FNTD hint="Data">2004/02/20</FNTD>
+                        <FNTN hint="Nome archivio">SABAP RC VV</FNTN>
+                        <FNTS hint="Posizione">Archivio Vincoli Monumentali</FNTS>
+                        <FNTI hint="Codice identificativo">DOC_1800167486</FNTI>
+                    </FNT>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2020</CMPD>
+                        <CMPN hint="Nome">Spanò, Lucia</CMPN>
+                    </CMP>
+                    <RSR hint="Referente scientifico">Panzani, Laura</RSR>
+                    <FUR hint="Funzionario responsabile">Cicero, Rita</FUR>
+                </CM>
+            </A>
+            <harvesting>
+                <geocoding>
+                    <x>15.995087</x>
+                    <y>38.369820</y>
+                </geocoding>
+                <idProgetto>ICCD1064593</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

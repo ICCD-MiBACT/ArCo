@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13077072@</identifier>
+        <datestamp>2020-10-02T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CG version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CG</TSK>
+                    <LIR hint="Livello">I</LIR>
+                    <CCG hint="Codice contenitore giuridico">DBunicoCG104140</CCG>
+                    <CCF hint="Codice contenitore fisico">1472596189993</CCF>
+                    <ESC hint="Ente schedatore">ICCD</ESC>
+                    <ACC hint="ALTRA IDENTIFICAZIONE">
+                        <ACCE hint="Ente/soggetto responsabile">MIBACT. DG Organizzazione. Servizio I</ACCE>
+                        <ACCC hint="Codice identificativo">104140</ACCC>
+                        <ACCP hint="Progetto di riferimento">DBUnico 2.0</ACCP>
+                    </ACC>
+                </CD>
+                <CG hint="CONTENITORE GIURIDICO">
+                    <LUC hint="Luogo della cultura">si</LUC>
+                    <CGT hint="Tipologia">museo</CGT>
+                    <CGN hint="Denominazione raccolta">Museo civico archeologico Cesare Cellini</CGN>
+                    <CGC hint="Complesso giuridico di appartenenza">Musei piceni</CGC>
+                    <CGD hint="Descrizione">Il Museo civico archeologico Cesare Cellini di Ripatransone ha sede al pianterreno del Palazzo Comunale, a fianco della biblioteca. Il Museo risale all'anno 1877 quando il reverendo Cesare Cellini (1832-1903) donò al Comune la sua vasta collezione di reperti archeologici. Si aggiunsero, poi, altre donazioni di famiglie locali, aumentando notevolmente la raccolta. A queste si aggiunsero alla fine dell'800 i consistenti ritrovamenti di necropoli dell'età del Ferro, effettuati in diverse zone del territorio, e i successivi rinvenimenti che si sono susseguiti fino ad oggi. Il Museo, riallestito circa un decennio fa, può contare su circa cinquemila reperti, dei quali soltanto un 10% è stato esposto nelle tre sezioni (preistorica, protostorica, e romana) che occupano le sette sale dell'attuale spazio espositivo. Ai materiali litici del Paleolitico, Neolitico e dell'Eneolitico si susseguono le testimonianze dell'età del Bronzo che attestano il ruolo importante della zona in quel periodo. Diverse sale sono dedicate alla Civiltà Picena ben rappresentata da una ricca tipologia di vasellame fittile, di ornamenti, di armi tra cui elmi, punte di lancia, asce e pugnali. I reperti di epoca romana sono legati all'ager cuprensis, di cui Ripatransone faceva amministrativamente parte, e costituiti da epigrafi latine, frammenti di statue, oggetti della vita quotidiana. Nell'ultima sala, da poco allestita, sono stati esposti materiali Altomedievali</CGD>
+                    <CGE hint="ENTE">
+                        <CGET hint="Tipo">proprietà Ente pubblico territoriale</CGET>
+                    </CGE>
+                </CG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Marche</PVCR>
+                        <PVCP hint="Provincia">AP</PVCP>
+                        <PVCC hint="Comune">Ripatransone</PVCC>
+                    </PVC>
+                </LC>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2016</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">ICCD</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">ICCD</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">Scheda prodotta da ICCD tramite migrazione dati da DB Unico</OSS>
+                </AN>
+            </CG>
+            <harvesting>
+                <idProgetto>ICCD1038112</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

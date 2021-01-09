@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13057300@</identifier>
+        <datestamp>2020-11-09T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CF version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CF</TSK>
+                    <LIR hint="Livello">P</LIR>
+                    <CCF hint="Codice contenitore fisico">1478852909358</CCF>
+                    <ESC hint="Ente schedatore">S251</ESC>
+                </CD>
+                <CF hint="CONTENITORE FISICO">
+                    <LUC hint="Luogo della cultura">no</LUC>
+                    <CFT hint="Tipologia">villa</CFT>
+                    <CFN hint="Denominazione attuale">Villa della Regina</CFN>
+                    <CFU hint="Uso">museo</CFU>
+                    <CFD hint="Descrizione">La villa fu progettata su commissione del cardinale Maurizio di Savoia all'inizio del Seicento: fu poi ampiamente modificata, nelle forme attuali, su progetto di Filippo Juvarra, all'inizio del Settecento</CFD>
+                    <CFG hint="Condizione giuridica">proprietà Stato</CFG>
+                    <CFW hint="Sito web">http://polomusealepiemonte.beniculturali.it/index.php/musei-e-luoghi-della-cultura/villa-della-regina/visita-villa-della-regina/</CFW>
+                </CF>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO - AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Piemonte</PVCR>
+                        <PVCP hint="Provincia">TO</PVCP>
+                        <PVCC hint="Comune">Torino</PVCC>
+                        <PVCI hint="Indirizzo">Strada Comunale Santa Margherita, 79</PVCI>
+                    </PVC>
+                </LC>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione puntuale</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">7.708336</GECX>
+                        <GECY hint="Coordinata y">45.057966</GECY>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">Google Maps</GPBB>
+                    </GPB>
+                </GE>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">New_1570008994090</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAK hint="Nome file originale">Torino, Villa della Regina.jpg</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">New_1570009042292</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAK hint="Nome file originale">Torino, Villa della Regina_2.jpeg</FTAK>
+                    </FTA>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2018</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">Piavento, Orso Maria</CMPN>
+                    </CMP>
+                    <RSR hint="Referente verifica scientifica">Martinella, Stefano</RSR>
+                    <FUR hint="Funzionario responsabile">Pratissoli, Manuela</FUR>
+                </CM>
+            </CF>
+            <harvesting>
+                <geocoding>
+                    <x>7.706046</x>
+                    <y>45.058405</y>
+                </geocoding>
+                <idProgetto>ICCD1060052</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

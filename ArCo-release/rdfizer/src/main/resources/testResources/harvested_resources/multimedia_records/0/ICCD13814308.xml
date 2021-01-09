@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13814308@</identifier>
+        <datestamp>2020-10-19T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <IMR version="4.00_ICCD0">
+                <MC hint="METADATI DI CATALOGAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">New_1524205854815</FTAN>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                    </FTA>
+                </MC>
+                <MM hint="METADATI DATO MULTIMEDIALE">
+                    <MMT hint="METADATI TECNICI DATO MULTIMEDIALE">
+                        <MMTO hint="Nome file originale">konsoantenatosvestito.jpg</MMTO>
+                    </MMT>
+                </MM>
+            </IMR>
+            <harvesting>
+                <linkEmm>http://www.sigecweb.beniculturali.it/images/fullsize/ICCD1060774/ICCD13814308_konsoantenatosvestito.jpg</linkEmm>
+                <idProgetto>ICCD1038112</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11156521@</identifier>
+        <datestamp>2014-12-18T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <BIB version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">BIB</TSK>
+                    <ESC hint="Ente schedatore">S67</ESC>
+                    <ECP hint="Ente competente">S67</ECP>
+                </CD>
+                <BI hint="BIBLIOGRAFIA">
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBA hint="Autore">Ghirardi, Angela</BIBA>
+                        <BIBF hint="Tipo">contributo in periodico</BIBF>
+                        <BIBG hint="Titolo libro o rivista">Arte Cristiana</BIBG>
+                        <BIBT hint="Titolo contributo">Un episodio mantovano per Orsola Maddalena Caccia, monaca pittrice del Monferrato</BIBT>
+                        <BIBD hint="Anno di edizione">1990</BIBD>
+                        <BIBE hint="Numero di edizione">736</BIBE>
+                        <BIBV hint="Volume">LXXVIII</BIBV>
+                        <BIBH hint="Sigla per citazione">00003590</BIBH>
+                    </BIB>
+                </BI>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2014</CMPD>
+                        <CMPN hint="Nome">Fabbri, Francesca</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Bava, Anna Maria</FUR>
+                </CM>
+            </BIB>
+        </schede>
+    </metadata>
+</record>
