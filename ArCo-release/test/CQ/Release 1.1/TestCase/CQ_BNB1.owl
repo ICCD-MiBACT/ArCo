@@ -45,9 +45,9 @@
     ]
   }
 }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasSPARQLQueryUnitTest>PREFIX mp: <https://w3id.org/arco/ontology/movable-property/>
-PREFIX arco: <https://w3id.org/arco/ontology/arco/>
-PREFIX core: <https://w3id.org/arco/ontology/core/>
+        <testannotationschema:hasSPARQLQueryUnitTest>PREFIX mp: &lt;https://w3id.org/arco/ontology/movable-property/&gt;
+PREFIX arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+PREFIX core: &lt;https://w3id.org/arco/ontology/core/&gt;
 SELECT ?specimen ?taxon
 WHERE{
 ?specimen core:hasClassificationInTime ?classification .
