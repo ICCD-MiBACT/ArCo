@@ -25,21 +25,21 @@
       {
         &quot;specimen&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;C:\Users\user\Documents\GitHub\ArCo\ArCo-release\test\CQ\Release 1.1\ToyDataset\Toyset_BNB1.ttl#Specimen1&quot;
+          &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_BNB1.ttl#Specimen1&quot;
         },
         &quot;taxon&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;C:\Users\user\Documents\GitHub\ArCo\ArCo-release\test\CQ\Release 1.1\ToyDataset\Toyset_BNB1.ttl#taxon1&quot;
+          &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_BNB1.ttl#taxon1&quot;
         }
       },
       {
         &quot;specimen&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;C:\Users\user\Documents\GitHub\ArCo\ArCo-release\test\CQ\Release 1.1\ToyDataset\Toyset_BNB1.ttl#Specimen3&quot;
+          &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_BNB1.ttl#Specimen3&quot;
         },
         &quot;taxon&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;C:\Users\user\Documents\GitHub\ArCo\ArCo-release\test\CQ\Release 1.1\ToyDataset\Toyset_BNB1.ttl#taxon3&quot;
+          &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_BNB1.ttl#taxon3&quot;
         }
       }
     ]
