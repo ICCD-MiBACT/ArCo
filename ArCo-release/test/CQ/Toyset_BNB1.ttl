@@ -1,4 +1,4 @@
-@prefix : <C:\Users\user\Documents\GitHub\ArCo\ArCo-release\test\CQ\Release 1.1\ToyDataset\Toyset_BNB1.ttl#> .
+@prefix : <https://w3id.org/arco/test/ToyDataset/Toyset_BNB1.ttl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema/> .
 @prefix core: <https://w3id.org/arco/ontology/core/> .
@@ -7,7 +7,7 @@
 @prefix a-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix a-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix arco: <https://w3id.org/arco/ontology/arco> .
-@prefix ti:<https://w3id.org/italia/onto/TI/> . 
+@prefix ti:<https://w3id.org/italia/onto/TI/> .
 @prefix arcolocation: <https://w3id.org/arco/ontology/location/> .
 
 :Specimen1	core:hasClassificationInTime :classification1 .
