@@ -1,0 +1,27 @@
+@prefix : <https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_BNB1.ttl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema/> .
+@prefix core: <https://w3id.org/arco/ontology/core/> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix a-mp: <https://w3id.org/arco/ontology/movable-property/> .
+@prefix a-ip: <https://w3id.org/arco/ontology/immovable-property/> .
+@prefix arco: <https://w3id.org/arco/ontology/arco> .
+@prefix ti:<https://w3id.org/italia/onto/TI/> .
+@prefix arcolocation: <https://w3id.org/arco/ontology/location/> .
+
+:Specimen1	core:hasClassificationInTime :classification1 .
+:classification1	a-mp:hasTaxon :taxon1 .
+:taxon1		a a-mp:Cultivar .
+
+:Specimen2	core:hasClassificationInTime :classification2 .
+:classification2	a-mp:hasTaxon :taxon2 .
+:taxon2		a a-mp:Species .
+
+:Specimen3	core:hasClassificationInTime :classification3 .
+:classification3	a-mp:hasTaxon :taxon3 .
+:taxon3		a a-mp:Cultivar .
+
+:Specimen4	core:hasClassificationInTime :classification4 .
+:classification4	a-mp:hasTaxon :taxon4 .
+:taxon4		a a-mp:BotanicalForm .
