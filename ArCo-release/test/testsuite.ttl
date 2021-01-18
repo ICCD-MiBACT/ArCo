@@ -1,0 +1,4 @@
+@prefix owlunit: <https://w3id.org/owlunit/ontology/> .
+
+
+<https://w3id.org/arco/test/testsuite.ttl> a owlunit:TestSuite .
