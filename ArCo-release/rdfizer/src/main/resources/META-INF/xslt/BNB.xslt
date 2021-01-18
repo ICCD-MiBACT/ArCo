@@ -646,7 +646,10 @@
 				</tiapit:atTime>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/*/SB/DBV/DBVA">
-			<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/*/SB/DBV/DBVA)" />
+			<xsl:variable name="virgola" select="record/metadata/schede/*/SB/DBV/DBVA" />
+			<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+			<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+			<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
 					<arco-core:involvesAgent>
 						<xsl:attribute name="rdf:resource">
@@ -738,7 +741,10 @@
 				</arco-cd:hasBibliography>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIA">
-			<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/SB/TBI/TBIA)" />
+				<xsl:variable name="virgola" select="record/metadata/schede/BNB/SB/TBI/TBIA" />
+				<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
 					<arco-core:involvesAgent>
 						<xsl:attribute name="rdf:resource">
@@ -831,8 +837,11 @@
 					</xsl:attribute>
 				</arco-cd:hasBibliography>
 			</xsl:if>
-			<xsl:if test="./RBR/RBRA">
-				<xsl:variable name="authorssplit" select="arco-fn:split(./RBR/RBRA)" />
+			<xsl:for-each select="./RBR/RBRA">
+				<xsl:variable name="virgola" select="." />
+				<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
 					<arco-core:involvesAgent>
 						<xsl:attribute name="rdf:resource">
@@ -840,7 +849,7 @@
 						</xsl:attribute>
 					</arco-core:involvesAgent>
 				</xsl:for-each>
-			</xsl:if>
+			</xsl:for-each>
 			<xsl:if test="./RBR/RBRN">
 				<arco-mp:hasTaxon>
 					<xsl:attribute name="rdf:resource">
@@ -916,8 +925,11 @@
 					</xsl:attribute>
 				</arco-cd:hasBibliography>
 			</xsl:if>
-			<xsl:if test="./RBR/RBRA">
-				<xsl:variable name="authorssplit" select="arco-fn:split(./RBR/RBRA)" />
+			<xsl:for-each select="./RBR/RBRA">
+				<xsl:variable name="virgola" select="." />
+				<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
 					<arco-core:involvesAgent>
 						<xsl:attribute name="rdf:resource">
@@ -925,7 +937,7 @@
 						</xsl:attribute>
 					</arco-core:involvesAgent>
 				</xsl:for-each>
-			</xsl:if>
+			</xsl:for-each>
 			<arco-mp:hasTaxon>
 				<xsl:attribute name="rdf:resource">
  					<xsl:choose>
@@ -1821,7 +1833,10 @@
 				<xsl:value-of select="concat('Accession of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="record/metadata/schede/BNB/SB/ABC/ABCA">
-				<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/SB/ABC/ABCA)" />
+				<xsl:variable name="virgola" select="record/metadata/schede/BNB/SB/ABC/ABCA" />
+				<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
 					<arco-core:involvesAgent>
 						<xsl:attribute name="rdf:resource">
@@ -2048,7 +2063,10 @@
 				<xsl:value-of select="concat('Harvesting of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="record/metadata/schede/BNB/LR/LRD/LRDA">
-				<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/LR/LRD/LRDA)" />
+				<xsl:variable name="virgola" select="record/metadata/schede/BNB/LR/LRD/LRDA" />
+				<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
 					<arco-mp:hasHarvestingOperator>
 						<xsl:attribute name="rdf:resource">
@@ -2606,16 +2624,19 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Analisi di laboratorio del bene ', $itemURI)" />
 			</l0:name>		
-			<xsl:if test="./RBR/RBRA">
-			<xsl:variable name="authorssplit" select="arco-fn:split(./RBR/RBRA)" />
-			<xsl:for-each select="$authorssplit">
+			<xsl:for-each select="./RBR/RBRA">
+				<xsl:variable name="virgola" select="." />
+				<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
+				<xsl:for-each select="$authorssplit">
 				<arco-cd:hasActivityOperator>
 					<xsl:attribute name="rdf:resource">
         				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 					</xsl:attribute>
 				</arco-cd:hasActivityOperator>
 			</xsl:for-each>
-			</xsl:if>
+			</xsl:for-each>
 			<xsl:if test="./RBR/RBRB">	
 				<arco-cd:hasBibliography>
 				<xsl:attribute name="rdf:resource">
@@ -2881,7 +2902,10 @@
 				<xsl:value-of select="concat('Preparation ', position(), ' related to cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./DBRA">
-				<xsl:variable name="authorssplit" select="arco-fn:split(./DBRA)" />
+				<xsl:variable name="virgola" select="./DBRA" />
+				<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
 					<arco-cd:hasAuthor>
 						<xsl:attribute name="rdf:resource">
@@ -2954,7 +2978,10 @@
 				<xsl:value-of select="concat('Fruit sample related to cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./DBCA">
-				<xsl:variable name="authorssplit" select="arco-fn:split(./DBCA)" />
+				<xsl:variable name="virgola" select="./DBCA" />
+				<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
 					<arco-cd:hasAuthor>
 						<xsl:attribute name="rdf:resource">
@@ -3030,7 +3057,10 @@
 				<xsl:value-of select="concat('Wood sample related to cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./DBXT">
-				<xsl:variable name="authorssplit" select="arco-fn:split(./DBXT)" />
+				<xsl:variable name="virgola" select="./DBXT" />
+				<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
 					<arco-cd:hasAuthor>
 						<xsl:attribute name="rdf:resource">
@@ -3174,7 +3204,10 @@
 				<xsl:value-of select="concat('Pollen sample related to cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./DBPA">
-				<xsl:variable name="authorssplit" select="arco-fn:split(./DBPA)" />
+				<xsl:variable name="virgola" select="./DBPA" />
+				<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
 					<arco-cd:hasAuthor>
 						<xsl:attribute name="rdf:resource">
@@ -3219,7 +3252,10 @@
 				<xsl:value-of select="concat('Seed sample related to cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./DBSR">
-				<xsl:variable name="authorssplit" select="arco-fn:split(./DBSR)" />
+				<xsl:variable name="virgola" select="./DBSR" />
+				<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
 					<arco-cd:hasAuthor>
 						<xsl:attribute name="rdf:resource">
@@ -3294,7 +3330,10 @@
 			</arco-mp:producesTaxon>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIA">
-			<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/SB/TBI/TBIA)" />
+			<xsl:variable name="virgola" select="record/metadata/schede/BNB/SB/TBI/TBIA" />
+				<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
 					<arco-core:involvesAgent>
 						<xsl:attribute name="rdf:resource">
@@ -3818,7 +3857,10 @@
 		</rdf:Description>
 	</xsl:for-each>		
 	<xsl:if test="record/metadata/schede/*/SB/DBV/DBVA">
-		<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/*/SB/DBV/DBVA)" />
+		<xsl:variable name="virgola" select="record/metadata/schede/*/SB/DBV/DBVA" />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -3839,7 +3881,10 @@
 		</xsl:for-each>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIA">
-		<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/SB/TBI/TBIA)" />
+		<xsl:variable name="virgola" select="record/metadata/schede/BNB/SB/TBI/TBIA" />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -3859,8 +3904,11 @@
 			</rdf:Description>
 		</xsl:for-each>
 	</xsl:if>
-	<xsl:if test="record/metadata/schede/BNB/RB/RBR/RBRA">
-		<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/RB/RBR/RBRA)" />
+	<xsl:for-each select="record/metadata/schede/BNB/RB/RBR/RBRA">
+		<xsl:variable name="virgola" select="." />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -3879,9 +3927,12 @@
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>
-	</xsl:if>
+	</xsl:for-each>
 	<xsl:if test="record/metadata/schede/BNB/SB/ABC/ABCA">
-		<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/SB/ABC/ABCA)" />
+		<xsl:variable name="virgola" select="record/metadata/schede/BNB/SB/ABC/ABCA" />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -3902,7 +3953,10 @@
 		</xsl:for-each>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/LR/LRD/LRDA">
-		<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/LR/LRD/LRDA)" />
+		<xsl:variable name="virgola" select="record/metadata/schede/BNB/LR/LRD/LRDA" />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -3922,8 +3976,11 @@
 			</rdf:Description>
 		</xsl:for-each>
 	</xsl:if>
-	<xsl:if test="record/metadata/schede/BNB/RB/RBR/RBRA">
-		<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/RB/RBR/RBRA)" />
+	<xsl:for-each select="record/metadata/schede/BNB/RB/RBR/RBRA">
+		<xsl:variable name="virgola" select="." />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -3942,7 +3999,7 @@
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>
-	</xsl:if>
+	</xsl:for-each>
 	
 										<!-- Agent as individual -->	
 	<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAC">
@@ -4162,7 +4219,10 @@
 		</rdf:Description>
 	</xsl:for-each>    
 	<xsl:if test="record/metadata/schede/BNB/SB/DBV/DBVA">
-		<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/SB/DBV/DBVA)" />
+		<xsl:variable name="virgola" select="record/metadata/schede/BNB/SB/DBV/DBVA" />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -4183,7 +4243,10 @@
 		</xsl:for-each>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/SB/ABC/ABCA">
-		<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/SB/ABC/ABCA)" />
+		<xsl:variable name="virgola" select="record/metadata/schede/BNB/SB/ABC/ABCA" />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -4204,7 +4267,10 @@
 		</xsl:for-each>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/LR/LRD/LRDA">
-		<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/LR/LRD/LRDA)" />
+		<xsl:variable name="virgola" select="record/metadata/schede/BNB/LR/LRD/LRDA" />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -4225,7 +4291,10 @@
 		</xsl:for-each>
 	</xsl:if>
 	<xsl:for-each select="record/metadata/schede/BNB/RB/RBR/RBRA">
-		<xsl:variable name="authorssplit" select="arco-fn:split(.)" />
+		<xsl:variable name="virgola" select="." />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -4246,7 +4315,10 @@
 		</xsl:for-each>
 	</xsl:for-each>
 	<xsl:for-each select="record/metadata/schede/BNB/DB/DBC/DBCA">
-		<xsl:variable name="authorssplit" select="arco-fn:split(.)" />
+		<xsl:variable name="virgola" select="." />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -4267,7 +4339,10 @@
 		</xsl:for-each>
 	</xsl:for-each>
 	<xsl:for-each select="record/metadata/schede/BNB/DB/DBX/DBXT">
-		<xsl:variable name="authorssplit" select="arco-fn:split(.)" />
+		<xsl:variable name="virgola" select="." />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -4288,7 +4363,10 @@
 		</xsl:for-each>
 	</xsl:for-each>
 	<xsl:for-each select="record/metadata/schede/BNB/DB/DBS/DBSR">
-		<xsl:variable name="authorssplit" select="arco-fn:split(.)" />
+		<xsl:variable name="virgola" select="." />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -4309,7 +4387,10 @@
 		</xsl:for-each>
 	</xsl:for-each>
 	<xsl:for-each select="record/metadata/schede/BNB/DB/DBP/DBPA">
-		<xsl:variable name="authorssplit" select="arco-fn:split(.)" />
+		<xsl:variable name="virgola" select="." />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -4330,7 +4411,10 @@
 		</xsl:for-each>
 	</xsl:for-each>
 	<xsl:for-each select="record/metadata/schede/BNB/DB/DBR/DBRA">
-		<xsl:variable name="authorssplit" select="arco-fn:split(.)" />
+		<xsl:variable name="virgola" select="." />
+		<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+		<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+		<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 		<xsl:for-each select="$authorssplit">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
