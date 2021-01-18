@@ -1979,21 +1979,6 @@
 						</xsl:attribute>
 					</language:hasLanguage>
 				</xsl:for-each>
-				<!-- language as an individual -->
-				<xsl:for-each select="./SBEL">
-					<rdf:Description>
-						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'Language/', arco-fn:urify(normalize-space(.)))" />
-						</xsl:attribute>
-						<rdf:type rdf:resource="https://w3id.org/italia/onto/Language/Language" />
-						<rdfs:label>
-							<xsl:value-of select="normalize-space(.)" />
-						</rdfs:label>
-						<l0:name>
-							<xsl:value-of select="normalize-space(.)" />
-						</l0:name>
-					</rdf:Description>
-				</xsl:for-each>
 			</xsl:if>
 			<xsl:if test="./SBEG">
 				<arco-mp:graphicSymbols>
@@ -2005,6 +1990,21 @@
 					<xsl:value-of select="normalize-space(./SBEI)" />
 				</arco-mp:headingTranscript>
 			</xsl:if>		
+		</rdf:Description>
+	</xsl:for-each>
+					<!-- language as an individual -->
+	<xsl:for-each select="record/metadata/schede/BNB/SB/SBE/SBEL">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Language/', arco-fn:urify(normalize-space(.)))" />
+			</xsl:attribute>
+			<rdf:type rdf:resource="https://w3id.org/italia/onto/Language/Language" />
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(.)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(.)" />
+			</l0:name>
 		</rdf:Description>
 	</xsl:for-each>
 									<!-- Font style as individual -->
