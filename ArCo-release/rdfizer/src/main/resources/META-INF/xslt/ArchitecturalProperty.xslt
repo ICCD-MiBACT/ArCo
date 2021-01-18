@@ -533,6 +533,7 @@
 
 							<!-- ConstructionDesign as individual -->
 	<xsl:for-each select="record/metadata/schede/A/PN/PNT">
+		<xsl:if test="./PNTQ or ./PNTE">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
         		<xsl:value-of select="concat($NS, 'ConstructionDesign/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
@@ -565,6 +566,7 @@
 				</arco-ip:significantIconographicInformation>
 			</xsl:for-each>
 		</rdf:Description>
+		</xsl:if>
 	</xsl:for-each>		
 										<!-- Layout as individual -->
 	<xsl:for-each select="record/metadata/schede/A/PN/PNT">
