@@ -24618,7 +24618,7 @@
 				/> </rdfs:label> </rdf:Description> </xsl:if -->
 			<!-- member of collection -->
 			<!-- intervention (CO/RST) -->
-			<xsl:for-each select="record/metadata/schede/*/CO/RST">
+			<xsl:for-each select="record/metadata/schede/*/CO/RST/*">
 				<rdf:Description>
 					<xsl:choose>
 						<xsl:when
@@ -24876,7 +24876,7 @@
 				</xsl:for-each>
 			</xsl:for-each>
 			<!-- intervention (RS/RST) -->
-			<xsl:for-each select="record/metadata/schede/*/RS/RST">
+			<xsl:for-each select="record/metadata/schede/*/RS/RST/*">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 							<xsl:value-of
