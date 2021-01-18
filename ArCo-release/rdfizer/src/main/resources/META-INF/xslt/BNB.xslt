@@ -1252,6 +1252,24 @@
             <l0:name>
             	<xsl:value-of select="concat($nata-natb-name,  ' ', record/metadata/schede/BNB/SB/NAT/NATL)" />
             </l0:name>
+            <xsl:choose>
+  	          <xsl:when test="record/metadata/schede/BNB/SB/TBI/TBIL and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'n.r')))">
+					<arco-cd:hasBibliography>
+						<xsl:attribute name="rdf:resource">
+	    			    	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+						</xsl:attribute>
+					</arco-cd:hasBibliography>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'n.r')))">
+						<arco-cd:hasBibliography>
+							<xsl:attribute name="rdf:resource">
+	    				    	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+							</xsl:attribute>
+						</arco-cd:hasBibliography>
+					</xsl:if>
+				</xsl:otherwise>
+			</xsl:choose>
   		</rdf:Description>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATH">
@@ -1281,7 +1299,25 @@
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNB/SB/NAT/NATI))" />
             	</xsl:attribute>
             	</arco-cd:hasAuthor>
-            </xsl:if>	           
+            </xsl:if>
+            <xsl:choose>
+  	          <xsl:when test="record/metadata/schede/BNB/SB/TBI/TBIL and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'n.r')))">
+					<arco-cd:hasBibliography>
+						<xsl:attribute name="rdf:resource">
+	    			    	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+						</xsl:attribute>
+					</arco-cd:hasBibliography>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'n.r')))">
+						<arco-cd:hasBibliography>
+							<xsl:attribute name="rdf:resource">
+	    				    	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+							</xsl:attribute>
+						</arco-cd:hasBibliography>
+					</xsl:if>
+				</xsl:otherwise>
+			</xsl:choose>	           
   		</rdf:Description>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATF">
@@ -1311,7 +1347,25 @@
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNB/SB/NAT/NATG))" />
             	</xsl:attribute>
             	</arco-cd:hasAuthor>
-            </xsl:if>	           
+            </xsl:if>
+            <xsl:choose>
+  	          <xsl:when test="record/metadata/schede/BNB/SB/TBI/TBIL and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'n.r')))">
+					<arco-cd:hasBibliography>
+						<xsl:attribute name="rdf:resource">
+	    			    	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+						</xsl:attribute>
+					</arco-cd:hasBibliography>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'n.r')))">
+						<arco-cd:hasBibliography>
+							<xsl:attribute name="rdf:resource">
+	    				    	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+							</xsl:attribute>
+						</arco-cd:hasBibliography>
+					</xsl:if>
+				</xsl:otherwise>
+			</xsl:choose>	           
   		</rdf:Description>
 	</xsl:if>	
 	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATD">
@@ -1341,7 +1395,25 @@
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNB/SB/NAT/NATE))" />
             	</xsl:attribute>
             	</arco-cd:hasAuthor> 
-            </xsl:if>                       
+            </xsl:if>  
+            <xsl:choose>
+  	          <xsl:when test="record/metadata/schede/BNB/SB/TBI/TBIL and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'n.r')))">
+					<arco-cd:hasBibliography>
+						<xsl:attribute name="rdf:resource">
+	    			    	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+						</xsl:attribute>
+					</arco-cd:hasBibliography>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'n.r')))">
+						<arco-cd:hasBibliography>
+							<xsl:attribute name="rdf:resource">
+	    				    	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+							</xsl:attribute>
+						</arco-cd:hasBibliography>
+					</xsl:if>
+				</xsl:otherwise>
+			</xsl:choose>                     
     	</rdf:Description>
 	</xsl:if>	
 	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATB">
@@ -1371,7 +1443,25 @@
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNB/SB/NAT/NATC))" />
             	</xsl:attribute>
             	</arco-cd:hasAuthor> 
-            </xsl:if>           	           
+            </xsl:if>   
+            <xsl:choose>
+  	          <xsl:when test="record/metadata/schede/BNB/SB/TBI/TBIL and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'n.r')))">
+					<arco-cd:hasBibliography>
+						<xsl:attribute name="rdf:resource">
+	    			    	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+						</xsl:attribute>
+					</arco-cd:hasBibliography>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'n.r')))">
+						<arco-cd:hasBibliography>
+							<xsl:attribute name="rdf:resource">
+	    				    	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+							</xsl:attribute>
+						</arco-cd:hasBibliography>
+					</xsl:if>
+				</xsl:otherwise>
+			</xsl:choose>        	           
     	</rdf:Description>
 	</xsl:if>	
 	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATA">
@@ -1393,6 +1483,24 @@
             <l0:name>
             	<xsl:value-of select="record/metadata/schede/BNB/SB/NAT/NATA" />
             </l0:name>
+            <xsl:choose>
+  	          <xsl:when test="record/metadata/schede/BNB/SB/TBI/TBIL and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'n.r')))">
+					<arco-cd:hasBibliography>
+						<xsl:attribute name="rdf:resource">
+	    			    	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+						</xsl:attribute>
+					</arco-cd:hasBibliography>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'n.r')))">
+						<arco-cd:hasBibliography>
+							<xsl:attribute name="rdf:resource">
+	    				    	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+							</xsl:attribute>
+						</arco-cd:hasBibliography>
+					</xsl:if>
+				</xsl:otherwise>
+			</xsl:choose>
     	</rdf:Description>
 	</xsl:if>	
 	<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSF">
