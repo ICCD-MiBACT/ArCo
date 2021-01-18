@@ -13940,6 +13940,11 @@
 								</xsl:attribute>
 			            	</arco-dd:hasMeasurementCollection>
 						</xsl:if>
+						<xsl:if test="./ISRP">
+							<arco-dd:positionOnCulturalProperty>
+					 	   			<xsl:value-of select="./ISRP" />
+							</arco-dd:positionOnCulturalProperty>
+						</xsl:if>
 						<xsl:if test="./ISRS and (not(starts-with(lower-case(normalize-space(./ISRS)), 'nr')) and not(starts-with(lower-case(normalize-space(ISRS)), 'n.r')))">
 							<xsl:if test="./ISRS">
 								<arco-dd:hasTechnicalStatus>
@@ -24618,7 +24623,8 @@
 				/> </rdfs:label> </rdf:Description> </xsl:if -->
 			<!-- member of collection -->
 			<!-- intervention (CO/RST) -->
-			<xsl:for-each select="record/metadata/schede/*/CO/RST/*">
+			<xsl:for-each select="record/metadata/schede/*/CO/RST">
+				<xsl:if test="./*">
 				<rdf:Description>
 					<xsl:choose>
 						<xsl:when
@@ -24874,9 +24880,11 @@
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
+			</xsl:if>
 			</xsl:for-each>
 			<!-- intervention (RS/RST) -->
-			<xsl:for-each select="record/metadata/schede/*/RS/RST/*">
+			<xsl:for-each select="record/metadata/schede/*/RS/RST">
+			<xsl:if test="./*">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 							<xsl:value-of
@@ -25111,6 +25119,7 @@
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
+			</xsl:if>
 			</xsl:for-each>
 			<!-- collection membership -->
 			<xsl:for-each select="record/metadata/schede/*/UB/COL">
@@ -28692,16 +28701,16 @@
 									select="'https://w3id.org/italia/onto/CLV/Feature'" />
                                     </xsl:attribute>
 							</rdf:type>
-							<rdfs:label>
-								<xsl:if test="./PRV">
+							<xsl:if test="./PRV">
+								<rdfs:label>
 									<xsl:value-of select="normalize-space(./PRV)" />
-								</xsl:if>
-							</rdfs:label>
-							<rdfs:label>
-								<xsl:if test="./PRT">
+								</rdfs:label>
+							</xsl:if>
+							<xsl:if test="./PRT">
+								<rdfs:label>
 									<xsl:value-of select="normalize-space(./PRT)" />
-								</xsl:if>
-							</rdfs:label>
+								</rdfs:label>
+							</xsl:if>
 							<xsl:if test="./PRV/*">
 								<clvapit:hasAddress>
 									<xsl:attribute name="rdf:resource">
