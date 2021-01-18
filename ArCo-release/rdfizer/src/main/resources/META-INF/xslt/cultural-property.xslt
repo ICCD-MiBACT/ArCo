@@ -3731,7 +3731,7 @@
 					</arco-dd:hasDesignationInTime>
 				</xsl:if>
 				<!-- name in time (OG/OGD) -->
-				<xsl:for-each select="record/metadata/schede/MODI/OG/OGD">
+				<xsl:for-each select="record/metadata/schede/*/OG/OGD">
 				<xsl:if test="not($sheetType='MODI')">
 					<arco-dd:hasDesignationInTime>
 						<xsl:attribute name="rdf:resource">
