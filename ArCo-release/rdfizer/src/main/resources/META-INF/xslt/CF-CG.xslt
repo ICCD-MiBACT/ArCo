@@ -89,7 +89,6 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	<xsl:variable name="sheetVersion"
 		select="record/metadata/schede/*/@version" />
 	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)" />
-	<xsl:variable name="idCF" select="record/metadata/schede/CF/CD/CCF" />
 	<xsl:variable name="idCG" select="record/metadata/schede/CG/CD/CCG" />
 	<xsl:variable name="cp-name" select="''" />
 	<!-- xsl:variable name="NS"
@@ -128,8 +127,18 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</xsl:otherwise>
 	</xsl:choose>
 	</xsl:variable>
+	<xsl:variable name="idCF">
+		<xsl:choose>
+   			<xsl:when test="record/metadata/schede/*/CD/CCF and contains(record/metadata/schede/*/CD/CCF, 'DBunico')">
+   				<xsl:value-of select="substring-after(record/metadata/schede/*/CD/CCF, 'DBunico')"/>
+   			</xsl:when>
+  			<xsl:otherwise>
+  				<xsl:value-of select="record/metadata/schede/CF/CD/CCF"/>
+  			</xsl:otherwise>
+  		</xsl:choose>
+ 	</xsl:variable>
 	<xsl:variable name="contenitoreFisico"
-			select="concat($NS, 'Site/', $idCF)" />
+			select="concat('http://dati.beniculturali.it/iccd/cf/resource/CulturalInstituteOrSite/', $idCF)" />
 	<xsl:variable name="contenitoreGiuridico"
 			select="concat($NS, 'CulturalInstituteOrSite/', $idCG)" />
 	<xsl:variable name="address">
@@ -736,6 +745,13 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 					<l0:name xml:lang="en">Site</l0:name>
 				</xsl:otherwise>
 			</xsl:choose>
+			<xsl:if test="contains(record/metadata/schede/*/CD/CCF/text(), 'DBunico')">
+    			<rdfs:seeAlso>
+    				<xsl:attribute name="rdf:resource">
+    					<xsl:value-of select="concat('http://dati.beniculturali.it/mibact/luoghi/resource/CulturalInstituteOrSite/', substring-after(record/metadata/schede/*/CD/CCF,'DBunicoCF') )"/>
+     				</xsl:attribute>
+     			</rdfs:seeAlso>
+   			</xsl:if>
 			<xsl:if test="record/metadata/schede/*/CF/CFN">
 				<arco-dd:hasDesignationInTime>
 					<xsl:attribute name="rdf:resource">
