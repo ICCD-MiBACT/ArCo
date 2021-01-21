@@ -213,7 +213,9 @@
 		<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'collezione'))">
 			<xsl:if test="record/metadata/schede/*/AC/ACO">
 				<arco-core:isPartOf>
-					<xsl:value-of select="concat($NS, 'Collection/', arco-fn:urify(record/metadata/schede/*/AC/ACO))" />
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Collection/', arco-fn:urify(record/metadata/schede/*/AC/ACO))" />
+					</xsl:attribute>
 				</arco-core:isPartOf>
 			</xsl:if>
 		</xsl:if>
@@ -400,7 +402,9 @@
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMF/SMFA or record/metadata/schede/BNM/SM/SMF/SMFZ">
 			<arco-mp:hasCleavage>
-				<xsl:value-of select="concat($NS, 'Cleavage/',  $itemURI)" />
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Cleavage/',  $itemURI)" />
+				</xsl:attribute>
 			</arco-mp:hasCleavage>
 		</xsl:if>
 		<xsl:for-each select="record/metadata/schede/BNM/RM">

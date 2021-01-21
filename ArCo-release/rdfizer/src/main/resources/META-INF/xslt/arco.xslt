@@ -13940,6 +13940,11 @@
 								</xsl:attribute>
 			            	</arco-dd:hasMeasurementCollection>
 						</xsl:if>
+						<xsl:if test="./ISRP">
+							<arco-dd:positionOnCulturalProperty>
+					 	   			<xsl:value-of select="./ISRP" />
+							</arco-dd:positionOnCulturalProperty>
+						</xsl:if>
 						<xsl:if test="./ISRS and (not(starts-with(lower-case(normalize-space(./ISRS)), 'nr')) and not(starts-with(lower-case(normalize-space(ISRS)), 'n.r')))">
 							<xsl:if test="./ISRS">
 								<arco-dd:hasTechnicalStatus>
@@ -17042,6 +17047,7 @@
 				</xsl:if>
 			</xsl:if>
 						<!-- CulturalEntityTechnicalStatus as an individual (not VeAC)-->
+			<xsl:if test="record/metadata/schede/*/MT/MTC/*">
 			<xsl:for-each select="record/metadata/schede/*/MT/MTC">
 				<xsl:if test="(not(./MTCP) or ./MTCP='intero bene' or ./MTCP='integrale' or ./MTCP='tutta' or ./MTCP='totale') or (starts-with(lower-case(normalize-space(./MTCP)), 'nr')) or (starts-with(lower-case(normalize-space(./MTCP)), 'n.r')) or (starts-with(lower-case(normalize-space(./MTCP)), 'intero')) or (starts-with(lower-case(normalize-space(./MTCP)), 'intera')) or (starts-with(lower-case(normalize-space(./MTCP)), 'esemplar'))">
 				<xsl:if test="not($sheetType='VeAC')" >
@@ -17337,10 +17343,10 @@
 					</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
-			
+			</xsl:if>
 				<!-- materialOrTechnique of cultural property (previous versions) as an individual -->
-			<xsl:if test="not(record/metadata/schede/*/MT/MTC/*) and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC)), 'n.r')))">
-				<xsl:for-each select="record/metadata/schede/*/MT/MTC">
+			<xsl:for-each select="record/metadata/schede/*/MT/MTC">
+				<xsl:if test="not(./*) and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
             				<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
@@ -17385,38 +17391,38 @@
 								</xsl:attribute>
 							</skos:relatedMatch>
 						</xsl:if>
-							<xsl:if test="$material-method-ra2 != ''">
-								<skos:relatedMatch>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="$material-method-ra2" />
-									</xsl:attribute>
-								</skos:relatedMatch>
-							</xsl:if>
-						</rdf:Description>
-						<!-- Technical detail as an individual -->
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-            					<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
-         			   		</xsl:attribute>
-							<rdf:type>
+						<xsl:if test="$material-method-ra2 != ''">
+							<skos:relatedMatch>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic'" />
+									<xsl:value-of select="$material-method-ra2" />
 								</xsl:attribute>
-							</rdf:type>
-							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
-							</rdfs:label>
-							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
-							</l0:name>
-							<arco-dd:isCharacteristicClassifiedBy>
-								<xsl:attribute name="rdf:resource">
-            						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique'" />
-            					</xsl:attribute>
-							</arco-dd:isCharacteristicClassifiedBy>
-						</rdf:Description>
-				</xsl:for-each>
-			</xsl:if>
+							</skos:relatedMatch>
+						</xsl:if>
+					</rdf:Description>
+					<!-- Technical detail as an individual -->
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+           					<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+       			   		</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic'" />
+							</xsl:attribute>
+						</rdf:type>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(.)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(.)" />
+						</l0:name>
+						<arco-dd:isCharacteristicClassifiedBy>
+							<xsl:attribute name="rdf:resource">
+           						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique'" />
+           					</xsl:attribute>
+						</arco-dd:isCharacteristicClassifiedBy>
+					</rdf:Description>
+				</xsl:if>
+			</xsl:for-each>
 			
 			<!-- shape of cultural property as an individual -->
 			<xsl:if
@@ -24618,6 +24624,7 @@
 			<!-- member of collection -->
 			<!-- intervention (CO/RST) -->
 			<xsl:for-each select="record/metadata/schede/*/CO/RST">
+				<xsl:if test="./*">
 				<rdf:Description>
 					<xsl:choose>
 						<xsl:when
@@ -24873,9 +24880,11 @@
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
+			</xsl:if>
 			</xsl:for-each>
 			<!-- intervention (RS/RST) -->
 			<xsl:for-each select="record/metadata/schede/*/RS/RST">
+			<xsl:if test="./*">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 							<xsl:value-of
@@ -25110,6 +25119,7 @@
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
+			</xsl:if>
 			</xsl:for-each>
 			<!-- collection membership -->
 			<xsl:for-each select="record/metadata/schede/*/UB/COL">
@@ -28691,16 +28701,16 @@
 									select="'https://w3id.org/italia/onto/CLV/Feature'" />
                                     </xsl:attribute>
 							</rdf:type>
-							<rdfs:label>
-								<xsl:if test="./PRV">
+							<xsl:if test="./PRV">
+								<rdfs:label>
 									<xsl:value-of select="normalize-space(./PRV)" />
-								</xsl:if>
-							</rdfs:label>
-							<rdfs:label>
-								<xsl:if test="./PRT">
+								</rdfs:label>
+							</xsl:if>
+							<xsl:if test="./PRT">
+								<rdfs:label>
 									<xsl:value-of select="normalize-space(./PRT)" />
-								</xsl:if>
-							</rdfs:label>
+								</rdfs:label>
+							</xsl:if>
 							<xsl:if test="./PRV/*">
 								<clvapit:hasAddress>
 									<xsl:attribute name="rdf:resource">
