@@ -249,6 +249,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/areGrainsOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/areGrainsOf"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/hasAccession -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasAccession">
@@ -265,6 +271,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: SB/ABC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasAlterationGrade -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasAlterationGrade"/>
     
 
 
@@ -321,6 +333,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasCement -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCement"/>
     
 
 
@@ -395,6 +413,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasContactType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasContactType"/>
     
 
 
@@ -581,6 +605,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/hasEruptiveType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasEruptiveType"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/hasFluidDynamism -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasFluidDynamism">
@@ -691,6 +721,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFG</a-cat:iccdNormTag>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasGrains -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasGrains"/>
     
 
 
@@ -917,6 +953,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/hasMatrix -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasMatrix"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/hasMeasuredDensity -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasMeasuredDensity">
@@ -936,6 +978,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/hasMineral -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasMineral"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/hasMineralDeposit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasMineralDeposit">
@@ -951,6 +999,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasMineralPresence -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasMineralPresence"/>
     
 
 
@@ -1234,6 +1288,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/hasSedimentaryStructure -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasSedimentaryStructure"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/hasShadeTolerance -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasShadeTolerance">
@@ -1438,6 +1498,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/hasWeatheringContition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasWeatheringContition"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/isAccessionOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isAccessionOf">
@@ -1451,6 +1517,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isAlterationGradeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isAlterationGradeOf"/>
     
 
 
@@ -1502,6 +1574,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isCementOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCementOf"/>
     
 
 
@@ -1621,6 +1699,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isContactTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isContactTypeOf"/>
     
 
 
@@ -1755,6 +1839,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isEruptiveTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isEruptiveTypeOf"/>
     
 
 
@@ -2023,6 +2113,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/isMatrixOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isMatrixOf"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/isMeasuredDensity -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isMeasuredDensity">
@@ -2053,6 +2149,18 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isMineralOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isMineralOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isMineralPresenceOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isMineralPresenceOf"/>
     
 
 
@@ -2507,6 +2615,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/isWeatheringContitionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isWeatheringContitionOf"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/producesTaxon -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/producesTaxon">
@@ -2762,6 +2876,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/mainMineral -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/mainMineral"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/manufacturingDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/manufacturingDate">
@@ -2930,6 +3050,12 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBC/DBCC, DB/DBX/DBXC, DB/DBS/DBSC, DB/DB/DBP/DBPC.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/secondaryMineral -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/secondaryMineral"/>
     
 
 
@@ -3166,6 +3292,30 @@ SB/NAA</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/AlterationGrade -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/AlterationGrade">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/AlterationType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/AlterationType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BiogenicSedimentaryStructure -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BiogenicSedimentaryStructure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/SedimentaryStructure"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/BiologicalTaxon -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon">
@@ -3214,6 +3364,14 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNH; SB/NAA/NAAH; SB/NAT/NATH</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Cement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Cement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
     </owl:Class>
     
 
@@ -3438,6 +3596,14 @@ SB/NAA</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/ContactType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ContactType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/CrystalHabit -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CrystalHabit">
@@ -3576,6 +3742,14 @@ SB/NAA</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/EruptiveType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/EruptiveType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/Family -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Family">
@@ -3660,6 +3834,14 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRID</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Fossil -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Fossil">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
     </owl:Class>
     
 
@@ -3841,6 +4023,76 @@ SB/NAA</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/GeologicClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicTaxon"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia geologica, ovvero la classe mineralogica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a geologic taxon, the mineral class.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="it">Classe geologica</rdfs:label>
+        <rdfs:label xml:lang="en">Geologic class</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSC, SMSD</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GeologicSpecies -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicSpecies">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicTaxon"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia geologica, ovvero la specie mineralogica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of an geologic taxon, the mineral species.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Geologic species</rdfs:label>
+        <rdfs:label xml:lang="it">Specie geologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GeologicSubclass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicSubclass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia geologica, ovvero la sottoclasse mineralogica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a geologic taxon, the mineral class.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Geologic subclass</rdfs:label>
+        <rdfs:label xml:lang="it">Sottoclasse geologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSS</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GeologicTaxon -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicTaxon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/Taxon"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un taxon di esemplari geologici.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a taxon for geologic specimen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Geologic taxon</rdfs:label>
+        <rdfs:label xml:lang="it">Taxon geologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMN/SMNA, SMNI, SMNP</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/GeologicalContext -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicalContext">
@@ -3881,6 +4133,14 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAT</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Grains -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Grains">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
     </owl:Class>
     
 
@@ -4012,76 +4272,6 @@ SB/NAA</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/GeologicClass -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicClass">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicTaxon"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia geologica, ovvero la classe mineralogica.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a geologic taxon, the mineral class.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
-        <rdfs:label xml:lang="it">Classe geologica</rdfs:label>
-        <rdfs:label xml:lang="en">Geologic class</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSC, SMSD</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/GeologicSpecies -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicSpecies">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicTaxon"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia geologica, ovvero la specie mineralogica.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of an geologic taxon, the mineral species.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
-        <rdfs:label xml:lang="en">Geologic species</rdfs:label>
-        <rdfs:label xml:lang="it">Specie geologica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/GeologicSubclass -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicSubclass">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicClass"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia geologica, ovvero la sottoclasse mineralogica.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a geologic taxon, the mineral class.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
-        <rdfs:label xml:lang="en">Geologic subclass</rdfs:label>
-        <rdfs:label xml:lang="it">Sottoclasse geologica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSS</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/GeologicTaxon -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicTaxon">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/Taxon"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un taxon di esemplari geologici.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a taxon for geologic specimen.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">Geologic taxon</rdfs:label>
-        <rdfs:label xml:lang="it">Taxon geologico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMN/SMNA, SMNI, SMNP</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/Kingdom -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Kingdom">
@@ -4161,6 +4351,15 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">untable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/LithologicType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/LithologicType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/PetrologicTaxon"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/movable-property/RockType"/>
     </owl:Class>
     
 
@@ -4251,6 +4450,14 @@ SB/NAA</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/Matrix -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Matrix">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/MetallicSpecimen -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MetallicSpecimen">
@@ -4296,6 +4503,14 @@ SB/NAA</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/Mineral -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Mineral">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/MineralDeposit -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralDeposit">
@@ -4330,6 +4545,38 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAP, IMAE</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/MineralPresence -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralPresence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasValue"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/MU/Value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasMineral"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Mineral"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/mainMineral"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/secondaryMineral"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4529,6 +4776,14 @@ erbario.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/PetrologicTaxon -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/PetrologicTaxon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/Taxon"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/Phylum -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Phylum">
@@ -4680,6 +4935,14 @@ erbario.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/PrimarySedimentaryStructure -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/PrimarySedimentaryStructure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/SedimentaryStructure"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/Pseudomorphosis -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis">
@@ -4732,6 +4995,14 @@ erbario.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/RockType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/RockType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/PetrologicTaxon"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/Sample -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Sample">
@@ -4767,6 +5038,22 @@ erbario.</rdfs:comment>
         <rdfs:label xml:lang="en">Sample</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/SecodarySedimentaryStructure -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SecodarySedimentaryStructure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/SedimentaryStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/SedimentaryStructure -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SedimentaryStructure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
     </owl:Class>
     
 
@@ -5320,6 +5607,14 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/WeatheringCondition -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/WeatheringCondition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/WoodSample -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/WoodSample">
@@ -5834,6 +6129,14 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiogenicSedimentaryStructure"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/PrimarySedimentaryStructure"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SecodarySedimentaryStructure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Chron"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Eon"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalAge"/>
@@ -5890,18 +6193,18 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Herbarium"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/NaturalHeritageCollection"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Specimen"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicClass"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicSpecies"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicSubclass"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicClass"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicSpecies"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicSubclass"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Herbarium"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/NaturalHeritageCollection"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

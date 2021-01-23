@@ -331,6 +331,14 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/hasConstituent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasConstituent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/hasCulturalEntityCharacteristic -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasCulturalEntityCharacteristic">
@@ -671,6 +679,14 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è conseguenza di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isConstituentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isConstituentOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
     </owl:ObjectProperty>
     
 
