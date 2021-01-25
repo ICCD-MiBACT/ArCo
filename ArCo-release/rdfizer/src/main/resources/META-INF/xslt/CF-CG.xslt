@@ -745,6 +745,11 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 					<l0:name xml:lang="en">Site</l0:name>
 				</xsl:otherwise>
 			</xsl:choose>
+			<xsl:if test="record/metadata/schede/*/CF/CFD">
+				<arco-core:description>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/CF/CFD)" />
+				</arco-core:description>
+			</xsl:if>
 			<xsl:if test="contains(record/metadata/schede/*/CD/CCF/text(), 'DBunico')">
     			<rdfs:seeAlso>
     				<xsl:attribute name="rdf:resource">
