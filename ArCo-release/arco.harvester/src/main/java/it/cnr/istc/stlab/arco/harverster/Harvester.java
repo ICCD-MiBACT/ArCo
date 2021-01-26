@@ -20,8 +20,8 @@ import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -41,7 +41,7 @@ public class Harvester {
 			authorityFiles;
 	private AtomicInteger c = new AtomicInteger(0);
 
-	private static final Logger logger = LogManager.getLogger(OAIHarvester.class);
+	private static final Logger logger = LoggerFactory.getLogger(OAIHarvester.class);
 
 	public Harvester(String listIdentifierURL, String outputDirectory) throws ParserConfigurationException {
 		super();
@@ -265,6 +265,7 @@ public class Harvester {
 		for (int i = 0; i < NUM_OF_ATTEMPTS; i++) {
 			try {
 				URL url = new URL(listIdentifierURL + "verb=GetRecord&metadataPrefix=oai_dc&identifier=" + identifier);
+				logger.trace("Getting {}", url);
 				HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 				conn.setRequestMethod("GET");
 				Document d = builder.parse(conn.getInputStream());
@@ -303,7 +304,7 @@ public class Harvester {
 		new File(outputDirectory).mkdirs();
 
 		for (String keycode : keycodes) {
-			String recordString = getRecord(getIdentifierFromKeycode(keycode));
+			String recordString = getRecord(getIdentifierFromKeycode(keycode) + "/xml");
 
 			if (recordString != null) {
 				FileOutputStream fos = new FileOutputStream(new File(outputDirectory + "/" + keycode + ".xml"));
@@ -322,7 +323,7 @@ public class Harvester {
 			throws XPathExpressionException, IOException, SAXException, TransformerException {
 		return getRecord("oai:oaicat.iccd.org:@" + keycode + "@/xml/contenitori_fisici");
 	}
-	
+
 	public String getContenitoreGiuridico(String keycode)
 			throws XPathExpressionException, IOException, SAXException, TransformerException {
 		return getRecord("oai:oaicat.iccd.org:@" + keycode + "@/xml/contenitori_giuridici");
