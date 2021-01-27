@@ -4882,7 +4882,7 @@
 					<arco-cd:isPrintingPlateMemberOf>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of
-							select="concat($NS, 'PrintingPlatesSeries/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/MI/OG/SGT/SGTS)))" />
+							select="concat($NS, 'PrintingPlatesSeries/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/S/OG/SGT/SGTS)))" />
 						</xsl:attribute>
 					</arco-cd:isPrintingPlateMemberOf>
 				</rdf:Description>
