@@ -4160,6 +4160,13 @@
 						</xsl:attribute>
 					</arco-cd:hasCoinIssuance>
 				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/DA/AUE">
+					<arco-cd:hasCoinIssuance>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'CoinIssuance/', $itemURI, '-issuance-', position())" />
+						</xsl:attribute>
+					</arco-cd:hasCoinIssuance>
+				</xsl:for-each>
 				<!-- Use of cultural property -->
 				<xsl:if
 					test="not(record/metadata/schede/A/UT or record/metadata/schede/PG/UT)">
