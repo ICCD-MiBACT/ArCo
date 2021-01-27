@@ -371,7 +371,7 @@
 			</arco-mp:hasLabel>			
 		</xsl:for-each>
 		<xsl:if test="not($sheetType='F' or $sheetType='PG')">
-			<xsl:if test="record/metadata/schede/*/LR">
+			<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM">
 				<arco-mp:hasSpecimenHarvesting>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS,'SpecimenHarvesting/', $itemURI)" />
@@ -3439,7 +3439,7 @@
 
 								<!-- Specimen Harvesting as individual -->
 	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">
-	<xsl:if test="record/metadata/schede/*/LR">
+	<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS,'SpecimenHarvesting/', $itemURI)" />
@@ -3563,6 +3563,7 @@
 	</xsl:if>				
 							
 							<!-- Time indexed typed location as individual -->
+	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">
 	<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -3614,6 +3615,7 @@
 				</arco-location:atLocation>
 			</xsl:for-each>
 		</rdf:Description>
+	</xsl:if>
 	</xsl:if>
 					
 					<!-- Feature as individual -->
@@ -3944,6 +3946,7 @@
 	</xsl:for-each>		
 	</xsl:if>				
 					<!-- Geological context as individual -->
+	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">				
 	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -4170,7 +4173,7 @@
 			</arco-arco:endTime>
 		</rdf:Description>
 	</xsl:if>
-	
+	</xsl:if>
 					<!-- Type specimen identification as individual -->
 	<xsl:if test="record/metadata/schede/BNM/SM/SMT and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMT/SMTT)), 'non tipo'))">
 		<rdf:Description>
@@ -4328,7 +4331,8 @@
 	</xsl:if>	
 						
 					<!-- Bibliography identification as individual -->	
-	<xsl:for-each select="record/metadata/schede/*/IM/IMA/IMAB">
+	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">					
+		<xsl:for-each select="record/metadata/schede/*/IM/IMA/IMAB">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
 					<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-geological-context-bibliography-', position())" />
@@ -4354,7 +4358,8 @@
 					<xsl:value-of select="." />
 				</arco-cd:completeBibliographicReference>			
 			</rdf:Description>
-		</xsl:for-each>					
+		</xsl:for-each>	
+	</xsl:if>				
 						<!-- Type specimen identification as individual -->
 	<xsl:for-each select="record/metadata/schede/BNM/RM">
 	<xsl:variable name="rmnv">
@@ -4598,6 +4603,7 @@
 	</xsl:for-each>
 		
 							<!-- Host rock as individual -->
+	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">							
 	<xsl:if test="record/metadata/schede/BNM/IM/IMA/IMAO">
 		<rdf:Description>	
 			<xsl:attribute name="rdf:about">
@@ -4616,7 +4622,7 @@
             </l0:name>
 		</rdf:Description>
 	</xsl:if>
-	
+	</xsl:if>
 										<!-- Inclusions rock as individual -->
 	<xsl:for-each select="record/metadata/schede/BNM/SM/SMA/SMAI">
 		<rdf:Description>
@@ -4637,6 +4643,7 @@
 		</rdf:Description>
 	</xsl:for-each>
 						<!-- Orientation as individual -->	
+	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">						
 	<xsl:if test="record/metadata/schede/BNM/IM/IMA/IMAG">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -4655,7 +4662,7 @@
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>
-	
+	</xsl:if>
 												<!-- Morphology as individual -->	
 	<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAB" >
 		<rdf:Description>
