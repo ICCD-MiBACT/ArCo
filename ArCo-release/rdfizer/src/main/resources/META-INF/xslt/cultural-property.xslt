@@ -2209,9 +2209,7 @@
 				</xsl:for-each>
 				<!-- AU/AUF (F version 2.00, 3.00 and BDM) -->
 				<xsl:for-each select="record/metadata/schede/*/AU/AUF">
-					<xsl:if
-						test="./* and ./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFB)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
-
+					<xsl:if test="./* and ./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFB)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
 						<arco-cd:hasAuthorshipAttribution>
 							<xsl:attribute name="rdf:resource">
 		                            <xsl:value-of
@@ -2314,8 +2312,7 @@
 				</xsl:for-each>
 				<!-- AU/AFB (F version 2.00, 3.00) -->
 				<xsl:for-each select="record/metadata/schede/*/AU/AFB">
-					<xsl:if
-						test="(not(starts-with(lower-case(normalize-space(./AFBD)), 'nr')) and not(starts-with(lower-case(normalize-space(./AFBD)), 'n.r')))">
+					<xsl:if test="(not(starts-with(lower-case(normalize-space(./AFBD)), 'nr')) and not(starts-with(lower-case(normalize-space(./AFBD)), 'n.r')))">
 						<arco-cd:hasAuthorshipAttribution>
 							<xsl:attribute name="rdf:resource">
 	                            <xsl:value-of
@@ -3386,7 +3383,7 @@
 					</xsl:if>
 				</xsl:for-each>
 				<!-- proper title -->
-				<xsl:if test="not($sheetType='PST')">
+				<xsl:if test="not($sheetType='PST' or $sheetType='SMO')">
 
 					<xsl:for-each select="record/metadata/schede/*/*/SGT/SGTP">
 						<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
@@ -4135,13 +4132,6 @@
 							</xsl:for-each>
 						</xsl:otherwise>
 					</xsl:choose>
-				</xsl:for-each>
-				<xsl:for-each select="record/metadata/schede/*/DA/ISR">
-					<arco-dd:hasAffixedElement>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Inscription/', $itemURI, '-affixed-element-', position())" />
-						</xsl:attribute>
-					</arco-dd:hasAffixedElement>
 				</xsl:for-each>
 				<!-- Sample Collected (CMN) -->
 				<xsl:for-each select="record/metadata/schede/*/MC/CMN">

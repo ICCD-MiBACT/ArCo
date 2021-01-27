@@ -23053,8 +23053,7 @@
 			</xsl:for-each>
 			<!-- AU/AUF (F version 2.00, 3.00 and BDM) -->
 			<xsl:for-each select="record/metadata/schede/*/AU/AUF">
-				<xsl:if
-					test="./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
+				<xsl:if test="./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
                         <xsl:value-of
@@ -23338,7 +23337,7 @@
 				</xsl:if>
 			</xsl:for-each>
 			<!-- AU/AFB (F version 2.00, 3.00) -->
-			<xsl:for-each select="record/metadata/schede/*/AU/ATB">
+			<xsl:for-each select="record/metadata/schede/*/AU/AFB">
 				<xsl:if test="(not(starts-with(lower-case(normalize-space(./AFBD)), 'nr')) and not(starts-with(lower-case(normalize-space(./AFBD)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
