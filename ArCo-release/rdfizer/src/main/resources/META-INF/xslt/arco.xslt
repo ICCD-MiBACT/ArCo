@@ -26549,10 +26549,22 @@
 							<xsl:variable name="CF" select="record/metadata/schede/harvesting/idContenitoreFisico" />
 							<xsl:variable name="idCF">
 								<xsl:value-of select="arco-fn:find-cf($CF)"/>
-							</xsl:variable>
+							</xsl:variable>			
+							<xsl:variable name="idCFisico">
+								<xsl:choose>
+						   			<xsl:when test="$idCF and contains($idCF, 'DBunico')">
+   										<xsl:value-of select="substring-after($idCF, 'DBunico')"/>
+						   			</xsl:when>
+						   			<xsl:otherwise>
+						   				<xsl:value-of select="$idCF"/>
+						   			</xsl:otherwise>
+						   		</xsl:choose>
+ 							</xsl:variable>
+							<xsl:variable name="contenitoreFisico"
+								select="concat('http://dati.beniculturali.it/iccd/cf/resource/CulturalInstituteOrSite/', $idCFisico)" />							
 							<arco-location:atSite>
 								<xsl:attribute name="rdf:resource">
-                                    <xsl:value-of select="concat($NS, 'Site/', $idCF)" />
+                                    <xsl:value-of select="$contenitoreFisico" />
                                 </xsl:attribute>
 							</arco-location:atSite>
 						</rdf:Description>
