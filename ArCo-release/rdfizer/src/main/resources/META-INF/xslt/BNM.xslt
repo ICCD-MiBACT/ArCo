@@ -370,7 +370,7 @@
 				</xsl:attribute>
 			</arco-mp:hasLabel>			
 		</xsl:for-each>
-		<xsl:if test="not($sheetType='F')">
+		<xsl:if test="not($sheetType='F' or $sheetType='PG')">
 			<xsl:if test="record/metadata/schede/*/LR">
 				<arco-mp:hasSpecimenHarvesting>
 					<xsl:attribute name="rdf:resource">
@@ -3438,8 +3438,8 @@
 	</xsl:for-each>
 
 								<!-- Specimen Harvesting as individual -->
-	<xsl:if test="not($sheetType='F')">
-	<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM">
+	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">
+	<xsl:if test="record/metadata/schede/*/LR">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS,'SpecimenHarvesting/', $itemURI)" />
