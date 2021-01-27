@@ -14742,7 +14742,7 @@
 							</arco-cd:hasMint>
 						</xsl:if>
 					</xsl:for-each>
-					<!-- has mint -->
+					<!-- has issuing State -->
 					<xsl:for-each select="./AUES">
 						<xsl:if
 							test="(not(starts-with(lower-case(normalize-space(./AUES)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUES)), 'n.r')))">
@@ -16411,6 +16411,7 @@
 			<!-- A and PG - Use of cultural property -->
 			<!-- USO -->
 			<xsl:for-each select="record/metadata/schede/*/US/USO">
+				<xsl:if test="./*">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
             			<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-historical-use-', position())" />
@@ -16475,6 +16476,7 @@
 						</arco-cd:hasUse>
 					</rdf:Description>
 				</xsl:if>
+			</xsl:if>
 			</xsl:for-each>
 			<!-- USA -->
 			<xsl:for-each select="record/metadata/schede/*/US/USA">
