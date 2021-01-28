@@ -2797,8 +2797,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà collega la struttura sedimentaria al campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the sedimentary structure to the specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">è struttura sedimentaria di</rdfs:label>
         <rdfs:label xml:lang="en">is sedimentary structure of</rdfs:label>
+        <rdfs:label xml:lang="it">è struttura sedimentaria di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3756,8 +3756,8 @@ SB/NAA</a-cat:iccdNormTag>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il grado di alterazione di un campione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the alteration grade of a specimen</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il grado di alterazionedi un campione causato da processi atmosferici e geologici.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the alteration grade of a specimen,  by weathering process or geological process</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">Alteration grade</rdfs:label>
         <rdfs:label xml:lang="it">Grado di alterazione</rdfs:label>
@@ -3797,8 +3797,8 @@ SB/NAA</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la struttura sedimentaria biogenica</rdfs:comment>
         <rdfs:comment xml:lang="en">TThis class represents the biogenic sedimentary structure</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Struttura sedimentaria biogenica</rdfs:label>
         <rdfs:label xml:lang="en">Biogenic sedimentary structure</rdfs:label>
+        <rdfs:label xml:lang="it">Struttura sedimentaria biogenica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCB</a-cat:iccdNormTag>
@@ -5834,8 +5834,8 @@ erbario.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la struttura sedimentaria primaria</rdfs:comment>
         <rdfs:comment xml:lang="en">TThis class represents the primary sedimentary structure</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Struttura sedimentaria primaria</rdfs:label>
         <rdfs:label xml:lang="en">Primary sedimentary structure</rdfs:label>
+        <rdfs:label xml:lang="it">Struttura sedimentaria primaria</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCP</a-cat:iccdNormTag>
@@ -5963,8 +5963,8 @@ erbario.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la struttura sedimentaria secondaria</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the secondary sedimentary structure</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Struttura sedimentaria secondaria</rdfs:label>
         <rdfs:label xml:lang="en">Secondary sedimentary structure</rdfs:label>
+        <rdfs:label xml:lang="it">Struttura sedimentaria secondaria</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCS</a-cat:iccdNormTag>
@@ -5979,8 +5979,8 @@ erbario.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la struttura sedimentaria</rdfs:comment>
         <rdfs:comment xml:lang="en">TThis class represents the sedimentary structure</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Struttura sedimentaria</rdfs:label>
         <rdfs:label xml:lang="en">Sedimentary structure</rdfs:label>
+        <rdfs:label xml:lang="it">Struttura sedimentaria</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCA</a-cat:iccdNormTag>
@@ -7257,8 +7257,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la riflettanza</rdfs:comment>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
     </rdf:Description>
     
 
