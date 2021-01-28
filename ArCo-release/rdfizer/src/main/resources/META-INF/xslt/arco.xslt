@@ -15044,7 +15044,7 @@
 						</rdf:Description>
 					</xsl:for-each>
 				</xsl:if>
-				<!-- minter as individual -->
+				<!-- issuing state as individual -->
 				<xsl:if
 					test="./AUES and (not(starts-with(lower-case(normalize-space(./AUES)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUES)), 'n.r')))">
 					<xsl:for-each select="./AUES">
@@ -15207,7 +15207,7 @@
 							</arco-cd:hasMint>
 						</xsl:if>
 					</xsl:for-each>
-					<!-- has mint -->
+					<!-- has issuing state -->
 					<xsl:for-each select="./EDTS">
 						<xsl:if test="(not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 							<arco-core:hasAgentRole>
