@@ -1683,11 +1683,6 @@
                                 	<xsl:value-of select="." />
                         		</xsl:attribute>
 							</foaf:depiction>
-							<arco-cd:depiction>
-								<xsl:attribute name="rdf:resource">
-                                	<xsl:value-of select="." />
-                        		</xsl:attribute>
-							</arco-cd:depiction>
 							<pico:preview>
 								<xsl:attribute name="rdf:resource">
                                 	<xsl:value-of select="." />

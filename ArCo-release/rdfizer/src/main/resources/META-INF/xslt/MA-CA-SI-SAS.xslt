@@ -335,7 +335,7 @@
 			<xsl:if test="./FNSI">
 				<arco-dd:hasMeasurementCollection>
 					<xsl:attribute name="rdf:resource">
-		 	   			<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-foundation-measurement-collection', position())" />
+		 	   			<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-foundation-measurement-collection-', position())" />
 					</xsl:attribute>
             	</arco-dd:hasMeasurementCollection>
 			</xsl:if>
@@ -345,7 +345,7 @@
 	<xsl:for-each select="record/metadata/schede/*/DA/FNS/FNSI">
 		<rdf:Description>
  			<xsl:attribute name="rdf:about">
-            	<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-foundation-measurement-collection', position())" />
+            	<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-foundation-measurement-collection-', position())" />
             </xsl:attribute>
  	        <rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -545,17 +545,18 @@
 			<xsl:if test="./ELEA">
 				<arco-dd:hasMeasurementCollection>
 					<xsl:attribute name="rdf:resource">
-		 	   			<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-vertical-element-measurement-collection', position())" />
+		 	   			<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-vertical-element-measurement-collection-', position())" />
 					</xsl:attribute>
             	</arco-dd:hasMeasurementCollection>
 			</xsl:if>
 		</rdf:Description>
 	</xsl:for-each>	
 											<!-- Measurement collection as individual -->
-	<xsl:for-each select="record/metadata/schede/*/DA/ELE/ELEA">
+	<xsl:for-each select="record/metadata/schede/*/DA/ELE">
+	<xsl:if test="./ELEA">
 		<rdf:Description>
  			<xsl:attribute name="rdf:about">
-            	<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-vertical-element-measurement-collection', position())" />
+            	<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-vertical-element-measurement-collection-', position())" />
             </xsl:attribute>
  	        <rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -576,29 +577,30 @@
 			</l0:name>
 			<arco-dd:hasMeasurement>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Measurement/VerticalElement/', (.))" />
+					<xsl:value-of select="concat($NS, 'Measurement/VerticalElement/', (./ELEA))" />
 				</xsl:attribute>
 			</arco-dd:hasMeasurement>
 		</rdf:Description>
 		<rdf:Description>
-			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/VerticalElement/', (.))" />
+			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/VerticalElement/', (./ELEA))" />
 			<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Measurement of vertical element ', position(), ': ', (.))" />
+				<xsl:value-of select="concat('Measurement of vertical element ', position(), ': ', (./ELEA))" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Measurement of vertical element ', position(), ': ', (.))" />
+				<xsl:value-of select="concat('Measurement of vertical element ', position(), ': ', (./ELEA))" />
 			</l0:name>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Misura delle strutture verticali ',  position(), ': ', (.))" />
+				<xsl:value-of select="concat('Misura delle strutture verticali ',  position(), ': ', (./ELEA))" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Misura delle strutture verticali ',  position(), ': ', (.))" />
+				<xsl:value-of select="concat('Misura delle strutture verticali ',  position(), ': ', (./ELEA))" />
 			</l0:name>
 			<arco-dd:hasValue>
-				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/VerticalElement-', (.))" />
+				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/VerticalElement-', (./ELEA))" />
 			</arco-dd:hasValue>
-		</rdf:Description>	
+		</rdf:Description>
+	</xsl:if>	
 	</xsl:for-each>
 											<!-- Material as individual -->
 	<xsl:for-each select="record/metadata/schede/*/DA/ELE">
