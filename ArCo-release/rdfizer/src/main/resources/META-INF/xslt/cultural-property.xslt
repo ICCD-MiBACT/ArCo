@@ -3186,7 +3186,7 @@
 					</xsl:choose>
 				</xsl:if>
 				<xsl:for-each select="record/metadata/schede/*/GA">
-					<xsl:if test="record/metadata/schede/*/GA/*/*">
+					<xsl:if test="./*/*">
 						<clvapit:hasGeometry>
 							<xsl:attribute name="rdf:resource">
 	                				<xsl:value-of
