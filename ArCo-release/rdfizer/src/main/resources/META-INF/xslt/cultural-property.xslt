@@ -161,8 +161,7 @@
 
 		<rdf:RDF>
 		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT')" >
-			<xsl:if
-				test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+			<xsl:if test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of select="$culturalProperty" />
