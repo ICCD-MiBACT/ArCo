@@ -771,13 +771,15 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 					</xsl:attribute>
 				</arco-dd:hasDesignationInTime>
 			</xsl:for-each>	
-			<xsl:for-each select="record/metadata/schede/*/GE">
-				<clvapit:hasGeometry>
-					<xsl:attribute name="rdf:resource">
-	                	<xsl:value-of select="concat($NS, 'Geometry/', $idCF, '-geometry-', position())" />
-	                </xsl:attribute>
-				</clvapit:hasGeometry>
-			</xsl:for-each>
+			<xsl:if test="record/metadata/schede/*/GE/*/*">
+				<xsl:for-each select="record/metadata/schede/*/GE">
+					<clvapit:hasGeometry>
+						<xsl:attribute name="rdf:resource">
+	        	        	<xsl:value-of select="concat($NS, 'Geometry/', $idCF, '-geometry-', position())" />
+	            	    </xsl:attribute>
+					</clvapit:hasGeometry>
+				</xsl:for-each>
+			</xsl:if>
 			<xsl:for-each select="record/metadata/schede/*/DO/FTA">
 				<arco-cd:hasDocumentation>
 					<xsl:attribute name="rdf:resource">
