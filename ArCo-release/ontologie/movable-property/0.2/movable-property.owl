@@ -7187,23 +7187,23 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/deltaO17 -->
+    <!-- https://w3id.org/arco/ontology/movable-property/delta17O -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/deltaO17">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/delta17O">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="en">DeltaO17</rdfs:label>
-        <rdfs:label xml:lang="it">DeltaO17</rdfs:label>
+        <rdfs:label xml:lang="en">Delta 17 O</rdfs:label>
+        <rdfs:label xml:lang="it">Delta 17 O</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPO/SPOA</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/deltaO18 -->
+    <!-- https://w3id.org/arco/ontology/movable-property/delta18O -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/deltaO18">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/delta18O">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="en">DeltaO18</rdfs:label>
-        <rdfs:label xml:lang="it">DeltaO18</rdfs:label>
+        <rdfs:label xml:lang="en">Delta 18 O</rdfs:label>
+        <rdfs:label xml:lang="it">Delta 18 O</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPO/SPOB</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
