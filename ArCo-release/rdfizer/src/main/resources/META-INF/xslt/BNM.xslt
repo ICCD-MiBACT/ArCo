@@ -203,12 +203,12 @@
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
 						<xsl:attribute name="rdf:resource">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
 		    			</xsl:attribute>
 		    		</xsl:when>
 		    		<xsl:otherwise>
 						<xsl:attribute name="rdf:resource">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
 		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
@@ -219,12 +219,12 @@
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
 						<xsl:attribute name="rdf:resource">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
 		    			</xsl:attribute>
 		    		</xsl:when>
 		    		<xsl:otherwise>
 						<xsl:attribute name="rdf:resource">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
 		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
@@ -235,12 +235,12 @@
 				<xsl:choose>
 					<xsl:when test="./RMNI">
 						<xsl:attribute name="rdf:resource">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMNI)))" />
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMNI)))" />
 		    			</xsl:attribute>
 		    		</xsl:when>
 		    		<xsl:otherwise>
 						<xsl:attribute name="rdf:resource">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMNA)))" />
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMNA)))" />
 		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
@@ -2323,18 +2323,18 @@
 			<xsl:choose>
 				<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
 					<xsl:attribute name="rdf:about">
-		    			<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
 			    	</xsl:attribute>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:attribute name="rdf:about">
-		    			<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
 			    	</xsl:attribute>
 			   	</xsl:otherwise>
 		  	</xsl:choose>	
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicSpecies'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralSpecies'" />
             	</xsl:attribute>
 			</rdf:type>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNI">
@@ -2380,7 +2380,7 @@
 			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSD">
 				<arco-mp:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
-		    			<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSD)))" />
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSD)))" />
 		    		</xsl:attribute>
             	</arco-mp:hasDirectHigherRank>
 			</xsl:if>
@@ -2389,12 +2389,12 @@
 					<xsl:choose>
 						<xsl:when test="record/metadata/schede/BNM/SM/SMS/SMSS">
 							<xsl:attribute name="rdf:resource">
-		    					<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSS)))" />
+		    					<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSS)))" />
 		    				</xsl:attribute>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:attribute name="rdf:resource">
-		    					<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSC)))" />
+		    					<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSC)))" />
 		    				</xsl:attribute>
 						</xsl:otherwise>
 					</xsl:choose>
@@ -2405,11 +2405,11 @@
 	<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSS">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSS)))" />
+		    	<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSS)))" />
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicSubclass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralSubclass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<xsl:choose>
@@ -2433,7 +2433,7 @@
 			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSC">
 				<arco-mp:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
-		    			<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSC)))" />
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSC)))" />
 		    		</xsl:attribute>
             	</arco-mp:hasDirectHigherRank>
 			</xsl:if>
@@ -2452,11 +2452,11 @@
 	<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSC">
 		<rdf:Description>	
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSC)))" />
+		    	<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSC)))" />
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicClass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralClass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -2482,11 +2482,11 @@
 	<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSD">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSD)))" />
+		    	<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSD)))" />
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicClass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralClass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -2534,18 +2534,18 @@
 		<xsl:choose>
 				<xsl:when test="./RMN/RMNI">
 					<xsl:attribute name="rdf:about">
-		    			<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)))" />
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)))" />
 			    	</xsl:attribute>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:attribute name="rdf:about">
-		    			<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)))" />
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)))" />
 			    	</xsl:attribute>
 			   	</xsl:otherwise>
 		  	</xsl:choose>	
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicSpecies'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralSpecies'" />
             	</xsl:attribute>
 			</rdf:type>
 			<xsl:if test="./RMN/RMNI">
@@ -2591,7 +2591,7 @@
 			<xsl:if test="./RMN/RMSD">
 				<arco-mp:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
-		    			<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMSD)))" />
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMSD)))" />
 		    		</xsl:attribute>
             	</arco-mp:hasDirectHigherRank>
 			</xsl:if>
@@ -2600,12 +2600,12 @@
 					<xsl:choose>
 						<xsl:when test="./RMN/RMSS">
 							<xsl:attribute name="rdf:resource">
-		    					<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMSS)))" />
+		    					<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMSS)))" />
 		    				</xsl:attribute>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:attribute name="rdf:resource">
-		    					<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMSC)))" />
+		    					<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMSC)))" />
 		    				</xsl:attribute>
 						</xsl:otherwise>
 					</xsl:choose>
@@ -2616,11 +2616,11 @@
 	<rdf:Description>
 		<xsl:if test="./RMS/RMSS">
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMS/RMSS)))" />
+		    	<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMS/RMSS)))" />
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicSubclass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralSubclass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<xsl:choose>
@@ -2644,7 +2644,7 @@
 			<xsl:if test="./RMS/RMSC">
 				<arco-mp:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
-		    			<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMS/RMSC)))" />
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMS/RMSC)))" />
 		    		</xsl:attribute>
             	</arco-mp:hasDirectHigherRank>
 			</xsl:if>
@@ -2663,11 +2663,11 @@
 	<rdf:Description>
 		<xsl:if test="./RMS/RMSC">
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMS/RMSC)))" />
+		    	<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMS/RMSC)))" />
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicClass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralClass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -2693,11 +2693,11 @@
 	<rdf:Description>
 		<xsl:if test="./RMS/RMSD">
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMS/RMSD)))" />
+		    	<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMS/RMSD)))" />
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicClass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralClass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -2750,12 +2750,12 @@
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
 						<xsl:attribute name="rdf:resource">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
 		    			</xsl:attribute>
 		    		</xsl:when>
 		    		<xsl:otherwise>
 						<xsl:attribute name="rdf:resource">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
 		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
@@ -2801,12 +2801,12 @@
 				<xsl:choose>
 					<xsl:when test="./RMNI">
 						<xsl:attribute name="rdf:resource">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMNI)))" />
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMNI)))" />
 		    			</xsl:attribute>
 		    		</xsl:when>
 		    		<xsl:otherwise>
 						<xsl:attribute name="rdf:resource">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMNA)))" />
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMNA)))" />
 		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
@@ -3960,12 +3960,12 @@
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
 						<xsl:attribute name="rdf:resource">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
 		    			</xsl:attribute>
 		    		</xsl:when>
 		    		<xsl:otherwise>
 						<xsl:attribute name="rdf:resource">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
 		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
@@ -4141,12 +4141,12 @@
 						<xsl:choose>
 							<xsl:when test="./RMN/RMNP">
 								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), $rmnv, '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
+		    						<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), $rmnv, '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
 		    					</xsl:attribute>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), $rmnv)" />
+		    						<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), $rmnv)" />
 		    					</xsl:attribute>
 							</xsl:otherwise>
 						</xsl:choose>
@@ -4155,12 +4155,12 @@
 		    			<xsl:choose>
 							<xsl:when test="./RMN/RMNP">
 								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), $rmnv, '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
+		    						<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), $rmnv, '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
 		    					</xsl:attribute>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), $rmnv)" />
+		    						<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), $rmnv)" />
 		    					</xsl:attribute>
 							</xsl:otherwise>
 						</xsl:choose>

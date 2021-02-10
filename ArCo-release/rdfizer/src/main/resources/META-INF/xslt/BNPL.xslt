@@ -134,6 +134,7 @@
 		
 <xsl:template match="/">
 	<rdf:RDF>
+	<xsl:if test="$sheetType='BNPL'" >
 	<rdf:Description>
 		<xsl:attribute name="rdf:about">
         	<xsl:value-of select="$culturalProperty" />
@@ -3033,6 +3034,7 @@
 		</xsl:if>
 		</xsl:if>
 	</xsl:for-each>
+	</xsl:if>
 	</rdf:RDF>
 </xsl:template>								
 </xsl:stylesheet>
