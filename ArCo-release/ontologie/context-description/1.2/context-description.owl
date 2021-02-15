@@ -5507,6 +5507,23 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/activityPlaceAndPeriod -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/activityPlaceAndPeriod">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il luogo e il periodo di attvità di un autore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the place and the period of activity of an author.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">activity place and period</rdfs:label>
+        <rdfs:label xml:lang="it">luogo e periodo di attività</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTG</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/address -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/address">
@@ -5590,6 +5607,25 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTH - ICCD Normativa F 4.00: RO/CRF/CRFX; PD/PDF/PDFH - ICCD Normativa F 3.00: RO/CRF/CRFH</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/alternativeName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/alternativeName">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/name"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta una variante del nome.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents an alternative name of a person.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">alternative name</rdfs:label>
+        <rdfs:label xml:lang="it">variante del nome</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTE, AUTV</a-cat:iccdNormTag>
+
     </owl:DatatypeProperty>
     
 
@@ -6801,6 +6837,24 @@ the area), to the environment and to the square from which the good comes.</rdfs
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/pseudonym -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/pseudonym">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/name"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta uno pseudonimo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents pseudonym</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">pseudonym</rdfs:label>
+        <rdfs:label xml:lang="it">pseudonimo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTP</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/refersToSurveys -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/refersToSurveys">
@@ -6950,6 +7004,24 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>DA/STS/STSS</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/signature -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/signature">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/name"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la firma o il monogramma</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the signature</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">signature</rdfs:label>
+        <rdfs:label xml:lang="it">firma</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTF</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -11473,6 +11545,19 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/CosmicRayExposureAge -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/CosmicRayExposureAge">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
+        <rdfs:label xml:lang="en">Cosmic ray exposure age</rdfs:label>
+        <rdfs:label xml:lang="it">Età di esposizione ai raggi cosmici</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative BNPL: SP/SPD/SPDX</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/CurrentUse -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/CurrentUse">
@@ -11605,6 +11690,19 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:label xml:lang="en">Historicized title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo storicizzato</rdfs:label>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa FF: se PA/PAC/PACG = &apos;storicizzata&apos;</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/IgneousAge -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/IgneousAge">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
+        <rdfs:label xml:lang="it">Età dalla solidificazione del fuso progenitore</rdfs:label>
+        <rdfs:label xml:lang="en">Igneous age</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative BNPL: SP/SPD/SPDE</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -11848,6 +11946,19 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/ShokAge -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ShokAge">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
+        <rdfs:label xml:lang="it">Età dell&apos;evento metamorfico di shock</rdfs:label>
+        <rdfs:label xml:lang="en">Shok age</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative BNPL: SP/SPD/SPDG</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/SpecificBibliography -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/SpecificBibliography">
@@ -11900,6 +12011,19 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/TerrestrialAge -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/TerrestrialAge">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
+        <rdfs:label xml:lang="it">Età di permanenza sulla terra</rdfs:label>
+        <rdfs:label xml:lang="en">Terrestrial age</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative BNPL: SP/SPD/SPDT</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/UncertainOrigin -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/UncertainOrigin">
@@ -11934,13 +12058,13 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>

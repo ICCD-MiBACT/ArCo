@@ -161,8 +161,7 @@
 
 		<rdf:RDF>
 		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT')" >
-			<xsl:if
-				test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+			<xsl:if test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of select="$culturalProperty" />
@@ -1683,11 +1682,6 @@
                                 	<xsl:value-of select="." />
                         		</xsl:attribute>
 							</foaf:depiction>
-							<arco-cd:depiction>
-								<xsl:attribute name="rdf:resource">
-                                	<xsl:value-of select="." />
-                        		</xsl:attribute>
-							</arco-cd:depiction>
 							<pico:preview>
 								<xsl:attribute name="rdf:resource">
                                 	<xsl:value-of select="." />
@@ -2209,9 +2203,7 @@
 				</xsl:for-each>
 				<!-- AU/AUF (F version 2.00, 3.00 and BDM) -->
 				<xsl:for-each select="record/metadata/schede/*/AU/AUF">
-					<xsl:if
-						test="./* and ./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFB)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
-
+					<xsl:if test="./* and ./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFB)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
 						<arco-cd:hasAuthorshipAttribution>
 							<xsl:attribute name="rdf:resource">
 		                            <xsl:value-of
@@ -2314,8 +2306,7 @@
 				</xsl:for-each>
 				<!-- AU/AFB (F version 2.00, 3.00) -->
 				<xsl:for-each select="record/metadata/schede/*/AU/AFB">
-					<xsl:if
-						test="(not(starts-with(lower-case(normalize-space(./AFBD)), 'nr')) and not(starts-with(lower-case(normalize-space(./AFBD)), 'n.r')))">
+					<xsl:if test="(not(starts-with(lower-case(normalize-space(./AFBD)), 'nr')) and not(starts-with(lower-case(normalize-space(./AFBD)), 'n.r')))">
 						<arco-cd:hasAuthorshipAttribution>
 							<xsl:attribute name="rdf:resource">
 	                            <xsl:value-of
@@ -2626,6 +2617,13 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:for-each>
+				<xsl:if test="record/metadata/schede/PG/CA/HAT">
+					<arco-dd:hasMeasurementCollection>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI)" />
+				        </xsl:attribute>
+					</arco-dd:hasMeasurementCollection>
+				</xsl:if>
 				<!-- mibact scope of protection (AMB) -->
 				<xsl:if test="record/metadata/schede/*/OG/AMB">
 					<xsl:for-each select="record/metadata/schede/*/OG/AMB">
@@ -3195,7 +3193,7 @@
 					</xsl:choose>
 				</xsl:if>
 				<xsl:for-each select="record/metadata/schede/*/GA">
-					<xsl:if test="record/metadata/schede/*/GA/*/*">
+					<xsl:if test="./*/*">
 						<clvapit:hasGeometry>
 							<xsl:attribute name="rdf:resource">
 	                				<xsl:value-of
@@ -3386,7 +3384,7 @@
 					</xsl:if>
 				</xsl:for-each>
 				<!-- proper title -->
-				<xsl:if test="not($sheetType='PST')">
+				<xsl:if test="not($sheetType='PST' or $sheetType='SMO')">
 
 					<xsl:for-each select="record/metadata/schede/*/*/SGT/SGTP">
 						<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
@@ -4136,13 +4134,6 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:for-each>
-				<xsl:for-each select="record/metadata/schede/*/DA/ISR">
-					<arco-dd:hasAffixedElement>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Inscription/', $itemURI, '-affixed-element-', position())" />
-						</xsl:attribute>
-					</arco-dd:hasAffixedElement>
-				</xsl:for-each>
 				<!-- Sample Collected (CMN) -->
 				<xsl:for-each select="record/metadata/schede/*/MC/CMN">
 					<arco-dd:hasSampleCollected>
@@ -4164,6 +4155,13 @@
 				</xsl:if>
 				<!-- coin issuance (NU) -->
 				<xsl:for-each select="record/metadata/schede/*/AU/EDT">
+					<arco-cd:hasCoinIssuance>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'CoinIssuance/', $itemURI, '-issuance-', position())" />
+						</xsl:attribute>
+					</arco-cd:hasCoinIssuance>
+				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/DA/AUE">
 					<arco-cd:hasCoinIssuance>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'CoinIssuance/', $itemURI, '-issuance-', position())" />
@@ -4885,7 +4883,7 @@
 					<arco-cd:isPrintingPlateMemberOf>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of
-							select="concat($NS, 'PrintingPlatesSeries/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/MI/OG/SGT/SGTS)))" />
+							select="concat($NS, 'PrintingPlatesSeries/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/S/OG/SGT/SGTS)))" />
 						</xsl:attribute>
 					</arco-cd:isPrintingPlateMemberOf>
 				</rdf:Description>

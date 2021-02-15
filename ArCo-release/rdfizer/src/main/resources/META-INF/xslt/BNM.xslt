@@ -166,26 +166,6 @@
 	</xsl:choose>
 	</xsl:variable>
 	<xsl:variable name="culturalProperty" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />	
-	<xsl:variable name="smnv">
-		<xsl:choose>
-			<xsl:when test="record/metadata/schede/*/SM/SMN/SMNV and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/SM/SMN/SMNV)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/SM/SMN/SMNV)), 'n.r')))">
-				<xsl:value-of select="concat('-', normalize-space(arco-fn:urify(record/metadata/schede/*/SM/SMN/SMNV)))" />
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:value-of select="''" />
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable> 
-	<xsl:variable name="smnv-label">
-		<xsl:choose>
-			<xsl:when test="record/metadata/schede/*/SM/SMN/SMNV and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/SM/SMN/SMNV)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/SM/SMN/SMNV)), 'n.r')))">
-				<xsl:value-of select="concat(' ', record/metadata/schede/*/SM/SMN/SMNV)" />
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:value-of select="''" />
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable> 
 		
 <xsl:template match="/">
 	<rdf:RDF>
@@ -196,13 +176,7 @@
 		<xsl:attribute name="rdf:about">
         	<xsl:value-of select="$culturalProperty" />
 		</xsl:attribute>
-		<xsl:if test="$sheetType='BNM'">
-			<rdf:type>
-				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="'https://w3id.org/arco/ontology/arco/MineralHeritage'" />
-		        </xsl:attribute>
-			</rdf:type>			
-		</xsl:if>
+
 		<xsl:if test="not($sheetType='BNB')">
 			<xsl:if test="record/metadata/schede/*/AC/ACK">
 				<l0:identifier>
@@ -222,116 +196,52 @@
 		<xsl:if test="record/metadata/schede/BNM/SM/SMN">
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="'https://w3id.org/arco/ontology/arco/Specimen'" />
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Specimen'" />
 		        </xsl:attribute>
 			</rdf:type>
 			<arco-mp:isClassifiedByCurrentTaxon>
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
-						<xsl:choose>
-							<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), $smnv, '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), $smnv)" />
-		    					</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
+		    			</xsl:attribute>
 		    		</xsl:when>
 		    		<xsl:otherwise>
-		    			<xsl:choose>
-							<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), $smnv, '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), $smnv)" />
-		    					</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
+		    			</xsl:attribute>
 		    		</xsl:otherwise>
-		    </xsl:choose>
+		    	</xsl:choose>
 			</arco-mp:isClassifiedByCurrentTaxon>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMN">
 			<arco-core:isClassifiedBy>
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
-						<xsl:choose>
-							<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), $smnv, '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), $smnv)" />
-		    					</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
+		    			</xsl:attribute>
 		    		</xsl:when>
 		    		<xsl:otherwise>
-		    			<xsl:choose>
-							<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), $smnv, '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), $smnv)" />
-		    					</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
+		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
 			</arco-core:isClassifiedBy>
 		</xsl:if>
 		<xsl:for-each select="record/metadata/schede/BNM/RM/RMN">
-		<xsl:variable name="rmnv">
-		<xsl:choose>
-			<xsl:when test="./RMNV and (not(starts-with(lower-case(normalize-space(./RMNV)), 'nr')) and not(starts-with(lower-case(normalize-space(./RMNV)), 'n.r')))">
-				<xsl:value-of select="concat('-', normalize-space(arco-fn:urify(./RMNV)))" />
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:value-of select="''" />
-			</xsl:otherwise>
-		</xsl:choose>
-		</xsl:variable>
 			<arco-core:isClassifiedBy>
 				<xsl:choose>
 					<xsl:when test="./RMNI">
-						<xsl:choose>
-							<xsl:when test="./RMNP">
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMNI)), $rmnv, '-',arco-fn:urify(normalize-space(./RMNP)))" />
-		    					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMNI)), $rmnv)" />
-		    					</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMNI)))" />
+		    			</xsl:attribute>
 		    		</xsl:when>
 		    		<xsl:otherwise>
-		    			<xsl:choose>
-							<xsl:when test="./RMNP">
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMNA)), $rmnv, '-',arco-fn:urify(normalize-space(./RMNP)))" />
-		    					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMNA)), $rmnv)" />
-		    					</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMNA)))" />
+		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
 			</arco-core:isClassifiedBy>
@@ -370,8 +280,8 @@
 				</xsl:attribute>
 			</arco-mp:hasLabel>			
 		</xsl:for-each>
-		<xsl:if test="not($sheetType='F')">
-			<xsl:if test="record/metadata/schede/*/LR">
+		<xsl:if test="not($sheetType='F' or $sheetType='PG')">
+			<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM  or record/metadata/schede/*/IR">
 				<arco-mp:hasSpecimenHarvesting>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS,'SpecimenHarvesting/', $itemURI)" />
@@ -1372,7 +1282,7 @@
          	</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/PhysicalCharacteristic'" />
+					<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -2387,331 +2297,90 @@
 		</rdf:Description>
 	</xsl:if>
 	</xsl:for-each>
-						<!-- Taxon of mineral property -->
-	<xsl:if test="record/metadata/schede/BNM/SM/SMN">
-		<rdf:Description>
-		<xsl:choose>
-			<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), $smnv, '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    			</xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), $smnv)" />
-		    			</xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
-		    </xsl:when>
-		    <xsl:otherwise>
-		    	<xsl:choose>
-					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), $smnv, '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    			</xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), $smnv)" />
-		    			</xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
-		    </xsl:otherwise>
-		</xsl:choose>
-		</rdf:Description>
-	</xsl:if> 
-	<xsl:for-each select="record/metadata/schede/BNM/RM">					
-	<xsl:variable name="rmnv">
-		<xsl:choose>
-			<xsl:when test="./RMN/RMNV and (not(starts-with(lower-case(normalize-space(./RMN/RMNV)), 'nr')) and not(starts-with(lower-case(normalize-space(./RMN/RMNV)), 'n.r')))">
-				<xsl:value-of select="concat('-', normalize-space(arco-fn:urify(./RMN/RMNV)))" />
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:value-of select="''" />
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable>
-		<rdf:Description>
-		<xsl:choose>
-			<xsl:when test="./RMN/RMNI">
-				<xsl:choose>
-					<xsl:when test="./RMN/RMNP">
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), $rmnv, '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
-		    			</xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), $rmnv)" />
-		    			</xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
-		    </xsl:when>
-		    <xsl:otherwise>
-		    	<xsl:choose>
-					<xsl:when test="./RMN/RMNP">
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), $rmnv, '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
-		    			</xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), $rmnv)" />
-		    			</xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
-		    </xsl:otherwise>
-		</xsl:choose>
-		</rdf:Description>
-	</xsl:for-each>
-	
-	
-	
+						
+						<!-- Taxon Specification of mineral property -->
 	<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNV">
 		<rdf:Description>
-		<xsl:choose>
-			<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), $smnv, '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    			</xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), $smnv)" />
-		    			</xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
-		    </xsl:when>
-		    <xsl:otherwise>
-		    	<xsl:choose>
-					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), $smnv, '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    			</xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), $smnv)" />
-		    			</xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
-		    </xsl:otherwise>
-		   </xsl:choose>	
-			<rdf:type>
-				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Variety'" />
-            	</xsl:attribute>
-			</rdf:type>
-			
-			<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNI">
-				<rdfs:label xml:lang="en">
-					<xsl:choose>
-						<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-	   						<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMN/SMNI, $smnv-label, ' ', record/metadata/schede/BNM/SM/SMN/SMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-		   					<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMN/SMNI, $smnv-label)" />
-						</xsl:otherwise>
-					</xsl:choose>
-		   		</rdfs:label>
-		   	</xsl:if>
-			<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNA">
-				<rdfs:label xml:lang="it">
-					<xsl:choose>
-						<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-	   						<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMN/SMNA, $smnv-label, ' ', record/metadata/schede/BNM/SM/SMN/SMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-	   						<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMN/SMNA, $smnv-label)" />
-						</xsl:otherwise>
-					</xsl:choose>
-	   			</rdfs:label>
-	    	</xsl:if>
-		    <xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNI">
-				<l0:name xml:lang="en">
-					<xsl:choose>
-						<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-	   						<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMN/SMNI, $smnv-label, ' ', record/metadata/schede/BNM/SM/SMN/SMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-		   					<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMN/SMNI, $smnv-label)" />
-						</xsl:otherwise>
-					</xsl:choose>
-	   			</l0:name>
-		   	</xsl:if>
-			<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNA">
-				<l0:name xml:lang="it">
-					<xsl:choose>
-						<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-	   						<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMN/SMNA, $smnv-label, ' ', record/metadata/schede/BNM/SM/SMN/SMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-	   						<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMN/SMNA, $smnv-label)" />
-						</xsl:otherwise>
-					</xsl:choose>
-		  		</l0:name>
-			</xsl:if>
-			<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNS">
-				<arco-cd:synonym>
-					<xsl:value-of select="record/metadata/schede/BNM/SM/SMN/SMNS" />
-				</arco-cd:synonym>
-			</xsl:if>
-			
-			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSG">
-				<arco-mp:imaCode>
-					<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSG" />
-				</arco-mp:imaCode>
-			</xsl:if>
-			<arco-mp:hasDirectHigherRank>
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
-						<xsl:choose>
-							<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-								<xsl:attribute name="rdf:resource">
-		   							<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-			   					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		   							<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
-		   						</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
-			   		</xsl:when>
-			   		<xsl:otherwise>
-		   				<xsl:choose>
-							<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-								<xsl:attribute name="rdf:resource">
-			   						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-			   					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		   							<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
-		   						</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
-		    		</xsl:otherwise>
-			    </xsl:choose>
-           	</arco-mp:hasDirectHigherRank>
-		</rdf:Description>
-	</xsl:if>
-					<!-- Taxon when not SMNV -->
+			<xsl:attribute name="rdf:about">
+               <xsl:value-of select="concat($NS,'Variety/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNV)))" />
+            </xsl:attribute>
+            <rdf:type>
+            <xsl:attribute name="rdf:resource">
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Variety'" />      
+            </xsl:attribute>
+            </rdf:type>
+            <rdfs:label>
+            	 <xsl:value-of select="record/metadata/schede/BNM/SM/SMN/SMNV" />
+            </rdfs:label>
+            <l0:name>
+            	<xsl:value-of select="record/metadata/schede/BNM/SM/SMN/SMNV" />
+            </l0:name>           
+  		</rdf:Description>
+  	</xsl:if>
+					<!-- Taxon as individual -->
 	<xsl:if test="record/metadata/schede/BNM/SM/SMN">
-	<rdf:Description>
-		<xsl:choose>
-			<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    			</xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
-		    			</xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
-		    </xsl:when>
-		    <xsl:otherwise>
-		    	<xsl:choose>
-					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    			</xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
-		    			</xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
-		    </xsl:otherwise>
-		   </xsl:choose>	
+		<rdf:Description>
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
+					<xsl:attribute name="rdf:about">
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
+			    	</xsl:attribute>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="rdf:about">
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
+			    	</xsl:attribute>
+			   	</xsl:otherwise>
+		  	</xsl:choose>	
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicSpecies'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralSpecies'" />
             	</xsl:attribute>
 			</rdf:type>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNI">
 				<rdfs:label xml:lang="en">
-					<xsl:choose>
-						<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-	   						<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMN/SMNI, ' ', record/metadata/schede/BNM/SM/SMN/SMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-		   					<xsl:value-of select="record/metadata/schede/BNM/SM/SMN/SMNI" />
-						</xsl:otherwise>
-					</xsl:choose>
+	   				<xsl:value-of select="record/metadata/schede/BNM/SM/SMN/SMNI" />
 		   		</rdfs:label>
 		   	</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNA">
 				<rdfs:label xml:lang="it">
-					<xsl:choose>
-						<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-	   						<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMN/SMNA, ' ', record/metadata/schede/BNM/SM/SMN/SMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-	   						<xsl:value-of select="record/metadata/schede/BNM/SM/SMN/SMNA" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMN/SMNA" />
 	   			</rdfs:label>
 	    	</xsl:if>
 		    <xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNI">
 				<l0:name xml:lang="en">
-					<xsl:choose>
-						<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-	   						<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMN/SMNI, ' ', record/metadata/schede/BNM/SM/SMN/SMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-		   					<xsl:value-of select="record/metadata/schede/BNM/SM/SMN/SMNI" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMN/SMNI" />
 	   			</l0:name>
 		   	</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNA">
 				<l0:name xml:lang="it">
-					<xsl:choose>
-						<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-	   						<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMN/SMNA, ' ', record/metadata/schede/BNM/SM/SMN/SMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-	   						<xsl:value-of select="record/metadata/schede/BNM/SM/SMN/SMNA" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMN/SMNA" />
 		   		</l0:name>
 		    </xsl:if>
-		    <xsl:if test="not(record/metadata/schede/BNM/SM/SMN/SMNV)">
-			    <xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNS">
+			<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNS">
 					<arco-cd:synonym>
 						<xsl:value-of select="record/metadata/schede/BNM/SM/SMN/SMNS" />
 					</arco-cd:synonym>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSK">
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSK">
 					<arco-mp:newDanaCode>
 						<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSK" />
 					</arco-mp:newDanaCode>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSX">
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSX">
 					<arco-mp:strunzCode>
 						<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSX" />
 					</arco-mp:strunzCode>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSG">
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSG">
 					<arco-mp:imaCode>
 						<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSG" />
 					</arco-mp:imaCode>
-				</xsl:if>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSD">
 				<arco-mp:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
-		    			<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSD)))" />
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSD)))" />
 		    		</xsl:attribute>
             	</arco-mp:hasDirectHigherRank>
 			</xsl:if>
@@ -2720,12 +2389,12 @@
 					<xsl:choose>
 						<xsl:when test="record/metadata/schede/BNM/SM/SMS/SMSS">
 							<xsl:attribute name="rdf:resource">
-		    					<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSS)))" />
+		    					<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSS)))" />
 		    				</xsl:attribute>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:attribute name="rdf:resource">
-		    					<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSC)))" />
+		    					<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSC)))" />
 		    				</xsl:attribute>
 						</xsl:otherwise>
 					</xsl:choose>
@@ -2736,11 +2405,11 @@
 	<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSS">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSS)))" />
+		    	<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSS)))" />
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicSubclass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralSubclass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<xsl:choose>
@@ -2764,7 +2433,7 @@
 			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSC">
 				<arco-mp:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
-		    			<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSC)))" />
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSC)))" />
 		    		</xsl:attribute>
             	</arco-mp:hasDirectHigherRank>
 			</xsl:if>
@@ -2783,11 +2452,11 @@
 	<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSC">
 		<rdf:Description>	
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSC)))" />
+		    	<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSC)))" />
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicClass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralClass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -2813,11 +2482,11 @@
 	<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSD">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSD)))" />
+		    	<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSD)))" />
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicClass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralClass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -2840,282 +2509,103 @@
 	</xsl:if>						
 						
 	<xsl:for-each select="record/metadata/schede/BNM/RM">					
-						<!-- Taxon of mineral property -->	
-	<xsl:variable name="rmnv">
-		<xsl:choose>
-			<xsl:when test="./RMN/RMNV and (not(starts-with(lower-case(normalize-space(./RMN/RMNV)), 'nr')) and not(starts-with(lower-case(normalize-space(./RMN/RMNV)), 'n.r')))">
-				<xsl:value-of select="concat('-', normalize-space(arco-fn:urify(./RMN/RMNV)))" />
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:value-of select="''" />
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable>
-	<xsl:variable name="rmnv-label">
-		<xsl:choose>
-			<xsl:when test="./RMN/RMNV and (not(starts-with(lower-case(normalize-space(./RMN/RMNV)), 'nr')) and not(starts-with(lower-case(normalize-space(./RMN/RMNV)), 'n.r')))">
-				<xsl:value-of select="concat(' ', ./RMN/RMNV)" />
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:value-of select="''" />
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable> 
+						<!-- Taxon Specificationof mineral property -->	
 	<xsl:if test="./RMN/RMNV">
 		<rdf:Description>
-		<xsl:choose>
-			<xsl:when test="./RMN/RMNI">
-				<xsl:choose>
-					<xsl:when test="./RMN/RMNP">
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), $rmnv, '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
-		    			</xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), $rmnv)" />
-		    			</xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
-		    </xsl:when>
-		    <xsl:otherwise>
-		    	<xsl:choose>
-					<xsl:when test="./RMN/RMNP">
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), $rmnv, '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
-		    			</xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), $rmnv)" />
-		    			</xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
-		    </xsl:otherwise>
-		   </xsl:choose>	
-			<rdf:type>
-				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Variety'" />
-            	</xsl:attribute>
-			</rdf:type>
-			<xsl:if test="./RMN/RMNI">
-				<rdfs:label xml:lang="en">
-					<xsl:choose>
-						<xsl:when test="./RMN/RMNP">
-	   						<xsl:value-of select="concat(./RMN/RMNI, $rmnv-label, ' ', ./RMN/RMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-		   					<xsl:value-of select="concat(./RMN/RMNI, $rmnv-label)" />
-						</xsl:otherwise>
-					</xsl:choose>
-		   		</rdfs:label>
-		   	</xsl:if>
-			<xsl:if test="./RMN/RMNA">
-				<rdfs:label xml:lang="it">
-					<xsl:choose>
-						<xsl:when test="./RMN/RMNP">
-	   						<xsl:value-of select="concat(./RMN/RMNA, $rmnv-label, ' ', ./RMN/RMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-	   						<xsl:value-of select="concat(./RMN/RMNA, $rmnv-label)" />
-						</xsl:otherwise>
-					</xsl:choose>
-	   			</rdfs:label>
-	    	</xsl:if>
-		    <xsl:if test="./RMN/RMNI">
-				<l0:name xml:lang="en">
-					<xsl:choose>
-						<xsl:when test="./RMN/RMNP">
-	   						<xsl:value-of select="concat(./RMN/RMNI, $rmnv-label, ' ', ./RMN/RMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-		   					<xsl:value-of select="concat(./RMN/RMNI, $rmnv-label)" />
-						</xsl:otherwise>
-					</xsl:choose>
-	   			</l0:name>
-		   	</xsl:if>
-			<xsl:if test="./RMN/RMNA">
-				<l0:name xml:lang="it">
-					<xsl:choose>
-						<xsl:when test="./RMN/RMNP">
-	   						<xsl:value-of select="concat(./RMN/RMNA, $rmnv-label, ' ', ./RMN/RMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-	   						<xsl:value-of select="concat(./RMN/RMNA, $rmnv-label)" />
-						</xsl:otherwise>
-					</xsl:choose>
-		  		</l0:name>
-			</xsl:if>
-		    <xsl:if test="./RMN/RMNS">
-				<arco-cd:synonym>
-					<xsl:value-of select="./RMN/RMNS" />
-				</arco-cd:synonym>
-			</xsl:if>
-			<xsl:if test="./RMS/RMSG">
-				<arco-mp:imaCode>
-					<xsl:value-of select="./RMS/RMSG" />
-				</arco-mp:imaCode>
-			</xsl:if>			
-			<arco-mp:hasDirectHigherRank>
-				<xsl:choose>
-					<xsl:when test="./RMN/RMNI">
-						<xsl:choose>
-							<xsl:when test="./RMN/RMNP">
-								<xsl:attribute name="rdf:resource">
-		   							<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
-			   					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		   							<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)))" />
-		   						</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
-			   		</xsl:when>
-			   		<xsl:otherwise>
-		   				<xsl:choose>
-							<xsl:when test="./RMN/RMNP">
-								<xsl:attribute name="rdf:resource">
-			   						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
-			   					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		   							<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)))" />
-		   						</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
-		    		</xsl:otherwise>
-			    </xsl:choose>
-           	</arco-mp:hasDirectHigherRank>
-		</rdf:Description>
-	</xsl:if>
-					<!-- Taxon when not RMNV -->
+			<xsl:attribute name="rdf:about">
+               <xsl:value-of select="concat($NS,'Variety/', arco-fn:urify(normalize-space(./RMN/RMNV)))" />
+            </xsl:attribute>
+            <rdf:type>
+            <xsl:attribute name="rdf:resource">
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Variety'" />      
+            </xsl:attribute>
+            </rdf:type>
+            <rdfs:label>
+            	 <xsl:value-of select="./RMN/RMNV" />
+            </rdfs:label>
+            <l0:name>
+            	<xsl:value-of select="./RMN/RMNV" />
+            </l0:name>           
+  		</rdf:Description>
+  	</xsl:if>
+					<!-- Taxon as individual -->
 	<xsl:if test="./RMN">
 	<rdf:Description>
 		<xsl:choose>
-			<xsl:when test="./RMN/RMNI">
-				<xsl:choose>
-					<xsl:when test="./RMN/RMNP">
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
-		    			</xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)))" />
-		    			</xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
-		    </xsl:when>
-		    <xsl:otherwise>
-		    	<xsl:choose>
-					<xsl:when test="./RMN/RMNP">
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
-		    			</xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="rdf:about">
-		    				<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)))" />
-		    			</xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
-		    </xsl:otherwise>
-		   </xsl:choose>	
+				<xsl:when test="./RMN/RMNI">
+					<xsl:attribute name="rdf:about">
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)))" />
+			    	</xsl:attribute>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="rdf:about">
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)))" />
+			    	</xsl:attribute>
+			   	</xsl:otherwise>
+		  	</xsl:choose>	
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicSpecies'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralSpecies'" />
             	</xsl:attribute>
 			</rdf:type>
 			<xsl:if test="./RMN/RMNI">
 				<rdfs:label xml:lang="en">
-					<xsl:choose>
-						<xsl:when test="./RMN/RMNP">
-	   						<xsl:value-of select="concat(./RMN/RMNI, ' ', ./RMN/RMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-		   					<xsl:value-of select="./RMN/RMNI" />
-						</xsl:otherwise>
-					</xsl:choose>
+	   				<xsl:value-of select="./RMN/RMNI" />
 		   		</rdfs:label>
 		   	</xsl:if>
 			<xsl:if test="./RMN/RMNA">
 				<rdfs:label xml:lang="it">
-					<xsl:choose>
-						<xsl:when test="./RMN/RMNP">
-	   						<xsl:value-of select="concat(./RMN/RMNA, ' ', ./RMN/RMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-	   						<xsl:value-of select="./RMN/RMNA" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:value-of select="./RMN/RMNA" />
 	   			</rdfs:label>
 	    	</xsl:if>
 		    <xsl:if test="./RMN/RMNI">
 				<l0:name xml:lang="en">
-					<xsl:choose>
-						<xsl:when test="./RMN/RMNP">
-	   						<xsl:value-of select="concat(./RMN/RMNI, ' ', ./RMN/RMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-		   					<xsl:value-of select="./RMN/RMNI" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:value-of select="./RMN/RMNI" />
 	   			</l0:name>
 		   	</xsl:if>
 			<xsl:if test="./RMN/RMNA">
 				<l0:name xml:lang="it">
-					<xsl:choose>
-						<xsl:when test="./RMN/RMNP">
-	   						<xsl:value-of select="concat(./RMN/RMNA, ' ', ./RMN/RMNP)" />
-						</xsl:when>
-						<xsl:otherwise>
-	   						<xsl:value-of select="./RMN/RMNA" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:value-of select="./RMN/RMNA" />
 		   		</l0:name>
 		    </xsl:if>
-		    <xsl:if test="not(./RMN/RMNV)">
-			    <xsl:if test="./RMN/RMNS">
+			<xsl:if test="./RMN/RMNS">
 					<arco-cd:synonym>
 						<xsl:value-of select="./RMN/RMNS" />
 					</arco-cd:synonym>
-				</xsl:if>
-				<xsl:if test="./RMS/RMSK">
-					<arco-mp:newDanaCode>
-						<xsl:value-of select="./RMS/RMSK" />
-					</arco-mp:newDanaCode>
-				</xsl:if>
-				<xsl:if test="./RMS/RMSX">
-					<arco-mp:strunzCode>
-						<xsl:value-of select="./RMS/RMSX" />
-					</arco-mp:strunzCode>
-				</xsl:if>
-				<xsl:if test="./RMS/RMSG">
-					<arco-mp:imaCode>
-						<xsl:value-of select="./RMS/RMSG" />
-					</arco-mp:imaCode>
-				</xsl:if>
 			</xsl:if>
-			<xsl:if test="./RMS/RMSD">
+			<xsl:if test="./RMN/RMSK">
+					<arco-mp:newDanaCode>
+						<xsl:value-of select="./RMN/RMSK" />
+					</arco-mp:newDanaCode>
+			</xsl:if>
+			<xsl:if test="./RMN/RMSX">
+					<arco-mp:strunzCode>
+						<xsl:value-of select="./RMN/RMSX" />
+					</arco-mp:strunzCode>
+			</xsl:if>
+			<xsl:if test="./RMN/RMSG">
+					<arco-mp:imaCode>
+						<xsl:value-of select="./RMN/RMSG" />
+					</arco-mp:imaCode>
+			</xsl:if>
+			<xsl:if test="./RMN/RMSD">
 				<arco-mp:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
-		    			<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMS/RMSD)))" />
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMSD)))" />
 		    		</xsl:attribute>
             	</arco-mp:hasDirectHigherRank>
 			</xsl:if>
-			<xsl:if test="./RMS/RMSC or ./RMS/RMSS">
+			<xsl:if test="./RMN/RMSC or ./RMN/RMSS">
 				<arco-mp:hasDirectHigherRank>
 					<xsl:choose>
-						<xsl:when test="./RMS/RMSS">
+						<xsl:when test="./RMN/RMSS">
 							<xsl:attribute name="rdf:resource">
-		    					<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMS/RMSS)))" />
+		    					<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMSS)))" />
 		    				</xsl:attribute>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:attribute name="rdf:resource">
-		    					<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMS/RMSC)))" />
+		    					<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMSC)))" />
 		    				</xsl:attribute>
 						</xsl:otherwise>
 					</xsl:choose>
@@ -3126,11 +2616,11 @@
 	<rdf:Description>
 		<xsl:if test="./RMS/RMSS">
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMS/RMSS)))" />
+		    	<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMS/RMSS)))" />
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicSubclass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralSubclass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<xsl:choose>
@@ -3154,7 +2644,7 @@
 			<xsl:if test="./RMS/RMSC">
 				<arco-mp:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
-		    			<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMS/RMSC)))" />
+		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMS/RMSC)))" />
 		    		</xsl:attribute>
             	</arco-mp:hasDirectHigherRank>
 			</xsl:if>
@@ -3173,11 +2663,11 @@
 	<rdf:Description>
 		<xsl:if test="./RMS/RMSC">
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMS/RMSC)))" />
+		    	<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMS/RMSC)))" />
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicClass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralClass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -3203,11 +2693,11 @@
 	<rdf:Description>
 		<xsl:if test="./RMS/RMSD">
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMS/RMSD)))" />
+		    	<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMS/RMSD)))" />
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicClass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralClass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -3259,34 +2749,16 @@
 			<arco-mp:hasTaxon>
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
-						<xsl:choose>
-							<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), $smnv, '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), $smnv)" />
-		    					</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
+		    			</xsl:attribute>
 		    		</xsl:when>
 		    		<xsl:otherwise>
-		    			<xsl:choose>
-							<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), $smnv, '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), $smnv)" />
-		    					</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
+		    			</xsl:attribute>
 		    		</xsl:otherwise>
-				</xsl:choose>
+		    	</xsl:choose>
 			</arco-mp:hasTaxon>
 		</rdf:Description>
 	</xsl:if>
@@ -3328,32 +2800,14 @@
 			<arco-mp:hasTaxon>
 				<xsl:choose>
 					<xsl:when test="./RMNI">
-						<xsl:choose>
-							<xsl:when test="./RMNP">
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMNI)), $rmnv, '-',arco-fn:urify(normalize-space(./RMNP)))" />
-		    					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMNI)), $rmnv)" />
-		    					</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMNI)))" />
+		    			</xsl:attribute>
 		    		</xsl:when>
 		    		<xsl:otherwise>
-		    			<xsl:choose>
-							<xsl:when test="./RMNP">
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMNA)), $rmnv, '-',arco-fn:urify(normalize-space(./RMNP)))" />
-		    					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMNA)), $rmnv)" />
-		    					</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMNA)))" />
+		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
 			</arco-mp:hasTaxon>
@@ -3410,16 +2864,16 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Etichetta ',  position(), ' del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Etichetta revisionata ',  position(), ' del bene ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Etichetta ',  position(), ' del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Etichetta revisionata ',  position(), ' del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Label ', position(), ' of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Revised label ', position(), ' of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of	select="concat('Label ', position(), ' of cultural property ', $itemURI)" />
+				<xsl:value-of	select="concat('Revised label ', position(), ' of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./RMET">
 				<arco-mp:bodyTranscript>
@@ -3438,8 +2892,8 @@
 	</xsl:for-each>
 
 								<!-- Specimen Harvesting as individual -->
-	<xsl:if test="not($sheetType='F')">
-	<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM">
+	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">
+	<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM or record/metadata/schede/*/IR">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS,'SpecimenHarvesting/', $itemURI)" />
@@ -3519,9 +2973,40 @@
 					</xsl:attribute>
 				</arco-location:hasHarvestingMotivation>
 			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/LR/LRI/LRIF">
+				<tiapit:atTime>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(record/metadata/schede/*/LR/LRI/LRIF)))" />
+					</xsl:attribute>
+				</tiapit:atTime>
+			</xsl:if>
 		</rdf:Description>
 	</xsl:if>	
 					
+					
+							<!-- Time interval as individual -->
+	<xsl:if test="record/metadata/schede/*/LR/LRI/LRIF">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(record/metadata/schede/*/LR/LRI/LRIF)))" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
+			</l0:name>
+			<tiapit:time>
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
+			</tiapit:time>
+		</rdf:Description>
+	</xsl:if>
+	
 								<!-- Harvesting Method as individual -->
 	<xsl:if test="record/metadata/schede/*/LR/LRI/LRIW">
 		<rdf:Description>
@@ -3563,7 +3048,8 @@
 	</xsl:if>				
 							
 							<!-- Time indexed typed location as individual -->
-	<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM">
+	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">
+	<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM or record/metadata/schede/*/IR">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-collecting-location')" />
@@ -3586,6 +3072,13 @@
 				<xsl:value-of select="concat('Collecting location of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
+				<arco-mp:hasGeologicalContex>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+					</xsl:attribute>
+				</arco-mp:hasGeologicalContex>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/IR/IRA/IRAC or record/metadata/schede/*/IR/IRA/IRAE or record/metadata/schede/*/IR/IRA/IRAP or record/metadata/schede/*/IR/IRA/IRAD or record/metadata/schede/*/IR/IRA/IRAF or record/metadata/schede/*/IR/IRA/IRAG">
 				<arco-mp:hasGeologicalContex>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
@@ -3614,6 +3107,7 @@
 				</arco-location:atLocation>
 			</xsl:for-each>
 		</rdf:Description>
+	</xsl:if>
 	</xsl:if>
 					
 					<!-- Feature as individual -->
@@ -3720,7 +3214,7 @@
 					<xsl:with-param name="text"
 						select="$address-label" />
 				</xsl:call-template>
-			</l0:name>	
+			</l0:name>
 			<clvapit:hasAddress>
 				<xsl:choose>
 					<xsl:when test="./LRVS and not(lower-case(normalize-space(./LRVS))='italia')">
@@ -3943,7 +3437,257 @@
 		</xsl:if>
 	</xsl:for-each>		
 	</xsl:if>				
-					<!-- Geological context as individual -->
+					<!-- Address Area -->
+	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">
+	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAR">	
+		<rdf:Description>
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/*/LR/LRV/LRVS and not(lower-case(normalize-space(record/metadata/schede/*/LR/LRV/LRVS))='italia')">
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVK), normalize-space(record/metadata/schede/*/LR/LRV/LRVS), normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVR), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL), normalize-space(record/metadata/schede/*/LR/LRV/LRVE))))" />
+					</xsl:attribute>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL))))" />
+					</xsl:attribute>
+				</xsl:otherwise>
+			</xsl:choose>
+			<clvapit:hasAddressArea>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IM/IMA/IMAR)))" />
+				</xsl:attribute>
+			</clvapit:hasAddressArea>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of 	select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IM/IMA/IMAR)))" />
+		 	</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IM/IMA/IMAR)" />
+				</xsl:call-template>
+			</rdfs:label>
+			<l0:name>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IM/IMA/IMAR)" />
+				</xsl:call-template>
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAM">	
+		<rdf:Description>
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/*/LR/LRV/LRVS and not(lower-case(normalize-space(record/metadata/schede/*/LR/LRV/LRVS))='italia')">
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVK), normalize-space(record/metadata/schede/*/LR/LRV/LRVS), normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVR), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL), normalize-space(record/metadata/schede/*/LR/LRV/LRVE))))" />
+					</xsl:attribute>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL))))" />
+					</xsl:attribute>
+				</xsl:otherwise>
+			</xsl:choose>
+			<clvapit:hasAddressArea>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IM/IMA/IMAM)))" />
+				</xsl:attribute>
+			</clvapit:hasAddressArea>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of 	select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IM/IMA/IMAM)))" />
+		 	</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IM/IMA/IMAM)" />
+				</xsl:call-template>
+			</rdfs:label>
+			<l0:name>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IM/IMA/IMAM)" />
+				</xsl:call-template>
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAT">	
+		<rdf:Description>
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/*/LR/LRV/LRVS and not(lower-case(normalize-space(record/metadata/schede/*/LR/LRV/LRVS))='italia')">
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVK), normalize-space(record/metadata/schede/*/LR/LRV/LRVS), normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVR), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL), normalize-space(record/metadata/schede/*/LR/LRV/LRVE))))" />
+					</xsl:attribute>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL))))" />
+					</xsl:attribute>
+				</xsl:otherwise>
+			</xsl:choose>
+			<clvapit:hasAddressArea>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IM/IMA/IMAT)))" />
+				</xsl:attribute>
+			</clvapit:hasAddressArea>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of 	select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IM/IMA/IMAT)))" />
+		 	</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IM/IMA/IMAT)" />
+				</xsl:call-template>
+			</rdfs:label>
+			<l0:name>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IM/IMA/IMAT)" />
+				</xsl:call-template>
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/IR/IRA/IRAR">	
+		<rdf:Description>
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/*/LR/LRV/LRVS and not(lower-case(normalize-space(record/metadata/schede/*/LR/LRV/LRVS))='italia')">
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVK), normalize-space(record/metadata/schede/*/LR/LRV/LRVS), normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVR), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL), normalize-space(record/metadata/schede/*/LR/LRV/LRVE))))" />
+					</xsl:attribute>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL))))" />
+					</xsl:attribute>
+				</xsl:otherwise>
+			</xsl:choose>
+			<clvapit:hasAddressArea>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IR/IRA/IRAR)))" />
+				</xsl:attribute>
+			</clvapit:hasAddressArea>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of 	select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IR/IRA/IRAR)))" />
+		 	</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IR/IRA/IRAR)" />
+				</xsl:call-template>
+			</rdfs:label>
+			<l0:name>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IR/IRA/IRAR)" />
+				</xsl:call-template>
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/IR/IRA/IRAM">	
+		<rdf:Description>
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/*/LR/LRV/LRVS and not(lower-case(normalize-space(record/metadata/schede/*/LR/LRV/LRVS))='italia')">
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVK), normalize-space(record/metadata/schede/*/LR/LRV/LRVS), normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVR), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL), normalize-space(record/metadata/schede/*/LR/LRV/LRVE))))" />
+					</xsl:attribute>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL))))" />
+					</xsl:attribute>
+				</xsl:otherwise>
+			</xsl:choose>
+			<clvapit:hasAddressArea>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IR/IRA/IRAM)))" />
+				</xsl:attribute>
+			</clvapit:hasAddressArea>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of 	select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IR/IRA/IRAM)))" />
+		 	</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IR/IRA/IRAM)" />
+				</xsl:call-template>
+			</rdfs:label>
+			<l0:name>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IR/IRA/IRAM)" />
+				</xsl:call-template>
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/IR/IRA/IRAT">	
+		<rdf:Description>
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/*/LR/LRV/LRVS and not(lower-case(normalize-space(record/metadata/schede/*/LR/LRV/LRVS))='italia')">
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVK), normalize-space(record/metadata/schede/*/LR/LRV/LRVS), normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVR), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL), normalize-space(record/metadata/schede/*/LR/LRV/LRVE))))" />
+					</xsl:attribute>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL))))" />
+					</xsl:attribute>
+				</xsl:otherwise>
+			</xsl:choose>
+			<clvapit:hasAddressArea>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IR/IRA/IRAT)))" />
+				</xsl:attribute>
+			</clvapit:hasAddressArea>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of 	select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IR/IRA/IRAT)))" />
+		 	</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IR/IRA/IRAT)" />
+				</xsl:call-template>
+			</rdfs:label>
+			<l0:name>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IR/IRA/IRAT)" />
+				</xsl:call-template>
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>				
+	</xsl:if>
+						<!-- Geological context as individual -->
+	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">					
 	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -4170,7 +3914,7 @@
 			</arco-arco:endTime>
 		</rdf:Description>
 	</xsl:if>
-	
+	</xsl:if>
 					<!-- Type specimen identification as individual -->
 	<xsl:if test="record/metadata/schede/BNM/SM/SMT and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMT/SMTT)), 'non tipo'))">
 		<rdf:Description>
@@ -4215,34 +3959,16 @@
 			<arco-mp:producesTaxon>
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
-						<xsl:choose>
-							<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), $smnv, '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)), $smnv)" />
-		    					</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
+		    			</xsl:attribute>
 		    		</xsl:when>
 		    		<xsl:otherwise>
-		    			<xsl:choose>
-							<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNP">
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), $smnv, '-',arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNP)))" />
-		    					</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)), $smnv)" />
-		    					</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
+		    			</xsl:attribute>
 		    		</xsl:otherwise>
-		    </xsl:choose>
+		    	</xsl:choose>
 			</arco-mp:producesTaxon>
 			</xsl:if>		
 			<xsl:if test="record/metadata/schede/BNM/SM/SMT/SMTA">
@@ -4328,7 +4054,8 @@
 	</xsl:if>	
 						
 					<!-- Bibliography identification as individual -->	
-	<xsl:for-each select="record/metadata/schede/*/IM/IMA/IMAB">
+	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">					
+		<xsl:for-each select="record/metadata/schede/*/IM/IMA/IMAB">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
 					<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-geological-context-bibliography-', position())" />
@@ -4354,7 +4081,8 @@
 					<xsl:value-of select="." />
 				</arco-cd:completeBibliographicReference>			
 			</rdf:Description>
-		</xsl:for-each>					
+		</xsl:for-each>	
+	</xsl:if>				
 						<!-- Type specimen identification as individual -->
 	<xsl:for-each select="record/metadata/schede/BNM/RM">
 	<xsl:variable name="rmnv">
@@ -4413,12 +4141,12 @@
 						<xsl:choose>
 							<xsl:when test="./RMN/RMNP">
 								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), $rmnv, '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
+		    						<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), $rmnv, '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
 		    					</xsl:attribute>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), $rmnv)" />
+		    						<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMNI)), $rmnv)" />
 		    					</xsl:attribute>
 							</xsl:otherwise>
 						</xsl:choose>
@@ -4427,12 +4155,12 @@
 		    			<xsl:choose>
 							<xsl:when test="./RMN/RMNP">
 								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), $rmnv, '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
+		    						<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), $rmnv, '-',arco-fn:urify(normalize-space(./RMN/RMNP)))" />
 		    					</xsl:attribute>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:attribute name="rdf:resource">
-		    						<xsl:value-of select="concat($NS,'GeologicTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), $rmnv)" />
+		    						<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMN/RMNA)), $rmnv)" />
 		    					</xsl:attribute>
 							</xsl:otherwise>
 						</xsl:choose>
@@ -4598,6 +4326,7 @@
 	</xsl:for-each>
 		
 							<!-- Host rock as individual -->
+	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">							
 	<xsl:if test="record/metadata/schede/BNM/IM/IMA/IMAO">
 		<rdf:Description>	
 			<xsl:attribute name="rdf:about">
@@ -4616,7 +4345,7 @@
             </l0:name>
 		</rdf:Description>
 	</xsl:if>
-	
+	</xsl:if>
 										<!-- Inclusions rock as individual -->
 	<xsl:for-each select="record/metadata/schede/BNM/SM/SMA/SMAI">
 		<rdf:Description>
@@ -4637,6 +4366,7 @@
 		</rdf:Description>
 	</xsl:for-each>
 						<!-- Orientation as individual -->	
+	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">						
 	<xsl:if test="record/metadata/schede/BNM/IM/IMA/IMAG">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -4655,7 +4385,7 @@
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>
-	
+	</xsl:if>
 												<!-- Morphology as individual -->	
 	<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAB" >
 		<rdf:Description>

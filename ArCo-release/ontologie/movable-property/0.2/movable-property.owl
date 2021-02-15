@@ -178,6 +178,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/hasConstituent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasConstituent"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/hasLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasLocation"/>
@@ -253,6 +259,15 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/areGrainsOf">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/hasGrains"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Grains"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Texture"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega i grani alla tessitura di un campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the grains to the texture</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">are grains of</rdfs:label>
+        <rdfs:label xml:lang="it">sono grani di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -278,7 +293,38 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasAlterationGrade -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasAlterationGrade"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasAlterationGrade">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isAlterationGradeOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/AlterationGrade"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il campione al grado di alterazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen to alteration grade</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha grado di alterazione</rdfs:label>
+        <rdfs:label xml:lang="en">has alteration grade</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCZ</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasAlterationType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasAlterationType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isAlterationTypeOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/AlterationType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il campione al tipo di alterazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen to alteration type</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha tipo di alterazione</rdfs:label>
+        <rdfs:label xml:lang="en">has alteration type</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCH</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
     
 
 
@@ -342,6 +388,16 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCement">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCementOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Texture"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Cement"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la tessitura di un campione al cemento</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the texture to the cement</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha cemento</rdfs:label>
+        <rdfs:label xml:lang="en">has cement</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -756,7 +812,18 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasGrains -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasGrains"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasGrains">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Texture"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Grains"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la tessitura di un campione ai grani</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the texture of a specimen to the grains</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha grani</rdfs:label>
+        <rdfs:label xml:lang="en">has grains</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCF, SR/SRC/SRCG</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
     
 
 
@@ -786,6 +853,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isHarvestingMotivation"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/HarvestingMotivation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la raccolta alla sua motivazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen harvesting to the motivation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha motivazione della raccolta</rdfs:label>
+        <rdfs:label xml:lang="en">has harvesting motivation</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -797,6 +871,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isHarvestingOperatorOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la raccolta all&apos;operatore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen harvesting to operator</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha operatore</rdfs:label>
+        <rdfs:label xml:lang="en">has harvesting operator</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -808,6 +889,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isHarvestingResponsibleOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la raccolta al responsabile della raccolta.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen harvesting to the harvesting operator</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha responsabile della raccolta</rdfs:label>
+        <rdfs:label xml:lang="en">has harvesting responsible</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -819,6 +907,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isHarvestingSponsorOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la raccolta allo sponsor.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen harvesting to the sponsor</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha sponsor</rdfs:label>
+        <rdfs:label xml:lang="en">has harvesting sponsor</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -987,6 +1082,16 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasMatrix">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isMatrixOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Texture"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Matrix"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la tessitura di un campione alla matrice</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the texture of a specimen to the matrix</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha matrice</rdfs:label>
+        <rdfs:label xml:lang="en">has matrix</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCX</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1012,19 +1117,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasMineral -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasMineral">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isMineralOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralPresence"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Mineral"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la presenza del minerale al minerale</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the mineral presence to the mineral</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">ha minerale</rdfs:label>
-        <rdfs:label xml:lang="en">has mineral</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRM/SRMP, SR/SRM/SRMS, SR/SRM/SRMT</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasMineral"/>
     
 
 
@@ -1346,7 +1439,19 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/movable-property/hasSedimentaryStructure -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasSedimentaryStructure"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasSedimentaryStructure">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isSedimentaryStructureOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/SedimentaryStructure"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un campione allasua struttura sedimentaria</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a specimen to its sedimentary structure</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha struttura sedimentaria</rdfs:label>
+        <rdfs:label xml:lang="en">has sedimentary structure</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCA, SR/SRC/SRCS, SR/SRC/SRCP, SR/SRC/SRCB</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
     
 
 
@@ -1499,6 +1604,24 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/hasTexture -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasTexture">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isTextureOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Texture"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il cammpione alla tessitura</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen to the texture</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha tessitura</rdfs:label>
+        <rdfs:label xml:lang="en">has texture</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCR</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/hasTypeOfTypeSpecimen -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasTypeOfTypeSpecimen">
@@ -1572,9 +1695,39 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/hasWeatheringContition -->
+    <!-- https://w3id.org/arco/ontology/movable-property/involvesChondrule -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasWeatheringContition"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/involvesChondrule">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isChondruleInvolvedIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/ChondrulePresence"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Chondrule"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la presenza di condrule al campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the chondrule presence to the specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha minerale</rdfs:label>
+        <rdfs:label xml:lang="en">has mineral</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRM/SRMP, SR/SRM/SRMS, SR/SRM/SRMT</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/involvesMineral -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/involvesMineral">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isMineralInvolvedIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralPresence"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Mineral"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la presenza del minerale al minerale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the mineral presence to the mineral</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha minerale</rdfs:label>
+        <rdfs:label xml:lang="en">has mineral</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRM/SRMP, SR/SRM/SRMS, SR/SRM/SRMT</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
     
 
 
@@ -1596,7 +1749,34 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/movable-property/isAlterationGradeOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isAlterationGradeOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isAlterationGradeOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/AlterationGrade"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il grado di alterazione al campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the alteration grade to the specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is alteration grade of</rdfs:label>
+        <rdfs:label xml:lang="it">è grado di alterazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isAlterationTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isAlterationTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/AlterationType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di alterazione al campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the alteration type to the specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is alteration type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di alterazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -1653,7 +1833,17 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/movable-property/isCementOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCementOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCementOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Cement"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Texture"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il cemento alla tessitura di un campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the cement to the texture of a specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is cement of</rdfs:label>
+        <rdfs:label xml:lang="it">è cemento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -1670,6 +1860,40 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è formula chimica di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isChondruleInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isChondruleInvolvedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Chondrule"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/ChondrulePresence"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega le condrule alla presenza di condrule nel campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the chondrules to the chondrule presence in the specimen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is chondrule involved in</rdfs:label>
+        <rdfs:label xml:lang="it">sono condrule coinvolte in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPL: SP/SPC/SPCC</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isChondrulePresenceOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isChondrulePresenceOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/ChondrulePresence"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la presenza di condrule al campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the presence of chondrules in the specimen to the specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is chondrule presence of</rdfs:label>
+        <rdfs:label xml:lang="it">è presenza di condrule di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPL: SP/SPC/SPCC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1785,8 +2009,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di contatto tra i grani ai grani di una roccia</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the type of contact between grains to the grains.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">è tipo di contatto di</rdfs:label>
         <rdfs:label xml:lang="en">is contact type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di contatto di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SR/SRC/SRCG</a-cat:iccdNormTag>
@@ -1937,8 +2161,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà collega il tipo eruttivo a una roccia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the eruptive type to the rock.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">è tipo eruttivo di</rdfs:label>
         <rdfs:label xml:lang="en">is eruptive type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo eruttivo di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SR/SRC/SRCE</a-cat:iccdNormTag>
@@ -2067,6 +2291,13 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/HarvestingMotivation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la motivazione alla raccolta del campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the harvesting motivation to the specimen harvesting.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is harvesting motivation of</rdfs:label>
+        <rdfs:label xml:lang="it">è motivazione della raccolta di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2076,6 +2307,13 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isHarvestingOperatorOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;operatore della raccolta alla raccolta del campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the harvesting operator to the specimen harvesting.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is harvesting operator of</rdfs:label>
+        <rdfs:label xml:lang="it">è operatore della raccolta di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2086,6 +2324,13 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il responsabile della raccolta alla raccolta del campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the harvesting responsible to the specimen harvesting.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is harvesting responsible of</rdfs:label>
+        <rdfs:label xml:lang="it">è responsabile della raccolta di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2096,6 +2341,13 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega lo sponsor raccolta alla raccolta del campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the harvesting sponsor to the specimen harvesting.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is harvesting sponsor of</rdfs:label>
+        <rdfs:label xml:lang="it">è sponsor della raccolta di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2250,16 +2502,16 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/isMineralOf -->
+    <!-- https://w3id.org/arco/ontology/movable-property/isMineralInvolvedIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isMineralOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isMineralInvolvedIn">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Mineral"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralPresence"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega il minerale la presenza del minerale nel campione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the mineral to the mineralt presence in the specimen.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il minerale alla presenza del minerale nel campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the mineral to the mineral presence in the specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">è minerale di</rdfs:label>
         <rdfs:label xml:lang="en">is mineral of</rdfs:label>
+        <rdfs:label xml:lang="it">è minerale di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRM/SRMP, SR/SRM/SRMS, SR/SRM/SRMT</a-cat:iccdNormTag>
@@ -2272,11 +2524,11 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isMineralPresenceOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralPresence"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la presenza di un minerale nel campione al campione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the presence of a mineral in the specimen to the specimen</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la presenza di un minerale al campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the presence of a mineral to the specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">è presenza di minerale di</rdfs:label>
         <rdfs:label xml:lang="en">is mineral presence of</rdfs:label>
+        <rdfs:label xml:lang="it">è presenza di minerale di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRM/SRMP, SR/SRM/SRMS, SR/SRM/SRMT</a-cat:iccdNormTag>
@@ -2537,6 +2789,22 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/isSedimentaryStructureOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isSedimentaryStructureOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/SedimentaryStructure"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la struttura sedimentaria al campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the sedimentary structure to the specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is sedimentary structure of</rdfs:label>
+        <rdfs:label xml:lang="it">è struttura sedimentaria di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/isShadeToleranceOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isShadeToleranceOf">
@@ -2660,8 +2928,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà collega la specificazione del taxon al taxon.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the taxon specification to a taxon.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">è specificazione del taxon di</rdfs:label>
         <rdfs:label xml:lang="en">is taxon specification of</rdfs:label>
+        <rdfs:label xml:lang="it">è specificazione del taxon di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. BNB: SB/NAA/NAAD, SB/NAA/NAAF, SB/NAA/NAAH, SB/NAT/NATD, SB/NAT/NATF, SB/NAT/NATH, RB/RBN/RBND, RB/RBN/RBNF, RB/RBN/RBNH</a-cat:iccdNormTag>
@@ -2680,6 +2948,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">is tenacity of</rdfs:label>
         <rdfs:label xml:lang="it">è tenacità di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isTextureOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isTextureOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Texture"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la tessitura a un campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the texture to a specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is texture of</rdfs:label>
+        <rdfs:label xml:lang="it">è tessitura di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2749,12 +3033,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/isWeatheringContitionOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isWeatheringContitionOf"/>
     
 
 
@@ -2910,10 +3188,27 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/fallDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/fallDate">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MeteoriteFall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data in cui è caduto il meteorite</rdfs:comment>
+        <rdfs:comment xml:lang="en">This preperty represents the date in which the meteorite has fallen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">data della caduta</rdfs:label>
+        <rdfs:label xml:lang="en">fall date</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="en">Normativa BNPL: SP/SPN/SPND</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/genusNumber -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/genusNumber">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Genus"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalGenus"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa porprietà rappresenta il numero del genere (secondo lo schema sistematico di riferimento)</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the genus number (according to the referenced axonomy)</rdfs:comment>
@@ -3015,7 +3310,18 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/movable-property/mainMineral -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/mainMineral"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/mainMineral">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralPresence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica il minerale principale all&apos;interno del campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the main mineral within the specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">main mineral</rdfs:label>
+        <rdfs:label xml:lang="it">minerale principale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRM/SRMP</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
     
 
 
@@ -3192,7 +3498,18 @@ SB/NAA</a-cat:iccdNormTag>
 
     <!-- https://w3id.org/arco/ontology/movable-property/secondaryMineral -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/secondaryMineral"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/secondaryMineral">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralPresence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica il minerale secondario all&apos;interno del campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the secondary mineral within the specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">monerale secondario</rdfs:label>
+        <rdfs:label xml:lang="en">secondary mineral</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRM/SRMA</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
     
 
 
@@ -3433,6 +3750,20 @@ SB/NAA</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/AlterationGrade">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isAlterationGradeOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il grado di alterazionedi un campione causato da processi atmosferici e geologici.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the alteration grade of a specimen,  by weathering process or geological process</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Alteration grade</rdfs:label>
+        <rdfs:label xml:lang="it">Grado di alterazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRC/SRCZ</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3441,6 +3772,20 @@ SB/NAA</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/AlterationType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isAlterationTypeOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di alterazione di un campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the alteration type of a specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Alteration type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di alterazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRC/SRCH</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3449,6 +3794,413 @@ SB/NAA</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BiogenicSedimentaryStructure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/SedimentaryStructure"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la struttura sedimentaria biogenica</rdfs:comment>
+        <rdfs:comment xml:lang="en">TThis class represents the biogenic sedimentary structure</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Biogenic sedimentary structure</rdfs:label>
+        <rdfs:label xml:lang="it">Struttura sedimentaria biogenica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCB</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BiologicalClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalPhylum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalOrder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalKingdom"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalPhylum"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalClass"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalKingdom"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalPhylum"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la classe.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the class</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Class</rdfs:label>
+        <rdfs:label xml:lang="it">Classe</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BiologicalFamily -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalFamily">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalOrder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalGenus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalFamily"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalGenus"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalSpecies"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalGenus"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalSpecies"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la famiglia</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the family.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="it">Famiglia</rdfs:label>
+        <rdfs:label xml:lang="en">Family</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSF</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BiologicalGenus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalGenus">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalFamily"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalSpecies"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalGenus"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalSpecies"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalSpecies"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/genusNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero il genere.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the genus.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="it">Genere</rdfs:label>
+        <rdfs:label xml:lang="en">Genus</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG. - Normativa BNB: RB/RBN/RBNA; SB/NAA/NAAA; SB/NAT/NATA</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BiologicalKingdom -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalKingdom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalPhylum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalKingdom"/>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero il regno.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the kingdom</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Kingdom</rdfs:label>
+        <rdfs:label xml:lang="it">Regno</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BiologicalOrder -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalOrder">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalFamily"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalClass"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalKingdom"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalPhylum"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalFamily"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalGenus"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalSpecies"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero l&apos;ordine</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the order</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Order</rdfs:label>
+        <rdfs:label xml:lang="it">Ordine</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BiologicalPhylum -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalPhylum">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalKingdom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalKingdom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalKingdom"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalPhylum"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero il phylum.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the phylum</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Phylum</rdfs:label>
+        <rdfs:label xml:lang="it">Phylum</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BiologicalSpecies -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalSpecies">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalGenus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalSpecies"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la specie.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the species.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="it">Specie</rdfs:label>
+        <rdfs:label xml:lang="en">Species</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3509,6 +4261,14 @@ SB/NAA</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Cement">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il cemento di una tessitura</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents cement of a texture.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Cement</rdfs:label>
+        <rdfs:label xml:lang="it">Cemento</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRC/SRCC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3525,6 +4285,66 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSE</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Chondrule -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Chondrule">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ChondruleType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta le condrule di una tessitura</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the chondrules of a texture.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Chondrule</rdfs:label>
+        <rdfs:label xml:lang="it">Condrule</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SP/SPC/SPCC</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/ChondrulePresence -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ChondrulePresence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la presenza di condrule in un campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the presence of chondrules in a specimen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Chondrule presence</rdfs:label>
+        <rdfs:label xml:lang="it">Presenza di condrule</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SP/SPC/SPCC</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/ChondruleType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ChondruleType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di condrule di una tessitura</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of chondrules of a texture.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Chondrule type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di condrule</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SP/SPC/SPCC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3609,64 +4429,6 @@ SB/NAA</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/Class -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Class">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Phylum"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Order"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Kingdom"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Phylum"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Class"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Kingdom"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Phylum"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la classe.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the class</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
-        <rdfs:label xml:lang="en">Class</rdfs:label>
-        <rdfs:label xml:lang="it">Classe</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/ClassificationSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ClassificationSystem">
@@ -3737,6 +4499,14 @@ SB/NAA</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ContactType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di contatto tra i grani</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of contact between grains</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Contact type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di contatto</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRC/SRCG</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3886,78 +4656,11 @@ SB/NAA</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo eruttivo di una roccia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the eruptive type of a rock.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Tipo eruttivo</rdfs:label>
         <rdfs:label xml:lang="en">Eruptive type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo eruttivo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">untable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRC/SRCE</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/Family -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Family">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Order"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Genus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Family"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Genus"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Species"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Genus"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Species"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la famiglia</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the family.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
-        <rdfs:label xml:lang="it">Famiglia</rdfs:label>
-        <rdfs:label xml:lang="en">Family</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSF</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3972,6 +4675,7 @@ SB/NAA</a-cat:iccdNormTag>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l idrodinamismo del luogo in cui il campione è stato raccolto</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the fluid dynamis when the specimenwas collected</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">Fluid dynamism</rdfs:label>
@@ -3987,6 +4691,14 @@ SB/NAA</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Fossil">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un fossile</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a fossil</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Fossil</rdfs:label>
+        <rdfs:label xml:lang="it">Fossil</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRL/SRLP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4015,77 +4727,6 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBC</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/Genus -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Genus">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Family"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Species"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Genus"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Species"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Species"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/genusNumber"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero il genere.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the genus.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
-        <rdfs:label xml:lang="it">Genere</rdfs:label>
-        <rdfs:label xml:lang="en">Genus</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG. - Normativa BNB: RB/RBN/RBNA; SB/NAA/NAAA; SB/NAT/NATA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4373,37 +5014,6 @@ SB/NAA</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/Kingdom -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Kingdom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Phylum"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="https://w3id.org/arco/ontology/movable-property/Kingdom"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero il regno.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the kingdom</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
-        <rdfs:label xml:lang="en">Kingdom</rdfs:label>
-        <rdfs:label xml:lang="it">Regno</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/Label -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Label">
@@ -4470,8 +5080,8 @@ SB/NAA</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un rank della tassonomia petrologica, in particolare il tipo litologico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the rank of the petrologic taxonomy, in particular the lithological type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Tipo litologico</rdfs:label>
         <rdfs:label xml:lang="en">Lithologic type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo litologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">untable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRN/SRNT</a-cat:iccdNormTag>
@@ -4565,6 +5175,34 @@ SB/NAA</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/MainMass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MainMass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la massa principale di un meteorite</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the main mass of a meteorite</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Main mass</rdfs:label>
+        <rdfs:label xml:lang="it">Massa principale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPN/SPNM</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/Matrix -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Matrix">
@@ -4572,8 +5210,8 @@ SB/NAA</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la matrice della texture di una roccia</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the matrix of a rock texture</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
-        <rdfs:label xml:lang="en">Matrix</rdfs:label>
         <rdfs:label xml:lang="it">Matrice</rdfs:label>
+        <rdfs:label xml:lang="en">Matrix</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRC/SRCX</a-cat:iccdNormTag>
@@ -4606,6 +5244,68 @@ SB/NAA</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Meteorite -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Meteorite">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/MainMass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/PlanetologicSpecies"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il meteorite</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the meteorite</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Meteorite</rdfs:label>
+        <rdfs:label xml:lang="it">Meteorite</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPN/SPNL</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/MeteoriteFall -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MeteoriteFall">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/Meteorite"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/fallDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il meteorite che è stato visto cadere</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the meteorite that has been seen falling</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Meteorite</rdfs:label>
+        <rdfs:label xml:lang="it">Meteorite</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPN/SPNL</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4700,6 +5400,14 @@ SB/NAA</a-cat:iccdNormTag>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la presenza di un minerale all&apos;interno di un campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the presence of a mineral in a specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Mineral presence</rdfs:label>
+        <rdfs:label xml:lang="it">Presenza del minerale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRM/SRMP, SR/SRM/SRMA. BNPL: SP/SPM/SPMO, SP/SPM/SPMP, SP/SPM/SPML, SP/SPM/SPMM, SP/SPM/SPMS, SP/SPM/SPMF, SP/SPM/SPMR, SP/SPM/SPMA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4850,65 +5558,6 @@ erbario.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/Order -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Order">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Class"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Family"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Class"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Kingdom"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Phylum"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Family"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Genus"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Species"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero l&apos;ordine</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the order</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
-        <rdfs:label xml:lang="en">Order</rdfs:label>
-        <rdfs:label xml:lang="it">Ordine</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/Outcrop -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Outcrop">
@@ -4973,54 +5622,11 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/PetrologicTaxon">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/Taxon"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/Phylum -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Phylum">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Kingdom"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Class"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Kingdom"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Kingdom"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Phylum"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero il phylum.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the phylum</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il taxon relativo al dominio petrologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the taxon related to the petrologic domain.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">Phylum</rdfs:label>
-        <rdfs:label xml:lang="it">Phylum</rdfs:label>
+        <rdfs:label xml:lang="en">Petrologic taxon</rdfs:label>
+        <rdfs:label xml:lang="it">Taxon petrologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -5036,6 +5642,99 @@ erbario.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="it">Caratteristica fisica</rdfs:label>
         <rdfs:label xml:lang="en">Physical characteristic</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/PlanetologicClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/PlanetologicClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/PlanetologicTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/PlanetologicGenus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia planetologica, ovvero la classe.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a planetologic taxon, the class</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Classe planetologica</rdfs:label>
+        <rdfs:label xml:lang="en">Planetologic class</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/PlanetologicGenus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/PlanetologicGenus">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/PlanetologicTaxon"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia planetologica, ovvero il genere.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a planetologic taxon, the genus</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Genere planetologico</rdfs:label>
+        <rdfs:label xml:lang="en">Planetologic genus</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/PlanetologicGroup -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/PlanetologicGroup">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/PlanetologicTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/PlanetologicClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia planetologica, ovvero il gruppo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a planetologic taxon, the group</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Gruppo planetologico</rdfs:label>
+        <rdfs:label xml:lang="en">Planetologic group</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/PlanetologicSpecies -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/PlanetologicSpecies">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/PlanetologicTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/PlanetologicGroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia planetologica, ovvero la specie.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a planetologic taxon, the species</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Planetologic species</rdfs:label>
+        <rdfs:label xml:lang="it">Specie planetologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/PlanetologicTaxon -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/PlanetologicTaxon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/Taxon"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il taxon relativo al dominio planeotlogico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the taxon related to the planetologic domain.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Planetologic taxon</rdfs:label>
+        <rdfs:label xml:lang="it">Taxon planeotologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -5132,6 +5831,14 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/PrimarySedimentaryStructure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/SedimentaryStructure"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la struttura sedimentaria primaria</rdfs:comment>
+        <rdfs:comment xml:lang="en">TThis class represents the primary sedimentary structure</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Primary sedimentary structure</rdfs:label>
+        <rdfs:label xml:lang="it">Struttura sedimentaria primaria</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5201,8 +5908,8 @@ erbario.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un rank della tassonomia petrologica, in particolare il tipo di roccia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the rank of the petrologic taxonomy, in particular the rock type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Tipo di roccia</rdfs:label>
         <rdfs:label xml:lang="en">Rock type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di roccia</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">untable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRN/SRNP, SR/SRN/SRNR</a-cat:iccdNormTag>
@@ -5253,6 +5960,14 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SecodarySedimentaryStructure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/SedimentaryStructure"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la struttura sedimentaria secondaria</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the secondary sedimentary structure</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Secondary sedimentary structure</rdfs:label>
+        <rdfs:label xml:lang="it">Struttura sedimentaria secondaria</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5261,6 +5976,14 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SedimentaryStructure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la struttura sedimentaria</rdfs:comment>
+        <rdfs:comment xml:lang="en">TThis class represents the sedimentary structure</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Sedimentary structure</rdfs:label>
+        <rdfs:label xml:lang="it">Struttura sedimentaria</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5315,69 +6038,6 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSE</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/Species -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Species">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Genus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Species"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la specie.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the species.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
-        <rdfs:label xml:lang="it">Specie</rdfs:label>
-        <rdfs:label xml:lang="en">Species</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5442,6 +6102,18 @@ erbario.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasAlterationGrade"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/AlterationGrade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasAlterationType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/AlterationType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasAssociatedPreparation"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Preparation"/>
             </owl:Restriction>
@@ -5492,12 +6164,6 @@ erbario.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasTypeSpecimenIdentification"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/TypeSpecimenIdentification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasWeatheringContition"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/WeatheringCondition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5745,6 +6411,62 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/Texture -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Texture">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/TextureType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCement"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Cement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasGrains"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Grains"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasMatrix"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Matrix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la tessitura di un campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the texture of a specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="it">Tessitura</rdfs:label>
+        <rdfs:label xml:lang="en">Texture</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRC/SRCR</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/TextureType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/TextureType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di tessitura di un campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of texture of a specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Texture type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di tessitura</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRC/SRCR</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/TypeOfTypeSpecimen -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/TypeOfTypeSpecimen">
@@ -5838,10 +6560,18 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/WeatheringCondition -->
+    <!-- https://w3id.org/arco/ontology/movable-property/WeatheringGrade -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/WeatheringCondition">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/WeatheringGrade">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/AlterationGrade"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il grado di alterazione causato da processi atmosferici di un campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the alteration grade caused by weathering process of a specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Grado di alterazione da processi atmosferici</rdfs:label>
+        <rdfs:label xml:lang="en">Weathering grade</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPC/SRCA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5961,8 +6691,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Cohesion">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="en">Cohesion</rdfs:label>
         <rdfs:label xml:lang="it">Coesione</rdfs:label>
+        <rdfs:label xml:lang="en">Cohesion</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRG/SRGS</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -6170,8 +6900,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/MetamorphicGrade">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
-        <rdfs:label xml:lang="en">Metamorphic grade</rdfs:label>
         <rdfs:label xml:lang="it">Grado metamorfico</rdfs:label>
+        <rdfs:label xml:lang="en">Metamorphic grade</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRC/SRCM</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -6192,8 +6922,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/NormativeMineralogy">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="en">Normative mineralogy</rdfs:label>
         <rdfs:label xml:lang="it">MIneralogia normativa</rdfs:label>
+        <rdfs:label xml:lang="en">Normative mineralogy</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRM/SRMN</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -6291,8 +7021,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/PrimaryPorosity">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="en">Primary porosity</rdfs:label>
         <rdfs:label xml:lang="it">Porosità primaria</rdfs:label>
+        <rdfs:label xml:lang="en">Primary porosity</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRG/SRGA</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -6332,8 +7062,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Roundness">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
-        <rdfs:label xml:lang="en">Roundness</rdfs:label>
         <rdfs:label xml:lang="it">Arrotondamento</rdfs:label>
+        <rdfs:label xml:lang="en">Roundness</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRC/SRCT</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -6343,8 +7073,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/SecondaryPorosity">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="en">Secondary porosity</rdfs:label>
         <rdfs:label xml:lang="it">Porosità secondaria</rdfs:label>
+        <rdfs:label xml:lang="en">Secondary porosity</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRG/SRGB</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -6379,6 +7109,14 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Tenacity</rdfs:label>
         <rdfs:label xml:lang="it">Tenacità</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFE</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/TotalKnownWeight -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/TotalKnownWeight">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
     </owl:NamedIndividual>
     
 
@@ -6449,6 +7187,28 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/delta17O -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/delta17O">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Delta 17 O</rdfs:label>
+        <rdfs:label xml:lang="it">Delta 17 O</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPO/SPOA</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/delta18O -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/delta18O">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Delta 18 O</rdfs:label>
+        <rdfs:label xml:lang="it">Delta 18 O</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPO/SPOB</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/gammaParameter -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/gammaParameter">
@@ -6497,8 +7257,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la riflettanza</rdfs:comment>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
     </rdf:Description>
     
 
@@ -6517,6 +7277,20 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiogenicSedimentaryStructure"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/PrimarySedimentaryStructure"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SecodarySedimentaryStructure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalClass"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalFamily"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalGenus"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalKingdom"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalOrder"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalPhylum"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalSpecies"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -6541,20 +7315,6 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Chronozone"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Eonthem"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Erathem"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Class"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Family"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Genus"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Kingdom"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Order"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Phylum"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Species"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

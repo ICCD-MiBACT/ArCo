@@ -259,7 +259,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 		<xsl:if test="record/metadata/schede/*/CM/CMP or record/metadata/schede/*/CM/RSR or record/metadata/schede/*/CM/FUR">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, '/', $idCF, '-compilation')" />
+					<xsl:value-of select="concat($NS, 'CatalogueRecordVersion/', $idCF, '-compilation')" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -771,15 +771,15 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 					</xsl:attribute>
 				</arco-dd:hasDesignationInTime>
 			</xsl:for-each>	
-			<xsl:for-each select="record/metadata/schede/*/GE">
-				<xsl:if test="record/metadata/schede/*/GE/*/*">
+			<xsl:if test="record/metadata/schede/*/GE/*/*">
+				<xsl:for-each select="record/metadata/schede/*/GE">
 					<clvapit:hasGeometry>
 						<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="concat($NS, 'Geometry/', $idCF, '-geometry-', position())" />
-	                	</xsl:attribute>
+	        	        	<xsl:value-of select="concat($NS, 'Geometry/', $idCF, '-geometry-', position())" />
+	            	    </xsl:attribute>
 					</clvapit:hasGeometry>
-				</xsl:if>
-			</xsl:for-each>
+				</xsl:for-each>
+			</xsl:if>
 			<xsl:for-each select="record/metadata/schede/*/DO/FTA">
 				<arco-cd:hasDocumentation>
 					<xsl:attribute name="rdf:resource">
@@ -1821,7 +1821,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 		<xsl:if test="record/metadata/schede/*/CM/CMP or record/metadata/schede/*/CM/RSR or record/metadata/schede/*/CM/FUR">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, '/', $idCG, '-compilation')" />
+					<xsl:value-of select="concat($NS, 'CatalogueRecordVersion/', $idCG, '-compilation')" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
