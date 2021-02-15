@@ -30203,7 +30203,7 @@
 
 
 
-
+			
 			<xsl:for-each select="record/metadata/schede/*/MT/MIS">
 				<rdf:Description>
 
@@ -30791,7 +30791,83 @@
 
 				</xsl:for-each>
 			</xsl:for-each>
-
+			<!-- measurement collection for PG -->
+			<xsl:if test="record/metadata/schede/PG/CA/HAT">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI)" />
+					</xsl:attribute>
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurements of cultural property ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurements of cultural property ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misure del bene culturale ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misure del bene culturale ', $itemURI)" />
+					</l0:name>
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-area')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-area')" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+        	       			<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Measurement'" />
+            	   		</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurement of ', $itemURI, ': ', normalize-space(record/metadata/schede/PG/CA/HAT))" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurement of ', $itemURI, ': ', normalize-space(record/metadata/schede/PG/CA/HAT))" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene ', $itemURI, ': ', normalize-space(record/metadata/schede/PG/CA/HAT))" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene ', $itemURI, ': ', normalize-space(record/metadata/schede/PG/CA/HAT))" />
+					</l0:name>
+					<arco-dd:hasMeasurementType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Area')" />
+					</arco-dd:hasMeasurementType>
+					<arco-dd:hasValue>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-area-', arco-fn:urify(record/metadata/schede/PG/CA/HAT))" />
+					</arco-dd:hasValue>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-area-', arco-fn:urify(record/metadata/schede/PG/CA/HAT))" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+					<rdfs:label>
+						<xsl:value-of select="record/metadata/schede/PG/CA/HAT" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="record/metadata/schede/PG/CA/HAT" />
+					</l0:name>
+					<mu:hasMeasurementUnit>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/ha')" />
+					</mu:hasMeasurementUnit>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/ha')" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit" />
+					<rdfs:label>
+						<xsl:value-of select="'ha'" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="'ha'" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
 			<!-- measurement collection for MI version 2.00 -->
 			<xsl:for-each select="record/metadata/schede/MI/MT/MIF">
 				<rdf:Description>
@@ -31346,6 +31422,7 @@
 			</xsl:if>
 		</xsl:for-each>
 
+	
 			<!-- xsl:apply-templates select="record/metadata/schede/*/MT/MIS" / -->
 		</xsl:if>
 		</rdf:RDF>

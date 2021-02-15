@@ -1182,6 +1182,22 @@ viene descritta.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/Artefact -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Artefact">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/ArtefactOrBuilding -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ArtefactOrBuilding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/Building -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Building">
@@ -1249,6 +1265,14 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Comignolo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/ConnectionElement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ConnectionElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionElement"/>
     </owl:Class>
     
 
@@ -1823,6 +1847,14 @@ viene descritta.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/NaturalElement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/NaturalElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionElement"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/OpenSpace -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/OpenSpace">
@@ -2101,7 +2133,7 @@ viene descritta.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/immovable-property/VerticalConnection -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalConnection">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ArchitecturalElement"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConnectionElement"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasUseFunction"/>

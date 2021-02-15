@@ -2617,6 +2617,13 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:for-each>
+				<xsl:if test="record/metadata/schede/PG/CA/HAT">
+					<arco-dd:hasMeasurementCollection>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI)" />
+				        </xsl:attribute>
+					</arco-dd:hasMeasurementCollection>
+				</xsl:if>
 				<!-- mibact scope of protection (AMB) -->
 				<xsl:if test="record/metadata/schede/*/OG/AMB">
 					<xsl:for-each select="record/metadata/schede/*/OG/AMB">

@@ -2176,28 +2176,28 @@
 			<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIT">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Measurement/NatuarlEnvironment/', $itemURI, '-temperature')" />
+						<xsl:value-of select="concat($NS, 'Measurement/NaturalEnvironment/', $itemURI, '-temperature')" />
 					</xsl:attribute>
 				</arco-dd:hasMeasurement>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIH">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Measurement/NatuarlEnvironment/', $itemURI, '-ph')" />
+						<xsl:value-of select="concat($NS, 'Measurement/NaturalEnvironment/', $itemURI, '-ph')" />
 					</xsl:attribute>
 				</arco-dd:hasMeasurement>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIO">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Measurement/NatuarlEnvironment/', $itemURI, '-depth')" />
+						<xsl:value-of select="concat($NS, 'Measurement/NaturalEnvironment/', $itemURI, '-depth')" />
 					</xsl:attribute>
 				</arco-dd:hasMeasurement>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIA">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Measurement/NatuarlEnvironment/', $itemURI, '-altitude')" />
+						<xsl:value-of select="concat($NS, 'Measurement/NaturalEnvironment/', $itemURI, '-altitude')" />
 					</xsl:attribute>
 				</arco-dd:hasMeasurement>
 			</xsl:if>		
@@ -2207,7 +2207,7 @@
 	<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIO">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"
-				select="concat($NS, 'Measurement/NatuarlEnvironment/', $itemURI, '-depth')" />
+				select="concat($NS, 'Measurement/NaturalEnvironment/', $itemURI, '-depth')" />
 			<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="concat('Measurement of collecting location of ', $itemURI, ': ', record/metadata/schede/BNB/LR/LRI/LRIO)" />
@@ -2232,7 +2232,7 @@
 	<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIT">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"
-				select="concat($NS, 'Measurement/NatuarlEnvironment/', $itemURI, '-temperature')" />
+				select="concat($NS, 'Measurement/NaturalEnvironment/', $itemURI, '-temperature')" />
 			<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="concat('Measurement of collecting location of ', $itemURI, ': ', record/metadata/schede/BNB/LR/LRI/LRIT)" />
@@ -2257,7 +2257,7 @@
 	<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIH">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"
-				select="concat($NS, 'Measurement/NatuarlEnvironment/', $itemURI, '-ph')" />
+				select="concat($NS, 'Measurement/NaturalEnvironment/', $itemURI, '-ph')" />
 			<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="concat('Measurement of collecting location of ', $itemURI, ': ', record/metadata/schede/BNB/LR/LRI/LRIH)" />
@@ -2279,7 +2279,7 @@
 	<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIA">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"
-				select="concat($NS, 'Measurement/NatuarlEnvironment/', $itemURI, '-altitude')" />
+				select="concat($NS, 'Measurement/NaturalEnvironment/', $itemURI, '-altitude')" />
 			<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="concat('Measurement of collecting location of ', $itemURI, ': ', record/metadata/schede/BNB/LR/LRI/LRIA)" />
