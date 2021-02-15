@@ -12,7 +12,24 @@ public class SpecificCulturalPropertyType {
 	static{
 		sheetPropertyTypeMap = new HashMap<String, String>();
 		
-		sheetPropertyTypeMap.put("AT", NAMESPACE + "ArchaeologicalProperty");
+		/*  Catalogue records for MODI
+		 *  archeologico --> ArchaeologicalProperty
+            architettonico e paesaggistico -->  ArchitecturalOrLandscapeHeritage 
+            etnoantropologico --> DemoEthnoAnthropologicalHeritage
+            storico artistico --> HistoricOrArtisticProperty
+            non individuabile --> CulturalProperty
+		 */
+		sheetPropertyTypeMap.put("archeologico", NAMESPACE + "ArchaeologicalProperty");
+		sheetPropertyTypeMap.put("architettonico e paesaggistico", NAMESPACE + "ArchitecturalOrLandscapeHeritage");
+		sheetPropertyTypeMap.put("etnoantropologico", NAMESPACE + "DemoEthnoAnthropologicalHeritage");
+		sheetPropertyTypeMap.put("storico artistico", NAMESPACE + "HistoricOrArtisticProperty");
+		sheetPropertyTypeMap.put("non individuabile", NAMESPACE + "CulturalProperty");
+		
+		/*
+		 *  Property types for catalogue records
+		 */
+		
+		sheetPropertyTypeMap.put("AT", NAMESPACE + "NaturalHeritage");
 		sheetPropertyTypeMap.put("CA", NAMESPACE + "ArchaeologicalProperty");
 		sheetPropertyTypeMap.put("MA", NAMESPACE + "ArchaeologicalProperty");
 		sheetPropertyTypeMap.put("RA", NAMESPACE + "ArchaeologicalProperty");
