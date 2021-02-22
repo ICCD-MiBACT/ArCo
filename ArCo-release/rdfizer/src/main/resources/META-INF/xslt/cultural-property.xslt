@@ -247,10 +247,12 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:variable>
-						<xsl:variable name="rsec-related-property" select="arco-fn:related-property(normalize-space(./RSEC), 'foaf')" />
-
-					<!-- Rule #RWS -->
-						<xsl:if test="./* and not(starts-with(lower-case(normalize-space(./RSEC)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSEC)), 'n.r')) and not(lower-case(normalize-space(./RSER))='scheda storica')">
+						<xsl:variable name="rels" select="arco-fn:related-property(normalize-space(./RSEC),' ')" />
+						<arco-core:count>
+							<xsl:value-of select="count($rels)"/>
+						</arco-core:count>
+						<!-- Rule #RWS -->
+						<xsl:for-each select="$rels">
 							<xsl:choose>
 								<xsl:when test="$create-rel-work-situation='true'">
 									<arco-cd:hasRelatedWorkSituation>
@@ -262,12 +264,12 @@
 								<xsl:otherwise>
 									<xsl:element name="{$create-rel-work-situation}">
 										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="$rsec-related-property" />
+											<xsl:value-of select="." />
 										</xsl:attribute>
 									</xsl:element>
 								</xsl:otherwise>
 							</xsl:choose>
-						</xsl:if>
+						</xsl:for-each>
 					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/RV/ROZ">
