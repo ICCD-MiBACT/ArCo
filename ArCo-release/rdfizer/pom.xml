@@ -252,12 +252,24 @@
 			<artifactId>apache-jena-libs</artifactId>
 			<version>3.2.0</version>
 			<type>pom</type>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>jcl-over-slf4j</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<!-- OWL API -->
 		<dependency>
 			<groupId>net.sourceforge.owlapi</groupId>
 			<artifactId>owlapi-distribution</artifactId>
 			<version>5.1.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>jcl-over-slf4j</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<!-- Graphml4J -->
 		<!-- https://mvnrepository.com/artifact/net.sf.saxon/Saxon-HE -->
@@ -279,12 +291,12 @@
 			<version>4.13.1</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+		<!--  dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
 			<version>1.7.24</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency-->
 
 		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-server -->
 		<dependency>
@@ -377,11 +389,17 @@
 			<artifactId>lucene-queryparser</artifactId>
 			<version>7.7.1</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>it.cnr.istc.stlab</groupId>
 			<artifactId>lgu.commons.semanticweb</artifactId>
 			<version>0.0.2</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-jdk14</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 

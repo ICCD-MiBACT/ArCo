@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<header>
+		<identifier>ICCD10979899</identifier>
+		<datestamp>2020-09-24T00:00:00Z</datestamp>
+	</header>
+	<metadata>
+		<schede>
+			<OA version="3.00_ICCD0">
+				<CD hint="CODICI">
+					<TSK hint="Tipo Scheda">OA</TSK>
+					<LIR hint="Livello ricerca">P</LIR>
+					<NCT hint="CODICE UNIVOCO">
+						<NCTR hint="Codice regione">20</NCTR>
+						<NCTN hint="Numero catalogo generale">00243934</NCTN>
+					</NCT>
+					<ESC hint="Ente schedatore">S252</ESC>
+					<ECP hint="Ente competente">S252</ECP>
+				</CD>
+				<RV hint="RELAZIONI">
+					<RVE hint="STRUTTURA COMPLESSA">
+						<RVEL hint="Livello">4</RVEL>
+						<RVER hint="Codice bene radice">2000243934</RVER>
+					</RVE>
+					<RSE hint="RELAZIONI DIRETTE">
+						<RSER hint="Tipo relazione">sede di realizzazione</RSER>
+						<RSET hint="Tipo scheda">OA</RSET>
+						<RSEC hint="Codice bene">2000243934-3</RSEC>
+					</RSE>
+					<RSE hint="RELAZIONI DIRETTE">
+						<RSER hint="Tipo relazione">sede di realizzazione</RSER>
+						<RSET hint="Tipo scheda">OA</RSET>
+						<RSEC hint="Codice bene">2000243934-2</RSEC>
+					</RSE>
+					<RSE hint="RELAZIONI DIRETTE">
+						<RSER hint="Tipo relazione">sede di realizzazione</RSER>
+						<RSET hint="Tipo scheda">OA</RSET>
+						<RSEC hint="Codice bene">2000243934-1</RSEC>
+					</RSE>
+					<RSE hint="RELAZIONI DIRETTE">
+						<RSER hint="Tipo relazione">sede di realizzazione</RSER>
+						<RSET hint="Tipo scheda">OA</RSET>
+						<RSEC hint="Codice bene">2000243934-5</RSEC>
+					</RSE>
+					<RSE hint="RELAZIONI DIRETTE">
+						<RSER hint="Tipo relazione">sede di realizzazione</RSER>
+						<RSET hint="Tipo scheda">OA</RSET>
+						<RSEC hint="Codice bene">2000243934-6</RSEC>
+					</RSE>
+					<RSE hint="RELAZIONI DIRETTE">
+						<RSER hint="Tipo relazione">sede di realizzazione</RSER>
+						<RSET hint="Tipo scheda">OA</RSET>
+						<RSEC hint="Codice bene">2000243934-7</RSEC>
+					</RSE>
+					<RSE hint="RELAZIONI DIRETTE">
+						<RSER hint="Tipo relazione">sede di realizzazione</RSER>
+						<RSET hint="Tipo scheda">OA</RSET>
+						<RSEC hint="Codice bene">2000243934-0</RSEC>
+					</RSE>
+				</RV>
+				<OG hint="OGGETTO">
+					<OGT hint="OGGETTO">
+						<OGTD hint="Definizione">candeliere</OGTD>
+					</OGT>
+				</OG>
+				<LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+					<PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+						<PVCS hint="Stato">ITALIA</PVCS>
+						<PVCR hint="Regione">Sardegna</PVCR>
+						<PVCP hint="Provincia">CA</PVCP>
+						<PVCC hint="Comune">Cagliari</PVCC>
+					</PVC>
+					<LDC hint="COLLOCAZIONE SPECIFICA">
+						<LDCT hint="Tipologia">chiesa</LDCT>
+						<LDCQ hint="Qualificazione">congregazionale</LDCQ>
+						<LDCN hint="Denominazione attuale">Chiesa della Purissima</LDCN>
+						<LDCU hint="Indirizzo">via Lamarmora</LDCU>
+					</LDC>
+				</LC>
+				<DT hint="CRONOLOGIA">
+					<DTZ hint="CRONOLOGIA GENERICA">
+						<DTZG hint="Secolo">XVIII</DTZG>
+					</DTZ>
+					<DTS hint="CRONOLOGIA SPECIFICA">
+						<DTSI hint="Da">1750</DTSI>
+						<DTSV hint="Validità">post</DTSV>
+						<DTSF hint="A">1800</DTSF>
+						<DTSL hint="Validità">ante</DTSL>
+					</DTS>
+					<DTM hint="Motivazione cronologia">analisi stilistica</DTM>
+				</DT>
+				<AU hint="DEFINIZIONE CULTURALE">
+					<ATB hint="AMBITO CULTURALE">
+						<ATBD hint="Denominazione">ambito italiano</ATBD>
+						<ATBM hint="Motivazione dell'attribuzione">analisi stilistica</ATBM>
+					</ATB>
+				</AU>
+				<MT hint="DATI TECNICI">
+					<MTC hint="Materia e tecnica">legno/ doratura</MTC>
+					<MIS hint="MISURE">
+						<MISU hint="Unità">cm</MISU>
+						<MISA hint="Altezza">75</MISA>
+					</MIS>
+				</MT>
+				<CO hint="CONSERVAZIONE">
+					<STC hint="STATO DI CONSERVAZIONE">
+						<STCC hint="Stato di conservazione">cattivo</STCC>
+						<STCS hint="Indicazioni specifiche">L'opera presenta marcate abrasioni che hanno rovinato la cromia e il supporto ligneo; vi sono lacune causate da agenti xilofagi; la parte superiore è danneggiata e staccata dal supporto</STCS>
+					</STC>
+				</CO>
+				<DA hint="DATI ANALITICI">
+					<DES hint="DESCRIZIONE">
+						<DESO hint="Indicazioni sull'oggetto">Candeliere in legno dorato con tripode leonino e decorazioni fitomorfe</DESO>
+						<DESI hint="Codifica Iconclass">41B313</DESI>
+						<DESS hint="Indicazioni sul soggetto">Candeliere</DESS>
+					</DES>
+				</DA>
+				<TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+					<CDG hint="CONDIZIONE GIURIDICA">
+						<CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+						<CDGS hint="Indicazione specifica">proprietà del Fondo Edifici di Culto (FEC)</CDGS>
+					</CDG>
+				</TU>
+				<DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+					<FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+						<FTAX hint="Genere">documentazione allegata</FTAX>
+						<FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+						<FTAA hint="Autore">Deiana, Samuele</FTAA>
+						<FTAN hint="Codice identificativo">New_1526570247674</FTAN>
+					</FTA>
+					<ADM hint="ALTRA DOCUMENTAZIONE MULTIMEDIALE">
+						<ADMX hint="Genere">documentazione allegata</ADMX>
+						<ADMP hint="Tipo">Immagine digitale</ADMP>
+						<ADMA hint="Autore">Deiana, Samuele</ADMA>
+						<ADMN hint="Codice identificativo">New_1526570362570</ADMN>
+					</ADM>
+				</DO>
+				<AD hint="ACCESSO AI DATI">
+					<ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+						<ADSP hint="Profilo di accesso">1</ADSP>
+						<ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+					</ADS>
+				</AD>
+				<CM hint="COMPILAZIONE">
+					<CMP hint="COMPILAZIONE">
+						<CMPD hint="Data">2018</CMPD>
+						<CMPN hint="Nome">Campus, Chiara</CMPN>
+					</CMP>
+					<FUR hint="Funzionario responsabile">Porcella, Maria Francesca</FUR>
+				</CM>
+				<AN hint="ANNOTAZIONI">
+					<OSS hint="Osservazioni">L'opera è stata momentaneamente spostata presso il laboratorio della restauratrice Anna Rita Pisu, a breve verrà sottoposta a degli interventi di restauro</OSS>
+				</AN>
+			</OA>
+			<harvesting>
+				<idProgetto>ICCD1007384</idProgetto>
+			</harvesting>
+		</schede>
+	</metadata>
+</record>

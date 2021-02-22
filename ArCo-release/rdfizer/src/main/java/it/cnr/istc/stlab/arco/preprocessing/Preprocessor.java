@@ -63,17 +63,23 @@ public class Preprocessor {
 					.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
 					.forEach(f -> preprocessRecord(f));
 			this.countRecords = new AtomicInteger(0);
-			Files.walk(Paths.get(multimediaRecordsFolder)).parallel()
-					.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
-					.forEach(f -> preprocessMultimediaRecord(f));
+			if (multimediaRecordsFolder != null) {
+				Files.walk(Paths.get(multimediaRecordsFolder)).parallel()
+						.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
+						.forEach(f -> preprocessMultimediaRecord(f));
+			}
 			this.countRecords = new AtomicInteger(0);
-			Files.walk(Paths.get(contenitoreFisicoFolder)).parallel()
-					.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
-					.forEach(f -> preprocessContenitoreFisico(f));
+			if (contenitoreFisicoFolder != null) {
+				Files.walk(Paths.get(contenitoreFisicoFolder)).parallel()
+						.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
+						.forEach(f -> preprocessContenitoreFisico(f));
+			}
 			this.countRecords = new AtomicInteger(0);
-			Files.walk(Paths.get(contenitoreGiuridicoFolder)).parallel()
-					.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
-					.forEach(f -> preprocessContenitoreGiuridico(f));
+			if (contenitoreGiuridicoFolder != null) {
+				Files.walk(Paths.get(contenitoreGiuridicoFolder)).parallel()
+						.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
+						.forEach(f -> preprocessContenitoreGiuridico(f));
+			}
 
 			pd.commit();
 
@@ -208,7 +214,8 @@ public class Preprocessor {
 			XPathFactory xpf = XPathFactory.newInstance();
 			XPath xpath = xpf.newXPath();
 
-			logger.trace("Adding CG map " + FilenameUtils.getBaseName(f.toFile().getName()) + " -> " + getCCG(xpath, xml));
+			logger.trace(
+					"Adding CG map " + FilenameUtils.getBaseName(f.toFile().getName()) + " -> " + getCCG(xpath, xml));
 
 			this.contenitoreGiuridicoSystemRecordCode2CCG.put(FilenameUtils.getBaseName(f.toFile().getName()),
 					getCCG(xpath, xml));
