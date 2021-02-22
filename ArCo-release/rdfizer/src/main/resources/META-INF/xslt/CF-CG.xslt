@@ -802,7 +802,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			<xsl:if test="record/metadata/schede/*/CF/CFU">
 				<arco-cd:hasUseFunction>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/LDC/LDCF)))" />
+						<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(normalize-space(record/metadata/schede/*/CF/CFU)))" />
 					</xsl:attribute>
 				</arco-cd:hasUseFunction>
 			</xsl:if>
