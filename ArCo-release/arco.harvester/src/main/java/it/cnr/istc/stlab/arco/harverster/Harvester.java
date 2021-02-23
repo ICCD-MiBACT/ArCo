@@ -97,7 +97,7 @@ public class Harvester {
 					d = builder.parse(new ByteArrayInputStream(identifiersResponse.getBytes()));
 					downloadedRecords
 							.addAll(getRecordsFromList(d, chunk, fos_keys, fos_paths, postfixRecord, folder, download));
-					nextToken = getResumptionToken(d);
+					nextToken = Utils.getResumptionToken(d);
 					break;
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -227,15 +227,7 @@ public class Harvester {
 
 	}
 
-	private String getResumptionToken(Document d) {
-		NodeList rt = d.getElementsByTagName("resumptionToken");
-		if (rt.getLength() > 0) {
-			return rt.item(0).getTextContent();
-		} else {
-			return null;
-		}
-
-	}
+	
 
 	private List<String> getRecords(Document d)
 			throws IOException, SAXException, XPathExpressionException, TransformerException {

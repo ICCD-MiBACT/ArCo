@@ -14,6 +14,7 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -57,6 +58,15 @@ public class Utils {
 			throw new RuntimeException(e);
 		} catch (XPathExpressionException e) {
 			throw new RuntimeException(e);
+		}
+	}
+	
+	public static String getResumptionToken(Document d) {
+		NodeList rt = d.getElementsByTagName("resumptionToken");
+		if (rt.getLength() > 0) {
+			return rt.item(0).getTextContent();
+		} else {
+			return null;
 		}
 	}
 
