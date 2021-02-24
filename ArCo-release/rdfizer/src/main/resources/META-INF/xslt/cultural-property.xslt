@@ -144,7 +144,7 @@
 		</xsl:variable>
 
 		<rdf:RDF>
-		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT')" >
+		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT') and not(administrativeDataRecord/metadata)" >
 					<!-- cultural property component -->
 			<xsl:if test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<rdf:Description>
@@ -1459,8 +1459,8 @@
 					</arco-dd:hasFunctionalPurpose>
 				</xsl:if>
 				<!-- heritage protection agency -->
-				<xsl:for-each select="record/metadata/schede/*/CD/ECP">
-					<xsl:if test=".">
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/harvesting/enteCompetente">
 						<arco-core:hasAgentRole>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
@@ -1468,11 +1468,23 @@
 						</arco-core:hasAgentRole>
 						<arco-arco:hasHeritageProtectionAgency>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/harvesting/enteCompetente))" />
 							</xsl:attribute>
 						</arco-arco:hasHeritageProtectionAgency>
-					</xsl:if>
-				</xsl:for-each>
+					</xsl:when>
+					<xsl:otherwise>
+						<arco-core:hasAgentRole>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
+							</xsl:attribute>
+						</arco-core:hasAgentRole>
+						<arco-arco:hasHeritageProtectionAgency>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/CD/ECP))" />
+							</xsl:attribute>
+						</arco-arco:hasHeritageProtectionAgency>
+					</xsl:otherwise>
+				</xsl:choose>
 				<!-- cataloguing agency -->
 				<xsl:for-each select="record/metadata/schede/*/CD/ESC">
 					<xsl:if test=".">
@@ -2526,11 +2538,13 @@
 				</xsl:if>
 				<!-- coin issuance (NU) -->
 				<xsl:for-each select="record/metadata/schede/*/AU/EDT">
-					<arco-cd:hasCoinIssuance>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'CoinIssuance/', $itemURI, '-issuance-', position())" />
-						</xsl:attribute>
-					</arco-cd:hasCoinIssuance>
+					<xsl:if test="$sheetType='OA' or $sheetType='NU'">
+						<arco-cd:hasCoinIssuance>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'CoinIssuance/', $itemURI, '-issuance-', position())" />
+							</xsl:attribute>
+						</arco-cd:hasCoinIssuance>
+					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/DA/AUE">
 					<arco-cd:hasCoinIssuance>
