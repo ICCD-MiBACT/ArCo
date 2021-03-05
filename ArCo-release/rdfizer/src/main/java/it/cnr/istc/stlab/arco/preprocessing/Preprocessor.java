@@ -19,7 +19,8 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.apache.commons.io.FilenameUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
@@ -30,13 +31,14 @@ import it.cnr.istc.stlab.arco.xsltextension.Utilities;
 public class Preprocessor {
 
 	private String recordsFolder, contenitoreFisicoFolder, resourcePrefix, multimediaRecordsFolder,
-			contenitoreGiuridicoFolder;
+			contenitoreGiuridicoFolder, assegnazioneFolder, attivitaFolder, campagneFolder, enti_baseFolder,
+			enti_completoFolder, progettiFolder;
 
-	private static final Logger logger = Logger.getLogger(Preprocessor.class);
+	private static final Logger logger = LoggerFactory.getLogger(Preprocessor.class);
 	private AtomicInteger countRecords = new AtomicInteger(0);
 	private AtomicInteger countMultimediaRecords = new AtomicInteger(0);
 	private Map<String, String> ftan2URL, catalogueRecordIdentifier2URI, contenitoreFisicoSystemRecordCode2CCF,
-			contenitoreGiuridicoSystemRecordCode2CCG;
+			contenitoreGiuridicoSystemRecordCode2CCG, codiceEnteToNomeEnte;
 	private Map<String, List<String>> uniqueIdentifier2URIs;
 	private PreprocessedData pd;
 
@@ -54,14 +56,97 @@ public class Preprocessor {
 		this.catalogueRecordIdentifier2URI = pd.getCatalogueRecordIdentifier2URI();
 		this.contenitoreFisicoSystemRecordCode2CCF = pd.getContenitoreFisicoSystemRecordCode2CCF();
 		this.contenitoreGiuridicoSystemRecordCode2CCG = pd.getContenitoreGiuridicoSystemRecordCode2CCG();
+		this.codiceEnteToNomeEnte = pd.getCodiceEnteToNomeEnte();
+	}
+
+	public String getRecordsFolder() {
+		return recordsFolder;
+	}
+
+	public void setRecordsFolder(String recordsFolder) {
+		this.recordsFolder = recordsFolder;
+	}
+
+	public String getContenitoreFisicoFolder() {
+		return contenitoreFisicoFolder;
+	}
+
+	public void setContenitoreFisicoFolder(String contenitoreFisicoFolder) {
+		this.contenitoreFisicoFolder = contenitoreFisicoFolder;
+	}
+
+	public String getMultimediaRecordsFolder() {
+		return multimediaRecordsFolder;
+	}
+
+	public void setMultimediaRecordsFolder(String multimediaRecordsFolder) {
+		this.multimediaRecordsFolder = multimediaRecordsFolder;
+	}
+
+	public String getContenitoreGiuridicoFolder() {
+		return contenitoreGiuridicoFolder;
+	}
+
+	public void setContenitoreGiuridicoFolder(String contenitoreGiuridicoFolder) {
+		this.contenitoreGiuridicoFolder = contenitoreGiuridicoFolder;
+	}
+
+	public String getAssegnazioneFolder() {
+		return assegnazioneFolder;
+	}
+
+	public void setAssegnazioneFolder(String assegnazioneFolder) {
+		this.assegnazioneFolder = assegnazioneFolder;
+	}
+
+	public String getAttivitaFolder() {
+		return attivitaFolder;
+	}
+
+	public void setAttivitaFolder(String attivitaFolder) {
+		this.attivitaFolder = attivitaFolder;
+	}
+
+	public String getCampagneFolder() {
+		return campagneFolder;
+	}
+
+	public void setCampagneFolder(String campagneFolder) {
+		this.campagneFolder = campagneFolder;
+	}
+
+	public String getEnti_baseFolder() {
+		return enti_baseFolder;
+	}
+
+	public void setEnti_baseFolder(String enti_baseFolder) {
+		this.enti_baseFolder = enti_baseFolder;
+	}
+
+	public String getEnti_completoFolder() {
+		return enti_completoFolder;
+	}
+
+	public void setEnti_completoFolder(String enti_completoFolder) {
+		this.enti_completoFolder = enti_completoFolder;
+	}
+
+	public String getProgettiFolder() {
+		return progettiFolder;
+	}
+
+	public void setProgettiFolder(String progettiFolder) {
+		this.progettiFolder = progettiFolder;
 	}
 
 	public void run() {
 
 		try {
-			Files.walk(Paths.get(recordsFolder)).parallel()
-					.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
-					.forEach(f -> preprocessRecord(f));
+			if (recordsFolder != null) {
+				Files.walk(Paths.get(recordsFolder)).parallel()
+						.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
+						.forEach(f -> preprocessRecord(f));
+			}
 			this.countRecords = new AtomicInteger(0);
 			if (multimediaRecordsFolder != null) {
 				Files.walk(Paths.get(multimediaRecordsFolder)).parallel()
@@ -79,6 +164,18 @@ public class Preprocessor {
 				Files.walk(Paths.get(contenitoreGiuridicoFolder)).parallel()
 						.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
 						.forEach(f -> preprocessContenitoreGiuridico(f));
+			}
+			this.countRecords = new AtomicInteger(0);
+			if (enti_baseFolder != null) {
+				Files.walk(Paths.get(enti_baseFolder)).parallel()
+						.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
+						.forEach(f -> preprocessEntiBase(f));
+			}
+			this.countRecords = new AtomicInteger(0);
+			if (enti_completoFolder != null) {
+				Files.walk(Paths.get(enti_completoFolder)).parallel()
+						.filter(f -> FilenameUtils.isExtension(f.getFileName().toAbsolutePath().toString(), "xml"))
+						.forEach(f -> preprocessEntiCompleto(f));
 			}
 
 			pd.commit();
@@ -229,6 +326,71 @@ public class Preprocessor {
 
 	}
 
+	private void preprocessEntiBase(Path f) {
+		// TODO
+		if (this.countRecords.get() % 10000 == 0) {
+			logger.info("Processed " + this.countRecords);
+		}
+
+		this.countRecords.incrementAndGet();
+
+		try {
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			DocumentBuilder db = dbf.newDocumentBuilder();
+			Document xml = db.parse(f.toFile());
+
+			// Get XPath
+			XPathFactory xpf = XPathFactory.newInstance();
+			XPath xpath = xpf.newXPath();
+
+			String codiceEnte = getCodiceEnte(xpath, xml);
+			String nomeEnte = getNomeEnte(xpath, xml);
+
+			logger.trace("{} {} -> {}", f.toFile().getName(), codiceEnte, nomeEnte);
+
+			this.codiceEnteToNomeEnte.put(codiceEnte, nomeEnte);
+
+		} catch (SAXException | IOException | ParserConfigurationException | XPathExpressionException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			logger.info("Error while processing " + f.toFile().getAbsolutePath() + " " + e.getMessage());
+
+		}
+
+	}
+
+	private void preprocessEntiCompleto(Path f) {
+		if (this.countRecords.get() % 10000 == 0) {
+			logger.info("Processed " + this.countRecords);
+		}
+
+		this.countRecords.incrementAndGet();
+
+		try {
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			DocumentBuilder db = dbf.newDocumentBuilder();
+			Document xml = db.parse(f.toFile());
+
+			// Get XPath
+			XPathFactory xpf = XPathFactory.newInstance();
+			XPath xpath = xpf.newXPath();
+
+			String codiceEnte = getCodiceEnte(xpath, xml);
+			String nomeEnte = getNomeEnte(xpath, xml);
+
+			logger.trace("{} {} -> {}", f.toFile().getName(), codiceEnte, nomeEnte);
+
+			this.codiceEnteToNomeEnte.put(codiceEnte, nomeEnte);
+
+		} catch (SAXException | IOException | ParserConfigurationException | XPathExpressionException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			logger.info("Error while processing " + f.toFile().getAbsolutePath() + " " + e.getMessage());
+
+		}
+
+	}
+
 	private String getFTANFromEMM(XPath xpath, Document xml) throws XPathExpressionException {
 		return (String) xpath.evaluate("//FTAN", xml, XPathConstants.STRING);
 	}
@@ -272,6 +434,15 @@ public class Preprocessor {
 		String CCF = (String) xpath.evaluate("/record/metadata/schede/CG/CD/CCG", xml, XPathConstants.STRING);
 		return CCF;
 
+	}
+
+	private String getCodiceEnte(XPath xpath, Document xml) throws XPathExpressionException {
+		return (String) xpath.evaluate("/administrativeDataRecord/metadata/ente/codiceEnte", xml,
+				XPathConstants.STRING);
+	}
+
+	private String getNomeEnte(XPath xpath, Document xml) throws XPathExpressionException {
+		return (String) xpath.evaluate("/administrativeDataRecord/metadata/ente/nomeEnte", xml, XPathConstants.STRING);
 	}
 
 	private String getSheetVersion(XPath xpath, Document xml) throws XPathExpressionException {
@@ -318,7 +489,10 @@ public class Preprocessor {
 
 	public static void main(String[] args) throws MalformedURLException, IOException {
 		logger.info("ArCo Preprocessor");
-		Preprocessor p = new Preprocessor(args[0], args[1], args[2], args[3], args[4]);
+//		Preprocessor p = new Preprocessor(args[0], args[1], args[2], args[3], args[4]);
+		Preprocessor p = new Preprocessor(null,null,null,null,null);
+		p.setEnti_baseFolder("/Users/lgu/Desktop/harvesting/enti_base");
+		p.setEnti_completoFolder("/Users/lgu/Desktop/harvesting/enti_completo");
 		p.run();
 		PreprocessedData.getInstance().close();
 	}

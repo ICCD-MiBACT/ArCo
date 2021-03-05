@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<header>
+<identifier>ICCD10979899</identifier>
+<datestamp>2020-09-24T00:00:00Z</datestamp>
+</header>
+<metadata>
+<schede>
+<BDM version="4.00_ICCD0" >
+<CD hint="CODICI" >
+<TSK hint="Tipo scheda" >BDM</TSK>
+<LIR hint="Livello catalogazione" >P</LIR>
+<NCT hint="CODICE UNIVOCO" >
+<NCTR hint="Codice Regione" >01</NCTR>
+<NCTN hint="Numero catalogo generale" >00406745</NCTN>
+</NCT>
+<ESC hint="Ente schedatore" >UNITO</ESC>
+<ECP hint="Ente competente per tutela" >S251</ECP>
+</CD>
+<OG hint="BENE CULTURALE" >
+<AMB hint="Ambito di tutela MiBACT" >etnoantropologico</AMB>
+<CTG hint="Categoria" >RITUALITÀ/ ABITI MAGICO-RITUALI-CERIMONIALI</CTG>
+<OGT hint="DEFINIZIONE BENE" >
+<OGTD hint="Definizione" >Maschera</OGTD>
+<OGTT hint="Tipologia" >a casco</OGTT>
+</OGT>
+<OGD hint="DENOMINAZIONE" >
+<OGDT hint="Tipo" >altra lingua</OGDT>
+<OGDN hint="Denominazione" >Geledé</OGDN>
+<OGDR hint="Riferimento cronologico" >XIX fine</OGDR>
+</OGD>
+<OGR hint="Disponibilità del bene" >bene disponibile</OGR>
+</OG>
+<MT hint="DATI TECNICI" >
+<MTC hint="MATERIA E TECNICA" >
+<MTCM hint="Materia" >legno</MTCM>
+<MTCT hint="Tecnica" >intaglio</MTCT>
+<MTCT hint="Tecnica" >tintura</MTCT>
+</MTC>
+<MIS hint="MISURE" >
+<MISZ hint="Tipo di misura" >altezza</MISZ>
+<MISS hint="Specifiche" >massima</MISS>
+<MISU hint="Unità di misura" >cm</MISU>
+<MISM hint="Valore" >19</MISM>
+</MIS>
+<MIS hint="MISURE" >
+<MISZ hint="Tipo di misura" >larghezza</MISZ>
+<MISS hint="Specifiche" >massima</MISS>
+<MISU hint="Unità di misura" >cm</MISU>
+<MISM hint="Valore" >15</MISM>
+</MIS>
+<MIS hint="MISURE" >
+<MISZ hint="Tipo di misura" >profondità</MISZ>
+<MISS hint="Specifiche" >massima</MISS>
+<MISU hint="Unità di misura" >cm</MISU>
+<MISM hint="Valore" >24</MISM>
+</MIS>
+</MT>
+</BDM>
+<harvesting>
+<geocoding>
+<x>7.678044</x>
+<y>45.050834</y>
+</geocoding>
+<idProgetto>ICCD1038112</idProgetto>
+</harvesting>
+</schede>
+</metadata>
+</record>

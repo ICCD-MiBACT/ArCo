@@ -22,13 +22,19 @@ public class AdministrativeDataHarvester {
 
 	private static final Logger logger = LoggerFactory.getLogger(AdministrativeDataHarvester.class);
 
-	private static final String BASE = "http://catalogo.beniculturali.it/oaitarget/OAIHandler?verb=AdministrativeDataRecords&set=";
+	private static final String OAI_ICCD = "http://www.catalogo-old.beniculturali.it/oaitarget/OAIHandler";
+	private String base;
 
 	private String verb, folderOut;
 
 	private DocumentBuilder builder;
 
 	public AdministrativeDataHarvester(String verb, String folderOut) throws ParserConfigurationException {
+		this(OAI_ICCD, verb, folderOut);
+	}
+
+	public AdministrativeDataHarvester(String endpoint, String verb, String folderOut)
+			throws ParserConfigurationException {
 		super();
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(true);
@@ -36,10 +42,10 @@ public class AdministrativeDataHarvester {
 		builder = factory.newDocumentBuilder();
 		this.verb = verb;
 		this.folderOut = folderOut;
+		this.base = endpoint + "?verb=AdministrativeDataRecords&set=";
 	}
 
 	private static final int NUM_OF_ATTEMPTS = 3;
-
 
 	public void downloadRecords() throws MalformedURLException {
 		int cursor = 0;
@@ -49,7 +55,7 @@ public class AdministrativeDataHarvester {
 		new File(folderOut).mkdirs();
 
 		while (!stop) {
-			URL url = new URL(BASE + verb + "&cursor=" + cursor);
+			URL url = new URL(base + verb + "&cursor=" + cursor);
 			stop = true;
 			for (int i = 0; i < NUM_OF_ATTEMPTS; i++) {
 				try {

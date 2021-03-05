@@ -29,6 +29,7 @@ import org.slf4j.LoggerFactory;
 import it.cnr.istc.stlab.arco.xsltextension.Arcofy;
 import it.cnr.istc.stlab.arco.xsltextension.CatalogueRecordIdentifierToCulturalProperty;
 import it.cnr.istc.stlab.arco.xsltextension.CataloguingEntityFinder;
+import it.cnr.istc.stlab.arco.xsltextension.CodiceEnteToNomeEnte;
 import it.cnr.istc.stlab.arco.xsltextension.ContenitoreFisicoFinder;
 import it.cnr.istc.stlab.arco.xsltextension.ContenitoreGiuridicoFinder;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForASheet;
@@ -198,6 +199,7 @@ public class Converter {
 		proc.registerExtensionFunction(NameCleaner.getInstance());
 		proc.registerExtensionFunction(ContenitoreFisicoFinder.getInstance());
 		proc.registerExtensionFunction(ContenitoreGiuridicoFinder.getInstance());
+		proc.registerExtensionFunction(CodiceEnteToNomeEnte.getInstance());
 
 		XsltCompiler comp = proc.newXsltCompiler();
 
