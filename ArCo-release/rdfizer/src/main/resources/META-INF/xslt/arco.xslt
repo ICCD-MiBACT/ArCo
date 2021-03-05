@@ -25090,14 +25090,30 @@
 						</clvapit:hasCountry>
 					</xsl:if>
 					<!-- Regione -->
-					<xsl:if
-						test="record/metadata/schede/*/LC/PVC/PVCR and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCR)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCR)), 'n.r')))">
+					<xsl:if test="record/metadata/schede/*/LC/PVC/PVCR and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCR)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCR)), 'n.r')))">
+						<xsl:choose>
+						<xsl:when test="record/metadata/schede/*/LC/PVC/PVCC and (starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCC)), 'firenze'))">	
+							<xsl:choose>
+								<xsl:when test="record/metadata/schede/*/LC/PVC/PVCR and (starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCR)), 'lombardia'))">
+								</xsl:when>
+								<xsl:otherwise>
+									<clvapit:hasRegion>
+										<xsl:attribute name="rdf:resource">
+            	                             		<xsl:value-of select="concat($NS, 'Region/', arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCR))" />
+		                                </xsl:attribute>
+									</clvapit:hasRegion>
+								</xsl:otherwise>
+							</xsl:choose>					
+						</xsl:when>
+						<xsl:otherwise>
 						<clvapit:hasRegion>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, 'Region/', arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCR))" />
                             </xsl:attribute>
 						</clvapit:hasRegion>
+						</xsl:otherwise>
+						</xsl:choose>
 					</xsl:if>
 					<!-- Provincia -->
 					<xsl:if
@@ -25941,13 +25957,31 @@
 									</clvapit:hasCountry>
 								</xsl:if>
 								<!-- Regione -->
+								
 								<xsl:if test="record/metadata/schede/*/LC/PVC/PVCR">
+								<xsl:choose>
+									<xsl:when test="record/metadata/schede/*/LC/PVC/PVCC and (starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCC)), 'firenze'))">	
+										<xsl:choose>
+											<xsl:when test="record/metadata/schede/*/LC/PVC/PVCR and (starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCR)), 'lombardia'))">
+											</xsl:when>
+											<xsl:otherwise>
+												<clvapit:hasRegion>
+													<xsl:attribute name="rdf:resource">
+            	                                		<xsl:value-of select="concat($NS, 'Region/', arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCR))" />
+		        	                                </xsl:attribute>
+												</clvapit:hasRegion>
+											</xsl:otherwise>
+										</xsl:choose>					
+									</xsl:when>
+									<xsl:otherwise>
 									<clvapit:hasRegion>
 										<xsl:attribute name="rdf:resource">
                                             <xsl:value-of
 											select="concat($NS, 'Region/', arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCR))" />
                                         </xsl:attribute>
 									</clvapit:hasRegion>
+									</xsl:otherwise>
+								</xsl:choose>
 								</xsl:if>
 								<!-- Provincia -->
 								<xsl:if test="record/metadata/schede/*/LC/PVC/PVCP">
