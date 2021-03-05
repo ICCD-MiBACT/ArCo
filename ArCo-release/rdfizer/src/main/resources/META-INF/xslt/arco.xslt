@@ -6418,11 +6418,11 @@
 						</rdf:type>
 						<rdfs:label xml:lang="it">
 							<xsl:value-of
-								select="concat('Ente schedatore del bene ', $itemURI, ': ', .)" />
+								select="concat('Ente schedatore del bene ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of
-								select="concat('Cataloguing agency for cultural property ', $itemURI, ': ', .)" />
+								select="concat('Cataloguing agency for cultural property ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
 						</rdfs:label>
 						<arco-core:hasRole>
 							<xsl:attribute name="rdf:resource">
@@ -6474,11 +6474,11 @@
 						</rdf:type>
 						<rdfs:label>
 							<xsl:value-of
-								select="arco-fn:cataloguing-entity(normalize-space(.))" />
+								select="arco-fn:get-nome-ente-from-codice(.)" />
 						</rdfs:label>
 						<l0:name>
 							<xsl:value-of
-								select="arco-fn:cataloguing-entity(normalize-space(.))" />
+								select="arco-fn:get-nome-ente-from-codice(.)" />
 						</l0:name>
 						<arco-arco:isCataloguingAgencyOf>
 							<xsl:attribute name="rdf:resource">
@@ -6602,10 +6602,10 @@
 	                        </xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Ente competente per tutela del bene ', $itemURI, ': ', record/metadata/schede/harvesting/enteCompetente)" />
+							<xsl:value-of select="concat('Ente competente per tutela del bene ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(record/metadata/schede/harvesting/enteCompetente))" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Heritage protection agency for cultural property ', $itemURI, ': ', record/metadata/schede/harvesting/enteCompetente)" />
+							<xsl:value-of select="concat('Heritage protection agency for cultural property ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(record/metadata/schede/harvesting/enteCompetente))" />
 						</rdfs:label>
 						<arco-core:hasRole>
 							<xsl:attribute name="rdf:resource">
@@ -6641,7 +6641,7 @@
 					</rdf:Description>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:if test=". and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CD/ECP)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CD/ECP)), 'n.r')))">
+					<xsl:if test="record/metadata/schede/*/CD/ECP and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CD/ECP)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CD/ECP)), 'n.r')))">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 	            	            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
@@ -6652,10 +6652,10 @@
 	                       		</xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Ente competente per tutela del bene ', $itemURI, ': ', record/metadata/schede/*/CD/ECP)" />
+								<xsl:value-of select="concat('Ente competente per tutela del bene ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(record/metadata/schede/*/CD/ECP))" />
 							</rdfs:label>
 							<rdfs:label xml:lang="en">
-								<xsl:value-of select="concat('Heritage protection agency for cultural property ', $itemURI, ': ', record/metadata/schede/*/CD/ECP)" />
+								<xsl:value-of select="concat('Heritage protection agency for cultural property ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(record/metadata/schede/*/CD/ECP))" />
 							</rdfs:label>
 							<arco-core:hasRole>
 								<xsl:attribute name="rdf:resource">
@@ -6699,10 +6699,10 @@
 			                       </xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="arco-fn:cataloguing-entity(normalize-space(record/metadata/schede/*/CD/ECP))" />
+								<xsl:value-of select="arco-fn:get-nome-ente-from-codice(record/metadata/schede/*/CD/ECP)" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="arco-fn:cataloguing-entity(normalize-space(record/metadata/schede/*/CD/ECP))" />
+								<xsl:value-of select="arco-fn:get-nome-ente-from-codice(record/metadata/schede/*/CD/ECP)" />
 							</l0:name>
 							<arco-core:isAgentOf>
 								<xsl:attribute name="rdf:resource">

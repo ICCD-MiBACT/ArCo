@@ -854,18 +854,18 @@
 			<xsl:if test="./SVCC">
 				<xsl:choose>
 					<xsl:when test="./SVCQ">
-						<arco-dd:hasShape>
+						<arco-dd:hasTechnique>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat($svcc, '-', $svcq)))" />
 						</xsl:attribute>
-						</arco-dd:hasShape>	
+						</arco-dd:hasTechnique>	
 					</xsl:when>
 					<xsl:otherwise>
-						<arco-dd:hasShape>
+						<arco-dd:hasTechnique>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify($svcc))" />
 						</xsl:attribute>
-						</arco-dd:hasShape>
+						</arco-dd:hasTechnique>
 					</xsl:otherwise>		
 				</xsl:choose>
 			</xsl:if>
@@ -947,7 +947,7 @@
 			</xsl:choose>
 			<arco-dd:isCharacteristicClassifiedBy>
 				<xsl:attribute name="rdf:resource">
-            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/VerticalElementShape'" />
+            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Technique'" />
             	</xsl:attribute>
 			</arco-dd:isCharacteristicClassifiedBy>
 		</rdf:Description>
