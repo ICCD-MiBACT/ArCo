@@ -1026,10 +1026,10 @@
 							</xsl:choose>
 						</xsl:variable>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
+							<xsl:value-of select="concat($tmp-label, ' ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat($tmp-label, $author-string-en, $cultural-context, $date-string)" />
+							<xsl:value-of select="concat($tmp-label, ' ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
 						</rdfs:label>
 					</xsl:when>
 					<xsl:otherwise>
@@ -1323,8 +1323,8 @@
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat($tmp-label, $author-string-en, $cultural-context, $date-string)" />
 				</rdfs:label>			</xsl:if>
-			<!-- BNM or BNPE or BNZ or E -->
-			<xsl:if test="$sheetType='BNPE' or $sheetType='BNM' or $sheetType='BNZ' or $sheetType='E'">
+			<!-- BNM or BNPE or or BNPL BNZ or E -->
+			<xsl:if test="$sheetType='BNPE' or $sheetType='BNM'  or $sheetType='BNPL' or $sheetType='BNZ' or $sheetType='E'">
 				<xsl:variable name="ogtv">
 					<xsl:choose>
 						<xsl:when test="record/metadata/schede/*/OG/OGT/OGTV and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'n.r')))">
@@ -2020,10 +2020,10 @@
 							</xsl:choose>
 						</xsl:variable>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
+							<xsl:value-of select="concat($tmp-label, ' ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat($tmp-label, $author-string-en, $cultural-context, $date-string)" />
+							<xsl:value-of select="concat($tmp-label, ' ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
 						</rdfs:label>
 					</xsl:when>
 					<xsl:otherwise>
