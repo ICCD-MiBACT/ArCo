@@ -6621,6 +6621,17 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/AParameter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/AParameter">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Parametro a</rdfs:label>
+        <rdfs:label xml:lang="en">a parameter</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCA</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/AlfaRefractiveIndex -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/AlfaRefractiveIndex">
@@ -6632,6 +6643,17 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/AlphaParameter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/AlphaParameter">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Alpha parameter</rdfs:label>
+        <rdfs:label xml:lang="it">Parametro alfa</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCF</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/Anisotropy -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Anisotropy">
@@ -6639,6 +6661,28 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Anisotropia</rdfs:label>
         <rdfs:label xml:lang="en">Anisotropy</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMA</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BParameter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/BParameter">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Parametro b</rdfs:label>
+        <rdfs:label xml:lang="en">b parameter</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCB</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BetaParameter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/BetaParameter">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Beta parameter</rdfs:label>
+        <rdfs:label xml:lang="it">Parametro beta</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCE</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6676,9 +6720,20 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/CalcualtedDensity -->
+    <!-- https://w3id.org/arco/ontology/movable-property/CParameter -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/CalcualtedDensity">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/CParameter">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Parametro c</rdfs:label>
+        <rdfs:label xml:lang="en">c parameter</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCC</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/CalculatedDensity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/CalculatedDensity">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Calculated density</rdfs:label>
         <rdfs:label xml:lang="it">Densità calcolata</rdfs:label>
@@ -6738,6 +6793,28 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Crysal system</rdfs:label>
         <rdfs:label xml:lang="it">Sistema cristallino</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCS</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Delta17O -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Delta17O">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Delta 17 O</rdfs:label>
+        <rdfs:label xml:lang="it">Delta 17 O</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPO/SPOA</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Delta18O -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Delta18O">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Delta 18 O</rdfs:label>
+        <rdfs:label xml:lang="it">Delta 18 O</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPO/SPOB</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6837,6 +6914,17 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Fracture</rdfs:label>
         <rdfs:label xml:lang="it">Frattura</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFU</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GammaParameter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/GammaParameter">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Gamma parameter</rdfs:label>
+        <rdfs:label xml:lang="it">Parametro gamma</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCM</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -7132,97 +7220,9 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/aParameter -->
+    <!-- https://w3id.org/arco/ontology/movable-property/ZParameter -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/aParameter">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="it">Parametro a</rdfs:label>
-        <rdfs:label xml:lang="en">a parameter</rdfs:label>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCA</a-cat:iccdNormTag>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/alfaParameter -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/alfaParameter">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="en">Alfa parameter</rdfs:label>
-        <rdfs:label xml:lang="it">Parametro alfa</rdfs:label>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCF</a-cat:iccdNormTag>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/bParameter -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/bParameter">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="it">Parametro b</rdfs:label>
-        <rdfs:label xml:lang="en">b parameter</rdfs:label>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCB</a-cat:iccdNormTag>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/betaParameter -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/betaParameter">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="en">Beta parameter</rdfs:label>
-        <rdfs:label xml:lang="it">Parametro beta</rdfs:label>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCE</a-cat:iccdNormTag>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/cParameter -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/cParameter">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="it">Parametro c</rdfs:label>
-        <rdfs:label xml:lang="en">c parameter</rdfs:label>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCC</a-cat:iccdNormTag>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/delta17O -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/delta17O">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="en">Delta 17 O</rdfs:label>
-        <rdfs:label xml:lang="it">Delta 17 O</rdfs:label>
-        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPO/SPOA</a-cat:iccdNormTag>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/delta18O -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/delta18O">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="en">Delta 18 O</rdfs:label>
-        <rdfs:label xml:lang="it">Delta 18 O</rdfs:label>
-        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPO/SPOB</a-cat:iccdNormTag>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/gammaParameter -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/gammaParameter">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="en">Gamma parameter</rdfs:label>
-        <rdfs:label xml:lang="it">Parametro gamma</rdfs:label>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCM</a-cat:iccdNormTag>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/zParameter -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/zParameter">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/ZParameter">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Parametro z</rdfs:label>
         <rdfs:label xml:lang="en">z parameter</rdfs:label>
