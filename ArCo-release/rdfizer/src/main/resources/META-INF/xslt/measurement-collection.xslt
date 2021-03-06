@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<xsl:stylesheet version="1.0"
+<xsl:stylesheet version="2.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension" 
@@ -21,7 +21,7 @@
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 	<xsl:param name="item" />
 	
-		<xsl:variable name="itemURI">
+	<xsl:variable name="itemURI">
 	<xsl:choose>
 		<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
 		<xsl:choose>
@@ -59,16 +59,16 @@
 	<!-- xsl:variable name="NS" select="'https://w3id.org/arco/resource/'" /-->
 	<xsl:param name="NS" />
 	
+    <xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])"></xsl:variable>
+    <xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version" />
+    <xsl:variable name="cp-name" select="''" />
+    
 	<xsl:variable name="culturalPropertyComponent"
 			select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />
 
-		<xsl:variable name="culturalProperty"
+	<xsl:variable name="culturalProperty"
 			select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
-	
-	<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version"></xsl:variable>
-	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)"></xsl:variable>
-	<xsl:variable name="cp-name" select="''"></xsl:variable>
-	
+		
 	<xsl:variable name="objectOfDescription">
 		<xsl:choose>
 			<xsl:when test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">

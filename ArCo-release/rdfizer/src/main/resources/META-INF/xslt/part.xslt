@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<xsl:stylesheet version="1.0"
+<xsl:stylesheet version="2.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension" xmlns:arco-core="https://w3id.org/arco/ontology/core/"
@@ -78,16 +78,16 @@
 	<!-- xsl:variable name="NS" select="'https://w3id.org/arco/resource/'" /-->
 	<xsl:param name="NS" />
 
+    <xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version" />
+    <xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
+    <xsl:variable name="cp-name" select="''" />
+    
 	<xsl:variable name="culturalPropertyComponent"
 		select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />
 
 	<xsl:variable name="culturalProperty"
 		select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
 
-	<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version"></xsl:variable>
-	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)"></xsl:variable>
-	<xsl:variable name="cp-name" select="''"></xsl:variable>
-	
 	<xsl:variable name="objectOfDescription">
 		<xsl:choose>
 			<xsl:when test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
@@ -414,8 +414,8 @@
 			</xsl:for-each>
 
 			<!-- part of cultural property when there is MTCP -->
-		<xsl:for-each select="record/metadata/schede/*/MT/MTC">
 		<xsl:if test="not($sheetType='VeAC')" >
+		<xsl:for-each select="record/metadata/schede/*/MT/MTC">
 			<xsl:if test="./MTCP and not((starts-with(lower-case(normalize-space(./MTCP)), 'integrale')) or (starts-with(lower-case(normalize-space(./MTCP)), 'tutto')) or (starts-with(lower-case(normalize-space(./MTCP)), 'tutta')) or (starts-with(lower-case(normalize-space(./MTCP)), 'totale')) or (starts-with(lower-case(normalize-space(./MTCP)), 'nr')) or (starts-with(lower-case(normalize-space(./MTCP)), 'n.r')) or (starts-with(lower-case(normalize-space(./MTCP)), 'intero')) or (starts-with(lower-case(normalize-space(./MTCP)), 'intera')) or (starts-with(lower-case(normalize-space(./MTCP)), 'esemplar')))">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
@@ -435,19 +435,19 @@
 						</arco-dd:hasMaterial>
 					</xsl:if>	
 					</xsl:if>
-					<xsl:if test="./MTCT">
-					<xsl:if test="not(starts-with(lower-case(normalize-space(./MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(./MTCT)), 'n.r'))">
+					<xsl:if test="./MTCT[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<arco-dd:hasTechnicalStatus>
 							<xsl:attribute name="rdf:resource">
 	               				<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MTCP)))" />
  	                		</xsl:attribute>
 						</arco-dd:hasTechnicalStatus>
-						<arco-dd:hasTechnique>
-							<xsl:attribute name="rdf:resource">
-           						<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./MTCT)))" />
-           					</xsl:attribute>
-						</arco-dd:hasTechnique>
-					</xsl:if>	
+						<xsl:for-each select="./MTCT[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]"><!-- allow multiple values es: ICCD13661286 -->
+							<arco-dd:hasTechnique>
+								<xsl:attribute name="rdf:resource">
+	           						<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space()))" />
+	           					</xsl:attribute>
+							</arco-dd:hasTechnique>
+						</xsl:for-each>
 					</xsl:if>
 					<xsl:if test="./MTCI">
 					<xsl:if test="not(starts-with(lower-case(normalize-space(./MTCI)), 'nr')) and not(starts-with(lower-case(normalize-space(./MTCI)), 'n.r'))">
@@ -465,8 +465,8 @@
 					</xsl:if>
 				</rdf:Description>
 			</xsl:if>
-		</xsl:if>
 		</xsl:for-each>
+		</xsl:if>
 				<!-- CulturalEntityTechnicalStatus when there is MTCP  -->
 		<xsl:for-each select="record/metadata/schede/*/MT/MTC">
 		<xsl:if test="not($sheetType='VeAC')" >

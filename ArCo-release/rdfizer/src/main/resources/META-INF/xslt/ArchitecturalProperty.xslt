@@ -81,16 +81,13 @@
 	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
 	xmlns:arco-ip="https://w3id.org/arco/ontology/immovable-property/"
 
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0"
 	exclude-result-prefixes="xsl php">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
-
-
-  
 	
 	<xsl:variable name="sheetVersion"
 		select="record/metadata/schede/*/@version" />
-	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)" />
+	<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
 	<xsl:variable name="cp-name" select="''" />
 	<!-- xsl:variable name="NS"
 		select="'https://w3id.org/arco/resource/'" /-->
@@ -127,27 +124,26 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:otherwise>
-	</xsl:choose>
+		</xsl:choose>
 	</xsl:variable>
-	<xsl:variable name="culturalProperty" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />	
+	<xsl:variable name="culturalProperty" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+	<!-- 
 	<xsl:variable name="fnst" select="normalize-space(record/metadata/schede/A/FN/FNS/FNST)" />
 	<xsl:variable name="fnsq" select="normalize-space(record/metadata/schede/A/FN/FNS/FNSQ)" />
 	<xsl:variable name="foundationType">
-					<xsl:choose>
-						<xsl:when test="record/metadata/schede/A/FN/FNS/FNSQ">
-							<xsl:value-of 	select="concat($NS, 'FoundationType/', arco-fn:urify(concat($fnst, '-', $fnsq)))" />	
-						</xsl:when>
-						<xsl:when test="record/metadata/schede/A/FN/FNS/FNST and not(record/metadata/schede/A/FN/FNS/FNSQ)">
-							<xsl:value-of 	select="concat($NS, 'FoundationType/', arco-fn:urify($fnst))" />	
-						</xsl:when>
-					</xsl:choose>
-		</xsl:variable>
-	<xsl:variable name="svcc" select="normalize-space(record/metadata/schede/A/SV/SVC/SVCC)" />
-	<xsl:variable name="svcq" select="normalize-space(record/metadata/schede/A/SV/SVC/SVCQ)" />
+		<xsl:choose>
+			<xsl:when test="record/metadata/schede/A/FN/FNS/FNSQ">
+				<xsl:value-of 	select="concat($NS, 'FoundationType/', arco-fn:urify(concat($fnst, '-', $fnsq)))" />	
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/A/FN/FNS/FNST and not(record/metadata/schede/A/FN/FNS/FNSQ)">
+				<xsl:value-of 	select="concat($NS, 'FoundationType/', arco-fn:urify($fnst))" />	
+			</xsl:when>
+		</xsl:choose>
+	</xsl:variable>
+	-->
 		
 <xsl:template match="/">
 	<rdf:RDF>
-
 							<!-- Properties of ArchitecturalHeritage -->
 	<rdf:Description>
 		<xsl:attribute name="rdf:about">
@@ -752,7 +748,7 @@
 			<xsl:attribute name="rdf:about"> 			
  				<xsl:choose>
 					<xsl:when test="./FNSQ">
-						<xsl:value-of 	select="concat($NS, 'FoundationType/', arco-fn:urify(concat($fnst, '-', $fnsq)))" />
+						<xsl:value-of 	select="concat($NS, 'FoundationType/', arco-fn:urify(normalize-space(concat(./FNST, '-', ./FNSQ))))" />
 					</xsl:when>
 					<xsl:otherwise>	
 						<xsl:value-of 	select="concat($NS, 'FoundationType/', arco-fn:urify(normalize-space(./FNST)))" />
@@ -767,7 +763,7 @@
 			<xsl:choose>
 				<xsl:when test="./FNSQ">
 					<rdfs:label>
-						<xsl:value-of 	select="concat(normalize-space($fnst), ' ', normalize-space($fnsq))" />
+						<xsl:value-of 	select="concat(normalize-space(./FNST), ' ', normalize-space(./FNSQ))" />
 					</rdfs:label>	
 				</xsl:when>
 				<xsl:otherwise>
@@ -779,7 +775,7 @@
 			<xsl:choose>
 				<xsl:when test="./FNSQ">
 					<l0:name>
-						<xsl:value-of 	select="concat(normalize-space($fnst), ' ', normalize-space($fnsq))" />
+						<xsl:value-of 	select="concat(normalize-space(./FNST), ' ', normalize-space(./FNSQ))" />
 					</l0:name>	
 				</xsl:when>
 				<xsl:otherwise>
@@ -904,12 +900,13 @@
 	</xsl:for-each>
 									<!-- VerticalElementShape as individual -->
 	<xsl:for-each select="record/metadata/schede/A/SV/SVC">
+	
 	<xsl:if test="./SVCC">
 		<rdf:Description>
  			<xsl:attribute name="rdf:about">
  				<xsl:choose>
 					<xsl:when test="./SVCQ">
-						<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat($svcc, '-', $svcq)))" />
+						<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat(normalize-space(./SVCC), '-', normalize-space(./SVCQ))))" />
 					</xsl:when>
 					<xsl:otherwise>	
 						<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SVCC)))" />
@@ -924,7 +921,7 @@
 			<xsl:choose>
 				<xsl:when test="normalize-space(./SVCQ)">
 					<rdfs:label>
-						<xsl:value-of 	select="concat($svcc, ' ', $svcq)" />
+						<xsl:value-of 	select="concat(normalize-space(./SVCC), ' ', normalize-space(./SVCQ))" />
 					</rdfs:label>	
 				</xsl:when>
 				<xsl:otherwise>
@@ -936,7 +933,7 @@
 			<xsl:choose>
 				<xsl:when test="./SVCQ">
 					<l0:name>
-						<xsl:value-of 	select="concat($svcc, ' ', $svcq)" />
+						<xsl:value-of 	select="concat(normalize-space(./SVCC), ' ', normalize-space(./SVCQ))" />
 					</l0:name>	
 				</xsl:when>
 				<xsl:otherwise>
@@ -977,9 +974,9 @@
 							<!-- Horizontal Element as individual -->
 	<xsl:for-each select="record/metadata/schede/A/SO">
 	<xsl:variable name="soff" select="normalize-space(./SOF/SOFF)" />
-	<xsl:variable name="sofq" select="normalize-space(./SOF/SOFQ)" />
+	<xsl:variable name="sofq" select="normalize-space(string-join(./SOF/SOFQ,'-'))" />
 	<xsl:variable name="sofg" select="normalize-space(./SOF/SOFG)" />
-	<xsl:variable name="sofp" select="normalize-space(./SOF/SOFP)" />
+	<xsl:variable name="sofp" select="normalize-space(string-join(./SOF/SOFP,'-'))" />
 	<xsl:variable name="horElem" select="arco-fn:arcofy(.)" />
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -1042,18 +1039,16 @@
 				<xsl:choose>
 					<xsl:when test="not(./SOE/SOER) or ./SOE/SOER='intero bene' or ./SOE/SOER='integrale' or ./SOE/SOER='tutta' or ./SOE/SOER='totale' or ./SOE/SOER='carattere generale' or (starts-with(lower-case(normalize-space(./SOE/SOER)), 'nr')) or (starts-with(lower-case(normalize-space(./SOE/SOER)), 'n.r')) or (starts-with(lower-case(normalize-space(./SOE/SOER)), 'intero')) or (starts-with(lower-case(normalize-space(./SOE/SOER)), 'intera')) or (starts-with(lower-case(normalize-space(./SOE/SOER)), 'esemplar'))">
 						<arco-dd:hasTechnique>
-							<xsl:choose>
-								<xsl:when test="./SOE/SOES and (not(starts-with(lower-case(normalize-space(./SOE/SOES)), 'nr')) and not(starts-with(lower-case(normalize-space(./SOE/SOES)), 'non ')) and not(starts-with(lower-case(normalize-space(./SOE/SOES)), 'n.r')))">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat(normalize-space(./SOE/SOEC), '-', normalize-space(./SOE/SOES))))" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SOE/SOEC)))" />
-								</xsl:attribute>
-								</xsl:otherwise>
-							</xsl:choose>
+							<xsl:attribute name="rdf:resource">
+								<xsl:choose>
+									<xsl:when test="./SOE/SOES[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'non ') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+										<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(concat(string-join(./SOE/SOEC,'-'), '-', string-join(./SOE/SOES,'-')))))" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(string-join(./SOE/SOEC,'-'))))" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:attribute>
 						</arco-dd:hasTechnique>
 					</xsl:when>
 					<xsl:otherwise>
@@ -1098,14 +1093,14 @@
 			<xsl:if test="./SOE/SOEC">	
 				<arco-dd:hasTechnique>
 					<xsl:choose>
-						<xsl:when test="./SOE/SOES and (not(starts-with(lower-case(normalize-space(./SOE/SOES)), 'nr')) and not(starts-with(lower-case(normalize-space(./SOE/SOES)), 'non ')) and not(starts-with(lower-case(normalize-space(./SOE/SOES)), 'n.r')))">
+						<xsl:when test="./SOE/SOES[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'non ') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat(normalize-space(./SOE/SOEC), '-', normalize-space(./SOE/SOES))))" />
+								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(concat(string-join(./SOE/SOEC,'-'), '-', string-join(./SOE/SOES,'-')))))" />
 							</xsl:attribute>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SOE/SOEC)))" />
+								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(string-join(./SOE/SOEC,'-'))))" />
 							</xsl:attribute>
 						</xsl:otherwise>
 					</xsl:choose>
@@ -1123,7 +1118,7 @@
  			<xsl:attribute name="rdf:about">
  				<xsl:choose>
 					<xsl:when test="./SOFQ">
-						<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat(normalize-space(./SOFF), '-', normalize-space(./SOFQ))))" />
+						<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat(normalize-space(./SOFF), '-', normalize-space(string-join(./SOFQ,'-')))))" />
 					</xsl:when>
 					<xsl:otherwise>	
 						<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SOFF)))" />
@@ -1138,7 +1133,7 @@
 			<xsl:choose>
 				<xsl:when test="./SOFQ">
 					<rdfs:label>
-						<xsl:value-of 	select="concat(normalize-space(./SOFF), ' ', normalize-space(./SOFQ))" />
+						<xsl:value-of 	select="concat(normalize-space(./SOFF), ' ', normalize-space(string-join(./SOFQ,', ')))" />
 					</rdfs:label>	
 				</xsl:when>
 				<xsl:otherwise>
@@ -1150,7 +1145,7 @@
 			<xsl:choose>
 				<xsl:when test="./SOFQ">
 					<l0:name>
-						<xsl:value-of 	select="concat(normalize-space(./SOFF), ' ', normalize-space(./SOFQ))" />
+						<xsl:value-of 	select="concat(normalize-space(./SOFF), ' ', normalize-space(string-join(./SOFQ,', ')))" />
 					</l0:name>	
 				</xsl:when>
 				<xsl:otherwise>
@@ -1174,7 +1169,7 @@
 			<xsl:attribute name="rdf:about"> 			
  				<xsl:choose>
 					<xsl:when test="./SOFP">
-						<xsl:value-of 	select="concat($NS, 'HorizontalElementType/', arco-fn:urify(concat(normalize-space(./SOFG), '-', normalize-space(./SOFP))))" />
+						<xsl:value-of 	select="concat($NS, 'HorizontalElementType/', arco-fn:urify(normalize-space(concat(./SOFG, '-', string-join(./SOFP,'-')))))" />
 					</xsl:when>
 					<xsl:otherwise>	
 						<xsl:value-of 	select="concat($NS, 'HorizontalElementType/', arco-fn:urify(normalize-space(./SOFG)))" />
@@ -1189,7 +1184,7 @@
 			<xsl:choose>
 				<xsl:when test="./SOFP">
 					<rdfs:label>
-						<xsl:value-of 	select="concat(normalize-space(./SOFG), ' ', normalize-space(./SOFP))" />
+						<xsl:value-of 	select="concat(normalize-space(./SOFG), ' ', normalize-space(string-join(./SOFP,', ')))" />
 					</rdfs:label>	
 				</xsl:when>
 				<xsl:otherwise>
@@ -1201,8 +1196,8 @@
 			<xsl:choose>
 				<xsl:when test="./SOP">
 					<l0:name>
-						<xsl:value-of 	select="concat(normalize-space(./SOFG), ' ', normalize-space(./SOFP))" />
-					</l0:name>	
+						<xsl:value-of 	select="concat(normalize-space(./SOFG), ' ', normalize-space(string-join(./SOFP,', ')))" />
+					</l0:name>
 				</xsl:when>
 				<xsl:otherwise>
 					<l0:name>
@@ -1214,15 +1209,15 @@
 		</xsl:if>
 	</xsl:for-each>	
 									<!-- Technique as individual -->
-	<xsl:for-each select="record/metadata/schede/A/SO/SOE">
+	<xsl:for-each select="record/metadata/schede/A/SO/SOE[SOEC]">
 		<rdf:Description>
  			<xsl:attribute name="rdf:about">
             	<xsl:choose>
-					<xsl:when test="./SOES and (not(starts-with(lower-case(normalize-space(./SOES)), 'nr')) and not(starts-with(lower-case(normalize-space(./SOES)), 'non ')) and not(starts-with(lower-case(normalize-space(./SOES)), 'n.r')))">
-						<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat(normalize-space(./SOEC), '-', normalize-space(./SOES))))" />
+					<xsl:when test="./SOES[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'non ') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+						<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(concat(string-join(./SOEC,'-'), '-', string-join(./SOES,'-')))))" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SOEC)))" />
+						<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(string-join(./SOEC,'-'))))" />
 					</xsl:otherwise>
 				</xsl:choose>
             </xsl:attribute>
@@ -1234,20 +1229,20 @@
 			<rdfs:label>
 				<xsl:choose>
 					<xsl:when test="./SOES">
-						<xsl:value-of select="concat(normalize-space(./SOEC), ' ', normalize-space(./SOES))" />
+						<xsl:value-of select="concat(normalize-space(string-join(./SOEC,', ')), ' ', normalize-space(string-join(./SOES,', ')))" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="normalize-space(./SOEC)" />
+						<xsl:value-of select="normalize-space(string-join(./SOEC,', '))" />
 					</xsl:otherwise>
 				</xsl:choose>
 			</rdfs:label>
 			<l0:name>
 				<xsl:choose>
 					<xsl:when test="./SOES">
-						<xsl:value-of select="concat(normalize-space(./SOEC), ' ', normalize-space(./SOES))" />
+						<xsl:value-of select="concat(normalize-space(string-join(./SOEC,', ')), ' ', normalize-space(string-join(./SOES,', ')))" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="normalize-space(./SOEC)" />
+						<xsl:value-of select="normalize-space(string-join(./SOEC,', '))" />
 					</xsl:otherwise>
 				</xsl:choose>
 			</l0:name>
@@ -1494,7 +1489,7 @@
 					<xsl:when test="./CPMQ">
 						<arco-core:hasType>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of 	select="concat($NS, 'RoofingType/', arco-fn:urify(concat(normalize-space(./CPMT), '-', normalize-space(./CPMQ))))" />
+							<xsl:value-of 	select="concat($NS, 'RoofingType/', arco-fn:urify(concat(normalize-space(./CPMT), '-', normalize-space(string-join(./CPMQ,'-')))))" />
 						</xsl:attribute>
 						</arco-core:hasType>	
 					</xsl:when>
@@ -1517,10 +1512,10 @@
 			<xsl:attribute name="rdf:about"> 
 			<xsl:choose>	
 					<xsl:when test="./CPMQ">
-							<xsl:value-of 	select="concat($NS, 'RoofingType/', arco-fn:urify(concat(normalize-space(./CPMT), '-', normalize-space(./CPMQ))))" />	
+							<xsl:value-of select="concat($NS, 'RoofingType/', arco-fn:urify(concat(normalize-space(./CPMT), '-', normalize-space(string-join(./CPMQ,'-')))))" />	
 					</xsl:when>
 					<xsl:otherwise>
-							<xsl:value-of 	select="concat($NS, 'RoofingType/', arco-fn:urify(normalize-space(./CPMT)))" />
+							<xsl:value-of select="concat($NS, 'RoofingType/', arco-fn:urify(normalize-space(./CPMT)))" />
 					</xsl:otherwise>		
 			</xsl:choose>
 			</xsl:attribute>
@@ -1532,7 +1527,7 @@
 			<rdfs:label>
 				<xsl:choose>	
 					<xsl:when test="./CPMQ">
-							<xsl:value-of 	select="concat(normalize-space(./CPMT), ' ', normalize-space(./CPMQ))" />	
+							<xsl:value-of 	select="concat(normalize-space(./CPMT), ' ', normalize-space(string-join(./CPMQ,', ')))" />	
 					</xsl:when>
 					<xsl:otherwise>
 							<xsl:value-of 	select="normalize-space(./CPMT)" />
@@ -1542,7 +1537,7 @@
 			<l0:name>
 				<xsl:choose>	
 					<xsl:when test="./CPMQ">
-							<xsl:value-of 	select="concat(normalize-space(./CPMT), ' ', normalize-space(./CPMQ))" />	
+							<xsl:value-of 	select="concat(normalize-space(./CPMT), ' ', normalize-space(string-join(./CPMQ,', ')))" />	
 					</xsl:when>
 					<xsl:otherwise>
 							<xsl:value-of 	select="normalize-space(./CPMT)" />

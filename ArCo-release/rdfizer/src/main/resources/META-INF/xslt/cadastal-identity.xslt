@@ -26,7 +26,7 @@
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:mu="https://w3id.org/italia/onto/MU/"
 	xmlns:language="https://w3id.org/italia/onto/Language/"
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0"
 	exclude-result-prefixes="xsl php">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 	<xsl:param name="item" />
@@ -68,7 +68,7 @@
 	<!-- xsl:variable name="sheetType" select="record/metadata/schede/*/CD/TSK/text()"></xsl:variable -->
 	<xsl:variable name="sheetVersion"
 		select="record/metadata/schede/*/@version" />
-	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)" />
+	<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
 	<xsl:variable name="cp-name" select="''" />
 	<!-- xsl:variable name="NS"
 		select="'https://w3id.org/arco/resource/'" /-->
@@ -328,13 +328,11 @@
 							</xsl:attribute>
 						</arco-location:hasCadastralEntity>
 					</xsl:if>
-					<xsl:if
-						test="./CTSP and (not(starts-with(lower-case(normalize-space(./CTSP)), 'nr')) and not(starts-with(lower-case(normalize-space(./CTSP)), 'n.r')))">
+					<xsl:if	test="./CTSP[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<xsl:for-each select="./CTSP">
 							<arco-location:hasCadastralEntity>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of
-										select="concat($NS, 'CadastralUnitCollection/', $itemURI, '-', arco-fn:urify(.))" />
+									<xsl:value-of select="concat($NS, 'CadastralUnitCollection/', $itemURI, '-', arco-fn:urify(.))" />
 								</xsl:attribute>
 							</arco-location:hasCadastralEntity>
 						</xsl:for-each>

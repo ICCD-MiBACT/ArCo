@@ -81,7 +81,7 @@
 	xmlns:ar-CISNameInTime="https://w3id.org/arco/resource/CISNameInTime/"
 	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
 
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0"
 	exclude-result-prefixes="xsl php">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 
@@ -96,7 +96,7 @@
 	
 	<xsl:variable name="sheetVersion"
 		select="record/metadata/schede/*/@version" />
-	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)" />
+	<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
 	<xsl:variable name="cp-name" select="''" />
 	<!-- xsl:variable name="NS"
 		select="$NS,''" /-->
@@ -847,11 +847,11 @@
 			<arco-mp:hasTaxon>
 			<xsl:variable name="rbna-rbnb">
 				<xsl:choose>
-					<xsl:when test="not(contains(./RBNB, ./RBNA))">
-						<xsl:value-of select="concat(./RBNA, '-', ./RBNB)" />
+					<xsl:when test="not(contains(./RBN/RBNB, ./RBN/RBNA))">
+						<xsl:value-of select="concat(./RBN/RBNA, '-', ./RBN/RBNB)" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="./RBNB" />
+						<xsl:value-of select="./RBN/RBNB" />
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:variable>
@@ -3306,7 +3306,7 @@
 					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/TBI/TBIN)" />
 				</xsl:when>
 				<xsl:when test="record/metadata/schede/BNB/SB/NAT">
-					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAT/*)" />
+					<xsl:value-of select="normalize-space(string-join(record/metadata/schede/BNB/SB/NAT/*,', '))" />
 				</xsl:when>
 			</xsl:choose>
 		</rdfs:label>
@@ -3316,7 +3316,7 @@
 					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/TBI/TBIN)" />
 				</xsl:when>
 				<xsl:when test="record/metadata/schede/BNB/SB/NAT">
-					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAT/*)" />
+					<xsl:value-of select="normalize-space(string-join(record/metadata/schede/BNB/SB/NAT/*,', '))" />
 				</xsl:when>
 			</xsl:choose>
 		</l0:name>

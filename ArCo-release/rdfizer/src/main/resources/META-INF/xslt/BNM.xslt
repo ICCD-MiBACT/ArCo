@@ -81,7 +81,7 @@
 	xmlns:ar-CISNameInTime="https://w3id.org/arco/resource/CISNameInTime/"
 	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
 
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0"
 	exclude-result-prefixes="xsl php">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 
@@ -122,11 +122,10 @@
 			select="translate(substring($text,2,string-length($text)-1),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
 	</xsl:template>
 	
-
 	
 	<xsl:variable name="sheetVersion"
 		select="record/metadata/schede/*/@version" />
-	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)" />
+	<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
 	<xsl:variable name="cp-name" select="''" />
 	<!-- xsl:variable name="NS"
 		select="$NS,''" /-->
@@ -165,8 +164,53 @@
 			</xsl:otherwise>
 	</xsl:choose>
 	</xsl:variable>
-	<xsl:variable name="culturalProperty" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />	
-		
+	<xsl:variable name="culturalProperty" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+	
+	<xsl:template name="address-area">
+		<xsl:param name="ctx" />
+		<xsl:for-each select="record/metadata/schede/*/LR/LRV">
+			<xsl:element name="rdf:Description">
+				<xsl:choose>
+					<xsl:when test="LRVS[not(lower-case(normalize-space())='italia')]">
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(LRVK), normalize-space(LRVS), normalize-space(LRVP), normalize-space(LRVR), normalize-space(LRVC), normalize-space(LRVL), normalize-space(LRVE))))" />
+						</xsl:attribute>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(LRVP), normalize-space(LRVC), normalize-space(LRVL))))" />
+						</xsl:attribute>
+					</xsl:otherwise>
+				</xsl:choose>
+				<clvapit:hasAddressArea>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space($ctx)))" />
+					</xsl:attribute>
+				</clvapit:hasAddressArea>
+			</xsl:element>
+		</xsl:for-each>
+		<xsl:element name="rdf:Description">
+			<xsl:attribute name="rdf:about">
+                <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space($ctx)))" />
+	            </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+                    <xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space($ctx)" />
+				</xsl:call-template>
+			</rdfs:label>
+			<l0:name>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="normalize-space($ctx)" />
+				</xsl:call-template>
+			</l0:name>
+		</xsl:element>
+	</xsl:template>
+
 <xsl:template match="/">
 	<rdf:RDF>
 
@@ -325,7 +369,7 @@
 					</xsl:attribute>
 				</arco-mp:hasUnitCell>
 			</xsl:if>
-			<xsl:if test="./RMF/RMFA or./RMF/RMFZ">
+			<xsl:if test="./RMF/RMFA or ./RMF/RMFZ">
 				<arco-mp:hasCleavage>
 					<xsl:value-of select="concat($NS,'Cleavage/',  $itemURI, '-', position())" />
 				</arco-mp:hasCleavage>
@@ -3439,251 +3483,23 @@
 	</xsl:if>				
 					<!-- Address Area -->
 	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">
-	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAR">	
-		<rdf:Description>
-			<xsl:choose>
-				<xsl:when test="record/metadata/schede/*/LR/LRV/LRVS and not(lower-case(normalize-space(record/metadata/schede/*/LR/LRV/LRVS))='italia')">
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVK), normalize-space(record/metadata/schede/*/LR/LRV/LRVS), normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVR), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL), normalize-space(record/metadata/schede/*/LR/LRV/LRVE))))" />
-					</xsl:attribute>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL))))" />
-					</xsl:attribute>
-				</xsl:otherwise>
-			</xsl:choose>
-			<clvapit:hasAddressArea>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IM/IMA/IMAR)))" />
-				</xsl:attribute>
-			</clvapit:hasAddressArea>
-		</rdf:Description>
-		<rdf:Description>
-			<xsl:attribute name="rdf:about">
-				<xsl:value-of 	select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IM/IMA/IMAR)))" />
-		 	</xsl:attribute>
-			<rdf:type>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
-				</xsl:attribute>
-			</rdf:type>
-			<rdfs:label>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IM/IMA/IMAR)" />
-				</xsl:call-template>
-			</rdfs:label>
-			<l0:name>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IM/IMA/IMAR)" />
-				</xsl:call-template>
-			</l0:name>
-		</rdf:Description>
+	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAR">
+		<xsl:call-template name="address-area"><xsl:with-param name="ctx" select="record/metadata/schede/*/IM/IMA/IMAR"/></xsl:call-template>
 	</xsl:if>
-	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAM">	
-		<rdf:Description>
-			<xsl:choose>
-				<xsl:when test="record/metadata/schede/*/LR/LRV/LRVS and not(lower-case(normalize-space(record/metadata/schede/*/LR/LRV/LRVS))='italia')">
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVK), normalize-space(record/metadata/schede/*/LR/LRV/LRVS), normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVR), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL), normalize-space(record/metadata/schede/*/LR/LRV/LRVE))))" />
-					</xsl:attribute>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL))))" />
-					</xsl:attribute>
-				</xsl:otherwise>
-			</xsl:choose>
-			<clvapit:hasAddressArea>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IM/IMA/IMAM)))" />
-				</xsl:attribute>
-			</clvapit:hasAddressArea>
-		</rdf:Description>
-		<rdf:Description>
-			<xsl:attribute name="rdf:about">
-				<xsl:value-of 	select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IM/IMA/IMAM)))" />
-		 	</xsl:attribute>
-			<rdf:type>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
-				</xsl:attribute>
-			</rdf:type>
-			<rdfs:label>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IM/IMA/IMAM)" />
-				</xsl:call-template>
-			</rdfs:label>
-			<l0:name>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IM/IMA/IMAM)" />
-				</xsl:call-template>
-			</l0:name>
-		</rdf:Description>
+	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAM">
+		<xsl:call-template name="address-area"><xsl:with-param name="ctx" select="record/metadata/schede/*/IM/IMA/IMAM"/></xsl:call-template>
 	</xsl:if>
-	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAT">	
-		<rdf:Description>
-			<xsl:choose>
-				<xsl:when test="record/metadata/schede/*/LR/LRV/LRVS and not(lower-case(normalize-space(record/metadata/schede/*/LR/LRV/LRVS))='italia')">
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVK), normalize-space(record/metadata/schede/*/LR/LRV/LRVS), normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVR), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL), normalize-space(record/metadata/schede/*/LR/LRV/LRVE))))" />
-					</xsl:attribute>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL))))" />
-					</xsl:attribute>
-				</xsl:otherwise>
-			</xsl:choose>
-			<clvapit:hasAddressArea>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IM/IMA/IMAT)))" />
-				</xsl:attribute>
-			</clvapit:hasAddressArea>
-		</rdf:Description>
-		<rdf:Description>
-			<xsl:attribute name="rdf:about">
-				<xsl:value-of 	select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IM/IMA/IMAT)))" />
-		 	</xsl:attribute>
-			<rdf:type>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
-				</xsl:attribute>
-			</rdf:type>
-			<rdfs:label>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IM/IMA/IMAT)" />
-				</xsl:call-template>
-			</rdfs:label>
-			<l0:name>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IM/IMA/IMAT)" />
-				</xsl:call-template>
-			</l0:name>
-		</rdf:Description>
+	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAT">
+		<xsl:call-template name="address-area"><xsl:with-param name="ctx" select="record/metadata/schede/*/IM/IMA/IMAT"/></xsl:call-template>
 	</xsl:if>
-	<xsl:if test="record/metadata/schede/*/IR/IRA/IRAR">	
-		<rdf:Description>
-			<xsl:choose>
-				<xsl:when test="record/metadata/schede/*/LR/LRV/LRVS and not(lower-case(normalize-space(record/metadata/schede/*/LR/LRV/LRVS))='italia')">
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVK), normalize-space(record/metadata/schede/*/LR/LRV/LRVS), normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVR), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL), normalize-space(record/metadata/schede/*/LR/LRV/LRVE))))" />
-					</xsl:attribute>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL))))" />
-					</xsl:attribute>
-				</xsl:otherwise>
-			</xsl:choose>
-			<clvapit:hasAddressArea>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IR/IRA/IRAR)))" />
-				</xsl:attribute>
-			</clvapit:hasAddressArea>
-		</rdf:Description>
-		<rdf:Description>
-			<xsl:attribute name="rdf:about">
-				<xsl:value-of 	select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IR/IRA/IRAR)))" />
-		 	</xsl:attribute>
-			<rdf:type>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
-				</xsl:attribute>
-			</rdf:type>
-			<rdfs:label>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IR/IRA/IRAR)" />
-				</xsl:call-template>
-			</rdfs:label>
-			<l0:name>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IR/IRA/IRAR)" />
-				</xsl:call-template>
-			</l0:name>
-		</rdf:Description>
+	<xsl:if test="record/metadata/schede/*/IR/IRA/IRAR">
+		<xsl:call-template name="address-area"><xsl:with-param name="ctx" select="record/metadata/schede/*/IR/IRA/IRAR"/></xsl:call-template>	
 	</xsl:if>
-	<xsl:if test="record/metadata/schede/*/IR/IRA/IRAM">	
-		<rdf:Description>
-			<xsl:choose>
-				<xsl:when test="record/metadata/schede/*/LR/LRV/LRVS and not(lower-case(normalize-space(record/metadata/schede/*/LR/LRV/LRVS))='italia')">
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVK), normalize-space(record/metadata/schede/*/LR/LRV/LRVS), normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVR), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL), normalize-space(record/metadata/schede/*/LR/LRV/LRVE))))" />
-					</xsl:attribute>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL))))" />
-					</xsl:attribute>
-				</xsl:otherwise>
-			</xsl:choose>
-			<clvapit:hasAddressArea>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IR/IRA/IRAM)))" />
-				</xsl:attribute>
-			</clvapit:hasAddressArea>
-		</rdf:Description>
-		<rdf:Description>
-			<xsl:attribute name="rdf:about">
-				<xsl:value-of 	select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IR/IRA/IRAM)))" />
-		 	</xsl:attribute>
-			<rdf:type>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
-				</xsl:attribute>
-			</rdf:type>
-			<rdfs:label>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IR/IRA/IRAM)" />
-				</xsl:call-template>
-			</rdfs:label>
-			<l0:name>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IR/IRA/IRAM)" />
-				</xsl:call-template>
-			</l0:name>
-		</rdf:Description>
+	<xsl:if test="record/metadata/schede/*/IR/IRA/IRAM">
+		<xsl:call-template name="address-area"><xsl:with-param name="ctx" select="record/metadata/schede/*/IR/IRA/IRAM"/></xsl:call-template>
 	</xsl:if>
-	<xsl:if test="record/metadata/schede/*/IR/IRA/IRAT">	
-		<rdf:Description>
-			<xsl:choose>
-				<xsl:when test="record/metadata/schede/*/LR/LRV/LRVS and not(lower-case(normalize-space(record/metadata/schede/*/LR/LRV/LRVS))='italia')">
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVK), normalize-space(record/metadata/schede/*/LR/LRV/LRVS), normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVR), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL), normalize-space(record/metadata/schede/*/LR/LRV/LRVE))))" />
-					</xsl:attribute>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of 	select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(record/metadata/schede/*/LR/LRV/LRVP), normalize-space(record/metadata/schede/*/LR/LRV/LRVC), normalize-space(record/metadata/schede/*/LR/LRV/LRVL))))" />
-					</xsl:attribute>
-				</xsl:otherwise>
-			</xsl:choose>
-			<clvapit:hasAddressArea>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IR/IRA/IRAT)))" />
-				</xsl:attribute>
-			</clvapit:hasAddressArea>
-		</rdf:Description>
-		<rdf:Description>
-			<xsl:attribute name="rdf:about">
-				<xsl:value-of 	select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(record/metadata/schede/*/IR/IRA/IRAT)))" />
-		 	</xsl:attribute>
-			<rdf:type>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
-				</xsl:attribute>
-			</rdf:type>
-			<rdfs:label>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IR/IRA/IRAT)" />
-				</xsl:call-template>
-			</rdfs:label>
-			<l0:name>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="normalize-space(record/metadata/schede/*/IR/IRA/IRAT)" />
-				</xsl:call-template>
-			</l0:name>
-		</rdf:Description>
+	<xsl:if test="record/metadata/schede/*/IR/IRA/IRAT">
+		<xsl:call-template name="address-area"><xsl:with-param name="ctx" select="record/metadata/schede/*/IR/IRA/IRAT"/></xsl:call-template>
 	</xsl:if>				
 	</xsl:if>
 						<!-- Geological context as individual -->
@@ -4514,7 +4330,7 @@
 		</rdf:Description>
 	</xsl:if>
 	<xsl:for-each select="record/metadata/schede/BNM/RM">					
-	<xsl:if test="./RMF/RMFA or./RMF/RMFZ">
+	<xsl:if test="./RMF/RMFA or ./RMF/RMFZ">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 	       		<xsl:value-of select="concat($NS,'Cleavage/',  $itemURI, '-', position())" />
