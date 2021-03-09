@@ -87,8 +87,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	<xsl:param name="item" />
 	<xsl:param name="NS" />
 	<xsl:param name="SOURCE"/>
-	<xsl:variable name="sheetVersion"
-		select="record/metadata/schede/*/@version" />
+	<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version" />
 	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)" />
 	<xsl:variable name="idCG" select="record/metadata/schede/CG/CD/CCG" />
 	<xsl:variable name="cp-name" select="''" />
@@ -98,13 +97,11 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 		<xsl:choose>
 			<xsl:when test="contains($text,' ')">
 				<xsl:call-template name="CamelCaseWord">
-					<xsl:with-param name="text"
-						select="substring-before($text,' ')" />
+					<xsl:with-param name="text" select="substring-before($text,' ')" />
 				</xsl:call-template>
 				<xsl:text> </xsl:text>
 				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text"
-						select="substring-after($text,' ')" />
+					<xsl:with-param name="text" select="substring-after($text,' ')" />
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:otherwise>
@@ -117,13 +114,9 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 
 	<xsl:template name="CamelCaseWord">
 		<xsl:param name="text" />
-		<xsl:value-of
-			select="translate(substring($text,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
-		<xsl:value-of
-			select="translate(substring($text,2,string-length($text)-1),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
+		<xsl:value-of select="translate(substring($text,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
+		<xsl:value-of select="translate(substring($text,2,string-length($text)-1),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
 	</xsl:template>
-		
-	
 		
 <xsl:template match="/">
 	<rdf:RDF>

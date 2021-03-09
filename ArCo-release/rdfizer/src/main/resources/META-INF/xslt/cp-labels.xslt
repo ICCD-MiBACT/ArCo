@@ -34,15 +34,15 @@
 			<xsl:variable name="accc-space" />
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
-						<xsl:value-of select="record/metadata/schede/*/AC/ACC/ACCC" />
+						<xsl:value-of select="record/metadata/schede/*/AC/ACC[1]/ACCC" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="record/metadata/schede/*/CD/ACC/ACCC" />
+						<xsl:value-of select="record/metadata/schede/*/CD/ACC[1]/ACCC" />
 					</xsl:otherwise>
 				</xsl:choose>
 			<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
 			<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
-			<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC" />
+			<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC[1]" />
 			<xsl:variable name="acc-nospace" select="translate($acc-space, ' ', '')" />
 			<xsl:variable name="acc" select="translate($acc-nospace, '/', '_')" />
 				<xsl:choose>
@@ -64,9 +64,7 @@
 	<xsl:variable name="culturalPropertyComponent" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />     
 	<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version"></xsl:variable>
 	<xsl:variable name="cp-name" select="''"></xsl:variable>
-	<xsl:variable name="culturalProperty">
-		<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
-	</xsl:variable>
+	<xsl:variable name="culturalProperty" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
 	<!-- variable sgta -->
 	<xsl:variable name="sgta">
 		<xsl:choose>
@@ -245,19 +243,19 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:when>
-							<xsl:otherwise>
-								<xsl:choose>
-									<xsl:when test="position() = 1">
-										<xsl:value-of select="./AUFN" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat(', ', ./AUFN)" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:otherwise>
-						</xsl:choose>
-					</xsl:for-each>
-				</xsl:if>
+						<xsl:otherwise>
+							<xsl:choose>
+								<xsl:when test="position() = 1">
+									<xsl:value-of select="./AUFN" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat(', ', ./AUFN)" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+			</xsl:if>
 		</xsl:variable>
 		<xsl:choose>
 			<xsl:when test="not($aut-string='')">

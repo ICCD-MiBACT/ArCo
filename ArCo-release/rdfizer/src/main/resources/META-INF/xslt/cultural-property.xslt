@@ -30,78 +30,9 @@
 
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 	<xsl:param name="item" />
-	<!-- xsl:variable name="NS"
-		select="$NS,'" /-->
+	<!-- xsl:variable name="NS" select="$NS,'" /-->
 	<xsl:param name="NS" />
 	
-					<!-- variable itemuri -->
-	<xsl:variable name="itemURI">
-		<xsl:choose>
-			<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
-						<xsl:value-of
-							select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/RV/RVE/RVEL)))" />
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:value-of
-							select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
-					</xsl:otherwise>
-				</xsl:choose>
-			</xsl:when>
-			<xsl:when test="record/metadata/schede/*/CD/CBC">
-				<xsl:value-of select="record/metadata/schede/*/CD/CBC" />
-			</xsl:when>
-			<xsl:otherwise>
-			<xsl:variable name="accc-space" />
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
-						<xsl:value-of select="record/metadata/schede/*/AC/ACC/ACCC" />
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:value-of select="record/metadata/schede/*/CD/ACC/ACCC" />
-					</xsl:otherwise>
-				</xsl:choose>
-			<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
-			<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
-			<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC" />
-			<xsl:variable name="acc-nospace" select="translate($acc-space, ' ', '')" />
-			<xsl:variable name="acc" select="translate($acc-nospace, '/', '_')" />
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
-						<xsl:value-of select="$accc" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/CD/ACC/ACCC">
-						<xsl:value-of select="$accc" />
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:value-of select="$acc" />
-					</xsl:otherwise>
-				</xsl:choose>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable>
-
-    
-    <xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version" />
-    <xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
-    <xsl:variable name="cp-name" select="''" />
-
-	<xsl:variable name="culturalPropertyComponent" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />
-
-	<xsl:variable name="culturalProperty" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
-
-	<xsl:variable name="objectOfDescription">
-		<xsl:choose>
-			<xsl:when test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
-				<xsl:value-of select="$culturalPropertyComponent" />
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:value-of select="$culturalProperty" />
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable>
-
 	<!-- xsl:import href="part.xsl" / -->
 
 	<xsl:template name="sgti"><!-- allow multiple values ? ICCD11389099 ICCD13074440 -->
@@ -112,42 +43,104 @@
 	</xsl:template>
     
 	<xsl:template match="/">
-						<!-- variable ogtp -->
-		<xsl:variable name="ogtp">
-			<xsl:if test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
-				<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTP)" />
-			</xsl:if>
-		</xsl:variable>
-						<!-- variable ogtt -->
-		<xsl:variable name="ogtt">
-			<xsl:choose>
-				<xsl:when test="record/metadata/schede/*/OG/OGT/OGTT and not($sheetType='NU')">
-					<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTT)" />
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="''" />
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-						<!-- variable sgta -->
-		<xsl:variable name="sgta">
-			<xsl:choose>
-				<xsl:when test="record/metadata/schede/*/OG/SGT/SGTA">
-					<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/SGT/SGTA)" />
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="''" />
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-						<!-- variable sgti -->
-		<xsl:variable name="sgti">
-			<xsl:call-template name="sgti"/>
-		</xsl:variable>
 
 		<rdf:RDF>
-		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT') and not(administrativeDataRecord/metadata)" >
-					<!-- cultural property component -->
+	    <xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
+		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata)" >
+
+			<xsl:variable name="itemURI">
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
+								<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/RV/RVE/RVEL)))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/*/CD/CBC">
+						<xsl:value-of select="record/metadata/schede/*/CD/CBC" />
+					</xsl:when>
+					<xsl:otherwise>
+					<xsl:variable name="accc-space" />
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
+								<xsl:value-of select="record/metadata/schede/*/AC/ACC[1]/ACCC" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="record/metadata/schede/*/CD/ACC[1]/ACCC" />
+							</xsl:otherwise>
+						</xsl:choose>
+					<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
+					<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
+					<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC[1]" />
+					<xsl:variable name="acc-nospace" select="translate($acc-space, ' ', '')" />
+					<xsl:variable name="acc" select="translate($acc-nospace, '/', '_')" />
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
+								<xsl:value-of select="$accc" />
+							</xsl:when>
+							<xsl:when test="record/metadata/schede/*/CD/ACC/ACCC">
+								<xsl:value-of select="$accc" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="$acc" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>	    
+		    <xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version" />
+		    <xsl:variable name="cp-name" select="''" />
+			<xsl:variable name="culturalPropertyComponent" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />		
+			<xsl:variable name="culturalProperty" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+			<xsl:variable name="objectOfDescription">
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+						<xsl:value-of select="$culturalPropertyComponent" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="$culturalProperty" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+							<!-- variable ogtp -->
+			<xsl:variable name="ogtp">
+				<xsl:if test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTP)" />
+				</xsl:if>
+			</xsl:variable>
+							<!-- variable ogtt -->
+			<xsl:variable name="ogtt">
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/OG/OGT/OGTT and not($sheetType='NU')">
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTT)" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="''" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+							<!-- variable sgta -->
+			<xsl:variable name="sgta">
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/OG/SGT/SGTA">
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/SGT/SGTA)" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="''" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+							<!-- variable sgti -->
+			<xsl:variable name="sgti">
+				<xsl:call-template name="sgti"/>
+			</xsl:variable>		
+		
+							<!-- cultural property component -->
+					
 			<xsl:if test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
