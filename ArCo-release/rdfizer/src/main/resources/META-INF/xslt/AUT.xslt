@@ -190,7 +190,7 @@
 						<xsl:value-of select="concat(record/metadata/schede/*/AU/AUT/AUTN, ' ', record/metadata/schede/*/AU/AUT/AUTB)" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTN)" />
+						<xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTN" />
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:variable>
