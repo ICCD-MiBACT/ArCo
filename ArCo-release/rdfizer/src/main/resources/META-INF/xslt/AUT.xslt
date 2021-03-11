@@ -152,35 +152,6 @@
 					</xsl:otherwise>
 			</xsl:choose>
 			</xsl:variable>
-			<xsl:variable name="author">
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTS and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTS)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTS)), 'n.r')))">
-						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat(record/metadata/schede/*/AU/AUT/AUTN, '-', record/metadata/schede/*/AU/AUT/AUTS)))" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTA and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'n.r')))">
-						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat(record/metadata/schede/*/AU/AUT/AUTN, '-', record/metadata/schede/*/AU/AUT/AUTA)))" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTB and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'n.r')))">
-						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat(record/metadata/schede/*/AU/AUT/AUTN, '-', record/metadata/schede/*/AU/AUT/AUTB)))" />
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTN))" />
-					</xsl:otherwise>
-				</xsl:choose>
-			</xsl:variable>	
-			<xsl:variable name="idAuthor">
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTA and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'n.r')))">
-						<xsl:value-of select="arco-fn:arcofy(concat(record/metadata/schede/*/AU/AUT/AUTN, '-', record/metadata/schede/*/AU/AUT/AUTA))" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTB and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'n.r')))">
-						<xsl:value-of select="concat(record/metadata/schede/*/AU/AUT/AUTN, '-', record/metadata/schede/*/AU/AUT/AUTB)" />
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:value-of select="arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTN)" />
-					</xsl:otherwise>
-				</xsl:choose>
-			</xsl:variable>
 			<xsl:variable name="nameAuthor">
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTA and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'n.r')))">
@@ -193,6 +164,27 @@
 						<xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTN" />
 					</xsl:otherwise>
 				</xsl:choose>
+			</xsl:variable>
+			<xsl:variable name="idAuthor">
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTA and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'n.r')))">
+						<xsl:value-of select="arco-fn:arcofy(concat(record/metadata/schede/*/AU/AUT/AUTN, '-', record/metadata/schede/*/AU/AUT/AUTA))" />
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTB and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'n.r')))">
+						<xsl:value-of select="arco-fn:arcofy(concat(record/metadata/schede/*/AU/AUT/AUTN, '-', record/metadata/schede/*/AU/AUT/AUTB))" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTN)" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<xsl:variable name="author" select="concat($NS, 'Agent/', $idAuthor)"/>
+			
+			<xsl:variable name="sex">
+			 <xsl:choose>
+				<xsl:when test="$sheetVersion='4.00_ICCD0'"><xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTE"/></xsl:when>
+				<xsl:otherwise><xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTZ"/></xsl:otherwise>
+			 </xsl:choose>
 			</xsl:variable>
 		
 			<rdf:Description>
@@ -561,7 +553,7 @@
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTF)" />
 					</arco-cd:signature>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTE">
+				<xsl:if test="not($sheetVersion='4.00_ICCD0') and record/metadata/schede/*/AU/AUT/AUTE">
 					<arco-cd:alternativeName>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTE)" />
 					</arco-cd:alternativeName>
@@ -571,10 +563,10 @@
 						<xsl:value-of select="normalize-space(.)" />
 					</arco-cd:alternativeName>
 				</xsl:for-each>
-				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTZ[contains('MF',translate(normalize-space(),'mf','MF'))]">
+				<xsl:if test="string-length($sex) and contains('MF',translate(normalize-space($sex),'mf','MF'))">
 					<cpv:hasSex>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Sex/', translate(normalize-space(record/metadata/schede/*/AU/AUT/AUTZ),'mf','MF'))" />
+							<xsl:value-of select="concat($NS, 'Sex/', $idAuthor)" />
 						</xsl:attribute>
 					</cpv:hasSex>
 				</xsl:if>
@@ -604,14 +596,14 @@
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTG">
 					<arco-cd:activityPlaceAndPeriod>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTE)" />
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTG)" />
 					</arco-cd:activityPlaceAndPeriod>
 				</xsl:if>
 			</rdf:Description>
-			<xsl:if test="record/metadata/schede/*/AU/AUT/AUTZ[contains('MF',translate(normalize-space(),'mf','MF'))]">
+			<xsl:if test="string-length($sex) and contains('MF',translate(normalize-space($sex),'mf','MF'))">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Sex/', translate(normalize-space(record/metadata/schede/*/AU/AUT/AUTZ),'mf','MF'))" />
+						<xsl:value-of select="concat($NS, 'Sex/', $idAuthor)" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -631,7 +623,7 @@
 						<xsl:value-of select="concat('Sesso di ', $nameAuthor)" />
 					</l0:name>
 					<cpv:sexID>
-						<xsl:value-of select="translate(normalize-space(record/metadata/schede/*/AU/AUT/AUTZ),'mf','MF')" />
+						<xsl:value-of select="translate(normalize-space($sex),'mf','MF')" />
 					</cpv:sexID>
 				</rdf:Description>
 			</xsl:if>
