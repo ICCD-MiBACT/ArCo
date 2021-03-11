@@ -571,10 +571,10 @@
 						<xsl:value-of select="normalize-space(.)" />
 					</arco-cd:alternativeName>
 				</xsl:for-each>
-				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTZ">
+				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTZ[contains('MF',translate(normalize-space(),'mf','MF'))]">
 					<cpv:hasSex>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Sex/', normalize-space(record/metadata/schede/*/AU/AUT/AUTE))" />
+							<xsl:value-of select="concat($NS, 'Sex/', translate(normalize-space(record/metadata/schede/*/AU/AUT/AUTZ),'mf','MF'))" />
 						</xsl:attribute>
 					</cpv:hasSex>
 				</xsl:if>
@@ -608,10 +608,10 @@
 					</arco-cd:activityPlaceAndPeriod>
 				</xsl:if>
 			</rdf:Description>
-			<xsl:if test="record/metadata/schede/*/AU/AUT/AUTZ">
+			<xsl:if test="record/metadata/schede/*/AU/AUT/AUTZ[contains('MF',translate(normalize-space(),'mf','MF'))]">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Sex/', normalize-space(record/metadata/schede/*/AU/AUT/AUTE))" />
+						<xsl:value-of select="concat($NS, 'Sex/', translate(normalize-space(record/metadata/schede/*/AU/AUT/AUTZ),'mf','MF'))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -630,9 +630,9 @@
 					<l0:name xml:lang="it">
 						<xsl:value-of select="concat('Sesso di', $nameAuthor)" />
 					</l0:name>
-					<cpv:sexIdentifier>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTZ)" />
-					</cpv:sexIdentifier>
+					<cpv:sexID>
+						<xsl:value-of select="translate(normalize-space(record/metadata/schede/*/AU/AUT/AUTZ),'mf','MF')" />
+					</cpv:sexID>
 				</rdf:Description>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/*/AU/AUT/AUTL">
