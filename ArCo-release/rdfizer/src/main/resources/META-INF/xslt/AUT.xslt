@@ -619,16 +619,16 @@
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Sex of', $nameAuthor)" />
+						<xsl:value-of select="concat('Sex of ', $nameAuthor)" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Sex of', $nameAuthor)" />
+						<xsl:value-of select="concat('Sex of ', $nameAuthor)" />
 					</l0:name>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Sesso di', $nameAuthor)" />
+						<xsl:value-of select="concat('Sesso di ', $nameAuthor)" />
 					</rdfs:label>
 					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Sesso di', $nameAuthor)" />
+						<xsl:value-of select="concat('Sesso di ', $nameAuthor)" />
 					</l0:name>
 					<cpv:sexID>
 						<xsl:value-of select="translate(normalize-space(record/metadata/schede/*/AU/AUT/AUTZ),'mf','MF')" />
