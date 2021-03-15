@@ -4909,7 +4909,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/NaturalHeritageCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenCollection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -5461,29 +5461,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMN/SMNA, SMNI, SMNP</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/NaturalHeritageCollection -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/NaturalHeritageCollection">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta gruppi di campioni all&apos;interno di un
-erbario.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a group of specimens or specimens container, collected into an herbarium.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Collezione di beni naturalistici</rdfs:label>
-        <rdfs:label xml:lang="en">Natural heritage collection</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -6179,6 +6156,28 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="it">Campione</rdfs:label>
         <rdfs:label xml:lang="en">Specimen</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/SpecimenCollection -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenCollection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta gruppi di campioni all&apos;interno di un
+erbario.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a group of specimens or specimens container, collected into an herbarium.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Collezione di campioni</rdfs:label>
+        <rdfs:label xml:lang="en">Natural heritage collection</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -7322,8 +7321,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Herbarium"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/NaturalHeritageCollection"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenCollection"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
         </owl:members>
     </rdf:Description>
