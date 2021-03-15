@@ -240,6 +240,11 @@
 		<xsl:attribute name="rdf:about">
         	<xsl:value-of select="$culturalProperty" />
 		</xsl:attribute>
+		<rdf:type>
+			<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="'https://w3id.org/arco/ontology/arco/BotanicalHeritage'" />
+			</xsl:attribute>
+		</rdf:type>
 		<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'erbario'))">
 			<xsl:if test="record/metadata/schede/BNB/AC/ACE">
 			<l0:identifier>
@@ -290,11 +295,22 @@
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNB/SB/NBN/NBNA or record/metadata/schede/BNB/SB/NAA">
-			<arco-mp:isClassifiedByOriginalTaxon>
-			<xsl:attribute name="rdf:resource">
-		    	<xsl:value-of select="$BiologicalTaxon" />
-		    </xsl:attribute>
-			</arco-mp:isClassifiedByOriginalTaxon>
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/BNB/RB/RBR/RBRN or record/metadata/schede/BNB/RB/RBN">
+					<arco-mp:isClassifiedByOriginalTaxon>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="$BiologicalTaxon" />
+					    </xsl:attribute>
+					</arco-mp:isClassifiedByOriginalTaxon>
+				</xsl:when>
+				<xsl:otherwise>
+					<arco-mp:isClassifiedByCurrentTaxon>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="$BiologicalTaxon" />
+					    </xsl:attribute>
+					</arco-mp:isClassifiedByCurrentTaxon>
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNB/OG/OGT/OGTS">
 			<arco-cd:historicalInformation>
@@ -370,7 +386,7 @@
 		<xsl:if test="record/metadata/schede/BNB/SB/NBN or record/metadata/schede/BNB/SB/NAA">
 			<arco-core:hasClassificationInTime>
 				<xsl:attribute name="rdf:resource">
-		    		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-original-classification')" />
+		    		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-classification')" />
 				</xsl:attribute>
 			</arco-core:hasClassificationInTime>
 		</xsl:if>
@@ -495,7 +511,7 @@
 	<xsl:if test="record/metadata/schede/BNB/SB/NBN or record/metadata/schede/BNB/SB/NAA">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-        		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-original-classification')" />
+        		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-classification')" />
         	</xsl:attribute>
        		<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -514,9 +530,18 @@
             <l0:name xml:lang="en">
             	<xsl:value-of select="concat('Classification in time of cultural property ', $itemURI)" />
             </l0:name>
-            <arco-mp:originalClassification>
-            	<xsl:value-of select="true()" />
-            </arco-mp:originalClassification>
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/BNB/RB/RBR/RBRN or record/metadata/schede/BNB/RB/RBN">  
+		            <arco-mp:currentClassification>
+        		    	<xsl:value-of select="false()" />
+            		</arco-mp:currentClassification>
+            	</xsl:when>
+            	<xsl:otherwise>
+            		<arco-mp:currentClassification>
+        		    	<xsl:value-of select="true()" />
+            		</arco-mp:currentClassification>
+            	</xsl:otherwise>
+            </xsl:choose>
 			<xsl:if test="record/metadata/schede/BNB/SB/DBV/DBVB">
 			<xsl:variable name="startDate">
 				<xsl:choose>

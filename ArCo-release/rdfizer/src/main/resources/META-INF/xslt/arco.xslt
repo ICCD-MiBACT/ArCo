@@ -6407,51 +6407,45 @@
 					</rdf:Description>
 			</xsl:if>
 			<!-- Cataloguing Agency - Agent Role CD/ESC -->
-			<xsl:if
-				test="(not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CD/ESC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CD/ESC)), 'n.r')))">
+			<xsl:if test="(not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CD/ESC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CD/ESC)), 'n.r')))">
 				<xsl:for-each select="record/metadata/schede/*/CD/ESC">
+					<xsl:variable name="getName">
+						<xsl:value-of select="arco-fn:get-nome-ente-from-codice(.)" />
+					</xsl:variable>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-                        <xsl:value-of
-							select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
-                    </xsl:attribute>
+							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
+						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-								select="'https://w3id.org/arco/ontology/core/AgentRole'" />
-                        </xsl:attribute>
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+	                        </xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of
-								select="concat('Ente schedatore del bene ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
+							<xsl:value-of select="concat('Ente schedatore del bene ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of
-								select="concat('Cataloguing agency for cultural property ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
+							<xsl:value-of select="concat('Cataloguing agency for cultural property ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
 						</rdfs:label>
 						<arco-core:hasRole>
 							<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-								select="concat($NS, 'Role/CataloguinAgency')" />
-                        </xsl:attribute>
+								<xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
+							</xsl:attribute>
 						</arco-core:hasRole>
 						<arco-core:hasAgent>
 							<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-								select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
-                        </xsl:attribute>
+                            	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	                        </xsl:attribute>
 						</arco-core:hasAgent>
 					</rdf:Description>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-                        <xsl:value-of
-							select="concat($NS, 'Role/CataloguinAgency')" />
-                    </xsl:attribute>
+                        	<xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
+                    	</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-								select="'https://w3id.org/italia/onto/RO/Role'" />
-                        </xsl:attribute>
+								<xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+                        	</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
 							<xsl:value-of select="'Ente schedatore'" />
@@ -6461,41 +6455,46 @@
 						</rdfs:label>
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-								select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
-                        </xsl:attribute>
+                            	<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
+	                        </xsl:attribute>
 						</arco-core:isRoleOf>
 					</rdf:Description>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-                        <xsl:value-of
-							select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
-                    </xsl:attribute>
+    	                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+                    	</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-								select="'https://w3id.org/italia/onto/COV/Organization'" />
-                        </xsl:attribute>
+								<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+                        	</xsl:attribute>
 						</rdf:type>
-						<rdfs:label>
-							<xsl:value-of
-								select="arco-fn:get-nome-ente-from-codice(.)" />
-						</rdfs:label>
-						<l0:name>
-							<xsl:value-of
-								select="arco-fn:get-nome-ente-from-codice(.)" />
-						</l0:name>
+						<xsl:choose>
+							<xsl:when test="string-length($getName)>0">
+								<rdfs:label>
+									<xsl:value-of select="arco-fn:get-nome-ente-from-codice(.)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="arco-fn:get-nome-ente-from-codice(.)" />
+								</l0:name>
+							</xsl:when>
+							<xsl:otherwise>
+								<rdfs:label>
+									<xsl:value-of select="." />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="." />
+								</l0:name>
+							</xsl:otherwise>
+						</xsl:choose>
 						<arco-arco:isCataloguingAgencyOf>
 							<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-								select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
-                        </xsl:attribute>
+                            	<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+                        	</xsl:attribute>
 						</arco-arco:isCataloguingAgencyOf>
 						<arco-core:isAgentOf>
 							<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-								select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
-                        </xsl:attribute>
+                            	<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
+	                        </xsl:attribute>
 						</arco-core:isAgentOf>
 					</rdf:Description>
 				</xsl:for-each>

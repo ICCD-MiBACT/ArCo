@@ -139,20 +139,16 @@
 		<xsl:attribute name="rdf:about">
         	<xsl:value-of select="$culturalProperty" />
 		</xsl:attribute>
+		<rdf:type>
+			<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="'https://w3id.org/arco/ontology/arco/PlanetaryScienceHeritage'" />
+			</xsl:attribute>
+		</rdf:type>
 		<xsl:if test="not($sheetType='BNB')">
 			<xsl:if test="record/metadata/schede/*/AC/ACK">
 				<l0:identifier>
 					<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
 				</l0:identifier>
-			</xsl:if>
-		</xsl:if>
-		<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTV)), 'collezione'))">
-			<xsl:if test="record/metadata/schede/*/AC/ACO">
-				<arco-core:isPartOf>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Collection/', arco-fn:urify(record/metadata/schede/*/AC/ACO))" />
-					</xsl:attribute>
-				</arco-core:isPartOf>
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPN">
