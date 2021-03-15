@@ -3348,11 +3348,11 @@
 						</arco-dd:positionOnCulturalProperty>
 					</xsl:if>
 					<xsl:if test="./FVPF">
-						<arco-ip:hasShape>
+						<arco-dd:hasShape>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./FVPF)))" />
 							</xsl:attribute>
-						</arco-ip:hasShape>
+						</arco-dd:hasShape>
 					</xsl:if>
 					<xsl:if test="./FVPS">
 						<arco-ip:hasMeasurementCollection>

@@ -2384,6 +2384,13 @@
 		    		</xsl:attribute>
             	</arco-mp:hasDirectHigherRank>
 			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNV">
+				<arco-mp:hasTaxonSpecification>
+					<xsl:attribute name="rdf:resource">
+		    			<xsl:value-of select="concat($NS,'Variety/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNV)))" />
+		    		</xsl:attribute>
+            	</arco-mp:hasTaxonSpecification>
+			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSC or record/metadata/schede/BNM/SM/SMS/SMSS">
 				<arco-mp:hasDirectHigherRank>
 					<xsl:choose>
@@ -4588,18 +4595,18 @@
 				</arco-dd:hasTechnicalStatus>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCS">
-				<arco-mp:hasCrystlSystem>
+				<arco-mp:hasCrystalSystem>
 					<xsl:attribute name="rdf:resource">
         	    		<xsl:value-of select="concat($NS, 'CrystallographicCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCS)))" />
             		</xsl:attribute>
-				</arco-mp:hasCrystlSystem>
+				</arco-mp:hasCrystalSystem>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCL">
-				<arco-mp:hasCrystlClass>
+				<arco-mp:hasCrystalClass>
 					<xsl:attribute name="rdf:resource">
         	    		<xsl:value-of select="concat($NS, 'CrystallographicCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCL)))" />
             		</xsl:attribute>
-				</arco-mp:hasCrystlClass>
+				</arco-mp:hasCrystalClass>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCP">
 				<arco-mp:hasPointGroup>

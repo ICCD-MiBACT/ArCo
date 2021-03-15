@@ -1626,6 +1626,23 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasMemberOfNumismaticSeries -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMemberOfNumismaticSeries">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfNumismaticSeriesOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/NumismaticSeriesMembership"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;appartenenza di un bene numismatico all&apos;appartenenza ad una serie numismatica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the membership of a cultural entity to its numismatic series.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha membro di serie numismatica</rdfs:label>
+        <rdfs:label xml:lang="en">has member of numismatic series</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasMemberOfPhotographicSeries -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMemberOfPhotographicSeries">
@@ -4146,6 +4163,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isMemberOfNumismaticSeriesOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfNumismaticSeriesOf">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/NumismaticSeriesMembership"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene numismatico alla classe che rappresenta l&apos;appartenenza del bene a una serie numismatica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to the class that represents the membership relation between this cultural property and a numismatic series.</rdfs:comment>
+        <rdfs:label xml:lang="en">is member of numismatic series of</rdfs:label>
+        <rdfs:label xml:lang="it">è membro di serie numismatica di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeriesIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeriesIn">
@@ -5625,7 +5657,6 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTE, AUTV</a-cat:iccdNormTag>
-
     </owl:DatatypeProperty>
     
 
@@ -6846,8 +6877,8 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta uno pseudonimo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents pseudonym</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">pseudonym</rdfs:label>
         <rdfs:label xml:lang="it">pseudonimo</rdfs:label>
+        <rdfs:label xml:lang="en">pseudonym</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTP</a-cat:iccdNormTag>
@@ -7017,8 +7048,8 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la firma o il monogramma</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the signature</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">signature</rdfs:label>
         <rdfs:label xml:lang="it">firma</rdfs:label>
+        <rdfs:label xml:lang="en">signature</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTF</a-cat:iccdNormTag>
@@ -9855,6 +9886,22 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/NumismaticSeriesMembership -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/NumismaticSeriesMembership">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Membership"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;appartenenza di un bene numismatico a una serie numismatica, esplicitamente indicata da un titolo o da una numerazione progressiva o da altri elementi che ne individuino inequivocabilmente l&apos;appartenenza</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the membership of numismatic property in a numismatic series, as a unit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Appartenenza a serie numismatica</rdfs:label>
+        <rdfs:label xml:lang="en">Numismatic series membership</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa NU: OG/OGT/OGTR</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/ObservationSurvey -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ObservationSurvey">
@@ -10268,6 +10315,14 @@ resource:PreparatoryOrFinalWork/0500212038-disegno
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MI: OG/SGT/SGTS</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/PrintingPlatesSeriesMembership -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PrintingPlatesSeriesMembership">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Membership"/>
     </owl:Class>
     
 
@@ -12063,10 +12118,10 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 

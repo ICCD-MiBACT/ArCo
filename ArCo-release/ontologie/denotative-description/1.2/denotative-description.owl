@@ -4018,7 +4018,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:label xml:lang="it">Modalità esecutiva</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BDI: CU/CUM/CUMD; CU/CUS/CUSD</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BDI: CU/CUM/CUMD; CU/CUS/CUSD; CU/CUV/CUVD</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4243,34 +4243,6 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/RuralEnvironment -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/RuralEnvironment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isEnvironmentOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente rurale di un oggetto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the rural environment of a thing</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Ambiente rurale</rdfs:label>
-        <rdfs:label xml:lang="en">Rural environment</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa PG: UT/RAM</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/SampleCollected -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SampleCollected">
@@ -4339,12 +4311,6 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SoilType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
             </owl:Restriction>
@@ -4372,21 +4338,6 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">Soil</rdfs:label>
         <rdfs:label xml:lang="it">Suolo</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/SoilType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SoilType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di suolo suolo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of the soil.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Soil tyoe</rdfs:label>
-        <rdfs:label xml:lang="it">Tipo di suolo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -4425,22 +4376,6 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;timbro&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;timbro&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;timbro&apos;</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/SuburbanEnvironment -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SuburbanEnvironment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente suburbano di un oggetto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the suburban environment of a thing</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Ambiente suburbano</rdfs:label>
-        <rdfs:label xml:lang="en">Suburban environment</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa PG: UT/RAM</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4524,22 +4459,6 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; MT/MTX; MT/FVM; MT/FRM;</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/UrbanEnvironment -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/UrbanEnvironment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente urbano di un oggetto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the urban environment of a thing</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Ambiente urbano</rdfs:label>
-        <rdfs:label xml:lang="en">Urban environment</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa PG: UT/RAM</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5684,7 +5603,6 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative OAC: MT/MIS/MISI</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
     
 
 
