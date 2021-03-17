@@ -443,7 +443,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/movable-property/hasCloseIndividual -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCloseIndividual">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCloseIndivisualOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCloseIndividualOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CloseIndividual"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il campione all&apos;individuo vicino</rdfs:comment>
@@ -1967,9 +1967,9 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/isCloseIndivisualOf -->
+    <!-- https://w3id.org/arco/ontology/movable-property/isCloseIndividualOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCloseIndivisualOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCloseIndividualOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CloseIndividual"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;individuo vicino e il campione</rdfs:comment>
@@ -4462,7 +4462,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isCloseIndivisualOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isCloseIndividualOf"/>
                 <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>

@@ -1493,7 +1493,7 @@
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
 							</xsl:attribute>
-						</arco-core:hasAgentRole>
+						</arco-core:hasAgentRole>						
 						<arco-arco:hasHeritageProtectionAgency>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/CD/ECP))" />

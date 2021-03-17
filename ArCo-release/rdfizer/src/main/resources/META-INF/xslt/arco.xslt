@@ -6646,6 +6646,9 @@
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:if test="record/metadata/schede/*/CD/ECP and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CD/ECP)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CD/ECP)), 'n.r')))">
+						<xsl:variable name="getName">
+							<xsl:value-of select="arco-fn:get-nome-ente-from-codice(record/metadata/schede/*/CD/ECP)" />
+						</xsl:variable>
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 	            	            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
@@ -6702,12 +6705,24 @@
 	                   		        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
 			                       </xsl:attribute>
 							</rdf:type>
-							<rdfs:label>
-								<xsl:value-of select="arco-fn:get-nome-ente-from-codice(record/metadata/schede/*/CD/ECP)" />
-							</rdfs:label>
-							<l0:name>
-								<xsl:value-of select="arco-fn:get-nome-ente-from-codice(record/metadata/schede/*/CD/ECP)" />
-							</l0:name>
+							<xsl:choose>
+								<xsl:when test="string-length($getName)>0">
+									<rdfs:label>
+										<xsl:value-of select="arco-fn:get-nome-ente-from-codice(record/metadata/schede/*/CD/ECP)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="arco-fn:get-nome-ente-from-codice(record/metadata/schede/*/CD/ECP)" />
+									</l0:name>
+								</xsl:when>
+								<xsl:otherwise>
+									<rdfs:label>
+										<xsl:value-of select="record/metadata/schede/*/CD/ECP" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="record/metadata/schede/*/CD/ECP" />
+									</l0:name>
+								</xsl:otherwise>
+							</xsl:choose>
 							<arco-core:isAgentOf>
 								<xsl:attribute name="rdf:resource">
 	                   		        <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
