@@ -145,12 +145,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/core/newIRI -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/core/newIRI"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
