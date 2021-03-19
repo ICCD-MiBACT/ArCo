@@ -6239,6 +6239,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">collocazione dell&apos;opera derivata</rdfs:label>
         <rdfs:label xml:lang="en">derivated work location</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFC - Normativa S: RO/COP/COPC - Normativa F: RO/CRF/CRFC</a-cat:iccdNormTag>
@@ -6857,59 +6858,6 @@ the area), to the environment and to the square from which the good comes.</rdfs
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkLocation -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkLocation">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PreparatoryOrFinalWork"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la localizzazione geografica e collocazione specifica dell&apos;opera derivata dal bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents geographical location and specific location of the work derived from the cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">collocazione dell&apos;opera preparatoria o finale</rdfs:label>
-        <rdfs:label xml:lang="en">preparatory or final work location</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFC - Normativa S: RO/COP/COPC - Normativa F: RO/CRF/CRFC</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkPreviousLocation -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkPreviousLocation">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PreparatoryOrFinalWork"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta le informazioni relative all&apos;antica o precedente l&apos;attuale collocazione dell&apos;opera da cui è tratta la matrice o la stampa presso collezioni, palazzi, chiese, ecc., quando questa è segnalata sulla matrice/stampa o sicuramente deducibile dalle fonti bibliografiche.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents information relating to ancient or previous location of the work from which the matrix or print is ​​drawn.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">collocazione precedente dell&apos;opera preparatoria o finale</rdfs:label>
-        <rdfs:label xml:lang="en">preparatory or final work previous location</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normative S, MI 3: RO/ROF/ROFR</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkRecordIdentifier -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkRecordIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PreparatoryOrFinalWork"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice, qualora esista, che identifica la scheda relativa all&apos;opera finale o preparatoria in relazione con il bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the code which identifies the record relating to the final or preparatory work in relation with the cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">codice della scheda dell&apos;opera originale o finale</rdfs:label>
-        <rdfs:label xml:lang="en">preparatory or final work record identifier</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFX</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/properTitle -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/properTitle">
@@ -6998,6 +6946,23 @@ the area), to the environment and to the square from which the good comes.</rdfs
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/relatedWorkLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/relatedWorkLocation">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la localizzazione geografica e collocazione specifica dell&apos;opera collegata al bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents geographical location and specific location of the work related to the cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">collocazione dell&apos;opera collegata</rdfs:label>
+        <rdfs:label xml:lang="en">related work location</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFC - Normativa S: RO/COP/COPC - Normativa F: RO/CRF/CRFC</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/relatedWorkNote -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/relatedWorkNote">
@@ -7012,6 +6977,42 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RV/REZ</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/relatedWorkPreviousLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/relatedWorkPreviousLocation">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta le informazioni relative all&apos;antica o precedente l&apos;attuale collocazione dell&apos;opera da cui è tratta la matrice o la stampa presso collezioni, palazzi, chiese, ecc., quando questa è segnalata sulla matrice/stampa o sicuramente deducibile dalle fonti bibliografiche.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents information relating to ancient or previous location of the work from which the matrix or print is ​​drawn.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">collocazione precedente dell&apos;opera collegata</rdfs:label>
+        <rdfs:label xml:lang="en">related work previous location</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normative S, MI 3: RO/ROF/ROFR</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/relatedWorkRecordIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/relatedWorkRecordIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice, qualora esista, che identifica la scheda relativa all&apos;opera finale o preparatoria in relazione con il bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the code which identifies the record relating to the final or preparatory work in relation with the cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">codice della scheda dell&apos;opera collegata</rdfs:label>
+        <rdfs:label xml:lang="en">related work record identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFX</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -8930,7 +8931,7 @@ resource:ArchivalSubseries/museo-civico-romano
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/derivatedWorkLocation"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/relatedWorkLocation"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -10313,19 +10314,19 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkLocation"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/relatedWorkLocation"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkPreviousLocation"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/relatedWorkPreviousLocation"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkRecordIdentifier"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/relatedWorkRecordIdentifier"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -12202,9 +12203,9 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>

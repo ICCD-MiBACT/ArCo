@@ -1111,6 +1111,15 @@
 						</xsl:attribute>
 					</arco-cd:hasEstimate>
 				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/UB/COL">
+					<xsl:if test="./COLV and (not(starts-with(lower-case(normalize-space(./COLV)), 'nr')) and not(starts-with(lower-case(normalize-space(./COLV)), 'n.r')))">
+						<arco-cd:hasEstimate>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'CulturalPropertyEstimate/', $itemURI, '-', position())" />
+							</xsl:attribute>
+						</arco-cd:hasEstimate>
+					</xsl:if>
+				</xsl:for-each>
 				<!-- commission -->
 				<xsl:for-each select="record/metadata/schede/*/AU/CMM">
 					<arco-cd:hasCommission>

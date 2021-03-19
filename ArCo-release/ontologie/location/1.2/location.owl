@@ -1947,12 +1947,6 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/time"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
@@ -1988,6 +1982,12 @@ resource:CadastralIdentity/1400055239-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/CadastralUnitCollection">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/CadastralEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una o più particelle catastali.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one or more cadastral parcels.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
