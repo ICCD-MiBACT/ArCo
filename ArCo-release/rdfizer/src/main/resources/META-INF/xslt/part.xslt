@@ -993,6 +993,25 @@
 					</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
+			<!-- Archaeometric and diagnostic survey -->
+			<xsl:if test="not(record/metadata/schede/*/RE/IND/INDD='0000/00/00' or record/metadata/schede/*/RE/IND/INDD='/') and record/metadata/schede/*/RE/IND/*">
+				<xsl:for-each select="record/metadata/schede/*/RE/IND">
+					<xsl:if test="./INDP and not(./INDP='intero bene' or ./INDP='integrale' or ./INDP='tutta' or ./INDP='totale' or ./INDP='carattere generale' or (starts-with(lower-case(normalize-space(./INDP)), 'non accertabile')) or (starts-with(lower-case(normalize-space(./INDP)), 'nr')) or (starts-with(lower-case(normalize-space(./INDP)), 'n.r')) or (starts-with(lower-case(normalize-space(./INDP)), 'intero')) or (starts-with(lower-case(normalize-space(./INDP)), 'intera')) or (starts-with(lower-case(normalize-space(./INDP)), 'esemplar')))">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of
+								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./INDP)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+							<arco-cd:hasSurvey>
+								<xsl:attribute name="rdf:resource">
+        		        			<xsl:value-of select="concat($NS, 'ArchaeometricDiagnosticSurvey/', $itemURI, '-survey-', position())" />
+                				</xsl:attribute>
+							</arco-cd:hasSurvey>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:for-each>
+			</xsl:if>
 				
 		</rdf:RDF>
 	</xsl:template>

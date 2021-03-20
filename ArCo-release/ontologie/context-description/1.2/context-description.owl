@@ -401,6 +401,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha tipo di anomalia</rdfs:label>
         <rdfs:label xml:lang="en">has anomaly type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIQ</a-cat:iccdNormTag>
@@ -420,6 +421,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha tipo di indagine su bene archeologico</rdfs:label>
         <rdfs:label xml:lang="en">has archaeological property survey type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT 3.00: IN/INI/INIT</a-cat:iccdNormTag>
@@ -439,6 +441,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha tipo di indagine archeometrica e diagnostica</rdfs:label>
         <rdfs:label xml:lang="en">has archaeometric diagnostic survey type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RE/IND/INDI - ICCD normative di versioni precedenti: RE/AIN/AINT</a-cat:iccdNormTag>
@@ -1582,6 +1585,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha tipo di analisi di laboratorio</rdfs:label>
         <rdfs:label xml:lang="en">has laboratory test type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative NU, RA, BNB, MA, CA: RS/ALB/ALBT</a-cat:iccdNormTag>
@@ -1770,6 +1774,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha tipo di indagine di rilevamento</rdfs:label>
         <rdfs:label xml:lang="en">has observation survey type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI 4.00: LA/PRM</a-cat:iccdNormTag>
@@ -3055,6 +3060,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is anomaly type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di anomalia di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3072,6 +3078,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is archaeological property survey type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di indagine su bene archeologico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3089,6 +3096,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is archaeometric diagnostic survey type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di indagine archeometrica e diagnostica di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -4124,6 +4132,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is laboratory test type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di analisi di laboratorio di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -4349,6 +4358,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is observation survey type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di indagine di rilevamento di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -7618,7 +7628,7 @@ resource:Acquisition/1200865053-acquisition-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAnomalyType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/AnomalyType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -7683,32 +7693,8 @@ resource:Acquisition/1200865053-acquisition-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityResponsible"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasStratigraphicUnit"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/StratigraphicUnit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyMethod"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyMotivation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMotivation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyScientificDirector"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -7753,24 +7739,6 @@ resource:Acquisition/1200865053-acquisition-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityResponsible"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyMethod"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyScientificDirector"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/archaeologicalFieldSurveyICCDIdentifier"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
@@ -7805,20 +7773,8 @@ resource:Acquisition/1200865053-acquisition-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasArchaeologicalPropertySurveyType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyMotivation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMotivation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/technicalDocumentation"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;indagine su una tipologia particolare di bene archeologico, ovvero i reperti antropologici (es.: analisi istologica, analisi chimica, TC, etc.).</rdfs:comment>
@@ -7836,7 +7792,7 @@ resource:Acquisition/1200865053-acquisition-1
     <!-- https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyType"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di indagine su bene archeologico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of archaeological property survey.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -7855,32 +7811,8 @@ resource:Acquisition/1200865053-acquisition-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityOperator"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityResponsible"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivitySponsor"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasArchaeometricDiagnosticSurveyType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyMotivation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMotivation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -7904,7 +7836,7 @@ resource:Acquisition/1200865053-acquisition-1
     <!-- https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyType"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di indagine archeometrica e diagnostica (es.: analisi della malta, carotaggio, termografia, etc.)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of archaeometric and diagnostic survey (e.g. coring)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -9549,12 +9481,6 @@ gioco, etc.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Inspection">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityResponsible"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo particolare di indagine su bene culturale, ovvero un&apos;ispezione effettuata per constatare lo stato del bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a particular type of survey on a cultural property, that is an inspection carried out to verify the condition of a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -9769,25 +9695,7 @@ resource:Intervention/0800640527-10-intervention-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityOperator"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityResponsible"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliography"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLaboratoryTestType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LaboratoryTestType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -9819,7 +9727,7 @@ Normativa BNB: RB</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/LaboratoryTestType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/LaboratoryTestType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyType"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di analisi di laboratorio (es.: analisi metallurgica, analisi chimica, etc.)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of laboratory test (es.: chemical analysis)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -9990,24 +9898,6 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityOperator"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityResponsible"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasObservationSurveyType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurveyType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyPhotographer"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
@@ -10022,6 +9912,12 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isRelatedToResearch"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurveyType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo particolare di indagine, ovvero il rilevamento (l&apos;occasione o l&apos;indagine in occasione della quale è stato rilevato, individuato, osservato il bene) di un bene musicale di interesse etno-organologico o di un bene demoetno-antropologico.</rdfs:comment>
@@ -10058,12 +9954,6 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyMethod"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/diagnosis"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
@@ -10092,12 +9982,6 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityResponsible"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAnomaly"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Anomaly"/>
             </owl:Restriction>
@@ -10112,18 +9996,6 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyImage"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyImage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyMotivation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMotivation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyScientificDirector"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -11018,6 +10890,48 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityOperator"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityResponsible"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivitySponsor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliography"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyMethod"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyMotivation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMotivation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyScientificDirector"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
@@ -11149,6 +11063,14 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:label xml:lang="en">Survey Motivation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/SurveyType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SurveyType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
     </owl:Class>
     
 
@@ -12203,15 +12125,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>
     
 
