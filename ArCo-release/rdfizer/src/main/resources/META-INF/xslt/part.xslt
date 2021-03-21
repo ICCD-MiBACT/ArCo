@@ -581,14 +581,12 @@
 			</xsl:for-each>
 			
 			<!-- part of cultural property when there is RSTP (4.00, intervention) -->
-			<xsl:for-each select="record/metadata/schede/*/CO/RST">
+			<xsl:for-each select="record/metadata/schede/*/*/RST">
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if
-					test="not(lower-case(normalize-space(./RSTP))='intero bene') and not(lower-case(normalize-space(./RSTP))='integrale') and not(lower-case(normalize-space(./RSTP))='tutta') and not(lower-case(normalize-space(./RSTP))='totale') and (not(starts-with(lower-case(normalize-space(./RSTP)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./RSTP)), 'intero')) and not(starts-with(lower-case(normalize-space(./RSTP)), 'intera')) and not(starts-with(lower-case(normalize-space(./RSTP)), 'esemplar')))">
+				<xsl:if test="not(lower-case(normalize-space(./RSTP))='intero bene') and not(lower-case(normalize-space(./RSTP))='integrale') and not(lower-case(normalize-space(./RSTP))='tutta') and not(lower-case(normalize-space(./RSTP))='totale') and (not(starts-with(lower-case(normalize-space(./RSTP)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./RSTP)), 'intero')) and not(starts-with(lower-case(normalize-space(./RSTP)), 'intera')) and not(starts-with(lower-case(normalize-space(./RSTP)), 'esemplar')))">
 					<xsl:for-each select="./RSTP">
-
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 						 		<xsl:value-of
@@ -626,13 +624,12 @@
 			</xsl:for-each>
 			
 			<!-- part of cultural property when there is RSTR (< 4.00, conservation intervention) -->
-			<xsl:if test="$sheetType='A'">
+			<xsl:if test="$sheetType='A' or $sheetType='PG'">
 			<xsl:for-each select="record/metadata/schede/*/RS/RST">
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if
-					test="not(lower-case(normalize-space(./RSTR))='intero bene') and not(lower-case(normalize-space(./RSTR))='integrale') and not(lower-case(normalize-space(./RSTR))='tutta') and not(lower-case(normalize-space(./RSTR))='totale') and (not(starts-with(lower-case(normalize-space(./RSTR)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTR)), 'n.r')) and not(starts-with(lower-case(normalize-space(./RSTR)), 'intero')) and not(starts-with(lower-case(normalize-space(./RSTR)), 'intera')) and not(starts-with(lower-case(normalize-space(./RSTR)), 'esemplar')))">
+				<xsl:if test="not(lower-case(normalize-space(./RSTR))='intero bene') and not(lower-case(normalize-space(./RSTR))='integrale') and not(lower-case(normalize-space(./RSTR))='tutta') and not(lower-case(normalize-space(./RSTR))='totale') and (not(starts-with(lower-case(normalize-space(./RSTR)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTR)), 'n.r')) and not(starts-with(lower-case(normalize-space(./RSTR)), 'intero')) and not(starts-with(lower-case(normalize-space(./RSTR)), 'intera')) and not(starts-with(lower-case(normalize-space(./RSTR)), 'esemplar')))">
 					<xsl:for-each select="./RSTR">
 
 						<rdf:Description>
@@ -994,6 +991,25 @@
 					</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
+			<!-- Archaeometric and diagnostic survey -->
+			<xsl:if test="not(record/metadata/schede/*/RE/IND/INDD='0000/00/00' or record/metadata/schede/*/RE/IND/INDD='/') and record/metadata/schede/*/RE/IND/*">
+				<xsl:for-each select="record/metadata/schede/*/RE/IND">
+					<xsl:if test="./INDP and not(./INDP='intero bene' or ./INDP='integrale' or ./INDP='tutta' or ./INDP='totale' or ./INDP='carattere generale' or (starts-with(lower-case(normalize-space(./INDP)), 'non accertabile')) or (starts-with(lower-case(normalize-space(./INDP)), 'nr')) or (starts-with(lower-case(normalize-space(./INDP)), 'n.r')) or (starts-with(lower-case(normalize-space(./INDP)), 'intero')) or (starts-with(lower-case(normalize-space(./INDP)), 'intera')) or (starts-with(lower-case(normalize-space(./INDP)), 'esemplar')))">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of
+								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./INDP)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+							<arco-cd:hasSurvey>
+								<xsl:attribute name="rdf:resource">
+        		        			<xsl:value-of select="concat($NS, 'ArchaeometricDiagnosticSurvey/', $itemURI, '-survey-', position())" />
+                				</xsl:attribute>
+							</arco-cd:hasSurvey>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:for-each>
+			</xsl:if>
 				
 		</rdf:RDF>
 	</xsl:template>

@@ -247,7 +247,7 @@
 						<xsl:for-each select="$floorssplit">
 							<arco-core:hasPart>
 								<xsl:attribute name="rdf:resource">
-	    		    				<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', arco-fn:urify(.))" />
+    		    				<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(.))" />
 								</xsl:attribute>
 							</arco-core:hasPart>
 						</xsl:for-each>
@@ -512,7 +512,7 @@
 					<xsl:for-each select="$floorssplit">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-	   	    					<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', arco-fn:urify(.))" />
+   	    					<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(.))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -3340,11 +3340,11 @@
 							</arco-dd:positionOnCulturalProperty>
 						</xsl:if>
 						<xsl:if test="./FVPF">
-							<arco-ip:hasShape>
+						<arco-dd:hasShape>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./FVPF)))" />
 								</xsl:attribute>
-							</arco-ip:hasShape>
+						</arco-dd:hasShape>
 						</xsl:if>
 						<xsl:if test="./FVPS">
 							<arco-ip:hasMeasurementCollection>

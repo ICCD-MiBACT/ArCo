@@ -81,14 +81,14 @@
 	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
 	xmlns:arco-ip="https://w3id.org/arco/ontology/immovable-property/"
 
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0"
 	exclude-result-prefixes="xsl php">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 
 	<xsl:variable name="sheetVersion"
 		select="record/metadata/schede/*/@version" />
 	<xsl:variable name="sheetType"
-		select="name(record/metadata/schede/*)" />
+		select="name(record/metadata/schede/*[1])" />
 	<xsl:variable name="cp-name" select="''" />
 	<xsl:param name="NS" />
 

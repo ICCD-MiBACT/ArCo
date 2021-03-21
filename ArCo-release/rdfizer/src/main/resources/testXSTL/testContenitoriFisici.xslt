@@ -4,14 +4,14 @@
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:php="http://php.net/xsl"
-	xmlns:arco-core="https://w3id.org/arco/ontology/core/" version="1.0"
+	xmlns:arco-core="https://w3id.org/arco/ontology/core/" version="2.0"
 	exclude-result-prefixes="xsl php">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 
 	<xsl:variable name="sheetVersion"
 		select="record/metadata/schede/*/@version" />
 	<xsl:variable name="sheetType"
-		select="name(record/metadata/schede/*)" />
+		select="name(record/metadata/schede/*[1])" />
 	<xsl:variable name="cp-name" select="''" />
 	<xsl:param name="NS" />
 

@@ -28,6 +28,7 @@ public abstract class SKOSThesaurusLinker {
 	protected XdmValue link(String arg) throws SaxonApiException {
 		
 		String argClean = arg.replaceAll("[\\(\\)]", "");
+		argClean = argClean.replaceAll("\\\\", "\\\\\\\\");
 		
 		ParameterizedSparqlString pss = new ParameterizedSparqlString();
 		pss.setCommandText(sparql);

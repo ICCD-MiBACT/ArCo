@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -29,21 +30,34 @@ public class Main {
 
 	private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
+	static void usage() {
+		System.err.println("parameters: <inFolderString> <outNtriplesFolder> [prefix="+Converter.defaultPrefix+" [sourcePrefix="+Converter.defaultSourcePrefix+" [quarantineList=null]] -xslt:<custom stylesheet>]"); 
+		System.exit(-1);
+	}
 	public static void main(String[] args) {
+		if (args.length<2) usage();
+		String xslt = null;
 		String inFolderString = args[0];
 		String outNtriplesFolder = args[1];
-		String prefix = args[2];
-		String sourceprefix = args[3];
-
-		logger.trace("inFolder {}, outFolder {}, prefix {}, sourcePrefixÂ {}", inFolderString, outNtriplesFolder, prefix,
-				sourceprefix);
+		String dp = Converter.defaultPrefix;
+		String dsp = Converter.defaultSourcePrefix;
+		String quarantineList = null;
+		for (int j=2;j<args.length;j++) {
+			if (args[j].startsWith("-xslt:")) { xslt = args[j].substring(6); continue; }
+			if (j==2) { dp = args[j]; continue; }
+			if (j==3) { dsp = args[j]; continue; }
+			if (j==4) { quarantineList = args[j]; continue; }
+			usage();
+		}
+		String prefix = dp;
+		String sourceprefix = dsp;
+		logger.trace("inFolder {}, outFolder {}, prefix {}, sourcePrefix {}", inFolderString, outNtriplesFolder, prefix, sourceprefix);
 
 		File inFolder = new File(inFolderString);
 
 		Set<String> catalogueRecordsToQuarantine = new HashSet<>();
 
-		if (args.length > 4) {
-			String quarantineList = args[4];
+		if (quarantineList!=null) {
 			// A file listing the catalogue records to quarantine is provided
 			try {
 				BufferedReader br = new BufferedReader(new FileReader(new File(quarantineList)));
@@ -66,6 +80,7 @@ public class Main {
 		outFolderTTLs.mkdirs();
 
 		Converter converter = new Converter();
+		if (xslt!=null) converter.addXSTLConverter(Paths.get(xslt));
 
 		try {
 			BufferedWriter errorLog = new BufferedWriter(new FileWriter("error.log"));
@@ -108,7 +123,7 @@ public class Main {
 							if (is != null) {
 								try {
 
-									System.out.println(itemName);
+									//System.out.println(itemName);
 									logger.trace("Convert {}",itemName);
 									Model model = converter.convert(itemName, prefix, sourceprefix, is);
 

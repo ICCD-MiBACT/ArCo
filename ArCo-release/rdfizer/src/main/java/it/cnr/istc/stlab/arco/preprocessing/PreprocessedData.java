@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.List;
@@ -32,19 +33,22 @@ public class PreprocessedData {
 	private static final Logger logger = LoggerFactory.getLogger(PreprocessedData.class);
 	public static final String GENERATED = "GENERATED";
 
-	private PreprocessedData(boolean download, String dbFileName, boolean forceCreate) {
+	private void download(String dbFileName) throws MalformedURLException, IOException {
+		FileUtils.copyURLToFile(new URL(dbURL), new File(dbFileName + ".gz"));
+		logger.info(dbURL + " downloaded!");
+		logger.info("Unzipping " + dbFileName + ".gz");
+		IOUtils.copy(new GZIPInputStream(new FileInputStream(new File(dbFileName + ".gz"))),
+				new FileOutputStream(new File(dbFileName)));
+		logger.info(dbFileName + ".gz unzipped");
+	}
+	private PreprocessedData(boolean download, String dbFileName, boolean forceUpdate) {
 
 		if (download) {
-			logger.info("Download " + dbURL);
+			//logger.info("Download " + dbURL);
 			if (!new File(dbFileName).exists()) {
 				logger.info("Downloading preprocessed data from " + dbURL);
 				try {
-					FileUtils.copyURLToFile(new URL(dbURL), new File(dbFileName + ".gz"));
-					logger.info(dbURL + " downloaded!");
-					logger.info("Unzipping " + dbFileName + ".gz");
-					IOUtils.copy(new GZIPInputStream(new FileInputStream(new File(dbFileName + ".gz"))),
-							new FileOutputStream(new File(dbFileName)));
-					logger.info(dbFileName + ".gz unzipped");
+					download(dbFileName);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -61,7 +65,7 @@ public class PreprocessedData {
 		this.db = DBMaker.fileDB(dbFileName).make();
 		initMaps();
 
-		if (!forceCreate) {
+		if (forceUpdate) { // avoid trashing local data
 			try {
 				org.mapdb.Atomic.Long generated = db.atomicLong(GENERATED).createOrOpen();
 				Long remoteGenerated = readRemoteGenerated();
@@ -74,8 +78,7 @@ public class PreprocessedData {
 						this.db.close();
 						new File(dbFileName).delete();
 						logger.info("Downloading preprocessed data from " + dbURL);
-						FileUtils.copyURLToFile(new URL(dbURL), new File(dbFileName));
-						logger.info(dbURL + " downloaded!");
+						download(dbFileName);
 						this.db = DBMaker.fileDB(dbFileName).make();
 						initMaps();
 					}
@@ -129,9 +132,9 @@ public class PreprocessedData {
 		return getInstance(download, dbFileName, false);
 	}
 
-	public static PreprocessedData getInstance(boolean download, String dbfilename, boolean forceCreate) {
+	public static PreprocessedData getInstance(boolean download, String dbfilename, boolean forceUpdate) {
 		if (instance == null) {
-			instance = new PreprocessedData(download, dbfilename, forceCreate);
+			instance = new PreprocessedData(download, dbfilename, forceUpdate);
 		}
 		return instance;
 	}

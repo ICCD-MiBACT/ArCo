@@ -18,6 +18,7 @@ import net.sf.saxon.s9api.SequenceType;
 import net.sf.saxon.s9api.XdmAtomicValue;
 import net.sf.saxon.s9api.XdmValue;
 import net.sf.saxon.value.StringValue;
+import net.sf.saxon.value.Whitespace;
 
 public class Arcofy implements ExtensionFunction {
 	
@@ -66,7 +67,6 @@ public class Arcofy implements ExtensionFunction {
 	        
     	}
     	
-    	
     	String[] argParts = sb.toString().split("( )+");
         List<String> args = Arrays.asList(argParts);
         String arg = args.stream()
@@ -79,8 +79,20 @@ public class Arcofy implements ExtensionFunction {
         
         return new XdmAtomicValue(arg);
     }
+
+    public static String arcoHify(String in) {
+    	in = Whitespace.collapseWhitespace(in.subSequence(0, in.length())).toString();
+    	String[] argParts = in.split("( )+");
+        List<String> args = Arrays.asList(argParts);
+        String arg = args.stream()
+        		.map(a -> {return a.toLowerCase();})
+        		.sorted().reduce((a,b) ->{
+        			return a + " " + b;
+        			}).get();   
+        return md5(Urifier.toURI(arg.toLowerCase()));        
+    }
     
-    private String md5(String arg) {
+    private static String md5(String arg) {
     	String digest = "";
         MessageDigest md;
 		try {

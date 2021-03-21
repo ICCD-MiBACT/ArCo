@@ -198,6 +198,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/hasConstructionSpace -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasConstructionSpace">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isConstructionSpaceOf"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione ai suoi spazi</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a construction to its construction space</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
+        <rdfs:label xml:lang="it">ha spazio della costruzione</rdfs:label>
+        <rdfs:label xml:lang="en">has construction space</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD norm MA, CA, SI, SAS: DA/SPA</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/hasCovering -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasCovering">
@@ -551,6 +568,21 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">is construction element of</rdfs:label>
         <rdfs:label xml:lang="it">è elemento della costruzione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/isConstructionSpaceOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isConstructionSpaceOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
+        <rdfs:comment xml:lang="it">Questa propietà collega lo spazio alla costruzione di cui fa parte</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a construction space to its constrution</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
+        <rdfs:label xml:lang="en">is construction space of</rdfs:label>
+        <rdfs:label xml:lang="it">è spazio della costruzione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>

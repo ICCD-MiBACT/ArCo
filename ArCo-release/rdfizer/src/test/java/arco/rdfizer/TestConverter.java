@@ -48,6 +48,8 @@ public class TestConverter {
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			converter.destroy();
 		}
 	}
 
@@ -72,6 +74,8 @@ public class TestConverter {
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			converter.destroy();
 		}
 	}
 	
@@ -96,6 +100,8 @@ public class TestConverter {
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			converter.destroy();
 		}
 	}
 
@@ -118,6 +124,8 @@ public class TestConverter {
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			converter.destroy();
 		}
 	}
 
@@ -145,6 +153,8 @@ public class TestConverter {
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			converter.destroy();
 		}
 	}
 
@@ -160,10 +170,12 @@ public class TestConverter {
 
 			System.out.println(model.size());
 
-			model.write(System.out,"TTL");
+			//model.write(System.out,"TTL");
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			converter.destroy();
 		}
 	}
 

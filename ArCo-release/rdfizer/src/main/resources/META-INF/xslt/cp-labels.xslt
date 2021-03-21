@@ -1080,10 +1080,10 @@
 					<xsl:variable name="tmp-label">
 						<xsl:choose>
 							<xsl:when test="record/metadata/schede/*/OG/OGD/OGDN">
-								<xsl:value-of select="concat($ogdn, normalize-space(record/metadata/schede/*/OG/OGT/OGTD), ', ', normalize-space(record/metadata/schede/*/OG/CTG), ')')" />
+								<xsl:value-of select="concat($ogdn, normalize-space(record/metadata/schede/*/OG/OGT/OGTD), ', ', normalize-space(string-join(record/metadata/schede/*/OG/CTG,'; ')), ')')" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/OG/OGT/OGTD), ', ', normalize-space(record/metadata/schede/*/OG/CTG))" />
+								<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/OG/OGT/OGTD), ', ', normalize-space(string-join(record/metadata/schede/*/OG/CTG,'; ')))" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:variable>
@@ -1173,8 +1173,8 @@
 					</xsl:variable>
 					<xsl:variable name="ctg">
 						<xsl:choose>
-							<xsl:when test="record/metadata/schede/*/OG/CTG and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/CTG)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/CTG)), 'n.r')))">
-								<xsl:value-of select="concat(', ', normalize-space(record/metadata/schede/*/OG/CTG))" />
+							<xsl:when test="record/metadata/schede/*/OG/CTG[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+								<xsl:value-of select="concat(', ', normalize-space(string-join(record/metadata/schede/*/OG/CTG,', ')))" />
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="''" />

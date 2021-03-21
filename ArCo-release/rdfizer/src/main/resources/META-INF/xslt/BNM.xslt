@@ -209,7 +209,13 @@
 		<xsl:attribute name="rdf:about">
         	<xsl:value-of select="$culturalProperty" />
 		</xsl:attribute>
-
+		<xsl:if test="$sheetType='BNM'">
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/arco/MineralHeritage'" />
+				</xsl:attribute>
+			</rdf:type>
+		</xsl:if>
 		<xsl:if test="not($sheetType='BNB')">
 			<xsl:if test="record/metadata/schede/*/AC/ACK">
 				<l0:identifier>
@@ -217,16 +223,20 @@
 				</l0:identifier>
 			</xsl:if>
 		</xsl:if>
-		<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'collezione'))">
+		<xsl:if test="not($sheetType='CA' or $sheetType='MA' or $sheetType='VeAC')">
+			<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'collezione'))">
 			<xsl:if test="record/metadata/schede/*/AC/ACO">
+				<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
+				<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
 				<arco-core:isPartOf>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Collection/', arco-fn:urify(record/metadata/schede/*/AC/ACO))" />
+							<xsl:value-of select="concat($NS, 'Collection/', $acm, '-', $aco)" />
 					</xsl:attribute>
 				</arco-core:isPartOf>
 			</xsl:if>
 		</xsl:if>
-		<xsl:if test="record/metadata/schede/BNM/SM/SMN">
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMN/*">
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
 		        	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Specimen'" />
@@ -247,7 +257,7 @@
 		    	</xsl:choose>
 			</arco-mp:isClassifiedByCurrentTaxon>
 		</xsl:if>
-		<xsl:if test="record/metadata/schede/BNM/SM/SMN">
+		<xsl:if test="record/metadata/schede/BNM/SM/SMN/*">
 			<arco-core:isClassifiedBy>
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
@@ -285,7 +295,7 @@
 				<xsl:value-of select="true()" />
 			</arco-mp:polytype>
 		</xsl:if>
-		<xsl:if test="record/metadata/schede/BNM/SM/SMN">
+		<xsl:if test="record/metadata/schede/BNM/SM/SMN/*">
 			<arco-core:hasClassificationInTime>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI)" />
@@ -2351,7 +2361,7 @@
   		</rdf:Description>
   	</xsl:if>
 					<!-- Taxon as individual -->
-	<xsl:if test="record/metadata/schede/BNM/SM/SMN">
+	<xsl:if test="record/metadata/schede/BNM/SM/SMN/*">
 		<rdf:Description>
 			<xsl:choose>
 				<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
@@ -2416,6 +2426,13 @@
 		    			<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSD)))" />
 		    		</xsl:attribute>
             	</arco-mp:hasDirectHigherRank>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNV">
+				<arco-mp:hasTaxonSpecification>
+					<xsl:attribute name="rdf:resource">
+		    			<xsl:value-of select="concat($NS,'Variety/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNV)))" />
+		    		</xsl:attribute>
+            	</arco-mp:hasTaxonSpecification>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSC or record/metadata/schede/BNM/SM/SMS/SMSS">
 				<arco-mp:hasDirectHigherRank>
@@ -2754,7 +2771,7 @@
 	</xsl:for-each>
 	
 								<!-- Classification in time -->
-	<xsl:if test="record/metadata/schede/BNM/SM/SMN">
+	<xsl:if test="record/metadata/schede/BNM/SM/SMN/*">
 		<rdf:Description>	
 			<xsl:attribute name="rdf:about">
 		    	<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI)" />
@@ -4393,18 +4410,18 @@
 				</arco-dd:hasTechnicalStatus>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCS">
-				<arco-mp:hasCrystlSystem>
+				<arco-mp:hasCrystalSystem>
 					<xsl:attribute name="rdf:resource">
         	    		<xsl:value-of select="concat($NS, 'CrystallographicCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCS)))" />
             		</xsl:attribute>
-				</arco-mp:hasCrystlSystem>
+				</arco-mp:hasCrystalSystem>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCL">
-				<arco-mp:hasCrystlClass>
+				<arco-mp:hasCrystalClass>
 					<xsl:attribute name="rdf:resource">
         	    		<xsl:value-of select="concat($NS, 'CrystallographicCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCL)))" />
             		</xsl:attribute>
-				</arco-mp:hasCrystlClass>
+				</arco-mp:hasCrystalClass>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCP">
 				<arco-mp:hasPointGroup>
@@ -6678,15 +6695,17 @@
 	</xsl:for-each>
 	
 	<xsl:if test="not($sheetType='CA' or $sheetType='MA' or $sheetType='VeAC')">
-	<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'collezione'))">
+	<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'collezione'))">
 		<xsl:if test="record/metadata/schede/*/AC/ACO">
+		<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
+		<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-                	<xsl:value-of select="concat($NS, 'Collection/', arco-fn:urify(record/metadata/schede/*/AC/ACO))" />
+                	<xsl:value-of select="concat($NS, 'Collection/', $acm, '-', $aco)" />
                 </xsl:attribute>
 	            <rdf:type>
 					<xsl:attribute name="rdf:resource">
-	    	        	<xsl:value-of	select="'https://w3id.org/arco/ontology/movable-property/NaturalHeritageCollection'" />
+	    	        	<xsl:value-of	select="'https://w3id.org/arco/ontology/movable-property/SpecimenCollection'" />
 					</xsl:attribute>
 				</rdf:type>
 				<xsl:choose> 

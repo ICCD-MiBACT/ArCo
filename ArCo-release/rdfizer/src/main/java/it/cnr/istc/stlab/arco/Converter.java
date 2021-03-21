@@ -250,6 +250,11 @@ public class Converter {
 		}
 	}
 
+	public static final String defaultPrefix = "https://w3id.org/arco/resource/";
+	public static final String defaultSourcePrefix = "https://catalogo.beniculturali.it/detail/$(PROPERTYTYPE)/$(IDENTIFIER)";
+    public Model convert(String item, InputStream sourceXml) throws Exception {
+        return convert(item, defaultPrefix, defaultSourcePrefix, sourceXml);
+    }
 	public Model convert(String item, String prefix, String sourcePrefix, InputStream sourceXml) throws Exception {
 
 		Model model = ModelFactory.createDefaultModel();
@@ -271,7 +276,7 @@ public class Converter {
 			trans.setParameter(new QName("SOURCE"), new XdmAtomicValue(sourcePrefix));
 			trans.setInitialContextNode(source);
 			trans.setDestination(out);
-			trans.transform();
+			try { trans.transform(); } catch (Exception e) { System.err.println("got exception @" + exp.name); throw e; }
 			trans.close();
 			out.close();
 

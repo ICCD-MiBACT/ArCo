@@ -73,7 +73,7 @@ public class SingleFileWriterNTriples {
 
 					counter++;
 
-					System.out.println(counter);
+					//System.out.println(counter);
 				}
 
 				bw_part.flush();

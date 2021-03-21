@@ -13,7 +13,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 	<xsl:param name="item" />
 	<xsl:param name="NS" />
 	<!-- xsl:variable name="NS" select="'https://w3id.org/arco/resource/'" /-->
-	<xsl:param name="SOURCE"/>
+	<xsl:param name="SOURCE" select="''"/>
 	
 	<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
 	
@@ -294,6 +294,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 		</xsl:attribute>
 	</dc:source>
 	 -->
+	<xsl:if test="string-length($SOURCE)">
 	<dc:source>
 		<xsl:attribute name="rdf:resource">
 			<xsl:choose>
@@ -308,6 +309,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 			</xsl:choose>    
 		</xsl:attribute>
 	</dc:source>
+	</xsl:if>
 												<!-- dc:title -->	
 
 	<xsl:if test="record/metadata/schede/*/OG">
@@ -345,10 +347,10 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 					<xsl:when test="record/metadata/schede/*/OG/CTG">
 						<xsl:choose>
 							<xsl:when test="record/metadata/schede/*/OG/OGT/OGTT">
-								<xsl:value-of select="concat($ogdn, ' (', record/metadata/schede/*/OG/OGT/OGTD, ' ', record/metadata/schede/*/OG/OGT/OGTT, ', ', record/metadata/schede/*/OG/CTG, ')')" />
+								<xsl:value-of select="concat($ogdn, ' (', record/metadata/schede/*/OG/OGT/OGTD, ' ', record/metadata/schede/*/OG/OGT/OGTT, ', ', string-join(record/metadata/schede/*/OG/CTG,', '), ')')" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="concat($ogdn, ' (', record/metadata/schede/*/OG/OGT/OGTD, ', ', record/metadata/schede/*/OG/CTG, ')')" />
+								<xsl:value-of select="concat($ogdn, ' (', record/metadata/schede/*/OG/OGT/OGTD, ', ', string-join(record/metadata/schede/*/OG/CTG,', '), ')')" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:when>
