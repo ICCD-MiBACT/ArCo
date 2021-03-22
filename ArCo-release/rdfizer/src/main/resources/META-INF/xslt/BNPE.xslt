@@ -138,11 +138,13 @@
 		<xsl:attribute name="rdf:about">
         	<xsl:value-of select="$culturalProperty" />
 		</xsl:attribute>
-		<rdf:type>
-			<xsl:attribute name="rdf:resource">
-				<xsl:value-of select="'https://w3id.org/arco/ontology/arco/PetrologicHeritage'" />
-			</xsl:attribute>
-		</rdf:type>
+		<xsl:if test="$sheetType='BNPE'">
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/arco/PetrologicHeritage'" />
+				</xsl:attribute>
+			</rdf:type>
+		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNPE/SR/SRN">
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
