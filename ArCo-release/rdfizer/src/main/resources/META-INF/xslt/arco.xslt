@@ -136,9 +136,6 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
-			<xsl:when test="record/metadata/schede/MODI/CD/CDM">
-				<xsl:value-of select="concat(arco-fn:urify(record/metadata/schede/*/CD/CDR), arco-fn:urify(record/metadata/schede/*/CD/CDM))" />
-			</xsl:when>
 			<xsl:when test="record/metadata/schede/*/CD/CBC">
 				<xsl:value-of select="record/metadata/schede/*/CD/CBC" />
 			</xsl:when>
@@ -548,7 +545,7 @@
 								</arco-catalogue:hasCatalogueRecordVersionRiT>
 								<arco-catalogue:hasScientificDirector>
 									<xsl:attribute name="rdf:resource">
-                        	        	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+                        	        	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/CM/RSR))" />
 	                            	</xsl:attribute>
 								</arco-catalogue:hasScientificDirector>
 							</xsl:if>
@@ -24500,7 +24497,7 @@
 						</arco-location:hasClericalAdministrativeArea>
 					</xsl:if>
 					<!-- Old Town -->
-					<xsl:if test="record/metadata/schede/*/LC/CST/CSTD">
+					<xsl:if test="record/metadata/schede/*/LC/CST">
 						<arco-location:hasTerritorialArea>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of select="concat($NS, 'OldTown/', arco-fn:urify(record/metadata/schede/*/LC/CST/CSTD))" />
@@ -24508,7 +24505,7 @@
 						</arco-location:hasTerritorialArea>
 					</xsl:if>
 					<!-- Urban Area -->
-					<xsl:if test="record/metadata/schede/*/LC/ZUR/ZURD">
+					<xsl:if test="record/metadata/schede/*/LC/ZUR">
 						<arco-location:hasTerritorialArea>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of select="concat($NS, 'UrbanArea/', arco-fn:urify(record/metadata/schede/*/LC/ZUR/ZURD))" />
@@ -24541,7 +24538,7 @@
 					</rdf:Description>
 				</xsl:if>
 				<!-- Old Town : if any exists -->
-				<xsl:if test="record/metadata/schede/*/LC/CST/CSTD">
+				<xsl:if test="record/metadata/schede/*/LC/CST">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'OldTown/', arco-fn:urify(record/metadata/schede/*/LC/CST/CSTD))" />
@@ -24581,7 +24578,7 @@
 					</rdf:Description>
 				</xsl:if>
 				<!-- Urban area : if any exists -->
-				<xsl:if test="record/metadata/schede/*/LC/ZUR/ZURD">
+				<xsl:if test="record/metadata/schede/*/LC/ZUR">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'UrbanArea/', arco-fn:urify(record/metadata/schede/*/LC/ZUR/ZURD))" />
@@ -28482,7 +28479,6 @@
 				rule #RWS in component.xslt). -->
 			<xsl:variable name="rez" select="normalize-space(record/metadata/schede/*/RV/REZ)" />
 			<xsl:for-each select="record/metadata/schede/*/*/RSE">
-			<xsl:if test="./RSEC">
 				<xsl:variable name="create-rel-work-situation">
 					<xsl:choose>
 						<xsl:when test="(lower-case(normalize-space(./RSER))='è contenuto in' 
@@ -28557,7 +28553,6 @@
 						</rdf:Description>
 					</xsl:if>
 				</xsl:if>
-			</xsl:if>
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/*/RV/ROZ">
 				<xsl:variable name="rel-work" select="arco-fn:related-property(normalize-space(.), '')" />

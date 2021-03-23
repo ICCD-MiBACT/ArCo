@@ -94,6 +94,40 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	<xsl:variable name="cp-name" select="''" />
 	<!-- xsl:variable name="NS"
 		select="'https://w3id.org/arco/resource/'" /-->
+	<xsl:variable name="itemURI">
+	<xsl:choose>
+		<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
+		<xsl:choose>
+			<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
+				<xsl:value-of
+					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/RV/RVE/RVEL)))" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of
+					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
+			</xsl:otherwise>
+		</xsl:choose>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:variable name="accc-space" select="record/metadata/schede/*/AC/ACC/ACCC" />
+			<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
+			<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
+			<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC" />
+			<xsl:variable name="acc-nospace" select="translate($acc-space, ' ', '')" />
+			<xsl:variable name="acc" select="translate($acc-nospace, '/', '_')" />
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
+						<xsl:value-of
+							select="$accc" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of
+							select="$acc" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:otherwise>
+	</xsl:choose>
+	</xsl:variable>
 	<xsl:template name="CamelCase">
 		<xsl:param name="text" />
 		<xsl:choose>
