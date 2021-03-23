@@ -28482,6 +28482,7 @@
 				rule #RWS in component.xslt). -->
 			<xsl:variable name="rez" select="normalize-space(record/metadata/schede/*/RV/REZ)" />
 			<xsl:for-each select="record/metadata/schede/*/*/RSE">
+				<xsl:if test="./RSEC">
 				<xsl:variable name="create-rel-work-situation">
 					<xsl:choose>
 						<xsl:when test="(lower-case(normalize-space(./RSER))='è contenuto in' 
@@ -28523,9 +28524,10 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:variable>
-				<xsl:if test="./* and not(starts-with(lower-case(normalize-space(./RSEC)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSEC)), 'n.r')) and not(lower-case(normalize-space(./RSER))='scheda storica')">
-					<xsl:variable name="related-property" select="arco-fn:related-property(normalize-space(./RSEC), 'foaf')" />
-					<xsl:if test="count($related-property) > 0 and not(./RSER) or $create-rel-work-situation='true'">
+				<xsl:variable name="related-property" select="arco-fn:related-property(normalize-space(./RSEC), 'foaf')" />
+				<xsl:variable name="rels" select="arco-fn:related-property(normalize-space(./RSEC),' ')" />
+				<xsl:for-each select="$rels">
+					<xsl:if test="string-length($rels)>0">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-related-cultural-property-1-', position())" />
@@ -28555,6 +28557,7 @@
 							</xsl:if>
 						</rdf:Description>
 					</xsl:if>
+				</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/*/RV/ROZ">

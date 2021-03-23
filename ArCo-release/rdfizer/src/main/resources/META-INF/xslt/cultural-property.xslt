@@ -277,8 +277,7 @@
 						</xsl:choose>
 						</xsl:for-each>
 					</xsl:if>
-				</xsl:for-each>
-				
+				</xsl:for-each>			
 				<xsl:for-each select="record/metadata/schede/*/RV/ROZ">
 					<xsl:variable name="rel-work" select="arco-fn:related-property(normalize-space(.), '')" />
 					<xsl:if test="count($rel-work) > 0">
