@@ -136,6 +136,9 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
+			<xsl:when test="record/metadata/schede/MODI/CD/CDM">
+				<xsl:value-of select="concat(arco-fn:urify(record/metadata/schede/*/CD/CDR), arco-fn:urify(record/metadata/schede/*/CD/CDM))" />
+			</xsl:when>
 			<xsl:when test="record/metadata/schede/*/CD/CBC">
 				<xsl:value-of select="record/metadata/schede/*/CD/CBC" />
 			</xsl:when>
@@ -24497,7 +24500,7 @@
 						</arco-location:hasClericalAdministrativeArea>
 					</xsl:if>
 					<!-- Old Town -->
-					<xsl:if test="record/metadata/schede/*/LC/CST">
+					<xsl:if test="record/metadata/schede/*/LC/CST/CSTD">
 						<arco-location:hasTerritorialArea>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of select="concat($NS, 'OldTown/', arco-fn:urify(record/metadata/schede/*/LC/CST/CSTD))" />
@@ -24505,7 +24508,7 @@
 						</arco-location:hasTerritorialArea>
 					</xsl:if>
 					<!-- Urban Area -->
-					<xsl:if test="record/metadata/schede/*/LC/ZUR">
+					<xsl:if test="record/metadata/schede/*/LC/ZUR/ZURD">
 						<arco-location:hasTerritorialArea>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of select="concat($NS, 'UrbanArea/', arco-fn:urify(record/metadata/schede/*/LC/ZUR/ZURD))" />
@@ -24538,7 +24541,7 @@
 					</rdf:Description>
 				</xsl:if>
 				<!-- Old Town : if any exists -->
-				<xsl:if test="record/metadata/schede/*/LC/CST">
+				<xsl:if test="record/metadata/schede/*/LC/CST/CSTD">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'OldTown/', arco-fn:urify(record/metadata/schede/*/LC/CST/CSTD))" />
@@ -24578,7 +24581,7 @@
 					</rdf:Description>
 				</xsl:if>
 				<!-- Urban area : if any exists -->
-				<xsl:if test="record/metadata/schede/*/LC/ZUR">
+				<xsl:if test="record/metadata/schede/*/LC/ZUR/ZURD">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'UrbanArea/', arco-fn:urify(record/metadata/schede/*/LC/ZUR/ZURD))" />
