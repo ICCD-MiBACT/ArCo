@@ -2952,13 +2952,13 @@
 							</xsl:attribute>
 						</arco-dd:hasTechnique>
 					</xsl:if>
-					<xsl:if test="./FOTM">
+					<xsl:for-each select="./FOTM"><!-- e.g.ICCD14284441  -->
 						<arco-dd:hasMaterial>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./FOTM)))" />
+								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 							</xsl:attribute>
 						</arco-dd:hasMaterial>
-					</xsl:if>		
+					</xsl:for-each>
 					<xsl:if test="./FOTT or ./FOTG">
 						<arco-core:hasType>
 							<xsl:choose>
@@ -2977,10 +2977,10 @@
 					</xsl:if>
 				</rdf:Description>
 						<!-- Material as individual -->
-				<xsl:if test="./FOTM">
+				<xsl:for-each select="./FOTM">
 					<rdf:Description>
 	 					<xsl:attribute name="rdf:about">
-			            	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./FOTM)))" />
+			            	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 	        	  		</xsl:attribute>
 	 	      			<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -2988,10 +2988,10 @@
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./FOTM)" />
+							<xsl:value-of select="normalize-space(.)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./FOTM)" />
+							<xsl:value-of select="normalize-space(.)" />
 						</l0:name>
 						<arco-dd:isCharacteristicClassifiedBy>
 							<xsl:attribute name="rdf:resource">
@@ -2999,7 +2999,7 @@
 	        		    	</xsl:attribute>
 						</arco-dd:isCharacteristicClassifiedBy>
 					</rdf:Description>
-				</xsl:if>
+				</xsl:for-each>
 									<!-- Technique as individual -->
 				<xsl:if test="./FOTC">
 					<rdf:Description>

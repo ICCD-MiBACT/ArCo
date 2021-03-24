@@ -74,6 +74,9 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
+			<xsl:when test="record/metadata/schede/MODI/CD/CDM">
+				<xsl:value-of select="concat(arco-fn:urify(record/metadata/schede/*/CD/CDR), arco-fn:urify(record/metadata/schede/*/CD/CDM))" />
+			</xsl:when>
 			<xsl:when test="record/metadata/schede/*/CD/CBC">
 				<xsl:value-of select="record/metadata/schede/*/CD/CBC" />
 			</xsl:when>

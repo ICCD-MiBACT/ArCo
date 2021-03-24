@@ -60,6 +60,9 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:when>
+			<xsl:when test="record/metadata/schede/MODI/CD/CDM">
+				<xsl:value-of select="concat(arco-fn:urify(record/metadata/schede/*/CD/CDR), arco-fn:urify(record/metadata/schede/*/CD/CDM))" />
+			</xsl:when>
 					<xsl:when test="record/metadata/schede/*/CD/CBC">
 						<xsl:value-of select="record/metadata/schede/*/CD/CBC" />
 					</xsl:when>
@@ -2066,28 +2069,22 @@
 				<!-- cultural property accessibility -->
 				<xsl:if test="record/metadata/schede/*/LC/ACB">
 					<arco-dd:hasCulturalPropertyAccessibility>
-						<xsl:choose>
-							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='si' or lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='sì'">
-								<xsl:attribute name="rdf:resource">
+						<xsl:attribute name="rdf:resource">
+							<xsl:choose>
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='si' or lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='sì'">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Accessible'" />
-								</xsl:attribute>
-							</xsl:when>
-							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='no'">
-								<xsl:attribute name="rdf:resource">
+								</xsl:when>
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='no'">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Inaccessible'" />
-								</xsl:attribute>
-							</xsl:when>
-							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='in parte'">
-								<xsl:attribute name="rdf:resource">
+								</xsl:when>
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='in parte'">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/PartiallyAccessible'" />
-								</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
+								</xsl:when>
+								<xsl:otherwise>
 									<xsl:value-of select="concat($NS, 'CulturalPropertyAccessibility/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/ACB/ACBA)))" />
-								</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:attribute>
 					</arco-dd:hasCulturalPropertyAccessibility>
 				</xsl:if>
 				<!-- numismatic property counterstamp -->

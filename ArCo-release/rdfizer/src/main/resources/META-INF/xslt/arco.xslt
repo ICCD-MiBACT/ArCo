@@ -24746,21 +24746,22 @@
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/*/LC/ACB">
 				<rdf:Description>
-					<xsl:choose>
-							<xsl:when
-								test="lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='si' or lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='sì'">
+					<xsl:attribute name="rdf:about">
+						<xsl:choose>
+							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='si' or lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='sì'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Accessible'" />
 							</xsl:when>
-							<xsl:when
-								test="lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='no'">
+							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='no'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Inaccessible'" />
 							</xsl:when>
-							<xsl:when
-								test="lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='in parte'">
+							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/LC/ACB/ACBA))='in parte'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/PartiallyAccessible'" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of
-									select="concat($NS, 'CulturalPropertyAccessibility/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/ACB/ACBA)))" />
-								</xsl:attribute>							
+								<xsl:value-of select="concat($NS, 'CulturalPropertyAccessibility/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/ACB/ACBA)))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:attribute>
 					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility" />
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/ACB/ACBA)" />
@@ -24773,8 +24774,6 @@
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/ACB/ACBS)" />
 						</arco-core:note>
 					</xsl:if>
-					</xsl:otherwise>
-						</xsl:choose>
 				</rdf:Description>
 			</xsl:if>
 			<!-- numismatic property counterstamp -->
