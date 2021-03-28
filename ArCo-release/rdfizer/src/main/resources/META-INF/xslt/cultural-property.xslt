@@ -1089,37 +1089,73 @@
 				<!-- inventory -->
 				<xsl:for-each select="record/metadata/schede/*/UB/INV">
 					<xsl:if test="./*">
-						<arco-cd:hasInventory>
-							<xsl:attribute name="rdf:resource">
-		                		<xsl:value-of select="concat($NS, 'Inventory/', $itemURI, '-', position())" />
-		                	</xsl:attribute>
-						</arco-cd:hasInventory>
+						<xsl:choose>
+							<xsl:when test="not(./INVP) or (starts-with(lower-case(normalize-space(./INVP)), 'non accertabile')) or (starts-with(lower-case(normalize-space(./INVP)), 'nr')) or (starts-with(lower-case(normalize-space(./INVP)), 'n.r')) or (starts-with(lower-case(normalize-space(./INVP)), 'intero')) or (starts-with(lower-case(normalize-space(./INVP)), 'intera'))">
+								<arco-cd:hasInventorySituation>
+									<xsl:attribute name="rdf:resource">
+				                		<xsl:value-of select="concat($NS, 'InventorySituation/', $itemURI, '-', position())" />
+		        		        	</xsl:attribute>
+								</arco-cd:hasInventorySituation>
+							</xsl:when>
+							<xsl:otherwise>
+								<arco-core:hasPart>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-', arco-fn:urify(normalize-space(./INVP)))" />
+									</xsl:attribute>
+								</arco-core:hasPart>
+							</xsl:otherwise>	
+						</xsl:choose>
 					</xsl:if>
 				</xsl:for-each>
-				<!-- Estimate for version 2.00 -->
-				<xsl:if test="record/metadata/schede/*/UB/INV/INVS and ($sheetVersion='1.00' or $sheetVersion='1.00_ICCD0' or $sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')">
+				<xsl:if test="record/metadata/schede/*/UB/INP">
+					<xsl:if test="record/metadata/schede/*/UB/INP/*">
+						<arco-cd:hasInventorySituation>
+							<xsl:attribute name="rdf:resource">
+		                		<xsl:value-of select="concat($NS, 'InventorySistuation/', $itemURI, '-current')" />
+		                	</xsl:attribute>
+						</arco-cd:hasInventorySituation>
+					</xsl:if>
+					<xsl:if test="record/metadata/schede/*/UB/INP/INPC">
+						<arco-cd:inventoryIdentifier>
+		                	<xsl:value-of select="normalize-space(record/metadata/schede/*/UB/INP/INPC)" />
+						</arco-cd:inventoryIdentifier>
+					</xsl:if>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/UB/INP/INPA  and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/INP/INPA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/INP/INPA)), 'n.r')))">
 					<arco-cd:hasEstimate>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'CulturalPropertyEstimate/', $itemURI)" />
+							<xsl:value-of select="concat($NS, 'Estimate/', $itemURI)" />
 						</xsl:attribute>
 					</arco-cd:hasEstimate>
 				</xsl:if>
-				<xsl:for-each select="record/metadata/schede/*/UB/STI">
-					<arco-cd:hasEstimate>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'CulturalPropertyEstimate/', $itemURI, '-', position())" />
-						</xsl:attribute>
-					</arco-cd:hasEstimate>
-				</xsl:for-each>
+				<!-- Estimate for version 2.00 -->
+				<xsl:if test="$sheetVersion='1.00' or $sheetVersion='1.00_ICCD0' or $sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'">
+					<xsl:for-each select="record/metadata/schede/*/UB/INV/INVS">
+						<arco-cd:hasEstimate>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Estimate/', $itemURI, '-', position())" />
+							</xsl:attribute>
+						</arco-cd:hasEstimate>
+					</xsl:for-each>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/UB/STI">
+					<xsl:for-each select="record/metadata/schede/*/UB/STI">
+						<arco-cd:hasEstimate>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Estimate/', $itemURI, '-', position())" />
+							</xsl:attribute>
+						</arco-cd:hasEstimate>
+					</xsl:for-each>
+				</xsl:if>
 				<xsl:for-each select="record/metadata/schede/*/UB/COL">
 					<xsl:if test="./COLV and (not(starts-with(lower-case(normalize-space(./COLV)), 'nr')) and not(starts-with(lower-case(normalize-space(./COLV)), 'n.r')))">
 						<arco-cd:hasEstimate>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'CulturalPropertyEstimate/', $itemURI, '-', position())" />
+								<xsl:value-of select="concat($NS, 'Estimate/', $itemURI, '-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasEstimate>
 					</xsl:if>
-				</xsl:for-each>
+				</xsl:for-each>			
 				<!-- commission -->
 				<xsl:for-each select="record/metadata/schede/*/AU/CMM">
 					<arco-cd:hasCommission>

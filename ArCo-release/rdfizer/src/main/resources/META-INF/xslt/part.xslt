@@ -539,6 +539,95 @@
 		</xsl:if>
 		</xsl:for-each>	
 		
+			<!-- inventory -->
+			<xsl:for-each select="record/metadata/schede/*/UB/INV">
+				<xsl:if test="./INVP and not((starts-with(lower-case(normalize-space(./INVP)), 'non accertabile')) or (starts-with(lower-case(normalize-space(./INVP)), 'nr')) or (starts-with(lower-case(normalize-space(./INVP)), 'n.r')) or (starts-with(lower-case(normalize-space(./INVP)), 'intero')) or (starts-with(lower-case(normalize-space(./INVP)), 'intera')))">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-', arco-fn:urify(normalize-space(./INVP)))" />
+						</xsl:attribute>
+						<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./INVP)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./INVP)" />
+						</l0:name>
+						<arco-cd:hasInventorySituation>
+							<xsl:attribute name="rdf:resource">
+		                		<xsl:value-of select="concat($NS, 'InventorySituation/', $itemURI, '-', arco-fn:urify(normalize-space(./INVP)))" />
+	        		        </xsl:attribute>
+						</arco-cd:hasInventorySituation>
+					</rdf:Description>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+		            		<xsl:value-of select="concat($NS, 'InventorySituation/', $itemURI, '-', arco-fn:urify(normalize-space(./INVP)))" />
+		            	</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+                            	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InventorySituation'" />
+                        	</xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat('Situazione inventariale del bene: ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of select="concat('Situazione inventariale del bene: ', $itemURI)" />
+						</l0:name>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Inventory situation of cultural property: ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:value-of select="concat('Inventory situation of cultural property: ', $itemURI)" />
+						</l0:name>
+						<xsl:if test="./INVS and not($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')">
+							<arco-core:note>
+								<xsl:value-of select="normalize-space(./INVS)" />
+							</arco-core:note>
+						</xsl:if>
+						<xsl:if test="./INVN and (not(starts-with(lower-case(normalize-space(./INVN)), 'nr')) and not(starts-with(lower-case(normalize-space(./INVN)), 'n.r')))"></xsl:if>
+						<arco-cd:inventoryIdentifier>
+							<xsl:value-of select="normalize-space(./INVN)" />
+						</arco-cd:inventoryIdentifier>
+						<!-- inventory -->
+						<xsl:if test="./INVA and (not(starts-with(lower-case(normalize-space(./INVA)), 'nr')) and not(starts-with(lower-case(normalize-space(./INVA)), 'n.r')))">
+							<arco-cd:hasInventory>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of select="concat($NS, 'Inventory/', arco-fn:urify(normalize-space(./INVA)))" />
+                        		</xsl:attribute>
+							</arco-cd:hasInventory>
+						</xsl:if>
+					</rdf:Description>
+					<xsl:if test="./INVA and (not(starts-with(lower-case(normalize-space(./INVA)), 'nr')) and not(starts-with(lower-case(normalize-space(./INVA)), 'n.r')))">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		    	        		<xsl:value-of select="concat($NS, 'Inventory/', arco-fn:urify(normalize-space(./INVA)))" />
+		        	    	</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Inventory'" />
+	                        	</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./INVA)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./INVA)" />
+							</l0:name>
+							<xsl:if test="./INVC and (not(starts-with(lower-case(normalize-space(./INVC)), 'nr')) and not(starts-with(lower-case(normalize-space(./INVC)), 'n.r')))">
+								<arco-cd:inventoryLocation>
+									<xsl:value-of select="normalize-space(./INVC)" />
+								</arco-cd:inventoryLocation>
+							</xsl:if>
+							<xsl:if test="./INVD and (not(starts-with(lower-case(normalize-space(./INVD)), 'nr')) and not(starts-with(lower-case(normalize-space(./INVD)), 'n.r')))">
+								<tiapit:time>
+									<xsl:value-of select="normalize-space(./INVD)" />
+								</tiapit:time>
+							</xsl:if>		
+						</rdf:Description>
+					</xsl:if>
+				</xsl:if>
+			</xsl:for-each>
 
 			
 			
