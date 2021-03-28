@@ -1187,6 +1187,13 @@
 						</arco-cd:hasEdition>
 					</xsl:if>
 				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/PD/EDI">
+					<arco-cd:hasEdition>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Edition/', $itemURI, '-', arco-fn:urify(normalize-space(./EDIT)))" />
+						</xsl:attribute>
+					</arco-cd:hasEdition>
+				</xsl:for-each>
 				<!-- has dating -->
 				<xsl:for-each select="record/metadata/schede/*/DT">
 					<xsl:choose>
