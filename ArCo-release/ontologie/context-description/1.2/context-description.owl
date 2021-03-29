@@ -1094,7 +1094,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla documentazione che riguarda il bene descritto in una scheda di catalogo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a cultural entity to the documentation related to the cutultural entity described in a catalogue record.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to the documentation related to the cultural entity described in a catalogue record.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha documentazione</rdfs:label>
         <rdfs:label xml:lang="en">has documentation</rdfs:label>
@@ -1869,7 +1869,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeriesMembership"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeries"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è serie in&quot;, collega il rapporto tra una serie e un bene fotografico che ne fa parte alla serie stessa.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a photographic series a the cultural entity which belongs to it.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a photographic series to the cultural entity which belongs to it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha serie fotografica</rdfs:label>
         <rdfs:label xml:lang="en">has photographic series</rdfs:label>
@@ -2287,7 +2287,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ResponsibilityType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una responsabilità individuata relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici al tipo di responsabilità (es.: stampatori, ritoccatori, coloritori, ecc.).</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a resposibility relative to some production or disclosure process which characterise photographic artefacts, to its responsibility type (i.e. printers, retouchers).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a responsibility relative to some production or disclosure process which characterize photographic artefacts, to its responsibility type (i.e. printers, retouchers).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha tipo di responsabilità</rdfs:label>
         <rdfs:label xml:lang="en">has responsibility type</rdfs:label>
@@ -3061,7 +3061,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Anomaly"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/PhotoInterpretationRendering"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;anomalia rilevata nel corso dell&apos;indagine tramite fotointerpretazione o fotorestituzione alla relativa indagine.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an anomaly revealed by a photo interepretation rendering to the related survey.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an anomaly revealed by a photo interpretation rendering to the related survey.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is anomaly of</rdfs:label>
         <rdfs:label xml:lang="it">è anomalia di</rdfs:label>
@@ -4865,7 +4865,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ResponsibilityType"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega al tipo di responsabilità (es.: stampatori, ritoccatori, coloritori, ecc.) alla relativa responsabilità individuata relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the esponsibility type (i.e. printers, retouchers) to the related resposibility relative to some production or disclosure process which characterise photographic artefacts.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the responsibility type (i.e. printers, retouchers) to the related responsibility relative to some production or disclosure process which characterize photographic artefacts.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is responsibility type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di responsabilità di</rdfs:label>
@@ -7369,7 +7369,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:comment xml:lang="en">This property represents a uncertain autorship attribution</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">attribuzione incerta di autore o responsabilità</rdfs:label>
-        <rdfs:label xml:lang="en">uncertain authotship attribution</rdfs:label>
+        <rdfs:label xml:lang="en">uncertain authorship attribution</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -8052,12 +8052,6 @@ resource:ArchivalSubseries/museo-civico-romano
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecordSetMembership">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasArchivalRecordSet"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasMemberOfArchivalRecordSet"/>
@@ -9066,7 +9060,7 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         cd:hasDocumentationType resource:DocumentationType/cassetta-dat ;
         cd:hasFormat resource:Format/cassetta-dat ;
         core:hasCategory cd:AttachedDocumentation .</dc:description>
-        <dc:description xml:lang="en">Un esempio d&apos;uso di una delle sottoclassi della classe &apos;Documentazione&apos; è il seguente:
+        <dc:description xml:lang="it">Un esempio d&apos;uso di una delle sottoclassi della classe &apos;Documentazione&apos; è il seguente:
 resource:AudioDocumentation/1200924650-audio-documentation-1
         a   cd:AudioDocumentation ;
         rdfs:label  &quot;Documentazione audio 1 del bene culturale: 1200924650&quot;@it ;
@@ -10196,10 +10190,26 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/PhotographicFonds -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicFonds">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicRecordSet"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/PhotographicRecordSet -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicRecordSet">
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/PhotographicSeries -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicSeries">
-        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicRecordSet"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasPhotoMember"/>
@@ -10242,12 +10252,6 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasPhotographicSeries"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeries"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCollection"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeries"/>
             </owl:Restriction>
@@ -10273,7 +10277,7 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
     <!-- https://w3id.org/arco/ontology/context-description/PhotographicSubseries -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicSubseries">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeries"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicRecordSet"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
@@ -12309,15 +12313,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>
     
 

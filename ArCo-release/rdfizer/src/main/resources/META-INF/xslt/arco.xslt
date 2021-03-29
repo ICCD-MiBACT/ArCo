@@ -15325,7 +15325,7 @@
 								</xsl:choose>
 							</tiapit:time>
 						</xsl:if>
-						<xsl:if test="./UTU/UTUT or ./UTF and (not(starts-with(lower-case(normalize-space(./UTU/UTUT)), 'nr')) and not(starts-with(lower-case(normalize-space(./UTU/UTUT)), 'n.r')) and not(starts-with(lower-case(normalize-space(./UTF)), 'nr')) and not(starts-with(lower-case(normalize-space(./UTF)), 'n.r')))">
+						<xsl:if test="./UTU/UTUF or ./UTF and (not(starts-with(lower-case(normalize-space(./UTU/UTUF)), 'nr')) and not(starts-with(lower-case(normalize-space(./UTU/UTUF)), 'n.r')) and not(starts-with(lower-case(normalize-space(./UTF)), 'nr')) and not(starts-with(lower-case(normalize-space(./UTF)), 'n.r')))">
 							<arco-cd:useFunction>
 								<xsl:choose>
 									<xsl:when test="./UTU/UTUF">
@@ -15487,12 +15487,12 @@
 									<xsl:attribute name="rdf:about">
                                     	<xsl:value-of select="concat($NS, 'UseTypeSpecification/', arco-fn:urify(normalize-space(./UTU/UTUS)))" />
                                 	</xsl:attribute>
-									<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseType" />
+									<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification" />
 									<rdfs:label>
-										<xsl:value-of select="normalize-space(./UTU/UTUT)" />
+										<xsl:value-of select="normalize-space(./UTU/UTUS)" />
 									</rdfs:label>
 									<l0:name>
-										<xsl:value-of select="normalize-space(./UTU/UTUT)" />
+										<xsl:value-of select="normalize-space(./UTU/UTUS)" />
 									</l0:name>
 								</rdf:Description>
 							</xsl:when>

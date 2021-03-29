@@ -717,7 +717,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/ComplexCulturalProperty"/>
-        <rdfs:comment xml:lang="en">Questa proprietà, inversa a &quot;ha componente&quot;, collega una delle parti componenti di un bene culturale complesso al bene complesso stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha componente&quot;, collega una delle parti componenti di un bene culturale complesso al bene complesso stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property, inverse of &quot;has component&quot;, relates a component of a complex cultural property to the complex cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is cultural property component of</rdfs:label>
@@ -2995,7 +2995,7 @@ In this module the following Ontology Design Patterns have been used:
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambito di tutela del MiBAC (archeologico, architettonico e paesaggistico, etnoantropologico, storico artistico), nel quale ricade il bene culturale in esame.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the MiBAC scope of protection (historical artistic, ethoanthropological, architectural landscape, archaeological) of a cultural property.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the MiBAC scope of protection (historical artistic, ethnoanthropological, architectural landscape, archaeological) of a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Ambito di tutela MiBAC</rdfs:label>
         <rdfs:label xml:lang="en">MiBAC Scope of protection</rdfs:label>
@@ -3326,7 +3326,7 @@ In this module the following Ontology Design Patterns have been used:
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una classificazione di un bene fotografico secondo un sistema di classificazione alternativo a Iconclass, che sia comunque riconosciuto e utilizzato a livello nazionale, o preferibilmente internazionale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a photographic entity&apos;s classification accorting to other classification systems as Iconclass. The system has to be recognised and used at national or preferably international level.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a photographic entity&apos;s classification according to other classification systems as Iconclass. The system has to be recognised and used at national or preferably international level.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Classificazione di bene fotografico</rdfs:label>
         <rdfs:label xml:lang="en">Photographic heritage classification</rdfs:label>
