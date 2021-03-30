@@ -327,6 +327,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha tipo di elemento apposto</rdfs:label>
         <rdfs:label xml:lang="en">has affixed element type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEE - Normative di versioni precedenti: DA/STM/STMQ</a-cat:iccdNormTag>
@@ -489,7 +490,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAvailability"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il bene culturale alla sua disponibilità materiale, ovvero se il bene è materialmente disponibile, per esempio per attività di catalogazione, o se non è disponibile (es.: furto, distruzione)</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class relates the cultural property to its availability, that is wheter the cultural property is available or not (e.g.: theft, destruction) for example for cataloguing activities.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class relates the cultural property to its availability, that is whether the cultural property is available or not (e.g.: theft, destruction) for example for cataloguing activities.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha disponibilità materiale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property availability</rdfs:label>
@@ -1245,23 +1246,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalCaracteristicQualification -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCaracteristicQualification">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCaracteristicQualificationOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristicQualification"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una caratteristica tecnica alla sua qualificazione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a technical characteristic to a aqualification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">ha qualificazione di caratteristica tecnica</rdfs:label>
-        <rdfs:label xml:lang="en">has technical caracteristic qualification</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic">
@@ -1455,7 +1439,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/AgeRange"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una modalità comunicativa (prossemica, cinesica) alla fascia d&apos;età delle persone che attuano la comunicazione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a communication medium (proxemics, kinesic) to the age range of the participants to the communication.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a communication medium (proxemics, kinetic) to the age range of the participants to the communication.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">coinvolge fascia d&apos;età</rdfs:label>
         <rdfs:label xml:lang="en">involves age range</rdfs:label>
@@ -1493,6 +1477,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is affixed element type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di elemento apposto</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2402,22 +2387,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalCaracteristicQualificationOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalCaracteristicQualificationOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristicQualification"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una qualificazione a una caratteristica tecnica</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an qualification to a technical characteristic</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">is technical caracteristic qualification of</rdfs:label>
-        <rdfs:label xml:lang="it">è qualificazione di carattestica tecnica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf">
@@ -2947,7 +2916,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero che identifica il campione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the seample collected identifier.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the sample collected identifier.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">identificativo del campione prelevato</rdfs:label>
         <rdfs:label xml:lang="en">sample collected identifier</rdfs:label>
@@ -3150,6 +3119,12 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFontStyle"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
             </owl:Restriction>
@@ -3158,6 +3133,12 @@ In this module the following Ontology Design Patterns have been used:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4431,28 +4412,13 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristicQualification -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristicQualification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la qualificazione di una caratteristica tecnica relativa a un bene culturale</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the qualification of a characteristic of a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Qualificazione di caratteristica tecnica</rdfs:label>
-        <rdfs:label xml:lang="en">Technical characteristic qualification</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalConcept -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-characteristic/"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un concetto tecnico, inteso come tipo particolare di concetto che fornisce una classificazione a una caratteristica tecnica di un&apos;entità, es. un bene culturale. Per esempio, &quot;materia&quot; è un concetto tecnico che può essere utilizzato per classificare la caratteristica tecnica &quot;terracotta&quot; relativa a un bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a technical concept, a particular type of concept that classifies a technical characteristic of an entity, e.g. cultural property. For instance, &quot;material&quot; is a techincal concept that classifies the technical characteristic &quot;pottery&quot; related to a cultural property.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a technical concept, a particular type of concept that classifies a technical characteristic of an entity, e.g. cultural property. For instance, &quot;material&quot; is a technical concept that classifies the technical characteristic &quot;pottery&quot; related to a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">Concetto tecnico</rdfs:label>
         <rdfs:label xml:lang="en">Technical concept</rdfs:label>
@@ -5194,12 +5160,12 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/KinesicCommunication -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/KineticCommunication -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/KinesicCommunication">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/KineticCommunication">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
         <rdfs:label xml:lang="it">Comunicazione cinesica</rdfs:label>
-        <rdfs:label xml:lang="en">Kinesic communication</rdfs:label>
+        <rdfs:label xml:lang="en">Kinetic communication</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5788,14 +5754,14 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/VibratingLenght -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/VibratingLength -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/VibratingLenght">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/VibratingLength">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la lunghezza vibrante di uno strumento, in particolare di un cordofono.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a musical instrument vibrating length, in particular a chordophone.</rdfs:comment>
         <rdfs:label xml:lang="it">Lunghezza vibrante</rdfs:label>
-        <rdfs:label xml:lang="en">Vibrating lenght</rdfs:label>
+        <rdfs:label xml:lang="en">Vibrating length</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAL</a-cat:iccdNormTag>

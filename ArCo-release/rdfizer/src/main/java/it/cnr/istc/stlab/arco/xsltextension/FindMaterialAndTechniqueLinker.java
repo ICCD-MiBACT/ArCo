@@ -56,7 +56,6 @@ public class FindMaterialAndTechniqueLinker extends SKOSThesaurusLinker implemen
 		} catch (IOException e2) {
 			indexPath = Paths.get(INDEX_PATH);
 		} 
-		
 		if(!kbManager.modelExists(KB_NAMED_MODEL)) {
 			Model model = ModelFactory.createDefaultModel();
 			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(THESAURUS);
@@ -66,10 +65,7 @@ public class FindMaterialAndTechniqueLinker extends SKOSThesaurusLinker implemen
 			
 			Analyzer analyzer = new ItalianAnalyzer();
 			
-			
 		    try {
-		    	
-				
 			    IndexWriterConfig config = new IndexWriterConfig(analyzer);
 			    IndexWriter iwriter = new IndexWriter(directory, config);
 				
@@ -99,20 +95,11 @@ public class FindMaterialAndTechniqueLinker extends SKOSThesaurusLinker implemen
 				});
 				iwriter.close();
 				
-				
-			    
-				
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-		    
-		    
-		    
-		}	
-		
-		
-		
+		}		
 		DirectoryReader ireader;
 		try {
 			if(directory == null) directory = FSDirectory.open(indexPath);
@@ -122,14 +109,10 @@ public class FindMaterialAndTechniqueLinker extends SKOSThesaurusLinker implemen
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-	    
-	    
-	}
-	
+	}	
 	
 	public static FindMaterialAndTechniqueLinker getInstance(){
-		if(instance == null){
+		if(instance == null){//System.out.println("FindMaterialAndTechnique getInstance");
 			instance = new FindMaterialAndTechniqueLinker();
 		}
 		return instance;
@@ -143,20 +126,17 @@ public class FindMaterialAndTechniqueLinker extends SKOSThesaurusLinker implemen
 		
 		String ret = "";
 	    try {
-			Query query = parser.parse(QueryParserBase.escape(arg));
-			System.out.println(isearcher);
+			Query query = parser.parse(QueryParserBase.escape(arg)); // System.out.println(isearcher);
 			ScoreDoc[] hits = isearcher.search(query, 10).scoreDocs;
 			if(hits.length > 0) {
 				Document hitDoc = isearcher.doc(hits[0].doc);
 				ret = hitDoc.getField("id").stringValue();
 			}
-				
-		    
+					    
 		} catch (ParseException | IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-	    
+		}	    
 		return new XdmAtomicValue(ret);
 	}
 

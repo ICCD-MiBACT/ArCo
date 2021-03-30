@@ -27,11 +27,14 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
+			<xsl:when test="record/metadata/schede/MODI/CD/CDM">
+				<xsl:value-of select="concat(arco-fn:urify(record/metadata/schede/*/CD/CDR), arco-fn:urify(record/metadata/schede/*/CD/CDM))" />
+			</xsl:when>
 			<xsl:when test="record/metadata/schede/*/CD/CBC">
 				<xsl:value-of select="record/metadata/schede/*/CD/CBC" />
 			</xsl:when>
 			<xsl:otherwise>
-			<xsl:variable name="accc-space" />
+			<xsl:variable name="accc-space" >
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
 						<xsl:value-of select="record/metadata/schede/*/AC/ACC[1]/ACCC" />
@@ -40,6 +43,7 @@
 						<xsl:value-of select="record/metadata/schede/*/CD/ACC[1]/ACCC" />
 					</xsl:otherwise>
 				</xsl:choose>
+			</xsl:variable>
 			<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
 			<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
 			<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC[1]" />
@@ -476,8 +480,8 @@
 				<xsl:value-of select="concat($tmp-label, $author-string-en, $cultural-context, $date-string)" />
 			</rdfs:label>
 		</xsl:if>
-		<!-- PST or SI -->
-		<xsl:if test="$sheetType='PST' or $sheetType='SI'">
+		<!-- PST -->
+		<xsl:if test="$sheetType='PST'">
 			<xsl:variable name="ogtn">
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/*/OG/OGT/OGTN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTN)), 'n.r')))">
@@ -515,6 +519,45 @@
 				<xsl:value-of select="concat($tmp-label, $author-string-en, $cultural-context, $date-string)" />
 			</rdfs:label>
 		</xsl:if>
+			<!-- SI -->
+			<xsl:if test="$sheetType='SI'">
+				<xsl:variable name="ogtn">
+					<xsl:choose>
+						<xsl:when test="record/metadata/schede/*/OG/OGT/OGTN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTN)), 'n.r')))">
+							<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/OG/OGT/OGTN), ' (')" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="''" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+				<xsl:variable name="ogtt">
+					<xsl:choose>
+						<xsl:when test="record/metadata/schede/*/OG/OGT/OGTT and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTT)), 'n.r')))">
+							<xsl:value-of select="concat(', ', normalize-space(record/metadata/schede/*/OG/OGT/OGTT))" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="''" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+				<xsl:variable name="tmp-label">
+					<xsl:choose>
+						<xsl:when test="record/metadata/schede/*/OG/OGT/OGTN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTN)), 'n.r')))">
+							<xsl:value-of select="concat($ogtn, normalize-space(record/metadata/schede/*/OG/OGT/OGTD), $ogtt, ')')" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/OG/OGT/OGTD), $ogtt)" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+				<rdfs:label xml:lang="it">	
+					<xsl:value-of select="concat($tmp-label, ' - ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
+				</rdfs:label>
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat($tmp-label, ' - ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
+				</rdfs:label>
+			</xsl:if>
 		<!-- RA -->
 		<xsl:if test="$sheetType='RA'">
 			<xsl:variable name="ogtt">
@@ -702,10 +745,10 @@
 				</xsl:choose>
 			</xsl:variable>
 			<rdfs:label xml:lang="it">				
-				<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
+					<xsl:value-of select="concat($tmp-label, ' - ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
 			</rdfs:label>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat($tmp-label, $author-string-en, $cultural-context, $date-string)" />
+					<xsl:value-of select="concat($tmp-label, ' - ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
 			</rdfs:label>
 		</xsl:if>
 		<!-- AT -->
@@ -959,10 +1002,10 @@
 						</xsl:choose>
 					</xsl:variable>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat($tmp-label, ' ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
+							<xsl:value-of select="concat($tmp-label, ' - ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
 					</rdfs:label>
 					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat($tmp-label, ' ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
+							<xsl:value-of select="concat($tmp-label, ' - ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
 					</rdfs:label>
 				</xsl:when>
 				<xsl:otherwise>
@@ -1029,10 +1072,10 @@
 				<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/OG/OGT/OGTN), ' (', normalize-space(record/metadata/schede/*/OG/OGT/OGTD), $ogtq, ')', $ogad)" />
 			</xsl:variable>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
+					<xsl:value-of select="concat($tmp-label, ' - ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
 			</rdfs:label>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat($tmp-label, $author-string-en, $cultural-context, $date-string)" />
+					<xsl:value-of select="concat($tmp-label, ' - ', record/metadata/schede/*/LC/PVC/PVCC, ' (', record/metadata/schede/*/LC/PVC/PVCP, ') ', $date-string)" />
 			</rdfs:label>
 		</xsl:if>
 		<!-- BDI -->

@@ -2910,8 +2910,8 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/producesTaxon"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Taxon"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/TypeSpecimenIdentification"/>
-        <rdfs:comment xml:lang="it">Questa porprietà collega il taxon all&apos;identificazione del tipo nomenclaturale che lo ha prodotto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This porperty relates a taxon to the Type specimen identification which produces it</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa poprietà collega il taxon all&apos;identificazione del tipo nomenclaturale che lo ha prodotto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a taxon to the Type specimen identification which produces it</rdfs:comment>
         <rdfs:label xml:lang="en">is taxon produced by</rdfs:label>
         <rdfs:label xml:lang="it">è taxon prodotto da</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3041,8 +3041,8 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/producesTaxon">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/TypeSpecimenIdentification"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Taxon"/>
-        <rdfs:comment xml:lang="it">Questa porprietà collega l&apos;identificazione del tipo nomenclaturale al taxon prodotto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This porperty relates a Type specimen identification to the taxon it produces</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa poprietà collega l&apos;identificazione del tipo nomenclaturale al taxon prodotto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a Type specimen identification to the taxon it produces</rdfs:comment>
         <rdfs:label xml:lang="it">produce taxon</rdfs:label>
         <rdfs:label xml:lang="en">produces taxon</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3210,8 +3210,8 @@ In this module the following Ontology Design Patterns have been used:
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/genusNumber">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalGenus"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa porprietà rappresenta il numero del genere (secondo lo schema sistematico di riferimento)</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the genus number (according to the referenced axonomy)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa poprietà rappresenta il numero del genere (secondo lo schema sistematico di riferimento)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the genus number (according to the referenced taxonomy)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">genus number</rdfs:label>
         <rdfs:label xml:lang="it">numero del genere</rdfs:label>
@@ -3297,7 +3297,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="it">Questa proprietà indica la presenza di riflessi interni</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property indicates the presence of internal reflecion</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the presence of internal reflection</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">internal reflection</rdfs:label>
         <rdfs:label xml:lang="it">riflesso interno</rdfs:label>
@@ -3356,23 +3356,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMS/SMSK</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/numberOfEnvelopes -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/numberOfEnvelopes">
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di buste che contengono il campione o sue parti se conservate assieme al campione, e non in collezioni ancillari</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the numebr of envelopes, containing the specimen or its parts, if they are preserved with the specimen itself and not in ancillar collections</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/movable-property</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">numbers of envelopes</rdfs:label>
-        <rdfs:label xml:lang="it">numero di buste</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPB</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4659,7 +4642,7 @@ In this module the following Ontology Design Patterns have been used:
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l idrodinamismo del luogo in cui il campione è stato raccolto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the fluid dynamis when the specimenwas collected</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the fluid dynamism when the specimenwas collected</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">Fluid dynamism</rdfs:label>
         <rdfs:label xml:lang="it">Idrodinamismo</rdfs:label>
@@ -5808,7 +5791,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la pseudomorfosi di un cristallo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the pseudomorphosis of a crystall.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the pseudomorphosis of a crystal.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="it">Pseudomorfosi</rdfs:label>
         <rdfs:label xml:lang="en">Pseudomorphosis</rdfs:label>
@@ -5906,7 +5889,7 @@ In this module the following Ontology Design Patterns have been used:
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il reperto appartenente alle collezioni ancillari</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a sample belonging to ancillar collections</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a sample belonging to ancillary collections</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="it">Reperto di collezione ancillare</rdfs:label>
         <rdfs:label xml:lang="en">Sample</rdfs:label>
@@ -6150,9 +6133,8 @@ In this module the following Ontology Design Patterns have been used:
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Questa classe rappresenta un insieme di parti che racchiudono i campioni,
-come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a collection of parts (as boxes, binders,bags, packages), containing specimens.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="it">Campione</rdfs:label>
         <rdfs:label xml:lang="en">Specimen</rdfs:label>
@@ -6684,8 +6666,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Bireflectance">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="it">BireflectanceV</rdfs:label>
-        <rdfs:label xml:lang="en">Biriflettanza</rdfs:label>
+        <rdfs:label xml:lang="en">Bireflectance</rdfs:label>
+        <rdfs:label xml:lang="it">Biriflettanza</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMB</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -6772,7 +6754,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/CrystalSystem">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic"/>
-        <rdfs:label xml:lang="en">Crysal system</rdfs:label>
+        <rdfs:label xml:lang="en">Crystal system</rdfs:label>
         <rdfs:label xml:lang="it">Sistema cristallino</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCS</a-cat:iccdNormTag>
     </owl:NamedIndividual>

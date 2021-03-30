@@ -562,15 +562,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/location/hasGovernamentalAdministrativeArea -->
+    <!-- https://w3id.org/arco/ontology/location/hasGovernmentalAdministrativeArea -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasGovernamentalAdministrativeArea">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasGovernmentalAdministrativeArea">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddressComponent"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isGovernamentalAdministrativeAreaOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isGovernmentalAdministrativeAreaOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/GovernamentalAdministrativeArea"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un indirizzo a un&apos;area di appartenenza amministrativa.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property links an address to a governamental administrative area.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links an address to a governmental administrative area.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="it">ha area di appartenenza amministrativa</rdfs:label>
         <rdfs:label xml:lang="en">has governamental administrative area</rdfs:label>
@@ -1015,7 +1015,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalInstituteOrSite"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un luogo o istituto della cultura (contenitore giuridico) al bene culturale</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property links a cultural institute or site to a cultutral property</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links a cultural institute or site to a cultural property</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="en">is cultural institute or site of</rdfs:label>
         <rdfs:label xml:lang="it">è luogo o istituto della cultura di</rdfs:label>
@@ -1106,16 +1106,16 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/location/isGovernamentalAdministrativeAreaOf -->
+    <!-- https://w3id.org/arco/ontology/location/isGovernmentalAdministrativeAreaOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isGovernamentalAdministrativeAreaOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isGovernmentalAdministrativeAreaOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/CLV/isAddressComponentOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/GovernamentalAdministrativeArea"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;area di appartenenza amministrativa al suo indirizzo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property links a governamental administrative area to its address.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links a governmental administrative area to its address.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
-        <rdfs:label xml:lang="en">is governamental administrative area of</rdfs:label>
+        <rdfs:label xml:lang="en">is governmental administrative area of</rdfs:label>
         <rdfs:label xml:lang="it">è area di appartenenza amministrativa di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
@@ -1767,7 +1767,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/GeographicalFeature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/isGovernamentalAdministrativeAreaOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/isGovernmentalAdministrativeAreaOf"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
             </owl:Restriction>
         </rdfs:subClassOf>

@@ -2779,7 +2779,7 @@
 	</xsl:for-each>
 		
 						<!-- Type specimen as individual -->
-	<xsl:if test="record/metadata/schede/BNPL/SP/SPT and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNPL/SP/SRT/SRTT)), 'non tipo'))">
+	<xsl:if test="record/metadata/schede/BNPL/SP/SPT and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNPL/SP/SPT/SPTT)), 'non tipo'))">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI)" />

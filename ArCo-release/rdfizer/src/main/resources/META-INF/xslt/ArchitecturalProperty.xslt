@@ -612,8 +612,8 @@
 		
 								<!-- Foundation as individual -->
 		<xsl:for-each select="record/metadata/schede/A/FN/FNS">
-		<xsl:variable name="fnst" select="normalize-space(./FNST)" />
-		<xsl:variable name="fnsq" select="normalize-space(./FNSQ)" />
+			<xsl:variable name="fnst" select="normalize-space(./FNST)" />
+			<xsl:variable name="fnsq" select="normalize-space(./FNSQ)" />
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
 	        		<xsl:value-of select="concat($NS, 'Foundation/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
@@ -646,7 +646,7 @@
 					<xsl:otherwise>
 						<arco-ip:isFoundationOf>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+								<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./FNSU)))" />
 							</xsl:attribute>
 						</arco-ip:isFoundationOf>
 					</xsl:otherwise>
@@ -658,7 +658,7 @@
 	            			</xsl:attribute>
 	 	                </arco-dd:hasMaterial>
 				</xsl:for-each>
-				<xsl:if test="record/metadata/schede/A/FN/FNA">
+				<xsl:if test="../FNA">
 					<arco-ip:laysOnSoil>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'Soil/', $itemURI)" />
@@ -784,7 +784,8 @@
 			</rdf:Description>
 			</xsl:if>
 		</xsl:for-each>
-		<xsl:if test="record/metadata/schede/A/FN/FNA">
+		
+		<xsl:if test="record/metadata/schede/A/FN[FNA and FNS]">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about"> 			
 	 				<xsl:value-of select="concat($NS, 'Soil/', $itemURI)" />
@@ -810,8 +811,7 @@
 					<xsl:value-of select="record/metadata/schede/A/FN/FNA" />
 				</arco-core:description>
 			</rdf:Description>
-		</xsl:if>
-		
+		</xsl:if>		
 								<!-- Vertical Element as individual -->
 		<xsl:for-each select="record/metadata/schede/A/SV/SVC">
 		<xsl:variable name="svcc" select="normalize-space(./SVCC)" />

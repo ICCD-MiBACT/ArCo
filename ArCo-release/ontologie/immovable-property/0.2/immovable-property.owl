@@ -981,7 +981,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalConnection"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di rampe di una connessione verticale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the numbero of flights of a vertical connection.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of flights of a vertical connection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">number of flights</rdfs:label>
         <rdfs:label xml:lang="it">numero delle rampe</rdfs:label>
@@ -1067,7 +1067,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di stanze di un edificio.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the numbero of rooms of a building.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of rooms of a building.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">numbero of rooms</rdfs:label>
         <rdfs:label xml:lang="it">numero di stanze</rdfs:label>

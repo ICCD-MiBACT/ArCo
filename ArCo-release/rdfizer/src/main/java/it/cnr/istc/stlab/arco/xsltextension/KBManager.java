@@ -37,12 +37,13 @@ public class KBManager {
 	
 	private void init() {
 		dataset = TDBFactory.createDataset("ArCo-KB");
-	}
+	}	
 	
-	
-	public static KBManager getInstance() {
-		if(singleton == null) singleton = new KBManager();
-		singleton.init();
+	public static synchronized KBManager getInstance() {
+		if (singleton == null) { //System.out.println("KBManager getInstance");
+			singleton = new KBManager();
+			singleton.init();
+		}
 		return singleton;
 	}
 }

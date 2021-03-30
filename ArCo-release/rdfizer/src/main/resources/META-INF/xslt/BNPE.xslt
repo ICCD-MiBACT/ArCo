@@ -92,7 +92,7 @@
 <xsl:template match="/">
 	<rdf:RDF>
 	<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
-	<xsl:if test="not($sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB')" >
+	<xsl:if test="$sheetType='BNPE'" >
 		<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version" />
 		<xsl:variable name="cp-name" select="''" />
 		<xsl:variable name="itemURI">

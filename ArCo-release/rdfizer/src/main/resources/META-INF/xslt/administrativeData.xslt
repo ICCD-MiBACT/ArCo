@@ -82,7 +82,7 @@
 	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
 	xmlns:ar-CISNameInTime="https://w3id.org/arco/resource/CISNameInTime/"
 	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
-xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 
 	<xsl:param name="item" />
 	<xsl:param name="NS" />

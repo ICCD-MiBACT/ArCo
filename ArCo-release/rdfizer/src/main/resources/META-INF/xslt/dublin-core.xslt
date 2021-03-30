@@ -81,7 +81,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 				<xsl:value-of select="record/metadata/schede/*/CD/CBC" />
 			</xsl:when>
 			<xsl:otherwise>
-			<xsl:variable name="accc-space" />
+			<xsl:variable name="accc-space" >
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
 						<xsl:value-of select="record/metadata/schede/*/AC/ACC[1]/ACCC" />
@@ -90,6 +90,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 						<xsl:value-of select="record/metadata/schede/*/CD/ACC[1]/ACCC" />
 					</xsl:otherwise>
 				</xsl:choose>
+			</xsl:variable>
 			<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
 			<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
 			<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC[1]" />
@@ -300,16 +301,23 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 	<xsl:if test="string-length($SOURCE)">
 	<dc:source>
 		<xsl:attribute name="rdf:resource">
-			<xsl:choose>
-				<xsl:when test="contains($SOURCE,'$(')">
-					<xsl:call-template name="sourceParser">
-						<xsl:with-param name="itemURI" select="$itemURI"/>
-					</xsl:call-template>
-				</xsl:when>	
-				<xsl:otherwise>
-					<xsl:value-of select="concat($SOURCE, $item)" />
-				</xsl:otherwise>
-			</xsl:choose>    
+		    <xsl:choose>
+		    	<xsl:when test="$sheetType='MODI'">
+					<xsl:value-of select="concat('http://catalogo-old.beniculturali.it/oaitarget/OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=oai:oaicat.iccd.org:@',$item,'@/xml/altre_normative')" />
+		    	</xsl:when>
+		    	<xsl:otherwise>
+					<xsl:choose>
+						<xsl:when test="contains($SOURCE,'$(')">
+							<xsl:call-template name="sourceParser">
+								<xsl:with-param name="itemURI" select="$itemURI"/>
+							</xsl:call-template>
+						</xsl:when>	
+						<xsl:otherwise>
+							<xsl:value-of select="concat($SOURCE, $item)" />
+						</xsl:otherwise>
+					</xsl:choose>    
+		    	</xsl:otherwise>
+			</xsl:choose>
 		</xsl:attribute>
 	</dc:source>
 	</xsl:if>

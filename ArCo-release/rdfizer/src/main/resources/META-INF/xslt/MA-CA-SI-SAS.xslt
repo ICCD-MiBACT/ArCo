@@ -339,7 +339,7 @@
 					<xsl:otherwise>
 						<arco-ip:isFoundationOf>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+								<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./FNSP)))" />
 							</xsl:attribute>
 						</arco-ip:isFoundationOf>
 					</xsl:otherwise>

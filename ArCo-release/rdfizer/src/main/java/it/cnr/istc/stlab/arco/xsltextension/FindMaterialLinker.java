@@ -55,8 +55,7 @@ public class FindMaterialLinker extends SKOSThesaurusLinker implements Extension
 			directory = FSDirectory.open(indexPath);
 		} catch (IOException e2) {
 			indexPath = Paths.get(INDEX_PATH);
-		} 
-		
+		}		
 		if(!kbManager.modelExists(KB_NAMED_MODEL)) {
 			Model model = ModelFactory.createDefaultModel();
 			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(THESAURUS);
@@ -66,10 +65,7 @@ public class FindMaterialLinker extends SKOSThesaurusLinker implements Extension
 			
 			Analyzer analyzer = new ItalianAnalyzer();
 			
-			
 		    try {
-		    	
-				
 			    IndexWriterConfig config = new IndexWriterConfig(analyzer);
 			    IndexWriter iwriter = new IndexWriter(directory, config);
 				
@@ -99,20 +95,11 @@ public class FindMaterialLinker extends SKOSThesaurusLinker implements Extension
 				});
 				iwriter.close();
 				
-				
-			    
-				
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-		    
-		    
-		    
 		}	
-		
-		
-		
 		DirectoryReader ireader;
 		try {
 			if(directory == null) directory = FSDirectory.open(indexPath);
@@ -122,14 +109,10 @@ public class FindMaterialLinker extends SKOSThesaurusLinker implements Extension
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-	    
-	    
 	}
 	
-	
 	public static FindMaterialLinker getInstance(){
-		if(instance == null){
+		if(instance == null){//System.out.println("FindMaterial getInstance");
 			instance = new FindMaterialLinker();
 		}
 		return instance;
@@ -142,21 +125,18 @@ public class FindMaterialLinker extends SKOSThesaurusLinker implements Extension
 		QueryParser parser = new QueryParser("label", new ItalianAnalyzer());
 		
 		String ret = "";
-	    try {
-	    	
+	    try {	    	
 			Query query = parser.parse(QueryParserBase.escape(arg));
 			ScoreDoc[] hits = isearcher.search(query, 10).scoreDocs;
 			if(hits.length > 0) {
 				Document hitDoc = isearcher.doc(hits[0].doc);
 				ret = hitDoc.getField("id").stringValue();
 			}
-				
 		    
 		} catch (ParseException | IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-	    
+		}	    
 		return new XdmAtomicValue(ret);
 	}
 
