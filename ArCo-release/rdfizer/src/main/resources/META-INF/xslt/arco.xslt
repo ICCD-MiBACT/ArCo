@@ -507,18 +507,18 @@
                         </xsl:attribute>
 					</arco-catalogue:isCatalogueRecordVersionOf>
 					<!-- Catalogue record version Role in Time -->
-					<xsl:if test="record/metadata/schede/*/CM/RVM/RVMN">
+					<xsl:for-each select="record/metadata/schede/*/CM/RVM/RVMN[not(starts-with(lower-case(normalize-space(.)), 'nr') or starts-with(lower-case(normalize-space(.)), 'n.r'))]">
 						<arco-catalogue:hasCatalogueRecordVersionRiT>
 							<xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-rvm-', arco-fn:arcofy(record/metadata/schede/*/CM/RVM/RVMN))" />
+                                <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-rvm-', arco-fn:arcofy(.))" />
                             </xsl:attribute>
 						</arco-catalogue:hasCatalogueRecordVersionRiT>
 						<arco-catalogue:hasDigitalTranscriptionOperator>
 							<xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/CM/RVM/RVMN))" />
+                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
                             </xsl:attribute>
 						</arco-catalogue:hasDigitalTranscriptionOperator>
-					</xsl:if>
+					</xsl:for-each>
 					<!-- Catalogue record version Role in Time -->
 					<xsl:if test="record/metadata/schede/*/CM/RVM/RVME">
 						<arco-catalogue:hasCatalogueRecordVersionRiT>
@@ -1218,10 +1218,10 @@
 				</rdf:Description>
 			</xsl:if>
 			<!-- Participant role - RVMN -->
-			<xsl:if test="record/metadata/schede/*/CM/RVM/RVMN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CM/RVM/RVMN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CM/RVM/RVMN)), 'n.r')))">
+			<xsl:for-each select="record/metadata/schede/*/CM/RVM/RVMN[not(starts-with(lower-case(normalize-space(.)), 'nr') or starts-with(lower-case(normalize-space(.)), 'n.r'))]">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-rvm-', arco-fn:arcofy(record/metadata/schede/*/CM/RVM/RVMN))" />
+                        <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-rvm-', arco-fn:arcofy(.))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -1229,10 +1229,10 @@
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat(record/metadata/schede/*/CM/RVM/@hint, ' da ', normalize-space(record/metadata/schede/*/CM/RVM/RVMN))" />
+						<xsl:value-of select="concat(../@hint, ' da ', normalize-space(.))" />
 					</rdfs:label>
 					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Digital transcription', ' by ', normalize-space(record/metadata/schede/*/CM/RVM/RVMN))" />
+						<xsl:value-of select="concat('Digital transcription', ' by ', normalize-space(.))" />
 					</rdfs:label>
 					<roapit:withRole>
 						<xsl:attribute name="rdf:resource">
@@ -1241,14 +1241,14 @@
 					</roapit:withRole>
 					<roapit:isRoleInTimeOf>
 						<xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/CM/RVM/RVMN))" />
+                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
                         </xsl:attribute>
 					</roapit:isRoleInTimeOf>
 				</rdf:Description>
 				<!-- digital transcription agent -->
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/CM/RVM/RVMN))" />
+                        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -1256,7 +1256,7 @@
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/CM/RVM/RVMN)" />
+						<xsl:value-of select="normalize-space(.)" />
 					</rdfs:label>
 				</rdf:Description>
 				<!-- digital transcription operator role -->
@@ -1276,7 +1276,7 @@
 						<xsl:value-of select="'Operatore della trascrizione per informatizzazione'" />
 					</rdfs:label>
 				</rdf:Description>
-			</xsl:if>
+			</xsl:for-each>
 			
 			<!-- Related Classes in cultural-property.xslt as individual -->
 			<!-- Subject as an individual -->
