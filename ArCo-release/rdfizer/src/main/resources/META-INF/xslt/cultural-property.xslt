@@ -85,7 +85,16 @@
 					<!-- variable culturalPropertyComponent -->	
 	<xsl:variable name="culturalPropertyComponent" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />
 					<!-- variable culturalProperty -->	
-	<xsl:variable name="culturalProperty" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+	<xsl:variable name="culturalProperty">
+		<xsl:choose>
+			<xsl:when test="$sheetType='MODI'">
+				<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)), '/', $itemURI)" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
 	<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version"></xsl:variable>
 	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)"></xsl:variable>
 	<xsl:variable name="cp-name" select="''"></xsl:variable>
@@ -3385,17 +3394,38 @@
 			<!-- Property related to cultural property -->
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-                    <xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+					<xsl:choose>
+						<xsl:when test="$sheetType='MODI'">
+							<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)), '/', $itemURI)" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+						</xsl:otherwise>
+					</xsl:choose>
                 </xsl:attribute>
-				<rdf:type>
+                <rdf:type>
 					<xsl:attribute name="rdf:resource">
-                        <xsl:value-of select="arco-fn:getPropertyType($sheetType)" />
+						 <xsl:choose>
+							<xsl:when test="$sheetType='MODI'">
+								<xsl:value-of select="arco-fn:getPropertyType(record/metadata/schede/MODI/OG/AMB)" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="arco-fn:getPropertyType($sheetType)" />
+							</xsl:otherwise>
+						</xsl:choose>
                     </xsl:attribute>
 				</rdf:type>
 				<!-- rdf:type of cultural property -->
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-                        <xsl:value-of select="arco-fn:getSpecificPropertyType($sheetType)" />
+                        <xsl:choose>
+							<xsl:when test="$sheetType='MODI'">
+								<xsl:value-of select="arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="arco-fn:getSpecificPropertyType($sheetType)" />
+							</xsl:otherwise>
+						</xsl:choose>
                     </xsl:attribute>
 				</rdf:type>
 				<!-- rdfs:comment of cultural property -->

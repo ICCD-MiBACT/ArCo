@@ -69,7 +69,14 @@
 	<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version"></xsl:variable>
 	<xsl:variable name="cp-name" select="''"></xsl:variable>       
 	<xsl:variable name="culturalProperty">
-		<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+		<xsl:choose>
+			<xsl:when test="$sheetType='MODI'">
+				<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)), '/', $itemURI)" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:variable>       		
 								<!-- variable ogtt -->
 	<xsl:variable name="ogtt">

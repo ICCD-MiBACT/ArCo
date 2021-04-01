@@ -548,7 +548,7 @@
 								</arco-catalogue:hasCatalogueRecordVersionRiT>
 								<arco-catalogue:hasScientificDirector>
 									<xsl:attribute name="rdf:resource">
-                        	        	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/CM/RSR))" />
+                        	        	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 	                            	</xsl:attribute>
 								</arco-catalogue:hasScientificDirector>
 							</xsl:if>
@@ -572,6 +572,7 @@
 				</rdf:Description>
 			</xsl:if>
 			<!-- Referente verifica scientifica -->
+			<xsl:if test="record/metadata/schede/*/CM/RSR">
 			<xsl:for-each select="record/metadata/schede/*/CM/RSR">
 				<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 					<rdf:Description>
@@ -633,6 +634,7 @@
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
+			</xsl:if>
 			<!-- Catalogue record version AGG and individuals-->
 			<xsl:for-each select="record/metadata/schede/*/CM/AGG">
 				<!-- Catalogue record version as individual -->
