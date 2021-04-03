@@ -1907,8 +1907,8 @@
 						</clvapit:hasGeometry>
 					</xsl:if>
 				</xsl:for-each>
-				<!-- Geometry for geocoding -->
-				<xsl:if test="record/metadata/schede/harvesting/geocoding/*">
+				<!-- Geometry for puntoPrincipale -->
+				<xsl:if test="record/metadata/schede/harvesting/puntoPrincipale/*">
 					<clvapit:hasGeometry>
 						<xsl:attribute name="rdf:resource">
 			                <xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-point')" />

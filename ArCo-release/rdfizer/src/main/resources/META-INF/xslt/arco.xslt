@@ -18620,8 +18620,8 @@
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
-			<!-- Geometry of cultural property as an individual for geocoding -->
-			<xsl:if test="record/metadata/schede/harvesting/geocoding/*">
+			<!-- Geometry of cultural property as an individual for puntoPrincipale -->
+			<xsl:if test="record/metadata/schede/harvesting/puntoPrincipale/*">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
             			<xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-point')" />
@@ -18658,7 +18658,7 @@
 					<clvapit:serialization rdf:datatype= "http://www.openlinksw.com/schemas/virtrdf#Geometry">
 						<!-- xsl:text disable-output-escaping="yes">&lt;![CDATA[ &lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; </xsl:text-->
 						<xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
-						<xsl:value-of select="normalize-space(concat('POINT(', record/metadata/schede/harvesting/geocoding/x, ' ', record/metadata/schede/harvesting/geocoding/y, ')'))" />
+						<xsl:value-of select="normalize-space(concat('POINT(', record/metadata/schede/harvesting/puntoPrincipale/x, ' ', record/metadata/schede/harvesting/puntoPrincipale/y, ')'))" />
 						<xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
 					</clvapit:serialization>
 					<arco-location:hasCoordinates>
@@ -18668,8 +18668,8 @@
 					</arco-location:hasCoordinates>
 				</rdf:Description>
 			</xsl:if>
-			<!-- geometry coordinates for geocoding as an individual -->
-			<xsl:if test="record/metadata/schede/harvesting/geocoding/*">
+			<!-- geometry coordinates for puntoPrincipale as an individual -->
+			<xsl:if test="record/metadata/schede/harvesting/puntoPrincipale/*">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
     	    	    	<xsl:value-of select="concat($NS, 'Coordinates/', $itemURI, '-geometry-', 'coordinates')" />
@@ -18688,10 +18688,10 @@
 						<xsl:value-of select="concat('Coordinate del bene culturale: ', $itemURI)" />
 					</l0:name>
 					<arco-location:long>
-						<xsl:value-of select="normalize-space(record/metadata/schede/harvesting/geocoding/x)" />
+						<xsl:value-of select="normalize-space(record/metadata/schede/harvesting/puntoPrincipale/x)" />
 					</arco-location:long>
 					<arco-location:lat>
-						<xsl:value-of select="normalize-space(record/metadata/schede/harvesting/geocoding/y)" />
+						<xsl:value-of select="normalize-space(record/metadata/schede/harvesting/puntoPrincipale/y)" />
 					</arco-location:lat>
 				</rdf:Description>
 			</xsl:if>
