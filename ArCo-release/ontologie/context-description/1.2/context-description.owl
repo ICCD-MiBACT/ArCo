@@ -529,14 +529,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAttributedAuthor">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAttributedAuthorIn"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/AlternativeAuthorshipAttribution"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/PreferredAuthorshipAttribution"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui viene attribuito un autore a un bene culturale all&apos;autore stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a situation where an autorship is attributed to a cultural entity&apos;s author.</rdfs:comment>
@@ -563,7 +556,6 @@ In this module the following Ontology Design Patterns have been used:
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega una entità di qualsiasi tipo (documentazione, bene culturale, etc.) con il suo autore.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a entity (i.e. documentation, cultural entity, etc.) to its author.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity to its author.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha autore</rdfs:label>
         <rdfs:label xml:lang="en">has author</rdfs:label>
@@ -1507,6 +1499,14 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isInventorySituationOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una cosa alla situazione inventariale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its inventory situation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha situazione inventariale</rdfs:label>
+        <rdfs:label xml:lang="en">has inventory situation</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">UB/INV; ICCD Normativa Trasversale: UB/INP.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1687,7 +1687,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeriesIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeriesMembership"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è membro di serie&quot;, collega l&apos;appartenenza di un bene fotografico a una serie editoriale al bene fotografico coinvolto nella relazione.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è membro di serie&quot;, collega l&apos;appartenenza di un bene fotografico a una serie editoriale al bene fotografico coinvolto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the membership of a cultural entity (e.g. photographic heritage) to its photographic series. It is the inverse property of &quot;isMemberPhotographicSeries&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha membro di serie fotografica</rdfs:label>
@@ -1706,6 +1706,14 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfPrintingPlatesSeriesOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PrintingPlatesSeriesMembership"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;appartenenza (di un bene culturale a una serie di matrici incise) alla matrice incisa coinvolta nella relazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the membership of a cultural entity to its printing plates series.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha membro di serie di matrici incise</rdfs:label>
+        <rdfs:label xml:lang="en">has member of printing plates series</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa MI: OG/SGT/SGTS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1899,26 +1907,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasPlanningEnvironmentalRelationWith -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPlanningEnvironmentalRelationWith">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isWorkRelatedTo"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, con cui è in relazione urbanistico-ambientale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a cultural entity to another cultural entity, in an planning environmental relation.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha relazione urbanistico-ambientale con</rdfs:label>
-        <rdfs:label xml:lang="en">has planning environmental relation with</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è in relazione urbanistico - ambientale con&apos; (versioni precedenti: &apos;relazione urbanistico ambientale&apos;)</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/hasPreferredAuthor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPreferredAuthor">
@@ -1926,6 +1914,14 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isPreferredAuthorOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una entità di qualsiasi tipo (documentazione, bene culturale, etc.) con il suo autore riconosciuto cime preferito.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity (i.e. documentation, cultural entity, etc.) to its preferred author.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha autore preferito</rdfs:label>
+        <rdfs:label xml:lang="en">has preferred author</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DO/FTA/FTAA, DO/DRA/DRAA, DO/VDC/VDCR, DO/REG/REGA, DO/FNT/FNTA, DO/BIB/BIBA - Normativa S 3: RO/ADL/ADLA - Normative VeAC e AT 3.01: DO/BSE/BSEA - Normativa MI 3.00: AU/DDC/DDCN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2011,6 +2007,13 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPrize">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isPrizeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Competition"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una competizione ad un premio.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a competition to  a prize.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha premio</rdfs:label>
+        <rdfs:label xml:lang="en">has prize</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2325,8 +2328,8 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSECCategoryOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SECCategory"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un inventario patrimoniale alla categoria SEC attribuita al bene.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a current inventory to the patrimonial category attributed to the cultural property based on the SEC classification.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una situazione inventariale alla categoria SEC attribuita al bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a inventory situation to the patrimonial category attributed to the cultural property based on the SEC classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha categoria SEC</rdfs:label>
         <rdfs:label xml:lang="en">has SEC category</rdfs:label>
@@ -2695,6 +2698,26 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/DSC/DSCS</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasUrbanPlanningEnvironmentalRelationWith -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasUrbanPlanningEnvironmentalRelationWith">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isWorkRelatedTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, con cui è in relazione urbanistico-ambientale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to another cultural entity, in an planning environmental relation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha relazione urbanistico-ambientale con</rdfs:label>
+        <rdfs:label xml:lang="en">has urban planning environmental relation with</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è in relazione urbanistico - ambientale con&apos; (versioni precedenti: &apos;relazione urbanistico ambientale&apos;)</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -3199,14 +3222,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAttributedAuthorIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/AlternativeAuthorshipAttribution"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/PreferredAuthorshipAttribution"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha autore attribuito&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has attributed author&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -4081,6 +4097,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la situazione inventariale a una cosa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the inventory situation to an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">ias inventory situation of</rdfs:label>
+        <rdfs:label xml:lang="it">è situazione inventariale di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4319,6 +4342,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfCollectionOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/PrintingPlatesSeriesMembership"/>
+        <rdfs:comment xml:lang="it">Questa proprietà è inversa alla proprietà hasMemebrOfPrintingPlatesSeries.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property is the inverse of hasMemebrOfPrintingPlatesSeries.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is member of printing plates series of</rdfs:label>
+        <rdfs:label xml:lang="it">è membro di serie di matrici incise di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4519,6 +4549,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un agent a una entità di qualsiasi tipo (documentazione, bene culturale, etc.) di cui quell&apos;agente è autore preferito.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an agent to an entity the agent is preferred author of.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is preferrede author of</rdfs:label>
+        <rdfs:label xml:lang="it">è autore preferito di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4596,6 +4633,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isPrizeOf">
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Competition"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un premio a una competizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a prize to a competition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is prize of</rdfs:label>
+        <rdfs:label xml:lang="it">è premio di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4918,6 +4962,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SECCategory"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la categoria SEC attribuita al bene alla situazione inventariale del bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a the patrimonial category attributed to the cultural property based on the SEC classification to the inventory situation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">è categoria SEC di</rdfs:label>
+        <rdfs:label xml:lang="en">is SEC category of</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -8828,7 +8879,7 @@ resource:ArchivalSubseries/museo-civico-romano
     <!-- https://w3id.org/arco/ontology/context-description/CulturalScopeAttribution -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CulturalScopeAttribution">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCulturalScope"/>
@@ -9825,6 +9876,14 @@ resource:Intervention/0800640527-10-intervention-1
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una situazione inventariale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an inventory situation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Situazione inventariale</rdfs:label>
+        <rdfs:label xml:lang="en">Inventory situation</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: UB/INV</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -10194,6 +10253,14 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicFonds">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicRecordSet"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un fondo fotografico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the photographic fonds.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Fondo fotografico</rdfs:label>
+        <rdfs:label xml:lang="en">Photographic fonds</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD F:UB/UBF/UBFP </a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -10202,6 +10269,14 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicRecordSet">
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un unità archivistisca fotografica complessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the photographic record set.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Unità archivistica fotografica complessa</rdfs:label>
+        <rdfs:label xml:lang="en">Photographic record set</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD F:UB/UBF </a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11259,6 +11334,13 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SurveyType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo di indagine.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the survey type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Tipo di indagine</rdfs:label>
+        <rdfs:label xml:lang="en">Survey type</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -12313,13 +12395,13 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
+        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>

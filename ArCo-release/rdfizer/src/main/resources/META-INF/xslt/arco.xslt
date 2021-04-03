@@ -2291,11 +2291,9 @@
 									</arco-cd:relatedWorkRecordIdentifier>
 								</xsl:if>
 								<xsl:if test="./ROFI and (not(starts-with(lower-case(normalize-space(./ROFI)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFI)), 'n.r')))">
-									<arco-cd:hasInventory>
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'Inventory/', $itemURI, '-preparatory-final-work-inventory-', arco-fn:urify(normalize-space(./ROFI)))" />
-										</xsl:attribute>
-									</arco-cd:hasInventory>
+									<arco-cd:inventoryIdentifier>
+										<xsl:value-of select="normalize-space(./ROFI)" />
+									</arco-cd:inventoryIdentifier>
 								</xsl:if>
 								<xsl:if test="./ROFT and (not(starts-with(lower-case(normalize-space(./ROFT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFT)), 'n.r')))">
 									<arco-cd:hasTitle>
@@ -2366,11 +2364,9 @@
 									</arco-cd:relatedWorkRecordIdentifier>
 								</xsl:if>
 								<xsl:if test="./ROFI and (not(starts-with(lower-case(normalize-space(./ROFI)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFI)), 'n.r')))">
-									<arco-cd:hasInventory>
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'Inventory/', $itemURI, '-preparatory-final-work-inventory-', arco-fn:urify(normalize-space(./ROFI)))" />
-										</xsl:attribute>
-									</arco-cd:hasInventory>
+									<arco-cd:inventoryIdentifier>
+										<xsl:value-of select="normalize-space(./ROFI)" />
+									</arco-cd:inventoryIdentifier>
 								</xsl:if>
 								<xsl:if test="./ROFT and (not(starts-with(lower-case(normalize-space(./ROFT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFT)), 'n.r')))">
 									<arco-cd:hasTitle>
@@ -2441,11 +2437,9 @@
 									</arco-cd:relatedWorkRecordIdentifier>
 								</xsl:if>
 								<xsl:if test="./ROFI and (not(starts-with(lower-case(normalize-space(./ROFI)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFI)), 'n.r')))">
-									<arco-cd:hasInventory>
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'Inventory/', $itemURI, '-preparatory-final-work-inventory-', arco-fn:urify(normalize-space(./ROFI)))" />
-										</xsl:attribute>
-									</arco-cd:hasInventory>
+									<arco-cd:inventoryIdentifier>
+										<xsl:value-of select="normalize-space(./ROFI)" />
+									</arco-cd:inventoryIdentifier>
 								</xsl:if>
 								<xsl:if test="./ROFT and (not(starts-with(lower-case(normalize-space(./ROFT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFT)), 'n.r')))">
 									<arco-cd:hasTitle>
@@ -2526,34 +2520,6 @@
 									</xsl:choose>
 								</xsl:attribute>
 							</arco-cd:isSubjectOf>
-						</rdf:Description>
-					</xsl:if>
-					<!-- inventory about related work as an individual -->
-					<xsl:if test="./ROFI and (not(starts-with(lower-case(normalize-space(./ROFI)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFI)), 'n.r')))">
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'Inventory/', $itemURI, '-preparatory-final-work-inventory-', arco-fn:urify(normalize-space(./ROFI)))" />
-							</xsl:attribute>
-							<rdf:type>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Inventory'" />
-								</xsl:attribute>
-							</rdf:type>
-							<rdfs:label xml:lang="en">
-								<xsl:value-of select="concat('Inventory ', normalize-space(./ROFI), ' of preparatory or final work of cultural property ', $itemURI)" />
-							</rdfs:label>
-							<l0:name xml:lang="en">
-								<xsl:value-of select="concat('Inventory ', normalize-space(./ROFI), ' of preparatory or final work of cultural property ', $itemURI)" />
-							</l0:name>
-							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Inventario ', normalize-space(./ROFI), ' dell''opera originale o finale del bene ', $itemURI)" />
-							</rdfs:label>
-							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Inventario ', normalize-space(./ROFI), ' dell''opera originale o finale del bene ', $itemURI)" />
-							</l0:name>
-							<arco-cd:inventoryIdentifier>
-								<xsl:value-of select="normalize-space(./ROFI)" />
-							</arco-cd:inventoryIdentifier>
 						</rdf:Description>
 					</xsl:if>
 					<!-- related work title as an individual -->
@@ -11090,11 +11056,9 @@
 							</arco-cd:hasBibliography>
 						</xsl:if>
 						<xsl:if test="./DSCI and (not(starts-with(lower-case(normalize-space(./DSCI)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCI)), 'n.r')))">
-							<arco-cd:hasInventory>
-								<xsl:attribute name="rdf:resource">
-	                				<xsl:value-of select="concat($NS, 'Inventory/', $itemURI, '-archaeological-excavation-inventory')" />
-	                			</xsl:attribute>
-							</arco-cd:hasInventory>
+							<arco-cd:inventoryIdentifier>
+										<xsl:value-of select="normalize-space(./DSCI)" />
+									</arco-cd:inventoryIdentifier>
 						</xsl:if>
 						<xsl:if test="./DSCM and (not(starts-with(lower-case(normalize-space(./DSCM)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCM)), 'n.r')))">
 							<arco-cd:hasSurveyMethod>
@@ -11242,34 +11206,6 @@
 							</l0:name>
 							<arco-cd:completeBibliographicReference>
 								<xsl:value-of select="normalize-space(./DSCB)" />
-							</arco-cd:completeBibliographicReference>
-						</rdf:Description>
-					</xsl:if>
-					<!-- inventory of survey as an individual -->
-					<xsl:if test="./DSCI and (not(starts-with(lower-case(normalize-space(./DSCI)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCI)), 'n.r')))">
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-		                		<xsl:value-of select="concat($NS, 'Inventory/', $itemURI, '-archaeological-excavation-inventory')" />
-	                		</xsl:attribute>
-							<rdf:type>
-								<xsl:attribute name="rdf:resource">
-	                				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Inventory'" />
-	                			</xsl:attribute>
-							</rdf:type>
-							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Inventario relativo allo scavo archeologico del bene ', $itemURI)" />
-							</rdfs:label>
-							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Inventario relativo allo scavo archeologico del bene ', $itemURI)" />
-							</l0:name>
-							<rdfs:label xml:lang="en">
-								<xsl:value-of select="concat('Inventory about archaeological excavation of cultural property ', $itemURI)" />
-							</rdfs:label>
-							<l0:name xml:lang="en">
-								<xsl:value-of select="concat('Inventory about archaeological excavation of cultural property ', $itemURI)" />
-							</l0:name>
-							<arco-cd:completeBibliographicReference>
-								<xsl:value-of select="normalize-space(./DSCI)" />
 							</arco-cd:completeBibliographicReference>
 						</rdf:Description>
 					</xsl:if>
