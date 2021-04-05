@@ -386,11 +386,6 @@
             	<xsl:value-of select="true()" />
 			</arco-mp:zoning>
 		</xsl:if>
-		<xsl:if test="not(record/metadata/schede/BNM/SM/SMA/SMAZ) or record/metadata/schede/BNM/SM/SMA/SMAZ and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMA/SMAZ)), 'presente'))">
-			<arco-mp:zoning>
-            	<xsl:value-of select="false()" />
-			</arco-mp:zoning>
-		</xsl:if>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMF/SMFR and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMF/SMFR)), 'non rilevata'))">
 			<arco-mp:radioactivity>
