@@ -200,6 +200,7 @@
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="not($sheetType='CA' or $sheetType='MA' or $sheetType='VeAC')">
+		<xsl:if test="record/metadata/schede/*/OG/OGT/OGTV">
 			<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'collezione'))">
 				<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'erbario'))">
 				<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
@@ -233,6 +234,7 @@
 						</xsl:choose>
 					</arco-cd:isSpecimenMemberOf>
 				</xsl:if>
+			</xsl:if>
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMN/*">
@@ -6916,6 +6918,7 @@
 			</rdf:Description>
 	</xsl:for-each>
 	<xsl:if test="not($sheetType='CA' or $sheetType='MA' or $sheetType='VeAC')">
+		<xsl:if test="record/metadata/schede/*/OG/OGT/OGTV">
 		<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'collezione'))">
 			<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'erbario'))">
 				<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
@@ -6979,9 +6982,11 @@
 				</rdf:Description>
 			</xsl:if>
 		</xsl:if>
+		</xsl:if>
 	</xsl:if>	
 				<!-- natural heritage collection membership membership -->
 	<xsl:if test="not($sheetType='CA' or $sheetType='MA' or $sheetType='VeAC')">
+		<xsl:if test="record/metadata/schede/*/OG/OGT/OGTV">
 		<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'collezione'))">
 			<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'erbario'))">
 				<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
@@ -7028,6 +7033,7 @@
 					</arco-cd:hasCollection>
 				</rdf:Description>
 			</xsl:if>
+		</xsl:if>
 		</xsl:if>
 	</xsl:if>			
 					
