@@ -201,14 +201,37 @@
 		</xsl:if>
 		<xsl:if test="not($sheetType='CA' or $sheetType='MA' or $sheetType='VeAC')">
 			<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'collezione'))">
-				<xsl:if test="record/metadata/schede/*/AC/ACO">
+				<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'erbario'))">
 				<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
 				<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
-					<arco-core:isPartOf>
+				<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
+				<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
+				<xsl:variable name="ecp" select="arco-fn:urify(record/metadata/schede/*/CD/ECP)"></xsl:variable>
+				<xsl:variable name="ogtc" select="arco-fn:urify(record/metadata/schede/*/OG/OGT/OGTC)"></xsl:variable>
+					<arco-cd:isMemberOfSpecimenCollectionOf>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Collection/', $acm, '-', $aco)" />
+							<xsl:value-of select="concat($NS, 'SpecimenCollectionMembership/', $itemURI)" />
 						</xsl:attribute>
-					</arco-core:isPartOf>
+					</arco-cd:isMemberOfSpecimenCollectionOf>
+					<arco-cd:isSpecimenMemberOf>
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/AC/ACO">
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'SpecimenCollection/', $acm, '-', $aco)" />
+								</xsl:attribute>
+							</xsl:when>
+							<xsl:when test="record/metadata/schede/*/LC/LDC/LDCM">
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ldcm, '-', $pvcc)" />
+								</xsl:attribute>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ecp, '-', $ogtc)" />
+								</xsl:attribute>
+							</xsl:otherwise>
+						</xsl:choose>
+					</arco-cd:isSpecimenMemberOf>
 				</xsl:if>
 			</xsl:if>
 		</xsl:if>
@@ -6892,52 +6915,121 @@
 				</l0:name>
 			</rdf:Description>
 	</xsl:for-each>
-	
 	<xsl:if test="not($sheetType='CA' or $sheetType='MA' or $sheetType='VeAC')">
-	<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'collezione'))">
-		<xsl:if test="record/metadata/schede/*/AC/ACO">
-		<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
-		<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-                	<xsl:value-of select="concat($NS, 'Collection/', $acm, '-', $aco)" />
-                </xsl:attribute>
-	            <rdf:type>
-					<xsl:attribute name="rdf:resource">
-	    	        	<xsl:value-of	select="'https://w3id.org/arco/ontology/movable-property/SpecimenCollection'" />
-					</xsl:attribute>
-				</rdf:type>
-				<xsl:choose> 
-					<xsl:when test="record/metadata/schede/*/OG/OGT/OGTC">
-						<rdfs:label>
-							<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTC)" />
-						</rdfs:label>
-						<l0:name>
-							<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTC)" />
-						</l0:name>
-					</xsl:when>
-					<xsl:otherwise>
-						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Natural heritage collection ', record/metadata/schede/*/AC/ACO)" />
-						</rdfs:label>
-						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Natural heritage collection ', record/metadata/schede/*/AC/ACO)" />
-						</l0:name>
-						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Collezione di beni naturalistici ', record/metadata/schede/*/AC/ACO)" />
-						</rdfs:label>
-						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Collezione di beni naturalistici ', record/metadata/schede/*/AC/ACO)" />
-						</l0:name>
-					</xsl:otherwise>
-				</xsl:choose>
-				<l0:identifier>
-					<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
-				</l0:identifier>
-			</rdf:Description>
+		<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'collezione'))">
+			<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'erbario'))">
+				<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
+				<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
+				<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
+				<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
+				<xsl:variable name="ecp" select="arco-fn:urify(record/metadata/schede/*/CD/ECP)"></xsl:variable>
+				<xsl:variable name="ogtc" select="arco-fn:urify(record/metadata/schede/*/OG/OGT/OGTC)"></xsl:variable>
+				<rdf:Description>
+					<xsl:choose>
+						<xsl:when test="record/metadata/schede/*/AC/ACO">
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'SpecimenCollection/', $acm, '-', $aco)" />
+							</xsl:attribute>
+						</xsl:when>
+						<xsl:when test="record/metadata/schede/*/LC/LDC/LDCM">
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ldcm, '-', $pvcc)" />
+							</xsl:attribute>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ecp, '-', $ogtc)" />
+							</xsl:attribute>
+						</xsl:otherwise>
+					</xsl:choose>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+	    	        		<xsl:value-of	select="'https://w3id.org/arco/ontology/movable-property/SpecimenCollection'" />
+						</xsl:attribute>
+					</rdf:type>
+					<xsl:choose> 
+						<xsl:when test="record/metadata/schede/*/OG/OGT/OGTC">
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTC)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTC)" />
+							</l0:name>
+						</xsl:when>
+						<xsl:otherwise>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Specimen collection ', record/metadata/schede/*/AC/ACO)" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="concat('Specimen collection ', record/metadata/schede/*/AC/ACO)" />
+							</l0:name>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Collezione di beni naturalistici ', record/metadata/schede/*/AC/ACO)" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Collezione di beni naturalistici ', record/metadata/schede/*/AC/ACO)" />
+							</l0:name>
+						</xsl:otherwise>
+					</xsl:choose>
+					<xsl:if test="record/metadata/schede/*/AC/ACO">
+						<l0:identifier>
+							<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
+						</l0:identifier>
+					</xsl:if>
+				</rdf:Description>
+			</xsl:if>
 		</xsl:if>
 	</xsl:if>	
-	</xsl:if>								
+				<!-- natural heritage collection membership membership -->
+	<xsl:if test="not($sheetType='CA' or $sheetType='MA' or $sheetType='VeAC')">
+		<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'collezione'))">
+			<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTV)), 'erbario'))">
+				<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
+				<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
+				<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
+				<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
+				<xsl:variable name="ecp" select="arco-fn:urify(record/metadata/schede/*/CD/ECP)"></xsl:variable>
+				<xsl:variable name="ogtc" select="arco-fn:urify(record/metadata/schede/*/OG/OGT/OGTC)"></xsl:variable>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'SpecimenCollectionMembership/', $itemURI)" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SpecimenCollectionMembership'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Appartenenza a collezione naturalistica del bene: ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Appartenenza a collezione naturalistica del bene: ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Specimen membership of cultural property: ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Specimen membership of cultural property: ', $itemURI)" />
+					</l0:name>
+					<arco-cd:hasCollection>
+						<xsl:attribute name="rdf:resource">
+							<xsl:choose>
+								<xsl:when test="record/metadata/schede/*/AC/ACO">
+									<xsl:value-of select="concat($NS, 'SpecimenCollection/', $acm, '-', $aco)" />
+								</xsl:when>
+								<xsl:when test="record/metadata/schede/*/LC/LDC/LDCM">
+									<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ldcm, '-', $pvcc)" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ecp, '-', $ogtc)" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:attribute>
+					</arco-cd:hasCollection>
+				</rdf:Description>
+			</xsl:if>
+		</xsl:if>
+	</xsl:if>			
 					
 	
 	</rdf:RDF>

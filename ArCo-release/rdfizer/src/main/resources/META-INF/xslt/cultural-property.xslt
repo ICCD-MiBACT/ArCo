@@ -109,6 +109,8 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
+	<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
+	<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
 
 	<!-- xsl:import href="part.xsl" / -->
 
@@ -1143,21 +1145,21 @@
 					<xsl:if test="record/metadata/schede/*/UB/UBF/UBFP and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/UBF/UBFP)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/UBF/UBFP)), 'n.r')))">
 						<arco-cd:isArchivalUnitMemberOf>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'ArchivalFonds/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFP)))" />
+								<xsl:value-of select="concat($NS, 'ArchivalFonds/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFP)))" />
 							</xsl:attribute>
 						</arco-cd:isArchivalUnitMemberOf>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/*/UB/UBF/UBFS and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/UBF/UBFS)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/UBF/UBFS)), 'n.r')))">
 						<arco-cd:isArchivalUnitMemberOf>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'ArchivalSeries/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFS)))" />
+								<xsl:value-of select="concat($NS, 'ArchivalSeries/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFS)))" />
 							</xsl:attribute>
 						</arco-cd:isArchivalUnitMemberOf>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/*/UB/UBF/UBFT and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/UBF/UBFT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/UBF/UBFT)), 'n.r')))">
 						<arco-cd:isArchivalUnitMemberOf>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'ArchivalSubseries/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFT)))" />
+								<xsl:value-of select="concat($NS, 'ArchivalSubseries/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFT)))" />
 							</xsl:attribute>
 						</arco-cd:isArchivalUnitMemberOf>
 					</xsl:if>

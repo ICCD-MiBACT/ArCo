@@ -1718,6 +1718,24 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasMemberOfSpecimenCollection -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMemberOfSpecimenCollection">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasMemberOfCollection"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfSpecimenCollectionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SpecimenCollectionMembership"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+ <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;appartenenza di un esemplare ad una collezione di esemplari.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the membership of a cultural entity to its specimen collection.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha membro di collezione di esemplari</rdfs:label>
+        <rdfs:label xml:lang="en">has member of specimen collection</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasMint -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMint">
@@ -2429,6 +2447,24 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasSpecimenMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSpecimenMember">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSpecimenMemberOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SpecimenCollection"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una collezione di esemplari all'esemplare che ne è membro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a specimen collection to a specimen that is member of it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha esemplare membro</rdfs:label>
+        <rdfs:label xml:lang="en">has specimen member</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4353,6 +4389,23 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isMemberOfSpecimenCollectionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfSpecimenCollectionOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfCollectionOf"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SpecimenCollectionMembership"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene alla classe che rappresenta l&apos;appartenenza del bene a una collezione di esemplari.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to the class that represents the membership relation between this cultural property and a specimen collection.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description"/>
+        <rdfs:label xml:lang="en">is member of specimen collection of</rdfs:label>
+        <rdfs:label xml:lang="it">è membro di collezione di esemplari di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isMintIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMintIn">
@@ -4965,8 +5018,8 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:comment xml:lang="it">Questa proprietà collega la categoria SEC attribuita al bene alla situazione inventariale del bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a the patrimonial category attributed to the cultural property based on the SEC classification to the inventory situation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">è categoria SEC di</rdfs:label>
         <rdfs:label xml:lang="en">is SEC category of</rdfs:label>
+        <rdfs:label xml:lang="it">è categoria SEC di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -5035,6 +5088,23 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isSpecimenMemberOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isSpecimenMemberOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isMemberOf"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SpecimenCollection"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un esemplare a una collezione di esemplari di cui è membro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a specimen to a specimen collection which is member of.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is specimen member of</rdfs:label>
+        <rdfs:label xml:lang="it">è esemplare membro di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -9595,6 +9665,21 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Herbarium -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Herbarium">
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un erbario</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an herbarium</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Erbario</rdfs:label>
+        <rdfs:label xml:lang="en">Herbarium</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/IndeterminateCircumstance -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/IndeterminateCircumstance">
@@ -9879,8 +9964,8 @@ resource:Intervention/0800640527-10-intervention-1
         <rdfs:comment xml:lang="it">Questa classe rappresenta una situazione inventariale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an inventory situation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">Situazione inventariale</rdfs:label>
         <rdfs:label xml:lang="en">Inventory situation</rdfs:label>
+        <rdfs:label xml:lang="it">Situazione inventariale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: UB/INV</a-cat:iccdNormTag>
@@ -10272,8 +10357,8 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:comment xml:lang="it">Questa classe rappresenta un unità archivistisca fotografica complessa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the photographic record set.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">Unità archivistica fotografica complessa</rdfs:label>
         <rdfs:label xml:lang="en">Photographic record set</rdfs:label>
+        <rdfs:label xml:lang="it">Unità archivistica fotografica complessa</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD F:UB/UBF </a-cat:iccdNormTag>
@@ -11074,6 +11159,29 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/SpecimenCollection -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SpecimenCollection">
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+        <rdfs:comment xml:lang="it">Questa casse rappresenta una collezione di esemplari</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a collection of specimens</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Collezione di esemplari</rdfs:label>
+        <rdfs:label xml:lang="en">Specimen collection</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/SpecimenCollectionMembership -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SpecimenCollectionMembership">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/StratigraphicUnit -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/StratigraphicUnit">
@@ -11337,8 +11445,8 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo di indagine.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the survey type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">Tipo di indagine</rdfs:label>
         <rdfs:label xml:lang="en">Survey type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di indagine</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
@@ -12400,8 +12508,8 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>

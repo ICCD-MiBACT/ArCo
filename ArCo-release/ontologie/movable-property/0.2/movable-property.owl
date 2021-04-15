@@ -4885,25 +4885,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/Herbarium -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Herbarium">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenCollection"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Erbario</rdfs:label>
-        <rdfs:label xml:lang="en">Herbarium</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/HostIndividual -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/HostIndividual">
@@ -6144,28 +6125,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/SpecimenCollection -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenCollection">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta gruppi di campioni all&apos;interno di un
-erbario.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a group of specimens or specimens container, collected into an herbarium.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Collezione di campioni</rdfs:label>
-        <rdfs:label xml:lang="en">Natural heritage collection</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/SpecimenContainer -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenContainer">
@@ -7297,15 +7256,6 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/PollenSample"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SeedSample"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/WoodSample"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Herbarium"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Specimen"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenCollection"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
