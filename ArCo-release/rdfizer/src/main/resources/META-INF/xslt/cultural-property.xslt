@@ -495,11 +495,13 @@
 				</xsl:if>
 				<!-- alternative locations -->
 				<xsl:for-each select="record/metadata/schede/*/LA">
+					<xsl:if test="./PRV">
 					<arco-location:hasTimeIndexedTypedLocation>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-alternative-', position())" />
 						</xsl:attribute>
 					</arco-location:hasTimeIndexedTypedLocation>
+					</xsl:if>
 				</xsl:for-each>
 				<!-- production realization location for BDM < version 4.00 -->
 				<xsl:for-each select="record/metadata/schede/BDM/AU/LDF">
@@ -3308,7 +3310,7 @@
 				<!-- Protective Measure for A 2.00 -->
 				<xsl:for-each select="record/metadata/schede/*/TU/VIN">
 					<xsl:choose>
-						<xsl:when test="./* and (not(./VINE) or ./VINE='intero bene' or ./VINE='integrale' or ./VINE='tutta' or ./VINE='totale') or (starts-with(lower-case(normalize-space(./VINE)), 'nr')) or (starts-with(lower-case(normalize-space(./VINE)), 'n.r')) or (starts-with(lower-case(normalize-space(./NVCP)), 'intero')) or (starts-with(lower-case(normalize-space(./NVCP)), 'intera')) or (starts-with(lower-case(normalize-space(./NVCP)), 'esemplar'))">
+						<xsl:when test="./* and (not(./VINE) or ./VINE='intero bene' or ./VINE='integrale' or ./VINE='tutta' or ./VINE='totale') or (starts-with(lower-case(normalize-space(./VINE)), 'nr')) or (starts-with(lower-case(normalize-space(./VINE)), 'n.r')) or (starts-with(lower-case(normalize-space(./VINE)), 'intero')) or (starts-with(lower-case(normalize-space(./VINE)), 'intera')) or (starts-with(lower-case(normalize-space(./VINE)), 'esemplar'))">
 							<arco-cd:hasProtectiveMeasure>
 								<xsl:attribute name="rdf:resource">
                 					<xsl:value-of select="concat($NS, 'ProtectiveMeasure/', $itemURI, '-protective-measure-', position())" />

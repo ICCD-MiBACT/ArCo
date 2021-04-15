@@ -1159,7 +1159,7 @@
 			<!-- BDI -->
 			<xsl:if test="$sheetType='BDI'">
 				<xsl:choose>
-					<xsl:when test="$sheetVersion='3.00_ICCD0' or $sheetVersion='3.00' or $sheetVersion='3.01_ICCD0' or $sheetVersion='3.01'">
+					<xsl:when test="$sheetVersion='2.00_ICCD0' or $sheetVersion='2.00' or $sheetVersion='3.00_ICCD0' or $sheetVersion='3.00' or $sheetVersion='3.01_ICCD0' or $sheetVersion='3.01'">
 						<xsl:variable name="dbl">
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/*/DB/DBL and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DB/DBL)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/DB/DBL)), 'n.r')))">
