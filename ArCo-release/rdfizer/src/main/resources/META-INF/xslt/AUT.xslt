@@ -548,6 +548,13 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 						</xsl:choose>
 					</xsl:attribute>
 				</rdf:type>
+				<xsl:if test="record/metadata/schede/*/AC/ACC/ACCW">
+					<rdfs:seeAlso>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="record/metadata/schede/*/AC/ACC/ACCW" />
+						</xsl:attribute>
+					</rdfs:seeAlso>
+				</xsl:if>
 				<arco-catalogue:isDescribedByCatalogueRecord>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $idAuthor)" />
@@ -716,6 +723,13 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 						<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
 					</xsl:attribute>
 				</rdf:type>
+				<xsl:if test="record/metadata/schede/*/AC/ACC/ACCW">
+					<rdfs:seeAlso>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="record/metadata/schede/*/AC/ACC/ACCW" />
+						</xsl:attribute>
+					</rdfs:seeAlso>
+				</xsl:if>
 				<arco-catalogue:isDescribedByCatalogueRecord>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $idAuthor)" />
