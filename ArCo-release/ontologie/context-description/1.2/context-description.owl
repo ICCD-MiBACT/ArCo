@@ -1725,7 +1725,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfSpecimenCollectionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SpecimenCollectionMembership"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
- <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;appartenenza di un esemplare ad una collezione di esemplari.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;appartenenza di un esemplare ad una collezione di esemplari.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the membership of a cultural entity to its specimen collection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha membro di collezione di esemplari</rdfs:label>
@@ -2458,7 +2458,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSpecimenMemberOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SpecimenCollection"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una collezione di esemplari all'esemplare che ne è membro.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una collezione di esemplari all&apos;esemplare che ne è membro.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a specimen collection to a specimen that is member of it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha esemplare membro</rdfs:label>
@@ -6900,6 +6900,21 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa FF: DA/MTI</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/nationality -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/nationality">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la nazionalità di una persona</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the nationality of a person</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">nationality</rdfs:label>
+        <rdfs:label xml:lang="it">nazionalità</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Norm AUT: AU/AUT/AUTF. BDI and BDM: AT/ATT/ATTZ</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -12504,14 +12519,14 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 
