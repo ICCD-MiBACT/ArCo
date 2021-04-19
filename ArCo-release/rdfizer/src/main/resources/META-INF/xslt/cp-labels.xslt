@@ -399,7 +399,8 @@
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:choose>
-	        		<xsl:when test="not(record/metadata/schede/*/DT/DTN/DTNS)">
+	        		<xsl:when test="record/metadata/schede/*/DT">
+	        			<xsl:if test="not(record/metadata/schede/*/DT/DTN/DTNS)">
 	        			<xsl:choose>
 	                    	<xsl:when test="record/metadata/schede/*/DT/DTZ/DTZS">
 								<xsl:value-of select="concat(' (', record/metadata/schede/*/DT/DTZ/DTZG, ', ',  record/metadata/schede/*/DT/DTZ/DTZS, ')')" />
@@ -408,6 +409,7 @@
 	                        	<xsl:value-of select="concat(' (', record/metadata/schede/*/DT/DTZ/DTZG, ')')" />
 							</xsl:otherwise>
 	                    </xsl:choose>
+	                    </xsl:if>
 	        		</xsl:when>
 	        		<xsl:otherwise>
 	        			<xsl:value-of select="''" />
@@ -1173,8 +1175,15 @@
 							</xsl:choose>
 						</xsl:variable>
 						<xsl:variable name="tmp-label">
-								<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DB/DBD), $dbl, ' (', normalize-space(record/metadata/schede/*/DB/DBC), ')')" />
-							</xsl:variable>
+							<xsl:choose>
+								<xsl:when test="record/metadata/schede/*/DB/DBC">
+									<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DB/DBD), $dbl, ' (', normalize-space(record/metadata/schede/*/DB/DBC), ')')" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DB/DBD), $dbl)" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:variable>
 						<rdfs:label xml:lang="it">
 							<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 						</rdfs:label>

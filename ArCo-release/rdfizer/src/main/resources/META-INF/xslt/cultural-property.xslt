@@ -109,7 +109,11 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-	<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
+	<xsl:variable name="ldcm">
+		<xsl:if test="record/metadata/schede/*/LC/LDC/LDCM" >
+			 <xsl:value-of select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"/>
+		</xsl:if>	 
+	</xsl:variable>
 	<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
 
 	<!-- xsl:import href="part.xsl" / -->
@@ -495,13 +499,11 @@
 				</xsl:if>
 				<!-- alternative locations -->
 				<xsl:for-each select="record/metadata/schede/*/LA">
-					<xsl:if test="./PRV">
 					<arco-location:hasTimeIndexedTypedLocation>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-alternative-', position())" />
 						</xsl:attribute>
 					</arco-location:hasTimeIndexedTypedLocation>
-					</xsl:if>
 				</xsl:for-each>
 				<!-- production realization location for BDM < version 4.00 -->
 				<xsl:for-each select="record/metadata/schede/BDM/AU/LDF">
@@ -685,10 +687,13 @@
 							<xsl:attribute name="rdf:resource">
 								<xsl:choose>
 									<xsl:when test="./MAC/MACD">
-										<xsl:value-of select="concat($NS, 'ArchaeologicalMaterial/', $itemURI, '-', position(), arco-fn:urify(normalize-space(./MACC)), arco-fn:urify(normalize-space(./MACD)))" />
+										<xsl:value-of select="concat($NS, 'ArchaeologicalMaterial/', $itemURI, '-', position(), arco-fn:urify(normalize-space(./MAC/MACC)), arco-fn:urify(normalize-space(./MAC/MACD)))" />
+									</xsl:when>
+									<xsl:when test="./MAC/MACL">
+										<xsl:value-of select="concat($NS, 'ArchaeologicalMaterial/', $itemURI, '-', position(), arco-fn:urify(normalize-space(./MAC/MACL)))" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="concat($NS, 'ArchaeologicalMaterial/', $itemURI, '-', position(), arco-fn:urify(normalize-space(./MACC)))" />
+										<xsl:value-of select="concat($NS, 'ArchaeologicalMaterial/', $itemURI, '-', position(), arco-fn:urify(normalize-space(./MAC/MACC)))" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:attribute>

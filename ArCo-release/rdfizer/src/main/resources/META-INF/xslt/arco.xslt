@@ -225,7 +225,11 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-	<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
+	<xsl:variable name="ldcm">
+		<xsl:if test="record/metadata/schede/*/LC/LDC/LDCM" >
+			 <xsl:value-of select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"/>
+		</xsl:if>	 
+	</xsl:variable>
 	<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
 	
 	<xsl:template match="/">
@@ -20115,71 +20119,59 @@
 			</xsl:if>
 			<!-- archaeological material (TMA) -->
 			<xsl:for-each select="record/metadata/schede/TMA/MA">
-				<xsl:if
-					test="(not(starts-with(lower-case(normalize-space(./MAC/MACC)), 'nr')) and not(starts-with(lower-case(normalize-space(./MAC/MACC)), 'n.r')))">
+				<xsl:if test="(not(starts-with(lower-case(normalize-space(./MAC/MACC)), 'nr')) and not(starts-with(lower-case(normalize-space(./MAC/MACC)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-								<xsl:choose>
-									<xsl:when test="./MAC/MACD">
-										<xsl:value-of
-							select="concat($NS, 'ArchaeologicalMaterial/', $itemURI, '-', position(), arco-fn:urify(normalize-space(./MACC)), arco-fn:urify(normalize-space(./MACD)))" />
+							<xsl:choose>
+								<xsl:when test="./MAC/MACD">
+									<xsl:value-of select="concat($NS, 'ArchaeologicalMaterial/', $itemURI, '-', position(), arco-fn:urify(normalize-space(./MAC/MACC)), arco-fn:urify(normalize-space(./MAC/MACD)))" />
+								</xsl:when>
+								<xsl:when test="./MAC/MACL">
+										<xsl:value-of select="concat($NS, 'ArchaeologicalMaterial/', $itemURI, '-', position(), arco-fn:urify(normalize-space(./MAC/MACL)))" />
 									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of
-							select="concat($NS, 'ArchaeologicalMaterial/', $itemURI, '-', position(), arco-fn:urify(normalize-space(./MACC)))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:attribute>
+								<xsl:otherwise>
+									<xsl:value-of select="concat($NS, 'ArchaeologicalMaterial/', $itemURI, '-', position(), arco-fn:urify(normalize-space(./MAC/MACC)))" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-									<xsl:value-of
-								select="'https://w3id.org/arco/ontology/arco/ArchaeologicalMaterial'" />
-								</xsl:attribute>
+								<xsl:value-of select="'https://w3id.org/arco/ontology/arco/ArchaeologicalMaterial'" />
+							</xsl:attribute>
 						</rdf:type>
 						<xsl:choose>
 							<xsl:when test="./MAC/MACD">
-								<rdfs:label xml:lang="it">
-									<xsl:value-of
-										select="concat('Materiale componente ', position(), ' del bene: ', $itemURI, ': ', normalize-space(./MAC/MACC), ' - ', normalize-space(./MAC/MACD))" />
+								<rdfs:label>
+									<xsl:value-of select="concat(normalize-space(./MAC/MACC), ' - ', normalize-space(./MAC/MACD))" />
 								</rdfs:label>
-								<rdfs:label xml:lang="en">
-									<xsl:value-of
-										select="concat('Archaeological Material ', position(), ' of cultural property: ', $itemURI, ': ', normalize-space(./MAC/MACC), ' - ', normalize-space(./MAC/MACD))" />
-								</rdfs:label>
-								<l0:name xml:lang="it">
-									<xsl:value-of
-										select="concat('Materiale componente ', position(), ' del bene: ', $itemURI, ': ', normalize-space(./MAC/MACC), ' - ', normalize-space(./MAC/MACD))" />
+								<l0:name>
+									<xsl:value-of select="concat(normalize-space(./MAC/MACC), ' - ', normalize-space(./MAC/MACD))" />
 								</l0:name>
-								<l0:name xml:lang="en">
-									<xsl:value-of
-										select="concat('Archaeological Material ', position(), ' of cultural property: ', $itemURI, ': ', normalize-space(./MAC/MACC), ' - ', normalize-space(./MAC/MACD))" />
+							</xsl:when>
+							<xsl:when test="./MAC/MACL">
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./MAC/MACL)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select=" normalize-space(./MAC/MACL)" />
 								</l0:name>
 							</xsl:when>
 							<xsl:otherwise>
-								<rdfs:label xml:lang="it">
-									<xsl:value-of
-										select="concat('Materiale componente ', position(), ' del bene ', $itemURI, ': ', normalize-space(./MAC/MACC))" />
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./MAC/MACC)" />
 								</rdfs:label>
-								<rdfs:label xml:lang="en">
-									<xsl:value-of
-										select="concat('Archaeological Material ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./MAC/MACC))" />
-								</rdfs:label>
-								<l0:name xml:lang="it">
-									<xsl:value-of
-										select="concat('Materiale componente ', position(), ' del bene ', $itemURI, ': ', normalize-space(./MAC/MACC))" />
-								</l0:name>
-								<l0:name xml:lang="en">
-									<xsl:value-of
-										select="concat('Archaeological Material ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./MAC/MACC))" />
+								<l0:name>
+									<xsl:value-of select=" normalize-space(./MAC/MACC)" />
 								</l0:name>
 							</xsl:otherwise>
 						</xsl:choose>
-						<arco-arco:hasArchaeologicalMaterialCategory>
-							<xsl:attribute name="rdf:resource">
-										<xsl:value-of
-								select="concat($NS, 'ArchaeologicalMaterialCategory/', arco-fn:urify(normalize-space(./MAC/MACC)))" />
-									</xsl:attribute>
-						</arco-arco:hasArchaeologicalMaterialCategory>
+						<xsl:if test="./MAC/MACC">
+							<arco-arco:hasArchaeologicalMaterialCategory>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'ArchaeologicalMaterialCategory/', arco-fn:urify(normalize-space(./MAC/MACC)))" />
+								</xsl:attribute>
+							</arco-arco:hasArchaeologicalMaterialCategory>
+						</xsl:if>
 						<xsl:if test="./MAC/MACQ">
 							<arco-arco:numberOfArchaeologicalMaterials>
 								<xsl:value-of select="normalize-space(./MAC/MACQ)" />
@@ -20187,20 +20179,20 @@
 						</xsl:if>
 					</rdf:Description>
 					<!-- archaeological material category as an individual -->
-					<rdf:Description>
-						<xsl:attribute name="rdf:about">
-								<xsl:value-of
-							select="concat($NS, 'ArchaeologicalMaterialCategory/', arco-fn:urify(normalize-space(./MAC/MACC)))" />
+					<xsl:if test="./MAC/MACC">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'ArchaeologicalMaterialCategory/', arco-fn:urify(normalize-space(./MAC/MACC)))" />
 							</xsl:attribute>
-						<rdf:type
-							rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterialCategory" />
-						<rdfs:label>
-							<xsl:value-of select="normalize-space(./MAC/MACC)" />
-						</rdfs:label>
-						<l0:name>
-							<xsl:value-of select="normalize-space(./MAC/MACC)" />
-						</l0:name>
-					</rdf:Description>
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterialCategory" />
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./MAC/MACC)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./MAC/MACC)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
 			<!-- cadastral identity -->
@@ -26188,7 +26180,6 @@
 			</xsl:if>
 			<!-- alternative locations -->
 			<xsl:for-each select="record/metadata/schede/*/LA">
-			<xsl:if test="./PRV">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-alternative-', position())" />
@@ -26368,10 +26359,8 @@
 						</xsl:if>
 					</rdf:Description>
 				</xsl:if>
-			</xsl:if>
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/*/LA">
-			<xsl:if test="./PRV">
 				<xsl:choose>
 					<xsl:when test="./PRC/*">
 						<xsl:variable name="site">
@@ -27190,37 +27179,46 @@
 									</xsl:when>
 								</xsl:choose>
 							</rdfs:label>
-							<xsl:if test="./PRV/*">
-								<clvapit:hasAddress>
-									<xsl:attribute name="rdf:resource">
-                                        	<xsl:choose>
-												<xsl:when test="./PRV/PRVS and not(lower-case(normalize-space(./PRV/PRVS))='italia')">
-													<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVS)), normalize-space(lower-case(./PRV/PRVE)))))" />
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:choose>
-														<xsl:when test="./PRV/PRVG and not(./PRV/PRVG='.' or ./PRV/PRVG='-' or ./PRV/PRVG='/')">
-															<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVG)), normalize-space(lower-case(./PRV/PRVA)), normalize-space(lower-case(./PRV/PRVR)), normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU)))))" />
-														</xsl:when>
-														<xsl:when test="./PRC/PRCU and not(./PRC/PRCU='.' or ./PRC/PRCU='-' or ./PRC/PRCU='/')">
-															<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU)))))" />
-														</xsl:when>
-														<xsl:otherwise>
-															<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRL/PRLT)))))" />
-														</xsl:otherwise>
-													</xsl:choose>
-												</xsl:otherwise>
-											</xsl:choose>
-                                        </xsl:attribute>
-								</clvapit:hasAddress>
-							</xsl:if>
-							<xsl:if test="./PRT/*">
-								<clvapit:hasAddress>
-									<xsl:attribute name="rdf:resource">
-                                        <xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRT/PRTK)), normalize-space(lower-case(./PRT/PRTS)), normalize-space(lower-case(./PRT/PRTR)), normalize-space(lower-case(./PRT/PRTL)))))" />
-                                      </xsl:attribute>
-								</clvapit:hasAddress>
-							</xsl:if>
+							<xsl:choose>
+								<xsl:when test="./PRV/*">
+									<clvapit:hasAddress>
+										<xsl:attribute name="rdf:resource">
+            	                            	<xsl:choose>
+													<xsl:when test="./PRV/PRVS and not(lower-case(normalize-space(./PRV/PRVS))='italia')">
+														<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVS)), normalize-space(lower-case(./PRV/PRVE)))))" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:choose>
+															<xsl:when test="./PRV/PRVG and not(./PRV/PRVG='.' or ./PRV/PRVG='-' or ./PRV/PRVG='/')">
+																<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVG)), normalize-space(lower-case(./PRV/PRVA)), normalize-space(lower-case(./PRV/PRVR)), normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU)))))" />
+															</xsl:when>
+															<xsl:when test="./PRC/PRCU and not(./PRC/PRCU='.' or ./PRC/PRCU='-' or ./PRC/PRCU='/')">
+																<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU)))))" />
+															</xsl:when>
+															<xsl:otherwise>
+																<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRL/PRLT)))))" />
+															</xsl:otherwise>
+														</xsl:choose>
+													</xsl:otherwise>
+												</xsl:choose>
+                        	                </xsl:attribute>
+									</clvapit:hasAddress>
+								</xsl:when>
+								<xsl:when test="./PRT/*">
+									<clvapit:hasAddress>
+										<xsl:attribute name="rdf:resource">
+                	                        <xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRT/PRTK)), normalize-space(lower-case(./PRT/PRTS)), normalize-space(lower-case(./PRT/PRTR)), normalize-space(lower-case(./PRT/PRTL)))))" />
+                    	                  </xsl:attribute>
+									</clvapit:hasAddress>
+								</xsl:when>
+								<xsl:when test="./PRE">
+									<clvapit:hasAddress>
+										<xsl:attribute name="rdf:resource">
+            	                            <xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(./PRE))" />
+                	                      </xsl:attribute>
+									</clvapit:hasAddress>
+								</xsl:when>
+							</xsl:choose>
 							<xsl:if test="./PRL">
 								<arco-location:hasToponymInTime>
 									<xsl:attribute name="rdf:resource">
@@ -27243,7 +27241,8 @@
 								</arco-location:hasToponymInTime>
 							</xsl:if>
 						</rdf:Description>
-						<xsl:if test="./PRT/*">
+						<xsl:choose>
+						<xsl:when test="./PRT/*">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
                                      <xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRT/PRTK)), normalize-space(lower-case(./PRT/PRTS)), normalize-space(lower-case(./PRT/PRTR)), normalize-space(lower-case(./PRT/PRTL)))))" />
@@ -27296,111 +27295,108 @@
 										</xsl:attribute>
 									</clvapit:hasAddressArea>
 								</xsl:if>
-							</rdf:Description>
-						</xsl:if>
-						<!-- Continent as individual -->
-						<xsl:if test="./PRT/PRTK and (not(starts-with(lower-case(normalize-space(./PRT/PRTK)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRT/PRTK)), 'n.r')))">
-							<rdf:Description>
-								<xsl:attribute name="rdf:about">
-                                    <xsl:value-of select="concat($NS, 'Continent/', arco-fn:arcofy(normalize-space(./PRT/PRTK)))" />
-                                </xsl:attribute>
-								<rdf:type>
-									<xsl:attribute name="rdf:resource">
-                                        <xsl:value-of select="'https://w3id.org/arco/ontology/location/Continent'" />
-                                    </xsl:attribute>
-								</rdf:type>
-								<rdfs:label>
-									<xsl:value-of select="normalize-space(./PRT/PRTK)" />
-								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(./PRT/PRTK)" />
-								</l0:name>
-							</rdf:Description>
-						</xsl:if>
-						<xsl:if test="./PRV/PRVS and (not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'n.r')))">
-							<rdf:Description>
-								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS, 'Country/', arco-fn:urify(./PRV/PRVS))" />
-								</xsl:attribute>
-								<rdf:type>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Country'" />
+							</rdf:Description>					
+							<!-- Continent as individual -->
+							<xsl:if test="./PRT/PRTK and (not(starts-with(lower-case(normalize-space(./PRT/PRTK)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRT/PRTK)), 'n.r')))">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+                	                    <xsl:value-of select="concat($NS, 'Continent/', arco-fn:arcofy(normalize-space(./PRT/PRTK)))" />
+                    	            </xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+                                	        <xsl:value-of select="'https://w3id.org/arco/ontology/location/Continent'" />
+                                    	</xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(./PRT/PRTK)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(./PRT/PRTK)" />
+									</l0:name>
+								</rdf:Description>
+							</xsl:if>
+							<xsl:if test="./PRV/PRVS and (not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'n.r')))">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'Country/', arco-fn:urify(./PRV/PRVS))" />
 									</xsl:attribute>
-								</rdf:type>
-								<rdfs:label>
-									<xsl:value-of select="normalize-space(./PRV/PRVS)" />
-								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(./PRV/PRVS)" />
-								</l0:name>
-							</rdf:Description>
-						</xsl:if>
-						<!-- Region LA -->
-						<xsl:if test="./PRT/PRTR and (not(starts-with(lower-case(normalize-space(./PRT/PRTR)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRT/PRTR)), 'n.r')))">
-							<rdf:Description>
-								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS, 'Region/', arco-fn:urify(./PRT/PRTR))" />
-								</xsl:attribute>
-								<rdf:type>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Region'" />
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Country'" />
+										</xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(./PRV/PRVS)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(./PRV/PRVS)" />
+									</l0:name>
+								</rdf:Description>
+							</xsl:if>
+							<!-- Region LA -->
+							<xsl:if test="./PRT/PRTR and (not(starts-with(lower-case(normalize-space(./PRT/PRTR)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRT/PRTR)), 'n.r')))">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'Region/', arco-fn:urify(./PRT/PRTR))" />
 									</xsl:attribute>
-								</rdf:type>
-								<rdfs:label>
-									<xsl:value-of select="normalize-space(./PRT/PRTR)" />
-								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(./PRT/PRTR)" />
-								</l0:name>
-							</rdf:Description>
-						</xsl:if>
-						<xsl:if test="./PRT/PRTL and (not(starts-with(lower-case(normalize-space(./PRT/PRTL)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRT/PRTL)), 'n.r')))">
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Region'" />
+										</xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(./PRT/PRTR)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(./PRT/PRTR)" />
+									</l0:name>
+								</rdf:Description>
+							</xsl:if>
+							<xsl:if test="./PRT/PRTL and (not(starts-with(lower-case(normalize-space(./PRT/PRTL)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRT/PRTL)), 'n.r')))">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+        	                                <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./PRT/PRTL))" />
+            	                    </xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+                        					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
+                            	        </xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(./PRT/PRTL)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(./PRT/PRTL)" />
+									</l0:name>
+								</rdf:Description>
+							</xsl:if>
+						</xsl:when>
+						<xsl:when test="./PRV/*">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-                                        <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./PRT/PRTL))" />
-                                </xsl:attribute>
-								<rdf:type>
-									<xsl:attribute name="rdf:resource">
-                                            <xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
-                                    </xsl:attribute>
-								</rdf:type>
-								<rdfs:label>
-									<xsl:value-of select="normalize-space(./PRT/PRTL)" />
-								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(./PRT/PRTL)" />
-								</l0:name>
-							</rdf:Description>
-						</xsl:if>
-						<xsl:if test="./PRV/*">
-							<rdf:Description>
-								<xsl:attribute name="rdf:about">
-                                    	<xsl:choose>
-											<xsl:when
-									test="./PRV/PRVS and not(lower-case(normalize-space(./PRV/PRVS))='italia')">
-												<xsl:value-of
-									select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVS)), normalize-space(lower-case(./PRV/PRVE)))))" />
-											</xsl:when>
-											<xsl:otherwise>
-												<xsl:choose>
-													<xsl:when test="./PRV/PRVG and not(./PRV/PRVG='.' or ./PRV/PRVG='-' or ./PRV/PRVG='/')">
-														<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVG)), normalize-space(lower-case(./PRV/PRVA)), normalize-space(lower-case(./PRV/PRVR)), normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU)))))" />
-													</xsl:when>
-													<xsl:when test="./PRC/PRCU and not(./PRC/PRCU='.' or ./PRC/PRCU='-' or ./PRC/PRCU='/')">
-														<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU)))))" />
-													</xsl:when>
-													<xsl:otherwise>
-														<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRL/PRLT)))))" />
-													</xsl:otherwise>
-												</xsl:choose>
-											</xsl:otherwise>
+									<xsl:choose>
+										<xsl:when test="./PRV/PRVS and not(lower-case(normalize-space(./PRV/PRVS))='italia')">
+											<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVS)), normalize-space(lower-case(./PRV/PRVE)))))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:choose>
+												<xsl:when test="./PRV/PRVG and not(./PRV/PRVG='.' or ./PRV/PRVG='-' or ./PRV/PRVG='/')">
+													<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVG)), normalize-space(lower-case(./PRV/PRVA)), normalize-space(lower-case(./PRV/PRVR)), normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU)))))" />
+												</xsl:when>
+												<xsl:when test="./PRC/PRCU and not(./PRC/PRCU='.' or ./PRC/PRCU='-' or ./PRC/PRCU='/')">
+													<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU)))))" />
+												</xsl:when>
+												<xsl:otherwise>
+													<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRL/PRLT)))))" />
+												</xsl:otherwise>
+											</xsl:choose>
+										</xsl:otherwise>
 									</xsl:choose>
-                                    </xsl:attribute>
+								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
-                                            <xsl:value-of
-										select="'https://w3id.org/italia/onto/CLV/Address'" />
-                                        </xsl:attribute>
+										<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
 									<xsl:for-each select="./PRV/*">
@@ -27414,60 +27410,44 @@
 										</xsl:choose>
 									</xsl:for-each>
 								</rdfs:label>
-								<!-- Address details <xsl:if test="record/metadata/schede/*/LC/PVC/PVCV"> 
-									<arco-location:addressDetails> <xsl:value-of select="normalize-space(record/metadata/schede/*/LC/PVC/PVCV)"" 
-									/> </arco-location:addressDetails> -->
-								<!-- Full Address - per issue github #8 <xsl:if test="record/metadata/schede/*/LC/PVC/PVCI"> 
-									<clvapit:fullAddress> <xsl:value-of select="normalize-space(record/metadata/schede/*/LC/PVC/PVCI)" 
-									/> </clvapit:fullAddress> </xsl:if> <xsl:if test="record/metadata/schede/*/LC/LDC/LDCU"> 
-									<clvapit:fullAddress> <xsl:value-of select="normalize-space(record/metadata/schede/*/LC/LDC/LDCU)" 
-									/> </clvapit:fullAddress> </xsl:if> -->
 								<!-- Stato -->
-								<xsl:if
-									test="./PRV/PRVS and (not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'n.r')))">
+								<xsl:if test="./PRV/PRVS and (not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'n.r')))">
 									<clvapit:hasCountry>
 										<xsl:attribute name="rdf:resource">
-                                                <xsl:value-of
-											select="concat($NS, 'Country/', arco-fn:urify(./PRV/PRVS))" />
-                                            </xsl:attribute>
+											<xsl:value-of select="concat($NS, 'Country/', arco-fn:urify(./PRV/PRVS))" />
+										</xsl:attribute>
 									</clvapit:hasCountry>
 								</xsl:if>
 								<!-- Regione -->
-								<xsl:if
-									test="./PRV/PRVR and (not(starts-with(lower-case(normalize-space(./PRV/PRVR)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVR)), 'n.r')))">
+								<xsl:if test="./PRV/PRVR and (not(starts-with(lower-case(normalize-space(./PRV/PRVR)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVR)), 'n.r')))">
 									<clvapit:hasRegion>
 										<xsl:attribute name="rdf:resource">
-                                                <xsl:value-of
-											select="concat($NS, 'Region/', arco-fn:urify(./PRV/PRVR))" />
-                                            </xsl:attribute>
+											<xsl:value-of select="concat($NS, 'Region/', arco-fn:urify(./PRV/PRVR))" />
+										</xsl:attribute>
 									</clvapit:hasRegion>
 								</xsl:if>
 								<!-- Provincia -->
-								<xsl:if
-									test="./PRV/PRVP and (not(starts-with(lower-case(normalize-space(./PRV/PRVP)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVP)), 'n.r')))">
+								<xsl:if test="./PRV/PRVP and (not(starts-with(lower-case(normalize-space(./PRV/PRVP)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVP)), 'n.r')))">
 									<clvapit:hasProvince>
 										<xsl:attribute name="rdf:resource">
-                                                <xsl:value-of
-											select="concat($NS, 'Province/', arco-fn:urify(./PRV/PRVP))" />
-                                            </xsl:attribute>
+											<xsl:value-of select="concat($NS, 'Province/', arco-fn:urify(./PRV/PRVP))" />
+										</xsl:attribute>
 									</clvapit:hasProvince>
 								</xsl:if>
 								<!-- Comune -->
-								<xsl:if
-									test="./PRV/PRVC and (not(starts-with(lower-case(normalize-space(./PRV/PRVC)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVC)), 'n.r')))">
+								<xsl:if test="./PRV/PRVC and (not(starts-with(lower-case(normalize-space(./PRV/PRVC)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVC)), 'n.r')))">
 									<clvapit:hasCity>
 										<xsl:attribute name="rdf:resource">
-                                                <xsl:value-of
-											select="concat($NS, 'City/', arco-fn:urify(./PRV/PRVC))" />
-                                            </xsl:attribute>
+											<xsl:value-of select="concat($NS, 'City/', arco-fn:urify(./PRV/PRVC))" />
+										</xsl:attribute>
 									</clvapit:hasCity>
 								</xsl:if>
 								<!-- Località -->
 								<xsl:if test="./PRV/PRVL and (not(starts-with(lower-case(normalize-space(./PRV/PRVL)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVL)), 'n.r')))">
 									<clvapit:hasAddressArea>
 										<xsl:attribute name="rdf:resource">
-                                                <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./PRV/PRVL))" />
-                                            </xsl:attribute>
+											<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./PRV/PRVL))" />
+										</xsl:attribute>
 									</clvapit:hasAddressArea>
 								</xsl:if>
 								<!-- Fraction -->
@@ -27481,163 +27461,155 @@
 								<xsl:if test="./PRT/PRTL and (not(starts-with(lower-case(normalize-space(./PRT/PRTL)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRT/PRTL)), 'n.r')))">
 									<clvapit:hasAddressArea>
 										<xsl:attribute name="rdf:resource">
-                                                <xsl:value-of
-											select="concat($NS, 'AddressArea/', arco-fn:urify(./PRT/PRTL))" />
-                                            </xsl:attribute>
+											<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./PRT/PRTL))" />
+										</xsl:attribute>
 									</clvapit:hasAddressArea>
 								</xsl:if>
-								<xsl:if
-									test="./PRV/PRVE and (not(starts-with(lower-case(normalize-space(./PRV/PRVE)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVE)), 'n.r')))">
+								<xsl:if test="./PRV/PRVE and (not(starts-with(lower-case(normalize-space(./PRV/PRVE)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVE)), 'n.r')))">
 									<clvapit:hasAddressArea>
 										<xsl:attribute name="rdf:resource">
-                                                <xsl:value-of
-											select="concat($NS, 'AddressArea/', arco-fn:urify(./PRV/PRVE))" />
-                                            </xsl:attribute>
+											<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./PRV/PRVE))" />
+										</xsl:attribute>
 									</clvapit:hasAddressArea>
 								</xsl:if>
-								<xsl:if
-									test="./PRC/PRCU and not(./PRC/PRCU='.' or ./PRC/PRCU='-' or ./PRC/PRCU='/') and (not(starts-with(lower-case(normalize-space(./PRC/PRCU)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRC/PRCU)), 'n.r')))">
+								<xsl:if test="./PRC/PRCU and not(./PRC/PRCU='.' or ./PRC/PRCU='-' or ./PRC/PRCU='/') and (not(starts-with(lower-case(normalize-space(./PRC/PRCU)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRC/PRCU)), 'n.r')))">
 									<clvapit:fullAddress>
-										<xsl:value-of
-											select="normalize-space(./PRC/PRCU)" />
+										<xsl:value-of select="normalize-space(./PRC/PRCU)" />
 									</clvapit:fullAddress>
 								</xsl:if>
 							</rdf:Description>
-						</xsl:if>
-						<!-- Country LA -->
-						<xsl:if
-							test="./PRV/PRVS and (not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'n.r')))">
+							<!-- Country LA -->
+							<xsl:if test="./PRV/PRVS and (not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'n.r')))">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+                                        <xsl:value-of select="concat($NS, 'Country/', arco-fn:urify(./PRV/PRVS))" />
+                                    </xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Country'" />
+                                        </xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(./PRV/PRVS)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(./PRV/PRVS)" />
+									</l0:name>
+								</rdf:Description>
+							</xsl:if>
+							<!-- Region LA -->
+							<xsl:if test="./PRV/PRVR and (not(starts-with(lower-case(normalize-space(./PRV/PRVR)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVR)), 'n.r')))">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+                                        <xsl:value-of select="concat($NS, 'Region/', arco-fn:urify(./PRV/PRVR))" />
+                                    </xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Region'" />
+                                        </xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(./PRV/PRVR)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(./PRV/PRVR)" />
+									</l0:name>
+								</rdf:Description>
+							</xsl:if>
+							<!-- Province LA -->
+							<xsl:if test="./PRV/PRVP and (not(starts-with(lower-case(normalize-space(./PRV/PRVP)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVP)), 'n.r')))">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+                                        <xsl:value-of select="concat($NS, 'Province/', arco-fn:urify(./PRV/PRVP))" />
+                                    </xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Province'" />
+                                        </xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(./PRV/PRVP)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(./PRV/PRVP)" />
+									</l0:name>
+								</rdf:Description>
+							</xsl:if>
+							<!-- City LA -->
+							<xsl:if test="./PRV/PRVC and (not(starts-with(lower-case(normalize-space(./PRV/PRVC)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVC)), 'n.r')))">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+                                        <xsl:value-of select="concat($NS, 'City/', arco-fn:urify(./PRV/PRVC))" />
+                                    </xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="'https://w3id.org/italia/onto/CLV/City'" />
+                                        </xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(./PRV/PRVC)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(./PRV/PRVC)" />
+									</l0:name>
+								</rdf:Description>
+							</xsl:if>
+							<!-- Località (Address Area) LA -->
+							<xsl:if test="./PRV/PRVL and (not(starts-with(lower-case(normalize-space(./PRV/PRVL)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVL)), 'n.r')))">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+                                        <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./PRV/PRVL))" />
+                                    </xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
+                                        </xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(./PRV/PRVL)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(./PRV/PRVL)" />
+									</l0:name>
+								</rdf:Description>
+							</xsl:if>
+							<xsl:if test="./PRV/PRVE and (not(starts-with(lower-case(normalize-space(./PRV/PRVE)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVE)), 'n.r')))">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+                                        <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./PRV/PRVE))" />
+                                    </xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
+                                        </xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(./PRV/PRVE)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(./PRV/PRVE)" />
+									</l0:name>
+								</rdf:Description>
+							</xsl:if>
+						</xsl:when>
+						<xsl:when test="./PRE">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-                                        <xsl:value-of
-									select="concat($NS, 'Country/', arco-fn:urify(./PRV/PRVS))" />
-                                    </xsl:attribute>
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(./PRE))" />
+								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
-                                            <xsl:value-of
-										select="'https://w3id.org/italia/onto/CLV/Country'" />
-                                        </xsl:attribute>
+										<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
-									<xsl:value-of select="normalize-space(./PRV/PRVS)" />
+									<xsl:value-of select="./PRE" />
 								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(./PRV/PRVS)" />
-								</l0:name>
 							</rdf:Description>
-						</xsl:if>
-						<!-- Region LA -->
-						<xsl:if
-							test="./PRV/PRVR and (not(starts-with(lower-case(normalize-space(./PRV/PRVR)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVR)), 'n.r')))">
-							<rdf:Description>
-								<xsl:attribute name="rdf:about">
-                                        <xsl:value-of
-									select="concat($NS, 'Region/', arco-fn:urify(./PRV/PRVR))" />
-                                    </xsl:attribute>
-								<rdf:type>
-									<xsl:attribute name="rdf:resource">
-                                            <xsl:value-of
-										select="'https://w3id.org/italia/onto/CLV/Region'" />
-                                        </xsl:attribute>
-								</rdf:type>
-								<rdfs:label>
-									<xsl:value-of select="normalize-space(./PRV/PRVR)" />
-								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(./PRV/PRVR)" />
-								</l0:name>
-							</rdf:Description>
-						</xsl:if>
-						<!-- Province LA -->
-						<xsl:if
-							test="./PRV/PRVP and (not(starts-with(lower-case(normalize-space(./PRV/PRVP)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVP)), 'n.r')))">
-							<rdf:Description>
-								<xsl:attribute name="rdf:about">
-                                        <xsl:value-of
-									select="concat($NS, 'Province/', arco-fn:urify(./PRV/PRVP))" />
-                                    </xsl:attribute>
-								<rdf:type>
-									<xsl:attribute name="rdf:resource">
-                                            <xsl:value-of
-										select="'https://w3id.org/italia/onto/CLV/Province'" />
-                                        </xsl:attribute>
-								</rdf:type>
-								<rdfs:label>
-									<xsl:value-of select="normalize-space(./PRV/PRVP)" />
-								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(./PRV/PRVP)" />
-								</l0:name>
-							</rdf:Description>
-						</xsl:if>
-						<!-- City LA -->
-						<xsl:if
-							test="./PRV/PRVC and (not(starts-with(lower-case(normalize-space(./PRV/PRVC)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVC)), 'n.r')))">
-							<rdf:Description>
-								<xsl:attribute name="rdf:about">
-                                        <xsl:value-of
-									select="concat($NS, 'City/', arco-fn:urify(./PRV/PRVC))" />
-                                    </xsl:attribute>
-								<rdf:type>
-									<xsl:attribute name="rdf:resource">
-                                            <xsl:value-of
-										select="'https://w3id.org/italia/onto/CLV/City'" />
-                                        </xsl:attribute>
-								</rdf:type>
-								<rdfs:label>
-									<xsl:value-of select="normalize-space(./PRV/PRVC)" />
-								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(./PRV/PRVC)" />
-								</l0:name>
-							</rdf:Description>
-						</xsl:if>
-						<!-- Località (Address Area) LA -->
-						<xsl:if
-							test="./PRV/PRVL and (not(starts-with(lower-case(normalize-space(./PRV/PRVL)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVL)), 'n.r')))">
-							<rdf:Description>
-								<xsl:attribute name="rdf:about">
-                                        <xsl:value-of
-									select="concat($NS, 'AddressArea/', arco-fn:urify(./PRV/PRVL))" />
-                                    </xsl:attribute>
-								<rdf:type>
-									<xsl:attribute name="rdf:resource">
-                                            <xsl:value-of
-										select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
-                                        </xsl:attribute>
-								</rdf:type>
-								<rdfs:label>
-									<xsl:value-of select="normalize-space(./PRV/PRVL)" />
-								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(./PRV/PRVL)" />
-								</l0:name>
-							</rdf:Description>
-						</xsl:if>
-						<xsl:if
-							test="./PRV/PRVE and (not(starts-with(lower-case(normalize-space(./PRV/PRVE)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVE)), 'n.r')))">
-							<rdf:Description>
-								<xsl:attribute name="rdf:about">
-                                        <xsl:value-of
-									select="concat($NS, 'AddressArea/', arco-fn:urify(./PRV/PRVE))" />
-                                    </xsl:attribute>
-								<rdf:type>
-									<xsl:attribute name="rdf:resource">
-                                            <xsl:value-of
-										select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
-                                        </xsl:attribute>
-								</rdf:type>
-								<rdfs:label>
-									<xsl:value-of select="normalize-space(./PRV/PRVE)" />
-								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(./PRV/PRVE)" />
-								</l0:name>
-							</rdf:Description>
-						</xsl:if>
+						</xsl:when>
+						</xsl:choose>
 					</xsl:otherwise>
 				</xsl:choose>
-			</xsl:if>
 			</xsl:for-each>
 			<!-- production realization location for BDM < version 4.00 -->
 			<xsl:for-each select="record/metadata/schede/BDM/AU/LDF">
