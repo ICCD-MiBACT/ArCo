@@ -81,59 +81,73 @@
 	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
 	xmlns:ar-CISNameInTime="https://w3id.org/arco/resource/CISNameInTime/"
 	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
-xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
+xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 
 	<xsl:param name="item" />
 	<xsl:param name="NS" />
 	<xsl:param name="SOURCE"/>
 	<xsl:variable name="sheetVersion"
 		select="record/metadata/schede/*/@version" />
-	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)" />
+	<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
 	<xsl:variable name="idCG" select="record/metadata/schede/CG/CD/CCG" />
 	<xsl:variable name="cp-name" select="''" />
 	<!-- xsl:variable name="NS"
 		select="'https://w3id.org/arco/resource/'" /-->
 	<xsl:variable name="itemURI">
-	<xsl:choose>
-		<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
-		<xsl:choose>
-			<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
-				<xsl:value-of
-					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/RV/RVE/RVEL)))" />
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:value-of
-					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
-			</xsl:otherwise>
-		</xsl:choose>
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:variable name="accc-space" select="record/metadata/schede/*/AC/ACC/ACCC" />
-			<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
-			<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
-			<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC" />
-			<xsl:variable name="acc-nospace" select="translate($acc-space, ' ', '')" />
-			<xsl:variable name="acc" select="translate($acc-nospace, '/', '_')" />
 				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
-						<xsl:value-of
-							select="$accc" />
+					<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
+								<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/RV/RVE/RVEL)))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/MODI/CD/CDM">
+						<xsl:value-of select="concat(arco-fn:urify(record/metadata/schede/*/CD/CDR), arco-fn:urify(record/metadata/schede/*/CD/CDM))" />
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/*/CD/CBC">
+						<xsl:value-of select="record/metadata/schede/*/CD/CBC" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of
-							select="$acc" />
+					<xsl:variable name="accc-space" >
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
+								<xsl:value-of select="record/metadata/schede/*/AC/ACC[1]/ACCC" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="record/metadata/schede/*/CD/ACC[1]/ACCC" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
+					<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
+					<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC[1]" />
+					<xsl:variable name="acc-nospace" select="translate($acc-space, ' ', '')" />
+					<xsl:variable name="acc" select="translate($acc-nospace, '/', '_')" />
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
+								<xsl:value-of select="$accc" />
+							</xsl:when>
+							<xsl:when test="record/metadata/schede/*/CD/ACC/ACCC">
+								<xsl:value-of select="$accc" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="$acc" />
+							</xsl:otherwise>
+						</xsl:choose>
 					</xsl:otherwise>
 				</xsl:choose>
-			</xsl:otherwise>
-	</xsl:choose>
-	</xsl:variable>
+			</xsl:variable>
 	<xsl:variable name="idCF">
 		<xsl:choose>
    			<xsl:when test="record/metadata/schede/*/CD/CCF and contains(record/metadata/schede/*/CD/CCF, 'DBunico')">
    				<xsl:value-of select="substring-after(record/metadata/schede/*/CD/CCF, 'DBunico')"/>
    			</xsl:when>
   			<xsl:otherwise>
-  				<xsl:value-of select="record/metadata/schede/CF/CD/CCF"/>
+  				<xsl:value-of select="record/metadata/schede/*/CD/CCF"/>
   			</xsl:otherwise>
   		</xsl:choose>
  	</xsl:variable>
@@ -780,12 +794,31 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 					</clvapit:hasGeometry>
 				</xsl:for-each>
 			</xsl:if>
+			<xsl:if test="record/metadata/schede/harvesting/geocoding/*">
+				<clvapit:hasGeometry>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Geometry/', $idCF, '-geometry-point')" />
+					</xsl:attribute>
+				</clvapit:hasGeometry>
+			</xsl:if>
 			<xsl:for-each select="record/metadata/schede/*/DO/FTA">
 				<arco-cd:hasDocumentation>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'PhotographicDocumentation/', $idCF, '-photographic-documentation-', position())" />
 	                </xsl:attribute>
 				</arco-cd:hasDocumentation>
+				 <xsl:if test="./FTAN and (not(starts-with(lower-case(normalize-space(./FTAN)), 'nr')) and not(starts-with(lower-case(normalize-space(./FTAN)), 'n.r')))">
+                    <xsl:for-each select="./FTAN">
+                        <xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
+                        <xsl:for-each select="$url">
+                            <foaf:depiction>
+                                <xsl:attribute name="rdf:resource">
+                                    <xsl:value-of select="." />
+                                </xsl:attribute>
+                            </foaf:depiction>
+                        </xsl:for-each>
+                    </xsl:for-each>
+                </xsl:if>
 			</xsl:for-each>
 			<xsl:if test="record/metadata/schede/*/LC/PVC">
 				<cis:siteAddress>
@@ -997,13 +1030,13 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 						</xsl:choose>
 					</xsl:for-each>
 				</rdfs:label>
-				<xsl:if test="record/metadata/schede/*/LC/PVL">
+				<xsl:for-each select="record/metadata/schede/*/LC/PVL">
 					<arco-location:hasToponymInTime>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/PVL)))" />
+							<xsl:value-of select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(.)))" />
 						</xsl:attribute>
 					</arco-location:hasToponymInTime>
-				</xsl:if>
+				</xsl:for-each>
 				<xsl:if test="record/metadata/schede/*/LC/PVC/PVCI and not(record/metadata/schede/*/LC/PVC/PVCI='.' or record/metadata/schede/*/LC/PVC/PVCI='-' or record/metadata/schede/*/LC/PVC/PVCI='/') and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCI)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCI)), 'n.r')))">
 					<clvapit:fullAddress>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/PVC/PVCI)" />
@@ -1084,10 +1117,10 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</xsl:if>
 
 				<!-- Toponym in Time as individual -->
-			<xsl:if test="record/metadata/schede/*/LC/PVL">
+			<xsl:for-each select="record/metadata/schede/*/LC/PVL">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/PVL)))" />
+						<xsl:value-of select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(.)))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -1095,13 +1128,13 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/PVL)" />
+						<xsl:value-of select="normalize-space(.)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/PVL)" />
+						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
 				</rdf:Description>
-			</xsl:if>
+			</xsl:for-each>>
 				<!-- Stato -->
 			<xsl:if test="record/metadata/schede/*/LC/PVC/PVCS and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCS)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCS)), 'n.r')))">
 				<rdf:Description>
@@ -1535,7 +1568,85 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
-		</xsl:if>			
+		</xsl:if>
+		<!-- Geometry of site as an individual for geocoding -->
+		<xsl:if test="record/metadata/schede/harvesting/geocoding/*">
+		    <rdf:Description>
+		        <xsl:attribute name="rdf:about">
+		            <xsl:value-of select="concat($NS, 'Geometry/', $idCF, '-geometry-point')" />
+		        </xsl:attribute>
+		        <rdf:type>
+		            <xsl:attribute name="rdf:resource">
+		                <xsl:value-of
+		                select="'https://w3id.org/italia/onto/CLV/Geometry'" />
+		            </xsl:attribute>
+		        </rdf:type>
+		        <rdfs:label xml:lang="en">
+		            <xsl:value-of
+		                select="concat('Geometry (point) of site: ', $idCF)" />
+		        </rdfs:label>
+		        <l0:name xml:lang="en">
+		            <xsl:value-of
+		                select="concat('Geometry (point) of site: ', $idCF)" />
+		        </l0:name>
+		        <rdfs:label xml:lang="it">
+		            <xsl:value-of
+		                select="concat('Georeferenziazione (puntuale) del contenitore fisico: ', $idCF)" />
+		        </rdfs:label>
+		        <l0:name xml:lang="it">
+		            <xsl:value-of
+		                select="concat('Georeferenziazione (puntuale) del contenitore fisico: ', $idCF)" />
+		        </l0:name>
+		        <clvapit:isGeometryFor>
+		            <xsl:attribute name="rdf:resource">
+		               <xsl:value-of select="$contenitoreFisico" />
+		            </xsl:attribute>
+		        </clvapit:isGeometryFor>
+		        <clvapit:hasGeometryType>
+		            <xsl:attribute name="rdf:resource">
+		                <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Point'" />
+		            </xsl:attribute>
+		        </clvapit:hasGeometryType>
+		        <!-- http://www.openlinksw.com/schemas/virtrdf#Geometry virtuoso datatype for geometry -->
+		        <!-- http://www.opengis.net/ont/geosparql#wktLiteral virtuoso datatype for geometry -->
+		        <clvapit:serialization rdf:datatype= "http://www.openlinksw.com/schemas/virtrdf#Geometry">
+		            <!-- xsl:text disable-output-escaping="yes">&lt;![CDATA[ &lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; </xsl:text-->
+		            <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
+		            <xsl:value-of select="normalize-space(concat('POINT(', record/metadata/schede/harvesting/geocoding/x, ' ', record/metadata/schede/harvesting/geocoding/y, ')'))" />
+		            <xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
+		        </clvapit:serialization>
+		        <arco-location:hasCoordinates>
+		            <xsl:attribute name="rdf:resource">
+		                <xsl:value-of select="concat($NS, 'Coordinates/', $idCF, '-geometry-', 'coordinates')" />
+		            </xsl:attribute>
+		        </arco-location:hasCoordinates>
+		    </rdf:Description>
+			<!-- geometry coordinates for geocoding as an individual -->
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'Coordinates/', $idCF, '-geometry-', 'coordinates')" />
+				</xsl:attribute>
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/location/Coordinates" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Coordinates of site: ', $idCF)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Coordinates of site: ', $idCF)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Coordinate del contenitore fisico: ', $idCF)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Coordinate del contenitore fisico: ', $idCF)" />
+				</l0:name>
+				<arco-location:long>
+					<xsl:value-of select="normalize-space(record/metadata/schede/harvesting/geocoding/x)" />
+				</arco-location:long>
+				<arco-location:lat>
+					<xsl:value-of select="normalize-space(record/metadata/schede/harvesting/geocoding/y)" />
+				</arco-location:lat>
+			</rdf:Description>
+		</xsl:if>		
 				<!-- Photographic documentation of cultural property as an individual -->
 		<xsl:for-each select="record/metadata/schede/*/DO/FTA">
 			<xsl:variable name="photodocu-position">
@@ -2331,7 +2442,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			<xsl:if test="record/metadata/schede/*/CD/CCF">
 				<cis:hasSite>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Site/', record/metadata/schede/*/CD/CCF)" />
+						<xsl:value-of select="$contenitoreFisico" />
 					</xsl:attribute>
 				</cis:hasSite>
 			</xsl:if>

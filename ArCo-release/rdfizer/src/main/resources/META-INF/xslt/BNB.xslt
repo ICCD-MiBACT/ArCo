@@ -81,7 +81,7 @@
 	xmlns:ar-CISNameInTime="https://w3id.org/arco/resource/CISNameInTime/"
 	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
 
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0"
 	exclude-result-prefixes="xsl php">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 
@@ -96,45 +96,59 @@
 	
 	<xsl:variable name="sheetVersion"
 		select="record/metadata/schede/*/@version" />
-	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)" />
+	<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
 	<xsl:variable name="cp-name" select="''" />
 	<!-- xsl:variable name="NS"
 		select="$NS,''" /-->
 	<xsl:param name="NS" />
-		<xsl:variable name="itemURI">
-	<xsl:choose>
-		<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
-		<xsl:choose>
-			<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
-				<xsl:value-of
-					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/RV/RVE/RVEL)))" />
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:value-of
-					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
-			</xsl:otherwise>
-		</xsl:choose>
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:variable name="accc-space" select="record/metadata/schede/*/AC/ACC/ACCC" />
-			<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
-			<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
-			<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC" />
-			<xsl:variable name="acc-nospace" select="translate($acc-space, ' ', '')" />
-			<xsl:variable name="acc" select="translate($acc-nospace, '/', '_')" />
+	<xsl:variable name="itemURI">
 				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
-						<xsl:value-of
-							select="$accc" />
+					<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
+								<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/RV/RVE/RVEL)))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/MODI/CD/CDM">
+						<xsl:value-of select="concat(arco-fn:urify(record/metadata/schede/*/CD/CDR), arco-fn:urify(record/metadata/schede/*/CD/CDM))" />
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/*/CD/CBC">
+						<xsl:value-of select="record/metadata/schede/*/CD/CBC" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of
-							select="$acc" />
+					<xsl:variable name="accc-space" >
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
+								<xsl:value-of select="record/metadata/schede/*/AC/ACC[1]/ACCC" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="record/metadata/schede/*/CD/ACC[1]/ACCC" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
+					<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
+					<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC[1]" />
+					<xsl:variable name="acc-nospace" select="translate($acc-space, ' ', '')" />
+					<xsl:variable name="acc" select="translate($acc-nospace, '/', '_')" />
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
+								<xsl:value-of select="$accc" />
+							</xsl:when>
+							<xsl:when test="record/metadata/schede/*/CD/ACC/ACCC">
+								<xsl:value-of select="$accc" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="$acc" />
+							</xsl:otherwise>
+						</xsl:choose>
 					</xsl:otherwise>
 				</xsl:choose>
-			</xsl:otherwise>
-	</xsl:choose>
-	</xsl:variable>
+			</xsl:variable>
 	<xsl:variable name="culturalProperty">
 		<xsl:choose>
 			<xsl:when test="$sheetType='MODI'">
@@ -883,11 +897,11 @@
 			<arco-mp:hasTaxon>
 			<xsl:variable name="rbna-rbnb">
 				<xsl:choose>
-					<xsl:when test="not(contains(./RBNB, ./RBNA))">
-						<xsl:value-of select="concat(./RBNA, '-', ./RBNB)" />
+					<xsl:when test="not(contains(./RBN/RBNB, ./RBN/RBNA))">
+						<xsl:value-of select="concat(./RBN/RBNA, '-', ./RBN/RBNB)" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="./RBNB" />
+						<xsl:value-of select="./RBN/RBNB" />
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:variable>
@@ -3342,7 +3356,7 @@
 					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/TBI/TBIN)" />
 				</xsl:when>
 				<xsl:when test="record/metadata/schede/BNB/SB/NAT">
-					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAT/*)" />
+					<xsl:value-of select="normalize-space(string-join(record/metadata/schede/BNB/SB/NAT/*,', '))" />
 				</xsl:when>
 			</xsl:choose>
 		</rdfs:label>
@@ -3352,7 +3366,7 @@
 					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/TBI/TBIN)" />
 				</xsl:when>
 				<xsl:when test="record/metadata/schede/BNB/SB/NAT">
-					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAT/*)" />
+					<xsl:value-of select="normalize-space(string-join(record/metadata/schede/BNB/SB/NAT/*,', '))" />
 				</xsl:when>
 			</xsl:choose>
 		</l0:name>

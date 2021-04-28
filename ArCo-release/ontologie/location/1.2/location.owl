@@ -1923,6 +1923,12 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasCadastralCity"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CLV/City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasCadastralEntity"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/CadastralEntity"/>
             </owl:Restriction>
@@ -2600,6 +2606,22 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/BuildingAndLandCadastre -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/BuildingAndLandCadastre">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/CadastreType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/BuildingCadastre -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/BuildingCadastre">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/CadastreType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/ChiefTown -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/ChiefTown">
@@ -2716,6 +2738,14 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/LandCadastre -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/LandCadastre">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/CadastreType"/>
     </owl:NamedIndividual>
     
 
