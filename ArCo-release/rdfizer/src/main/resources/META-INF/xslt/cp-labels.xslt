@@ -66,6 +66,16 @@
  	<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])"></xsl:variable>
  				  <!-- variable culturalPropertyComponent -->	
 	<xsl:variable name="culturalPropertyComponent" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />     
+	<xsl:variable name="objectOfDescription">
+		<xsl:choose>
+			<xsl:when test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+				<xsl:value-of select="$culturalPropertyComponent" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="$culturalProperty" />
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
 	<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version"></xsl:variable>
 	<xsl:variable name="cp-name" select="''"></xsl:variable>       
 	<xsl:variable name="culturalProperty">
@@ -1400,7 +1410,7 @@
 		<rdf:RDF>
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="$culturalProperty" />
+					<xsl:value-of select="$objectOfDescription" />
 				</xsl:attribute>
 				<xsl:call-template name="label"/>
 			</rdf:Description>

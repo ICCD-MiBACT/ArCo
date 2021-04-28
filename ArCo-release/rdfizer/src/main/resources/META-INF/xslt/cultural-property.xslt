@@ -157,8 +157,8 @@
 		<rdf:RDF>
 		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT') and not(administrativeDataRecord/metadata)" >
 					<!-- cultural property component -->
-			<xsl:if test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
-				<rdf:Description>
+		 	<xsl:if test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+			<!--	<rdf:Description>
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of select="$culturalProperty" />
 					</xsl:attribute>
@@ -167,7 +167,7 @@
 							<xsl:value-of select="$culturalPropertyComponent" />
 						</xsl:attribute>
 					</arco-arco:hasCulturalPropertyComponent>
-				</rdf:Description>
+				</rdf:Description>  -->	
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of select="$culturalPropertyComponent" />
@@ -186,11 +186,11 @@
 							<xsl:value-of select="arco-fn:getSpecificPropertyType($sheetType)" />
 						</xsl:attribute>
 					</rdf:type>
-					<arco-arco:isCulturalPropertyComponentOf>
+				<!-- <arco-arco:isCulturalPropertyComponentOf>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="$culturalProperty" />
 						</xsl:attribute>
-					</arco-arco:isCulturalPropertyComponentOf>
+					</arco-arco:isCulturalPropertyComponentOf>  -->	
 				</rdf:Description>
 			</xsl:if>
 					<!-- description of catalogue record -->
@@ -3466,14 +3466,7 @@
 			<!-- Property related to cultural property -->
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:choose>
-						<xsl:when test="$sheetType='MODI'">
-							<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)), '/', $itemURI)" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:value-of select="$objectOfDescription" />
                 </xsl:attribute>
                 <rdf:type>
 					<xsl:attribute name="rdf:resource">
