@@ -24,6 +24,7 @@ public class AdministrativeDataHarvester {
 
 	private static final String OAI_ICCD = "http://www.catalogo-old.beniculturali.it/oaitarget/OAIHandler";
 	private String base;
+	private long limit = 0;
 
 	private String verb, folderOut;
 
@@ -31,6 +32,14 @@ public class AdministrativeDataHarvester {
 
 	public AdministrativeDataHarvester(String verb, String folderOut) throws ParserConfigurationException {
 		this(OAI_ICCD, verb, folderOut);
+	}
+
+	public long getLimit() {
+		return limit;
+	}
+
+	public void setLimit(long limit) {
+		this.limit = limit;
 	}
 
 	public AdministrativeDataHarvester(String endpoint, String verb, String folderOut)
@@ -55,6 +64,10 @@ public class AdministrativeDataHarvester {
 		new File(folderOut).mkdirs();
 
 		while (!stop) {
+			if (limit > 0 && cursor > limit) {
+				break;
+			}
+
 			URL url = new URL(base + verb + "&cursor=" + cursor);
 			stop = true;
 			for (int i = 0; i < NUM_OF_ATTEMPTS; i++) {

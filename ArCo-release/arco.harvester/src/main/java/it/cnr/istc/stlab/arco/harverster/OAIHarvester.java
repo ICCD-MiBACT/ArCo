@@ -96,9 +96,10 @@ public class OAIHarvester {
 			// Download adminstrative data
 
 			if (toDownload.contains(enti_base)) {
+				logger.trace("Download enti base");
 				AdministrativeDataHarvester adh = new AdministrativeDataHarvester(enti_base,
 						outputFolder + "/" + enti_base);
-				logger.trace("Download enti base");
+				adh.setLimit(limit);
 				adh.downloadRecords();
 			}
 
@@ -106,6 +107,7 @@ public class OAIHarvester {
 				logger.trace("Download enti completo");
 				AdministrativeDataHarvester adh = new AdministrativeDataHarvester(enti_completo,
 						outputFolder + "/" + enti_completo);
+				adh.setLimit(limit);
 				adh.downloadRecords();
 			}
 
@@ -113,6 +115,7 @@ public class OAIHarvester {
 				logger.trace("Download assegnazione");
 				AdministrativeDataHarvester adh = new AdministrativeDataHarvester(assegnazione,
 						outputFolder + "/" + assegnazione);
+				adh.setLimit(limit);
 				adh.downloadRecords();
 			}
 
@@ -120,6 +123,7 @@ public class OAIHarvester {
 				logger.trace("Download campagne");
 				AdministrativeDataHarvester adh = new AdministrativeDataHarvester(campagne,
 						outputFolder + "/" + campagne);
+				adh.setLimit(limit);
 				adh.downloadRecords();
 			}
 
@@ -127,6 +131,7 @@ public class OAIHarvester {
 				logger.trace("Download attività");
 				AdministrativeDataHarvester adh = new AdministrativeDataHarvester(attivita,
 						outputFolder + "/" + attivita);
+				adh.setLimit(limit);
 				adh.downloadRecords();
 			}
 
@@ -134,6 +139,7 @@ public class OAIHarvester {
 				logger.trace("Download progetti");
 				AdministrativeDataHarvester adh = new AdministrativeDataHarvester(progetti,
 						outputFolder + "/" + progetti);
+				adh.setLimit(limit);
 				adh.downloadRecords();
 			}
 

@@ -132,28 +132,34 @@ public class Harvester {
 			TransformerException {
 
 		if (records) {
+			logger.info("Download records");
 			downloadRecords(recordsDirectory, "", "/xml", true);
 			downloaded = 0;
 		}
 		if (multimedia_records) {
+			logger.info("Download multimedia records");
 			downloadRecords(multimediaRecordsDirectory, "/entita_multimediale", "/xml/entita_multimediale", true);
 			downloaded = 0;
 		}
 		if (contenitoriFisici) {
+			logger.info("Download contenitori fisici");
 			downloadRecords(contenitoriFisiciDirectory, "/contenitori_fisici", "/xml/contenitori_fisici", true);
 			downloaded = 0;
 		}
 		if (contenitoriGiuridici) {
+			logger.info("Download contenitori giuridici");
 			downloadRecords(contenitoriGiuridiciDirectory, "/contenitori_giuridici", "/xml/contenitori_giuridici",
 					true);
 			downloaded = 0;
 		}
 		if (altreNormative) {
+			logger.info("Download altre normative");
 			downloadRecords(altreNormativeDirectory, "/altre_normative", "/xml/altre_normative", true);
 			downloaded = 0;
 		}
 
 		if (authorityFiles) {
+			logger.info("Download authority file");
 			downloadRecords(authorityFilesDirectory, "/authorities", "/xml/authorities", true);
 		}
 
