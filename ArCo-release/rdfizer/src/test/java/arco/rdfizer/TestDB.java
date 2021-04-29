@@ -50,6 +50,38 @@ public class TestDB {
 			e.printStackTrace();
 		}
 	}
+	
+	@Test
+	public void testlinkEMM() {
+		String dbFile = "test_db";
+		new File(dbFile).delete();
+		PreprocessedData pd = PreprocessedData.getInstance(false, dbFile, true);
+		String resourcePrefix = "https://w3id.org/arco/resources/";
+		String testFolder = "src/main/resources/testResources/harvested_resources/";
+		try {
+			Preprocessor p = new Preprocessor(testFolder + "records", testFolder + "multimedia_records",
+					testFolder + "contenitori_fisici", testFolder + "contenitori_giuridici", resourcePrefix);
+			p.run();
+
+			assertEquals("http://www.sigecweb.beniculturali.it/images/fullsize/ICCD1038895/ICCD13814302_S239_57084.jpg", pd.getFtan2URL().get("S239_57084"));
+			assertEquals("http://www.sigecweb.beniculturali.it/images/fullsize/ICCD1060774/ICCD13814308_konsoantenatosvestito.jpg", pd.getFtan2URL().get("New_1524205854815"));
+			assertEquals("http://www.sigecweb.beniculturali.it/images/fullsize/ICCD1022624/ICCD11173579_CRDA00078_02.mp3", pd.getFtan2URL().get("New_1401358982589"));
+			
+
+			new File(dbFile).delete();
+			resetInstance();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (NoSuchFieldException e) {
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+	}
 
 	@Test
 	public void issue156() {

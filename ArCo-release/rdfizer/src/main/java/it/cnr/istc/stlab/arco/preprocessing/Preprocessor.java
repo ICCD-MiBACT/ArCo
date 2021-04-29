@@ -204,13 +204,22 @@ public class Preprocessor {
 			XPathFactory xpf = XPathFactory.newInstance();
 			XPath xpath = xpf.newXPath();
 
-			String ftan = getFTANFromEMM(xpath, xml);
+			String ftan = getFieldFromEMM(xpath, xml,"FTAN");
+			String regn = getFieldFromEMM(xpath, xml,"REGN");
+			String dran = getFieldFromEMM(xpath, xml,"DRAN");
+			String vdcn = getFieldFromEMM(xpath, xml,"VDCN");
 			String link = getLinkEMMFromEMM(xpath, xml);
 
 			logger.trace(f.toFile().getAbsolutePath() + " - " + ftan + " - " + link);
 
 			if (validateField(ftan) && validateField(link)) {
 				this.ftan2URL.put(ftan, link);
+			}else if (validateField(regn) && validateField(link)) {
+				this.ftan2URL.put(regn, link);
+			}else if (validateField(dran) && validateField(link)) {
+				this.ftan2URL.put(dran, link);
+			}else if (validateField(vdcn) && validateField(link)) {
+				this.ftan2URL.put(vdcn, link);
 			}
 
 		} catch (SAXException | IOException | ParserConfigurationException | XPathExpressionException e) {
@@ -391,8 +400,12 @@ public class Preprocessor {
 
 	}
 
-	private String getFTANFromEMM(XPath xpath, Document xml) throws XPathExpressionException {
-		return (String) xpath.evaluate("//FTAN", xml, XPathConstants.STRING);
+//	private String getFTANFromEMM(XPath xpath, Document xml) throws XPathExpressionException {
+//		return (String) xpath.evaluate("//FTAN", xml, XPathConstants.STRING);
+//	}
+	
+	private String getFieldFromEMM(XPath xpath, Document xml, String field) throws XPathExpressionException {
+		return (String) xpath.evaluate("//"+field, xml, XPathConstants.STRING);
 	}
 
 	private String getLinkEMMFromEMM(XPath xpath, Document xml) throws XPathExpressionException {
