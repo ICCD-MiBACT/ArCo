@@ -12,7 +12,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 
 	<xsl:param name="item" />
 	<xsl:param name="NS" />
-	<xsl:param name="SOURCE"/>
+	<xsl:param name="SOURCE" select="''"/>
 	<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version" />
 	<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
 	<xsl:variable name="cp-name" select="''" />
@@ -116,20 +116,24 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 	</xsl:template>
 	<xsl:template name="sourceParser">
 		<xsl:param name="source" select="$SOURCE"/>
+		<xsl:param name="itemURI"/>
 		<xsl:choose>
 			<xsl:when test="contains($source,'$(IDENTIFIER)')">
 				<xsl:call-template name="sourceParser">
 					<xsl:with-param name="source" select="concat(substring-before($source,'$(IDENTIFIER)'),$itemURI,substring-after($source,'$(IDENTIFIER)'))"/>
+					<xsl:with-param name="itemURI" select="$itemURI"/>
 				</xsl:call-template> 
 			</xsl:when>
 			<xsl:when test="contains($source,'$(SYSCODE)')">
 				<xsl:call-template name="sourceParser">
 					<xsl:with-param name="source" select="concat(substring-before($source,'$(SYSCODE)'),$item,substring-after($source,'$(SYSCODE)'))"/>
+					<xsl:with-param name="itemURI" select="$itemURI"/>
 				</xsl:call-template> 
 			</xsl:when>
 			<xsl:when test="contains($source,'$(PROPERTYTYPE)')">
 				<xsl:call-template name="sourceParser">
 					<xsl:with-param name="source" select="concat(substring-before($source,'$(PROPERTYTYPE)'),arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)),substring-after($source,'$(PROPERTYTYPE)'))"/>
+					<xsl:with-param name="itemURI" select="$itemURI"/>
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:otherwise>
@@ -311,20 +315,31 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 			<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="concat($SOURCE, $item)" />
 			</xsl:attribute>
-		</dc:source>
-		 -->
+		</dc:source> -->
+		 
+		<xsl:if test="string-length($SOURCE)">
 		<dc:source>
 			<xsl:attribute name="rdf:resource">
 				<xsl:choose>
-					<xsl:when test="contains($SOURCE,'$(')">
-						<xsl:call-template name="sourceParser"/>
-					</xsl:when>	
-					<xsl:otherwise>
-						<xsl:value-of select="concat($SOURCE, $item)" />
-					</xsl:otherwise>
-				</xsl:choose>    
+		    	<xsl:when test="$sheetType='MODI'">
+					<xsl:value-of select="concat('http://catalogo-old.beniculturali.it/oaitarget/OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=oai:oaicat.iccd.org:@',$item,'@/xml/altre_normative')" />
+		    	</xsl:when>
+		    	<xsl:otherwise>
+					<xsl:choose>
+						<xsl:when test="contains($SOURCE,'$(')">
+							<xsl:call-template name="sourceParser">
+								<xsl:with-param name="itemURI" select="$itemURI"/>
+							</xsl:call-template>
+						</xsl:when>	
+						<xsl:otherwise>
+							<xsl:value-of select="concat($SOURCE, $item)" />
+						</xsl:otherwise>
+					</xsl:choose>    
+		    	</xsl:otherwise>
+			</xsl:choose>    
 			</xsl:attribute>
 		</dc:source>
+		</xsl:if>
 												<!-- dc:title -->	
 
 	<xsl:if test="record/metadata/schede/*/OG">

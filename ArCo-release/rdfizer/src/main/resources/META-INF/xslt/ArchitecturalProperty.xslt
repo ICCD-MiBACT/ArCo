@@ -886,7 +886,7 @@
 					<xsl:otherwise>
 						<arco-dd:hasTechnique>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify($svcc))" />
+							<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(./SVCC))" />
 						</xsl:attribute>
 						</arco-dd:hasTechnique>
 					</xsl:otherwise>		

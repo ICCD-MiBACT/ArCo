@@ -214,7 +214,7 @@
 						<xsl:for-each select="./CTSC[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<arco-location:hasCadastralCity>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'City/', arco-fn:urify(normalize-space(.)))" />
+									<xsl:value-of select="concat($NS, 'City/', arco-fn:urify(normalize-space()))" />
 								</xsl:attribute>
 							</arco-location:hasCadastralCity>
 						</xsl:for-each>
@@ -292,8 +292,7 @@
 						</xsl:for-each>
 					</xsl:if>
 					<!-- cadastre unit collection as an individual -->
-					<xsl:if test="./CTSN and (not(starts-with(lower-case(normalize-space(./CTSN)), 'nr')) and not(starts-with(lower-case(normalize-space(./CTSN)), 'n.r')))">
-						<xsl:for-each select="./CTSN">
+					<xsl:for-each select="./CTSN[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'CadastralUnitCollection/', arco-fn:urify(normalize-space(../CTSC)), '-', arco-fn:urify(normalize-space(../CTSF)), '-', arco-fn:urify(normalize-space(.)))" />
@@ -318,11 +317,9 @@
 									</arco-cd:hasLegalSituation>
 								</xsl:if>
 							</rdf:Description>
-						</xsl:for-each>
-					</xsl:if>
+					</xsl:for-each>
 					<!-- Neighbouring Cadastral Entity as an individual -->
-					<xsl:if test="./CTSE and (not(starts-with(lower-case(normalize-space(./CTSE)), 'nr')) and not(starts-with(lower-case(normalize-space(./CTSE)), 'n.r')))">
-						<xsl:for-each select="./CTSE">
+					<xsl:for-each select="./CTSE[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'NeighbouringCadastralEntity/', $itemURI, '-', $parentPosition, '-', position())" />
@@ -345,8 +342,7 @@
 									<xsl:value-of select="concat('Neighbouring cadastral identity of cultural property ', $itemURI, ': ', normalize-space(.))" />
 								</l0:name>
 							</rdf:Description>
-						</xsl:for-each>
-					</xsl:if>
+					</xsl:for-each>
 					<!-- Legal situation of cadastral identity as an individual -->
 					<xsl:if	test="./CTSP[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<rdf:Description>

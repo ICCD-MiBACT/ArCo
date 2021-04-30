@@ -1088,32 +1088,34 @@
 	<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAB">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-               <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify($naaa-naab))" />
-            </xsl:attribute>
-            <arco-mp:hasDirectHigherRank>
-            <xsl:attribute name="rdf:resource">
-            		 <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/NAA/NAAA))" />
-            </xsl:attribute>
-            </arco-mp:hasDirectHigherRank>
-            <rdf:type>
-            <xsl:attribute name="rdf:resource">
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Species'" />      
-            </xsl:attribute>
-            </rdf:type>
-            <rdfs:label>
-            	 <xsl:value-of select="$naaa-naab-name" />
-            </rdfs:label>
-            <l0:name>
-            	<xsl:value-of select="$naaa-naab-name" />
-            </l0:name>
-            <xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAC">
-            	<arco-cd:hasAuthor>
-            	<xsl:attribute name="rdf:resource">
-            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNB/SB/NAA/NAAC))" />
-            	</xsl:attribute>
-            	</arco-cd:hasAuthor> 
-            </xsl:if>           	           
-    	</rdf:Description>
+<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify($naaa-naab))" />
+			</xsl:attribute>
+			<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAA">
+				<arco-mp:hasDirectHigherRank>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/NAA/NAAA))" />
+					</xsl:attribute>
+				</arco-mp:hasDirectHigherRank>
+			</xsl:if>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Species'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="$naaa-naab-name" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="$naaa-naab-name" />
+			</l0:name>
+			<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAC">
+				<arco-cd:hasAuthor>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNB/SB/NAA/NAAC))" />
+					</xsl:attribute>
+				</arco-cd:hasAuthor>
+			</xsl:if>
+		</rdf:Description>
 	</xsl:if>	
 	<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAA">
 		<rdf:Description>

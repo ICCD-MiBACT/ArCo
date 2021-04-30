@@ -400,6 +400,36 @@
 					</xsl:otherwise>
        			</xsl:choose>
 			</xsl:when>
+			<xsl:when test="$sheetType='MODI'">
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/MODI/DT/DTS/DTSI or record/metadata/schede/MODI/DT/DTS/DTSF">
+							<xsl:variable name="startDate">
+								<xsl:choose>
+									<xsl:when test="record/metadata/schede/MODI/DT/DTS/DTSV">
+										<xsl:value-of select="concat(normalize-space(record/metadata/schede/MODI/DT/DTS/DTSV), ' ', normalize-space(record/metadata/schede/MODI/DT/DTS/DTSI))" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="normalize-space(record/metadata/schede/MODI/DT/DTS/DTSI)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+							<xsl:variable name="endDate">
+								<xsl:choose>
+									<xsl:when test="record/metadata/schede/MODI/DT/DTS/DTSL">
+										<xsl:value-of select="concat(normalize-space(record/metadata/schede/MODI/DT/DTS/DTSL), ' ', normalize-space(record/metadata/schede/MODI/DT/DTS/DTSF))" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="normalize-space(record/metadata/schede/MODI/DT/DTS/DTSF)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+						<xsl:value-of select="concat(' (', $startDate, ' - ', $endDate, ')')" /><!-- multiple DTF eg:ICCD8531832 -->
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="''" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:when>
 			<xsl:otherwise>
 				<xsl:choose>
 	        		<xsl:when test="not(record/metadata/schede/*/DT[1]/DTN/DTNS)"><!-- TODO multiple values? (DT maxOccurs unbounded) -->
@@ -1115,17 +1145,8 @@
 			<xsl:if test="$sheetType='BDI'">
 				<xsl:choose>
 					<xsl:when test="$sheetVersion='2.00_ICCD0' or $sheetVersion='2.00' or $sheetVersion='3.00_ICCD0' or $sheetVersion='3.00' or $sheetVersion='3.01_ICCD0' or $sheetVersion='3.01'">
-						<xsl:variable name="dbl">
-							<xsl:choose>
-								<xsl:when test="record/metadata/schede/*/DB/DBL and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DB/DBL)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/DB/DBL)), 'n.r')))">
-									<xsl:for-each select="record/metadata/schede/*/DB/DBL">
-										<xsl:value-of select="concat(', ', normalize-space(.))" />
-									</xsl:for-each>
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="''" />
-								</xsl:otherwise>
-							</xsl:choose>
+						<xsl:variable name="dbl"><!-- allow multiple values ? ICCD11389099 ICCD13074440 -->
+							<xsl:value-of select="string-join(record/metadata/schede/*/DB/DBL[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))],', ')"/>
 						</xsl:variable>
 						<xsl:variable name="tmp-label">
 							<xsl:choose>
@@ -1133,10 +1154,10 @@
 									<xsl:variable name="dbc"><!-- allow multiple values ? ICCD11389099 ICCD13074440 -->
 										<xsl:value-of select="string-join(record/metadata/schede/*/DB/DBC[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))],', ')"/>
 									</xsl:variable>
-									<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DB/DBD), $dbl, ' (', normalize-space($dbc), ')')" />
+									<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DB/DBD), ' - ', $dbl, ' (', normalize-space($dbc), ')')" />
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DB/DBD), $dbl)" />
+									<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DB/DBD), ' - ', $dbl)" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:variable>
@@ -1404,6 +1425,38 @@
 				</rdfs:label>
 			</xsl:if>			
 	
+			<!-- MODI -->
+			<xsl:if test="$sheetType='MODI'">
+				<xsl:variable name="ogt">
+					<xsl:choose>
+						<xsl:when test="record/metadata/schede/*/OG/OGT and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT)), 'n.r')))">
+							<xsl:value-of select="concat(', ', normalize-space(record/metadata/schede/*/OG/OGT))" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="''" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+				<xsl:variable name="ogn">
+					<xsl:choose>
+						<xsl:when test="record/metadata/schede/*/OG/OGN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGN)), 'n.r')))">
+							<xsl:value-of select="concat(', ', normalize-space(record/metadata/schede/*/OG/OGN))" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="''" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+				<xsl:variable name="tmp-label">
+					<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/OG/OGD), $ogt, $ogn)" />
+				</xsl:variable>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
+				</rdfs:label>
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat($tmp-label, $author-string-en, $cultural-context, $date-string)" />
+				</rdfs:label>
+			</xsl:if>
 	</xsl:template>
 	
 	<xsl:template match="/">

@@ -807,19 +807,22 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 						<xsl:value-of select="concat($NS, 'PhotographicDocumentation/', $idCF, '-photographic-documentation-', position())" />
 	                </xsl:attribute>
 				</arco-cd:hasDocumentation>
-				 <xsl:if test="./FTAN and (not(starts-with(lower-case(normalize-space(./FTAN)), 'nr')) and not(starts-with(lower-case(normalize-space(./FTAN)), 'n.r')))">
-                    <xsl:for-each select="./FTAN">
-                        <xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
-                        <xsl:for-each select="$url">
-                            <foaf:depiction>
-                                <xsl:attribute name="rdf:resource">
-                                    <xsl:value-of select="." />
-                                </xsl:attribute>
-                            </foaf:depiction>
-                        </xsl:for-each>
-                    </xsl:for-each>
-                </xsl:if>
 			</xsl:for-each>
+			<xsl:for-each select="record/metadata/schede/*/DO/FTA/FTAN[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]"><!-- xslt2 multiple nodes normalize-space exception  -->
+				    <xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
+				    <xsl:for-each select="$url">
+				        <foaf:depiction>
+				            <xsl:attribute name="rdf:resource">
+				                <xsl:value-of select="." />
+				            </xsl:attribute>
+				        </foaf:depiction>
+				        <pico:preview>
+				            <xsl:attribute name="rdf:resource">
+				                <xsl:value-of select="." />
+				            </xsl:attribute>
+				        </pico:preview>
+				    </xsl:for-each>
+				</xsl:for-each>
 			<xsl:if test="record/metadata/schede/*/LC/PVC">
 				<cis:siteAddress>
 					<xsl:attribute name="rdf:resource">
