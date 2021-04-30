@@ -18,8 +18,8 @@
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/catalogue">
-        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/catalogue/1.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/catalogue/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -50,8 +50,8 @@ In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/sequence.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Catalogue Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia del Catalogo (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.1</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.2</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1260,6 +1260,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/lastUpdateDate">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/TI/date"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data dell&apos;ultimo aggiornamento della scheda di catalogo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents information about the last update date of a catalogue record.</rdfs:comment>
@@ -1750,6 +1751,36 @@ resource:CatalogueRecordS/0500212038
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordCF -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordCF">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive il contenitore fisico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the catalogue record describing the site.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">Site catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Contenitore fisico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordCG -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordCG">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive il contenitore fisico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the catalogue record describing the cultural institute or site.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">Cultural institute or site catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Contenitore giuridico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordCNS -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordCNS">
@@ -1851,6 +1882,21 @@ resource:CatalogueRecordS/0500212038
         <rdfs:label xml:lang="it">Scheda Matrici incise</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordMODI -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordMODI">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda MODI-Modulo informativo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the MODI catalogue record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">MODI catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda MODI</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
