@@ -214,6 +214,42 @@
 				<xsl:attribute name="rdf:about">
 					<xsl:value-of select="$objectOfDescription" />
 				</xsl:attribute>
+				<xsl:if test="$sheetType='MODI'">
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:choose>
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/MODI/OG/AMB))='architettonico e paesaggistico'">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/arco/ImmovableCulturalProperty'" />
+								</xsl:when>
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/MODI/OG/AMB))='storico artistico'">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/arco/MovableCulturalProperty'" />
+								</xsl:when>
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/MODI/OG/AMB))='archeologico'">
+									<xsl:choose>
+										<xsl:when test="lower-case(normalize-space(record/metadata/schede/MODI/CM/IMD/IMDT))='ra' or lower-case(normalize-space(record/metadata/schede/MODI/CM/IMD/IMDT))='tma'">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/arco/MovableCulturalProperty'" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="'https://w3id.org/arco/ontology/arco/ImmovableCulturalProperty'" />
+										</xsl:otherwise>									
+									</xsl:choose>
+								</xsl:when>
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/MODI/OG/AMB))='etnoantropologico'">
+									<xsl:choose>
+										<xsl:when test="lower-case(normalize-space(record/metadata/schede/MODI/CM/IMD/IMDT))='bdm'">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/arco/MovableCulturalProperty'" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="'https://w3id.org/arco/ontology/arco/IntangibleCulturalProperty'" />
+										</xsl:otherwise>									
+									</xsl:choose>
+								</xsl:when>
+								<xsl:otherwise>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:attribute>
+					</rdf:type>
+				</xsl:if>
 				<!-- related work situation -->
 				<xsl:for-each select="record/metadata/schede/*/*/RSE">
 					<xsl:if test="./RSEC">
