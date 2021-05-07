@@ -544,6 +544,10 @@ public class Preprocessor {
 		options.addOption(Option.builder(ENTI_COMPLETO).argName("path").hasArg().required(false).desc(
 				"The path to the folder containing a dump of XML files of the records of the ICCD 'enti-completo'.")
 				.longOpt("enti-base").build());
+		
+		options.addOption(Option.builder(BASE_URI).argName("URI").hasArg().required(false).desc(
+				"The base URI for the ArCo's resources (e.g. https://w3id.org/arco/resource/).")
+				.longOpt("enti-base").build());
 
 		CommandLine commandLine = null;
 
