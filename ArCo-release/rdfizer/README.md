@@ -31,15 +31,17 @@ This data is contained in a MapDB's dump, named ``db``, in the project root.
 You can create this file  by running the following command:
 
 ```
-mvn exec:java -Dexec.mainClass="it.cnr.istc.stlab.arco.preprocessing.Preprocessor" -Dexec.args="CATALOGUE_RECORDS MULTIMEDIA_RECORDS CONTENITORI_FISICI_RECORDS  CONTENITORI_GIURIDICI_RECORDS ARCO_RESOURCES_BASE_URI"
+mvn exec:java -Dexec.mainClass="it.cnr.istc.stlab.arco.preprocessing.Preprocessor" -Dexec.args=" -c CATALOGUE_RECORDS -m MULTIMEDIA_RECORDS -f CONTENITORI_FISICI_RECORDS -g CONTENITORI_GIURIDICI_RECORDS -b ARCO_RESOURCES_BASE_URI [-e ENTI_BASE] [-e ENTI_BASE] [-ec ENTI_COMPLETO]"
 ```
 
 where:
-- ``CATALOGUE_RECORDS`` is the the path to the folder containing a dump of XML files of the catalogue records.
-- ``MULTIMEDIA_RECORDS`` is the the path to the folder containing a dump of XML files of the multimedia records (multimedia entities - EMM). 
-- ``CONTENITORI_FISICI_RECORDS`` is the the path to the folder containing a dump of XML files of the records of the ICCD contenitori fisici.
-- ``CONTENITORI_GIURIDICI_RECORDS`` is the the path to the folder containing a dump of XML files of the records of the ICCD contenitori giuridici.
+- ``CATALOGUE_RECORDS`` is the path to the folder containing a dump of XML files of the catalogue records.
+- ``MULTIMEDIA_RECORDS`` is the  path to the folder containing a dump of XML files of the multimedia records (multimedia entities - EMM). 
+- ``CONTENITORI_FISICI_RECORDS`` is  the path to the folder containing a dump of XML files of the records of the ICCD contenitori fisici.
+- ``CONTENITORI_GIURIDICI_RECORDS`` is  the path to the folder containing a dump of XML files of the records of the ICCD contenitori giuridici.
 - ``BASE_URI`` is the base URI for the ArCo's resources (e.g. ``https://w3id.org/arco/resource/``).
+- ``ENTI_BASE`` is the path to the folder containing a dump of XML files of the records of the ICCD 'enti-base' (OPTIONAL).
+- ``ENTI_COMPLETO`` is the path to the folder containing a dump of XML files of the records of the ICCD 'enti-completo' (OPTIONAL).
 
 If the ``db`` file is not available when running the transformation, then the last pre-processed ``db`` will be automatically downloaded from this [address](http://arco.istc.cnr.it/preprocessing/db).
 
