@@ -215,6 +215,7 @@ public class Preprocessor {
 			String regn = getFieldFromEMM(xpath, xml, "REGN");
 			String dran = getFieldFromEMM(xpath, xml, "DRAN");
 			String vdcn = getFieldFromEMM(xpath, xml, "VDCN");
+			String fnti = getFieldFromEMM(xpath, xml, "FNTI");
 			String link = getLinkEMMFromEMM(xpath, xml);
 
 			logger.trace(f.toFile().getAbsolutePath() + " - " + ftan + " - " + link);
@@ -227,6 +228,8 @@ public class Preprocessor {
 				this.ftan2URL.put(dran, link);
 			} else if (validateField(vdcn) && validateField(link)) {
 				this.ftan2URL.put(vdcn, link);
+			} else if(validateField(fnti) && validateField(link)) {
+				this.ftan2URL.put(fnti, link);
 			}
 
 		} catch (SAXException | IOException | ParserConfigurationException | XPathExpressionException e) {

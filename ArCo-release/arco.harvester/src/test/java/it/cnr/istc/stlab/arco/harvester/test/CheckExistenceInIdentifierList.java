@@ -16,9 +16,9 @@ public class CheckExistenceInIdentifierList {
 	@Test
 	public void testDownloadContenitoriFisici() {
 		try {
-			Harvester h = new Harvester("http://catalogo.beniculturali.it/oaitarget/OAIHandler?", null);
+			Harvester h = new Harvester("http://www.catalogo-old.beniculturali.it/oaitarget/OAIHandler?", null);
 
-			List<String> identifiers = h.downloadRecords(null, "/contenitori_fisici", "/xml/contenitori_fisici", false);
+			List<String> identifiers = h.downloadRecords(null, "/contenitori_fisici", "/xml/contenitori_fisici", false, null,null);
 
 			System.out.println("Numero di contenitori fisici: " + identifiers.size());
 			assertTrue(identifiers.contains("ICCD13678576"));
@@ -32,10 +32,10 @@ public class CheckExistenceInIdentifierList {
 	@Test
 	public void testDownloadContenitoriGiuridici() {
 		try {
-			Harvester h = new Harvester("http://catalogo.beniculturali.it/oaitarget/OAIHandler?", null);
+			Harvester h = new Harvester("http://www.catalogo-old.beniculturali.it/oaitarget/OAIHandler?", null);
 
 			List<String> identifiers = h.downloadRecords(null, "/contenitori_giuridici", "/xml/contenitori_giuridici",
-					false);
+					false, null, null);
 
 			assertTrue(identifiers.contains("ICCD13954023"));
 

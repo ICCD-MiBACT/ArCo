@@ -29,7 +29,7 @@ public class HarvesterTest {
 	@Test
 	public void testDownloadContenitoriFisici() {
 		try {
-			Harvester h = new Harvester("http://catalogo.beniculturali.it/oaitarget/OAIHandler?", null);
+			Harvester h = new Harvester("http://www.catalogo-old.beniculturali.it/oaitarget/OAIHandler?", null);
 
 			String actual = evaluateXPath(new ByteArrayInputStream(h.getContenitoreFisico("ICCD13678576").getBytes()),
 					"/record/metadata/schede/CF/CD/CCF");
@@ -50,7 +50,7 @@ public class HarvesterTest {
 	@Test
 	public void testDownloadContenitoriGiuridici() {
 		try {
-			Harvester h = new Harvester("http://catalogo.beniculturali.it/oaitarget/OAIHandler?", null);
+			Harvester h = new Harvester("http://www.catalogo-old.beniculturali.it/oaitarget/OAIHandler?", null);
 
 			String actual = evaluateXPath(
 					new ByteArrayInputStream(h.getContenitoreGiuridico("ICCD13954023").getBytes()),

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14218293@</identifier>
+        <datestamp>2015-12-29T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+       <schede>
+<PG version="3.00_ICCD0" >
+<CD hint="CODICI" >
+<TSK hint="Tipo scheda" >PG</TSK>
+<LIR hint="Livello ricerca" >P</LIR>
+<NCT hint="CODICE UNIVOCO" >
+<NCTR hint="Codice regione" >17</NCTR>
+<NCTN hint="Numero catalogo generale" >00203403</NCTN>
+</NCT>
+<ESC hint="Ente schedatore" >S284</ESC>
+<ECP hint="Ente competente" >S284</ECP>
+</CD>
+<OG hint="OGGETTO" >
+<OGT hint="OGGETTO" >
+<OGTD hint="Definizione tipologica" >parco</OGTD>
+<OGTQ hint="Qualificazione" >commemorativo/ ai caduti della prima guerra mondiale</OGTQ>
+<OGTN hint="Denominazione" >Villa Santa Maria</OGTN>
+</OGT>
+<OGA hint="ALTRA DENOMINAZIONE" >
+<OGAG hint="Genere denominazione" >storica</OGAG>
+<OGAD hint="Denominazione" >Parco della Rimembranza</OGAD>
+</OGA>
+<OGA hint="ALTRA DENOMINAZIONE" >
+<OGAG hint="Genere denominazione" >originaria</OGAG>
+<OGAD hint="Denominazione" >Orto botanico</OGAD>
+</OGA>
+</OG>
+<LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA" >
+<PVC hint="LOCALIZZAZIONE GEOGRAFICO AMMINISTRATIVA" >
+<PVCS hint="Stato" >ITALIA</PVCS>
+<PVCR hint="Regione" >Basilicata</PVCR>
+<PVCP hint="Provincia" >PZ</PVCP>
+<PVCC hint="Comune" >Potenza</PVCC>
+<PVCL hint="Località" >Rione Santa Maria</PVCL>
+<PVCI hint="Indirizzo" >Via Angilla Vecchia s.n.c</PVCI>
+<PVCV hint="Altre vie di comunicazione" >Via Angilla vecchia all'incrocio con via Ettore Ciccotti</PVCV>
+<PVCA hint="Altri indirizzi/affacci su spazi pubblici" >L'ingresso storico di Villa Santa Maria è ubicato su via Angilla Vecchia, s.n.c., mentre su via Ettore Ciccotti vi è un accesso secondario che ne permette l'ingresso diretto dal lato della Caserma</PVCA>
+</PVC>
+<PVE hint="Diocesi" >Arcidiocesi Potenza-Muro Lucano-Marsico Nuovo</PVE>
+</LC>
+<CS hint="LOCALIZZAZIONE CATASTALE" >
+<CTL hint="Tipo di localizzazione" >localizzazione fisica</CTL>
+<CTS hint="LOCALIZZAZIONE CATASTALE" >
+<CTSC hint="Comune" >Potenza</CTSC>
+<CTSF hint="Foglio/data" >30</CTSF>
+<CTSN hint="Particelle" >3598</CTSN>
+<CTSP hint="Proprietari" >ente pubblico comunale</CTSP>
+</CTS>
+</CS>
+<GP hint="GEOREFERENZIAZIONE TRAMITE PUNTO" >
+<GPI hint="Identificativo punto" >2</GPI>
+<GPL hint="Tipo di localizzazione" >localizzazione fisica</GPL>
+<GPD hint="DESCRIZIONE DEL PUNTO" >
+<GPDP hint="PUNTO" >
+<GPDPX hint="Coordinata X" >15.804291</GPDPX>
+<GPDPY hint="Coordinata Y" >40.643919</GPDPY>
+</GPDP>
+</GPD>
+<GPM hint="Metodo di georeferenziazione" >punto esatto</GPM>
+<GPT hint="Tecnica di georeferenziazione" >rilievo da cartografia con sopralluogo</GPT>
+<GPP hint="Proiezione e Sistema di riferimento" >WGS84</GPP>
+<GPB hint="BASE DI RIFERIMENTO" >
+<GPBB hint="Descrizione sintetica" >google maps</GPBB>
+<GPBT hint="Data" >2019</GPBT>
+<GPBO hint="Note" >(4516855) www.google.it/maps</GPBO>
+</GPB>
+</GP>
+<UT hint="SISTEMA URBANISTICO TERRITORIALE" >
+<RAM hint="Correlazioni ambientali" >Villa Santa Maria è inserita all'interno di un contesto urbano, altamente edificato. Sul lato orientale è separata dalla Caserma da via Ettore Ciccotti, mentre a SO è separata dagli edifici privati tramite via Angilla Vecchia. A NO confina con la ferrovia mentre a N confina direttamente con la corte interna di un isolato privato</RAM>
+</UT>
+<CA hint="CARATTERI AMBIENTALI" >
+<HAT hint="Superficie totale" >1.07</HAT>
+<CAC hint="Pendenze" >0.42%</CAC>
+<CAE hint="Esposizione" >parco, Sudest-Nordovest</CAE>
+<CAM hint="Morfologia" >pianeggiante</CAM>
+<CAI hint="Disponibilità idriche" >rete idrica comunale</CAI>
+</CA>
+<AU hint="DEFINIZIONE CULTURALE" >
+<ATB hint="AMBITO CULTURALE" >
+<ATBR hint="Riferimento all'intervento (ruolo)" >progetto</ATBR>
+<ATBD hint="Denominazione" >periodo fascista</ATBD>
+<ATBM hint="Fonte dell'attribuzione" >analisi storica</ATBM>
+</ATB>
+</AU>
+<RE hint="NOTIZIE STORICHE" >
+<REN hint="NOTIZIA" >
+<RENR hint="Riferimento" >intero bene</RENR>
+<RENS hint="Notizia sintetica" >preesistenze</RENS>
+<RENN hint="Notizia" >Dopo alcuni anni di incuria, l’orto botanico riprese nuova vita tra il 1878 e il 1885 grazie all'impegno delle amministrazioni pubbliche nei confronti del verde urbano. Proprio in questi anni l’orto perse il suo valore scientifico e iniziò ad essere identificato come villa comunale. In questi anni fu impiantata anche una piccola fontana, dotata di un abbeveratoio e di un lavatoio, a ridosso del muro esterno, nei pressi dell’attuale ingresso laterale della medesima Villa S. Maria. La creazione del Quartiere Militare di Basilicata rese necessario un secondo ingresso al centro del lato sud, di fronte all'edificio della Caserma, tuttora esistente. Negli anni successivi la villa continuò ad essere oggetto di cure e di frequentazione con la riparazione della ringhiera, estesa poi fino all’estremo nord in direzione della Stazione Superiore, e della piccola fontana esterna, danneggiate da atti vandalici. Nel 1923, su richiesta degli Ufficiali del 29° Reggimento di Fanteria, venne ampliato il lato nord-ovest della villa per la realizzazione di un campo da tennis e di una pista per il pattinaggio, tuttora esistenti</RENN>
+<RENF hint="Fonte" >n.d.c. notizia da sito web</RENF>
+</REN>
+<REL hint="CRONOLOGIA, ESTREMO REMOTO" >
+<RELS hint="Secolo" >XIX</RELS>
+<RELV hint="Validità" >ca</RELV>
+<RELF hint="Frazione di secolo" >seconda metà</RELF>
+<RELW hint="Validità" >post</RELW>
+<RELI hint="Data" >1878</RELI>
+<RELX hint="Validità" >post</RELX>
+</REL>
+<REV hint="CRONOLOGIA, ESTREMO RECENTE" >
+<REVS hint="Secolo" >XX</REVS>
+<REVV hint="Validità" >post</REVV>
+<REVF hint="Frazione di secolo" >prima metà</REVF>
+<REVW hint="Validità" >ante</REVW>
+<REVI hint="Data" >1923</REVI>
+<REVX hint="Validità" >ca</REVX>
+</REV>
+</RE>
+<RE hint="NOTIZIE STORICHE" >
+<REN hint="NOTIZIA" >
+<RENR hint="Riferimento" >intero bene</RENR>
+<RENS hint="Notizia sintetica" >committenza</RENS>
+<RENN hint="Notizia" >A seguito della circolare di Dario Lupi che istitutiva i Parchi e Viali della Rimembranza, la città di Potenza si mobilitò prontamente costituendo il proprio comitato esecutivo già nel gennaio 1923. Come si apprende anche dall'elenco dei comuni redatti da Lupi, al 15 Ottobre 1923, la città di Potenza aveva già inaugurato il proprio Parco della Rimembranza</RENN>
+<RENF hint="Fonte" >LUPI1923</RENF>
+</REN>
+<REL hint="CRONOLOGIA, ESTREMO REMOTO" >
+<RELS hint="Secolo" >XX</RELS>
+<RELV hint="Validità" >post</RELV>
+<RELF hint="Frazione di secolo" >prima metà</RELF>
+<RELW hint="Validità" >ante</RELW>
+<RELI hint="Data" >1922/12/27</RELI>
+<RELX hint="Validità" >post</RELX>
+</REL>
+<REV hint="CRONOLOGIA, ESTREMO RECENTE" >
+<REVS hint="Secolo" >XX</REVS>
+<REVV hint="Validità" >post</REVV>
+<REVF hint="Frazione di secolo" >prima metà</REVF>
+<REVW hint="Validità" >ante</REVW>
+<REVI hint="Data" >1923/10/15</REVI>
+<REVX hint="Validità" >ante</REVX>
+</REV>
+</RE>
+<RE hint="NOTIZIE STORICHE" >
+<REN hint="NOTIZIA" >
+<RENR hint="Riferimento" >intero bene</RENR>
+<RENS hint="Notizia sintetica" >realizzazione</RENS>
+<RENN hint="Notizia" >Il comitato pro parco ritenne più opportuno collocare il Parco della Rimembranza presso il vecchio orto botanico, trasformato in villa comunale già sul finire del XIX secolo. Dopo aver abbandonato l’idea di farlo sorgere “lungo il tratto ascendente della Strada nazionale Appulo-Lucana, sia perché quel viale è poco frequentato, sia anche perché, appunto per questo, gli alberi sarebbero rimasti incustoditi”, il Comitato scelse la villa comunale nel rione Santa Maria perché “cintata e custodita da un apposito giardiniere, si presta benissimo allo scopo. Gli alberi sorgeranno nel grande Viale delle Acacie e potranno essere distribuiti lungo il viale stesso, in numero di oltre novanta, tanti quanti sono i morti per ferite della Grande Guerra". Il Parco della Rimembranza di Potenza fu quindi inaugurato nel corso di una solenne cerimonia il 29 aprile 1923, dove non furono commemorati i morti ma ne furono glorificate le vite, e gli alberi furono benedetti dal vescovo Monsignor Razzòli</RENN>
+<RENF hint="Fonte" >Giornale di Basilicata</RENF>
+</REN>
+<REL hint="CRONOLOGIA, ESTREMO REMOTO" >
+<RELS hint="Secolo" >XX</RELS>
+<RELV hint="Validità" >post</RELV>
+<RELF hint="Frazione di secolo" >prima metà</RELF>
+<RELW hint="Validità" >ante</RELW>
+<RELI hint="Data" >1923</RELI>
+<RELX hint="Validità" >ca</RELX>
+</REL>
+<REV hint="CRONOLOGIA, ESTREMO RECENTE" >
+<REVS hint="Secolo" >XX</REVS>
+<REVV hint="Validità" >post</REVV>
+<REVF hint="Frazione di secolo" >prima metà</REVF>
+<REVW hint="Validità" >ante</REVW>
+<REVI hint="Data" >1923/04/29</REVI>
+<REVX hint="Validità" >ante</REVX>
+</REV>
+</RE>
+<RE hint="NOTIZIE STORICHE" >
+<REN hint="NOTIZIA" >
+<RENR hint="Riferimento" >intero bene</RENR>
+<RENS hint="Notizia sintetica" >completamento</RENS>
+<RENN hint="Notizia" >Per i primi dieci anni il Parco fu custodito con cura e gli studenti più meritevoli della città si alternarono nel servizio di Guardia d’Onore. Nel 1928 la villa andò ad inglobare la piazzetta dell’antico abbeveratoio e il lavatoio ormai abbandonati e negli anni '30, oltre ai periodici interventi di manutenzione e di miglioramento al verde e alle strutture fisse, venne istituito un posto di ristoro estivo con lo scopo di aumentare le attrattive del sito</RENN>
+<RENF hint="Fonte" >Delibere comunali rinvenute presso l'Archivio storico del comune di Potenza</RENF>
+</REN>
+<REL hint="CRONOLOGIA, ESTREMO REMOTO" >
+<RELS hint="Secolo" >XX</RELS>
+<RELV hint="Validità" >post</RELV>
+<RELF hint="Frazione di secolo" >prima metà</RELF>
+<RELW hint="Validità" >ante</RELW>
+<RELI hint="Data" >1923/04/29</RELI>
+<RELX hint="Validità" >post</RELX>
+</REL>
+<REV hint="CRONOLOGIA, ESTREMO RECENTE" >
+<REVS hint="Secolo" >XX</REVS>
+<REVV hint="Validità" >post</REVV>
+<REVF hint="Frazione di secolo" >seconda metà</REVF>
+<REVW hint="Validità" >ca</REVW>
+<REVI hint="Data" >1930</REVI>
+<REVX hint="Validità" >ca</REVX>
+</REV>
+</RE>
+<RE hint="NOTIZIE STORICHE" >
+<REN hint="NOTIZIA" >
+<RENR hint="Riferimento" >intero bene</RENR>
+<RENS hint="Notizia sintetica" >ristrutturazione</RENS>
+<RENN hint="Notizia" >Nel 1932, con deliberazione del podestà, furono sostituite le targhe nominative in ferro, logorate dal tempo, con targhe in bronzo, mentre nel 1938 venne impiantata una serra per le colture floreali ed in seguito un campo per il gioco delle bocce, tuttora esistente nella zona a valle. Il dono al Comune di un orso da parte di un certo Cav.Mazzei, residente a Rodi, diede inizio alla creazione di un piccolo zoo che comprendeva anche un’aquila reale e dei capretti, per i quali vennero realizzati opportuni ricoveri. Successivamente però, benchè la villa fosse frequentata assiduamente dai cittadini, gli alberi, piantati a ricordo dei caduti, furono abbandonati a se stessi fin quando nei primi anni '90 non si decise di riqualificarla</RENN>
+<RENF hint="Fonte" >Delibere comunali rinvenute presso l'Archivio storico del comune</RENF>
+</REN>
+<REL hint="CRONOLOGIA, ESTREMO REMOTO" >
+<RELS hint="Secolo" >XX</RELS>
+<RELV hint="Validità" >post</RELV>
+<RELF hint="Frazione di secolo" >prima metà</RELF>
+<RELW hint="Validità" >ante</RELW>
+<RELI hint="Data" >1932</RELI>
+<RELX hint="Validità" >post</RELX>
+</REL>
+<REV hint="CRONOLOGIA, ESTREMO RECENTE" >
+<REVS hint="Secolo" >XX</REVS>
+<REVV hint="Validità" >post</REVV>
+<REVF hint="Frazione di secolo" >prima metà</REVF>
+<REVW hint="Validità" >ante</REVW>
+<REVI hint="Data" >1938</REVI>
+<REVX hint="Validità" >ca</REVX>
+</REV>
+</RE>
+<RE hint="NOTIZIE STORICHE" >
+<REN hint="NOTIZIA" >
+<RENR hint="Riferimento" >intero bene</RENR>
+<RENS hint="Notizia sintetica" >ristrutturazione</RENS>
+<RENN hint="Notizia" >Nei recenti anni '90, per opera della Giunta Comunale presieduta dal Sindaco Prof. G. Fierro, la villa è stata oggetto di lavori di rifacimento della pavimentazione con marmette in betonella, con la messa in funzione della grande fontana all’ingresso principale, dismessa da diversi anni, oltre ad interventi su alberi ed aiuole, finalizzati ad una maggiore cura del verde</RENN>
+<RENF hint="Fonte" >n.d.c. notizia da sito web</RENF>
+</REN>
+<REL hint="CRONOLOGIA, ESTREMO REMOTO" >
+<RELS hint="Secolo" >XX</RELS>
+<RELV hint="Validità" >post</RELV>
+<RELF hint="Frazione di secolo" >ultimo quarto</RELF>
+<RELW hint="Validità" >post</RELW>
+<RELI hint="Data" >1990</RELI>
+<RELX hint="Validità" >post</RELX>
+</REL>
+<REV hint="CRONOLOGIA, ESTREMO RECENTE" >
+<REVS hint="Secolo" >XXI</REVS>
+<REVV hint="Validità" >ca</REVV>
+<REVF hint="Frazione di secolo" >inizio</REVF>
+<REVW hint="Validità" >post</REVW>
+<REVI hint="Data" >2000</REVI>
+<REVX hint="Validità" >ante</REVX>
+</REV>
+</RE>
+<PE hint="PREESISTENZE" >
+<PRE hint="PREESISTENZE" >
+<PREU hint="Ubicazione" >parco</PREU>
+<PREI hint="Individuazione" >il nucleo originario della villa era un orto botanico</PREI>
+</PRE>
+</PE>
+<MP hint="IMPIANTO" >
+<MPT hint="IMPIANTO PLANIMETRICO" >
+<MPTR hint="Riferimento" >parco</MPTR>
+<MPTS hint="Schema" >geometrico con percorsi perpendicolari</MPTS>
+<MPTF hint="Forma" >rettangolare</MPTF>
+</MPT>
+<MPA hint="PECULIARITA' SCENOGRAFICHE E COMPOSITIVE" >
+<MPAU hint="Ubicazione" >parco</MPAU>
+<MPAT hint="Tipo" >fontana</MPAT>
+</MPA>
+<MPC hint="COLLEGAMENTI INTERNI" >
+<MPCR hint="Riferimento" >parco</MPCR>
+<MPCS hint="Descrizione" >viali interni con pavimentazione a marmette in betonella</MPCS>
+</MPC>
+<MPC hint="COLLEGAMENTI INTERNI" >
+<MPCR hint="Riferimento" >intero complesso</MPCR>
+<MPCS hint="Descrizione" >scala di ingresso per collegare il parco con la quota stradale</MPCS>
+</MPC>
+</MP>
+<FV hint="FISIONOMIA DELL'AREA VERDE" >
+<FVP hint="STRUTTURA ELEMENTI PRIMARI" >
+<FVPU hint="Ubicazione" >area nord-ovest del parco</FVPU>
+<FVPD hint="Denominazione elemento strutturale" >viale ovest</FVPD>
+<FVPF hint="Forma" >irregolare</FVPF>
+<FVPS hint="Superficie" >3440</FVPS>
+</FVP>
+<FVE hint="ESEMPLARI DI RILIEVO" >
+<FVEU hint="Ubicazione" >aiuola</FVEU>
+<FVED hint="Denominazione" >FABACEAE/ Robinia pseudoacacia/ Arb/ 150 ml/ acacia/ A</FVED>
+</FVE>
+</FV>
+<FO hint="SISTEMA FONTANIERO" >
+<FOT hint="ELEMENTO FONTANIERO" >
+<FOTU hint="Ubicazione" >viale</FOTU>
+<FOTG hint="Genere" >bacino</FOTG>
+<FOTT hint="Tipo" >esedra</FOTT>
+<FOTD hint="Denominazione" >Fontana di Villa Santa Maria</FOTD>
+<FOTC hint="Tecnica costruttiva" >in pietrame misto</FOTC>
+<FOTM hint="Materiali" >marmo</FOTM>
+</FOT>
+</FO>
+<SC hint="SCALE" >
+<SCL hint="SCALE" >
+<SCLU hint="Ubicazione" >parco</SCLU>
+<SCLG hint="Genere" >rampa</SCLG>
+<SCLN hint="Quantità" >1</SCLN>
+<SCLF hint="Forma planimetrica" >rettilinea</SCLF>
+</SCL>
+</SC>
+<RC hint="RECINZIONI E CANCELLI" >
+<RCN hint="RECINZIONI E CANCELLI" >
+<RCNG hint="Genere" >cancellata in ferro battuto</RCNG>
+<RCNU hint="Ubicazione" >di limitazione del parco</RCNU>
+</RCN>
+</RC>
+<CO hint="CONSERVAZIONE" >
+<STC hint="STATO DI CONSERVAZIONE" >
+<STCR hint="Riferimento alla parte" >intero bene</STCR>
+<STCC hint="Stato di conservazione" >buono</STCC>
+<STCO hint="Indicazioni specifiche" >Quasi tutti gli alberi originari sono stati abbattuti durante gli anni di abbandono della villa, che attualmente ha perso il suo valore commemorativo originario. Ciononostante lo stato di conservazione dell'impianto, grazie agli interventi dei primi anni '90, risulta abbastanza buona e curata nei minimi dettagli, essendo la villa centro verde della città storica di Potenza</STCO>
+</STC>
+</CO>
+<US hint="UTILIZZAZIONI" >
+<USA hint="USO ATTUALE" >
+<USAR hint="Riferimento alla parte" >intero bene</USAR>
+<USAD hint="Uso" >villa comunale</USAD>
+</USA>
+<USO hint="USO STORICO" >
+<USOR hint="Riferimento alla parte" >intero bene</USOR>
+<USOC hint="Riferimento cronologico" >XX</USOC>
+<USOD hint="Uso" >villa comunale</USOD>
+</USO>
+</US>
+<TU hint="CONDIZIONE GIURIDICA E VINCOLI" >
+<CDG hint="CONDIZIONE GIURIDICA" >
+<CDGG hint="Indicazione generica" >proprietà Ente pubblico territoriale</CDGG>
+</CDG>
+</TU>
+<DO hint="FONTI E DOCUMENTI DI RIFERIMENTO" >
+<FTA hint="DOCUMENTAZIONE FOTOGRAFICA" >
+<FTAX hint="Genere" >documentazione allegata</FTAX>
+<FTAP hint="Tipo" >fotografia digitale (file)</FTAP>
+<FTAA hint="Autore" >Labbattaglia, Anna</FTAA>
+<FTAD hint="Data" >2019/10/11</FTAD>
+<FTAE hint="Ente proprietario" >S284</FTAE>
+<FTAN hint="Codice identificativo" >PZ_FTA_01</FTAN>
+<FTAF hint="Formato" >JPEG</FTAF>
+</FTA>
+<FTA hint="DOCUMENTAZIONE FOTOGRAFICA" >
+<FTAX hint="Genere" >documentazione allegata</FTAX>
+<FTAP hint="Tipo" >fotografia digitale (file)</FTAP>
+<FTAA hint="Autore" >Labbattaglia, Anna</FTAA>
+<FTAD hint="Data" >2019/10/11</FTAD>
+<FTAE hint="Ente proprietario" >S284</FTAE>
+<FTAN hint="Codice identificativo" >PZ_FTA_02</FTAN>
+<FTAT hint="Note" >Parco della Rimembranza originale</FTAT>
+<FTAF hint="Formato" >JPEG</FTAF>
+</FTA>
+<FTA hint="DOCUMENTAZIONE FOTOGRAFICA" >
+<FTAX hint="Genere" >documentazione allegata</FTAX>
+<FTAP hint="Tipo" >fotografia digitale (file)</FTAP>
+<FTAA hint="Autore" >Labbattaglia, Anna</FTAA>
+<FTAD hint="Data" >2019/10/11</FTAD>
+<FTAE hint="Ente proprietario" >S284</FTAE>
+<FTAN hint="Codice identificativo" >PZ_FTA_03</FTAN>
+<FTAT hint="Note" >vista sulla fontana centrale</FTAT>
+<FTAF hint="Formato" >JPEG</FTAF>
+</FTA>
+<FTA hint="DOCUMENTAZIONE FOTOGRAFICA" >
+<FTAX hint="Genere" >documentazione allegata</FTAX>
+<FTAP hint="Tipo" >fotografia digitale (file)</FTAP>
+<FTAA hint="Autore" >Labbattaglia, Anna</FTAA>
+<FTAD hint="Data" >2019/10/11</FTAD>
+<FTAE hint="Ente proprietario" >S284</FTAE>
+<FTAN hint="Codice identificativo" >PZ_FTA_04</FTAN>
+<FTAF hint="Formato" >JPEG</FTAF>
+</FTA>
+<DRA hint="DOCUMENTAZIONE GRAFICA" >
+<DRAX hint="Genere" >documentazione allegata</DRAX>
+<DRAT hint="Tipo" >cartografia con delimitazione dell’area</DRAT>
+<DRAO hint="Note" >IGM con delimitazione dell'area</DRAO>
+<DRAE hint="Ente proprietario" >S284</DRAE>
+<DRAN hint="Codice identificativo" >PZ_DRA_IGM_02</DRAN>
+<DRAA hint="Autore" >Labbattaglia, Anna</DRAA>
+<DRAD hint="Data" >2019/10/03</DRAD>
+</DRA>
+<DRA hint="DOCUMENTAZIONE GRAFICA" >
+<DRAX hint="Genere" >documentazione allegata</DRAX>
+<DRAT hint="Tipo" >estratto di mappa catastale</DRAT>
+<DRAO hint="Note" >stralcio catastale, f.30, p. 3598</DRAO>
+<DRAS hint="Scala" >1:1000</DRAS>
+<DRAE hint="Ente proprietario" >S284</DRAE>
+<DRAN hint="Codice identificativo" >PZ_DRA_CT_01</DRAN>
+<DRAA hint="Autore" >Labbattaglia, Anna</DRAA>
+<DRAD hint="Data" >2019/10/03</DRAD>
+</DRA>
+<DRA hint="DOCUMENTAZIONE GRAFICA" >
+<DRAX hint="Genere" >documentazione allegata</DRAX>
+<DRAT hint="Tipo" >foto aerea con delimitazione dell’area</DRAT>
+<DRAO hint="Note" >ortofoto con parco evidenziato</DRAO>
+<DRAS hint="Scala" >1:1000</DRAS>
+<DRAE hint="Ente proprietario" >S284</DRAE>
+<DRAN hint="Codice identificativo" >PZ_DRA_OR_03</DRAN>
+<DRAA hint="Autore" >Labbattaglia, Anna</DRAA>
+<DRAD hint="Data" >2019/10/03</DRAD>
+</DRA>
+<DRA hint="DOCUMENTAZIONE GRAFICA" >
+<DRAX hint="Genere" >documentazione allegata</DRAX>
+<DRAT hint="Tipo" >planimetria con simbologia botanica</DRAT>
+<DRAE hint="Ente proprietario" >S284</DRAE>
+<DRAN hint="Codice identificativo" >PZ_DRA_PLAN_04</DRAN>
+<DRAA hint="Autore" >Labbattaglia, Anna</DRAA>
+<DRAD hint="Data" >2019/10/14</DRAD>
+</DRA>
+<DRA hint="DOCUMENTAZIONE GRAFICA" >
+<DRAX hint="Genere" >documentazione allegata</DRAX>
+<DRAT hint="Tipo" >planimetria</DRAT>
+<DRAO hint="Note" >mappa delle prese fotografiche</DRAO>
+<DRAE hint="Ente proprietario" >S284</DRAE>
+<DRAN hint="Codice identificativo" >PZ_DRA_CNOT_05</DRAN>
+<DRAA hint="Autore" >Labbattaglia, Anna</DRAA>
+<DRAD hint="Data" >2019/10/14</DRAD>
+</DRA>
+<FNT hint="FONTI E DOCUMENTI" >
+<FNTP hint="Tipo" >registro dei pagamenti</FNTP>
+<FNTT hint="Denominazione" >Delibere comunali inerenti al Parco della Rimembranza di Potenza</FNTT>
+<FNTD hint="Data" >1932/07/09-1933/05/27</FNTD>
+<FNTN hint="Nome archivio" >Archivio Storico del Comune di Potenza</FNTN>
+<FNTS hint="Posizione" >busta 1338, fascicolo 11</FNTS>
+<FNTI hint="Codice identificativo" >PZ_DEL_01</FNTI>
+</FNT>
+<BIB hint="BIBLIOGRAFIA" >
+<BIBX hint="Genere" >bibliografia specifica</BIBX>
+<BIBA hint="Autore" >Lupi Dario</BIBA>
+<BIBD hint="Anno di edizione" >1923</BIBD>
+<BIBH hint="Sigla per citazione" >LUPI1923</BIBH>
+</BIB>
+<BIL hint="Citazione completa" >Giornale di Basilicata, 20-21 gennaio 1923 n.3</BIL>
+<BIL hint="Citazione completa" >Giornale di Basilicata, 5-6 maggio 1923 n. 18</BIL>
+<BIL hint="Citazione completa" >http://alberidellamemoria.beniculturali.it (consultazione:2019/08/22)</BIL>
+<BIL hint="Citazione completa" >http://luoghi.centenario1914-1918.it/it/il-governo-per-il-centenario (consultazione:2019/08/22)</BIL>
+</DO>
+<AD hint="ACCESSO AI DATI" >
+<ADS hint="SPECIFICHE DI ACCESSO AI DATI" >
+<ADSP hint="Profilo di accesso" >1</ADSP>
+<ADSM hint="Motivazione" >scheda contenente dati liberamente accessibili</ADSM>
+</ADS>
+</AD>
+<CM hint="COMPILAZIONE" >
+<CMP hint="COMPILAZIONE" >
+<CMPD hint="Data" >2019</CMPD>
+<CMPN hint="Nome" >Labbattaglia, Anna</CMPN>
+</CMP>
+<FUR hint="Funzionario responsabile" >Magnani, Fabrizio</FUR>
+<RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE" >
+<RVMD hint="Data" >2019</RVMD>
+<RVMN hint="Nome" >Labbattaglia, Anna</RVMN>
+</RVM>
+</CM>
+</PG>
+<harvesting>
+<puntoPrincipale>
+<x>15.799741</x>
+<y>40.645765</y>
+</puntoPrincipale>
+<idProgetto>ICCD1063423</idProgetto>
+</harvesting>
+</schede>
+    </metadata>
+</record>
