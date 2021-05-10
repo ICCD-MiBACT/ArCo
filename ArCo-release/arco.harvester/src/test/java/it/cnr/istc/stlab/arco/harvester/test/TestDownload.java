@@ -21,7 +21,7 @@ public class TestDownload {
 	public void downloadResources() {
 		try {
 			FileUtils.deleteDirectory(new File("src/main/resources/test_harvesting"));
-			Harvester h = new Harvester("http://catalogo.beniculturali.it/oaitarget/OAIHandler?",
+			Harvester h = new Harvester("http://www.catalogo-old.beniculturali.it/oaitarget/OAIHandler?",
 					"src/main/resources/test_harvesting");
 			h.setLimit(100);
 

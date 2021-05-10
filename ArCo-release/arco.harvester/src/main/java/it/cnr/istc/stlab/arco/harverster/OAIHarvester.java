@@ -22,7 +22,9 @@ public class OAIHarvester {
 
 	public static final String catalogue_records = "catalogue_records", multimedia_records = "multimedia_records",
 			contenitori_fisici = "contenitori_fisici", contenitori_giuridici = "contenitori_giuridici",
-			authority_files = "authority_files", altre_normative = "altre_normative";
+			authority_files = "authority_files", altre_normative = "altre_normative", enti_base = "enti_base",
+			enti_completo = "enti_completo", assegnazione = "assegnazione", progetti = "progetti",
+			campagne = "campagne", attivita = "attivita";
 
 	public static void main(String[] args) {
 		try {
@@ -45,11 +47,17 @@ public class OAIHarvester {
 			allRecords.add(contenitori_giuridici);
 			allRecords.add(authority_files);
 			allRecords.add(altre_normative);
+			allRecords.add(enti_base);
+			allRecords.add(enti_completo);
+			allRecords.add(assegnazione);
+			allRecords.add(progetti);
+			allRecords.add(campagne);
+			allRecords.add(attivita);
 
 			List<String> toDownload = config.getList(String.class, "records_to_download", allRecords);
-			
-			logger.trace(toDownload.toString()+" "+toDownload.size());
-			
+
+			logger.trace(toDownload.toString() + " " + toDownload.size());
+
 			Harvester h = new Harvester(oaiEndpoint, outputFolder);
 			h.setLimit(limit);
 
@@ -84,6 +92,56 @@ public class OAIHarvester {
 			}
 
 			h.getRecords();
+
+			// Download adminstrative data
+
+			if (toDownload.contains(enti_base)) {
+				logger.trace("Download enti base");
+				AdministrativeDataHarvester adh = new AdministrativeDataHarvester(enti_base,
+						outputFolder + "/" + enti_base);
+				adh.setLimit(limit);
+				adh.downloadRecords();
+			}
+
+			if (toDownload.contains(enti_completo)) {
+				logger.trace("Download enti completo");
+				AdministrativeDataHarvester adh = new AdministrativeDataHarvester(enti_completo,
+						outputFolder + "/" + enti_completo);
+				adh.setLimit(limit);
+				adh.downloadRecords();
+			}
+
+			if (toDownload.contains(assegnazione)) {
+				logger.trace("Download assegnazione");
+				AdministrativeDataHarvester adh = new AdministrativeDataHarvester(assegnazione,
+						outputFolder + "/" + assegnazione);
+				adh.setLimit(limit);
+				adh.downloadRecords();
+			}
+
+			if (toDownload.contains(campagne)) {
+				logger.trace("Download campagne");
+				AdministrativeDataHarvester adh = new AdministrativeDataHarvester(campagne,
+						outputFolder + "/" + campagne);
+				adh.setLimit(limit);
+				adh.downloadRecords();
+			}
+
+			if (toDownload.contains(attivita)) {
+				logger.trace("Download attività");
+				AdministrativeDataHarvester adh = new AdministrativeDataHarvester(attivita,
+						outputFolder + "/" + attivita);
+				adh.setLimit(limit);
+				adh.downloadRecords();
+			}
+
+			if (toDownload.contains(progetti)) {
+				logger.trace("Download progetti");
+				AdministrativeDataHarvester adh = new AdministrativeDataHarvester(progetti,
+						outputFolder + "/" + progetti);
+				adh.setLimit(limit);
+				adh.downloadRecords();
+			}
 
 		} catch (ConfigurationException e) {
 			e.printStackTrace();

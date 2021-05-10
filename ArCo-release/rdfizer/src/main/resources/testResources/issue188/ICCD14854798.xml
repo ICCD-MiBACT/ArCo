@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14854798@</identifier>
+        <datestamp>2021-04-11 08:03:15.454247</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <OA version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo Scheda">OA</TSK>
+                    <LIR hint="Livello ricerca">P</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">09</NCTR>
+                        <NCTN hint="Numero catalogo generale">00648445</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">M443</ESC>
+                    <ECP hint="Ente competente">M443</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">dipinto</OGTD>
+                    </OGT>
+                    <SGT hint="SOGGETTO">
+                        <SGTI hint="Identificazione">ritratto di Anton Paolo De Witt</SGTI>
+                        <SGTT hint="Titolo">Autoritratto con sfondo di case a Lucca</SGTT>
+                    </SGT>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Toscana</PVCR>
+                        <PVCP hint="Provincia">FI</PVCP>
+                        <PVCC hint="Comune">Firenze</PVCC>
+                    </PVC>
+                    <LDC hint="COLLOCAZIONE SPECIFICA">
+                        <LDCT hint="Tipologia">palazzo</LDCT>
+                        <LDCQ hint="Qualificazione">statale</LDCQ>
+                        <LDCN hint="Denominazione attuale">Palazzo Pitti</LDCN>
+                        <LDCC hint="Complesso di appartenenza">Palazzo Pitti e Giardino di Boboli</LDCC>
+                        <LDCU hint="Indirizzo">piazza Pitti, 1</LDCU>
+                        <LDCM hint="Denominazione raccolta">Galleria d'Arte Moderna</LDCM>
+                        <LDCS hint="Specifiche">SALA 27</LDCS>
+                    </LDC>
+                </LC>
+                <UB hint="UBICAZIONE E DATI PATRIMONIALI">
+                    <UBO hint="Ubicazione originaria">SC</UBO>
+                </UB>
+                <DT hint="CRONOLOGIA">
+                    <DTZ hint="CRONOLOGIA GENERICA">
+                        <DTZG hint="Secolo">sec. XX</DTZG>
+                    </DTZ>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1916</DTSI>
+                        <DTSF hint="A">1916</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione cronologia">bibliografia</DTM>
+                </DT>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <AUT hint="AUTORE">
+                        <AUTM hint="Motivazione dell'attribuzione">documentazione</AUTM>
+                        <AUTN hint="Nome scelto">De Witt Antonio Paolo</AUTN>
+                        <AUTA hint="Dati anagrafici">1876/ 1967</AUTA>
+                        <AUTH hint="Sigla per citazione">00003208</AUTH>
+                    </AUT>
+                </AU>
+                <MT hint="DATI TECNICI">
+                    <MTC hint="Materia e tecnica">tavola/ pittura a olio</MTC>
+                    <MIS hint="MISURE">
+                        <MISU hint="Unità">cm</MISU>
+                        <MISA hint="Altezza">70.5</MISA>
+                        <MISL hint="Larghezza">44</MISL>
+                        <MISV hint="Varie">cornice tinta di grigio; 79 x 63 x 7</MISV>
+                    </MIS>
+                </MT>
+                <CO hint="CONSERVAZIONE">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                    </STC>
+                </CO>
+                <RS hint="RESTAURI">
+                    <RST hint="RESTAURI">
+                        <RSTD hint="Data">2014</RSTD>
+                        <RSTE hint="Ente responsabile">SSPSAEPM FI, UR n. 12.160</RSTE>
+                        <RSTN hint="Nome operatore">Vervat M</RSTN>
+                    </RST>
+                </RS>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="DESCRIZIONE">
+                        <DESO hint="Indicazioni sull'oggetto">N.P</DESO>
+                        <DESI hint="Codifica Iconclass">48 C 51 3</DESI>
+                        <DESS hint="Indicazioni sul soggetto">Ritratti: Anton Paolo de Witt. Vedute: Lucca; case</DESS>
+                    </DES>
+                    <ISR hint="ISCRIZIONI">
+                        <ISRC hint="Classe di appartenenza">documentaria</ISRC>
+                        <ISRP hint="Posizione">sul retro, sulla tavola, in alto a destra, etichetta</ISRP>
+                        <ISRI hint="Trascrizione">MOSTRA DI PALAZZO STROZZI 1975/ AUTORITRATTO CON SFONDO DI / CASE A LUCCA, 1916/ CAT. 6</ISRI>
+                    </ISR>
+                    <ISR hint="ISCRIZIONI">
+                        <ISRC hint="Classe di appartenenza">documentaria</ISRC>
+                        <ISRP hint="Posizione">sul retro, etichetta</ISRP>
+                        <ISRI hint="Trascrizione">ARTIFICIO MOSTRE SRL. (COPIA)/ AUTORITRATTO/ CAT. 07</ISRI>
+                    </ISR>
+                    <ISR hint="ISCRIZIONI">
+                        <ISRC hint="Classe di appartenenza">documentaria</ISRC>
+                        <ISRP hint="Posizione">sul retro, etichetta</ISRP>
+                        <ISRI hint="Trascrizione">sulla cornice, etichetta: DAL TIRRENO ALLE APUANE/ CAT. 60 COLL. 42 (COPIA )</ISRI>
+                    </ISR>
+                    <NSC hint="Notizie storico-critiche">Il dipinto mostra una riflessione sullo studio degli antichi maestri e sulle componenti plastiche della tradizione toscana, che già si erano manifestate in 'Piazza a Lucca', eseguito nello stesso 1916. Esistono degli altri autoritratti precedenti a questo, realizzati però con la tecnica incisioria</NSC>
+                </DA>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <ACQ hint="ACQUISIZIONE">
+                        <ACQT hint="Tipo acquisizione">legato</ACQT>
+                        <ACQN hint="Nome">De Witt</ACQN>
+                        <ACQD hint="Data acquisizione">1981</ACQD>
+                        <ACQL hint="Luogo acquisizione">FI/ Firenze</ACQL>
+                    </ACQ>
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+                        <CDGS hint="Indicazione specifica">Ministero dei Beni e delle Attività Culturali e del Turismo</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia b/n</FTAP>
+                        <FTAN hint="Codice identificativo">SBAS FI 402788</FTAN>
+                    </FTA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTP hint="Tipo">registro inventariale</FNTP>
+                        <FNTT hint="Denominazione">Giornale della Galleria d'Arte Moderna</FNTT>
+                        <FNTD hint="Data">1932 -</FNTD>
+                        <FNTF hint="Foglio/Carta">4120</FNTF>
+                        <FNTN hint="Nome archivio">Firenze/ Galleria d'Arte Moderna</FNTN>
+                        <FNTS hint="Posizione">s.s</FNTS>
+                        <FNTI hint="Codice identificativo">Giornale GAM</FNTI>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Antonio Antony</BIBA>
+                        <BIBD hint="Anno di edizione">1975</BIBD>
+                        <BIBH hint="Sigla per citazione">00002112</BIBH>
+                        <BIBN hint="V., pp., nn.">n. 6</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Antonio Antony</BIBA>
+                        <BIBD hint="Anno di edizione">1998</BIBD>
+                        <BIBH hint="Sigla per citazione">00013446</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 87, n. 7</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Galleria arte</BIBA>
+                        <BIBD hint="Anno di edizione">2008</BIBD>
+                        <BIBH hint="Sigla per citazione">00014403</BIBH>
+                        <BIBN hint="V., pp., nn.">V. I, p. 939, n. 3479</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Tirreno Apuane</BIBA>
+                        <BIBD hint="Anno di edizione">1990</BIBD>
+                        <BIBH hint="Sigla per citazione">00001450</BIBH>
+                        <BIBN hint="V., pp., nn.">n. 60</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Umberto Prencipe</BIBA>
+                        <BIBD hint="Anno di edizione">2014</BIBD>
+                        <BIBH hint="Sigla per citazione">00001684</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 178, n. 111</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Cagianelli F</BIBA>
+                        <BIBD hint="Anno di edizione">1997</BIBD>
+                        <BIBH hint="Sigla per citazione">00013445</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 20</BIBN>
+                        <BIBI hint="V., tavv., figg.">fig. 2</BIBI>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Postmacchiaioli</BIBA>
+                        <BIBD hint="Anno di edizione">1994</BIBD>
+                        <BIBH hint="Sigla per citazione">00004714</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 150</BIBN>
+                    </BIB>
+                    <MST hint="MOSTRE">
+                        <MSTT hint="Titolo">Antony De Witt</MSTT>
+                        <MSTL hint="Luogo">Firenze</MSTL>
+                        <MSTD hint="Data">1975</MSTD>
+                    </MST>
+                    <MST hint="MOSTRE">
+                        <MSTT hint="Titolo">Fra il Tirreno e le Apuane. Arte e cultura tra Otto e Novecento</MSTT>
+                        <MSTL hint="Luogo">Lucca/ Firenze</MSTL>
+                        <MSTD hint="Data">1990</MSTD>
+                    </MST>
+                    <MST hint="MOSTRE">
+                        <MSTT hint="Titolo">Antonio Antony de Witt 1876 - 1967</MSTT>
+                        <MSTL hint="Luogo">Firenze</MSTL>
+                        <MSTD hint="Data">1998</MSTD>
+                    </MST>
+                    <MST hint="MOSTRE">
+                        <MSTT hint="Titolo">Umberto Prencipe e la Toscana. Tra modernità e tradizione</MSTT>
+                        <MSTL hint="Luogo">Lucca</MSTL>
+                        <MSTD hint="Data">2014</MSTD>
+                    </MST>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2009</CMPD>
+                        <CMPN hint="Nome">Matucci B</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Giusti A</FUR>
+                    <FUR hint="Funzionario responsabile">Sframeli M</FUR>
+                    <AGG hint="AGGIORNAMENTO - REVISIONE">
+                        <AGGD hint="Data">2015</AGGD>
+                        <AGGN hint="Nome">Rousseau B</AGGN>
+                        <AGGF hint="Funzionario responsabile">Sframeli M</AGGF>
+                    </AGG>
+                </CM>
+            </OA>
+            <harvesting>
+                <enteCompetente>M443</enteCompetente>
+                <idProgetto>ICCD1063217</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

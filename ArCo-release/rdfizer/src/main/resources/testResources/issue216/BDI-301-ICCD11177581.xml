@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11177581@</identifier>
+        <datestamp>2015-01-06T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <BDI version="3.01_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">BDI</TSK>
+                    <LIR hint="Livello ricerca">C</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">12</NCTR>
+                        <NCTN hint="Numero catalogo generale">00870331</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S48</ESC>
+                    <ECP hint="Ente competente">S48</ECP>
+                    <EPR hint="Ente proponente">ICCD</EPR>
+                </CD>
+                <DB hint="DEFINIZIONE BENE">
+                    <DBL hint="Denominazione locale">La yunta</DBL>
+                    <DBD hint="Denominazione">Semina rituale</DBD>
+                    <DBC hint="Categoria">festa/ cerimonia</DBC>
+                    <DBC hint="Categoria">musica strumentale</DBC>
+                    <DBC hint="Categoria">danza</DBC>
+                </DB>
+                <RD hint="REDAZIONE">
+                    <RDM hint="Modalita' di redazione">archivio</RDM>
+                </RD>
+                <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO-AMMINISTRATIVE">
+                    <TLC hint="Tipo di localizzazione">localizzazione di rilevamento</TLC>
+                    <PRV hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                        <PRVS hint="Stato">PERU'</PRVS>
+                        <PRVE hint="Localita' estera">America, Perù, Departamento di Moquegua, Ubinas</PRVE>
+                    </PRV>
+                    <PRC hint="COLLOCAZIONE SPECIFICA">
+                        <PRCL hint="Luogo">Plaza de Armas</PRCL>
+                    </PRC>
+                    <PRG hint="Area storico-geografica">Sierra Estremo Sud</PRG>
+                    <PRT hint="Contesto">rilevamento nel contesto</PRT>
+                </LA>
+                <DR hint="DATI DI RILEVAMENTO">
+                    <DRV hint="Ente responsabile">S48</DRV>
+                    <DRR hint="Responsabile della ricerca">Cavatrunci Claudio</DRR>
+                    <DRL hint="Rilevatore">Cavatrunci Claudio</DRL>
+                    <DRD hint="Data del rilevamento">1995/12/08</DRD>
+                </DR>
+                <CA hint="OCCASIONE">
+                    <CAR hint="Occasione religiosa">si</CAR>
+                    <CAA hint="Ciclo dell'anno">Immacolata (Concezione-8 dicembre)</CAA>
+                </CA>
+                <RC hint="RICORRENZA">
+                    <RCP hint="Periodicita'">annuale</RCP>
+                    <RCI hint="Data inizio">1995/12/08</RCI>
+                    <RCF hint="Data fine">1995/12/08</RCF>
+                </RC>
+                <CU hint="COMUNICAZIONE">
+                    <CUS hint="MUSICALE STRUMENTALE">
+                        <CUSC hint="Strumenti musicali solisti/classificazione">classificazione mista</CUSC>
+                        <CUSS hint="Strumenti musicali solisti">flauto a tacca</CUSS>
+                        <CUSS hint="Strumenti musicali solisti">tamburo cilindrico</CUSS>
+                        <CUSL hint="Strumenti musicali di accompagnamento/classificazione">classificazione mista</CUSL>
+                        <CUSD hint="Modalita' esecutiva">polifonia strumentale</CUSD>
+                    </CUS>
+                    <CUC hint="CINESICA">
+                        <CUCM hint="Maschile">2</CUCM>
+                        <CUCE hint="Fascia d'eta'">adulto</CUCE>
+                        <CUCC hint="Corpo">L’uomo mascherato da contadina danza compiendo piccoli saltelli e di tanto in tanto, piegando il busto in avanti, sfiora il terreno con la mano destra. L’uomo mascherato con una lunga barba danza saltellando dietro alla donna</CUCC>
+                        <CUCG hint="Gesto">L’uomo mascherato da contadina si piega sul solco tracciato dall’aratro e con la mano destra vi depone alcuni chicchi di mais. L’uomo barbuto compie con il piede il gesto di chiudere il solco; mentre danza fa roteare con la mano destra il lembo di una sciarpa</CUCG>
+                    </CUC>
+                    <CUP hint="PROSSEMICA">
+                        <CUPM hint="Maschile">7</CUPM>
+                        <CUPE hint="Fascia d'eta'">adulto</CUPE>
+                        <CUPD hint="Descrizione">Gli attori entrano nella piazza centrale del paese, e si dispongono davanti alla chiesa, attorniati dagli astanti. Camminano e danzano compiendo alcuni giri intorno ad uno spazio ovale. L’aratro guidato da tre uomini incede per primo, seguono la seminatrice e il personaggio barbuto. I due musicisti si dispongono al centro</CUPD>
+                    </CUP>
+                </CU>
+                <DA hint="DATI ANALITICI">
+                    <DRS hint="Descrizione del bene">Il corteo dei personaggi fa il suo ingresso in plaza de Armas, la piazza centrale del paese. Sfilano ordinatamente un suonatore di flauto a tacca #quena# e un suonatore di tamburo, due danzatori mascherati da contadini in abiti tradizionali, due uomini che conducono i buoi aggiogati all’aratro, l’uomo che guida l’aratro. I due musici si dispongono al centro eseguendo la melodia di accompagnamento al rito. I buoi portano coperte multicolori sulla groppa e un giogo appositamente adornato per la festa. Vengono tirati da due uomini mentre un terzo si occupa di guidare l’aratro da dietro, facendo talvolta pressione con il piede sinistro sulla bure, per approfondire il solco. Dietro all’aratro si muovono i personaggi principali, un uomo travestito da contadina, con gonna e #manta# sulle spalle, e un secondo uomo con il volto mascherato e con una lunga barba nera. La donna danza dietro all’aratro simulando l’atto della semina. Con cadenza ritmica si piega in avanti lasciando cadere nel solco alcuni chicchi di mais che preleva con la mano destra da una bisaccia appesa al collo. Alcune donne tra gli astanti si chinano a raccogliere i chicchi dal solco per assicurarsi la buona fortuna e un buon raccolto. Subito dietro, il danzatore barbuto, detto #abuelo# (il nonno) segue la donna accennando con il piede il gesto di coprire il solco dove è stato seminato. Mentre danza fa roteare con la mano destra una lunga sciarpa bianca</DRS>
+                    <DRE hint="Elementi strutturali">Ingresso dei musicisti/ ingresso dei danzatori/ ingresso dei buoi e dell’aratro/ simulazione dell’aratura/ simulazione della semina</DRE>
+                    <DRM hint="ELEMENTI MATERIALI">
+                        <DRMA hint="Animali">buoi</DRMA>
+                        <DRMV hint="Vegetali">chicchi di mais</DRMV>
+                        <DRMO hint="Oggetti">aratro</DRMO>
+                    </DRM>
+                </DA>
+                <AT hint="ATTORE INDIVIDUALE">
+                    <ATT hint="ATTORE">
+                        <ATTI hint="Ruolo">seminatrice</ATTI>
+                        <ATTZ hint="Nazionalita'">peruviana</ATTZ>
+                        <ATTS hint="Sesso">M</ATTS>
+                    </ATT>
+                    <ATA hint="Annotazioni">Il ruolo della contadina che semina è interpretato da un uomo travestito da donna</ATA>
+                </AT>
+                <AT hint="ATTORE INDIVIDUALE">
+                    <ATT hint="ATTORE">
+                        <ATTI hint="Ruolo">#abuelo# (nonno)</ATTI>
+                        <ATTZ hint="Nazionalita'">peruviana</ATTZ>
+                        <ATTS hint="Sesso">M</ATTS>
+                    </ATT>
+                    <ATA hint="Annotazioni">Il personaggio, comunemente definito #abuelo# (il nonno), indossa un fazzoletto nero che copre il volto, una lunga barba nera, gambali di cuoio e tiene in mano una frusta</ATA>
+                </AT>
+                <PC hint="PAROLE CHIAVE">
+                    <THS hint="THESAURUS">
+                        <THSD hint="Descrittore">Ciclo dell’anno/ Immacolata Concezione, 8 dicembre</THSD>
+                        <THST hint="Tipo thesaurus">Gian Luigi Bravo, Parole chiave etnoantropologiche, Torino, Dipartimento di Scienze Antropologiche, Università di Torino, 1995</THST>
+                    </THS>
+                </PC>
+                <DV hint="DOCUMENTO VIDEO-CINEMATOGRAFICO">
+                    <DVC hint="Codice">64942_13</DVC>
+                    <DVL hint="Titolo">La yunta</DVL>
+                    <DVU hint="Durata">1’ 41’’</DVU>
+                    <DVB hint="Abstract">Il video descrive il rito della yunta, una semina rituale compiuta durante la festa dell’Immacolata ad Ubinas. Personaggi principali sono una coppia di contadini, in abito tradizionale, che danzano seguendo il solco tracciato dall’aratro simulando l’atto della semina</DVB>
+                    <DVO hint="SUPPORTO VIDEO-CINEMATOGRAFICO ORIGINALE">
+                        <DVOC hint="Codice">203</DVOC>
+                        <DVOT hint="Tipo di registrazione/ripresa">magnetica</DVOT>
+                        <DVOA hint="Attrezzature tecniche e modalita' di registrazione/ripresa">Telecamera VHS C GVC</DVOA>
+                    </DVO>
+                    <DVM hint="RIVERSAMENTO">
+                        <DVMC hint="Codice">64942</DVMC>
+                        <DVMT hint="Tipo di riversamento">digitale</DVMT>
+                        <DVMF hint="Formato">DVD</DVMF>
+                        <DVMI hint="Indice">1. Valle di Vitor: sopralluogo alla necropoli di Pampa de los Desamparados; 2. Magazzino reperti: 3. Valle di Siguas: sopralluogo al sito di Pachaqui; 4. Chuquibamba; 5. Valle di Siguas: sopralluogo alla necropoli saccheggiata di Tambillo; 6. Arequipa: quartiere di Cayma; 7. Valle di Siguas: saggio di scavo nella necropoli di Tambillo; 8. In viaggio per Ubinas; 9. Ubinas Festa dell’Immacolata: sfilata del devoto; 10. Danza dei Tucumanes per le vie del paese; 11. Processione della statua della Madonna; 12. Ingresso dei Tucumanes a Plaza des Armas; 13. La yunta; 14. Wayno</DVMI>
+                    </DVM>
+                    <DVG hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA DEL SUPPORTO VIDEO CINEMATOGRAFICO">
+                        <DVGS hint="Stato">ITALIA</DVGS>
+                        <DVGR hint="Regione">Lazio</DVGR>
+                        <DVGP hint="Provincia">RM</DVGP>
+                        <DVGC hint="Comune">Roma</DVGC>
+                    </DVG>
+                    <DVP hint="COLLOCAZIONE SPECIFICA DEL SUPPORTO VIDEO-CINEMATOGRAFICO">
+                        <DVPN hint="Denominazione archivio">Museo Nazionale Preistorico Etnografico “L. Pigorini”</DVPN>
+                    </DVP>
+                    <DVQ hint="ACQUISIZIONE DEL SUPPORTO VIDEO-CINEMATOGRAFICO">
+                        <DVQT hint="Tipo acquisizione">documentazione prodotta da rilevamento sul terreno</DVQT>
+                    </DVQ>
+                    <DVZ hint="CONDIZIONE GIURIDICA DEL SUPPORTO VIDEO-CINEMATOGRAFICO">
+                        <DVZG hint="Indicazione generica">proprietà Stato</DVZG>
+                    </DVZ>
+                </DV>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <VDC hint="DOCUMENTAZIONE VIDEO-CINEMATOGRAFICA">
+                        <VDCM hint="Tipo di documento">primario</VDCM>
+                        <VDCX hint="Genere">documentazione allegata</VDCX>
+                        <VDCP hint="Tipo">video DVD</VDCP>
+                        <VDCN hint="Codice identificativo">New_1401864636006</VDCN>
+                    </VDC>
+                    <BIL hint="Citazione completa">Gasperini Ginevra, La festa dell’Immacolata di Ubinas. Un caso di meticciato religioso e culturale nel Sud delle Ande peruviane, Tesi di laurea in Civiltà Indigene dell’America, Università La Sapienza di Roma, 1997</BIL>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2004</CMPD>
+                        <CMPN hint="Nome">Adelfio Simonetta</CMPN>
+                    </CMP>
+                    <RSR hint="Referente scientifico">Cavatrunci Claudio</RSR>
+                    <FUR hint="Funzionario responsabile">Cardelli Alessandra</FUR>
+                    <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
+                        <RVMD hint="Data">2014</RVMD>
+                        <RVMN hint="Nome">Tucci Roberta</RVMN>
+                        <RVME hint="Ente">ICCD</RVME>
+                    </RVM>
+                </CM>
+            </BDI>
+        </schede>
+    </metadata>
+</record>

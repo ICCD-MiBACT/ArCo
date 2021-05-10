@@ -8,6 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
@@ -20,8 +21,8 @@ import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -41,7 +42,10 @@ public class Harvester {
 			authorityFiles;
 	private AtomicInteger c = new AtomicInteger(0);
 
-	private static final Logger logger = LogManager.getLogger(OAIHarvester.class);
+	private Calendar from = null;
+	private Calendar to = null;
+
+	private static final Logger logger = LoggerFactory.getLogger(OAIHarvester.class);
 
 	public Harvester(String listIdentifierURL, String outputDirectory) throws ParserConfigurationException {
 		super();
@@ -61,18 +65,46 @@ public class Harvester {
 
 	}
 
+	public void setFrom(Calendar from) {
+		this.from = from;
+	}
+
+	public void setTo(Calendar to) {
+		this.to = to;
+	}
+
 	public void setLimit(long limit) {
 		this.limit = limit;
 	}
 
-	private static String getResumptionToken(String postfix) {
-		return System.currentTimeMillis() + ":0:oai_dc:00010101000000:99991231235959:null" + postfix;
+	private static String getResumptionToken(String postfix, Calendar from, Calendar to, boolean depub) {
+
+		String depubString = "null";
+
+		if (depub) {
+			depubString = "DEPUBBLICATO";
+		}
+
+		if (from == null || to == null) {
+
+			return System.currentTimeMillis() + ":0:oai_dc:00010101000000:99991231235959:" + depubString + postfix;
+		} else {
+			return System.currentTimeMillis() + ":0:oai_dc:" + getStringDate(from) + "000000:" + getStringDate(to)
+					+ "235959:" + depubString + postfix;
+		}
+
 	}
 
-	public List<String> downloadRecords(String folder, String postfixList, String postfixRecord, boolean download)
-			throws IOException {
+	private static String getStringDate(Calendar c) {
+		return String.format("%d%02d%02d", c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH));
+	}
 
-		String nextToken = getResumptionToken(postfixList);
+	public List<String> downloadRecords(String folder, String postfixList, String postfixRecord, boolean download,
+			Calendar from, Calendar to) throws IOException {
+
+		String nextToken = getResumptionToken(postfixList, from, to, false);
+		
+		//TODO
 
 		AtomicInteger chunk = new AtomicInteger(0);
 		List<String> downloadedRecords = new ArrayList<>();
@@ -97,7 +129,7 @@ public class Harvester {
 					d = builder.parse(new ByteArrayInputStream(identifiersResponse.getBytes()));
 					downloadedRecords
 							.addAll(getRecordsFromList(d, chunk, fos_keys, fos_paths, postfixRecord, folder, download));
-					nextToken = getResumptionToken(d);
+					nextToken = Utils.getResumptionToken(d);
 					break;
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -132,29 +164,37 @@ public class Harvester {
 			TransformerException {
 
 		if (records) {
-			downloadRecords(recordsDirectory, "", "/xml", true);
+			logger.info("Download records");
+			downloadRecords(recordsDirectory, "", "/xml", true, from, to);
 			downloaded = 0;
 		}
 		if (multimedia_records) {
-			downloadRecords(multimediaRecordsDirectory, "/entita_multimediale", "/xml/entita_multimediale", true);
+			logger.info("Download multimedia records");
+			downloadRecords(multimediaRecordsDirectory, "/entita_multimediale", "/xml/entita_multimediale", true, from,
+					to);
 			downloaded = 0;
 		}
 		if (contenitoriFisici) {
-			downloadRecords(contenitoriFisiciDirectory, "/contenitori_fisici", "/xml/contenitori_fisici", true);
+			logger.info("Download contenitori fisici");
+			downloadRecords(contenitoriFisiciDirectory, "/contenitori_fisici", "/xml/contenitori_fisici", true, from,
+					to);
 			downloaded = 0;
 		}
 		if (contenitoriGiuridici) {
-			downloadRecords(contenitoriGiuridiciDirectory, "/contenitori_giuridici", "/xml/contenitori_giuridici",
-					true);
+			logger.info("Download contenitori giuridici");
+			downloadRecords(contenitoriGiuridiciDirectory, "/contenitori_giuridici", "/xml/contenitori_giuridici", true,
+					from, to);
 			downloaded = 0;
 		}
 		if (altreNormative) {
-			downloadRecords(altreNormativeDirectory, "/altre_normative", "/xml/altre_normative", true);
+			logger.info("Download altre normative");
+			downloadRecords(altreNormativeDirectory, "/altre_normative", "/xml/altre_normative", true, from, to);
 			downloaded = 0;
 		}
 
 		if (authorityFiles) {
-			downloadRecords(authorityFilesDirectory, "/authorities", "/xml/authorities", true);
+			logger.info("Download authority file");
+			downloadRecords(authorityFilesDirectory, "/authorities", "/xml/authorities", true, from, to);
 		}
 
 	}
@@ -227,16 +267,6 @@ public class Harvester {
 
 	}
 
-	private String getResumptionToken(Document d) {
-		NodeList rt = d.getElementsByTagName("resumptionToken");
-		if (rt.getLength() > 0) {
-			return rt.item(0).getTextContent();
-		} else {
-			return null;
-		}
-
-	}
-
 	private List<String> getRecords(Document d)
 			throws IOException, SAXException, XPathExpressionException, TransformerException {
 
@@ -265,6 +295,7 @@ public class Harvester {
 		for (int i = 0; i < NUM_OF_ATTEMPTS; i++) {
 			try {
 				URL url = new URL(listIdentifierURL + "verb=GetRecord&metadataPrefix=oai_dc&identifier=" + identifier);
+				logger.trace("Getting {}", url);
 				HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 				conn.setRequestMethod("GET");
 				Document d = builder.parse(conn.getInputStream());
@@ -303,7 +334,7 @@ public class Harvester {
 		new File(outputDirectory).mkdirs();
 
 		for (String keycode : keycodes) {
-			String recordString = getRecord(getIdentifierFromKeycode(keycode));
+			String recordString = getRecord(getIdentifierFromKeycode(keycode) + "/xml");
 
 			if (recordString != null) {
 				FileOutputStream fos = new FileOutputStream(new File(outputDirectory + "/" + keycode + ".xml"));
@@ -322,7 +353,7 @@ public class Harvester {
 			throws XPathExpressionException, IOException, SAXException, TransformerException {
 		return getRecord("oai:oaicat.iccd.org:@" + keycode + "@/xml/contenitori_fisici");
 	}
-	
+
 	public String getContenitoreGiuridico(String keycode)
 			throws XPathExpressionException, IOException, SAXException, TransformerException {
 		return getRecord("oai:oaicat.iccd.org:@" + keycode + "@/xml/contenitori_giuridici");

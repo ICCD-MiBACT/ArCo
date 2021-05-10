@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?><record>
+            <header>
+                <identifier>oai:oaicat.iccd.org:@ICCD11173579@</identifier>
+                <datestamp>2021-04-07 15:48:49.595434</datestamp>
+            </header>
+            <metadata>
+                <schede>
+                    <AUD version="3.00_ICCD0">
+                        <MC hint="METADATI DI CATALOGAZIONE">
+                            <REG hint="DOCUMENTAZIONE AUDIO">
+                                <REGP hint="Tipo">cassetta DAT</REGP>
+                                <REGN hint="Codice identificativo">New_1401358982589</REGN>
+                            </REG>
+                        </MC>
+                        <MM hint="METADATI DATO MULTIMEDIALE">
+                            <MMT hint="METADATI TECNICI DATO MULTIMEDIALE">
+                                <MMTO hint="Nome file originale">CRDA00078_02.mp3</MMTO>
+                            </MMT>
+                        </MM>
+                    </AUD>
+                    <harvesting>
+                        <enteCompetente>S168</enteCompetente>
+                        <linkEmm>http://www.sigecweb.beniculturali.it/images/fullsize/ICCD1022624/ICCD11173579_CRDA00078_02.mp3</linkEmm>
+                        <idProgetto>ICCD1007384</idProgetto>
+                    </harvesting>
+                </schede>
+            </metadata>
+        </record>

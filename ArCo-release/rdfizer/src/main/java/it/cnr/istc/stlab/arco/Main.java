@@ -22,28 +22,35 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 import org.apache.jena.rdf.model.Model;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Main {
+
+	private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
 	public static void main(String[] args) {
 		String inFolderString = args[0];
 		String outNtriplesFolder = args[1];
 		String prefix = args[2];
 		String sourceprefix = args[3];
-		String quarantineList = args[4];
+
+		logger.trace("inFolder {}, outFolder {}, prefix {}, sourcePrefix {}", inFolderString, outNtriplesFolder, prefix,
+				sourceprefix);
 
 		File inFolder = new File(inFolderString);
 
 		Set<String> catalogueRecordsToQuarantine = new HashSet<>();
 
 		if (args.length > 4) {
+			String quarantineList = args[4];
 			// A file listing the catalogue records to quarantine is provided
 			try {
 				BufferedReader br = new BufferedReader(new FileReader(new File(quarantineList)));
 				String line;
 				while ((line = br.readLine()) != null) {
-					System.out.println(line + " goes to quarantine.");
-					catalogueRecordsToQuarantine.add(line);
+					logger.info("{} goes to quarantine.", line);
+					catalogueRecordsToQuarantine.add(line.trim());
 				}
 				br.close();
 			} catch (FileNotFoundException e) {
@@ -78,15 +85,17 @@ public class Main {
 					File[] xmls = subFolder.listFiles(f -> f.isFile() && !f.isHidden() && f.getName().endsWith(".xml"));
 
 					System.out.println("XMLN " + outSubFolder + ": " + xmls.length);
+					
 
 					List<File> xmlList = new ArrayList<File>();
 					for (File xml : xmls) {
 						xmlList.add(xml);
 					}
 
-					xmlList.parallelStream().forEach(f -> {
+					xmlList.forEach(f -> {
 						String itemName = f.getName().replace(".xml", "");
 						File ret = new File(outSubFolder, itemName + ".nt.gz");
+						logger.trace("Processing file {}",f.getAbsolutePath());
 						if (!ret.exists()) {
 
 							InputStream is = null;
@@ -99,7 +108,8 @@ public class Main {
 							if (is != null) {
 								try {
 
-									// System.out.println(itemName);
+									System.out.println(itemName);
+									logger.trace("Convert {}",itemName);
 									Model model = converter.convert(itemName, prefix, sourceprefix, is);
 
 									if (catalogueRecordsToQuarantine.contains(itemName)) {
@@ -129,6 +139,8 @@ public class Main {
 								}
 
 							}
+						}else {
+							logger.trace("{} already exists",f.getAbsolutePath());
 						}
 					});
 

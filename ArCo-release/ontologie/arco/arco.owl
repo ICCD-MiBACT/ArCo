@@ -28,14 +28,16 @@
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco">
-        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/arco/1.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/arco/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/0.1"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event/1.1"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/immovable-property/0.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/movable-property/0.2"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
@@ -76,8 +78,8 @@ In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">ArCo Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia ArCo (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.1</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.2</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -171,7 +173,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has alternative discipline</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa PST: CT/CTA</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa PST: CT/CTA, versione 4.00: OG/CTA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -304,6 +306,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has cultural property category</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/CTG -  Normativa AT: OG/OGT/OGTP - Normativa RA: OG/CLS - Normative CA e MA e Normativa VeAC: OG/OGT/OGTC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -714,7 +717,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/ComplexCulturalProperty"/>
-        <rdfs:comment xml:lang="en">Questa proprietà, inversa a &quot;ha componente&quot;, collega una delle parti componenti di un bene culturale complesso al bene complesso stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha componente&quot;, collega una delle parti componenti di un bene culturale complesso al bene complesso stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property, inverse of &quot;has component&quot;, relates a component of a complex cultural property to the complex cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is cultural property component of</rdfs:label>
@@ -962,12 +965,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate"/>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/hasAuthor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
@@ -1109,12 +1106,6 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/context-description/hasResponsibility -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasResponsibility"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/hasSexEstimate -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSexEstimate"/>
     
 
 
@@ -1372,6 +1363,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/hasAccession -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasAccession"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/CLV/hasGeometry -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasGeometry"/>
@@ -1444,6 +1441,14 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa SM 4.00: CL/CHS/CHSN</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/RVERidentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/RVERidentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1535,6 +1540,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD normative F, MI, S: OG/QNT/QNTC</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/containerSequence -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/containerSequence">
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice che definisce la sequenza dei contenitori.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Thisproperty represents the code defining the container sequence.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
+        <rdfs:label xml:lang="it">codice sequenza</rdfs:label>
+        <rdfs:label xml:lang="en">container sequence</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: AC/ACZ</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1809,7 +1829,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">region identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTN</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTR</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1881,7 +1901,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">unique identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: concat(CD/NCT/NCTR + CD/NCT/NCTN + CD/NCT/NCTS)</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: concat(CD/NCT/NCTR + CD/NCT/NCTN + CD/NCT/NCTS); RV/RVE/RVER (identificativo univoco delle schede collegate); scheda A e PG, v. 1 e v. 2: RV/RVE/RVES (identificativo univoco delle schede collegate). RV/RSE/RSEC (identificativo univoco delle schede collegate)</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2709,7 +2729,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Cultural Property Category</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/CTG -  Normativa AT: OG/OGT/OGTP - Normativa RA: OG/CLS - Normative CA e MA e Normativa VeAC: OG/OGT/OGTC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/CTG -  Normativa AT: OG/OGT/OGTP - Normativa RA: OG/CLS - Normative CA e MA e Normativa VeAC: OG/OGT/OGTC, Normativa BDM: OG/OGT/OGTG</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2975,7 +2995,7 @@ In this module the following Ontology Design Patterns have been used:
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambito di tutela del MiBAC (archeologico, architettonico e paesaggistico, etnoantropologico, storico artistico), nel quale ricade il bene culturale in esame.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the MiBAC scope of protection (historical artistic, ethoanthropological, architectural landscape, archaeological) of a cultural property.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the MiBAC scope of protection (historical artistic, ethnoanthropological, architectural landscape, archaeological) of a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Ambito di tutela MiBAC</rdfs:label>
         <rdfs:label xml:lang="en">MiBAC Scope of protection</rdfs:label>
@@ -3306,7 +3326,7 @@ In this module the following Ontology Design Patterns have been used:
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una classificazione di un bene fotografico secondo un sistema di classificazione alternativo a Iconclass, che sia comunque riconosciuto e utilizzato a livello nazionale, o preferibilmente internazionale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a photographic entity&apos;s classification accorting to other classification systems as Iconclass. The system has to be recognised and used at national or preferably international level.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a photographic entity&apos;s classification according to other classification systems as Iconclass. The system has to be recognised and used at national or preferably international level.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Classificazione di bene fotografico</rdfs:label>
         <rdfs:label xml:lang="en">Photographic heritage classification</rdfs:label>
@@ -3486,12 +3506,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate"/>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/AnomalyOrigin -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AnomalyOrigin"/>
@@ -3560,9 +3574,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/context-description/Dating -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Dating">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/DetectionMethod"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Dating"/>
     
 
 
@@ -3659,12 +3671,6 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/context-description/Responsibility -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Responsibility"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/SexEstimate -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
     
 
 
@@ -3863,6 +3869,12 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/location/TypeOfContext -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TypeOfContext"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Accession -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Accession"/>
     
 
 

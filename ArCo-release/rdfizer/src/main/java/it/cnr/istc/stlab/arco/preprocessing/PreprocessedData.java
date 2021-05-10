@@ -13,10 +13,11 @@ import java.util.zip.GZIPInputStream;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.Logger;
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
 import org.mapdb.Serializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class PreprocessedData {
 
@@ -26,9 +27,9 @@ public class PreprocessedData {
 	private DB db;
 	private static PreprocessedData instance;
 	private Map<String, String> ftan2URL, catalogueRecordIdentifier2URI, contenitoreFisicoSystemRecordCode2CCF,
-			contenitoreGiuridicoSystemRecordCode2CCG;
+			contenitoreGiuridicoSystemRecordCode2CCG, codiceEnteToNomeEnte;
 	private Map<String, List<String>> uniqueIdentifier2URIs;
-	private static final Logger logger = Logger.getLogger(PreprocessedData.class);
+	private static final Logger logger = LoggerFactory.getLogger(PreprocessedData.class);
 	public static final String GENERATED = "GENERATED";
 
 	private PreprocessedData(boolean download, String dbFileName, boolean forceCreate) {
@@ -39,8 +40,8 @@ public class PreprocessedData {
 				logger.info("Downloading preprocessed data from " + dbURL);
 				try {
 					FileUtils.copyURLToFile(new URL(dbURL), new File(dbFileName + ".gz"));
-					logger.info(dbURL+" downloaded!");
-					logger.info("Unzipping "+dbFileName + ".gz");
+					logger.info(dbURL + " downloaded!");
+					logger.info("Unzipping " + dbFileName + ".gz");
 					IOUtils.copy(new GZIPInputStream(new FileInputStream(new File(dbFileName + ".gz"))),
 							new FileOutputStream(new File(dbFileName)));
 					logger.info(dbFileName + ".gz unzipped");
@@ -90,14 +91,27 @@ public class PreprocessedData {
 	private void initMaps() {
 		this.ftan2URL = db.hashMap("ftan2URL").keySerializer(Serializer.STRING).valueSerializer(Serializer.JAVA)
 				.createOrOpen();
+//		logger.trace("FTAN2URL {}", ftan2URL.size());
+		
 		this.catalogueRecordIdentifier2URI = db.hashMap("catalogueRecordIdentifier2URI")
 				.keySerializer(Serializer.STRING).valueSerializer(Serializer.JAVA).createOrOpen();
+//		logger.trace("catalogueRecordIdentifier2URI {}", catalogueRecordIdentifier2URI.size());
+		
 		this.uniqueIdentifier2URIs = db.hashMap("uniqueIdentifier2URIs").keySerializer(Serializer.STRING)
 				.valueSerializer(Serializer.JAVA).createOrOpen();
+//		logger.trace("uniqueIdentifier2URIs {}", uniqueIdentifier2URIs.size());
+		
 		this.contenitoreFisicoSystemRecordCode2CCF = db.hashMap("contenitoreFisicoSystemRecordCode2CCF")
 				.keySerializer(Serializer.STRING).valueSerializer(Serializer.JAVA).createOrOpen();
+//		logger.trace("contenitoreFisicoSystemRecordCode2CCF {}", contenitoreFisicoSystemRecordCode2CCF.size());
+		
 		this.contenitoreGiuridicoSystemRecordCode2CCG = db.hashMap("contenitoreGiuridicoSystemRecordCode2CCG")
 				.keySerializer(Serializer.STRING).valueSerializer(Serializer.JAVA).createOrOpen();
+//		logger.trace("contenitoreGiuridicoSystemRecordCode2CCG {}", contenitoreGiuridicoSystemRecordCode2CCG.size());
+		
+		this.codiceEnteToNomeEnte = db.hashMap("codiceEnteToNomeEnte").keySerializer(Serializer.STRING)
+				.valueSerializer(Serializer.JAVA).createOrOpen();
+//		logger.trace("codiceEnteToNomeEnte {}", codiceEnteToNomeEnte.size());
 
 	}
 
@@ -136,6 +150,10 @@ public class PreprocessedData {
 
 	public Map<String, String> getContenitoreGiuridicoSystemRecordCode2CCG() {
 		return contenitoreGiuridicoSystemRecordCode2CCG;
+	}
+
+	public Map<String, String> getCodiceEnteToNomeEnte() {
+		return codiceEnteToNomeEnte;
 	}
 
 	public void commit() {

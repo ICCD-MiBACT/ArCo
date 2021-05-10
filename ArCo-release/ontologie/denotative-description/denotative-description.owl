@@ -25,7 +25,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/denotative-description">
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
@@ -63,8 +64,8 @@ In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Denotative Description Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia della Descrizione Denotativa (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.1</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.2</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -309,7 +310,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has element affixed to cultural property</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI - ICCD Normativa MI: AU/DDC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI - ICCD Normativa MI: AU/DDC. -  Normativa NU: DA/DES/DESA, DESL, DESN, DESF, DESM, DESG, DESR, DEST</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -326,6 +327,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha tipo di elemento apposto</rdfs:label>
         <rdfs:label xml:lang="en">has affixed element type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEE - Normative di versioni precedenti: DA/STM/STMQ</a-cat:iccdNormTag>
@@ -361,6 +363,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha situazione climatica</rdfs:label>
         <rdfs:label xml:lang="en">has climate situation</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasColour -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasColour">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isColourOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto al colore .</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects an object to the colour.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha colore</rdfs:label>
+        <rdfs:label xml:lang="en">has colour</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -470,7 +490,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAvailability"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il bene culturale alla sua disponibilità materiale, ovvero se il bene è materialmente disponibile, per esempio per attività di catalogazione, o se non è disponibile (es.: furto, distruzione)</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class relates the cultural property to its availability, that is wheter the cultural property is available or not (e.g.: theft, destruction) for example for cataloguing activities.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class relates the cultural property to its availability, that is whether the cultural property is available or not (e.g.: theft, destruction) for example for cataloguing activities.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha disponibilità materiale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property availability</rdfs:label>
@@ -512,7 +532,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has cultural property specification</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>OG/OGT/OGTT</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>OG/OGT/OGTT. Scheda A e PG (v. 1 e v.2): OG/OGT/OGTQ. - Normativa BNB: OG/OGT/OGTK, OGTZ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -559,7 +579,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasDesignationInTime">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationInTime"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa un bene culturale alla sua denominazione e/o dedicazione o, per la normativa FF, titolo, nel corso del tempo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a cultural entity to its denomination and/or dedication, or title (for FF legislation) over time.</rdfs:comment>
@@ -568,7 +588,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has designation in time</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC. - Normativa NU: OG/OGT/OGTO. - OG/OGT/OGTU. Normativa SI: OG/OGT/OGTY</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -986,6 +1006,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy xml:lang="en">unstable</rdfs:isDefinedBy>
         <rdfs:label xml:lang="it">ha motivo decorativo</rdfs:label>
         <rdfs:label xml:lang="en">has ornamental motif</rdfs:label>
+        <a-cat:iccdNormTag>DA/APF/APFT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1150,6 +1171,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has shape</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: DB/DBX/DBXX</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1224,20 +1246,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalCaracteristicQualification -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCaracteristicQualification">
-        <rdfs:comment xml:lang="it">Questa proprietà collega una caratteristica tecnica alla sua qualificazione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a technical characteristic to a aqualification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">ha qualificazione di caratteristica tecnica</rdfs:label>
-        <rdfs:label xml:lang="en">has technical caracteristic qualification</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic">
@@ -1274,7 +1282,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has technical status</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; DA/APF/APFE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1345,6 +1353,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has value</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>MT/MIS/MISM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1400,7 +1409,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has writing system</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEF. DA/DES/DEST, DESF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1430,7 +1439,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/AgeRange"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una modalità comunicativa (prossemica, cinesica) alla fascia d&apos;età delle persone che attuano la comunicazione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a communication medium (proxemics, kinesic) to the age range of the participants to the communication.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a communication medium (proxemics, kinetic) to the age range of the participants to the communication.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">coinvolge fascia d&apos;età</rdfs:label>
         <rdfs:label xml:lang="en">involves age range</rdfs:label>
@@ -1468,6 +1477,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is affixed element type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di elemento apposto</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1535,6 +1545,23 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is climate situation of</rdfs:label>
         <rdfs:label xml:lang="it">è situazione climatica di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isColourOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isColourOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il colore all&apos;oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects the colour to the object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is colour of</rdfs:label>
+        <rdfs:label xml:lang="it">è colore di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1679,8 +1706,8 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isCulturalPropertyTypeOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha tipo di bene culturale&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has cultural property type&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -1713,7 +1740,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationInTime"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha designazione nel tempo&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has designation in time&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -2360,20 +2387,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalCaracteristicQualificationOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalCaracteristicQualificationOf">
-        <rdfs:comment xml:lang="it">Questa proprietà collega una qualificazione a una caratteristica tecnica</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an qualification to a technical characteristic</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">is technical caracteristic qualification of</rdfs:label>
-        <rdfs:label xml:lang="it">è qualificazione di carattestica tecnica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf">
@@ -2521,21 +2534,6 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è accordatura di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/isUnitOfMesurementOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isUnitOfMesurementOf">
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
-        <rdfs:comment xml:lang="it">Questa classe collega l&apos;unità di misura ad una misura</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a unit of measurement to a measurement</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">is unit of measurement of</rdfs:label>
-        <rdfs:label xml:lang="it">è unità di misura di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2701,22 +2699,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/bodyTranscript -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/bodyTranscript">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/transcript"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il testo scritto nel corpo dell&apos;etichetta</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the text written in the body of the label</rdfs:comment>
-        <rdfs:label xml:lang="en">body transcript</rdfs:label>
-        <rdfs:label xml:lang="it">trascrizione del corpo</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBET</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/creationDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/creationDate">
@@ -2738,13 +2720,14 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/denotative-description/geologicalDescription -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/geologicalDescription">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la descrizione geologica di un suolo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents geological description of a soil</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">geological description</rdfs:label>
         <rdfs:label xml:lang="it">descrizione geologica</rdfs:label>
+        <rdfs:label xml:lang="en">geological description</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -2754,6 +2737,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/denotative-description/handwriting -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/handwriting">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:label xml:lang="it">autografa</rdfs:label>
         <rdfs:label xml:lang="en">handwriting</rdfs:label>
@@ -2762,22 +2746,6 @@ In this module the following Ontology Design Patterns have been used:
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEA</a-cat:iccdNormTag>
         <a-cat:iccdNormTag xml:lang="it">Questa proprietà indica se l&apos;etichetta è autografa o meno</a-cat:iccdNormTag>
         <a-cat:iccdNormTag xml:lang="en">This property indicates if the label is handwritten or not</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/headingTranscript -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/headingTranscript">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/transcript"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il testo scritto nell&apos;intestazione dell&apos;etichetta</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the heading of the label</rdfs:comment>
-        <rdfs:label xml:lang="en">heading transcript</rdfs:label>
-        <rdfs:label xml:lang="it">trascrizione dell&apos;intestazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEI</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2802,13 +2770,14 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/denotative-description/morphologicalDescription -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/morphologicalDescription">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la descrizione morfologica di un suolo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents morphological description of a soil</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">morphological description</rdfs:label>
         <rdfs:label xml:lang="it">descrizione morfologica</rdfs:label>
+        <rdfs:label xml:lang="en">morphological description</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -2833,23 +2802,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfEnvelopes -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfEnvelopes">
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di buste che contengono il campione o sue parti se conservate assieme al campione, e non in collezioni ancillari</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the numebr of envelopes, containing the specimen or its parts, if they are preserved with the specimen itself and not in ancillar collections</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/denotative-description</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">numbers of envelopes</rdfs:label>
-        <rdfs:label xml:lang="it">numero di buste</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPB</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants">
@@ -2864,23 +2816,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVF; CU/CUM/CUMF; CU/CUC/CUCF</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfLabels -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfLabels">
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta etichette presenti assieme al campione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the number of labels with the specimen</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/denotative-description</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">number of labels</rdfs:label>
-        <rdfs:label xml:lang="it">numero di etichette</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPE</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2934,7 +2869,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">posizione rispetto al bene culturale complesso</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normative OA e RA: OG/OGT/OGTP</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normative D, OA, RA, BDM (v.1 e v.2): OG/OGT/OGTP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2981,7 +2916,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero che identifica il campione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the seample collected identifier.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the sample collected identifier.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">identificativo del campione prelevato</rdfs:label>
         <rdfs:label xml:lang="en">sample collected identifier</rdfs:label>
@@ -3022,7 +2957,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">trascrizione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEI - Normative di versioni precedenti: DA/ISR/ISRI</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEI - Normative di versioni precedenti: DA/ISR/ISRI. DA/DES/DESG, DESL</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3184,6 +3119,12 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFontStyle"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
             </owl:Restriction>
@@ -3192,6 +3133,12 @@ In this module the following Ontology Design Patterns have been used:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3390,7 +3337,7 @@ resource:Inscription/1200865151-inscription-1
         <rdfs:label xml:lang="it">Legenda della moneta</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa NU 4.00: DA/DES/DELS; DA/DES/DESN; DA/DES/DESF; DA/DES/DESG; DA/DES/DESR; DA/DES/DEST.</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa NU 4.00: DA/DES/DELS; DA/DES/DESN; DA/DES/DEL; DA/DES/DESF; DA/DES/DESG; DA/DES/DESR; DA/DES/DEST.</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3608,6 +3555,12 @@ resource:ConservationStatus/0900750201-conservation-status-1
                 <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/current"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-characteristic/"/>
         <dc:description xml:lang="en">An example of usage of the class &apos;Cultural entity technical status&apos; is the following:
 resource:CulturalEntityTechnicalStatus/0900281817-4
@@ -3638,7 +3591,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:label xml:lang="en">Technical status of cultural entity</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; DA/APF/APFE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3726,7 +3679,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:label xml:lang="it">Specifiche del bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>OG/OGT/OGTT</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>OG/OGT/OGTT. Scheda A e PG (v. 1 e v.2): OG/OGT/OGTQ. - Normativa BNB: OG/OGT/OGTK, OGTZ</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3827,7 +3780,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:label xml:lang="en">Designation In Time</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD - Normative A, BDM, PG 3: OG/OGA. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC. - Normativa NU: OG/OGT/OGTO. - OG/OGT/OGTU. Normativa SI: OG/OGT/OGTY</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3910,7 +3863,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:label xml:lang="en">Environment</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa PG: CA</core:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa PG: CA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4046,7 +3999,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:label xml:lang="it">Modalità esecutiva</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BDI: CU/CUM/CUMD; CU/CUS/CUSD</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BDI: CU/CUM/CUMD; CU/CUS/CUSD; CU/CUV/CUVD</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4266,34 +4219,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Ornamental Motif</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/RuralEnvironment -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/RuralEnvironment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isEnvironmentOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente rurale di un oggetto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the rural environment of a thing</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Ambiente rurale</rdfs:label>
-        <rdfs:label xml:lang="en">Rural environment</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa PG: UT/RAM</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>DA/APF/APFT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4366,8 +4292,8 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SoilType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4376,26 +4302,23 @@ resource:MeasurementCollection/1200865132-1
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SoilUse"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/geologicalDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/morphologicalDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il suolo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the soil.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">Soil</rdfs:label>
         <rdfs:label xml:lang="it">Suolo</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/SoilType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SoilType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di suolo suolo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of the soil.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Soil tyoe</rdfs:label>
-        <rdfs:label xml:lang="it">Tipo di suolo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -4434,22 +4357,6 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;timbro&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;timbro&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;timbro&apos;</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/SuburbanEnvironment -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SuburbanEnvironment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente suburbano di un oggetto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the suburban environment of a thing</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Ambiente suburbano</rdfs:label>
-        <rdfs:label xml:lang="en">Suburban environment</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa PG: UT/RAM</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4505,50 +4412,19 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristicQualification -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristicQualification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la qualificazione di una caratteristica tecnica relativa a un bene culturale</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the qualification of a characteristic of a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Qualificazione di caratteristica tecnica</rdfs:label>
-        <rdfs:label xml:lang="en">Technical characteristic qualification</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalConcept -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-characteristic/"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un concetto tecnico, inteso come tipo particolare di concetto che fornisce una classificazione a una caratteristica tecnica di un&apos;entità, es. un bene culturale. Per esempio, &quot;materia&quot; è un concetto tecnico che può essere utilizzato per classificare la caratteristica tecnica &quot;terracotta&quot; relativa a un bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a technical concept, a particular type of concept that classifies a technical characteristic of an entity, e.g. cultural property. For instance, &quot;material&quot; is a techincal concept that classifies the technical characteristic &quot;pottery&quot; related to a cultural property.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a technical concept, a particular type of concept that classifies a technical characteristic of an entity, e.g. cultural property. For instance, &quot;material&quot; is a technical concept that classifies the technical characteristic &quot;pottery&quot; related to a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">Concetto tecnico</rdfs:label>
         <rdfs:label xml:lang="en">Technical concept</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; MT/MTX; MT/FVM; MT/FRM;</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/UrbanEnvironment -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/UrbanEnvironment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente urbano di un oggetto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the urban environment of a thing</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Ambiente urbano</rdfs:label>
-        <rdfs:label xml:lang="en">Urban environment</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa PG: UT/RAM</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4676,7 +4552,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="it">Area</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/HAT</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/HAT</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -4791,6 +4667,18 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Circumference</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Colour -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Colour">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="it">Colore</rdfs:label>
+        <rdfs:label xml:lang="en">Colour</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -4955,6 +4843,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Duration</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa OAC: MT/MIS/MISH</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5021,6 +4910,19 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: MT/FVC/FVCF</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/FileSize -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/FileSize">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Dimensione del file</rdfs:label>
+        <rdfs:label xml:lang="en">File size</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa OAC: MT/MIS/MISB</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5258,12 +5160,12 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/KinesicCommunication -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/KineticCommunication -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/KinesicCommunication">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/KineticCommunication">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
         <rdfs:label xml:lang="it">Comunicazione cinesica</rdfs:label>
-        <rdfs:label xml:lang="en">Kinesic communication</rdfs:label>
+        <rdfs:label xml:lang="en">Kinetic communication</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5612,7 +5514,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Rainfall</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CLM/CLMP</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CLM/CLMP</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5642,7 +5544,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Shape</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative OA, D, S, MI: MT/FRM</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normative OA, D, S, MI: MT/FRM. Normativa BNB: DB/DBX/DBXX</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5653,6 +5555,19 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
         <rdfs:label xml:lang="it">Comunicazione musicale vocale</rdfs:label>
         <rdfs:label xml:lang="en">Singing communication</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Size -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Size">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Dimensione del file</rdfs:label>
+        <rdfs:label xml:lang="en">File size</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative OAC: MT/MIS/MISI</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5680,7 +5595,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Slope</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAC</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAC</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5839,14 +5754,14 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/VibratingLenght -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/VibratingLength -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/VibratingLenght">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/VibratingLength">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la lunghezza vibrante di uno strumento, in particolare di un cordofono.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a musical instrument vibrating length, in particular a chordophone.</rdfs:comment>
         <rdfs:label xml:lang="it">Lunghezza vibrante</rdfs:label>
-        <rdfs:label xml:lang="en">Vibrating lenght</rdfs:label>
+        <rdfs:label xml:lang="en">Vibrating length</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAL</a-cat:iccdNormTag>

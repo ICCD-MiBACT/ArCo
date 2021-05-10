@@ -562,15 +562,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/location/hasGovernamentalAdministrativeArea -->
+    <!-- https://w3id.org/arco/ontology/location/hasGovernmentalAdministrativeArea -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasGovernamentalAdministrativeArea">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasGovernmentalAdministrativeArea">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddressComponent"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isGovernamentalAdministrativeAreaOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isGovernmentalAdministrativeAreaOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/GovernamentalAdministrativeArea"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un indirizzo a un&apos;area di appartenenza amministrativa.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property links an address to a governamental administrative area.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links an address to a governmental administrative area.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="it">ha area di appartenenza amministrativa</rdfs:label>
         <rdfs:label xml:lang="en">has governamental administrative area</rdfs:label>
@@ -854,6 +854,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="it">ha zona urbana</rdfs:label>
         <rdfs:label xml:lang="en">has urban area</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/ZUR/ZURD.</a-cat:iccdNormTag>
@@ -1014,7 +1015,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalInstituteOrSite"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un luogo o istituto della cultura (contenitore giuridico) al bene culturale</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property links a cultural institute or site to a cultutral property</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links a cultural institute or site to a cultural property</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="en">is cultural institute or site of</rdfs:label>
         <rdfs:label xml:lang="it">è luogo o istituto della cultura di</rdfs:label>
@@ -1105,16 +1106,16 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/location/isGovernamentalAdministrativeAreaOf -->
+    <!-- https://w3id.org/arco/ontology/location/isGovernmentalAdministrativeAreaOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isGovernamentalAdministrativeAreaOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isGovernmentalAdministrativeAreaOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/CLV/isAddressComponentOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/GovernamentalAdministrativeArea"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;area di appartenenza amministrativa al suo indirizzo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property links a governamental administrative area to its address.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links a governmental administrative area to its address.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
-        <rdfs:label xml:lang="en">is governamental administrative area of</rdfs:label>
+        <rdfs:label xml:lang="en">is governmental administrative area of</rdfs:label>
         <rdfs:label xml:lang="it">è area di appartenenza amministrativa di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
@@ -1400,6 +1401,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="en">is urban area of</rdfs:label>
         <rdfs:label xml:lang="it">è area urbana di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1673,16 +1675,16 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/location/spacialReferenceSystem -->
+    <!-- https://w3id.org/arco/ontology/location/spatialReferenceSystem -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/spacialReferenceSystem">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/spatialReferenceSystem">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il sistema di riferimento utilizzato per la georeferenziazione (ad es. WGS84, WGS84 UTM32, ecc.).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the reference system used for the object georeferencing (e.g. WGS84, WGS84 UTM32, etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="it">sistema di riferimento</rdfs:label>
-        <rdfs:label xml:lang="en">spacial reference system</rdfs:label>
+        <rdfs:label xml:lang="en">spatial reference system</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEP - Normative precedenti: GA/GAP; GL/GLP; GP/GPP</a-cat:iccdNormTag>
@@ -1765,7 +1767,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/GeographicalFeature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/isGovernamentalAdministrativeAreaOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/isGovernmentalAdministrativeAreaOf"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1921,6 +1923,12 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasCadastralCity"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CLV/City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasCadastralEntity"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/CadastralEntity"/>
             </owl:Restriction>
@@ -1941,12 +1949,6 @@ In this module the following Ontology Design Patterns have been used:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/isCadastralIdentityOf"/>
                 <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1986,6 +1988,12 @@ resource:CadastralIdentity/1400055239-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/CadastralUnitCollection">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/CadastralEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una o più particelle catastali.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one or more cadastral parcels.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
@@ -2089,8 +2097,8 @@ resource:CadastralIdentity/1400055239-1
         <rdfs:comment xml:lang="it">Questa classe rappresenta la definizione della tipologia di un contenitore giuridico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type definition of a cultural insititute or site.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
-        <rdfs:label xml:lang="it">Definizione di Contenitore Giuridico</rdfs:label>
         <rdfs:label xml:lang="en">Cultural Institute or Site Definition</rdfs:label>
+        <rdfs:label xml:lang="it">Definizione di Contenitore Giuridico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGT</a-cat:iccdNormTag>
@@ -2105,8 +2113,8 @@ resource:CadastralIdentity/1400055239-1
         <rdfs:comment xml:lang="it">Questa classe rappresenta la specificazione della tipologia di un contenitore giuridico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type specification of a cultural insititute or site.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
-        <rdfs:label xml:lang="it">Specificazione di Contenitore Giuridico</rdfs:label>
         <rdfs:label xml:lang="en">Cultural Institute or Site Specification</rdfs:label>
+        <rdfs:label xml:lang="it">Specificazione di Contenitore Giuridico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGQ</a-cat:iccdNormTag>
@@ -2121,8 +2129,8 @@ resource:CadastralIdentity/1400055239-1
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tipologia di un contenitore giuridico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of a cultural insititute or site.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
-        <rdfs:label xml:lang="it">Tipo di Contenitore Giuridico</rdfs:label>
         <rdfs:label xml:lang="en">Cultural Institute or Site type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di Contenitore Giuridico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGT, CG/CGQ</a-cat:iccdNormTag>
@@ -2460,12 +2468,6 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/UrbanArea">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/AdministrativeUnitComponent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/isUrbanAreaOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/OldTown"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/italia/onto/CLV/District"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni relative alla denominazione della zona urbana che fa parte del centro storico dove si trova il bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the informations on the denomination of the urban area that is part of the old town where the cultural property is located.</rdfs:comment>
@@ -2604,6 +2606,22 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/BuildingAndLandCadastre -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/BuildingAndLandCadastre">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/CadastreType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/BuildingCadastre -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/BuildingCadastre">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/CadastreType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/ChiefTown -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/ChiefTown">
@@ -2720,6 +2738,14 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/LandCadastre -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/LandCadastre">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/CadastreType"/>
     </owl:NamedIndividual>
     
 

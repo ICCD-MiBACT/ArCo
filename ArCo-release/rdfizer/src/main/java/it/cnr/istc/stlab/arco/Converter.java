@@ -23,12 +23,13 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import it.cnr.istc.stlab.arco.xsltextension.Arcofy;
 import it.cnr.istc.stlab.arco.xsltextension.CatalogueRecordIdentifierToCulturalProperty;
 import it.cnr.istc.stlab.arco.xsltextension.CataloguingEntityFinder;
+import it.cnr.istc.stlab.arco.xsltextension.CodiceEnteToNomeEnte;
 import it.cnr.istc.stlab.arco.xsltextension.ContenitoreFisicoFinder;
 import it.cnr.istc.stlab.arco.xsltextension.ContenitoreGiuridicoFinder;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForASheet;
@@ -66,7 +67,7 @@ public class Converter {
 
 	// private static final String XSLT_LOCATION = "META-INF/xslt/arco.xslt";
 	private static final String XSLT_LOCATION = "META-INF/xslt";
-	private static final Logger logger = LogManager.getLogger(Converter.class);
+	private static final Logger logger = LoggerFactory.getLogger(Converter.class);
 
 	private Processor proc;
 	private List<XSLTConverter> exps;
@@ -104,7 +105,6 @@ public class Converter {
 					}
 					digest = sb.toString();
 				} catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				return new XdmAtomicValue(digest);
@@ -149,9 +149,6 @@ public class Converter {
 
 			public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
 				String arg = ((XdmAtomicValue) arguments[0].itemAt(0)).getStringValue();
-//                arg = SpecificCulturalPropertyType.getPropertyType(arg);
-//                
-//                if(arg == null) arg = "http://www.w3id.org/arco/core/CulturalProperty";
 				return new XdmAtomicValue(Utilities.getSpecificPropertyType(arg));
 			}
 		};
@@ -202,6 +199,7 @@ public class Converter {
 		proc.registerExtensionFunction(NameCleaner.getInstance());
 		proc.registerExtensionFunction(ContenitoreFisicoFinder.getInstance());
 		proc.registerExtensionFunction(ContenitoreGiuridicoFinder.getInstance());
+		proc.registerExtensionFunction(CodiceEnteToNomeEnte.getInstance());
 
 		XsltCompiler comp = proc.newXsltCompiler();
 
@@ -229,24 +227,15 @@ public class Converter {
 						exp = comp.compile(new StreamSource(Files.newInputStream(path)));
 						exps.add(new XSLTConverter(path.toString(), exp));
 					} catch (Exception e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				}
 			});
 
 		} catch (URISyntaxException | IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 
-		/*
-		 * String path = url.getPath(); try { XsltExecutable exp = comp.compile(new
-		 * StreamSource(xsltInputStream)); exps.add(exp);
-		 * 
-		 * } catch (SaxonApiException e) { // TODO Auto-generated catch block
-		 * e.printStackTrace(); }
-		 */
 	}
 
 	public void addXSTLConverter(Path path) {
@@ -265,6 +254,8 @@ public class Converter {
 
 		Model model = ModelFactory.createDefaultModel();
 
+		logger.trace("item {} prefix {}", item, prefix);
+
 		StreamSource inputStreamSource = new StreamSource(sourceXml);
 		XdmNode source = proc.newDocumentBuilder().build(inputStreamSource);
 
@@ -275,9 +266,7 @@ public class Converter {
 			XsltTransformer trans = exp.executable.load();
 
 			// System.out.println(exp.name);
-			QName qName = new QName("item");
-			XdmValue value = new XdmAtomicValue(item);
-			trans.setParameter(qName, value);
+			trans.setParameter(new QName("item"), new XdmAtomicValue(item));
 			trans.setParameter(new QName("NS"), new XdmAtomicValue(prefix));
 			trans.setParameter(new QName("SOURCE"), new XdmAtomicValue(sourcePrefix));
 			trans.setInitialContextNode(source);
@@ -313,25 +302,6 @@ public class Converter {
 	public void destroy() {
 		cataloguingEntityFinder.destroy();
 	}
-
-//	public static void main(String[] args) {
-//		Converter converter = new Converter();
-//		// converter.convert("ICCD3569822",
-//		// Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD3569822.xml"),
-//		// System.out);
-//
-//		Model model = null;
-//		try {
-//			model = converter.convert("ICCD10717180",
-//					Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD10717180.xml"));
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		model.write(System.out, "TURTLE");
-//
-//		converter.destroy();
-//	}
 
 	class XSLTConverter {
 		String name;
