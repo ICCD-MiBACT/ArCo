@@ -398,6 +398,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/hasClimateSituation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasClimateSituation"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/hasContinent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasContinent">
@@ -534,6 +540,30 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/hasFindingStratum -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasFindingStratum"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasFluidDynamism -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasFluidDynamism"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasGeochronology -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasGeochronology"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasGeologicalContext -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasGeologicalContext"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/hasGeometryMethod -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasGeometryMethod">
@@ -607,6 +637,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/hasIncline -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasIncline"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/hasLocationType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasLocationType">
@@ -623,6 +659,18 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEL; LA/TLC; LA/TCL; LC (CurrentPhysicalLocation) - Normativa F: anche LR (ShotLocation) - Normative di versioni precedenti: GP/GPL; GA/GAL; GL/GLL. - CS/CTL</a-cat:iccdNormTag>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasMineralDeposit -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasMineralDeposit"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasNaturalEnvironment -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasNaturalEnvironment"/>
     
 
 
@@ -643,6 +691,18 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasOutcrop -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasOutcrop"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasShadeTolerance -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasShadeTolerance"/>
     
 
 
@@ -698,6 +758,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/LDC/LDCT; LC/LDC/LDCQ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasSoil -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasSoil"/>
     
 
 
@@ -763,6 +829,18 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SAS: OG/OGT/OGTZ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasStratum -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasStratum"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasSubstrate -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasSubstrate"/>
     
 
 
@@ -995,6 +1073,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/isClimateSituationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isClimateSituationOf"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/isContinentOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isContinentOf">
@@ -1092,6 +1176,30 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/isFindingStratumOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isFindingStratumOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isFluidDynamismOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isFluidDynamismOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isGeochronologyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isGeochronologyOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isGeologicalContextOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isGeologicalContextOf"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/isGeometryMethodOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isGeometryMethodOf">
@@ -1158,6 +1266,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/isInclineOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isInclineOf"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/isLocationIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isLocationIn">
@@ -1191,6 +1305,18 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/isMineralDepositOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isMineralDepositOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isNaturalEnvironmentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isNaturalEnvironmentOf"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/isOldTownAdministrativeTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isOldTownAdministrativeTypeOf">
@@ -1206,6 +1332,18 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isOutcropOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isOutcropOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isShadeToleranceOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isShadeToleranceOf"/>
     
 
 
@@ -1275,6 +1413,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/isSoilOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isSoilOf"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/isSoilUseOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isSoilUseOf"/>
@@ -1329,6 +1473,18 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isStratumOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isStratumOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isSubstrateOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isSubstrateOf"/>
     
 
 
@@ -2075,6 +2231,70 @@ resource:CadastralIdentity/1400055239-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/Chron -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Chron">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/ChronostratigraphicClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ChronostratigraphicClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/ChronostratigraphicSeries -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ChronostratigraphicSeries">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/ChronostratigraphicStage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ChronostratigraphicStage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/ChronostratigraphicSubstage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ChronostratigraphicSubstage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/ChronostratigraphicSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ChronostratigraphicSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Chronozone -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Chronozone">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/ClimateSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ClimateSituation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/Continent -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Continent">
@@ -2185,6 +2405,120 @@ resource:CadastralIdentity/1400055239-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/Eon -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Eon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Eontem -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Eontem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Erathem -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Erathem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/FluidDynamism -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/FluidDynamism">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/GeochronologicalAge -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeochronologicalAge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/GeochronologicalClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeochronologicalClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/GeochronologicalEpoch -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeochronologicalEpoch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/GeochronologicalEra -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeochronologicalEra">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/GeochronologicalPeriod -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeochronologicalPeriod">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/GeochronologicalSubage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeochronologicalSubage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/GeochronologicalType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeochronologicalType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/GeologicalContext -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeologicalContext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasMineralDeposit"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/MineralDeposit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasOutcrop"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/Outcrop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasStratum"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/Stratum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/GeometryMethod -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeometryMethod">
@@ -2230,6 +2564,78 @@ resource:CadastralIdentity/1400055239-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/Geotope -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Geotope">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/MineralDeposit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Incline -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Incline">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/LithostratigraphicBed -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicBed">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/LithostratigraphicClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/LithostratigraphicComplex -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicComplex">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/LithostratigraphicFormation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicFormation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/LithostratigraphicGroup -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicGroup">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/LithostratigraphicMember -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicMember">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/LithostratigraphicSoupergroup -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicSoupergroup">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/LocationType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LocationType">
@@ -2248,6 +2654,68 @@ resource:CadastralIdentity/1400055239-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: LA/TLC; LA/TCL; LC (CurrentPhysicalLocation) - Normativa F: anche LR (ShotLocation). - CS/CTL. - GE/GEL; GP/GPL; GL/GLL; GA/GAL</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Mine -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Mine">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/MineralDeposit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/MineralDeposit -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/MineralDeposit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/MineralDepositType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/MineralDepositType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/MineralDepositType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/NaturalEnvironment -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/NaturalEnvironment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasFluidDynamism"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/FluidDynamism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasShadeTolerance"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/ShadeTolerance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasSubstrate"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/Substrate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2308,6 +2776,42 @@ resource:CadastralIdentity/1400055239-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Outcrop -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Outcrop">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/OutcropType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/OutcropType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/OutcropType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/ShadeTolerance -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ShadeTolerance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
     </owl:Class>
     
 
@@ -2412,6 +2916,60 @@ resource:CadastralIdentity/1400055239-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/Stratum -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Stratum">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasGeochronology"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Substrate -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Substrate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/SubstrateType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasIncline"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/Incline"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/SubstrateType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/SubstrateType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation">
@@ -2438,6 +2996,12 @@ resource:CadastralIdentity/1400055239-1
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/atSite"/>
                 <owl:allValuesFrom rdf:resource="http://dati.beniculturali.it/cis/Site"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasGeologicalContext"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/GeologicalContext"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2653,6 +3217,14 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/Age -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Age">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/ArchivalLocation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/ArchivalLocation">
@@ -2701,6 +3273,14 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/Chron -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Chron">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/CollectingLocation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/CollectingLocation">
@@ -2724,6 +3304,30 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdfs:label xml:lang="it">Localizzazione fisica attuale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Eon -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Eon">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Epoch -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Epoch">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Era -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Era">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalType"/>
     </owl:NamedIndividual>
     
 
@@ -2846,6 +3450,18 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/MaximumTemperature -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/MaximumTemperature"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/MinimumTemperature -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/MinimumTemperature"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/ObservationLocation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/ObservationLocation">
@@ -2858,6 +3474,20 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Period -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Period">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Ph -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Ph"/>
     
 
 
@@ -2891,6 +3521,12 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/Rainfall -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Rainfall"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/ShootingLocation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/ShootingLocation">
@@ -2917,6 +3553,14 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdfs:label xml:lang="en">Storage Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/SubAge -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/SubAge">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalType"/>
     </owl:NamedIndividual>
     
 
@@ -2949,6 +3593,12 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ - Normative A e PG: LC/SET/SETT (sigla SU anomalo)</a-cat:iccdNormTag>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Temperature -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Temperature"/>
     
 
 
