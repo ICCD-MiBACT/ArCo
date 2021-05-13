@@ -400,7 +400,18 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/location/hasClimateSituation -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasClimateSituation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasClimateSituation">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isClimateSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/ClimateSituation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ambiente alla situazione climatica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the ambient to the climate situation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">ha situazione clumatica</rdfs:label>
+        <rdfs:label xml:lang="en">has climate situation</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -670,7 +681,18 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/location/hasNaturalEnvironment -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasNaturalEnvironment"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasNaturalEnvironment">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isNaturalEnvironmentOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Questa proprietà collega una cosa all&apos;ambiente naturale in cui è inserita</rdfs:label>
+        <rdfs:label xml:lang="en">This property relates a thing to its natural environment</rdfs:label>
+        <rdfs:label xml:lang="it">ha ambiente naturale</rdfs:label>
+        <rdfs:label xml:lang="en">has natual environment</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -763,7 +785,18 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/location/hasSoil -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasSoil"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasSoil">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isSoilOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Soil"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una cosa al suolo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a thing to the soil</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">ha suolo</rdfs:label>
+        <rdfs:label xml:lang="en">has soil</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -771,6 +804,15 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasSoilUse">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isSoilUseOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Soil"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/SoilUse"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il suolo al suo uso</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a soil to its use</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">ha uso del suolo</rdfs:label>
+        <rdfs:label xml:lang="en">has soil use</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1075,7 +1117,17 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/location/isClimateSituationOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isClimateSituationOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isClimateSituationOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/ClimateSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la situazione climatica all&apos;ambiente</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the climate situation to the ambient</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">is climate situation of</rdfs:label>
+        <rdfs:label xml:lang="it">è situazione climatica di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -1313,7 +1365,17 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/location/isNaturalEnvironmentOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isNaturalEnvironmentOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isNaturalEnvironmentOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ambiente naturale al bene culturale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the natural environment to the cultural property</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">is natural environment of</rdfs:label>
+        <rdfs:label xml:lang="it">è ambiente naturale di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -1415,13 +1477,33 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/location/isSoilOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isSoilOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isSoilOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Soil"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il suolo ad una cosa</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the soil to a thing</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">is soil of</rdfs:label>
+        <rdfs:label xml:lang="it">è suolo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://w3id.org/arco/ontology/location/isSoilUseOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isSoilUseOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isSoilUseOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/SoilUse"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Soil"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;uso al suolo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the use to the soil</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">ha uso del suolo</rdfs:label>
+        <rdfs:label xml:lang="en">has soil use</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -2016,7 +2098,14 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/denotative-description/MeasurementCollection -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/geologicalDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -2291,6 +2380,25 @@ resource:CadastralIdentity/1400055239-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ClimateSituation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/isClimateSituationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Questa classe rappresenta la situazione climatica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents class situation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Climate situation</rdfs:label>
+        <rdfs:label xml:lang="en">Situazione climatica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2716,6 +2824,14 @@ resource:CadastralIdentity/1400055239-1
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/Substrate"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente naturale collegato a un oggetto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the natural environment related to a thing</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Ambiente naturale</rdfs:label>
+        <rdfs:label xml:lang="en">Natural environment</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa PG: CA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2904,6 +3020,31 @@ resource:CadastralIdentity/1400055239-1
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasSoilUse"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/SoilUse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/geologicalDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/morphologicalDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il suolo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the soil</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Soil</rdfs:label>
+        <rdfs:label xml:lang="it">Suolo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2912,6 +3053,19 @@ resource:CadastralIdentity/1400055239-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/SoilUse">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/isSoilUseOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/Soil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa cclase rappresenta l&apos;uso del suolo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the soil use</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Soil use</rdfs:label>
+        <rdfs:label xml:lang="it">Uso del suolo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
