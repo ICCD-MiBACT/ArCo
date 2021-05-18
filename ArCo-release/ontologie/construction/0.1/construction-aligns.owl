@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/construction-aligns/"
+     xml:base="https://w3id.org/arco/ontology/construction-aligns/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:ifc="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/construction-aligns/">
+        <owl:imports rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL"/>
+        <dc:creator>STLab (ISTC-CNR)</dc:creator>
+        <rdfs:label xml:lang="it">Questi sono gli allineamenti del modulo Construction (ArCo ontology network) verso ontologie esterne del Web semantico standard e ampiamente utilizzate.</rdfs:label>
+        <rdfs:label xml:lang="en">These are the alignments of Construction module (ArCo ontology network) to external ontologies widely used and available at the state of the art.</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction/ArchitecturalElement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction/ArchitecturalElement">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcBuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction/Chimney -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction/Chimney">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcChimney"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction/Covering -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction/Covering">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcCovering"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction/Door -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction/Door">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcDoor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction/FurnishingElement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction/FurnishingElement">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcFurnishingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction/Railing -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction/Railing">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcRailing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction/Ramp -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction/Ramp">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcRamp"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction/Roof -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction/Roof">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcRoof"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction/ShadingDevice -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction/ShadingDevice">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcShadingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction/Stair -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction/Stair">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcStair"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction/TransportElement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction/TransportElement">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcTransportElement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction/Window -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction/Window">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcWindow"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#COLUMN -->
+
+    <rdf:Description rdf:about="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#COLUMN">
+        <owl:sameAs rdf:resource="https://w3id.org/arco/ontology/construction/Column"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction/Column -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/construction/Column"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
