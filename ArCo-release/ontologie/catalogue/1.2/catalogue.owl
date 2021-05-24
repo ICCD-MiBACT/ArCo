@@ -1608,8 +1608,8 @@ resource:CatalogueRecordS/0500212038
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive reperti antropologici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Anthropological materials.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <rdfs:label xml:lang="en">Anthropological materials catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Reperti antropologici</rdfs:label>
+        <rdfs:label xml:lang="en">Physical anthropology catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Antropologia fisica</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
@@ -1758,8 +1758,8 @@ resource:CatalogueRecordS/0500212038
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive il contenitore fisico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing the site.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <rdfs:label xml:lang="en">Site catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Contenitore fisico</rdfs:label>
+        <rdfs:label xml:lang="en">Site catalogue record</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
