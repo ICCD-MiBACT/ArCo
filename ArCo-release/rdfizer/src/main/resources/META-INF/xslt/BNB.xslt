@@ -509,18 +509,18 @@
 		<xsl:for-each select="record/metadata/schede/BNB/RB/RBN">
 		<xsl:variable name="rbn-species">
 			<xsl:choose>
-				<xsl:when test="not(contains(./RBN/RBNB, ./RBN/RBNA))">
-					<xsl:value-of select="concat(arco-fn:urify(normalize-space(./RBN/RBNA)), '-', arco-fn:urify(normalize-space(./RBN/RBNB)))" />
+				<xsl:when test="not(contains(./RBNB, ./RBNA))">
+					<xsl:value-of select="concat(arco-fn:urify(normalize-space(./RBNA)), '-', arco-fn:urify(normalize-space(./RBNB)))" />
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:value-of select="arco-fn:urify(normalize-space(./RBN/RBNB))" />
+					<xsl:value-of select="arco-fn:urify(normalize-space(./RBNB))" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
 		<xsl:variable name="rbn-subspecies" >
 			<xsl:choose>
-				<xsl:when test="./RBN/RBND">
-					<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./RBN/RBND)))" />
+				<xsl:when test="./RBND">
+					<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./RBND)))" />
 				</xsl:when>
 				<xsl:otherwise>
 				</xsl:otherwise>
@@ -528,8 +528,8 @@
 		</xsl:variable>
 		<xsl:variable name="rbn-variety" >
 			<xsl:choose>
-				<xsl:when test="./RBN/RBNF">
-					<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./RBN/RBNF)))" />
+				<xsl:when test="./RBNF">
+					<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./RBNF)))" />
 				</xsl:when>
 				<xsl:otherwise>
 				</xsl:otherwise>
@@ -537,8 +537,8 @@
 		</xsl:variable>
 		<xsl:variable name="rbn-form" >
 			<xsl:choose>
-				<xsl:when test="./RBN/RBNH">
-					<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./RBN/RBNH)))" />
+				<xsl:when test="./RBNH">
+					<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./RBNH)))" />
 				</xsl:when>
 				<xsl:otherwise>
 				</xsl:otherwise>
@@ -546,22 +546,15 @@
 		</xsl:variable>
 		<xsl:variable name="rbn-cultivar" >
 			<xsl:choose>
-				<xsl:when test="./RBN/RBNL">
-					<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./RBN/RBNL)))" />
+				<xsl:when test="./RBNL">
+					<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./RBNL)))" />
 				</xsl:when>
 				<xsl:otherwise>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
 		<xsl:variable name="RevisedTaxon">   
-			<xsl:choose>
-				<xsl:when test="record/metadata/schede/BNB/SB/NBN/NBNA and not(lower-case(normalize-space(record/metadata/schede/BNB/SB/NBN/NBNA))='nr' or lower-case(normalize-space(record/metadata/schede/BNB/SB/NBN/NBNA))='n.r.' or lower-case(normalize-space(record/metadata/schede/BNB/SB/NBN/NBNA))='nr (recupero pregresso)')">
-					<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/NBN/NBNA)))" />
-				</xsl:when>                	
-				<xsl:otherwise>
-					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-variety, $rbn-form, $rbn-cultivar)" />		                		
-				</xsl:otherwise>
-			</xsl:choose>
+			<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-variety, $rbn-form, $rbn-cultivar)" />	
 		</xsl:variable>
 			<arco-core:isIdentifiedBy>
 				<xsl:attribute name="rdf:resource">
@@ -718,10 +711,10 @@
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-            	 <xsl:value-of select="concat('Identification nel tempo  del bene culturale ', $itemURI)" />
+            	 <xsl:value-of select="concat('Identificazione nel tempo  del bene culturale ', $itemURI)" />
             </rdfs:label>
             <l0:name xml:lang="it">
-            	<xsl:value-of select="concat('Identification nel tempo del bene culturale ', $itemURI)" />
+            	<xsl:value-of select="concat('Identificazione nel tempo del bene culturale ', $itemURI)" />
             </l0:name>
 			<rdfs:label xml:lang="en">
             	 <xsl:value-of select="concat('Identification in time of cultural property ', $itemURI)" />

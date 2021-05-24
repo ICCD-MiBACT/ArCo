@@ -278,6 +278,17 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasAgeInterpretation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgeInterpretation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgeInterpretationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AgeInterpretation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasAgeOfDeathInterpretation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgeOfDeathInterpretation">
@@ -290,6 +301,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha età della morte stimata</rdfs:label>
         <rdfs:label xml:lang="en">has age of death interpretation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3075,6 +3087,16 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isAgeInterpretationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgeInterpretationOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AgeInterpretation"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isAgeOfDeathInterpretationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgeOfDeathInterpretationOf">
@@ -3086,6 +3108,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is age of death interpretation of</rdfs:label>
         <rdfs:label xml:lang="it">è età della morte stimata di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -5885,23 +5908,6 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/absoluteAge -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/absoluteAge">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AgeInterpretation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;età assoluta di un campione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the absolute age of a specimen.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">absolute age</rdfs:label>
-        <rdfs:label xml:lang="it">età assoluta</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">Normativa ICCD BNPE: SR/SRR/SRRE</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/acquisitionLocation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/acquisitionLocation">
@@ -5981,6 +5987,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">estimated age of death</rdfs:label>
         <rdfs:label xml:lang="it">età della morte stimata</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>DA/SEM/SEME</a-cat:iccdNormTag>
@@ -7359,23 +7366,6 @@ the area), to the environment and to the square from which the good comes.</rdfs
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/relativeAge -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/relativeAge">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AgeInterpretation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;età relativa di un campione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the relative age of a specimen.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">età relativa</rdfs:label>
-        <rdfs:label xml:lang="en">relative age</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">Normativa ICCD BNPE: SR/SRL/SRLE</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/relevantLegalAct -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/relevantLegalAct">
@@ -7821,19 +7811,13 @@ resource:Acquisition/1200865053-acquisition-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Interpretation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/absoluteAge"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAgeType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/age"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/relativeAge"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -7870,6 +7854,7 @@ resource:Acquisition/1200865053-acquisition-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Age of death interpretation</rdfs:label>
         <rdfs:label xml:lang="it">Interpretazione dell&apos;età della morte</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: DA/SEM</a-cat:iccdNormTag>
@@ -12141,6 +12126,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/AbsoluteAge -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AbsoluteAge">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRR/SRRE</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/AccompanyingBibliography -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AccompanyingBibliography">
@@ -12161,6 +12155,14 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyImageType"/>
         <rdfs:label xml:lang="en">Aerial photograph</rdfs:label>
         <rdfs:label xml:lang="it">Fotografia aerea</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/AgeOfDeath -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AgeOfDeath">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
     </owl:NamedIndividual>
     
 
@@ -12223,6 +12225,14 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/BiologicalAge -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/BiologicalAge">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/BuildingUse -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/BuildingUse">
@@ -12233,6 +12243,14 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:label xml:lang="it">Uso edilizio</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/ChronologicalAge -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ChronologicalAge">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
     </owl:NamedIndividual>
     
 
@@ -12629,6 +12647,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/RelativeAge -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/RelativeAge">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
+        <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRL/SRLE</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/ReligiousCircumstance -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ReligiousCircumstance">
@@ -12782,15 +12809,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 

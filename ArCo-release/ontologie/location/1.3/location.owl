@@ -2513,6 +2513,14 @@ resource:CadastralIdentity/1400055239-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/EnvironmentType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/EnvironmentType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/Eon -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Eon">
@@ -2800,6 +2808,12 @@ resource:CadastralIdentity/1400055239-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/NaturalEnvironment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/EnvironmentType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
