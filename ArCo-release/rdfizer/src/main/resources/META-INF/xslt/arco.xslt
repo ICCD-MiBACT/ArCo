@@ -7731,6 +7731,18 @@
 							<xsl:value-of select="normalize-space(./VDCN)" />
 						</arco-cd:documentationIdentifier>
 					</xsl:if>
+					<xsl:if test="./VDCN and (not(starts-with(lower-case(normalize-space(./VDCN)), 'nr')) and not(starts-with(lower-case(normalize-space(./VDCN)), 'n.r')))">
+						<xsl:for-each select="./VDCN">
+							<xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
+							<xsl:for-each select="$url">
+								<smapit:URL>
+									<xsl:attribute name="rdf:resource">
+                                	<xsl:value-of select="." />
+                        		</xsl:attribute>
+								</smapit:URL>
+							</xsl:for-each>
+						</xsl:for-each>
+					</xsl:if>
 					<xsl:if
 						test="./VDCD and (not(starts-with(lower-case(normalize-space(./VDCD)), 'nr')) and not(starts-with(lower-case(normalize-space(./VDCD)), 'n.r')))">
 						<tiapit:time>
@@ -7763,7 +7775,9 @@
 					<xsl:if
 						test="./VDCW and (not(starts-with(lower-case(normalize-space(./VDCW)), 'nr')) and not(starts-with(lower-case(normalize-space(./VDCW)), 'n.r')))">
 						<smapit:URL>
-							<xsl:value-of select="normalize-space(./VDCW)" />
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="normalize-space(./VDCW)" />
+							</xsl:attribute>
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if
@@ -8078,6 +8092,18 @@
 						<arco-cd:documentationIdentifier>
 							<xsl:value-of select="normalize-space(./REGN)" />
 						</arco-cd:documentationIdentifier>
+					</xsl:if>
+					<xsl:if test="./REGN and (not(starts-with(lower-case(normalize-space(./REGN)), 'nr')) and not(starts-with(lower-case(normalize-space(./REGN)), 'n.r')))">
+						<xsl:for-each select="./REGN">
+							<xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
+							<xsl:for-each select="$url">
+								<smapit:URL>
+									<xsl:attribute name="rdf:resource">
+                                	<xsl:value-of select="." />
+                        		</xsl:attribute>
+								</smapit:URL>
+							</xsl:for-each>
+						</xsl:for-each>
 					</xsl:if>
 					<xsl:if
 						test="./REGD and (not(starts-with(lower-case(normalize-space(./REGD)), 'nr')) and not(starts-with(lower-case(normalize-space(./REGD)), 'n.r')))">

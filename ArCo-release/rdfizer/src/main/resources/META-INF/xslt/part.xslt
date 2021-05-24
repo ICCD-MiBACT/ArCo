@@ -432,6 +432,12 @@
 						<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MTCP)))" />
 					</xsl:attribute>
 					<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./MTCP)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./MTCP)" />
+					</l0:name>
 					<xsl:if test="./MTCM">
 					<xsl:if test="not(starts-with(lower-case(normalize-space(./MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(./MTCM)), 'n.r'))">
 						<arco-dd:hasTechnicalStatus>
