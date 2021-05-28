@@ -227,6 +227,21 @@
 						</xsl:attribute>
 					</rdf:type>
 				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/RV/RVE/RVEL and not($sheetVersion='2.00_ICCD0' or $sheetVersion='2.00')">
+					<xsl:variable name="rvel" select="lower-case(normalize-space(record/metadata/schede/*/RV/RVE/RVEL))" />
+					<xsl:if test="not($rvel='0' or $rvel='bene componente' or $rvel='bene complesso' or $rvel='bene individuo')">
+					<arco-arco:isCulturalPropertyComponentOf>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-0')" />
+						</xsl:attribute>
+					</arco-arco:isCulturalPropertyComponentOf>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/arco/CulturalPropertyComponent'" />
+						</xsl:attribute>
+					</rdf:type>
+					</xsl:if>
+				</xsl:if>		
 				<xsl:if test="$sheetType='MODI'">
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
