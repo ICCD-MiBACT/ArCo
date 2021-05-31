@@ -37,6 +37,7 @@
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event/1.1"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/0.1"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>

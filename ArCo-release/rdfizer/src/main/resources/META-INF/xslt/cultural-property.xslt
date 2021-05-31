@@ -45,6 +45,10 @@
 	<xsl:template match="/">
 
 		<rdf:RDF>
+	<!-- <xsl:if test="record/metadata/schede/*/RV/RVE/RVEL">
+			<xsl:variable name="rvel-punto" select="lower-case(normalize-space(record/metadata/schede/*/RV/RVE/RVEL))" />
+			<xsl:variable name="rvel" select="translate($rvel-punto, '.', '_')" />		
+		</xsl:if>  -->	
 	    <xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
 		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata)" >
 
@@ -53,7 +57,9 @@
 					<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
 						<xsl:choose>
 							<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
-								<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/RV/RVE/RVEL)))" />
+								<xsl:variable name="rvel-punto" select="lower-case(normalize-space(record/metadata/schede/*/RV/RVE/RVEL))" />
+								<xsl:variable name="rvel" select="translate($rvel-punto, '.', '_')" />
+								<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify($rvel))" />
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
@@ -228,7 +234,8 @@
 					</rdf:type>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/RV/RVE/RVEL and not($sheetVersion='2.00_ICCD0' or $sheetVersion='2.00')">
-					<xsl:variable name="rvel" select="lower-case(normalize-space(record/metadata/schede/*/RV/RVE/RVEL))" />
+					<xsl:variable name="rvel-punto" select="lower-case(normalize-space(record/metadata/schede/*/RV/RVE/RVEL))" />
+					<xsl:variable name="rvel" select="translate($rvel-punto, '.', '_')" />
 					<xsl:if test="not($rvel='0' or $rvel='bene componente' or $rvel='bene complesso' or $rvel='bene individuo')">
 					<arco-arco:isCulturalPropertyComponentOf>
 						<xsl:attribute name="rdf:resource">
