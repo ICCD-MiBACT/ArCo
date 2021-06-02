@@ -421,7 +421,7 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
-			<xsl:otherwise>
+			<xsl:when test="record/metadata/schede/MODI/DT/DTS">
 				<xsl:choose>
 					<xsl:when test="not(record/metadata/schede/*/DT[1]/DTN/DTNS)"><!-- TODO multiple values? (DT maxOccurs unbounded) -->
 						<xsl:choose>
@@ -437,6 +437,9 @@
 						<xsl:value-of select="''" />
 					</xsl:otherwise>
 				</xsl:choose>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="''" />
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -1135,31 +1138,7 @@
 		<!-- BDI -->
 		<xsl:if test="$sheetType='BDI'">
 			<xsl:choose>
-				<xsl:when test="$sheetVersion='2.00_ICCD0' or $sheetVersion='2.00' or $sheetVersion='3.00_ICCD0' or $sheetVersion='3.00' or $sheetVersion='3.01_ICCD0' or $sheetVersion='3.01'">
-					<xsl:variable name="dbl"><!-- allow multiple values ? ICCD11389099 ICCD13074440 -->
-						<xsl:value-of select="string-join(record/metadata/schede/*/DB/DBL[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))],', ')"/>
-					</xsl:variable>
-					<xsl:variable name="tmp-label">
-						<xsl:choose>
-							<xsl:when test="record/metadata/schede/*/DB/DBC">
-								<xsl:variable name="dbc"><!-- allow multiple values ? ICCD11389099 ICCD13074440 -->
-									<xsl:value-of select="string-join(record/metadata/schede/*/DB/DBC[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))],', ')"/>
-								</xsl:variable>
-								<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DB/DBD), ' - ', $dbl, ' (', normalize-space($dbc), ')')" />
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DB/DBD), ' - ', $dbl)" />
-							</xsl:otherwise>
-						</xsl:choose>
-					</xsl:variable>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
-					</rdfs:label>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat($tmp-label, $author-string-en, $cultural-context, $date-string)" />
-					</rdfs:label>
-				</xsl:when>
-				<xsl:otherwise>
+				<xsl:when test="$sheetVersion='4.00_ICCD0' or $sheetVersion='4.00'">
 					<!-- la parentesi di apertura viene aggiunta alla variabile ogdn perché 
 						c'è solo se c'è ogdn; quindi viene messo un choose per la rdfs:label per 
 						inserire la parentesi di chiusura a seconda dell'esistenza o meno di $ogdn. 
@@ -1187,6 +1166,30 @@
 					</xsl:variable>
 					<rdfs:label xml:lang="it">
 						 <xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
+					</rdfs:label>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat($tmp-label, $author-string-en, $cultural-context, $date-string)" />
+					</rdfs:label>
+				</xsl:when>					
+				<xsl:otherwise>					
+					<xsl:variable name="dbl"><!-- allow multiple values ? ICCD11389099 ICCD13074440 -->
+						<xsl:value-of select="string-join(record/metadata/schede/*/DB/DBL[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))],', ')"/>
+					</xsl:variable>
+					<xsl:variable name="tmp-label">
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/DB/DBC">
+								<xsl:variable name="dbc"><!-- allow multiple values ? ICCD11389099 ICCD13074440 -->
+									<xsl:value-of select="string-join(record/metadata/schede/*/DB/DBC[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))],', ')"/>
+								</xsl:variable>
+								<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DB/DBD), ' - ', $dbl, ' (', normalize-space($dbc), ')')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DB/DBD), ' - ', $dbl)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 					</rdfs:label>
 					<rdfs:label xml:lang="en">
 						<xsl:value-of select="concat($tmp-label, $author-string-en, $cultural-context, $date-string)" />

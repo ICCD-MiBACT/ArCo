@@ -2110,18 +2110,6 @@
 						</arco-cd:hasSubject>
 					</xsl:if>
 				</xsl:for-each>
-				<xsl:for-each select="record/metadata/schede/*/DA/AID/AIDI">
-					<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
-						<arco-cd:subject>
-							<xsl:value-of select="normalize-space(.)" />
-						</arco-cd:subject>
-						<arco-cd:hasSubject>
-							<xsl:attribute name="rdf:resource">
-	                    		<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
-	                    	</xsl:attribute>
-						</arco-cd:hasSubject>
-					</xsl:if>
-				</xsl:for-each>
 				<!-- iconclass code -->
 				<xsl:if test="record/metadata/schede/*/*/SGT/SGTC and not(lower-case(normalize-space(record/metadata/schede/*/*/SGT/SGTC))='nr' or lower-case(normalize-space(record/metadata/schede/*/*/SGT/SGTC))='n.r.' or lower-case(normalize-space(record/metadata/schede/*/*/SGT/SGTC))='nr (recupero pregresso)')">
 					<xsl:for-each select="record/metadata/schede/*/*/SGT/SGTC">
@@ -2159,30 +2147,6 @@
 						<arco-cd:title>
 							<xsl:value-of select="normalize-space(.)" />
 						</arco-cd:title>
-						<arco-cd:hasTitle>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
-							</xsl:attribute>
-						</arco-cd:hasTitle>
-					</xsl:if>
-				</xsl:for-each>
-				<xsl:for-each select="record/metadata/schede/*/DA/AID/AIDT">
-					<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
-						<arco-cd:title>
-							<xsl:value-of select="normalize-space(.)" />
-						</arco-cd:title>
-						<arco-cd:hasTitle>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
-							</xsl:attribute>
-						</arco-cd:hasTitle>
-					</xsl:if>
-				</xsl:for-each>
-				<xsl:for-each select="record/metadata/schede/*/DA/AID/AIDN">
-					<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
-						<arco-cd:alternativeTitle>
-							<xsl:value-of select="normalize-space(.)" />
-						</arco-cd:alternativeTitle>
 						<arco-cd:hasTitle>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
@@ -2280,6 +2244,24 @@
 						</xsl:attribute>
 					</arco-dd:hasIconographicOrDecorativeApparatus>
 				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/DA/AID">	
+					<xsl:choose>	
+						<xsl:when test="not(./AIDA) or ./AIDA='intero bene' or ./AIDA='integrale' or ./AIDA='tutta' or ./AIDA='totale' or ./AIDA='carattere generale' or (starts-with(lower-case(normalize-space(./AIDA)), 'nr')) or (starts-with(lower-case(normalize-space(./AIDA)), 'n.r')) or (starts-with(lower-case(normalize-space(./AIDA)), 'intero')) or (starts-with(lower-case(normalize-space(./AIDA)), 'intera')) or (starts-with(lower-case(normalize-space(./AIDA)), 'esemplar'))">
+							<arco-dd:hasIconographicOrDecorativeApparatus>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatus/', $itemURI, '-', position())" />
+								</xsl:attribute>
+							</arco-dd:hasIconographicOrDecorativeApparatus>
+						</xsl:when>
+						<xsl:otherwise>
+							<arco-core:hasPart>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./AIDA)))" />
+								</xsl:attribute>
+							</arco-core:hasPart>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/DE/DEC">	
 					<xsl:choose>	
 						<xsl:when test="not(./DECU) or ./DECU='intero bene' or ./DECU='integrale' or ./DECU='tutta' or ./DECU='totale' or ./DECU='carattere generale' or (starts-with(lower-case(normalize-space(./DECU)), 'nr')) or (starts-with(lower-case(normalize-space(./DECU)), 'n.r')) or (starts-with(lower-case(normalize-space(./DECU)), 'intero')) or (starts-with(lower-case(normalize-space(./DECU)), 'intera')) or (starts-with(lower-case(normalize-space(./DECU)), 'esemplar'))">
@@ -2348,6 +2330,34 @@
 							</xsl:choose>
 						</xsl:attribute>
 					</arco-dd:hasCulturalPropertyAccessibility>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/UT/CNU/CNUV">
+					<arco-dd:hasCulturalPropertyAccessibility>
+						<xsl:attribute name="rdf:resource">
+							<xsl:choose>
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/UT/CNU/CNUV))='aperto al pubblico'">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Accessible'" />
+								</xsl:when>
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/UT/CNU/CNUV))='no'">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Inaccessible'" />
+								</xsl:when>
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/UT/CNU/CNUV))='parzialmente aperto al pubblico'">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/PartiallyAccessible'" />
+								</xsl:when>
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/UT/CNU/CNUV))='accessibile con permesso'">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/AccessibleWithAutorisation'" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat($NS, 'CulturalPropertyAccessibility/', arco-fn:urify(normalize-space(record/metadata/schede/*/UT/CNU/CNUV)))" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:attribute>
+					</arco-dd:hasCulturalPropertyAccessibility>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/UT/CNU/CNUN">
+					<arco-core:note>
+						<xsl:value-of select="concat('Condizione d uso: ', normalize-space(record/metadata/schede/*/UT/CNU/CNUN), '. ', normalize-space(record/metadata/schede/*/UT/CNU/CNUS))" />
+					</arco-core:note>
 				</xsl:if>
 				<!-- numismatic property counterstamp -->
 				<xsl:for-each select="record/metadata/schede/NU/DA/CON">
@@ -2975,14 +2985,6 @@
                 		</xsl:attribute>
 					</arco-cd:hasSexInterpretation>
 				</xsl:if>
-				<!-- age of death estimate -->
-				<xsl:if test="record/metadata/schede/AT/DA/SEM">
-					<arco-cd:hasAgeOfDeathInterpretation>
-						<xsl:attribute name="rdf:resource">
-                			<xsl:value-of select="concat($NS, 'AgeOfDeathInterpretation/', $itemURI)" />
-                		</xsl:attribute>
-					</arco-cd:hasAgeOfDeathInterpretation>
-				</xsl:if>
 				<!-- technical status of cultural property (version 4.00) -->
 				<xsl:if test="record/metadata/schede/*/MT/MTC/*">
 					<!-- material of cultural property (version 4.00) -->
@@ -3476,7 +3478,7 @@
 					</xsl:for-each>
 				</xsl:if>
 				<!-- Inspection of cultural property -->
-				<xsl:if test="not(record/metadata/schede/*/CM/ISP/ISPD='0000/00/00' or record/metadata/schede/*/CM/ISP/ISPD='/') and record/metadata/schede/*/CM/ISP/*">
+				<xsl:if test="not(record/metadata/schede/*/ISP/ISPD='0000/00/00' or record/metadata/schede/*/CM/ISP/ISPD='/') and record/metadata/schede/*/CM/ISP/*">
 					<xsl:for-each select="record/metadata/schede/*/CM/ISP">
 						<arco-cd:hasSurvey>
 							<xsl:attribute name="rdf:resource">

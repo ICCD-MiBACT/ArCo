@@ -1712,7 +1712,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/numberOfElements">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/numberOfParts"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ComplexCulturalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
         <rdfs:comment xml:lang="it">Questa propietà rappresenta  il numero complessivo, espresso in cifre, degli elementi che costituiscono il bene catalogato, nel caso esso sia un insieme o una serie i cui esemplari/oggetti componenti comprendono ciascuno più elementi.</rdfs:comment>
         <rdfs:label xml:lang="en">This property represents the total number of elements of a complex cultural property, when it is composed by parts containing more elements.</rdfs:label>

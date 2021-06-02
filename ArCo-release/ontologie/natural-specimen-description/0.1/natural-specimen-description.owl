@@ -4083,6 +4083,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/ArtificialSpecimen -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/ArtificialSpecimen">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/NaturalSpecimen"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/BiogenicSedimentaryStructure -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiogenicSedimentaryStructure">
@@ -6015,6 +6024,14 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMN/SMNA, SMNI, SMNP</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/NaturalSpecimen -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/NaturalSpecimen">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
     </owl:Class>
     
 

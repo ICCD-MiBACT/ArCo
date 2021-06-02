@@ -79,7 +79,7 @@
 	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
 	xmlns:ar-CISNameInTime="https://w3id.org/arco/resource/CISNameInTime/"
 	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
-	xmlns:arco-con="https://w3id.org/arco/ontology/construction/"
+	xmlns:arco-con="https://w3id.org/arco/ontology/construction-description/"
 
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0"
 	exclude-result-prefixes="xsl php">
@@ -851,7 +851,7 @@
 				</xsl:attribute>
 	 	        <rdf:type>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Soil'" />
+						<xsl:value-of select="'https://w3id.org/arco/ontology/location/Soil'" />
 					</xsl:attribute>
 				</rdf:type>
 				<rdfs:label xml:lang="en">
@@ -3505,6 +3505,95 @@
 			</xsl:if>
 		</xsl:for-each>					
 	</xsl:if>																
+	<!-- MODI description -->
+	<xsl:if test="record/metadata/schede/MODI/UR" >
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	       		<xsl:value-of select="$culturalProperty" />
+			</xsl:attribute>
+			<xsl:if test="record/metadata/schede/MODI/UR/URL">
+				<arco-con:numberOfFlights>
+					<xsl:value-of select="normalize-space(record/metadata/schede/MODI/UR/URL)" />
+				</arco-con:numberOfFlights>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/MODI/UR/URN">
+				<arco-con:numberOfConstructionSpaces>
+					<xsl:value-of select="normalize-space(record/metadata/schede/MODI/UR/URN)" />
+				</arco-con:numberOfConstructionSpaces>
+			</xsl:if>
+			<xsl:for-each select="record/metadata/schede/MODI/UR/URA">
+				<arco-core:hasPart>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./URAS)))" />
+					</xsl:attribute>
+				</arco-core:hasPart>
+			</xsl:for-each>
+		</rdf:Description>
+		<xsl:for-each select="record/metadata/schede/MODI/UR/URA">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+	       			<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./URAS)))" />
+				</xsl:attribute>
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+				<xsl:choose>
+					<xsl:when test="./URAE">
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./URAE)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./URAE)" />
+						</l0:name>
+					</xsl:when>
+					<xsl:otherwise>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./URAS)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./URAS)" />
+						</l0:name>
+					</xsl:otherwise>
+				</xsl:choose>
+				<xsl:if test="./URAZ">
+					<arco-cd:hasUseFunction>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(normalize-space(./URAZ)))" />
+						</xsl:attribute>
+					</arco-cd:hasUseFunction>
+				</xsl:if>
+				<xsl:if test="./URAD">
+					<arco-core:description>
+						<xsl:value-of select="normalize-space(./URAD)" />
+					</arco-core:description>
+				</xsl:if>
+				<xsl:if test="./URAV">
+					<arco-core:note>
+						<xsl:value-of select="normalize-space(./URAV)" />
+					</arco-core:note>
+				</xsl:if>
+			</rdf:Description>
+			<xsl:if test="./URAZ">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(normalize-space(./URAZ)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/UseFunction'" />
+						</xsl:attribute>
+					</rdf:type>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./URAZ)" />
+					</l0:name>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./URAZ)" />
+					</rdfs:label>
+					<arco-cd:useFunction>
+						<xsl:value-of select="normalize-space(./URAZ)" />
+					</arco-cd:useFunction>
+				</rdf:Description>
+			</xsl:if>
+		</xsl:for-each>
+	</xsl:if>
 	</rdf:RDF>
 </xsl:template>								
 </xsl:stylesheet>

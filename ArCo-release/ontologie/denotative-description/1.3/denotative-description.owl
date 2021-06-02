@@ -4614,6 +4614,12 @@ resource:TechnicalCharacteristic/pietra-scultura
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/AccessibleWithAutorisation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/AccessibleWithAutorisation"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Area -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Area">

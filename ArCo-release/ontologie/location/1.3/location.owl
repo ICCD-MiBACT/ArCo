@@ -673,6 +673,16 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/hasMap -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasMap">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isMapOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/hasMineralDeposit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasMineralDeposit"/>
@@ -1357,6 +1367,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/isMapOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isMapOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/isMineralDepositOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isMineralDepositOf"/>
@@ -1797,9 +1816,39 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/geographicalDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/geographicalDescription">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/geologicalDescription -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/geologicalDescription">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/geomorphologicalDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/geomorphologicalDescription">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/historicalEnvironmentContextDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/historicalEnvironmentContextDescription">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
     </owl:DatatypeProperty>
     
@@ -1896,6 +1945,18 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/morphologicalDescription">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/pedologicalDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/pedologicalDescription">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -2635,6 +2696,14 @@ resource:CadastralIdentity/1400055239-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/GeologicalMap -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeologicalMap">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/GeometryMethod -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeometryMethod">
@@ -2692,6 +2761,14 @@ resource:CadastralIdentity/1400055239-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Incline">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/LandUseMap -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LandUseMap">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
     </owl:Class>
     
 
@@ -2770,6 +2847,14 @@ resource:CadastralIdentity/1400055239-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: LA/TLC; LA/TCL; LC (CurrentPhysicalLocation) - Normativa F: anche LR (ShotLocation). - CS/CTL. - GE/GEL; GP/GPL; GL/GLL; GA/GAL</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Map -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Map">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
     </owl:Class>
     
 
@@ -2938,6 +3023,14 @@ resource:CadastralIdentity/1400055239-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/PedologicalMap -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/PedologicalMap">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/ShadeTolerance -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ShadeTolerance">
@@ -3036,20 +3129,14 @@ resource:CadastralIdentity/1400055239-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasMap"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/LandUseMap"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasSoilUse"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/SoilUse"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/geologicalDescription"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/morphologicalDescription"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il suolo</rdfs:comment>
