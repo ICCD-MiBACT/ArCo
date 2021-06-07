@@ -4915,6 +4915,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Crystal</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM 3.01: SM/SMC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5009,6 +5010,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Stadio di sviluppo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM 3.01: LIR (livello di ricerca)</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5265,7 +5267,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il contesto geologico del luogo di raccolta di un bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents geological context of a collecting location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/natural-specimen-property/"/>
         <rdfs:label xml:lang="it">Contesto geologico</rdfs:label>
         <rdfs:label xml:lang="en">Geological context</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -5800,6 +5802,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Minerale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM 3.01: SM/SMN-SMNA-SMNI</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -6403,6 +6406,14 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PlantSample">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Sample"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto botanico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a sample from the botanical collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-property"/>
+        <rdfs:label xml:lang="en">Plant sample</rdfs:label>
+        <rdfs:label xml:lang="it">Reperto botanico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag></a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -6418,7 +6429,7 @@ In this module the following Ontology Design Patterns have been used:
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto palinologico (pollini)</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents sample from the pollen collection</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a sample from the pollen collection</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-property"/>
         <rdfs:label xml:lang="en">Pollen sample</rdfs:label>
         <rdfs:label xml:lang="it">Reperto palinologico</rdfs:label>
@@ -7165,7 +7176,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto xilologico (legni)</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents sample from the wood collection</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a sample from the wood collection</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-property"/>
         <rdfs:label xml:lang="it">Reperto xilologico</rdfs:label>
         <rdfs:label xml:lang="en">Wood sample</rdfs:label>
@@ -7873,8 +7884,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Reflectance">
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-property"/>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
-        <rdfs:comment xml:lang="en">This class represents the reflectance</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la riflettanza</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the reflectance</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
         <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
