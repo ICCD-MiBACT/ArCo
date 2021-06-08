@@ -12067,79 +12067,6 @@
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>		
-			<!-- paleopathology survey -->
-			<xsl:for-each select="record/metadata/schede/*/PT/PTC">
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'PaleopathologySurvey/', $itemURI, '-survey-', position())" />
-					</xsl:attribute>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/PaleopathologySurvey'" />
- 	                	</xsl:attribute>
-					</rdf:type>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Paleopathology survey of cultural property ', $itemURI)" />
-					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Paleopathology survey of cultural property ', $itemURI)" />
-					</l0:name>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Indagine su paleopatologia del bene culturale ', $itemURI)" />
-					</rdfs:label>
-					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Indagine su paleopatologia del bene culturale ', $itemURI)" />
-					</l0:name>
-					<xsl:if test="./PTCM">
-						<arco-cd:hasSurveyMethod>
-							<xsl:attribute name="rdf:resource">
-	                			<xsl:value-of select="concat($NS, 'SurveyMethod/', arco-fn:urify(normalize-space(./PTCM)))" />
- 	                		</xsl:attribute>
-						</arco-cd:hasSurveyMethod>
-					</xsl:if>
-					<xsl:if test="./PTCD">
-						<arco-cd:diagnosis>
-							<xsl:value-of select="normalize-space(./PTCD)" />
-						</arco-cd:diagnosis>
-					</xsl:if>
-					<xsl:if test="./PTCI">
-						<arco-cd:refersToSurvey>
-							<xsl:value-of select="normalize-space(./PTCI)" />
-						</arco-cd:refersToSurvey>
-					</xsl:if>
-					<xsl:if test="./PTCZ or ./PTCN">
-						<arco-core:note>
-							<xsl:choose>
-								<xsl:when test="./PTCZ and ./PTCN">
-									<xsl:value-of select="concat(normalize-space(./PTCN), ' ', normalize-space(./PTCZ))" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="concat(normalize-space(./PTCN), normalize-space(./PTCZ))" />
-								</xsl:otherwise>
-							</xsl:choose>
-						</arco-core:note>
-					</xsl:if>
-				</rdf:Description>
-				<!-- survey method as individual-->
-				<xsl:if test="./PTCM">
-					<rdf:Description>
-						<xsl:attribute name="rdf:about">
-                			<xsl:value-of select="concat($NS, 'SurveyMethod/', arco-fn:urify(normalize-space(./PTCM)))" />
-	                	</xsl:attribute>
-						<rdf:type>
-							<xsl:attribute name="rdf:resource">
-		                		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SurveyMethod'" />
-	 	                	</xsl:attribute>
-						</rdf:type>
-						<rdfs:label>
-							<xsl:value-of select="normalize-space(./PTCM)" />
-						</rdfs:label>
-						<l0:name>
-							<xsl:value-of select="normalize-space(./PTCM)" />
-						</l0:name>
-					</rdf:Description>
-				</xsl:if>
-			</xsl:for-each>
 			<!-- Photo interpretation rendering excavation of cultural property -->
 			<xsl:if test="record/metadata/schede/*/*/FOI/*">
 				<xsl:for-each select="record/metadata/schede/*/*/FOI">
@@ -28489,33 +28416,26 @@
 								</xsl:choose>
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of
-									select="arco-fn:map-measure(lower-case(../MISZ))" />
+								<xsl:value-of select="arco-fn:map-measure(lower-case(../MISZ))" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:variable>
 
 					<xsl:if test="$measurement-type != ''">
 						<rdf:Description>
-							<xsl:attribute name="rdf:about"
-								select="concat($NS, 'Measurement/', $itemURI, '-', $parent-id, '-', arco-fn:uncamelize($measurement-type))" />
-							<rdf:type
-								rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
-
+							<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-', $parent-id, '-', arco-fn:uncamelize($measurement-type))" />
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 							<xsl:variable name="mu-value">
 								<xsl:choose>
-									<xsl:when
-										test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+									<xsl:when test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 										<xsl:choose>
-											<xsl:when
-												test="$tag-name='MISV' and $sheetType='VeAC'">
+											<xsl:when test="$tag-name='MISV' and $sheetType='VeAC'">
 												<xsl:value-of select="normalize-space(.)" />
 											</xsl:when>
 											<xsl:when test="$tag-name='MISF'">
 												<xsl:value-of select="normalize-space(.)" />
 											</xsl:when>
-											<xsl:when
-												test="$tag-name='MISO' and $sheetType='VeAC'">
+											<xsl:when test="$tag-name='MISO' and $sheetType='VeAC'">
 												<xsl:value-of select="normalize-space(.)" />
 											</xsl:when>
 											<xsl:when test="$tag-name='MISL'">
