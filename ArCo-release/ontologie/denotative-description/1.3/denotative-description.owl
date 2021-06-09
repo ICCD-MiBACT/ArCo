@@ -3563,7 +3563,7 @@ resource:ConservationStatus/0900750201-conservation-status-1
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la descrizione tecnica di un&apos;entità culturale, la quale utilizza tutti i concetti tecnici che possono classificare caratteristiche tecniche possedute da un&apos;entità culturale. Questa classe è un tipo particolare di Description, la classe degli oggetti costruiti socialmente (testi, valori, categorie, relazioni, contesti), usati per descrivere qualcos&apos;altro in modo strutturato.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the technical description of a cultural entity, which uses all the technical concepts classifying the technical characteristics that a cultural entity can have. This class is a particular type of the class Description, which is the class for socially constructed objects (i.e. texts, values, categories, relations, contexts) used to describe other objects in a structured manner.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/denotative-description/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">Cultural entity technical description</rdfs:label>
         <rdfs:label xml:lang="it">Descrizione tecnica di entità culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
