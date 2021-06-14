@@ -5599,6 +5599,14 @@ resource:TechnicalCharacteristic/pietra-scultura
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/RecordingSpeed -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/RecordingSpeed">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Resolution -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Resolution">
