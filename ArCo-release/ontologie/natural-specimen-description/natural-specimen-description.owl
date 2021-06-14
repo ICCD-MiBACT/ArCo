@@ -3832,6 +3832,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Interpretation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Interpretation"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/LaboratoryTest -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/LaboratoryTest">
@@ -4029,7 +4035,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/SpecimenHarvesting"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;informazione (dato) sulla/e persona fisica o giuridica/che che a vario titolo ha/hanno fatto pervenire il bene (campione, raccolta, collezione ecc.) all&apos;Ente di riferimento.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the information about the way in which the cultural property has arrived to the organization</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Accession</rdfs:label>
         <rdfs:label xml:lang="it">Accessione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4051,7 +4057,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il grado di alterazionedi un campione causato da processi atmosferici e geologici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the alteration grade of a specimen,  by weathering process or geological process</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Alteration grade</rdfs:label>
         <rdfs:label xml:lang="it">Grado di alterazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4073,7 +4079,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di alterazione di un campione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the alteration type of a specimen</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Alteration type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di alterazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4089,7 +4095,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/SedimentaryStructure"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la struttura sedimentaria biogenica</rdfs:comment>
         <rdfs:comment xml:lang="en">TThis class represents the biogenic sedimentary structure</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Biogenic sedimentary structure</rdfs:label>
         <rdfs:label xml:lang="it">Struttura sedimentaria biogenica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4148,7 +4154,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la classe.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the class</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Class</rdfs:label>
         <rdfs:label xml:lang="it">Classe</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4214,7 +4220,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la famiglia</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the family.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Famiglia</rdfs:label>
         <rdfs:label xml:lang="en">Family</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4285,7 +4291,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero il genere.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the genus.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Genere</rdfs:label>
         <rdfs:label xml:lang="en">Genus</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4317,7 +4323,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero il regno.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the kingdom</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Kingdom</rdfs:label>
         <rdfs:label xml:lang="it">Regno</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4376,7 +4382,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero l&apos;ordine</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the order</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Order</rdfs:label>
         <rdfs:label xml:lang="it">Ordine</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4426,7 +4432,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero il phylum.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the phylum</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Phylum</rdfs:label>
         <rdfs:label xml:lang="it">Phylum</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4488,7 +4494,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la specie.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the species.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Specie</rdfs:label>
         <rdfs:label xml:lang="en">Species</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4537,7 +4543,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralTaxon"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un taxon biologico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a biological taxon.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Biological taxon</rdfs:label>
         <rdfs:label xml:lang="it">Taxon biologico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4551,6 +4557,14 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalVariety">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la varietà.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the variety.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="en">Biological variety</rdfs:label>
+        <rdfs:label xml:lang="it">Varietà biologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/NAA/NAAF</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4562,7 +4576,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Cultivar"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una varietà dal punto di vista della forma estetica o cromatica</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a variety from an aesthetic or chromatic point of view.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Botanical form</rdfs:label>
         <rdfs:label xml:lang="it">Forma botanica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4578,7 +4592,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il cemento di una tessitura</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents cement of a texture.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Cement</rdfs:label>
         <rdfs:label xml:lang="it">Cemento</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4594,7 +4608,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la formula chimica di una specie mineralogica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the chemical formula of a mineral species</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Chemical formula</rdfs:label>
         <rdfs:label xml:lang="it">Formula chimica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4622,7 +4636,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le condrule di una tessitura</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the chondrules of a texture.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Chondrule</rdfs:label>
         <rdfs:label xml:lang="it">Condrule</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4638,7 +4652,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la presenza di condrule in un campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the presence of chondrules in a specimen.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Chondrule presence</rdfs:label>
         <rdfs:label xml:lang="it">Presenza di condrule</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4654,7 +4668,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di condrule di una tessitura</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of chondrules of a texture.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Chondrule type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di condrule</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4757,7 +4771,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/System"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema di classificazione in base a cui un&apos;entità è stata classificata.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents classification system used to classify an entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Classification system</rdfs:label>
         <rdfs:label xml:lang="it">Sistema di classificazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4785,7 +4799,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la sfaldatura di un minerale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the cleveage of a mineral.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Cleveage</rdfs:label>
         <rdfs:label xml:lang="it">Sfaldatura</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4807,7 +4821,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;individuo vicino al campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the individual close to the specimen</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Close individual</rdfs:label>
         <rdfs:label xml:lang="it">Individuo vicino</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4823,7 +4837,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di contatto tra i grani</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of contact between grains</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Contact type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di contatto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4891,6 +4905,13 @@ In this module the following Ontology Design Patterns have been used:
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un cristallo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represent a crystal</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="it">Cristallo</rdfs:label>
+        <rdfs:label xml:lang="en">Crystal</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -4901,7 +4922,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/CrystalMorphology"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;abito di un cristallo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the habit of a crystal.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Abito del cristallo</rdfs:label>
         <rdfs:label xml:lang="en">CrystalHabit</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4917,7 +4938,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lamorfologia di un cristallo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the morphology of a crystal.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Crystal morphology</rdfs:label>
         <rdfs:label xml:lang="it">Morfologia del cristallo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4933,7 +4954,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/CrystalMorphology"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la geminazione di un cristallo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the twinning of a crystal.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Crystal twinning</rdfs:label>
         <rdfs:label xml:lang="it">Geminazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4950,11 +4971,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la caratteristica cristallografica di un minerale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents crystallographic characteristic of a mineral.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Caratteristica cristallografica</rdfs:label>
         <rdfs:label xml:lang="en">Crystallographic characteristic</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4965,7 +4987,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una varietà dal punto di vista delle specifiche forme coltivate</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents is the most basic classification category of cultivated plants in the International Code of Nomenclature for Cultivated Plants</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Cultivar</rdfs:label>
         <rdfs:label xml:lang="it">Cultivar</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4979,6 +5001,11 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/DevelopmentStage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Interpretation"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="en">Development stage</rdfs:label>
+        <rdfs:label xml:lang="it">Stadio di sviluppo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -4989,7 +5016,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChemicalFormula"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la formula chimica empirica di una specie mineralogica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the empirical chemical formula of a mineral species</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Empirical chemical formula</rdfs:label>
         <rdfs:label xml:lang="it">Formula chimica empirica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5050,7 +5077,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo eruttivo di una roccia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the eruptive type of a rock.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Eruptive type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo eruttivo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5072,7 +5099,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l idrodinamismo del luogo in cui il campione è stato raccolto</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the fluid dynamism when the specimenwas collected</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Fluid dynamism</rdfs:label>
         <rdfs:label xml:lang="it">Idrodinamismo</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -5089,7 +5116,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un fossile</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a fossil</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Fossil</rdfs:label>
         <rdfs:label xml:lang="it">Fossil</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5117,7 +5144,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto carpologico (frutti)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a sample from the fruit collection</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Fruit  sample</rdfs:label>
         <rdfs:label xml:lang="it">Reperto carpologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5235,7 +5262,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il contesto geologico del luogo di raccolta di un bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents geological context of a collecting location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Contesto geologico</rdfs:label>
         <rdfs:label xml:lang="en">Geological context</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -5252,7 +5279,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralDeposit"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il geotopo</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the geotope</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Geotope</rdfs:label>
         <rdfs:label xml:lang="it">Geotopo</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -5281,7 +5308,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta i grani che compongono la texture di una roccia</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the grain of a rock texture</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Grains</rdfs:label>
         <rdfs:label xml:lang="it">Grani</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5297,7 +5324,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il metodo di raccolta del campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the harvesting method</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Harvesting method</rdfs:label>
         <rdfs:label xml:lang="it">Metodo di raccolta</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5313,7 +5340,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la potivazione della raccolta del campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the harvesting motivation</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Harvesting motivation</rdfs:label>
         <rdfs:label xml:lang="it">Motivazione della raccolta</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5335,7 +5362,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;individuo ospite del campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the individual hosting the specimen</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Host individual</rdfs:label>
         <rdfs:label xml:lang="it">Individuo ospite</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5351,7 +5378,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/HostIndividual"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la roccia ospite</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the host rock</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Host rock</rdfs:label>
         <rdfs:label xml:lang="it">Roccia ospite</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5389,6 +5416,11 @@ In this module the following Ontology Design Patterns have been used:
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="en">Identification in time</rdfs:label>
+        <rdfs:label xml:lang="it">Identificazione nel tempo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -5405,7 +5437,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;inclinazione (qualitativa) del substrato di raccolta del campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the incline of the substrate where the specimen was collected</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Inclinazione</rdfs:label>
         <rdfs:label xml:lang="en">Incline</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -5422,7 +5454,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;inclusione in un minerale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the inclusion in a mineral.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Inclusion</rdfs:label>
         <rdfs:label xml:lang="it">Inclusione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5474,7 +5506,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il cartellino o l&apos;etichetta presente sul o insieme al campione oggetto della scheda o al contenitore.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the label located on a specimen or on a specimen container.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Etichetta</rdfs:label>
         <rdfs:label xml:lang="en">Label</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5497,7 +5529,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/RockType"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un rank della tassonomia petrologica, in particolare il tipo litologico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the rank of the petrologic taxonomy, in particular the lithological type.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Lithologic type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo litologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5618,7 +5650,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la massa principale di un meteorite</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the main mass of a meteorite</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Main mass</rdfs:label>
         <rdfs:label xml:lang="it">Massa principale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5634,7 +5666,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la matrice della texture di una roccia</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the matrix of a rock texture</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Matrice</rdfs:label>
         <rdfs:label xml:lang="en">Matrix</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5703,7 +5735,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il meteorite</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the meteorite</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Meteorite</rdfs:label>
         <rdfs:label xml:lang="it">Meteorite</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5725,7 +5757,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il meteorite che è stato visto cadere</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the meteorite that has been seen falling</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Meteorite</rdfs:label>
         <rdfs:label xml:lang="it">Meteorite</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5741,7 +5773,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralDeposit"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la miniera</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the mine</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Mine</rdfs:label>
         <rdfs:label xml:lang="it">Miniera</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -5756,6 +5788,13 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Mineral">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un minerale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a mineral</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="en">Mineral</rdfs:label>
+        <rdfs:label xml:lang="it">Minerale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -5766,7 +5805,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralTaxon"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia mineralogica, ovvero la classe mineralogica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a mineral taxon, the mineral class.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Classe mineralogica</rdfs:label>
         <rdfs:label xml:lang="en">Mineral class</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5788,7 +5827,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il deposito mineralogico</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the mineral deposit</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Deposito mineralogico</rdfs:label>
         <rdfs:label xml:lang="en">Mineral deposit</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -5805,7 +5844,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di deposito mineralogico</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of mineral deposit</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Mineral deposit type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di deposito mineralogico</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -5846,7 +5885,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la presenza di un minerale all&apos;interno di un campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the presence of a mineral in a specimen</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Mineral presence</rdfs:label>
         <rdfs:label xml:lang="it">Presenza del minerale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5904,7 +5943,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia mineralogica, ovvero la specie mineralogica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of an mineral taxon, the mineral species.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Mineral species</rdfs:label>
         <rdfs:label xml:lang="it">Specie mineralogica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5958,7 +5997,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia mineralogica, ovvero la sottoclasse mineralogica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a mineralogical taxon, the mineral subclass.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Mineralogic subclass</rdfs:label>
         <rdfs:label xml:lang="it">Sottoclasse geologica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5974,7 +6013,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un taxon di esemplari mineralogici</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a taxon for mineralogical specimen.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Mineralogical taxon</rdfs:label>
         <rdfs:label xml:lang="it">Taxon geologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5990,7 +6029,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ClassificationSystem"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema di classificazione New Dana.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents New Dana classification system.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">New Dana classification system</rdfs:label>
         <rdfs:label xml:lang="it">Sistema di classificazione New Dana</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6028,11 +6067,12 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la caratteristica ottica di un minerale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the optic characteristic of a mineral.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Caratteristica ottica</rdfs:label>
         <rdfs:label xml:lang="en">Optic characteristic</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO;SMM</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -6055,7 +6095,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;affioramento</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the outcrop</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Affioramento</rdfs:label>
         <rdfs:label xml:lang="en">Outcrop</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6072,7 +6112,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di affioramento</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the outcrop type</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Outcrop type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di affioramento</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6089,7 +6129,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/CrystalMorphology"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la paramorfosi di un cristallo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the paramorphosis of a crystall.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Paramorfosi</rdfs:label>
         <rdfs:label xml:lang="en">Paramorphosis</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6173,7 +6213,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il taxon relativo al dominio petrologico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the taxon related to the petrologic domain.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Petrologic taxon</rdfs:label>
         <rdfs:label xml:lang="it">Taxon petrologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6188,11 +6228,12 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la caratteristica fisica di un minerale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the physical characteristic of a mineral.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Caratteristica fisica</rdfs:label>
         <rdfs:label xml:lang="en">Physical characteristic</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -6209,11 +6250,12 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia planetologica, ovvero la classe.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a planetologic taxon, the class</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Classe planetologica</rdfs:label>
         <rdfs:label xml:lang="en">Planetologic class</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPN/SPNC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -6224,11 +6266,12 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicTaxon"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia planetologica, ovvero il genere.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a planetologic taxon, the genus</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Genere planetologico</rdfs:label>
         <rdfs:label xml:lang="en">Planetologic genus</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPN/SPNE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -6245,11 +6288,12 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia planetologica, ovvero il gruppo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a planetologic taxon, the group</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Gruppo planetologico</rdfs:label>
         <rdfs:label xml:lang="en">Planetologic group</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPN/SPNG</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -6266,7 +6310,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia planetologica, ovvero la specie.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a planetologic taxon, the species</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Planetologic species</rdfs:label>
         <rdfs:label xml:lang="it">Specie planetologica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6319,7 +6363,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il taxon relativo al dominio planeotlogico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the taxon related to the planetologic domain.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Planetologic taxon</rdfs:label>
         <rdfs:label xml:lang="it">Taxon planeotologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6332,6 +6376,13 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PlantSample">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Sample"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto vegetale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a plant sample</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="en">Plant sample</rdfs:label>
+        <rdfs:label xml:lang="it">Reperto vegetale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -6348,7 +6399,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto palinologico (pollini)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents sample from the pollen collection</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Pollen sample</rdfs:label>
         <rdfs:label xml:lang="it">Reperto palinologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6382,7 +6433,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta informazioni sul preparato (es. vetrini, provette, risultati di analisi) associato o conservato con l&apos;oggetto della scheda e non in una collezione ancillare</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents information about the preparation, associated to the specimen and not belonging to an ancillary collection</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Preparation</rdfs:label>
         <rdfs:label xml:lang="it">Preparato</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6398,7 +6449,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di preparato</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of te preparation</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Preparation type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di preparato</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6414,7 +6465,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di conservazione di un campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the preparation type of a sample</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Preservation type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di conservazione</rdfs:label>
         <a-cat:iccdNormTag xml:lang="en">Normativa ICCD BNB: DB/DBC/DBCX</a-cat:iccdNormTag>
@@ -6428,7 +6479,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/SedimentaryStructure"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la struttura sedimentaria primaria</rdfs:comment>
         <rdfs:comment xml:lang="en">TThis class represents the primary sedimentary structure</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Primary sedimentary structure</rdfs:label>
         <rdfs:label xml:lang="it">Struttura sedimentaria primaria</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6444,7 +6495,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/CrystalMorphology"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la pseudomorfosi di un cristallo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the pseudomorphosis of a crystal.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Pseudomorfosi</rdfs:label>
         <rdfs:label xml:lang="en">Pseudomorphosis</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6481,11 +6532,12 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la rifrazione di un minerale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the refraction of a mineral.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Refraction</rdfs:label>
         <rdfs:label xml:lang="it">Rifrazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOI; RM/RMO/RMOI</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -6502,7 +6554,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un rank della tassonomia petrologica, in particolare il tipo di roccia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the rank of the petrologic taxonomy, in particular the rock type.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Rock type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di roccia</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6542,7 +6594,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il reperto appartenente alle collezioni ancillari</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a sample belonging to ancillary collections</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Reperto di collezione ancillare</rdfs:label>
         <rdfs:label xml:lang="en">Sample</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6557,7 +6609,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/SedimentaryStructure"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la struttura sedimentaria secondaria</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the secondary sedimentary structure</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Secondary sedimentary structure</rdfs:label>
         <rdfs:label xml:lang="it">Struttura sedimentaria secondaria</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6573,7 +6625,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la struttura sedimentaria</rdfs:comment>
         <rdfs:comment xml:lang="en">TThis class represents the sedimentary structure</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Sedimentary structure</rdfs:label>
         <rdfs:label xml:lang="it">Struttura sedimentaria</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6589,7 +6641,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Sample"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto spermologico (semi)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a sample from the seed collection</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Reperto spermologico</rdfs:label>
         <rdfs:label xml:lang="en">Seed  sample</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6611,7 +6663,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tolleranza alla luminosità del popolamento ove il campione è stato raccolto</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the shade tolerance of the individuals in the collecting location</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Shade tolerance</rdfs:label>
         <rdfs:label xml:lang="it">Situazione luminosa</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6628,7 +6680,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChemicalFormula"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la formula chimica semplificata di una specie mineralogica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the simplified chemical formula of a mineral species</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Formula chimica semplificata</rdfs:label>
         <rdfs:label xml:lang="en">Simplified chemical formula</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6674,7 +6726,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un campione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a specimen.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Campione</rdfs:label>
         <rdfs:label xml:lang="en">Specimen</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6707,11 +6759,12 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme di parti che racchiudono i campioni,
 come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Contenitore di campioni</rdfs:label>
         <rdfs:label xml:lang="en">Specimen Container</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: OG/OGT/OGTO</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -6770,7 +6823,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;informazione sulla raccolta del campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the information about the harvesting of the specimen</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Raccolta del campione</rdfs:label>
         <rdfs:label xml:lang="en">Specimen harvesting</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6786,7 +6839,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ClassificationSystem"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema di classificazione Strunz.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents Strunz classification system.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Sistema di classificazione Strunz</rdfs:label>
         <rdfs:label xml:lang="en">Strunz classification system</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6802,7 +6855,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la sottospecie.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the subspecies.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Sottospecie</rdfs:label>
         <rdfs:label xml:lang="en">Subspecies</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6830,7 +6883,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta substrato specifico sul quale è stato raccolto il campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents  the specific substrate where the specimen was collected</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Substrate</rdfs:label>
         <rdfs:label xml:lang="it">Substrato</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6847,7 +6900,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria cui appartiene il substrato su cui è stato raccolto il campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the category of the substrate where the specimen was collected</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Substrate Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di substrato</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6887,7 +6940,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il taxon</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the taxon</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Taxon</rdfs:label>
         <rdfs:label xml:lang="it">Taxon</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6902,9 +6955,9 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un taxon biologico che rappresenta organismi della stessa specie ma con delle differenze minime, che non sono sufficienti per considerarli una specie completamente diversa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a biological taxon for organisms of the same species but with minimal differences.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Specificazione del taxon</rdfs:label>
         <rdfs:label xml:lang="en">Taxon specification</rdfs:label>
-        <owl:versionInfo rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -6941,7 +6994,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tessitura di un campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the texture of a specimen</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Tessitura</rdfs:label>
         <rdfs:label xml:lang="en">Texture</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6957,7 +7010,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di tessitura di un campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of texture of a specimen</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Texture type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di tessitura</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -6973,7 +7026,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo del campione che è servito a denominare un taxon specifico o infraspecifico</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of a specimen used to produce a specific taxon</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Tipo di campione nomenclaturale</rdfs:label>
         <rdfs:label xml:lang="en">Type of type specimen</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -7013,7 +7066,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;identificazione di un campione vegetale che è servito a produrne la prima descrizione e a denominare un taxon specifico o infraspecifico considerato nuovo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the identification of a specimen used to produce the first description an to produce the new taxon</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Identificazione del tipo nomenclaturale</rdfs:label>
         <rdfs:label xml:lang="en">Type specimen identification</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -7041,11 +7094,12 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la cella di un minerale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the unit cell of a mineral.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Cella</rdfs:label>
         <rdfs:label xml:lang="en">Unit cell</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCA;SMCB;SMCC;SMCF;SEMCE;SMCM;SMCV;SMCZ</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -7056,7 +7110,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TaxonSpecification"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la varietà.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the variety</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Variety</rdfs:label>
         <rdfs:label xml:lang="it">Varietà</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -7072,7 +7126,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/AlterationGrade"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il grado di alterazione causato da processi atmosferici di un campione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the alteration grade caused by weathering process of a specimen</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Grado di alterazione da processi atmosferici</rdfs:label>
         <rdfs:label xml:lang="en">Weathering grade</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -7094,7 +7148,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto xilologico (legni)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents sample from the wood collection</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Reperto xilologico</rdfs:label>
         <rdfs:label xml:lang="en">Wood sample</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -7799,11 +7853,11 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
      -->
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Reflectance">
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
-        <rdfs:comment xml:lang="en">This class represents the reflectance</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la riflettanza</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the reflectance</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
         <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
