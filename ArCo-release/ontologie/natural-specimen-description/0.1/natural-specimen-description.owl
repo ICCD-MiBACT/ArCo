@@ -3487,6 +3487,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">identificazione corrente</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative BNB,BNM,BNPE,BNPL: OG/OGT/OGTV</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3666,7 +3667,13 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/modalAnalysis -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/modalAnalysis"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/modalAnalysis">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="it">analisi modale</rdfs:label>
+        <rdfs:label xml:lang="en">modal analysis</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
     
 
 
@@ -7981,6 +7988,9 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/TotalKnownWeight">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Peso totale conosciuto</rdfs:label>
+        <rdfs:label xml:lang="en">Total known weight</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPN/SPNW</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -8027,14 +8037,13 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
      -->
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Reflectance">
+        <rdfs:comment xml:lang="en">This individual represents the reflectance</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
-        <rdfs:comment xml:lang="en">This class represents the reflectance</rdfs:comment>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la riflettanza</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
+        <rdfs:comment xml:lang="it">Questa individuo rappresenta la riflettanza</rdfs:comment>
     </rdf:Description>
     
 

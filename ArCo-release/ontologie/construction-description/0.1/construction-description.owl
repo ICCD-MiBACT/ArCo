@@ -1186,6 +1186,13 @@ viene descritta.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/ConnectionElement">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElement"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta gli elementi architettonici che collegano due parti della costruzione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the architectural elements of a construction that join two parts of the property</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
+        <rdfs:label xml:lang="en">Connection element</rdfs:label>
+        <rdfs:label xml:lang="it">Elemento di collegamento</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1466,6 +1473,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Piano</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa A: SI/SII/SIIP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1752,6 +1760,13 @@ viene descritta.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/NaturalElement">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionElement"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un elemento naturale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a natural element</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
+        <rdfs:label xml:lang="it">Elemento naturale</rdfs:label>
+        <rdfs:label xml:lang="en">Natural element</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2131,6 +2146,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Vertical element type</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa A: SV/SVCT</a-cat:iccdNormTag>
     </owl:Class>
     
 
