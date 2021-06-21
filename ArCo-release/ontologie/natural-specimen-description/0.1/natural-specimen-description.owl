@@ -2638,6 +2638,13 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedByCurrentTaxon">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;attuale taxon che l&apos;ha identificata</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to the current taxon assigned to it</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="en">is identified by current taxon</rdfs:label>
+        <rdfs:label xml:lang="it">è identificato da taxon attuale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4709,7 +4716,6 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Varietà biologica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/NAA/NAAF</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -8041,8 +8047,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa individuo rappresenta la riflettanza</rdfs:comment>
     </rdf:Description>
     

@@ -1017,9 +1017,9 @@ viene descritta.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/construction-description/scenogrphic -->
+    <!-- https://w3id.org/arco/ontology/construction-description/scenographic -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/scenogrphic">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/scenographic">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:DatatypeProperty>
     
@@ -1167,7 +1167,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Edificio</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa A: SI/SII/SIIN</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: SI/SII/SIIN;SIIP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1292,6 +1292,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Progetto della costruzione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa A: PN/PNT/PNTQ;PNTE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1380,6 +1381,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Spazio della costruzione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa A: SI/SII/SIIP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1429,7 +1431,6 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di rivestimento</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa A: CP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1502,7 +1503,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Piano</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa A: SI/SII/SIIP</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa A: SI/SII/SIIN</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1608,7 +1609,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di fondazioni</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa A: FN/FNST</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa A: FN/FNST;FNSQ</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1661,7 +1662,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di elemento orizzontale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa A: SO/SOF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa A: SO/SOF/SOFG;SOFP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1707,7 +1708,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Suddivisione interna</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa A: SI/SII</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: SI/SII/SIIV;SIIO</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1815,6 +1816,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Spazio aperto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa PG</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1935,6 +1937,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di copertura</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa A: CP/CPF/CPFG</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2030,6 +2033,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Stairs</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa A: SC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2127,7 +2131,6 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Vertical connection</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa A: SC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2143,6 +2146,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Vertical connection type</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa A: SC/SCL/SCLG</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2180,7 +2184,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Vertical element type</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa A: SV/SVCT</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa A: SV/SVCU;SVCT</a-cat:iccdNormTag>
     </owl:Class>
     
 
