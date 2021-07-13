@@ -3782,6 +3782,14 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/RecordingLocation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/RecordingLocation">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/ShootingLocation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/ShootingLocation">
