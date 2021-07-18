@@ -9123,10 +9123,14 @@
 	            			<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 	            		</xsl:attribute>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(.)" />
+							<xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							</xsl:call-template>
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(.)" />
+							<xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							</xsl:call-template>
 						</l0:name>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
