@@ -1,7 +1,206 @@
 openapi: 3.0.1
 info:
-  title: Virtuoso SPARQL endpoint dati.beniculturali.it
-  description: E’ un’interfaccia machine-to-machine che offre LOD interrogabili direttamente da qualsiasi applicazione, rispondendo in tal modo all’esigenza di disporre di dati standardizzati e interoperabili espresse da varie comunità di utilizzatori. Su questi dati ci auguriamo possano essere sviluppate applicazioni, interfacce user-friendly e servizi utili per i cittadini, gli studenti, i ricercatori, i turisti e altre categorie di utenti. dati.beniculturali.it è la piattaforma in cui il MiBACT pubblica il proprio patrimonio informativo secondo la logica dei linked open data (LOD). 
+  title: SPARQL endpoint dati.beniculturali.it
+  description: | 
+    E’ un’interfaccia machine-to-machine che offre LOD interrogabili direttamente da qualsiasi applicazione, rispondendo in tal modo all’esigenza di disporre di dati standardizzati e interoperabili espresse da varie comunità di utilizzatori. Su questi dati ci auguriamo possano essere sviluppate applicazioni, interfacce user-friendly e servizi utili per i cittadini, gli studenti, i ricercatori, i turisti e altre categorie di utenti. dati.beniculturali.it è la piattaforma in cui il MiBACT pubblica il proprio patrimonio informativo secondo la logica dei linked open data (LOD).
+    
+    # Catalogo dei dati aperti del MiBACT
+    
+    Il MiBACT ha avviato vari progetti di pubblicazione di dataset in formato linked open data (LOD) e open data (OD). Per conoscere tutti i dataset open del MiBACT,  consulta il [Catalogo](https://dati.beniculturali.it/descrizione_dataset/), una pagina in cui vengono elencati e descritti i dati aperti del MiBACT in un formato RDF conforme alle specifiche DCAT-AP-IT rilasciate da AGID.  Attraverso la pagina del Catalogo così realizzata, i dataset del MiBACT alimentano in maniera automatica anche il nuovo portale governativo dei dati aperti.
+    Tra i dataset disponibili attraverso l'endpoint dati.beniculturali.it troviamo ArCo e Luoghi della Cultura
+    
+    ## ArCo
+    
+    ArCo sta per Architettura della Conoscenza è il Knowledge Graph del patrimonio culturale italiano, e comprende: una rete di 7 vocabolari che descrivono il dominio dei beni culturali e i dati estratti dal Catalogo Generale dei Beni Culturali dell’ICCD-MiBAC e trasformati in RDF, in accordo con le ontologie.
+    [Questo documento](https://dati.beniculturali.it/arco/primer-guide-v1.0-it.html) descrive brevemente le ontologie incluse nella versione v1.0 di ArCo, una rete di ontologie per descrivere i diversi tipi di beni culturali e le schede catalografiche ad essi associate, gestite con il sistema SIGEC dall’Istituto Centrale per il Catalogo e la Documentazione.
+    Le ultime novità sullo sviluppo delle ontologie (anche in lingua inglese) sono disponibili a [questo indirizzo](http://wit.istc.cnr.it/arco).
+    
+    ### Query di esempio
+    
+    Di seguito verranno riportate alcuni esempi di SPARQL query progettate per recuperare dati dal Knowledge Graph ArCo. Altri esempi disponibili al seguente [indirizzo](https://dati.beniculturali.it/arco-rete-ontologie#esempi)
+    
+    1. Quali eventi culturali hanno interessato il bene culturale X?
+    
+    ```
+    PREFIX l0: <https://w3id.org/italia/onto/l0/>
+    PREFIX cis: <http://dati.beniculturali.it/cis/>
+    SELECT ?event ?eventName ?culturalProperty ?culturalPropertyLabel
+    WHERE{
+      ?event cis:involvesCulturalEntity ?culturalProperty ;
+      l0:name ?eventName .
+      ?culturalProperty rdfs:label ?culturalPropertyLabel
+    }
+    ```
+    
+    2. Quali sono le persone coinvolte nelle operazioni di redazione e aggiornamento della scheda sul bene culturale X, e con quali ruoli?
+  
+    ```
+    PREFIX arco-catalogue: <https://w3id.org/arco/ontology/catalogue/>
+    PREFIX roapit: <https://w3id.org/italia/onto/RO/>
+    SELECT *
+    WHERE{
+      ?entity arco-catalogue:hasCatalogueRecordVersion ?record . 
+      ?record arco-catalogue:hasCatalogueRecordVersionRiT ?rit . 
+      ?rit roapit:withRole ?role ;
+        roapit:isRoleInTimeOf ?agent
+    }
+    ```
+    
+    3. Quando è stata redatta e aggiornata la scheda sul bene culturale X?
+    
+    ```
+    PREFIX arco-catalogue: <https://w3id.org/arco/ontology/catalogue/>
+    SELECT *
+    WHERE{
+      ?record arco-catalogue:hasCatalogueRecordVersion ?recordVersion . 
+      ?recordVersion arco-catalogue:editedAtTime ?time .
+      ?time rdfs:label ?timeLabel
+    }
+    ```
+    
+    4. Quali sono tutte le localizzazioni in contenitori fisici che hanno riguardato il bene culturale X e di che tipo sono?
+
+    ```
+    PREFIX arco-location: <https://w3id.org/arco/ontology/location/>
+    SELECT *
+    WHERE{
+      ?entity rdfs:label ?entityLabel ;
+        arco-location:hasTimeIndexedTypedLocation ?location .
+      ?location arco-location:hasLocationType ?locationType ;
+        arco-location:atSite ?site .
+    }
+    ```
+    
+    ## Luoghi della cultura
+  
+    Il progetto mirava alla produzione di un’ontologia in  formato OWL relativa all’anagrafica e ai servizi degli Istituti e luoghi della cultura e alla descrizione degli Eventi culturali preliminare alla pubblicazione in formato Linked Open Data dei dataset sui Luoghi e sugli Eventi della Cultura, sulla base di quanto previsto dall’Agenda nazionale per la valorizzazione del patrimonio informativo pubblico per l’anno 2014 e per l’anno 2015 dell’Agenzia per l’Italia Digitale.
+
+    Il MIBACT, attraverso la Direzione generale Organizzazione, gestisce tramite il DBUnico 2.0, i dati sia anagrafici sia sui servizi offerti al pubblico dei “Luoghi della Cultura” e degli “Eventi culturali”  relativi a:
+    - circa 8000 tra aree e parchi archeologici, monumenti, complessi monumentali ed altre strutture espositive permanenti destinate alla pubblica fruizione
+    - manifestazioni culturali (mostre, conferenze, convegni, seminari, presentazioni cataloghi, ecc.) organizzate dal MIBACT e dagli Istituti periferici.
+
+    Questa Anagrafe dei luoghi della cultura costituisce:
+    
+    - Authority affidabile e condiviso dei Luoghi della Cultura, intesi come “contenitori” dei beni culturali descritti analiticamente in altri sistemi informativi.
+    - Fulcro della Linked Data Cloud del MIBACT, e punto di accesso e snodo per mettere in risalto, attraverso gli opportuni collegamenti i Linked Open Data, e relativi dataset, degli Istituti Centrali ed eventualmente , tramite opportuni accordi, delle Regioni
+
+    ### Query di esempio
+    
+     Di seguito verranno riportate alcuni esempi di SPARQL query progettate per recuperare dati dal dataset Luoghi della Cultura. Altri esempi disponibili al seguente [indirizzo](https://dati.beniculturali.it/endpoint-sparql/query-di-esempio/)
+     
+     1. "Luoghi della cultura" con i seguenti dati: Nome Istituzionale, Descrizione, Identifier, Latitudine, Longitudine, Tipo, luogo, Disciplina, Indirizzo, Codice postale, Comune, Provincia, Prenotazioni, Orari di apertura, Telefono, Fax, Email, WebSite, Biglietti,  Servizi
+     
+     ```
+      PREFIX  geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#>
+      PREFIX  l0:   <https://w3id.org/italia/onto/l0/>
+      PREFIX  rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX  clvapit: <https://w3id.org/italia/onto/CLV/>
+      PREFIX  accessCondition: <https://w3id.org/italia/onto/AccessCondition/>
+      PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX  potapit: <https://w3id.org/italia/onto/POT/>
+      PREFIX  cis:  <http://dati.beniculturali.it/cis/>
+      PREFIX  smapit: <https://w3id.org/italia/onto/SM/>
+      
+      SELECT  *
+      WHERE
+        { SELECT DISTINCT  (?s AS ?subject) ?Nome_Istituzionale ?Descrizione ?Identifier ?Latitudine ?Longitudine ?Disciplina ?Indirizzo ?Codice_postale ?Comune ?Provincia ?Prenotazioni ?Orari_di_apertura ?Telefono ?Fax ?Email ?WebSite (str(?Biglietti) AS ?Bigliettistr) ?Servizi
+          WHERE
+            { GRAPH <http://dati.beniculturali.it/mibact/luoghi>
+                { ?s  rdf:type              cis:CulturalInstituteOrSite ;
+                      cis:institutionalCISName  ?Nome_Istituzionale
+                  OPTIONAL
+                    { ?s  l0:description  ?Descrizione }
+                  OPTIONAL
+                    { ?s  l0:identifier  ?Identifier }
+                  OPTIONAL
+                    { ?s  geo:lat  ?Latitudine }
+                  OPTIONAL
+                    { ?s  geo:long  ?Longitudine }
+                  OPTIONAL
+                    { ?s    cis:hasDiscipline  _:b0 .
+                      _:b0  l0:name            ?Disciplina
+                    }
+                  OPTIONAL
+                    { ?s    cis:hasSite      _:b1 .
+                      _:b1  cis:siteAddress  ?address
+                      OPTIONAL
+                        { ?address  clvapit:fullAddress  ?Indirizzo }
+                      OPTIONAL
+                        { ?address  clvapit:postCode  ?Codice_postale }
+                      OPTIONAL
+                        { ?address  clvapit:hasCity  _:b2 .
+                          _:b2      rdfs:label       ?Comune
+                        }
+                      OPTIONAL
+                        { ?address  clvapit:hasProvince  _:b3 .
+                          _:b3      rdfs:label           ?Provincia
+                        }
+                    }
+                  OPTIONAL
+                    { ?s    accessCondition:hasAccessCondition  _:b4 .
+                      _:b4  rdf:type              accessCondition:Booking ;
+                            rdfs:label            ?Prenotazioni
+                    }
+                  OPTIONAL
+                    { ?s    accessCondition:hasAccessCondition  _:b5 .
+                      _:b5  rdf:type              accessCondition:OpeningHoursSpecification ;
+                            l0:description        ?Orari_di_apertura
+                    }
+                  OPTIONAL
+                    { ?s  smapit:hasOnlineContactPoint  ?contactPoint
+                      OPTIONAL
+                        { ?contactPoint
+                                    smapit:hasTelephone   _:b6 .
+                          _:b6      smapit:hasTelephoneType  <https://w3id.org/italia/controlled-vocabulary/classifications-for-public-services/channel/031> ;
+                                    smapit:telephoneNumber  ?Telefono
+                        }
+                      OPTIONAL
+                        { ?contactPoint
+                                    smapit:hasTelephone   _:b7 .
+                          _:b7      smapit:hasTelephoneType  <https://w3id.org/italia/controlled-vocabulary/classifications-for-public-services/channel/033> ;
+                                    smapit:telephoneNumber  ?Fax
+                        }
+                      OPTIONAL
+                        { ?contactPoint
+                                    smapit:hasEmail      _:b8 .
+                          _:b8      smapit:emailAddress  ?Email
+                        }
+                      OPTIONAL
+                        { ?contactPoint
+                                    smapit:hasWebSite  _:b9 .
+                          _:b9      smapit:URL         ?WebSite
+                        }
+                    }
+                  OPTIONAL
+                    { ?s      potapit:hasTicket     ?ticket .
+                      ?offer  potapit:includes      ?ticket ;
+                              potapit:hasPriceSpecification  _:b10 .
+                      _:b10   potapit:hasCurrencyValue  ?Biglietti
+                    }
+                  OPTIONAL
+                    { ?s     cis:providesService  _:b11 .
+                      _:b11  l0:name              ?Servizi
+                    }
+                }
+            }
+          ORDER BY ?s
+        }
+      ```
+      
+      2. Recupera tutti i contenitori fisici che sono anche beni architettonici
+      
+      ```
+      PREFIX  owl:  <http://www.w3.org/2002/07/owl#>
+      PREFIX  a-cat: <https://w3id.org/arco/ontology/catalogue/>
+      
+      SELECT DISTINCT  ?cf ?sc
+      WHERE
+        {   { ?sc  owl:sameAs  ?cf }
+          UNION
+            { ?cf  owl:sameAs  ?sc }
+          ?sc  a-cat:isDescribedByCatalogueRecord  ?cr
+        }
+      ```
   termsOfService: 'https://dati.beniculturali.it/'
   contact:
     email: dati@beniculturali.it
