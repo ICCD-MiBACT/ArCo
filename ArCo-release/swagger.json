@@ -1,0 +1,89 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Virtuoso SPARQL endpoint dati.beniculturali.it",
+    "description": "E’ un’interfaccia machine-to-machine che offre LOD interrogabili direttamente da qualsiasi applicazione, rispondendo in tal modo all’esigenza di disporre di dati standardizzati e interoperabili espresse da varie comunità di utilizzatori. Su questi dati ci auguriamo possano essere sviluppate applicazioni, interfacce user-friendly e servizi utili per i cittadini, gli studenti, i ricercatori, i turisti e altre categorie di utenti. dati.beniculturali.it è la piattaforma in cui il MiBACT pubblica il proprio patrimonio informativo secondo la logica dei linked open data (LOD).",
+    "termsOfService": "https://dati.beniculturali.it/",
+    "contact": {
+      "email": "dati@beniculturali.it"
+    },
+    "license": {
+      "name": "CC-BY-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "version": "1.2.4"
+  },
+  "tags": [
+    {
+      "name": "sparql",
+      "description": "Perform a SPARQL query against the data"
+    }
+  ],
+  "paths": {
+    "/sparql": {
+      "get": {
+        "tags": [
+          "sparql"
+        ],
+        "summary": "Retrieve sparql",
+        "operationId": "getSparql",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "description": "The SPARQL query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Query results",
+            "content": {
+              "application/sparql-results+json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/sparql-results+xml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "string",
+                  "example": "subject,predicate,object"
+                }
+              },
+              "text/tab-separated-values": {
+                "schema": {
+                  "type": "string",
+                  "example": "?subject ?predicate ?object"
+                }
+              },
+              "application/x-binary-rdf-results-table": {
+                "schema": {
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request or malformed SPARQL"
+          },
+          "500": {
+            "description": "Fatal error"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://dati.beniculturali.it"
+    }
+  ]
+}
