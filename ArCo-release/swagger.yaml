@@ -236,7 +236,7 @@ paths:
               $ref: '#/components/examples/CaravaggioMasterpieces'
       responses:
         '200':
-          description: Query results
+          description: The SparQL query has been processed successfully.
           content:
             application/sparql-results+json:
               schema:
@@ -247,13 +247,17 @@ paths:
             text/csv:
               schema:
                 type: string
-                example: 'subject,predicate,object'
+                example: |-
+                  "subject","predicate","object"
+                  "foo","meets","bar"
+                  "one","meets","two"
             text/tab-separated-values:
               schema:
                 type: string
                 example: '?subject ?predicate ?object'
             application/x-binary-rdf-results-table:
               schema:
+                type: string
                 format: binary
         '400':
           description: Bad request or malformed SPARQL
