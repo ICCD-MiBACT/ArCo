@@ -232,6 +232,8 @@ paths:
               $ref: '#/components/examples/AuthorsWithLimits'
             CulturalPlacesInVinci:
               $ref: '#/components/examples/CulturalPlacesInVinci'
+            CaravaggioMasterpieces:
+              $ref: '#/components/examples/CaravaggioMasterpieces'
       responses:
         '200':
           description: Query results
@@ -262,6 +264,29 @@ servers:
     description: Production
 components:
   examples:
+    CaravaggioMasterpieces:
+      summary: First 5 Caravaggio's masterpieces
+      value: >-
+        SELECT DISTINCT 
+          ?masterpiece
+          SAMPLE(?masterpiece_name)      # show only one localized string
+          SAMPLE(?masterpiece_address)   # show only one localized string
+        WHERE {
+         ?author_url a-cd:pseudonym ?x             
+         . ?author_url rdfs:label ?author_label 
+         . ?author_url a-cd:isAuthorOf ?masterpiece 
+         . ?masterpiece rdfs:label ?masterpiece_name 
+         . ?masterpiece a-loc:hasTimeIndexedTypedLocation [
+              a-loc:hasLocationType a-loc:CurrentPhysicalLocation # pick only the current location
+              ; a-loc:atSite/cis:siteAddress/rdfs:label ?masterpiece_address # set ?masterpiece_address
+            ]
+         FILTER( 
+            langMatches(lang(?masterpiece_name),"en")
+            && REGEX(?author_label, "merisi.*caravaggio", "i")
+         )
+        }
+        GROUP BY ?masterpiece
+        LIMIT 5
     AuthorsWithLimits:
       summary: First 10 authors
       value: >-
