@@ -202,6 +202,8 @@ info:
         }
       ```
   termsOfService: 'https://dati.beniculturali.it/'
+  x-summary: >-
+    Ricerca le opere d'arte, i luoghi della cultura e le altre informazioni del dataset dei Beni Culturali.
   contact:
     email: dati@beniculturali.it
   license:
@@ -225,9 +227,16 @@ paths:
           required: true
           schema:
             type: string
+          examples:
+            AuthorsWithLimits:
+              $ref: '#/components/examples/AuthorsWithLimits'
+            CulturalPlacesInVinci:
+              $ref: '#/components/examples/CulturalPlacesInVinci'
+            CaravaggioMasterpieces:
+              $ref: '#/components/examples/CaravaggioMasterpieces'
       responses:
         '200':
-          description: Query results
+          description: The SparQL query has been processed successfully.
           content:
             application/sparql-results+json:
               schema:
@@ -238,13 +247,17 @@ paths:
             text/csv:
               schema:
                 type: string
-                example: 'subject,predicate,object'
+                example: |-
+                  "subject","predicate","object"
+                  "foo","meets","bar"
+                  "one","meets","two"
             text/tab-separated-values:
               schema:
                 type: string
                 example: '?subject ?predicate ?object'
             application/x-binary-rdf-results-table:
               schema:
+                type: string
                 format: binary
         '400':
           description: Bad request or malformed SPARQL
@@ -252,3 +265,57 @@ paths:
           description: Fatal error
 servers:
   - url: 'https://dati.beniculturali.it'
+    description: Production
+components:
+  examples:
+    CaravaggioMasterpieces:
+      summary: First 5 Caravaggio's masterpieces
+      value: >-
+        SELECT DISTINCT 
+          ?masterpiece
+          SAMPLE(?masterpiece_name)      # show only one localized string
+          SAMPLE(?masterpiece_address)   # show only one localized string
+        WHERE {
+         ?author_url a-cd:pseudonym ?x             
+         . ?author_url rdfs:label ?author_label 
+         . ?author_url a-cd:isAuthorOf ?masterpiece 
+         . ?masterpiece rdfs:label ?masterpiece_name 
+         . ?masterpiece a-loc:hasTimeIndexedTypedLocation [
+              a-loc:hasLocationType a-loc:CurrentPhysicalLocation # pick only the current location
+              ; a-loc:atSite/cis:siteAddress/rdfs:label ?masterpiece_address # set ?masterpiece_address
+            ]
+         FILTER( 
+            langMatches(lang(?masterpiece_name),"en")
+            && REGEX(?author_label, "merisi.*caravaggio", "i")
+         )
+        }
+        GROUP BY ?masterpiece
+        LIMIT 5
+    AuthorsWithLimits:
+      summary: First 10 authors
+      value: >-
+        SELECT DISTINCT 
+          ?author_url 
+          (GROUP_CONCAT(?author_label; SEPARATOR=";") AS ?author_names)
+        { 
+        
+         ?author_url a-cd:pseudonym ?x .
+         ?author_url rdfs:label ?author_label
+        }
+        LIMIT 10
+    CulturalPlacesInVinci:
+      summary: Cultural places in Latina
+      value: >-
+        SELECT DISTINCT ?luogo ?indirizzo ?comune
+        WHERE {
+         ?x a cis:CulturalInstituteOrSite ;
+          cis:institutionalCISName ?luogo ;
+          cis:hasSite ?site .
+         ?site cis:siteAddress ?address .
+         ?address clvapit:fullAddress ?indirizzo ;
+                  clvapit:hasCity [rdfs:label ?comune] .
+         FILTER regex(str(?comune), "Vinci", "i")
+        } 
+        ORDER BY ?luogo
+        LIMIT 100
+
