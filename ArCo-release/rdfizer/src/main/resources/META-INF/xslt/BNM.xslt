@@ -227,7 +227,33 @@
 			</l0:name>
 		</xsl:element>
 	</xsl:template>
-
+	<xsl:variable name="aco">
+		<xsl:if test="record/metadata/schede/*/AC/ACO">
+			<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/AC/ACO)" />
+		</xsl:if>
+	</xsl:variable>
+	<xsl:variable name="acm">
+		<xsl:if test="record/metadata/schede/*/AC/ACM">
+			<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/AC/ACM)" />
+		</xsl:if>
+	</xsl:variable>
+	<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
+	<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
+	<xsl:variable name="ecp" select="record/metadata/schede/*/CD/ECP"></xsl:variable>
+	<xsl:variable name="ogtc" select="record/metadata/schede/*/OG/OGT/OGTC"></xsl:variable>	
+	<xsl:variable name="specimencollection">
+		<xsl:choose>
+			<xsl:when test="record/metadata/schede/*/AC/ACO">				
+				<xsl:value-of select="concat($NS, 'SpecimenCollection/', $acm, '-', $aco)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/LC/LDC/LDCM">
+				<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ldcm, '-', $pvcc)" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ecp, '-', $ogtc)" />
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
 <xsl:template match="/">
 	<rdf:RDF>
 	<!-- Properties of MineralHeritage -->
@@ -249,38 +275,26 @@
 				</l0:identifier>
 			</xsl:if>
 		</xsl:if>
-		<xsl:if test="$sheetType='BNM' or $sheetType='BNPE' or $sheetType='BNPL' or $sheetType='BNZ'">
+	 <xsl:if test="$sheetType='BNM' or $sheetType='BNPE' or $sheetType='BNPL' or $sheetType='BNZ'">
 			<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
 			<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
-			<xsl:variable name="ldcm"><xsl:for-each select="record/metadata/schede/*/LC/LDC/LDCM"><xsl:value-of select="arco-fn:urify(.)"/></xsl:for-each></xsl:variable>
-			<xsl:variable name="pvcc"><xsl:for-each select="record/metadata/schede/*/LC/PVC/PVCC"><xsl:value-of select="arco-fn:urify(.)"/></xsl:for-each></xsl:variable>
-			<xsl:variable name="ecp" select="arco-fn:urify(record/metadata/schede/*/CD/ECP)"></xsl:variable>
-			<xsl:variable name="ogtc"><xsl:for-each select="record/metadata/schede/*/OG/OGT/OGTC"><xsl:value-of select="arco-fn:urify(.)"/></xsl:for-each></xsl:variable>
+			<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
+			<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
+			<xsl:variable name="ecp" select="record/metadata/schede/*/CD/ECP"></xsl:variable>
+			<xsl:variable name="ogtc" select="record/metadata/schede/*/OG/OGT/OGTC"></xsl:variable>		
+			<xsl:if test="record/metadata/schede/*/AC/ACO or record/metadata/schede/*/LC/LDC/LDCM or record/metadata/schede/*/OG/OGT/OGTC">
 			<arco-cd:isMemberOfSpecimenCollectionOf>
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS, 'SpecimenCollectionMembership/', $itemURI)" />
 				</xsl:attribute>
 			</arco-cd:isMemberOfSpecimenCollectionOf>
+			</xsl:if>
 			<arco-cd:isSpecimenMemberOf>
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/AC/ACO">
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'SpecimenCollection/', $acm, '-', $aco)" />
-						</xsl:attribute>
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/LC/LDC/LDCM">
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ldcm, '-', $pvcc)" />
-						</xsl:attribute>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ecp, '-', $ogtc)" />
-						</xsl:attribute>
-					</xsl:otherwise>
-				</xsl:choose>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="$specimencollection" />
+				</xsl:attribute>
 			</arco-cd:isSpecimenMemberOf>
-		</xsl:if>
+		</xsl:if>	
 		<xsl:if test="record/metadata/schede/BNM/SM/SMN/*">
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -376,12 +390,6 @@
 		    	</xsl:choose>
 			</arco-core:isIdentifiedBy>
 		</xsl:for-each>
-			
-		<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNP">
-			<arco-spe:polytype>
-				<xsl:value-of select="true()" />
-			</arco-spe:polytype>
-		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMN/*">
 			<arco-core:hasClassificationInTime>
 				<xsl:attribute name="rdf:resource">
@@ -4045,8 +4053,7 @@
 				</xsl:for-each>
 			</xsl:if>
 		</rdf:Description>
-		
-					<!-- Bibliography as individual -->
+		<!-- Bibliography as individual -->
 		<xsl:if test="record/metadata/schede/BNM/SM/SMT/SMTB">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -6930,28 +6937,14 @@
 	<xsl:if test="$sheetType='BNM' or $sheetType='BNPE' or $sheetType='BNPL' or $sheetType='BNZ'">
 		<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
 		<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
-		<xsl:variable name="ldcm"><xsl:for-each select="record/metadata/schede/*/LC/LDC/LDCM"><xsl:value-of select="arco-fn:urify(.)"/></xsl:for-each></xsl:variable>
-		<xsl:variable name="pvcc"><xsl:for-each select="record/metadata/schede/*/LC/PVC/PVCC"><xsl:value-of select="arco-fn:urify(.)"/></xsl:for-each></xsl:variable>
-		<xsl:variable name="ecp" select="arco-fn:urify(record/metadata/schede/*/CD/ECP)"></xsl:variable>
-		<xsl:variable name="ogtc"><xsl:for-each select="record/metadata/schede/*/OG/OGT/OGTC"><xsl:value-of select="arco-fn:urify(.)"/></xsl:for-each></xsl:variable>				
+		<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
+		<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
+		<xsl:variable name="ecp" select="record/metadata/schede/*/CD/ECP"></xsl:variable>
+		<xsl:variable name="ogtc" select="record/metadata/schede/*/OG/OGT/OGTC"></xsl:variable>				
 		<rdf:Description>
-			<xsl:choose>
-				<xsl:when test="record/metadata/schede/*/AC/ACO">
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'SpecimenCollection/', $acm, '-', $aco)" />
-					</xsl:attribute>
-				</xsl:when>
-				<xsl:when test="record/metadata/schede/*/LC/LDC/LDCM">
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ldcm, '-', $pvcc)" />
-					</xsl:attribute>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ecp, '-', $ogtc)" />
-					</xsl:attribute>
-				</xsl:otherwise>
-			</xsl:choose>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="$specimencollection" />
+			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of	select="'https://w3id.org/arco/ontology/natural-specimen-description/SpecimenCollection'" />
@@ -6987,15 +6980,15 @@
 				</l0:identifier>
 			</xsl:if>
 		</rdf:Description>
-	</xsl:if>	
+	</xsl:if>
 				<!-- natural heritage collection membership membership -->
-	<xsl:if test="$sheetType='BNM' or $sheetType='BNPE' or $sheetType='BNPL' or $sheetType='BNZ'">
-		<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
-		<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
-		<xsl:variable name="ldcm"><xsl:for-each select="record/metadata/schede/*/LC/LDC/LDCM"><xsl:value-of select="arco-fn:urify(.)"/></xsl:for-each></xsl:variable>
-		<xsl:variable name="pvcc"><xsl:for-each select="record/metadata/schede/*/LC/PVC/PVCC"><xsl:value-of select="arco-fn:urify(.)"/></xsl:for-each></xsl:variable>
-		<xsl:variable name="ecp" select="arco-fn:urify(record/metadata/schede/*/CD/ECP)"></xsl:variable>
-		<xsl:variable name="ogtc"><xsl:for-each select="record/metadata/schede/*/OG/OGT/OGTC"><xsl:value-of select="arco-fn:urify(.)"/></xsl:for-each></xsl:variable>
+ 	<xsl:if test="$sheetType='BNM' or $sheetType='BNPE' or $sheetType='BNPL' or $sheetType='BNZ'">
+	<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
+			<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
+			<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
+			<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
+			<xsl:variable name="ecp" select="record/metadata/schede/*/CD/ECP"></xsl:variable>
+			<xsl:variable name="ogtc" select="record/metadata/schede/*/OG/OGT/OGTC"></xsl:variable>	
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS, 'SpecimenCollectionMembership/', $itemURI)" />
@@ -7019,17 +7012,7 @@
 			</l0:name>
 			<arco-cd:hasCollection>
 				<xsl:attribute name="rdf:resource">
-					<xsl:choose>
-						<xsl:when test="record/metadata/schede/*/AC/ACO">
-							<xsl:value-of select="concat($NS, 'SpecimenCollection/', $acm, '-', $aco)" />
-						</xsl:when>
-						<xsl:when test="record/metadata/schede/*/LC/LDC/LDCM">
-							<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ldcm, '-', $pvcc)" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ecp, '-', $ogtc)" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:value-of select="$specimencollection" />
 				</xsl:attribute>
 			</arco-cd:hasCollection>
 		</rdf:Description>

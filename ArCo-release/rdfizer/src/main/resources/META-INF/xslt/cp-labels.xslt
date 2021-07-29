@@ -393,45 +393,8 @@
 			</xsl:when>
 			<xsl:when test="$sheetType='MODI'">
 				<xsl:choose>
-					<xsl:when test="record/metadata/schede/MODI/DT/DTS/DTSI or record/metadata/schede/MODI/DT/DTS/DTSF">
-							<xsl:variable name="startDate">
-								<xsl:choose>
-									<xsl:when test="record/metadata/schede/MODI/DT/DTS/DTSV">
-										<xsl:value-of select="concat(normalize-space(string-join(record/metadata/schede/MODI/DT/DTS/DTSV,', ')), ' ', normalize-space(string-join(record/metadata/schede/MODI/DT/DTS/DTSI,', ')))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="normalize-space(string-join(record/metadata/schede/MODI/DT/DTS/DTSI,', '))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="endDate">
-								<xsl:choose>
-									<xsl:when test="record/metadata/schede/MODI/DT/DTS/DTSL">
-										<xsl:value-of select="concat(normalize-space(string-join(record/metadata/schede/MODI/DT/DTS/DTSL,', ')), ' ', normalize-space(string-join(record/metadata/schede/MODI/DT/DTS/DTSF,', ')))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="normalize-space(string-join(record/metadata/schede/MODI/DT/DTS/DTSF,', '))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-						<xsl:value-of select="concat(' (', $startDate, ' - ', $endDate, ')')" /><!-- multiple DTF eg:ICCD8531832 -->
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:value-of select="''" />
-					</xsl:otherwise>
-				</xsl:choose>
-			</xsl:when>
-			<xsl:when test="record/metadata/schede/MODI/DT/DTS">
-				<xsl:choose>
-					<xsl:when test="not(record/metadata/schede/*/DT[1]/DTN/DTNS)"><!-- TODO multiple values? (DT maxOccurs unbounded) -->
-						<xsl:choose>
-							<xsl:when test="record/metadata/schede/*/DT[1]/DTZ/DTZS">
-								<xsl:value-of select="concat(' (', record/metadata/schede/*/DT[1]/DTZ/DTZG, ', ',  record/metadata/schede/*/DT[1]/DTZ/DTZS, ')')" />
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:value-of select="concat(' (', record/metadata/schede/*/DT[1]/DTZ/DTZG, ')')" />
-							</xsl:otherwise>
-						</xsl:choose>
+					<xsl:when test="record/metadata/schede/MODI/DT/DTR">					
+						<xsl:value-of select="concat(' (', record/metadata/schede/MODI/DT/DTR, ')')" /><!-- multiple DTF eg:ICCD8531832 -->
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="''" />
@@ -439,7 +402,47 @@
 				</xsl:choose>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="''" />
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/DT/DTZ"><!-- TODO multiple values? (DT maxOccurs unbounded) -->
+					<xsl:variable name="date">
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/DT/DTZ/DTZS">
+								<xsl:value-of select="concat(normalize-space(string-join(record/metadata/schede/*/DT/DTZ/DTZS,', ')), ' ', normalize-space(string-join(record/metadata/schede/*/DT/DTZ/DTZG,', ')))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="normalize-space(string-join(record/metadata/schede/*/DT/DTZ/DTZG,', '))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+						<xsl:value-of select="concat(' (', $date, ')')" />
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/*/DT/DTS"><!-- TODO multiple values? (DT maxOccurs unbounded) -->
+					<xsl:variable name="startDate">
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/DT/DTS/DTSV">
+								<xsl:value-of select="concat(normalize-space(string-join(record/metadata/schede/*/DT/DTS/DTSV,', ')), ' ', normalize-space(string-join(record/metadata/schede/*/DT/DTS/DTSI,', ')))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="normalize-space(string-join(record/metadata/schede/*/DT/DTS/DTSI,', '))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="endDate">
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/DT/DTS/DTSL">
+								<xsl:value-of select="concat(normalize-space(string-join(record/metadata/schede/*/DT/DTS/DTSL,', ')), ' ', normalize-space(string-join(record/metadata/schede/*/DT/DTS/DTSF,', ')))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="normalize-space(string-join(record/metadata/schede/*/DT/DTS/DTSF,', '))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+						<xsl:value-of select="concat(' (', $startDate, ' - ', $endDate, ')')" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="''" />
+					</xsl:otherwise>
+				</xsl:choose>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
