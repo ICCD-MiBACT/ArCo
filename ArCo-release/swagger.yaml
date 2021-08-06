@@ -2,12 +2,17 @@ openapi: 3.0.1
 info:
   title: SPARQL endpoint dati.beniculturali.it
   description: | 
-    E’ un’interfaccia machine-to-machine che offre LOD interrogabili direttamente da qualsiasi applicazione, rispondendo in tal modo all’esigenza di disporre di dati standardizzati e interoperabili espresse da varie comunità di utilizzatori. Su questi dati ci auguriamo possano essere sviluppate applicazioni, interfacce user-friendly e servizi utili per i cittadini, gli studenti, i ricercatori, i turisti e altre categorie di utenti. dati.beniculturali.it è la piattaforma in cui il MiBACT pubblica il proprio patrimonio informativo secondo la logica dei linked open data (LOD).
+    Ricerca i beni culturali, i luoghi della cultura, gli archivi fotografici e altre informazioni sul patrimonio culturale italiano.
+
+    E’ un’interfaccia machine-to-machine che offre linked open data interrogabili direttamente da qualsiasi applicazione, rispondendo in tal modo all’esigenza di disporre di dati standardizzati e interoperabili espresse da varie comunità di utilizzatori. Su questi dati possono essere sviluppate applicazioni, interfacce user-friendly e servizi utili per i cittadini, gli studenti, i ricercatori, i turisti e altre categorie di utenti. [dati.beniculturali.it](https://dati.beniculturali.it) è la piattaforma in cui il MiC pubblica il proprio patrimonio informativo secondo la logica dei linked open data (LOD).
     
     # Catalogo dei dati aperti del MiBACT
     
-    Il MiBACT ha avviato vari progetti di pubblicazione di dataset in formato linked open data (LOD) e open data (OD). Per conoscere tutti i dataset open del MiBACT,  consulta il [Catalogo](https://dati.beniculturali.it/descrizione_dataset/), una pagina in cui vengono elencati e descritti i dati aperti del MiBACT in un formato RDF conforme alle specifiche DCAT-AP-IT rilasciate da AGID.  Attraverso la pagina del Catalogo così realizzata, i dataset del MiBACT alimentano in maniera automatica anche il nuovo portale governativo dei dati aperti.
-    Tra i dataset disponibili attraverso l'endpoint dati.beniculturali.it troviamo ArCo e Luoghi della Cultura
+    Il MiC ha avviato vari progetti di pubblicazione di dataset in formato linked open data (LOD) e open data (OD). Per conoscere tutti i dataset open del MiC, consulta il [Catalogo](https://dati.beniculturali.it/descrizione_dataset/), una pagina in cui vengono elencati e descritti i dati aperti del MiC in un formato RDF conforme alle specifiche DCAT-AP-IT rilasciate da AGID. Attraverso la pagina del Catalogo così realizzata, i dataset del MiC alimentano in maniera automatica anche il nuovo portale governativo dei dati aperti. Tra i dataset disponibili attraverso l'endpoint [dati.beniculturali.it](https://dati.beniculturali.it) troviamo il catalogo generale dei beni culturali ei luoghi della cultura
+    
+    ## Catalogo generale dei beni culturali
+    
+    Oltre 2.500.000 schede del Catalogo generale dei beni culturali sono state pubblicate in linked open data nell’ambito del progetto ArCo. ArCo sta per Architettura della Conoscenza è il Knowledge Graph del patrimonio culturale italiano, e comprende: una rete di 7 vocabolari che descrivono il dominio dei beni culturali e i dati estratti dal Catalogo Generale dei Beni Culturali dell’ICCD-MiC e trasformati in RDF, in accordo con le ontologie. [Questo documento](https://dati.beniculturali.it/arco/primer-guide-v1.0-it.html) descrive brevemente le ontologie incluse nella versione v1.0 di ArCo, una rete di ontologie per descrivere i diversi tipi di beni culturali e le schede catalografiche ad essi associate, gestite con il sistema SIGEweb  dall’Istituto Centrale per il Catalogo e la Documentazione. Le ultime novità sullo sviluppo delle ontologie (anche in lingua inglese) sono disponibili a [questo indirizzo](http://wit.istc.cnr.it/arco).
     
     ## ArCo
     
@@ -318,4 +323,3 @@ components:
         } 
         ORDER BY ?luogo
         LIMIT 100
-
