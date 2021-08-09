@@ -6,7 +6,7 @@ info:
 
     E’ un’interfaccia machine-to-machine che offre linked open data interrogabili direttamente da qualsiasi applicazione, rispondendo in tal modo all’esigenza di disporre di dati standardizzati e interoperabili espresse da varie comunità di utilizzatori. Su questi dati possono essere sviluppate applicazioni, interfacce user-friendly e servizi utili per i cittadini, gli studenti, i ricercatori, i turisti e altre categorie di utenti. [dati.beniculturali.it](https://dati.beniculturali.it) è la piattaforma in cui il MiC pubblica il proprio patrimonio informativo secondo la logica dei linked open data (LOD).
     
-    # Catalogo dei dati aperti del MiBACT
+    # Catalogo dei dati aperti del MIC
     
     Il MiC ha avviato vari progetti di pubblicazione di dataset in formato linked open data (LOD) e open data (OD). Per conoscere tutti i dataset open del MiC, consulta il [Catalogo](https://dati.beniculturali.it/descrizione_dataset/), una pagina in cui vengono elencati e descritti i dati aperti del MiC in un formato RDF conforme alle specifiche DCAT-AP-IT rilasciate da AGID. Attraverso la pagina del Catalogo così realizzata, i dataset del MiC alimentano in maniera automatica anche il nuovo portale governativo dei dati aperti. Tra i dataset disponibili attraverso l'endpoint [dati.beniculturali.it](https://dati.beniculturali.it) troviamo il catalogo generale dei beni culturali ei luoghi della cultura
     
