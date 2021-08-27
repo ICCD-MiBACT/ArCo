@@ -31,13 +31,13 @@
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/arco/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/0.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/construction/0.1"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event/1.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.2"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/immovable-property/0.2"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/1.2"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/movable-property/0.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/0.1"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
@@ -78,8 +78,8 @@ In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">ArCo Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia ArCo (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.2</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.2</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.3</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.3</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -318,6 +318,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco/isCulturalPropertyComponentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ComplexCulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyComponent"/>
+        <opla:isNativeTo>https://w3id.org/arco/pattern/cultural-property-component-of/</opla:isNativeTo>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale complesso a una delle sue parti componenti.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property to its components.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
@@ -717,6 +718,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/ComplexCulturalProperty"/>
+        <opla:isNativeTo>https://w3id.org/arco/pattern/cultural-property-component-of/</opla:isNativeTo>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha componente&quot;, collega una delle parti componenti di un bene culturale complesso al bene complesso stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property, inverse of &quot;has component&quot;, relates a component of a complex cultural property to the complex cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
@@ -1712,7 +1714,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/numberOfElements">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/numberOfParts"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ComplexCulturalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
         <rdfs:comment xml:lang="it">Questa propietà rappresenta  il numero complessivo, espresso in cifre, degli elementi che costituiscono il bene catalogato, nel caso esso sia un insieme o una serie i cui esemplari/oggetti componenti comprendono ciascuno più elementi.</rdfs:comment>
         <rdfs:label xml:lang="en">This property represents the total number of elements of a complex cultural property, when it is composed by parts containing more elements.</rdfs:label>
@@ -2331,6 +2333,7 @@ In this module the following Ontology Design Patterns have been used:
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <opla:isNativeTo>https://w3id.org/arco/pattern/cultural-property-component-of/</opla:isNativeTo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale complesso, cioè costituito da più parti componenti.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a complex cultural property, that consists of different components.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
@@ -2771,6 +2774,7 @@ In this module the following Ontology Design Patterns have been used:
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <opla:isNativeTo>https://w3id.org/arco/pattern/cultural-property-component-of/</opla:isNativeTo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una parte componente di un bene culturale complesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a component of a complex cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>

@@ -22,7 +22,7 @@
      xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/0.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/COV"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/TI"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -363,6 +363,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign/applicationDate">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/TI/date"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Application"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una richiesta alla data in cui è stata creata</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an application to the date of its creation</rdfs:comment>
         <rdfs:label xml:lang="en">application date</rdfs:label>
@@ -378,6 +379,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign/approvalDate">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/TI/date"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Application"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una richiesta alla data di approvazione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an application to the date of its approval</rdfs:comment>
         <rdfs:label xml:lang="en">approval date</rdfs:label>

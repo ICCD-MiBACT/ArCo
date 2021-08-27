@@ -25,8 +25,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/denotative-description">
-        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.2"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
@@ -64,8 +64,8 @@ In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Denotative Description Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia della Descrizione Denotativa (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.2</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.2</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.3</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.3</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -356,13 +356,14 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasClimateSituation">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isClimateSituationOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ClimateSituation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ambiente alla situazione climatica</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the ambient to the climate situation</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha situazione climatica</rdfs:label>
         <rdfs:label xml:lang="en">has climate situation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -418,6 +419,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha tipo di modalità comunicativa</rdfs:label>
         <rdfs:label xml:lang="en">has communication medium type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: CU</a-cat:iccdNormTag>
@@ -456,6 +458,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha tipo di stato di conservazione</rdfs:label>
         <rdfs:label xml:lang="en">has conservation status type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>CO/STC/STCC</a-cat:iccdNormTag>
@@ -635,11 +638,12 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasEnvironment">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isEnvironmentOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una cosa all&apos;ambiente in cui è inserito</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a thing to its environment</rdfs:comment>
         <rdfs:label xml:lang="it">ha ambiente</rdfs:label>
         <rdfs:label xml:lang="en">has environment</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -805,6 +809,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha tipo di apparato iconografico e decorativo</rdfs:label>
         <rdfs:label xml:lang="en">has iconographic or decorative apparatus type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1150,6 +1155,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha tipo di campione prelevato</rdfs:label>
         <rdfs:label xml:lang="en">has sample collected type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</a-cat:iccdNormTag>
@@ -1187,6 +1193,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha suolo</rdfs:label>
         <rdfs:label xml:lang="en">has soil</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1204,6 +1211,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha uso del suolo</rdfs:label>
         <rdfs:label xml:lang="en">has soil use</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1432,6 +1440,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/involvesAccompanyingInstrument -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesAccompanyingInstrument">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isAccompanyingInstrumentInvolvedIn"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MusicalInstrument"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/involvesAgeRange -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesAgeRange">
@@ -1450,6 +1467,31 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/involvesElement -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesElement">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isElementInvolvedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/involvesMainAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesMainAgent">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMainAgentInvolvedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/involvesSoloInstrument -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesSoloInstrument">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSoloInstrumentInvolvedIn"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MusicalInstrument"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isAccessoryOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isAccessoryOf">
@@ -1462,6 +1504,14 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è accessorio di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isAccompanyingInstrumentInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isAccompanyingInstrumentInvolvedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MusicalInstrument"/>
     </owl:ObjectProperty>
     
 
@@ -1539,12 +1589,13 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isClimateSituationOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/ClimateSituation"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la situazione climatica all&apos;ambiente</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the climate situation to the ambient</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is climate situation of</rdfs:label>
         <rdfs:label xml:lang="it">è situazione climatica di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1802,16 +1853,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isElementInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isElementInvolvedIn"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isEnvironmentOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isEnvironmentOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ambiente al bene culturale</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the environment to the cultural property</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is environment of</rdfs:label>
         <rdfs:label xml:lang="it">è ambiente di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2032,6 +2090,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isMainAgentInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMainAgentInvolvedIn"/>
     
 
 
@@ -2331,6 +2395,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is soil of</rdfs:label>
         <rdfs:label xml:lang="it">è suolo di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2347,8 +2412,17 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha uso del suolo</rdfs:label>
         <rdfs:label xml:lang="en">has soil use</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isSoloInstrumentInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSoloInstrumentInvolvedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MusicalInstrument"/>
     </owl:ObjectProperty>
     
 
@@ -2441,7 +2515,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno stato tecnico di un&apos;entità culturale a un&apos;entità culturale. Lo stato è valido fino a determinato momento ed è rappresentato dalle caratteristiche tecniche che il bene culturale ha in quel momento.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a technical status to a cultural entity. This status is valid until a specific moment and is represented by the technical characteristics that a cultural entity has in that moment.</rdfs:comment>
@@ -2465,6 +2539,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is cultural entity technical status valid at</rdfs:label>
         <rdfs:label xml:lang="it">è stato tecnico di entità culturale valido fino a</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2515,6 +2590,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is time interval valid for</rdfs:label>
         <rdfs:label xml:lang="it">è intervallo di tempo valido per</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2717,6 +2793,22 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/currentMeasurementCollection -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/currentMeasurementCollection">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/currentTechnicalStatus -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/currentTechnicalStatus">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/geologicalDescription -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/geologicalDescription">
@@ -2728,6 +2820,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">descrizione geologica</rdfs:label>
         <rdfs:label xml:lang="en">geological description</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -2778,6 +2871,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">descrizione morfologica</rdfs:label>
         <rdfs:label xml:lang="en">morphological description</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -3213,7 +3307,7 @@ resource:Inscription/1200865151-inscription-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isAffixedElementTypeOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3251,6 +3345,14 @@ resource:Inscription/1200865151-inscription-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/Animal -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Animal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Brand -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Brand">
@@ -3280,7 +3382,7 @@ resource:Inscription/1200865151-inscription-1
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isClimateSituationOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la situazione climatica.</rdfs:comment>
@@ -3288,6 +3390,7 @@ resource:Inscription/1200865151-inscription-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">Climate situation</rdfs:label>
         <rdfs:label xml:lang="it">Situazione climatica</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -3348,7 +3451,7 @@ resource:Inscription/1200865151-inscription-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasCommunicationMediumType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3406,7 +3509,7 @@ resource:Inscription/1200865151-inscription-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCommunicationMediumTypeOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3434,7 +3537,7 @@ resource:Inscription/1200865151-inscription-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasConservationStatusType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3476,7 +3579,7 @@ resource:ConservationStatus/0900750201-conservation-status-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isConservationStatusTypeOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3530,7 +3633,7 @@ resource:ConservationStatus/0900750201-conservation-status-1
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la descrizione tecnica di un&apos;entità culturale, la quale utilizza tutti i concetti tecnici che possono classificare caratteristiche tecniche possedute da un&apos;entità culturale. Questa classe è un tipo particolare di Description, la classe degli oggetti costruiti socialmente (testi, valori, categorie, relazioni, contesti), usati per descrivere qualcos&apos;altro in modo strutturato.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the technical description of a cultural entity, which uses all the technical concepts classifying the technical characteristics that a cultural entity can have. This class is a particular type of the class Description, which is the class for socially constructed objects (i.e. texts, values, categories, relations, contexts) used to describe other objects in a structured manner.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/denotative-description/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">Cultural entity technical description</rdfs:label>
         <rdfs:label xml:lang="it">Descrizione tecnica di entità culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3542,23 +3645,11 @@ resource:ConservationStatus/0900750201-conservation-status-1
     <!-- https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf"/>
                 <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/current"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-characteristic/"/>
@@ -3822,52 +3913,6 @@ resource:TechnicalCharacteristic/pietra-scultura
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Environment -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Environment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isEnvironmentOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasClimateSituation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ClimateSituation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasSoil"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/description"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente collegato ad un oggetto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the environment related to a thing</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Ambiente</rdfs:label>
-        <rdfs:label xml:lang="en">Environment</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa PG: CA</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/FontStyle -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/FontStyle">
@@ -3927,7 +3972,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasIconographicOrDecorativeApparatusType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3967,7 +4012,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isIconographicOrDecorativeApparatusTypeOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4109,6 +4154,12 @@ resource:Measurement/0500212021-1-height
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isValidAt"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurement"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
             </owl:Restriction>
@@ -4164,18 +4215,71 @@ resource:MeasurementCollection/1200865132-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/Mineral -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Mineral">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/MusicalInstrument -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MusicalInstrument">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSoloInstrumentInvolvedIn"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente naturale di un oggetto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the natural environment of a thing</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isEnvironmentOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasClimateSituation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ClimateSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasSoil"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente collegato ad un oggetto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the environment related to a thing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Ambiente naturale</rdfs:label>
-        <rdfs:label xml:lang="en">Natural environment</rdfs:label>
+        <rdfs:label xml:lang="it">Ambiente</rdfs:label>
+        <rdfs:label xml:lang="en">Environment</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIB</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa PG: CA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4236,7 +4340,7 @@ resource:MeasurementCollection/1200865132-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasSampleCollectedType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollectedType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4270,7 +4374,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSampleCollectedTypeOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4289,6 +4393,7 @@ resource:MeasurementCollection/1200865132-1
     <!-- https://w3id.org/arco/ontology/denotative-description/Soil -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Soil">
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/location/Soil"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4319,6 +4424,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">Soil</rdfs:label>
         <rdfs:label xml:lang="it">Suolo</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -4340,6 +4446,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">Soil use</rdfs:label>
         <rdfs:label xml:lang="it">Uso del suolo</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -4429,6 +4536,75 @@ resource:MeasurementCollection/1200865132-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalStatus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isValidAt"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/currentTechnicalStatus"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of the class &apos;Cultural entity technical status&apos; is the following:
+resource:CulturalEntityTechnicalStatus/0900281817-4
+        a           a-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  &quot;Technical status of cultural property 0900281817-4&quot;@en ;
+        a-dd:includesTechnicalCharacteristic
+                resource:TechnicalCharacteristic/centinato, resource:TechnicalCharacteristic/stone-sculpture .
+
+resource:TechnicalCharacteristic/stone-sculpture
+        a                    a-dd:TechnicalCharacteristic ;
+        rdfs:label           &quot;stone/ sculpture&quot; ;
+        a-dd:isClassifiedBy  a-dd:MaterialOrTechnique .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Stato tecnico di entità culturale&quot; è il seguente:
+resource:CulturalEntityTechnicalStatus/0900281817-4
+        a           a-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  &quot;Stato tecnico del bene culturale 0900281817-4&quot;@it ;
+        a-dd:includesTechnicalCharacteristic
+                resource:TechnicalCharacteristic/centinato, resource:TechnicalCharacteristic/pietra-scultura .
+
+resource:TechnicalCharacteristic/pietra-scultura
+        a                    a-dd:TechnicalCharacteristic ;
+        rdfs:label           &quot;pietra/ scultura&quot; ;
+        a-dd:isClassifiedBy  a-dd:MaterialOrTechnique .</dc:description>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato tecnico di un&apos;entità culturale, cioè una situazione in cui un&apos;entità culturale ha associate una serie di caratteristiche tecniche. Lo stato di un&apos;entità ha associata una validità temporale, relativa al momento in cui quelle caratteristiche sono state rilevate. Per esempio, una occorrenza di un dettaglio tecnico è: &quot;bene culturale X realizzato con la materia terracotta e di forma cilindrica&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the technical status of a cultural entity, that is a situation in which the cultural entity is associated to technical characteristics. The technical status has a temporal validity, related to the moment when the characteristics were observed. For instance, a cultural property techncal status is: &quot;the cultural property X realized with pottery material and cylindrical in shape&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="it">Stato tecnico di entità culturale</rdfs:label>
+        <rdfs:label xml:lang="en">Technical status of cultural entity</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; DA/APF/APFE</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Vegetal -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Vegetal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/WritingSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/WritingSystem">
@@ -4448,6 +4624,12 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEF</a-cat:iccdNormTag>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Soil -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Soil"/>
     
 
 
@@ -4532,15 +4714,9 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Altitude -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/AccessibleWithAutorisation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Altitude">
-        <rdfs:label xml:lang="en">Altitude</rdfs:label>
-        <rdfs:label xml:lang="it">Altitudine</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa BNB: LR/LRI/LRIA</a-cat:iccdNormTag>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/AccessibleWithAutorisation"/>
     
 
 
@@ -5270,6 +5446,7 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Maximum temperature</rdfs:label>
         <rdfs:label xml:lang="it">Temperatura massima</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -5320,6 +5497,7 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Minimum temperature</rdfs:label>
         <rdfs:label xml:lang="it">Temperatura minima</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -5406,6 +5584,7 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Ph</rdfs:label>
         <rdfs:label xml:lang="it">Ph</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">Instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -5512,9 +5691,18 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Precipitazioni</rdfs:label>
         <rdfs:label xml:lang="en">Rainfall</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa PG: CA/CLM/CLMP</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/RecordingSpeed -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/RecordingSpeed">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
     </owl:NamedIndividual>
     
 
@@ -5593,6 +5781,7 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Pendenza</rdfs:label>
         <rdfs:label xml:lang="en">Slope</rdfs:label>
+        <owl:deprecated></owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa PG: CA/CAC</a-cat:iccdNormTag>
@@ -5663,6 +5852,7 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Temperatura</rdfs:label>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>

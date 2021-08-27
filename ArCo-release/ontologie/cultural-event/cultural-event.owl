@@ -25,12 +25,14 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:roapit="https://w3id.org/italia/onto/RO/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cultural-event">
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/cultural-event/1.1"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
@@ -56,8 +58,8 @@ In this module are used as template the following Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/sequence.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Cultural Event Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia degli Eventi Culturali (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.0</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -206,7 +208,7 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/cultural-event/hasImmediateNextEvent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasImmediateNextEvent">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasNextEvent"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasNextSituation"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasImmediatePreviousEvent"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
@@ -225,7 +227,7 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/cultural-event/hasImmediatePreviousEvent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasImmediatePreviousEvent">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasPreviousEvent"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasPreviousSituation"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
@@ -240,29 +242,31 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/cultural-event/hasMemberEvent -->
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasMemberSituation -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasMemberEvent">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasMemberSituation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isEventMemberOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isSituationMemberOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento ricorrente, inteso come collezione di eventi, a uno degli eventi membri della collezione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a recurrent event, as a collection of events, to one of its member events.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha evento membro</rdfs:label>
+        <rdfs:label xml:lang="it">ha situazione membro</rdfs:label>
         <rdfs:label xml:lang="en">has member event</rdfs:label>
+        <rdfs:label xml:lang="en">has member situation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/arco/ontology/cultural-event/hasNextEvent -->
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasNextSituation -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasNextEvent">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasNextSituation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/precedes"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasPreviousEvent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasPreviousSituation"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
@@ -270,16 +274,18 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to one of the next events.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha evento successivo</rdfs:label>
+        <rdfs:label xml:lang="it">ha situazione successiva</rdfs:label>
         <rdfs:label xml:lang="en">has next event</rdfs:label>
+        <rdfs:label xml:lang="en">has next sitution</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/arco/ontology/cultural-event/hasPreviousEvent -->
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasPreviousSituation -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasPreviousEvent">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasPreviousSituation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/follows"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
@@ -288,7 +294,9 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to one of the previous events.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha evento precedente</rdfs:label>
+        <rdfs:label xml:lang="it">ha situazione precedente</rdfs:label>
         <rdfs:label xml:lang="en">has previous event</rdfs:label>
+        <rdfs:label xml:lang="en">has previous situation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -299,10 +307,10 @@ In this module are used as template the following Ontology Design Patterns:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasRecurrentTimePeriod">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isRecurrentTimePeriodOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentTimePeriod"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/cultural-event/hasMemberEvent"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/cultural-event/hasMemberSituation"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/cultural-event/hasTimePeriodBeforeNextEvent"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento ricorrente al periodo di tempo che intercorre tra uno dei suoi eventi membri e quello successivo.</rdfs:comment>
@@ -356,7 +364,7 @@ In this module are used as template the following Ontology Design Patterns:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasUnifyingFactor">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isUnifyingFactorOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/UnifyingFactor"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento ricorrente a un fattore unificante.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a recurrent event to a unifying factor.</rdfs:comment>
@@ -386,23 +394,6 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/cultural-event/isEventMemberOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isEventMemberOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isMemberOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
-        <rdfs:isDefinedBy xml:lang="it">Questa proprietà collega un evento, membro di un evento ricorrente inteso come una collezione di eventi, all&apos;evento ricorrente di cui è membro.</rdfs:isDefinedBy>
-        <rdfs:isDefinedBy xml:lang="en">This property relates an event, member of a recurrent event as a collection of events, to the recurrent event that is member of.</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">is event member of</rdfs:label>
-        <rdfs:label xml:lang="it">è evento membro di</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/cultural-event/isEventOrganiserOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isEventOrganiserOf">
@@ -424,12 +415,31 @@ In this module are used as template the following Ontology Design Patterns:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isRecurrentTimePeriodOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentTimePeriod"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il periodo di tempo massimo che intercorre tra uno degli eventi membri di un evento ricorrente e l&apos;evento successivo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the maximum time period that elapses between one of the member events of a recurrent event and the next one.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="en">is recurrent time period of</rdfs:label>
         <rdfs:label xml:lang="it">è periodo di tempo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/isSituationMemberOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isSituationMemberOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isMemberOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
+        <rdfs:isDefinedBy xml:lang="it">Questa proprietà collega un evento, membro di un evento ricorrente inteso come una collezione di eventi, all&apos;evento ricorrente di cui è membro.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">This property relates an event, member of a recurrent event as a collection of events, to the recurrent event that is member of.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">is event member of</rdfs:label>
+        <rdfs:label xml:lang="en">is situation member of</rdfs:label>
+        <rdfs:label xml:lang="it">è evento membro di</rdfs:label>
+        <rdfs:label xml:lang="it">è situazione membro di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -474,7 +484,7 @@ In this module are used as template the following Ontology Design Patterns:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isUnifyingFactorOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/UnifyingFactor"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un fattore unificante a un evento ricorrente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a unifying factor to a recurrent event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
@@ -614,21 +624,21 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/cultural-event/RecurrentEvent -->
+    <!-- https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasMemberEvent"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasMemberSituation"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasNextEvent"/>
+                                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasNextSituation"/>
                                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasPreviousEvent"/>
+                                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasPreviousSituation"/>
                                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
                             </owl:Restriction>
                         </owl:unionOf>
@@ -646,7 +656,7 @@ In this module are used as template the following Ontology Design Patterns:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasMemberEvent"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasMemberSituation"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -667,6 +677,8 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">Evento ricorrente</rdfs:label>
         <rdfs:label xml:lang="en">Recurrent event</rdfs:label>
+        <rdfs:label xml:lang="en">Recurrent situation series</rdfs:label>
+        <rdfs:label xml:lang="it">Situazione ricorrente</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI 4.00: RC</a-cat:iccdNormTag>
@@ -686,7 +698,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/isRecurrentTimePeriodOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -749,7 +761,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/isUnifyingFactorOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un fattore unificante, ovvero un fattore che rappresenta un invariante comune a tutti gli eventi che sono membri dell&apos;evento ricorrente.</rdfs:comment>
