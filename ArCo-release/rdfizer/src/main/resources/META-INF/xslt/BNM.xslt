@@ -239,8 +239,8 @@
 	</xsl:variable>
 	<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
 	<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
-	<xsl:variable name="ecp" select="record/metadata/schede/*/CD/ECP"></xsl:variable>
-	<xsl:variable name="ogtc" select="record/metadata/schede/*/OG/OGT/OGTC"></xsl:variable>	
+	<xsl:variable name="ecp" select="arco-fn:urify(record/metadata/schede/*/CD/ECP)"></xsl:variable>
+	<xsl:variable name="ogtc" select="arco-fn:urify(record/metadata/schede/*/OG/OGT/OGTC)"></xsl:variable>	
 	<xsl:variable name="specimencollection">
 		<xsl:choose>
 			<xsl:when test="record/metadata/schede/*/AC/ACO">				
@@ -251,6 +251,156 @@
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="concat($NS, 'SpecimenCollection/', $ecp, '-', $ogtc)" />
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:variable name="chronostratigraphicClassBNM">
+		<xsl:choose>
+			<xsl:when test="record/metadata/schede/*/IM/IMG/IMGC">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGC)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IM/IMG/IMGS">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGS)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IM/IMG/IMGT">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGT)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IM/IMG/IMGO">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGO)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IM/IMG/IMGP">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGP)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IM/IMG/IMGR">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGR)" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGE)" />
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:variable name="chronostratigraphicClassBNPE">
+		<xsl:choose>
+			<xsl:when test="record/metadata/schede/*/IR/IRG/IRGC">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGC)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IR/IRG/IRGS">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGS)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IR/IRG/IRGT">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGT)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IR/IRG/IRGO">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGO)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IR/IRG/IRGP">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGP)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IR/IRG/IRGR">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGR)" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGE)" />
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:variable name="chronostratigraphicClassBNP">
+		<xsl:choose>
+			<xsl:when test="record/metadata/schede/*/ET/ETG/ETGC">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGC)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/ET/ETG/ETGS">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGS)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/ET/ETG/ETGT">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGT)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/ET/ETG/ETGO">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGO)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/ET/ETG/ETGP">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGP)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/ET/ETG/ETGR">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGR)" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGE)" />
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:variable name="lithostratigraphicClassBNM">
+		<xsl:choose>
+			<xsl:when test="record/metadata/schede/*/IM/IML/IMLO">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IML/IMLO)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IM/IML/IMLL">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IML/IMLL)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IM/IML/IMLM">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IML/IMLM)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IM/IML/IMLF">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IML/IMLF)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IM/IML/IMLG">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IML/IMLG)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IM/IML/IMLS">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IML/IMLS)" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IM/IML/IMLC)" />
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:variable name="lithostratigraphicClassBNPE">
+		<xsl:choose>
+			<xsl:when test="record/metadata/schede/*/IR/IRL/IRLO">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLO)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IR/IRL/IRLL">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLL)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IR/IRL/IRLM">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLM)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IR/IRL/IRLF">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLF)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IR/IRL/IRLG">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLG)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/IR/IRL/IRLS">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLS)" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLC)" />
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:variable name="lithostratigraphicClassBNP">
+		<xsl:choose>
+			<xsl:when test="record/metadata/schede/*/ET/ETL/ETLO">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLO)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/ET/ETL/ETLL">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLL)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/ET/ETL/ETLM">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLM)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/ET/ETL/ETLF">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLF)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/ET/ETL/ETLG">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLG)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/ET/ETL/ETLS">				
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLS)" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLC)" />
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -275,7 +425,7 @@
 				</l0:identifier>
 			</xsl:if>
 		</xsl:if>
-	 <xsl:if test="$sheetType='BNM' or $sheetType='BNPE' or $sheetType='BNPL' or $sheetType='BNZ'">
+		<xsl:if test="$sheetType='BNM' or $sheetType='BNPE' or $sheetType='BNPL' or $sheetType='BNZ'">
 			<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
 			<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
 			<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
@@ -294,7 +444,72 @@
 					<xsl:value-of select="$specimencollection" />
 				</xsl:attribute>
 			</arco-cd:isSpecimenMemberOf>
-		</xsl:if>	
+		</xsl:if>
+		<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">
+			<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM or record/metadata/schede/*/IR or record/metadata/schede/*/ET">
+				<arco-location:hasTimeIndexedTypedLocation>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-collecting-location')" />
+					</xsl:attribute>
+				</arco-location:hasTimeIndexedTypedLocation>
+			</xsl:if>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IMG">
+			<arco-location:hasFindingStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasFindingStratum>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IML">
+			<arco-location:hasFindingStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasFindingStratum>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRG">
+			<arco-location:hasFindingStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasFindingStratum>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRL">
+			<arco-location:hasFindingStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasFindingStratum>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/ET/ETG">
+			<arco-location:hasFindingStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasFindingStratum>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/ET/ETL">
+			<arco-location:hasFindingStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasFindingStratum>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IMA/IMAS">
+			<arco-location:hasFindingStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasFindingStratum>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRA/IRAS">
+			<arco-location:hasFindingStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasFindingStratum>
+		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMN/*">
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -429,7 +644,7 @@
 			</arco-spe:hasLabel>			
 		</xsl:for-each>
 		<xsl:if test="not($sheetType='F' or $sheetType='PG')">
-			<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM  or record/metadata/schede/*/IR">
+			<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM  or record/metadata/schede/*/IR or record/metadata/schede/*/ET">
 				<arco-spe:hasSpecimenHarvesting>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS,'SpecimenHarvesting/', $itemURI)" />
@@ -479,12 +694,14 @@
 				</arco-spe:hasCleavage>
 			</xsl:if>
 		</xsl:for-each>
-		<xsl:if test="record/metadata/schede/BNM/IM/IMA/IMAO">
-			<arco-spe:hasHostRock>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'HostRock/', arco-fn:urify(record/metadata/schede/BNM/IM/IMA/IMAO))" />
-				</xsl:attribute>
-			</arco-spe:hasHostRock>
+		<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">
+			<xsl:if test="record/metadata/schede/BNM/IM/IMA/IMAO">
+				<arco-spe:hasHostRock>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'HostRock/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAO))" />
+					</xsl:attribute>
+				</arco-spe:hasHostRock>
+			</xsl:if>
 		</xsl:if>					
 		<xsl:if test="record/metadata/schede/BNM/SM/SMT and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMT/SMTT)), 'non tipo'))">
 			<arco-spe:hasTypeSpecimenIdentification>
@@ -3042,7 +3259,7 @@
 
 								<!-- Specimen Harvesting as individual -->
 	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">
-	<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM or record/metadata/schede/*/IR">
+	<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM or record/metadata/schede/*/IR or record/metadata/schede/*/ET">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS,'SpecimenHarvesting/', $itemURI)" />
@@ -3098,10 +3315,17 @@
 						</xsl:attribute>
 					</arco-spe:hasHarvestingSponsor>
 			</xsl:for-each>
-			<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIY">
+			<xsl:if test="record/metadata/schede/*/LR/LRI/LRIY">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
 	               		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/BNB/LR/LRI/LRIY, '-',  record/metadata/schede/BNB/LR/LRI/LRIY)))" />
+					</xsl:attribute>
+				</tiapit:atTime>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/LR/LRI/LRIK">
+				<tiapit:atTime>
+					<xsl:attribute name="rdf:resource">
+	               		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/*/LR/LRI/LRIK, '-',  record/metadata/schede/BNB/LR/LRI/LRIN, '-',  record/metadata/schede/BNB/LR/LRI/LRIC,'-',  record/metadata/schede/BNB/LR/LRI/LRIQ)))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -3137,10 +3361,8 @@
 				</tiapit:atTime>
 			</xsl:if>
 		</rdf:Description>
-	</xsl:if>	
-					
-					
-							<!-- Time interval as individual -->
+	</xsl:if>				
+	<!-- Time interval as individual -->
 	<xsl:if test="record/metadata/schede/*/LR/LRI/LRIF">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -3162,8 +3384,7 @@
 			</tiapit:time>
 		</rdf:Description>
 	</xsl:if>
-	
-								<!-- Harvesting Method as individual -->
+	<!-- Harvesting Method as individual -->
 	<xsl:if test="record/metadata/schede/*/LR/LRI/LRIW">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -3182,8 +3403,7 @@
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>
-	
-								<!-- Harvesting Motivation as individual -->
+	<!-- Harvesting Motivation as individual -->
 	<xsl:if test="record/metadata/schede/*/LR/LRI/LRIU and not($sheetType='F')">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -3202,10 +3422,9 @@
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>				
-							
-							<!-- Time indexed typed location as individual -->
+	<!-- Time indexed typed location as individual -->
 	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">
-		<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM or record/metadata/schede/*/IR">
+		<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM or record/metadata/schede/*/IR or record/metadata/schede/*/ET">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
 					<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-collecting-location')" />
@@ -3228,6 +3447,55 @@
 					<xsl:value-of select="concat('Collecting location of cultural property ', $itemURI)" />
 				</l0:name>
 				<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
+					<arco-location:hasGeologicalContex>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+						</xsl:attribute>
+					</arco-location:hasGeologicalContex>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/ET/ETA/ETAC or record/metadata/schede/*/ET/ETA/ETAP or record/metadata/schede/*/ET/ETA/ETAD or record/metadata/schede/*/ET/ETA/ETAF">
+					<arco-location:hasGeologicalContex>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+						</xsl:attribute>
+					</arco-location:hasGeologicalContex>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/IM/IMG">
+					<arco-location:hasGeologicalContex>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+						</xsl:attribute>
+					</arco-location:hasGeologicalContex>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/IM/IML">
+					<arco-location:hasGeologicalContex>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+						</xsl:attribute>
+					</arco-location:hasGeologicalContex>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/IR/IRG">
+					<arco-location:hasGeologicalContex>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+						</xsl:attribute>
+					</arco-location:hasGeologicalContex>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/IR/IRL">
+					<arco-location:hasGeologicalContex>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+						</xsl:attribute>
+					</arco-location:hasGeologicalContex>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/ET/ETG">
+					<arco-location:hasGeologicalContex>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+						</xsl:attribute>
+					</arco-location:hasGeologicalContex>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/ET/ETL">
 					<arco-location:hasGeologicalContex>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
@@ -3728,7 +3996,7 @@
 		</xsl:if>
 	</xsl:for-each>		
 	</xsl:if>				
-					<!-- Address Area -->
+	<!-- Address Area -->
 	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">
 	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAR">
 		<xsl:call-template name="address-area">
@@ -3759,11 +4027,16 @@
 		<xsl:call-template name="address-area">
 			<xsl:with-param name="ctx" select="record/metadata/schede/*/IR/IRA/IRAT"/>
 		</xsl:call-template>
-	</xsl:if>				
+	</xsl:if>	
+	<xsl:if test="record/metadata/schede/*/ET/ETA/ETAT">
+		<xsl:call-template name="address-area">
+			<xsl:with-param name="ctx" select="record/metadata/schede/*/ET/ETA/ETAT"/>
+		</xsl:call-template>
+	</xsl:if>			
 	</xsl:if>
-						<!-- Geological context as individual -->
+	<!-- Geological context as individual -->
 	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">					
-	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
+	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAS or record/metadata/schede/*/IR/IRA/IRAS or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
@@ -3792,6 +4065,20 @@
 					</xsl:attribute>
 				</arco-location:hasMineralDeposit>
 			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAS">
+				<arco-location:hasStratum>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasStratum>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/IR/IRA/IRAS">
+				<arco-location:hasStratum>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasStratum>
+			</xsl:if>
 			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAG">
 				<arco-location:hasOutcrop>
 					<xsl:attribute name="rdf:resource">
@@ -3817,9 +4104,1407 @@
 				</arco-core:note>
 			</xsl:if>
 		</rdf:Description>
-	</xsl:if>						
-	
-						<!-- Mineral deposit as individual -->
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/ET/ETA/ETAC or record/metadata/schede/*/ET/ETA/ETAP or record/metadata/schede/*/ET/ETA/ETAD or record/metadata/schede/*/ET/ETA/ETAF">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/GeologicalContext'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</l0:name>
+			<xsl:if test="record/metadata/schede/*/ET/ETA/ETAP">
+				<arco-location:hasMineralDeposit>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'MineralDeposit/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasMineralDeposit>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/ET/ETA/ETAF or record/metadata/schede/*/ET/ETA/ETAD">
+				<arco-location:hasOutcrop>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Outcrop/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasOutcrop>
+			</xsl:if>
+			<xsl:for-each select="record/metadata/schede/*/ET/ETA/ETAB">
+				<arco-cd:hasBibliography>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-geological-context-bibliography-', position())" />
+					</xsl:attribute>
+				</arco-cd:hasBibliography>
+			</xsl:for-each>
+			<xsl:if test="record/metadata/schede/*/ET/ETA/ETAC">
+				<arco-core:description>
+					<xsl:value-of select="record/metadata/schede/*/ET/ETA/ETAC" />
+				</arco-core:description>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/ET/ETA/ETAN">
+				<arco-core:note>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETA/ETAN)" />
+				</arco-core:note>
+			</xsl:if>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/IM/IMG">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/GeologicalContext'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-location:hasStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasStratum>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Stratum'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-core:isClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', $chronostratigraphicClassBNM)" />
+				</xsl:attribute>
+			</arco-core:isClassifiedBy>
+		</rdf:Description>
+		<xsl:if test="record/metadata/schede/*/IM/IMG/IMGC">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGC))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Chronozone'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGC)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGC)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IM/IMG/IMGS">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGS))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IMG/IMGS">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGS))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/ChronostratigraphicSubstage'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGS)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGS)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IM/IMG/IMGT">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGT))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>	
+		<xsl:if test="record/metadata/schede/*/IM/IMG/IMGT">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGT))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/ChronostratigraphicStage'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGT)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGT)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IM/IMG/IMGO">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGO))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IMG/IMGO">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGO))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/ChronostratigraphicSeries'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGO)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGO)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IM/IMG/IMGP">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGP))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IMG/IMGP">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGP))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/ChronostratigraphicSystem'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGP)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGP)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IM/IMG/IMGR">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGR))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IMG/IMGR">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGR))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Erathem'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGR)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGR)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IM/IMG/IMGE">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGE))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IMG/IMGE">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IMG/IMGE))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Eonothem'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGE)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMG/IMGE)" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/IM/IML">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/GeologicalContext'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-location:hasStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasStratum>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Stratum'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-core:isClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', $lithostratigraphicClassBNM)" />
+				</xsl:attribute>
+			</arco-core:isClassifiedBy>
+		</rdf:Description>
+		<xsl:if test="record/metadata/schede/*/IM/IML/IMLO">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IML/IMLO))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicBed'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLO)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLO)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IM/IML/IMLL">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IML/IMLL))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IML/IMLL">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IML/IMLL))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicStratum'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLL)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLL)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IM/IML/IMLM">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IML/IMLM))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IML/IMLM">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IML/IMLM))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicMember'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLM)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLM)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IM/IML/IMLF">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IML/IMLF))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IML/IMLF">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IML/IMLF))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicFormation'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLF)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLF)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IM/IML/IMLG">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IML/IMLG))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IML/IMLG">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IML/IMLG))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicGroup'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLG)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLG)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IM/IML/IMLS">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IML/IMLS))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IML/IMLS">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IML/IMLS))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicSupergroup'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLS)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLS)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IM/IML/IMLC">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IML/IMLC))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IM/IML/IMLC">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IM/IML/IMLC))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicComplex'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLC)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IML/IMLC)" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>		
+	<xsl:if test="record/metadata/schede/*/IR/IRG">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/GeologicalContext'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-location:hasStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasStratum>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Stratum'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-core:isClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', $chronostratigraphicClassBNPE)" />
+				</xsl:attribute>
+			</arco-core:isClassifiedBy>
+		</rdf:Description>
+		<xsl:if test="record/metadata/schede/*/IR/IRG/IRGC">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGC))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Chronozone'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGC)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGC)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IR/IRG/IRGS">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGS))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRG/IRGS">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGS))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/ChronostratigraphicSubstage'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGS)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGS)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IR/IRG/IRGT">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGT))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>	
+		<xsl:if test="record/metadata/schede/*/IR/IRG/IRGT">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGT))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/ChronostratigraphicStage'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGT)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGT)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IR/IRG/IRGO">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGO))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRG/IRGO">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGO))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/ChronostratigraphicSeries'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGO)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGO)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IR/IRG/IRGP">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGP))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRG/IRGP">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGP))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/ChronostratigraphicSystem'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGP)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGP)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IR/IRG/IRGR">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGR))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRG/IRGR">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGR))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Erathem'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGR)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGR)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IR/IRG/IRGE">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGE))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRG/IRGE">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRG/IRGE))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Eonothem'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGE)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRG/IRGE)" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/IR/IRL">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/GeologicalContext'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-location:hasStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasStratum>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Stratum'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-core:isClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', $lithostratigraphicClassBNPE)" />
+				</xsl:attribute>
+			</arco-core:isClassifiedBy>
+		</rdf:Description>
+		<xsl:if test="record/metadata/schede/*/IR/IRL/IRLO">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLO))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicBed'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLO)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLO)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IR/IRL/IRLL">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLL))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRL/IRLL">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLL))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicStratum'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLL)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLL)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IR/IRL/IRLM">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLM))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRL/IRLM">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLM))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicMember'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLM)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLM)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IR/IRL/IRLF">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLF))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRL/IRLF">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLF))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicFormation'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLF)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLF)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IR/IRL/IRLG">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLG))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRL/IRLG">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLG))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicGroup'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLG)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLG)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IR/IRL/IRLS">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLS))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRL/IRLS">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLS))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicSupergroup'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLS)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLS)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/IR/IRL/IRLC">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLC))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/IR/IRL/IRLC">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/IR/IRL/IRLC))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicComplex'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLC)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRL/IRLC)" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>	
+	<xsl:if test="record/metadata/schede/*/ET/ETG">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/GeologicalContext'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-location:hasStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasStratum>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Stratum'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-core:isClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', $chronostratigraphicClassBNP)" />
+				</xsl:attribute>
+			</arco-core:isClassifiedBy>
+		</rdf:Description>
+		<xsl:if test="record/metadata/schede/*/ET/ETG/ETGC">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGC))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Chronozone'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGC)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGC)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/ET/ETG/ETGS">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGS))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/ET/ETG/ETGS">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGS))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/ChronostratigraphicSubstage'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGS)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGS)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/ET/ETG/ETGT">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGT))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>	
+		<xsl:if test="record/metadata/schede/*/ET/ETG/ETGT">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGT))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/ChronostratigraphicStage'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGT)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGT)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/ET/ETG/ETGO">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGO))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/ET/ETG/ETGO">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGO))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/ChronostratigraphicSeries'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGO)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGO)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/ET/ETG/ETGP">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGP))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/ET/ETG/ETGP">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGP))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/ChronostratigraphicSystem'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGP)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGP)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/ET/ETG/ETGR">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGR))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/ET/ETG/ETGR">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGR))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Erathem'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGR)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGR)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/ET/ETG/ETGE">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGE))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/ET/ETG/ETGE">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ChronostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETG/ETGE))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Eonothem'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGE)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETG/ETGE)" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/ET/ETL">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/GeologicalContext'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-location:hasStratum>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+				</xsl:attribute>
+			</arco-location:hasStratum>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Stratum'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-core:isClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', $lithostratigraphicClassBNP)" />
+				</xsl:attribute>
+			</arco-core:isClassifiedBy>
+		</rdf:Description>
+		<xsl:if test="record/metadata/schede/*/ET/ETL/ETLO">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLO))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicBed'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLO)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLO)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/ET/ETL/ETLL">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLL))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/ET/ETL/ETLL">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLL))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicStratum'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLL)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLL)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/ET/ETL/ETLM">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLM))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/ET/ETL/ETLM">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLM))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicMember'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLM)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLM)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/ET/ETL/ETLF">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLF))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/ET/ETL/ETLF">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLF))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicFormation'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLF)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLF)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/ET/ETL/ETLG">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLG))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/ET/ETL/ETLG">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLG))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicGroup'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLG)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLG)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/ET/ETL/ETLS">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLS))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/ET/ETL/ETLS">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLS))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicSupergroup'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLS)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLS)" />
+				</l0:name>
+				<xsl:if test="record/metadata/schede/*/ET/ETL/ETLC">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLC))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/ET/ETL/ETLC">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'LithostratigraphicClass/', arco-fn:urify(record/metadata/schede/*/ET/ETL/ETLC))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/LithostratigraphicComplex'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLC)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETL/ETLC)" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
+	<!-- Mineral deposit as individual -->
 	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAE">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -3853,6 +5538,37 @@
 				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'MineralDepositType/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAE))" />
+					</xsl:attribute>
+				</arco-core:hasType>
+			</xsl:if>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/ET/ETA/ETAP">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of select="concat($NS, 'MineralDeposit/', $itemURI)" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of	select="'https://w3id.org/arco/ontology/location/MineralDeposit'" />
+				</xsl:attribute>	
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Giacimento del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Giacimento del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Mineral deposit of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Mineral deposit of cultural property ', $itemURI)" />
+			</l0:name>
+			<xsl:if test="record/metadata/schede/*/ET/ETA/ETAP">
+				<arco-core:hasType>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'MineralDepositType/', arco-fn:urify(record/metadata/schede/*/ET/ETA/ETAP))" />
 					</xsl:attribute>
 				</arco-core:hasType>
 			</xsl:if>
@@ -3892,6 +5608,201 @@
 			</rdfs:label>
 			<l0:name>
 				<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMA/IMAE)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/ET/ETA/ETAP">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of select="concat($NS, 'MineralDepositType/', arco-fn:urify(record/metadata/schede/*/ET/ETA/ETAP))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/arco/ontology/location/MineralDepositType'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETA/ETAP)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETA/ETAP)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<!-- Stratum as individual -->
+	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAS">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Stratum'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-dd:hasMeasurementCollection>
+				<xsl:attribute name="rdf:resource">
+			 	   	<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-stratum')" />
+				</xsl:attribute>
+			</arco-dd:hasMeasurementCollection>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				 <xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-stratum')" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MeasurementCollection'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="'Misure dello strato di ritrovmento del bene culturale ', $itemURI" />
+			</rdfs:label>
+			<l0:name  xml:lang="it">
+				<xsl:value-of select="'Misure dello strato di ritrovmento del bene culturale ', $itemURI" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="'Measuerements of finding stratum of cultural property ', $itemURI" />
+			</rdfs:label>
+			<l0:name  xml:lang="en">
+				<xsl:value-of select="'Measuerements of finding stratum of cultural property ', $itemURI" />
+			</l0:name>
+			<arco-dd:hasMeasurement>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IM/IMA/IMAS))" />
+				</xsl:attribute>
+			</arco-dd:hasMeasurement>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IM/IMA/IMAS))" />
+			<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Measurement of stratum: ', (.))" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Measurement of stratum: ', (.))" />
+			</l0:name>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Misura dello strato: ', (.))" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Misura dello strato: ', (.))" />
+			</l0:name>
+			<arco-dd:hasMeasurementType>
+				<xsl:attribute name="rdf:resource" select="'https://w3id.org/arco/ontology/denotative-description/Thickness'" />
+			</arco-dd:hasMeasurementType>
+			<arco-dd:hasValue>
+				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Stratum', (record/metadata/schede/*/IM/IMA/IMAS))" />
+			</arco-dd:hasValue>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about"   select="concat($NS, 'Value/Stratum', (record/metadata/schede/*/IM/IMA/IMAS))" />
+			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMA/IMAS)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMA/IMAS)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/IR/IRA/IRAS">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Stratum/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Stratum'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Strato del luogo di ritrovamento del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Stratum of finding location of cultural property ', $itemURI)" />
+			</l0:name>
+			<arco-dd:hasMeasurementCollection>
+				<xsl:attribute name="rdf:resource">
+			 	   	<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-stratum')" />
+				</xsl:attribute>
+			</arco-dd:hasMeasurementCollection>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				 <xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-stratum')" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MeasurementCollection'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="'Misure dello strato di ritrovmento del bene culturale ', $itemURI" />
+			</rdfs:label>
+			<l0:name  xml:lang="it">
+				<xsl:value-of select="'Misure dello strato di ritrovmento del bene culturale ', $itemURI" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="'Measuerements of finding stratum of cultural property ', $itemURI" />
+			</rdfs:label>
+			<l0:name  xml:lang="en">
+				<xsl:value-of select="'Measuerements of finding stratum of cultural property ', $itemURI" />
+			</l0:name>
+			<arco-dd:hasMeasurement>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IR/IRA/IRAS))" />
+				</xsl:attribute>
+			</arco-dd:hasMeasurement>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IR/IRA/IRAS))" />
+			<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Measurement of stratum: ', (.))" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Measurement of stratum: ', (.))" />
+			</l0:name>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Misura dello strato: ', (.))" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Misura dello strato: ', (.))" />
+			</l0:name>
+			<arco-dd:hasMeasurementType>
+				<xsl:attribute name="rdf:resource" select="'https://w3id.org/arco/ontology/denotative-description/Thickness'" />
+			</arco-dd:hasMeasurementType>
+			<arco-dd:hasValue>
+				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Stratum', (record/metadata/schede/*/IR/IRA/IRAS))" />
+			</arco-dd:hasValue>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about"   select="concat($NS, 'Value/Stratum', (record/metadata/schede/*/IR/IRA/IRAS))" />
+			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRA/IRAS)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRA/IRAS)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>
@@ -3940,7 +5851,45 @@
 				</arco-dd:hasOrientation>
 			</xsl:if>
 		</rdf:Description>
-	</xsl:if>						
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/ET/ETA/ETAF or record/metadata/schede/*/ET/ETA/ETAD">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Outcrop/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/Outcrop'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Affioramento del luogo di raccolta del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Affioramento del luogo di raccolta del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Outcrop of collecting location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Outcrop of collecting location of cultural property ', $itemURI)" />
+			</l0:name>
+			<xsl:if test="record/metadata/schede/*/ET/ETA/ETAF">
+				<arco-core:hasType>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'OutcropType/', arco-fn:urify(record/metadata/schede/*/ET/ETA/ETAF))" />
+					</xsl:attribute>
+				</arco-core:hasType>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/ET/ETA/ETAD">
+				<tiapit:atTime>
+					<xsl:attribute name="rdf:resource">
+		        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/*/ET/ETA/ETAD, '-',  record/metadata/schede/*/ET/ETA/ETAD)))" />
+					</xsl:attribute>
+				</tiapit:atTime>
+			</xsl:if>
+		</rdf:Description>
+	</xsl:if>					
 	<!-- OutCrop type as individual -->
 	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAF">
 		<rdf:Description>
@@ -3957,6 +5906,24 @@
 			</rdfs:label>
 			<l0:name>
 				<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMA/IMAF)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/ET/ETA/ETAF">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of select="concat($NS, 'OutcropType/', arco-fn:urify(record/metadata/schede/*/ET/ETA/ETAF))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/arco/ontology/location/OutcropType'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETA/ETAF)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/ET/ETA/ETAF)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>				
@@ -3982,6 +5949,30 @@
 			</arco-arco:startTime>
 			<arco-arco:endTime>
 				<xsl:value-of select="record/metadata/schede/*/IM/IMA/IMAD" />
+			</arco-arco:endTime>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/*/ET/ETA/ETAD">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/*/ET/ETA/ETAD, '-',  record/metadata/schede/*/ET/ETA/ETAD)))" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="concat(record/metadata/schede/*/ET/ETA/ETAD, ' - ', record/metadata/schede/*/ET/ETA/ETAD)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="concat(record/metadata/schede/*/ET/ETA/ETAD, ' - ', record/metadata/schede/*/ET/ETA/ETAD)" />
+			</l0:name>
+			<arco-arco:startTime>
+				<xsl:value-of select="record/metadata/schede/*/ET/ETA/ETAD" />
+			</arco-arco:startTime>
+			<arco-arco:endTime>
+				<xsl:value-of select="record/metadata/schede/*/ET/ETA/ETAD" />
 			</arco-arco:endTime>
 		</rdf:Description>
 	</xsl:if>
@@ -4393,10 +6384,10 @@
 	</xsl:for-each>
 	<!-- Host rock as individual -->
 	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">							
-	<xsl:if test="record/metadata/schede/BNM/IM/IMA/IMAO">
+	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAO">
 		<rdf:Description>	
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'HostRock/', arco-fn:urify(record/metadata/schede/BNM/IM/IMA/IMAO))" />
+		    	<xsl:value-of select="concat($NS,'HostRock/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAO))" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -4404,10 +6395,10 @@
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-            	 <xsl:value-of select="record/metadata/schede/BNM/IM/IMA/IMAO" />
+            	 <xsl:value-of select="record/metadata/schede/*/IM/IMA/IMAO" />
             </rdfs:label>
             <l0:name>
-            	<xsl:value-of select="record/metadata/schede/BNM/IM/IMA/IMAO" />
+            	<xsl:value-of select="record/metadata/schede/*/IM/IMA/IMAO" />
             </l0:name>
 		</rdf:Description>
 	</xsl:if>
@@ -6915,6 +8906,56 @@
 					<xsl:value-of select="." />
 				</l0:name>
 			</rdf:Description>
+	</xsl:for-each>
+	<xsl:for-each select="record/metadata/schede/*/LR/LRI">
+		<xsl:if test="record/metadata/schede/*/LR/LRI/LRIY">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./LRIY, '-',  ./LRIY)))" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+		        </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="concat(./LRIY, ' - ', ./LRIY)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="concat(./LRIY, ' - ', ./LRIY)" />
+			</l0:name>
+			<arco-arco:startTime>
+				<xsl:value-of select="./LRIY" />
+			</arco-arco:startTime>
+			<arco-arco:endTime>
+				<xsl:value-of select="./LRIY" />
+			</arco-arco:endTime>
+		</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/*/LR/LRI/LRIK">
+			<rdf:Description>
+			<xsl:attribute name="rdf:about">
+		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./LRIK, '-',  ./LRIN, '-', ./LRIC,'-', ./LRIQ)))" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+		        </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="concat(./LRIK, '/', ./LRIN, '/', ./LRIC, '/', ./LRIQ)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="concat(./LRIK, '/', ./LRIN, '/', ./LRIC, '/', ./LRIQ)" />
+			</l0:name>
+			<arco-arco:startTime>
+				<xsl:value-of select="./LRIK, '/', ./LRIN, '/', ./LRIC, '/', ./LRIQ" />
+			</arco-arco:startTime>
+			<arco-arco:endTime>
+				<xsl:value-of select="./LRIK, '/', ./LRIN, '/', ./LRIC, '/', ./LRIQ" />
+			</arco-arco:endTime>
+		</rdf:Description>
+		</xsl:if>
 	</xsl:for-each>
 	<xsl:for-each select="record/metadata/schede/*/LR/LRI/LRIG">
 			<rdf:Description>

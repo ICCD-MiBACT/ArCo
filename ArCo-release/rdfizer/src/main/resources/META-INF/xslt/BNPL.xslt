@@ -204,7 +204,7 @@
 			</arco-core:isIdentifiedBy>
 			<arco-core:hasClassificationInTime>
 				<xsl:attribute name="rdf:resource">
-		    		<xsl:value-of select="concat($NS,'IdentificationInTime/', $itemURI)" />
+		    		<xsl:value-of select="concat($NS,'ClassificationInTime/', $itemURI)" />
 				</xsl:attribute>
 			</arco-core:hasClassificationInTime>
 			<arco-core:hasIdentificationInTime>

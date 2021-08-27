@@ -1319,7 +1319,7 @@
             </xsl:attribute>
             <rdf:type>
             <xsl:attribute name="rdf:resource">
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Variety'" />      
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/BotanicalVariety'" />      
             </xsl:attribute>
             </rdf:type>
             <rdfs:label>
@@ -1353,7 +1353,7 @@
             </xsl:attribute>
             <rdf:type>
             <xsl:attribute name="rdf:resource">
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Subspecies'" />      
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSubspecies'" />      
             </xsl:attribute>
             </rdf:type>
             <rdfs:label>
@@ -1602,7 +1602,7 @@
             </xsl:attribute>
             <rdf:type>
             <xsl:attribute name="rdf:resource">
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Variety'" />      
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/BotanicalVariety'" />      
             </xsl:attribute>
             </rdf:type>
             <rdfs:label>
@@ -1636,7 +1636,7 @@
             </xsl:attribute>
             <rdf:type>
             <xsl:attribute name="rdf:resource">
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Subspecies'" />      
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSubspecies'" />      
             </xsl:attribute>
             </rdf:type>
             <rdfs:label>
@@ -1949,7 +1949,7 @@
 				</xsl:attribute>
             	<rdf:type>
 		            <xsl:attribute name="rdf:resource">
-        		    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Variety'" />      
+        		    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/BotanicalVariety'" />      
 		            </xsl:attribute>
         	    </rdf:type>
             	<rdfs:label>
@@ -1983,7 +1983,7 @@
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Subspecies'" />      
+						<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSubspecies'" />      
 					</xsl:attribute>
 	            </rdf:type>
     	        <rdfs:label>

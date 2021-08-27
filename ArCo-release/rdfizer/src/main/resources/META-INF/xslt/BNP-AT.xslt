@@ -4,7 +4,6 @@
 	xmlns:arco-core="https://w3id.org/arco/ontology/core/"
 	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
-	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
 	xmlns:arco-spe="https://w3id.org/arco/ontology/natural-specimen-description/"
 	xmlns:cis="http://dati.beniculturali.it/cis/"
 	xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
@@ -163,7 +162,8 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>		
-
+	
+	
 	<xsl:if test="$sheetType='BNP'">			
 	<rdf:Description>
 		<xsl:attribute name="rdf:about">
@@ -256,6 +256,14 @@
 				</xsl:attribute>
 			</arco-spe:hasLabel>			
 		</xsl:for-each>
+		<!-- hostRock -->
+		<xsl:if test="record/metadata/schede/BNP/ET/ETA/ETAO">
+			<arco-spe:hasHostRock>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS,'HostRock/', arco-fn:urify(record/metadata/schede/BNP/ET/ETA/ETAO))" />
+				</xsl:attribute>
+			</arco-spe:hasHostRock>
+		</xsl:if>
 		<!-- sex interpretation -->
 		<xsl:for-each select="record/metadata/schede/BNP/SP/SPZ">
 			<xsl:if test="./SPZS">
@@ -727,6 +735,25 @@
 			</xsl:if>		
 		</rdf:Description> 
 	</xsl:for-each>
+	<!-- Host rock as individual -->							
+	<xsl:if test="record/metadata/schede/BNP/ET/ETA/ETAO">
+		<rdf:Description>	
+			<xsl:attribute name="rdf:about">
+		    	<xsl:value-of select="concat($NS,'HostRock/', arco-fn:urify(record/metadata/schede/BNP/ET/ETA/ETAO))" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+                	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/HostRock'" />
+            	</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+            	 <xsl:value-of select="record/metadata/schede/BNP/ET/ETA/ETAO" />
+            </rdfs:label>
+            <l0:name>
+            	<xsl:value-of select="record/metadata/schede/BNP/ET/ETA/ETAO" />
+            </l0:name>
+		</rdf:Description>
+	</xsl:if>
 	<!-- Sex interpretation as individual  -->
 	<xsl:for-each select="record/metadata/schede/BNP/SP/SPZ">
 		<xsl:if test="./SPZS">
@@ -884,6 +911,643 @@
 	</xsl:for-each>
 	</xsl:if>
 
+	<xsl:if test="$sheetType='BNZ'">			
+	<rdf:Description>
+		<xsl:attribute name="rdf:about">
+        	<xsl:value-of select="$culturalProperty" />
+		</xsl:attribute>
+		<rdf:type>
+			<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="'https://w3id.org/arco/ontology/arco/ZoologicalHeritage'" />
+			</xsl:attribute>
+		</rdf:type>
+		<!-- identifier -->
+		<xsl:if test="$sheetType='BNZ' and (record/metadata/schede/BNZ/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNZ/OG/OGT/OGTD)), 'collezione'))">
+			<xsl:if test="record/metadata/schede/BNZ/AC/ACO">
+			<l0:identifier>
+				<xsl:value-of select="record/metadata/schede/BNZ/AC/ACO" />
+			</l0:identifier>
+			</xsl:if>
+		</xsl:if>
+		<xsl:if test="$sheetType='BNZ' and (record/metadata/schede/BNZ/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNZ/OG/OGT/OGTD)), 'campione'))">
+			<xsl:if test="record/metadata/schede/BNZ/AC/ACK">
+			<l0:identifier>
+				<xsl:value-of select="record/metadata/schede/BNZ/AC/ACK" />
+			</l0:identifier>
+			</xsl:if>
+		</xsl:if>
+	<!-- taxon 	 -->
+		<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZS">
+			<xsl:variable name="sps-species">
+				<xsl:choose>
+					<xsl:when test="not(contains(./SZSS, ./SZSR))">
+						<xsl:value-of select="concat(arco-fn:urify(normalize-space(./SZSR)), '-', arco-fn:urify(normalize-space(./SZSS)))" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="arco-fn:urify(normalize-space(./SZSS))" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<xsl:variable name="sps-subspecies" >
+				<xsl:choose>
+					<xsl:when test="./SZSX">
+						<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./SZSX)))" />
+					</xsl:when>
+					<xsl:otherwise>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<xsl:variable name="sps-species-lab">
+				<xsl:choose>
+					<xsl:when test="not(contains(./SZSS, ./SZSR))">
+						<xsl:value-of select="concat(./SZSR, ' ', ./SZSS)" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="./SZSS" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<xsl:variable name="sps-subspecies-lab" >
+				<xsl:choose>
+					<xsl:when test="./SZSX">
+						<xsl:value-of select="concat(' ', ./SZSX)" />
+					</xsl:when>
+					<xsl:otherwise>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<xsl:variable name="BiologicalTaxon">   
+				<xsl:value-of select="concat($NS,'BiologicalTaxon/', $sps-species, $sps-subspecies)" />
+			</xsl:variable>
+			<xsl:variable name="BiologicalTaxonLabel">   		
+				<xsl:call-template name="CamelCase1">
+					<xsl:with-param name="text" select="concat($sps-species-lab, $sps-subspecies-lab)" />
+				</xsl:call-template>
+			</xsl:variable>
+			<arco-core:isIdentifiedBy>
+				<xsl:attribute name="rdf:resource">
+		    		<xsl:value-of select="$BiologicalTaxon" />
+				</xsl:attribute>
+			</arco-core:isIdentifiedBy> 
+			<!-- identification in time  -->
+			<arco-spe:hasIdentificationInTime>
+				<xsl:attribute name="rdf:resource">
+		    		<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-identification-', position())" />
+				</xsl:attribute>
+			</arco-spe:hasIdentificationInTime>
+		</xsl:for-each> 
+		<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZE">
+			<arco-spe:hasLabel>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS,'Label/', $itemURI, '-', position())" />
+				</xsl:attribute>
+			</arco-spe:hasLabel>			
+		</xsl:for-each>
+		<!-- sex interpretation -->
+		<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZAS">
+			<xsl:if test="./SZAS">
+				<arco-cd:hasSexInterpretation>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'SexInterpretation/', $itemURI, '-', position())" />
+					</xsl:attribute>
+				</arco-cd:hasSexInterpretation>
+			</xsl:if>		
+		</xsl:for-each>
+		<!-- development stage -->
+		<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZA">
+			<xsl:if test="./SZAE">
+				<arco-cd:hasDevelopmentStage>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'DevelopmentStage/', arco-fn:urify(normalize-space(./SZAE)))" />
+					</xsl:attribute>
+				</arco-cd:hasDevelopmentStage>
+			</xsl:if>		
+		</xsl:for-each>
+		<!-- specimen harvesting -->	
+		<xsl:if test="record/metadata/schede/BNZ/LR">
+			<arco-spe:hasSpecimenHarvesting>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS,'SpecimenHarvesting/', $itemURI)" />
+				</xsl:attribute>
+			</arco-spe:hasSpecimenHarvesting>
+		</xsl:if>
+		<!-- type specimen identification in time -->	
+		<xsl:for-each select="record/metadata/schede/BNZ/SZ/TZI">
+			<arco-spe:hasTypeSpecimenIdentification>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI, '-', position())" />
+				</xsl:attribute>
+			</arco-spe:hasTypeSpecimenIdentification>
+		</xsl:for-each>	
+	</rdf:Description>
+	<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZS">
+		<!-- IdentificationInTime as individual	 --> 
+		<xsl:variable name="sps-species">
+				<xsl:choose>
+					<xsl:when test="not(contains(./SZSS, ./SZSR))">
+						<xsl:value-of select="concat(arco-fn:urify(normalize-space(./SZSR)), '-', arco-fn:urify(normalize-space(./SZSS)))" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="arco-fn:urify(normalize-space(./SZSS))" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<xsl:variable name="sps-subspecies" >
+				<xsl:choose>
+					<xsl:when test="./SZSX">
+						<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./SZSX)))" />
+					</xsl:when>
+					<xsl:otherwise>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<xsl:variable name="sps-species-lab">
+				<xsl:choose>
+					<xsl:when test="not(contains(./SZSS, ./SZSR))">
+						<xsl:value-of select="concat(./SZSR, ' ', ./SZSS)" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="./SZSS" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<xsl:variable name="sps-subspecies-lab" >
+				<xsl:choose>
+					<xsl:when test="./SZSX">
+						<xsl:value-of select="concat(' ', ./SZSX)" />
+					</xsl:when>
+					<xsl:otherwise>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<xsl:variable name="BiologicalTaxon">   
+				<xsl:value-of select="concat($NS,'BiologicalTaxon/', $sps-species, $sps-subspecies)" />
+			</xsl:variable>
+			<xsl:variable name="BiologicalTaxonLabel">   		
+				<xsl:call-template name="CamelCase1">
+					<xsl:with-param name="text" select="concat($sps-species-lab, $sps-subspecies-lab)" />
+				</xsl:call-template>
+			</xsl:variable>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+        		<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-identification-', position())" />
+        	</xsl:attribute>
+       		<rdf:type>
+				<xsl:attribute name="rdf:resource">
+                	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime'" />
+            	</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+            	 <xsl:value-of select="concat('Identificazione ', position(), 'del bene culturale ', $itemURI)" />
+            </rdfs:label>
+            <l0:name xml:lang="it">
+            	<xsl:value-of select="concat('Identificazione ', position(), 'del bene culturale ', $itemURI)" />
+            </l0:name>
+			<rdfs:label xml:lang="en">
+            	 <xsl:value-of select="concat('Identification ', position(), ' of cultural property ', $itemURI)" />
+            </rdfs:label>
+            <l0:name xml:lang="en">
+            	<xsl:value-of select="concat('Identification ', position(), ' of cultural property ', $itemURI)" />
+            </l0:name>
+			<xsl:if test="./SZSC">
+				<tiapit:atTime>
+					<xsl:attribute name="rdf:resource">
+		        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./SZSC, '-',  ./SZSC)))" />
+					</xsl:attribute>
+				</tiapit:atTime>
+			</xsl:if>
+			<xsl:if test="./SZSL">
+			<xsl:variable name="virgola" select="./SZSL" />
+			<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+			<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+			<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
+				<xsl:for-each select="$authorssplit">
+					<arco-core:involvesAgent>
+						<xsl:attribute name="rdf:resource">
+    	    				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+						</xsl:attribute>
+					</arco-core:involvesAgent>
+				</xsl:for-each>
+			</xsl:if>
+			<arco-spe:hasTaxon>
+				<xsl:attribute name="rdf:resource">
+	    	    	<xsl:value-of select="$BiologicalTaxon" />
+				</xsl:attribute>
+			</arco-spe:hasTaxon>
+		</rdf:Description>
+		<!-- BiologicalTaxon as individual 	--> 
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+        		<xsl:value-of select="$BiologicalTaxon" />
+	        </xsl:attribute>    
+			<rdfs:label>
+            	 <xsl:value-of select="$BiologicalTaxonLabel" />
+           	</rdfs:label>
+	           <l0:name>
+    	       	<xsl:value-of select="$BiologicalTaxonLabel" />
+            </l0:name>		
+		</rdf:Description>																	
+		<xsl:if test="./SZSX">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+        	       <xsl:value-of select="concat($NS,'BiologicalTaxon/', $sps-species, $sps-subspecies)" />	
+            	</xsl:attribute>
+	            <rdf:type>
+    	        	<xsl:attribute name="rdf:resource">
+        	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Subspecies'" />      
+            		</xsl:attribute>
+	            </rdf:type>
+	            <xsl:if test="./SZSA">
+					<arco-cd:synonym>
+						<xsl:value-of select="." />
+					</arco-cd:synonym>
+				</xsl:if>
+				<xsl:if test="./SZSN">
+					<arco-cd:synonym>
+						<xsl:value-of select="." />
+					</arco-cd:synonym>
+				</xsl:if>
+    	        <rdfs:label>
+					<xsl:call-template name="CamelCase1">
+						<xsl:with-param name="text" select="concat($sps-species-lab, $sps-subspecies-lab)" />
+					</xsl:call-template>
+	            </rdfs:label>
+    	        <l0:name>
+					<xsl:call-template name="CamelCase1">
+						<xsl:with-param name="text" select="concat($sps-species-lab, $sps-subspecies-lab)" />
+					</xsl:call-template>
+	            </l0:name>
+	            <xsl:if test="./SZSE">
+ 					<arco-cd:hasAuthor>
+    	    	    	<xsl:attribute name="rdf:resource">
+        	    			<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./SZSE))" />
+		            	</xsl:attribute>
+        	    	</arco-cd:hasAuthor>
+            	</xsl:if>
+				<arco-spe:hasDirectHigherRank>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'BiologicalTaxon/', $sps-species)" />
+					</xsl:attribute>	
+				</arco-spe:hasDirectHigherRank>	
+  			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./SZSS">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $sps-species)" />
+				</xsl:attribute>
+				<xsl:if test="./SZSR">
+					<arco-spe:hasDirectHigherRank>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./SZSR))" />
+						</xsl:attribute>
+					</arco-spe:hasDirectHigherRank>
+				</xsl:if>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Species'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:call-template name="CamelCase1">
+						<xsl:with-param name="text" select="$sps-species-lab" />
+					</xsl:call-template>
+				</rdfs:label>
+				<l0:name>
+					<xsl:call-template name="CamelCase1">
+						<xsl:with-param name="text" select="$sps-species-lab" />
+					</xsl:call-template>
+				</l0:name>
+				<xsl:if test="./SZSD">
+					<arco-cd:hasAuthor>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./SZSD))" />
+						</xsl:attribute>
+					</arco-cd:hasAuthor>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>	
+		<xsl:if test="./SZSR">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+            	   <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./SZSR))" />
+	            </xsl:attribute>
+				<xsl:if test="./SZSF">
+	    	        <arco-spe:hasDirectHigherRank>
+    	    	   		<xsl:attribute name="rdf:resource">
+        	    			 <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./SZSF))" />
+            			</xsl:attribute>
+	            	</arco-spe:hasDirectHigherRank>
+	            </xsl:if>
+    	        <rdf:type>
+        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />      
+            	</rdf:type>
+	            <rdfs:label>
+    	        	 <xsl:value-of select="./SZSR" />
+        	    </rdfs:label>
+            	<l0:name>
+            		<xsl:value-of select="./SZSR" />
+	            </l0:name>
+    		</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./SZSF">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+            	   <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./SZSF))" />
+	            </xsl:attribute>
+    	        <xsl:if test="./SZSO">
+	    	        <arco-spe:hasDirectHigherRank>
+    	    	   		<xsl:attribute name="rdf:resource">
+        	    			 <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./SZSO))" />
+            			</xsl:attribute>
+	            	</arco-spe:hasDirectHigherRank>
+	            </xsl:if>
+    	        <rdf:type>
+        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Family'" />      
+            	</rdf:type>
+	            <rdfs:label>
+    	        	 <xsl:value-of select="./SZSF" />
+        	    </rdfs:label>
+            	<l0:name>
+            		<xsl:value-of select="./SZSF" />
+	            </l0:name>
+    		</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./SZSO">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+            	   <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./SZSO))" />
+	            </xsl:attribute>
+    	        <xsl:if test="./SZSB">
+	    	        <arco-spe:hasDirectHigherRank>
+    	    	   		<xsl:attribute name="rdf:resource">
+        	    			 <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./SZSB))" />
+            			</xsl:attribute>
+	            	</arco-spe:hasDirectHigherRank>
+	            </xsl:if>
+    	        <rdf:type>
+        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Order'" />      
+            	</rdf:type>
+	            <rdfs:label>
+    	        	 <xsl:value-of select="./SZSO" />
+        	    </rdfs:label>
+            	<l0:name>
+            		<xsl:value-of select="./SZSO" />
+	            </l0:name>
+    		</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./SZSB">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+            	   <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./SZSB))" />
+	            </xsl:attribute>
+    	        <xsl:if test="./SZSP">
+	    	        <arco-spe:hasDirectHigherRank>
+    	    	   		<xsl:attribute name="rdf:resource">
+        	    			 <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./SZSP))" />
+            			</xsl:attribute>
+	            	</arco-spe:hasDirectHigherRank>
+	            </xsl:if>
+    	        <rdf:type>
+        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Class'" />      
+            	</rdf:type>
+	            <rdfs:label>
+    	        	 <xsl:value-of select="./SZSB" />
+        	    </rdfs:label>
+            	<l0:name>
+            		<xsl:value-of select="./SZSB" />
+	            </l0:name>
+    		</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./SZSP">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+            	   <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./SZSP))" />
+	            </xsl:attribute>
+    	        <rdf:type>
+        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Phylum'" />      
+            	</rdf:type>
+	            <rdfs:label>
+    	        	 <xsl:value-of select="./SZSP" />
+        	    </rdfs:label>
+            	<l0:name>
+            		<xsl:value-of select="./SZSP" />
+	            </l0:name>
+    		</rdf:Description>
+		</xsl:if>
+	</xsl:for-each>
+	<!-- Time Interval as individual -->
+	<xsl:for-each select ="record/metadata/schede/BNZ/SZ/SZS">
+		<xsl:if test ="./SZSC">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./SZSC, '-',  ./SZSC)))" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+		        </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="concat(./SZSC, ' - ', ./SZSC)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="concat(./SZSC, ' - ', ./SZSC)" />
+			</l0:name>
+			<arco-arco:startTime>
+				<xsl:value-of select="./SZSC" />
+			</arco-arco:startTime>
+			<arco-arco:endTime>
+				<xsl:value-of select="./SZSC" />
+			</arco-arco:endTime>
+		</rdf:Description>
+		</xsl:if>
+	</xsl:for-each>			
+	<!-- Label as individual  -->
+	<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZE">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+		    	<xsl:value-of select="concat($NS,'Label/', $itemURI, '-', position())" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Label'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Etichetta ',  position(), ' del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Etichetta ',  position(), ' del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Label ', position(), ' of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of	select="concat('Label ', position(), ' of cultural property ', $itemURI)" />
+			</l0:name>
+			<xsl:if test="./SZET">
+				<arco-spe:bodyTranscript>
+					<xsl:value-of select="normalize-space(./SZET)" />
+				</arco-spe:bodyTranscript>
+			</xsl:if>
+			<xsl:if test="./SZEI">
+				<arco-spe:headingTranscript>
+					<xsl:value-of select="normalize-space(./SZEI)" />
+				</arco-spe:headingTranscript>
+			</xsl:if>		
+		</rdf:Description> 
+	</xsl:for-each>
+	
+	<!-- Sex interpretation as individual  -->
+	<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZA">
+		<xsl:if test="./SZAS">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+		    	<xsl:value-of select="concat($NS,'SexInterpretation/', $itemURI, '-', position())" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SexInterpretation'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Interpretazione del sesso ',  position(), ' del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Interpretazione del sesso ',  position(), ' del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Sex interpretation ', position(), ' of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of	select="concat('Sex interpretation ', position(), ' of cultural property ', $itemURI)" />
+			</l0:name>
+			<xsl:if test="./SZAS">
+				<arco-cd:sex>
+					<xsl:value-of select="normalize-space(./SZAS)" />
+				</arco-cd:sex>
+			</xsl:if>		
+		</rdf:Description>
+		</xsl:if> 
+	</xsl:for-each>
+	<!-- development stage as individual  -->
+	<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZA">
+		<xsl:if test="./SZAE">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+		    	<xsl:value-of select="concat($NS,'DevelopmentStage/', arco-fn:urify(normalize-space(./SZAE)))" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DevelopmentStage'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="./SZAE" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="./SZAE" />
+			</l0:name>		
+		</rdf:Description>
+		</xsl:if> 
+	</xsl:for-each>
+	<!-- Type Specimen Identification as individual -->								
+ 	<xsl:for-each select="record/metadata/schede/BNZ/SZ/TZI">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI, '-', position())" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of 	select="concat('Identificazione del tipo nomenclaturale del bene ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of 	select="concat('Identificazione del tipo nomenclaturale del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of 	select="concat('Identification of type specimen of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of 	select="concat('Identification of type specimen of cultural property ', $itemURI)" />
+			</l0:name>
+			<xsl:if test="./TZIT">	
+				<arco-spe:hasTypeOfTypeSpecimen>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'TypeOfTypeSpecimen/', arco-fn:urify(./TZIT))" />
+				</xsl:attribute>
+				</arco-spe:hasTypeOfTypeSpecimen>
+			</xsl:if>								
+			<xsl:if test="./TZID">
+				<arco-spe:producesTaxon>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(./TZID)))" />
+					</xsl:attribute>
+				</arco-spe:producesTaxon>
+			</xsl:if>
+		</rdf:Description>
+		<!--TypeSpecimen Type as individual -->
+		<xsl:if test="./TZIT">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'TypeSpecimenType/', arco-fn:urify(./TZIT))" />
+		        </xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+	        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/TypeOfTypeSpecimen'" />
+	            	</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="./TZIT" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="./TZIT" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<!-- biological taxon as individual -->
+		<xsl:if test="./TZID">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+        			<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(./TZID)))" />
+	        	</xsl:attribute>    
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+        	   	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon'" />
+           			</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+        	    	 <xsl:value-of select="./TZID" />
+           		</rdfs:label>
+				<l0:name>
+   					<xsl:value-of select="./TZID" />
+				</l0:name>
+			</rdf:Description>				
+		</xsl:if>
+	</xsl:for-each>							
+	<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZS/SZSL">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of 	select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNZ/SZ/SZS/SZSL))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNZ/SZ/SZS/SZSL)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNZ/SZ/SZS/SZSL)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:if>	
 
 	<xsl:if test="$sheetType='AT'">			
 		<rdf:Description>
@@ -1992,51 +2656,29 @@
             	   		<xsl:value-of select="normalize-space(./ELES)" />
 					</arco-core:specifications>
 				</xsl:if>
-				<xsl:if test="./ELEN">
-					<arco-core:note>
-        	       		<xsl:value-of select="normalize-space(./ELEN)" />
-					</arco-core:note>
-				</xsl:if>
 				<xsl:if test="./ELEA">
 					<arco-core:specifications>
             	   		<xsl:value-of select="concat(normalize-space(./ELEA), '. ', normalize-space(./ELER))" />
 					</arco-core:specifications>
 				</xsl:if>
-				<xsl:if test="./ELEZ">
-					<arco-cd:hasBibliography>
-						<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-bibliography-cultural-property-part-', position())" />
-	                	</xsl:attribute>
-					</arco-cd:hasBibliography>
-				</xsl:if>
+				<xsl:choose>
+					<xsl:when test="./ELEN and ./ELEZ">
+						<arco-core:note>
+							<xsl:value-of select="concat(normalize-space(./ELEN), ' - Documentazione: ', normalize-space(./ELEZ))" />
+						</arco-core:note>
+					</xsl:when>
+					<xsl:when test="./ELEZ">
+						<arco-core:note>
+							<xsl:value-of select="concat('Documentazione: ', normalize-space(./ELEZ))" />
+						</arco-core:note>
+					</xsl:when>
+					<xsl:when test="./ELEN">
+						<arco-core:note>
+							<xsl:value-of select="normalize-space(./ELEN)" />
+						</arco-core:note>
+					</xsl:when>
+				</xsl:choose>
 			</rdf:Description>
-			<xsl:if test="./ELEZ">
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-bibliography-cultural-property-part-', position())" />
-	        		</xsl:attribute>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-        	       			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Bibliography'" />
-	            	   	</xsl:attribute>
-					</rdf:type>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Bibliografia relativa all oggetto associato al bene ', $itemURI)" />
-					</rdfs:label>
-					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Bibliografia relativa all oggetto associato al bene ', $itemURI)" />
-					</l0:name>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Bibliography about the object associated to cultural property ', $itemURI)" />
-					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Bibliography about the object associated to cultural property ', $itemURI)" />
-					</l0:name>
-					<arco-cd:completeBibliographicReference>
-						<xsl:value-of select="./ELEZ" />
-					</arco-cd:completeBibliographicReference>			
-				</rdf:Description>
-			</xsl:if>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/AT/VM/VMC/VMCE">
 			<rdf:Description>
