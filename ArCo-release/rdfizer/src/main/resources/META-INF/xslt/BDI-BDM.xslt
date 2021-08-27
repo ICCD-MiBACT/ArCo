@@ -201,6 +201,11 @@
 					<xsl:value-of select="'https://w3id.org/arco/ontology/arco/DemoEthnoAnthropologicalHeritage'" />
 				</xsl:attribute>
 			</rdf:type>
+			<xsl:if test="record/metadata/schede/*/MT/MOF">
+				<arco-cd:methodOfManufacturing>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/MT/MOF)" />
+				</arco-cd:methodOfManufacturing>
+			</xsl:if>
 			<!-- production realization location for BDM < version 4.00 -->
 			<xsl:for-each select="record/metadata/schede/BDM/AU/LDF">
 				<arco-location:hasTimeIndexedTypedLocation>
