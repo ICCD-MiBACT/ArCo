@@ -2828,7 +2828,7 @@
 				<xsl:for-each select="record/metadata/schede/*/MC/CMN">
 					<arco-dd:hasSampleCollected>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'SampleCollected/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
+							<xsl:value-of select="concat($NS, 'SampleCollected/', $itemURI, '-', arco-fn:urify(normalize-space(./CMND)))" />
 						</xsl:attribute>
 					</arco-dd:hasSampleCollected>
 				</xsl:for-each>

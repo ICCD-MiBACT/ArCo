@@ -28568,24 +28568,18 @@
 		<xsl:for-each select="record/metadata/schede/*/MC/CMN">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'SampleCollected/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
+					<xsl:value-of select="concat($NS, 'SampleCollected/', $itemURI, '-', arco-fn:urify(normalize-space(./CMND)))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
 			        	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/SampleCollected'" />
 					</xsl:attribute>
 				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('Campione prelevato ', position(), 'del bene ', $itemURI)" />
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(./CMND)" />
 				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('Campione prelevato ', position(), 'del bene ', $itemURI)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Sample collected ', position(), 'of cultural property ', $itemURI)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Sample collected ', position(), 'of cultural property ', $itemURI)" />
+				<l0:name>
+					<xsl:value-of select="normalize-space(./CMND)" />
 				</l0:name>
 				<xsl:if test="./CMNT">
 					<arco-dd:hasSampleCollectedType>
