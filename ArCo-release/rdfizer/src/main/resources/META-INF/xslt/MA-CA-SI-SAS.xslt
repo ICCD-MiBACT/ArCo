@@ -322,7 +322,7 @@
 			</xsl:for-each>
 			<xsl:if test="record/metadata/schede/*/MT/POS">
 				<arco-core:description>
-					<xsl:value-of select="concat('Posizione saggio: area ', record/metadata/schede/*/MT/POS/POSN, '. ',  record/metadata/schede/*/MT/POS/POSD" />
+					<xsl:value-of select="concat('Posizione saggio: area ', record/metadata/schede/*/MT/POS/POSN, '. ',  record/metadata/schede/*/MT/POS/POSD)" />
 				</arco-core:description>
 			</xsl:if>
 		</rdf:Description>

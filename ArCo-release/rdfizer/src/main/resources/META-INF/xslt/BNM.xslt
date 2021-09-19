@@ -3774,6 +3774,13 @@
 						select="$address-label" />
 				</xsl:call-template>
 			</l0:name>
+			<xsl:if test="../MAO and (not(starts-with(lower-case(normalize-space(../MAO)), 'nr')) and not(starts-with(lower-case(normalize-space(../MAO)), 'n.r')))">
+			<arco-location:seaOrOcean>
+				<xsl:call-template name="CamelCase">
+					<xsl:with-param name="text" select="../MAO" />
+				</xsl:call-template>
+			</arco-location:seaOrOcean>
+			</xsl:if>
 			<clvapit:hasAddress>
 				<xsl:choose>
 					<xsl:when test="./LRVS and not(lower-case(normalize-space(./LRVS))='italia')">
@@ -3787,7 +3794,19 @@
 						</xsl:attribute>
 					</xsl:otherwise>
 				</xsl:choose>
-			</clvapit:hasAddress>		
+			</clvapit:hasAddress>
+			<xsl:if test="../LRL and (not(starts-with(lower-case(normalize-space(../LRL)), 'nr')) and not(starts-with(lower-case(normalize-space(../LRL)), 'n.r')))">
+				<arco-location:hasToponymInTime>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(../LRL)))" />
+					</xsl:attribute>
+				</arco-location:hasToponymInTime>
+			</xsl:if>	
+			<xsl:if test="../LRS and (not(starts-with(lower-case(normalize-space(../LRS)), 'nr')) and not(starts-with(lower-case(normalize-space(../LRS)), 'n.r')))">
+				<arco-core:specifications>
+					<xsl:value-of select="normalize-space(../LRS)" />
+				</arco-core:specifications>
+			</xsl:if>	
 		</rdf:Description>
 		<rdf:Description>
 			<xsl:choose>
@@ -4007,6 +4026,28 @@
 				<l0:name>
 					<xsl:call-template name="CamelCase">
 						<xsl:with-param name="text" select="normalize-space(./LRVC)" />
+					</xsl:call-template>
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="../LRL and (not(starts-with(lower-case(normalize-space(../LRL)), 'nr')) and not(starts-with(lower-case(normalize-space(../LRL)), 'n.r')))">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(../LRL)))" />
+			 	</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/location/ToponymInTime'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:call-template name="CamelCase">
+						<xsl:with-param name="text" select="normalize-space(../LRL)" />
+					</xsl:call-template>
+				</rdfs:label>
+				<l0:name>
+					<xsl:call-template name="CamelCase">
+						<xsl:with-param name="text" select="normalize-space(../LRL)" />
 					</xsl:call-template>
 				</l0:name>
 			</rdf:Description>

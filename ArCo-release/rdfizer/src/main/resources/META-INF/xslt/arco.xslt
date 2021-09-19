@@ -5,6 +5,7 @@
 	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
+	xmlns:arco-spe="https://w3id.org/arco/ontology/natural-specimen-description/"
 	xmlns:cis="http://dati.beniculturali.it/cis/"
 	xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
 	xmlns:smapit="https://w3id.org/italia/onto/SM/"
@@ -22192,6 +22193,15 @@
 							</arco-cd:hasCommittent>
 						</xsl:if>
 					</xsl:for-each>
+					<xsl:for-each select="./CMME">
+						<xsl:if test=".">
+							<arco-cd:hasSponsor>
+								<xsl:attribute name="rdf:resource">
+                                	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+								</xsl:attribute>
+							</arco-cd:hasSponsor>
+						</xsl:if>
+					</xsl:for-each>
 					<xsl:if test="./CMMC and (not(starts-with(lower-case(normalize-space(./CMMC)), 'nr')) and not(starts-with(lower-case(normalize-space(./CMMC)), 'n.r')))">
 						<arco-cd:hasCircumstance>
 							<xsl:attribute name="rdf:resource">
@@ -22278,6 +22288,30 @@
 					</rdf:Description>
 				</xsl:if>
 				<xsl:for-each select="./CMMN">
+					<xsl:if test=".">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+	                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	                        </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	                                <xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+	                            </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(.)" />
+								</xsl:call-template>
+							</rdfs:label>
+							<l0:name>
+								<xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" 	select="normalize-space(.)" />
+								</xsl:call-template>
+							</l0:name>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:for-each>
+				<xsl:for-each select="./CMME">
 					<xsl:if test=".">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
@@ -23055,6 +23089,13 @@
 							</xsl:attribute>
 						</tiapit:atTime>
 						</xsl:if>
+						<xsl:if test="./STCT">
+							<arco-spe:isContainedIn>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'SpecimenContainer/', arco-fn:urify(normalize-space(./STCT)))" />
+								</xsl:attribute>
+							</arco-spe:isContainedIn>
+						</xsl:if>
 					</rdf:Description>
 					<!-- Time interval as an individual -->
 					<xsl:if test="./STCD">
@@ -23076,6 +23117,30 @@
 							<tiapit:time>
 								<xsl:value-of select="normalize-space(./STCD)" />
 							</tiapit:time>
+						</rdf:Description>
+					</xsl:if>
+					<!-- Specimen container as an individual -->
+					<xsl:if test="./STCD">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'SpecimenContainer/', arco-fn:urify(normalize-space(./STCT)))" />
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/SpecimenContainer'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./STCT)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./STCT)" />
+							</l0:name>
+							<xsl:if test="./STCE">
+								<arco-core:specifications>
+									<xsl:value-of select="normalize-space(./STCE)" />
+								</arco-core:specifications>
+							</xsl:if>
 						</rdf:Description>
 					</xsl:if>
 					<xsl:if test="./STCC and not(lower-case(normalize-space(./STCC))='nr' or lower-case(normalize-space(./STCC))='n.r.' or lower-case(normalize-space(./STCC))='nr (recupero pregresso)')">

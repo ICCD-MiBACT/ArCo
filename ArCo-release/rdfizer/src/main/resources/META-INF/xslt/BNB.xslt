@@ -981,6 +981,11 @@
 						</xsl:attribute>
 					</arco-spe:hasTaxon>
 				</xsl:if>
+				<xsl:if test="./RBA">
+					<arco-core:note>
+						<xsl:value-of select="normalize-space(./RBA)" />
+					</arco-core:note>
+				</xsl:if>
 			</rdf:Description>
 		</xsl:if>
 		<xsl:if test="./RBN">
@@ -3617,7 +3622,12 @@
 				<arco-spe:manufacturingDate>
 					<xsl:value-of select="normalize-space(./DBPD)" />
 				</arco-spe:manufacturingDate>
-			</xsl:if>			
+			</xsl:if>
+			<xsl:if test="./DBPT">
+				<arco-core:note>
+					<xsl:value-of select="concat('Tecnica di preparazione: ', normalize-space(./DBPT))" />
+				</arco-core:note>
+			</xsl:if>		
 		</rdf:Description>
 	</xsl:for-each>
 	<!-- Seed sample as individual -->

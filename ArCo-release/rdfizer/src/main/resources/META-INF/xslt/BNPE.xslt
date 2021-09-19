@@ -790,6 +790,13 @@
 						</xsl:otherwise>
 			    	</xsl:choose>
 				</arco-spe:hasTaxon>
+				<xsl:if test="../RRD/RRDA">
+					<arco-core:involvesAgent>
+						<xsl:attribute name="rdf:resource">
+    	    				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(../RRD/RRDA))" />
+						</xsl:attribute>
+					</arco-core:involvesAgent>
+				</xsl:if>
 			</rdf:Description>
 		</xsl:for-each>
 		<!-- Identification in time -->
@@ -1003,6 +1010,16 @@
 				<xsl:if test="record/metadata/schede/*/IR/IRA/IRAN">
 					<arco-core:note>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/IR/IRA/IRAN)" />
+					</arco-core:note>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/IR/IRA/IRAU">
+					<arco-core:note>
+						<xsl:value-of select="concat('Natura dello strato sovrastante: ', normalize-space(record/metadata/schede/*/IR/IRA/IRAU))" />
+					</arco-core:note>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/IR/IRA/IRAL">
+					<arco-core:note>
+						<xsl:value-of select="concat('Natura dello strato sottostante: ', normalize-space(record/metadata/schede/*/IR/IRA/IRAL))" />
 					</arco-core:note>
 				</xsl:if>
 			</rdf:Description>
@@ -1253,6 +1270,11 @@
 						</xsl:attribute>
 					</arco-dd:includesTechnicalCharacteristic>
 				</xsl:if>
+				<xsl:if test="record/metadata/schede/BNPE/SR/SRF/SRFA">
+					<arco-core:note>
+						<xsl:value-of select="normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFA)" />
+					</arco-core:note>
+				</xsl:if>
 			</rdf:Description>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNPE/SR/SRF/SRFC">
@@ -1397,6 +1419,13 @@
 							<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./RRC/RRCT)))" />
 						</xsl:attribute>
 					</arco-dd:includesTechnicalCharacteristic>
+				</xsl:if>
+				<xsl:if test="./RRD/RRDA">
+					<arco-core:involvesAgent>
+						<xsl:attribute name="rdf:resource">
+    	    				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RRD/RRDA))" />
+						</xsl:attribute>
+					</arco-core:involvesAgent>
 				</xsl:if>
 				</rdf:Description>
 			</xsl:if>
@@ -2035,7 +2064,535 @@
 					</l0:name>
 				</rdf:Description>
 			</xsl:if>
-		</xsl:if>								
+		</xsl:if>
+		<xsl:for-each select="record/metadata/schede/BNPE/RR">
+		<xsl:if test="./RRG/RRGD or ./RRG/RRGS  or ./RRG/RRGP or ./RRG/RRGA or ./RRG/RRGB or ./RRG/RRGC or ./RRG/RRGE or ./RRG/RRGR or ./RRF/RRFV or ./RRF/RRFI  or ./RRM/RRMN or ./RRF/RRFP">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI)" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+	               		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MeasurementCollection'" />
+	               	</xsl:attribute>
+				</rdf:type>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="'Misure del bene culturale ', $itemURI" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="'Misure del bene culturale ', $itemURI" />
+				</l0:name>
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
+				</l0:name>
+				<arco-core:current>
+	            	<xsl:value-of select="false()" />
+	            </arco-core:current>
+	            <xsl:if test="./RRD/RRDA">
+		            <arco-core:involvesAgent>
+						<xsl:attribute name="rdf:resource">
+    	    				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RRD/RRDA))" />
+						</xsl:attribute>
+					</arco-core:involvesAgent>
+				</xsl:if>
+				<xsl:if test="./RRG/RRGD">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-density')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RRG/RRGS">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-cohesion')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RRG/RRGP">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-porosity')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RRG/RRGA">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-primary-porosity')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RRG/RRGB">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-secondary-porosity')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RRG/RRGC">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-effective-porosity')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RRG/RRGE">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-permeability-coefficient')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RRG/RRGR">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-electrical-resistivity')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RRF/RRFV">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-radioactivity')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RRF/RRFI">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-colour-index')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RRM/RRMN">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-normative-mineralogy')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RRF/RRFP">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-paleomagnetism')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+			</rdf:Description>
+			<xsl:if test="./RRG/RRGD">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-density')" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGD)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGD)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGD)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGD)" />
+					</l0:name>
+					<arco-dd:hasMeasurementType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Density')" />
+					</arco-dd:hasMeasurementType>
+					<arco-dd:hasValue>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-density', '-', arco-fn:urify(normalize-space(./RRG/RRGD)))" />
+					</arco-dd:hasValue>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-density', '-', arco-fn:urify(normalize-space(./RRG/RRGD)))" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+					<rdfs:label>
+						<xsl:value-of select="./RRG/RRGD" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RRG/RRGD" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./RRG/RRGS">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-cohesion')" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGS)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGS)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGS)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGS)" />
+					</l0:name>
+					<arco-dd:hasMeasurementType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Cohesion')" />
+					</arco-dd:hasMeasurementType>
+					<arco-dd:hasValue>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-cohesion', '-', arco-fn:urify(normalize-space(./RRG/RRGS)))" />
+					</arco-dd:hasValue>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-cohesion', '-', arco-fn:urify(normalize-space(./RRG/RRGS)))" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+					<rdfs:label>
+						<xsl:value-of select="./RRG/RRGS" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RRG/RRGS" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./RRG/RRGP">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-porosity')" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGP)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGP)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGP)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGP)" />
+					</l0:name>
+					<arco-dd:hasMeasurementType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Porosity')" />
+					</arco-dd:hasMeasurementType>
+					<arco-dd:hasValue>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGP)))" />
+					</arco-dd:hasValue>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGP)))" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+					<rdfs:label>
+						<xsl:value-of select="./RRG/RRGP" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RRG/RRGP" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./RRG/RRGA">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-primary-porosity')" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGA)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGA)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGA)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGA)" />
+					</l0:name>
+					<arco-dd:hasMeasurementType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'PrimaryPorosity')" />
+					</arco-dd:hasMeasurementType>
+					<arco-dd:hasValue>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-primary-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGA)))" />
+					</arco-dd:hasValue>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-primary-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGA)))" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+					<rdfs:label>
+						<xsl:value-of select="./RRG/RRGA" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RRG/RRGA" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./RRG/RRGB">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-secondary-porosity')" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGB)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGB)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGB)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGB)" />
+					</l0:name>
+					<arco-dd:hasMeasurementType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'SecondaryPorosity')" />
+					</arco-dd:hasMeasurementType>
+					<arco-dd:hasValue>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-secondary-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGB)))" />
+					</arco-dd:hasValue>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-secondary-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGB)))" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+					<rdfs:label>
+						<xsl:value-of select="./RRG/RRGB" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RRG/RRGB" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./RRG/RRGC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-effective-porosity')" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGC)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGC)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGC)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGC)" />
+					</l0:name>
+					<arco-dd:hasMeasurementType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'EffectivePorosity')" />
+					</arco-dd:hasMeasurementType>
+					<arco-dd:hasValue>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-effective-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGC)))" />
+					</arco-dd:hasValue>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-effective-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGC)))" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+					<rdfs:label>
+						<xsl:value-of select="./RRG/RRGC" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RRG/RRGC" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./RRG/RRGE">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-permeability-coefficient')" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGE)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGE)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGE)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGE)" />
+					</l0:name>
+					<arco-dd:hasMeasurementType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'PermeabilityCoefficient')" />
+					</arco-dd:hasMeasurementType>
+					<arco-dd:hasValue>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-permeability-coefficient', '-', arco-fn:urify(normalize-space(./RRG/RRGE)))" />
+					</arco-dd:hasValue>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-permeability-coefficient', '-', arco-fn:urify(normalize-space(./RRG/RRGE)))" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+					<rdfs:label>
+						<xsl:value-of select="./RRG/RRGE" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RRG/RRGE" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./RRG/RRGR">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-electrical-resistivity')" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGR)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRG/RRGR)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGR)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRG/RRGR)" />
+					</l0:name>
+					<arco-dd:hasMeasurementType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'ElectricalResistivity')" />
+					</arco-dd:hasMeasurementType>
+					<arco-dd:hasValue>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-electrical-resistivity', '-', arco-fn:urify(normalize-space(./RRG/RRGR)))" />
+					</arco-dd:hasValue>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-electrical-resistivity', '-', arco-fn:urify(normalize-space(./RRG/RRGR)))" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+					<rdfs:label>
+						<xsl:value-of select="./RRG/RRGR" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RRG/RRGR" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./RRF/RRFV">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-radioactivity')" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRF/RRFV)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRF/RRFV)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRF/RRFV)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRF/RRFV)" />
+					</l0:name>
+					<arco-dd:hasMeasurementType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Radioactivity')" />
+					</arco-dd:hasMeasurementType>
+					<arco-dd:hasValue>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-radioactivity', '-', arco-fn:urify(normalize-space(./RRF/RRFV)))" />
+					</arco-dd:hasValue>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-radioactivity', '-', arco-fn:urify(normalize-space(./RRF/RRFV)))" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+					<rdfs:label>
+						<xsl:value-of select="./RRF/RRFV" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RRF/RRFV" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./RRF/RRFI">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-colour-index')" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRF/RRFI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRF/RRFI)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRF/RRFI)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRF/RRFI)" />
+					</l0:name>
+					<arco-dd:hasMeasurementType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'ColourIndex')" />
+					</arco-dd:hasMeasurementType>
+					<arco-dd:hasValue>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-colour-index', '-', arco-fn:urify(normalize-space(./RRF/RRFI)))" />
+					</arco-dd:hasValue>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-colour-index', '-', arco-fn:urify(normalize-space(./RRF/RRFI)))" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+					<rdfs:label>
+						<xsl:value-of select="./RRF/RRFI" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RRF/RRFI" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./RRM/RRMN">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-normative-mineralogy')" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRM/RRMN)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRM/RRMN)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRM/RRMN)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRM/RRMN)" />
+					</l0:name>
+					<arco-dd:hasMeasurementType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'NormativeMineralogy')" />
+					</arco-dd:hasMeasurementType>
+					<arco-dd:hasValue>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-normative-mineralogy', '-', arco-fn:urify(normalize-space(./RRM/RRMN)))" />
+					</arco-dd:hasValue>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-normative-mineralogy', '-', arco-fn:urify(normalize-space(./RRM/RRMN)))" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+					<rdfs:label>
+						<xsl:value-of select="./RRM/RRMN" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RRM/RRMN" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./RRF/RRFP">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-paleomagnetism')" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRF/RRFP)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', ./RRF/RRFP)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRF/RRFP)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RRF/RRFP)" />
+					</l0:name>
+					<arco-dd:hasMeasurementType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Paleomagnetism')" />
+					</arco-dd:hasMeasurementType>
+					<arco-dd:hasValue>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-paleomagnetism', '-', arco-fn:urify(normalize-space(./RRF/RRFP)))" />
+					</arco-dd:hasValue>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-paleomagnetism', '-', arco-fn:urify(normalize-space(./RRF/RRFP)))" />
+					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+					<rdfs:label>
+						<xsl:value-of select="./RRF/RRFP" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RRF/RRFP" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+		</xsl:if>	
+		</xsl:for-each>							
 		<!-- Alteration grade as individual -->
 		<xsl:if test="record/metadata/schede/BNPE/SR/SRC/SRCZ and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNPE/SR/SRC/SRCZ)), 'nessuna'))">
 			<rdf:Description>
@@ -3069,6 +3626,24 @@
 			</xsl:if>
 		</xsl:if>		
 		<xsl:for-each select="record/metadata/schede/BNPE/RR"> 
+			<xsl:if test="./RRD/RRDA">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+        	        	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RRD/RRDA))" />
+            	    </xsl:attribute>
+	            	<rdf:type>
+						<xsl:attribute name="rdf:resource">
+	    	        		<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+						</xsl:attribute>
+					</rdf:type>   
+					<rdfs:label>
+						<xsl:value-of select="./RRD/RRDA" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RRD/RRDA" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
 			<xsl:if test="./RRT/RRTT and not(starts-with(lower-case(normalize-space(./RRT/RRTT)), 'non tipo'))">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">

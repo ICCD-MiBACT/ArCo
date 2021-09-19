@@ -1996,6 +1996,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/seaOrOcean -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/seaOrOcean"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/siteIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/siteIdentifier">
