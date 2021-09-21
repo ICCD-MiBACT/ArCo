@@ -3562,12 +3562,26 @@
 					<xsl:for-each select="record/metadata/schede/*/OG/OGT">
 						<xsl:if test="./*">
 							<xsl:choose>
-								<xsl:when test="not($sheetType='BNB') and not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
+								<xsl:when test="not($sheetType='BNB') and not($sheetType='F' and ($sheetVersion='1.00' or $sheetVersion='1.00_ICCD0')) and not($sheetType='F' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
 									<arco-dd:hasCulturalPropertyType>
 										<xsl:attribute name="rdf:resource">
 											<xsl:choose>
 												<xsl:when test="./OGTT">
 													<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, '-', ./OGTT)))" />
+												</xsl:when>
+												<xsl:when test="./OGTD">
+													<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
+												</xsl:when>
+											</xsl:choose>
+										</xsl:attribute>
+									</arco-dd:hasCulturalPropertyType>
+								</xsl:when>
+								<xsl:when test="$sheetType='F' and ($sheetVersion='1.00' or $sheetVersion='1.00_ICCD0' or $sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')">
+									<arco-dd:hasCulturalPropertyType>
+										<xsl:attribute name="rdf:resource">
+											<xsl:choose>
+												<xsl:when test="./OGTS">
+													<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, '-', ./OGTS)))" />
 												</xsl:when>
 												<xsl:when test="./OGTD">
 													<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />

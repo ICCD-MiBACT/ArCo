@@ -271,6 +271,13 @@
 						</rdf:type>
 					</xsl:if>
 				</xsl:if>
+				<xsl:if test="record/metadata/schede/F/OG/OGT/OGTB and (not(lower-case(normalize-space(record/metadata/schede/F/OG/OGT/OGTB))='m') and not(lower-case(normalize-space(record/metadata/schede/F/OG/OGT/OGTB))='c'))">
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/catalogue/ComplexCPCatalogueRecord'" />
+						</xsl:attribute>
+					</rdf:type>
+				</xsl:if>
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Catalogue Record n: ', $itemURI)" />
 				</rdfs:label>
@@ -5693,7 +5700,7 @@
 			<xsl:for-each select="record/metadata/schede/*/OG/OGT">
 				<rdf:Description>
 					<xsl:choose>
-						<xsl:when test="not($sheetType='BNB') and not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
+						<xsl:when test="not($sheetType='BNB') and not($sheetType='F' and ($sheetVersion='1.00' or $sheetVersion='1.00_ICCD0' or $sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
 							<xsl:attribute name="rdf:about">
                      			<xsl:choose>
                             		<xsl:when test="./OGTT">
@@ -5748,6 +5755,65 @@
 								<arco-dd:hasCulturalPropertySpecification>
 									<xsl:attribute name="rdf:resource">
                                 		<xsl:value-of select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTT)))" />
+                            		</xsl:attribute>
+								</arco-dd:hasCulturalPropertySpecification>
+							</xsl:if>
+						</xsl:when>
+						<xsl:when test="$sheetType='F' and ($sheetVersion='1.00' or $sheetVersion='1.00_ICCD0' or $sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')">
+							<xsl:attribute name="rdf:about">
+                     			<xsl:choose>
+									<xsl:when test="./OGTS">
+										<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, '-', ./OGTS)))" />
+									</xsl:when>
+									<xsl:when test="./OGTD">
+										<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
+									</xsl:when>
+								</xsl:choose>
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType'" />
+                        		</xsl:attribute>
+							</rdf:type>
+							<rdfs:label  xml:lang="it">
+								<xsl:choose>
+									<xsl:when test="./OGTS">
+										<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text" select="concat(./OGTD, ' ', ./OGTS)" />
+										</xsl:call-template>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text" select="./OGTD" />
+										</xsl:call-template>
+									</xsl:otherwise>
+								</xsl:choose>
+							</rdfs:label>
+							<l0:name  xml:lang="it">
+								<xsl:choose>
+									<xsl:when test="./OGTS">
+										<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text" select="concat(./OGTD, ' ', ./OGTS)" />
+										</xsl:call-template>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text" select="./OGTD" />
+										</xsl:call-template>
+									</xsl:otherwise>
+								</xsl:choose>
+							</l0:name>
+							<xsl:if test="./OGTD and not(lower-case(normalize-space(./OGTD))='nr' or lower-case(normalize-space(./OGTD))='n.r.' or lower-case(normalize-space(./OGTD))='nr (recupero pregresso)')">
+								<arco-dd:hasCulturalPropertyDefinition>
+									<xsl:attribute name="rdf:resource">
+                            			<xsl:value-of select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
+                        			</xsl:attribute>
+								</arco-dd:hasCulturalPropertyDefinition>
+							</xsl:if>
+							<xsl:if test="./OGTS and not(lower-case(normalize-space(./OGTS))='nr' or lower-case(normalize-space(./OGTS))='n.r.' or lower-case(normalize-space(./OGTS))='nr (recupero pregresso)')">
+								<arco-dd:hasCulturalPropertySpecification>
+									<xsl:attribute name="rdf:resource">
+                                		<xsl:value-of select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTS)))" />
                             		</xsl:attribute>
 								</arco-dd:hasCulturalPropertySpecification>
 							</xsl:if>
@@ -5870,8 +5936,7 @@
 								</arco-dd:hasCulturalPropertySpecification>
 							</xsl:if>
 						</xsl:when>
-						<xsl:when
-							test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'erbario'))">
+						<xsl:when test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'erbario'))">
 							<xsl:attribute name="rdf:about">
                         		<xsl:choose>
                             		<xsl:when test="./OGTR">
@@ -6249,6 +6314,21 @@
 		</xsl:if>
 		<!-- We add the cultural property specification as an individual. It's 
 			associated with a Cultural Property Type by the property arco-dd:hasCulturalPropertySpecification. -->
+		<xsl:if test="record/metadata/schede/F/OG/OGT/OGTS">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/F/OG/OGT/OGTS)))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/F/OG/OGT/OGTS)" />
+				</rdfs:label>
+			</rdf:Description>
+		</xsl:if>
 		<xsl:if test="not($sheetType='MODI')">
 			<xsl:choose>
 				<xsl:when test="not($sheetType='BNB') and not($sheetType='NU') and not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">

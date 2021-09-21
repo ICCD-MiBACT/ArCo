@@ -4655,7 +4655,134 @@
 					<l0:name>
 						<xsl:value-of select="record/metadata/schede/*/DU/DUS/DUST" />
 					</l0:name>
+					<!-- Edition -->
+					<xsl:if test="record/metadata/schede/*/DU/DUX">
+						<arco-cd:hasEdition>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Edition/', $itemURI)" />
+							</xsl:attribute>
+						</arco-cd:hasEdition>
+					</xsl:if>
 				</rdf:Description>
+				<!-- Edition as an individual -->
+				<xsl:if test="record/metadata/schede/*/DU/DUX">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Edition/', $itemURI)" />
+            			</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+	            			</xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat('Edizione del documento audio del bene ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of select="concat('Edizione del documento audio del bene ', $itemURI)" />
+						</l0:name>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Edition of audio documentation of cultural property ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:value-of select="concat('Edition of audio documentation of cultural property ', $itemURI)" />
+						</l0:name>
+						<!-- editor -->
+						<xsl:if test="record/metadata/schede/*/DU/DUX/DUXE">
+							<arco-cd:hasEditor>
+								<xsl:attribute name="rdf:resource">
+            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/DU/DUX/DUXE))" />
+            					</xsl:attribute>
+							</arco-cd:hasEditor>
+						</xsl:if>
+						<!-- curator -->
+						<xsl:if test="record/metadata/schede/*/DU/DUX/DUXC">
+							<arco-cd:hasCurator>
+								<xsl:attribute name="rdf:resource">
+            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/DU/DUX/DUXC))" />
+            					</xsl:attribute>
+							</arco-cd:hasCurator>
+						</xsl:if>
+						<!-- time interval -->
+						<xsl:if test="record/metadata/schede/*/DU/DUX/DUXP">
+							<tiapit:atTime>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(record/metadata/schede/*/DU/DUX/DUXP)))" />
+								</xsl:attribute>
+							</tiapit:atTime>
+						</xsl:if>
+						<xsl:if test="record/metadata/schede/*/DU/DUX/DUXI">
+							<arco-core:note>
+								<xsl:value-of select="concat('Indice: ', normalize-space(record/metadata/schede/*/DU/DUX/DUXI))" />
+							</arco-core:note>
+						</xsl:if>
+						<xsl:if test="record/metadata/schede/*/DU/DUX/DUXZ">
+							<arco-core:note>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUX/DUXZ)" />
+							</arco-core:note>
+						</xsl:if>
+					</rdf:Description>
+					<!-- Time interval as an individual -->
+					<xsl:if test="record/metadata/schede/*/DU/DUX/DUXP">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(record/metadata/schede/*/DU/DUX/DUXP)))" />
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUX/DUXP)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUX/DUXP)" />
+							</l0:name>
+							<tiapit:time>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUX/DUXP)" />
+							</tiapit:time>
+						</rdf:Description>
+					</xsl:if>
+					<!-- editor as an individual -->
+					<xsl:if test="record/metadata/schede/*/DU/DUX/DUXE">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+	            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/DU/DUX/DUXE))" />
+	            			</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            				</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUX/DUXE)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUX/DUXE)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:if>
+					<!-- curator as an individual -->
+					<xsl:if test="record/metadata/schede/*/DU/DUX/DUXC">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+	            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/DU/DUX/DUXC))" />
+	            			</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            				</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUX/DUXC)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUX/DUXC)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:if>
 			</xsl:if>
 			<!-- recording type -->
 			<xsl:if test="record/metadata/schede/*/DU/DUO/DUOT">
@@ -5779,6 +5906,7 @@
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
+			
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/*/DV">
 			<rdf:Description>
@@ -8971,7 +9099,134 @@
 					<l0:name>
 						<xsl:value-of select="./AIS/AIST" />
 					</l0:name>
+					<!-- Edition -->
+					<xsl:if test="./AIX">
+						<arco-cd:hasEdition>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Edition/', $itemURI)" />
+							</xsl:attribute>
+						</arco-cd:hasEdition>
+					</xsl:if>
 				</rdf:Description>
+				<!-- Edition as an individual -->
+				<xsl:if test="./AIX">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Edition/', $itemURI)" />
+            			</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+	            			</xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat('Edizione del documento audio del bene ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of select="concat('Edizione del documento audio del bene ', $itemURI)" />
+						</l0:name>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Edition of audio documentation of cultural property ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:value-of select="concat('Edition of audio documentation of cultural property ', $itemURI)" />
+						</l0:name>
+						<!-- editor -->
+						<xsl:if test="./AIX/AIXE">
+							<arco-cd:hasEditor>
+								<xsl:attribute name="rdf:resource">
+            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AIX/AIXE))" />
+            					</xsl:attribute>
+							</arco-cd:hasEditor>
+						</xsl:if>
+						<!-- curator -->
+						<xsl:if test="./AIX/AIXC">
+							<arco-cd:hasCurator>
+								<xsl:attribute name="rdf:resource">
+            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AIX/AIXC))" />
+            					</xsl:attribute>
+							</arco-cd:hasCurator>
+						</xsl:if>
+						<!-- time interval -->
+						<xsl:if test="./AIX/AIXP">
+							<tiapit:atTime>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./AIX/AIXP)))" />
+								</xsl:attribute>
+							</tiapit:atTime>
+						</xsl:if>
+						<xsl:if test="./AIX/AIXI">
+							<arco-core:note>
+								<xsl:value-of select="concat('Indice: ', normalize-space(./AIX/AIXI))" />
+							</arco-core:note>
+						</xsl:if>
+						<xsl:if test="./AIX/AIXZ">
+							<arco-core:note>
+								<xsl:value-of select="normalize-space(./AIX/AIXZ)" />
+							</arco-core:note>
+						</xsl:if>
+					</rdf:Description>
+					<!-- Time interval as an individual -->
+					<xsl:if test="./AIX/AIXP">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./AIX/AIXP)))" />
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./AIX/AIXP)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./AIX/AIXP)" />
+							</l0:name>
+							<tiapit:time>
+								<xsl:value-of select="normalize-space(./AIX/AIXP)" />
+							</tiapit:time>
+						</rdf:Description>
+					</xsl:if>
+					<!-- editor as an individual -->
+					<xsl:if test="./AIX/AIXE">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+	            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AIX/AIXE))" />
+	            			</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            				</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./AIX/AIXE)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./AIX/AIXE)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:if>
+					<!-- curator as an individual -->
+					<xsl:if test="./AIX/AIXC">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+	            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AIX/AIXC))" />
+	            			</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            				</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./AIX/AIXC)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./AIX/AIXC)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:if>
 			</xsl:if>			
 			<!-- recording location -->
 			<xsl:if test="./AIA">
@@ -11285,6 +11540,13 @@
 						</xsl:attribute>
 					</arco-cd:isMemberOfCollectionOf>
 				</xsl:if>
+				<xsl:if test="./VIV/VIVT">
+					<arco-cd:isMemberOfCollectionOf>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'VideoCollectionMembership/', $itemURI, arco-fn:urify(normalize-space(./VIV/VIVT)))" />
+						</xsl:attribute>
+					</arco-cd:isMemberOfCollectionOf>
+				</xsl:if>
 				<xsl:if test="./VIS">
 					<arco-cd:isMemberOfCollectionOf>
 						<xsl:attribute name="rdf:resource">
@@ -11500,6 +11762,184 @@
 						<xsl:value-of select="./VIR/VIRD" />
 					</l0:name>
 				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./VIV/VIVT">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'VideoCollectionMembership/', $itemURI, arco-fn:urify(normalize-space(./VIV/VIVT)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/VideoCollectionMembership'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Appartenenza a collezione video della registrazione del bene: ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Appartenenza a collezione video della registrazione del bene: ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Video collection membership of recording of cultural property: ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Video collection membership of recording of cultural property: ', $itemURI)" />
+					</l0:name>
+					<xsl:if test="./VIV/VIVT">
+						<arco-arco:positionInSequence>
+							<xsl:value-of select="normalize-space(./VIV/VIVT)" />
+						</arco-arco:positionInSequence>
+					</xsl:if>
+					<arco-cd:hasCollection>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'VideoCollection/', arco-fn:urify(normalize-space(./VIV/VIVT)))" />
+						</xsl:attribute>
+					</arco-cd:hasCollection>
+				</rdf:Description>
+				<!-- video collection -->
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'VideoCollection/', arco-fn:urify(normalize-space(./VIV/VIVT)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/VideoCollection'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="./VIV/VIVT" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./VIV/VIVT" />
+					</l0:name>
+					<!-- Edition -->
+					<xsl:if test="./VIX">
+						<arco-cd:hasEdition>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Edition/', $itemURI)" />
+							</xsl:attribute>
+						</arco-cd:hasEdition>
+					</xsl:if>
+				</rdf:Description>
+				<!-- Edition as an individual -->
+				<xsl:if test="./VIX">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Edition/', $itemURI)" />
+            			</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+	            			</xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat('Edizione del documento audio del bene ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of select="concat('Edizione del documento audio del bene ', $itemURI)" />
+						</l0:name>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Edition of audio documentation of cultural property ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:value-of select="concat('Edition of audio documentation of cultural property ', $itemURI)" />
+						</l0:name>
+						<!-- editor -->
+						<xsl:if test="./VIX/VIXE">
+							<arco-cd:hasEditor>
+								<xsl:attribute name="rdf:resource">
+            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./VIX/VIXE))" />
+            					</xsl:attribute>
+							</arco-cd:hasEditor>
+						</xsl:if>
+						<!-- curator -->
+						<xsl:if test="./VIX/VIXC">
+							<arco-cd:hasCurator>
+								<xsl:attribute name="rdf:resource">
+            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./VIX/VIXC))" />
+            					</xsl:attribute>
+							</arco-cd:hasCurator>
+						</xsl:if>
+						<!-- time interval -->
+						<xsl:if test="./VIX/VIXP">
+							<tiapit:atTime>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./VIX/VIXP)))" />
+								</xsl:attribute>
+							</tiapit:atTime>
+						</xsl:if>
+						<xsl:if test="./VIX/VIXI">
+							<arco-core:note>
+								<xsl:value-of select="concat('Indice: ', normalize-space(./VIX/VIXI))" />
+							</arco-core:note>
+						</xsl:if>
+						<xsl:if test="./VIX/VIXZ">
+							<arco-core:note>
+								<xsl:value-of select="normalize-space(./VIX/VIXZ)" />
+							</arco-core:note>
+						</xsl:if>
+					</rdf:Description>
+					<!-- Time interval as an individual -->
+					<xsl:if test="./VIX/VIXP">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./VIX/VIXP)))" />
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./VIX/VIXP)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./VIX/VIXP)" />
+							</l0:name>
+							<tiapit:time>
+								<xsl:value-of select="normalize-space(./VIX/VIXP)" />
+							</tiapit:time>
+						</rdf:Description>
+					</xsl:if>
+					<!-- editor as an individual -->
+					<xsl:if test="./VIX/VIXE">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+	            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./VIX/VIXE))" />
+	            			</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            				</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./VIX/VIXE)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./VIX/VIXE)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:if>
+					<!-- curator as an individual -->
+					<xsl:if test="./VIX/VIXC">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+	            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./VIX/VIXC))" />
+	            			</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            				</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./VIX/VIXC)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./VIX/VIXC)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:if>
 			</xsl:if>
 			<xsl:if test="./VIS">
 				<rdf:Description>
