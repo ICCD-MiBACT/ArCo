@@ -488,7 +488,7 @@
 					</arco-cd:rights>
 				</xsl:if>
 				<!-- Depiction -->
-				<xsl:for-each select="record/metadata/schede/*/DO/FTA/FTAN[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]"><!-- xslt2 multiple nodes normalize-space exception  -->
+				<xsl:for-each select="record/metadata/schede/*/*/FTA/FTAN[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]"><!-- xslt2 multiple nodes normalize-space exception  -->
 				    <xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
 				    <xsl:for-each select="$url">
 				        <foaf:depiction>
@@ -1938,6 +1938,13 @@
 				</xsl:for-each>
 				<!-- Photographic Documentation of cultural property -->
 				<xsl:for-each select="record/metadata/schede/*/DO/FTA">
+					<arco-cd:hasDocumentation>
+						<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'PhotographicDocumentation/', $itemURI, '-photographic-documentation-', position())" />
+	                	</xsl:attribute>
+					</arco-cd:hasDocumentation>
+				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/AL/FTA">
 					<arco-cd:hasDocumentation>
 						<xsl:attribute name="rdf:resource">
 	                		<xsl:value-of select="concat($NS, 'PhotographicDocumentation/', $itemURI, '-photographic-documentation-', position())" />
