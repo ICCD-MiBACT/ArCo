@@ -23188,7 +23188,7 @@
 							</xsl:attribute>
 						</tiapit:atTime>
 						</xsl:if>
-						<xsl:if test="./STCT">
+						<xsl:if test="./STCT and not($sheetType='BNB' or $sheetType='BNP' or $sheetType='BNZ')">
 							<arco-spe:isContainedIn>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'SpecimenContainer/', arco-fn:urify(normalize-space(./STCT)))" />
@@ -23219,7 +23219,7 @@
 						</rdf:Description>
 					</xsl:if>
 					<!-- Specimen container as an individual -->
-					<xsl:if test="./STCD">
+					<xsl:if test="./STCT and not($sheetType='BNB' or $sheetType='BNP' or $sheetType='BNZ')">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'SpecimenContainer/', arco-fn:urify(normalize-space(./STCT)))" />
