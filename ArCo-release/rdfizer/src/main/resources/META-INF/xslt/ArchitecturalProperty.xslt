@@ -592,10 +592,10 @@
 					<arco-core:note>
 						<xsl:choose>
 							<xsl:when test="./UBVN">
-								<xsl:value-of select="concat(./UBVD, ' ', ./UBVN)" />
+								<xsl:value-of select="concat('Affaccio su ', ./UBVD, ' ', ./UBVN)" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="./UBVD" />
+								<xsl:value-of select="concat('Affaccio su ', ./UBVD)" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</arco-core:note>
