@@ -9314,8 +9314,7 @@
 					<rdfs:label xml:lang="it">
 						<xsl:choose>
 							<xsl:when test="./ESPT">
-								<xsl:value-of
-									select="concat(normalize-space(./ESPT), ' ', position(), ' del bene culturale ', $itemURI)" />
+								<xsl:value-of select="concat(normalize-space(./ESPT), ' ', position(), ' del bene culturale ', $itemURI)" />
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of
@@ -9325,27 +9324,21 @@
 					</rdfs:label>
 					<l0:name xml:lang="it">
 						<xsl:choose>
-							<xsl:when
-								test="./ESPT and (not(starts-with(lower-case(normalize-space(./ESPT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ESPT)), 'n.r')))">
-								<xsl:value-of
-									select="concat(normalize-space(./ESPT), ' ', position(), ' del bene culturale ', $itemURI)" />
+							<xsl:when test="./ESPT and (not(starts-with(lower-case(normalize-space(./ESPT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ESPT)), 'n.r')))">
+								<xsl:value-of select="concat(normalize-space(./ESPT), ' ', position(), ' del bene culturale ', $itemURI)" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of
-									select="concat('Certificazione ', position(), ' per la circolazione del bene culturale ', $itemURI)" />
+								<xsl:value-of select="concat('Certificazione ', position(), ' per la circolazione del bene culturale ', $itemURI)" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</l0:name>
 					<rdfs:label xml:lang="en">
-						<xsl:value-of
-							select="concat('Certification ', position(), ' for import and export of cultural property ', $itemURI)" />
+						<xsl:value-of select="concat('Certification ', position(), ' for import and export of cultural property ', $itemURI)" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
-						<xsl:value-of
-							select="concat('Certification ', position(), ' for import and export of cultural property ', $itemURI)" />
+						<xsl:value-of select="concat('Certification ', position(), ' for import and export of cultural property ', $itemURI)" />
 					</l0:name>
-					<xsl:if
-						test="./ESPD and (not(starts-with(lower-case(normalize-space(./ESPD)), 'nr')) and not(starts-with(lower-case(normalize-space(./ESPD)), 'n.r')))">
+					<xsl:if test="./ESPD and (not(starts-with(lower-case(normalize-space(./ESPD)), 'nr')) and not(starts-with(lower-case(normalize-space(./ESPD)), 'n.r')))">
 						<arco-cd:issueDate>
 							<xsl:value-of select="normalize-space(./ESPD)" />
 						</arco-cd:issueDate>
@@ -9358,60 +9351,43 @@
 					<xsl:if test="./ESPT">
 						<arco-cd:hasExportImportCertificationType>
 							<xsl:attribute name="rdf:resource">
-	                				<xsl:if
-								test="./ESPT and not(./ESPT='.' or ./ESPT='-' or ./ESPT='/') and (not(starts-with(lower-case(normalize-space(./ESPT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ESPT)), 'n.r')))">
+	                				<xsl:if test="./ESPT and not(./ESPT='.' or ./ESPT='-' or ./ESPT='/') and (not(starts-with(lower-case(normalize-space(./ESPT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ESPT)), 'n.r')))">
 	                                <xsl:choose>
-	                                    <xsl:when
-								test="lower-case(normalize-space(./ESPT))='attestato di libera circolazione' or lower-case(normalize-space(./ESPT))='attestato libera circolazione'">
-	                                        <xsl:value-of
-								select="'https://w3id.org/arco/ontology/context-description/FreeMovementCertification'" />
+	                                    <xsl:when test="lower-case(normalize-space(./ESPT))='attestato di libera circolazione' or lower-case(normalize-space(./ESPT))='attestato libera circolazione'">
+	                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/FreeMovementCertification'" />
 	                                    </xsl:when>
-	                                    <xsl:when
-								test="lower-case(normalize-space(./ESPT))='attestato di circolazione temporanea' or lower-case(normalize-space(./ESPT))='attestato circolazione temporanea'">
-	                                        <xsl:value-of
-								select="'https://w3id.org/arco/ontology/context-description/TemporaryMovementCertification'" />
+	                                    <xsl:when test="lower-case(normalize-space(./ESPT))='attestato di circolazione temporanea' or lower-case(normalize-space(./ESPT))='attestato circolazione temporanea'">
+	                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/TemporaryMovementCertification'" />
 	                                    </xsl:when>
-	                                    <xsl:when
-								test="lower-case(normalize-space(./ESPT))='licenza di esportazione definitiva' or lower-case(normalize-space(./ESPT))='licenza esportazione definitiva'">
-	                                        <xsl:value-of
-								select="'https://w3id.org/arco/ontology/context-description/PermanentExportLicense'" />
+	                                    <xsl:when test="lower-case(normalize-space(./ESPT))='licenza di esportazione definitiva' or lower-case(normalize-space(./ESPT))='licenza esportazione definitiva'">
+	                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/PermanentExportLicense'" />
 	                                    </xsl:when>
-	                                    <xsl:when
-								test="lower-case(normalize-space(./ESPT))='licenza di esportazione temporanea' or lower-case(normalize-space(./ESPT))='licenza esportazione temporanea'">
-	                                        <xsl:value-of
-								select="'https://w3id.org/arco/ontology/context-description/TemporaryExportLicense'" />
+	                                    <xsl:when test="lower-case(normalize-space(./ESPT))='licenza di esportazione temporanea' or lower-case(normalize-space(./ESPT))='licenza esportazione temporanea'">
+	                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/TemporaryExportLicense'" />
 	                                    </xsl:when>
-	                                    <xsl:when
-								test="lower-case(normalize-space(./ESPT))='certificato di avvenuta spedizione' or lower-case(normalize-space(./ESPT))='certificato avvenuta spedizione'">
-	                                        <xsl:value-of
-								select="'https://w3id.org/arco/ontology/context-description/DeliveryConfirmationCertification'" />
+	                                    <xsl:when test="lower-case(normalize-space(./ESPT))='certificato di avvenuta spedizione' or lower-case(normalize-space(./ESPT))='certificato avvenuta spedizione'">
+	                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DeliveryConfirmationCertification'" />
 	                                    </xsl:when>
-	                                    <xsl:when
-								test="lower-case(normalize-space(./ESPT))='certificato di avvenuta importazione' or lower-case(normalize-space(./ESPT))='certificato avvenuta importazione'">
-	                                        <xsl:value-of
-								select="'https://w3id.org/arco/ontology/context-description/ImportConfirmationCertification'" />
+	                                    <xsl:when test="lower-case(normalize-space(./ESPT))='certificato di avvenuta importazione' or lower-case(normalize-space(./ESPT))='certificato avvenuta importazione'">
+	                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ImportConfirmationCertification'" />
 	                                    </xsl:when>
 	                                    <xsl:when test="./ESPT">
-	                                        <xsl:value-of
-								select="concat($NS, 'ExportImportCertificationType/', arco-fn:urify(normalize-space(./ESPT)))" />
+	                                        <xsl:value-of select="concat($NS, 'ExportImportCertificationType/', arco-fn:urify(normalize-space(./ESPT)))" />
 	                                    </xsl:when>
 	                                </xsl:choose>
                     			</xsl:if>
 	                			</xsl:attribute>
 						</arco-cd:hasExportImportCertificationType>
 					</xsl:if>
-					<xsl:if
-						test="./ESPU and (not(starts-with(lower-case(normalize-space(./ESPU)), 'nr')) and not(starts-with(lower-case(normalize-space(./ESPU)), 'n.r')))">
+					<xsl:if test="./ESPU and (not(starts-with(lower-case(normalize-space(./ESPU)), 'nr')) and not(starts-with(lower-case(normalize-space(./ESPU)), 'n.r')))">
 						<arco-cd:hasExportOffice>
 							<xsl:attribute name="rdf:resource">
-	                				<xsl:value-of
-								select="concat($NS, 'Agent/', arco-fn:arcofy(./ESPU))" />
-	                			</xsl:attribute>
+	                			<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./ESPU))" />
+	                		</xsl:attribute>
 						</arco-cd:hasExportOffice>
 						<arco-core:hasAgentRole>
 							<xsl:attribute name="rdf:resource">
-							<xsl:value-of
-								select="concat($NS, 'AgentRole/', $itemURI, '-export-import-certification-', $exp-position, '-export-office')" />
+							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-export-import-certification-', $exp-position, '-export-office')" />
 						</xsl:attribute>
 						</arco-core:hasAgentRole>
 					</xsl:if>
@@ -9419,27 +9395,18 @@
 				<!-- export import certification type as an individual -->
 				<xsl:if test="./ESPT">
 					<xsl:choose>
-						<xsl:when
-							test="lower-case(normalize-space(./ESPT))='attestato di libera circolazione' or lower-case(normalize-space(./ESPT))='attestato libera circolazione'" />
-						<xsl:when
-							test="lower-case(normalize-space(./ESPT))='attestato di circolazione temporanea' or lower-case(normalize-space(./ESPT))='attestato circolazione temporanea'" />
-						<xsl:when
-							test="lower-case(normalize-space(./ESPT))='licenza di esportazione definitiva' or lower-case(normalize-space(./ESPT))='licenza esportazione definitiva'" />
-						<xsl:when
-							test="lower-case(normalize-space(./ESPT))='licenza di esportazione temporanea' or lower-case(normalize-space(./ESPT))='licenza esportazione temporanea'" />
-						<xsl:when
-							test="lower-case(normalize-space(./ESPT))='certificato di avvenuta spedizione' or lower-case(normalize-space(./ESPT))='certificato avvenuta spedizione'" />
-						<xsl:when
-							test="lower-case(normalize-space(./ESPT))='certificato di avvenuta importazione' or lower-case(normalize-space(./ESPT))='certificato avvenuta importazione'" />
-						<xsl:when
-							test="./ESPT and not(./ESPT='.' or ./ESPT='-' or ./ESPT='/') and (not(starts-with(lower-case(normalize-space(./ESPT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ESPT)), 'n.r')))">
+						<xsl:when test="lower-case(normalize-space(./ESPT))='attestato di libera circolazione' or lower-case(normalize-space(./ESPT))='attestato libera circolazione'" />
+						<xsl:when test="lower-case(normalize-space(./ESPT))='attestato di circolazione temporanea' or lower-case(normalize-space(./ESPT))='attestato circolazione temporanea'" />
+						<xsl:when test="lower-case(normalize-space(./ESPT))='licenza di esportazione definitiva' or lower-case(normalize-space(./ESPT))='licenza esportazione definitiva'" />
+						<xsl:when test="lower-case(normalize-space(./ESPT))='licenza di esportazione temporanea' or lower-case(normalize-space(./ESPT))='licenza esportazione temporanea'" />
+						<xsl:when test="lower-case(normalize-space(./ESPT))='certificato di avvenuta spedizione' or lower-case(normalize-space(./ESPT))='certificato avvenuta spedizione'" />
+						<xsl:when test="lower-case(normalize-space(./ESPT))='certificato di avvenuta importazione' or lower-case(normalize-space(./ESPT))='certificato avvenuta importazione'" />
+						<xsl:when test="./ESPT and not(./ESPT='.' or ./ESPT='-' or ./ESPT='/') and (not(starts-with(lower-case(normalize-space(./ESPT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ESPT)), 'n.r')))">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-                                    <xsl:value-of
-									select="concat($NS, 'ExportImportCertificationType/', arco-fn:urify(normalize-space(./ESPT)))" />
+                                    <xsl:value-of 	select="concat($NS, 'ExportImportCertificationType/', arco-fn:urify(normalize-space(./ESPT)))" />
                                 </xsl:attribute>
-								<rdf:type
-									rdf:resource="https://w3id.org/arco/ontology/context-description/ExportImportCertificationType" />
+								<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/ExportImportCertificationType" />
 								<rdfs:label>
 									<xsl:value-of select="normalize-space(./ESPT)" />
 								</rdfs:label>
@@ -9451,58 +9418,48 @@
 					</xsl:choose>
 				</xsl:if>
 				<!-- agent role of export import certification as an individual -->
-				<xsl:if
-					test="./ESPU and (not(starts-with(lower-case(normalize-space(./ESPU)), 'nr')) and not(starts-with(lower-case(normalize-space(./ESPU)), 'n.r')))">
+				<xsl:if test="./ESPU and (not(starts-with(lower-case(normalize-space(./ESPU)), 'nr')) and not(starts-with(lower-case(normalize-space(./ESPU)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-		                        		<xsl:value-of
-							select="concat($NS, 'AgentRole/', $itemURI, '-export-import-certification-', $exp-position, '-export-office')" />
-		                    		</xsl:attribute>
+							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-export-import-certification-', $exp-position, '-export-office')" />
+						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-				                            <xsl:value-of
-								select="'https://w3id.org/arco/ontology/core/AgentRole'" />
-				                        </xsl:attribute>
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of
-								select="concat('Ufficio Esportazione della certificazione ', $exp-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./ESPU))" />
+							<xsl:value-of select="concat('Ufficio Esportazione della certificazione ', $exp-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./ESPU))" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of
 								select="concat('Export Office of certification ', $exp-position, ' of cultural property ', $itemURI, ': ', normalize-space(./ESPU))" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of
-								select="concat('Ufficio Esportazione della certificazione ', $exp-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./ESPU))" />
+							<xsl:value-of select="concat('Ufficio Esportazione della certificazione ', $exp-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./ESPU))" />
 						</l0:name>
 						<l0:name xml:lang="en">
-							<xsl:value-of
-								select="concat('Export Office of certification ', $exp-position, ' of cultural property ', $itemURI, ': ', normalize-space(./ESPU))" />
+							<xsl:value-of select="concat('Export Office of certification ', $exp-position, ' of cultural property ', $itemURI, ': ', normalize-space(./ESPU))" />
 						</l0:name>
 						<arco-core:hasRole>
 							<xsl:attribute name="rdf:resource">
-				                            <xsl:value-of
-								select="concat($NS, 'Role/ExportOffice')" />
-				                        </xsl:attribute>
+								<xsl:value-of select="concat($NS, 'Role/ExportOffice')" />
+							</xsl:attribute>
 						</arco-core:hasRole>
 						<arco-core:hasAgent>
 							<xsl:attribute name="rdf:resource">
-				                            <xsl:value-of
-								select="concat($NS, 'Agent/', arco-fn:arcofy(./ESPU))" />
-				                        </xsl:attribute>
+								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./ESPU))" />
+							</xsl:attribute>
 						</arco-core:hasAgent>
 					</rdf:Description>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-				                        <xsl:value-of
-							select="concat($NS, 'Role/ExportOffice')" />
-				                    </xsl:attribute>
+							<xsl:value-of select="concat($NS, 'Role/ExportOffice')" />
+						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-				                            <xsl:value-of
-								select="'https://w3id.org/italia/onto/RO/Role'" />
-				                        </xsl:attribute>
+								<xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
 							<xsl:value-of select="'Ufficio Esportazione'" />
@@ -9512,21 +9469,18 @@
 						</rdfs:label>
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
-				                            <xsl:value-of
-								select="concat($NS, 'AgentRole/', $itemURI, '-export-import-certification-', $exp-position, '-export-office')" />
-				                        </xsl:attribute>
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-export-import-certification-', $exp-position, '-export-office')" />
+							</xsl:attribute>
 						</arco-core:isRoleOf>
 					</rdf:Description>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-				                        <xsl:value-of
-							select="concat($NS, 'Agent/', arco-fn:arcofy(./ESPU))" />
-				                    </xsl:attribute>
+							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./ESPU))" />
+						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-				                            <xsl:value-of
-								select="'https://w3id.org/italia/onto/l0/Agent'" />
-				                        </xsl:attribute>
+								<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./ESPU)" />
@@ -9536,9 +9490,8 @@
 						</l0:name>
 						<arco-core:isAgentOf>
 							<xsl:attribute name="rdf:resource">
-				                            <xsl:value-of
-								select="concat($NS, 'AgentRole/', $itemURI, '-export-import-certification-', $exp-position, '-export-office')" />
-				                        </xsl:attribute>
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-export-import-certification-', $exp-position, '-export-office')" />
+							</xsl:attribute>
 						</arco-core:isAgentOf>
 					</rdf:Description>
 				</xsl:if>
@@ -10469,6 +10422,13 @@
 	                		</xsl:attribute>
 							</arco-cd:hasBibliography>
 						</xsl:if>
+						<xsl:if test="./RCGE and (not(starts-with(lower-case(normalize-space(./RCGE)), 'nr')) and not(starts-with(lower-case(normalize-space(./RCGE)), 'n.r')))">
+							<arco-cd:hasSurveyMethod>
+								<xsl:attribute name="rdf:resource">
+	                			<xsl:value-of select="concat($NS, 'SurveyMotivation/', arco-fn:urify(normalize-space(./RCGE)))" />
+	                		</xsl:attribute>
+							</arco-cd:hasSurveyMethod>
+						</xsl:if>
 						<xsl:if test="./RCGM and (not(starts-with(lower-case(normalize-space(./RCGM)), 'nr')) and not(starts-with(lower-case(normalize-space(./RCGM)), 'n.r')))">
 							<arco-cd:hasSurveyMethod>
 								<xsl:attribute name="rdf:resource">
@@ -10561,6 +10521,25 @@
 							<arco-cd:completeBibliographicReference>
 								<xsl:value-of select="normalize-space(string-join(./RCGS,' ; '))" />
 							</arco-cd:completeBibliographicReference>
+						</rdf:Description>
+					</xsl:if>
+					<!-- motivation of survey as an individual -->
+					<xsl:if test="./RCGE and (not(starts-with(lower-case(normalize-space(./RCGE)), 'nr')) and not(starts-with(lower-case(normalize-space(./RCGE)), 'n.r')))">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+	                			<xsl:value-of select="concat($NS, 'SurveyMotivation/', arco-fn:urify(normalize-space(./RCGE)))" />
+	                		</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SurveyMethod'" />
+		                        </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./RCGE)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./RCGE)" />
+							</l0:name>
 						</rdf:Description>
 					</xsl:if>
 					<!-- method of survey as an individual -->
@@ -13434,6 +13413,13 @@
 								</xsl:for-each>
 							</xsl:if>
 						</xsl:if>
+						<xsl:for-each select="./ISRC[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+							<arco-dd:hasFunctionalPurpose>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'FunctionalPurpose/', arco-fn:urify(normalize-space(.)))" />
+								</xsl:attribute>
+							</arco-dd:hasFunctionalPurpose>
+						</xsl:for-each>
 					</rdf:Description>
 					<!-- Measurement collection as individual -->
 					<xsl:for-each select="ISRM">
@@ -13591,6 +13577,21 @@
 							</xsl:for-each>
 						</xsl:if>
 					</xsl:if>
+					<!-- functional purpose as an individual -->
+					<xsl:for-each select="./ISRC[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'FunctionalPurpose/', arco-fn:urify(normalize-space()))" />
+							</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose" />
+							<rdfs:label>
+								<xsl:value-of select="normalize-space()" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space()" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:for-each>
 				</xsl:for-each>
 			</xsl:if>
 			<!-- affixed element (dedication) -->
@@ -22511,6 +22512,11 @@
 							<xsl:value-of select="normalize-space(./RSTO)" />
 						</arco-core:note>
 					</xsl:if>
+					<xsl:if test="./RSTT">
+						<arco-core:description>
+							<xsl:value-of select="concat('Intervento su ', normalize-space(./RST))" />
+						</arco-core:description>
+					</xsl:if>
 					<xsl:if test="./RSTM">
 						<arco-core:note>
 							<xsl:value-of select="concat('Intervento su ', normalize-space(./RSTM))" />
@@ -25910,9 +25916,7 @@
 								</xsl:if>
 								<xsl:for-each select="./PRG">
 									<arco-core:note>
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="." />
-										</xsl:attribute>
+										<xsl:value-of select="." />
 									</arco-core:note>
 								</xsl:for-each>
 							</rdf:Description>
