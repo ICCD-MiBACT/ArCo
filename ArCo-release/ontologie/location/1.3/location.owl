@@ -1009,6 +1009,16 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/hasZoogeographicRegion -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasZoogeographicRegion">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isZoogeographicRegionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/ZoogeographicRegion"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/isAltitudeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isAltitudeOf">
@@ -1690,6 +1700,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/isZoogeographicRegionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isZoogeographicRegionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/ZoogeographicRegion"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/italia/onto/CLV/hasAddress -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasAddress"/>
@@ -1812,6 +1831,17 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/SET/SETP</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/drainageBasin -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/drainageBasin">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="it">Bacino idrografico</rdfs:label>
+        <rdfs:label xml:lang="en">Drainage basin</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2473,7 +2503,7 @@ resource:CadastralIdentity/1400055239-1
     <!-- https://w3id.org/arco/ontology/location/Continent -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Continent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/AdministrativeUnitComponent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/isContinentOf"/>
@@ -3365,6 +3395,14 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/ZUR/ZURD.</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/ZoogeographicRegion -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ZoogeographicRegion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
     </owl:Class>
     
 

@@ -3775,11 +3775,32 @@
 				</xsl:call-template>
 			</l0:name>
 			<xsl:if test="../MAO and (not(starts-with(lower-case(normalize-space(../MAO)), 'nr')) and not(starts-with(lower-case(normalize-space(../MAO)), 'n.r')))">
-			<arco-location:seaOrOcean>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="../MAO" />
-				</xsl:call-template>
-			</arco-location:seaOrOcean>
+				<arco-location:seaOrOcean>
+					<xsl:call-template name="CamelCase">
+						<xsl:with-param name="text" select="../MAO" />
+					</xsl:call-template>
+				</arco-location:seaOrOcean>
+			</xsl:if>
+			<xsl:if test="../BID and (not(starts-with(lower-case(normalize-space(../BID)), 'nr')) and not(starts-with(lower-case(normalize-space(../BID)), 'n.r')))">
+				<arco-location:drainageBasin>
+					<xsl:call-template name="CamelCase">
+						<xsl:with-param name="text" select="../BID" />
+					</xsl:call-template>
+				</arco-location:drainageBasin>
+			</xsl:if>
+			<xsl:if test="./LRVZ and (not(starts-with(lower-case(normalize-space(./LRVZ)), 'nr')) and not(starts-with(lower-case(normalize-space(./LRVZ)), 'n.r')))">
+				<arco-location:hasZoogeographicRegion>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of 	select="concat($NS, 'ZoogeographicRegion/', arco-fn:urify(./LRVZ))" />
+					</xsl:attribute>
+				</arco-location:hasZoogeographicRegion> 
+			</xsl:if>
+			<xsl:if test="../LRM and (not(starts-with(lower-case(normalize-space(../LRM)), 'nr')) and not(starts-with(lower-case(normalize-space(../LRM)), 'n.r')))">
+				<arco-location:hasZoogeographicRegion>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of 	select="concat($NS, 'ZoogeographicRegion/', arco-fn:urify(../LRM))" />
+					</xsl:attribute>
+				</arco-location:hasZoogeographicRegion> 
 			</xsl:if>
 			<clvapit:hasAddress>
 				<xsl:choose>
@@ -3938,6 +3959,50 @@
 				<l0:name>
 					<xsl:call-template name="CamelCase">
 						<xsl:with-param name="text" select="normalize-space(./LRVE)" />
+					</xsl:call-template>
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./LRVZ and (not(starts-with(lower-case(normalize-space(./LRVZ)), 'nr')) and not(starts-with(lower-case(normalize-space(./LRVZ)), 'n.r')))">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of 	select="concat($NS, 'ZoogeographicRegion/', arco-fn:urify(./LRVZ))" />
+			 	</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/location/ZoogeographicRegion'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:call-template name="CamelCase">
+						<xsl:with-param name="text" select="normalize-space(./LRVZ)" />
+					</xsl:call-template>
+				</rdfs:label>
+				<l0:name>
+					<xsl:call-template name="CamelCase">
+						<xsl:with-param name="text" select="normalize-space(./LRVZ)" />
+					</xsl:call-template>
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="../LRM and (not(starts-with(lower-case(normalize-space(../LRM)), 'nr')) and not(starts-with(lower-case(normalize-space(../LRM)), 'n.r')))">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of 	select="concat($NS, 'ZoogeographicRegion/', arco-fn:urify(../LRM))" />
+			 	</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/location/ZoogeographicRegion'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:call-template name="CamelCase">
+						<xsl:with-param name="text" select="normalize-space(../LRM)" />
+					</xsl:call-template>
+				</rdfs:label>
+				<l0:name>
+					<xsl:call-template name="CamelCase">
+						<xsl:with-param name="text" select="normalize-space(../LRM)" />
 					</xsl:call-template>
 				</l0:name>
 			</rdf:Description>

@@ -8039,6 +8039,39 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/10BeConcentration -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/10BeConcentration">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">10 Be concentration</rdfs:label>
+        <rdfs:label xml:lang="it">Concentrazione 10 Be</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPD/SPDB</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/14CConcentration -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/14CConcentration">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">14 C concentration</rdfs:label>
+        <rdfs:label xml:lang="it">Concentrazione 14 C</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPD/SPDC</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/147Sm-144NdRatio -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/147Sm-144NdRatio">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">147 Sm/ 144 Nd ratio</rdfs:label>
+        <rdfs:label xml:lang="it">Rapporto isotopico 147 Sm/144 Nd</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPD/SPDS</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/2vAngle -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/2vAngle">
@@ -8046,6 +8079,83 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">2v Angle</rdfs:label>
         <rdfs:label xml:lang="it">Biassico 2V</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOV</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/21NeConcentration -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/21NeConcentration">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">21 Ne concentration</rdfs:label>
+        <rdfs:label xml:lang="it">concentrazione 21 Ne</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPD/SPDN</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/238U-206PbRatio -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/238U-206PbRatio">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">239 U/ 206 Pb ratio</rdfs:label>
+        <rdfs:label xml:lang="it">Rapporto isotopico 239 U/ 206 Pb</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPD/SPDU</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/3HeConcentration -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/3HeConcentration">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">3 He concentration</rdfs:label>
+        <rdfs:label xml:lang="it">concentrazione 3 He</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPD/SPDH</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/36ClConcentration -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/36ClConcentration">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:seeAlso xml:lang="en">36 Cl concentration</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="it">Concentrazione 36 Cl</rdfs:seeAlso>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPD/SPDL</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/38ArConcentration -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/38ArConcentration">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">38 Ar concentration</rdfs:label>
+        <rdfs:label xml:lang="it">Concentrazione 38 Ar</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPD/SPDA</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/40Ar-40KRatio -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/40Ar-40KRatio">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">40 Ar/ 40 K ratio</rdfs:label>
+        <rdfs:label xml:lang="it">Rapporto isotopico 40 Ar/ 40 K</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPD/SPDP</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/87Rb-86SrRatio -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/87Rb-86SrRatio">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">87 Rb/ 86 Sr ratio</rdfs:label>
+        <rdfs:label xml:lang="it">rapporto isotopico 87 Rb/ 86 Sr</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPD/SPDR, SP/SPD/SPDD</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 

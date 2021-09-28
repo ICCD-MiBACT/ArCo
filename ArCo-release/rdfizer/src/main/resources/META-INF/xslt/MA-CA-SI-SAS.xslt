@@ -775,6 +775,13 @@
 	            		</xsl:attribute>
 					</arco-dd:hasMaterial>
 				</xsl:for-each>
+				<xsl:for-each select="./ELER">
+					<arco-dd:hasMaterial>
+	 	                <xsl:attribute name="rdf:resource">
+	            			<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+	            		</xsl:attribute>
+					</arco-dd:hasMaterial>
+				</xsl:for-each>
 				<xsl:for-each select="./ELET">
 					<arco-dd:hasTechnique>
 	 	                <xsl:attribute name="rdf:resource">
@@ -792,6 +799,16 @@
 				<xsl:if test="./ELED">
 					<arco-core:description>
 						<xsl:value-of select="./ELED" />
+					</arco-core:description>
+				</xsl:if>
+				<xsl:if test="./ELEE">
+					<arco-core:description>
+						<xsl:value-of select="./ELEE" />
+					</arco-core:description>
+				</xsl:if>
+				<xsl:if test="./ELEM">
+					<arco-core:description>
+						<xsl:value-of select="./ELEM" />
 					</arco-core:description>
 				</xsl:if>
 				<xsl:if test="./ELEA">
@@ -905,11 +922,29 @@
 	            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Material'" />
 	            	</xsl:attribute>
 				</arco-dd:isCharacteristicClassifiedBy>
-				<xsl:if test="./ELEE">
-					<arco-core:description>
-						<xsl:value-of select="./ELEE" />
-					</arco-core:description>
-				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./ELER">
+			<rdf:Description>
+	 			<xsl:attribute name="rdf:about">
+	            	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./ELER)))" />
+	            </xsl:attribute>
+	 	        <rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(./ELER)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(./ELER)" />
+				</l0:name>
+				<arco-dd:isCharacteristicClassifiedBy>
+					<xsl:attribute name="rdf:resource">
+	            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Material'" />
+	            	</xsl:attribute>
+				</arco-dd:isCharacteristicClassifiedBy>
 			</rdf:Description>
 		</xsl:if>
 		</xsl:for-each>
@@ -977,6 +1012,16 @@
 				<xsl:if test="./SOLD">
 					<arco-core:description>
 						<xsl:value-of select="./SOLD" />
+					</arco-core:description>
+				</xsl:if>
+				<xsl:if test="./SOLE">
+					<arco-core:description>
+						<xsl:value-of select="concat('Configurazione esterna: ', ./SOLE)" />
+					</arco-core:description>
+				</xsl:if>
+				<xsl:if test="./SOLI">
+					<arco-core:description>
+						<xsl:value-of select="concat('Configurazione interna: ', ./SOLI)" />
 					</arco-core:description>
 				</xsl:if>
 			</rdf:Description>
@@ -1064,6 +1109,16 @@
 				<xsl:if test="./CPUD">
 					<arco-core:description>
 						<xsl:value-of select="./CPUD" />
+					</arco-core:description>
+				</xsl:if>
+				<xsl:if test="./CPUE">
+					<arco-core:description>
+						<xsl:value-of select="concat('Configurazione esterna: ', ./CPUE)" />
+					</arco-core:description>
+				</xsl:if>
+				<xsl:if test="./CPUI">
+					<arco-core:description>
+						<xsl:value-of select="concat('Configurazione interna: ', ./CPUI)" />
 					</arco-core:description>
 				</xsl:if>
 			</rdf:Description>
