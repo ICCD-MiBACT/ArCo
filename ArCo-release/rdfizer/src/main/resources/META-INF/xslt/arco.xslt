@@ -17734,7 +17734,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
             					<xsl:value-of select="concat($NS, 'Altitude/', $itemURI, '-geometry-', $geometry-position, '-altitude')" />
-            		</xsl:attribute>
+            				</xsl:attribute>
 							<rdf:type rdf:resource="https://w3id.org/arco/ontology/location/Altitude" />
 							<rdfs:label xml:lang="it">
 								<xsl:value-of select="concat('Altitudine del bene culturale: ', $itemURI)" />
@@ -21802,6 +21802,11 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Inventory situation of cultural property: ', $itemURI)" />
 						</l0:name>
+						<xsl:if test="./INPV and (not(starts-with(lower-case(normalize-space(./INPV)), 'nr')) and not(starts-with(lower-case(normalize-space(./INPV)), 'n.r')))">
+							<arco-core:note>
+								<xsl:value-of select="normalize-space(./INPV)" />
+							</arco-core:note>
+						</xsl:if>
 						<xsl:if test="./INPR and (not(starts-with(lower-case(normalize-space(./INPR)), 'nr')) and not(starts-with(lower-case(normalize-space(./INPR)), 'n.r')))">
 							<arco-cd:insertionDate>
 								<xsl:value-of select="normalize-space(./INPR)" />
