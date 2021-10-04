@@ -28790,6 +28790,36 @@
 					</l0:name>
 				</rdf:Description>
 			</xsl:if>
+			<xsl:for-each select="record/metadata/schede/SM/AS/ASS" >
+				<xsl:if test="./ASST">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+        			       	<xsl:value-of select="concat($NS, 'Accessory/', arco-fn:urify(normalize-space(./ASST)))" />
+            	    	</xsl:attribute>
+		        	    <rdf:type>
+							<xsl:attribute name="rdf:resource">
+	    		        		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Accessory'" />
+							</xsl:attribute>
+						</rdf:type>   
+						<rdfs:label>
+							<xsl:value-of select="./ASST" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="./ASST" />
+						</l0:name>
+						<xsl:if test="./ASSD">
+							<tiapit:time>
+								<xsl:value-of select="normalize-space(./ASSD)" />
+							</tiapit:time>
+						</xsl:if>
+						<xsl:if test="./ASSE">
+							<arco-core:description>
+								<xsl:value-of select="normalize-space(./ASSE)" />
+							</arco-core:description>
+						</xsl:if>
+					</rdf:Description>
+				</xsl:if>
+			</xsl:for-each>
 		</xsl:for-each>
 	
 			<!-- xsl:apply-templates select="record/metadata/schede/*/MT/MIS" / -->

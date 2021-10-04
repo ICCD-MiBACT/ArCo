@@ -3506,6 +3506,20 @@
 						<xsl:value-of select="record/metadata/schede/FF/DA/MTI" />
 					</arco-cd:methodOfInterventionAndDigitization>
 				</xsl:if>
+				<xsl:if test="$sheetType='SM'" >
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MusicalInstrument'" />
+						</xsl:attribute>
+					</rdf:type>
+					<xsl:for-each select="record/metadata/schede/*/AS/ASS/ASST" >
+						<arco-dd:hasAccessory>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Accessory/', arco-fn:urify(normalize-space(.)))" />
+							</xsl:attribute>
+						</arco-dd:hasAccessory>
+					</xsl:for-each>
+				</xsl:if>
 			</rdf:Description>
 			
 			<!-- Property related to cultural property -->
