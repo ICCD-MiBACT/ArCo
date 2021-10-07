@@ -1438,6 +1438,7 @@
 				</xsl:if>
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/*/*/THS">
+				<xsl:if test="record/metadata/schede/*/*/THS/THSD">
 				<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
@@ -1476,6 +1477,7 @@
 							</arco-cd:thesaurus>
 						</xsl:if>
 					</rdf:Description>
+				</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/NU/DA/DES/DESU">

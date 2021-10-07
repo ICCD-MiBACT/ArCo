@@ -2084,22 +2084,24 @@
 					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/*/THS">
-					<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
-						<arco-cd:subject>
-							<xsl:value-of select="normalize-space(./THSD)" />
-						</arco-cd:subject>
-						<arco-cd:hasSubject>
-							<xsl:attribute name="rdf:resource">
-								<xsl:choose>
-									<xsl:when test="./THST">
-										<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./THSD), arco-fn:urify(./THST))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./THSD))" />
-									</xsl:otherwise>
-								</xsl:choose>
-	                    	</xsl:attribute>
-						</arco-cd:hasSubject>
+					<xsl:if test="record/metadata/schede/*/*/THS/THSD">
+						<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
+							<arco-cd:subject>
+								<xsl:value-of select="normalize-space(./THSD)" />
+							</arco-cd:subject>
+							<arco-cd:hasSubject>
+								<xsl:attribute name="rdf:resource">
+									<xsl:choose>
+										<xsl:when test="./THST">
+											<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./THSD), arco-fn:urify(./THST))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./THSD))" />
+										</xsl:otherwise>
+									</xsl:choose>
+	            	        	</xsl:attribute>
+							</arco-cd:hasSubject>
+						</xsl:if>
 					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/NU/DA/DES/DESU">
