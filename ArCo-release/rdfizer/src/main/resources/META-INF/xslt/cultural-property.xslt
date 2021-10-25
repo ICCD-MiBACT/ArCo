@@ -290,6 +290,7 @@
 					<xsl:if test="./RSEC and not(lower-case(normalize-space(./RSER))='scheda storica')"><!-- e.g.ICCD2284134  -->
 						<!-- Rule #RWS -->
 						<xsl:variable name="rels" select="arco-fn:related-property(normalize-space(./RSEC),'')" />
+						<xsl:variable name="rset" select="name(./RSET)" />
 						<xsl:if test="count($rels)">
 							<xsl:variable name="create-rel-work-situation">
 								<xsl:choose>
@@ -332,7 +333,8 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:variable>
-							<xsl:for-each select="$rels[not(.=$culturalProperty)]"><!-- context lost  -->
+							<!-- 
+							<xsl:for-each select="$rels[not(.=$culturalProperty)]">
 							<xsl:choose>
 								<xsl:when test="$create-rel-work-situation='true'">
 									<arco-cd:hasRelatedWorkSituation>
@@ -342,20 +344,32 @@
 									</arco-cd:hasRelatedWorkSituation>
 								</xsl:when>
 								<xsl:otherwise>
-									<!-- 
-									<xsl:for-each select="$rels">
-									 -->
+									
 										<xsl:element name="{$create-rel-work-situation}">
 											<xsl:attribute name="rdf:resource">
 												<xsl:value-of select="." />
 											</xsl:attribute>
 										</xsl:element>
-									<!-- 
-									</xsl:for-each>
-									 -->
 								</xsl:otherwise>
 							</xsl:choose>
 							</xsl:for-each>
+							-->
+							<xsl:choose>
+								<xsl:when test="$create-rel-work-situation='true'">
+									<arco-cd:hasRelatedWorkSituation>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-related-cultural-property-1-', position())" />
+										</xsl:attribute>
+									</arco-cd:hasRelatedWorkSituation>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:element name="{$create-rel-work-situation}">
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(./RSET)), '/', normalize-space(./RSEC))" />
+										</xsl:attribute>
+									</xsl:element>
+								</xsl:otherwise>
+							</xsl:choose> 
 						</xsl:if>
 					</xsl:if>
 				</xsl:for-each>
