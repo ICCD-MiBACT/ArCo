@@ -24598,6 +24598,20 @@
 		                            </xsl:attribute>
 								</arco-location:hasToponymInTime>
 							</xsl:for-each>
+							<xsl:for-each select="record/metadata/schede/*/LS/LTS">
+								<arco-location:hasToponymInTime>
+									<xsl:attribute name="rdf:resource">
+                		                <xsl:value-of select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(./LTST)))" />
+		                            </xsl:attribute>
+								</arco-location:hasToponymInTime>
+							</xsl:for-each>
+							<xsl:for-each select="record/metadata/schede/*/LS/LVS">
+								<arco-location:hasToponymInTime>
+									<xsl:attribute name="rdf:resource">
+                		                <xsl:value-of select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(./LVSD)))" />
+		                            </xsl:attribute>
+								</arco-location:hasToponymInTime>
+							</xsl:for-each>
 							<xsl:if test="record/metadata/schede/*/LC/PVC/*">
 								<clvapit:hasAddress>
 									<xsl:attribute name="rdf:resource">
@@ -24619,7 +24633,79 @@
 									</xsl:attribute>
 								</clvapit:hasAddress>
 							</xsl:if>
+							<xsl:for-each select="record/metadata/schede/*/LS/LCS">
+								<clvapit:hasHistoricalAddress>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(.))))" />
+									</xsl:attribute>
+								</clvapit:hasHistoricalAddress>
+							</xsl:for-each>
 						</rdf:Description>
+						<xsl:for-each select="record/metadata/schede/*/LS/LTS">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+                		            <xsl:value-of select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(./LTST)))" />
+                        		</xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+                		                <xsl:value-of select="'https://w3id.org/arco/ontology/location/ToponymInTime'" />
+                        		    </xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./LTST)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./LTST)" />
+								</l0:name>
+								<xsl:if test="./LTSD">
+									<tiapit:atTime>
+										<xsl:attribute name="rdf:resource">
+        	        		                <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./LTSD)))" />
+            	            		    </xsl:attribute>
+									</tiapit:atTime>
+								</xsl:if>
+								<xsl:if test="./LTSF">
+									<arco-core:note>
+										<xsl:value-of select="concat('Fonte: ', normalize-space(./LTSF))" />
+									</arco-core:note>
+								</xsl:if>
+							</rdf:Description>
+						</xsl:for-each>
+						<xsl:for-each select="record/metadata/schede/*/LS/LVS">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+                		            <xsl:value-of select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(./LVSD)))" />
+                        		</xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+                		                <xsl:value-of select="'https://w3id.org/arco/ontology/location/ToponymInTime'" />
+                        		    </xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./LVSD)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./LVSD)" />
+								</l0:name>
+								<xsl:if test="./LVST">
+									<tiapit:atTime>
+										<xsl:attribute name="rdf:resource">
+        	        		                <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./LVST)))" />
+            	            		    </xsl:attribute>
+									</tiapit:atTime>
+								</xsl:if>
+								<xsl:if test="./LVSF">
+									<arco-core:note>
+										<xsl:value-of select="concat('Fonte: ', normalize-space(./LVSF))" />
+									</arco-core:note>
+								</xsl:if>
+								<xsl:if test="./LVSN">
+									<arco-core:note>
+										<xsl:value-of select="normalize-space(./LVSN)" />
+									</arco-core:note>
+								</xsl:if>
+							</rdf:Description>
+						</xsl:for-each>
 						<xsl:if test="record/metadata/schede/*/LC/PVC/*">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
@@ -24731,6 +24817,132 @@
 								</xsl:if>
 							</rdf:Description>
 						</xsl:if>
+						<xsl:for-each select="record/metadata/schede/*/LS/LCS">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+                                	<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(.))))" />
+                				</xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+                                        <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+                                    </xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:for-each select="./*">
+										<xsl:choose>
+											<xsl:when test="position() = 1">
+												<xsl:value-of select="./text()" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="concat(', ', ./text())" />
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:for-each>
+								</rdfs:label>
+								<!-- GovernamentalAdministrativeArea -->
+								<xsl:if test="./LCSR">
+									<arco-location:hasGovernamentalAdministrativeArea>
+										<xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="concat($NS, 'GeographicalFeature/', arco-fn:urify(./LCSR))" />
+                                        </xsl:attribute>
+									</arco-location:hasGovernamentalAdministrativeArea>
+								</xsl:if>
+								<xsl:if test="./LCST">
+									<arco-location:hasGovernamentalAdministrativeArea>
+										<xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="concat($NS, 'GeographicalFeature/', arco-fn:urify(./LCST))" />
+                                        </xsl:attribute>
+									</arco-location:hasGovernamentalAdministrativeArea>
+								</xsl:if>
+								<xsl:if test="./LCSA">
+									<arco-location:hasGovernamentalAdministrativeArea>
+										<xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="concat($NS, 'GeographicalFeature/', arco-fn:urify(./LCSA))" />
+                                        </xsl:attribute>
+									</arco-location:hasGovernamentalAdministrativeArea>
+								</xsl:if>
+								<!-- Località -->
+								<xsl:if test="./LCSI">
+									<clvapit:hasAddressArea>
+										<xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./LCSI))" />
+                                        </xsl:attribute>
+									</clvapit:hasAddressArea>
+								</xsl:if>
+							</rdf:Description>
+							<xsl:if test="./LCSR">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about"> 			
+						 				 <xsl:value-of select="concat($NS, 'GeographicalFeature/', arco-fn:urify(./LCSR))" />
+									</xsl:attribute>
+						 	        <rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'http://dati.beniculturali.it/cis/GovernamentalAdministrativeArea'" />
+										</xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of 	select="normalize-space(./LCSR)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of 	select="normalize-space(./LCSR)" />
+									</l0:name>	
+								</rdf:Description>
+							</xsl:if>
+							<xsl:if test="./LCST">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about"> 			
+						 				 <xsl:value-of select="concat($NS, 'GeographicalFeature/', arco-fn:urify(./LCST))" />
+									</xsl:attribute>
+						 	        <rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'http://dati.beniculturali.it/cis/GovernamentalAdministrativeArea'" />
+										</xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of 	select="normalize-space(./LCST)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of 	select="normalize-space(./LCST)" />
+									</l0:name>	
+								</rdf:Description>
+							</xsl:if>
+							<xsl:if test="./LCSA">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about"> 			
+						 				 <xsl:value-of select="concat($NS, 'GeographicalFeature/', arco-fn:urify(./LCSA))" />
+									</xsl:attribute>
+						 	        <rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'http://dati.beniculturali.it/cis/GovernamentalAdministrativeArea'" />
+										</xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of 	select="normalize-space(./LCSA)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of 	select="normalize-space(./LCSA)" />
+									</l0:name>	
+								</rdf:Description>
+							</xsl:if>
+							<xsl:if test="./LCSI">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about"> 			
+						 				  <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./LCSI))" />
+									</xsl:attribute>
+						 	        <rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
+										</xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of 	select="normalize-space(./LCSI)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of 	select="normalize-space(./LCSI)" />
+									</l0:name>	
+								</rdf:Description>
+							</xsl:if>
+						</xsl:for-each>
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:if>

@@ -630,6 +630,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/hasHistoricalAddress -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasHistoricalAddress">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isHistoricalAddressFor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;indirizzo storico di una localizzazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the historical address of a Location</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">ha indirizzo storico</rdfs:label>
+        <rdfs:label xml:lang="en">has historical address</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/hasHistoricalArea -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasHistoricalArea">
@@ -1317,6 +1334,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è area di appartenenza amministrativa di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isHistoricalAddressFor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isHistoricalAddressFor">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha indirizzo storico&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has historical address&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">is historical address</rdfs:label>
+        <rdfs:label xml:lang="it">è indirizzo storico di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
