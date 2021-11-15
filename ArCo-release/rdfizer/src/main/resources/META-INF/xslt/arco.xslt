@@ -24670,6 +24670,30 @@
 									</arco-core:note>
 								</xsl:if>
 							</rdf:Description>
+							<xsl:if test="./LTSD">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about"> 			
+						 				<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./LTSD)))" />
+									</xsl:attribute>
+						 	        <rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+										</xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of 	select="normalize-space(./LTSD)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of 	select="normalize-space(./LTSD)" />
+									</l0:name>
+									<arco-arco:startTime>
+										<xsl:value-of select="normalize-space(./LTSD)" />
+									</arco-arco:startTime>
+									<arco-arco:endTime>
+										<xsl:value-of select="normalize-space(./LTSD)" />
+									</arco-arco:endTime>
+								</rdf:Description>
+							</xsl:if>
 						</xsl:for-each>
 						<xsl:for-each select="record/metadata/schede/*/LS/LVS">
 							<rdf:Description>
@@ -24705,6 +24729,30 @@
 									</arco-core:note>
 								</xsl:if>
 							</rdf:Description>
+							<xsl:if test="./LVST">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about"> 			
+						 				<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./LVST)))" />
+									</xsl:attribute>
+						 	        <rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+										</xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of 	select="normalize-space(./LVST)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of 	select="normalize-space(./LVST)" />
+									</l0:name>
+									<arco-arco:startTime>
+										<xsl:value-of select="normalize-space(./LVST)" />
+									</arco-arco:startTime>
+									<arco-arco:endTime>
+										<xsl:value-of select="normalize-space(./LVST)" />
+									</arco-arco:endTime>
+								</rdf:Description>
+							</xsl:if>
 						</xsl:for-each>
 						<xsl:if test="record/metadata/schede/*/LC/PVC/*">
 							<rdf:Description>
@@ -24869,7 +24917,43 @@
                                         </xsl:attribute>
 									</clvapit:hasAddressArea>
 								</xsl:if>
+								<xsl:if test="./LCSD">
+									<tiapit:atTime>
+										<xsl:attribute name="rdf:resource">
+        	        		                <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./LTSD)))" />
+            	            		    </xsl:attribute>
+									</tiapit:atTime>
+								</xsl:if>
+								<xsl:if test="./LCSF">
+									<arco-core:note>
+										<xsl:value-of select="concat('Fonte: ', normalize-space(./LTSF))" />
+									</arco-core:note>
+								</xsl:if>
 							</rdf:Description>
+							<xsl:if test="./LCSD">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about"> 			
+						 				<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./LCSD)))" />
+									</xsl:attribute>
+						 	        <rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+										</xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of 	select="normalize-space(./LCSD)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of 	select="normalize-space(./LCSD)" />
+									</l0:name>
+									<arco-arco:startTime>
+										<xsl:value-of select="normalize-space(./LCSD)" />
+									</arco-arco:startTime>
+									<arco-arco:endTime>
+										<xsl:value-of select="normalize-space(./LCSD)" />
+									</arco-arco:endTime>
+								</rdf:Description>
+							</xsl:if>
 							<xsl:if test="./LCSR">
 								<rdf:Description>
 									<xsl:attribute name="rdf:about"> 			

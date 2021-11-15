@@ -327,7 +327,7 @@
 			</xsl:if>
 		</rdf:Description>
 		<!-- NaturalEnvironment as individual -->
-		<xsl:if test="record/metadata/schede/SI/CA">
+		<xsl:if test="record/metadata/schede/*/CA">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
 	    	   		<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" />
@@ -359,69 +359,69 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="concat('Natural environment of cultural property ', $itemURI)" />
 				</l0:name>
-				<xsl:if test="record/metadata/schede/SI/CA/GEF">
+				<xsl:if test="record/metadata/schede/*/CA/GEF">
 					<arco-location:geographicalDescription>
 						<xsl:choose>
-							<xsl:when test="record/metadata/schede/SI/CA/GEF/GEFI">
-								<xsl:value-of select="concat('Sistema idrico di superficie: ', record/metadata/schede/SI/CA/GEF/GEFI, ' ', record/metadata/schede/SI/CA/GEF/GEFD)" />
+							<xsl:when test="record/metadata/schede/*/CA/GEF/GEFI">
+								<xsl:value-of select="concat('Sistema idrico di superficie: ', record/metadata/schede/*/CA/GEF/GEFI, ' ', record/metadata/schede/*/CA/GEF/GEFD)" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="record/metadata/schede/SI/CA/GEF/GEFD" />
+								<xsl:value-of select="record/metadata/schede/*/CA/GEF/GEFD" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</arco-location:geographicalDescription>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/SI/CA/GEO/GEOD">
+				<xsl:if test="record/metadata/schede/*/CA/GEO/GEOD">
 					<arco-location:geomorphologicalDescription>
-						<xsl:value-of select="record/metadata/schede/SI/CA/GEO/GEOD" />
+						<xsl:value-of select="record/metadata/schede/*/CA/GEO/GEOD" />
 					</arco-location:geomorphologicalDescription>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/SI/CA/GEL/GELD">
+				<xsl:if test="record/metadata/schede/*/CA/GEL/GELD">
 					<arco-location:geologicalDescription>
-						<xsl:value-of select="record/metadata/schede/SI/CA/GEL/GELD" />
+						<xsl:value-of select="record/metadata/schede/*/CA/GEL/GELD" />
 					</arco-location:geologicalDescription>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/SI/CA/AGR">
+				<xsl:if test="record/metadata/schede/*/CA/AGR">
 					<arco-core:description>
-						<xsl:value-of select="record/metadata/schede/SI/CA/AGR" />
+						<xsl:value-of select="record/metadata/schede/*/CA/AGR" />
 					</arco-core:description>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/SI/CA/GEL/GELC">
+				<xsl:if test="record/metadata/schede/*/CA/GEL/GELC">
 					<arco-location:hasMap>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'GeologicalMap/', arco-fn:urify(normalize-space(record/metadata/schede/SI/CA/GEL/GELC)))" />
+							<xsl:value-of select="concat($NS, 'GeologicalMap/', arco-fn:urify(normalize-space(record/metadata/schede/*/CA/GEL/GELC)))" />
 						</xsl:attribute>
 					</arco-location:hasMap>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/SI/CA/PED">
+				<xsl:if test="record/metadata/schede/*/CA/PED">
 					<arco-location:pedologicalDescription>
 						<xsl:choose>
-							<xsl:when test="record/metadata/schede/SI/CA/PED/PEDE">
-								<xsl:value-of select="concat(record/metadata/schede/SI/CA/PED/PEDD, '. ', 'Esame dei campioni: ', record/metadata/schede/SI/CA/PED/PEDE)" />
+							<xsl:when test="record/metadata/schede/*/CA/PED/PEDE">
+								<xsl:value-of select="concat(record/metadata/schede/*/CA/PED/PEDD, '. ', 'Esame dei campioni: ', record/metadata/schede/*/CA/PED/PEDE)" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="record/metadata/schede/SI/CA/PED/PEDD" />
+								<xsl:value-of select="record/metadata/schede/*/CA/PED/PEDD" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</arco-location:pedologicalDescription>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/SI/CA/PED/PEDC">
+				<xsl:if test="record/metadata/schede/*/CA/PED/PEDC">
 					<arco-location:hasMap>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'PedologicalMap/', arco-fn:urify(normalize-space(record/metadata/schede/SI/CA/PED/PEDC)))" />
+							<xsl:value-of select="concat($NS, 'PedologicalMap/', arco-fn:urify(normalize-space(record/metadata/schede/*/CA/PED/PEDC)))" />
 						</xsl:attribute>
 					</arco-location:hasMap>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/SI/CA/CAS">
+				<xsl:if test="record/metadata/schede/*/CA/CAS">
 					<arco-location:historicalEnvironmentContextDescription>
-						<xsl:value-of select="concat(record/metadata/schede/SI/CA/CAS/CASD, '. ', record/metadata/schede/SI/CA/CAS/CASF, '. ', record/metadata/schede/SI/CA/CAS/CASA)" />
+						<xsl:value-of select="concat(record/metadata/schede/*/CA/CAS/CASD, '. ', record/metadata/schede/*/CA/CAS/CASF, '. ', record/metadata/schede/*/CA/CAS/CASA)" />
 					</arco-location:historicalEnvironmentContextDescription>
 				</xsl:if>
 			</rdf:Description>
-			<xsl:if test="record/metadata/schede/SI/CA/GEL/GELC">
+			<xsl:if test="record/metadata/schede/*/CA/GEL/GELC">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'GeologicalMap/', arco-fn:urify(normalize-space(record/metadata/schede/SI/CA/GEL/GELC)))" />
+						<xsl:value-of select="concat($NS, 'GeologicalMap/', arco-fn:urify(normalize-space(record/metadata/schede/*/CA/GEL/GELC)))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -429,17 +429,17 @@
 						</xsl:attribute>
 					</rdf:type>
 					<l0:name>
-						<xsl:value-of select="record/metadata/schede/SI/CA/GEL/GELC" />
+						<xsl:value-of select="record/metadata/schede/*/CA/GEL/GELC" />
 					</l0:name>
 					<rdfs:label>
-						<xsl:value-of select="record/metadata/schede/SI/CA/GEL/GELC" />
+						<xsl:value-of select="record/metadata/schede/*/CA/GEL/GELC" />
 					</rdfs:label>
 				</rdf:Description>
 			</xsl:if>
-			<xsl:if test="record/metadata/schede/SI/CA/PED/PEDC">
+			<xsl:if test="record/metadata/schede/*/CA/PED/PEDC">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'PedologicalMap/', arco-fn:urify(normalize-space(record/metadata/schede/SI/CA/PED/PEDC)))" />
+						<xsl:value-of select="concat($NS, 'PedologicalMap/', arco-fn:urify(normalize-space(record/metadata/schede/*/CA/PED/PEDC)))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -447,16 +447,16 @@
 						</xsl:attribute>
 					</rdf:type>
 					<l0:name>
-						<xsl:value-of select="record/metadata/schede/SI/CA/PED/PEDC" />
+						<xsl:value-of select="record/metadata/schede/*/CA/PED/PEDC" />
 					</l0:name>
 					<rdfs:label>
-						<xsl:value-of select="record/metadata/schede/SI/CA/PED/PEDC" />
+						<xsl:value-of select="record/metadata/schede/*/CA/PED/PEDC" />
 					</rdfs:label>
 				</rdf:Description>
 			</xsl:if>
 		</xsl:if>	
 		<!-- Soil as individual -->
-		<xsl:if test="record/metadata/schede/SI/CA/USD">
+		<xsl:if test="record/metadata/schede/*/CA/USD">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about"> 			
 	 				<xsl:value-of select="concat($NS, 'Soil/', $itemURI)" />
@@ -479,20 +479,20 @@
 					<xsl:value-of select="concat('Suolo del bene culturale: ', $itemURI)" />
 				</l0:name>
 				<arco-core:description>
-					<xsl:value-of select="record/metadata/schede/SI/CA/USD/USDT" />
+					<xsl:value-of select="record/metadata/schede/*/CA/USD/USDT" />
 				</arco-core:description>
-				<xsl:if test="record/metadata/schede/SI/CA/USD/USDC">
+				<xsl:if test="record/metadata/schede/*/CA/USD/USDC">
 					<arco-location:hasMap>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'LandUseMap/', arco-fn:urify(normalize-space(record/metadata/schede/SI/CA/USD/USDC)))" />
+							<xsl:value-of select="concat($NS, 'LandUseMap/', arco-fn:urify(normalize-space(record/metadata/schede/*/CA/USD/USDC)))" />
 						</xsl:attribute>
 					</arco-location:hasMap>
 				</xsl:if>
 			</rdf:Description>
-			<xsl:if test="record/metadata/schede/SI/CA/USD/USDC">
+			<xsl:if test="record/metadata/schede/*/CA/USD/USDC">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'LandUseMap/', arco-fn:urify(normalize-space(record/metadata/schede/SI/CA/USD/USDC)))" />
+						<xsl:value-of select="concat($NS, 'LandUseMap/', arco-fn:urify(normalize-space(record/metadata/schede/*/CA/USD/USDC)))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -500,10 +500,10 @@
 						</xsl:attribute>
 					</rdf:type>
 					<l0:name>
-						<xsl:value-of select="record/metadata/schede/SI/CA/USD/USDC" />
+						<xsl:value-of select="record/metadata/schede/*/CA/USD/USDC" />
 					</l0:name>
 					<rdfs:label>
-						<xsl:value-of select="record/metadata/schede/SI/CA/USD/USDC" />
+						<xsl:value-of select="record/metadata/schede/*/CA/USD/USDC" />
 					</rdfs:label>
 				</rdf:Description>
 			</xsl:if>
