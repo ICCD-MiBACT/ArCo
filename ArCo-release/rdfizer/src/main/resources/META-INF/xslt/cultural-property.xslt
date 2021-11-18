@@ -717,6 +717,11 @@
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/DRE)" />
 					</arco-core:description>
 				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/DA/DSO">
+					<arco-core:note>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/DSO)" />
+					</arco-core:note>
+				</xsl:if>
 				<xsl:if test="record/metadata/schede/FF/OG/OGT/OGTC">
 					<arco-core:description>
 						<xsl:value-of select="normalize-space(record/metadata/schede/FF/OG/OGT/OGTC)" />
@@ -2541,7 +2546,7 @@
                         </xsl:attribute>
 					</arco-dd:hasDesignationInTime>
 				</xsl:for-each>
-				<xsl:for-each select="record/metadata/schede/*/OG/OGT/OGTU">
+				<xsl:for-each select="record/metadata/schede/*/OG/OGT/OGTU and not($sheetType='FF')">
 					<arco-dd:hasDesignationInTime>
 						<xsl:attribute name="rdf:resource">
                         	<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space()))" />                      	                            
