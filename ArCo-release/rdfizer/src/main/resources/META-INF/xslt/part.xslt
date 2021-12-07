@@ -1353,6 +1353,56 @@
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
+			<xsl:for-each select="record/metadata/schede/*/*/SGT">
+				<xsl:if test="$sheetType='PST'">
+					<xsl:if test="./SGTP">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(../SGTP)))" />
+							</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./SGTP)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./SGTP)" />
+							</l0:name>
+							<arco-cd:subject>
+								<xsl:value-of select="normalize-space(./SGTI)" />
+							</arco-cd:subject>
+							<arco-cd:hasSubject>
+								<xsl:attribute name="rdf:resource">
+	                    			<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./SGTI))" />
+	  			              	</xsl:attribute>
+							</arco-cd:hasSubject>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:if>
+				<xsl:if test="$sheetType='SMO'">
+					<xsl:if test="./SGTA">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(../SGTA)))" />
+							</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./SGTA)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./SGTA)" />
+							</l0:name>
+							<arco-cd:subject>
+								<xsl:value-of select="normalize-space(./SGTI)" />
+							</arco-cd:subject>
+							<arco-cd:hasSubject>
+								<xsl:attribute name="rdf:resource">
+	                    			<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./SGTI))" />
+	  			              	</xsl:attribute>
+							</arco-cd:hasSubject>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:if>
+			</xsl:for-each>
 		</rdf:RDF>
 	</xsl:template>
 </xsl:stylesheet>

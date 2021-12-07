@@ -2090,17 +2090,63 @@
 					</clvapit:hasGeometry>
 				</xsl:if>
 				<!-- subject -->
-				<xsl:for-each select="record/metadata/schede/*/*/SGT/SGTI">
-					<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
-						<arco-cd:subject>
-							<xsl:value-of select="normalize-space(.)" />
-						</arco-cd:subject>
-						<arco-cd:hasSubject>
-							<xsl:attribute name="rdf:resource">
-	                    		<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
-	                    	</xsl:attribute>
-						</arco-cd:hasSubject>
-					</xsl:if>
+				<xsl:for-each select="record/metadata/schede/*/*/SGT">
+					<xsl:choose>
+						<xsl:when test="$sheetType='PST'">
+							<xsl:choose>
+								<xsl:when test="./SGTP">
+									 <arco-core:hasPart>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./SGTP)))" />
+										</xsl:attribute>
+									</arco-core:hasPart>
+								</xsl:when>
+								<xsl:otherwise>
+									<arco-cd:subject>
+										<xsl:value-of select="normalize-space(./SGTI)" />
+										</arco-cd:subject>
+									<arco-cd:hasSubject>
+										<xsl:attribute name="rdf:resource">
+	                    					<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./SGTI))" />
+	  				                  	</xsl:attribute>
+									</arco-cd:hasSubject>
+								</xsl:otherwise>
+							</xsl:choose>	
+						</xsl:when>
+						<xsl:when test="$sheetType='SMO'">
+							<xsl:choose>
+								<xsl:when test="./SGTA">
+									 <arco-core:hasPart>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./SGTA)))" />
+										</xsl:attribute>
+									</arco-core:hasPart>
+								</xsl:when>
+								<xsl:otherwise>
+									<arco-cd:subject>
+										<xsl:value-of select="normalize-space(./SGTI)" />
+										</arco-cd:subject>
+									<arco-cd:hasSubject>
+										<xsl:attribute name="rdf:resource">
+	                    					<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./SGTI))" />
+	  				                  	</xsl:attribute>
+									</arco-cd:hasSubject>
+								</xsl:otherwise>
+							</xsl:choose>	
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
+								<arco-cd:subject>
+									<xsl:value-of select="normalize-space(./SGTI)" />
+								</arco-cd:subject>
+								<arco-cd:hasSubject>
+									<xsl:attribute name="rdf:resource">
+	  									<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./SGTI))" />
+	  				        	  	</xsl:attribute>
+								</arco-cd:hasSubject>
+							</xsl:if>
+						</xsl:otherwise>
+					</xsl:choose>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/*/THS">
 					<xsl:if test="record/metadata/schede/*/*/THS/THSD">
@@ -2110,14 +2156,7 @@
 							</arco-cd:subject>
 							<arco-cd:hasSubject>
 								<xsl:attribute name="rdf:resource">
-									<xsl:choose>
-										<xsl:when test="./THST">
-											<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./THSD), arco-fn:urify(./THST))" />
-										</xsl:when>
-										<xsl:otherwise>
-											<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./THSD))" />
-										</xsl:otherwise>
-									</xsl:choose>
+									<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./THSD))" />
 	            	        	</xsl:attribute>
 							</arco-cd:hasSubject>
 						</xsl:if>
@@ -3760,6 +3799,11 @@
 						</xsl:attribute>
 					</arco-dd:hasCulturalPropertyType>
 				</xsl:if>
+				<xsl:for-each select="record/metadata/schede/*/*/SGT/SGTD">
+					<arco-cd:subjectDescription>
+						<xsl:value-of select="." />
+					</arco-cd:subjectDescription>
+				</xsl:for-each>
 			</rdf:Description>
 
 			<!-- Images retrieved from the OAI-PMH service of ICCD-MiBAC > <xsl:variable 
