@@ -20209,6 +20209,9 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Preferred authorship attribution of cultural property: ', $itemURI)" />
 						</l0:name>
+						<arco-cd:preferredAuthorshipAttribution>
+							<xsl:value-of select="true()" />
+						</arco-cd:preferredAuthorshipAttribution>
 						<arco-cd:isAuthorshipAttributionOf>
 							<xsl:attribute name="rdf:resource"> 
 								<xsl:value-of select="$culturalProperty" /> 
@@ -20464,6 +20467,9 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Preferred authorship attribution of cultural property: ', $itemURI)" />
 						</l0:name>
+						<arco-cd:preferredAuthorshipAttribution>
+							<xsl:value-of select="true()" />
+						</arco-cd:preferredAuthorshipAttribution>
 						<arco-cd:isAuthorshipAttributionOf>
 							<xsl:attribute name="rdf:resource"> 
 								<xsl:value-of select="$culturalProperty" /> 
@@ -21014,6 +21020,9 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Preferred authorship attribution of cultural property: ', $itemURI)" />
 						</l0:name>
+						<arco-cd:preferredAuthorshipAttribution>
+							<xsl:value-of select="true()" />
+						</arco-cd:preferredAuthorshipAttribution>
 						<arco-cd:isAuthorshipAttributionOf>
 							<xsl:attribute name="rdf:resource"> 
 								<xsl:value-of select="$culturalProperty" /> 
