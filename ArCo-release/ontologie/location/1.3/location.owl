@@ -119,6 +119,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/iccdNormTag -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
@@ -371,7 +377,6 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="it">ha tipo di catasto</rdfs:label>
         <rdfs:label xml:lang="en">has cadastre type</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>CS/CTS/CTST</a-cat:iccdNormTag>
@@ -1128,7 +1133,6 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="en">is cadastre type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di catasto di</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1754,9 +1758,45 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/italia/onto/CLV/hasAdressinTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasAdressinTime"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/hasCensusSection -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasCensusSection"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/hasInternalAccess -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasInternalAccess"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/hasNumber -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasNumber"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/hasStreetToponym -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasStreetToponym"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/CLV/isAddressComponentOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/isAddressComponentOf"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/isAddressFor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/isAddressFor"/>
     
 
 
@@ -2101,6 +2141,18 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/italia/onto/CLV/fullAddress -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/CLV/fullAddress"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/postCode -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/CLV/postCode"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/TI/date -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/TI/date"/>
@@ -2345,12 +2397,6 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/CadastreType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasCadastralCity"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CLV/City"/>
             </owl:Restriction>
@@ -2359,6 +2405,12 @@ In this module the following Ontology Design Patterns have been used:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasCadastralEntity"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/CadastralEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasCadastreType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/CadastreType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3444,7 +3496,89 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Address">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasAddressComponent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CLV/AddressComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasInternalAccess"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/CLV/InternalAccess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/isAddressFor"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/italia/onto/CLV/CivicNumbering"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasStreetToponym"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/italia/onto/CLV/StreetToponym"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasAdressinTime"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/italia/onto/CLV/AddressInTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasCensusSection"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/italia/onto/CLV/CensusSection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/fullAddress"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/postCode"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/onto/CLV/AddressComponent"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/onto/CLV/CensusSection"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un oggetto spaziale indirizzabile o una rappresentazione indirizzabile. In particolare, nel contesto italiano, essa rappresenta l’accesso esterno da un’area di circolazione a una unità ecografica semplice (abitazioni, uffici, locali in cui sono ubicate attività economiche, ecc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an  &quot;addressable object&quot; or &quot;addressable representation&quot;. In most situations the addressable objects are current, real world objects. In the Italian context it represents the external access from a circulation area to a simple unit such as dwellings, offices, premises where economic activities are located, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/CLV"/>
+        <rdfs:label xml:lang="it">Accesso Esterno</rdfs:label>
+        <rdfs:label xml:lang="en">Address</rdfs:label>
+        <rdfs:label xml:lang="it">Indirizzo</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <prov:wasDerivedFrom rdf:resource="http://inspire.ec.europa.eu/featureconcept/Address"/>
+        <prov:wasDerivedFrom rdf:resource="https://www.w3.org/ns/locn#Address"/>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/AddressComponent -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/AddressComponent"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/AddressInTime -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/AddressInTime"/>
     
 
 
@@ -3456,11 +3590,23 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     
 
 
+    <!-- https://w3id.org/italia/onto/CLV/CensusSection -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/CensusSection"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/CLV/City -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/City">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/AdministrativeUnitComponent"/>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/CivicNumbering -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/CivicNumbering"/>
     
 
 
@@ -3494,11 +3640,23 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     
 
 
+    <!-- https://w3id.org/italia/onto/CLV/InternalAccess -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/InternalAccess"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/CLV/SpatialObject -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/SpatialObject">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/StreetToponym -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/StreetToponym"/>
     
 
 
