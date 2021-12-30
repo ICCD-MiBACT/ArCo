@@ -4555,7 +4555,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf"/>
-                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4564,32 +4564,10 @@ resource:MeasurementCollection/1200865132-1
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description xml:lang="en">An example of usage of the class &apos;Cultural entity technical status&apos; is the following:
-resource:CulturalEntityTechnicalStatus/0900281817-4
-        a           a-dd:CulturalEntityTechnicalStatus ;
-        rdfs:label  &quot;Technical status of cultural property 0900281817-4&quot;@en ;
-        a-dd:includesTechnicalCharacteristic
-                resource:TechnicalCharacteristic/centinato, resource:TechnicalCharacteristic/stone-sculpture .
-
-resource:TechnicalCharacteristic/stone-sculpture
-        a                    a-dd:TechnicalCharacteristic ;
-        rdfs:label           &quot;stone/ sculpture&quot; ;
-        a-dd:isClassifiedBy  a-dd:MaterialOrTechnique .</dc:description>
-        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Stato tecnico di entità culturale&quot; è il seguente:
-resource:CulturalEntityTechnicalStatus/0900281817-4
-        a           a-dd:CulturalEntityTechnicalStatus ;
-        rdfs:label  &quot;Stato tecnico del bene culturale 0900281817-4&quot;@it ;
-        a-dd:includesTechnicalCharacteristic
-                resource:TechnicalCharacteristic/centinato, resource:TechnicalCharacteristic/pietra-scultura .
-
-resource:TechnicalCharacteristic/pietra-scultura
-        a                    a-dd:TechnicalCharacteristic ;
-        rdfs:label           &quot;pietra/ scultura&quot; ;
-        a-dd:isClassifiedBy  a-dd:MaterialOrTechnique .</dc:description>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato tecnico di un&apos;entità culturale, cioè una situazione in cui un&apos;entità culturale ha associate una serie di caratteristiche tecniche. Lo stato di un&apos;entità ha associata una validità temporale, relativa al momento in cui quelle caratteristiche sono state rilevate. Per esempio, una occorrenza di un dettaglio tecnico è: &quot;bene culturale X realizzato con la materia terracotta e di forma cilindrica&quot;.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the technical status of a cultural entity, that is a situation in which the cultural entity is associated to technical characteristics. The technical status has a temporal validity, related to the moment when the characteristics were observed. For instance, a cultural property techncal status is: &quot;the cultural property X realized with pottery material and cylindrical in shape&quot;.</rdfs:comment>
-        <rdfs:label xml:lang="it">Stato tecnico di entità culturale</rdfs:label>
-        <rdfs:label xml:lang="en">Technical status of cultural entity</rdfs:label>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato tecnico di un&apos;entità, cioè una situazione in cui un&apos;entità ha associate una serie di caratteristiche tecniche. Lo stato di un&apos;entità ha associata una validità temporale, relativa al momento in cui quelle caratteristiche sono state rilevate.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the technical status of an entity, that is a situation in which the entity is associated to technical characteristics. The technical status has a temporal validity, related to the moment when the characteristics were observed.</rdfs:comment>
+        <rdfs:label xml:lang="it">Stato tecnico</rdfs:label>
+        <rdfs:label xml:lang="en">Technical status</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; DA/APF/APFE</a-cat:iccdNormTag>
