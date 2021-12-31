@@ -549,6 +549,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="en">cultural property address</rdfs:label>
         <rdfs:label xml:lang="it">indirizzo del bene culturale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: LC/PVC</a-cat:iccdNormTag>
@@ -1263,6 +1264,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="en">is cultural property address of</rdfs:label>
         <rdfs:label xml:lang="it">è indirizzo del bene culturale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
