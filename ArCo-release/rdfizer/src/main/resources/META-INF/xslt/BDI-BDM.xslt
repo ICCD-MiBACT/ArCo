@@ -3,6 +3,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:arco-core="https://w3id.org/arco/ontology/core/"
 	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
+	xmlns:arco-lite="https://w3id.org/arco/ontology/arco-lite/"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
 	xmlns:arco-spe="https://w3id.org/arco/ontology/natural-specimen-description/"
@@ -14410,6 +14411,14 @@
 						</xsl:attribute>
 					</arco-location:hasTimeIndexedTypedLocation>
 				</xsl:if>
+				<!-- Acquisition of cultural property -->
+					<xsl:if test="./FIQ">
+						<arco-cd:hasAcquisition>
+							<xsl:attribute name="rdf:resource">
+	        	        		<xsl:value-of select="concat($NS, 'Acquisition/StorageMedium/', $itemURI, '-integrative-photographic-recording-original')" />
+	            	    	</xsl:attribute>
+						</arco-cd:hasAcquisition>
+					</xsl:if>
 				<!-- informant -->
 				<xsl:for-each select="./FIF">
 					<arco-core:hasAgentRole>

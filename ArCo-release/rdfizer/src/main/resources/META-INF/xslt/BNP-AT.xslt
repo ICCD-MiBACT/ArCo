@@ -3,6 +3,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:arco-core="https://w3id.org/arco/ontology/core/"
 	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
+	xmlns:arco-lite="https://w3id.org/arco/ontology/arco-lite/"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:arco-spe="https://w3id.org/arco/ontology/natural-specimen-description/"
 	xmlns:cis="http://dati.beniculturali.it/cis/"
@@ -492,11 +493,11 @@
 					</xsl:call-template>
 	            </l0:name>
 	            <xsl:if test="./SPSA">
- 					<arco-cd:hasAuthor>
+ 					<arco-lite:hasAuthor>
     	    	    	<xsl:attribute name="rdf:resource">
         	    			<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./SPSA))" />
 		            	</xsl:attribute>
-        	    	</arco-cd:hasAuthor>
+        	    	</arco-lite:hasAuthor>
             	</xsl:if>
 				<arco-spe:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
@@ -533,11 +534,11 @@
 					</xsl:call-template>
 				</l0:name>
 				<xsl:if test="./SPSD">
-					<arco-cd:hasAuthor>
+					<arco-lite:hasAuthor>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./SPSD))" />
 						</xsl:attribute>
-					</arco-cd:hasAuthor>
+					</arco-lite:hasAuthor>
 				</xsl:if>
 			</rdf:Description>
 		</xsl:if>	
@@ -1186,11 +1187,11 @@
 					</xsl:call-template>
 	            </l0:name>
 	            <xsl:if test="./SZSE">
- 					<arco-cd:hasAuthor>
+ 					<arco-lite:hasAuthor>
     	    	    	<xsl:attribute name="rdf:resource">
         	    			<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./SZSE))" />
 		            	</xsl:attribute>
-        	    	</arco-cd:hasAuthor>
+        	    	</arco-lite:hasAuthor>
             	</xsl:if>
 				<arco-spe:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
@@ -1227,11 +1228,11 @@
 					</xsl:call-template>
 				</l0:name>
 				<xsl:if test="./SZSD">
-					<arco-cd:hasAuthor>
+					<arco-lite:hasAuthor>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./SZSD))" />
 						</xsl:attribute>
-					</arco-cd:hasAuthor>
+					</arco-lite:hasAuthor>
 				</xsl:if>
 			</rdf:Description>
 		</xsl:if>	
@@ -1968,11 +1969,11 @@
 						</xsl:call-template>
 					</l0:name>
 					<xsl:if test="record/metadata/schede/AT/OG/OGS/OGSA">
-						<arco-cd:hasAuthor>
+						<arco-lite:hasAuthor>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/AT/OG/OGS/OGSA))" />
 							</xsl:attribute>
-						</arco-cd:hasAuthor>
+						</arco-lite:hasAuthor>
 					</xsl:if>
 				</rdf:Description>
 			</xsl:if>	

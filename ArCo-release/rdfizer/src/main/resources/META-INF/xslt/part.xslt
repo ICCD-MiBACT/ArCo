@@ -5,6 +5,7 @@
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension" xmlns:arco-core="https://w3id.org/arco/ontology/core/"
 	xmlns:arco-event="https://w3id.org/arco/ontology/cultural-event/" xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
+	xmlns:arco-lite="https://w3id.org/arco/ontology/arco-lite/"
 	xmlns:cis="http://dati.beniculturali.it/cis/" xmlns:l0="https://w3id.org/italia/onto/l0/"
 	xmlns:clvapit="https://w3id.org/italia/onto/CLV/" xmlns:tiapit="https://w3id.org/italia/onto/TI/"
 	xmlns:roapit="https://w3id.org/italia/onto/RO/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -222,7 +223,7 @@
 		                    </xsl:attribute>
 							</arco-cd:hasAuthorshipAttribution>
 
-							<arco-cd:hasAuthor>
+							<arco-lite:hasAuthor>
 								<xsl:attribute name="rdf:resource">
 		                    		<xsl:variable name="author">
 				                            <xsl:choose>
@@ -258,7 +259,7 @@
 			                                </xsl:otherwise>
 			                            </xsl:choose>
 		                    	</xsl:attribute>
-							</arco-cd:hasAuthor>
+							</arco-lite:hasAuthor>
 							<dc:creator>
 								<xsl:attribute name="rdf:resource">
 		                    		<xsl:variable name="author">
@@ -347,7 +348,7 @@
 								<xsl:value-of select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasAuthorshipAttribution>
-						<arco-cd:hasAuthor>
+						<arco-lite:hasAuthor>
 							<xsl:attribute name="rdf:resource">
 		                   		<xsl:variable name="author">
 									<xsl:choose>
@@ -361,7 +362,7 @@
 								</xsl:variable>
 								<xsl:value-of select="$author" />
 		                    </xsl:attribute>
-						</arco-cd:hasAuthor>
+						</arco-lite:hasAuthor>
 					</xsl:if>
 					<xsl:if test="./AUIB and (not(starts-with(lower-case(normalize-space(./AUIB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUIB)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUIB)), '-')))">
 						<arco-cd:hasAuthorshipAttribution>
@@ -369,11 +370,11 @@
 								<xsl:value-of select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasAuthorshipAttribution>
-						<arco-cd:hasAuthor>
+						<arco-lite:hasAuthor>
 							<xsl:attribute name="rdf:resource">
 		                   		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUIB))" />
 		                    </xsl:attribute>
-						</arco-cd:hasAuthor>
+						</arco-lite:hasAuthor>
 					</xsl:if>
 				</xsl:if>
 			</xsl:for-each>

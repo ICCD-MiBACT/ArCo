@@ -114,18 +114,38 @@
 						<xsl:when test="./AUTS and (not(starts-with(lower-case(normalize-space(./AUTS)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTS)), 'n.r')))">
 							<xsl:choose>
 								<xsl:when test="position() = 1">
-									<xsl:value-of select="concat(./AUTN, ' (', ./AUTS, ')')" />
+									<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', ./AUTS, ')')" />
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="concat(', ', ./AUTN, ' (', ./AUTS, ')')" />
+									<xsl:value-of select="concat(', ', arco-fn:name-cleaner(./AUTN), ' (', ./AUTS, ')')" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:when>
-							<xsl:otherwise>	
-								<xsl:choose>
-									<xsl:when test="position() = 1">
-										<xsl:value-of select="./AUTN" />
-									</xsl:when>
+						<xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+							<xsl:choose>
+								<xsl:when test="position() = 1">
+									<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', ./AUTA, ')')" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat(', ', arco-fn:name-cleaner(./AUTN), ' (', ./AUTA, ')')" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:when>
+						<xsl:when test="./AUTB and (not(starts-with(lower-case(normalize-space(./AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTB)), 'n.r')))">
+							<xsl:choose>
+								<xsl:when test="position() = 1">
+									<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', ./AUTB, ')')" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat(', ', arco-fn:name-cleaner(./AUTN), ' (', ./AUTB, ')')" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:when>
+						<xsl:otherwise>	
+							<xsl:choose>
+								<xsl:when test="position() = 1">
+									<xsl:value-of select="./AUTN" />
+								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="concat(', ', ./AUTN)" />
 								</xsl:otherwise>
@@ -210,10 +230,30 @@
 						<xsl:when test="./AUTS and (not(starts-with(lower-case(normalize-space(./AUTS)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTS)), 'n.r')))">
 							<xsl:choose>
 								<xsl:when test="position() = 1">
-								<xsl:value-of select="concat(./AUTN, ' (', ./AUTS, ')')" />
+									<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', ./AUTS, ')')" />
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="concat(', ', ./AUTN, ' (', ./AUTS, ')')" />
+									<xsl:value-of select="concat(', ', arco-fn:name-cleaner(./AUTN), ' (', ./AUTS, ')')" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:when>
+						<xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+							<xsl:choose>
+								<xsl:when test="position() = 1">
+									<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', ./AUTA, ')')" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat(', ', arco-fn:name-cleaner(./AUTN), ' (', ./AUTA, ')')" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:when>
+						<xsl:when test="./AUTB and (not(starts-with(lower-case(normalize-space(./AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTB)), 'n.r')))">
+							<xsl:choose>
+								<xsl:when test="position() = 1">
+									<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', ./AUTB, ')')" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat(', ', arco-fn:name-cleaner(./AUTN), ' (', ./AUTB, ')')" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:when>

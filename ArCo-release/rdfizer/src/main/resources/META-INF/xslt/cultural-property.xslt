@@ -7,6 +7,7 @@
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:arco-core="https://w3id.org/arco/ontology/core/"
 	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
+	xmlns:arco-lite="https://w3id.org/arco/ontology/arco-lite/"
 	xmlns:arco-ce="https://w3id.org/arco/ontology/cultural-event/"
 	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
 	xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
@@ -602,7 +603,7 @@
 				</xsl:if>
 				<!-- cultural property address -->
 				<xsl:if test="record/metadata/schede/*/LC/PVC/*">
-					<arco-location:hasCulturalPropertyAddress>
+					<arco-lite:hasCulturalPropertyAddress>
 						<xsl:attribute name="rdf:resource">
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/*/LC/PVC/PVCS and not(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCS))='italia')">
@@ -620,10 +621,10 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:attribute>
-					</arco-location:hasCulturalPropertyAddress>
+					</arco-lite:hasCulturalPropertyAddress>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/MODI/LC/*">
-					<arco-location:hasCulturalPropertyAddress>
+					<arco-lite:hasCulturalPropertyAddress>
 						<xsl:attribute name="rdf:resource">
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/*/LC/LCS and not(lower-case(normalize-space(record/metadata/schede/*/LC/LCS))='italia')">
@@ -641,7 +642,7 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:attribute>
-					</arco-location:hasCulturalPropertyAddress>
+					</arco-lite:hasCulturalPropertyAddress>
 				</xsl:if>
 				<!-- has number of components -->
 				<xsl:if test="record/metadata/schede/*/OG/QNT/QNTN">
@@ -875,7 +876,7 @@
 				                            <xsl:value-of select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
 				                        </xsl:attribute>
 									</arco-cd:hasAuthorshipAttribution>
-									<arco-cd:hasAuthor>
+									<arco-lite:hasAuthor>
 										<xsl:attribute name="rdf:resource">
 				                    		<xsl:variable name="author">
 					                            <xsl:choose>
@@ -895,8 +896,8 @@
 				                            </xsl:variable>
 				                            <xsl:value-of select="$author" />
 				                    	</xsl:attribute>
-									</arco-cd:hasAuthor>
-									<arco-cd:hasPreferredAuthor>
+									</arco-lite:hasAuthor>
+									<arco-lite:hasPreferredAuthor>
 										<xsl:attribute name="rdf:resource">
 				                    		<xsl:variable name="author">
 					                            <xsl:choose>
@@ -916,7 +917,7 @@
 				                            </xsl:variable>
 				                            <xsl:value-of select="$author" />
 				                    	</xsl:attribute>
-									</arco-cd:hasPreferredAuthor>
+									</arco-lite:hasPreferredAuthor>
 									<dc:creator>
 										<xsl:attribute name="rdf:resource">
 				                    		<xsl:variable name="author">
@@ -981,16 +982,16 @@
 								<xsl:value-of select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasAuthorshipAttribution>
-						<arco-cd:hasAuthor>
+						<arco-lite:hasAuthor>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AAUN))" />
 							</xsl:attribute>
-						</arco-cd:hasAuthor>
-						<arco-cd:hasPreferredAuthor>
+						</arco-lite:hasAuthor>
+						<arco-lite:hasPreferredAuthor>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AAUN))" />
 							</xsl:attribute>
-						</arco-cd:hasPreferredAuthor>
+						</arco-lite:hasPreferredAuthor>
 						<dc:creator>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AAUN))" />
@@ -1011,7 +1012,7 @@
 								<xsl:value-of select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-photographer-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasAuthorshipAttribution>
-						<arco-cd:hasAuthor>
+						<arco-lite:hasAuthor>
 							<xsl:attribute name="rdf:resource">
 		                    	<xsl:variable name="author">
 									<xsl:choose>
@@ -1038,8 +1039,8 @@
 									</xsl:otherwise>
 								</xsl:choose>
 		                    </xsl:attribute>
-						</arco-cd:hasAuthor>
-						<arco-cd:hasPreferredAuthor>
+						</arco-lite:hasAuthor>
+						<arco-lite:hasPreferredAuthor>
 							<xsl:attribute name="rdf:resource">
 		                    	<xsl:variable name="author">
 									<xsl:choose>
@@ -1066,7 +1067,7 @@
 									</xsl:otherwise>
 								</xsl:choose>
 		                    </xsl:attribute>
-						</arco-cd:hasPreferredAuthor>
+						</arco-lite:hasPreferredAuthor>
 						<dc:creator>
 							<xsl:attribute name="rdf:resource">
 		                    	<xsl:variable name="author">
@@ -1153,7 +1154,7 @@
 										<xsl:value-of select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
 									</xsl:attribute>
 								</arco-cd:hasAuthorshipAttribution>
-								<arco-cd:hasAuthor>
+								<arco-lite:hasAuthor>
 									<xsl:attribute name="rdf:resource">
 				                   		<xsl:variable name="author">
 											<xsl:choose>
@@ -1170,7 +1171,7 @@
 										</xsl:variable>
 										<xsl:value-of select="$author" />
 				                    </xsl:attribute>
-								</arco-cd:hasAuthor>
+								</arco-lite:hasAuthor>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:for-each select="./AUIY">
@@ -1191,11 +1192,11 @@
 										<xsl:value-of select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
 									</xsl:attribute>
 								</arco-cd:hasAuthorshipAttribution>
-								<arco-cd:hasAuthor>
+								<arco-lite:hasAuthor>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUIB))" />
 				                    </xsl:attribute>
-								</arco-cd:hasAuthor>
+								</arco-lite:hasAuthor>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:for-each select="./AUIY">
@@ -2450,93 +2451,100 @@
 					</xsl:for-each>
 				</xsl:if>
 				<!-- relation with copy (RO/COP) -->
-				<xsl:if test="record/metadata/schede/*/RO/COP or record/metadata/schede/*/RO/CRF/CRFT='copia'">
-					<xsl:for-each select="record/metadata/schede/*/RO/COP | record/metadata/schede/*/RO/CRF">
+				<xsl:for-each select="record/metadata/schede/*/RO/COP">
+					<arco-cd:hasRelatedWorkSituation>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-copy-', position())" />
+						</xsl:attribute>
+					</arco-cd:hasRelatedWorkSituation>
+				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/RO/CRF">
+					<xsl:if test="./CRFT='copia'">
 						<arco-cd:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-copy-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasRelatedWorkSituation>
-					</xsl:for-each>
-				</xsl:if>
+					</xsl:if>
+				</xsl:for-each>
 				<!-- relation with a generic derivated work (if RO/CRF/CRFT != 'replica' 
 					or 'contraffazione' or 'controtipo' or 'reimpiego' or 'copia') -->
-				<xsl:if test="record/metadata/schede/*/RO/CRF and not(record/metadata/schede/*/RO/CRF/CRFT='copia' or record/metadata/schede/*/RO/CRF/CRFT='contraffazione' or record/metadata/schede/*/RO/CRF/CRFT='controtipo' or record/metadata/schede/*/RO/CRF/CRFT='replica' or record/metadata/schede/*/RO/CRF/CRFT='reimpiego')">
-					<xsl:for-each select="record/metadata/schede/*/RO/CRF">
+				<xsl:for-each select="record/metadata/schede/*/RO/CRF">
+					<xsl:if test=". and not(./CRFT='copia' or ./CRFT='contraffazione' or ./CRFT='controtipo' or ./CRFT='replica' or ./CRFT='reimpiego')">
 						<arco-cd:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-derivated-work-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasRelatedWorkSituation>
-					</xsl:for-each>
-				</xsl:if>
+					</xsl:if>
+				</xsl:for-each>
 				<!-- relation with a particular type of derivated work: forgery -->
-				<xsl:if test="record/metadata/schede/*/RO/CRF/CFRT='contraffazione'">
-					<xsl:for-each select="record/metadata/schede/*/RO/CRF">
+				<xsl:for-each select="record/metadata/schede/*/RO/CRF">
+					<xsl:if test="./CRFT='contraffazione'">
 						<arco-cd:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-forgery-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasRelatedWorkSituation>
-					</xsl:for-each>
-				</xsl:if>
+					</xsl:if>
+				</xsl:for-each>
 				<!-- relation with a particular type of derivated work: facsimile -->
-				<xsl:if test="record/metadata/schede/*/RO/CRF/CFRT='controtipo'">
-					<xsl:for-each select="record/metadata/schede/*/RO/CRF">
+				<xsl:for-each select="record/metadata/schede/*/RO/CRF">
+					<xsl:if test="./CRFT='controtipo'">
 						<arco-cd:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-facsimile-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasRelatedWorkSituation>
-					</xsl:for-each>
-				</xsl:if>
+					</xsl:if>
+				</xsl:for-each>
 				<!-- relation with a particular type of derivated work: same author copy -->
-				<xsl:if test="record/metadata/schede/*/RO/CRF/CFRT='replica'">
-					<xsl:for-each select="record/metadata/schede/*/RO/CRF">
+				<xsl:for-each select="record/metadata/schede/*/RO/CRF">
+					<xsl:if test="./CRFT='replica'">
 						<arco-cd:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-same-author-copy-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasRelatedWorkSituation>
-					</xsl:for-each>
-				</xsl:if>
+					</xsl:if>
+				</xsl:for-each>
 				<!-- relation with a particular type of derivated work: reuse -->
-				<xsl:if test="record/metadata/schede/*/RO/REI or record/metadata/schede/*/RO/RIU or record/metadata/schede/*/RO/CRF/CFRT='reimpiego'">
-					<xsl:for-each select="record/metadata/schede/*/RO/REI | record/metadata/schede/*/RO/RIU | record/metadata/schede/*/RO/CRF">
-						<xsl:choose>
-							<xsl:when test="./* and (not(./REIP) or ./REIP='intero bene' or ./REIP='integrale' or ./REIP='tutta' or ./REIP='totale') or (starts-with(lower-case(normalize-space(./REIP)), 'nr')) or (starts-with(lower-case(normalize-space(./REIP)), 'n.r')) or (starts-with(lower-case(normalize-space(./REIP)), 'intero')) or (starts-with(lower-case(normalize-space(./REIP)), 'intera')) or (starts-with(lower-case(normalize-space(./REIP)), 'esemplar'))">
-								<arco-cd:hasRelatedWorkSituation>
+				<xsl:for-each select="record/metadata/schede/*/RO/CRF">
+					<xsl:if test="./CFRT='reimpiego'">	
+						<arco-cd:hasRelatedWorkSituation>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-reuse-', position())" />
+							</xsl:attribute>
+						</arco-cd:hasRelatedWorkSituation>
+					</xsl:if>
+				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/RO/REI">
+					<xsl:choose>
+						<xsl:when test="./* and (not(./REIP) or ./REIP='intero bene' or ./REIP='integrale' or ./REIP='tutta' or ./REIP='totale') or (starts-with(lower-case(normalize-space(./REIP)), 'nr')) or (starts-with(lower-case(normalize-space(./REIP)), 'n.r')) or (starts-with(lower-case(normalize-space(./REIP)), 'intero')) or (starts-with(lower-case(normalize-space(./REIP)), 'intera')) or (starts-with(lower-case(normalize-space(./REIP)), 'esemplar'))">
+							<arco-cd:hasRelatedWorkSituation>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-reuse-', position())" />
+								</xsl:attribute>
+							</arco-cd:hasRelatedWorkSituation>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:for-each select="./REIP">
+								<arco-core:hasPart>
 									<xsl:attribute name="rdf:resource">
-			                            <xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-reuse-', position())" />
-			                        </xsl:attribute>
-								</arco-cd:hasRelatedWorkSituation>
-							</xsl:when>
-							<xsl:when test="../RIU">
-								<arco-cd:hasRelatedWorkSituation>
-									<xsl:attribute name="rdf:resource">
-			                            <xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-reuse-', position())" />
-			                        </xsl:attribute>
-								</arco-cd:hasRelatedWorkSituation>
-							</xsl:when>
-							<xsl:when test="../CRF">
-								<arco-cd:hasRelatedWorkSituation>
-									<xsl:attribute name="rdf:resource">
-			                            <xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-reuse-', position())" />
-			                        </xsl:attribute>
-								</arco-cd:hasRelatedWorkSituation>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:for-each select="./REIP">
-									<arco-core:hasPart>
-										<xsl:attribute name="rdf:resource">
-				                			<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
-				                		</xsl:attribute>
-									</arco-core:hasPart>
-								</xsl:for-each>
-							</xsl:otherwise>
-						</xsl:choose>
-					</xsl:for-each>
-				</xsl:if>
+				               			<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+				               		</xsl:attribute>
+								</arco-core:hasPart>
+							</xsl:for-each>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/RO/RIU">
+					<arco-cd:hasRelatedWorkSituation>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-reuse-', position())" />
+						</xsl:attribute>
+					</arco-cd:hasRelatedWorkSituation>
+				</xsl:for-each>
 				<!-- relation with a particular type of derivated work: print in publication  (S) -->
 				<xsl:if test="record/metadata/schede/*/RO/ADL">
 					<xsl:for-each select="record/metadata/schede/*/RO/ADL">
