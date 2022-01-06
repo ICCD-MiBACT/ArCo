@@ -1678,6 +1678,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha membro di collezione</rdfs:label>
         <rdfs:label xml:lang="en">has member of collection</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>UB/COL</a-cat:iccdNormTag>
@@ -2879,6 +2880,24 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/involvesElement -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/involvesElement"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/involvesMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/involvesMember">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberInvolvedIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;appartenenza a una collezione in un certo intervallo di tempo al bene culturale mobile coinvolto nella relazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the membership of a movable cultural entity to a collection in a time interval.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">coinvolge membro</rdfs:label>
+        <rdfs:label xml:lang="en">involves member</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>UB/COL. Normativa F: UB/UBF. Normativa NU: OG/OGT/OGTR. Normativa BN: OG/OGT/OGTC. Normativa MI e S: OG/SGT/SGTS. Normativa BDI: DU/DUR, SF/SFI, SS/SSI, DU/DUS, AI/AIR,AI/ AIS, VI/VIR,VI/VIV, DU/DUR</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
     
 
 
@@ -4288,6 +4307,20 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isMemberInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberInvolvedIn">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale mobile alla classe che rappresenta l&apos;appartenenza del bene culturale a una collezione in un certo intervallo di tempo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to the class that represents the membership relation between this cultural property and a collection.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is member involved in</rdfs:label>
+        <rdfs:label xml:lang="it">è membro coinvolto in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isMemberOfArchivalRecordSetOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfArchivalRecordSetOf">
@@ -4317,6 +4350,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is member of collection of</rdfs:label>
         <rdfs:label xml:lang="it">è membro di collezione di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>UB/COL</a-cat:iccdNormTag>
@@ -8247,6 +8281,7 @@ resource:ArchivalSubseries/museo-civico-romano
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalSubseries"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <a-cat:iccdNormTag>Normativa F: UB/UBF/UBFU</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -8641,7 +8676,7 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Membership"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasMemberOfCollection"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/involvesMember"/>
                 <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -12672,15 +12707,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>
     
 
