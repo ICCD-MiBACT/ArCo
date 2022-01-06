@@ -3,6 +3,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:arco-core="https://w3id.org/arco/ontology/core/"
 	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
+	xmlns:arco-lite="https://w3id.org/arco/ontology/arco-lite/"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
 	xmlns:arco-spe="https://w3id.org/arco/ontology/natural-specimen-description/"
@@ -446,17 +447,17 @@
 			<xsl:variable name="ecp" select="record/metadata/schede/*/CD/ECP"></xsl:variable>
 			<xsl:variable name="ogtc" select="record/metadata/schede/*/OG/OGT/OGTC"></xsl:variable>		
 			<xsl:if test="record/metadata/schede/*/AC/ACO or record/metadata/schede/*/LC/LDC/LDCM or record/metadata/schede/*/OG/OGT/OGTC">
-			<arco-cd:isMemberOfSpecimenCollectionOf>
+			<arco-cd:isMemberInvolvedIn>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'SpecimenCollectionMembership/', $itemURI)" />
+					<xsl:value-of select="concat($NS, 'CollectionMembership/', $itemURI)" />
 				</xsl:attribute>
-			</arco-cd:isMemberOfSpecimenCollectionOf>
+			</arco-cd:isMemberInvolvedIn>
 			</xsl:if>
-			<arco-cd:isSpecimenMemberOf>
+			<arco-lite:isCollectionMemberOf>
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="$specimencollection" />
 				</xsl:attribute>
-			</arco-cd:isSpecimenMemberOf>
+			</arco-lite:isCollectionMemberOf>
 		</xsl:if>
 		<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">
 			<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM or record/metadata/schede/*/IR or record/metadata/schede/*/ET">
@@ -9180,11 +9181,11 @@
 			<xsl:variable name="ogtc" select="record/metadata/schede/*/OG/OGT/OGTC"></xsl:variable>	
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'SpecimenCollectionMembership/', $itemURI)" />
+				<xsl:value-of select="concat($NS, 'CollectionMembership/', $itemURI)" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SpecimenCollectionMembership'" />
+					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CollectionMembership'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">

@@ -1887,6 +1887,11 @@
 							<xsl:value-of select="concat($NS, 'LegalSituation/Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-typespecimen')" />
 						</xsl:attribute>
 					</arco-cd:hasLegalSituation>
+					<arco-cd:hasOwner>
+						<xsl:attribute name="rdf:resource">
+		            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNPL/SP/SPN/SPNS))" />
+		            	</xsl:attribute>
+					</arco-cd:hasOwner>
 				</xsl:if>
 			</rdf:Description>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPN/SPNS">
@@ -1912,12 +1917,67 @@
 							select="'https://w3id.org/arco/ontology/context-description/LegalSituation'" />
 						</xsl:attribute>
 					</rdf:type>
-					<arco-cd:hasOwner>
+					<arco-core:hasAgentRole>
 						<xsl:attribute name="rdf:resource">
-		            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNPL/SP/SPN/SPNS))" />
-		            	</xsl:attribute>
-					</arco-cd:hasOwner>
+							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner')" />
+						</xsl:attribute>
+					</arco-core:hasAgentRole>
 				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner')" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Proprietario ', position(), 'del tipo nomenclaturale del meteorite ', normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN))" />
+					</rdfs:label>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Owner ', position(), ' of type specimen of meteorite ', normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN))" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Proprietario ', position(), ' del tipo nomenclaturale del meteorite ', normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN))" />
+					</l0:name>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Owner ', position(), ' of type specimen of meteorite ', normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN))" />
+					</l0:name>
+					<arco-core:hasRole>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Role/Owner')" />
+						</xsl:attribute>
+					</arco-core:hasRole>
+					<arco-core:hasAgent>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNPL/SP/SPN/SPNS))" />
+						</xsl:attribute>
+					</arco-core:hasAgent>
+				</rdf:Description>
+				<!-- role as an individual -->
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'Role/Owner')" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="'Proprietario'" />
+					</rdfs:label>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="'Owner'" />
+					</rdfs:label>
+					<arco-core:isRoleOf>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner')" />
+						</xsl:attribute>
+					</arco-core:isRoleOf>
+				</rdf:Description>
+				<!-- agent as an indiviual -->
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 		            	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNPL/SP/SPN/SPNS))" />
@@ -2098,6 +2158,11 @@
 							<xsl:value-of select="concat($NS, 'LegalSituation/Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-main-mass')" />
 						</xsl:attribute>
 					</arco-cd:hasLegalSituation>
+					<arco-cd:hasOwner>
+						<xsl:attribute name="rdf:resource">
+		            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNPL/SP/SPN/SPNM))" />
+		            	</xsl:attribute>
+					</arco-cd:hasOwner>
 				</xsl:if>
 			</rdf:Description>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPN/SPNM">
@@ -2123,12 +2188,67 @@
 							select="'https://w3id.org/arco/ontology/context-description/LegalSituation'" />
 						</xsl:attribute>
 					</rdf:type>
-					<arco-cd:hasOwner>
-						<xsl:attribute name="rdf:resource">
-		            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNPL/SP/SPN/SPNM))" />
-		            	</xsl:attribute>
-					</arco-cd:hasOwner>
+					<arco-core:hasAgentRole>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner')" />
+							</xsl:attribute>
+						</arco-core:hasAgentRole>
 				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner')" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Proprietario ', position(), ' della massa principale del meteorite ', normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN))" />
+					</rdfs:label>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Owner ', position(), ' of main mass of meteorite ', normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN))" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Proprietario ', position(), ' della massa principale del meteorite ', normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN))" />
+					</l0:name>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Owner ', position(), ' of main mass of meteorite ', normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN))" />
+					</l0:name>
+					<arco-core:hasRole>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Role/Owner')" />
+						</xsl:attribute>
+					</arco-core:hasRole>
+					<arco-core:hasAgent>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNPL/SP/SPN/SPNM))" />
+						</xsl:attribute>
+					</arco-core:hasAgent>
+				</rdf:Description>
+				<!-- role as an individual -->
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'Role/Owner')" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="'Proprietario'" />
+					</rdfs:label>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="'Owner'" />
+					</rdfs:label>
+					<arco-core:isRoleOf>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner')" />
+						</xsl:attribute>
+					</arco-core:isRoleOf>
+				</rdf:Description>
+				<!-- agent as an indiviual -->
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 		            	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNPL/SP/SPN/SPNM))" />

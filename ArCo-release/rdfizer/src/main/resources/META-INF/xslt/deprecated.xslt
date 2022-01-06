@@ -270,6 +270,15 @@
 				</xsl:attribute>
 			</arco-location:hasCulturalPropertyAddress>
 		</xsl:if>
+		<xsl:for-each select="record/metadata/schede/*/UB/COL">
+			<xsl:if test="./*">
+				<arco-cd:isMemberOfCollectionOf>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'CollectionMembership/', $itemURI, '-collection-membership-', position())" />
+					</xsl:attribute>
+				</arco-cd:isMemberOfCollectionOf>
+			</xsl:if>
+		</xsl:for-each>
 	</rdf:Description>
 	<xsl:if test="$sheetType='A' or $sheetType='PG'" >	
 							<!-- Properties of ArchitecturalHeritage -->									
