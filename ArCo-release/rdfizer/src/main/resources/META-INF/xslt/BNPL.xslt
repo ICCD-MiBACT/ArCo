@@ -904,9 +904,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-dd:currentMeasurementCollection>
             	<xsl:value-of select="true()" />
-            </arco-core:current>
+            </arco-dd:currentMeasurementCollection>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDR">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -1316,9 +1316,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-dd:currentMeasurementCollection>
             	<xsl:value-of select="true()" />
-            </arco-core:current>
+            </arco-dd:currentMeasurementCollection>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPO/SPOB">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -1425,9 +1425,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-dd:currentMeasurementCollection>
             	<xsl:value-of select="true()" />
-            </arco-core:current>
+            </arco-dd:currentMeasurementCollection>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPC/SPCS">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -1494,9 +1494,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-dd:currentMeasurementCollection>
             	<xsl:value-of select="true()" />
-            </arco-core:current>
+            </arco-dd:currentMeasurementCollection>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPN/SPNP">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -1563,9 +1563,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-dd:currentMeasurementCollection>
             	<xsl:value-of select="false()" />
-            </arco-core:current>
+            </arco-dd:currentMeasurementCollection>
 			<xsl:if test="./RPOB">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -1672,9 +1672,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-dd:currentMeasurementCollection>
             	<xsl:value-of select="false()" />
-            </arco-core:current>
+            </arco-dd:currentMeasurementCollection>
 			<xsl:if test=".">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -1742,9 +1742,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-dd:currentMeasurementCollection>
             	<xsl:value-of select="true()" />
-            </arco-core:current>
+            </arco-dd:currentMeasurementCollection>
 			<xsl:if test=".">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">

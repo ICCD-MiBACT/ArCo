@@ -1568,9 +1568,9 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 				</l0:name>
-				<arco-core:current>
+				<arco-dd:currentMeasurementCollection>
 	            	<xsl:value-of select="true()" />
-	            </arco-core:current>
+	            </arco-dd:currentMeasurementCollection>
 				<xsl:if test="record/metadata/schede/BNPE/SR/SRG/SRGD">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
@@ -2088,9 +2088,9 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 				</l0:name>
-				<arco-core:current>
+				<arco-dd:currentMeasurementCollection>
 	            	<xsl:value-of select="false()" />
-	            </arco-core:current>
+	            </arco-dd:currentMeasurementCollection>
 	            <xsl:if test="./RRD/RRDA">
 		            <arco-core:involvesAgent>
 						<xsl:attribute name="rdf:resource">

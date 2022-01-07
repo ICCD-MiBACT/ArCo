@@ -2018,9 +2018,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-dd:currentMeasurementCollection>
             	<xsl:value-of select="true()" />
-            </arco-core:current>
+            </arco-dd:currentMeasurementCollection>
 
 			<xsl:if test="record/metadata/schede/BNM/SM/SMF/SMFV">
 				<arco-dd:hasMeasurement>
@@ -2358,9 +2358,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of collecting location'" />
 			</l0:name>
-			 <arco-core:current>
+			 <arco-dd:currentMeasurementCollection>
             	<xsl:value-of select="false()" />
-            </arco-core:current>
+            </arco-dd:currentMeasurementCollection>
 			<xsl:if test="./RMFV">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -6842,9 +6842,9 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="concat('Measuerements of cell of mineral ', $itemURI)" />
 				</l0:name>
-				<arco-core:current>
+				<arco-dd:currentMeasurementCollection>
     	        	<xsl:value-of select="true()" />
-        	    </arco-core:current>
+        	    </arco-dd:currentMeasurementCollection>
 				<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCA">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
@@ -7197,9 +7197,9 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="concat('Technical status of unit cell ', position(), ' of cultural property ', $itemURI)" />
 				</l0:name>
-				<arco-core:current>
+				<arco-dd:currentTechnicalStatus>
          	   		<xsl:value-of select="true()" />
-            	</arco-core:current>
+            	</arco-dd:currentTechnicalStatus>
 				<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCS">
 					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
@@ -7383,9 +7383,9 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="'Measuerements of cell of mineral ', $itemURI" />
 				</l0:name>
-				<arco-core:current>
+				<arco-dd:currentMeasurementCollection>
     	        	<xsl:value-of select="false()" />
-        	    </arco-core:current>
+        	    </arco-dd:currentMeasurementCollection>
 				<xsl:if test="./RMC/RMCA">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
@@ -7740,9 +7740,9 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="concat('Technical status of unit cell ', position(), ' of cultural property ', $itemURI)" />
 				</l0:name>
-				<arco-core:current>
+				<arco-dd:currentTechnicalStatus>
          	   		<xsl:value-of select="false()" />
-            	</arco-core:current>
+            	</arco-dd:currentTechnicalStatus>
 				<xsl:if test="./RMC/RMCS">
 					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
@@ -7918,9 +7918,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of reflectance of mineral ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-dd:currentMeasurementCollection>
             	<xsl:value-of select="true()" />
-       	    </arco-core:current>
+       	    </arco-dd:currentMeasurementCollection>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMM/SMMF">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -8055,9 +8055,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of reflectance of mineral ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-dd:currentMeasurementCollection>
             	<xsl:value-of select="true()" />
-       	    </arco-core:current>
+       	    </arco-dd:currentMeasurementCollection>
 			<xsl:if test="./RMMF">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -8194,9 +8194,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of refraction of mineral ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-dd:currentMeasurementCollection>
     	       	<xsl:value-of select="true()" />
-            </arco-core:current>
+            </arco-dd:currentMeasurementCollection>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOI">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -8619,9 +8619,9 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="'Measuerements of refraction of mineral ', $itemURI" />
 				</l0:name>
-				<arco-core:current>
+				<arco-dd:currentMeasurementCollection>
     	        	<xsl:value-of select="false()" />
-        	    </arco-core:current>
+        	    </arco-dd:currentMeasurementCollection>
 				<xsl:if test="./RMO/RMOI">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
