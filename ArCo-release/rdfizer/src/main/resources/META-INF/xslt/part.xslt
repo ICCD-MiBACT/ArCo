@@ -693,14 +693,11 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if
-					test="not(lower-case(normalize-space(./DTP))='intero bene') and not(lower-case(normalize-space(./DTP))='integrale') and not(lower-case(normalize-space(./DTP))='carattere generale') and not(lower-case(normalize-space(./DTP))='tutta') and not(lower-case(normalize-space(./DTP))='totale') and (not(starts-with(lower-case(normalize-space(./DTP)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./DTP)), 'intero')) and not(starts-with(lower-case(normalize-space(./DTP)), 'intera')) and not(starts-with(lower-case(normalize-space(./DTP)), 'esemplar')))">
+				<xsl:if test="not(lower-case(normalize-space(./DTP))='intero bene') and not(lower-case(normalize-space(./DTP))='integrale') and not(lower-case(normalize-space(./DTP))='carattere generale') and not(lower-case(normalize-space(./DTP))='tutta') and not(lower-case(normalize-space(./DTP))='totale') and (not(starts-with(lower-case(normalize-space(./DTP)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./DTP)), 'intero')) and not(starts-with(lower-case(normalize-space(./DTP)), 'intera')) and not(starts-with(lower-case(normalize-space(./DTP)), 'esemplar')))">
 					<xsl:for-each select="./DTP">
-
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-						 		<xsl:value-of
-								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-cd:hasDating>
@@ -719,8 +716,49 @@
 									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
 								</xsl:attribute>
 							</arco-core:isPartOf>
+							<xsl:if test="not(../DTN/DTNS)">
+								<arco-lite:hasRealizationDate>
+									<xsl:attribute name="rdf:resource">
+        	    	                    <xsl:choose>
+            	    	                    <xsl:when test="../DTZ/DTZS">
+                	    	                    <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(../DTZ/DTZG)), '-',  arco-fn:urify(normalize-space(../DTZ/DTZS)))" />
+                    	    	            </xsl:when>
+                        	    	        <xsl:otherwise>
+                            	    	        <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(../DTZ/DTZG)))" />
+                                	    	</xsl:otherwise>
+	                                	</xsl:choose>
+	    	                        </xsl:attribute>
+								</arco-lite:hasRealizationDate>
+							</xsl:if>
+							<xsl:if test="starts-with(lower-case(normalize-space(../DTN/DTNS)), 'realizzazione')">
+								<arco-lite:hasRealizationDate>
+									<xsl:attribute name="rdf:resource">
+                        	    	    <xsl:choose>
+                            	    	    <xsl:when test="../DTZ/DTZS">
+                                	    	    <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(../DTZ/DTZG)), '-',  arco-fn:urify(normalize-space(../DTZ/DTZS)))" />
+	                                	    </xsl:when>
+    	                                	<xsl:otherwise>
+        	                                	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(../DTZ/DTZG)))" />
+	            	                        </xsl:otherwise>
+    	            	                </xsl:choose>
+        	            	        </xsl:attribute>
+								</arco-lite:hasRealizationDate>
+							</xsl:if>
+							<xsl:if test="starts-with(lower-case(normalize-space(../DTN/DTNS)), 'costruzione')">
+								<arco-lite:hasRealizationDate>
+									<xsl:attribute name="rdf:resource">
+                	            	    <xsl:choose>
+                    	            	    <xsl:when test="../DTZ/DTZS">
+                        	            	    <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(../DTZ/DTZG)), '-',  arco-fn:urify(normalize-space(../DTZ/DTZS)))" />
+	                            	        </xsl:when>
+    	                            	    <xsl:otherwise>
+        	                            	    <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(../DTZ/DTZG)))" />
+	        	                            </xsl:otherwise>
+    	        	                    </xsl:choose>
+        	        	            </xsl:attribute>
+								</arco-lite:hasRealizationDate>
+							</xsl:if>
 						</rdf:Description>
-
 					</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
@@ -959,10 +997,108 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if
-					test="not(lower-case(normalize-space(./REN/RENR))='intero bene') and not(lower-case(normalize-space(./REN/RENR))='carattere generale') and not(lower-case(normalize-space(./REN/RENR))='integrale') and not(lower-case(normalize-space(./REN/RENR))='tutta') and not(lower-case(normalize-space(./REN/RENR))='totale') and (not(starts-with(lower-case(normalize-space(./REN/RENR)), 'nr')) and not(starts-with(lower-case(normalize-space(./REN/RENR)), 'n.r')) and not(starts-with(lower-case(normalize-space(./REN/RENR)), 'esemplar')) and not(starts-with(lower-case(normalize-space(./REN/RENR)), 'intero')) and not(starts-with(lower-case(normalize-space(./REN/RENR)), 'intera')))">
+				<xsl:if test="not(lower-case(normalize-space(./REN/RENR))='intero bene') and not(lower-case(normalize-space(./REN/RENR))='carattere generale') and not(lower-case(normalize-space(./REN/RENR))='integrale') and not(lower-case(normalize-space(./REN/RENR))='tutta') and not(lower-case(normalize-space(./REN/RENR))='totale') and (not(starts-with(lower-case(normalize-space(./REN/RENR)), 'nr')) and not(starts-with(lower-case(normalize-space(./REN/RENR)), 'n.r')) and not(starts-with(lower-case(normalize-space(./REN/RENR)), 'esemplar')) and not(starts-with(lower-case(normalize-space(./REN/RENR)), 'intero')) and not(starts-with(lower-case(normalize-space(./REN/RENR)), 'intera')))">
+					<xsl:variable name="relv">
+						<xsl:choose>
+							<xsl:when test="./REL/RELV">
+								<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELV)), '-')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="''" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="relw">
+						<xsl:choose>
+							<xsl:when test="./REL/RELW">
+								<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELW)), '-')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="''" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="relf">
+						<xsl:choose>
+							<xsl:when test="./REL/RELF">
+								<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELF)), '-')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="''" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="revv">
+						<xsl:choose>
+							<xsl:when test="./REV/REVV">
+								<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVV)), '-')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="''" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="revw">
+						<xsl:choose>
+							<xsl:when test="./REV/REVW">
+								<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVW)), '-')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="''" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="revf">
+						<xsl:choose>
+							<xsl:when test="./REV/REVF">
+								<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVF)), '-')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="''" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="rels">
+						<xsl:choose>
+							<xsl:when test="./REL/RELW">
+								<xsl:value-of select="concat($relw, $relf, arco-fn:urify(normalize-space(./REL/RELS)))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat($relv, $relf, arco-fn:urify(normalize-space(./REL/RELS)))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="revs">
+						<xsl:choose>
+							<xsl:when test="./REV/REVW">
+								<xsl:value-of select="concat($revw, $revf, arco-fn:urify(normalize-space(./REV/REVS)))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat($revv, $revf, arco-fn:urify(normalize-space(./REV/REVS)))" />
+							</xsl:otherwise>
+							</xsl:choose>
+						</xsl:variable>
+					<xsl:variable name="relx">
+						<xsl:choose>
+							<xsl:when test="./REL/RELX">
+								<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELX)), '-')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="''" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="revx">
+						<xsl:choose>
+							<xsl:when test="./REV/REVX">
+								<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVX)), '-')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="''" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
 					<xsl:for-each select="./REN/RENR">
-
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 						 		<xsl:value-of
@@ -985,8 +1121,58 @@
 									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
 								</xsl:attribute>
 							</arco-core:isPartOf>
+							<xsl:if test="not(./REN/RENS)">
+								<arco-lite:hasRealizationDate>
+									<xsl:attribute name="rdf:resource">
+										<xsl:choose>
+											<xsl:when test="./REL/RELS and not(./REV/REVS)">
+												<xsl:value-of select="concat($NS, 'TimeInterval/', $rels, '-', $revx, arco-fn:urify(normalize-space(./REV/REVI)))" />
+											</xsl:when>
+											<xsl:when test="./REV/REVS and not(./REL/RELS)">
+												<xsl:value-of select="concat($NS, 'TimeInterval/', $relx, arco-fn:urify(normalize-space(./REL/RELI)), '-', $revs)" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="concat($NS, 'TimeInterval/', $rels, '-', $revs)" />
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:attribute>
+								</arco-lite:hasRealizationDate>
+							</xsl:if>
+						<xsl:if test="starts-with(lower-case(normalize-space(./REN/RENS)), 'realizzazione')">
+							<arco-lite:hasRealizationDate>
+								<xsl:attribute name="rdf:resource">
+									<xsl:choose>
+										<xsl:when test="./REL/RELS and not(./REV/REVS)">
+											<xsl:value-of select="concat($NS, 'TimeInterval/', $rels, '-', $revx, arco-fn:urify(normalize-space(./REV/REVI)))" />
+										</xsl:when>
+										<xsl:when test="./REV/REVS and not(./REL/RELS)">
+											<xsl:value-of select="concat($NS, 'TimeInterval/', $relx, arco-fn:urify(normalize-space(./REL/RELI)), '-', $revs)" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'TimeInterval/', $rels, '-', $revs)" />
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:attribute>
+							</arco-lite:hasRealizationDate>
+						</xsl:if>
+						<xsl:if test="starts-with(lower-case(normalize-space(./REN/RENS)), 'costruzione')">
+							<arco-lite:hasRealizationDate>
+								<xsl:attribute name="rdf:resource">
+									<xsl:choose>
+										<xsl:when test="./REL/RELS and not(./REV/REVS)">
+											<xsl:value-of select="concat($NS, 'TimeInterval/', $rels, '-', $revx, arco-fn:urify(normalize-space(./REV/REVI)))" />
+										</xsl:when>
+										<xsl:when test="./REV/REVS and not(./REL/RELS)">
+											<xsl:value-of select="concat($NS, 'TimeInterval/', $relx, arco-fn:urify(normalize-space(./REL/RELI)), '-', $revs)" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'TimeInterval/', $rels, '-', $revs)" />
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:attribute>
+							</arco-lite:hasRealizationDate>
+						</xsl:if>
 						</rdf:Description>
-
 					</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>

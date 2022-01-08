@@ -2926,11 +2926,9 @@
 					</arco-core:hasType>
 				</xsl:if>
 				<xsl:if test="./INIZ">
-					<arco-cd:hasBibliography>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-survey-', position())" />
-						</xsl:attribute>
-					</arco-cd:hasBibliography>
+					<arco-cd:technicalDocumentation>
+						<xsl:value-of select="normalize-space(./INIZ)" />
+					</arco-cd:technicalDocumentation>
 				</xsl:if>
 				<xsl:if test="./INID">
 					<tiapit:atTime>
@@ -2977,34 +2975,6 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./INIT)" />
 					</l0:name>
-				</rdf:Description>
-			</xsl:if>
-			<!-- bibliography as an individual -->
-			<xsl:if test="./INIZ">
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-bibliography-survey-', position())" />
-	        		</xsl:attribute>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-        	       			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Bibliography'" />
-	            	   	</xsl:attribute>
-					</rdf:type>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Bibliografia relativa all indagine del bene ', $itemURI)" />
-					</rdfs:label>
-					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Bibliografia relativa all indagine del bene ', $itemURI)" />
-					</l0:name>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Bibliography about the survey of cultural property ', $itemURI)" />
-					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Bibliography about the survey of cultural property ', $itemURI)" />
-					</l0:name>
-					<arco-cd:completeBibliographicReference>
-						<xsl:value-of select="./INIZ" />
-					</arco-cd:completeBibliographicReference>			
 				</rdf:Description>
 			</xsl:if>
 			<!-- time interval as an individual -->
