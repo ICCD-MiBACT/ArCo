@@ -1937,6 +1937,9 @@
 					<l0:name>
 						<xsl:value-of 	select="normalize-space(./SCL/SCLO)" />
 					</l0:name>
+					<arco-cd:useFunction>
+						<xsl:value-of 	select="normalize-space(./SCL/SCLO)" />
+					</arco-cd:useFunction>
 				</rdf:Description>
 			</xsl:if>
 			<!-- VerticalConnectionType as individual -->

@@ -2840,7 +2840,7 @@
 				</xsl:for-each>
 				<!-- relation with a particular type of derivated work: reuse -->
 				<xsl:for-each select="record/metadata/schede/*/RO/CRF">
-					<xsl:if test="./CFRT='reimpiego'">	
+					<xsl:if test="./CRFT='reimpiego'">	
 						<arco-cd:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-reuse-', position())" />
@@ -3296,6 +3296,13 @@
 	                			<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-use-', position())" />
 	                		</xsl:attribute>
 						</arco-cd:hasUse>
+						<xsl:for-each select="(./UTU/UTUF)[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+							<arco-lite:hasCulturalEntityUseFunction>
+								<xsl:attribute name="rdf:resource">
+		        					<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(.))" />
+								</xsl:attribute>
+							</arco-lite:hasCulturalEntityUseFunction>
+						</xsl:for-each>
 					</xsl:for-each>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/DA/UTF or record/metadata/schede/*/DA/UTM or record/metadata/schede/*/DA/UTS">
@@ -3304,6 +3311,13 @@
 	                		<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-use')" />
 	                	</xsl:attribute>
 					</arco-cd:hasUse>
+					<xsl:for-each select="(./UTF)[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+						<arco-lite:hasCulturalEntityUseFunction>
+							<xsl:attribute name="rdf:resource">
+		        				<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(.))" />
+							</xsl:attribute>
+						</arco-lite:hasCulturalEntityUseFunction>
+					</xsl:for-each>
 				</xsl:if>
 				<xsl:for-each select="record/metadata/schede/*/US/USO">
 					<xsl:choose>
@@ -3313,6 +3327,13 @@
 	                				<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-historical-use-', position())" />
  	                			</xsl:attribute>
 							</arco-cd:hasUse>
+							<xsl:for-each select="./USOD[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]"> <!-- allow multiple values eg:ICCD14295730  -->
+								<arco-lite:hasCulturalEntityUseFunction>
+									<xsl:attribute name="rdf:resource">
+		        						<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(.))" />
+									</xsl:attribute>
+								</arco-lite:hasCulturalEntityUseFunction>
+							</xsl:for-each>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:for-each select="./USOR">
@@ -3333,6 +3354,13 @@
 	                				<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-current-use-', position())" />
  	                			</xsl:attribute>
 							</arco-cd:hasUse>
+							<xsl:if test="./USAD and (not(starts-with(lower-case(normalize-space(./USAD)), 'nr')) and not(starts-with(lower-case(normalize-space(./USAD)), 'n.r')))">
+								<arco-cd:hasUseFunction>
+									<xsl:attribute name="rdf:resource">
+				        				<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(./USAD))" />
+									</xsl:attribute>
+								</arco-cd:hasUseFunction>
+							</xsl:if>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:for-each select="./USAR">
