@@ -2437,9 +2437,9 @@
 									</arco-cd:relatedWorkRecordIdentifier>
 								</xsl:if>
 								<xsl:if test="./ROFI and (not(starts-with(lower-case(normalize-space(./ROFI)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFI)), 'n.r')))">
-									<arco-lite:inventoryIdentifier>
+									<arco-lite:currentInventoryIdentifier>
 										<xsl:value-of select="normalize-space(./ROFI)" />
-									</arco-lite:inventoryIdentifier>
+									</arco-lite:currentInventoryIdentifier>
 								</xsl:if>
 								<xsl:if test="./ROFT and (not(starts-with(lower-case(normalize-space(./ROFT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFT)), 'n.r')))">
 									<arco-cd:hasTitle>
@@ -2510,9 +2510,9 @@
 									</arco-cd:relatedWorkRecordIdentifier>
 								</xsl:if>
 								<xsl:if test="./ROFI and (not(starts-with(lower-case(normalize-space(./ROFI)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFI)), 'n.r')))">
-									<arco-lite:inventoryIdentifier>
+									<arco-lite:currentInventoryIdentifier>
 										<xsl:value-of select="normalize-space(./ROFI)" />
-									</arco-lite:inventoryIdentifier>
+									</arco-lite:currentInventoryIdentifier>
 								</xsl:if>
 								<xsl:if test="./ROFT and (not(starts-with(lower-case(normalize-space(./ROFT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFT)), 'n.r')))">
 									<arco-cd:hasTitle>
@@ -2583,9 +2583,9 @@
 									</arco-cd:relatedWorkRecordIdentifier>
 								</xsl:if>
 								<xsl:if test="./ROFI and (not(starts-with(lower-case(normalize-space(./ROFI)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFI)), 'n.r')))">
-									<arco-lite:inventoryIdentifier>
+									<arco-lite:currentInventoryIdentifier>
 										<xsl:value-of select="normalize-space(./ROFI)" />
-									</arco-lite:inventoryIdentifier>
+									</arco-lite:currentInventoryIdentifier>
 								</xsl:if>
 								<xsl:if test="./ROFT and (not(starts-with(lower-case(normalize-space(./ROFT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFT)), 'n.r')))">
 									<arco-cd:hasTitle>
@@ -11170,9 +11170,9 @@
 							</arco-cd:hasBibliography>
 						</xsl:if>
 						<xsl:if test="./DSCI and (not(starts-with(lower-case(normalize-space(./DSCI)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCI)), 'n.r')))">
-							<arco-lite:inventoryIdentifier>
+							<arco-lite:currentInventoryIdentifier>
 								<xsl:value-of select="normalize-space(./DSCI)" />
-							</arco-lite:inventoryIdentifier>
+							</arco-lite:currentInventoryIdentifier>
 						</xsl:if>
 						<xsl:if test="./DSCM and (not(starts-with(lower-case(normalize-space(./DSCM)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCM)), 'n.r')))">
 							<arco-cd:hasSurveyMethod>
@@ -14221,11 +14221,11 @@
 						</arco-core:note>
 					</xsl:if>
 					<xsl:if test="./CPRN">
-						<arco-cd:hasCopyrightHolder>
+						<arco-lite:hasCopyrightHolder>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./CPRN))" />
 							</xsl:attribute>
-						</arco-cd:hasCopyrightHolder>
+						</arco-lite:hasCopyrightHolder>
 						<arco-core:hasAgentRole>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, position(), '-copyright-holder')" />
@@ -21709,9 +21709,9 @@
 							</arco-cd:RCSReason>
 						</xsl:if>
 						<xsl:if test="./INPC and (not(starts-with(lower-case(normalize-space(./INPC)), 'nr')) and not(starts-with(lower-case(normalize-space(./INPC)), 'n.r')))">
-						<arco-cd:inventoryNumber>
+						<arco-cd:inventoryIdentifer>
 								<xsl:value-of select="normalize-space(./INPC)" />
-						</arco-cd:inventoryNumber>
+						</arco-cd:inventoryIdentifer>
 						</xsl:if>
 						<!-- responsible of inventory identifier -->
 						<xsl:if test="./INPE and (not(starts-with(lower-case(normalize-space(./INPE)), 'nr')) and not(starts-with(lower-case(normalize-space(./INPE)), 'n.r')))">
@@ -21826,7 +21826,6 @@
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/*/UB/INV">
 				<xsl:if test="./*">
-					<xsl:if test="not(./INVP) or (starts-with(lower-case(normalize-space(./INVP)), 'non accertabile')) or (starts-with(lower-case(normalize-space(./INVP)), 'nr')) or (starts-with(lower-case(normalize-space(./INVP)), 'n.r')) or (starts-with(lower-case(normalize-space(./INVP)), 'intero')) or (starts-with(lower-case(normalize-space(./INVP)), 'intera'))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 		            		<xsl:value-of select="concat($NS, 'InventorySituation/', $itemURI, '-', position())" />
@@ -21854,9 +21853,9 @@
 							</arco-core:note>
 						</xsl:if>
 						<xsl:if test="./INVN and (not(starts-with(lower-case(normalize-space(./INVN)), 'nr')) and not(starts-with(lower-case(normalize-space(./INVN)), 'n.r')))"></xsl:if>
-						<arco-cd:inventoryNumber>
-							<xsl:value-of select="normalize-space(./INVN)" />
-						</arco-cd:inventoryNumber>
+							<arco-cd:inventoryIdentifer>
+								<xsl:value-of select="normalize-space(./INVN)" />
+							</arco-cd:inventoryIdentifer>
 						<!-- inventory -->
 						<xsl:if test="./INVA and (not(starts-with(lower-case(normalize-space(./INVA)), 'nr')) and not(starts-with(lower-case(normalize-space(./INVA)), 'n.r')))">
 							<arco-cd:hasInventory>
@@ -21893,7 +21892,6 @@
 								</tiapit:time>
 							</xsl:if>		
 						</rdf:Description>
-					</xsl:if>
 					</xsl:if>				
 				</xsl:if>
 			</xsl:for-each>

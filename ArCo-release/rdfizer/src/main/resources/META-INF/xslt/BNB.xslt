@@ -627,6 +627,13 @@
 			</arco-spe:hasLabel>			
 		</xsl:for-each>
 		<!-- specimen harvesting -->	
+		<xsl:if test="record/metadata/schede/BNB/LR/LRI or record/metadata/schede/BNB/LR/LRV">
+			<arco-location:hasTimeIndexedTypedLocation>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-collecting-location')" />
+				</xsl:attribute>
+			</arco-location:hasTimeIndexedTypedLocation>
+		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNB/LR">
 			<arco-spe:hasSpecimenHarvesting>
 				<xsl:attribute name="rdf:resource">
@@ -2464,13 +2471,6 @@
 						<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/BNB/LR/LRD/LRDF, '-',  record/metadata/schede/BNB/LR/LRD/LRDF)))" />
 					</xsl:attribute>
 				</tiapit:atTime>
-			</xsl:if>
-			<xsl:if test="record/metadata/schede/BNB/LR/LRI or record/metadata/schede/BNB/LR/LRV">
-				<arco-location:hasTimeIndexedTypedLocation>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-collecting-location')" />
-					</xsl:attribute>
-				</arco-location:hasTimeIndexedTypedLocation>
 			</xsl:if>
 		</rdf:Description>
 	</xsl:if>

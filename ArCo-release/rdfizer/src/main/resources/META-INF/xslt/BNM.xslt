@@ -3348,11 +3348,22 @@
 					<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIE)" />
 				</arco-core:note>
 			</xsl:if>			
-			<arco-location:hasTimeIndexedTypedLocation>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-collecting-location')" />
-				</xsl:attribute>
-			</arco-location:hasTimeIndexedTypedLocation>
+			<xsl:if test="record/metadata/schede/*/LR/LRV">
+				<clvapit:hasSpatialCoverage>
+					<xsl:choose>
+						<xsl:when test="./LRVS and not(lower-case(normalize-space(./LRVS))='italia')">
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVK), normalize-space(./LRVS), normalize-space(./LRVP), normalize-space(./LRVR), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
+							</xsl:attribute>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVP), normalize-space(./LRVC), normalize-space(./LRVL))))" />
+							</xsl:attribute>
+						</xsl:otherwise>
+					</xsl:choose>
+				</clvapit:hasSpatialCoverage>
+			</xsl:if>
 			<xsl:if test="record/metadata/schede/*/LR/LRI/LRIW">
 				<arco-location:hasHarvestingMethod>
 					<xsl:attribute name="rdf:resource">
@@ -3583,7 +3594,9 @@
 					<xsl:value-of select="record/metadata/schede/*/LR/LRI/LRIR" />
 				</l0:name>
 				<arco-core:hasType>
-					<xsl:value-of select="concat($NS, 'NaturalEnvironmentType/', arco-fn:urify(record/metadata/schede/*/LR/LRI/LRIR))" />
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'NaturalEnvironmentType/', arco-fn:urify(record/metadata/schede/*/LR/LRI/LRIR))" />
+					</xsl:attribute>
 				</arco-core:hasType>
 				<xsl:if test="record/metadata/schede/*/LR/LRI/LRIO">
 					<arco-dd:hasMeasurementCollection>

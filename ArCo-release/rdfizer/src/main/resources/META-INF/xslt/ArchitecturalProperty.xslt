@@ -366,14 +366,6 @@
 				</xsl:choose>
 				</xsl:if>
 			</xsl:for-each>
-			<!-- Soil -->
-			<xsl:if test="record/metadata/schede/A/FN/FNA">
-				<arco-con:laysOnSoil>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Soil/', $itemURI)" />
-					</xsl:attribute>
-				</arco-con:laysOnSoil>
-			</xsl:if>
 			<!-- Foundation -->
 			<xsl:for-each select="record/metadata/schede/A/FN/FNS">
 				<xsl:choose>	
@@ -943,8 +935,45 @@
 				</rdf:Description>
 			</xsl:if>
 		</xsl:for-each>	
-		<!-- Soil as individual -->
+		<!-- Soil -->
 		<xsl:if test="record/metadata/schede/A/FN/FNA">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+	    	   		<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" />
+				</xsl:attribute>
+				<arco-location:hasNaturalEnvironment>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'NaturalEnvironment/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasNaturalEnvironment>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+        			<xsl:value-of select="concat($NS, 'NaturalEnvironment/', $itemURI)" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/location/NaturalEnvironment'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Ambiente naturale relativo al bene ', $itemURI)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Ambiente naturale relativo al bene ', $itemURI)" />
+				</l0:name>
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Natural environment of cultural property ', $itemURI)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Natural environment of cultural property ', $itemURI)" />
+				</l0:name>
+				<arco-location:hasSoil>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Soil/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasSoil>
+			</rdf:Description>
 			<rdf:Description>
 				<xsl:attribute name="rdf:about"> 			
 	 				<xsl:value-of select="concat($NS, 'Soil/', $itemURI)" />
@@ -2386,14 +2415,6 @@
 			<xsl:attribute name="rdf:about">
 	       		<xsl:value-of select="$culturalProperty" />
 			</xsl:attribute>
-			<!-- Soil -->
-			<xsl:if test="record/metadata/schede/PG/CA/CAC or record/metadata/schede/PG/CA/CAM or record/metadata/schede/PG/CA/CAG">
-				<arco-con:laysOnSoil>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Soil/', $itemURI)" />
-					</xsl:attribute>
-				</arco-con:laysOnSoil>
-			</xsl:if>
 			<!-- Technical system -->
 			<xsl:if test="record/metadata/schede/PG/CA/CAI">
 				<arco-con:hasTechnicalSystem>
@@ -2558,6 +2579,45 @@
 				</xsl:if>
 			</xsl:for-each>
 		</rdf:Description>	
+		<xsl:if test="record/metadata/schede/PG/CA/CAC or record/metadata/schede/PG/CA/CAM or record/metadata/schede/PG/CA/CAG">>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+	    	   		<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" />
+				</xsl:attribute>
+				<arco-location:hasNaturalEnvironment>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'NaturalEnvironment/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasNaturalEnvironment>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+        			<xsl:value-of select="concat($NS, 'NaturalEnvironment/', $itemURI)" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/location/NaturalEnvironment'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Ambiente naturale relativo al bene ', $itemURI)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Ambiente naturale relativo al bene ', $itemURI)" />
+				</l0:name>
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Natural environment of cultural property ', $itemURI)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Natural environment of cultural property ', $itemURI)" />
+				</l0:name>
+				<arco-location:hasSoil>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Soil/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasSoil>
+			</rdf:Description>
+		</xsl:if>		
 		<!-- Natural Environment as individual -->
 		<xsl:if test="record/metadata/schede/PG/UT/RAM or record/metadata/schede/PG/CA/CLM">
 			<rdf:Description>

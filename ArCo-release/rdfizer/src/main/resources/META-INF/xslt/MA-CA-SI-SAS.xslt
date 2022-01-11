@@ -175,13 +175,6 @@
 			<xsl:attribute name="rdf:about">
 	        	<xsl:value-of select="$culturalProperty" />
 			</xsl:attribute>
-			<xsl:if test="record/metadata/schede/SI/CA/USD">
-				<arco-con:laysOnSoil>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Soil/', $itemURI)" />
-					</xsl:attribute>
-				</arco-con:laysOnSoil>
-			</xsl:if>
 			<xsl:for-each select="record/metadata/schede/*/DA/FNS">
 				<xsl:choose>	
 					<xsl:when test="not(./FNSP) or ./FNSP='intero bene' or ./FNSP='integrale' or ./FNSP='tutta' or ./FNSP='totale' or ./FNSP='carattere generale' or (starts-with(lower-case(normalize-space(./FNSP)), 'nr')) or (starts-with(lower-case(normalize-space(./FNSP)), 'n.r')) or (starts-with(lower-case(normalize-space(./FNSP)), 'intero')) or (starts-with(lower-case(normalize-space(./FNSP)), 'intera')) or (starts-with(lower-case(normalize-space(./FNSP)), 'esemplar'))">
@@ -370,6 +363,13 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</arco-location:geographicalDescription>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/CA/USD">
+					<arco-location:hasSoil>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Soil/', $itemURI)" />
+						</xsl:attribute>
+					</arco-location:hasSoil>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/CA/GEO/GEOD">
 					<arco-location:geomorphologicalDescription>

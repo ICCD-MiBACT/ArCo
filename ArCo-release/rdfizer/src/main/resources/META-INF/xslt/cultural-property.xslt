@@ -1236,6 +1236,11 @@
 				                		<xsl:value-of select="concat($NS, 'InventorySituation/', $itemURI, '-', position())" />
 		        		        	</xsl:attribute>
 								</arco-cd:hasInventorySituation>
+								<xsl:if test="./INVN and (not(starts-with(lower-case(normalize-space(./INVN)), 'nr')) and not(starts-with(lower-case(normalize-space(./INVN)), 'n.r')))">
+									<arco-cd:alternativeInventoryIdentifier>
+										<xsl:value-of select="normalize-space(./INVN)" />
+									</arco-cd:alternativeInventoryIdentifier>
+								</xsl:if>
 							</xsl:when>
 							<xsl:otherwise>
 								<arco-core:hasPart>
@@ -1256,18 +1261,11 @@
 						</arco-cd:hasInventorySituation>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/*/UB/INP/INPC">
-						<arco-lite:inventoryIdentifier>
+						<arco-lite:currentInventoryIdentifier>
 		                	<xsl:value-of select="normalize-space(record/metadata/schede/*/UB/INP/INPC)" />
-						</arco-lite:inventoryIdentifier>
+						</arco-lite:currentInventoryIdentifier>
 					</xsl:if>
 				</xsl:if>
-				<xsl:for-each select="record/metadata/schede/*/UB/INV">
-					<arco-cd:hasInventorySituation>
-						<xsl:attribute name="rdf:resource">
-		                	<xsl:value-of select="concat($NS, 'InventorySituation/', $itemURI, '-', position())" />
-		                </xsl:attribute>
-					</arco-cd:hasInventorySituation>
-				</xsl:for-each>
 				<xsl:if test="record/metadata/schede/*/UB/INP/INPA  and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/INP/INPA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/INP/INPA)), 'n.r')))">
 					<arco-cd:hasEstimate>
 						<xsl:attribute name="rdf:resource">
