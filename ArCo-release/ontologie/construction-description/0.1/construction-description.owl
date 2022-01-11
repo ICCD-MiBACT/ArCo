@@ -31,8 +31,9 @@
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/construction-description">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/construction-description/0.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/1.2"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/1.3"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
@@ -817,9 +818,57 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasUseFunction -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasUseFunction"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasColour -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasColour"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasMaterial -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMaterial"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasOrientation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasOrientation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasShape -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasShape"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnique -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnique"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
     
 
 
@@ -2383,6 +2432,30 @@ viene descritta.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/context-description/UseFunction -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Orientation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Soil -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Soil"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalConcept -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
     
 
 

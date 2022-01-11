@@ -120,6 +120,16 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasCopyrightHolder -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCopyrightHolder">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCopyrightHolderOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCulturalEntityUseFunction -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCulturalEntityUseFunction">
@@ -317,6 +327,15 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isCopyrightHolderOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCopyrightHolderOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isCulturalEntityUseFunctionOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCulturalEntityUseFunctionOf">
@@ -447,6 +466,16 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/alternativeInventoryIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/alternativeInventoryIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/culturalPropertyValue -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/culturalPropertyValue">
@@ -456,9 +485,9 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/inventoryIdentifier -->
+    <!-- https://w3id.org/arco/ontology/arco-lite/currentInventoryIdentifier -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/inventoryIdentifier">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/currentInventoryIdentifier">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
