@@ -120,6 +120,16 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasCulturalEntityUseFunction -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCulturalEntityUseFunction">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCulturalEntityUseFunctionOf"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCulturalPropertyAddress -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCulturalPropertyAddress">
@@ -303,6 +313,15 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isColourOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isCulturalEntityUseFunctionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCulturalEntityUseFunctionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
     </owl:ObjectProperty>
     
 

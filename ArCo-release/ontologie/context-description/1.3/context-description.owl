@@ -2803,6 +2803,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha specifiche del tipo d&apos;uso</rdfs:label>
         <rdfs:label xml:lang="en">has use type specification</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: UT/UTUS</a-cat:iccdNormTag>
@@ -2813,7 +2814,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasUser -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasUser">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isUserOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
@@ -5388,6 +5389,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is use type specification of</rdfs:label>
         <rdfs:label xml:lang="it">è specifica del tipo di uso di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -5397,7 +5399,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <!-- https://w3id.org/arco/ontology/context-description/isUserOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isUserOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un utente, inteso come agente che ha fatto uso di un&apos;entità, all&apos;entità stessa.</rdfs:comment>
@@ -7573,6 +7575,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">funzione d&apos;uso</rdfs:label>
         <rdfs:label xml:lang="en">use function</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUF - BDM 2.00:UT/UTF - PST 3.01: DA/UTF</a-cat:iccdNormTag>
@@ -9515,7 +9518,6 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/FairMarketCircumstance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/IndeterminateCircumstance"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione connessa a fiere, mercati, sagre.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a circumstance related to fairs, markets, festivals.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -9766,12 +9768,6 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/IndeterminateCircumstance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/LifeCycleCircumstance"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/ProductionCycleCircumstance"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/SeasonCycleCircumstance"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/SocialInteractionCircumstance"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/WorkCircumstance"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/YearCycleCircumstance"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione indeterminata, cioè quando il bene non è in rapporto con una precisa occasione o scadenza, ma si realizza in modo del tutto estemporaneo e contingente. Occasioni indeterminate possono essere, per esempio, un&apos;esecuzione musicale, una narrazione, un
 gioco, etc.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an indeterminate circumstance, when the cultural property is not related to a determinate circumstance, but takes place in an extemporaneous and contingent way (e.g.: a musical performance, a narration, a game).</rdfs:comment>
@@ -11449,6 +11445,12 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
@@ -11714,7 +11716,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <!-- https://w3id.org/arco/ontology/context-description/Use -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Use">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasUseFunction"/>
@@ -11735,12 +11737,6 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasUseTypeSpecification"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
             </owl:Restriction>
@@ -11748,12 +11744,6 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/useConditions"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/useFunction"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -11773,12 +11763,6 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/UseFunction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/useFunction"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la funzione d&apos;uso che ha un oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the use function of an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -11795,14 +11779,14 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/UseType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di uso del bene (attuale, precedente, storico o dato non disponibile).</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of use of a cultural property (current, previous, historical)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di uso del bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of use of a cultural property</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">Tipo d&apos;uso</rdfs:label>
         <rdfs:label xml:lang="en">Use type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUT</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUT, UT/UTU/UTUS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11816,6 +11800,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">Specifiche del tipo d&apos;uso</rdfs:label>
         <rdfs:label xml:lang="en">Use type specification</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: UT/UTU/UTUS</a-cat:iccdNormTag>
@@ -12174,7 +12159,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <!-- https://w3id.org/arco/ontology/context-description/BuildingUse -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/BuildingUse">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso edilizio di un bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents cultural entity  building use specifications.</rdfs:comment>
         <rdfs:label xml:lang="en">Building use</rdfs:label>
@@ -12292,7 +12277,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <!-- https://w3id.org/arco/ontology/context-description/EpigraphicUse -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/EpigraphicUse">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso epigrafico di un bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents cultural entity&apos;s epigraphic use.</rdfs:comment>
         <rdfs:label xml:lang="it">Epigrafico</rdfs:label>
@@ -12402,7 +12387,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <!-- https://w3id.org/arco/ontology/context-description/InstrumentalUse -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/InstrumentalUse">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso strumentale di un bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents cultural entity instrumental use specifications.</rdfs:comment>
         <rdfs:label xml:lang="en">Instrumental</rdfs:label>
@@ -12485,7 +12470,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <!-- https://w3id.org/arco/ontology/context-description/OrnamentalUse -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/OrnamentalUse">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso ornamentale di un bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents cultural entity&apos;s ornamental use specifications.</rdfs:comment>
         <rdfs:label xml:lang="en">Ornamental</rdfs:label>
@@ -12665,7 +12650,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <!-- https://w3id.org/arco/ontology/context-description/StructuralUse -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/StructuralUse">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso strutturale di un bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents cultural entity&apos;s structural use specifications.</rdfs:comment>
         <rdfs:label xml:lang="en">Structural use</rdfs:label>
@@ -12746,16 +12731,17 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
      -->
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 
@@ -12867,6 +12853,19 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/DocumentationCategory"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/SECIdentifier"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/UserSocialCategory"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/FairMarketCircumstance"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/IndeterminateCircumstance"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/LifeCycleCircumstance"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ProductionCycleCircumstance"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/SeasonCycleCircumstance"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/SocialInteractionCircumstance"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/WorkCircumstance"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/YearCycleCircumstance"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
