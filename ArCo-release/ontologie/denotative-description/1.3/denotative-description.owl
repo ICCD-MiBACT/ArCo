@@ -607,6 +607,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha tipo di denominazione</rdfs:label>
         <rdfs:label xml:lang="en">has designation type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">Questa proprietà collega una denominazione o dedicazione o, per la normativa FF, titolo nel tempo al tipo di denominazione del bene (altra lingua, attribuita, attuale, dialettale, etc.)</owl:versionInfo>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
@@ -973,6 +974,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha tipo di misura</rdfs:label>
         <rdfs:label xml:lang="en">has measurement type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</a-cat:iccdNormTag>
@@ -1647,6 +1649,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is communication medium type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di modalità comunicativa</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1681,6 +1684,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is conservation status type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di stato di conservazione</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1814,6 +1818,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is designation type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di denominazione</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2021,6 +2026,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is iconographic or decorative apparatus type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di apparato iconografico e decorativo</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2195,6 +2201,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is measurement type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di misura</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2362,6 +2369,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is sample collected type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di campione prelevato</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2793,22 +2801,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/currentMeasurementCollection -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/currentMeasurementCollection">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/currentTechnicalStatus -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/currentTechnicalStatus">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/geologicalDescription -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/geologicalDescription">
@@ -3066,6 +3058,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">validity</rdfs:label>
         <rdfs:label xml:lang="it">validità</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -4108,7 +4101,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4122,6 +4115,18 @@ un&apos;azienda, ecc.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementIn"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasValue"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/MU/Value"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description xml:lang="en">An example of usage of the class &apos;Measurement&apos; is the following:
@@ -4556,12 +4561,6 @@ resource:MeasurementCollection/1200865132-1
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/currentTechnicalStatus"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato tecnico di un&apos;entità, cioè una situazione in cui un&apos;entità ha associate una serie di caratteristiche tecniche. Lo stato di un&apos;entità ha associata una validità temporale, relativa al momento in cui quelle caratteristiche sono state rilevate.</rdfs:comment>
