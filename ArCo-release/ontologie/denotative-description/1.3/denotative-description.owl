@@ -589,6 +589,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha designazione nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has designation in time</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC. - Normativa NU: OG/OGT/OGTO. - OG/OGT/OGTU. Normativa SI: OG/OGT/OGTY</a-cat:iccdNormTag>
@@ -604,11 +605,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationInTime"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
         <rdfs:comment xml:lang="en">This property relates a cultural entity designation to its type.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una denominazione o dedicazione o, per la normativa FF, titolo nel tempo al tipo di denominazione del bene (altra lingua, attribuita, attuale, dialettale, etc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha tipo di denominazione</rdfs:label>
         <rdfs:label xml:lang="en">has designation type</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">Questa proprietà collega una denominazione o dedicazione o, per la normativa FF, titolo nel tempo al tipo di denominazione del bene (altra lingua, attribuita, attuale, dialettale, etc.)</owl:versionInfo>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD/OGDT</a-cat:iccdNormTag>
@@ -1791,23 +1792,6 @@ In this module the following Ontology Design Patterns have been used:
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationInTime"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha designazione nel tempo&quot;.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has designation in time&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">is designation in time of</rdfs:label>
-        <rdfs:label xml:lang="it">è denominazione nel tempo di</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/isDesignationTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDesignationTypeOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
@@ -3841,7 +3825,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasDesignationType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3862,6 +3846,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">Denominazione nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">Designation In Time</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC. - Normativa NU: OG/OGT/OGTO. - OG/OGT/OGTU. Normativa SI: OG/OGT/OGTY</a-cat:iccdNormTag>
@@ -3884,6 +3869,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">Designation Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di denominazione</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</a-cat:iccdNormTag>
@@ -4718,6 +4704,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents an attributed denomination.</rdfs:comment>
         <rdfs:label xml:lang="en">Assigned designation</rdfs:label>
         <rdfs:label xml:lang="it">Denominazione attribuita</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</a-cat:iccdNormTag>
@@ -4866,6 +4853,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents the current designation.</rdfs:comment>
         <rdfs:label xml:lang="en">Current designation</rdfs:label>
         <rdfs:label xml:lang="it">Denominazione attuale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normativa A 3: OGA/OGAG.</a-cat:iccdNormTag>
@@ -4881,6 +4869,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents the usual designation.</rdfs:comment>
         <rdfs:label xml:lang="en">Customary designation</rdfs:label>
         <rdfs:label xml:lang="it">Denominazione consuetudinaria</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</a-cat:iccdNormTag>
@@ -4954,6 +4943,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents the dialect designation.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione dialettale</rdfs:label>
         <rdfs:label xml:lang="en">Dialectal designation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</a-cat:iccdNormTag>
@@ -5241,6 +5231,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents a historical designation.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione storica</rdfs:label>
         <rdfs:label xml:lang="en">Historical designation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</a-cat:iccdNormTag>
@@ -5276,6 +5267,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents an idiomatic designation.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione idiomatica</rdfs:label>
         <rdfs:label xml:lang="en">Idiomatic designation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</a-cat:iccdNormTag>
@@ -5343,6 +5335,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents an local designation.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione locale</rdfs:label>
         <rdfs:label xml:lang="en">Local designation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</a-cat:iccdNormTag>
@@ -5511,6 +5504,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents original designation.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione originaria</rdfs:label>
         <rdfs:label xml:lang="en">Original designation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</a-cat:iccdNormTag>
@@ -5526,6 +5520,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents a designation in other language.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione in altra lingua</rdfs:label>
         <rdfs:label xml:lang="en">Other language designation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</a-cat:iccdNormTag>
@@ -5745,6 +5740,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents a slang designation.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione gergale</rdfs:label>
         <rdfs:label xml:lang="en">Slang designation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</a-cat:iccdNormTag>

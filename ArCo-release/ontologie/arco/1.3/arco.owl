@@ -2017,7 +2017,14 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- http://dati.beniculturali.it/cis/CulturalEntity -->
 
-    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDesignationInTime"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/DesignationInTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 

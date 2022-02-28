@@ -481,6 +481,13 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/assignedDesignation">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione attribuita di un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the assigned designation of an object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">assigned designation</rdfs:label>
+        <rdfs:label xml:lang="it">denominazione attribuita</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -499,6 +506,13 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/currentDesignation">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione attuale di un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the current designation of an object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">current designation</rdfs:label>
+        <rdfs:label xml:lang="it">denominazione attuale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -518,6 +532,13 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/customaryDesignation">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione consuetudinaria di un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the usual designation of an object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">customary designation</rdfs:label>
+        <rdfs:label xml:lang="it">denominazione consuetudinaria</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -527,6 +548,13 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/dialectalDesignation">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione dialettale di un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the dialectal designation of an object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">dialectal designation</rdfs:label>
+        <rdfs:label xml:lang="it">denominazione dialettale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -536,6 +564,13 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/historicalDesignation">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione storica di un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the historical designation of an object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">historical designation</rdfs:label>
+        <rdfs:label xml:lang="it">denominazione storica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -545,6 +580,13 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/idiomaticDesignation">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione idiomatica di un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the idiomatic designation of an object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">idiomatic designation</rdfs:label>
+        <rdfs:label xml:lang="it">denominazione idiomatica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -554,6 +596,13 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/localDesignation">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione locale di un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the local designation of an object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">local designation</rdfs:label>
+        <rdfs:label xml:lang="it">denominazione locale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -563,6 +612,13 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/originalDesignation">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione originale di un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the original designation of an object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">original designation</rdfs:label>
+        <rdfs:label xml:lang="it">denominazione originale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -572,6 +628,13 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/slangDesignation">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione gergale di un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the slang designation of an object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">slang designation</rdfs:label>
+        <rdfs:label xml:lang="it">denominazione gergale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
