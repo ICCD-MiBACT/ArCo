@@ -2270,11 +2270,22 @@
 				</xsl:if>
 				<!-- Acquisition of cultural property -->
 				<xsl:for-each select="record/metadata/schede/*/TU/ACQ">
-					<arco-cd:hasAcquisition>
-						<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="concat($NS, 'Acquisition/', $itemURI, '-acquisition-', position())" />
-	                	</xsl:attribute>
-					</arco-cd:hasAcquisition>
+					<xsl:if test="./ACQT and (not(starts-with(lower-case(normalize-space(./ACQT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ACQT)), 'n.r.')) and not(starts-with(lower-case(normalize-space(./ACQT)), 'dato non')) and not(starts-with(lower-case(normalize-space(./ACQT)), 'non ')) and not(starts-with(lower-case(normalize-space(./ACQT)), 'ignota')) and not(starts-with(lower-case(normalize-space(./ACQT)), '-')))">
+						<arco-cd:hasAcquisition>
+							<xsl:attribute name="rdf:resource">
+	    	            		<xsl:value-of select="concat($NS, 'Acquisition/', $itemURI, '-acquisition-', position())" />
+	        	        	</xsl:attribute>
+						</arco-cd:hasAcquisition>
+						<xsl:for-each select="./ACQN">
+							<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r.')) and not(starts-with(lower-case(normalize-space(.)), '.')) and not(starts-with(lower-case(normalize-space(.)), ' ')) and not(starts-with(lower-case(normalize-space(.)), '-')) and not(starts-with(lower-case(normalize-space(.)), '(')))">
+								<arco-lite:hasTransferor>
+									<xsl:attribute name="rdf:resource">
+	            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	            					</xsl:attribute>
+								</arco-lite:hasTransferor>
+							</xsl:if>
+						</xsl:for-each>
+					</xsl:if>
 				</xsl:for-each>
 				<!-- Change of availability of cultural property -->
 				<xsl:for-each select="record/metadata/schede/*/TU/ALN">
