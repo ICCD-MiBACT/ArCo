@@ -4146,6 +4146,37 @@
 							<xsl:when test="$sheetType='MODI'">
 								<xsl:value-of select="arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)" />
 							</xsl:when>
+							<xsl:when test="$sheetType='SCAN'">
+								<xsl:choose>
+									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni architettonici e paesaggistici'">
+										<xsl:value-of select="concat($NS, 'arco/ArchitecturalOrLandscapeHeritage')" />
+									</xsl:when>
+									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni storici e artistici'">
+										<xsl:value-of select="concat($NS, 'arco/HistoricOrArtisticProperty')" />
+									</xsl:when>
+									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni archeologici'">
+										<xsl:value-of select="concat($NS, 'arco/ArchaeologicalProperty')" />
+									</xsl:when>
+									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni demoetnoantopologici'">
+										<xsl:value-of select="concat($NS, 'arco/DemoEthnoAnthropologicalHeritage')" />
+									</xsl:when>
+									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni fotografici'">
+										<xsl:value-of select="concat($NS, 'arco/PhotographicHeritage')" />
+									</xsl:when>
+									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni musicali'">
+										<xsl:value-of select="concat($NS, 'arco/MusicHeritage')" />
+									</xsl:when>
+									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni naturalistici'">
+										<xsl:value-of select="concat($NS, 'arco/NaturalHeritage')" />
+									</xsl:when>
+									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni numismatici'">
+										<xsl:value-of select="concat($NS, 'arco/NumismaticProperty')" />
+									</xsl:when>
+									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni scientifici e tecnologici'">
+										<xsl:value-of select="concat($NS, 'arco/ScientificOrTechnologicalHeritage')" />
+									</xsl:when>
+								</xsl:choose>
+							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="arco-fn:getSpecificPropertyType($sheetType)" />
 							</xsl:otherwise>
