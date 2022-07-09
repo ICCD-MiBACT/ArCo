@@ -7252,9 +7252,12 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./ACQD)" />
 							</l0:name>
-							<tiapit:time>
+							<arco-arco:startTime>
 								<xsl:value-of select="normalize-space(./ACQD)" />
-							</tiapit:time>
+							</arco-arco:startTime>
+							<arco-arco:endTime>
+								<xsl:value-of select="normalize-space(./ACQD)" />
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:if>
 					<!-- acquisition type as an individual -->
@@ -7310,6 +7313,11 @@
 										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 									</xsl:attribute>
 								</arco-core:hasAgent>
+								<xsl:if test="contains((.), '?')">
+									<arco-core:uncertainData>
+										<xsl:value-of select="true()" />
+									</arco-core:uncertainData>
+								</xsl:if>
 							</rdf:Description>
 							<!-- role as an individual -->
 							<rdf:Description>
