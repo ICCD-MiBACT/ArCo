@@ -5,6 +5,7 @@
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
      xmlns:ro="https://w3id.org/italia/onto/RO/"
+     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
      xmlns:cis="http://dati.beniculturali.it/cis/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -20,6 +21,7 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/core">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/1.0"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
@@ -142,6 +144,12 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/catalogue/iccdNormTag -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/replacedBy -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/core/replacedBy"/>
     
 
 
@@ -364,6 +372,23 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has cultural entity characteristic</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasIdentifier">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isIdentifierOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+        <rdfs:comment xml:lang="it">La object property che collega una entità a un identificativo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property that links an entity to an identifier.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha identificativo</rdfs:label>
+        <rdfs:label xml:lang="en">has identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -725,6 +750,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è caratteristica di entità culturale di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isIdentifierOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isIdentifierOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">La object property che collega un identificativo a una entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property that links an identifier to an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is identifier of</rdfs:label>
+        <rdfs:label xml:lang="it">è identificativo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1259,6 +1300,36 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/Identifier -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Identifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Identifier"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta in identificativo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents identifier.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">Identificativo</rdfs:label>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/IdentifierType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/IdentifierType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta in tipo di identificativo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents identifier type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Identifier type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di identificativo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Method -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Method">
@@ -1400,6 +1471,143 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/italia/onto/l0/Object -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/ArchaeologicalExcavationIdentifier -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/ArchaeologicalExcavationIdentifier">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Archaeological excavation identifier</rdfs:label>
+        <rdfs:label xml:lang="it">Identificativo dello scavo archeologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/ArchaeologicalFieldSurveyIdentifier -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/ArchaeologicalFieldSurveyIdentifier">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Archaeological field survey identifier</rdfs:label>
+        <rdfs:label xml:lang="it">Identificativo della ricognizione archeologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/AuthorIdentifier -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/AuthorIdentifier">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Author identifier</rdfs:label>
+        <rdfs:label xml:lang="it">Identificativo della autore</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/BibliographyIdentifier -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/BibliographyIdentifier">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Bibliography identifier</rdfs:label>
+        <rdfs:label xml:lang="it">Identificativo della bibliografia</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/CatalogueIdentifier -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/CatalogueIdentifier">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Catalogue record identifier</rdfs:label>
+        <rdfs:label xml:lang="it">Identificativo della scheda di catalogo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/InternationalIdentifier -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/InternationalIdentifier">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">Identificativo internazionale</rdfs:label>
+        <rdfs:label xml:lang="en">International identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/LocalIdentifier -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/LocalIdentifier">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:label xml:lang="it">Identificativo locale</rdfs:label>
+        <rdfs:label xml:lang="en">Local identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/NationalIdentifier -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/NationalIdentifier">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:label xml:lang="it">Identificativo nazionale</rdfs:label>
+        <rdfs:label xml:lang="en">National identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/RegionIdentifier -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/RegionIdentifier">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:label xml:lang="it">Identificativo regionale</rdfs:label>
+        <rdfs:label xml:lang="en">Regional identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/SECIdentifier -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/SECIdentifier">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:label xml:lang="it">Identificativo SEC</rdfs:label>
+        <rdfs:label xml:lang="en">SEC identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
