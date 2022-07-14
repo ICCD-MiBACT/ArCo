@@ -238,12 +238,12 @@
                     <xsl:value-of
 					select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
                 </xsl:attribute>
-				<arco-catalogue:describesCulturalProperty>
+				<arco-catalogue:describes>
 					<xsl:attribute name="rdf:resource">
                         <xsl:value-of
 						select="$culturalProperty" />
                     </xsl:attribute>
-				</arco-catalogue:describesCulturalProperty>
+				</arco-catalogue:describes>
 				<arco-catalogue:lastUpdateDate>
 					<xsl:value-of select="record/header/datestamp" />
 				</arco-catalogue:lastUpdateDate>
@@ -531,9 +531,14 @@
 				</xsl:if>
 				<!-- archaeological site identifier -->
 				<xsl:if test="record/metadata/schede/*/OG/OGT/OGTI and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTI)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTI)), 'n.r')))">
-					<arco-arco:archaeologicalSiteIdentifier>
+					<arco-lite:localIdentifier>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTI)" />
-					</arco-arco:archaeologicalSiteIdentifier>
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Identifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/OG/OGT/OGTI))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/AU/TRT/TRTN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/TRT/TRTN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/TRT/TRTN)), 'n.r')))">
 					<arco-cd:numberInCirculation>
@@ -583,12 +588,12 @@
 				        </pico:preview>
 				    </xsl:for-each>
 				</xsl:for-each>
-				<!-- isDescribedByCatalogueRecord -->
-				<arco-catalogue:isDescribedByCatalogueRecord>
+				<!-- isDescribedBy -->
+				<arco-catalogue:isDescribedBy>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
 					</xsl:attribute>
-				</arco-catalogue:isDescribedByCatalogueRecord>
+				</arco-catalogue:isDescribedBy>
 				<!-- Cultural institute or site -->
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/harvesting/idContenitoreGiuridico">
@@ -2077,7 +2082,16 @@
 					<xsl:if test="./*">
 						<arco-catalogue:isDescribedBy>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'CulturalPropertyRecord/', $itemURI, '-', position())" />
+								<xsl:value-of select="concat($NS, 'Record/', $itemURI, '-', position())" />
+							</xsl:attribute>
+						</arco-catalogue:isDescribedBy>
+					</xsl:if>
+				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/AC/MOD">
+					<xsl:if test="./*">
+						<arco-catalogue:isDescribedBy>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Record/', $itemURI, '-modi-', position())" />
 							</xsl:attribute>
 						</arco-catalogue:isDescribedBy>
 					</xsl:if>
@@ -3126,10 +3140,14 @@
 				</xsl:if>
 				<!-- identifier:uniqueIdentifier - concat of NCTR + NCTN + NCTS available in record/metadata/schede/*/CD/NCT) -->
 				<xsl:if test="record/metadata/schede/*/CD/NCT/NCTN">
-					<arco-arco:uniqueIdentifier>
-						<xsl:value-of
-							select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
-					</arco-arco:uniqueIdentifier>
+					<arco-lite:uniqueIdentifier>
+						<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
+					</arco-lite:uniqueIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'UniqueIdentifier/', $itemURI)" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:if>
 				<!-- NCTR Codice Regione (record/metadata/schede/*/CD/NCT/NCTR) -->
 				<xsl:for-each select="record/metadata/schede/*/CD/NCT/NCTR">

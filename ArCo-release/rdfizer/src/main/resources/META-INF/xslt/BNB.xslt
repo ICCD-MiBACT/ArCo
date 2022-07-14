@@ -450,9 +450,14 @@
 		</xsl:if>
 		<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'campione'))">
 			<xsl:if test="record/metadata/schede/BNB/AC/ACN">
-			<arco-arco:previousIdentifier>
+			<l0:identifier>
 				<xsl:value-of select="record/metadata/schede/BNB/AC/ACN" />
-			</arco-arco:previousIdentifier>
+			</l0:identifier>
+			<arco-core:hasIdentifier>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Identifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACN))" />
+				</xsl:attribute>
+			</arco-core:hasIdentifier>
 			</xsl:if>
 		</xsl:if>
 		<!-- container sequence -->
@@ -709,6 +714,35 @@
 			</arco-spe:hasTypeSpecimenIdentification>
 		</xsl:if>	
 	</rdf:Description>
+	<!-- previous identifier -->
+	<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'campione'))">
+		<xsl:if test="record/metadata/schede/BNB/AC/ACN">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'Identifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACN))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+	        		</xsl:attribute>
+				</rdf:type>
+				<arco-core:hasType>
+					<xsl:attribute name="rdf:resource">
+			    		<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+					</xsl:attribute>
+				</arco-core:hasType>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/AC/ACN)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/AC/ACN)" />
+				</l0:name>
+				<l0:identifier>
+					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/AC/ACN)" />
+				</l0:identifier>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
 	<!-- IdentificationInTime as individual --> 	
 	<xsl:if test="record/metadata/schede/BNB/SB/NBN or record/metadata/schede/BNB/SB/NAA">
 		<rdf:Description>
