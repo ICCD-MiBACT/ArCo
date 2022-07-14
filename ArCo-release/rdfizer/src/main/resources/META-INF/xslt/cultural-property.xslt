@@ -1342,9 +1342,9 @@
 		        		        	</xsl:attribute>
 								</arco-cd:hasInventorySituation>
 								<xsl:if test="./INVN and (not(starts-with(lower-case(normalize-space(./INVN)), 'nr')) and not(starts-with(lower-case(normalize-space(./INVN)), 'n.r')))">
-									<arco-cd:alternativeInventoryIdentifier>
+									<arco-lite:alternativeInventoryNumber>
 										<xsl:value-of select="normalize-space(./INVN)" />
-									</arco-cd:alternativeInventoryIdentifier>
+									</arco-lite:alternativeInventoryNumber>
 								</xsl:if>
 							</xsl:when>
 							<xsl:otherwise>
@@ -1366,9 +1366,9 @@
 						</arco-cd:hasInventorySituation>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/*/UB/INP/INPC">
-						<arco-lite:currentInventoryIdentifier>
+						<arco-lite:currentInventoryNumber>
 		                	<xsl:value-of select="normalize-space(record/metadata/schede/*/UB/INP/INPC)" />
-						</arco-lite:currentInventoryIdentifier>
+						</arco-lite:currentInventoryNumber>
 					</xsl:if>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/SCAN/CD/INP">
@@ -1377,9 +1377,9 @@
 		               		<xsl:value-of select="concat($NS, 'InventorySistuation/', $itemURI, '-current')" />
 		               	</xsl:attribute>
 					</arco-cd:hasInventorySituation>
-					<arco-lite:currentInventoryIdentifier>
+					<arco-lite:currentInventoryNumber>
 	                	<xsl:value-of select="normalize-space(record/metadata/schede/SCAN/CD/INP)" />
-					</arco-lite:currentInventoryIdentifier>
+					</arco-lite:currentInventoryNumber>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/UB/INP/INPA  and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/INP/INPA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/INP/INPA)), 'n.r')))">
 					<arco-cd:hasEstimate>

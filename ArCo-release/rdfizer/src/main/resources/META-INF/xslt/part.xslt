@@ -608,14 +608,12 @@
 						</l0:name>
 						<arco-cd:hasInventorySituation>
 							<xsl:attribute name="rdf:resource">
-		                		<xsl:value-of select="concat($NS, 'InventorySituation/', $itemURI, '-', arco-fn:urify(normalize-space(./INVP)))" />
+		                		<xsl:value-of select="concat($NS, 'InventorySituation/', $itemURI, '-', position())" />
 	        		        </xsl:attribute>
 						</arco-cd:hasInventorySituation>
-						<xsl:if test="./INVN and (not(starts-with(lower-case(normalize-space(./INVN)), 'nr')) and not(starts-with(lower-case(normalize-space(./INVN)), 'n.r')))">
-							<arco-cd:otherInventoryIdentifier>
-								<xsl:value-of select="normalize-space(./INVN)" />
-							</arco-cd:otherInventoryIdentifier>
-						</xsl:if>
+						<arco-lite:alternativeInventoryNumber>
+							<xsl:value-of select="normalize-space(./INVN)" />
+						</arco-lite:alternativeInventoryNumber>
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>	
