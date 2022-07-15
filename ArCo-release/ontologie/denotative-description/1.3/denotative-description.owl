@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/ontology/denotative-description/"
-     xml:base="https://w3id.org/arco/ontology/denotative-description/"
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/denotative-description#"
+     xml:base="https://w3id.org/arco/ontology/denotative-description"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
@@ -11,6 +11,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
+     xmlns:a-dd="https://w3id.org/arco/ontology/denotative-description/"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
@@ -604,8 +605,8 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isDesignationTypeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationInTime"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
-        <rdfs:comment xml:lang="en">This property relates a cultural entity designation to its type.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà collega una denominazione o dedicazione o, per la normativa FF, titolo nel tempo al tipo di denominazione del bene (altra lingua, attribuita, attuale, dialettale, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity designation to its type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha tipo di denominazione</rdfs:label>
         <rdfs:label xml:lang="en">has designation type</rdfs:label>
@@ -1792,6 +1793,12 @@ In this module the following Ontology Design Patterns have been used:
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isDesignationTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDesignationTypeOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
@@ -3138,6 +3145,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/TimeIndexedSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Type -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Type"/>
@@ -3505,7 +3518,7 @@ resource:Inscription/1200865151-inscription-1
     <!-- https://w3id.org/arco/ontology/denotative-description/ConservationStatus -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ConservationStatus">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isConservationStatusOf"/>
@@ -4084,7 +4097,7 @@ un&apos;azienda, ecc.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/denotative-description/Measurement -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Measurement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
@@ -4530,7 +4543,7 @@ resource:MeasurementCollection/1200865132-1
     <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalStatus -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isValidAt"/>

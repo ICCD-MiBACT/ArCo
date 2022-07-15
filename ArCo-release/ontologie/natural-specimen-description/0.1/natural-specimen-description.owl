@@ -4163,7 +4163,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/Accession -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Accession">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedEvent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isAccessionOf"/>
@@ -4822,7 +4822,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/ChondrulePresence -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/ChondrulePresence">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la presenza di condrule in un campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the presence of chondrules in a specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
@@ -5174,7 +5174,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/DevelopmentStage -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/DevelopmentStage">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Interpretation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Development stage</rdfs:label>
         <rdfs:label xml:lang="it">Stadio di sviluppo</rdfs:label>
@@ -6036,7 +6036,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/MineralPresence -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/MineralPresence">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasValue"/>
@@ -6981,7 +6981,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/SpecimenHarvesting -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/SpecimenHarvesting">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedEvent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasSpatialCoverage"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/ontology/location#"
-     xml:base="https://w3id.org/arco/ontology/location"
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/location/"
+     xml:base="https://w3id.org/arco/ontology/location/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
@@ -22,7 +22,6 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
-     xmlns:a-loc="https://w3id.org/arco/ontology/location/"
      xmlns:opla1="http://ontologydesignpatterns.org/opla/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/location">
@@ -2664,7 +2663,7 @@ resource:CadastralIdentity/1400055239-1
     <!-- https://w3id.org/arco/ontology/location/ClimateSituation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ClimateSituation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
@@ -2891,7 +2890,7 @@ resource:CadastralIdentity/1400055239-1
     <!-- https://w3id.org/arco/ontology/location/GeologicalContext -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeologicalContext">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasMineralDeposit"/>
@@ -3211,7 +3210,7 @@ resource:CadastralIdentity/1400055239-1
     <!-- https://w3id.org/arco/ontology/location/NaturalEnvironment -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/NaturalEnvironment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
@@ -3568,7 +3567,7 @@ resource:CadastralIdentity/1400055239-1
     <!-- https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasLocationType"/>
@@ -3633,7 +3632,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     <!-- https://w3id.org/arco/ontology/location/ToponymInTime -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ToponymInTime">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/isToponymInTimeOf"/>

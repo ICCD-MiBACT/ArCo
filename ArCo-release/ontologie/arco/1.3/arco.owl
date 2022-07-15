@@ -1467,9 +1467,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">archaeological site identifier</rdfs:label>
         <rdfs:label xml:lang="it">sigla identificativa del saggio stratigrafico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SAS: OG/OGT/OGTI</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1485,9 +1487,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">cartographic symbol identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo del simbolo cartografico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMS</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1626,9 +1630,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">codice internazionale</rdfs:label>
         <rdfs:label xml:lang="en">international identifier</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa PST: AC/ACI</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1810,9 +1816,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">identificativo precedente</rdfs:label>
         <rdfs:label xml:lang="en">previous identifier</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">Instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1901,9 +1909,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">codice univoco</rdfs:label>
         <rdfs:label xml:lang="en">unique identifier</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: concat(CD/NCT/NCTR + CD/NCT/NCTN + CD/NCT/NCTS); RV/RVE/RVER (identificativo univoco delle schede collegate); scheda A e PG, v. 1 e v. 2: RV/RVE/RVES (identificativo univoco delle schede collegate). RV/RSE/RSEC (identificativo univoco delle schede collegate)</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1994,7 +2004,10 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/italia/onto/l0/identifier -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/identifier"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/identifier">
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMS
+ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
     
 
 
