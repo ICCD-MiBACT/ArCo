@@ -434,9 +434,14 @@
 		</xsl:if>
 		<xsl:if test="not($sheetType='BNB')">
 			<xsl:if test="record/metadata/schede/*/AC/ACK">
-				<l0:identifier>
-					<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
-				</l0:identifier>
+				<arco-lite:localIdentifier>
+               		<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
+				</arco-lite:localIdentifier>
+				<arco-core:hasIdentifier>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'SpecimenIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/AC/ACK))" />
+					</xsl:attribute>
+				</arco-core:hasIdentifier>
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="$sheetType='BNM' or $sheetType='BNPE' or $sheetType='BNPL' or $sheetType='BNZ'">
@@ -1066,6 +1071,38 @@
 			</xsl:if>
 		</xsl:for-each>
 	</rdf:Description>
+	<!-- identifier -->
+	<xsl:if test="not($sheetType='BNB')">
+		<xsl:if test="record/metadata/schede/*/AC/ACK">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'SpecimenIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/AC/ACK))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+    	            </xsl:attribute>
+				</rdf:type>
+				<arco-core:hasType>
+					<xsl:attribute name="rdf:resource">
+	                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+			        </xsl:attribute>
+				</arco-core:hasType>
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
+				</l0:name>
+				<l0:identifier>
+					<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
+				</l0:identifier>
+				<arco-core:current>
+					<xsl:value-of select="true()" />
+				</arco-core:current>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
 	<!-- Cultural entity technical status -->
 	<xsl:if test="record/metadata/schede/BNM/SM/SMF or record/metadata/schede/BNM/SM/SMO or record/metadata/schede/BNM/SM/SMM">
 		<xsl:if test="record/metadata/schede/BNM/SM/SMF/SMFC or record/metadata/schede/BNM/SM/SMF/SMFT or record/metadata/schede/BNM/SM/SMF/SMFB or record/metadata/schede/BNM/SM/SMF/SMFP or record/metadata/schede/BNM/SM/SMF/SMFE or record/metadata/schede/BNM/SM/SMF/SMFO or record/metadata/schede/BNM/SM/SMF/SMFM or record/metadata/schede/BNM/SM/SMF/SMFL or record/metadata/schede/BNM/SM/SMF/SMFS or record/metadata/schede/BNM/SM/SMF/SMFU or record/metadata/schede/BNM/SM/SMM/SMMC or record/metadata/schede/BNM/SM/SMM/SMMA or record/metadata/schede/BNM/SM/SMM/SMMP or record/metadata/schede/BNM/SM/SMO/SMOP">
@@ -9178,11 +9215,45 @@
 				</xsl:otherwise>
 			</xsl:choose>
 			<xsl:if test="record/metadata/schede/*/AC/ACO">
+				<arco-lite:localIdentifier>
+               		<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
+				</arco-lite:localIdentifier>
+				<arco-core:hasIdentifier>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'CollectionIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/AC/ACO))" />
+					</xsl:attribute>
+				</arco-core:hasIdentifier>
+			</xsl:if>
+		</rdf:Description>
+		<xsl:if test="record/metadata/schede/*/AC/ACO">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'CollectionIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/AC/ACO))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+    	            </xsl:attribute>
+				</rdf:type>
+				<arco-core:hasType>
+					<xsl:attribute name="rdf:resource">
+	                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+			        </xsl:attribute>
+				</arco-core:hasType>
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
+				</l0:name>
 				<l0:identifier>
 					<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
 				</l0:identifier>
-			</xsl:if>
-		</rdf:Description>
+				<arco-core:current>
+					<xsl:value-of select="true()" />
+				</arco-core:current>
+			</rdf:Description>
+		</xsl:if>
 	</xsl:if>
 				<!-- natural heritage collection membership membership -->
  	<xsl:if test="$sheetType='BNM' or $sheetType='BNPE' or $sheetType='BNPL' or $sheetType='BNZ'">

@@ -1438,6 +1438,18 @@
 							<xsl:value-of select="concat($NS, 'Commission/', $itemURI, '-', position())" />
 						</xsl:attribute>
 					</arco-cd:hasCommission>
+					<arco-cd:isSubjectOfInterpretation>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'CommissionInterpretation/', $itemURI, '-', position())" />
+						</xsl:attribute>
+					</arco-cd:isSubjectOfInterpretation>
+				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/AU/CMM/CMMN">
+					<arco-lite:hasCommittent>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+						</xsl:attribute>
+					</arco-lite:hasCommittent>
 				</xsl:for-each>
 				<!-- edition -->
 				<xsl:for-each select="record/metadata/schede/*/AU/EDT">

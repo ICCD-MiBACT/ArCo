@@ -4400,9 +4400,14 @@
 					<xsl:value-of select="true()" />
 				</arco-cd:primaryDocument>
 				<xsl:if test="record/metadata/schede/*/DU/DUC">
-					<l0:identifier>
+					<arco-lite:localIdentifier>
                			<xsl:value-of select="record/metadata/schede/*/DU/DUC" />
-					</l0:identifier>
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'AudioRecordingIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/DU/DUC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/DU/DUB">
 					<arco-core:abstract>
@@ -4477,6 +4482,36 @@
 					</arco-cd:hasCopyright>
 				</xsl:for-each>
 			</rdf:Description>
+			<!-- identifier -->
+			<xsl:if test="record/metadata/schede/*/DU/DUC">
+			<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'AudioRecordingIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/DU/DUC))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		                </xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+			                <xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+				        </xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUC)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUC)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUC)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:if>
 			<!-- title -->
 			<xsl:if test="record/metadata/schede/*/DU/DUL">
 				<rdf:Description>
@@ -4813,9 +4848,14 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./DUOC)" />
 					</l0:name>
-					<l0:identifier>
-						<xsl:value-of select="normalize-space(./DUOC)" />
-					</l0:identifier>
+					<arco-lite:localIdentifier>
+               			<xsl:value-of select="normalize-space(./DUOC)" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./DUOC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 					<arco-cd:originalStorageMedium>
 						<xsl:value-of select="true()" />
 					</arco-cd:originalStorageMedium>
@@ -4905,6 +4945,36 @@
 						</arco-cd:hasChangeOfAvailability>
 					</xsl:for-each>
 				</rdf:Description>
+				<!-- identifier -->
+				<xsl:if test="./DUOC">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./DUOC))" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		    	            </xsl:attribute>
+						</rdf:type>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+			                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+					        </xsl:attribute>
+						</arco-core:hasType>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./DUOC)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./DUOC)" />
+						</l0:name>
+						<l0:identifier>
+							<xsl:value-of select="normalize-space(./DUOC)" />
+						</l0:identifier>
+						<arco-core:current>
+							<xsl:value-of select="true()" />
+						</arco-core:current>
+					</rdf:Description>
+				</xsl:if>
 				<!-- storage medium type -->
 				<xsl:if test="./DUOF[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 					<rdf:Description>
@@ -5045,9 +5115,14 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./DUMC)" />
 					</l0:name>
-					<l0:identifier>
-						<xsl:value-of select="normalize-space(./DUMC)" />
-					</l0:identifier>
+					<arco-lite:localIdentifier>
+               			<xsl:value-of select="./DUMC" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./DUMC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 					<arco-cd:originalStorageMedium>
 						<xsl:value-of select="false()" />
 					</arco-cd:originalStorageMedium>
@@ -5082,6 +5157,36 @@
 						</arco-dd:hasMeasurementCollection>
 					</xsl:if>
 				</rdf:Description>
+				<!-- identifier -->
+				<xsl:if test="./DUMC">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./DUMC))" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		    	            </xsl:attribute>
+						</rdf:type>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+			                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+					        </xsl:attribute>
+						</arco-core:hasType>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./DUMC)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./DUMC)" />
+						</l0:name>
+						<l0:identifier>
+							<xsl:value-of select="normalize-space(./DUMC)" />
+						</l0:identifier>
+						<arco-core:current>
+							<xsl:value-of select="true()" />
+						</arco-core:current>
+					</rdf:Description>
+				</xsl:if>
 			</xsl:for-each>
 			<!-- CIS -->
 			<xsl:if test="record/metadata/schede/*/DU/DUP/DUPN">
@@ -6022,9 +6127,14 @@
 					<xsl:value-of select="true()" />
 				</arco-cd:primaryDocument>
 				<xsl:if test="record/metadata/schede/*/DV/DVC">
-					<l0:identifier>
+					<arco-lite:localIdentifier>
                			<xsl:value-of select="record/metadata/schede/*/DV/DVC" />
-					</l0:identifier>
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'VideoRecordingIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/DV/DVC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/DV/DVB">
 					<arco-core:abstract>
@@ -6099,6 +6209,36 @@
 					</arco-cd:hasCopyright>
 				</xsl:for-each>
 			</rdf:Description>
+			<!-- identifier -->
+			<xsl:if test="record/metadata/schede/*/DV/DVC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'VideoRecordingIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/DV/DVC))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		                </xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+			                <xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+				        </xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/DV/DVC)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/DV/DVC)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/DV/DVC)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:if>
 			<!-- title -->
 			<xsl:if test="record/metadata/schede/*/DV/DVL">
 				<rdf:Description>
@@ -6300,9 +6440,14 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./DVOC)" />
 					</l0:name>
-					<l0:identifier>
-						<xsl:value-of select="normalize-space(./DVOC)" />
-					</l0:identifier>
+					<arco-lite:localIdentifier>
+               			<xsl:value-of select="./DVOC" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./DVOC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 					<arco-cd:originalStorageMedium>
 						<xsl:value-of select="true()" />
 					</arco-cd:originalStorageMedium>
@@ -6386,6 +6531,36 @@
 						</arco-cd:hasChangeOfAvailability>
 					</xsl:for-each>
 				</rdf:Description>
+				<!-- identifier -->
+				<xsl:if test="./DVOC">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./DVOC))" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		    	            </xsl:attribute>
+						</rdf:type>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+			                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+					        </xsl:attribute>
+						</arco-core:hasType>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./DVOC)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./DVOC)" />
+						</l0:name>
+						<l0:identifier>
+							<xsl:value-of select="normalize-space(./DVOC)" />
+						</l0:identifier>
+						<arco-core:current>
+							<xsl:value-of select="true()" />
+						</arco-core:current>
+					</rdf:Description>
+				</xsl:if>
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/*/DV/DVM">
 				<rdf:Description>
@@ -6399,9 +6574,14 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./DVMC)" />
 					</l0:name>
-					<l0:identifier>
-						<xsl:value-of select="normalize-space(./DVMC)" />
-					</l0:identifier>
+					<arco-lite:localIdentifier>
+               			<xsl:value-of select="./DVMC" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./DVMC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 					<arco-cd:originalStorageMedium>
 						<xsl:value-of select="false()" />
 					</arco-cd:originalStorageMedium>
@@ -6428,6 +6608,36 @@
 						</arco-core:note>
 					</xsl:if>
 				</rdf:Description>
+				<!-- identifier -->
+				<xsl:if test="./DVMC">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./DVMC))" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		    	            </xsl:attribute>
+						</rdf:type>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+			                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+					        </xsl:attribute>
+						</arco-core:hasType>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./DVMC)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./DVMC)" />
+						</l0:name>
+						<l0:identifier>
+							<xsl:value-of select="normalize-space(./DVMC)" />
+						</l0:identifier>
+						<arco-core:current>
+							<xsl:value-of select="true()" />
+						</arco-core:current>
+					</rdf:Description>
+				</xsl:if>
 			</xsl:for-each>
 			<!-- CIS -->
 			<xsl:if test="record/metadata/schede/*/DV/DVP/DVPN">
@@ -7368,29 +7578,54 @@
 					<xsl:value-of select="true()" />
 				</arco-cd:primaryDocument>
 				<xsl:for-each select="./DFO/DFOG">
-					<l0:identifier>
-               			<xsl:value-of select="." />
-					</l0:identifier>
+					<arco-lite:localIdentifier>
+               			<xsl:value-of select="./DFO/DFOG" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(./DFO/DFOG))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:for-each>
 				<xsl:for-each select="./DFO/DFOE">
-					<l0:identifier>
-               			<xsl:value-of select="." />
-					</l0:identifier>
+					<arco-lite:localIdentifier>
+               			<xsl:value-of select="./DFO/DFOE" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(./DFO/DFOE))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:for-each>
 				<xsl:for-each select="./DFO/DFOO">
-					<l0:identifier>
-               			<xsl:value-of select="." />
-					</l0:identifier>
+					<arco-lite:localIdentifier>
+               			<xsl:value-of select="./DFO/DFOO" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(./DFO/DFOO))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:for-each>
 				<xsl:for-each select="./DFC/DFCC">
-					<l0:identifier>
-               			<xsl:value-of select="." />
-					</l0:identifier>
+					<arco-lite:localIdentifier>
+               			<xsl:value-of select="./DFC/DFCC" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(./DFC/DFCC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:for-each>
 				<xsl:for-each select="./DFA/DFAC">
-					<l0:identifier>
-               			<xsl:value-of select="." />
-					</l0:identifier>
+					<arco-lite:localIdentifier>
+               			<xsl:value-of select="./DFA/DFAC" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(./DFA/DFAC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:for-each>
 				<xsl:if test="record/metadata/schede/*/DF/DFT/DFTQ">
 					<arco-arco:numberOfElements>
@@ -7540,6 +7775,123 @@
 					</arco-cd:hasCopyright>
 				</xsl:for-each>
 			</rdf:Description>
+			<!-- identifier -->
+			<xsl:if test="./DFO/DFOG">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(./DFO/DFOG))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		    		</xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+			               	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+						</xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./DFO/DFOG)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./DFO/DFOG)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(./DFO/DFOG)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./DFO/DFOE">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(./DFO/DFOE))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		    		</xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+			               	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+						</xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./DFO/DFOE)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./DFO/DFOE)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(./DFO/DFOE)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./DFC/DFCC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(./DFC/DFCC))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		    		</xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+			               	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+						</xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./DFC/DFCC)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./DFC/DFCC)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(./DFC/DFCC)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./DFA/DFAC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(./DFA/DFAC))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		    		</xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+			               	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+						</xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./DFA/DFAC)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./DFA/DFAC)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(./DFA/DFAC)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:if>
 			<!-- title -->
 			<xsl:if test="record/metadata/schede/*/DF/DFT/DFTT">
 				<rdf:Description>
@@ -8844,9 +9196,14 @@
 					<xsl:value-of select="false()" />
 				</arco-cd:primaryDocument>
 				<xsl:if test="./AIC">
-					<l0:identifier>
+					<arco-lite:localIdentifier>
                			<xsl:value-of select="./AIC" />
-					</l0:identifier>
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'AudioRecordingIdentifier/', $itemURI, arco-fn:arcofy(./AIC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:if>
 				<xsl:if test="./AIB">
 					<arco-core:abstract>
@@ -8968,6 +9325,36 @@
 					</arco-cd:hasCopyright>
 				</xsl:for-each>
 			</rdf:Description>
+			<!-- identifier -->
+			<xsl:if test="./AIC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'AudioRecordingIdentifier/', $itemURI, arco-fn:arcofy(./AIC))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		    			</xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+			               	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+						</xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./AIC)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./AIC)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(./AIC)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:if>
 			<!-- title -->
 			<xsl:if test="./AIL">
 				<rdf:Description>
@@ -10761,9 +11148,14 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./AIOC)" />
 					</l0:name>
-					<l0:identifier>
-						<xsl:value-of select="normalize-space(./AIOC)" />
-					</l0:identifier>
+					<arco-lite:localIdentifier>
+               			<xsl:value-of select="./AIOC" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./AIOC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 					<arco-cd:originalStorageMedium>
 						<xsl:value-of select="true()" />
 					</arco-cd:originalStorageMedium>
@@ -10850,6 +11242,36 @@
 						</arco-cd:hasChangeOfAvailability>
 					</xsl:for-each>
 				</rdf:Description>
+				<!-- identifier -->
+				<xsl:if test="./AIOC">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./AIOC))" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		    	            </xsl:attribute>
+						</rdf:type>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+			                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+					        </xsl:attribute>
+						</arco-core:hasType>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./AIOC)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./AIOC)" />
+						</l0:name>
+						<l0:identifier>
+							<xsl:value-of select="normalize-space(./AIOC)" />
+						</l0:identifier>
+						<arco-core:current>
+							<xsl:value-of select="true()" />
+						</arco-core:current>
+					</rdf:Description>
+				</xsl:if>
 				<!-- storage medium type -->
 				<xsl:if test="./AIOF[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 					<rdf:Description>
@@ -10882,9 +11304,14 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./AIMC)" />
 					</l0:name>
-					<l0:identifier>
-						<xsl:value-of select="normalize-space(./AIMC)" />
-					</l0:identifier>
+					<arco-lite:localIdentifier>
+               			<xsl:value-of select="./AIMC" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./AIMC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 					<arco-cd:originalStorageMedium>
 						<xsl:value-of select="false()" />
 					</arco-cd:originalStorageMedium>
@@ -10918,6 +11345,36 @@
 						</arco-dd:hasMeasurementCollection>
 					</xsl:if>
 				</rdf:Description>
+				<!-- identifier -->
+				<xsl:if test="./AIMC">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./AIMC))" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		    	            </xsl:attribute>
+						</rdf:type>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+			                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+					        </xsl:attribute>
+						</arco-core:hasType>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./AIMC)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./AIMC)" />
+						</l0:name>
+						<l0:identifier>
+							<xsl:value-of select="normalize-space(./AIMC)" />
+						</l0:identifier>
+						<arco-core:current>
+							<xsl:value-of select="true()" />
+						</arco-core:current>
+					</rdf:Description>
+				</xsl:if>
 			</xsl:for-each>
 			<!-- CIS -->
 			<xsl:if test="./AIP/AIPN[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
@@ -11858,9 +12315,14 @@
 					<xsl:value-of select="false()" />
 				</arco-cd:primaryDocument>
 				<xsl:if test="./VIC">
-					<l0:identifier>
+					<arco-lite:localIdentifier>
                			<xsl:value-of select="./VIC" />
-					</l0:identifier>
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'VideoRecordingIdentifier/', $itemURI, arco-fn:arcofy(./VIC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:if>
 				<xsl:if test="./VIB">
 					<arco-core:abstract>
@@ -11989,6 +12451,36 @@
 					</arco-cd:hasCopyright>
 				</xsl:for-each>
 			</rdf:Description>
+			<!-- identifier -->
+			<xsl:if test="./VIC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'VideoRecordingIdentifier/', $itemURI, arco-fn:arcofy(./VIC))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		                </xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+			               	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+				        </xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./VIC)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./VIC)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(./VIC)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:if>
 			<!-- title -->
 			<xsl:if test="./VIL">
 				<rdf:Description>
@@ -13641,9 +14133,14 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./VIOC)" />
 					</l0:name>
-					<l0:identifier>
-						<xsl:value-of select="normalize-space(./VIOC)" />
-					</l0:identifier>
+					<arco-lite:localIdentifier>
+               			<xsl:value-of select="./VIOC" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./VIOC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 					<arco-cd:originalStorageMedium>
 						<xsl:value-of select="true()" />
 					</arco-cd:originalStorageMedium>
@@ -13723,6 +14220,36 @@
 						</arco-cd:hasChangeOfAvailability>
 					</xsl:for-each>
 				</rdf:Description>
+				<!-- identifier -->
+				<xsl:if test="./VIOC">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./VIOC))" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		    	            </xsl:attribute>
+						</rdf:type>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+			                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+					        </xsl:attribute>
+						</arco-core:hasType>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./VIOC)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./VIOC)" />
+						</l0:name>
+						<l0:identifier>
+							<xsl:value-of select="normalize-space(./VIOC)" />
+						</l0:identifier>
+						<arco-core:current>
+							<xsl:value-of select="true()" />
+						</arco-core:current>
+					</rdf:Description>
+				</xsl:if>
 				<!-- storage medium type -->
 				<xsl:if test="./VIOF[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 					<rdf:Description>
@@ -13755,9 +14282,14 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./VIMC)" />
 					</l0:name>
-					<l0:identifier>
-						<xsl:value-of select="normalize-space(./VIMC)" />
-					</l0:identifier>
+					<arco-lite:localIdentifier>
+               			<xsl:value-of select="./VIMC" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./VIMC))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 					<arco-cd:originalStorageMedium>
 						<xsl:value-of select="false()" />
 					</arco-cd:originalStorageMedium>
@@ -13784,6 +14316,36 @@
 						</arco-core:hasType>
 					</xsl:if>
 				</rdf:Description>
+				<!-- identifier -->
+				<xsl:if test="./VIMC">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./VIMC))" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		    	            </xsl:attribute>
+						</rdf:type>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+			                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+					        </xsl:attribute>
+						</arco-core:hasType>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./VIMC)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./VIMC)" />
+						</l0:name>
+						<l0:identifier>
+							<xsl:value-of select="normalize-space(./VIMC)" />
+						</l0:identifier>
+						<arco-core:current>
+							<xsl:value-of select="true()" />
+						</arco-core:current>
+					</rdf:Description>
+				</xsl:if>
 			</xsl:for-each>
 			<!-- CIS -->
 			<xsl:if test="./VIP/VIPN[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
@@ -14724,29 +15286,56 @@
 					<xsl:value-of select="false()" />
 				</arco-cd:primaryDocument>
 				<xsl:for-each select="./FIO/FIOG">
-					<l0:identifier>
+					<arco-lite:localIdentifier>
                			<xsl:value-of select="." />
-					</l0:identifier>
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(.))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:for-each>
 				<xsl:for-each select="./FIO/FIOE">
-					<l0:identifier>
+					<arco-lite:localIdentifier>
                			<xsl:value-of select="." />
-					</l0:identifier>
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(.))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:for-each>
 				<xsl:for-each select="./FIO/FIOO">
-					<l0:identifier>
+					<arco-lite:localIdentifier>
                			<xsl:value-of select="." />
-					</l0:identifier>
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(.))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:for-each>
-				<xsl:for-each select="./FIC/FICC and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
-					<l0:identifier>
+				<xsl:if test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+				<xsl:for-each select="./FIC/FICC">
+					<arco-lite:localIdentifier>
                			<xsl:value-of select="." />
-					</l0:identifier>
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(.))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:for-each>
+				</xsl:if>
 				<xsl:for-each select="./FIA/FIAC">
-					<l0:identifier>
+					<arco-lite:localIdentifier>
                			<xsl:value-of select="." />
-					</l0:identifier>
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(.))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
 				</xsl:for-each>
 				<xsl:if test="./FIT/FITQ">
 					<arco-arco:numberOfElements>
@@ -14925,6 +15514,154 @@
 					</arco-cd:hasCopyright>
 				</xsl:for-each>
 			</rdf:Description>
+			<!-- identifier -->
+			<xsl:for-each select="./FIO/FIOG">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(.))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		                </xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+			               	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+				        </xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(.)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:for-each>
+			<xsl:for-each select="./FIO/FIOE">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(.))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		                </xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+			               	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+				        </xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(.)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:for-each>
+			<xsl:for-each select="./FIO/FIOO">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(.))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		                </xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+			               	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+				        </xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(.)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:for-each>
+			<xsl:if test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+			<xsl:for-each select="./FIC/FICC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(.))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		                </xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+			               	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+				        </xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(.)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:for-each>
+			</xsl:if>
+			<xsl:for-each select="./FIA/FIAC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'PhotographicRecordingIdentifier/', $itemURI, arco-fn:arcofy(.))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		                </xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+			               	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+				        </xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(.)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:for-each>
 			<!-- title -->
 			<xsl:if test="./FIT/FITT">
 				<rdf:Description>
