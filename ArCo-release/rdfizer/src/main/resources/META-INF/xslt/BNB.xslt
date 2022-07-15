@@ -415,49 +415,74 @@
 		<!-- identifier -->
 		<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'erbario'))">
 			<xsl:if test="record/metadata/schede/BNB/AC/ACE">
-			<l0:identifier>
-				<xsl:value-of select="record/metadata/schede/BNB/AC/ACE" />
-			</l0:identifier>
+				<arco-lite:localIdentifier>
+               		<xsl:value-of select="record/metadata/schede/BNB/AC/ACE" />
+				</arco-lite:localIdentifier>
+				<arco-core:hasIdentifier>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'HerbariumIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACE))" />
+					</xsl:attribute>
+				</arco-core:hasIdentifier>
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'erbario'))">
 			<xsl:if test="record/metadata/schede/BNB/AC/ACI">
-			<arco-arco:internationalIdentifier>
-				<xsl:value-of select="record/metadata/schede/BNB/AC/ACI" />
-			</arco-arco:internationalIdentifier>
+				<arco-lite:InternationalIdentifier>
+               		<xsl:value-of select="record/metadata/schede/BNB/AC/ACI" />
+				</arco-lite:InternationalIdentifier>
+				<arco-core:hasIdentifier>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'HerbariumIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACI))" />
+					</xsl:attribute>
+				</arco-core:hasIdentifier>
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'collezione'))">
 			<xsl:if test="record/metadata/schede/BNB/AC/ACO">
-			<l0:identifier>
-				<xsl:value-of select="record/metadata/schede/BNB/AC/ACO" />
-			</l0:identifier>
+				<arco-lite:localIdentifier>
+               		<xsl:value-of select="record/metadata/schede/BNB/AC/ACO" />
+				</arco-lite:localIdentifier>
+				<arco-core:hasIdentifier>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'CollectionIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACO))" />
+					</xsl:attribute>
+				</arco-core:hasIdentifier>
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'contenitore'))">
 			<xsl:if test="record/metadata/schede/BNB/AC/ACJ">
-			<l0:identifier>
-				<xsl:value-of select="record/metadata/schede/BNB/AC/ACJ" />
-			</l0:identifier>
+				<arco-lite:localIdentifier>
+               		<xsl:value-of select="record/metadata/schede/BNB/AC/ACJ" />
+				</arco-lite:localIdentifier>
+				<arco-core:hasIdentifier>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'ContainerIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACJ))" />
+					</xsl:attribute>
+				</arco-core:hasIdentifier>
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'campione'))">
 			<xsl:if test="record/metadata/schede/BNB/AC/ACK">
-			<l0:identifier>
-				<xsl:value-of select="record/metadata/schede/BNB/AC/ACK" />
-			</l0:identifier>
+				<arco-lite:localIdentifier>
+               		<xsl:value-of select="record/metadata/schede/BNB/AC/ACK" />
+				</arco-lite:localIdentifier>
+				<arco-core:hasIdentifier>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'SpecimenIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACK))" />
+					</xsl:attribute>
+				</arco-core:hasIdentifier>
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'campione'))">
 			<xsl:if test="record/metadata/schede/BNB/AC/ACN">
-			<l0:identifier>
-				<xsl:value-of select="record/metadata/schede/BNB/AC/ACN" />
-			</l0:identifier>
-			<arco-core:hasIdentifier>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Identifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACN))" />
-				</xsl:attribute>
-			</arco-core:hasIdentifier>
+				<l0:identifier>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACN" />
+				</l0:identifier>
+				<arco-core:hasIdentifier>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'SpecimenIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACN))" />
+					</xsl:attribute>
+				</arco-core:hasIdentifier>
 			</xsl:if>
 		</xsl:if>
 		<!-- container sequence -->
@@ -714,32 +739,190 @@
 			</arco-spe:hasTypeSpecimenIdentification>
 		</xsl:if>	
 	</rdf:Description>
-	<!-- previous identifier -->
-	<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'campione'))">
-		<xsl:if test="record/metadata/schede/BNB/AC/ACN">
+	<!-- identifier -->
+	<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'erbario'))">
+		<xsl:if test="record/metadata/schede/BNB/AC/ACE">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'Identifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACN))" />
+					<xsl:value-of select="concat($NS, 'HerbariumIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACE))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
-	        		</xsl:attribute>
+    	            </xsl:attribute>
 				</rdf:type>
 				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource">
-			    		<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
-					</xsl:attribute>
+	                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+			        </xsl:attribute>
 				</arco-core:hasType>
 				<rdfs:label>
-					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/AC/ACN)" />
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACE" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/AC/ACN)" />
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACE" />
 				</l0:name>
 				<l0:identifier>
-					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/AC/ACN)" />
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACE" />
 				</l0:identifier>
+				<arco-core:current>
+					<xsl:value-of select="true()" />
+				</arco-core:current>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
+	<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'erbario'))">
+		<xsl:if test="record/metadata/schede/BNB/AC/ACI">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'HerbariumIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACI))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+    	            </xsl:attribute>
+				</rdf:type>
+				<arco-core:hasType>
+					<xsl:attribute name="rdf:resource">
+	                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/InternationalIdentifier'" />
+			        </xsl:attribute>
+				</arco-core:hasType>
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACI" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACI" />
+				</l0:name>
+				<l0:identifier>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACI" />
+				</l0:identifier>
+				<arco-core:current>
+					<xsl:value-of select="true()" />
+				</arco-core:current>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
+	<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'collezione'))">
+		<xsl:if test="record/metadata/schede/BNB/AC/ACO">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'CollectionIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACO))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+    	            </xsl:attribute>
+				</rdf:type>
+				<arco-core:hasType>
+					<xsl:attribute name="rdf:resource">
+	                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+			        </xsl:attribute>
+				</arco-core:hasType>
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACO" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACO" />
+				</l0:name>
+				<l0:identifier>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACO" />
+				</l0:identifier>
+				<arco-core:current>
+					<xsl:value-of select="true()" />
+				</arco-core:current>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
+	<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'contenitore'))">
+		<xsl:if test="record/metadata/schede/BNB/AC/ACJ">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'ContainerIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACJ))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+    	            </xsl:attribute>
+				</rdf:type>
+				<arco-core:hasType>
+					<xsl:attribute name="rdf:resource">
+	                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+			        </xsl:attribute>
+				</arco-core:hasType>
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACJ" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACJ" />
+				</l0:name>
+				<l0:identifier>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACJ" />
+				</l0:identifier>
+				<arco-core:current>
+					<xsl:value-of select="true()" />
+				</arco-core:current>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
+	<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'campione'))">
+		<xsl:if test="record/metadata/schede/BNB/AC/ACK">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'SpecimenIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACK))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+    	            </xsl:attribute>
+				</rdf:type>
+				<arco-core:hasType>
+					<xsl:attribute name="rdf:resource">
+	                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+			        </xsl:attribute>
+				</arco-core:hasType>
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACK" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACK" />
+				</l0:name>
+				<l0:identifier>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACK" />
+				</l0:identifier>
+				<arco-core:current>
+					<xsl:value-of select="true()" />
+				</arco-core:current>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
+	<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'campione'))">
+		<xsl:if test="record/metadata/schede/BNB/AC/ACN">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'SpecimenIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACN))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+    	            </xsl:attribute>
+				</rdf:type>
+				<arco-core:hasType>
+					<xsl:attribute name="rdf:resource">
+	                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+			        </xsl:attribute>
+				</arco-core:hasType>
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACN" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACN" />
+				</l0:name>
+				<l0:identifier>
+					<xsl:value-of select="record/metadata/schede/BNB/AC/ACN" />
+				</l0:identifier>
+				<arco-core:current>
+					<xsl:value-of select="true()" />
+				</arco-core:current>
 			</rdf:Description>
 		</xsl:if>
 	</xsl:if>

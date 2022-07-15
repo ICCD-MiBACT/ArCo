@@ -168,13 +168,6 @@
 				<xsl:value-of select="'https://w3id.org/arco/ontology/arco/PlanetaryScienceHeritage'" />
 			</xsl:attribute>
 		</rdf:type>
-		<xsl:if test="not($sheetType='BNB')">
-			<xsl:if test="record/metadata/schede/*/AC/ACK">
-				<l0:identifier>
-					<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
-				</l0:identifier>
-			</xsl:if>
-		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPN">
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
