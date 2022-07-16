@@ -947,9 +947,12 @@
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/OC/OCD)" />
 					</rdfs:label>
-					<tiapit:time>
+					<tiapit:startTime>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/OC/OCD)" />
-					</tiapit:time>
+					</tiapit:startTime>
+					<tiapit:endTime>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/OC/OCD)" />
+					</tiapit:endTime>
 				</rdf:Description>
 			</xsl:if>
 			<!-- feature for BDM < version 4.00 -->
@@ -1577,11 +1580,11 @@
 				</xsl:if>
 				<!-- has agent role -->
 				<xsl:if test="record/metadata/schede/BDM/DR/DRV/DRVE and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BDM/DR/DRV/DRVE)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BDM/DR/DRV/DRVE)), 'n.r')))">
-					<arco-cd:hasActivityResponsible>
+					<arco-cd:hasResponsibleAgent>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BDM/DR/DRV/DRVE))" />
                			</xsl:attribute>
-					</arco-cd:hasActivityResponsible>
+					</arco-cd:hasResponsibleAgent>
 					<arco-core:hasAgentRole>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-observation-survey-activity-responsible')" />
@@ -1590,11 +1593,11 @@
 				</xsl:if>
 				<xsl:if test="not(record/metadata/schede/*/DR/DRV/*)">
 					<xsl:if test="record/metadata/schede/*/DR/DRV and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DR/DRV)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DR/DRV)), 'n.r')))">
-						<arco-cd:hasActivityResponsible>
+						<arco-cd:hasResponsibleAgent>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/DR/DRV))" />
                				</xsl:attribute>
-						</arco-cd:hasActivityResponsible>
+						</arco-cd:hasResponsibleAgent>
 						<arco-core:hasAgentRole>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-observation-survey-activity-responsible')" />
@@ -1603,11 +1606,11 @@
 					</xsl:if>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/DR/DRL and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DR/DRL)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DR/DRL)), 'n.r')))">
-					<arco-cd:hasActivityOperator>
+					<arco-cd:hasOperator>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/DR/DRL))" />
                			</xsl:attribute>
-					</arco-cd:hasActivityOperator>
+					</arco-cd:hasOperator>
 					<arco-core:hasAgentRole>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-observation-survey-activity-operator')" />
@@ -1757,7 +1760,7 @@
 						<xsl:value-of select="'Responsabile dell''attività'" />
 					</rdfs:label>
 					<rdfs:label xml:lang="en">
-						<xsl:value-of select="'Activity Responsible'" />
+						<xsl:value-of select="'Responsible agent'" />
 					</rdfs:label>
 					<arco-core:isRoleOf>
 						<xsl:attribute name="rdf:resource">
@@ -1836,7 +1839,7 @@
 							<xsl:value-of select="'Responsabile dell''attività'" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="'Activity Responsible'" />
+							<xsl:value-of select="'Responsible agent'" />
 						</rdfs:label>
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
