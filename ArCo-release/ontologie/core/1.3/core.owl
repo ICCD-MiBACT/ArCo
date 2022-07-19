@@ -465,6 +465,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has role</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative F e FF: PD/PDF/PDFR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1298,7 +1299,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>NC/NCT, AC/ACC/ACCC, AC/ACS/ACSC, AC/MOD/MODI</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>NC/NCT, AC/ACC/ACCC, AC/ACS/ACSC, AC/MOD/MODI. ICCD Normativa Trasversale 4.00: UB/INP/INPS. ICCD Normativa FF: PA/PAC/PACI; PA/PAC/PACA. ICCD Normativa Trasversale 4.00: DO/FTA/FTAN; DO/DRA/DRAN; DO/VDC/VDCN; DO/REG/REGN; DO/FNT/FNTI. ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFX. ICCD Normativa Trasversale 4.00: RE/FOI/FOID. UB/COL/COLI.</a-cat:iccdNormTag>
     </owl:Class>
     
 
