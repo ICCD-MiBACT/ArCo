@@ -49,6 +49,7 @@
     <!-- https://w3id.org/arco/ontology/arco-lite/hasActivityOperator -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasActivityOperator">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isActivityOperatorOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
@@ -59,6 +60,7 @@
     <!-- https://w3id.org/arco/ontology/arco-lite/hasActivityResponsible -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasActivityResponsible">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isActivityResponsibleOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
@@ -69,9 +71,26 @@
     <!-- https://w3id.org/arco/ontology/arco-lite/hasActivitySponsor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasActivitySponsor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isActivitySponsorOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasAdditionalFormResponsibleAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasAdditionalFormResponsibleAgent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasAttributedAuthor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasAttributedAuthor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
     </owl:ObjectProperty>
     
 
@@ -82,10 +101,38 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isAuthorOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasAuthorshipAttribution"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasAttributedAuthor"/>
-        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasAuthorityFileCataloguingAgency -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasAuthorityFileCataloguingAgency">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasCity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCity">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un catasto alla sua città</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the cadastre to its city.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha città</rdfs:label>
+        <rdfs:label xml:lang="en">has city</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="it">Notmativa Trasversale 4.00: CS/CTS/CTSC, Normativa RA 1.0 LG/LGC/LGCC</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -96,6 +143,13 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una collezione di cultural beni culturali con il singolo bene</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a collection of cultural entities with the cultutal entities</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha membro di collezione</rdfs:label>
+        <rdfs:label xml:lang="en">has collection member</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -106,6 +160,13 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCollectorOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una collezione all&apos;agente collezionista</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a collection of cultural entities with its collector</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha collezionista</rdfs:label>
+        <rdfs:label xml:lang="en">has collector</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -120,12 +181,40 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasCommittent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCommittent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCopyrightHolder -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCopyrightHolder">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCopyrightHolderOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasCreationLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCreationLocation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedWork"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCreationLocationOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di produzione/realizzazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to a connected cultural entity which constitutes its production site.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha luogo di creazione</rdfs:label>
+        <rdfs:label xml:lang="en">has creation location</rdfs:label>
+        <rdfs:label xml:lang="it">è stato realizzato in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è stato realizzato in&apos; (versioni precedenti: &apos;sede di realizzazione&apos;)</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -156,16 +245,134 @@
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/location/atSite"/>
             <rdf:Description rdf:about="https://w3id.org/italia/onto/CLV/hasAddress"/>
         </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale all&apos;indirizzo della sua localizzazione fisica attuale, al momento della catalogazione. La relazione fornisce una rappresentazione semplificata, con ridotta espressività, della localizzazione attuale del bene culturale, e provoca la perdita delle altre informazioni che riguardano la collocazione del bene (continente, eventuale contenitore fisico, collocazione specifica nel contenitore fisico, ecc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the relationship that links a cultural property to the address of its current physical location at the cataloging time. The report provides a simplified representation, with a reduced expressivity, of the current location of the cultural property, and it causes the loss of other information regarding its location (i.e. the continent, the possible physical container, the specific location in the physical container, etc.).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">has cultural property address</rdfs:label>
+        <rdfs:label xml:lang="it">indirizzo del bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: LC/PVC</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/hasInventoryIdentifierResponsible -->
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasCurator -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasInventoryIdentifierResponsible">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isInventoryIdentifierResponsibleOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCurator">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al suo curatore</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its curator</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha curatore</rdfs:label>
+        <rdfs:label xml:lang="en">has curator</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasDigitalTranscriptionResponsibleAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasDigitalTranscriptionResponsibleAgent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasDigitalTranscriptorOperator -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasDigitalTranscriptorOperator">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasEditor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasEditor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isEditorOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;edizione all&apos;editore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an edition to its editor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha editore</rdfs:label>
+        <rdfs:label xml:lang="en">has editor</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="it">Normativa F: PD/EDI/EDIR, Normativa S: AU/EDT/EDTN</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasExportOffice -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasExportOffice">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasFindingLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasFindingLocation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedWork"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isFindingLocationOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di rinvenimento archeologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to a connected cultural entity which constitutes the site where it was rediscovered.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha sede di rinvenimento</rdfs:label>
+        <rdfs:label xml:lang="en">has finding location</rdfs:label>
+        <rdfs:label xml:lang="it">è stato rinvenuto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è stato rinvenuto in&apos; (versioni precedenti: &apos;sede di rinvenimento&apos;)</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasInventoryNumberResponsible -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasInventoryNumberResponsible">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isInventoryNumberResponsibleOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una situazione inventariale all&apos;agente che ha inserito il numero d&apos;inventario</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an inventary situation with the responsible of the insertion of the inventory number</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha responsabile di numero d&apos;inventario</rdfs:label>
+        <rdfs:label xml:lang="en">has inventory number responsible</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasIssuer -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasIssuer">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasIssuingAgency -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasIssuingAgency">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasIssuingState -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasIssuingState">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
     </owl:ObjectProperty>
     
 
@@ -190,9 +397,50 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasMint -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasMint">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasMinter -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasMinter">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasMusicalEnsemble -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasMusicalEnsemble">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasMusician -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasMusician">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasOfficialInCharge -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasOfficialInCharge">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasOwner -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasOwner">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOwnerOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
@@ -210,6 +458,25 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasPreviousLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasPreviousLocation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedWork"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPreviousLocationOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di provenienza, prima della sua attuale collocazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to a connected cultural entity which constitutes its provenance location before its current position.</rdfs:comment>
+        <rdfs:label xml:lang="it">era contenuto in</rdfs:label>
+        <rdfs:label xml:lang="it">ha sede di provenienza</rdfs:label>
+        <rdfs:label xml:lang="en">has previous location</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabili</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;era contenuto in&apos; (versioni precedenti: &apos;sede di provenienza&apos;)</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPreviousOwner -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasPreviousOwner">
@@ -220,12 +487,122 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasProponentAgency -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasProponentAgency">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasRealizationDate -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasRealizationDate">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRealizationDateOf"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua data di realizazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its realization date</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha data di realizzazione</rdfs:label>
+        <rdfs:label xml:lang="en">has realization date</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasRecipient -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasRecipient">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasTransferor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al suo destinatario</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its recipient</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha destinatario</rdfs:label>
+        <rdfs:label xml:lang="en">has recipient</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasRecordResponsibleAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasRecordResponsibleAgent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOfRecord"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa properietà collega una scheda su cui si analizza un bene culturale per finalità diverse da quella della catalogazione del patrimonio all&apos;Ente o al soggetto che ha prodotto la scheda o che gestisce la banca dati di cui la scheda fa parte.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property record to the agency or the person that created that record or manages the database where the record is.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha agente responsabile di scheda</rdfs:label>
+        <rdfs:label xml:lang="en">has record responsible agent</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Notmativa Trasversale 4.00: AC/ACS/ACSE</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentTo"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità di qualsiasi tipo a un agente che è collegato in qualche modo a quell&apos;entità. È una relazione generica che viene usata per quei casi in cui non sia possibile definire in maniera più precisa la natura della relazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property is used to associate an entity of any kind to an agent related to that entity in some way. It is used when it is not possible to express the relation in a more specific way.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha agente correlato</rdfs:label>
+        <rdfs:label xml:lang="en">has related agent</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: AU/NMC</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasRelatedWork -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasRelatedWork">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un&apos;altra opera collegata (es.: copia, fase preparatoria, etc.), che può essere essa stessa un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to a related work (e.g. copy, preparatory work).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha opera collegata</rdfs:label>
+        <rdfs:label xml:lang="en">has related work</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasResearchScientificDirector -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasResearchScientificDirector">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasResponsibleForInsertion -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasResponsibleForInsertion">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
     </owl:ObjectProperty>
     
 
@@ -233,9 +610,26 @@
     <!-- https://w3id.org/arco/ontology/arco-lite/hasScientificDirector -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasScientificDirector">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isScientificDirectorOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasSecondaryAuthor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasSecondaryAuthor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasSoundEngineer -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasSoundEngineer">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
     </owl:ObjectProperty>
     
 
@@ -260,9 +654,96 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasTransferor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasTransferor">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con il suo cedente</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its transferor</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha cedente</rdfs:label>
+        <rdfs:label xml:lang="en">has transferor</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasUpdateOfficialInCharge -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasUpdateOfficialInCharge">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasUpdateResponsibleAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasUpdateResponsibleAgent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasUpdateResponsibleResearchAndCompilation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasUpdateResponsibleResearchAndCompilation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasUpdateScientificRevisor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasUpdateScientificRevisor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasUrbanPlanningEnvironmentalRelationWith -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasUrbanPlanningEnvironmentalRelationWith">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedWork"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to another cultural entity, in an planning environmental relation.</rdfs:comment>
+        <rdfs:comment xml:lang="it">rdfs:comment
+Questa proprietà collega un bene culturale a un altro bene culturale collegato, con cui è in relazione urbanistico-ambientale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha relazione urbanistico-ambientale con</rdfs:label>
+        <rdfs:label xml:lang="en">has planning environmental relation with</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è in relazione urbanistico - ambientale con&apos; (versioni precedenti: &apos;relazione urbanistico ambientale&apos;)</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/involves -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/involves">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isInvolvedIn"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &apos;is involved in&apos;, che collega un bene culturale a un altro bene culturale collegato, di tipo immateriale, in cui è coinvolto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &apos;is involved in&apos;, which relates a cultural entity to another involved cultural entity (e.g. immaterial).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">coinvolge</rdfs:label>
+        <rdfs:label xml:lang="en">involves</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isActivityOperatorOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isActivityOperatorOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
     </owl:ObjectProperty>
@@ -287,6 +768,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isAgentRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isAgentRelatedTo"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isAuthorOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isAuthorOf">
@@ -300,11 +787,32 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isCityOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCityOf">
+        <rdfs:comment xml:lang="it">Questa proprietà collega una città al suo catasto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a city with its cadastre</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is city of</rdfs:label>
+        <rdfs:label xml:lang="it">è città di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf">
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale con la sua collezione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity with its collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is collection member of</rdfs:label>
+        <rdfs:label xml:lang="it">è membro della collezione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -314,6 +822,13 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCollectorOf">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;agente collezionista con la collezione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the collector with their collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is collector of</rdfs:label>
+        <rdfs:label xml:lang="en">è collezionista di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -332,6 +847,23 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCopyrightHolderOf">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isCreationLocationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCreationLocationOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha luogo di creazione&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has creation location&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is creation location of</rdfs:label>
+        <rdfs:label xml:lang="it">è luogo di realizzazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -364,11 +896,105 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/isInventoryIdentifierResponsibleOf -->
+    <!-- https://w3id.org/arco/ontology/arco-lite/isEditorOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isInventoryIdentifierResponsibleOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isEditorOf">
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;edizione al suo editore</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an editor with the edition</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is editor of</rdfs:label>
+        <rdfs:label xml:lang="it">è editore di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="it">Normativa F: PD/EDI/EDIR, Normativa S: AU/EDT/EDTN</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isFindingLocationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isFindingLocationOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha luogo di ritrovamento&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has finding location&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/aco-lite"/>
+        <rdfs:label xml:lang="en">is findifng location of</rdfs:label>
+        <rdfs:label xml:lang="it">è luogo di ritrovamento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isInventoryNumberResponsibleOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isInventoryNumberResponsibleOf">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;agente responsabile dell&apos;inserimento del numero inventariale di un&apos;entità alla situazione inventariale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the responsible of the inventory number to the inventory situation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is inventory number responsible of</rdfs:label>
+        <rdfs:label xml:lang="it">è responsabile di numero inventariale di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isInvolvedIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedWork"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, di tipo immateriale, in cui è coinvolto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to another involved  cultural entity (e.g. immaterial).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is involved in</rdfs:label>
+        <rdfs:label xml:lang="it">è coinvolto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è coinvolto in&apos; (versioni precedenti: &apos;esecuzione/evento di riferimento&apos;)</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isLocatedIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedWork"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isLocationOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce il luogo di collocazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to a connected cultural entity which constitutes its location area.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha luogo di collocazione</rdfs:label>
+        <rdfs:label xml:lang="en">is located in</rdfs:label>
+        <rdfs:label xml:lang="it">è contenuto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è contenuto in&apos; (versioni precedenti: &apos;luogo di collocazione/localizzazione&apos;; &apos;scheda contenitore&apos;)</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isLocationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isLocationOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa di &apos;is located in&apos;, collega un bene culturale a un altro bene culturale collegato, che costituisce il luogo di collocazione del primo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property, inverse of &apos;is located in&apos;, relates a cultural entity to a connected cultural entity, which constitutes its location area.</rdfs:comment>
+        <rdfs:label xml:lang="en">is location of</rdfs:label>
+        <rdfs:label xml:lang="it">è luogo di collocazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -410,6 +1036,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isPreviousLocationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isPreviousLocationOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha sede di provenienza&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has previous location&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https:/w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is previous location of</rdfs:label>
+        <rdfs:label xml:lang="it">è sede di provenienza di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isPreviousOwnerOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isPreviousOwnerOf">
@@ -423,7 +1066,65 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isRealizationDateOf">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la data di realizzazione co la sua entità</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a realization date with its entity</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is realization date of</rdfs:label>
+        <rdfs:label xml:lang="it">è data di realizzazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isRelatedAgentTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentTo">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un agente che è collegato in qualche modo a un&apos;entità di qualsiasi tipo a quell&apos;entità. È una relazione generica che viene usata per quei casi in cui non sia possibile definire in maniera più precisa la natura della relazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property is used to associate an agent related in some way to an entity of any kind to that entity. It is used when it is not possible to express the relation in a more specific way.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is related agent to</rdfs:label>
+        <rdfs:label xml:lang="it">è agente correlato a</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOfRecord -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOfRecord">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;Ente o il soggetto che ha prodotto la scheda o che gestisce la banca dati di cui la scheda fa parte alla scheda stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the agency or the person that created the record or manages the database where the record is to the record itself</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is responsible agent of record</rdfs:label>
+        <rdfs:label xml:lang="it">è ente responsabile della scheda</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isReusedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isReusedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedWork"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/reuses"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato che lo riutilizza in tutto o in parte.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to a connected cultural entity that reuse it or a part of it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is reused by</rdfs:label>
+        <rdfs:label xml:lang="it">è riutilizzato in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è riutilizzato in&apos; (versioni precedenti: &apos;bene composto&apos;)</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -455,6 +1156,99 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha opera collegata&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has related work&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is work related to</rdfs:label>
+        <rdfs:label xml:lang="it">è opera collegata a</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/reuses -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/reuses">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &apos;è riutilizzato da&apos;, che collega un bene culturale a un altro bene culturale collegato che lo riutilizza in tutto o in parte.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the invers property of &apos;is reused by&apos;, which relates a cultural entity to a connected cultural entity that reuse it or a part of it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">reuses</rdfs:label>
+        <rdfs:label xml:lang="it">riutilizza</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isAttributedAuthorIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAttributedAuthorIn"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/atLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/atLocation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/atSite -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/atSite"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isLocationIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isLocationIn"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isSiteIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isSiteIn"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/hasAddress -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasAddress"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/isAddressFor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/isAddressFor"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -466,12 +1260,34 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/alternativeInventoryIdentifier -->
+    <!-- https://w3id.org/arco/ontology/arco-lite/alternativeDesignation -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/alternativeInventoryIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/alternativeDesignation">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua denominazione alternativa</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its alternative designation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">alternative designation</rdfs:label>
+        <rdfs:label xml:lang="it">denominazione alternativa</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/alternativeInventoryNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/alternativeInventoryNumber">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al suo numero di inventario alternativo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its alternative inventory number</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">alternative inventory number</rdfs:label>
+        <rdfs:label xml:lang="it">numero d&apos;inventario alternativo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -511,18 +1327,25 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="en">current designation</rdfs:label>
         <rdfs:label xml:lang="it">denominazione attuale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/currentInventoryIdentifier -->
+    <!-- https://w3id.org/arco/ontology/arco-lite/currentInventoryNumber -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/currentInventoryIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/currentInventoryNumber">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al suo numero d&apos;inventario corrente</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its current inventory number</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">current inventory number</rdfs:label>
+        <rdfs:label xml:lang="it">numero di inventario corrente</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -551,8 +1374,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione dialettale di un oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the dialectal designation of an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="en">dialectal designation</rdfs:label>
         <rdfs:label xml:lang="it">denominazione dialettale</rdfs:label>
+        <rdfs:label xml:lang="en">dialectal designation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -567,8 +1390,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione storica di un oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the historical designation of an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="en">historical designation</rdfs:label>
         <rdfs:label xml:lang="it">denominazione storica</rdfs:label>
+        <rdfs:label xml:lang="en">historical designation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -583,8 +1406,25 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione idiomatica di un oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the idiomatic designation of an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="en">idiomatic designation</rdfs:label>
         <rdfs:label xml:lang="it">denominazione idiomatica</rdfs:label>
+        <rdfs:label xml:lang="en">idiomatic designation</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/internationalIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/internationalIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al suo identificativo internazionale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its international identifier</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">identificativo internazionale</rdfs:label>
+        <rdfs:label xml:lang="en">international identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -599,8 +1439,41 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione locale di un oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the local designation of an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="en">local designation</rdfs:label>
         <rdfs:label xml:lang="it">denominazione locale</rdfs:label>
+        <rdfs:label xml:lang="en">local designation</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/localIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/localIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al suo identificativo locale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its local identifier</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">identificativo locale</rdfs:label>
+        <rdfs:label xml:lang="en">local identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/nationalIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/nationalIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">identificativo nazionale</rdfs:label>
+        <rdfs:label xml:lang="en">national ientifier</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">Questa proprietà collega un&apos;entità al suo identificativo nazionale</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">This property relates an entity with its national identifier</rdfs:seeAlso>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -615,8 +1488,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione originale di un oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the original designation of an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="en">original designation</rdfs:label>
         <rdfs:label xml:lang="it">denominazione originale</rdfs:label>
+        <rdfs:label xml:lang="en">original designation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -631,8 +1504,41 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione gergale di un oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the slang designation of an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="en">slang designation</rdfs:label>
         <rdfs:label xml:lang="it">denominazione gergale</rdfs:label>
+        <rdfs:label xml:lang="en">slang designation</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/toponym -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/toponym">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment rdf:resource="https:w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un luogo al suo toponimo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a feature with its toponym</rdfs:comment>
+        <rdfs:label xml:lang="it">toponimo</rdfs:label>
+        <rdfs:label xml:lang="it">toponym</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al suo identificativo univoco</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its unique identifier</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">identificativo univoco</rdfs:label>
+        <rdfs:label xml:lang="en">unique identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -656,9 +1562,39 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/InventorySituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/UseFunction -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/Address -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Address"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/Feature -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Feature"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Activity -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Activity"/>
 </rdf:RDF>
 
 
