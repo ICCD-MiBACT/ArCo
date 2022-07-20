@@ -66,7 +66,7 @@
 	xmlns:ar-HistoricOrArtisticProperty="https://w3id.org/arco/resource/HistoricOrArtisticProperty/"
 	xmlns:ar-CulturalPropertyCataloguingCategory="https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/"
 	xmlns:ar-RelatedWorkSituation="https://w3id.org/arco/resource/RelatedWorkSituation/"
-	xmlns:ar-CulturalEntityTechnicalStatus="https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/"
+	xmlns:ar-TechnicalStatus="https://w3id.org/arco/resource/TechnicalStatus/"
 	xmlns:ar-Value="https://w3id.org/arco/resource/Value/"
 	xmlns:ar-PreferredAuthorshipAttribution="https://w3id.org/arco/resource/PreferredAuthorshipAttribution/"
 	xmlns:ar-CatalogueRecordOA="https://w3id.org/arco/resource/CatalogueRecordOA/"
@@ -2906,8 +2906,11 @@
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Depth')" />
 			</arco-dd:hasMeasurementType>
 			<arco-dd:hasValue>
-				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-', 'depth', '-', arco-fn:extract-value(record/metadata/schede/BNB/LR/LRI/LRIO))" />
+				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(record/metadata/schede/BNB/LR/LRI/LRIO))" />
 			</arco-dd:hasValue>
+			<mu:hasMeasurementUnit>
+				<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(record/metadata/schede/BNB/LR/LRI/LRIO))" />
+			</mu:hasMeasurementUnit>
 		</rdf:Description>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIT">
@@ -2931,7 +2934,7 @@
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Temperature')" />
 			</arco-dd:hasMeasurementType>
 			<arco-dd:hasValue>
-				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-', 'temperature', '-', arco-fn:extract-value(record/metadata/schede/BNB/LR/LRI/LRIT))" />
+				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(record/metadata/schede/BNB/LR/LRI/LRIT))" />
 			</arco-dd:hasValue>
 		</rdf:Description>
 	</xsl:if>	
@@ -3670,8 +3673,11 @@
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Height')" />
 				</arco-dd:hasMeasurementType>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', WoodSample, '-', 'height', '-', arco-fn:extract-value(./DBXA))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(./DBXA))" />
 				</arco-dd:hasValue>
+				<mu:hasMeasurementUnit>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(./DBXA))" />
+				</mu:hasMeasurementUnit>
 			</rdf:Description>
 		</xsl:if>		
 		<xsl:if test="./DBXL">
@@ -3694,8 +3700,11 @@
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Width')" />
 				</arco-dd:hasMeasurementType>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', WoodSample, '-', 'width', '-', arco-fn:extract-value(./DBXL))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(./DBXL))" />
 				</arco-dd:hasValue>
+				<mu:hasMeasurementUnit>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(./DBXL))" />
+				</mu:hasMeasurementUnit>
 			</rdf:Description>
 		</xsl:if>
 		<xsl:if test="./DBXN">
@@ -3718,8 +3727,11 @@
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Length')" />
 				</arco-dd:hasMeasurementType>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/',WoodSample, '-', 'length', '-', arco-fn:extract-value(./DBXN))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(./DBXN))" />
 				</arco-dd:hasValue>
+				<mu:hasMeasurementUnit>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(./DBXN))" />
+				</mu:hasMeasurementUnit>
 			</rdf:Description>
 		</xsl:if>
 		<xsl:if test="./DBXD">
@@ -3742,8 +3754,11 @@
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Diameter')" />
 				</arco-dd:hasMeasurementType>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/',WoodSample, '-', 'diameter', '-', arco-fn:extract-value(./DBXD))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(./DBXD))" />
 				</arco-dd:hasValue>
+				<mu:hasMeasurementUnit>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(./DBXD))" />
+				</mu:hasMeasurementUnit>
 			</rdf:Description>
 		</xsl:if>
 		<xsl:if test="./DBXP">
@@ -3766,8 +3781,11 @@
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Weight')" />
 				</arco-dd:hasMeasurementType>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/',WoodSample, '-', 'weight', '-', arco-fn:extract-value(./DBXP))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(./DBXP))" />
 				</arco-dd:hasValue>
+				<mu:hasMeasurementUnit>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(./DBXP))" />
+				</mu:hasMeasurementUnit>
 			</rdf:Description>
 		</xsl:if>				
 		<!-- Shape as individual -->
@@ -4154,7 +4172,7 @@
 	<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIT">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"
-				select="concat($NS, 'Value/', $itemURI, '-', 'temperature', '-', arco-fn:extract-value(record/metadata/schede/BNB/LR/LRI/LRIT))" />
+				select="concat($NS, 'Value/', arco-fn:extract-value(record/metadata/schede/BNB/LR/LRI/LRIT))" />
 			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="arco-fn:extract-value(record/metadata/schede/BNB/LR/LRI/LRIT)" />
@@ -4172,7 +4190,7 @@
 	</xsl:if>	
 	<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIO">
 		<rdf:Description>
-			<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-', 'depth', '-', arco-fn:extract-value(record/metadata/schede/BNB/LR/LRI/LRIO))" />
+			<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:extract-value(record/metadata/schede/BNB/LR/LRI/LRIO))" />
 			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="arco-fn:extract-value(record/metadata/schede/BNB/LR/LRI/LRIO)" />
@@ -4186,15 +4204,12 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="arco-fn:extract-value(record/metadata/schede/BNB/LR/LRI/LRIO)" />
 			</l0:name>
-			<mu:hasMeasurementUnit>
-				<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(record/metadata/schede/BNB/LR/LRI/LRIO))" />
-			</mu:hasMeasurementUnit>
 		</rdf:Description>
 	</xsl:if>
 	<xsl:for-each select="record/metadata/schede/BNB/DB/DBX/DBXA">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"
-				select="concat($NS, 'Value/', $itemURI, '-', 'height', '-', arco-fn:extract-value(.))" />
+				select="concat($NS, 'Value/', arco-fn:extract-value(.))" />
 			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="arco-fn:extract-value(.)" />
@@ -4208,15 +4223,12 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="arco-fn:extract-value(.)" />
 			</l0:name>
-			<mu:hasMeasurementUnit>
-				<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(.))" />
-			</mu:hasMeasurementUnit>
 		</rdf:Description>
 	</xsl:for-each>
 	<xsl:for-each select="record/metadata/schede/BNB/DB/DBX/DBXL">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"
-				select="concat($NS, 'Value/', $itemURI, '-', 'width', '-', arco-fn:extract-value(.))" />
+				select="concat($NS, 'Value/', arco-fn:extract-value(.))" />
 			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="arco-fn:extract-value(.)" />
@@ -4230,15 +4242,12 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="arco-fn:extract-value(.)" />
 			</l0:name>
-			<mu:hasMeasurementUnit>
-				<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(.))" />
-			</mu:hasMeasurementUnit>
 		</rdf:Description>
 	</xsl:for-each>		
 	<xsl:for-each select="record/metadata/schede/BNB/DB/DBX/DBXN">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"
-				select="concat($NS, 'Value/', $itemURI, '-', 'length', '-', arco-fn:extract-value(.))" />
+				select="concat($NS, 'Value/', arco-fn:extract-value(.))" />
 			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="arco-fn:extract-value(.)" />
@@ -4252,15 +4261,12 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="arco-fn:extract-value(.)" />
 			</l0:name>
-			<mu:hasMeasurementUnit>
-			<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(.))" />
-			</mu:hasMeasurementUnit>
 		</rdf:Description>
 	</xsl:for-each>			
 	<xsl:for-each select="record/metadata/schede/BNB/DB/DBX/DBXD">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"
-				select="concat($NS, 'Value/', $itemURI, '-', 'diameter', '-', arco-fn:extract-value(.))" />
+				select="concat($NS, 'Value/', arco-fn:extract-value(.))" />
 			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="arco-fn:extract-value(.)" />
@@ -4274,15 +4280,12 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="arco-fn:extract-value(.)" />
 			</l0:name>
-			<mu:hasMeasurementUnit>
-			<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(.))" />
-			</mu:hasMeasurementUnit>
 		</rdf:Description>
 	</xsl:for-each>		
 	<xsl:for-each select="record/metadata/schede/BNB/DB/DBX/DBXP">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"
-				select="concat($NS, 'Value/', $itemURI, '-', 'wheight', '-', arco-fn:extract-value(.))" />
+				select="concat($NS, 'Value/', arco-fn:extract-value(.))" />
 			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="arco-fn:extract-value(.)" />
@@ -4296,9 +4299,6 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="arco-fn:extract-value(.)" />
 			</l0:name>
-			<mu:hasMeasurementUnit>
-				<xsl:attribute name="rdf:resource"	select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(.))" />
-			</mu:hasMeasurementUnit>
 		</rdf:Description>
 	</xsl:for-each>		
 	<!-- Agent as individual -->

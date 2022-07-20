@@ -64,7 +64,7 @@
 	xmlns:ar-HistoricOrArtisticProperty="https://w3id.org/arco/resource/HistoricOrArtisticProperty/"
 	xmlns:ar-CulturalPropertyCataloguingCategory="https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/"
 	xmlns:ar-RelatedWorkSituation="https://w3id.org/arco/resource/RelatedWorkSituation/"
-	xmlns:ar-CulturalEntityTechnicalStatus="https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/"
+	xmlns:ar-TechnicalStatus="https://w3id.org/arco/resource/TechnicalStatus/"
 	xmlns:ar-Value="https://w3id.org/arco/resource/Value/"
 	xmlns:ar-PreferredAuthorshipAttribution="https://w3id.org/arco/resource/PreferredAuthorshipAttribution/"
 	xmlns:ar-CatalogueRecordOA="https://w3id.org/arco/resource/CatalogueRecordOA/"
@@ -640,9 +640,19 @@
 					<xsl:value-of select="concat('Misura delle fondazioni ',  position(), ': ', (.))" />
 				</l0:name>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Foundation-', (.))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(.))" />
 				</arco-dd:hasValue>
 			</rdf:Description>	
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(.))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="." />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="." />
+				</l0:name>
+			</rdf:Description>
 		</xsl:for-each>
 		<!-- Material as individual -->
 		<xsl:for-each select="record/metadata/schede/*/DA/FNS/FNSM">
@@ -866,8 +876,18 @@
 					<xsl:value-of select="concat('Misura delle strutture verticali ',  position(), ': ', (./ELEA))" />
 				</l0:name>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/VerticalElement-', (./ELEA))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(./ELEA))" />
 				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(./ELEA))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="./ELEA" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="./ELEA" />
+				</l0:name>
 			</rdf:Description>
 		</xsl:if>	
 		</xsl:for-each>

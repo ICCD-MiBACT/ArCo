@@ -66,7 +66,7 @@
 	xmlns:ar-HistoricOrArtisticProperty="https://w3id.org/arco/resource/HistoricOrArtisticProperty/"
 	xmlns:ar-CulturalPropertyCataloguingCategory="https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/"
 	xmlns:ar-RelatedWorkSituation="https://w3id.org/arco/resource/RelatedWorkSituation/"
-	xmlns:ar-CulturalEntityTechnicalStatus="https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/"
+	xmlns:ar-TechnicalStatus="https://w3id.org/arco/resource/TechnicalStatus/"
 	xmlns:ar-Value="https://w3id.org/arco/resource/Value/"
 	xmlns:ar-PreferredAuthorshipAttribution="https://w3id.org/arco/resource/PreferredAuthorshipAttribution/"
 	xmlns:ar-CatalogueRecordOA="https://w3id.org/arco/resource/CatalogueRecordOA/"
@@ -4580,12 +4580,12 @@
 					</arco-dd:hasMeasurementType>
 					<!-- has value -->
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/AudioRecording-duration-',  arco-fn:urify(normalize-space(record/metadata/schede/*/DU/DUU)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/',  arco-fn:urify(normalize-space(record/metadata/schede/*/DU/DUU)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<!-- Value -->
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/AudioRecording-duration-',  arco-fn:urify(normalize-space(record/metadata/schede/*/DU/DUU)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/',  arco-fn:urify(normalize-space(record/metadata/schede/*/DU/DUU)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/*/DU/DUU" />
@@ -5187,7 +5187,7 @@
 							</arco-dd:hasValue>
 						</rdf:Description>
 						<rdf:Description>
-							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/StorageMedium-frequency-', arco-fn:urify(normalize-space(.)))" />
+							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
 							<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 							<rdfs:label>
 								<xsl:value-of select="." />
@@ -5217,11 +5217,11 @@
 								<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'AudioRecordingSpeed')" />
 							</arco-dd:hasMeasurementType>
 							<arco-dd:hasValue>
-								<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/StorageMedium-audio-recording-speed-', arco-fn:urify(normalize-space(.)))" />
+								<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
 							</arco-dd:hasValue>
 						</rdf:Description>
 						<rdf:Description>
-							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/StorageMedium-audio-recording-speed-', arco-fn:urify(normalize-space(.)))" />
+							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
 							<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 							<rdfs:label>
 								<xsl:value-of select="." />
@@ -6433,11 +6433,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Duration')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Recording-duration-', arco-fn:urify(record/metadata/schede/*/DV/DVU))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DV/DVU))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/Recording-duration-', arco-fn:urify(record/metadata/schede/*/DV/DVU))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DV/DVU))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/*/DV/DVU" />
@@ -8124,11 +8124,11 @@
 							<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'PhotoSize')" />
 						</arco-dd:hasMeasurementType>
 						<arco-dd:hasValue>
-							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFME))" />
+							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFME))" />
 						</arco-dd:hasValue>
 					</rdf:Description>
 					<rdf:Description>
-						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFME))" />
+						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFME))" />
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 						<rdfs:label>
 							<xsl:value-of select="record/metadata/schede/*/DF/DFM/DFME" />
@@ -8158,11 +8158,11 @@
 							<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'PhotoSize')" />
 						</arco-dd:hasMeasurementType>
 						<arco-dd:hasValue>
-							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFMO))" />
+							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFMO))" />
 						</arco-dd:hasValue>
 					</rdf:Description>
 					<rdf:Description>
-						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFMO))" />
+						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFMO))" />
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 						<rdfs:label>
 							<xsl:value-of select="record/metadata/schede/*/DF/DFM/DFMO" />
@@ -8192,11 +8192,11 @@
 							<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'PhotoSize')" />
 						</arco-dd:hasMeasurementType>
 						<arco-dd:hasValue>
-							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFMG))" />
+							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFMG))" />
 						</arco-dd:hasValue>
 					</rdf:Description>
 					<rdf:Description>
-						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFMG))" />
+						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFMG))" />
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 						<rdfs:label>
 							<xsl:value-of select="record/metadata/schede/*/DF/DFM/DFMG" />
@@ -8255,11 +8255,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'PhotoSize')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(record/metadata/schede/*/DF/DFC/DFCF))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFC/DFCF))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(record/metadata/schede/*/DF/DFC/DFCF))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFC/DFCF))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/*/DF/DFC/DFCF" />
@@ -8277,7 +8277,7 @@
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -8297,6 +8297,9 @@
 		          			<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/*/DF/DFC/DFCX)))" />
 						</xsl:attribute>
 					</arco-dd:includesTechnicalCharacteristic>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
 				</rdf:Description>
 				<!-- Technical characteristic as an individual -->
 				<rdf:Description>
@@ -8328,7 +8331,7 @@
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -8348,6 +8351,9 @@
 		          			<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/*/DF/DFX)))" />
 						</xsl:attribute>
 					</arco-dd:includesTechnicalCharacteristic>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
 				</rdf:Description>
 				<!-- Technical characteristic as an individual -->
 				<rdf:Description>
@@ -9570,11 +9576,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Duration')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Recording-duration-', arco-fn:urify(./AIU))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(./AIU))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/Recording-duration-', arco-fn:urify(./AIU))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(./AIU))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./AIU" />
@@ -9645,11 +9651,11 @@
 								<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Frequency')" />
 							</arco-dd:hasMeasurementType>
 							<arco-dd:hasValue>
-								<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/StorageMedium-frequency-', arco-fn:urify(normalize-space(.)))" />
+								<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
 							</arco-dd:hasValue>
 						</rdf:Description>
 						<rdf:Description>
-							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/StorageMedium-frequency-', arco-fn:urify(normalize-space(.)))" />
+							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
 							<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 							<rdfs:label>
 								<xsl:value-of select="." />
@@ -9679,11 +9685,11 @@
 								<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'AudioRecordingSpeed')" />
 							</arco-dd:hasMeasurementType>
 							<arco-dd:hasValue>
-								<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/StorageMedium-audio-recording-speed-', arco-fn:urify(normalize-space(.)))" />
+								<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
 							</arco-dd:hasValue>
 						</rdf:Description>
 						<rdf:Description>
-							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/StorageMedium-audio-recording-speed-', arco-fn:urify(normalize-space(.)))" />
+							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
 							<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 							<rdfs:label>
 								<xsl:value-of select="." />
@@ -9756,11 +9762,11 @@
 								<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Frequency')" />
 							</arco-dd:hasMeasurementType>
 							<arco-dd:hasValue>
-								<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/StorageMedium-frequency-', arco-fn:urify(normalize-space(.)))" />
+								<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
 							</arco-dd:hasValue>
 						</rdf:Description>
 						<rdf:Description>
-							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/StorageMedium-frequency-', arco-fn:urify(normalize-space(.)))" />
+							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
 							<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 							<rdfs:label>
 								<xsl:value-of select="." />
@@ -9790,11 +9796,11 @@
 								<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'AudioRecordingSpeed')" />
 							</arco-dd:hasMeasurementType>
 							<arco-dd:hasValue>
-								<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/StorageMedium-audio-recording-speed-', arco-fn:urify(normalize-space(.)))" />
+								<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
 							</arco-dd:hasValue>
 						</rdf:Description>
 						<rdf:Description>
-							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/StorageMedium-audio-recording-speed-', arco-fn:urify(normalize-space(.)))" />
+							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
 							<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 							<rdfs:label>
 								<xsl:value-of select="." />
@@ -12824,11 +12830,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Duration')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Recording-duration-', arco-fn:urify(./VIU))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(./VIU))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/Recording-duration-', arco-fn:urify(./VIU))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(./VIU))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./VIU" />
@@ -16160,11 +16166,11 @@
 							<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'PhotoSize')" />
 						</arco-dd:hasMeasurementType>
 						<arco-dd:hasValue>
-							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(./FIM/FIME))" />
+							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(./FIM/FIME))" />
 						</arco-dd:hasValue>
 					</rdf:Description>
 					<rdf:Description>
-						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(./FIM/FIME))" />
+						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(./FIM/FIME))" />
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 						<rdfs:label>
 							<xsl:value-of select="./FIM/FIME" />
@@ -16194,11 +16200,11 @@
 							<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'PhotoSize')" />
 						</arco-dd:hasMeasurementType>
 						<arco-dd:hasValue>
-							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(./FIM/FIMO))" />
+							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(./FIM/FIMO))" />
 						</arco-dd:hasValue>
 					</rdf:Description>
 					<rdf:Description>
-						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(./FIM/FIMO))" />
+						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(./FIM/FIMO))" />
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 						<rdfs:label>
 							<xsl:value-of select="./FIM/FIMO" />
@@ -16228,11 +16234,11 @@
 							<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'PhotoSize')" />
 						</arco-dd:hasMeasurementType>
 						<arco-dd:hasValue>
-							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(./FIM/FIMG))" />
+							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(./FIM/FIMG))" />
 						</arco-dd:hasValue>
 					</rdf:Description>
 					<rdf:Description>
-						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/Recording-photosize-', arco-fn:urify(./FIM/FIMG))" />
+						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(./FIM/FIMG))" />
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 						<rdfs:label>
 							<xsl:value-of select="./FIM/FIMG" />
@@ -16291,11 +16297,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'PhotoSize')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/IntegrativeRecording-photosize-', arco-fn:urify(./FIC/FICF))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(./FIC/FICF))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/IntegrativeRecording-photosize-', arco-fn:urify(./FIC/FICF))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(./FIC/FICF))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./FIC/FICF" />
@@ -16313,7 +16319,7 @@
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -16333,6 +16339,9 @@
 		          			<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./FIC/FICX)))" />
 						</xsl:attribute>
 					</arco-dd:includesTechnicalCharacteristic>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
 				</rdf:Description>
 				<!-- Technical characteristic as an individual -->
 				<rdf:Description>
@@ -16364,7 +16373,7 @@
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -16384,6 +16393,9 @@
 		          			<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./FIX)))" />
 						</xsl:attribute>
 					</arco-dd:includesTechnicalCharacteristic>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
 				</rdf:Description>
 				<!-- Technical characteristic as an individual -->
 				<rdf:Description>

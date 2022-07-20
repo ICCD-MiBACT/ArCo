@@ -65,7 +65,7 @@
 	xmlns:ar-HistoricOrArtisticProperty="https://w3id.org/arco/resource/HistoricOrArtisticProperty/"
 	xmlns:ar-CulturalPropertyCataloguingCategory="https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/"
 	xmlns:ar-RelatedWorkSituation="https://w3id.org/arco/resource/RelatedWorkSituation/"
-	xmlns:ar-CulturalEntityTechnicalStatus="https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/"
+	xmlns:ar-TechnicalStatus="https://w3id.org/arco/resource/TechnicalStatus/"
 	xmlns:ar-Value="https://w3id.org/arco/resource/Value/"
 	xmlns:ar-PreferredAuthorshipAttribution="https://w3id.org/arco/resource/PreferredAuthorshipAttribution/"
 	xmlns:ar-CatalogueRecordOA="https://w3id.org/arco/resource/CatalogueRecordOA/"
@@ -2710,11 +2710,11 @@
 							<xsl:value-of select="concat('Larghezza della fasciatura ',  position(), ': ', (./PRFA))" />
 						</l0:name>
 						<arco-dd:hasValue>
-							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', (./PRFA))" />
+							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(./PRFA))" />
 						</arco-dd:hasValue>
 					</rdf:Description>
 					<rdf:Description>
-						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', (./PRFA))" />
+						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(./PRFA))" />
 							<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 							<rdfs:label>
 								<xsl:value-of select="./PRFA" />
@@ -2741,11 +2741,11 @@
 							<xsl:value-of select="concat('Lunghezza della fasciatura ',  position(), ': ', (./PRFL))" />
 						</l0:name>
 						<arco-dd:hasValue>
-							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', (./PRFL))" />
+							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(./PRFL))" />
 						</arco-dd:hasValue>
 					</rdf:Description>
 					<rdf:Description>
-						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', (./PRFL))" />
+						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(./PRFL))" />
 							<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 							<rdfs:label>
 								<xsl:value-of select="./PRFL" />
@@ -2902,8 +2902,13 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', arco-fn:uncamelize(arco-fn:map-measure(lower-case(./VMCT))))" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', (./VMCV))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(./VMCV))" />
 					</arco-dd:hasValue>
+					<mu:hasMeasurementUnit>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'MeasurementUnit/', arco-fn:urify(normalize-space(./VMCU)))" />
+						</xsl:attribute>
+					</mu:hasMeasurementUnit>
 					<xsl:if test="./VMCD">
 						<arco-core:specifications>
 							<xsl:value-of select="normalize-space(./VMCD)" />
@@ -2916,7 +2921,7 @@
 					</xsl:if>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', (./VMCV))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(./VMCV))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./VMCV" />
@@ -2924,11 +2929,6 @@
 					<l0:name>
 						<xsl:value-of select="./VMCV" />
 					</l0:name>
-					<mu:hasMeasurementUnit>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'MeasurementUnit/', arco-fn:urify(normalize-space(./VMCU)))" />
-						</xsl:attribute>
-					</mu:hasMeasurementUnit>
 				</rdf:Description>
 			</xsl:if>
 			<xsl:if test="./VMCU">
@@ -2952,7 +2952,7 @@
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/PaleopathologySurvey'" />
+						<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/PaleopathologySurvey'" />
 					</xsl:attribute>
 				</rdf:type>
 				<rdfs:label xml:lang="en">
@@ -2982,14 +2982,14 @@
 					</arco-cd:hasBibliography>
 				</xsl:if>
 				<xsl:if test="./PTCD">
-					<arco-cd:diagnosis>
+					<arco-spe:diagnosis>
 						<xsl:value-of select="normalize-space(./PTCD)" />
-					</arco-cd:diagnosis>
+					</arco-spe:diagnosis>
 				</xsl:if>
 				<xsl:if test="./PTCI">
-					<arco-cd:refersToSurvey>
+					<arco-spe:refersToSurvey>
 						<xsl:value-of select="normalize-space(./PTCI)" />
-					</arco-cd:refersToSurvey>
+					</arco-spe:refersToSurvey>
 				</xsl:if>
 				<xsl:if test="./PTCN">
 					<arco-core:note>
@@ -3084,11 +3084,11 @@
 					</tiapit:atTime>
 				</xsl:if>
 				<xsl:for-each select="./INIL">
-					<arco-cd:hasActivityOperator>
+					<arco-lite:hasOperator>
 						<xsl:attribute name="rdf:resource">
 		              		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./INIL))" />
 						</xsl:attribute>
-					</arco-cd:hasActivityOperator>
+					</arco-lite:hasOperator>
 					<arco-core:hasAgentRole>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-survey-', position(), '-activity-operator')" />
@@ -3096,11 +3096,11 @@
 					</arco-core:hasAgentRole>
 				</xsl:for-each>
 				<xsl:for-each select="./INIO">
-					<arco-cd:hasActivityResponsible>
+					<arco-lite:hasResponsibleAgent>
 						<xsl:attribute name="rdf:resource">
 		              		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./INIO))" />
 						</xsl:attribute>
-					</arco-cd:hasActivityResponsible>
+					</arco-lite:hasResponsibleAgent>
 					<arco-core:hasAgentRole>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-survey-', position(), '-activity-responsible')" />
@@ -3178,7 +3178,7 @@
 						</l0:name>
 						<arco-core:hasRole>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Role/ActivityOperator')" />
+								<xsl:value-of select="concat($NS, 'Role/Operator')" />
 							</xsl:attribute>
 						</arco-core:hasRole>
 						<arco-core:hasAgent>
@@ -3190,7 +3190,7 @@
 					<!-- role of activity responsible as an individual -->
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'Role/ActivityOperator')" />
+							<xsl:value-of select="concat($NS, 'Role/Operator')" />
 						</xsl:attribute>
 						<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -3198,10 +3198,10 @@
 						</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="'Operatore dell''attività'" />
+							<xsl:value-of select="'Operatore'" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="'Activity Operator'" />
+							<xsl:value-of select="'Operator'" />
 						</rdfs:label>
 					</rdf:Description>
 					<!-- agent of activity responsible as an individual -->
@@ -3244,7 +3244,7 @@
 						</l0:name>
 						<arco-core:hasRole>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Role/ActivityResponsible')" />
+								<xsl:value-of select="concat($NS, 'Role/ResponsibleAgent')" />
 							</xsl:attribute>
 						</arco-core:hasRole>
 						<arco-core:hasAgent>
@@ -3256,7 +3256,7 @@
 					<!-- role of activity responsible as an individual -->
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'Role/ActivityResponsible')" />
+							<xsl:value-of select="concat($NS, 'Role/ResponsibleAgent')" />
 						</xsl:attribute>
 						<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -3264,10 +3264,10 @@
 						</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="'Responsabile dell''attività'" />
+							<xsl:value-of select="'Responsabile'" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="'Activity Responsible'" />
+							<xsl:value-of select="'Responsible agent'" />
 						</rdfs:label>
 					</rdf:Description>
 					<!-- agent of activity responsible as an individual -->

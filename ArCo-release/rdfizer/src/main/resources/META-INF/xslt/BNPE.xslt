@@ -65,7 +65,7 @@
 	xmlns:ar-HistoricOrArtisticProperty="https://w3id.org/arco/resource/HistoricOrArtisticProperty/"
 	xmlns:ar-CulturalPropertyCataloguingCategory="https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/"
 	xmlns:ar-RelatedWorkSituation="https://w3id.org/arco/resource/RelatedWorkSituation/"
-	xmlns:ar-CulturalEntityTechnicalStatus="https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/"
+	xmlns:ar-TechnicalStatus="https://w3id.org/arco/resource/TechnicalStatus/"
 	xmlns:ar-Value="https://w3id.org/arco/resource/Value/"
 	xmlns:ar-PreferredAuthorshipAttribution="https://w3id.org/arco/resource/PreferredAuthorshipAttribution/"
 	xmlns:ar-CatalogueRecordOA="https://w3id.org/arco/resource/CatalogueRecordOA/"
@@ -310,28 +310,28 @@
 			<xsl:if test="record/metadata/schede/BNPE/SR/SRC/SRCD">
 				<arco-dd:hasTechnicalStatus>
 					<xsl:attribute name="rdf:resource">
-		                <xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
+		                <xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
 	 				</xsl:attribute>
 				</arco-dd:hasTechnicalStatus>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNPE/SR/SRC/SRCM">
 				<arco-dd:hasTechnicalStatus>
 					<xsl:attribute name="rdf:resource">
-		                <xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
+		                <xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
 	 				</xsl:attribute>
 				</arco-dd:hasTechnicalStatus>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNPE/SR/SRC/SRCT">
 				<arco-dd:hasTechnicalStatus>
 					<xsl:attribute name="rdf:resource">
-		                <xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
+		                <xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
 	 				</xsl:attribute>
 				</arco-dd:hasTechnicalStatus>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNPE/SR/SRF/SRFC">
 				<arco-dd:hasTechnicalStatus>
 					<xsl:attribute name="rdf:resource">
-		                <xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
+		                <xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
 	 				</xsl:attribute>
 				</arco-dd:hasTechnicalStatus>
 			</xsl:if>
@@ -339,7 +339,7 @@
 				<xsl:if test="./RRC/RRCD or ./RRC/RRCM or ./RRC/RRCT or ./RRF/RRFC">
 					<arco-dd:hasTechnicalStatus>
 						<xsl:attribute name="rdf:resource">
-		    	            <xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-', position())" />
+		    	            <xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI, '-', position())" />
 	 					</xsl:attribute>
 					</arco-dd:hasTechnicalStatus>
 				</xsl:if>
@@ -1223,11 +1223,11 @@
 		<xsl:if test="record/metadata/schede/BNPE/SR/SRF/SRFC or record/metadata/schede/BNPE/SR/SRC/SRCD or record/metadata/schede/BNPE/SR/SRC/SRCM or record/metadata/schede/BNPE/SR/SRC/SRCT">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
+					<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
+						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 					</xsl:attribute>
 				</rdf:type>
 				<rdfs:label xml:lang="it">
@@ -1275,6 +1275,9 @@
 						<xsl:value-of select="normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFA)" />
 					</arco-core:note>
 				</xsl:if>
+				<arco-core:current>
+					<xsl:value-of select="true()" />
+				</arco-core:current>
 			</rdf:Description>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNPE/SR/SRF/SRFC">
@@ -1373,11 +1376,11 @@
 			<xsl:if test="./RRC/RRCD or ./RRC/RRCM or ./RRC/RRCT or ./RRF/RRFC">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-		    			<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-', position())" />
+		    			<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI, '-', position())" />
 	 				</xsl:attribute>
 	 				<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -1427,6 +1430,9 @@
 						</xsl:attribute>
 					</arco-core:involvesAgent>
 				</xsl:if>
+				<arco-core:current>
+					<xsl:value-of select="false()" />
+				</arco-core:current>
 				</rdf:Description>
 			</xsl:if>
 			<xsl:if test="./RRF/RRFC">
@@ -1568,9 +1574,9 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 				</l0:name>
-				<arco-dd:currentMeasurementCollection>
+				<arco-core:current>
 	            	<xsl:value-of select="true()" />
-	            </arco-dd:currentMeasurementCollection>
+	            </arco-core:current>
 				<xsl:if test="record/metadata/schede/BNPE/SR/SRG/SRGD">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
@@ -1676,11 +1682,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Density')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-density', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGD)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGD)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-density', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGD)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGD)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRG/SRGD" />
@@ -1710,11 +1716,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Cohesion')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-cohesion', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGS)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGS)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-cohesion', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGS)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGS)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRG/SRGS" />
@@ -1744,11 +1750,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Porosity')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-porosity', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGP)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGP)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-porosity', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGP)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGP)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRG/SRGP" />
@@ -1778,11 +1784,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'PrimaryPorosity')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-primary-porosity', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGA)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGA)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-primary-porosity', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGA)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGA)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRG/SRGA" />
@@ -1812,11 +1818,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'SecondaryPorosity')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-secondary-porosity', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGB)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGB)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-secondary-porosity', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGB)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGB)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRG/SRGB" />
@@ -1846,11 +1852,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'EffectivePorosity')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-effective-porosity', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGC)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGC)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-effective-porosity', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGC)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGC)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRG/SRGC" />
@@ -1880,11 +1886,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'PermeabilityCoefficient')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-permeability-coefficient', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGE)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGE)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-permeability-coefficient', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGE)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGE)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRG/SRGE" />
@@ -1914,11 +1920,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'ElectricalResistivity')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-electrical-resistivity', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGR)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGR)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-electrical-resistivity', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGR)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRG/SRGR)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRG/SRGR" />
@@ -1948,11 +1954,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Radioactivity')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-radioactivity', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFV)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFV)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-radioactivity', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFV)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFV)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRF/SRFV" />
@@ -1982,11 +1988,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'ColourIndex')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-colour-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFI)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFI)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-colour-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFI)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFI)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRF/SRFI" />
@@ -2016,11 +2022,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'NormativeMineralogy')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-normative-mineralogy', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRM/SRMN)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRM/SRMN)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-normative-mineralogy', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRM/SRMN)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRM/SRMN)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRM/SRMN" />
@@ -2050,11 +2056,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Paleomagnetism')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-paleomagnetism', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFP)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFP)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-paleomagnetism', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFP)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFP)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRF/SRFP" />
@@ -2088,9 +2094,9 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 				</l0:name>
-				<arco-dd:currentMeasurementCollection>
+				<arco-core:current>
 	            	<xsl:value-of select="false()" />
-	            </arco-dd:currentMeasurementCollection>
+	            </arco-core:current>
 	            <xsl:if test="./RRD/RRDA">
 		            <arco-core:involvesAgent>
 						<xsl:attribute name="rdf:resource">
@@ -2203,11 +2209,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Density')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-density', '-', arco-fn:urify(normalize-space(./RRG/RRGD)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGD)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-density', '-', arco-fn:urify(normalize-space(./RRG/RRGD)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGD)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./RRG/RRGD" />
@@ -2237,11 +2243,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Cohesion')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-cohesion', '-', arco-fn:urify(normalize-space(./RRG/RRGS)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGS)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-cohesion', '-', arco-fn:urify(normalize-space(./RRG/RRGS)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGS)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./RRG/RRGS" />
@@ -2271,11 +2277,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Porosity')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGP)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGP)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGP)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGP)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./RRG/RRGP" />
@@ -2305,11 +2311,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'PrimaryPorosity')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-primary-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGA)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGA)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-primary-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGA)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGA)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./RRG/RRGA" />
@@ -2339,11 +2345,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'SecondaryPorosity')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-secondary-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGB)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGB)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-secondary-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGB)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGB)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./RRG/RRGB" />
@@ -2373,11 +2379,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'EffectivePorosity')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-effective-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGC)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGC)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-effective-porosity', '-', arco-fn:urify(normalize-space(./RRG/RRGC)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGC)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./RRG/RRGC" />
@@ -2407,11 +2413,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'PermeabilityCoefficient')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-permeability-coefficient', '-', arco-fn:urify(normalize-space(./RRG/RRGE)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGE)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-permeability-coefficient', '-', arco-fn:urify(normalize-space(./RRG/RRGE)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGE)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./RRG/RRGE" />
@@ -2441,11 +2447,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'ElectricalResistivity')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-electrical-resistivity', '-', arco-fn:urify(normalize-space(./RRG/RRGR)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGR)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-electrical-resistivity', '-', arco-fn:urify(normalize-space(./RRG/RRGR)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRG/RRGR)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./RRG/RRGR" />
@@ -2475,11 +2481,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Radioactivity')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-radioactivity', '-', arco-fn:urify(normalize-space(./RRF/RRFV)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRF/RRFV)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-radioactivity', '-', arco-fn:urify(normalize-space(./RRF/RRFV)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRF/RRFV)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./RRF/RRFV" />
@@ -2509,11 +2515,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'ColourIndex')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-colour-index', '-', arco-fn:urify(normalize-space(./RRF/RRFI)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRF/RRFI)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-colour-index', '-', arco-fn:urify(normalize-space(./RRF/RRFI)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRF/RRFI)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./RRF/RRFI" />
@@ -2543,11 +2549,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'NormativeMineralogy')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-normative-mineralogy', '-', arco-fn:urify(normalize-space(./RRM/RRMN)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRM/RRMN)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-normative-mineralogy', '-', arco-fn:urify(normalize-space(./RRM/RRMN)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRM/RRMN)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./RRM/RRMN" />
@@ -2577,11 +2583,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Paleomagnetism')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-paleomagnetism', '-', arco-fn:urify(normalize-space(./RRF/RRFP)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRF/RRFP)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-paleomagnetism', '-', arco-fn:urify(normalize-space(./RRF/RRFP)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RRF/RRFP)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="./RRF/RRFP" />

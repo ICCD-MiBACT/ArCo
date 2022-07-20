@@ -65,7 +65,7 @@
 	xmlns:ar-HistoricOrArtisticProperty="https://w3id.org/arco/resource/HistoricOrArtisticProperty/"
 	xmlns:ar-CulturalPropertyCataloguingCategory="https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/"
 	xmlns:ar-RelatedWorkSituation="https://w3id.org/arco/resource/RelatedWorkSituation/"
-	xmlns:ar-CulturalEntityTechnicalStatus="https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/"
+	xmlns:ar-TechnicalStatus="https://w3id.org/arco/resource/TechnicalStatus/"
 	xmlns:ar-Value="https://w3id.org/arco/resource/Value/"
 	xmlns:ar-PreferredAuthorshipAttribution="https://w3id.org/arco/resource/PreferredAuthorshipAttribution/"
 	xmlns:ar-CatalogueRecordOA="https://w3id.org/arco/resource/CatalogueRecordOA/"
@@ -897,9 +897,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-dd:currentMeasurementCollection>
+			<arco-core:current>
             	<xsl:value-of select="true()" />
-            </arco-dd:currentMeasurementCollection>
+            </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDR">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -1309,9 +1309,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-dd:currentMeasurementCollection>
+			<arco-core:current>
             	<xsl:value-of select="true()" />
-            </arco-dd:currentMeasurementCollection>
+            </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPO/SPOB">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -1347,11 +1347,11 @@
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'delta18O')" />
 				</arco-dd:hasMeasurementType>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-delta-18-o', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPO/SPOB)))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPO/SPOB)))" />
 				</arco-dd:hasValue>
 			</rdf:Description>
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-delta-18-o', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPO/SPOB)))" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPO/SPOB)))" />
 				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 				<rdfs:label>
 					<xsl:value-of select="record/metadata/schede/BNPL/SP/SPO/SPOB" />
@@ -1381,11 +1381,11 @@
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'delta17O')" />
 				</arco-dd:hasMeasurementType>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-delta-17-o', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPO/SPOA)))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPO/SPOA)))" />
 				</arco-dd:hasValue>
 			</rdf:Description>
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-delta-17-o', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPO/SPOA)))" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPO/SPOA)))" />
 				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 				<rdfs:label>
 					<xsl:value-of select="record/metadata/schede/BNPL/SP/SPO/SPOA" />
@@ -1418,9 +1418,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-dd:currentMeasurementCollection>
+			<arco-core:current>
             	<xsl:value-of select="true()" />
-            </arco-dd:currentMeasurementCollection>
+            </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPC/SPCS">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -1449,11 +1449,11 @@
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'ShockStage')" />
 				</arco-dd:hasMeasurementType>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-shok-stage', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPC/SPCS)))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPC/SPCS)))" />
 				</arco-dd:hasValue>
 			</rdf:Description>
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-shok-stage', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPC/SPCS)))" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPC/SPCS)))" />
 				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 				<rdfs:label>
 					<xsl:value-of select="record/metadata/schede/BNPL/SP/SPC/SPCS" />
@@ -1487,9 +1487,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-dd:currentMeasurementCollection>
+			<arco-core:current>
             	<xsl:value-of select="true()" />
-            </arco-dd:currentMeasurementCollection>
+            </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPN/SPNP">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -1519,11 +1519,11 @@
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotatove-description/', 'Weight')" />
 			</arco-dd:hasMeasurementType>
 			<arco-dd:hasValue>
-				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNP)))" />
+				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNP)))" />
 			</arco-dd:hasValue>
 		</rdf:Description>
 		<rdf:Description>
-			<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNP)))" />
+			<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNP)))" />
 			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 			<rdfs:label>
 				<xsl:value-of select="record/metadata/schede/BNPL/SP/SPN/SPNP" />
@@ -1556,9 +1556,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-dd:currentMeasurementCollection>
+			<arco-core:current>
             	<xsl:value-of select="false()" />
-            </arco-dd:currentMeasurementCollection>
+            </arco-core:current>
 			<xsl:if test="./RPOB">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -1594,11 +1594,11 @@
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'delta18O')" />
 				</arco-dd:hasMeasurementType>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-delta-18-o', '-', arco-fn:urify(normalize-space(./RPOB)))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RPOB)))" />
 				</arco-dd:hasValue>
 			</rdf:Description>
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-delta-18-o', '-', arco-fn:urify(normalize-space(./RPOB)))" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RPOB)))" />
 				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 				<rdfs:label>
 					<xsl:value-of select="./RPOB" />
@@ -1628,11 +1628,11 @@
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'delta17O')" />
 				</arco-dd:hasMeasurementType>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-delta-17-o', '-', arco-fn:urify(normalize-space(./RPOA)))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RPOA)))" />
 				</arco-dd:hasValue>
 			</rdf:Description>
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-delta-17-o', '-', arco-fn:urify(normalize-space(./RPOA)))" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RPOA)))" />
 				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 				<rdfs:label>
 					<xsl:value-of select="./RPOA" />
@@ -1665,9 +1665,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-dd:currentMeasurementCollection>
+			<arco-core:current>
             	<xsl:value-of select="false()" />
-            </arco-dd:currentMeasurementCollection>
+            </arco-core:current>
 			<xsl:if test=".">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -1696,11 +1696,11 @@
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'ShockStage')" />
 				</arco-dd:hasMeasurementType>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-shok-stage', '-', arco-fn:urify(normalize-space(.)))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
 				</arco-dd:hasValue>
 			</rdf:Description>
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-shok-stage', '-', arco-fn:urify(normalize-space(.)))" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
 				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 				<rdfs:label>
 					<xsl:value-of select="." />
@@ -1735,9 +1735,9 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-dd:currentMeasurementCollection>
+			<arco-core:current>
             	<xsl:value-of select="true()" />
-            </arco-dd:currentMeasurementCollection>
+            </arco-core:current>
 			<xsl:if test=".">
 				<arco-dd:hasMeasurement>
 					<xsl:attribute name="rdf:resource">
@@ -1766,11 +1766,11 @@
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotatove-description/', 'Weight')" />
 				</arco-dd:hasMeasurementType>
 				<arco-dd:hasValue>
-					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-weight', '-', arco-fn:urify(normalize-space(./RPN/RPNP)))" />
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RPN/RPNP)))" />
 				</arco-dd:hasValue>
 			</rdf:Description>
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-weight', '-', arco-fn:urify(normalize-space(./RPN/RPNP)))" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RPN/RPNP)))" />
 				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 				<rdfs:label>
 					<xsl:value-of select="./RPN/RPNP" />
@@ -2035,11 +2035,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotatove-description/', 'Weight')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-typespecimen-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNP)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-typespecimen-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNP)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-typespecimen-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNP)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-typespecimen-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNP)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPL/SP/SPN/SPNP" />
@@ -2101,11 +2101,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotatove-description/', 'Weight')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNW)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNW)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNW)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNW)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPL/SP/SPN/SPNW" />
@@ -2306,11 +2306,11 @@
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotatove-description/', 'Weight')" />
 					</arco-dd:hasMeasurementType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-main-mass-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNK)))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-main-mass-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNK)))" />
 					</arco-dd:hasValue>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-main-mass-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNK)))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-main-mass-weight', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNK)))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/BNPL/SP/SPN/SPNK" />
