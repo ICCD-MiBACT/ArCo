@@ -3539,6 +3539,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/diagnosis -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/diagnosis"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/fallDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/fallDate">
@@ -3854,6 +3860,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMF/SMFR</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/refersToSurveys -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/refersToSurveys"/>
     
 
 
@@ -6313,6 +6325,14 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAF</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/PaleopatologySurvey -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PaleopatologySurvey">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
     </owl:Class>
     
 

@@ -251,9 +251,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha responsabile di modulo di approfondimento</rdfs:label>
         <rdfs:label xml:lang="en">has additional form responsible agent</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPE</iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
     </owl:ObjectProperty>
     
 
@@ -346,8 +348,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha agente coinvolto nella catalogazione</rdfs:label>
         <rdfs:label xml:lang="en">has cataloguing agent</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
     </owl:ObjectProperty>
     
 
@@ -387,6 +391,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRecordResponsibleAgent"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
     </owl:ObjectProperty>
     
 
@@ -402,9 +407,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha operatore di trascrizione per informatizzazione</rdfs:label>
         <rdfs:label xml:lang="en">has digital transcription operator</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/RVM/RVMN</iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOperator"/>
     </owl:ObjectProperty>
     
 
@@ -420,9 +427,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha ente o soggetto responsabile di trascrizione per informatizzazione</rdfs:label>
         <rdfs:label xml:lang="en">has digital transcription responsible agent</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/RVM/RVME</iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
     </owl:ObjectProperty>
     
 
@@ -458,9 +467,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha funzionario responsabile</rdfs:label>
         <rdfs:label xml:lang="en">has official in charge</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/FUR</iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOfficialInCharge"/>
     </owl:ObjectProperty>
     
 
@@ -532,9 +543,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha responsabile ricerca e redazione</rdfs:label>
         <rdfs:label xml:lang="en">has responsible research and compilation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/CMP/CMPN</iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation"/>
     </owl:ObjectProperty>
     
 
@@ -550,9 +563,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha referente verifica scientifica</rdfs:label>
         <rdfs:label xml:lang="en">has scientific director</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/RSR</iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasScientificDirector"/>
     </owl:ObjectProperty>
     
 
@@ -568,9 +583,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha funzionario responsabile di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update official in charge</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGF</iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOfficialInCharge"/>
     </owl:ObjectProperty>
     
 
@@ -586,9 +603,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha ente o soggetto responsabile di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update responsible agency or person</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGE</iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
     </owl:ObjectProperty>
     
 
@@ -604,9 +623,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha responsabile di ricerca e redazione di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update responsible research and compilation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGN</iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation"/>
     </owl:ObjectProperty>
     
 
@@ -622,9 +643,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha referente verifica scientifica di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update scientific revisor</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGR</iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasScientificDirector"/>
     </owl:ObjectProperty>
     
 
@@ -657,8 +680,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is additional form responsible agent of</rdfs:label>
         <rdfs:label xml:lang="it">è responsabile di modulo di approfondimento</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
     </owl:ObjectProperty>
     
 
@@ -739,8 +764,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is cataloguing agent of</rdfs:label>
         <rdfs:label xml:lang="it">è agente coinvolto nella catalogazione di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCataloguingAgentOf"/>
     </owl:ObjectProperty>
     
 
@@ -808,8 +835,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is digital transcription operator of</rdfs:label>
         <rdfs:label xml:lang="it">è operatore di trascrizione per informatizzazione di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOperatorOf"/>
     </owl:ObjectProperty>
     
 
@@ -825,8 +854,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is digital transcription responsible agent of</rdfs:label>
         <rdfs:label xml:lang="it">è ente o soggetto responsabile di trascrizione per informatizzazione di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
     </owl:ObjectProperty>
     
 
@@ -861,8 +892,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is official in charge of</rdfs:label>
         <rdfs:label xml:lang="it">è funzionario responsabile di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOfficialInChargeOf"/>
     </owl:ObjectProperty>
     
 
@@ -984,8 +1017,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is responsible research and compilation of</rdfs:label>
         <rdfs:label xml:lang="it">è responsabile ricerca e redazione di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleResearchAndCompilationOf"/>
     </owl:ObjectProperty>
     
 
@@ -1001,8 +1036,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is scientific director of</rdfs:label>
         <rdfs:label xml:lang="it">è referente verifica scientifica di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isScientificDirectorOf"/>
     </owl:ObjectProperty>
     
 
@@ -1018,8 +1055,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is update official in charge of</rdfs:label>
         <rdfs:label xml:lang="it">è funzionario responsabile di aggiornamento di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOfficialInChargeOf"/>
     </owl:ObjectProperty>
     
 
@@ -1035,8 +1074,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is update responsible agent of</rdfs:label>
         <rdfs:label xml:lang="it">è ente o soggetto responsabile di aggiornamento di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
     </owl:ObjectProperty>
     
 
@@ -1052,8 +1093,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is update responsible research and compilation of</rdfs:label>
         <rdfs:label xml:lang="it">è responsabile di ricerca e redazione di aggiornamento di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleResearchAndCompilationOf"/>
     </owl:ObjectProperty>
     
 
@@ -1069,8 +1112,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is update scientific revisor of</rdfs:label>
         <rdfs:label xml:lang="it">è referente verifica scientifica di aggiornamento di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isScientificDirectorOf"/>
     </owl:ObjectProperty>
     
 
@@ -2128,12 +2173,6 @@ resource:CatalogueRecordS/0500212038
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCataloguingAgent"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasImmediatePreviousVersion"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
             </owl:Restriction>
@@ -2162,6 +2201,19 @@ resource:CatalogueRecordS/0500212038
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Rappresenta una versione (relativa a operazioni di redazione, aggiornamento, revisione) di una scheda di catalogo, cioè un modello descrittivo che raccoglie in modo organizzato le informazioni sui beni.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a version (after creation, editing, updating) of a catalogue record on a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
@@ -2170,6 +2222,22 @@ resource:CatalogueRecordS/0500212038
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/CMP; CM/RVM; CM/AGG</iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di versione della scheda di catalogo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of the catalog record version</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">Catalogue record version type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di versione di scheda di catalogo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>CM/CMO, RVM, AGG</iccdNormTag>
     </owl:Class>
     
 
@@ -2421,6 +2489,22 @@ resource:CatalogueRecordS/0500212038
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/Compiling -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/Compiling">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/DigitalTranscription -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/DigitalTranscription">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/EpigraphyForm -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/EpigraphyForm">
@@ -2491,6 +2575,14 @@ resource:CatalogueRecordS/0500212038
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalFormType"/>
         <rdfs:label xml:lang="it">Modulo sull&apos;Unità Stratigrafica</rdfs:label>
         <rdfs:label xml:lang="en">Stratigraphic Unit form</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/Updating -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/Updating">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
     </owl:NamedIndividual>
     
 
