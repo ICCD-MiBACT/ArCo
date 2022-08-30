@@ -371,46 +371,10 @@
 						</xsl:attribute>
 					</arco-location:hasSoil>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/CA/GEO/GEOD">
-					<arco-location:geomorphologicalDescription>
-						<xsl:value-of select="record/metadata/schede/*/CA/GEO/GEOD" />
-					</arco-location:geomorphologicalDescription>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/CA/GEL/GELD">
-					<arco-location:geologicalDescription>
-						<xsl:value-of select="record/metadata/schede/*/CA/GEL/GELD" />
-					</arco-location:geologicalDescription>
-				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/CA/AGR">
 					<arco-core:description>
 						<xsl:value-of select="record/metadata/schede/*/CA/AGR" />
 					</arco-core:description>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/CA/GEL/GELC">
-					<arco-location:hasMap>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'GeologicalMap/', arco-fn:urify(normalize-space(record/metadata/schede/*/CA/GEL/GELC)))" />
-						</xsl:attribute>
-					</arco-location:hasMap>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/CA/PED">
-					<arco-location:pedologicalDescription>
-						<xsl:choose>
-							<xsl:when test="record/metadata/schede/*/CA/PED/PEDE">
-								<xsl:value-of select="concat(record/metadata/schede/*/CA/PED/PEDD, '. ', 'Esame dei campioni: ', record/metadata/schede/*/CA/PED/PEDE)" />
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:value-of select="record/metadata/schede/*/CA/PED/PEDD" />
-							</xsl:otherwise>
-						</xsl:choose>
-					</arco-location:pedologicalDescription>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/CA/PED/PEDC">
-					<arco-location:hasMap>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'PedologicalMap/', arco-fn:urify(normalize-space(record/metadata/schede/*/CA/PED/PEDC)))" />
-						</xsl:attribute>
-					</arco-location:hasMap>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/CA/CAS">
 					<arco-location:historicalEnvironmentContextDescription>
@@ -487,6 +451,42 @@
 							<xsl:value-of select="concat($NS, 'LandUseMap/', arco-fn:urify(normalize-space(record/metadata/schede/*/CA/USD/USDC)))" />
 						</xsl:attribute>
 					</arco-location:hasMap>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/CA/GEL/GELC">
+					<arco-location:hasMap>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'GeologicalMap/', arco-fn:urify(normalize-space(record/metadata/schede/*/CA/GEL/GELC)))" />
+						</xsl:attribute>
+					</arco-location:hasMap>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/CA/PED/PEDC">
+					<arco-location:hasMap>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'PedologicalMap/', arco-fn:urify(normalize-space(record/metadata/schede/*/CA/PED/PEDC)))" />
+						</xsl:attribute>
+					</arco-location:hasMap>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/CA/GEO/GEOD">
+					<arco-location:geomorphologicalDescription>
+						<xsl:value-of select="record/metadata/schede/*/CA/GEO/GEOD" />
+					</arco-location:geomorphologicalDescription>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/CA/GEL/GELD">
+					<arco-location:geologicalDescription>
+						<xsl:value-of select="record/metadata/schede/*/CA/GEL/GELD" />
+					</arco-location:geologicalDescription>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/CA/PED">
+					<arco-location:pedologicalDescription>
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/CA/PED/PEDE">
+								<xsl:value-of select="concat(record/metadata/schede/*/CA/PED/PEDD, '. ', 'Esame dei campioni: ', record/metadata/schede/*/CA/PED/PEDE)" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="record/metadata/schede/*/CA/PED/PEDD" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</arco-location:pedologicalDescription>
 				</xsl:if>
 			</rdf:Description>
 			<xsl:if test="record/metadata/schede/*/CA/USD/USDC">

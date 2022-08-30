@@ -2106,7 +2106,7 @@
 						<xsl:when test="./* and (not(./RSTP) or ./RSTP='intero bene' or ./RSTP='integrale' or ./RSTP='tutta' or ./RSTP='totale') or (starts-with(lower-case(normalize-space(./RSTP)), 'nr')) or (starts-with(lower-case(normalize-space(./RSTP)), 'n.r')) or (starts-with(lower-case(normalize-space(./RSTP)), 'intero')) or (starts-with(lower-case(normalize-space(./RSTP)), 'intera')) or (starts-with(lower-case(normalize-space(./RSTP)), 'esemplar'))">
 							<arco-cd:hasIntervention>
 								<xsl:choose>
-									<xsl:when test="contains(normalize-space(lower-case(./RSTI)), 'consolidamento') or contains(normalize-space(lower-case(./RSTI)), 'controllo microclimatico') or contains(normalize-space(lower-case(./RSTI)), 'trattamento biocida-disinfestazione') or contains(normalize-space(lower-case(./RSTI)), 'rimozione di elementi non originali') or contains(normalize-space(lower-case(./RSTI)), 'pulitura meccanica') or contains(normalize-space(lower-case(./RSTI)), 'pulitura chimica') or contains(normalize-space(lower-case(./RSTI)), 'protezione finale') or contains(normalize-space(lower-case(./RSTI)), 'riadesione parti') or contains(normalize-space(lower-case(./RSTI)), 'trattamento parti metalliche')">
+									<xsl:when test="contains(normalize-space(lower-case(./RSTI)), 'restaur') or contains(normalize-space(lower-case(./RSTI)), 'conservativi') or contains(normalize-space(lower-case(./RSTI)), 'conservative') or contains(normalize-space(lower-case(./RSTI)), 'conservativa') or contains(normalize-space(lower-case(./RSTI)), 'conservativo') or contains(normalize-space(lower-case(./RSTI)), 'consolidamento') or contains(normalize-space(lower-case(./RSTI)), 'controllo microclimatico') or contains(normalize-space(lower-case(./RSTI)), 'trattamento biocida-disinfestazione') or contains(normalize-space(lower-case(./RSTI)), 'rimozione di elementi non originali') or contains(normalize-space(lower-case(./RSTI)), 'pulitura meccanica') or contains(normalize-space(lower-case(./RSTI)), 'pulitura chimica') or contains(normalize-space(lower-case(./RSTI)), 'protezione finale') or contains(normalize-space(lower-case(./RSTI)), 'riadesione parti') or contains(normalize-space(lower-case(./RSTI)), 'trattamento parti metalliche')">
 										<xsl:attribute name="rdf:resource">
 											<xsl:value-of select="concat($NS, 'ConservationIntervention/', $itemURI, '-conservation-intervention-', position())" />
 										</xsl:attribute>
@@ -3430,6 +3430,13 @@
 							<xsl:value-of select="concat($NS, 'Copyright/', $itemURI, '-copyright-', position())" />
 						</xsl:attribute>
 					</arco-cd:hasCopyright>
+					<xsl:if test="./CPRN">
+						<arco-lite:hasCopyrightHolder>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./CPRN))" />
+							</xsl:attribute>
+						</arco-lite:hasCopyrightHolder>
+					</xsl:if>
 				</xsl:for-each>
 				<!-- dedication (DA/DDC) -->
 				<xsl:if test="record/metadata/schede/*/AU/DDC/*">
@@ -4017,16 +4024,11 @@
 				<!-- technical status - file format of photograph (F) -->
 				<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/F/MT/FVC/FVCF)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/F/MT/FVC/FVCF)), 'n.r'))">
 					<xsl:if test="record/metadata/schede/F/MT/FVC/FVCF">
-						<arco-dd:hasTechnicalStatus>
+						<arco-dd:hasFormat>
 							<xsl:attribute name="rdf:resource">
- 	                			<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+ 	                			<xsl:value-of select="concat($NS, 'Format/', arco-fn:urify(normalize-space(record/metadata/schede/F/MT/FVC/FVCF)))" />
  	                		</xsl:attribute>
-						</arco-dd:hasTechnicalStatus>
-						<arco-lite:hasFileFormat>
-							<xsl:attribute name="rdf:resource">
-		 	                	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/F/MT/FVC/FVCF)))" />
-		            		</xsl:attribute>
-						</arco-lite:hasFileFormat>
+						</arco-dd:hasFormat>
 					</xsl:if>
 				</xsl:if>
 				<!-- technical status - photo size of photograph (F) -->
@@ -4328,6 +4330,27 @@
 							</xsl:attribute>
 						</arco-dd:hasAccessory>
 					</xsl:for-each>
+				</xsl:if>
+				<xsl:if test="$sheetType='CA'" >
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/construction-description/Construction'" />
+						</xsl:attribute>
+					</rdf:type>
+				</xsl:if>
+				<xsl:if test="$sheetType='MA'" >
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/construction-description/Construction'" />
+						</xsl:attribute>
+					</rdf:type>
+				</xsl:if>
+				<xsl:if test="$sheetType='SI'" >
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/construction-description/Construction'" />
+						</xsl:attribute>
+					</rdf:type>
 				</xsl:if>
 			</rdf:Description>
 			<!-- Property related to cultural property -->
