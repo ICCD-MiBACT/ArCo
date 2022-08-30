@@ -183,6 +183,24 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/definesEligibleIntervention -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/definesEligibleIntervention">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isEligibleInterventionDefinedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/EligibleIntervention"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento urbanistico-territoriale all&apos;intervento ammesso dalla normativa specifica (es.: restauro/ manutenzione straordinaria).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a urban planning instrument to the eligible intervention (e.g.: conservation intervention/ exceptional maintenance).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha intervento ammesso</rdfs:label>
+        <rdfs:label xml:lang="en">has eligible intervention</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/STU/STUN</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasAcquisition -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAcquisition">
@@ -1241,16 +1259,8 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasEligibleIntervention">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isInterventionEligibleBy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/EligibleIntervention"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento urbanistico-territoriale all&apos;intervento ammesso dalla normativa specifica (es.: restauro/ manutenzione straordinaria).</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a urban planning instrument to the eligible intervention (e.g.: conservation intervention/ exceptional maintenance).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha intervento ammesso</rdfs:label>
-        <rdfs:label xml:lang="en">has eligible intervention</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/STU/STUN</a-cat:iccdNormTag>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/definesEligibleIntervention"/>
     </owl:ObjectProperty>
     
 
@@ -1424,9 +1434,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha formato</rdfs:label>
         <rdfs:label xml:lang="en">has format</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: DO/FTA/FTAF, DO/DRA/DRAF, DO/DNT/FNTR</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFormat"/>
     </owl:ObjectProperty>
     
 
@@ -1504,7 +1516,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasIntervention">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isInterventionOn"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Intervention"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale con un intervento, a fini conservativi o di altro tipo, che lo ha interessato.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural entity to a intervention on it, for conservational or other purposes.</rdfs:comment>
@@ -1736,6 +1748,16 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG. - RP/LGC/LGCO. LS/CSS/CSSP. - CS/CTS/CTSP</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasLicense -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasLicense">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isLicenseOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/License"/>
     </owl:ObjectProperty>
     
 
@@ -4066,6 +4088,22 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isEligibleInterventionDefinedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isEligibleInterventionDefinedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/EligibleIntervention"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha intervento ammesso&quot;, collega un intervento allo strumento urbanistico-territoriale che ammette quell&apos;intervento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property, inverse of &quot;has eligible intervention&quot;, relates an intervention to the urban planning instrument that finds eligible that intervention.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is intervention eligible by</rdfs:label>
+        <rdfs:label xml:lang="it">è intervento ammesso da</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isEntityInvolvedIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isEntityInvolvedIn">
@@ -4228,8 +4266,10 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is format of</rdfs:label>
         <rdfs:label xml:lang="it">è formato di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/isFormatOf"/>
     </owl:ObjectProperty>
     
 
@@ -4289,15 +4329,8 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <!-- https://w3id.org/arco/ontology/context-description/isInterventionEligibleBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isInterventionEligibleBy">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/EligibleIntervention"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument"/>
-        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha intervento ammesso&quot;, collega un intervento allo strumento urbanistico-territoriale che ammette quell&apos;intervento.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property, inverse of &quot;has eligible intervention&quot;, relates an intervention to the urban planning instrument that finds eligible that intervention.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is intervention eligible by</rdfs:label>
-        <rdfs:label xml:lang="it">è intervento ammesso da</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isEligibleInterventionDefinedBy"/>
     </owl:ObjectProperty>
     
 
@@ -4306,7 +4339,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isInterventionOn">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Intervention"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha intervento&quot;, collega un intervento, a fini conservativi o di altro tipo, che ha interessato un bene culturale, al bene stesso.</rdfs:comment>
         <rdfs:comment xml:lang="it">This property relates an intervention on a cultural property to that cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -4533,6 +4566,12 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isLicenseOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isLicenseOf"/>
     
 
 
@@ -6762,8 +6801,10 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:comment xml:lang="en">This property relates an entity to the uri of its graphic representation</rdfs:comment>
         <rdfs:label xml:lang="en">depiction</rdfs:label>
         <rdfs:label xml:lang="it">rappresentazione</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/depiction"/>
     </owl:DatatypeProperty>
     
 
@@ -6947,6 +6988,15 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/COL/COLV; UB/INP/INP/INPA; UB/STI</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/expired -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/expired">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Copyright"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -9274,20 +9324,20 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCopyrightHolder"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isCopyrightOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/expiryDate"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/expired"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta i diritti d&apos;autore detenuti da un agente su un oggetto, per esempio un bene culturale.</rdfs:comment>
@@ -9654,14 +9704,26 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLicense"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/License"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isDocumentationOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasFormat"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Format"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCopyright"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Copyright"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -9672,8 +9734,14 @@ resource:ArchivalSubseries/museo-civico-romano
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/documentationIdentifier"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/caption"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -9684,13 +9752,19 @@ resource:ArchivalSubseries/museo-civico-romano
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/rights"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/documentationLocation"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/specifications"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/documentationTitle"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/rights"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -9812,7 +9886,7 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Intervention"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isInterventionEligibleBy"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isEligibleInterventionDefinedBy"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -9859,9 +9933,11 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">Diritti d&apos;autore scaduti</rdfs:label>
         <rdfs:label xml:lang="en">Expired Copyright</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR (if CPRD = &apos;scaduti&apos; or &apos;diritti scaduti&apos; or &apos;in pubblico dominio&apos;)</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/expired"/>
     </owl:Class>
     
 
@@ -10081,6 +10157,7 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Format</rdfs:label>
         <rdfs:label xml:lang="it">Formato</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAF, DO/DRA/DRAF, DO/FNT/FNTR (+ DO/VDC/VDCP, DO/REG/REGP)</a-cat:iccdNormTag>
@@ -10284,26 +10361,8 @@ resource:PreferredAuthorshipAttribution/1200865600-1 a           cd:PreferredAut
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityOperator"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityResponsible"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivitySponsor"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isInterventionOn"/>
-                <owl:allValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -10326,13 +10385,7 @@ resource:PreferredAuthorshipAttribution/1200865600-1 a           cd:PreferredAut
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/description"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/specifications"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/framework"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -10598,6 +10651,14 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/LegalSituationType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <a-cat:iccdNormTag>TU/CDG/CDGG. Normativa BDM:  DU/DUZ/DUZG, DV/DVZ/DVZG, DF/DFZ/DFZG, AI/AIZ/AIZG,  VI/VIZ/VIZG, FI/FIZ/FIZG</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/License -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/License">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
     </owl:Class>
     
 
@@ -11702,8 +11763,10 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         <rdfs:comment xml:lang="it">Questa classe rappresenta le fonti e i documenti testuali editi e inediti relativi a un oggetto, per esempio a un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents source and document related to an object, e.g. a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Documentazione testuale</rdfs:label>
         <rdfs:label xml:lang="it">Fonti e documenti</rdfs:label>
         <rdfs:label xml:lang="en">Source and document</rdfs:label>
+        <rdfs:label xml:lang="en">Textual documentation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DO/FNT</a-cat:iccdNormTag>
@@ -12123,7 +12186,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasEligibleIntervention"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/definesEligibleIntervention"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/EligibleIntervention"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -13301,16 +13364,16 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 

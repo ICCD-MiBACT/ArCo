@@ -181,6 +181,8 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/hasConstructionSpace">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isConstructionSpaceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionSpace"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione ai suoi spazi</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a construction to its construction space</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -197,14 +199,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/hasCovering">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isCoveringOf"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/Construction"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/ConstructionPart"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/Covering"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al rivestimento  .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects an entity to a covering .</rdfs:comment>
@@ -223,15 +218,9 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/hasDesign">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isDesignOf"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/Construction"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/ConstructionSpace"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionDesign"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/Design"/>
+        <rdfs:comment>PN/PNT</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al design.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects an entity to a design .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -239,6 +228,16 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has design</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction-description/hasDesignedFunction -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/hasDesignedFunction">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isDeignedFunctionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Design"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
     </owl:ObjectProperty>
     
 
@@ -291,7 +290,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/hasLayout">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isLayoutOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Design"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/Layout"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il design allo schema iconografico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the design to the layout.</rdfs:comment>
@@ -355,11 +354,11 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/construction-description/hasPreviousConstructionOrElement -->
+    <!-- https://w3id.org/arco/ontology/construction-description/hasPreviousStructureOrElement -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/hasPreviousConstructionOrElement">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/hasPreviousStructureOrElement">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isPreviousConstructionOrElementOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isPreviousStructureOrElementOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
         <rdfs:comment xml:lang="en">This property relates a construction with its previous construction or element</rdfs:comment>
@@ -444,12 +443,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/construction-description/hasWaterDistributionType -->
+    <!-- https://w3id.org/arco/ontology/construction-description/hasWaterDistribution -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/hasWaterDistributionType">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isWaterDistributionTypeOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/hasWaterDistribution">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isWaterDistributionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterSystem"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterDistributionType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterDistribution"/>
         <rdfs:comment xml:lang="it">Questa proprietà collelga l&apos;impianto idrico al tipo di distribuzione idrica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a water system to the water distribution type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -516,6 +515,8 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isConstructionSpaceOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionSpace"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
         <rdfs:comment xml:lang="it">Questa propietà collega lo spazio alla costruzione di cui fa parte</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a construction space to its constrution</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -551,19 +552,21 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/construction-description/isDeignedFunctionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isDeignedFunctionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/Design"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/construction-description/isDesignOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isDesignOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionDesign"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/Construction"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/ConstructionSpace"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Design"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un progetto ad una costruzione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a design to a  construction.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -620,7 +623,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isLayoutOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Layout"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/Design"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega lo schema iconografico al progetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the layout to a design.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -675,9 +678,9 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/construction-description/isPreviousConstructionOrElementOf -->
+    <!-- https://w3id.org/arco/ontology/construction-description/isPreviousStructureOrElementOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isPreviousConstructionOrElementOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isPreviousStructureOrElementOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
@@ -721,7 +724,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isSoilOccupiedBy">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/laysOnSoil"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Soil"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il terreno ad una cosa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the soil to a thing.</rdfs:comment>
@@ -768,10 +771,10 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/construction-description/isWaterDistributionTypeOf -->
+    <!-- https://w3id.org/arco/ontology/construction-description/isWaterDistributionOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isWaterDistributionTypeOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterDistributionType"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isWaterDistributionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterDistribution"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterSystem"/>
         <rdfs:comment xml:lang="it">Questa proprietà collelga il tipo di distribuzione idrica all&apos;impianto idrico</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the water distribution type to a water system.</rdfs:comment>
@@ -806,7 +809,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/laysOnSoil">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Soil"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega le fondazioni al terreno.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the foundation to the soil.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -883,6 +886,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/construction-description/auxiliaryStructuralElement -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/auxiliaryStructuralElement">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/construction-description/differenceInHeight -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/differenceInHeight">
@@ -899,6 +911,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/construction-description/exterior -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/exterior">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/construction-description/fanlightPresence -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/fanlightPresence">
@@ -911,6 +932,15 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">presenza del sopraluce</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction-description/interior -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/interior">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -1058,10 +1088,22 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/construction-description/overlooking -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/overlooking">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Facade"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa propiretà indica l&apos;affaccio della facciata dell&apos;edificio che si sta descrivendo</rdfs:comment>
+        <rdfs:label xml:lang="it">affaccio</rdfs:label>
+        <rdfs:label xml:lang="en">overlooking</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/construction-description/refersToFloorOrLevel -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/refersToFloorOrLevel">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionDesign"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il piano o la quota (m., cm.) del livello a cui si riferisce la pianta che
 viene descritta.</rdfs:comment>
@@ -1071,14 +1113,16 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">riferimento a piano o quota</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>PN/PNT/PNTQ</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/arco/ontology/construction-description/scenographic -->
+    <!-- https://w3id.org/arco/ontology/construction-description/reinforcementElement -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/scenographic">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/reinforcementElement">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -1086,7 +1130,7 @@ viene descritta.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/construction-description/significantIconographicInformation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/significantIconographicInformation">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionDesign"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la presenza e il numero di eventuali elementi icnografici significativi.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents iconographic information about the construction design.</rdfs:comment>
@@ -1095,6 +1139,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">significant iconographic information</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>PN/PNT/PNTE</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1132,20 +1177,20 @@ viene descritta.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionElement"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMaterial"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasShape"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnique"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta gli elementi architettonici, sia strutturali sia non strutturali, che sono parte primaria della costruzione..</rdfs:comment>
@@ -1155,6 +1200,14 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Elemento architettonico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
     </owl:Class>
     
 
@@ -1200,12 +1253,6 @@ viene descritta.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/Building">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionSpace"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/Room"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/numberOfFloors"/>
@@ -1288,14 +1335,14 @@ viene descritta.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasCovering"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/Covering"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasDesign"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/Design"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasLayout"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/Layout"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasDesign"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/Design"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1317,40 +1364,6 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Costruzione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/construction-description/ConstructionDesign -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/ConstructionDesign">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasUseFunction"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/refersToFloorOrLevel"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/significantIconographicInformation"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta i principali caratteri del progetto di una costruzione, relative alla  sua forma e alla sua funzione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the main features of the design of a construction, referring to its shape and its function.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
-        <rdfs:label xml:lang="en">Construction design</rdfs:label>
-        <rdfs:label xml:lang="it">Progetto della costruzione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa A: PN/PNT/PNTQ;PNTE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1410,26 +1423,8 @@ viene descritta.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasDesign"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionDesign"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasInteriorSubdivision"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/InteriorSubdivision"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/numberOfFloors"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/numberOfRooms"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo spazio interno o esterno di una costruzione, eventualmente delimitato da elementi fisici e destinato a una determinata funzione.</rdfs:comment>
@@ -1450,20 +1445,26 @@ viene descritta.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasDesign"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/Design"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/CoveringType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasColour"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMaterial"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta i rivestimenti delle superfici interne ed esterne di una costruzione.</rdfs:comment>
@@ -1489,6 +1490,34 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di rivestimento</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction-description/Design -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/Design">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasDesignedFunction"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasLayout"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/Layout"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta i principali caratteri del design di una entità, relative alla  sua forma e alla sua funzione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the main features of the design of an entity, referring to its shape and its function.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
+        <rdfs:label xml:lang="en">Design</rdfs:label>
+        <rdfs:label xml:lang="it">Design</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa A: PN/PNT, normativa PG: MP/MPA (UseFunction: Scenographic), MP/MPT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1546,16 +1575,32 @@ viene descritta.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/construction-description/FenceOrGate -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/FenceOrGate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/FenceOrGateType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction-description/FenceOrGateType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/FenceOrGateType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/construction-description/Floor -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/Floor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionSpace"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/Room"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/numberOfRooms"/>
@@ -1667,7 +1712,7 @@ viene descritta.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/construction-description/FoundationType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/FoundationType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di fondazioni.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents type of the foundation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -1676,6 +1721,14 @@ viene descritta.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa A: FN/FNST;FNSQ</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction-description/Fountain -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/Fountain">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterElement"/>
     </owl:Class>
     
 
@@ -1720,7 +1773,7 @@ viene descritta.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/construction-description/HorizontalElementType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/HorizontalElementType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di elemento orizzonale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of an horizontal element.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -1790,7 +1843,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Schema iconografico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa A: PN/PNT/PNTS e PN/PNT/PNTF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: PN/PNT/PNTS e PN/PNT/PNTF. Normativa PG: MP/MPT/MPTS E MP/MPT/MPTF</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1995,7 +2048,7 @@ viene descritta.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/construction-description/RoofType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/RoofType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di copertura.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of a roof.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -2050,12 +2103,6 @@ viene descritta.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/Room">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionSpace"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionElement"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una stanza.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a room.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -2156,12 +2203,6 @@ viene descritta.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ConnectionElement"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasUseFunction"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/VerticalConnectionType"/>
             </owl:Restriction>
@@ -2204,7 +2245,7 @@ viene descritta.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/construction-description/VerticalConnectionType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/VerticalConnectionType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di connessione verticale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type od a vertical connection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -2242,7 +2283,7 @@ viene descritta.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/construction-description/VerticalElementType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/VerticalElementType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di elemento verticale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of a vertical element.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -2287,9 +2328,9 @@ viene descritta.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/construction-description/WaterDistributionType -->
+    <!-- https://w3id.org/arco/ontology/construction-description/WaterDistribution -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/WaterDistributionType">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/WaterDistribution">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di distribuzione idrica di un impianto idrico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the water distribution type of a water system.</rdfs:comment>
@@ -2307,6 +2348,30 @@ viene descritta.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/WaterElement">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDesignationInTime"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/DesignationInTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDesignationInTime"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/DesignationInTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterElementType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;elemento idrico di un impianto idrico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the water element of a water system.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -2315,6 +2380,14 @@ viene descritta.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa PG: FO/FOT</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction-description/WaterElementType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/WaterElementType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType"/>
     </owl:Class>
     
 
@@ -2337,8 +2410,8 @@ viene descritta.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasWaterDistributionType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterDistributionType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasWaterDistribution"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterDistribution"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2411,7 +2484,7 @@ viene descritta.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/construction-description/WindowType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/WindowType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di una finestra.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of a window.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
@@ -2588,14 +2661,6 @@ viene descritta.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/ConstructionDesign"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/InteriorSubdivision"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/Layout"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/CoveringType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/FoundationType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/HorizontalElementType"/>
@@ -2604,6 +2669,14 @@ viene descritta.</rdfs:comment>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/VerticalElementType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/WaterSystemType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/WindowType"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/Design"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/InteriorSubdivision"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/Layout"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

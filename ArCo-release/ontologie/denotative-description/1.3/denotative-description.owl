@@ -731,6 +731,24 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasFormat -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasFormat">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isFormatOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Format"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al formato</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to a format</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha formato</rdfs:label>
+        <rdfs:label xml:lang="en">has format</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose">
@@ -1967,6 +1985,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isFormatOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isFormatOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Format"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il formato ad un&apos;entità</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a format to an entity</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is format of</rdfs:label>
+        <rdfs:label xml:lang="it">è formato di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isFunctionalPurposeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isFunctionalPurposeOf">
@@ -3044,9 +3079,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">proposed intervention</rdfs:label>
         <rdfs:label xml:lang="it">proposte di interventi</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>CO/STP</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/proposedIntervention"/>
     </owl:DatatypeProperty>
     
 
@@ -3994,6 +4031,22 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Traversale 4.00: DA/ISE/ISET - Normative di versioni precedenti: DA/ISR/ISRT. Normativa BNB: SB/SBE/SBEC</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Format -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Format">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il formato (es.: jpeg, A0, pdf, audiocassetta, MP4).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+        <rdfs:label xml:lang="it">Formato</rdfs:label>
+        <rdfs:label xml:lang="en">This class represent the format (jpg, A0, pdf, audiocassetta, MP4)</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAF, DO/DRA/DRAF, DO/FNT/FNTR (+ DO/VDC/VDCP, DO/REG/REGP). ICCD Normativa F: MT/FVC/FVCF</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5158,6 +5211,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents the format used to write a digital resource on a data medium.</rdfs:comment>
         <rdfs:label xml:lang="en">File Format</rdfs:label>
         <rdfs:label xml:lang="it">Formato di compressione/estensione file</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: MT/FVC/FVCF</a-cat:iccdNormTag>
@@ -6122,8 +6176,8 @@ resource:MeasurementCollection/1200865132-1
         <a-cat:iccdNormTag>ICCD Normative OA, D, F, S: MT/FIL</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <a-cat:iccdNormTag>MT/FIL</a-cat:iccdNormTag>
-        <rdfs:label xml:lang="en">Filigree</rdfs:label>
         <rdfs:comment xml:lang="en">This individual represents the filigree of an artwork, painting, photography, print.</rdfs:comment>
+        <rdfs:label xml:lang="en">Filigree</rdfs:label>
     </rdf:Description>
     
 
