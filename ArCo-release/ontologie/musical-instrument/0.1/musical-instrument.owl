@@ -48,6 +48,12 @@
         <Class IRI="/MusicalInstrumentClass"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/MusicalNote"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/String"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/involvesAccompanyingInstrument"/>
     </Declaration>
     <Declaration>
@@ -57,7 +63,13 @@
         <ObjectProperty IRI="/isAccompanyingInstrumentInvolvedIn"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/isProducedByMusicalInstrument"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/isSoloInstrumentInvolvedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/producesMusicalNote"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/HSDefinition"/>
@@ -67,9 +79,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/HSNumber"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/AvailableNotes"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/Diapason"/>
@@ -82,9 +91,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/Tuning"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/VibratingLength"/>
     </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="a-dd:CommunicationMedium"/>
@@ -109,6 +115,13 @@
         <Class abbreviatedIRI="l0:Object"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/MusicalInstrument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/producesMusicalNote"/>
+            <Class IRI="/MusicalNote"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/MusicalInstrumentClass"/>
         <Class abbreviatedIRI="core:Concept"/>
     </SubClassOf>
@@ -119,10 +132,21 @@
             <Class IRI="/MusicalInstrument"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
-    <ClassAssertion>
-        <Class abbreviatedIRI="a-dd:TechnicalConcept"/>
-        <NamedIndividual IRI="/AvailableNotes"/>
-    </ClassAssertion>
+    <SubClassOf>
+        <Class IRI="/MusicalNote"/>
+        <Class abbreviatedIRI="l0:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/String"/>
+        <Class abbreviatedIRI="l0:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/String"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="a-dd:hasMeasurementCollection"/>
+            <Class abbreviatedIRI="a-dd:MeasurementCollection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
     <ClassAssertion>
         <Class abbreviatedIRI="a-dd:TechnicalConcept"/>
         <NamedIndividual IRI="/Diapason"/>
@@ -139,10 +163,6 @@
         <Class abbreviatedIRI="a-dd:TechnicalConcept"/>
         <NamedIndividual IRI="/Tuning"/>
     </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="a-dd:TechnicalConcept"/>
-        <NamedIndividual IRI="/VibratingLength"/>
-    </ClassAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="/involvesAccompanyingInstrument"/>
         <ObjectProperty IRI="/isAccompanyingInstrumentInvolvedIn"/>
@@ -151,12 +171,24 @@
         <ObjectProperty IRI="/involvesSoloInstrument"/>
         <ObjectProperty IRI="/isSoloInstrumentInvolvedIn"/>
     </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/isProducedByMusicalInstrument"/>
+        <ObjectProperty IRI="/producesMusicalNote"/>
+    </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/isAccompanyingInstrumentInvolvedIn"/>
         <Class IRI="/MusicalInstrument"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isProducedByMusicalInstrument"/>
+        <Class IRI="/MusicalNote"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="/isSoloInstrumentInvolvedIn"/>
+        <Class IRI="/MusicalInstrument"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/producesMusicalNote"/>
         <Class IRI="/MusicalInstrument"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
@@ -166,6 +198,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="/involvesSoloInstrument"/>
         <Class IRI="/MusicalInstrument"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isProducedByMusicalInstrument"/>
+        <Class IRI="/MusicalInstrument"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/producesMusicalNote"/>
+        <Class IRI="/MusicalNote"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="/HSNumber"/>
@@ -195,46 +235,6 @@
         <DataProperty IRI="/HSNumber"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/AvailableNotes</IRI>
-        <Literal xml:lang="it">Questo individuo rappresenta le note producibili da uno strumento musicale, dal grave all&apos;acuto.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/AvailableNotes</IRI>
-        <Literal xml:lang="en">This individual represents playable notes by a musical instrument, from low to high.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/AvailableNotes</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/AvailableNotes</IRI>
-        <Literal xml:lang="en">Available Notes</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/AvailableNotes</IRI>
-        <Literal xml:lang="it">Note producibili</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/AvailableNotes</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/AvailableNotes</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/AvailableNotes</IRI>
-        <Literal xml:lang="it">ICCD Normativa SM 4.00: AA/AAN</Literal>
-    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/Diapason</IRI>
@@ -537,6 +537,86 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/MusicalNote</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta una nota musicale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/MusicalNote</IRI>
+        <Literal xml:lang="en">This entity represents a musical note</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/MusicalNote</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MusicalNote</IRI>
+        <Literal xml:lang="en">Musical note</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MusicalNote</IRI>
+        <Literal xml:lang="it">Nota musicale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/MusicalNote</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/MusicalNote</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/MusicalNote</IRI>
+        <Literal>Normativa SM 4.00: AA/AAN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/String</IRI>
+        <Literal xml:lang="en">Normativa ICCD SM 4.00: AA/AAL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/String</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta la corda di uno strumento musicale cordofono</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/String</IRI>
+        <Literal xml:lang="en">This property represents the string of a chordophone musical instrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/String</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/String</IRI>
+        <Literal xml:lang="it">Corda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/String</IRI>
+        <Literal xml:lang="en">String</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/String</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/String</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/Temperament</IRI>
         <Literal xml:lang="it">Questo individuo rappresenta il temperamento adottato, soprattutto in caso di oggetto in condizioni originali, o dopo un restauro, di uno strumento musicale. Per gli idiofoni a tasti fissi (come xilofoni, litofoni, metallofoni) rappresenta la successione degli intervalli.</Literal>
     </AnnotationAssertion>
@@ -614,46 +694,6 @@
         <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
         <IRI>/Tuning</IRI>
         <Literal>ICCD Normativa SM 4.00: AA/AAA</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/VibratingLength</IRI>
-        <Literal xml:lang="it">Questo individuo rappresenta la lunghezza vibrante di uno strumento, in particolare di un cordofono.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/VibratingLength</IRI>
-        <Literal xml:lang="en">This individual represents a musical instrument vibrating length, in particular a chordophone.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/VibratingLength</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/VibratingLength</IRI>
-        <Literal xml:lang="it">Lunghezza vibrante</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/VibratingLength</IRI>
-        <Literal xml:lang="en">Vibrating length</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/VibratingLength</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/VibratingLength</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/VibratingLength</IRI>
-        <Literal>ICCD Normativa SM 4.00: AA/AAL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -762,6 +802,41 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isProducedByMusicalInstrument</IRI>
+        <Literal xml:lang="it">Questa proprietà collega una nota musicale allo strumento musicale che la produce</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isProducedByMusicalInstrument</IRI>
+        <Literal xml:lang="en">This property relates a musical note to the instrument that produces it</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isProducedByMusicalInstrument</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isProducedByMusicalInstrument</IRI>
+        <Literal xml:lang="en">is produced by musical instrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isProducedByMusicalInstrument</IRI>
+        <Literal xml:lang="it">è prodotta da strumento musicale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/isProducedByMusicalInstrument</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/isProducedByMusicalInstrument</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/isSoloInstrumentInvolvedIn</IRI>
         <Literal xml:lang="it">Questa proprietà collega uno strumento musicale solista a un&apos;altra entità</Literal>
     </AnnotationAssertion>
@@ -793,6 +868,41 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <IRI>/isSoloInstrumentInvolvedIn</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/producesMusicalNote</IRI>
+        <Literal xml:lang="it">Questa proprietà collega uno strumento musicale a una nota musicale che è in grado di produrre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/producesMusicalNote</IRI>
+        <Literal xml:lang="en">This property relates a musical instrument with a musical note</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/producesMusicalNote</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/producesMusicalNote</IRI>
+        <Literal xml:lang="it">produce nota musicale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/producesMusicalNote</IRI>
+        <Literal xml:lang="en">produces musical note</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/producesMusicalNote</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/producesMusicalNote</IRI>
         <Literal xml:lang="en">unstable</Literal>
     </AnnotationAssertion>
 </Ontology>
