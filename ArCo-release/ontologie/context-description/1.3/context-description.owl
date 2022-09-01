@@ -2371,10 +2371,10 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasResearch">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isResearchOn"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla ricerca nell&apos;ambito della quale è stata redatta la scheda.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a culural entity to the research, which is the context where the enity&apos;s cataloguing record has been produced.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla ricerca.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to the research.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha ricerca</rdfs:label>
         <rdfs:label xml:lang="en">has research</rdfs:label>
@@ -5094,16 +5094,18 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isRelatedToResearch">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurvey"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un rilevamento di un bene musicale o demoetnoantropologico alla ricerca nell&apos;ambito della quale è stata redatta la scheda.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class relates an observation survey of musical or demoetnoanthropological heritage to the research in which the catalogue record describing a cultural property was recorded (e.g.: a cataloguing campaign)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is related to research</rdfs:label>
         <rdfs:label xml:lang="it">si riferisce a ricerca</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: DR</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasResearch"/>
     </owl:ObjectProperty>
     
 
@@ -5221,9 +5223,9 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isResearchOn">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:comment xml:lang="it">Questa proprietà la ricerca nell&apos;ambito della quale è stata redatta la scheda su un bene culturale al bene stesso.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a research from which has been produced a cultural entity&apos;s catalogue record, to the cultural entity.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà la ricerca ad un&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a research to an entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is research on</rdfs:label>
         <rdfs:label xml:lang="it">è ricerca su</rdfs:label>
@@ -10784,19 +10786,7 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyPhotographer"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveySoundEngineer"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isRelatedToResearch"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasResearch"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -13364,14 +13354,14 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>

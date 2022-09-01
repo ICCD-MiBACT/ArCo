@@ -3559,7 +3559,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdfs:label xml:lang="en">Time Indexed Typed Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC; LA; per normativa F: anche LR</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: LC; LA; per normativa F: anche LR. Normativa BDI: OC, AT/DML, DU/DUG, DV/DVG, DF/DFG, AI/AIA, AI/AIF, AI/AIG, VI/VIA, VI/VIF, VIG, FI/FIA, FIF, FIG</a-cat:iccdNormTag>
     </owl:Class>
     
 

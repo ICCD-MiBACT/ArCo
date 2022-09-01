@@ -365,7 +365,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isUnifyingFactorOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/UnifyingFactor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento ricorrente a un fattore unificante.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a recurrent event to a unifying factor.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
@@ -483,7 +483,7 @@ In this module are used as template the following Ontology Design Patterns:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isUnifyingFactorOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/UnifyingFactor"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un fattore unificante a un evento ricorrente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a unifying factor to a recurrent event.</rdfs:comment>
@@ -770,6 +770,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="en">Common factor</rdfs:label>
         <rdfs:label xml:lang="it">Fattore unificante</rdfs:label>
         <rdfs:label xml:lang="en">Unifying factor</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>

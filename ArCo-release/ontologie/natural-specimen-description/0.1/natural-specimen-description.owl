@@ -2124,9 +2124,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is classification system of</rdfs:label>
         <rdfs:label xml:lang="it">è sistema di classificazione di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMSD/SMSC</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isClassificationSystemOf"/>
     </owl:ObjectProperty>
     
 
@@ -3363,8 +3365,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">refers to classification system</rdfs:label>
         <rdfs:label xml:lang="it">si riferisce a sistema di classificazione</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/refersToClassificationSystem"/>
     </owl:ObjectProperty>
     
 
@@ -4959,9 +4963,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Classification system</rdfs:label>
         <rdfs:label xml:lang="it">Sistema di classificazione</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSG, SMSD, SMSC, SMSS</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
     </owl:Class>
     
 
@@ -6232,7 +6238,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/NewDanaClassificationSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/NewDanaClassificationSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ClassificationSystem"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema di classificazione New Dana.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents New Dana classification system.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
@@ -7065,7 +7071,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/StrunzClassificationSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/StrunzClassificationSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ClassificationSystem"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema di classificazione Strunz.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents Strunz classification system.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
@@ -7151,8 +7157,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/refersToClassificationSystem"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ClassificationSystem"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/refersToClassificationSystem"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -8199,8 +8205,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa individuo rappresenta la riflettanza</rdfs:comment>
     </rdf:Description>
     
