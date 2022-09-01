@@ -2865,11 +2865,11 @@
 					<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSX" />
 				</arco-spe:strunzCode>
 			</xsl:if>
-			<arco-spe:refersToClassificationSystem>
+			<arco-core:refersToClassificationSystem>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/StrunzClassificationSystem'" />
 		    	</xsl:attribute>
-			</arco-spe:refersToClassificationSystem>
+			</arco-core:refersToClassificationSystem>
 		</rdf:Description>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSC">
@@ -2888,11 +2888,11 @@
 			<l0:name>
 				<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSC" />
 			</l0:name>
-			<arco-spe:refersToClassificationSystem>
+			<arco-core:refersToClassificationSystem>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/StrunzClassificationSystem'" />
 		    	</xsl:attribute>
-			</arco-spe:refersToClassificationSystem>
+			</arco-core:refersToClassificationSystem>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSX">
 				<xsl:if test="not(record/metadata/schede/BNM/SM/SMS/SMSS)">
 					<arco-spe:strunzCode>
@@ -2918,11 +2918,11 @@
 			<l0:name>
 				<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSD" />
 			</l0:name>
-			<arco-spe:refersToClassificationSystem>
+			<arco-core:refersToClassificationSystem>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/NewDanaClassificationSystem'" />
 		    	</xsl:attribute>
-			</arco-spe:refersToClassificationSystem>
+			</arco-core:refersToClassificationSystem>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSK">
 				<arco-spe:newDanaCode>
 					<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSK" />
@@ -3076,11 +3076,11 @@
 					<xsl:value-of select="./RMS/RMSX" />
 				</arco-spe:strunzCode>
 			</xsl:if>
-			<arco-spe:refersToClassificationSystem>
+			<arco-core:refersToClassificationSystem>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/StrunzClassificationSystem'" />
 		    	</xsl:attribute>
-			</arco-spe:refersToClassificationSystem>
+			</arco-core:refersToClassificationSystem>
 		</xsl:if>
 	</rdf:Description>
 	<rdf:Description>
@@ -3106,11 +3106,11 @@
 					</arco-spe:strunzCode>
 				</xsl:if>
 			</xsl:if>
-			<arco-spe:refersToClassificationSystem>
+			<arco-core:refersToClassificationSystem>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/StrunzClassificationSystem'" />
 		    	</xsl:attribute>
-			</arco-spe:refersToClassificationSystem>
+			</arco-core:refersToClassificationSystem>
 		</xsl:if>
 	</rdf:Description>
 	<rdf:Description>
@@ -3134,11 +3134,11 @@
 					<xsl:value-of select="./RMS/RMSK" />
 				</arco-spe:newDanaCode>
 			</xsl:if>
-			<arco-spe:refersToClassificationSystem>
+			<arco-core:refersToClassificationSystem>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/NewDanaClassificationSystem'" />
 		    	</xsl:attribute>
-			</arco-spe:refersToClassificationSystem>
+			</arco-core:refersToClassificationSystem>
 		</xsl:if>
 	</rdf:Description>
 	</xsl:for-each>

@@ -588,6 +588,11 @@
 				                <xsl:value-of select="." />
 				            </xsl:attribute>
 				        </arco-lite:depiction>
+				        <foaf:depiction>
+				            <xsl:attribute name="rdf:resource">
+				                <xsl:value-of select="." />
+				            </xsl:attribute>
+				        </foaf:depiction>
 				        <pico:preview>
 				            <xsl:attribute name="rdf:resource">
 				                <xsl:value-of select="." />
@@ -4323,14 +4328,16 @@
 							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MusicalInstrument'" />
 						</xsl:attribute>
 					</rdf:type>
-					<xsl:for-each select="record/metadata/schede/*/AS/ASS/ASST" >
+				</xsl:if>
+				<xsl:for-each select="record/metadata/schede/*/AS/ASS" >
+					<xsl:if test="./ASST">
 						<arco-dd:hasAccessory>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Accessory/', arco-fn:urify(normalize-space(.)))" />
+								<xsl:value-of select="concat($NS, 'Accessory/', arco-fn:urify(normalize-space(./ASST)))" />
 							</xsl:attribute>
 						</arco-dd:hasAccessory>
-					</xsl:for-each>
-				</xsl:if>
+					</xsl:if>
+				</xsl:for-each>
 				<xsl:if test="$sheetType='CA'" >
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -4380,31 +4387,31 @@
 							<xsl:when test="$sheetType='SCAN'">
 								<xsl:choose>
 									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni architettonici e paesaggistici'">
-										<xsl:value-of select="concat($NS, 'arco/ArchitecturalOrLandscapeHeritage')" />
+										<xsl:value-of select="'https://w3id.org/arco/ontology/arco/ArchitecturalOrLandscapeHeritage'" />
 									</xsl:when>
 									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni storici e artistici'">
-										<xsl:value-of select="concat($NS, 'arco/HistoricOrArtisticProperty')" />
+										<xsl:value-of select="'https://w3id.org/arco/ontology/arco/HistoricOrArtisticProperty'" />
 									</xsl:when>
 									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni archeologici'">
-										<xsl:value-of select="concat($NS, 'arco/ArchaeologicalProperty')" />
+										<xsl:value-of select="'https://w3id.org/arco/ontology/arco/ArchaeologicalProperty'" />
 									</xsl:when>
 									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni demoetnoantopologici'">
-										<xsl:value-of select="concat($NS, 'arco/DemoEthnoAnthropologicalHeritage')" />
+										<xsl:value-of select="'https://w3id.org/arco/ontology/arco/DemoEthnoAnthropologicalHeritage'" />
 									</xsl:when>
 									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni fotografici'">
-										<xsl:value-of select="concat($NS, 'arco/PhotographicHeritage')" />
+										<xsl:value-of select="'https://w3id.org/arco/ontology/arco/PhotographicHeritage'" />
 									</xsl:when>
 									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni musicali'">
-										<xsl:value-of select="concat($NS, 'arco/MusicHeritage')" />
+										<xsl:value-of select="'https://w3id.org/arco/ontology/arco/MusicHeritage'" />
 									</xsl:when>
 									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni naturalistici'">
-										<xsl:value-of select="concat($NS, 'arco/NaturalHeritage')" />
+										<xsl:value-of select="'https://w3id.org/arco/ontology/arco/NaturalHeritage'" />
 									</xsl:when>
 									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni numismatici'">
-										<xsl:value-of select="concat($NS, 'arco/NumismaticProperty')" />
+										<xsl:value-of select="'https://w3id.org/arco/ontology/arco/NumismaticProperty'" />
 									</xsl:when>
 									<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni scientifici e tecnologici'">
-										<xsl:value-of select="concat($NS, 'arco/ScientificOrTechnologicalHeritage')" />
+										<xsl:value-of select="'https://w3id.org/arco/ontology/arco/ScientificOrTechnologicalHeritage'" />
 									</xsl:when>
 								</xsl:choose>
 							</xsl:when>

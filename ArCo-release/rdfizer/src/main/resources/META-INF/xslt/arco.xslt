@@ -31341,7 +31341,9 @@
 					</l0:name>
 				</rdf:Description>
 			</xsl:if>
-			<xsl:for-each select="record/metadata/schede/SM/AS/ASS" >
+			</xsl:for-each>
+			<!-- accessory -->
+			<xsl:for-each select="record/metadata/schede/*/AS/ASS" >
 				<xsl:if test="./ASST">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
@@ -31371,8 +31373,6 @@
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
-		</xsl:for-each>
-	
 			<!-- collection membership -->
 			<xsl:for-each select="record/metadata/schede/*/UB/COL">
 				<xsl:if test="./*">
