@@ -16790,7 +16790,7 @@
 						<!-- role as an individual -->
 						<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'Role/USer')" />
+							<xsl:value-of select="concat($NS, 'Role/User')" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -20730,7 +20730,7 @@
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Uso'" />
+								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Use'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
@@ -20807,7 +20807,7 @@
 					<!-- role as an individual -->
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'Role/USer')" />
+							<xsl:value-of select="concat($NS, 'Role/User')" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
