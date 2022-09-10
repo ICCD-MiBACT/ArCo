@@ -3506,7 +3506,7 @@
               	</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-               			<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Animal'" />
+               			<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Animal'" />
                		</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
@@ -3524,7 +3524,7 @@
               	</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-               			<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Vegetal'" />
+               			<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Vegetal'" />
                		</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
@@ -3542,7 +3542,7 @@
               	</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-               			<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Mineral'" />
+               			<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Mineral'" />
                		</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
@@ -3726,11 +3726,21 @@
 				</xsl:if>
 				<!-- age interpretation -->
 				<xsl:if test="./ATT/ATTE">
-					<arco-cd:hasAgeInterpretation>
+					<arco-cd:hasAge>
 						<xsl:attribute name="rdf:resource">
-            	   			<xsl:value-of select="concat($NS, 'AgeInterpretation/', arco-fn:arcofy(normalize-space(./ATT/ATTN)))" />
+            	   			<xsl:value-of select="concat($NS, 'Age/', arco-fn:arcofy(normalize-space(./ATT/ATTE)))" />
                			</xsl:attribute>
-					</arco-cd:hasAgeInterpretation>
+					</arco-cd:hasAge>
+					<arco-lite:age>
+						<xsl:attribute name="rdf:resource">
+            	   			<xsl:value-of select="arco-fn:arcofy(normalize-space(./ATT/ATTE))" />
+               			</xsl:attribute>
+					</arco-lite:age>
+					<arco-cd:isSubjectOfInterpretation>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'AgeInterpetation/', $itemURI, '-', arco-fn:urify(./ATT/ATTE))" />
+						</xsl:attribute>
+					</arco-cd:isSubjectOfInterpretation>
 				</xsl:if>
 				<!-- birth place -->
 				<xsl:if test="./DNA/DNAP or ./DNA/DNAC or ./DNA/DNAE">
@@ -3806,28 +3816,30 @@
 			<xsl:if test="./ATT/ATTE">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-				    	<xsl:value-of select="concat($NS, 'AgeInterpretation/', arco-fn:arcofy(normalize-space(./ATT/ATTN)))" />
+						<xsl:value-of select="concat($NS, 'AgeInterpetation/', $itemURI, '-', arco-fn:urify(./ATT/ATTE))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-	            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeInterpretation'" />
-			            </xsl:attribute>
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Interpretation'" />
+						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Interpretazione dell&quot;età dell&quot;agente principale ', ./ATT/ATTN)" />
+						<xsl:value-of select="concat('Interpretazione relativa alla età di  ', normalize-space(./ATT/ATTN))" />
+					</rdfs:label>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Interpretation of age of ', normalize-space(./ATT/ATTN))" />
 					</rdfs:label>
 					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Interpretazione dell&quot;età dell&quot;agente principale ', ./ATT/ATTN)" />
+						<xsl:value-of select="concat('Interpretazione relativa alla età di  ', normalize-space(./ATT/ATTN))" />
 					</l0:name>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Age interpretation of main agent ', ./ATT/ATTN)" />
-					</rdfs:label>
 					<l0:name xml:lang="en">
-						<xsl:value-of	select="concat('Age interpretation of main agent ', ./ATT/ATTN)" />
+						<xsl:value-of select="concat('Interpretation of age of ', normalize-space(./ATT/ATTN))" />
 					</l0:name>
-					<arco-cd:age>
-						<xsl:value-of select="normalize-space(./ATT/ATTE)" />
-					</arco-cd:age>
+					<arco-cd:involvesEntity>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Age/', arco-fn:arcofy(normalize-space(./ATT/ATTE)))" />
+						</xsl:attribute>
+					</arco-cd:involvesEntity>
 					<arco-cd:hasInterpretationCriterion>
 						<xsl:choose>
 							<xsl:when test="contains(lower-case(normalize-space(./ATT/ATTE)), 'ca')">
@@ -3842,6 +3854,31 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</arco-cd:hasInterpretationCriterion>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+				    	<xsl:value-of select="concat($NS, 'Age/', arco-fn:arcofy(normalize-space(./ATT/ATTE)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+	            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Age'" />
+			            </xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Età dell&quot;agente principale ', ./ATT/ATTN)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Età dell&quot;agente principale ', ./ATT/ATTN)" />
+					</l0:name>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Age of main agent ', ./ATT/ATTN)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of	select="concat('Age of main agent ', ./ATT/ATTN)" />
+					</l0:name>
+					<arco-cd:ageValue>
+						<xsl:value-of select="normalize-space(./ATT/ATTE)" />
+					</arco-cd:ageValue>
 					<arco-cd:hasAgeType>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ChronologicalAge'" />
@@ -10997,20 +11034,16 @@
 				</xsl:if>
 				<!-- age interpretation -->
 				<xsl:if test="./AIFH">
-					<arco-cd:hasAgeInterpretation>
-						<xsl:choose>
-							<xsl:when test="./AIFN[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS,'AgeInterpretation/', arco-fn:arcofy(./AIFN))" />
-								</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS,'AgeInterpretation/', arco-fn:arcofy(concat(./AIFU, ./AIFZ, ./AIFB, ./AIFM)))" />
-								</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
-					</arco-cd:hasAgeInterpretation>
+					<arco-cd:hasAge>
+						<xsl:attribute name="rdf:resource">
+            	   			<xsl:value-of select="concat($NS, 'Age/', arco-fn:arcofy(normalize-space(./AIF/AIFH)))" />
+               			</xsl:attribute>
+					</arco-cd:hasAge>
+					<arco-lite:age>
+						<xsl:attribute name="rdf:resource">
+            	   			<xsl:value-of select="arco-fn:arcofy(normalize-space(./AIF/AIFH))" />
+               			</xsl:attribute>
+					</arco-lite:age>
 				</xsl:if>
 				<!-- birth place -->
 				<xsl:if test="./AIFS or ./AIFR or ./AIFP or ./AIFC or ./AIFE">
@@ -11084,32 +11117,32 @@
 					</arco-cd:sex>
 				</rdf:Description>
 			</xsl:if>
-			<!-- age interpretation as individual -->
+			<!-- age as individual -->
 			<xsl:if test="./AIFH">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-				    	<xsl:value-of select="concat($NS, 'AgeInterpretation/', arco-fn:arcofy(normalize-space(./AIFN)))" />
+				    	<xsl:value-of select="concat($NS, 'Age/', arco-fn:arcofy(normalize-space(./AIFH)))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-	            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeInterpretation'" />
+	            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Age'" />
 			            </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Interpretazione dell&quot;età dell&quot;informatore ', ./AIFN)" />
+						<xsl:value-of select="concat('Età dell&quot;informatore ', ./AIFN)" />
 					</rdfs:label>
 					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Interpretazione dell&quot;età dell&quot;informatore ', ./AIFN)" />
+						<xsl:value-of select="concat('Età dell&quot;informatore ', ./AIFN)" />
 					</l0:name>
 					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Age interpretation of informant ', ./AIFN)" />
+						<xsl:value-of select="concat('Age of informant ', ./AIFN)" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
-						<xsl:value-of	select="concat('Age interpretation of informant ', ./AIFN)" />
+						<xsl:value-of	select="concat('Age of informant ', ./AIFN)" />
 					</l0:name>
-					<arco-cd:age>
+					<arco-cd:ageValue>
 						<xsl:value-of select="normalize-space(./AIFH)" />
-					</arco-cd:age>
+					</arco-cd:ageValue>
 					<arco-cd:hasAgeType>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ChronologicalAge'" />
@@ -14186,20 +14219,16 @@
 				</xsl:if>
 				<!-- age interpretation -->
 				<xsl:if test="./VIFH">
-					<arco-cd:hasAgeInterpretation>
-						<xsl:choose>
-							<xsl:when test="./VIFN[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS,'AgeInterpretation/', arco-fn:arcofy(./VIFN))" />
-								</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS,'AgeInterpretation/', arco-fn:arcofy(concat(./VIFU, ./VIFZ, ./VIFB, ./VIFM)))" />
-								</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
-					</arco-cd:hasAgeInterpretation>
+					<arco-cd:hasAge>
+						<xsl:attribute name="rdf:resource">
+            	   			<xsl:value-of select="concat($NS, 'Age/', arco-fn:arcofy(normalize-space(./VIF/VIFH)))" />
+               			</xsl:attribute>
+					</arco-cd:hasAge>
+					<arco-lite:age>
+						<xsl:attribute name="rdf:resource">
+            	   			<xsl:value-of select="arco-fn:arcofy(normalize-space(./VIF/VIFH))" />
+               			</xsl:attribute>
+					</arco-lite:age>
 				</xsl:if>
 				<!-- birth place -->
 				<xsl:if test="./VIFS or ./VIFR or ./VIFP or ./VIFC or ./VIFE">
@@ -14273,32 +14302,32 @@
 					</arco-cd:sex>
 				</rdf:Description>
 			</xsl:if>
-			<!-- age interpretation as individual -->
+			<!-- age as individual -->
 			<xsl:if test="./VIFH">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-				    	<xsl:value-of select="concat($NS, 'AgeInterpretation/', arco-fn:arcofy(normalize-space(./VIFN)))" />
+				    	<xsl:value-of select="concat($NS, 'Age/', arco-fn:arcofy(normalize-space(./VIFH)))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-	            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeInterpretation'" />
+	            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Age'" />
 			            </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Interpretazione dell&quot;età dell&quot;informatore ', ./VIFN)" />
+						<xsl:value-of select="concat('Età dell&quot;informatore ', ./VIFN)" />
 					</rdfs:label>
 					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Interpretazione dell&quot;età dell&quot;informatore ', ./VIFN)" />
+						<xsl:value-of select="concat('Età dell&quot;informatore ', ./VIFN)" />
 					</l0:name>
 					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Age interpretation of informant ', ./VIFN)" />
+						<xsl:value-of select="concat('Age of informant ', ./VIFN)" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
-						<xsl:value-of	select="concat('Age interpretation of informant ', ./VIFN)" />
+						<xsl:value-of	select="concat('Age of informant ', ./VIFN)" />
 					</l0:name>
-					<arco-cd:age>
+					<arco-cd:ageValue>
 						<xsl:value-of select="normalize-space(./VIFH)" />
-					</arco-cd:age>
+					</arco-cd:ageValue>
 					<arco-cd:hasAgeType>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ChronologicalAge'" />
@@ -17816,20 +17845,16 @@
 				</xsl:if>
 				<!-- age interpretation -->
 				<xsl:if test="./FIFH">
-					<arco-cd:hasAgeInterpretation>
-						<xsl:choose>
-							<xsl:when test="./FIFN[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS,'AgeInterpretation/', arco-fn:arcofy(./FIFN))" />
-								</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS,'AgeInterpretation/', arco-fn:arcofy(concat(./FIFU, ./FIFZ, ./FIFB, ./FIFM)))" />
-								</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
-					</arco-cd:hasAgeInterpretation>
+					<arco-cd:hasAge>
+						<xsl:attribute name="rdf:resource">
+            	   			<xsl:value-of select="concat($NS, 'Age/', arco-fn:arcofy(normalize-space(./FIF/FIFH)))" />
+               			</xsl:attribute>
+					</arco-cd:hasAge>
+					<arco-lite:age>
+						<xsl:attribute name="rdf:resource">
+            	   			<xsl:value-of select="arco-fn:arcofy(normalize-space(./FIF/FIFH))" />
+               			</xsl:attribute>
+					</arco-lite:age>
 				</xsl:if>
 				<!-- birth place -->
 				<xsl:if test="./FIFS or ./FIFR or ./FIFP or ./FIFC or ./FIFE">
@@ -17907,28 +17932,28 @@
 			<xsl:if test="./FIFH">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-				    	<xsl:value-of select="concat($NS, 'AgeInterpretation/', arco-fn:arcofy(normalize-space(./FIFN)))" />
+				    	<xsl:value-of select="concat($NS, 'Age/', arco-fn:arcofy(normalize-space(./FIFH)))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-	            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeInterpretation'" />
+	            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Age'" />
 			            </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Interpretazione dell&quot;età dell&quot;informatore ', ./FIFN)" />
+						<xsl:value-of select="concat('Età dell&quot;informatore ', ./FIFN)" />
 					</rdfs:label>
 					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Interpretazione dell&quot;età dell&quot;informatore ', ./FIFN)" />
+						<xsl:value-of select="concat('Età dell&quot;informatore ', ./FIFN)" />
 					</l0:name>
 					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Age interpretation of informant ', ./FIFN)" />
+						<xsl:value-of select="concat('Age of informant ', ./FIFN)" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
-						<xsl:value-of	select="concat('Age interpretation of informant ', ./FIFN)" />
+						<xsl:value-of	select="concat('Age of informant ', ./FIFN)" />
 					</l0:name>
-					<arco-cd:age>
+					<arco-cd:ageValue>
 						<xsl:value-of select="normalize-space(./FIFH)" />
-					</arco-cd:age>
+					</arco-cd:ageValue>
 					<arco-cd:hasAgeType>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ChronologicalAge'" />
