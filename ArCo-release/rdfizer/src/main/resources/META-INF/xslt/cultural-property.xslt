@@ -923,15 +923,6 @@
 						</arco-location:hasCadastralIdentity>
 					</xsl:for-each>
 				</xsl:if>
-				<!-- naming matches above criterion record/metadata/schede/*/CS in cadastral-identity.xslt 
-				<xsl:for-each select="record/metadata/schede/*/CS/CTS">
-					<arco-location:hasCadastralIdentity>
-						<xsl:attribute name="rdf:resource">
-		                	<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-', position())" />
-		                </xsl:attribute>
-					</arco-location:hasCadastralIdentity>
-				</xsl:for-each>
-				 -->
 				<xsl:for-each select="record/metadata/schede/*/UB[CTS]">
 					<arco-location:hasCadastralIdentity>
 						<xsl:attribute name="rdf:resource">
