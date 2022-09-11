@@ -387,7 +387,9 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has cadastral identity</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CS. - Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Traversale 4.00: CS; LS.
+Normativa A e PG v.2.: UB
+Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1214,6 +1216,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è contenuta nel catasto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>LS/CSS/CSSD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2435,7 +2438,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Foglio di mappa catastale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CS/CTS/CTSF ; LS/CSS/CSSF. - Normativa RA v.2: RP/LGC/LGCM+LGCA</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CS/CTS/CTSF ; LS/CSS/CSSF. - Normativa RA v.2: RP/LGC/LGCM+LGCA.
+Normativa A e PG v.2: UB/CTS/CTSF+CTSD</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2494,7 +2498,6 @@ resource:CadastralIdentity/1400055239-1
         a-cd:hasLegalSituation resource:LegalSituation/1400055239-cadastral-legal-situation-1 ;
         a-loc:hasCadastralCity resource:City/s-martino-in-pensilis ;
         a-loc:hasCadastralEntity resource:CadastralUnitCollection/1400055239-207 , resource:CadastralFolio/1400055239-8 .</dc:description>
-        <rdfs:comment xml:lang="it">ICCD Normativa Traversale 4.00: CS; LS</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;identità catastale di un&apos;entità, intesa come l&apos;insieme delle informazioni di localizzazione che riguardano il bene con riferimento alla ripartizione catastale nazionale. L&apos;identità catastale di un&apos;entità può avere un riferimento cronologico, che indica l&apos;epoca alla quale risalgono i dati catastali.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the cadastral identity of an entity, which is intended as a set of location information concerning the property with reference to the national cadastral allocation. The cadastral identity can have a chronological reference indicating the dating of cadastral data.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
@@ -2502,7 +2505,9 @@ resource:CadastralIdentity/1400055239-1
         <rdfs:label xml:lang="it">Identità catastale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CS. - Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Traversale 4.00: CS; LS.
+Normativa A e PG v.2.: UB
+Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
     </owl:Class>
     
 

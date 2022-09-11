@@ -4255,6 +4255,14 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Animal -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Animal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/ArtificialSpecimen -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/ArtificialSpecimen">
@@ -7355,6 +7363,14 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Vegetal -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Vegetal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/WeatheringGrade -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/WeatheringGrade">
@@ -8205,8 +8221,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
-        <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <rdfs:comment xml:lang="it">Questa individuo rappresenta la riflettanza</rdfs:comment>
     </rdf:Description>
     
