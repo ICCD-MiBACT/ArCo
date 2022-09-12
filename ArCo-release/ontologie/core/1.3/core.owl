@@ -655,6 +655,16 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/isClassificationSystemOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isClassificationSystemOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/refersToClassificationSystem"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/isClassifiedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isClassifiedBy">
@@ -922,6 +932,15 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è valido in</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/refersToClassificationSystem -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/refersToClassificationSystem">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
     </owl:ObjectProperty>
     
 
@@ -1212,6 +1231,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Classificazione nel tempo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/ClassificationSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/System"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema di classificazione in base a cui un&apos;entità è stata classificata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents classification system used to classify an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Classification system</rdfs:label>
+        <rdfs:label xml:lang="it">Sistema di classificazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSG, SMSD, SMSC, SMSS. Normativa SM: CL/CLA</a-cat:iccdNormTag>
     </owl:Class>
     
 

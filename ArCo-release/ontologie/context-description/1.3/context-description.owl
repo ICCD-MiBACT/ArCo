@@ -305,13 +305,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasAge -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAge">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgeOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Age"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasAgeInterpretation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgeInterpretation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgeInterpretationOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AgeInterpretation"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasAge"/>
     </owl:ObjectProperty>
     
 
@@ -331,6 +341,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasAge"/>
     </owl:ObjectProperty>
     
 
@@ -347,6 +358,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha tipo di età</rdfs:label>
         <rdfs:label xml:lang="en">has age type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1000,7 +1012,11 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/context-description/hasCulturalContex -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCulturalContex"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCulturalContex">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isCulturalContextOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalContext"/>
+    </owl:ObjectProperty>
     
 
 
@@ -2371,10 +2387,10 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasResearch">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isResearchOn"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla ricerca nell&apos;ambito della quale è stata redatta la scheda.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a culural entity to the research, which is the context where the enity&apos;s cataloguing record has been produced.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla ricerca.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to the research.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha ricerca</rdfs:label>
         <rdfs:label xml:lang="en">has research</rdfs:label>
@@ -2544,21 +2560,32 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasSexInterpretation -->
+    <!-- https://w3id.org/arco/ontology/context-description/hasSex -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSexInterpretation">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSex">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSexOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Sex"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al sesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its sex.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha sesso</rdfs:label>
+        <rdfs:label xml:lang="en">has sex</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT: DA/STS. Normativa BDI: AT/ATT/ATTS, AI/AIF/AIFO, VI/VIF/VIFO, FI/FIF/FIFO. Normativa SM: MU/MUT/MUTS</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasSexInterpetation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSexInterpetation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSexInterpretationOf"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SexInterpretation"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un reperto antropologico alla stima del sesso.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an antropologic artifact to its sex estimate.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha sesso stimato</rdfs:label>
-        <rdfs:label xml:lang="en">has sex interpretation</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: DA/STS</a-cat:iccdNormTag>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasSex"/>
     </owl:ObjectProperty>
     
 
@@ -3217,8 +3244,18 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgeInterpretationOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AgeInterpretation"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isAgeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isAgeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Age"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:ObjectProperty>
     
 
@@ -3237,6 +3274,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isAgeOf"/>
     </owl:ObjectProperty>
     
 
@@ -3252,6 +3290,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is age type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di età di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3847,7 +3886,11 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <!-- https://w3id.org/arco/ontology/context-description/isCulturalContextOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCulturalContextOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCulturalContextOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalContext"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <a-cat:iccdNormTag>Normativa BDM v4: AU/AUT/AUTC</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
     
 
 
@@ -5094,16 +5137,18 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isRelatedToResearch">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurvey"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un rilevamento di un bene musicale o demoetnoantropologico alla ricerca nell&apos;ambito della quale è stata redatta la scheda.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class relates an observation survey of musical or demoetnoanthropological heritage to the research in which the catalogue record describing a cultural property was recorded (e.g.: a cataloguing campaign)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is related to research</rdfs:label>
         <rdfs:label xml:lang="it">si riferisce a ricerca</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: DR</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasResearch"/>
     </owl:ObjectProperty>
     
 
@@ -5221,9 +5266,9 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isResearchOn">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:comment xml:lang="it">Questa proprietà la ricerca nell&apos;ambito della quale è stata redatta la scheda su un bene culturale al bene stesso.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a research from which has been produced a cultural entity&apos;s catalogue record, to the cultural entity.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà la ricerca ad un&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a research to an entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is research on</rdfs:label>
         <rdfs:label xml:lang="it">è ricerca su</rdfs:label>
@@ -5386,15 +5431,25 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isSexInterpretationOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SexInterpretation"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la stima del sesso di un reperto antropologico al reperto stesso.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the sex estimate of an antropologic artifact to the related artifact.</rdfs:comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isSexOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isSexOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isSexOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Sex"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il sesso di un&apos;entità all&apos;entità stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the sex to the entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is sex interpretation of</rdfs:label>
-        <rdfs:label xml:lang="it">è interpretazione del sesso di</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">stable</owl:versionInfo>
+        <rdfs:label xml:lang="en">is sex of</rdfs:label>
+        <rdfs:label xml:lang="it">è sesso di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -6208,16 +6263,8 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <!-- https://w3id.org/arco/ontology/context-description/age -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/age">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AgeInterpretation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;età di un campione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the age of a specimen.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">age</rdfs:label>
-        <rdfs:label xml:lang="it">età</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>DA/SEM/SEME</a-cat:iccdNormTag>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/ageValue"/>
     </owl:DatatypeProperty>
     
 
@@ -6238,6 +6285,23 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>DA/SEM/SEME</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/age"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/ageValue -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/ageValue">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AgeInterpretation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;età di un campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the age of a specimen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">age</rdfs:label>
+        <rdfs:label xml:lang="it">età</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>DA/SEM/SEME</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -7757,14 +7821,16 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SexInterpretation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il sesso stimato nel contesto della stima del sesso di un reperto antropologico.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents anthropological finding estimated sex.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il sesso dei una entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the sex of an entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">estimated sex</rdfs:label>
-        <rdfs:label xml:lang="it">sesso stimato</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>DA/STS/STSS</a-cat:iccdNormTag>
+        <rdfs:label xml:lang="it">sesso</rdfs:label>
+        <rdfs:label xml:lang="en">sex</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa AT: DA/STS/STSS. Normativa BDI: AT/ATT/ATTS</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Sex"/>
     </owl:DatatypeProperty>
     
 
@@ -8153,6 +8219,33 @@ resource:AgentRole/1200865053-1-transferor
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Age -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Age">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/ageValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;età di un &apos;entità (animale, vegetale, minerale).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the age of an entity (animal, vegetal, mineral).</rdfs:comment>
+        <rdfs:label xml:lang="en">Age</rdfs:label>
+        <rdfs:label xml:lang="it">Età</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRL/SRLE, SR/SRR/SRRE. ICCD Normativa AT: DA/SEM, BDI: AT/ATT/ATTE, AI/AIF/AIFH, VI/VIF/VIFH, FI/FIF/FIFH. Normativa SM: MU/MUT/MUTE</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/AgeInterpretation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AgeInterpretation">
@@ -8172,7 +8265,7 @@ resource:AgentRole/1200865053-1-transferor
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/age"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/ageValue"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -8181,9 +8274,11 @@ resource:AgentRole/1200865053-1-transferor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Age interpretation</rdfs:label>
         <rdfs:label xml:lang="it">Interpretazione dell&apos;età</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRL/SRLE, SR/SRR/SRRE. ICCD Normativa AT: DA/SEM</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Age"/>
     </owl:Class>
     
 
@@ -8213,7 +8308,7 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: DA/SEM</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/AgeInterpretation"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Age"/>
     </owl:Class>
     
 
@@ -9075,7 +9170,7 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:label xml:lang="it">Occasione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUO - Normativa BDM: UT/UTO; AU/CMM/CMMC - Normativa VeAC: AU/FRU/FRUC - Normativa F: LR/LRO - Normativa BDI: CA</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUO - Normativa BDM: UT/UTO; AU/CMM/CMMC - Normativa VeAC: AU/FRU/FRUC, OG/OGT/OGTL - Normativa F: LR/LRO - Normativa BDI: CA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -9348,6 +9443,14 @@ resource:ArchivalSubseries/museo-civico-romano
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/CulturalContext -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CulturalContext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
     </owl:Class>
     
 
@@ -9655,7 +9758,7 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:label xml:lang="en">Designation In Time</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC. - Normativa NU: OG/OGT/OGTO. - OG/OGT/OGTU. Normativa SI: OG/OGT/OGTY</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC. - Normativa NU: OG/OGT/OGTO. - OG/OGT/OGTU. Normativa SI: OG/OGT/OGTY. VeAC: OG/OGT/OGTS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -10784,19 +10887,7 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyPhotographer"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveySoundEngineer"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isRelatedToResearch"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasResearch"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -11228,7 +11319,7 @@ resource:PreparatoryOrFinalWork/0500212038-disegno
         <rdfs:label xml:lang="it">Professione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BDM 2: UT/UTN/UTNM</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BDM 2: UT/UTN/UTNM, BDM 4: AU/AUT/AUTE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11408,7 +11499,7 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/RelationshipType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, F: RO/ROF/ROFF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, F: RO/ROF/ROFF. VEAC: AU/AUT/AUTO</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11706,6 +11797,21 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Sex -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Sex">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il sesso di un entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the sex of an entity.</rdfs:comment>
+        <rdfs:label xml:lang="it">Sesso</rdfs:label>
+        <rdfs:label xml:lang="en">Sex</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT: DA/STS. Normativa BDI: AT/ATT/ATTS, AI/AIF/AIFO, VI/VIF/VIFO, FI/FIF/FIFO. Normativa SM: MU/MUT/MUTS</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/SexInterpretation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SexInterpretation">
@@ -11716,20 +11822,16 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
                 <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/sex"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la stima del sesso di un reperto antropologico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the interpretation of the sex of an anthropological material.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">Interpretazione del sesso</rdfs:label>
         <rdfs:label xml:lang="en">Sex interpretation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: DA/STS</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Sex"/>
     </owl:Class>
     
 
@@ -11881,7 +11983,7 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         <rdfs:label xml:lang="en">Subject</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS. DA/DES/DESU</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS. DA/DES/DESU. VeAC: OG/PGT/OGTV</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -12271,7 +12373,8 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:label xml:lang="en">Use function</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUF; LC/LDC/LDCF; LA/PRC/PRCF - BDM 2.00:UT/UTF - PST 3.01: DA/UTF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUF; LC/LDC/LDCF; LA/PRC/PRCF - BDM 2.00:UT/UTF - PST 3.01: DA/UTF
+ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF - Normative VeAC, MA e CA: OG/OGT/OGTF. CF: CF/CFU</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -13365,15 +13468,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
+        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>
     
 

@@ -2242,6 +2242,22 @@ resource:CatalogueRecordS/0500212038
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/CataloguerecordSCAN -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CataloguerecordSCAN">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda SCAN-Scheda anagrafica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents SCAn catalogue record</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">SCAN Catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda SCAN</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda anagrafica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/CataloguingLevel -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CataloguingLevel">
