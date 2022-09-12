@@ -1,0 +1,1582 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://w3id.org/arco/ontology/clothing-description"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://w3id.org/arco/ontology/clothing-description"
+     versionIRI="https://w3id.org/arco/ontology/clothing-description/0.1">
+    <Prefix name="clo" IRI="http://w3id.org/arco/ontology/clothing-description/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="a-cd" IRI="http://w3id.org/arco/ontology/context-description/"/>
+    <Prefix name="a-dd" IRI="http://w3id.org/arco/ontology/denotative-description/"/>
+    <Prefix name="core" IRI="http://w3id.org/arco/ontology/core/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://w3id.org/arco/ontology/context-description/1.2</Import>
+    <Import>https://w3id.org/arco/ontology/core/1.2</Import>
+    <Import>https://w3id.org/arco/ontology/denotative-description/1.2</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">Clothing Description Ontology (ArCo network)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="it">Ontologia per la Descrizione dei Vestimenti (ArCo network)</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="/Bottom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Clothing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ClothingElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Costume"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Cuff"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CuffType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Decoration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/DecorationType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Fastener"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/FastenerType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/InteriorElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Neck"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/NeckType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Pocket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/PocketType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Seam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Sleeve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/SleeveStructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/SleeveType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ThreadCut"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Top"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasClothingElement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasSeam"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasThreadCut"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isClothingElementOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isSeamOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isThreadCutOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/appliedDecoration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/costumeSpecification"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/intendedUser"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/uniformSpecification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/BackTotalLength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/BackWidth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/ChestCircumference"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/DepthOrHeight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/EdgeCircumference"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/ExternalInternalLength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/FrontTotalLength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/GarmentAnalysis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/HipCircumference"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/MaximumLength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/MaximumMinimumWidth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/MaximumTotalWidth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/MaximumWidth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/WaistCircumference"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="/Bottom"/>
+        <Class IRI="/ClothingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Clothing"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ClothingElement"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Costume"/>
+        <Class IRI="/Clothing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Cuff"/>
+        <Class IRI="/ClothingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Cuff"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/arco/ontology/core/hasType"/>
+            <Class IRI="/CuffType"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CuffType"/>
+        <Class IRI="https://w3id.org/arco/ontology/core/Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Decoration"/>
+        <Class IRI="/ClothingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Decoration"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/arco/ontology/core/hasType"/>
+            <Class IRI="/DecorationType"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DecorationType"/>
+        <Class IRI="https://w3id.org/arco/ontology/core/Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Fastener"/>
+        <Class IRI="/ClothingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Fastener"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/arco/ontology/core/hasType"/>
+            <Class IRI="/FastenerType"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FastenerType"/>
+        <Class IRI="https://w3id.org/arco/ontology/core/Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/InteriorElement"/>
+        <Class IRI="/ClothingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Neck"/>
+        <Class IRI="/ClothingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Neck"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/arco/ontology/core/hasType"/>
+            <Class IRI="/NeckType"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/NeckType"/>
+        <Class IRI="https://w3id.org/arco/ontology/core/Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Pocket"/>
+        <Class IRI="/ClothingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Pocket"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/arco/ontology/core/hasType"/>
+            <Class IRI="/PocketType"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/PocketType"/>
+        <Class IRI="https://w3id.org/arco/ontology/core/Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Seam"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Sleeve"/>
+        <Class IRI="/ClothingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Sleeve"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/arco/ontology/core/hasPart"/>
+            <Class IRI="/Cuff"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Sleeve"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/arco/ontology/core/hasType"/>
+            <Class IRI="/SleeveType"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/SleeveStructure"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Description"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/SleeveType"/>
+        <Class IRI="https://w3id.org/arco/ontology/core/Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ThreadCut"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Top"/>
+        <Class IRI="/ClothingElement"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <NamedIndividual IRI="/GarmentAnalysis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <NamedIndividual IRI="/MaximumLength"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <NamedIndividual IRI="/MaximumWidth"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/isSeamOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasClothingElement"/>
+        <ObjectProperty IRI="/isClothingElementOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasSeam"/>
+        <ObjectProperty IRI="/isSeamOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasThreadCut"/>
+        <ObjectProperty IRI="/isThreadCutOf"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasClothingElement"/>
+        <Class IRI="/Clothing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasClothingElement"/>
+        <Class IRI="/ClothingElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasSeam"/>
+        <Class IRI="/Clothing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasSeam"/>
+        <Class IRI="/ClothingElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasThreadCut"/>
+        <Class IRI="/Clothing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasThreadCut"/>
+        <Class IRI="/ClothingElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isClothingElementOf"/>
+        <Class IRI="/ClothingElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isSeamOf"/>
+        <Class IRI="/Seam"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isThreadCutOf"/>
+        <Class IRI="/ThreadCut"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasClothingElement"/>
+        <Class IRI="/ClothingElement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasSeam"/>
+        <Class IRI="/Seam"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasThreadCut"/>
+        <Class IRI="/ThreadCut"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isClothingElementOf"/>
+        <Class IRI="/Clothing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isClothingElementOf"/>
+        <Class IRI="/ClothingElement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isSeamOf"/>
+        <Class IRI="/Clothing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isSeamOf"/>
+        <Class IRI="/ClothingElement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isThreadCutOf"/>
+        <Class IRI="/Clothing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isThreadCutOf"/>
+        <Class IRI="/ClothingElement"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="/appliedDecoration"/>
+        <Class IRI="/Decoration"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/intendedUser"/>
+        <Class IRI="/Clothing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/uniformSpecification"/>
+        <Class IRI="/Clothing"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="/appliedDecoration"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/intendedUser"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/uniformSpecification"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Bottom</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta la parte inferiore dei vestimenti (es. gonna)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Bottom</IRI>
+        <Literal xml:lang="en">This entity represents the bottom part of a piece of clothing (e.g. skirt)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Bottom</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Bottom</IRI>
+        <Literal xml:lang="en">Bottom (clothing)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Bottom</IRI>
+        <Literal xml:lang="it">Parte inferiore (vestiti)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Bottom</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Bottom</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/Bottom</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: DA/SRC/SRCI-SRCD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Clothing</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta un capo d&apos;abbigliamento, un vestimento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Clothing</IRI>
+        <Literal xml:lang="en">This entity represents a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Clothing</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Clothing</IRI>
+        <Literal xml:lang="en">Clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Clothing</IRI>
+        <Literal xml:lang="it">Vestimento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Clothing</IRI>
+        <Literal xml:lang="it">Vestito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Clothing</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Clothing</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/Clothing</IRI>
+        <Literal>ICCD Normativa VeAC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ClothingElement</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta un elemento di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ClothingElement</IRI>
+        <Literal xml:lang="en">This entity represents an element of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ClothingElement</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ClothingElement</IRI>
+        <Literal xml:lang="en">Clothing Element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ClothingElement</IRI>
+        <Literal xml:lang="it">Elemento di vestimento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ClothingElement</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ClothingElement</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Costume</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta un vestimento definito come costume.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Costume</IRI>
+        <Literal xml:lang="en">This entity represents a costume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Costume</IRI>
+        <Literal xml:lang="en">Costume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Costume</IRI>
+        <Literal xml:lang="it">Costume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Costume</IRI>
+        <Literal xml:lang="it">instable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Costume</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/Costume</IRI>
+        <Literal>Normativa VeAC 3.01</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Cuff</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta un polsino di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Cuff</IRI>
+        <Literal xml:lang="en">This entity represents a cuff of a piece of clothing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Cuff</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Cuff</IRI>
+        <Literal xml:lang="en">Cuff</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Cuff</IRI>
+        <Literal xml:lang="it">Polsino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Cuff</IRI>
+        <Literal xml:lang="en">ICCD Normativa VeAC 3.01: DA/SRM/SRMF</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Cuff</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Cuff</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CuffType</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta il tipo di maniche di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CuffType</IRI>
+        <Literal xml:lang="en">This entity represents the type of cuff of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CuffType</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CuffType</IRI>
+        <Literal xml:lang="en">Cuff type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CuffType</IRI>
+        <Literal xml:lang="it">Tipo di maniche</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/CuffType</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/CuffType</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Decoration</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta la decorazione di un capo di abbigliamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Decoration</IRI>
+        <Literal xml:lang="en">This entity represents the decoration of a piece of clothing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Decoration</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Decoration</IRI>
+        <Literal xml:lang="en">Decoration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Decoration</IRI>
+        <Literal xml:lang="it">Decorazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Decoration</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Decoration</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/Decoration</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: DA/EDA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/DecorationType</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta il tipo di decorazione di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/DecorationType</IRI>
+        <Literal xml:lang="en">This entity represents the decoration type of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/DecorationType</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/DecorationType</IRI>
+        <Literal xml:lang="en">Decoration type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/DecorationType</IRI>
+        <Literal xml:lang="it">Tipo di decorazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/DecorationType</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/DecorationType</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Fastener</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta la chiusura di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Fastener</IRI>
+        <Literal xml:lang="en">This entity represents a faster of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Fastener</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Fastener</IRI>
+        <Literal xml:lang="it">Chiusura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Fastener</IRI>
+        <Literal xml:lang="en">Fastener</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Fastener</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Fastener</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/Fastener</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: EDT, MTCD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/FastenerType</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta il tipo di chiusura di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/FastenerType</IRI>
+        <Literal xml:lang="en">This entity represents the type of fastener of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/FastenerType</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/FastenerType</IRI>
+        <Literal xml:lang="en">Fastener type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/FastenerType</IRI>
+        <Literal xml:lang="it">Tipo di chiusura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/FastenerType</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/FastenerType</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/GarmentAnalysis</IRI>
+        <Literal xml:lang="it">Questo individuo rappresenta la definizione tecnica completa dei tessuti, secondo le norme fornite dal C.I.E.T.A., o dei merletti, oppure rappresenta la distinzione fra tessuto unito e tessuto operato.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/GarmentAnalysis</IRI>
+        <Literal xml:lang="en">This individual represents the techincal definition of textured fabrics of an ancient or contemporary garment, according to the standard provided by C.I.E.T.A., or laces. It can also represent the dinstrinction between plain fabric and textured fabric.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/GarmentAnalysis</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/GarmentAnalysis</IRI>
+        <Literal xml:lang="it">Analisi del vestimento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/GarmentAnalysis</IRI>
+        <Literal xml:lang="en">Garment analysis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/GarmentAnalysis</IRI>
+        <Literal>ICCD Normativa VeAC: MT/MTC/MTCA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/InteriorElement</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta ula fodera di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/InteriorElement</IRI>
+        <Literal xml:lang="en">This entity represents the internal element (lining) of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/InteriorElement</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/InteriorElement</IRI>
+        <Literal xml:lang="it">Fodera</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/InteriorElement</IRI>
+        <Literal xml:lang="en">Interior element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/InteriorElement</IRI>
+        <Literal xml:lang="en">Lining</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/InteriorElement</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/InteriorElement</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/InteriorElement</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: EDT, MTCD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/MaximumLength</IRI>
+        <Literal>ICCD Normativa VeAC: MI/MIIA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/MaximumWidth</IRI>
+        <Literal>ICCD Normativa VeAC: MIIL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Neck</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta il collo di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Neck</IRI>
+        <Literal xml:lang="en">This entity represents the neck of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Neck</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Neck</IRI>
+        <Literal xml:lang="it">Collo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Neck</IRI>
+        <Literal xml:lang="en">Neck</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Neck</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Neck</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/Neck</IRI>
+        <Literal>ICCD Normativa VeAC: SREC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/NeckType</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta il tipo di collo di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/NeckType</IRI>
+        <Literal xml:lang="en">This entity represents the type of neck of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NeckType</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/NeckType</IRI>
+        <Literal xml:lang="en">Neck type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/NeckType</IRI>
+        <Literal xml:lang="it">Tipo di collo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/NeckType</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/NeckType</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Pocket</IRI>
+        <Literal xml:lang="it">Questa entità le tasche di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Pocket</IRI>
+        <Literal xml:lang="en">This entity represents the pockets of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Pocket</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Pocket</IRI>
+        <Literal xml:lang="en">Pocket</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Pocket</IRI>
+        <Literal xml:lang="it">Tasche</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Pocket</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Pocket</IRI>
+        <Literal xml:lang="en">unstabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/Pocket</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: SRET/SREP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/PocketType</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta il tipo di tasche di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/PocketType</IRI>
+        <Literal xml:lang="en">This entity represents the type of pocket of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/PocketType</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/PocketType</IRI>
+        <Literal xml:lang="en">Pocket type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/PocketType</IRI>
+        <Literal xml:lang="it">Tipi di tasche</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/PocketType</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/PocketType</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Seam</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta la cucitura di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Seam</IRI>
+        <Literal xml:lang="en">This entity represents the seam of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Seam</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Seam</IRI>
+        <Literal xml:lang="it">Cuciture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Seam</IRI>
+        <Literal xml:lang="en">Seam</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Seam</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Seam</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/Seam</IRI>
+        <Literal>ICCD Normativa VeAC: SREU</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Sleeve</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta le maniche di un capo di abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Sleeve</IRI>
+        <Literal xml:lang="en">This entity represents the sleeves of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Sleeve</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Sleeve</IRI>
+        <Literal xml:lang="it">Manica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Sleeve</IRI>
+        <Literal xml:lang="en">Sleeve</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Sleeve</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Sleeve</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/Sleeve</IRI>
+        <Literal>ICCD Normativa 3.01 VeAC: MIM/SRM</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SleeveType</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta il tipo di manica di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SleeveType</IRI>
+        <Literal xml:lang="en">This property represents the type of sleeve of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/SleeveType</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/SleeveType</IRI>
+        <Literal xml:lang="en">Sleeve type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/SleeveType</IRI>
+        <Literal xml:lang="it">Tipo di manica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/SleeveType</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/SleeveType</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/SleeveType</IRI>
+        <Literal>ICCD Normativa VeAC: DA/SRM/SRMT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ThreadCut</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta il taglio di un capo d&apos;abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ThreadCut</IRI>
+        <Literal xml:lang="en">This entity represents the thread cut of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ThreadCut</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ThreadCut</IRI>
+        <Literal xml:lang="it">Taglio (di un vestimento)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ThreadCut</IRI>
+        <Literal xml:lang="en">Thread cut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ThreadCut</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ThreadCut</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Top</IRI>
+        <Literal xml:lang="it">Questa entità rappresenta la parte superiore di un capo di abbigliamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Top</IRI>
+        <Literal xml:lang="en">This entity represents the top of a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Top</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Top</IRI>
+        <Literal xml:lang="it">Parte superiore (abbigliamento)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Top</IRI>
+        <Literal xml:lang="en">Top (clothing)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Top</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/Top</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/appliedDecoration</IRI>
+        <Literal xml:lang="it">Questa proprietà indica se la decorazione di un capo è applicata oppure no (e.g. ricamata)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/appliedDecoration</IRI>
+        <Literal xml:lang="en">This property claims if a decoration is applied on the clothing or not (e.g. embrodered)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/appliedDecoration</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/appliedDecoration</IRI>
+        <Literal xml:lang="en">is applied decoration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/appliedDecoration</IRI>
+        <Literal xml:lang="it">è decorazione applicata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/appliedDecoration</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/appliedDecoration</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/costumeSpecification</IRI>
+        <Literal xml:lang="it">Questa proprietà collega un costume alle sue specifiche</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/costumeSpecification</IRI>
+        <Literal xml:lang="en">This property relates a costume with its specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/costumeSpecification</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/costumeSpecification</IRI>
+        <Literal xml:lang="it">ha specifiche di costume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/costumeSpecification</IRI>
+        <Literal xml:lang="en">has costume specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/costumeSpecification</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/costumeSpecification</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasClothingElement</IRI>
+        <Literal xml:lang="it">Questa proprietà collega un capo d&apos;abbigliamento (o un suo elemento) con un altro elemento del vestito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasClothingElement</IRI>
+        <Literal xml:lang="en">This property relates a piece of clothing or a clothing element with another clothing element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasClothingElement</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasClothingElement</IRI>
+        <Literal xml:lang="it">ha elemento (di vestimento)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasClothingElement</IRI>
+        <Literal xml:lang="en">has clothing element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/hasClothingElement</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/hasClothingElement</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSeam</IRI>
+        <Literal xml:lang="it">Questa proprietà collega un vestimento con la sua cucitura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSeam</IRI>
+        <Literal xml:lang="en">This property relates a piece of clothing with its seam</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasSeam</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSeam</IRI>
+        <Literal xml:lang="it">ha cucitura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSeam</IRI>
+        <Literal xml:lang="en">has seam</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/hasSeam</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/hasSeam</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasThreadCut</IRI>
+        <Literal xml:lang="it">Questa proprietà collega un capo d&apos;abbigliamento con il taglio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasThreadCut</IRI>
+        <Literal xml:lang="en">This property relates a piece of clothing with its thread cut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasThreadCut</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasThreadCut</IRI>
+        <Literal xml:lang="it">ha taglio (di vestimento)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasThreadCut</IRI>
+        <Literal xml:lang="en">has thread cut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/hasThreadCut</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/hasThreadCut</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/intendedUser</IRI>
+        <Literal xml:lang="it">Questa proprietà collega un vestimento al tipo di utente per cui è stato realizzato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/intendedUser</IRI>
+        <Literal xml:lang="en">This property relates a clothing with the indended user type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/intendedUser</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/intendedUser</IRI>
+        <Literal xml:lang="it">ha utente designato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/intendedUser</IRI>
+        <Literal xml:lang="en">has intended user</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/intendedUser</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/intendedUser</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/intendedUser</IRI>
+        <Literal>Normativa VeAC 3.01: OG/OGT/OGTG, OG/OGTA+OGTR/Q</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isClothingElementOf</IRI>
+        <Literal xml:lang="it">Questa proprietà collega un elemento di un capo di abbigliamento con un altro elemento o con un intero capo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isClothingElementOf</IRI>
+        <Literal xml:lang="en">This property relates a clothing element with another clothing element or a piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isClothingElementOf</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isClothingElementOf</IRI>
+        <Literal xml:lang="en">is clothing element of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isClothingElementOf</IRI>
+        <Literal xml:lang="it">è elemento di vestimento di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/isClothingElementOf</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/isClothingElementOf</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isSeamOf</IRI>
+        <Literal xml:lang="it">Questa proprietà collega una cucitura con il suo vestimento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isSeamOf</IRI>
+        <Literal xml:lang="en">This property relates a seam with its piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isSeamOf</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isSeamOf</IRI>
+        <Literal xml:lang="en">is seam of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isSeamOf</IRI>
+        <Literal xml:lang="it">è cucitura di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/isSeamOf</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/isSeamOf</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isThreadCutOf</IRI>
+        <Literal xml:lang="it">Questa proprietà collega il taglio con il suo vestimento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isThreadCutOf</IRI>
+        <Literal xml:lang="en">This property relates a thread cut with its piece of clothing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isThreadCutOf</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isThreadCutOf</IRI>
+        <Literal xml:lang="en">is thread cut of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isThreadCutOf</IRI>
+        <Literal xml:lang="it">è taglio di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/isThreadCutOf</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/isThreadCutOf</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/uniformSpecification</IRI>
+        <Literal xml:lang="it">Questa proprietà collega un&apos;uniforme con le sue specifiche</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/uniformSpecification</IRI>
+        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/uniformSpecification</IRI>
+        <Literal xml:lang="it">ha specifiche di uniforme</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/uniformSpecification</IRI>
+        <Literal xml:lang="en">has uniform specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/uniformSpecification</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/uniformSpecification</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

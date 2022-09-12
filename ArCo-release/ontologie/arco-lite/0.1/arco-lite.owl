@@ -308,6 +308,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasGarmentAnalysis -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasGarmentAnalysis">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isGarmentAnalysisOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un elemento di un capo di abbigliamento con l&apos;analisi dei tessuti</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a clothing element with its garment analysis (technical characteristic)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description"/>
+        <rdfs:label xml:lang="it">ha analisi del tessuto</rdfs:label>
+        <rdfs:label xml:lang="en">has garment analysis</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa VeAC 3.01: MT/MTCA</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasInventoryNumberResponsible -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasInventoryNumberResponsible">
@@ -972,6 +990,23 @@ Questa proprietà collega un bene culturale a un altro bene culturale collegato,
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isGarmentAnalysisOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isGarmentAnalysisOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;analisi del tessuto (caratteristica tecnica) con un elemento di un vestimento</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the garment analysis with its element of clothing</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description"/>
+        <rdfs:label xml:lang="en">is garment analysis of</rdfs:label>
+        <rdfs:label xml:lang="it">è analisi del tessuto di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa VeAC 3.01: MT/MTCA</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isInventoryNumberResponsibleOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isInventoryNumberResponsibleOf">
@@ -1397,6 +1432,23 @@ Questa proprietà collega un bene culturale a un altro bene culturale collegato,
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/age -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/age">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua età</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its age</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">Age</rdfs:label>
+        <rdfs:label xml:lang="it">Età</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>Normativa BDI 4.00: ATTE, AIFH, VIFH, FIFH</catalogue:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/alternativeDesignation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/alternativeDesignation">
@@ -1657,6 +1709,24 @@ Questa proprietà collega un bene culturale a un altro bene culturale collegato,
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/sex -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/sex">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con il suo sesso biologico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its biological sex</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">Sesso</rdfs:label>
+        <rdfs:label xml:lang="en">Sex</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>Normativa AT: DA/STS
+Normativa BDI: AT/ATT/ATTS</catalogue:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/slangDesignation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/slangDesignation">
@@ -1756,6 +1826,33 @@ Questa proprietà collega un bene culturale a un altro bene culturale collegato,
     <!-- https://w3id.org/italia/onto/l0/Activity -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Activity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/GarmentAnalysis -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/arco-lite/GarmentAnalysis">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la definizione tecnica completa dei tessuti, secondo le norme fornite dal C.I.E.T.A., o dei merletti, oppure rappresenta la distinzione fra tessuto unito e tessuto operato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the techincal definition of textured fabrics of an ancient or contemporary garment, according to the standard provided by C.I.E.T.A., or laces. It can also represent the dinstrinction between plain fabric and textured fabric.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description"/>
+        <rdfs:label xml:lang="it">Analisi del vestimento</rdfs:label>
+        <rdfs:label xml:lang="en">Garment analysis</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa VeAC: MT/MTC/MTCA</catalogue:iccdNormTag>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
