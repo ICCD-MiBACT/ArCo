@@ -54,6 +54,9 @@
         <Class IRI="/String"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/hasString"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/involvesAccompanyingInstrument"/>
     </Declaration>
     <Declaration>
@@ -67,6 +70,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/isSoloInstrumentInvolvedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isStringOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/producesMusicalNote"/>
@@ -164,6 +170,10 @@
         <NamedIndividual IRI="/Tuning"/>
     </ClassAssertion>
     <InverseObjectProperties>
+        <ObjectProperty IRI="/hasString"/>
+        <ObjectProperty IRI="/isStringOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="/involvesAccompanyingInstrument"/>
         <ObjectProperty IRI="/isAccompanyingInstrumentInvolvedIn"/>
     </InverseObjectProperties>
@@ -171,21 +181,21 @@
         <ObjectProperty IRI="/involvesSoloInstrument"/>
         <ObjectProperty IRI="/isSoloInstrumentInvolvedIn"/>
     </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/isProducedByMusicalInstrument"/>
-        <ObjectProperty IRI="/producesMusicalNote"/>
-    </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/isAccompanyingInstrumentInvolvedIn"/>
         <Class IRI="/MusicalInstrument"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/isProducedByMusicalInstrument"/>
-        <Class IRI="/MusicalNote"/>
+        <Class IRI="/MusicalInstrument"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/isSoloInstrumentInvolvedIn"/>
         <Class IRI="/MusicalInstrument"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isStringOf"/>
+        <Class IRI="/String"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/producesMusicalNote"/>
@@ -201,6 +211,10 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/isProducedByMusicalInstrument"/>
+        <Class IRI="/String"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isStringOf"/>
         <Class IRI="/MusicalInstrument"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -697,6 +711,46 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasString</IRI>
+        <Literal xml:lang="it">Questa proprietà collega uno strumento musicale con la sua corda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasString</IRI>
+        <Literal xml:lang="en">This property relates a musical instrument with its string</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasString</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasString</IRI>
+        <Literal xml:lang="it">ha corda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasString</IRI>
+        <Literal xml:lang="en">has string</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/hasString</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/hasString</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/hasString</IRI>
+        <Literal>ICCD Normativa SM 3.01: AA/AAL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/involvesAccompanyingInstrument</IRI>
         <Literal xml:lang="it">Questa proprietà collega un&apos;entità al su strumento musicale di accompagnamento</Literal>
     </AnnotationAssertion>
@@ -869,6 +923,46 @@
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <IRI>/isSoloInstrumentInvolvedIn</IRI>
         <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isStringOf</IRI>
+        <Literal xml:lang="it">Questa è la proprietà inversa di &quot;ha corda&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isStringOf</IRI>
+        <Literal xml:lang="en">This is the inverse property of &quot;has string&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isStringOf</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isStringOf</IRI>
+        <Literal xml:lang="en">is string of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isStringOf</IRI>
+        <Literal xml:lang="it">è corda di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/isStringOf</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/isStringOf</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/isStringOf</IRI>
+        <Literal>ICCD Normativa SM 3.01: AA/AAL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
