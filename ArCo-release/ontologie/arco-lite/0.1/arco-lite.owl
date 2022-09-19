@@ -262,6 +262,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasDiapason -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasDiapason">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isDiapasonOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musical al corista rilevato (nota, temperatura ed eventualmente umidità ambientale al momento della rilevazione).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a musical instrument to the identified diapason (note, temperature and eventually humidity during the detection).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha corista</rdfs:label>
+        <rdfs:label xml:lang="en">has diapason</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasEditor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasEditor">
@@ -284,6 +302,25 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasExportOffice">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasExtension -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasExtension">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isExtensionOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale alla sua estensione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a musical instrument with its extension</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha estensione musicale</rdfs:label>
+        <rdfs:label xml:lang="en">has musical extension</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAE</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -419,6 +456,25 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasMusicalTemperament -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasMusicalTemperament">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isMusicalTemperamentOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento al temperamento adottato, soprattutto in caso di oggetto in condizioni originali, o dopo un restauro, dello strumento musicale. Per gli idiofoni a tasti fissi (come xilofoni, litofoni, metallofoni) rappresenta la successione degli intervalli.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a musical instrument to the adopted temperament, especially in relation to an object in its original conditions, or after its restoration. For idiophones with fixed keys (e.g. xylophone, litophone, metallophone) the temperament represents the succession of intervals.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha temperamento</rdfs:label>
+        <rdfs:label xml:lang="en">has musical temperament</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAP</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasMusician -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasMusician">
@@ -517,7 +573,6 @@
     <!-- https://w3id.org/arco/ontology/arco-lite/hasRealizationDate -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasRealizationDate">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRealizationDateOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
@@ -613,6 +668,7 @@
     <!-- https://w3id.org/arco/ontology/arco-lite/hasRightHolder -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasRightHolder">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRightHolderOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
@@ -726,6 +782,25 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasTuning -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasTuning">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTuningOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale alla sua accordatura</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a musical instrument with its tuning</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha accordatura</rdfs:label>
+        <rdfs:label xml:lang="en">has tuning</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAA</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasUrbanPlanningEnvironmentalRelationWith -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasUrbanPlanningEnvironmentalRelationWith">
@@ -835,6 +910,24 @@ Questa proprietà collega un bene culturale a un altro bene culturale collegato,
         <rdfs:label xml:lang="it">è città di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isClassifiedByCurrentTaxon -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isClassifiedByCurrentTaxon">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCurrentTaxonOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isClassifiedByOriginalTaxon -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isClassifiedByOriginalTaxon">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOriginalTaxonOf"/>
     </owl:ObjectProperty>
     
 
@@ -958,6 +1051,31 @@ Questa proprietà collega un bene culturale a un altro bene culturale collegato,
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isCurrentTaxonOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCurrentTaxonOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/classifies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isDiapasonOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isDiapasonOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà è l&apos;inversa di &quot;ha corista&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has diapason&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is diapason of</rdfs:label>
+        <rdfs:label xml:lang="it">è corista di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isEditorOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isEditorOf">
@@ -969,6 +1087,24 @@ Questa proprietà collega un bene culturale a un altro bene culturale collegato,
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">Normativa F: PD/EDI/EDIR, Normativa S: AU/EDT/EDTN</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isExtensionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isExtensionOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà è l&apos;inversa di &quot;è estensione di&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has extension&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is extension of</rdfs:label>
+        <rdfs:label xml:lang="it">è estensione musicale di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAE</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1103,12 +1239,38 @@ Questa proprietà collega un bene culturale a un altro bene culturale collegato,
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isMusicalTemperamentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isMusicalTemperamentOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà è l&apos;inversa di &quot;ha temperamento musicale&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has musical temperament&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is musical temperament of</rdfs:label>
+        <rdfs:label xml:lang="it">è temperamento musicale di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAP</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isOperatorOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isOperatorOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentTo"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isOriginalTaxonOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isOriginalTaxonOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/classifies"/>
     </owl:ObjectProperty>
     
 
@@ -1238,6 +1400,7 @@ Questa proprietà collega un bene culturale a un altro bene culturale collegato,
     <!-- https://w3id.org/arco/ontology/arco-lite/isRightHolderOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isRightHolderOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentTo"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">Questa proprietà collega un agente detentore di diritti con l&apos;entità</rdfs:comment>
@@ -1315,6 +1478,24 @@ Questa proprietà collega un bene culturale a un altro bene culturale collegato,
         <rdfs:label xml:lang="it">è tecnica di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isTuningOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isTuningOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha accordatura&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has tuning&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is tuning of</rdfs:label>
+        <rdfs:label xml:lang="it">è accordatura di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAA</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1705,24 +1886,6 @@ Questa proprietà collega un bene culturale a un altro bene culturale collegato,
         <rdfs:label xml:lang="en">original designation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/arco-lite/sex -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/sex">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con il suo sesso biologico</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity with its biological sex</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="it">Sesso</rdfs:label>
-        <rdfs:label xml:lang="en">Sex</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <catalogue:iccdNormTag>Normativa AT: DA/STS
-Normativa BDI: AT/ATT/ATTS</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
