@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://w3id.org/arco/ontology/clothing-description"
+     xml:base="https://w3id.org/arco/ontology/clothing-description"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://w3id.org/arco/ontology/clothing-description"
+     ontologyIRI="https://w3id.org/arco/ontology/clothing-description"
      versionIRI="https://w3id.org/arco/ontology/clothing-description/0.1">
     <Prefix name="clo" IRI="http://w3id.org/arco/ontology/clothing-description/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -148,16 +148,13 @@
         <NamedIndividual IRI="/HipCircumference"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/MaximumLength"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="/MaximumMinimumWidth"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/MaximumTotalWidth"/>
+        <NamedIndividual IRI="/MaximumTotalLength"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/MaximumWidth"/>
+        <NamedIndividual IRI="/MaximumTotalWidth"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/WaistCircumference"/>
@@ -296,16 +293,56 @@
         <Class IRI="/ClothingElement"/>
     </SubClassOf>
     <ClassAssertion>
+        <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <NamedIndividual IRI="/BackTotalLength"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <NamedIndividual IRI="/BackWidth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <NamedIndividual IRI="/ChestCircumference"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <NamedIndividual IRI="/DepthOrHeight"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <NamedIndividual IRI="/EdgeCircumference"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <NamedIndividual IRI="/ExternalInternalLength"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <NamedIndividual IRI="/FrontTotalLength"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
         <NamedIndividual IRI="/GarmentAnalysis"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <NamedIndividual IRI="/MaximumLength"/>
+        <NamedIndividual IRI="/HipCircumference"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <NamedIndividual IRI="/MaximumWidth"/>
+        <NamedIndividual IRI="/MaximumMinimumWidth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <NamedIndividual IRI="/MaximumTotalLength"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <NamedIndividual IRI="/MaximumTotalWidth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <NamedIndividual IRI="/WaistCircumference"/>
     </ClassAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/isSeamOf"/>
@@ -420,6 +457,66 @@
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/BackTotalLength</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/BackTotalLength</IRI>
+        <Literal xml:lang="en">Back total length</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/BackTotalLength</IRI>
+        <Literal xml:lang="it">Lunghezza totale parte posteriore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/BackTotalLength</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/BackTotalLength</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/BackTotalLength</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: MISD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/BackWidth</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/BackWidth</IRI>
+        <Literal xml:lang="en">Back width</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/BackWidth</IRI>
+        <Literal xml:lang="it">Larghezza dorso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/BackWidth</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/BackWidth</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/BackWidth</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: MISS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/Bottom</IRI>
         <Literal xml:lang="it">Questa entità rappresenta la parte inferiore dei vestimenti (es. gonna)</Literal>
@@ -432,7 +529,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Bottom</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -460,6 +557,36 @@
         <Literal>ICCD Normativa VeAC 3.01: DA/SRC/SRCI-SRCD</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ChestCircumference</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ChestCircumference</IRI>
+        <Literal xml:lang="en">Chest circumference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ChestCircumference</IRI>
+        <Literal xml:lang="it">Circonferenza petto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ChestCircumference</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ChestCircumference</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/ChestCircumference</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: MISP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/Clothing</IRI>
         <Literal xml:lang="it">Questa entità rappresenta un capo d&apos;abbigliamento, un vestimento</Literal>
@@ -472,7 +599,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Clothing</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -517,7 +644,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/ClothingElement</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -587,7 +714,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Cuff</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -627,7 +754,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/CuffType</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -662,7 +789,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Decoration</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -702,7 +829,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/DecorationType</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -725,6 +852,96 @@
         <Literal xml:lang="en">unstable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/DepthOrHeight</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/DepthOrHeight</IRI>
+        <Literal xml:lang="en">Depth / height</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/DepthOrHeight</IRI>
+        <Literal xml:lang="it">Profondità / altezza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/DepthOrHeight</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/DepthOrHeight</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/DepthOrHeight</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: MIIP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/EdgeCircumference</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/EdgeCircumference</IRI>
+        <Literal xml:lang="it">Circonferenza orlo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/EdgeCircumference</IRI>
+        <Literal xml:lang="en">Edge circumference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/EdgeCircumference</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/EdgeCircumference</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/EdgeCircumference</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: MISO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ExternalInternalLength</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ExternalInternalLength</IRI>
+        <Literal xml:lang="en">External / internal length</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ExternalInternalLength</IRI>
+        <Literal xml:lang="it">Lunghezza esterna / interna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ExternalInternalLength</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ExternalInternalLength</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/ExternalInternalLength</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: MIMA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/Fastener</IRI>
         <Literal xml:lang="it">Questa entità rappresenta la chiusura di un capo d&apos;abbigliamento</Literal>
@@ -737,7 +954,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Fastener</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -777,7 +994,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/FastenerType</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -800,6 +1017,36 @@
         <Literal xml:lang="en">unstable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/FrontTotalLength</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/FrontTotalLength</IRI>
+        <Literal xml:lang="en">Front total length</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/FrontTotalLength</IRI>
+        <Literal xml:lang="it">Lunghezza totale parte anteriore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/FrontTotalLength</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/FrontTotalLength</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/FrontTotalLength</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: MISR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/GarmentAnalysis</IRI>
         <Literal xml:lang="it">Questo individuo rappresenta la definizione tecnica completa dei tessuti, secondo le norme fornite dal C.I.E.T.A., o dei merletti, oppure rappresenta la distinzione fra tessuto unito e tessuto operato.</Literal>
@@ -812,7 +1059,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/GarmentAnalysis</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -830,6 +1077,36 @@
         <Literal>ICCD Normativa VeAC: MT/MTC/MTCA</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/HipCircumference</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/HipCircumference</IRI>
+        <Literal xml:lang="it">Circonferenza fianchi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/HipCircumference</IRI>
+        <Literal xml:lang="en">Hip circumference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/HipCircumference</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/HipCircumference</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/HipCircumference</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: MISF</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/InteriorElement</IRI>
         <Literal xml:lang="it">Questa entità rappresenta ula fodera di un capo d&apos;abbigliamento</Literal>
@@ -842,7 +1119,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/InteriorElement</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -875,14 +1152,94 @@
         <Literal>ICCD Normativa VeAC 3.01: EDT, MTCD</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/MaximumLength</IRI>
-        <Literal>ICCD Normativa VeAC: MI/MIIA</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/MaximumMinimumWidth</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MaximumMinimumWidth</IRI>
+        <Literal xml:lang="it">Larghezza massima / minima</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MaximumMinimumWidth</IRI>
+        <Literal xml:lang="en">Maximum minimum width</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/MaximumMinimumWidth</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/MaximumMinimumWidth</IRI>
+        <Literal xml:lang="en">unstable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/MaximumWidth</IRI>
-        <Literal>ICCD Normativa VeAC: MIIL</Literal>
+        <IRI>/MaximumMinimumWidth</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: MIML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/MaximumTotalLength</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MaximumTotalLength</IRI>
+        <Literal xml:lang="it">Lunghezza totale massima</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MaximumTotalLength</IRI>
+        <Literal xml:lang="en">Maximum total length</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/MaximumTotalLength</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/MaximumTotalLength</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/MaximumTotalLength</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: MIIA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/MaximumTotalWidth</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MaximumTotalWidth</IRI>
+        <Literal xml:lang="it">Larghezza totale massima</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MaximumTotalWidth</IRI>
+        <Literal xml:lang="en">Maximum total width</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/MaximumTotalWidth</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/MaximumTotalWidth</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/MaximumTotalWidth</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: MIIL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -897,7 +1254,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Neck</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -937,7 +1294,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/NeckType</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -972,7 +1329,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Pocket</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1012,7 +1369,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/PocketType</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1047,7 +1404,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Seam</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1087,7 +1444,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Sleeve</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1127,7 +1484,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/SleeveType</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1167,7 +1524,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/ThreadCut</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1202,7 +1559,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Top</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1225,6 +1582,36 @@
         <Literal xml:lang="en">unstable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/WaistCircumference</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/WaistCircumference</IRI>
+        <Literal xml:lang="it">Circonferenza vita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/WaistCircumference</IRI>
+        <Literal xml:lang="en">Waist circumference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/WaistCircumference</IRI>
+        <Literal xml:lang="it">instabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/WaistCircumference</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+        <IRI>/WaistCircumference</IRI>
+        <Literal>ICCD Normativa VeAC 3.01: MISV</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/appliedDecoration</IRI>
         <Literal xml:lang="it">Questa proprietà indica se la decorazione di un capo è applicata oppure no (e.g. ricamata)</Literal>
@@ -1237,7 +1624,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/appliedDecoration</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1272,7 +1659,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/costumeSpecification</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1307,7 +1694,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/hasClothingElement</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1342,7 +1729,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/hasSeam</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1377,7 +1764,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/hasThreadCut</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1412,7 +1799,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/intendedUser</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1452,7 +1839,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/isClothingElementOf</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1487,7 +1874,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/isSeamOf</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1522,7 +1909,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/isThreadCutOf</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1552,7 +1939,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/uniformSpecification</IRI>
-        <IRI>https://w3id.org/arco/ontology/clothing-description</IRI>
+        <IRI></IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
