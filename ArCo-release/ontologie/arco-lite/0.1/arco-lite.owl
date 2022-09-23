@@ -50,6 +50,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasAdditionalFormResponsibleAgent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+        <catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPE</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -65,9 +66,17 @@
     <!-- https://w3id.org/arco/ontology/arco-lite/hasAuthor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasAuthor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isAuthorOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al suo autore/creatore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its author.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha autore</rdfs:label>
+        <rdfs:label xml:lang="en">has author</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -874,12 +883,20 @@ Questa proprietà collega un bene culturale a un altro bene culturale collegato,
     <!-- https://w3id.org/arco/ontology/arco-lite/isAuthorOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isAuthorOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentTo"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/isAttributedAuthorIn"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf"/>
         </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un agente (autore) all&apos;entità realizzata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an agent (author) with its realized entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is author of</rdfs:label>
+        <rdfs:label xml:lang="it">è autore di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
