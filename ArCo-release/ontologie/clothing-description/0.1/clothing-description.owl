@@ -7,6 +7,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://w3id.org/arco/ontology/clothing-description"
      versionIRI="https://w3id.org/arco/ontology/clothing-description/0.1">
+    <Prefix name="" IRI="https://w3id.org/arco/ontology/clothing-description"/>
     <Prefix name="clo" IRI="http://w3id.org/arco/ontology/clothing-description/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -597,7 +598,7 @@
         <Literal xml:lang="en">This entity represents a piece of clothing</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Clothing</IRI>
         <IRI></IRI>
     </AnnotationAssertion>
