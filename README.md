@@ -12,4 +12,4 @@ I dati dovranno essere strutturati sulla base di modelli ontologici che:
 
 ## ArCo Releases
 
-ArCo v0.5 is now available! Please, go to the ArCo-release folder and download it.
+ArCo is available! Please, go to the ArCo-release folder and download it.
