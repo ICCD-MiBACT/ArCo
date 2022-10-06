@@ -3534,14 +3534,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasGeologicalContext"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/GeologicalContext"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSite"/>
+                <owl:allValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalInstituteOrSite"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasGeologicalContext"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/GeologicalContext"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description xml:lang="en">An example of usage of the class &apos;Time Indexed Typed Location&apos; is the following:
@@ -3577,12 +3577,6 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/isToponymInTimeOf"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4010,6 +4004,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/PreviousLocation"/>
     </owl:NamedIndividual>
     
 

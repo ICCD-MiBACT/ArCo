@@ -1121,9 +1121,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- http://dati.beniculturali.it/cis/Site -->
 
-    <owl:Class rdf:about="http://dati.beniculturali.it/cis/Site">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/Site"/>
     
 
 
@@ -1418,6 +1416,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/italia/onto/CLV/Identifier -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Identifier"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/RO/Role -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/RO/Role"/>
@@ -1477,6 +1481,12 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/italia/onto/l0/Object -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/System -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/System"/>
     
 
 

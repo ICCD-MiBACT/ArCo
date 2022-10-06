@@ -142,9 +142,21 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/iccdNormTag -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/replacedBy -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/core/replacedBy"/>
     
 
 
@@ -240,6 +252,12 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTypeOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isValidAt -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isValidAt"/>
     
 
 
@@ -2833,6 +2851,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/italia/onto/l0/isDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -3187,6 +3211,18 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error2 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error2"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/ArchivalRecordSet -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet"/>
@@ -3226,6 +3262,12 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/EventOrSituationInTime -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
     
 
 
@@ -4284,6 +4326,7 @@ resource:Measurement/0500212021-1-height
     <!-- https://w3id.org/arco/ontology/denotative-description/MeasurementCollection -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection">
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error2"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4301,13 +4344,6 @@ resource:Measurement/0500212021-1-height
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/current"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
@@ -4652,7 +4688,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-characteristic/"/>
@@ -4688,6 +4724,7 @@ resource:MeasurementCollection/1200865132-1
     <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalStatus -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus">
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4699,13 +4736,6 @@ resource:MeasurementCollection/1200865132-1
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/current"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato tecnico di un&apos;entità, cioè una situazione in cui un&apos;entità ha associate una serie di caratteristiche tecniche. Lo stato di un&apos;entità ha associata una validità temporale, relativa al momento in cui quelle caratteristiche sono state rilevate.</rdfs:comment>
@@ -6157,6 +6187,12 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="it">Comunicazione scritta</rdfs:label>
         <rdfs:label xml:lang="en">Written communication</rdfs:label>
     </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
     
 
 
