@@ -3515,67 +3515,67 @@
 					<xsl:value-of select="concat('Collecting location of cultural property ', $itemURI)" />
 				</l0:name>
 				<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
-					<arco-location:hasGeologicalContex>
+					<arco-location:hasGeologicalContext>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
 						</xsl:attribute>
-					</arco-location:hasGeologicalContex>
+					</arco-location:hasGeologicalContext>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/ET/ETA/ETAC or record/metadata/schede/*/ET/ETA/ETAP or record/metadata/schede/*/ET/ETA/ETAD or record/metadata/schede/*/ET/ETA/ETAF">
-					<arco-location:hasGeologicalContex>
+					<arco-location:hasGeologicalContext>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
 						</xsl:attribute>
-					</arco-location:hasGeologicalContex>
+					</arco-location:hasGeologicalContext>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/IM/IMG">
-					<arco-location:hasGeologicalContex>
+					<arco-location:hasGeologicalContext>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
 						</xsl:attribute>
-					</arco-location:hasGeologicalContex>
+					</arco-location:hasGeologicalContext>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/IM/IML">
-					<arco-location:hasGeologicalContex>
+					<arco-location:hasGeologicalContext>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
 						</xsl:attribute>
-					</arco-location:hasGeologicalContex>
+					</arco-location:hasGeologicalContext>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/IR/IRG">
-					<arco-location:hasGeologicalContex>
+					<arco-location:hasGeologicalContext>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
 						</xsl:attribute>
-					</arco-location:hasGeologicalContex>
+					</arco-location:hasGeologicalContext>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/IR/IRL">
-					<arco-location:hasGeologicalContex>
+					<arco-location:hasGeologicalContext>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
 						</xsl:attribute>
-					</arco-location:hasGeologicalContex>
+					</arco-location:hasGeologicalContext>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/ET/ETG">
-					<arco-location:hasGeologicalContex>
+					<arco-location:hasGeologicalContext>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
 						</xsl:attribute>
-					</arco-location:hasGeologicalContex>
+					</arco-location:hasGeologicalContext>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/ET/ETL">
-					<arco-location:hasGeologicalContex>
+					<arco-location:hasGeologicalContext>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
 						</xsl:attribute>
-					</arco-location:hasGeologicalContex>
+					</arco-location:hasGeologicalContext>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/IR/IRA/IRAC or record/metadata/schede/*/IR/IRA/IRAE or record/metadata/schede/*/IR/IRA/IRAP or record/metadata/schede/*/IR/IRA/IRAD or record/metadata/schede/*/IR/IRA/IRAF or record/metadata/schede/*/IR/IRA/IRAG">
-					<arco-location:hasGeologicalContex>
+					<arco-location:hasGeologicalContext>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
 						</xsl:attribute>
-					</arco-location:hasGeologicalContex>
+					</arco-location:hasGeologicalContext>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/LR/LRI/LRIR">
 					<arco-location:hasNaturalEnvironment>
