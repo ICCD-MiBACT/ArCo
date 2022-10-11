@@ -390,7 +390,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRecordResponsibleAgent"/>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
     </owl:ObjectProperty>
     
@@ -1447,6 +1446,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- http://id.loc.gov/ontologies/bibframe/Identifier -->
+
+    <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/AccessProfile -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/AccessProfile">
@@ -2191,27 +2196,15 @@ resource:CatalogueRecordS/0500212038
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isImmediatePreviousVersionOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isPreviousVersionOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/editedAtTime"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
+                <owl:onClass rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Rappresenta una versione (relativa a operazioni di redazione, aggiornamento, revisione) di una scheda di catalogo, cioè un modello descrittivo che raccoglie in modo organizzato le informazioni sui beni.</rdfs:comment>
@@ -2411,14 +2404,14 @@ resource:CatalogueRecordS/0500212038
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+                <owl:someValuesFrom rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
