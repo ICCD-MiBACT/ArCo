@@ -2540,7 +2540,9 @@
 						</xsl:if>
 						<xsl:if test="./ACSW and (not(starts-with(lower-case(normalize-space(./ACSW)), 'nr')) and not(starts-with(lower-case(normalize-space(./ACSW)), 'n.r')))">
 							<smapit:URL>
-								<xsl:value-of select="normalize-space(./ACSW)" />
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="./ACSW" />
+								</xsl:attribute>
 							</smapit:URL>
 						</xsl:if>
 						<xsl:if test="./ACSE and (not(starts-with(lower-case(normalize-space(./ACSE)), 'nr')) and not(starts-with(lower-case(normalize-space(./ACSE)), 'n.r')))">
@@ -8415,7 +8417,9 @@
 					</xsl:if>
 					<xsl:if test="./DCMW and (not(starts-with(lower-case(normalize-space(./DCMW)), 'nr')) and not(starts-with(lower-case(normalize-space(./DCMW)), 'n.r')))">
 						<smapit:URL>
-							<xsl:value-of select="normalize-space(./DCMW)" />
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="./DMCW" />
+							</xsl:attribute>
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if test="./DCML and (not(starts-with(lower-case(normalize-space(./DCML)), 'nr')) and not(starts-with(lower-case(normalize-space(./DCML)), 'n.r')))">
@@ -8621,7 +8625,9 @@
 					</xsl:if>
 					<xsl:if test="./FTAW and (not(starts-with(lower-case(normalize-space(./FTAW)), 'nr')) and not(starts-with(lower-case(normalize-space(./FTAW)), 'n.r')))">
 						<smapit:URL>
-							<xsl:value-of select="normalize-space(./FTAW)" />
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="./FTAW" />
+							</xsl:attribute>
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if test="./FTAY and (not(starts-with(lower-case(normalize-space(./FTAY)), 'nr')) and not(starts-with(lower-case(normalize-space(./FTAY)), 'n.r')))">
@@ -8975,7 +8981,9 @@
 					</xsl:if>
 					<xsl:if test="./DRAW">
 						<smapit:URL>
-							<xsl:value-of select="normalize-space(./DRAW)" />
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="./DRAW" />
+							</xsl:attribute>
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if test="./DRAY and (not(starts-with(lower-case(normalize-space(./DRAY)), 'nr')) and not(starts-with(lower-case(normalize-space(./DRAY)), 'n.r')))">
@@ -9303,7 +9311,7 @@
 						test="./VDCW and (not(starts-with(lower-case(normalize-space(./VDCW)), 'nr')) and not(starts-with(lower-case(normalize-space(./VDCW)), 'n.r')))">
 						<smapit:URL>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="normalize-space(./VDCW)" />
+								<xsl:value-of select="./VDCW" />
 							</xsl:attribute>
 						</smapit:URL>
 					</xsl:if>
@@ -9628,7 +9636,9 @@
 					<xsl:if
 						test="./REGW and (not(starts-with(lower-case(normalize-space(./REGW)), 'nr')) and not(starts-with(lower-case(normalize-space(./REGW)), 'n.r')))">
 						<smapit:URL>
-							<xsl:value-of select="normalize-space(./REGW)" />
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="./REGW" />
+							</xsl:attribute>
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if
@@ -9957,7 +9967,9 @@
 					</xsl:if>
 					<xsl:if test="./FNTW and (not(starts-with(lower-case(normalize-space(./FNTW)), 'nr')) and not(starts-with(lower-case(normalize-space(./FNTW)), 'n.r')))">
 						<smapit:URL>
-							<xsl:value-of select="normalize-space(./FNTW)" />
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="./FNTW" />
+							</xsl:attribute>
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if test="./FNTT and (not(starts-with(lower-case(normalize-space(./FNTT)), 'nr')) and not(starts-with(lower-case(normalize-space(./FNTT)), 'n.r')))">
@@ -10341,7 +10353,9 @@
 					</xsl:if>
 					<xsl:if test="./BIBW">
 						<smapit:URL>
-							<xsl:value-of select="normalize-space(./BIBW)" />
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="./BIBW" />
+							</xsl:attribute>
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if
@@ -10990,7 +11004,9 @@
 					</xsl:if>
 					<xsl:if test="./NVCW and (not(starts-with(lower-case(normalize-space(./NVCW)), 'nr')) and not(starts-with(lower-case(normalize-space(./NVCW)), 'n.r')))">
 						<smapit:URL>
-							<xsl:value-of select="normalize-space(./NVCW)" />
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="./NVCW" />
+							</xsl:attribute>
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if test="./NVCN">
@@ -11213,7 +11229,9 @@
 					</l0:name>
 					<xsl:if test="./STUW and (not(starts-with(lower-case(normalize-space(./STUW)), 'nr')) and not(starts-with(lower-case(normalize-space(./STUW)), 'n.r')))">
 						<smapit:URL>
-							<xsl:value-of select="normalize-space(./STUW)" />
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="./STUW" />
+							</xsl:attribute>
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if test="./STUS">
@@ -18997,7 +19015,9 @@
 							</xsl:if>
 							<xsl:if test="./GPB/GPBU and (not(starts-with(lower-case(normalize-space(./GPB/GPBU)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPB/GPBU)), 'n.r')))">
 								<smapit:url>
-									<xsl:value-of select="normalize-space(./GPB/GPBU)" />
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="normalize-space(./GPB/GPBU)" />
+									</xsl:attribute>
 								</smapit:url>
 							</xsl:if>
 							<xsl:if test="./GPB/GPBO and (not(starts-with(lower-case(normalize-space(./GPB/GPBO)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPB/GPBO)), 'n.r')))">
@@ -21017,7 +21037,9 @@
 						</xsl:if>
 						<xsl:if test="./ACCW and (not(starts-with(lower-case(normalize-space(./ACCW)), 'nr')) and not(starts-with(lower-case(normalize-space(./ACCW)), 'n.r')))">
 							<smapit:URL>
-								<xsl:value-of select="normalize-space(./ACCW)" />
+								<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="./ACCW" />
+							</xsl:attribute>
 							</smapit:URL>
 						</xsl:if>
 						<xsl:if test="./ACCE and (not(starts-with(lower-case(normalize-space(./ACCE)), 'nr')) and not(starts-with(lower-case(normalize-space(./ACCE)), 'n.r')))">
