@@ -181,6 +181,10 @@
         <ObjectProperty IRI="/involvesSoloInstrument"/>
         <ObjectProperty IRI="/isSoloInstrumentInvolvedIn"/>
     </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/isProducedByMusicalInstrument"/>
+        <ObjectProperty IRI="/producesMusicalNote"/>
+    </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/isAccompanyingInstrumentInvolvedIn"/>
         <Class IRI="/MusicalInstrument"/>
@@ -211,7 +215,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/isProducedByMusicalInstrument"/>
-        <Class IRI="/String"/>
+        <Class IRI="/MusicalNote"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/isStringOf"/>
