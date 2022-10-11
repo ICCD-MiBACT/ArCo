@@ -1642,8 +1642,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is classified by current taxon</rdfs:label>
         <rdfs:label xml:lang="it">è classificato dal taxon attuale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isClassifiedByCurrentTaxon"/>
     </owl:ObjectProperty>
     
 
@@ -1659,8 +1661,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is classified by original taxon</rdfs:label>
         <rdfs:label xml:lang="it">è classificato dal taxon originario</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isClassifiedByOriginalTaxon"/>
     </owl:ObjectProperty>
     
 
@@ -3140,6 +3144,17 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationInTime">
         <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Review"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isConsequenceOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LaboratoryTest"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassificationInTimeOf"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
@@ -3149,18 +3164,6 @@ In this module the following Ontology Design Patterns have been used:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliography"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/current"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4711,7 +4714,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon"/>
@@ -6278,12 +6281,6 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/refersToClassificationSystem"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
             </owl:Restriction>
@@ -6401,7 +6398,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isConsequenceOf"/>

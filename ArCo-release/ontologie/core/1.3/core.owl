@@ -184,6 +184,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/definesConcept -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/definesConcept">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega sistema di classificazione al concetto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a classification system to a concept</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">defines concept</rdfs:label>
+        <rdfs:label xml:lang="it">definisce concetto</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/hasAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasAgent">
@@ -282,6 +299,27 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy>https://w3id.org/arco/ontology/core</rdfs:isDefinedBy>
         <rdfs:label xml:lang="it">ha classificazione nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has classification in time</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasClassificationSystem -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasClassificationSystem">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isClassificationSystemOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasConcept"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione nel tempo ad un sistema di classificazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a classification in time to a classification system</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/core</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="it">ha sistema di classificazione</rdfs:label>
+        <rdfs:label xml:lang="en">has classification system</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -658,9 +696,15 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isClassificationSystemOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isClassificationSystemOf">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/refersToClassificationSystem"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
+        <rdfs:comment xml:lang="it">La proprietà inversa di hasClassificationSystem, che collega un sistema di classificazione a una sua classificazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The inverse object property of hasClassificationSystem, that links classification system to a classification.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is classification system of</rdfs:label>
+        <rdfs:label xml:lang="it">è sistema di classificazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -763,6 +807,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è caratteristica di entità culturale di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
+        <rdfs:comment xml:lang="it">La object property che collega un concetto al sistema di classificazione.</rdfs:comment>
+        <rdfs:comment xml:lang="it">The object property that links a concept to a classification system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is defined by classification system</rdfs:label>
+        <rdfs:label xml:lang="it">è definito da sistema di classificazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -932,15 +992,6 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è valido in</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/core/refersToClassificationSystem -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/refersToClassificationSystem">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
     </owl:ObjectProperty>
     
 
@@ -1222,6 +1273,36 @@ In this module the following Ontology Design Patterns have been used:
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationInTime">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassificationInTimeOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasClassificationSystem"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una classificazione nel tempo</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a classification in time</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1237,6 +1318,18 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/System"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/definesConcept"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassificationSystemOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema di classificazione in base a cui un&apos;entità è stata classificata.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents classification system used to classify an entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
