@@ -5,6 +5,7 @@
 	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
+	xmlns:arco-lite="https://w3id.org/arco/ontology/arco-lite/"
 	xmlns:cis="http://dati.beniculturali.it/cis/"
 	xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
 	xmlns:smapit="https://w3id.org/italia/onto/SM/"
@@ -645,6 +646,11 @@
 						<xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTF" />
 					</arco-cd:nationality>
 				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTY and ($sheetVersion='4.00' or $sheetVersion='4.00_ICCD0')">
+					<arco-cd:nationality>
+						<xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTY" />
+					</arco-cd:nationality>
+				</xsl:if>
 				<xsl:if test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00_ICCD0') and record/metadata/schede/*/AU/AUT/AUTE">
 					<arco-cd:alternativeName>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTE)" />
@@ -673,12 +679,12 @@
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/NSC)" />
 					</arco-cd:historicalInformation>
 				</xsl:if>
-				<xsl:if test="string-length($sex) and contains('MF',translate(normalize-space($sex),'mf','MF'))">
-					<cpv:hasSex>
+				<xsl:if test="string-length($sex)">
+					<arco-cd:hasSex>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Sex/', $idAuthor)" />
+							<xsl:value-of select="concat($NS, 'Sex/', $sex)" />
 						</xsl:attribute>
-					</cpv:hasSex>
+					</arco-cd:hasSex>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTL">
 					<cpv:hasBirthPlace>
@@ -717,6 +723,16 @@
 	                	</xsl:attribute>
 					</arco-cd:hasBibliography>
 				</xsl:for-each>
+				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTH and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)), 'n.r')))">
+					<arco-lite:localIdentifier>
+   			        	<xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTH" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'AuthorIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTH))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
+				</xsl:if>
 			</rdf:Description>
 			<xsl:for-each select="record/metadata/schede/*/AU/AUT/AUTQ">
 				<rdf:Description>
@@ -761,31 +777,22 @@
 					</rdfs:label>
 				</rdf:Description>
 			</xsl:for-each>
-			<xsl:if test="string-length($sex) and contains('MF',translate(normalize-space($sex),'mf','MF'))">
+			<xsl:if test="string-length($sex)">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Sex/', $idAuthor)" />
+						<xsl:value-of select="concat($NS, 'Sex/', $sex)" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Sex'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Sex'" />
 						</xsl:attribute>
 					</rdf:type>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Sex of ', $nameAuthor)" />
+					<rdfs:label>
+						<xsl:value-of select="normalize-space($sex)" />
 					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Sex of ', $nameAuthor)" />
+					<l0:name>
+						<xsl:value-of select="normalize-space($sex)" />
 					</l0:name>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Sesso di ', $nameAuthor)" />
-					</rdfs:label>
-					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Sesso di ', $nameAuthor)" />
-					</l0:name>
-					<cpv:sexID>
-						<xsl:value-of select="translate(normalize-space($sex),'mf','MF')" />
-					</cpv:sexID>
 				</rdf:Description>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/*/AU/AUT/AUTL">
@@ -822,6 +829,35 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTX)" />
 					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/AU/AUT/AUTH and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)), 'n.r')))">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'AuthorIdentifier/', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTH))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+			            </xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+					  		<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+						</xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTH)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTH)" />
+					</l0:name>
+					<l0:identifier>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTH)" />
+					</l0:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
 				</rdf:Description>
 			</xsl:if>
 			<!-- Bibliography of cultural property as an individual -->

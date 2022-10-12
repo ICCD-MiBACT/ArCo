@@ -2692,30 +2692,41 @@
 				</xsl:if>
 				<!-- Acquisition of cultural property -->
 				<xsl:for-each select="record/metadata/schede/*/TU/ACQ">
-					<arco-cd:hasAcquisition>
-						<xsl:attribute name="rdf:resource">
-	    	            	<xsl:value-of select="concat($NS, 'Acquisition/', $itemURI, '-acquisition-', position())" />
-	        	        </xsl:attribute>
-					</arco-cd:hasAcquisition>
-					<xsl:for-each select="./ACQN">
-						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r.')) and not(starts-with(lower-case(normalize-space(.)), '.')) and not(starts-with(lower-case(normalize-space(.)), ' ')) and not(starts-with(lower-case(normalize-space(.)), '-')) and not(starts-with(lower-case(normalize-space(.)), '(')))">
-							<arco-lite:hasTransferor>
+					<xsl:choose>
+						<xsl:when test="not(./ACQP) or (starts-with(lower-case(normalize-space(./ACQP)), 'non accertabile')) or (starts-with(lower-case(normalize-space(./ACQP)), 'nr')) or (starts-with(lower-case(normalize-space(./ACQP)), 'n.r')) or (starts-with(lower-case(normalize-space(./ACQP)), 'intero')) or (starts-with(lower-case(normalize-space(./ACQP)), 'intera'))">
+							<arco-cd:hasAcquisition>
 								<xsl:attribute name="rdf:resource">
-	            					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
-	            				</xsl:attribute>
-							</arco-lite:hasTransferor>
-							<arco-cd:hasLegalSituation>
+	    			            	<xsl:value-of select="concat($NS, 'Acquisition/', $itemURI, '-acquisition-', position())" />
+	        			        </xsl:attribute>
+							</arco-cd:hasAcquisition>
+							<xsl:for-each select="./ACQN">
+								<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r.')) and not(starts-with(lower-case(normalize-space(.)), '.')) and not(starts-with(lower-case(normalize-space(.)), ' ')) and not(starts-with(lower-case(normalize-space(.)), '-')) and not(starts-with(lower-case(normalize-space(.)), '(')))">
+									<arco-lite:hasTransferor>
+										<xsl:attribute name="rdf:resource">
+			            					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	    	        					</xsl:attribute>
+									</arco-lite:hasTransferor>
+									<arco-cd:hasLegalSituation>
+										<xsl:attribute name="rdf:resource">
+			                				<xsl:value-of select="concat($NS, 'LegalSituation/', $itemURI, '-legal-situation-', position())" />
+		            			    	</xsl:attribute>
+									</arco-cd:hasLegalSituation>
+									<arco-lite:hasPreviousOwner>
+										<xsl:attribute name="rdf:resource">
+						           			<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+						           		</xsl:attribute>
+									</arco-lite:hasPreviousOwner>
+								</xsl:if>
+							</xsl:for-each>
+						</xsl:when>
+						<xsl:otherwise>
+							<arco-core:hasPart>
 								<xsl:attribute name="rdf:resource">
-			                		<xsl:value-of select="concat($NS, 'LegalSituation/', $itemURI, '-legal-situation-', position())" />
-            			    	</xsl:attribute>
-							</arco-cd:hasLegalSituation>
-							<arco-lite:hasPreviousOwner>
-								<xsl:attribute name="rdf:resource">
-				           			<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
-				           		</xsl:attribute>
-							</arco-lite:hasPreviousOwner>
-						</xsl:if>
-					</xsl:for-each>
+									<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-', arco-fn:urify(normalize-space(./ACQP)))" />
+								</xsl:attribute>
+							</arco-core:hasPart>
+						</xsl:otherwise>	
+					</xsl:choose>
 				</xsl:for-each>
 				<!-- Change of availability of cultural property -->
 				<xsl:for-each select="record/metadata/schede/*/TU/ALN">
@@ -3528,9 +3539,9 @@
 				</xsl:if>
 				<!-- numismatic property specification -->
 				<xsl:if test="record/metadata/schede/NU/OG/OGT/OGTS">
-					<arco-core:specification>
+					<arco-core:specifications>
 						<xsl:value-of select="normalize-space(record/metadata/schede/NU/OG/OGT/OGTS)" />
-					</arco-core:specification>
+					</arco-core:specifications>
 				</xsl:if>
 				<!-- copyright -->
 				<xsl:for-each select="record/metadata/schede/*/TU/CPR">

@@ -337,7 +337,7 @@
 					</xsl:attribute>
 				</arco-cd:hasUse>
 				<arco-lite:hasUser>
-					<xsl:attribute name="rdf:resource">
+						<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./OSD))" />
 					</xsl:attribute>
 				</arco-lite:hasUser>
@@ -818,6 +818,11 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="concat('Musician ', position(), ' of cultural property ', $itemURI)" />
 				</l0:name>
+				<xsl:if test="./MUS">
+					<arco-core:note>
+						<xsl:value-of select="./MUS" />
+					</arco-core:note>
+				</xsl:if>
 				<!-- hasRole -->
 				<xsl:if test="./MUT/MUTI">
 					<arco-core:hasRole>
@@ -840,6 +845,7 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</arco-core:hasAgent>
+				
 			</rdf:Description>
 			<!-- role as an individual -->
 			<xsl:if test="./MUT/MUTI">
@@ -911,17 +917,19 @@
 						<xsl:value-of select="concat('Scolarità: ', ./MUT/MUTO)" />
 					</arco-core:note>
 				</xsl:if>
-				<xsl:if test="./ATTM and (not(starts-with(lower-case(normalize-space(./ATTM)), 'nr')) and not(starts-with(lower-case(normalize-space(./ATTM)), 'n.r')))">
+				<xsl:if test="./MUT/MUTM and (not(starts-with(lower-case(normalize-space(./MUT/MUTM)), 'nr')) and not(starts-with(lower-case(normalize-space(./MUT/MUTM)), 'n.r')))">
 					<arco-cd:hasProfession>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Profession/', arco-fn:urify(normalize-space(./ATTM)))" />
+							<xsl:value-of select="concat($NS, 'Profession/', arco-fn:urify(normalize-space(./MUT/MUTM)))" />
 						</xsl:attribute>
 					</arco-cd:hasProfession>
 				</xsl:if>
 				<xsl:if test="./MUT/MUTB">
-					<arco-core:note>
-						<xsl:value-of select="concat('Contesto culturale: ', ./MUT/MUTB)" />
-					</arco-core:note>
+					<arco-cd:hasCulturalContext>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'CulturalContext/', arco-fn:urify(normalize-space(./MUT/MUTB)))" />
+						</xsl:attribute>
+					</arco-cd:hasCulturalContext>
 				</xsl:if>
 				<!-- sex -->
 				<xsl:if test="./MUT/MUTS">
@@ -939,9 +947,7 @@
                			</xsl:attribute>
 					</arco-cd:hasAge>
 					<arco-lite:age>
-						<xsl:attribute name="rdf:resource">
-            	   			<xsl:value-of select="arco-fn:arcofy(normalize-space(./MUT/MUTE))" />
-               			</xsl:attribute>
+						<xsl:value-of select="normalize-space(./MUT/MUTE)" />
 					</arco-lite:age>
 					<arco-cd:isSubjectOfInterpretation>
 						<xsl:attribute name="rdf:resource">
@@ -973,10 +979,10 @@
 				</xsl:if>
 			</rdf:Description>
 			<!-- profession of user as an individual -->
-			<xsl:if test="./ATTM and (not(starts-with(lower-case(normalize-space(./ATTM)), 'nr')) and not(starts-with(lower-case(normalize-space(./ATTM)), 'n.r')))">
+			<xsl:if test="./MUT/MUTM and (not(starts-with(lower-case(normalize-space(./MUT/MUTM)), 'nr')) and not(starts-with(lower-case(normalize-space(./MUT/MUTM)), 'n.r')))">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Profession/', arco-fn:urify(normalize-space(./ATTM)))" />
+						<xsl:value-of select="concat($NS, 'Profession/', arco-fn:urify(normalize-space(./MUT/MUTM)))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -984,10 +990,29 @@
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
-						<xsl:value-of select="normalize-space(./ATTM)" />
+						<xsl:value-of select="normalize-space(./MUT/MUTM)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="normalize-space(./ATTM)" />
+						<xsl:value-of select="normalize-space(./MUT/MUTM)" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<!-- cultural context -->
+			<xsl:if test="./MUT/MUTB">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'CulturalContext/', arco-fn:urify(normalize-space(./MUT/MUTB)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CulturalContext'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./MUT/MUTB)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./MUT/MUTB)" />
 					</l0:name>
 				</rdf:Description>
 			</xsl:if>
@@ -1402,7 +1427,7 @@
 			</xsl:variable>
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'Location/', arco-fn:arcofy(normalize-space(./MUT/MUTN)), '-birth-place')" />
+					<xsl:value-of select="concat($NS, 'Location/', arco-fn:arcofy(normalize-space(./MUT/MUTN)), '-domicile')" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
