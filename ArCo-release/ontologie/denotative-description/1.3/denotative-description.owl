@@ -2909,9 +2909,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">creation date</rdfs:label>
         <rdfs:label xml:lang="it">data di creazione</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AS/ASS/ASSD</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRealizationDate"/>
     </owl:DatatypeProperty>
     
 
@@ -3313,17 +3315,33 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/creationDate"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/AccessoryType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un accessorio di un bene musicale, ovvero un oggetto collegabile al bene musicale, sia nel caso in cui sia funzionale alla produzione del suono, sia nel caso in cui sia di supporto alla produzione del suono o alla conservazione o alla prassi musicale del bene.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents an accessory of a musical property, both if it is functional to the sound production, or if it is the sound&apos;s production or conservation medium.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un accessorio di un bene, ovvero un oggetto collegabile al bene, sia nel caso in cui sia funzionale alla produzione del suono, sia nel caso in cui sia di supporto alla produzione del suono o alla conservazione o alla prassi d'uso del bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an accessory of a cultural property, both if it is functional to the sound production, or if it is the sound&apos;s production or conservation medium.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">Accessorio</rdfs:label>
         <rdfs:label xml:lang="en">Accessory</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AS/ASS</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/AccessoryType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/AccessoryType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo accessorio di un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents type of accessory of a cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">Tipo di accessorio</rdfs:label>
+        <rdfs:label xml:lang="en">Accessory type</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AS/ASS/ASST</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -6211,8 +6229,8 @@ resource:MeasurementCollection/1200865132-1
         <a-cat:iccdNormTag>ICCD Normative OA, D, F, S: MT/FIL</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <a-cat:iccdNormTag>MT/FIL</a-cat:iccdNormTag>
-        <rdfs:comment xml:lang="en">This individual represents the filigree of an artwork, painting, photography, print.</rdfs:comment>
         <rdfs:label xml:lang="en">Filigree</rdfs:label>
+        <rdfs:comment xml:lang="en">This individual represents the filigree of an artwork, painting, photography, print.</rdfs:comment>
     </rdf:Description>
     
 
