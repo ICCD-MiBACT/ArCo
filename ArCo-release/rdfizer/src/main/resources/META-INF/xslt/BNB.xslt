@@ -1031,7 +1031,7 @@
 	        </xsl:attribute>
     	   	<rdf:type>
 				<xsl:attribute name="rdf:resource">
-            	    <xsl:value-of select="'https://w3id.org/arco/ontology/core/ClassificationInTime'" />
+            	    <xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
@@ -1104,18 +1104,18 @@
 				</xsl:for-each>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIN">
-				<arco-spe:hasTaxon>
+				<arco-core:hasTaxon>
 					<xsl:attribute name="rdf:resource">
 		        		<xsl:value-of select="$TypespecimenTaxon" />
 					</xsl:attribute>
-				</arco-spe:hasTaxon>
+				</arco-core:hasTaxon>
 			</xsl:if> 
 			<xsl:if test="record/metadata/schede/BNB/SB/NAT">
-				<arco-spe:hasTaxon>
+				<arco-core:hasTaxon>
 					<xsl:attribute name="rdf:resource">
 		        		<xsl:value-of select="$TypespecimenTaxon" />
 					</xsl:attribute>
-				</arco-spe:hasTaxon>
+				</arco-core:hasTaxon>
 			</xsl:if>
 		</rdf:Description>
 	</xsl:if>
@@ -1200,11 +1200,11 @@
 					</xsl:for-each>
 				</xsl:for-each>
 				<xsl:if test="./RBR/RBRN">
-					<arco-spe:hasTaxon>
+					<arco-core:hasTaxon>
 						<xsl:attribute name="rdf:resource">
 		    	    		<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(./RBR/RBRN)))" />
 						</xsl:attribute>
-					</arco-spe:hasTaxon>
+					</arco-core:hasTaxon>
 				</xsl:if>
 				<xsl:if test="./RBA">
 					<arco-core:note>
@@ -1409,11 +1409,11 @@
 					</xsl:for-each>
 				</xsl:for-each>
 				<xsl:if test="./RBR/RBRN">
-					<arco-spe:hasTaxon>
+					<arco-core:hasTaxon>
 						<xsl:attribute name="rdf:resource">
 		    	   			<xsl:value-of select="$RevisedTaxon" />
 						</xsl:attribute>
-					</arco-spe:hasTaxon>
+					</arco-core:hasTaxon>
 				</xsl:if> 
 				<xsl:if test="./RBN">
 					<arco-spe:hasTaxon>
@@ -1501,11 +1501,11 @@
 					<xsl:with-param name="text" select="concat($naa-species-lab, $naa-subspecies-lab, $naa-variety-lab, $naa-form-lab, $naa-cultivar-lab)" />
 				</xsl:call-template>
             </l0:name>
-			<arco-spe:hasDirectHigherRank>
+			<arco-core:hasDirectHigherRank>
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies, $naa-variety, $naa-form)" />
 				</xsl:attribute>	
-			</arco-spe:hasDirectHigherRank>	
+			</arco-core:hasDirectHigherRank>	
   		</rdf:Description>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAH">
@@ -1535,11 +1535,11 @@
             	</xsl:attribute>
             	</arco-lite:hasAuthor>
             </xsl:if>
-            <arco-spe:hasDirectHigherRank>
+            <arco-core:hasDirectHigherRank>
             	<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies, $naa-variety)" />
 				</xsl:attribute>	
-			</arco-spe:hasDirectHigherRank>	           
+			</arco-core:hasDirectHigherRank>           
   		</rdf:Description>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAF">
@@ -1569,11 +1569,11 @@
             	</xsl:attribute>
             	</arco-lite:hasAuthor>
             </xsl:if>
-            <arco-spe:hasDirectHigherRank>
+            <arco-core:hasDirectHigherRank>
             	<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies)" />
 				</xsl:attribute>	
-			</arco-spe:hasDirectHigherRank>	           
+			</arco-core:hasDirectHigherRank>           
   		</rdf:Description>
 	</xsl:if>	
 	<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAD">
@@ -1603,11 +1603,11 @@
             	</xsl:attribute>
             	</arco-lite:hasAuthor>
             </xsl:if>
-            <arco-spe:hasDirectHigherRank>
+            <arco-core:hasDirectHigherRank>
             	<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species)" />
 				</xsl:attribute>	
-			</arco-spe:hasDirectHigherRank>	        
+			</arco-core:hasDirectHigherRank>       
     	</rdf:Description>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAB">
@@ -1616,11 +1616,11 @@
 				<xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species)" />
 			</xsl:attribute>
 			<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAA">
-				<arco-spe:hasDirectHigherRank>
+				<arco-core:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/NAA/NAAA))" />
 					</xsl:attribute>
-				</arco-spe:hasDirectHigherRank>
+				</arco-core:hasDirectHigherRank>
 			</xsl:if>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -1651,11 +1651,11 @@
 			<xsl:attribute name="rdf:about">
                <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/NAA/NAAA))" />
             </xsl:attribute>
-            <arco-spe:hasDirectHigherRank>
+            <arco-core:hasDirectHigherRank>
            		<xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/SBS/SBSF))" />
             	</xsl:attribute>
-            </arco-spe:hasDirectHigherRank>
+            </arco-core:hasDirectHigherRank>
             <rdf:type>
             	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />      
             </rdf:type>
@@ -1678,32 +1678,32 @@
                <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/SBS/SBSF))" />
             </xsl:attribute>
            <xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAA">
-	            <arco-spe:hasDirectLowerRank>
+	            <arco-core:hasDirectLowerRank>
     	        <xsl:attribute name="rdf:resource">
         	    	<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/NAA/NAAA))" />
             	</xsl:attribute>
-	            </arco-spe:hasDirectLowerRank>
+	            </arco-core:hasDirectLowerRank>
             </xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATA">
-            	<arco-spe:hasDirectLowerRank>
+            	<arco-core:hasDirectLowerRank>
 	            <xsl:attribute name="rdf:resource">
     	        	<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/NAT/NATA))" />
         	    </xsl:attribute>
-            	</arco-spe:hasDirectLowerRank>
+            	</arco-core:hasDirectLowerRank>
             </xsl:if>
             <xsl:if test="record/metadata/schede/BNB/SB/NBN/NBNA">
- 	           <arco-spe:hasLowerRank>
+ 	           <arco-core:hasLowerRank>
     	        <xsl:attribute name="rdf:resource">
         	    	<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/NBN/NBNA))" />
             	</xsl:attribute>
-	            </arco-spe:hasLowerRank>
+	            </arco-core:hasLowerRank>
             </xsl:if>
             <xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIN">
-				<arco-spe:hasLowerRank>
+				<arco-core:hasLowerRank>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/TBI/TBIN))" />
 					</xsl:attribute>
-            	</arco-spe:hasLowerRank>
+            	</arco-core:hasLowerRank>
             </xsl:if>  
             <rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -1784,11 +1784,11 @@
 					<xsl:with-param name="text" select="concat($nat-species-lab, $nat-subspecies-lab, $nat-variety-lab, $nat-form-lab, $nat-cultivar-lab)" />
 				</xsl:call-template>
             </l0:name>
-			<arco-spe:hasDirectHigherRank>
+			<arco-core:hasDirectHigherRank>
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies, $nat-variety, $nat-form)" />
 				</xsl:attribute>	
-			</arco-spe:hasDirectHigherRank>	
+			</arco-core:hasDirectHigherRank>
   		</rdf:Description>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATH">
@@ -1818,11 +1818,11 @@
             	</xsl:attribute>
             	</arco-lite:hasAuthor>
             </xsl:if>
-            <arco-spe:hasDirectHigherRank>
+            <arco-core:hasDirectHigherRank>
             	<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies, $nat-variety)" />
 				</xsl:attribute>	
-			</arco-spe:hasDirectHigherRank>	           
+			</arco-core:hasDirectHigherRank>	           
   		</rdf:Description>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATF">
@@ -1852,11 +1852,11 @@
             	</xsl:attribute>
             	</arco-lite:hasAuthor>
             </xsl:if>
-            <arco-spe:hasDirectHigherRank>
+            <arco-core:hasDirectHigherRank>
             	<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies)" />
 				</xsl:attribute>	
-			</arco-spe:hasDirectHigherRank>	           
+			</arco-core:hasDirectHigherRank>           
   		</rdf:Description>
 	</xsl:if>	
 	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATD">
@@ -1886,11 +1886,11 @@
             	</xsl:attribute>
             	</arco-lite:hasAuthor>
             </xsl:if>
-            <arco-spe:hasDirectHigherRank>
+            <arco-core:hasDirectHigherRank>
             	<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species)" />
 				</xsl:attribute>	
-			</arco-spe:hasDirectHigherRank>	        
+			</arco-core:hasDirectHigherRank>        
     	</rdf:Description>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATB">
@@ -1899,11 +1899,11 @@
 				<xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species)" />
 			</xsl:attribute>
 			<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATA">
-				<arco-spe:hasDirectHigherRank>
+				<arco-core:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/NAT/NATA))" />
 					</xsl:attribute>
-				</arco-spe:hasDirectHigherRank>
+				</arco-core:hasDirectHigherRank>
 			</xsl:if>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -1934,11 +1934,11 @@
 			<xsl:attribute name="rdf:about">
                <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/NAT/NATA))" />
             </xsl:attribute>
-            <arco-spe:hasDirectHigherRank>
+            <arco-core:hasDirectHigherRank>
             	<xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/SBS/SBSF))" />
             	</xsl:attribute>
-            </arco-spe:hasDirectHigherRank>
+            </arco-core:hasDirectHigherRank>
             <rdf:type>
             	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />      
             </rdf:type>
@@ -2131,11 +2131,11 @@
 						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-variety-lab, $rbn-form-lab, $rbn-cultivar-lab)" />
 					</xsl:call-template>
 	            </l0:name>
-				<arco-spe:hasDirectHigherRank>
+				<arco-core:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-variety, $rbn-form)" />
 					</xsl:attribute>	
-				</arco-spe:hasDirectHigherRank>	
+				</arco-core:hasDirectHigherRank>
   			</rdf:Description>
 		</xsl:if>
 		<xsl:if test="./RBN/RBNH">
@@ -2165,11 +2165,11 @@
         		    	</xsl:attribute>
             		</arco-lite:hasAuthor>
 	            </xsl:if>
-    	        <arco-spe:hasDirectHigherRank>
+    	        <arco-core:hasDirectHigherRank>
         	    	<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-variety)" />
 					</xsl:attribute>	
-				</arco-spe:hasDirectHigherRank>	           
+				</arco-core:hasDirectHigherRank>          
   			</rdf:Description>
 		</xsl:if>
 		<xsl:if test="./RBN/RBNF">
@@ -2199,11 +2199,11 @@
         		    	</xsl:attribute>
             		</arco-lite:hasAuthor>
 	            </xsl:if>
-    	        <arco-spe:hasDirectHigherRank>
+    	        <arco-core:hasDirectHigherRank>
         	    	<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies)" />
 					</xsl:attribute>	
-				</arco-spe:hasDirectHigherRank>	           
+				</arco-core:hasDirectHigherRank>           
   			</rdf:Description>
 		</xsl:if>	
 		<xsl:if test="./RBN/RBND">
@@ -2233,11 +2233,11 @@
 	            		</xsl:attribute>
 	            	</arco-lite:hasAuthor>
     	        </xsl:if>
-        	    <arco-spe:hasDirectHigherRank>
+        	    <arco-core:hasDirectHigherRank>
             		<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species)" />
 					</xsl:attribute>	
-				</arco-spe:hasDirectHigherRank>	        
+				</arco-core:hasDirectHigherRank>        
     		</rdf:Description>
 		</xsl:if>
 		<xsl:if test="./RBN/RBNB">
@@ -2246,11 +2246,11 @@
 					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species)" />
 				</xsl:attribute>
 				<xsl:if test="./RBN/RBNA">
-					<arco-spe:hasDirectHigherRank>
+					<arco-core:hasDirectHigherRank>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./RBN/RBNA))" />
 						</xsl:attribute>
-					</arco-spe:hasDirectHigherRank>
+					</arco-core:hasDirectHigherRank>
 				</xsl:if>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">

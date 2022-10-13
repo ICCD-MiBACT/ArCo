@@ -2888,9 +2888,12 @@
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(./CLMS)" />
 					</rdfs:label>
-					<tiapit:time>
+					<tiapit:startTime>
 						<xsl:value-of select="normalize-space(./CLMS)" />
-					</tiapit:time>
+					</tiapit:startTime>
+					<tiapit:endTime>
+						<xsl:value-of select="normalize-space(./CLMS)" />
+					</tiapit:endTime>
 				</rdf:Description>
 			</xsl:if>
 			<!-- Measurement collection  as individual -->
@@ -2962,12 +2965,15 @@
 					<l0:name xml:lang="it">
 						<xsl:value-of select="concat('Misura della situazone climatica ', position (), ' del bene ', $itemURI, ': ', normalize-space(./CLMF))" />
 					</l0:name>
-					<arco-dd:hasMeasurementType>
-						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'MinimumTemperature')" />
-						</arco-dd:hasMeasurementType>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/location/', 'MinimumTemperature')" />
+					</arco-core:hasType>
 					<arco-dd:hasValue>
 						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-minimum-temperature-', arco-fn:urify(./CLMF))" />
 					</arco-dd:hasValue>
+					<mu:hasMeasurementUnit>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/CelsiusDegrees')" />
+					</mu:hasMeasurementUnit>
 				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-minimum-temperature-', arco-fn:urify(./CLMF))" />
@@ -2978,9 +2984,6 @@
 					<l0:name>
 						<xsl:value-of select="./CLMF" />
 					</l0:name>
-					<mu:hasMeasurementUnit>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/CelsiusDegrees')" />
-					</mu:hasMeasurementUnit>
 				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/CelsiusDegrees')" />
@@ -3015,12 +3018,15 @@
 					<l0:name xml:lang="it">
 						<xsl:value-of select="concat('Misura della situazone climatica ', position (), ' del bene ', $itemURI, ': ', normalize-space(./CLMC))" />
 					</l0:name>
-					<arco-dd:hasMeasurementType>
-						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'MaximumTemperature')" />
-					</arco-dd:hasMeasurementType>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/location/', 'MaximumTemperature')" />
+					</arco-core:hasType>
 					<arco-dd:hasValue>
 						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-maximum-temperature-', arco-fn:urify(./CLMC))" />
 					</arco-dd:hasValue>
+					<mu:hasMeasurementUnit>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/CelsiusDegrees')" />
+					</mu:hasMeasurementUnit>					
 				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-maximum-temperature-', arco-fn:urify(./CLMC))" />
@@ -3031,9 +3037,6 @@
 					<l0:name>
 						<xsl:value-of select="./CLMC" />
 					</l0:name>
-					<mu:hasMeasurementUnit>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/CelsiusDegrees')" />
-					</mu:hasMeasurementUnit>
 				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/CelsiusDegrees')" />
@@ -3068,12 +3071,15 @@
 					<l0:name xml:lang="it">
 						<xsl:value-of select="concat('Misura della situazone climatica ', position (), ' del bene ', $itemURI, ': ', normalize-space(./CLMP))" />
 					</l0:name>
-					<arco-dd:hasMeasurementType>
-						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Rainfall')" />
-					</arco-dd:hasMeasurementType>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/location/', 'Rainfall')" />
+					</arco-core:hasType>
 					<arco-dd:hasValue>
 						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-rainfall-', arco-fn:urify(./CLMP))" />
 					</arco-dd:hasValue>
+					<mu:hasMeasurementUnit>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/mm')" />
+					</mu:hasMeasurementUnit>
 				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-rainfall-', arco-fn:urify(./CLMP))" />
@@ -3084,9 +3090,6 @@
 					<l0:name>
 						<xsl:value-of select="./CLMP" />
 					</l0:name>
-					<mu:hasMeasurementUnit>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/mm')" />
-					</mu:hasMeasurementUnit>
 				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/mm')" />

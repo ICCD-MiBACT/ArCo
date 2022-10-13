@@ -308,14 +308,14 @@
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
 							<!-- Legal situation of cadastral unit collection -->
-							<xsl:if	test="./CTSP[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+							<xsl:if	test="../CTSP[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 								<arco-cd:hasLegalSituation>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'LegalSituation/', arco-fn:urify(normalize-space(../CTSC)), '-', arco-fn:urify(normalize-space(string-join(../CTSF,','))), '-', arco-fn:urify(normalize-space(.)), '-cadastral-legal-situation')" />
 									</xsl:attribute>
 								</arco-cd:hasLegalSituation>
 							</xsl:if>
-							<xsl:for-each select="./CTSP[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+							<xsl:for-each select="../CTSP[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 								<arco-lite:hasOwner>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
@@ -793,6 +793,15 @@
 								</arco-location:hasCadastralEntity>
 							</xsl:for-each>
 						</xsl:if>
+						<xsl:if test="./CSSE and (not(starts-with(lower-case(normalize-space(./CSSE)), 'nr')) and not(starts-with(lower-case(normalize-space(./CSSE)), 'n.r')))">
+							<xsl:for-each select="./CSSE">
+								<arco-location:hasCadastralEntity>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'NeighbouringCadastralEntity/', $itemURI, '-historical-', $parentPosition)" />
+									</xsl:attribute>
+								</arco-location:hasCadastralEntity>
+							</xsl:for-each>
+						</xsl:if>
 						<!-- Note -->
 						<xsl:if test="./CSSS and (not(starts-with(lower-case(normalize-space(./CSSS)), 'nr')) and not(starts-with(lower-case(normalize-space(./CSSS)), 'n.r')))">
 							<arco-core:note>
@@ -998,6 +1007,25 @@
 							</rdf:Description>
 						</xsl:for-each>
 					</xsl:if>
+					<!-- Neighbouring Cadastral Entity as an individual -->
+					<xsl:for-each select="./CSSE[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'NeighbouringCadastralEntity/', $itemURI, '-historical-', $parentPosition)" />
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/location/NeighbouringCadastralEntity'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select=" normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select=" normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:for-each>
 				</xsl:for-each>
 			</xsl:if>
 			<xsl:for-each select="record/metadata/schede/*/RP/LGC">

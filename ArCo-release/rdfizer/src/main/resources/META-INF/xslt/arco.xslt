@@ -31492,11 +31492,11 @@
 									<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./ASSD)))" />
 								</xsl:attribute>
 							</arco-lite:hasRealizationDate>
-							<arco-cd:hasRelatedEvent>
+							<arco-core:isInvolvedIn>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Event/Accessory', $itemURI, '-creation')" />
 								</xsl:attribute>
-							</arco-cd:hasRelatedEvent>
+							</arco-core:isInvolvedIn>
 						</xsl:if>
 						<xsl:if test="./ASSE">
 							<arco-core:description>
@@ -32745,6 +32745,54 @@
 						</xsl:if>
 					</rdf:Description>
 				</xsl:if>
+			</xsl:if>
+			<!-- Natural Environment as individual -->
+			<xsl:if test="record/metadata/schede/MODI/CA/CAT">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+		       			<xsl:value-of select="concat($NS, 'NaturalEnvironment/', $itemURI)" />
+					</xsl:attribute>
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Environment of cultural property: ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Environment of cultural property: ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Ambiente del bene culturale: ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Ambiente del bene culturale: ', $itemURI)" />
+					</l0:name>
+					<arco-location:hasClimateSituation>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ClimateSituation/', $itemURI, '-', position())" />
+						</xsl:attribute>
+					</arco-location:hasClimateSituation>
+				</rdf:Description>
+				<!-- Climate situation as individual -->
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+	       				<xsl:value-of select="concat($NS, 'ClimateSituation/', $itemURI, '-', position())" />
+					</xsl:attribute>
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/location/ClimateSituation" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Climate situation ', position(), ' of cultural property: ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Climate situation ', position(), ' of cultural property: ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Situazione climatica ', position(), ' del bene culturale: ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Situazione climatica ', position(), ' del bene culturale: ', $itemURI)" />
+					</l0:name>
+					<arco-core:description>
+						<xsl:value-of select="record/metadata/schede/MODI/CA/CAT" />
+					</arco-core:description>
+				</rdf:Description>
 			</xsl:if>
 			<!-- xsl:apply-templates select="record/metadata/schede/*/MT/MIS" / -->
 		</xsl:if>
