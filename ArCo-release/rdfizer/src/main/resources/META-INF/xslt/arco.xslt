@@ -31255,6 +31255,21 @@
 				
 					<!-- Deprecated URI -->
 			<xsl:if test="record/metadata/schede/harvesting/idContenitoreFisico">
+				<xsl:variable name="CF" select="record/metadata/schede/harvesting/idContenitoreFisico" />
+							<xsl:variable name="idCF">
+								<xsl:value-of select="arco-fn:find-cf($CF)"/>
+							</xsl:variable>			
+							<xsl:variable name="idCFisico">
+								<xsl:choose>
+						   			<xsl:when test="$idCF and contains($idCF, 'DBunico')">
+   										<xsl:value-of select="substring-after($idCF, 'DBunico')"/>
+						   			</xsl:when>
+						   			<xsl:otherwise>
+						   				<xsl:value-of select="$idCF"/>
+						   			</xsl:otherwise>
+						   		</xsl:choose>
+ 							</xsl:variable>
+							<xsl:variable name="contenitoreFisico" select="concat('http://dati.beniculturali.it/iccd/cf/resource/CulturalInstituteOrSite/', $idCFisico)" />							
 			<xsl:if test="record/metadata/schede/*/LC/LDC/*">
 						<xsl:variable name="site">
 							<xsl:choose>
@@ -31282,11 +31297,17 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:variable>
+						
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of select="$site" />
 					</xsl:attribute>
 					<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+					<owl:sameAs>
+						<xsl:attribute name="rdf:resource">
+                              <xsl:value-of select="$contenitoreFisico" />
+                        </xsl:attribute>
+					</owl:sameAs>
 				</rdf:Description>
 			</xsl:if>
 			</xsl:if>
