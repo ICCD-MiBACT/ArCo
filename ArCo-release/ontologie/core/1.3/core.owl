@@ -560,9 +560,27 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/involves -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/involves">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isInvolvedIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il collegamento con una situazione o un evento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the link to a situation or event</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">coinvolge</rdfs:label>
+        <rdfs:label xml:lang="en">involves</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/involvesAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/involvesAgent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/involves"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
@@ -580,6 +598,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isAgentInvolvedIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentInvolvedIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isInvolvedIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la partecipazione di un agente.</rdfs:comment>
@@ -837,6 +856,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">is identifier of</rdfs:label>
         <rdfs:label xml:lang="it">è identificativo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isInvolvedIn">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
+        <rdfs:comment xml:lang="it">La object property inversa a coinvolge.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The inverse object property of involves.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is involved in</rdfs:label>
+        <rdfs:label xml:lang="it">è coinvolto in</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1393,6 +1428,12 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/involves"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
@@ -1403,6 +1444,11 @@ In this module the following Ontology Design Patterns have been used:
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">La classe che rappresenta una situazione o un evento nel tempo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class that models a situation or an event in time.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Event or situation in time</rdfs:label>
+        <rdfs:label xml:lang="it">Evento o situazione nel tempo</rdfs:label>
     </owl:Class>
     
 

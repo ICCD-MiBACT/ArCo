@@ -2644,6 +2644,12 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/isClimateSituationOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Questa classe rappresenta la situazione climatica</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents class situation</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
@@ -2651,6 +2657,7 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">Situazione climatica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa PG: CA/CLM, CA/CAT. Normativa MODI: CA/CAT. Normativa BNB: LR/LRI/LRIT</a-cat:iccdNormTag>
     </owl:Class>
     
 

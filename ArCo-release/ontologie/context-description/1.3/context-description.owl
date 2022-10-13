@@ -1017,6 +1017,14 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isCulturalContextOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalContext"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una persona al contesto culturale in cui ha operato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a person to the cultural context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha contesto culturale</rdfs:label>
+        <rdfs:label xml:lang="en">has cultural context</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BDM, SM: AU/AUT/AUTC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1230,6 +1238,24 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>FTAP, DRAT, FNTP (+VDCP, REGP), ADMP (v. 3.00 e 3.01)</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasDomicile -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDomicile">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isDomicileOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;agente al suo domicilio.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an agent to the domicile.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha domicilio</rdfs:label>
+        <rdfs:label xml:lang="en">has domicile</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BDI: AT/DML. Normativa SM: MU/DML.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2147,7 +2173,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasProfession">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isProfessionOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Profession"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un agente al suo mestiere o professione, per esempio l&apos;utente del bene oppure il responsabile della fabbricazione di un bene con il suo mestiere o la sua professione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an agent to its job. For example the agent responsible of the production of a cultual entity.</rdfs:comment>
@@ -3894,6 +3920,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCulturalContextOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalContext"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha contesto culturale&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has cultural context&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is cultural context of</rdfs:label>
+        <rdfs:label xml:lang="it">è contesto culturale di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa BDM v4: AU/AUT/AUTC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -4090,6 +4123,22 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isDomicileOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isDomicileOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il domicilio all&apos;agente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a domicile to the agent.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is domicile of</rdfs:label>
+        <rdfs:label xml:lang="it">è domicilio di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -6323,6 +6372,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:label xml:lang="it">indicazioni cronologiche relative a un agente</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>AU/AUT/AUTA</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -6359,7 +6409,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:label xml:lang="it">variante del nome</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTE, AUTV</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTE, AUTV. AU/AUV</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -6612,6 +6662,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>AU/AUT/AUTY</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/specifications"/>
     </owl:DatatypeProperty>
     
 
@@ -7387,14 +7438,14 @@ the area), to the environment and to the square from which the good comes.</rdfs
     <!-- https://w3id.org/arco/ontology/context-description/nationality -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/nationality">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la nazionalità di una persona</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the nationality of a person</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">nationality</rdfs:label>
         <rdfs:label xml:lang="it">nazionalità</rdfs:label>
-        <a-cat:iccdNormTag>ICCD Norm AUT: AU/AUT/AUTF. BDI and BDM: AT/ATT/ATTZ</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Norm AUT: AU/AUT/AUTF, AUTY. BDI and BDM: AT/ATT/ATTZ, AI/AIF/AIFZ, VI/VIF/VIFZ, FI/FIF/FIFZ. Normativa SM: MU/MUT/MUTZ.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -7626,7 +7677,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/pseudonym">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/name"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta uno pseudonimo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents pseudonym</rdfs:comment>
@@ -7844,7 +7895,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/signature">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/name"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la firma o il monogramma</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the signature</rdfs:comment>
@@ -8142,6 +8193,12 @@ the area), to the environment and to the square from which the good comes.</rdfs
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Acquisition">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isAcquisitionOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
@@ -9444,6 +9501,14 @@ resource:ArchivalSubseries/museo-civico-romano
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CulturalContext">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il contesto culturale in cui un artista ha operato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the cultural context of an artist.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Contesto culturale</rdfs:label>
+        <rdfs:label xml:lang="en">Cultural context</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BDM, SM: AU/AUT/AUTC. BDI: AT/ATT/ATTB, AI/AIF/AIFB, VI/VIF/VOFB, FI/FI/FIFB. MU: MU/MUT/MUTB</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11312,7 +11377,7 @@ resource:PreparatoryOrFinalWork/0500212038-disegno
         <rdfs:label xml:lang="it">Professione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BDM 2: UT/UTN/UTNM, BDM 4: AU/AUT/AUTE</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BDM 2: UT/UTN/UTNM, BDM 4: AU/AUT/AUTE. BDI: AT/ATT/ATTM, AI/AIF/AIFM, VI/VIF/VIFM, FI/FIF/FIFM. SM: MU/MUT/MUTM</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11838,7 +11903,7 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         <rdfs:label xml:lang="en">Sex</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: DA/STS. Normativa BDI: AT/ATT/ATTS, AI/AIF/AIFO, VI/VIF/VIFO, FI/FIF/FIFO. Normativa SM: MU/MUT/MUTS</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa AT: DA/STS. Normativa BDI: AT/ATT/ATTS, AI/AIF/AIFO, VI/VIF/VIFO, FI/FIF/FIFO. Normativa SM: MU/MUT/MUTS. Normativa AUT: AU/AUT/AUTZ</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -12401,7 +12466,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:label xml:lang="it">Uso</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UT. Normativa VeAC: AU/FRU. ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;. Normative A e PG: US/USO e US/USA</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UT. Normativa VeAC: AU/FRU. ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;. Normative A e PG: US/USO e US/USA. Normativa SM: MU, OS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -12591,13 +12656,50 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
     <owl:Class rdf:about="https://w3id.org/italia/onto/CPV/Person">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAge"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Age"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasProfession"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Profession"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSex"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/context-description/Sex"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/activityPlaceAndPeriod"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/alternativeName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/nationality"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/pseudonym"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/signature"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -13511,16 +13613,16 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 

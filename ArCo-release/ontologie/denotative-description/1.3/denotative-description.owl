@@ -3309,8 +3309,14 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isInvolvedIn"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isAccessoryOf"/>
-                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3319,7 +3325,7 @@ In this module the following Ontology Design Patterns have been used:
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/AccessoryType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un accessorio di un bene, ovvero un oggetto collegabile al bene, sia nel caso in cui sia funzionale alla produzione del suono, sia nel caso in cui sia di supporto alla produzione del suono o alla conservazione o alla prassi d'uso del bene.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un accessorio di un bene, ovvero un oggetto collegabile al bene, sia nel caso in cui sia funzionale alla produzione del suono, sia nel caso in cui sia di supporto alla produzione del suono o alla conservazione o alla prassi d&apos;uso del bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an accessory of a cultural property, both if it is functional to the sound production, or if it is the sound&apos;s production or conservation medium.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">Accessorio</rdfs:label>
@@ -3338,8 +3344,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo accessorio di un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents type of accessory of a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Tipo di accessorio</rdfs:label>
         <rdfs:label xml:lang="en">Accessory type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di accessorio</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AS/ASS/ASST</a-cat:iccdNormTag>
@@ -5623,6 +5629,7 @@ resource:MeasurementCollection/1200865132-1
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/MaximumTemperature"/>
     </owl:NamedIndividual>
     
 
@@ -5674,6 +5681,7 @@ resource:MeasurementCollection/1200865132-1
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/MinimumTemperature"/>
     </owl:NamedIndividual>
     
 
@@ -6034,6 +6042,7 @@ resource:MeasurementCollection/1200865132-1
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/Temperature"/>
     </owl:NamedIndividual>
     
 
@@ -6229,8 +6238,8 @@ resource:MeasurementCollection/1200865132-1
         <a-cat:iccdNormTag>ICCD Normative OA, D, F, S: MT/FIL</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <a-cat:iccdNormTag>MT/FIL</a-cat:iccdNormTag>
-        <rdfs:label xml:lang="en">Filigree</rdfs:label>
         <rdfs:comment xml:lang="en">This individual represents the filigree of an artwork, painting, photography, print.</rdfs:comment>
+        <rdfs:label xml:lang="en">Filigree</rdfs:label>
     </rdf:Description>
     
 
