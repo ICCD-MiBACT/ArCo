@@ -4032,18 +4032,6 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/location/MaximumTemperature -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/MaximumTemperature"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/location/MinimumTemperature -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/MinimumTemperature"/>
-    
-
-
     <!-- https://w3id.org/arco/ontology/location/ObservationLocation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/ObservationLocation">
@@ -4183,12 +4171,6 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ - Normative A e PG: LC/SET/SETT (sigla SU anomalo)</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/location/Temperature -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Temperature"/>
     
 
 

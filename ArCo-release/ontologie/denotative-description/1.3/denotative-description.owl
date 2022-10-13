@@ -5626,10 +5626,9 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Maximum temperature</rdfs:label>
         <rdfs:label xml:lang="it">Temperatura massima</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/MaximumTemperature"/>
+        <a-cat:iccdNormTag>Normativa PG: CA/CLM/CLMC</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5678,10 +5677,9 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Minimum temperature</rdfs:label>
         <rdfs:label xml:lang="it">Temperatura minima</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/MinimumTemperature"/>
+        <a-cat:iccdNormTag>Normativa PG: CA/CLM/CLMF</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5880,7 +5878,7 @@ resource:MeasurementCollection/1200865132-1
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa PG: CA/CLM/CLMP</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CLM/CLMP. Normativa BNB: LR/LRI/LRIT</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6039,10 +6037,8 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Temperatura</rdfs:label>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/Temperature"/>
     </owl:NamedIndividual>
     
 

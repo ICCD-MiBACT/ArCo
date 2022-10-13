@@ -1270,6 +1270,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">synonym</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNM: SM/SMN/SMNS, RM/RMS/RMNS. Normativa BNP; SP/SPV. Normativa BNPE: SR/SRN/SRNC, SRNN, RR/RRN/RRNC, RRNN. Normativa BNZ: SZ/SZS/SZSN</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1449,6 +1450,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Classificazione nel tempo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa SM: CL/CHS, CL/CLA. Normativa BNB: SB/NBN/NBNA, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN.
+Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normativa BNPL:  SP/SPN. Normativa BNZ: SZ/SZS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1648,6 +1651,12 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Taxon">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
