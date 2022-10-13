@@ -295,12 +295,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/core/isClassifiedBy -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isClassifiedBy">
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasClassificationInTime"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
     
 
 
@@ -681,41 +676,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasDirectHigherRank -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectHigherRank">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasHigherRank"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega due taxa, dove la prima è più specifica della seconda e non ci sono altri taxa che siano più generali del primo e più specifici del secondo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates two taxa, where the first is more specific then the second and there is no other taxon that is both more general than the first and more specific than the second.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">ha rango superiore diretto</rdfs:label>
-        <rdfs:label xml:lang="en">has direct higher rank</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasLowerRank"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega due taxa, dove la prima è meno specifica della seconda e non ci sono altri taxa che siano più specifici del primo e più denerali del secondo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates two taxa, where the first is less specific then the second and there is no other taxon that is both more specific than the first and more general than the second.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">ha rango inferiore diretto</rdfs:label>
-        <rdfs:label xml:lang="en">has direct lower rank</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasEruptiveType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasEruptiveType">
@@ -901,23 +861,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasHigherRank -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasHigherRank">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasLowerRank"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega due taxa, dove la prima è più specifica della seconda.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates two taxa, where the first is more specific than the second.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">ha rango superiore</rdfs:label>
-        <rdfs:label xml:lang="en">has higher rank</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasHostIndividual -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasHostIndividual">
@@ -1023,22 +966,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasLowerRank -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasLowerRank">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega due taxa, dove la prima è meno specifica della seconda.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates two taxa, where the first is less specific than the second.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">ha rango inferiore</rdfs:label>
-        <rdfs:label xml:lang="en">has lower rank</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1321,42 +1248,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isTaxonOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione a un taxon.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a classification to a taxon.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">ha taxon</rdfs:label>
-        <rdfs:label xml:lang="en">has taxon</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. BNB: SB/SBS/SBSA, SB/NBN/NBNA, SB/NAA, SB/TBI/TBIN, SB/NAT, RB/RBR/RBRN, RB/RBN</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasTaxonSpecification -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTaxonSpecification">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isTaxonSpecificationOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TaxonSpecification"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un taxon alla sua specificazione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a taxon to its specification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">ha specificazione del taxon</rdfs:label>
-        <rdfs:label xml:lang="en">has taxon specification</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. BNB: SB/NAA/NAAD, SB/NAA/NAAF, SB/NAA/NAAH, SB/NAT/NATD, SB/NAT/NATF, SB/NAT/NATH, RB/RBN/RBND, RB/RBN/RBNF, RB/RBN/RBNH</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasTexture -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTexture">
@@ -1626,44 +1517,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMSD/SMSC</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isClassificationSystemOf"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/isClassifiedByCurrentTaxon -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isClassifiedByCurrentTaxon">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;attuale taxon che l&apos;ha classificata</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity to the current taxon assigned to it</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="en">is classified by current taxon</rdfs:label>
-        <rdfs:label xml:lang="it">è classificato dal taxon attuale</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isClassifiedByCurrentTaxon"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/isClassifiedByOriginalTaxon -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isClassifiedByOriginalTaxon">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al primo taxon che l&apos;ha classificata</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity to the first taxon assigned to it</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="en">is classified by original taxon</rdfs:label>
-        <rdfs:label xml:lang="it">è classificato dal taxon originario</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isClassifiedByOriginalTaxon"/>
     </owl:ObjectProperty>
     
 
@@ -2318,27 +2171,11 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/isTaxonOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isTaxonOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un taxon con una classificazione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a taxon to a classification</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="en">is taxon of</rdfs:label>
-        <rdfs:label xml:lang="it">è taxon di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/isTaxonProducedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isTaxonProducedBy">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/producesTaxon"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification"/>
         <rdfs:comment xml:lang="it">Questa poprietà collega il taxon all&apos;identificazione del tipo nomenclaturale che lo ha prodotto</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a taxon to the Type specimen identification which produces it</rdfs:comment>
@@ -2347,23 +2184,6 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è taxon prodotto da</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/isTaxonSpecificationOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isTaxonSpecificationOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TaxonSpecification"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la specificazione del taxon al taxon.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the taxon specification to a taxon.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="en">is taxon specification of</rdfs:label>
-        <rdfs:label xml:lang="it">è specificazione del taxon di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. BNB: SB/NAA/NAAD, SB/NAA/NAAF, SB/NAA/NAAH, SB/NAT/NATD, SB/NAT/NATF, SB/NAT/NATH, RB/RBN/RBND, RB/RBN/RBNF, RB/RBN/RBNH</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2438,7 +2258,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/producesTaxon">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
         <rdfs:comment xml:lang="it">Questa poprietà collega l&apos;identificazione del tipo nomenclaturale al taxon prodotto</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a Type specimen identification to the taxon it produces</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
@@ -3128,14 +2948,14 @@ In this module the following Ontology Design Patterns have been used:
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationInTime">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassificationInTimeOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasTaxon"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassificationInTimeOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3395,19 +3215,19 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectHigherRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalPhylum"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectLowerRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalOrder"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasHigherRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasHigherRank"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -3420,7 +3240,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasLowerRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasLowerRank"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:complementOf>
@@ -3453,53 +3273,14 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectHigherRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalOrder"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectLowerRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalGenus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasHigherRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalFamily"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalGenus"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecies"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BotanicalForm"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Cultivar"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Subspecies"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Variety"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasLowerRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalGenus"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecies"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BotanicalForm"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Cultivar"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Subspecies"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Variety"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la famiglia</rdfs:comment>
@@ -3520,51 +3301,14 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectHigherRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalFamily"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectLowerRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecies"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasHigherRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalGenus"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecies"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BotanicalForm"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Cultivar"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Subspecies"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Variety"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasLowerRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecies"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BotanicalForm"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Cultivar"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Subspecies"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Variety"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3591,13 +3335,13 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectLowerRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalPhylum"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasLowerRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasLowerRank"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:complementOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalKingdom"/>
@@ -3622,43 +3366,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectHigherRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalClass"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectLowerRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalFamily"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasHigherRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasHigherRank"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalClass"/>
                             <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalKingdom"/>
                             <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalPhylum"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasLowerRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalFamily"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalGenus"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecies"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BotanicalForm"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Cultivar"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Subspecies"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Variety"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -3681,25 +3407,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectHigherRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalKingdom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectLowerRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalClass"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasHigherRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasHigherRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalKingdom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasLowerRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasLowerRank"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:complementOf>
@@ -3731,49 +3457,14 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectHigherRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalGenus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Subspecies"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasHigherRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecies"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BotanicalForm"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Cultivar"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Subspecies"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Variety"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasLowerRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BotanicalForm"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Cultivar"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Subspecies"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Variety"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSubspecies"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la specie.</rdfs:comment>
@@ -3810,16 +3501,26 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSubspecies -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSubspecies">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la sottospecie.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the subspecies.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="it">Sottospecie</rdfs:label>
+        <rdfs:label xml:lang="en">Subspecies</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGST. -  Normativa BNB: RB/RBN/RBND; SB/NAA/NAAD; SB/NAT/NATD</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliography"/>
@@ -3991,12 +3692,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicSeries">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicStage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4006,12 +3701,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicStage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicSubstage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4021,12 +3710,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicSubstage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Chronozone"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4036,12 +3719,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicSeries"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4307,12 +3984,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Eon">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalEra"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4322,12 +3993,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Eonthem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Erathem"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4337,12 +4002,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Erathem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChronostratigraphicSystem"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4435,12 +4094,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalAge">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalSubage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4459,12 +4112,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalEpoch">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalAge"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4474,12 +4121,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalEra">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalPeriod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4489,12 +4130,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalPeriod">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalEpoch"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4504,12 +4139,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalSubage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/GeochronologicalClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Chron"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4671,14 +4300,14 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasTaxon"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4689,8 +4318,8 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasTaxon"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4807,7 +4436,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PetrologicTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectLowerRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/RockType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4846,12 +4475,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicComplex">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicSupergroup"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4861,12 +4484,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicFormation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicMember"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4876,12 +4493,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicGroup">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicFormation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4891,12 +4502,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicMember">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicBed"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4906,12 +4511,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicSupergroup">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicClass"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/LithostratigraphicGroup"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5276,12 +4875,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/MineralSubclass">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectHigherRank"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralClass"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia mineralogica, ovvero la sottoclasse mineralogica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a mineralogical taxon, the mineral subclass.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
@@ -5297,7 +4890,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/MineralTaxon -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/MineralTaxon">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un taxon di esemplari mineralogici</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a taxon for mineralogical specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
@@ -5528,7 +5121,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/PetrologicTaxon -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PetrologicTaxon">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il taxon relativo al dominio petrologico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the taxon related to the petrologic domain.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
@@ -5562,8 +5155,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectHigherRank"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicGenus"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicGenus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia planetologica, ovvero la classe.</rdfs:comment>
@@ -5600,8 +5193,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectHigherRank"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicClass"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicClass"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia planetologica, ovvero il gruppo.</rdfs:comment>
@@ -5621,8 +5214,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectHigherRank"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicGroup"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicGroup"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia planetologica, ovvero la specie.</rdfs:comment>
@@ -5685,7 +5278,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicTaxon -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicTaxon">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il taxon relativo al dominio planeotlogico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the taxon related to the planetologic domain.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
@@ -5873,7 +5466,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PetrologicTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDirectHigherRank"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/LithologicType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -6028,7 +5621,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6174,22 +5767,6 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Subspecies -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Subspecies">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la sottospecie.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the subspecies.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">Sottospecie</rdfs:label>
-        <rdfs:label xml:lang="en">Subspecies</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGST. -  Normativa BNB: RB/RBN/RBND; SB/NAA/NAAD; SB/NAT/NATD</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/Substrate -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Substrate">
@@ -6231,54 +5808,6 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIJ</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Taxon -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Taxon">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/refersToClassificationSystem"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/synonym"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il taxon</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the taxon</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="en">Taxon</rdfs:label>
-        <rdfs:label xml:lang="it">Taxon</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/TaxonSpecification -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/TaxonSpecification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un taxon biologico che rappresenta organismi della stessa specie ma con delle differenze minime, che non sono sufficienti per considerarli una specie completamente diversa.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a biological taxon for organisms of the same species but with minimal differences.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">Specificazione del taxon</rdfs:label>
-        <rdfs:label xml:lang="en">Taxon specification</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -6380,7 +5909,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/producesTaxon"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;identificazione di un campione vegetale che è servito a produrne la prima descrizione e a denominare un taxon specifico o infraspecifico considerato nuovo.</rdfs:comment>
@@ -6413,22 +5942,6 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCA;SMCB;SMCC;SMCF;SMCE;SMCM;SMCV;SMCZ</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Variety -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Variety">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TaxonSpecification"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la varietà.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the variety</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="en">Variety</rdfs:label>
-        <rdfs:label xml:lang="it">Varietà</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNF; SB/NAA/NAAF; SB/NAT/NATF. Normativa BNM: SM/SMN/SMNV</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -7324,20 +6837,6 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiogenicSedimentaryStructure"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PrimarySedimentaryStructure"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/SecodarySedimentaryStructure"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalClass"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalFamily"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalGenus"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalKingdom"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalOrder"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalPhylum"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecies"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Subspecies"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Variety"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

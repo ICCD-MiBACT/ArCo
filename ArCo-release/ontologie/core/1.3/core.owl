@@ -417,6 +417,58 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/hasDirectHigherRank -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasDirectHigherRank">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasHigherRank"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega due taxa, dove la prima è più specifica della seconda e non ci sono altri taxa che siano più generali del primo e più specifici del secondo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates two taxa, where the first is more specific then the second and there is no other taxon that is both more general than the first and more specific than the second.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha rango superiore diretto</rdfs:label>
+        <rdfs:label xml:lang="en">has direct higher rank</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasDirectLowerRank -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasDirectLowerRank">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasLowerRank"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega due taxa, dove la prima è meno specifica della seconda e non ci sono altri taxa che siano più specifici del primo e più denerali del secondo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates two taxa, where the first is less specific then the second and there is no other taxon that is both more specific than the first and more general than the second.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha rango inferiore diretto</rdfs:label>
+        <rdfs:label xml:lang="en">has direct lower rank</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasHigherRank -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasHigherRank">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/hasLowerRank"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega due taxa, dove la prima è più specifica della seconda.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates two taxa, where the first is more specific than the second.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha rango superiore</rdfs:label>
+        <rdfs:label xml:lang="en">has higher rank</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/hasIdentifier -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasIdentifier">
@@ -448,6 +500,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasLowerRank -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasLowerRank">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega due taxa, dove la prima è meno specifica della seconda.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates two taxa, where the first is less specific than the second.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha rango inferiore</rdfs:label>
+        <rdfs:label xml:lang="en">has lower rank</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -520,6 +588,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">ha situazione</rdfs:label>
         <rdfs:label xml:lang="en">has situation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasTaxon -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasTaxon">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isTaxonOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione a un taxon, quando il sistema di classificazione è di tipo gerarchico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a classification to a taxon, when the classification system is hierarchical.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha taxon</rdfs:label>
+        <rdfs:label xml:lang="en">has taxon</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. BNB: SB/SBS/SBSA, SB/NBN/NBNA, SB/NAA, SB/TBI/TBIN, SB/NAT, RB/RBR/RBRN, RB/RBN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -960,6 +1047,23 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è situazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isTaxonOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTaxonOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un taxon con una classificazione, quando il sistem adi classificazione è di tipo gerarchico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a taxon to a classification, when the classification system is hierarchical</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is taxon of</rdfs:label>
+        <rdfs:label xml:lang="it">è taxon di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1536,6 +1640,33 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Situazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Taxon -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Taxon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/synonym"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il taxon, ovvero il concetto che appartiene a una classificazione gerarchizzata</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the taxon, that is a concept related to a hierarchical classification system</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Taxon</rdfs:label>
+        <rdfs:label xml:lang="it">Taxon</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
