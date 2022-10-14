@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/ontology/arco-lite/"
      xml:base="https://w3id.org/arco/ontology/arco-lite/"
-     xmlns:cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:dd="https://w3id.org/arco/ontology/denotative-description/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
@@ -12,6 +10,9 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:ADMS="https://w3id.org/italia/onto/ADMS/"
+     xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
+     xmlns:a-dd="https://w3id.org/arco/ontology/denotative-description/"
+     xmlns:a-mi="https://w3id.org/arco/ontology/musical-instrument/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -19,6 +20,7 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:a-spe="https://w3id.org/arco/ontology/natural-specimen-description/"
      xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco-lite">
@@ -28,14 +30,16 @@
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/musical-instrument/0.1"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/0.1"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/1.0"/>
         <rdfs:label xml:lang="en">Arco Lite Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia Arco Leggera (ArCo network)</rdfs:label>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -43,22 +47,22 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.w3.org/2002/07/owl#inverseOf -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#inverseOf"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/iccdNormTag -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/iccdNormTag"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -66,7 +70,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasAnisotropy -->
@@ -85,7 +89,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>SM/SMM/SMMA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasAttributedAuthor -->
@@ -104,7 +108,7 @@
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
         <a-cat:iccdNormTag> AU/AUT/AUTN (+ AU/AUT/AUTS); AU/AAT; AU/AAT/AATN. ICCD Normativa F e FF 4.00: PD/PDF/PDFN - ICCD Normativa F 3.00: PD/PDF/PDFN o PD/PDF/PDFB</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasAuthor -->
@@ -122,14 +126,14 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCalculatedDensity -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCalculatedDensity">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasPhysicalCharacteristic"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCalculatedDensity"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCalculatedDensityOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un entità alla densità calcolata</rdfs:comment>
@@ -141,7 +145,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgency -->
@@ -160,7 +164,7 @@
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTJ; DO/BIB/BIBJ; RE/RCG/RCGJ; RE/DSC/DSCJ - ICCD Normativa F: PD/PDF/PDFJ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent -->
@@ -182,13 +186,15 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCity -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCity">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCity"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCityOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Cadastre"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/City"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un catasto alla sua città.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the cadastre to its city.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -196,9 +202,9 @@
         <rdfs:label xml:lang="en">has city</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa Trasversale 4.00: CS/CTS/CTSC, Normativa RA 1.0 LG/LGC/LGCC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CS/CTS/CTSC, ICCD Normativa RA 1.0 LG/LGC/LGCC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCollectionMember -->
@@ -207,6 +213,10 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/isCollectionIn"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/involvesMember"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega una collezione di cultural beni culturali con il singolo bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a collection of cultural entities with the cultutal entities.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -215,7 +225,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCollector -->
@@ -233,13 +243,12 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasColour -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasColour">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasTechnicalCharacteristic"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isColourOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
@@ -251,7 +260,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCommittent -->
@@ -261,6 +270,11 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCommittentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Commission"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasCommission"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasAgent"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui viene indicata la committenza di un bene culturale alla persona o istituzione committente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a situation where it is indicated a cultural entity&apos;s commission to the investor agent or institution.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -270,7 +284,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/CMM/CMMN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCompatibilityIndex -->
@@ -289,7 +303,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasConservationStatusType -->
@@ -298,6 +312,10 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isConservationStatusTypeOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/hasConservationStatus"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasType"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà associa lo stato di conservazione a uno dei valori del tipo di stato di conservazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a conservation status to one of its type&apos;s values.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -307,7 +325,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">CO/STC/STCC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCopyrightHolder -->
@@ -326,7 +344,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR/CPRN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCreationLocation -->
@@ -346,7 +364,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è stato realizzato in&apos; (versioni precedenti: &apos;sede di realizzazione&apos;)</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCrystalClass -->
@@ -365,7 +383,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMC/SMCL</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCrystalSystem -->
@@ -384,7 +402,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMC/SMCS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCrystallographicCharacteristic -->
@@ -402,7 +420,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCulturalEntityUseFunction -->
@@ -424,7 +442,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUF; LC/LDC/LDCF; LA/PRC/PRCF - BDM 2.00:UT/UTF - PST 3.01: DA/UTF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCulturalPropertyAddress -->
@@ -452,13 +470,14 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: LC/PVC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCurator -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCurator">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCuratorOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al suo curatore.</rdfs:comment>
@@ -470,7 +489,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasDiapason -->
@@ -488,7 +507,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasDiaphaneity -->
@@ -507,7 +526,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasEditor -->
@@ -516,6 +535,12 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isEditorOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasEdition"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasAgent"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;edizione all&apos;editore.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an edition to its editor.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -525,7 +550,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">Normativa F: PD/EDI/EDIR, Normativa S: AU/EDT/EDTN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasExportOffice -->
@@ -544,7 +569,7 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ESP/ESPU</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasExtension -->
@@ -563,7 +588,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasFindingLocation -->
@@ -583,7 +608,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è stato rinvenuto in&apos; (versioni precedenti: &apos;sede di rinvenimento&apos;)</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasFluorescence -->
@@ -602,7 +627,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFL</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasFracture -->
@@ -621,7 +646,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFU</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasGarmentAnalysis -->
@@ -640,7 +665,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa VeAC 3.01: MT/MTCA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasGladstone-DaleRelation -->
@@ -659,7 +684,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFG</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasInventoryNumberResponsible -->
@@ -676,7 +701,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasIssuer -->
@@ -695,7 +720,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUEE - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTN. DA/CON/CONA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasIssuingAgency -->
@@ -714,7 +739,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>TU/STU/STUE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasIssuingState -->
@@ -733,7 +758,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUES - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasLustre -->
@@ -752,7 +777,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFB</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasMagnetism -->
@@ -771,7 +796,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasMaterial -->
@@ -789,7 +814,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa A 3.00: SVCM, FNSM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasMaterialOrTechnicque -->
@@ -807,7 +832,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasMeasuredDensity -->
@@ -826,7 +851,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasMint -->
@@ -845,7 +870,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/ZEC - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTZ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasMinter -->
@@ -864,7 +889,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa NU: DA/AUE/AUEZ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasMohsHardness -->
@@ -883,7 +908,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFH</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasMusicalEnsemble -->
@@ -902,7 +927,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: OS/OSD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasMusicalTemperament -->
@@ -921,7 +946,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasMusician -->
@@ -940,7 +965,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: MU/MUTN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasOfficialInCharge -->
@@ -959,7 +984,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasvesale 4.00: CM/FUR, CM/AGG/AGGF</iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasOperator -->
@@ -978,7 +1003,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: RE/IND/INDN; CO/RST/RSTN - ICCD Normativa SM e BDM 4.00: DR/DRL - ICCD normative di versioni precedenti: RE/AIN/AINR. RS/ALB/ALBO; CO/ALB/ALBO. Normativa BNB: RB/RBR/RBRA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasOpticCharacteristic -->
@@ -996,7 +1021,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasOpticalPhenomena -->
@@ -1015,7 +1040,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFO</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasOwner -->
@@ -1034,7 +1059,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPhosphorescence -->
@@ -1053,7 +1078,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPhotoColour -->
@@ -1071,7 +1096,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPhotoSize -->
@@ -1089,7 +1114,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPhotographer -->
@@ -1108,7 +1133,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI 3.00: DR/DRG</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPhysicalCharacteristic -->
@@ -1127,7 +1152,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPixelDimension -->
@@ -1145,7 +1170,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPleochroism -->
@@ -1164,7 +1189,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>SM/SMM/SMMP. SM/SMO/SMOP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPointGroup -->
@@ -1183,7 +1208,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMC/SMCP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPreferredAuthor -->
@@ -1202,7 +1227,7 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DO/FTA/FTAA, DO/DRA/DRAA, DO/VDC/VDCR, DO/REG/REGA, DO/FNT/FNTA, DO/BIB/BIBA - Normativa S 3: RO/ADL/ADLA - Normative VeAC e AT 3.01: DO/BSE/BSEA - Normativa MI 3.00: AU/DDC/DDCN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPreviousLocation -->
@@ -1221,7 +1246,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;era contenuto in&apos; (versioni precedenti: &apos;sede di provenienza&apos;)</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPreviousOwner -->
@@ -1231,8 +1256,20 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPreviousOwnerOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasAcquisition"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al soggetto precedente proprietario.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the event of a cultural entity to the previous owner.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha soggetto precedente proprietario</rdfs:label>
+        <rdfs:label xml:lang="en">has previous owner</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasProponentAgency -->
@@ -1258,7 +1295,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA; Versioni precedenti: CD/EPR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasRadioactivity -->
@@ -1277,7 +1314,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFV</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasRealizationDate -->
@@ -1294,12 +1331,13 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasRecipient -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasRecipient">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasTransferor"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
@@ -1311,7 +1349,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent -->
@@ -1329,7 +1367,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: AU/NMC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasRelatedWork -->
@@ -1346,7 +1384,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasResolution -->
@@ -1364,7 +1402,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent -->
@@ -1382,7 +1420,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Notmativa Trasversale 4.00: AC/ACS/ACSE, DA/APP/APPE, RE/IND/INDE-RCG/RCGR-DSC/DSCFFOI/FOIE, CM/ISP/ISPN, CO/RST/RSTE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation -->
@@ -1407,7 +1445,7 @@
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
         <iccdNormTag>CM/CMP/CMPN</iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasRightHolder -->
@@ -1417,6 +1455,11 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRightHolderOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasCopyright"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasAgent"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con l&apos;agente detentore dei diritti.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity with its right holder.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -1426,7 +1469,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa  F, OAC: TU/CPR/CPRN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasScientificDirector -->
@@ -1446,7 +1489,7 @@
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGA-FOI/FOIS,
           ICCD Normativa SM e BDM 4.00: DR/DRR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasSecondaryAuthor -->
@@ -1465,7 +1508,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative VeAC e AT 3.01: DO/BSE/BSER</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasShape -->
@@ -1485,7 +1528,7 @@
         <a-cat:iccdNormTag xml:lang="it">Normativa A 3.00: SCLF, CPFF+CPFQ, SVCC+SVCQ, SOFF+SOFQ,
           ICCD Normativa BNB: DB/DBX/DBXX</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasSoundEngineer -->
@@ -1501,7 +1544,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasSpaceGroup -->
@@ -1520,7 +1563,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMC/SMCG</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasSponsor -->
@@ -1539,7 +1582,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RS/RST/RSTR; RE/IND/INDR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasStorageMethodOrColourDepth -->
@@ -1557,7 +1600,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasStreak -->
@@ -1576,7 +1619,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasSubject -->
@@ -1595,7 +1638,7 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS. DA/DES/DESU</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasTechnicalCharacteristic -->
@@ -1616,12 +1659,13 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasTechnique -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasTechnique">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasTechnicalCharacteristic"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTechniqueOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
@@ -1634,7 +1678,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">Normativa A 3.00: SCSC, FNSC, SOEC+SOEF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasTemperament -->
@@ -1652,7 +1696,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasTenacity -->
@@ -1671,7 +1715,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasTransferor -->
@@ -1687,7 +1731,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasTuning -->
@@ -1706,7 +1750,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasUrbanPlanningEnvironmentalRelationWith -->
@@ -1716,8 +1760,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="en">This property relates a cultural entity to another cultural entity, in an planning environmental relation.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, con cui è in relazione urbanistico-ambientale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to another cultural entity, in an planning environmental relation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="it">ha relazione urbanistico-ambientale con</rdfs:label>
         <rdfs:label xml:lang="en">has planning environmental relation with</rdfs:label>
@@ -1725,7 +1769,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è in relazione urbanistico - ambientale con&apos; (versioni precedenti: &apos;relazione urbanistico ambientale&apos;)</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasUser -->
@@ -1749,7 +1793,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUN; Normativa VeAC: AU/FRU/FRUF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasVhnHardness -->
@@ -1768,7 +1812,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMF/SMFN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasVideoOperator -->
@@ -1776,6 +1820,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasVideoOperator">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isVideoOperatorOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità (per esempio, una registrazione) all&apos;operatore dell&apos;entità. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity to the agent who recorded it. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
@@ -1785,7 +1830,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/involves -->
@@ -1803,7 +1848,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/involvesMainAgent -->
@@ -1821,13 +1866,12 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isAnisotropyOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isAnisotropyOf">
-              <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAnisotropy"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOpticCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/OpticCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -1840,7 +1884,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>SM/SMM/SMMA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isAttributedAuthorOf -->
@@ -1857,7 +1901,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isAuthorOf -->
@@ -1866,10 +1910,6 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco-lite/isAttributedAuthorOf"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf"/>
-        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega un agente (autore) all&apos;entità realizzata.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an agent (author) with its realized entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -1878,13 +1918,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
-
-
-    <!-- https://w3id.org/arco/ontology/arco-lite/isCalculatedDensity -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCalculatedDensity"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCalculatedDensityOf -->
@@ -1901,7 +1935,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCataloguingAgencyOf -->
@@ -1918,20 +1952,31 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCataloguingAgentOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCataloguingAgentOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà è l&apos;inversa di &quot;ha agente coinvolto nella catalogazione&quot;, usata per associare l&apos;agente che si occupa della catalogazione al record catalografico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property, inverse of &quot;has cataloguing agent&quot;, is used to associate an agent playing a role in cataloguing activities to the catalogue record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is cataloguing agent of</rdfs:label>
+        <rdfs:label xml:lang="it">è agente catalogatore di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCityOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCityOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/City"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Cadastre"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una città al suo catasto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a city with its cadastre.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -1940,7 +1985,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isClassifiedByCurrentTaxon -->
@@ -1948,6 +1993,12 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isClassifiedByCurrentTaxon">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCurrentTaxonOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasClassificationInTime"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega un campione alla sua classificazione tassonomica corrente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a sepcimen to its current classified taxon.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -1956,7 +2007,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isClassifiedByOriginalTaxon -->
@@ -1972,7 +2023,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf -->
@@ -1988,7 +2039,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCollectorOf -->
@@ -2005,12 +2056,13 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isColourOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isColourOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTechnicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il colore all&apos;oggetto.</rdfs:comment>
@@ -2021,7 +2073,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCommittentOf -->
@@ -2039,13 +2091,12 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/CMM/CMMN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCompatibilityIndexOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCompatibilityIndexOf">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCompatibilityIndex"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhysicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -2057,7 +2108,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isConservationStatusTypeOf -->
@@ -2073,7 +2124,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCopyrightHolderOf -->
@@ -2090,7 +2141,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCreationLocationOf -->
@@ -2107,7 +2158,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCrystalClassOf -->
@@ -2124,7 +2175,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCrystalSystemOf -->
@@ -2141,7 +2192,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCrystallographicCharacteristicOf -->
@@ -2158,7 +2209,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCulturalEntityUseFunctionOf -->
@@ -2174,7 +2225,7 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCulturalPropertyAddressOf -->
@@ -2201,7 +2252,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: LC/PVC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCuratorOf -->
@@ -2219,7 +2270,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCurrentTaxonOf -->
@@ -2234,7 +2285,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isDiapasonOf -->
@@ -2251,13 +2302,12 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isDiaphaneityOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isDiaphaneityOf">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasDiaphaneity"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhysicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -2269,7 +2319,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isEditorOf -->
@@ -2287,7 +2337,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">Normativa F: PD/EDI/EDIR, Normativa S: AU/EDT/EDTN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isExportOfficeOf -->
@@ -2305,7 +2355,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ESP/ESPU</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isExtensionOf -->
@@ -2323,7 +2373,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isFindingLocationOf -->
@@ -2340,13 +2390,12 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isFluorescenceOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isFluorescenceOf">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasFluorescence"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhysicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -2358,13 +2407,12 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isFractureOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isFractureOf">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasFracture"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhysicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -2376,12 +2424,13 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isGarmentAnalysisOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isGarmentAnalysisOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTechnicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;analisi del tessuto (caratteristica tecnica) con un elemento di un vestimento.</rdfs:comment>
@@ -2393,13 +2442,12 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa VeAC 3.01: MT/MTCA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isGladstone-DaleRelationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isGladstone-DaleRelationOf">
-      <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasGladstone-DaleRelation"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhysicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -2411,7 +2459,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isInventoryNumberResponsibleOf -->
@@ -2427,7 +2475,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isInvolvedIn -->
@@ -2445,7 +2493,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è coinvolto in&apos; (versioni precedenti: &apos;esecuzione/evento di riferimento&apos;)</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isIssuerOf -->
@@ -2462,7 +2510,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isIssuingAgencyOf -->
@@ -2479,7 +2527,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isIssuingStateOf -->
@@ -2496,7 +2544,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isLocatedIn -->
@@ -2516,7 +2564,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è contenuto in&apos; (versioni precedenti: &apos;luogo di collocazione/localizzazione&apos;; &apos;scheda contenitore&apos;)</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isLocationOf -->
@@ -2533,13 +2581,12 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isLustreOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isLustreOf">
-      <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasLustre"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhysicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -2551,13 +2598,12 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isMagnetismOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isMagnetismOf">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasMagnetism"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhysicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -2569,7 +2615,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isMainAgentInvolvedIn -->
@@ -2585,12 +2631,13 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isMaterialOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isMaterialOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTechnicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un materiale all&apos;entità composta da quel materiale.</rdfs:comment>
@@ -2601,12 +2648,13 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isMaterialOrTechniqueOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isMaterialOrTechniqueOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTechnicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha materia e tecnica&quot;</rdfs:comment>
@@ -2617,7 +2665,7 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isMeasuredDensityOf -->
@@ -2634,7 +2682,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isMintOf -->
@@ -2651,7 +2699,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isMinterOf -->
@@ -2668,7 +2716,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isMohsHardnessOf -->
@@ -2685,7 +2733,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isMusicalEnsembleOf -->
@@ -2702,7 +2750,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isMusicalTemperamentOf -->
@@ -2720,7 +2768,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isMusicianOf -->
@@ -2737,7 +2785,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isOfficialInChargeOf -->
@@ -2754,7 +2802,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isOperatorOf -->
@@ -2762,7 +2810,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isOperatorOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha operatore dell&apos;attività&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has activity operator&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -2771,7 +2819,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isOpticCharacteristicOf -->
@@ -2788,13 +2836,12 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isOpticalPhenomenaOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isOpticalPhenomenaOf">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOpticalPhenomena"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhysicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -2806,13 +2853,19 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isOriginalTaxonOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isOriginalTaxonOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/classifies"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasClassificationInTime"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione tassonomica originale al suo campione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an original classified taxon to its specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -2821,7 +2874,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isOwnerOf -->
@@ -2839,7 +2892,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isPhosphorescenceOf -->
@@ -2856,7 +2909,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isPhotoColourOf -->
@@ -2873,7 +2926,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isPhotoSizeOf -->
@@ -2890,7 +2943,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isPhotographerOf -->
@@ -2907,7 +2960,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isPhysicalCharacteristicOf -->
@@ -2924,7 +2977,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isPixelDimensionOf -->
@@ -2941,13 +2994,12 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isPleochroismOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isPleochroismOf">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasPleochroism"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOpticCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/OpticCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -2959,7 +3011,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isPointGroupOf -->
@@ -2976,7 +3028,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isPreferredAuthorOf -->
@@ -2993,7 +3045,7 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isPreviousLocationOf -->
@@ -3010,7 +3062,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isPreviousOwnerOf -->
@@ -3019,8 +3071,16 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha soggetto fonte di acquisizione&quot;, collega il soggetto fonte dell&apos;acquisizione di un bene all&apos;acquisizione stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the previous owner of a cultural property to the acquisition by a new owner.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is previous owner of</rdfs:label>
+        <rdfs:label xml:lang="it">è precedente proprietario di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isProponentAgencyOf -->
@@ -3045,7 +3105,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isRadioactivityOf -->
@@ -3062,7 +3122,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isRealizationDateOf -->
@@ -3078,7 +3138,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf -->
@@ -3094,7 +3154,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isResolutionOf -->
@@ -3111,7 +3171,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf -->
@@ -3128,7 +3188,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isResponsibleResearchAndCompilationOf -->
@@ -3152,7 +3212,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isReusedBy -->
@@ -3171,7 +3231,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è riutilizzato in&apos; (versioni precedenti: &apos;bene composto&apos;)</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isRightHolderOf -->
@@ -3188,7 +3248,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isScientificDirectorOf -->
@@ -3205,15 +3265,17 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isSecondaryAuthorOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isSecondaryAuthorOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isShapeOf -->
@@ -3230,7 +3292,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isSoundEngineerOf -->
@@ -3247,7 +3309,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isSpaceGroupOf -->
@@ -3264,7 +3326,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isSponsorOf -->
@@ -3281,7 +3343,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isStorageMethodOrColourDepthOf -->
@@ -3298,13 +3360,12 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isStreakOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isStreakOf">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasStreak"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhysicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -3316,7 +3377,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isSubjectOf -->
@@ -3334,7 +3395,7 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isTechnicalCharacteristicOf -->
@@ -3343,6 +3404,10 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega una caratteristica tecnica all&apos;entità che ha quella caratteristica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a technical characteristic to an entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -3351,12 +3416,13 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isTechniqueOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isTechniqueOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTechnicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una tecnica con un&apos;entità realizzata con quella tecnica.</rdfs:comment>
@@ -3367,7 +3433,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isTemperamentOf -->
@@ -3384,13 +3450,12 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isTenacityOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isTenacityOf">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasTenacity"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhysicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -3402,7 +3467,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isTuningOf -->
@@ -3420,7 +3485,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isUserOf -->
@@ -3437,7 +3502,7 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isVhnHardnessOf -->
@@ -3454,7 +3519,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isVideoOperatorOf -->
@@ -3470,7 +3535,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo -->
@@ -3486,7 +3551,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/reuses -->
@@ -3503,88 +3568,94 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/context-description/isAttributedAuthorIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAttributedAuthorIn"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/isResolutionOf -->
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/isResolutionOf"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/location/atLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/atLocation"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/location/atSite -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/atSite"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/location/isLocationIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isLocationIn"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/location/isSiteIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isSiteIn"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf"/>
+    
 
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon"/>
+    
 
 
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/isCrystalSystemOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isCrystalSystemOf"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/isPointGroupOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isPointGroupOf"/>
-
+    
 
 
     <!-- https://w3id.org/italia/onto/CLV/hasAddress -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasAddress"/>
-
+    
 
 
     <!-- https://w3id.org/italia/onto/CLV/isAddressFor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/isAddressFor"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -3592,7 +3663,25 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/HSNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/HSNumber">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClass"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica il Hornbostel-Sachs number secondo la HS edizione usata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the Hornbostel-Sachs number according to the HS edition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">Codice numerico Hornbostel-Sachs</rdfs:label>
+        <rdfs:label xml:lang="en">Hornbostel-Sachs number</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa SM 3.01: CL/CHS/CHSN</iccdNormTag>
+    </owl:DatatypeProperty>
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/age -->
@@ -3609,7 +3698,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa BDI 4.00: ATTE, AIFH, VIFH, FIFH</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/alternativeDesignation -->
@@ -3625,7 +3714,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/alternativeInventoryNumber -->
@@ -3641,7 +3730,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/assignedDesignation -->
@@ -3657,7 +3746,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/culturalPropertyValue -->
@@ -3674,7 +3763,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: UB/COL/COLV; UB/INP/INP/INPA; UB/STI</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/currentDesignation -->
@@ -3691,7 +3780,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/currentInventoryNumber -->
@@ -3707,7 +3796,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/customaryDesignation -->
@@ -3723,7 +3812,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/depiction -->
@@ -3739,7 +3828,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/dialectalDesignation -->
@@ -3755,7 +3844,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/historicalDesignation -->
@@ -3771,7 +3860,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/idiomaticDesignation -->
@@ -3787,7 +3876,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/internationalIdentifier -->
@@ -3804,7 +3893,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/localDesignation -->
@@ -3820,7 +3909,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/localIdentifier -->
@@ -3838,7 +3927,7 @@
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAN, DO/DRA7DRAN, DO/VDC/VDCN, DO/REG/REGN, DO/FNT/FNTI</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/nationalIdentifier -->
@@ -3854,7 +3943,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/originalDesignation -->
@@ -3870,7 +3959,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/slangDesignation -->
@@ -3886,7 +3975,25 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
+    
 
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/taxonNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/taxonNumber">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero che fa riferimento a determinate categorie tassonomiche diverse dal genere, nel caso di erbari antichi (prelinneiani o linneiani antichi, come ad es. l&apos;Erbario Micheli).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number related to a taxonomic category, different from the genus (expecially for ancient herbaria and prelinnaean herbaria, e.g. Micheli Herbarium)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">numero tassonomico</rdfs:label>
+        <rdfs:label xml:lang="en">taxon number</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSG</iccdNormTag>
+    </owl:DatatypeProperty>
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/toponym -->
@@ -3902,7 +4009,7 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier -->
@@ -3919,10 +4026,10 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -3930,88 +4037,146 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://dati.beniculturali.it/cis/CollectionCulEnt -->
 
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/CoinIssuance -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco-lite/CoinIssuance"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/CrystallographicCharacteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco-lite/CrystallographicCharacteristic"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/context-description/InventorySituation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/context-description/UseFunction -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/UseFunction"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/CrystallographicCharacteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/CrystallographicCharacteristic"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/OpticCharacteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/OpticCharacteristic"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PhysicalCharacteristic"/>
+    
 
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Specimen -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Taxon -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Taxon"/>
+    
 
 
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/UnitCell -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/UnitCell"/>
-
+    
 
 
     <!-- https://w3id.org/italia/onto/CLV/Address -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Address"/>
+    
 
+
+    <!-- https://w3id.org/italia/onto/CLV/City -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/City">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/AdminUnitComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/CLV/District"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasHigherRank"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/italia/onto/CLV/Country"/>
+                            <rdf:Description rdf:about="https://w3id.org/italia/onto/CLV/Province"/>
+                            <rdf:Description rdf:about="https://w3id.org/italia/onto/CLV/Region"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasDirectHigherRank"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/italia/onto/CLV/Province"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la città (Comune)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the city</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/CLV"/>
+        <rdfs:label xml:lang="it">Città</rdfs:label>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+        <rdfs:label xml:lang="it">Comune</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <prov:wasDerivedFrom rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <CLV:hasRankOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</CLV:hasRankOrder>
+        <l0:controlledVocabulary rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities"/>
+    </owl:Class>
+    
 
 
     <!-- https://w3id.org/italia/onto/CLV/Feature -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Feature"/>
-
+    
 
 
     <!-- https://w3id.org/italia/onto/l0/Activity -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Activity"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -4019,7 +4184,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/GarmentAnalysis -->
@@ -4040,3 +4205,4 @@
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

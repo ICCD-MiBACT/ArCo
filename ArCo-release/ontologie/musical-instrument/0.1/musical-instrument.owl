@@ -1,1009 +1,501 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/musical-instrument"
      xml:base="https://w3id.org/arco/ontology/musical-instrument"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:l0="https://w3id.org/italia/onto/l0/"
+     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ADMS="https://w3id.org/italia/onto/ADMS/"
+     xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
+     xmlns:a-dd="https://w3id.org/arco/ontology/denotative-description/"
+     xmlns:a-mi="https://w3id.org/arco/ontology/musical-instrument/"
+     xmlns:core="https://w3id.org/arco/ontology/core/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://w3id.org/arco/ontology/musical-instrument"
-     versionIRI="https://w3id.org/arco/ontology/musical-instrument/0.1">
-    <Prefix name="" IRI="https://w3id.org/arco/ontology/musical-instrument"/>
-    <Prefix name="l0" IRI="https://w3id.org/italia/onto/l0/"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="a-cd" IRI="https://w3id.org/arco/ontology/context-description/"/>
-    <Prefix name="a-dd" IRI="https://w3id.org/arco/ontology/denotative-description/"/>
-    <Prefix name="a-mi" IRI="https://w3id.org/arco/ontology/musical-instrument/"/>
-    <Prefix name="core" IRI="https://w3id.org/arco/ontology/core/"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>https://w3id.org/arco/ontology/context-description/1.2</Import>
-    <Import>https://w3id.org/arco/ontology/core/1.2</Import>
-    <Import>https://w3id.org/arco/ontology/denotative-description/1.2</Import>
-    <Import>https://w3id.org/italia/onto/l0/0.8</Import>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
-        <IRI>https://creativecommons.org/licenses/by-sa/4.0/</IRI>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
-        <IRI>https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40</IRI>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal xml:lang="en">Musical Instrument Ontology (ArCo network)</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal xml:lang="it">Ontologia Strumenti Musicali (ArCo network)</Literal>
-    </Annotation>
-    <Declaration>
-        <Class IRI="/HornbostelSachsClass"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/MusicalInstrument"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/MusicalInstrumentClass"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/MusicalNote"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/String"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasString"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/involvesAccompanyingInstrument"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/involvesSoloInstrument"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isAccompanyingInstrumentInvolvedIn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isProducedByMusicalInstrument"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isSoloInstrumentInvolvedIn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/isStringOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/producesMusicalNote"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/HSDefinition"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/HSEdition"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/HSNumber"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/Diapason"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/Extension"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/Temperament"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/Tuning"/>
-    </Declaration>
-    <SubClassOf>
-        <Class abbreviatedIRI="a-dd:CommunicationMedium"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/involvesAccompanyingInstrument"/>
-            <Class IRI="/MusicalInstrument"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="a-dd:CommunicationMedium"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/involvesSoloInstrument"/>
-            <Class IRI="/MusicalInstrument"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/HornbostelSachsClass"/>
-        <Class IRI="/MusicalInstrumentClass"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/MusicalInstrument"/>
-        <Class abbreviatedIRI="l0:Object"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/MusicalInstrument"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/producesMusicalNote"/>
-            <Class IRI="/MusicalNote"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/MusicalInstrumentClass"/>
-        <Class abbreviatedIRI="core:Concept"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/MusicalInstrumentClass"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:classifies"/>
-            <Class IRI="/MusicalInstrument"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/MusicalNote"/>
-        <Class abbreviatedIRI="l0:Object"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/String"/>
-        <Class abbreviatedIRI="l0:Object"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/String"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="a-dd:hasMeasurementCollection"/>
-            <Class abbreviatedIRI="a-dd:MeasurementCollection"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <ClassAssertion>
-        <Class abbreviatedIRI="a-dd:TechnicalConcept"/>
-        <NamedIndividual IRI="/Diapason"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="a-dd:TechnicalConcept"/>
-        <NamedIndividual IRI="/Extension"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="a-dd:TechnicalConcept"/>
-        <NamedIndividual IRI="/Temperament"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="a-dd:TechnicalConcept"/>
-        <NamedIndividual IRI="/Tuning"/>
-    </ClassAssertion>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/hasString"/>
-        <ObjectProperty IRI="/isStringOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/involvesAccompanyingInstrument"/>
-        <ObjectProperty IRI="/isAccompanyingInstrumentInvolvedIn"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/involvesSoloInstrument"/>
-        <ObjectProperty IRI="/isSoloInstrumentInvolvedIn"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="/isProducedByMusicalInstrument"/>
-        <ObjectProperty IRI="/producesMusicalNote"/>
-    </InverseObjectProperties>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isAccompanyingInstrumentInvolvedIn"/>
-        <Class IRI="/MusicalInstrument"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isProducedByMusicalInstrument"/>
-        <Class IRI="/MusicalInstrument"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isSoloInstrumentInvolvedIn"/>
-        <Class IRI="/MusicalInstrument"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/isStringOf"/>
-        <Class IRI="/String"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/producesMusicalNote"/>
-        <Class IRI="/MusicalInstrument"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/involvesAccompanyingInstrument"/>
-        <Class IRI="/MusicalInstrument"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/involvesSoloInstrument"/>
-        <Class IRI="/MusicalInstrument"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isProducedByMusicalInstrument"/>
-        <Class IRI="/MusicalNote"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/isStringOf"/>
-        <Class IRI="/MusicalInstrument"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/producesMusicalNote"/>
-        <Class IRI="/MusicalNote"/>
-    </ObjectPropertyRange>
-    <SubDataPropertyOf>
-        <DataProperty IRI="/HSNumber"/>
-        <DataProperty abbreviatedIRI="l0:identifier"/>
-    </SubDataPropertyOf>
-    <DataPropertyDomain>
-        <DataProperty IRI="/HSDefinition"/>
-        <Class IRI="/HornbostelSachsClass"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/HSEdition"/>
-        <Class IRI="/HornbostelSachsClass"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/HSNumber"/>
-        <Class IRI="/HornbostelSachsClass"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="/HSDefinition"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/HSEdition"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/HSNumber"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Diapason</IRI>
-        <Literal xml:lang="it">Questo individuo rappresenta il corista rilevato (nota, temperatura ed eventualmente umidità ambientale al momento della rilevazione).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Diapason</IRI>
-        <Literal xml:lang="en">This individual represents the identified diapason (note, temperature and eventually humidity during the detection).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/Diapason</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Diapason</IRI>
-        <Literal xml:lang="it">Corista</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Diapason</IRI>
-        <Literal xml:lang="en">Diapason</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/Diapason</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/Diapason</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/Diapason</IRI>
-        <Literal xml:lang="en">ICCD Normativa SM 4.00: AA/AAC</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Extension</IRI>
-        <Literal xml:lang="it">Questo individuo rappresenta l&apos;estensione musicale di uno strumento musicale.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Extension</IRI>
-        <Literal xml:lang="en">This individual represents a musical instrument&apos;s musical extension.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/Extension</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Extension</IRI>
-        <Literal xml:lang="it">Estensione</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Extension</IRI>
-        <Literal xml:lang="en">Extension</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/Extension</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/Extension</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/Extension</IRI>
-        <Literal>ICCD Normativa SM 4.00: AA/AAE</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/HSDefinition</IRI>
-        <Literal xml:lang="it">Questa proprietà collega la classe Hornbostel-Sachs alla rispettiva definizione</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/HSDefinition</IRI>
-        <Literal xml:lang="en">This property relates the Hornbostel-Sachs class with its definition</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/HSDefinition</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/HSDefinition</IRI>
-        <Literal xml:lang="en">Hornbostel-Sachs definition</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/HSDefinition</IRI>
-        <Literal xml:lang="it">definizione Hornbostel-Sachs</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/HSDefinition</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/HSDefinition</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/HSDefinition</IRI>
-        <Literal>Normativa SM 4.00: CL/CHS/CHSD</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/HSEdition</IRI>
-        <Literal xml:lang="it">Questa proprietà collega la classificazione Horbostel-Sachs al riferimento bibliografico dell&apos;edizione scelta</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/HSEdition</IRI>
-        <Literal xml:lang="en">This property relates the Hornbostel-Sachs class with the used edition</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/HSEdition</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/HSEdition</IRI>
-        <Literal xml:lang="en">Hornbostel-Sachs edition</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/HSEdition</IRI>
-        <Literal xml:lang="it">edizione Hornbostel-Sachs</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/HSEdition</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/HSEdition</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/HSNumber</IRI>
-        <Literal xml:lang="it">Questa proprietà collega la classe Hornbostel-Sachs al suo rispettivo codice numerico</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/HSNumber</IRI>
-        <Literal xml:lang="en">This property relates the Hornbostel-Sachs class with its respective identifier number</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/HSNumber</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/HSNumber</IRI>
-        <Literal xml:lang="en">Hornbostel-Sachs number</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/HSNumber</IRI>
-        <Literal xml:lang="it">codice numerico Hornbostel-Sachs</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/HornbostelSachsClass</IRI>
-        <Literal xml:lang="it">Questa classe rappresenta la classificazione Hornbostel-Sachs per gli strumenti musicali</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/HornbostelSachsClass</IRI>
-        <Literal xml:lang="en">This class represents the Hornbostel-Sachs classification</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/HornbostelSachsClass</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/HornbostelSachsClass</IRI>
-        <Literal xml:lang="it">Classificazione Hornbostel-Sachs</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/HornbostelSachsClass</IRI>
-        <Literal xml:lang="en">Hornbostel-Sachs classification</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/HornbostelSachsClass</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/HornbostelSachsClass</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/HornbostelSachsClass</IRI>
-        <Literal>Normativa SM 4.00: CL/CHS</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/MusicalInstrument</IRI>
-        <Literal xml:lang="it">Questa classe rappresenta uno strumento musicale</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/MusicalInstrument</IRI>
-        <Literal xml:lang="en">This class represents a musical instrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/MusicalInstrument</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/MusicalInstrument</IRI>
-        <Literal xml:lang="en">Musical instrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/MusicalInstrument</IRI>
-        <Literal xml:lang="it">Strumento musicale</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/MusicalInstrument</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/MusicalInstrument</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/MusicalInstrument</IRI>
-        <Literal xml:lang="it">Normativa ICCD BDI 4.00: CU/CUS/CUSS-CUSA</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/MusicalInstrumentClass</IRI>
-        <Literal xml:lang="it">Questa classe rappresenta la classificazione di strumenti musicali</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/MusicalInstrumentClass</IRI>
-        <Literal xml:lang="en">This class represents the classification of musical instrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/MusicalInstrumentClass</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/MusicalInstrumentClass</IRI>
-        <Literal xml:lang="it">Classificazione di strumenti musicali</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/MusicalInstrumentClass</IRI>
-        <Literal xml:lang="en">Musical instrument class</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/MusicalInstrumentClass</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/MusicalInstrumentClass</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/MusicalInstrumentClass</IRI>
-        <Literal>Normativa SM 4.00: CL/CLA/CLAT</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/MusicalNote</IRI>
-        <Literal xml:lang="it">Questa entità rappresenta una nota musicale</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/MusicalNote</IRI>
-        <Literal xml:lang="en">This entity represents a musical note</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/MusicalNote</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/MusicalNote</IRI>
-        <Literal xml:lang="en">Musical note</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/MusicalNote</IRI>
-        <Literal xml:lang="it">Nota musicale</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/MusicalNote</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/MusicalNote</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/MusicalNote</IRI>
-        <Literal>Normativa SM 4.00: AA/AAN</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/String</IRI>
-        <Literal xml:lang="en">Normativa ICCD SM 4.00: AA/AAL</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/String</IRI>
-        <Literal xml:lang="it">Questa entità rappresenta la corda di uno strumento musicale cordofono</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/String</IRI>
-        <Literal xml:lang="en">This property represents the string of a chordophone musical instrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/String</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/String</IRI>
-        <Literal xml:lang="it">Corda</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/String</IRI>
-        <Literal xml:lang="en">String</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/String</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/String</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Temperament</IRI>
-        <Literal xml:lang="it">Questo individuo rappresenta il temperamento adottato, soprattutto in caso di oggetto in condizioni originali, o dopo un restauro, di uno strumento musicale. Per gli idiofoni a tasti fissi (come xilofoni, litofoni, metallofoni) rappresenta la successione degli intervalli.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Temperament</IRI>
-        <Literal xml:lang="en">This individual represents a musical instrument adopted temperament, especially in relation to an object in its original conditions, or after its restoration. For idiophones with fixed keys (e.g. xylophone, litophone, metallophone) the temperament represents the succession of intervals.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/Temperament</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Temperament</IRI>
-        <Literal xml:lang="en">Temperament</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Temperament</IRI>
-        <Literal xml:lang="it">Temperamento</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/Temperament</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/Temperament</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/Temperament</IRI>
-        <Literal>ICCD Normativa SM 4.00: AA/AAP</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Tuning</IRI>
-        <Literal xml:lang="it">Questo individuo rappresenta l&apos;accordatura di uno strumento musicale.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Tuning</IRI>
-        <Literal xml:lang="en">This individual represents a musical instrument tuning.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/Tuning</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Tuning</IRI>
-        <Literal xml:lang="it">Accordatura</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Tuning</IRI>
-        <Literal xml:lang="en">Tuning</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/Tuning</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/Tuning</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/Tuning</IRI>
-        <Literal>ICCD Normativa SM 4.00: AA/AAA</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasString</IRI>
-        <Literal xml:lang="it">Questa proprietà collega uno strumento musicale con la sua corda</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasString</IRI>
-        <Literal xml:lang="en">This property relates a musical instrument with its string</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/hasString</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/hasString</IRI>
-        <Literal xml:lang="it">ha corda</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/hasString</IRI>
-        <Literal xml:lang="en">has string</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/hasString</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/hasString</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/hasString</IRI>
-        <Literal>ICCD Normativa SM 3.01: AA/AAL</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/involvesAccompanyingInstrument</IRI>
-        <Literal xml:lang="it">Questa proprietà collega un&apos;entità al su strumento musicale di accompagnamento</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/involvesAccompanyingInstrument</IRI>
-        <Literal xml:lang="en">This property relates an entity with its accompanying instrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/involvesAccompanyingInstrument</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/involvesAccompanyingInstrument</IRI>
-        <Literal xml:lang="it">comprende strumento di accompagnamento</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/involvesAccompanyingInstrument</IRI>
-        <Literal xml:lang="en">involves accompanying instrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/involvesAccompanyingInstrument</IRI>
-        <Literal xml:lang="it">instable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/involvesAccompanyingInstrument</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/involvesSoloInstrument</IRI>
-        <Literal xml:lang="it">Questa proprietà collega un&apos;entità a uno strumento musicale solista</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/involvesSoloInstrument</IRI>
-        <Literal xml:lang="en">This property relates an entity with a solo musical instrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/involvesSoloInstrument</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/involvesSoloInstrument</IRI>
-        <Literal xml:lang="it">coinvolge strumento solista</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/involvesSoloInstrument</IRI>
-        <Literal xml:lang="en">involves solo instrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/involvesSoloInstrument</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/involvesSoloInstrument</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/isAccompanyingInstrumentInvolvedIn</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/isAccompanyingInstrumentInvolvedIn</IRI>
-        <Literal xml:lang="it">Questa proprietà collega uno strumento musicale di accompagnamento con un&apos;entità</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/isAccompanyingInstrumentInvolvedIn</IRI>
-        <Literal xml:lang="it">This property relates an accompanying musical instrument with an entity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/isAccompanyingInstrumentInvolvedIn</IRI>
-        <Literal xml:lang="en">is accompanying instrument involved in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/isAccompanyingInstrumentInvolvedIn</IRI>
-        <Literal xml:lang="it">è strumento musicale di accompagnamento coinvolto in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/isAccompanyingInstrumentInvolvedIn</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/isAccompanyingInstrumentInvolvedIn</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isProducedByMusicalInstrument</IRI>
-        <Literal xml:lang="it">Questa proprietà collega una nota musicale allo strumento musicale che la produce</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isProducedByMusicalInstrument</IRI>
-        <Literal xml:lang="en">This property relates a musical note to the instrument that produces it</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/isProducedByMusicalInstrument</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/isProducedByMusicalInstrument</IRI>
-        <Literal xml:lang="en">is produced by musical instrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/isProducedByMusicalInstrument</IRI>
-        <Literal xml:lang="it">è prodotta da strumento musicale</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/isProducedByMusicalInstrument</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/isProducedByMusicalInstrument</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isSoloInstrumentInvolvedIn</IRI>
-        <Literal xml:lang="it">Questa proprietà collega uno strumento musicale solista a un&apos;altra entità</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isSoloInstrumentInvolvedIn</IRI>
-        <Literal xml:lang="en">This property relates a solo musical instrument to an entity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/isSoloInstrumentInvolvedIn</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/isSoloInstrumentInvolvedIn</IRI>
-        <Literal xml:lang="en">is solo instrument involved in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/isSoloInstrumentInvolvedIn</IRI>
-        <Literal xml:lang="it">è strumento musicale solista coinvolto in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/isSoloInstrumentInvolvedIn</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/isSoloInstrumentInvolvedIn</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isStringOf</IRI>
-        <Literal xml:lang="it">Questa è la proprietà inversa di &quot;ha corda&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/isStringOf</IRI>
-        <Literal xml:lang="en">This is the inverse property of &quot;has string&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/isStringOf</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/isStringOf</IRI>
-        <Literal xml:lang="en">is string of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/isStringOf</IRI>
-        <Literal xml:lang="it">è corda di</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/isStringOf</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/isStringOf</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
-        <IRI>/isStringOf</IRI>
-        <Literal>ICCD Normativa SM 3.01: AA/AAL</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/producesMusicalNote</IRI>
-        <Literal xml:lang="it">Questa proprietà collega uno strumento musicale a una nota musicale che è in grado di produrre</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/producesMusicalNote</IRI>
-        <Literal xml:lang="en">This property relates a musical instrument with a musical note</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/producesMusicalNote</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/producesMusicalNote</IRI>
-        <Literal xml:lang="it">produce nota musicale</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/producesMusicalNote</IRI>
-        <Literal xml:lang="en">produces musical note</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/producesMusicalNote</IRI>
-        <Literal xml:lang="it">instabile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <IRI>/producesMusicalNote</IRI>
-        <Literal xml:lang="en">unstable</Literal>
-    </AnnotationAssertion>
-</Ontology>
+     xmlns:opla1="http://ontologydesignpatterns.org/opla/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/musical-instrument">
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/musical-instrument/0.1"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/0.8"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <rdfs:label xml:lang="en">Musical Instrument Ontology (ArCo network)</rdfs:label>
+        <rdfs:label xml:lang="it">Ontologia Strumenti Musicali (ArCo network)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/hasString -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/musical-instrument/hasString">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/musical-instrument/isStringOf"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale con la sua corda</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a musical instrument with its string</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">ha corda</rdfs:label>
+        <rdfs:label xml:lang="en">has string</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 3.01: AA/AAL</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/involvesAccompanyingInstrument -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/musical-instrument/involvesAccompanyingInstrument">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/musical-instrument/isAccompanyingInstrumentInvolvedIn"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al su strumento musicale di accompagnamento</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its accompanying instrument</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">comprende strumento di accompagnamento</rdfs:label>
+        <rdfs:label xml:lang="en">involves accompanying instrument</rdfs:label>
+        <owl:versionInfo xml:lang="it">instable</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/involvesSoloInstrument -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/musical-instrument/involvesSoloInstrument">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/musical-instrument/isSoloInstrumentInvolvedIn"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a uno strumento musicale solista</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with a solo musical instrument</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">coinvolge strumento solista</rdfs:label>
+        <rdfs:label xml:lang="en">involves solo instrument</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/isAccompanyingInstrumentInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/musical-instrument/isAccompanyingInstrumentInvolvedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">Questa proprietà collega uno strumento musicale di accompagnamento con un&apos;entità</rdfs:label>
+        <rdfs:label xml:lang="it">This property relates an accompanying musical instrument with an entity</rdfs:label>
+        <rdfs:label xml:lang="en">is accompanying instrument involved in</rdfs:label>
+        <rdfs:label xml:lang="it">è strumento musicale di accompagnamento coinvolto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/isProducedByMusicalInstrument -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/musical-instrument/isProducedByMusicalInstrument">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/musical-instrument/producesMusicalNote"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalNote"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una nota musicale allo strumento musicale che la produce</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a musical note to the instrument that produces it</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="en">is produced by musical instrument</rdfs:label>
+        <rdfs:label xml:lang="it">è prodotta da strumento musicale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/isSoloInstrumentInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/musical-instrument/isSoloInstrumentInvolvedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale solista a un&apos;altra entità</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a solo musical instrument to an entity</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="en">is solo instrument involved in</rdfs:label>
+        <rdfs:label xml:lang="it">è strumento musicale solista coinvolto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/isStringOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/musical-instrument/isStringOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/musical-instrument/String"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha corda&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has string&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="en">is string of</rdfs:label>
+        <rdfs:label xml:lang="it">è corda di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 3.01: AA/AAL</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/producesMusicalNote -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/musical-instrument/producesMusicalNote">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalNote"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale a una nota musicale che è in grado di produrre</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a musical instrument with a musical note</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">produce nota musicale</rdfs:label>
+        <rdfs:label xml:lang="en">produces musical note</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/HSDefinition -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/musical-instrument/HSDefinition">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClass"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la classe Hornbostel-Sachs alla rispettiva definizione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the Hornbostel-Sachs class with its definition</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="en">Hornbostel-Sachs definition</rdfs:label>
+        <rdfs:label xml:lang="it">definizione Hornbostel-Sachs</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: CL/CHS/CHSD</catalogue:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/HSEdition -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/musical-instrument/HSEdition">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClass"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la classificazione Horbostel-Sachs al riferimento bibliografico dell&apos;edizione scelta</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the Hornbostel-Sachs class with the used edition</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="en">Hornbostel-Sachs edition</rdfs:label>
+        <rdfs:label xml:lang="it">edizione Hornbostel-Sachs</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/HSNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/musical-instrument/HSNumber">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClass"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la classe Hornbostel-Sachs al suo rispettivo codice numerico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the Hornbostel-Sachs class with its respective identifier number</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="en">Hornbostel-Sachs number</rdfs:label>
+        <rdfs:label xml:lang="it">codice numerico Hornbostel-Sachs</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CommunicationMedium -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/musical-instrument/involvesAccompanyingInstrument"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/musical-instrument/involvesSoloInstrument"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/MeasurementCollection -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalConcept -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClassificationSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una classe della classificazione Hornbostel-Sachs per gli strumenti musicali</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the Hornbostel-Sachs class</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">Classe Hornbostel-Sachs</rdfs:label>
+        <rdfs:label xml:lang="en">Hornbostel-Sachs class</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: CL/CHS</catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClassificationSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClassificationSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema di classificazione Hornbostel-Sachs per strumenti musicali.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the Hornbostel-Sachs classification system for musical instruments.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="en">Hornbostel-Sachs classification system</rdfs:label>
+        <rdfs:label xml:lang="it">Sistema di classificazione Hornbostel-Sachs</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: CL/CHS</catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/musical-instrument/producesMusicalNote"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalNote"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno strumento musicale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a musical instrument</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="en">Musical instrument</rdfs:label>
+        <rdfs:label xml:lang="it">Strumento musicale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="it">ICCD Normativa BDI 4.00: CU/CUS/CUSS-CUSA</catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/classifies"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la classificazione di strumenti musicali</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the classification of musical instrument</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">Classificazione di strumenti musicali</rdfs:label>
+        <rdfs:label xml:lang="en">Musical instrument class</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: CL/CLA/CLAT</catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentTaxon -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentTaxon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/classifies"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il taxon, ovvero il concetto che appartiene a una classificazione gerarchizzata degli strumenti musicali.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the taxon, that is a concept related to a hierarchical classification system of musical instruments.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="en">Musical instrument taxon</rdfs:label>
+        <rdfs:label xml:lang="it">Taxon degli strumenti musicali</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: CL/CLA/CLAT</catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/MusicalNote -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/MusicalNote">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa entità rappresenta una nota musicale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This entity represents a musical note</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="en">Musical note</rdfs:label>
+        <rdfs:label xml:lang="it">Nota musicale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAN</catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/String -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/String">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">ICCD Normativa SM 4.00: AA/AAL</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa entità rappresenta la corda di uno strumento musicale cordofono</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the string of a chordophone musical instrument</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">Corda</rdfs:label>
+        <rdfs:label xml:lang="en">String</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/Diapason -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/musical-instrument/Diapason">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il corista rilevato (nota, temperatura ed eventualmente umidità ambientale al momento della rilevazione).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the identified diapason (note, temperature and eventually humidity during the detection).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">Corista</rdfs:label>
+        <rdfs:label xml:lang="en">Diapason</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag xml:lang="en">ICCD Normativa SM 4.00: AA/AAC</catalogue:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/Extension -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/musical-instrument/Extension">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;estensione musicale di uno strumento musicale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a musical instrument&apos;s musical extension.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">Estensione</rdfs:label>
+        <rdfs:label xml:lang="en">Extension</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAE</catalogue:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/Temperament -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/musical-instrument/Temperament">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il temperamento adottato, soprattutto in caso di oggetto in condizioni originali, o dopo un restauro, di uno strumento musicale. Per gli idiofoni a tasti fissi (come xilofoni, litofoni, metallofoni) rappresenta la successione degli intervalli.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a musical instrument adopted temperament, especially in relation to an object in its original conditions, or after its restoration. For idiophones with fixed keys (e.g. xylophone, litophone, metallophone) the temperament represents the succession of intervals.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="en">Temperament</rdfs:label>
+        <rdfs:label xml:lang="it">Temperamento</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAP</catalogue:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/musical-instrument/Tuning -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/musical-instrument/Tuning">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;accordatura di uno strumento musicale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a musical instrument tuning.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">Accordatura</rdfs:label>
+        <rdfs:label xml:lang="en">Tuning</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAA</catalogue:iccdNormTag>
+    </owl:NamedIndividual>
+</rdf:RDF>
 
 
 
