@@ -4572,14 +4572,6 @@
 						<xsl:value-of select="concat(' ', string-join(record/metadata/schede/*/OG/SGT/SGTI,', '))" />
 					</xsl:if>
 				</rdfs:comment>
-				<!-- Natural environment for modi -->
-				<xsl:if test="record/metadata/schede/MODI/CA/CAT">
-					<arco-location:hasNaturalEnvironment>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'NaturalEnvironment/', $itemURI)" />
-						</xsl:attribute>
-					</arco-location:hasNaturalEnvironment>
-				</xsl:if>
 				<!-- hasCulturalPropertyType -->
 				<xsl:if test="not($sheetType='MODI')">
 					<xsl:for-each select="record/metadata/schede/*/OG/OGT">

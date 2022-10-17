@@ -2966,7 +2966,7 @@
 						<xsl:value-of select="concat('Misura della situazone climatica ', position (), ' del bene ', $itemURI, ': ', normalize-space(./CLMF))" />
 					</l0:name>
 					<arco-core:hasType>
-						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/location/', 'MinimumTemperature')" />
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'MinimumTemperature')" />
 					</arco-core:hasType>
 					<arco-dd:hasValue>
 						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-minimum-temperature-', arco-fn:urify(./CLMF))" />
@@ -3019,7 +3019,7 @@
 						<xsl:value-of select="concat('Misura della situazone climatica ', position (), ' del bene ', $itemURI, ': ', normalize-space(./CLMC))" />
 					</l0:name>
 					<arco-core:hasType>
-						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/location/', 'MaximumTemperature')" />
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'MaximumTemperature')" />
 					</arco-core:hasType>
 					<arco-dd:hasValue>
 						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-maximum-temperature-', arco-fn:urify(./CLMC))" />

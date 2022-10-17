@@ -3589,6 +3589,7 @@
             			<xsl:value-of select="'https://w3id.org/arco/ontology/location/CollectingLocation'" />
 	            	</xsl:attribute>
 				</arco-location:hasLocationType>			
+				<!-- at location -->
 				<xsl:for-each select="record/metadata/schede/*/LR/LRV">
 					<arco-location:atLocation>
 						<xsl:choose>
