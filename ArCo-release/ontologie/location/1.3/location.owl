@@ -226,6 +226,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isMeasurementTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMeasurementTypeOf"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/areCoordinatesOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/areCoordinatesOf">
@@ -2335,9 +2341,79 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/AffixedElementType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/ConservationStatusType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/DesignationType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Measurement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/MeasurementCollection -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/MeasurementType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementTypeOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di misura osservata (larghezza, altezza, diametro, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the observed measurement type (width, height, diameter, etc).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Measurement Type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di Misura</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/SampleCollectedType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SampleCollectedType"/>
     
 
 
@@ -4093,7 +4169,10 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
 
     <!-- https://w3id.org/arco/ontology/location/Rainfall -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Rainfall"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Rainfall">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <a-cat:iccdNormTag>Normativa PG: CA/CLM/CLMP</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
     
 
 
@@ -4257,6 +4336,30 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/italia/onto/CLV/long">
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: GE/GEC/GECX - Normative precedenti: GP/GPD/GPDP/GPDPX; GA/GAD/GADP/GADPX; GL/GLD/GLDP/GLDPX</a-cat:iccdNormTag>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/SampleCollectedType"/>
+        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
