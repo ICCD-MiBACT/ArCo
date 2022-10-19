@@ -309,7 +309,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasClassificationSystem">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isClassificationSystemOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasConcept"/>
@@ -803,7 +803,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isClassificationSystemOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
         <rdfs:comment xml:lang="it">La proprietà inversa di hasClassificationSystem, che collega un sistema di classificazione a una sua classificazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">The inverse object property of hasClassificationSystem, that links classification system to a classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1208,6 +1208,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/informationSource -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/informationSource">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la fonte da cui vengono prese le informazioni.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the source of information.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">fonte dell&apos;informazione</rdfs:label>
+        <rdfs:label xml:lang="en">information source</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>AU/CMM/CMMF</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/keyword -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/keyword">
@@ -1396,6 +1413,12 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Classification">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasClassificationSystem"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta il concetto di classificazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class that models the concept of classification.</rdfs:comment>
@@ -1429,12 +1452,6 @@ In this module the following Ontology Design Patterns have been used:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassificationInTimeOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasClassificationSystem"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1479,7 +1496,7 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
         <rdfs:label xml:lang="it">Sistema di classificazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSG, SMSD, SMSC, SMSS. Normativa SM: CL/CLA</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSG, SMSD, SMSC, SMSS. Normativa SM: CL/CLA. - Normativa BNB: SB/SBS/SBSC</a-cat:iccdNormTag>
     </owl:Class>
     
 

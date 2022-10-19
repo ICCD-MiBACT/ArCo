@@ -1248,6 +1248,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasTaxonSpecification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTaxonSpecification">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isTaxonSpecificationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TaxonSpecification"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il taxon alla sua specificazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the taxon to its specification</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="it">ha specificazione del taxon</rdfs:label>
+        <rdfs:label xml:lang="en">has taxon specification</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasTexture -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTexture">
@@ -1271,7 +1288,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTypeOfTypeSpecimen">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isTypeOfTypeSpecimenFor"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Typification"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TypeOfTypeSpecimen"/>
         <rdfs:comment xml:lang="it">Questa porprietà collega l&apos;identificazione del tipo nomenclaturale al taxon prodotto</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the identification of a type specimen to the type of type specimen</rdfs:comment>
@@ -1285,15 +1302,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasTypeSpecimenIdentification -->
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasTypification -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTypeSpecimenIdentification">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTypification">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isTypeSpecimenIdentificationOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isTypificationOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Typification"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il campione all&apos;individuazione del tipo nomenclaturale creato a partire dal campione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the specimen to the identification of type specimen</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen to the typification</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha identificazione del tipo nomenclaturale</rdfs:label>
         <rdfs:label xml:lang="en">has type specimen identification</rdfs:label>
@@ -2176,12 +2193,28 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isTaxonProducedBy">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/producesTaxon"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Typification"/>
         <rdfs:comment xml:lang="it">Questa poprietà collega il taxon all&apos;identificazione del tipo nomenclaturale che lo ha prodotto</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a taxon to the Type specimen identification which produces it</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is taxon produced by</rdfs:label>
         <rdfs:label xml:lang="it">è taxon prodotto da</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/isTaxonSpecificationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isTaxonSpecificationOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TaxonSpecification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la specificazione al taxon</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specification to the taxon</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="en">is taxon specification og</rdfs:label>
+        <rdfs:label xml:lang="it">è specificazione del taxon di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2209,7 +2242,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isTypeOfTypeSpecimenFor">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TypeOfTypeSpecimen"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Typification"/>
         <rdfs:comment xml:lang="en">This property relates the type of type specimen to  the identification of a type specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is type of type specimen for</rdfs:label>
@@ -2220,16 +2253,16 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/isTypeSpecimenIdentificationOf -->
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/isTypificationOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isTypeSpecimenIdentificationOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isTypificationOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Typification"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;individiazione del tipo nomenclaturale al campione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the type specimen identification to the specimen</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the typification to the specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="en">is type specimen identification of</rdfs:label>
+        <rdfs:label xml:lang="en">is typifcation of</rdfs:label>
         <rdfs:label xml:lang="it">è identificazione del tipo nomenclaturale di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -2257,7 +2290,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/producesTaxon -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/producesTaxon">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Typification"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
         <rdfs:comment xml:lang="it">Questa poprietà collega l&apos;identificazione del tipo nomenclaturale al taxon prodotto</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a Type specimen identification to the taxon it produces</rdfs:comment>
@@ -2561,7 +2594,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">codice IMA</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMS/SMSG</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMS/SMSG, RM/RMS/RMSG</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2907,7 +2940,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConsequence"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Typification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3233,6 +3266,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Classe</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNP: SP/SPS/SPSB. - Normativa BNZ: SZ/SZS/SZSB</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3260,7 +3294,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Family</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSF. Normativa BNP: SP/SPS/SPSF. - Normativa BNZ: SZ/SZS/SZSF</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3294,7 +3328,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Genus</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG. - Normativa BNB: RB/RBN/RBNA; SB/NAA/NAAA; SB/NAT/NATA</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG. - Normativa BNB: RB/RBN/RBNA; SB/NAA/NAAA; SB/NAT/NATA. Normativa BNP: Sp/SPS/SPSR. Normativa BNZ: SZ/SZS/SZSR. - Normativa BNZ: SZ/SZS/SZSR</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3326,6 +3360,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Regno</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNP: SP/SPS/SPSP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3367,6 +3402,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Ordine</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNP: SP/SPS/SPSO. - Normativa BNZ: SZ/SZS/SZSO</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3417,6 +3453,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Phylum</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNP: SP/SPS/SPSH. - Normativa BNZ: SZ/SZS/SZSP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3444,7 +3481,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Species</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB. Normativa BNP: SP/SPS/SPSS. - Normativa BNZ: SZ/SZS/SZSS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3482,7 +3519,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Subspecies</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGST. -  Normativa BNB: RB/RBN/RBND; SB/NAA/NAAD; SB/NAT/NATD</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGST. -  Normativa BNB: RB/RBN/RBND; SB/NAA/NAAD; SB/NAT/NATD. Normativa BNP: SP/SPS/SPST. - Normativa BNZ: SZ/SZS/SZSX</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3506,21 +3543,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. - Normativa BNB: SB/SBS, SB/TBI, RB/RBN. Normativa PG: FV/FV/FVED</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/BiologicalVariety -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalVariety">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la varietà.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the variety.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="en">Biological variety</rdfs:label>
-        <rdfs:label xml:lang="it">Varietà biologica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -4412,7 +4434,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Tipo litologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">untable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRN/SRNT</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRN/SRNT, RR/RRN/RRNT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4659,7 +4681,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Mineral class</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSC, SMSD</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSC, SMSD, RM/RMS/RMSC, RMSD</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4797,7 +4819,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Specie mineralogica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMN/SMNA, SMNI, RM/RMN/RMNA, RMNI</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4846,7 +4868,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Sottoclasse geologica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSS</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSS, RM/RMS/RMSS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5131,6 +5153,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa: SP/SPN/SPNC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa BNPL: SP/SPN/SPNC, Rp/RPN/RPNC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5147,6 +5170,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPN/SPNE</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa BNPL: SP/SPN/SPNE, RP/RPN/RPNE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5168,6 +5192,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Planetologic group</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNPL: SP/SPN/SPNG, RP/RPN/RPNG</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5189,6 +5214,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Specie planetologica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNPL: SP/SPN/SPNN, RP/RPN/RPNN</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5602,8 +5628,8 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasTypeSpecimenIdentification"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasTypification"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Typification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un campione.</rdfs:comment>
@@ -5776,6 +5802,21 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/TaxonSpecification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/TaxonSpecification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la specificazione di un taxon</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the specification of a taxon</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="it">Specificazione del taxon</rdfs:label>
+        <rdfs:label xml:lang="en">Taxon specification</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/Texture -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Texture">
@@ -5848,9 +5889,9 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification -->
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Typification -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Typification">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -5880,7 +5921,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the identification of a specimen used to produce the first description an to produce the new taxon</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Identificazione del tipo nomenclaturale</rdfs:label>
-        <rdfs:label xml:lang="en">Type specimen identification</rdfs:label>
+        <rdfs:label xml:lang="en">Typification</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI. BNM: SM/SMT</a-cat:iccdNormTag>
@@ -5906,6 +5947,22 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCA;SMCB;SMCC;SMCF;SMCE;SMCM;SMCV;SMCZ</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Variety -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Variety">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/TaxonSpecification"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la varietà di un taxon</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the variety of a Taxon.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="en">Biological variety</rdfs:label>
+        <rdfs:label xml:lang="it">Varietà biologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: RB/RBN/RBNF; SB/NAA/NAAF; SB/NAT/NATF. - Normativa BNPE: SR/SRN/SRNV, RR/RRN/RRNV</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -6780,8 +6837,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa individuo rappresenta la riflettanza</rdfs:comment>
     </rdf:Description>
     

@@ -1801,6 +1801,13 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isLicenseOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/License"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua licenza di utilizzo. La licenza si distingue dal copyright in quanto la prima stabilisce le condizioni di utilizzo, mentre il secondo stabilisce l&apos;agente che detiene i diritti.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its license. The license differs from copyright in that the former establishes the conditions of use, while the latter establishes the agent who owns the rights.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha licenza</rdfs:label>
+        <rdfs:label xml:lang="en">has license</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4668,7 +4675,17 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <!-- https://w3id.org/arco/ontology/context-description/isLicenseOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isLicenseOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isLicenseOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/License"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una licenza d&apos;uso ad un&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a license to an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is license of</rdfs:label>
+        <rdfs:label xml:lang="it">è licenza di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -6844,8 +6861,9 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>UB/COL/COLI</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/inventoryNumber"/>
+        <a-cat:iccdNormTag>UB/COL/COLI. OG/QNT/QNTO. Normativa BDI: VIRN, DURN, DUSN
+AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/positionInSequence"/>
     </owl:DatatypeProperty>
     
 
@@ -7864,6 +7882,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">gestione diritti</rdfs:label>
         <rdfs:label xml:lang="en">rights</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, DO/BIB/BIBY - ICCD Normativa MI 3.00: DA/PLC</a-cat:iccdNormTag>
@@ -8109,7 +8128,9 @@ the area), to the environment and to the square from which the good comes.</rdfs
 
     <!-- https://w3id.org/arco/ontology/core/specifications -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/specifications"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/specifications">
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/specifications"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -8156,7 +8177,10 @@ the area), to the environment and to the square from which the good comes.</rdfs
 
     <!-- http://dati.beniculturali.it/cis/CollectionCulEnt -->
 
-    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CollectionCulEnt">
+        <a-cat:iccdNormTag>UBF/UBFP,UBFS, UBFT. OG/SGT/SGTS, 
+Normativa BDI: DURD, DUST,  AIRD, AIST, VIRD, VIVT, DURD</a-cat:iccdNormTag>
+    </owl:Class>
     
 
 
@@ -8888,14 +8912,6 @@ resource:ArchivalSubseries/museo-civico-romano
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/AudioCollection -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AudioCollection">
-        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/AudioDocumentation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AudioDocumentation">
@@ -9318,7 +9334,7 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:label xml:lang="en">Collection Membership</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>UB/COL. ICCD Normativa F: UB/UBF. ICCD Normativa NU: OG/OGT/OGTR. ICCD Normativa F: PD/SFI; PD/SSI</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>UB/COL. ICCD Normativa F: UB/UBF. ICCD Normativa NU: OG/OGT/OGTR. ICCD Normativa F: PD/SFI; PD/SSI. Normativa BDI: DU/DUR, DU/DUS, VI/VIR, VI/VIV, AI/AIR, AI/AIS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -9475,7 +9491,9 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:label xml:lang="it">Diritti d&apos;autore</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR. Normativa BDI v. 3.01: DU/DUY; DV/DVY, DF/DFY, AI/AIY, VI/VIY, FI/FIY.
+Versioni 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, DO/BIB/BIBY.
+DO/DCM/DCME</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -10402,6 +10420,7 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <rdfs:label xml:lang="en">Herbarium</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: OG/OGT/OGTE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -10794,6 +10813,13 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/LegalSituationType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di situazione legale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of a legal situation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Legal situation type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di situazione legale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
         <a-cat:iccdNormTag>TU/CDG/CDGG. Normativa BDM:  DU/DUZ/DUZG, DV/DVZ/DVZG, DF/DFZ/DFZG, AI/AIZ/AIZG,  VI/VIZ/VIZG, FI/FIZ/FIZG</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -10803,6 +10829,14 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/License">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una licenza.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a license</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">License</rdfs:label>
+        <rdfs:label xml:lang="it">Licenza</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>DO/DCM/DCML</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11092,6 +11126,7 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD F:UB/UBF </a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa F: PD/SFI, SSI</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11990,6 +12025,7 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         <rdfs:label xml:lang="en">Specimen collection</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normative BN: OG/OGT/OGTC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -13596,16 +13632,16 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 
