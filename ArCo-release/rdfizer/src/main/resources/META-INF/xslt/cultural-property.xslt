@@ -3551,11 +3551,11 @@
 						</xsl:attribute>
 					</arco-cd:hasCopyright>
 					<xsl:if test="./CPRN">
-						<arco-lite:hasCopyrightHolder>
+						<arco-lite:hasRightsHolder>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./CPRN))" />
 							</xsl:attribute>
-						</arco-lite:hasCopyrightHolder>
+						</arco-lite:hasRightsHolder>
 					</xsl:if>
 				</xsl:for-each>
 				<!-- dedication (DA/DDC) -->
@@ -4849,12 +4849,12 @@
 				<xsl:if test="record/metadata/schede/S/OG/SGT/SGTS">
 					<arco-cd:isMemberInvolvedIn>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'PrintingPlatesSeriesMembership/', $itemURI)" />
+							<xsl:value-of select="concat($NS, 'CollectionMembership/Print', $itemURI)" />
 						</xsl:attribute>
 					</arco-cd:isMemberInvolvedIn>
 					<arco-lite:isCollectionMemberOf>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'PrintingPlatesSeries/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/MI/OG/SGT/SGTS)))" />
+							<xsl:value-of select="concat($NS, 'PrintCollection/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/MI/OG/SGT/SGTS)))" />
 						</xsl:attribute>
 					</arco-lite:isCollectionMemberOf>
 				</xsl:if>
