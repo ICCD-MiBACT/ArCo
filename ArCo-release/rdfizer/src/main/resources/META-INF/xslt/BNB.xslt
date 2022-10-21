@@ -428,7 +428,7 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-
+	
 	
 	<rdf:Description>
 		<xsl:attribute name="rdf:about">
@@ -530,41 +530,67 @@
 		<xsl:if test="record/metadata/schede/BNB/SB/NBN/NBNA or record/metadata/schede/BNB/SB/NAA">
 			<xsl:choose>
 				<xsl:when test="record/metadata/schede/BNB/RB/RBR/RBRN or record/metadata/schede/BNB/RB/RBN">
-					<arco-spe:isIdentifiedByOriginalTaxon>
+					<arco-lite:isIdentifiedByOriginalTaxon>
 						<xsl:attribute name="rdf:resource">
 					    	<xsl:value-of select="$BiologicalTaxon" />
 					    </xsl:attribute>
-					</arco-spe:isIdentifiedByOriginalTaxon>
+					</arco-lite:isIdentifiedByOriginalTaxon>
+					<arco-lite:isClassifiedByOriginalTaxon>
+						<xsl:attribute name="rdf:resource">
+					    	<xsl:value-of select="$BiologicalTaxon" />
+					    </xsl:attribute>
+					</arco-lite:isClassifiedByOriginalTaxon>
 				</xsl:when>
 				<xsl:otherwise>
-					<arco-spe:isIdentifiedByCurrentTaxon>
+					<arco-lite:isIdentifiedByCurrentTaxon>
 						<xsl:attribute name="rdf:resource">
 		    				<xsl:value-of select="$BiologicalTaxon" />
 					    </xsl:attribute>
-					</arco-spe:isIdentifiedByCurrentTaxon>
+					</arco-lite:isIdentifiedByCurrentTaxon>
+					<arco-lite:isClassifiedByCurrentTaxon>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="$BiologicalTaxon" />
+					    </xsl:attribute>
+					</arco-lite:isClassifiedByCurrentTaxon>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNB/SB/NBN/NBNA">
-			<arco-core:isIdentifiedBy>
+			<arco-spe:isIdentifiedBy>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="$BiologicalTaxon" />
 				</xsl:attribute>
-			</arco-core:isIdentifiedBy>
+			</arco-spe:isIdentifiedBy>
+			<arco-core:isClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+		    		<xsl:value-of select="$BiologicalTaxon" />
+				</xsl:attribute>
+			</arco-core:isClassifiedBy>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNB/SB/NAA">
-			<arco-core:isIdentifiedBy>
+			<arco-spe:isIdentifiedBy>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="$BiologicalTaxon" />
 				</xsl:attribute>
-			</arco-core:isIdentifiedBy>
+			</arco-spe:isIdentifiedBy>
+			<arco-core:isClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+		    		<xsl:value-of select="$BiologicalTaxon" />
+				</xsl:attribute>
+			</arco-core:isClassifiedBy>
 		</xsl:if>
+		<!-- revised taxon -->
 		<xsl:for-each select="record/metadata/schede/BNB/RB/RBR/RBRN">
-			<arco-core:isIdentifiedBy>
+			<arco-spe:isIdentifiedBy>
 				<xsl:attribute name="rdf:resource">
 			    	<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(.)))" />
 				</xsl:attribute>
-			</arco-core:isIdentifiedBy>
+			</arco-spe:isIdentifiedBy>
+			<arco-core:isClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+			    	<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(.)))" />
+				</xsl:attribute>
+			</arco-core:isClassifiedBy>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/BNB/RB/RBN">
 		<xsl:variable name="rbn-species">
@@ -616,26 +642,29 @@
 		<xsl:variable name="RevisedTaxon">   
 			<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-variety, $rbn-form, $rbn-cultivar)" />	
 		</xsl:variable>
-			<arco-core:isIdentifiedBy>
+			<arco-spe:isIdentifiedBy>
 				<xsl:attribute name="rdf:resource">
  					<xsl:value-of select="$RevisedTaxon" />
 				</xsl:attribute>
-			</arco-core:isIdentifiedBy>
-		</xsl:for-each>
-		<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIN or record/metadata/schede/BNB/SB/NAT">
-			<arco-core:isIdentifiedBy>
+			</arco-spe:isIdentifiedBy>
+			<arco-core:isClassifiedBy>
 				<xsl:attribute name="rdf:resource">
-		             <xsl:value-of select="$TypespecimenTaxon" />
+ 					<xsl:value-of select="$RevisedTaxon" />
 				</xsl:attribute>
-			</arco-core:isIdentifiedBy>
-		</xsl:if>
-		<!-- identification in time -->
+			</arco-core:isClassifiedBy>
+		</xsl:for-each>
+		<!-- identification/classification in time -->
 		<xsl:if test="record/metadata/schede/BNB/SB/NBN or record/metadata/schede/BNB/SB/NAA">
 			<arco-spe:hasIdentificationInTime>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-identification')" />
 				</xsl:attribute>
 			</arco-spe:hasIdentificationInTime>
+			<arco-core:hasClassificationInTime>
+				<xsl:attribute name="rdf:resource">
+		    		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-classification')" />
+				</xsl:attribute>
+			</arco-core:hasClassificationInTime>
 		</xsl:if>
 		<xsl:for-each select="record/metadata/schede/BNB/RB">
 			<xsl:if test="./RBR/RBRN or ./RB/RBN">
@@ -644,15 +673,13 @@
 		    			<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-revised-identification-', position())" />
 					</xsl:attribute>
 				</arco-spe:hasIdentificationInTime>
+				<arco-core:hasClassificationInTime>
+					<xsl:attribute name="rdf:resource">
+		    			<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-revised-classification-', position())" />
+					</xsl:attribute>
+				</arco-core:hasClassificationInTime>
 			</xsl:if>
 		</xsl:for-each>
-		<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIN or record/metadata/schede/BNB/SB/NAT">
-			<arco-spe:hasIdentificationInTime>
-				<xsl:attribute name="rdf:resource">
-		             <xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-typespecimen-identification')" />
-				</xsl:attribute>
-			</arco-spe:hasIdentificationInTime>
-		</xsl:if>
 		<!-- accession -->
 		<xsl:if test="record/metadata/schede/BNB/SB/ABC">				
 			<arco-spe:hasAccession>
@@ -759,11 +786,11 @@
 		</xsl:if>
 		<!-- type specimen identification in time -->	
 		<xsl:if test="record/metadata/schede/BNB/SB/TBI">
-			<arco-spe:hasTypeSpecimenIdentification>
+			<arco-spe:hasTypification>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI)" />
+					<xsl:value-of select="concat($NS,'Typification/', $itemURI)" />
 				</xsl:attribute>
-			</arco-spe:hasTypeSpecimenIdentification>
+			</arco-spe:hasTypification>
 		</xsl:if>	
 	</rdf:Description>
 	<!-- identifier -->
@@ -978,14 +1005,14 @@
             </l0:name>
 			<xsl:choose>
 				<xsl:when test="record/metadata/schede/BNB/RB/RBR/RBRN or record/metadata/schede/BNB/RB/RBN">  
-		            <arco-spe:currentIdentification>
+		            <arco-core:current>
         		    	<xsl:value-of select="false()" />
-            		</arco-spe:currentIdentification>
+            		</arco-core:current>
             	</xsl:when>
             	<xsl:otherwise>
-            		<arco-spe:currentIdentification>
+            		<arco-core:current>
             	<xsl:value-of select="true()" />
-            		</arco-spe:currentIdentification>
+            		</arco-core:current>
             	</xsl:otherwise>
             </xsl:choose>
 			<xsl:if test="record/metadata/schede/BNB/SB/DBV/DBVB">
@@ -1018,7 +1045,7 @@
 			<xsl:if test="record/metadata/schede/BNB/SB/DBV/DBVF">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/BNB/SB/DBV/DBVF, '-',  record/metadata/schede/BNB/SB/DBV/DBVF)))" />
+		        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/BNB/SB/DBV/DBVF))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -1036,211 +1063,120 @@
 				</xsl:for-each>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/SB/NBN/NBNA">
-				<arco-spe:hasTaxon>
+				<arco-core:hasTaxon>
 					<xsl:attribute name="rdf:resource">
 		    	    	<xsl:value-of select="$BiologicalTaxon" />
 					</xsl:attribute>
-				</arco-spe:hasTaxon>
+				</arco-core:hasTaxon>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/SB/NAA">
-				<arco-spe:hasTaxon>
+				<arco-core:hasTaxon>
 					<xsl:attribute name="rdf:resource">
 		        		<xsl:value-of select="$BiologicalTaxon" />
 					</xsl:attribute>
-				</arco-spe:hasTaxon>
+				</arco-core:hasTaxon>
 			</xsl:if>
 		</rdf:Description>
 	</xsl:if>
-	<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIN or record/metadata/schede/BNB/SB/NAT">
+	<!-- ClassificationInTime as individual --> 	
+	<xsl:if test="record/metadata/schede/BNB/SB/NBN or record/metadata/schede/BNB/SB/NAA">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-        		<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-typespecimen-identification')" />
-	        </xsl:attribute>
-    	   	<rdf:type>
+        		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-classification')" />
+        	</xsl:attribute>
+       		<rdf:type>
 				<xsl:attribute name="rdf:resource">
-            	    <xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime'" />
+                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/ClassificationInTime'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-            	 <xsl:value-of select="concat('Identificazione nel tempo del bene culturale ', $itemURI)" />
+            	 <xsl:value-of select="concat('Classificazione nel tempo  del bene culturale ', $itemURI)" />
             </rdfs:label>
             <l0:name xml:lang="it">
-            	<xsl:value-of select="concat('Identificazione nel tempo del bene culturale ', $itemURI)" />
+            	<xsl:value-of select="concat('Classificazione nel tempo del bene culturale ', $itemURI)" />
             </l0:name>
 			<rdfs:label xml:lang="en">
-            	 <xsl:value-of select="concat('Identification in time of cultural property ', $itemURI)" />
+            	 <xsl:value-of select="concat('Classification in time of cultural property ', $itemURI)" />
             </rdfs:label>
             <l0:name xml:lang="en">
-            	<xsl:value-of select="concat('Identification in time of cultural property ', $itemURI)" />
+            	<xsl:value-of select="concat('Classification in time of cultural property ', $itemURI)" />
             </l0:name>
-            <arco-spe:originalIdentification>
-            	<xsl:value-of select="false()" />
-            </arco-spe:originalIdentification>
-			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIB">
-				<xsl:variable name="startDate">
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/BNB/RB/RBR/RBRN or record/metadata/schede/BNB/RB/RBN">  
+		            <arco-core:current>
+        		    	<xsl:value-of select="false()" />
+            		</arco-core:current>
+            	</xsl:when>
+            	<xsl:otherwise>
+            		<arco-core:current>
+            	<xsl:value-of select="true()" />
+            		</arco-core:current>
+            	</xsl:otherwise>
+            </xsl:choose>
+			<xsl:if test="record/metadata/schede/BNB/SB/DBV/DBVB">
+			<xsl:variable name="startDate">
 				<xsl:choose>
-					<xsl:when test="record/metadata/schede/BNB/SB/TBI/TBIC">
-						<xsl:value-of select="concat(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIC), ' ', normalize-space(record/metadata/schede/BNB/SB/TBI/TBIB))" />
+					<xsl:when test="record/metadata/schede/BNB/SB/DBV/DBVC">
+						<xsl:value-of select="concat(normalize-space(record/metadata/schede/BNB/SB/DBV/DBVC), ' ', normalize-space(record/metadata/schede/BNB/SB/DBV/DBVB))" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/TBI/TBIB)" />
+						<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/DBV/DBVB)" />
 					</xsl:otherwise>
 				</xsl:choose>
-				</xsl:variable>
-				<xsl:variable name="endDate">
+			</xsl:variable>
+			<xsl:variable name="endDate">
 				<xsl:choose>
-					<xsl:when test="record/metadata/schede/BNB/SB/TBI/TBIE">
-						<xsl:value-of 	select="concat(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIE), ' ', normalize-space(record/metadata/schede/BNB/SB/TBI/TBID))" />
+					<xsl:when test="record/metadata/schede/BNB/SB/DBV/DBVE">
+						<xsl:value-of 	select="concat(normalize-space(record/metadata/schede/BNB/SB/DBV/DBVE), ' ', normalize-space(record/metadata/schede/BNB/SB/DBV/DBVD))" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/TBI/TBID)" />
+						<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/DBV/DBVD)" />
 					</xsl:otherwise>
 				</xsl:choose>
-				</xsl:variable>
+			</xsl:variable>
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
 		        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat($startDate, '-',  $endDate)))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
-			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIF">
+			<xsl:if test="record/metadata/schede/BNB/SB/DBV/DBVF">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/BNB/SB/TBI/TBIF, '-',  record/metadata/schede/BNB/SB/TBI/TBIF)))" />
+		        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/BNB/SB/DBV/DBVF))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
-			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIL">
-				<arco-cd:hasBibliography>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, 'bibliography-2-', position())" />
-				</xsl:attribute>
-				</arco-cd:hasBibliography>
-			</xsl:if>
-			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIA">
-				<xsl:variable name="virgola" select="record/metadata/schede/BNB/SB/TBI/TBIA" />
-				<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
-				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
-				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
+			<xsl:if test="record/metadata/schede/*/SB/DBV/DBVA">
+			<xsl:variable name="virgola" select="record/metadata/schede/*/SB/DBV/DBVA" />
+			<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+			<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+			<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
 					<arco-core:involvesAgent>
 						<xsl:attribute name="rdf:resource">
-        					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+    	    				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 						</xsl:attribute>
 					</arco-core:involvesAgent>
 				</xsl:for-each>
 			</xsl:if>
-			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIN">
+			<xsl:if test="record/metadata/schede/BNB/SB/NBN/NBNA">
 				<arco-core:hasTaxon>
 					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="$TypespecimenTaxon" />
+		    	    	<xsl:value-of select="$BiologicalTaxon" />
 					</xsl:attribute>
 				</arco-core:hasTaxon>
-			</xsl:if> 
-			<xsl:if test="record/metadata/schede/BNB/SB/NAT">
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNB/SB/NAA">
 				<arco-core:hasTaxon>
 					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="$TypespecimenTaxon" />
+		        		<xsl:value-of select="$BiologicalTaxon" />
 					</xsl:attribute>
 				</arco-core:hasTaxon>
 			</xsl:if>
 		</rdf:Description>
 	</xsl:if>
 	<xsl:for-each select="record/metadata/schede/BNB/RB">
-		<xsl:if test="./RBR/RBRN">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-        			<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-revised-identification-', position())" />
-		        </xsl:attribute>
-    		   	<rdf:type>
-					<xsl:attribute name="rdf:resource">
-            		    <xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime'" />
-            			</xsl:attribute>
-					</rdf:type>
-					<rdfs:label xml:lang="it">
-        		    	 <xsl:value-of select="concat('Identificazione nel tempo del bene culturale ', $itemURI)" />
-            		</rdfs:label>
-	            	<l0:name xml:lang="it">
-    	        		<xsl:value-of select="concat('Identificazione nel tempo del bene culturale ', $itemURI)" />
-	        	    </l0:name>
-					<rdfs:label xml:lang="en">
-        	    		 <xsl:value-of select="concat('Identification in time of cultural property ', $itemURI)" />
-	        	    </rdfs:label>
-    	        	<l0:name xml:lang="en">
-        	    		<xsl:value-of select="concat('Identification in time of cultural property ', $itemURI)" />
-	            	</l0:name>
-		            <arco-spe:originalIdentification>
-    		        	<xsl:value-of select="false()" />
-        		    </arco-spe:originalIdentification>
-					<xsl:if test="./RBD/RBDB">
-						<xsl:variable name="startDate">
-						<xsl:choose>
-							<xsl:when test="./RBD/RBDC">
-								<xsl:value-of select="concat(normalize-space(./RBD/RBDC), ' ', normalize-space(./RBD/RBDB))" />
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:value-of select="normalize-space(./RBD/RBDB)" />
-							</xsl:otherwise>
-						</xsl:choose>
-					</xsl:variable>
-					<xsl:variable name="endDate">
-						<xsl:choose>
-							<xsl:when test="./RBDE">
-								<xsl:value-of 	select="concat(normalize-space(./RBD/RBDE), ' ', normalize-space(./RBD/RBDD))" />
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:value-of select="normalize-space(./RBD/RBDD)" />
-							</xsl:otherwise>
-						</xsl:choose>
-					</xsl:variable>
-					<tiapit:atTime>
-						<xsl:attribute name="rdf:resource">
-			    	    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat($startDate, '-',  $endDate)))" />
-						</xsl:attribute>
-					</tiapit:atTime>
-				</xsl:if>
-				<xsl:if test="./RBD/RBDF">
-					<tiapit:atTime>
-						<xsl:attribute name="rdf:resource">
-			    	    	<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./RBD/RBDF, '-',  ./RBD/RBDF)))" />
-						</xsl:attribute>
-					</tiapit:atTime>
-				</xsl:if>
-				<xsl:if test="./RBR/RBRB">
-					<arco-cd:hasBibliography>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, 'bibliography-2-', position())" />
-						</xsl:attribute>
-					</arco-cd:hasBibliography>
-				</xsl:if>
-				<xsl:for-each select="./RBR/RBRA">
-					<xsl:variable name="virgola" select="." />
-					<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
-					<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
-					<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
-					<xsl:for-each select="$authorssplit">
-						<arco-core:involvesAgent>
-							<xsl:attribute name="rdf:resource">
-        						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
-							</xsl:attribute>
-						</arco-core:involvesAgent>
-					</xsl:for-each>
-				</xsl:for-each>
-				<xsl:if test="./RBR/RBRN">
-					<arco-core:hasTaxon>
-						<xsl:attribute name="rdf:resource">
-		    	    		<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(./RBR/RBRN)))" />
-						</xsl:attribute>
-					</arco-core:hasTaxon>
-				</xsl:if>
-				<xsl:if test="./RBA">
-					<arco-core:note>
-						<xsl:value-of select="normalize-space(./RBA)" />
-					</arco-core:note>
-				</xsl:if>
-			</rdf:Description>
-		</xsl:if>
-		<xsl:if test="./RBN">
 		<xsl:variable name="rbn-species">
 			<xsl:choose>
 				<xsl:when test="not(contains(./RBN/RBNB, ./RBN/RBNA))">
@@ -1357,6 +1293,191 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
+		<xsl:if test="./RBR/RBRN">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+        			<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-revised-identification-', position())" />
+		        </xsl:attribute>
+    		   	<rdf:type>
+					<xsl:attribute name="rdf:resource">
+            		    <xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime'" />
+            			</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+        		    	 <xsl:value-of select="concat('Identificazione nel tempo del bene culturale ', $itemURI)" />
+            		</rdfs:label>
+	            	<l0:name xml:lang="it">
+    	        		<xsl:value-of select="concat('Identificazione nel tempo del bene culturale ', $itemURI)" />
+	        	    </l0:name>
+					<rdfs:label xml:lang="en">
+        	    		 <xsl:value-of select="concat('Identification in time of cultural property ', $itemURI)" />
+	        	    </rdfs:label>
+    	        	<l0:name xml:lang="en">
+        	    		<xsl:value-of select="concat('Identification in time of cultural property ', $itemURI)" />
+	            	</l0:name>
+		            <arco-spe:originalIdentification>
+    		        	<xsl:value-of select="false()" />
+        		    </arco-spe:originalIdentification>
+					<xsl:if test="./RBD/RBDB">
+						<xsl:variable name="startDate">
+						<xsl:choose>
+							<xsl:when test="./RBD/RBDC">
+								<xsl:value-of select="concat(normalize-space(./RBD/RBDC), ' ', normalize-space(./RBD/RBDB))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="normalize-space(./RBD/RBDB)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="endDate">
+						<xsl:choose>
+							<xsl:when test="./RBDE">
+								<xsl:value-of 	select="concat(normalize-space(./RBD/RBDE), ' ', normalize-space(./RBD/RBDD))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="normalize-space(./RBD/RBDD)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<tiapit:atTime>
+						<xsl:attribute name="rdf:resource">
+			    	    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat($startDate, '-',  $endDate)))" />
+						</xsl:attribute>
+					</tiapit:atTime>
+				</xsl:if>
+				<xsl:if test="./RBD/RBDF">
+					<tiapit:atTime>
+						<xsl:attribute name="rdf:resource">
+			    	    	<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(./RBD/RBDF))" />
+						</xsl:attribute>
+					</tiapit:atTime>
+				</xsl:if>
+				<xsl:if test="./RBR/RBRB">
+					<arco-cd:hasBibliography>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, 'bibliography-2-', position())" />
+						</xsl:attribute>
+					</arco-cd:hasBibliography>
+				</xsl:if>
+				<xsl:for-each select="./RBR/RBRA">
+					<xsl:variable name="virgola" select="." />
+					<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+					<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+					<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
+					<xsl:for-each select="$authorssplit">
+						<arco-core:involvesAgent>
+							<xsl:attribute name="rdf:resource">
+        						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+							</xsl:attribute>
+						</arco-core:involvesAgent>
+					</xsl:for-each>
+				</xsl:for-each>
+				<xsl:if test="./RBR/RBRN">
+					<arco-core:hasTaxon>
+						<xsl:attribute name="rdf:resource">
+		    	    		<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(./RBR/RBRN)))" />
+						</xsl:attribute>
+					</arco-core:hasTaxon>
+				</xsl:if>
+				<xsl:if test="./RBA">
+					<arco-core:note>
+						<xsl:value-of select="normalize-space(./RBA)" />
+					</arco-core:note>
+				</xsl:if>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+        			<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-revised-classification-', position())" />
+		        </xsl:attribute>
+    		   	<rdf:type>
+					<xsl:attribute name="rdf:resource">
+            		    <xsl:value-of select="'https://w3id.org/arco/ontology/core/ClassificationInTime'" />
+            			</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+        		    	 <xsl:value-of select="concat('Classificazione nel tempo del bene culturale ', $itemURI)" />
+            		</rdfs:label>
+	            	<l0:name xml:lang="it">
+    	        		<xsl:value-of select="concat('Classificazione nel tempo del bene culturale ', $itemURI)" />
+	        	    </l0:name>
+					<rdfs:label xml:lang="en">
+        	    		 <xsl:value-of select="concat('Classification in time of cultural property ', $itemURI)" />
+	        	    </rdfs:label>
+    	        	<l0:name xml:lang="en">
+        	    		<xsl:value-of select="concat('Classification in time of cultural property ', $itemURI)" />
+	            	</l0:name>
+		            <arco-spe:originalClassification>
+    		        	<xsl:value-of select="false()" />
+        		    </arco-spe:originalClassification>
+					<xsl:if test="./RBD/RBDB">
+						<xsl:variable name="startDate">
+						<xsl:choose>
+							<xsl:when test="./RBD/RBDC">
+								<xsl:value-of select="concat(normalize-space(./RBD/RBDC), ' ', normalize-space(./RBD/RBDB))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="normalize-space(./RBD/RBDB)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="endDate">
+						<xsl:choose>
+							<xsl:when test="./RBDE">
+								<xsl:value-of 	select="concat(normalize-space(./RBD/RBDE), ' ', normalize-space(./RBD/RBDD))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="normalize-space(./RBD/RBDD)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<tiapit:atTime>
+						<xsl:attribute name="rdf:resource">
+			    	    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat($startDate, '-',  $endDate)))" />
+						</xsl:attribute>
+					</tiapit:atTime>
+				</xsl:if>
+				<xsl:if test="./RBD/RBDF">
+					<tiapit:atTime>
+						<xsl:attribute name="rdf:resource">
+			    	    	<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(./RBD/RBDF))" />
+						</xsl:attribute>
+					</tiapit:atTime>
+				</xsl:if>
+				<xsl:if test="./RBR/RBRB">
+					<arco-cd:hasBibliography>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, 'bibliography-2-', position())" />
+						</xsl:attribute>
+					</arco-cd:hasBibliography>
+				</xsl:if>
+				<xsl:for-each select="./RBR/RBRA">
+					<xsl:variable name="virgola" select="." />
+					<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+					<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+					<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
+					<xsl:for-each select="$authorssplit">
+						<arco-core:involvesAgent>
+							<xsl:attribute name="rdf:resource">
+        						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+							</xsl:attribute>
+						</arco-core:involvesAgent>
+					</xsl:for-each>
+				</xsl:for-each>
+				<xsl:if test="./RBR/RBRN">
+					<arco-core:hasTaxon>
+						<xsl:attribute name="rdf:resource">
+		    	    		<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(./RBR/RBRN)))" />
+						</xsl:attribute>
+					</arco-core:hasTaxon>
+				</xsl:if>
+				<xsl:if test="./RBA">
+					<arco-core:note>
+						<xsl:value-of select="normalize-space(./RBA)" />
+					</arco-core:note>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./RBN">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
         			<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-revised-identification-', position())" />
@@ -1411,7 +1532,7 @@
 				<xsl:if test="./RBD/RBDF">
 					<tiapit:atTime>
 						<xsl:attribute name="rdf:resource">
-			        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./RBD/RBDF, '-',  ./RBD/RBDF)))" />
+			        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(./RBD/RBDF))" />
 						</xsl:attribute>
 					</tiapit:atTime>
 				</xsl:if>
@@ -1435,19 +1556,98 @@
 						</arco-core:involvesAgent>
 					</xsl:for-each>
 				</xsl:for-each>
-				<xsl:if test="./RBR/RBRN">
-					<arco-core:hasTaxon>
-						<xsl:attribute name="rdf:resource">
-		    	   			<xsl:value-of select="$RevisedTaxon" />
-						</xsl:attribute>
-					</arco-core:hasTaxon>
-				</xsl:if> 
 				<xsl:if test="./RBN">
-					<arco-spe:hasTaxon>
+					<arco-core:hasTaxon>
 						<xsl:attribute name="rdf:resource">
 				       		<xsl:value-of select="$RevisedTaxon" />
 						</xsl:attribute>
-					</arco-spe:hasTaxon>
+					</arco-core:hasTaxon>
+				</xsl:if>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+        			<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-revised-classification-', position())" />
+		        </xsl:attribute>
+    		   	<rdf:type>
+					<xsl:attribute name="rdf:resource">
+            		    <xsl:value-of select="'https://w3id.org/arco/ontology/core/ClassificationInTime'" />
+            		</xsl:attribute>
+				</rdf:type>
+				<rdfs:label xml:lang="it">
+    	    	   	 <xsl:value-of select="concat('Classificazione nel tempo del bene culturale ', $itemURI)" />
+        	    </rdfs:label>
+	        	<l0:name xml:lang="it">
+    				<xsl:value-of select="concat('Classificazione nel tempo del bene culturale ', $itemURI)" />
+	        	</l0:name>
+				<rdfs:label xml:lang="en">
+        	    	 <xsl:value-of select="concat('Classification in time of cultural property ', $itemURI)" />
+	        	   </rdfs:label>
+    	        <l0:name xml:lang="en">
+        	    	<xsl:value-of select="concat('Classification in time of cultural property ', $itemURI)" />
+	            </l0:name>
+				<arco-spe:originalClassification>
+    		       	<xsl:value-of select="false()" />
+        		</arco-spe:originalClassification>
+				<xsl:if test="./RBD/RBDB">
+					<xsl:variable name="startDate">
+						<xsl:choose>
+							<xsl:when test="./RBD/RBDC">
+								<xsl:value-of select="concat(normalize-space(./RBD/RBDC), ' ', normalize-space(./RBD/RBDB))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="normalize-space(./RBD/RBDB)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="endDate">
+						<xsl:choose>
+							<xsl:when test="./RBDE">
+								<xsl:value-of 	select="concat(normalize-space(./RBD/RBDE), ' ', normalize-space(./RBD/RBDD))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="normalize-space(./RBD/RBDD)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<tiapit:atTime>
+						<xsl:attribute name="rdf:resource">
+			        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat($startDate, '-',  $endDate)))" />
+						</xsl:attribute>
+					</tiapit:atTime>
+				</xsl:if>
+				<xsl:if test="./RBD/RBDF">
+					<tiapit:atTime>
+						<xsl:attribute name="rdf:resource">
+			        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(./RBD/RBDF))" />
+						</xsl:attribute>
+					</tiapit:atTime>
+				</xsl:if>
+				<xsl:if test="./RBR/RBRB">
+					<arco-cd:hasBibliography>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, 'bibliography-2-', position())" />
+						</xsl:attribute>
+					</arco-cd:hasBibliography>
+				</xsl:if>
+				<xsl:for-each select="./RBR/RBRA">
+					<xsl:variable name="virgola" select="." />
+					<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+					<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+					<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
+					<xsl:for-each select="$authorssplit">
+						<arco-core:involvesAgent>
+							<xsl:attribute name="rdf:resource">
+        						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+							</xsl:attribute>
+						</arco-core:involvesAgent>
+					</xsl:for-each>
+				</xsl:for-each>
+				<xsl:if test="./RBN">
+					<arco-core:hasTaxon>
+						<xsl:attribute name="rdf:resource">
+				       		<xsl:value-of select="$RevisedTaxon" />
+						</xsl:attribute>
+					</arco-core:hasTaxon>
 				</xsl:if>
 			</rdf:Description>
 		</xsl:if>
@@ -1482,9 +1682,9 @@
             	</arco-spe:genusNumber>
         	</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSG">
-				<arco-spe:taxonomicNumber>
+				<arco-lite:taxonomicNumber>
 					<xsl:value-of select="record/metadata/schede/BNB/SB/SBS/SBSG" />		
-				</arco-spe:taxonomicNumber>
+				</arco-lite:taxonomicNumber>
 			</xsl:if>
 		</rdf:Description>
 	</xsl:if>
@@ -1745,7 +1945,7 @@
             </l0:name>	           
     	</rdf:Description>
 	</xsl:if>	
-	<!-- TypespecimenTaxon as individual -->
+	<!-- Typification as individual -->
 	<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIN">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -2368,7 +2568,7 @@
 	<xsl:if test="record/metadata/schede/BNB/SB/DBV/DBVF">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/BNB/SB/DBV/DBVF, '-',  record/metadata/schede/BNB/SB/DBV/DBVF)))" />
+		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/BNB/SB/DBV/DBVF))" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -2376,10 +2576,10 @@
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="concat(record/metadata/schede/BNB/SB/DBV/DBVF, ' - ', record/metadata/schede/BNB/SB/DBV/DBVF)" />
+				<xsl:value-of select="record/metadata/schede/BNB/SB/DBV/DBVF" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="concat(record/metadata/schede/BNB/SB/DBV/DBVF, ' - ', record/metadata/schede/BNB/SB/DBV/DBVF)" />
+				<xsl:value-of select="record/metadata/schede/BNB/SB/DBV/DBVF" />
 			</l0:name>
 			<arco-arco:startTime>
 				<xsl:value-of select="record/metadata/schede/BNB/SB/DBV/DBVF" />
@@ -2455,7 +2655,7 @@
 			<xsl:if test="record/metadata/schede/BNB/SB/ABC/ABCF">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
-		            	<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/BNB/SB/ABC/ABCF, '-',  record/metadata/schede/BNB/SB/ABC/ABCF)))" />
+		            	<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/BNB/SB/ABC/ABCF))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -2533,7 +2733,7 @@
 		<xsl:if test="record/metadata/schede/BNB/SB/ABC/ABCF">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-		    		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/BNB/SB/ABC/ABCF, '-',  record/metadata/schede/BNB/SB/ABC/ABCF)))" />
+		    		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/BNB/SB/ABC/ABCF))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -2541,10 +2741,10 @@
 					</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
-					<xsl:value-of select="concat(record/metadata/schede/BNB/SB/ABC/ABCF, ' - ', record/metadata/schede/BNB/SB/ABC/ABCF)" />
+					<xsl:value-of select="record/metadata/schede/BNB/SB/ABC/ABCF" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="concat(record/metadata/schede/BNB/SB/ABC/ABCF, ' - ', record/metadata/schede/BNB/SB/ABC/ABCF)" />
+					<xsl:value-of select="record/metadata/schede/BNB/SB/ABC/ABCF" />
 				</l0:name>
 				<arco-arco:startTime>
 					<xsl:value-of select="record/metadata/schede/BNB/SB/ABC/ABCF" />
@@ -2670,11 +2870,11 @@
 				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
 				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
-					<arco-spe:hasHarvestingOperator>
+					<arco-lite:hasOperator>
 						<xsl:attribute name="rdf:resource">
         					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 						</xsl:attribute>
-					</arco-spe:hasHarvestingOperator>
+					</arco-lite:hasOperator>
 				</xsl:for-each>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIE">
@@ -2712,7 +2912,7 @@
 			<xsl:if test="record/metadata/schede/BNB/LR/LRD/LRDF">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/BNB/LR/LRD/LRDF, '-',  record/metadata/schede/BNB/LR/LRD/LRDF)))" />
+						<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/BNB/LR/LRD/LRDF))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -2766,7 +2966,7 @@
 	<xsl:if test="record/metadata/schede/BNB/LR/LRD/LRDF">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/BNB/LR/LRD/LRDF, '-',  record/metadata/schede/BNB/LR/LRD/LRDF)))" />
+        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/BNB/LR/LRD/LRDF))" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -2774,10 +2974,10 @@
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="concat(record/metadata/schede/BNB/LR/LRD/LRDF, ' - ', record/metadata/schede/BNB/LR/LRD/LRDF)" />
+				<xsl:value-of select="record/metadata/schede/BNB/LR/LRD/LRDF" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="concat(record/metadata/schede/BNB/LR/LRD/LRDF, ' - ', record/metadata/schede/BNB/LR/LRD/LRDF)" />
+				<xsl:value-of select="record/metadata/schede/BNB/LR/LRD/LRDF" />
 			</l0:name>
 			<arco-arco:startTime>
 				<xsl:value-of select="record/metadata/schede/BNB/LR/LRD/LRDF" />
@@ -2876,7 +3076,7 @@
 			<xsl:if test="record/metadata/schede/BNB/LR/LRD/LRDF">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/BNB/LR/LRD/LRDF, '-',  record/metadata/schede/BNB/LR/LRD/LRDF)))" />
+						<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/BNB/LR/LRD/LRDF))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -4433,15 +4633,15 @@
 			</xsl:if>			
 		</rdf:Description>
 	</xsl:for-each>
-	<!-- Type Specimen Identification as individual -->								
+	<!-- Typification as individual -->								
  	<xsl:if test="record/metadata/schede/BNB/SB/TBI">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI)" />
+				<xsl:value-of select="concat($NS,'Typification/', $itemURI)" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification'" />
+					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Typification'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
@@ -4451,10 +4651,10 @@
 				<xsl:value-of 	select="concat('Identificazione del tipo nomenclaturale del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of 	select="concat('Identification of type specimen of cultural property ', $itemURI)" />
+				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of 	select="concat('Identification of type specimen of cultural property ', $itemURI)" />
+				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIL">	
 				<arco-cd:hasBibliography>
@@ -4527,7 +4727,7 @@
 			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIF">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
-		            	<xsl:value-of	select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/BNB/SB/TBI/TBIF, '-',  record/metadata/schede/BNB/SB/TBI/TBIF)))" />
+		            	<xsl:value-of	select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/BNB/SB/TBI/TBIF))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -4627,7 +4827,7 @@
 		<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIF">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-		    		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/BNB/SB/TBI/TBIF, '-',  record/metadata/schede/BNB/SB/TBI/TBIF)))" />
+		    		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/BNB/SB/TBI/TBIF))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -4635,10 +4835,10 @@
 					</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
-					<xsl:value-of select="concat(record/metadata/schede/BNB/SB/TBI/TBIF, ' - ', record/metadata/schede/BNB/SB/TBI/TBIF)" />
+					<xsl:value-of select="record/metadata/schede/BNB/SB/TBI/TBIF" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="concat(record/metadata/schede/BNB/SB/TBI/TBIF, ' - ', record/metadata/schede/BNB/SB/TBI/TBIF)" />
+					<xsl:value-of select="record/metadata/schede/BNB/SB/TBI/TBIF" />
 				</l0:name>
 				<arco-arco:startTime>
 					<xsl:value-of select="record/metadata/schede/BNB/SB/TBI/TBIF" />
