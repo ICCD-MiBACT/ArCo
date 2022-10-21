@@ -6220,8 +6220,8 @@ resource:MeasurementCollection/1200865132-1
         <a-cat:iccdNormTag>ICCD Normative OA, D, F, S: MT/FIL</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <a-cat:iccdNormTag>MT/FIL</a-cat:iccdNormTag>
-        <rdfs:label xml:lang="en">Filigree</rdfs:label>
         <rdfs:comment xml:lang="en">This individual represents the filigree of an artwork, painting, photography, print.</rdfs:comment>
+        <rdfs:label xml:lang="en">Filigree</rdfs:label>
     </rdf:Description>
     
 
