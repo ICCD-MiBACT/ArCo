@@ -1616,7 +1616,7 @@
 				</xsl:for-each>
 				<!-- edition -->
 				<xsl:for-each select="record/metadata/schede/*/AU/EDT">
-					<xsl:if test="$sheetType='OAC' or $sheetType='S'">
+					<xsl:if test="$sheetType='OAC' or $sheetType='S' or $sheetType='MI'">
 						<arco-cd:hasEdition>
 							<xsl:attribute name="rdf:resource">
 								<xsl:choose>
@@ -3359,6 +3359,13 @@
 					<arco-dd:hasDesignationInTime>
 						<xsl:attribute name="rdf:resource">
                         	<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/NU/OG/OGT/OGTO)))" />                      	                            
+                        </xsl:attribute>
+					</arco-dd:hasDesignationInTime>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/VeAC/OG/OGT/OGTS">
+					<arco-dd:hasDesignationInTime>
+						<xsl:attribute name="rdf:resource">
+                        	<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/OG/OGT/OGTS)))" />                      	                            
                         </xsl:attribute>
 					</arco-dd:hasDesignationInTime>
 				</xsl:if>
