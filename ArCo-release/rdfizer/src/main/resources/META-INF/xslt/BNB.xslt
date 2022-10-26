@@ -502,9 +502,9 @@
 		</xsl:if>
 		<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'campione'))">
 			<xsl:if test="record/metadata/schede/BNB/AC/ACN">
-				<l0:identifier>
+				<l0:localIdentifier>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACN" />
-				</l0:identifier>
+				</l0:localIdentifier>
 				<arco-core:hasIdentifier>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'SpecimenIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/BNB/AC/ACN))" />
