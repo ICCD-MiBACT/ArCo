@@ -350,25 +350,6 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/hasCopyrightHolder -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCopyrightHolder">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCopyrightHolderOf"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega i diritti d&apos;autore di un&apos;entità al titolare dei diritti d&apos;autore. Questa proprietà fornisce una rappresentazione semplificata della relazione, il cui valore viene esplicitato nel nome della proprietà. La stessa relazione viene anche modellata nell&apos;ontologia, in maniera più espressiva, per mezzo della classe AgentRole, che permette di collegare un agente al ruolo che ha rivestito (in questo caso, al ruolo di &quot;titolare dei diritti d&apos;autore&quot;).</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity&apos;s copyright to its copyright holder. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="it">ha titolare dei diritti d&apos;autore</rdfs:label>
-        <rdfs:label xml:lang="en">has copyright holder</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR/CPRN</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCreationLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCreationLocation">
@@ -1470,11 +1451,11 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/hasRightHolder -->
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasRightsHolder -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasRightHolder">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasRightsHolder">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRightHolderOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRightsHolderOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
@@ -1483,10 +1464,10 @@
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasAgent"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con l&apos;agente detentore dei diritti.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity with its right holder.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its rights holder.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="it">ha detentore dei diritti</rdfs:label>
-        <rdfs:label xml:lang="en">has copyright holder</rdfs:label>
+        <rdfs:label xml:lang="en">has rights holder</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa  F, OAC: TU/CPR/CPRN</a-cat:iccdNormTag>
@@ -2154,23 +2135,6 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="en">is conservation status type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di stato di conservazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/arco-lite/isCopyrightHolderOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCopyrightHolderOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha titolare dei diritti d&apos;autore&quot;</rdfs:comment>
-        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has copyright holder&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="en">is copyright holder in</rdfs:label>
-        <rdfs:label xml:lang="it">è titolare dei diritti d&apos;autore in</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3343,16 +3307,16 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/isRightHolderOf -->
+    <!-- https://w3id.org/arco/ontology/arco-lite/isRightsHolderOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isRightHolderOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isRightsHolderOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">Questa proprietà collega un agente detentore di diritti con l&apos;entità.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a right holder with its entity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a rights holder with its entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="en">is right holder of</rdfs:label>
+        <rdfs:label xml:lang="en">is rights holder of</rdfs:label>
         <rdfs:label xml:lang="it">è detentore dei diritti di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
