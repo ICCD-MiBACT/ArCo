@@ -1135,6 +1135,25 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/issuedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/issuedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/issues"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/issues -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/issues">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/italia/onto/TI/atTime -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/TI/atTime"/>
@@ -1587,7 +1606,25 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
     <!-- https://w3id.org/arco/ontology/core/Identifier -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Identifier">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Identifier"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/issuedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isIdentifierOf"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/current"/>
