@@ -556,6 +556,27 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasEligibleIntervention -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasEligibleIntervention">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isEligibleInterventionOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasUrbanPlanningInstrument"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/definesEligibleIntervention"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un intervento ammissible sul bene in oggetto al bene stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its eligible intervention defined by a urban planning instrument.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha intervento ammissibile</rdfs:label>
+        <rdfs:label xml:lang="en">has eligible intervention</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasExportOffice -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasExportOffice">
@@ -2339,6 +2360,26 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isEligibleInterventionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isEligibleInterventionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/isEligibleInterventionDefinedBy"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/isUrbanPlanningInstrumentOf"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un intervento ammissibile al bene coinvolto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an eligibile intervetion to the involved cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is eligible intervention of</rdfs:label>
+        <rdfs:label xml:lang="it">è intervento ammissibile di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isExportOfficeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isExportOfficeOf">
@@ -3879,6 +3920,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">numero d&apos;inventario alternativo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasvrsale 4.00: UB/INV</iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3945,6 +3987,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">numero di inventario corrente</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP</iccdNormTag>
     </owl:DatatypeProperty>
     
 
