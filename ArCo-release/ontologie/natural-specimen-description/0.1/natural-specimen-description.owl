@@ -31,7 +31,6 @@
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/natural-specimen-description">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/0.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.3"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
@@ -6837,8 +6836,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
-        <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <rdfs:comment xml:lang="it">Questa individuo rappresenta la riflettanza</rdfs:comment>
     </rdf:Description>
     
