@@ -189,9 +189,9 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/definesEligibleIntervention">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isEligibleInterventionDefinedBy"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/EligibleIntervention"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento urbanistico-territoriale all&apos;intervento ammesso dalla normativa specifica (es.: restauro/ manutenzione straordinaria).</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a urban planning instrument to the eligible intervention (e.g.: conservation intervention/ exceptional maintenance).</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento urbanistico-territoriale al tipo di intervento ammesso dalla normativa specifica (es.: restauro/ manutenzione straordinaria).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a urban planning instrument to the eligible intervention type (e.g.: conservation intervention/ exceptional maintenance).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha intervento ammesso</rdfs:label>
         <rdfs:label xml:lang="en">has eligible intervention</rdfs:label>
@@ -4203,10 +4203,10 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <!-- https://w3id.org/arco/ontology/context-description/isEligibleInterventionDefinedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isEligibleInterventionDefinedBy">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/EligibleIntervention"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument"/>
-        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha intervento ammesso&quot;, collega un intervento allo strumento urbanistico-territoriale che ammette quell&apos;intervento.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property, inverse of &quot;has eligible intervention&quot;, relates an intervention to the urban planning instrument that finds eligible that intervention.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha intervento ammesso&quot;, collega un tipo di intervento allo strumento urbanistico-territoriale che ammette quell&apos;intervento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property, inverse of &quot;has eligible intervention&quot;, relates an intervention type to the urban planning instrument that finds eligible that intervention.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is intervention eligible by</rdfs:label>
         <rdfs:label xml:lang="it">è intervento ammesso da</rdfs:label>
@@ -7067,7 +7067,7 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">luogo dell&apos;edizione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative VeAC e AT 3.01: DO/BSE/BSEL. Normative MI, S, OAC: AU/EDT/EDTL</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normative VeAC e AT 3.01: DO/BSE/BSEL. Normative MI, S, OAC: AU/EDT/EDTL. Normativa F: PD/PDF/PDFL</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -7130,7 +7130,6 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/expired -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/expired">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Copyright"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -7369,7 +7368,7 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">è mantenuto in</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BDM 2.00: UT/UTA</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BDM 2.00: UT/UTA. Normativa BNM, BNPE, BNPL: CO/STC/STCT</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -10066,9 +10065,11 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Eligible intervention</rdfs:label>
         <rdfs:label xml:lang="it">Intervento ammesso</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/STU/STUN</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType"/>
     </owl:Class>
     
 
@@ -12431,14 +12432,20 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/definesEligibleIntervention"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/EligibleIntervention"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasIssuingAgency"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/definesEligibleIntervention"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrumentType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno strumento urbanistico-territoriale, ovvero un piano regolatore generale e particolareggiato o un piano paesaggistico che interessa un bene culturale.</rdfs:comment>
@@ -12449,6 +12456,22 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/STU</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrumentType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrumentType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di strumento urbanistico-territoriale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a urban planning instrument type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Tipo di strumento urbanistico-territoriale</rdfs:label>
+        <rdfs:label xml:lang="en">Urban planning instrument type</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/STU/STUT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -13653,9 +13676,9 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
