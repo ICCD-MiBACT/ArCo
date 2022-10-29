@@ -727,11 +727,11 @@
 		</xsl:if>
 		<!-- laboratory test -->					
 		<xsl:for-each select="record/metadata/schede/BNB/RB">
-			<arco-cd:hasLaboratoryTest>
+			<arco-cd:hasSurvey>
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'LaboratoryTest/', $itemURI, '-', position())" />
 				</xsl:attribute>
-			</arco-cd:hasLaboratoryTest>
+			</arco-cd:hasSurvey>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/BNB/DB/DBR">
 			<arco-spe:hasAssociatedPreparation>
@@ -3854,7 +3854,7 @@
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>
-	<!-- Laboraotry test as individual  -->
+	<!-- Laboratory test as individual  -->
  	<xsl:for-each select="record/metadata/schede/BNB/RB">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -3883,12 +3883,12 @@
 				<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
 				<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
 				<xsl:for-each select="$authorssplit">
-				<arco-cd:hasActivityOperator>
-					<xsl:attribute name="rdf:resource">
-        				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
-					</xsl:attribute>
-				</arco-cd:hasActivityOperator>
-			</xsl:for-each>
+					<arco-lite:hasOperator>
+						<xsl:attribute name="rdf:resource">
+        					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+						</xsl:attribute>
+					</arco-lite:hasOperator>
+				</xsl:for-each>
 			</xsl:for-each>
 			<xsl:if test="./RBR/RBRB">	
 				<arco-cd:hasBibliography>
@@ -3911,9 +3911,14 @@
 			</xsl:if>					
 			<xsl:if test="./RBR/RBRN or ./RBN">
 				<arco-core:hasConsequence>
-				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-revised-identification-', position())" />
-				</xsl:attribute>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-revised-identification-', position())" />
+					</xsl:attribute>
+				</arco-core:hasConsequence>
+				<arco-core:hasConsequence>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-revised-classification-', position())" />
+					</xsl:attribute>
 				</arco-core:hasConsequence>
 			</xsl:if>	
 			<xsl:if test="./RBD/RBDB">
