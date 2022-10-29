@@ -556,6 +556,27 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasEligibleIntervention -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasEligibleIntervention">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isEligibleInterventionOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasUrbanPlanningInstrument"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/definesEligibleIntervention"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un intervento ammissible sul bene in oggetto al bene stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its eligible intervention defined by a urban planning instrument.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha intervento ammissibile</rdfs:label>
+        <rdfs:label xml:lang="en">has eligible intervention</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasExportOffice -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasExportOffice">
@@ -1414,8 +1435,12 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa properietà collega una scheda su cui si analizza un bene culturale per finalità diverse da quella della catalogazione del patrimonio all&apos;Ente o al soggetto che ha prodotto la scheda o che gestisce la banca dati di cui la scheda fa parte.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a cultural property record to the agency or the person that created that record or manages the database where the record is. (RecordResponsibleAgent).</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa properietà collega un&apos;entità culturale con l&apos;agente che ha una responsabilità su di essa. 
+Es: una scheda su cui si analizza un bene culturale per finalità diverse da quella della catalogazione del patrimonio all&apos;Ente o al soggetto che ha prodotto la scheda o che gestisce la banca dati di cui la scheda fa parte.
+Es: un bene culturale al suo valutatore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to the agent that has a responsibility on it. 
+E.g. a cultural property record to the agency or the person that created that record or manages the database where the record is. (RecordResponsibleAgent).
+E.g. an estimate on a cultural property to the estimation responsible agent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="it">ha agente responsabile</rdfs:label>
         <rdfs:label xml:lang="en">has responsible agent</rdfs:label>
@@ -2041,10 +2066,6 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf">
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/isMemberInvolvedIn"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasCollection"/>
-        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale con la sua collezione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural entity with its collection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -2335,6 +2356,26 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">Normativa F: PD/EDI/EDIR, Normativa S: AU/EDT/EDTN</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isEligibleInterventionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isEligibleInterventionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/isEligibleInterventionDefinedBy"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/isUrbanPlanningInstrumentOf"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un intervento ammissibile al bene coinvolto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an eligibile intervetion to the involved cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is eligible intervention of</rdfs:label>
+        <rdfs:label xml:lang="it">è intervento ammissibile di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -3817,6 +3858,23 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/ICCDIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/ICCDIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a suo identificativo rilasciato da ICCD.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its identifier issued by ICCD.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha identificativo ICCD</rdfs:label>
+        <rdfs:label xml:lang="en">has ICCD identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/age -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/age">
@@ -3862,6 +3920,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">numero d&apos;inventario alternativo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasvrsale 4.00: UB/INV</iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3928,6 +3987,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">numero di inventario corrente</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP</iccdNormTag>
     </owl:DatatypeProperty>
     
 
