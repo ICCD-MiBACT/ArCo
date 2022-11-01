@@ -10776,9 +10776,9 @@
                 		<xsl:value-of select="concat($NS, 'UrbanPlanningInstrument/', $itemURI, '-urban-planning-instrument-', position())" />
 					</xsl:attribute>
 					<rdf:type>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument'" />
-					</xsl:attribute>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument'" />
+						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(./STUT)" />
@@ -10813,7 +10813,7 @@
 					<xsl:if test="./STUN and (not(starts-with(lower-case(normalize-space(./STUN)), 'nr')) and not(starts-with(lower-case(normalize-space(./STUN)), 'n.r')))">
 						<arco-cd:definesEligibleIntervention>
 							<xsl:attribute name="rdf:resource">
-	                			<xsl:value-of select="concat($NS, 'EligibleIntervention/', arco-fn:urify(normalize-space(./STUN)))" />
+	                			<xsl:value-of select="concat($NS, 'InterventionType/', arco-fn:urify(normalize-space(./STUN)))" />
 							</xsl:attribute>
 						</arco-cd:definesEligibleIntervention>
 					</xsl:if>
@@ -10899,11 +10899,11 @@
 				<xsl:if test="./STUN and (not(starts-with(lower-case(normalize-space(./STUN)), 'nr')) and not(starts-with(lower-case(normalize-space(./STUN)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'EligibleIntervention/', arco-fn:urify(normalize-space(./STUN)))" />
+							<xsl:value-of select="concat($NS, 'InterventionType/', arco-fn:urify(normalize-space(./STUN)))" />
 						</xsl:attribute>
 						<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/EligibleIntervention'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterventionType'" />
 						</xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
@@ -30077,7 +30077,6 @@
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/*/MT/MIS">
 				<rdf:Description>
-
 					<xsl:variable name="measurement-collection">
 						<xsl:choose>
 							<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP">
@@ -30097,7 +30096,7 @@
 					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection" />
 					<rdfs:label xml:lang="en">
 						<xsl:choose>
-							<xsl:when test="./MISP">
+							<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP">
 								<xsl:value-of select="concat('Measurements of cultural property ', $itemURI, ' ', normalize-space(./MISP))" />
 							</xsl:when>
 							<xsl:otherwise>
@@ -30107,7 +30106,7 @@
 					</rdfs:label>
 					<l0:name xml:lang="en">
 						<xsl:choose>
-							<xsl:when test="./MISP">
+							<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP">
 								<xsl:value-of select="concat('Measurements of cultural property ', $itemURI, ' ', normalize-space(./MISP))" />
 							</xsl:when>
 							<xsl:otherwise>
@@ -30117,7 +30116,7 @@
 					</l0:name>
 					<rdfs:label xml:lang="it">
 						<xsl:choose>
-							<xsl:when test="./MISP">
+							<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP">
 								<xsl:value-of select="concat('Misure del bene culturale ', $itemURI, ' ', normalize-space(./MISP))" />
 							</xsl:when>
 							<xsl:otherwise>
@@ -30127,7 +30126,7 @@
 					</rdfs:label>
 					<l0:name xml:lang="it">
 						<xsl:choose>
-							<xsl:when test="./MISP">
+							<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP">
 								<xsl:value-of select="concat('Misure del bene culturale ', $itemURI, ' ', normalize-space(./MISP))" />
 							</xsl:when>
 							<xsl:otherwise>
@@ -30135,11 +30134,6 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</l0:name>
-					<xsl:if test="./MIST">
-						<arco-dd:validity>
-							<xsl:value-of select="normalize-space(./MIST)" />
-						</arco-dd:validity>
-					</xsl:if>
 					<xsl:if test="./MISV and not($sheetType='VeAC')">
 						<arco-core:note>
 							<xsl:value-of select="normalize-space(string-join(./MISV, ', '))" /><!-- multiple values eg:ICCD11937406  -->
@@ -30154,10 +30148,17 @@
 									</xsl:attribute>
 								</arco-dd:hasMeasurement>
 							</xsl:if>
-							<xsl:if test="./MISF">
+							<xsl:if test="./MISF and $sheetType='VeAC'">
 								<arco-dd:hasMeasurement>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-hip-circumference')" />
+									</xsl:attribute>
+								</arco-dd:hasMeasurement>
+							</xsl:if>
+							<xsl:if test="./MISF and not ($sheetType='VeAC')">
+								<arco-dd:hasMeasurement>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-area')" />
 									</xsl:attribute>
 								</arco-dd:hasMeasurement>
 							</xsl:if>
@@ -30182,7 +30183,6 @@
 									</xsl:attribute>
 								</arco-dd:hasMeasurement>
 							</xsl:if>
-							<!-- new -->
 							<xsl:if test="./MISD and $sheetType='VeAC'">
 								<arco-dd:hasMeasurement>
 									<xsl:attribute name="rdf:resource">
@@ -30190,15 +30190,13 @@
 									</xsl:attribute>
 								</arco-dd:hasMeasurement>
 							</xsl:if>
-							<!-- new -->
-							<xsl:if test="./MISS and not($sheetType='VeAC' or $sheetType='BDM' or $sheetType='PST')">
+							<xsl:if test="./MISS and not($sheetType='VeAC')">
 								<arco-dd:hasMeasurement>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-thickness')" />
 									</xsl:attribute>
 								</arco-dd:hasMeasurement>
 							</xsl:if>
-							<!-- new -->
 							<xsl:if test="./MISS and $sheetType='VeAC'">
 								<arco-dd:hasMeasurement>
 									<xsl:attribute name="rdf:resource">
@@ -30220,7 +30218,6 @@
 									</xsl:attribute>
 								</arco-dd:hasMeasurement>
 							</xsl:if>
-							<!-- new -->
 							<xsl:if test="./MISP and $sheetType='VeAC'">
 								<arco-dd:hasMeasurement>
 									<xsl:attribute name="rdf:resource">
@@ -30242,21 +30239,34 @@
 									</xsl:attribute>
 								</arco-dd:hasMeasurement>
 							</xsl:if>
-							<xsl:if test="./MISB">
+							<xsl:if test="./MISB and $sheetType='OAC'">
 								<arco-dd:hasMeasurement>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-file-size')" />
 									</xsl:attribute>
 								</arco-dd:hasMeasurement>
 							</xsl:if>
-							<xsl:if test="./MISI">
+							<xsl:if test="./MISB and $sheetType='PST'">
+								<arco-dd:hasMeasurement>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-storage-capacity')" />
+									</xsl:attribute>
+								</arco-dd:hasMeasurement>
+							</xsl:if>
+							<xsl:if test="./MISI and not($sheetType='BDM')">
 								<arco-dd:hasMeasurement>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-size')" />
 									</xsl:attribute>
 								</arco-dd:hasMeasurement>
 							</xsl:if>
-							<!-- new -->
+							<xsl:if test="./MISI and ($sheetType='BDM')">
+								<arco-dd:hasMeasurement>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-perimeter')" />
+									</xsl:attribute>
+								</arco-dd:hasMeasurement>
+							</xsl:if>
 							<xsl:if test="./MISN">
 								<arco-dd:hasMeasurement>
 									<xsl:attribute name="rdf:resource">
@@ -30264,77 +30274,78 @@
 									</xsl:attribute>
 								</arco-dd:hasMeasurement>
 							</xsl:if>
-							<!-- new -->
-							<xsl:if test="./MISR">
-							<xsl:if test="$sheetType='VeAC'">
+							<xsl:if test="./MISR and $sheetType='VeAC'">
 								<arco-dd:hasMeasurement>
 									<xsl:attribute name="rdf:resource">
-												<xsl:value-of
-										select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-front-total-length')" />
-											</xsl:attribute>
+										<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-front-total-length')" />
+									</xsl:attribute>
 								</arco-dd:hasMeasurement>
 							</xsl:if>
+							<xsl:if test="./MISC">
+								<arco-dd:hasMeasurement>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-capacity')" />
+									</xsl:attribute>
+								</arco-dd:hasMeasurement>
+							</xsl:if>
+							<xsl:if test="./MISW">
+								<arco-dd:hasMeasurement>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-power')" />
+									</xsl:attribute>
+								</arco-dd:hasMeasurement>
 							</xsl:if>
 						</xsl:when>
 						<xsl:otherwise>
 							<arco-dd:hasMeasurement>
 								<xsl:attribute name="rdf:resource">
-											<xsl:value-of
-									select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-', arco-fn:uncamelize(arco-fn:map-measure(lower-case(./MISZ))))" />
-										</xsl:attribute>
+									<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-', arco-fn:uncamelize(arco-fn:map-measure(lower-case(./MISZ))))" />
+								</xsl:attribute>
 							</arco-dd:hasMeasurement>
 						</xsl:otherwise>
 					</xsl:choose>
 				</rdf:Description>
-
 				<xsl:variable name="parent-id" select="position()" />
 				<xsl:for-each select="./*">
 					<xsl:variable name="tag-name" select="name(.)" />
-
 					<xsl:variable name="measurement-type">
 						<xsl:choose>
-							<xsl:when
-								test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+							<xsl:when test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 								<xsl:choose>
-									<xsl:when
-										test="$tag-name='MISV' and $sheetType='VeAC'">
+									<xsl:when test="$tag-name='MISV' and $sheetType='VeAC'">
 										<xsl:value-of select="'WaistCircumference'" />
 									</xsl:when>
-									<xsl:when test="$tag-name='MISF'">
+									<xsl:when test="$tag-name='MISF'and $sheetType='VeAC'">
 										<xsl:value-of select="'HipCircumference'" />
 									</xsl:when>
-									<xsl:when
-										test="$tag-name='MISO' and $sheetType='VeAC'">
+									<xsl:when test="$tag-name='MISF'and not ($sheetType='VeAC')">
+										<xsl:value-of select="'Area'" />
+									</xsl:when>
+									<xsl:when test="$tag-name='MISO' and $sheetType='VeAC'">
 										<xsl:value-of select="'EdgeCircumference'" />
 									</xsl:when>
 									<xsl:when test="$tag-name='MISL'">
 										<xsl:value-of select="'Width'" />
 									</xsl:when>
-									<xsl:when
-										test="$tag-name='MISD' and not($sheetType='VeAC')">
+									<xsl:when test="$tag-name='MISD' and not($sheetType='VeAC')">
 										<xsl:value-of select="'Diameter'" />
 									</xsl:when>
-									<xsl:when
-										test="$tag-name='MISD' and $sheetType='VeAC'">
+									<xsl:when test="$tag-name='MISD' and $sheetType='VeAC'">
 										<xsl:value-of select="'BackTotalLength'" />
 									</xsl:when>
 									<xsl:when test="$tag-name='MISA'">
 										<xsl:value-of select="'Height'" />
 									</xsl:when>
-									<xsl:when
-										test="$tag-name='MISP' and not($sheetType='VeAC')">
+									<xsl:when test="$tag-name='MISP' and not($sheetType='VeAC')">
 										<xsl:value-of select="'Depth'" />
 									</xsl:when>
-									<xsl:when
-										test="$tag-name='MISP' and $sheetType='VeAC'">
+									<xsl:when test="$tag-name='MISP' and $sheetType='VeAC'">
 										<xsl:value-of select="'ChestCircumference'" />
 									</xsl:when>
-									<xsl:when
-										test="$tag-name='MISS' and not($sheetType='VeAC' or $sheetType='BDM')">
+									<xsl:when test="$tag-name='MISS' and not($sheetType='VeAC')">
 										<xsl:value-of select="'Thickness'" />
 									</xsl:when>
-									<xsl:when
-										test="$tag-name='MISS' and $sheetType='VeAC'">
+									<xsl:when test="$tag-name='MISS' and $sheetType='VeAC'">
 										<xsl:value-of select="'BackWidth'" />
 									</xsl:when>
 									<xsl:when test="$tag-name='MISG'">
@@ -30343,11 +30354,17 @@
 									<xsl:when test="$tag-name='MISH'">
 										<xsl:value-of select="'Duration'" />
 									</xsl:when>
-									<xsl:when test="$tag-name='MISB'">
+									<xsl:when test="$tag-name='MISB' and $sheetType='OAC'">
 										<xsl:value-of select="'FileSize'" />
 									</xsl:when>
-									<xsl:when test="$tag-name='MISI'">
+									<xsl:when test="$tag-name='MISB' and $sheetType='PST'">
+										<xsl:value-of select="'StorageCapacity'" />
+									</xsl:when>
+									<xsl:when test="$tag-name='MISI' and not($sheetType='BDM')">
 										<xsl:value-of select="'Size'" />
+									</xsl:when>
+									<xsl:when test="$tag-name='MISI' and ($sheetType='BDM')">
+										<xsl:value-of select="'Perimeter'" />
 									</xsl:when>
 									<xsl:when test="$tag-name='MISR'">
 										<xsl:if test="$sheetType='VeAC'">
@@ -30357,6 +30374,12 @@
 									<xsl:when test="$tag-name='MISN'">
 										<xsl:value-of select="'Length'" />
 									</xsl:when>
+									<xsl:when test="$tag-name='MISC'">
+										<xsl:value-of select="'Capacity'" />
+									</xsl:when>
+									<xsl:when test="$tag-name='MISW'">
+										<xsl:value-of select="'Power'" />
+									</xsl:when>
 								</xsl:choose>
 							</xsl:when>
 							<xsl:otherwise>
@@ -30364,7 +30387,6 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:variable>
-
 					<xsl:if test="$measurement-type != ''">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-', $parent-id, '-', arco-fn:uncamelize($measurement-type))" />
@@ -30417,6 +30439,12 @@
 												<xsl:value-of select="normalize-space(.)" />
 												</xsl:if>
 											</xsl:when>
+											<xsl:when test="$tag-name='MISC'">
+												<xsl:value-of select="normalize-space(.)" />
+											</xsl:when>
+											<xsl:when test="$tag-name='MISW'">
+												<xsl:value-of select="normalize-space(.)" />
+											</xsl:when>
 										</xsl:choose>
 									</xsl:when>
 									<xsl:otherwise>
@@ -30424,43 +30452,33 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:variable>
-
 							<rdfs:label xml:lang="en">
-								<xsl:value-of
-									select="concat('Measurement of cultural property ', $itemURI, ': ', $mu-value, ' ', normalize-space(../MISU))" />
+								<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', $mu-value, ' ', normalize-space(../MISU))" />
 							</rdfs:label>
 							<l0:name xml:lang="en">
-								<xsl:value-of
-									select="concat('Measurement of cultural property ', $itemURI, ': ', $mu-value, ' ',  normalize-space(../MISU))" />
+								<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', $mu-value, ' ',  normalize-space(../MISU))" />
 							</l0:name>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of
-									select="concat('Misura del bene culturale ', $itemURI, ': ', $mu-value, ' ',  normalize-space(../MISU))" />
+								<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', $mu-value, ' ',  normalize-space(../MISU))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of
-									select="concat('Misura del bene culturale ', $itemURI, ': ', $mu-value, ' ',  normalize-space(../MISU))" />
+								<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', $mu-value, ' ',  normalize-space(../MISU))" />
 							</l0:name>
-
 							<arco-dd:hasMeasurementType>
-								<xsl:attribute name="rdf:resource"
-									select="concat('https://w3id.org/arco/ontology/denotative-description/', $measurement-type)" />
+								<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', $measurement-type)" />
 							</arco-dd:hasMeasurementType>
 							<arco-dd:hasValue>
 								<xsl:choose>
-									<xsl:when
-										test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+									<xsl:when test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 										<xsl:variable name="mu-value">
 											<xsl:choose>
-												<xsl:when
-													test="$tag-name='MISV' and $sheetType='VeAC'">
+												<xsl:when test="$tag-name='MISV' and $sheetType='VeAC'">
 													<xsl:value-of select="normalize-space(.)" />
 												</xsl:when>
 												<xsl:when test="$tag-name='MISF'">
 													<xsl:value-of select="normalize-space(.)" />
 												</xsl:when>
-												<xsl:when
-													test="$tag-name='MISO' and $sheetType='VeAC'">
+												<xsl:when test="$tag-name='MISO' and $sheetType='VeAC'">
 													<xsl:value-of select="normalize-space(.)" />
 												</xsl:when>
 												<xsl:when test="$tag-name='MISL'">
@@ -30498,14 +30516,18 @@
 													<xsl:value-of select="normalize-space(.)" />
 													</xsl:if>
 												</xsl:when>
+												<xsl:when test="$tag-name='MISC'">
+													<xsl:value-of select="normalize-space(.)" />
+												</xsl:when>
+												<xsl:when test="$tag-name='MISW'">
+													<xsl:value-of select="normalize-space(.)" />
+												</xsl:when>
 											</xsl:choose>
 										</xsl:variable>
-										<xsl:attribute name="rdf:resource"
-											select="concat($NS, 'Value/', arco-fn:urify($mu-value))" />
+										<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify($mu-value))" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:attribute name="rdf:resource"
-											select="concat($NS, 'Value/', arco-fn:urify(normalize-space(../MISM)))" />
+										<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(../MISM)))" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</arco-dd:hasValue>
@@ -30513,17 +30535,15 @@
 								<xsl:when test="../MISU">
 									<mu:hasMeasurementUnit>
 										<xsl:attribute name="rdf:resource">
-													<xsl:value-of
-											select="concat($NS, 'MeasurementUnit/', arco-fn:urify(normalize-space(../MISU)))" />
-												</xsl:attribute>
+											<xsl:value-of select="concat($NS, 'MeasurementUnit/', arco-fn:urify(normalize-space(../MISU)))" />
+										</xsl:attribute>
 									</mu:hasMeasurementUnit>
 								</xsl:when>
 								<xsl:when test="$sheetType='VeAC'">
 									<mu:hasMeasurementUnit>
 										<xsl:attribute name="rdf:resource">
-													<xsl:value-of
-											select="concat($NS, 'MeasurementUnit/cm')" />
-												</xsl:attribute>
+											<xsl:value-of select="concat($NS, 'MeasurementUnit/cm')" />
+										</xsl:attribute>
 									</mu:hasMeasurementUnit>
 								</xsl:when>
 							</xsl:choose>
@@ -30531,18 +30551,15 @@
 						<rdf:Description>
 							<xsl:variable name="mu-value">
 								<xsl:choose>
-									<xsl:when
-										test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+									<xsl:when test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 										<xsl:choose>
-											<xsl:when
-												test="$tag-name='MISV' and $sheetType='VeAC'">
+											<xsl:when test="$tag-name='MISV' and $sheetType='VeAC'">
 												<xsl:value-of select="normalize-space(.)" />
 											</xsl:when>
 											<xsl:when test="$tag-name='MISF'">
 												<xsl:value-of select="normalize-space(.)" />
 											</xsl:when>
-											<xsl:when
-												test="$tag-name='MISO' and $sheetType='VeAC'">
+											<xsl:when test="$tag-name='MISO' and $sheetType='VeAC'">
 												<xsl:value-of select="normalize-space(.)" />
 											</xsl:when>
 											<xsl:when test="$tag-name='MISL'">
@@ -30580,6 +30597,12 @@
 												<xsl:value-of select="normalize-space(.)" />
 												</xsl:if>
 											</xsl:when>
+											<xsl:when test="$tag-name='MISC'">
+												<xsl:value-of select="normalize-space(.)" />
+											</xsl:when>
+											<xsl:when test="$tag-name='MISW'">
+												<xsl:value-of select="normalize-space(.)" />
+											</xsl:when>
 										</xsl:choose>
 									</xsl:when>
 									<xsl:otherwise>
@@ -30587,10 +30610,8 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:variable>
-							<xsl:attribute name="rdf:about"
-								select="concat($NS, 'Value/', arco-fn:urify($mu-value))" />
-							<rdf:type
-								rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify($mu-value))" />
+							<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 							<mu:value>
 								<xsl:value-of select="$mu-value" />
 							</mu:value>
@@ -30603,10 +30624,8 @@
 						</rdf:Description>
 						<xsl:if test="../MISU">
 							<rdf:Description>
-								<xsl:attribute name="rdf:about"
-									select="concat($NS, 'MeasurementUnit/', arco-fn:urify(normalize-space(../MISU)))" />
-								<rdf:type
-									rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit" />
+								<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/', arco-fn:urify(normalize-space(../MISU)))" />
+								<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit" />
 								<rdfs:label>
 									<xsl:value-of select="normalize-space(../MISU)" />
 								</rdfs:label>
@@ -30616,7 +30635,6 @@
 							</rdf:Description>
 						</xsl:if>
 					</xsl:if>
-
 				</xsl:for-each>
 			</xsl:for-each>
 			<!-- measurement collection for PG -->
@@ -30706,59 +30724,44 @@
 					<xsl:attribute name="rdf:about">
 								<xsl:value-of select="$measurement-collection" />
 							</xsl:attribute>
-					<rdf:type
-						rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection" />
 					<rdfs:label xml:lang="en">
-						<xsl:value-of
-							select="concat('Measurements of cultural property ', $itemURI)" />
+						<xsl:value-of select="concat('Measurements of cultural property ', $itemURI)" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
-						<xsl:value-of
-							select="concat('Measurements of cultural property ', $itemURI)" />
+						<xsl:value-of select="concat('Measurements of cultural property ', $itemURI)" />
 					</l0:name>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of
-							select="concat('Misure del bene culturale ', $itemURI)" />
+						<xsl:value-of select="concat('Misure del bene culturale ', $itemURI)" />
 					</rdfs:label>
 					<l0:name xml:lang="it">
-						<xsl:value-of
-							select="concat('Misure del bene culturale ', $itemURI)" />
+						<xsl:value-of select="concat('Misure del bene culturale ', $itemURI)" />
 					</l0:name>
-					<xsl:if test="./MIFV">
-						<arco-dd:validity>
-							<xsl:value-of select="normalize-space(./MIFV)" />
-						</arco-dd:validity>
-					</xsl:if>
 					<xsl:if test="./MIFL">
 						<arco-dd:hasMeasurement>
 							<xsl:attribute name="rdf:resource">
-												<xsl:value-of
-								select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-width')" />
-											</xsl:attribute>
+								<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-width')" />
+							</xsl:attribute>
 						</arco-dd:hasMeasurement>
 					</xsl:if>
 					<xsl:if test="./MIFD">
 						<arco-dd:hasMeasurement>
 							<xsl:attribute name="rdf:resource">
-												<xsl:value-of
-								select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-diameter')" />
-											</xsl:attribute>
+								<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-diameter')" />
+							</xsl:attribute>
 						</arco-dd:hasMeasurement>
 					</xsl:if>
 					<xsl:if test="./MIFA">
 						<arco-dd:hasMeasurement>
 							<xsl:attribute name="rdf:resource">
-												<xsl:value-of
-								select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-height')" />
-											</xsl:attribute>
+								<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-height')" />
+							</xsl:attribute>
 						</arco-dd:hasMeasurement>
 					</xsl:if>
 				</rdf:Description>
-
 				<xsl:variable name="parent-id" select="position()" />
 				<xsl:for-each select="./*">
 					<xsl:variable name="tag-name" select="name(.)" />
-
 					<xsl:variable name="measurement-type">
 						<xsl:choose>
 							<xsl:when test="$tag-name='MIFL'">
@@ -30772,14 +30775,10 @@
 							</xsl:when>
 						</xsl:choose>
 					</xsl:variable>
-
 					<xsl:if test="$measurement-type != ''">
 						<rdf:Description>
-							<xsl:attribute name="rdf:about"
-								select="concat($NS, 'Measurement/', $itemURI, '-', $parent-id, '-', arco-fn:uncamelize($measurement-type))" />
-							<rdf:type
-								rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
-
+							<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-', $parent-id, '-', arco-fn:uncamelize($measurement-type))" />
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 							<xsl:variable name="mu-value">
 								<xsl:choose>
 									<xsl:when test="$tag-name='MIFL'">
@@ -30793,27 +30792,20 @@
 									</xsl:when>
 								</xsl:choose>
 							</xsl:variable>
-
 							<rdfs:label xml:lang="en">
-								<xsl:value-of
-									select="concat('Measurement of cultural property ', $itemURI, ': ', $mu-value, normalize-space(../MIFU))" />
+								<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', $mu-value, normalize-space(../MIFU))" />
 							</rdfs:label>
 							<l0:name xml:lang="en">
-								<xsl:value-of
-									select="concat('Measurement of cultural property ', $itemURI, ': ', $mu-value, normalize-space(../MIFU))" />
+								<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', $mu-value, normalize-space(../MIFU))" />
 							</l0:name>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of
-									select="concat('Misura del bene culturale ', $itemURI, ': ', $mu-value, normalize-space(../MIFU))" />
+								<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', $mu-value, normalize-space(../MIFU))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of
-									select="concat('Misura del bene culturale ', $itemURI, ': ', $mu-value, normalize-space(../MIFU))" />
+								<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', $mu-value, normalize-space(../MIFU))" />
 							</l0:name>
-
 							<arco-dd:hasMeasurementType>
-								<xsl:attribute name="rdf:resource"
-									select="concat('https://w3id.org/arco/ontology/denotative-description/', $measurement-type)" />
+								<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', $measurement-type)" />
 							</arco-dd:hasMeasurementType>
 							<arco-dd:hasValue>
 								<xsl:variable name="mu-value">
@@ -30829,15 +30821,13 @@
 										</xsl:when>
 									</xsl:choose>
 								</xsl:variable>
-								<xsl:attribute name="rdf:resource"
-									select="concat($NS, 'Value/', arco-fn:urify($mu-value))" />
+								<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify($mu-value))" />
 							</arco-dd:hasValue>
 							<xsl:if test="../MIFU">
 								<mu:hasMeasurementUnit>
 									<xsl:attribute name="rdf:resource">
-													<xsl:value-of
-										select="concat($NS, 'MeasurementUnit/', arco-fn:urify(normalize-space(../MIFU)))" />
-												</xsl:attribute>
+										<xsl:value-of select="concat($NS, 'MeasurementUnit/', arco-fn:urify(normalize-space(../MIFU)))" />
+									</xsl:attribute>
 								</mu:hasMeasurementUnit>
 							</xsl:if>
 						</rdf:Description>
@@ -30855,10 +30845,8 @@
 									</xsl:when>
 								</xsl:choose>
 							</xsl:variable>
-							<xsl:attribute name="rdf:about"
-								select="concat($NS, 'Value/', arco-fn:urify($mu-value))" />
-							<rdf:type
-								rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+							<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify($mu-value))" />
+							<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 							<mu:value>
 								<xsl:value-of select="$mu-value" />
 							</mu:value>
@@ -30869,13 +30857,10 @@
 								<xsl:value-of select="$mu-value" />
 							</rdfs:label>
 						</rdf:Description>
-
 						<xsl:if test="../MIFU">
 							<rdf:Description>
-								<xsl:attribute name="rdf:about"
-									select="concat($NS, 'MeasurementUnit/', arco-fn:urify(normalize-space(../MIFU)))" />
-								<rdf:type
-									rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit" />
+								<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/', arco-fn:urify(normalize-space(../MIFU)))" />
+								<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit" />
 								<rdfs:label>
 									<xsl:value-of select="normalize-space(../MIFU)" />
 								</rdfs:label>
@@ -30885,7 +30870,6 @@
 							</rdf:Description>
 						</xsl:if>
 					</xsl:if>
-
 				</xsl:for-each>
 			</xsl:for-each>
 

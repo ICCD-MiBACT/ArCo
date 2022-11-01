@@ -215,15 +215,6 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-	<xsl:variable name="naa-variety" >
-		<xsl:choose>
-			<xsl:when test="record/metadata/schede/BNB/SB/NAA/NAAF">
-				<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/NAA/NAAF)))" />
-			</xsl:when>
-			<xsl:otherwise>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable>
 	<xsl:variable name="naa-form" >
 		<xsl:choose>
 			<xsl:when test="record/metadata/schede/BNB/SB/NAA/NAAH">
@@ -261,15 +252,6 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-	<xsl:variable name="naa-variety-lab" >
-		<xsl:choose>
-			<xsl:when test="record/metadata/schede/BNB/SB/NAA/NAAF">
-				<xsl:value-of select="concat(' ', record/metadata/schede/BNB/SB/NAA/NAAF)" />
-			</xsl:when>
-			<xsl:otherwise>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable>
 	<xsl:variable name="naa-form-lab" >
 		<xsl:choose>
 			<xsl:when test="record/metadata/schede/BNB/SB/NAA/NAAH">
@@ -294,7 +276,7 @@
 				<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/NBN/NBNA)))" />
 			</xsl:when>                	
 			<xsl:otherwise>
-				<xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies, $naa-variety, $naa-form, $naa-cultivar)" />		                		
+				<xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies, $naa-form, $naa-cultivar)" />		                		
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -307,7 +289,7 @@
 			</xsl:when>                	
 			<xsl:otherwise>
 				<xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($naa-species-lab, $naa-subspecies-lab, $naa-variety-lab, $naa-form-lab, $naa-cultivar-lab)" />
+					<xsl:with-param name="text" select="concat($naa-species-lab, $naa-subspecies-lab, $naa-form-lab, $naa-cultivar-lab)" />
 				</xsl:call-template>	                		
 			</xsl:otherwise>
 		</xsl:choose>
@@ -326,15 +308,6 @@
 		<xsl:choose>
 			<xsl:when test="record/metadata/schede/BNB/SB/NAT/NATD">
 				<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/NAT/NATD)))" />
-			</xsl:when>
-			<xsl:otherwise>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable>
-	<xsl:variable name="nat-variety" >
-		<xsl:choose>
-			<xsl:when test="record/metadata/schede/BNB/SB/NAT/NATF">
-				<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/NAT/NATF)))" />
 			</xsl:when>
 			<xsl:otherwise>
 			</xsl:otherwise>
@@ -377,15 +350,6 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-	<xsl:variable name="nat-variety-lab" >
-		<xsl:choose>
-			<xsl:when test="record/metadata/schede/BNB/SB/NAT/NATF">
-				<xsl:value-of select="concat(' ', record/metadata/schede/BNB/SB/NAT/NATF)" />
-			</xsl:when>
-			<xsl:otherwise>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable>
 	<xsl:variable name="nat-form-lab" >
 		<xsl:choose>
 			<xsl:when test="record/metadata/schede/BNB/SB/NAT/NATH">
@@ -410,7 +374,7 @@
 				<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIN)))" />
 			</xsl:when>                	
 			<xsl:otherwise>
-				<xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies, $nat-variety, $nat-form, $nat-cultivar)" />		                		
+				<xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies, $nat-form, $nat-cultivar)" />		                		
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -423,13 +387,11 @@
 			</xsl:when>                	
 			<xsl:otherwise>
 				<xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($nat-species-lab, $nat-subspecies-lab, $nat-variety-lab, $nat-form-lab, $nat-cultivar-lab)" />
+					<xsl:with-param name="text" select="concat($nat-species-lab, $nat-subspecies-lab, $nat-form-lab, $nat-cultivar-lab)" />
 				</xsl:call-template>	                		
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-	
-	
 	<rdf:Description>
 		<xsl:attribute name="rdf:about">
         	<xsl:value-of select="$culturalProperty" />
@@ -612,15 +574,6 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<xsl:variable name="rbn-variety" >
-			<xsl:choose>
-				<xsl:when test="./RBNF">
-					<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./RBNF)))" />
-				</xsl:when>
-				<xsl:otherwise>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
 		<xsl:variable name="rbn-form" >
 			<xsl:choose>
 				<xsl:when test="./RBNH">
@@ -640,7 +593,7 @@
 			</xsl:choose>
 		</xsl:variable>
 		<xsl:variable name="RevisedTaxon">   
-			<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-variety, $rbn-form, $rbn-cultivar)" />	
+			<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-form, $rbn-cultivar)" />	
 		</xsl:variable>
 			<arco-spe:isIdentifiedBy>
 				<xsl:attribute name="rdf:resource">
@@ -784,7 +737,7 @@
 				</xsl:attribute>
 			</arco-spe:hasCloseIndividual>
 		</xsl:if>
-		<!-- type specimen identification in time -->	
+		<!-- typification identification in time -->	
 		<xsl:if test="record/metadata/schede/BNB/SB/TBI">
 			<arco-spe:hasTypification>
 				<xsl:attribute name="rdf:resource">
@@ -1196,15 +1149,6 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<xsl:variable name="rbn-variety" >
-			<xsl:choose>
-				<xsl:when test="./RBN/RBNF">
-					<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./RBN/RBNF)))" />
-				</xsl:when>
-				<xsl:otherwise>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
 		<xsl:variable name="rbn-form" >
 			<xsl:choose>
 				<xsl:when test="./RBN/RBNH">
@@ -1242,15 +1186,6 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<xsl:variable name="rbn-variety-lab" >
-			<xsl:choose>
-				<xsl:when test="./RBN/RBNF">
-					<xsl:value-of select="concat(' ', ./RBN/RBNF)" />
-				</xsl:when>
-				<xsl:otherwise>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
 		<xsl:variable name="rbn-form-lab" >
 			<xsl:choose>
 				<xsl:when test="./RBN/RBNH">
@@ -1275,7 +1210,7 @@
 					<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/NBN/NBNA)))" />
 				</xsl:when>                	
 				<xsl:otherwise>
-					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-variety, $rbn-form, $rbn-cultivar)" />		                		
+					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-form, $rbn-cultivar)" />		                		
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
@@ -1288,7 +1223,7 @@
 				</xsl:when>                	
 				<xsl:otherwise>
 					<xsl:call-template name="CamelCase1">
-						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-variety-lab, $rbn-form-lab, $rbn-cultivar-lab)" />
+						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-form-lab, $rbn-cultivar-lab)" />
 					</xsl:call-template>	                		
 				</xsl:otherwise>
 			</xsl:choose>
@@ -1682,9 +1617,9 @@
             	</arco-spe:genusNumber>
         	</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSG">
-				<arco-lite:taxonomicNumber>
+				<arco-lite:taxonNumber>
 					<xsl:value-of select="record/metadata/schede/BNB/SB/SBS/SBSG" />		
-				</arco-lite:taxonomicNumber>
+				</arco-lite:taxonNumber>
 			</xsl:if>
 		</rdf:Description>
 	</xsl:if>
@@ -1705,13 +1640,49 @@
            	</rdfs:label>
 	           <l0:name>
     	       	<xsl:value-of select="$BiologicalTaxonLabel" />
-            </l0:name>		
+            </l0:name>
+            <xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAF">
+				<arco-spe:hasTaxonSpecification>
+					<xsl:attribute name="rdf:resource">
+	        			<xsl:value-of select="concat($NS,'BiologicalTaxon/Variety/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/NAA/NAAF)))" />	
+					</xsl:attribute>
+				</arco-spe:hasTaxonSpecification>
+			</xsl:if>		
 		</rdf:Description>
-	</xsl:if>																		
+	</xsl:if>		
+	<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAF">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+              <xsl:value-of select="concat($NS,'BiologicalTaxon/Variety/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/NAA/NAAF)))" />
+            </xsl:attribute>
+            <rdf:type>
+            <xsl:attribute name="rdf:resource">
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Variety'" />      
+            </xsl:attribute>
+            </rdf:type>
+            <rdfs:label>
+            	 <xsl:call-template name="CamelCase1">
+					<xsl:with-param name="text" select="record/metadata/schede/BNB/SB/NAA/NAAF" />
+				</xsl:call-template>
+            </rdfs:label>
+            <l0:name>
+            	<xsl:call-template name="CamelCase1">
+					<xsl:with-param name="text" select="record/metadata/schede/BNB/SB/NAA/NAAF" />
+				</xsl:call-template>
+            </l0:name>
+            <xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAG">
+            	<arco-lite:hasAuthor>
+            	<xsl:attribute name="rdf:resource">
+            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNB/SB/NAA/NAAG))" />
+            	</xsl:attribute>
+            	</arco-lite:hasAuthor>
+            </xsl:if>         
+  		</rdf:Description>
+	</xsl:if>																	
 	<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAL">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-               <xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies, $naa-variety, $naa-form, $naa-cultivar)" />	
+               <xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies, $naa-form, $naa-cultivar)" />	
             </xsl:attribute>
             <rdf:type>
             	<xsl:attribute name="rdf:resource">
@@ -1720,17 +1691,17 @@
             </rdf:type>
             <rdfs:label>
 				<xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($naa-species-lab, $naa-subspecies-lab, $naa-variety-lab, $naa-form-lab, $naa-cultivar-lab)" />
+					<xsl:with-param name="text" select="concat($naa-species-lab, $naa-subspecies-lab, $naa-form-lab, $naa-cultivar-lab)" />
 				</xsl:call-template>
             </rdfs:label>
             <l0:name>
 				<xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($naa-species-lab, $naa-subspecies-lab, $naa-variety-lab, $naa-form-lab, $naa-cultivar-lab)" />
+					<xsl:with-param name="text" select="concat($naa-species-lab, $naa-subspecies-lab, $naa-form-lab, $naa-cultivar-lab)" />
 				</xsl:call-template>
             </l0:name>
 			<arco-core:hasDirectHigherRank>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies, $naa-variety, $naa-form)" />
+					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies, $naa-form)" />
 				</xsl:attribute>	
 			</arco-core:hasDirectHigherRank>	
   		</rdf:Description>
@@ -1738,7 +1709,7 @@
 	<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAH">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-               <xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies, $naa-variety, $naa-form)" />
+               <xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies, $naa-form)" />
             </xsl:attribute>
             <rdf:type>
             	<xsl:attribute name="rdf:resource">
@@ -1747,12 +1718,12 @@
             </rdf:type>
            <rdfs:label>
 				<xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($naa-species-lab, $naa-subspecies-lab, $naa-variety-lab, $naa-form-lab)" />
+					<xsl:with-param name="text" select="concat($naa-species-lab, $naa-subspecies-lab, $naa-form-lab)" />
 				</xsl:call-template>
             </rdfs:label>
             <l0:name>
 				<xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($naa-species-lab, $naa-subspecies-lab, $naa-variety-lab, $naa-form-lab)" />
+					<xsl:with-param name="text" select="concat($naa-species-lab, $naa-subspecies-lab, $naa-form-lab)" />
 				</xsl:call-template>
             </l0:name>
             <xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAI">
@@ -1764,45 +1735,11 @@
             </xsl:if>
             <arco-core:hasDirectHigherRank>
             	<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies, $naa-variety)" />
-				</xsl:attribute>	
-			</arco-core:hasDirectHigherRank>           
-  		</rdf:Description>
-	</xsl:if>
-	<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAF">
-		<rdf:Description>
-			<xsl:attribute name="rdf:about">
-              <xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies, $naa-variety)" />
-            </xsl:attribute>
-            <rdf:type>
-            <xsl:attribute name="rdf:resource">
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/BotanicalVariety'" />      
-            </xsl:attribute>
-            </rdf:type>
-            <rdfs:label>
-            	 <xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($naa-species-lab, $naa-subspecies-lab, $naa-variety-lab)" />
-				</xsl:call-template>
-            </rdfs:label>
-            <l0:name>
-            	<xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($naa-species-lab, $naa-subspecies-lab, $naa-variety-lab)" />
-				</xsl:call-template>
-            </l0:name>
-            <xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAG">
-            	<arco-lite:hasAuthor>
-            	<xsl:attribute name="rdf:resource">
-            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNB/SB/NAA/NAAG))" />
-            	</xsl:attribute>
-            	</arco-lite:hasAuthor>
-            </xsl:if>
-            <arco-core:hasDirectHigherRank>
-            	<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $naa-species, $naa-subspecies)" />
 				</xsl:attribute>	
 			</arco-core:hasDirectHigherRank>           
   		</rdf:Description>
-	</xsl:if>	
+	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAD">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -1878,11 +1815,13 @@
 			<xsl:attribute name="rdf:about">
                <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/NAA/NAAA))" />
             </xsl:attribute>
+            <xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSF">
             <arco-core:hasDirectHigherRank>
            		<xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/SBS/SBSF))" />
             	</xsl:attribute>
             </arco-core:hasDirectHigherRank>
+            </xsl:if>
             <rdf:type>
             	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />      
             </rdf:type>
@@ -1988,13 +1927,49 @@
            	</rdfs:label>
 	           <l0:name>
     	       	<xsl:value-of select="$TypespecimenTaxonLabel" />
-            </l0:name>		
+            </l0:name>
+            <xsl:if test="record/metadata/schede/BNB/SB/NAT/NATF">
+				<arco-spe:hasTaxonSpecification>
+					<xsl:attribute name="rdf:resource">
+	        			<xsl:value-of select="concat($NS,'BiologicalTaxon/Variety/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/NAT/NATF)))" />	
+					</xsl:attribute>
+				</arco-spe:hasTaxonSpecification>
+			</xsl:if>		
 		</rdf:Description>
-	</xsl:if>																		
+	</xsl:if>		
+	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATF">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+              <xsl:value-of select="concat($NS,'BiologicalTaxon/Variety/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/NAT/NATF)))" />
+            </xsl:attribute>
+            <rdf:type>
+            <xsl:attribute name="rdf:resource">
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Variety'" />      
+            </xsl:attribute>
+            </rdf:type>
+            <rdfs:label>
+            	 <xsl:call-template name="CamelCase1">
+					<xsl:with-param name="text" select="record/metadata/schede/BNB/SB/NAT/NATF" />
+				</xsl:call-template>
+            </rdfs:label>
+            <l0:name>
+            	<xsl:call-template name="CamelCase1">
+					<xsl:with-param name="text" select="record/metadata/schede/BNB/SB/NAT/NATF" />
+				</xsl:call-template>
+            </l0:name>
+            <xsl:if test="record/metadata/schede/BNB/SB/NAT/NATG">
+            	<arco-lite:hasAuthor>
+            	<xsl:attribute name="rdf:resource">
+            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNB/SB/NAT/NATG))" />
+            	</xsl:attribute>
+            	</arco-lite:hasAuthor>
+            </xsl:if>         
+  		</rdf:Description>
+	</xsl:if>																	
 	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATL">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-               <xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies, $nat-variety, $nat-form, $nat-cultivar)" />	
+               <xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies, $nat-form, $nat-cultivar)" />	
             </xsl:attribute>
             <rdf:type>
             	<xsl:attribute name="rdf:resource">
@@ -2003,17 +1978,17 @@
             </rdf:type>
             <rdfs:label>
 				<xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($nat-species-lab, $nat-subspecies-lab, $nat-variety-lab, $nat-form-lab, $nat-cultivar-lab)" />
+					<xsl:with-param name="text" select="concat($nat-species-lab, $nat-subspecies-lab,  $nat-form-lab, $nat-cultivar-lab)" />
 				</xsl:call-template>
             </rdfs:label>
             <l0:name>
 				<xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($nat-species-lab, $nat-subspecies-lab, $nat-variety-lab, $nat-form-lab, $nat-cultivar-lab)" />
+					<xsl:with-param name="text" select="concat($nat-species-lab, $nat-subspecies-lab, $nat-form-lab, $nat-cultivar-lab)" />
 				</xsl:call-template>
             </l0:name>
 			<arco-core:hasDirectHigherRank>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies, $nat-variety, $nat-form)" />
+					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies, $nat-form)" />
 				</xsl:attribute>	
 			</arco-core:hasDirectHigherRank>
   		</rdf:Description>
@@ -2021,7 +1996,7 @@
 	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATH">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-               <xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies, $nat-variety, $nat-form)" />
+               <xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies, $nat-form)" />
             </xsl:attribute>
             <rdf:type>
             	<xsl:attribute name="rdf:resource">
@@ -2030,12 +2005,12 @@
             </rdf:type>
            <rdfs:label>
 				<xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($nat-species-lab, $nat-subspecies-lab, $nat-variety-lab, $nat-form-lab)" />
+					<xsl:with-param name="text" select="concat($nat-species-lab, $nat-subspecies-lab, $nat-form-lab)" />
 				</xsl:call-template>
             </rdfs:label>
             <l0:name>
 				<xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($nat-species-lab, $nat-subspecies-lab, $nat-variety-lab, $nat-form-lab)" />
+					<xsl:with-param name="text" select="concat($nat-species-lab, $nat-subspecies-lab, $nat-form-lab)" />
 				</xsl:call-template>
             </l0:name>
             <xsl:if test="record/metadata/schede/BNB/SB/NAT/NATI">
@@ -2047,45 +2022,11 @@
             </xsl:if>
             <arco-core:hasDirectHigherRank>
             	<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies, $nat-variety)" />
+					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies)" />
 				</xsl:attribute>	
 			</arco-core:hasDirectHigherRank>	           
   		</rdf:Description>
 	</xsl:if>
-	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATF">
-		<rdf:Description>
-			<xsl:attribute name="rdf:about">
-              <xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies, $nat-variety)" />
-            </xsl:attribute>
-            <rdf:type>
-            <xsl:attribute name="rdf:resource">
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/BotanicalVariety'" />      
-            </xsl:attribute>
-            </rdf:type>
-            <rdfs:label>
-            	 <xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($nat-species-lab, $nat-subspecies-lab, $nat-variety-lab)" />
-				</xsl:call-template>
-            </rdfs:label>
-            <l0:name>
-            	<xsl:call-template name="CamelCase1">
-					<xsl:with-param name="text" select="concat($nat-species-lab, $nat-subspecies-lab, $nat-variety-lab)" />
-				</xsl:call-template>
-            </l0:name>
-            <xsl:if test="record/metadata/schede/BNB/SB/NAT/NATG">
-            	<arco-lite:hasAuthor>
-            	<xsl:attribute name="rdf:resource">
-            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNB/SB/NAT/NATG))" />
-            	</xsl:attribute>
-            	</arco-lite:hasAuthor>
-            </xsl:if>
-            <arco-core:hasDirectHigherRank>
-            	<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $nat-species, $nat-subspecies)" />
-				</xsl:attribute>	
-			</arco-core:hasDirectHigherRank>           
-  		</rdf:Description>
-	</xsl:if>	
 	<xsl:if test="record/metadata/schede/BNB/SB/NAT/NATD">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -2161,11 +2102,13 @@
 			<xsl:attribute name="rdf:about">
                <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/NAT/NATA))" />
             </xsl:attribute>
+            <xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSF">
             <arco-core:hasDirectHigherRank>
             	<xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/SBS/SBSF))" />
             	</xsl:attribute>
             </arco-core:hasDirectHigherRank>
+            </xsl:if>
             <rdf:type>
             	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />      
             </rdf:type>
@@ -2198,15 +2141,6 @@
 			<xsl:choose>
 				<xsl:when test="./RBN/RBND">
 					<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./RBN/RBND)))" />
-				</xsl:when>
-				<xsl:otherwise>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-		<xsl:variable name="rbn-variety" >
-			<xsl:choose>
-				<xsl:when test="./RBN/RBNF">
-					<xsl:value-of select="concat('-', arco-fn:urify(normalize-space(./RBN/RBNF)))" />
 				</xsl:when>
 				<xsl:otherwise>
 				</xsl:otherwise>
@@ -2249,15 +2183,6 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<xsl:variable name="rbn-variety-lab" >
-			<xsl:choose>
-				<xsl:when test="./RBN/RBNF">
-					<xsl:value-of select="concat(' ', ./RBN/RBNF)" />
-				</xsl:when>
-				<xsl:otherwise>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
 		<xsl:variable name="rbn-form-lab" >
 			<xsl:choose>
 				<xsl:when test="./RBN/RBNH">
@@ -2282,7 +2207,7 @@
 					<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/NBN/NBNA)))" />
 				</xsl:when>                	
 				<xsl:otherwise>
-					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-variety, $rbn-form, $rbn-cultivar)" />		                		
+					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-form, $rbn-cultivar)" />		                		
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
@@ -2295,7 +2220,7 @@
 				</xsl:when>                	
 				<xsl:otherwise>
 					<xsl:call-template name="CamelCase1">
-						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-variety-lab, $rbn-form-lab, $rbn-cultivar-lab)" />
+						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-form-lab, $rbn-cultivar-lab)" />
 					</xsl:call-template>	                		
 				</xsl:otherwise>
 			</xsl:choose>
@@ -2335,13 +2260,49 @@
         	   	</rdfs:label>
 				<l0:name>
 					<xsl:value-of select="$RevisedTaxonLabel" />
-				</l0:name>		
+				</l0:name>
+				<xsl:if test="./RBN/RBNF">
+				<arco-spe:hasTaxonSpecification>
+					<xsl:attribute name="rdf:resource">
+	        			<xsl:value-of select="concat($NS,'BiologicalTaxon/Variety/', arco-fn:urify(normalize-space(./RBN/RBNF)))" />	
+					</xsl:attribute>
+				</arco-spe:hasTaxonSpecification>
+			</xsl:if>
 			</rdf:Description>
-		</xsl:if>																		
+		</xsl:if>
+		<xsl:if test="./RBN/RBNF">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS,'BiologicalTaxon/Variety/', arco-fn:urify(normalize-space(./RBN/RBNF)))" />
+				</xsl:attribute>
+            	<rdf:type>
+		            <xsl:attribute name="rdf:resource">
+        		    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Variety'" />      
+		            </xsl:attribute>
+        	    </rdf:type>
+            	<rdfs:label>
+            		<xsl:call-template name="CamelCase1">
+						<xsl:with-param name="text" select="./RBN/RBNF" />
+					</xsl:call-template>
+    	        </rdfs:label>
+        	    <l0:name>
+            		<xsl:call-template name="CamelCase1">
+						<xsl:with-param name="text" select="./RBN/RBNF" />
+					</xsl:call-template>
+    	        </l0:name>
+        	    <xsl:if test="./RBN/RBNG">
+            		<arco-lite:hasAuthor>
+            			<xsl:attribute name="rdf:resource">
+		            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RBN/RBNG))" />
+        		    	</xsl:attribute>
+            		</arco-lite:hasAuthor>
+	            </xsl:if>         
+  			</rdf:Description>
+		</xsl:if>																			
 		<xsl:if test="./RBN/RBNL">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-    	           <xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-variety, $rbn-form, $rbn-cultivar)" />	
+    	           <xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-form, $rbn-cultivar)" />	
         	    </xsl:attribute>
             	<rdf:type>
             		<xsl:attribute name="rdf:resource">
@@ -2350,17 +2311,17 @@
             	</rdf:type>
 	            <rdfs:label>
 					<xsl:call-template name="CamelCase1">
-						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-variety-lab, $rbn-form-lab, $rbn-cultivar-lab)" />
+						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-form-lab, $rbn-cultivar-lab)" />
 					</xsl:call-template>
 	            </rdfs:label>
     	        <l0:name>
 					<xsl:call-template name="CamelCase1">
-						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-variety-lab, $rbn-form-lab, $rbn-cultivar-lab)" />
+						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-form-lab, $rbn-cultivar-lab)" />
 					</xsl:call-template>
 	            </l0:name>
 				<arco-core:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-variety, $rbn-form)" />
+						<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-form)" />
 					</xsl:attribute>	
 				</arco-core:hasDirectHigherRank>
   			</rdf:Description>
@@ -2368,7 +2329,7 @@
 		<xsl:if test="./RBN/RBNH">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-	               <xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-variety, $rbn-form)" />
+	               <xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-form)" />
     	        </xsl:attribute>
         	    <rdf:type>
             		<xsl:attribute name="rdf:resource">
@@ -2377,12 +2338,12 @@
     	        </rdf:type>
         	   <rdfs:label>
 					<xsl:call-template name="CamelCase1">
-						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-variety-lab, $rbn-form-lab)" />
+						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab,  $rbn-form-lab)" />
 					</xsl:call-template>
     	        </rdfs:label>
         	    <l0:name>
 					<xsl:call-template name="CamelCase1">
-						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-variety-lab, $rbn-form-lab)" />
+						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-form-lab)" />
 					</xsl:call-template>
     	        </l0:name>
         	    <xsl:if test="./RBN/RBNI">
@@ -2394,45 +2355,11 @@
 	            </xsl:if>
     	        <arco-core:hasDirectHigherRank>
         	    	<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-variety)" />
+						<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies)" />
 					</xsl:attribute>	
 				</arco-core:hasDirectHigherRank>          
   			</rdf:Description>
 		</xsl:if>
-		<xsl:if test="./RBN/RBNF">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies, $rbn-variety)" />
-				</xsl:attribute>
-            	<rdf:type>
-		            <xsl:attribute name="rdf:resource">
-        		    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/BotanicalVariety'" />      
-		            </xsl:attribute>
-        	    </rdf:type>
-            	<rdfs:label>
-            		<xsl:call-template name="CamelCase1">
-						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-variety-lab)" />
-					</xsl:call-template>
-    	        </rdfs:label>
-        	    <l0:name>
-            		<xsl:call-template name="CamelCase1">
-						<xsl:with-param name="text" select="concat($rbn-species-lab, $rbn-subspecies-lab, $rbn-variety-lab)" />
-					</xsl:call-template>
-    	        </l0:name>
-        	    <xsl:if test="./RBN/RBNG">
-            		<arco-lite:hasAuthor>
-            			<xsl:attribute name="rdf:resource">
-		            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RBN/RBNG))" />
-        		    	</xsl:attribute>
-            		</arco-lite:hasAuthor>
-	            </xsl:if>
-    	        <arco-core:hasDirectHigherRank>
-        	    	<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'BiologicalTaxon/', $rbn-species, $rbn-subspecies)" />
-					</xsl:attribute>	
-				</arco-core:hasDirectHigherRank>           
-  			</rdf:Description>
-		</xsl:if>	
 		<xsl:if test="./RBN/RBND">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">

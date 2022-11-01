@@ -248,17 +248,27 @@
 					<xsl:with-param name="text" select="concat($sps-species-lab, $sps-subspecies-lab)" />
 				</xsl:call-template>
 			</xsl:variable>
-			<arco-core:isIdentifiedBy>
+			<arco-spe:isIdentifiedBy>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="$BiologicalTaxon" />
 				</xsl:attribute>
-			</arco-core:isIdentifiedBy> 
+			</arco-spe:isIdentifiedBy>
+			<arco-core:isClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+		    		<xsl:value-of select="$BiologicalTaxon" />
+				</xsl:attribute>
+			</arco-core:isClassifiedBy>
 			<!-- identification in time  -->
 			<arco-spe:hasIdentificationInTime>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-identification-', position())" />
 				</xsl:attribute>
 			</arco-spe:hasIdentificationInTime>
+			<arco-core:hasClassificationInTime>
+				<xsl:attribute name="rdf:resource">
+		    		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-identification-', position())" />
+				</xsl:attribute>
+			</arco-core:hasClassificationInTime>
 		</xsl:for-each> 
 		<xsl:for-each select="record/metadata/schede/BNP/SP/SPE">
 			<arco-spe:hasLabel>
@@ -311,14 +321,14 @@
 				</xsl:attribute>
 			</arco-spe:hasSpecimenHarvesting>
 		</xsl:if>
-		<!-- type specimen identification in time -->	
+		<!-- typification in time -->	
 		<xsl:for-each select="record/metadata/schede/BNP/SP/SPM">
 			<xsl:if test="lower-case(normalize-space(./SPMT))='si'">
-				<arco-spe:hasTypeSpecimenIdentification>
+				<arco-spe:hasTypification>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI, '-', position())" />
+						<xsl:value-of select="concat($NS,'Typification/', $itemURI, '-', position())" />
 					</xsl:attribute>
-				</arco-spe:hasTypeSpecimenIdentification>
+				</arco-spe:hasTypification>
 			</xsl:if>
 		</xsl:for-each>	
 	</rdf:Description>
@@ -453,6 +463,53 @@
             </rdfs:label>
             <l0:name xml:lang="en">
             	<xsl:value-of select="concat('Identification ', position(), ' of cultural property ', $itemURI)" />
+            </l0:name>
+			<xsl:if test="./SPSC">
+				<tiapit:atTime>
+					<xsl:attribute name="rdf:resource">
+		        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./SPSC, '-',  ./SPSC)))" />
+					</xsl:attribute>
+				</tiapit:atTime>
+			</xsl:if>
+			<xsl:if test="./SPSL">
+			<xsl:variable name="virgola" select="./SPSL" />
+			<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+			<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+			<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
+				<xsl:for-each select="$authorssplit">
+					<arco-core:involvesAgent>
+						<xsl:attribute name="rdf:resource">
+    	    				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+						</xsl:attribute>
+					</arco-core:involvesAgent>
+				</xsl:for-each>
+			</xsl:if>
+			<arco-spe:hasTaxon>
+				<xsl:attribute name="rdf:resource">
+	    	    	<xsl:value-of select="$BiologicalTaxon" />
+				</xsl:attribute>
+			</arco-spe:hasTaxon>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+        		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-classification-', position())" />
+        	</xsl:attribute>
+       		<rdf:type>
+				<xsl:attribute name="rdf:resource">
+                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/ClassificationInTime'" />
+            	</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+            	 <xsl:value-of select="concat('Classificazione ', position(), 'del bene culturale ', $itemURI)" />
+            </rdfs:label>
+            <l0:name xml:lang="it">
+            	<xsl:value-of select="concat('Classificazione ', position(), 'del bene culturale ', $itemURI)" />
+            </l0:name>
+			<rdfs:label xml:lang="en">
+            	 <xsl:value-of select="concat('Classification ', position(), ' of cultural property ', $itemURI)" />
+            </rdfs:label>
+            <l0:name xml:lang="en">
+            	<xsl:value-of select="concat('Classification ', position(), ' of cultural property ', $itemURI)" />
             </l0:name>
 			<xsl:if test="./SPSC">
 				<tiapit:atTime>
@@ -881,16 +938,16 @@
 		</rdf:Description>
 		</xsl:if> 
 	</xsl:for-each>
-	<!-- Type Specimen Identification as individual -->								
+	<!-- Typification as individual -->								
  	<xsl:for-each select="record/metadata/schede/BNP/SP/SPM">
  		<xsl:if test="lower-case(normalize-space(./SPMT))='si'">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI, '-', position())" />
+				<xsl:value-of select="concat($NS,'Typification/', $itemURI, '-', position())" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification'" />
+					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Typification'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
@@ -900,10 +957,10 @@
 				<xsl:value-of 	select="concat('Identificazione del tipo nomenclaturale del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of 	select="concat('Identification of type specimen of cultural property ', $itemURI)" />
+				<xsl:value-of 	select="concat('Typificationof cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of 	select="concat('Identification of type specimen of cultural property ', $itemURI)" />
+				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./SPMP">	
 				<arco-spe:hasTypeOfTypeSpecimen>
@@ -1076,17 +1133,27 @@
 					<xsl:with-param name="text" select="concat($sps-species-lab, $sps-subspecies-lab)" />
 				</xsl:call-template>
 			</xsl:variable>
-			<arco-core:isIdentifiedBy>
+			<arco-spe:isIdentifiedBy>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="$BiologicalTaxon" />
 				</xsl:attribute>
-			</arco-core:isIdentifiedBy> 
+			</arco-spe:isIdentifiedBy>
+			<arco-core:isClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+		    		<xsl:value-of select="$BiologicalTaxon" />
+				</xsl:attribute>
+			</arco-core:isClassifiedBy>
 			<!-- identification in time  -->
 			<arco-spe:hasIdentificationInTime>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-identification-', position())" />
 				</xsl:attribute>
 			</arco-spe:hasIdentificationInTime>
+			<arco-core:hasClassificationInTime>
+				<xsl:attribute name="rdf:resource">
+		    		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-classification-', position())" />
+				</xsl:attribute>
+			</arco-core:hasClassificationInTime>
 		</xsl:for-each> 
 		<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZE">
 			<arco-spe:hasLabel>
@@ -1123,13 +1190,13 @@
 				</xsl:attribute>
 			</arco-spe:hasSpecimenHarvesting>
 		</xsl:if>
-		<!-- type specimen identification in time -->	
+		<!-- typification in time -->	
 		<xsl:for-each select="record/metadata/schede/BNZ/SZ/TZI">
-			<arco-spe:hasTypeSpecimenIdentification>
+			<arco-spe:hasTypification>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI, '-', position())" />
+					<xsl:value-of select="concat($NS,'Typificatin/', $itemURI, '-', position())" />
 				</xsl:attribute>
-			</arco-spe:hasTypeSpecimenIdentification>
+			</arco-spe:hasTypification>
 		</xsl:for-each>	
 	</rdf:Description>
 	<!-- identifier -->
@@ -1263,6 +1330,53 @@
             </rdfs:label>
             <l0:name xml:lang="en">
             	<xsl:value-of select="concat('Identification ', position(), ' of cultural property ', $itemURI)" />
+            </l0:name>
+			<xsl:if test="./SZSC">
+				<tiapit:atTime>
+					<xsl:attribute name="rdf:resource">
+		        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./SZSC, '-',  ./SZSC)))" />
+					</xsl:attribute>
+				</tiapit:atTime>
+			</xsl:if>
+			<xsl:if test="./SZSL">
+			<xsl:variable name="virgola" select="./SZSL" />
+			<xsl:variable name="novirgola" select="translate($virgola, ',', ' ')" />
+			<xsl:variable name="aut" select="translate($novirgola, '/', ',')" />
+			<xsl:variable name="authorssplit" select="arco-fn:split($aut)" />
+				<xsl:for-each select="$authorssplit">
+					<arco-core:involvesAgent>
+						<xsl:attribute name="rdf:resource">
+    	    				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+						</xsl:attribute>
+					</arco-core:involvesAgent>
+				</xsl:for-each>
+			</xsl:if>
+			<arco-spe:hasTaxon>
+				<xsl:attribute name="rdf:resource">
+	    	    	<xsl:value-of select="$BiologicalTaxon" />
+				</xsl:attribute>
+			</arco-spe:hasTaxon>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+        		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-classification-', position())" />
+        	</xsl:attribute>
+       		<rdf:type>
+				<xsl:attribute name="rdf:resource">
+                	<xsl:value-of select="'https://w3id.org/arco/ontology/core/ClassificationInTime'" />
+            	</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+            	 <xsl:value-of select="concat('Classificazione ', position(), 'del bene culturale ', $itemURI)" />
+            </rdfs:label>
+            <l0:name xml:lang="it">
+            	<xsl:value-of select="concat('Classificazione ', position(), 'del bene culturale ', $itemURI)" />
+            </l0:name>
+			<rdfs:label xml:lang="en">
+            	 <xsl:value-of select="concat('Classification ', position(), ' of cultural property ', $itemURI)" />
+            </rdfs:label>
+            <l0:name xml:lang="en">
+            	<xsl:value-of select="concat('Classification ', position(), ' of cultural property ', $itemURI)" />
             </l0:name>
 			<xsl:if test="./SZSC">
 				<tiapit:atTime>
@@ -1607,15 +1721,15 @@
 		</rdf:Description>
 		</xsl:if> 
 	</xsl:for-each>
-	<!-- Type Specimen Identification as individual -->								
+	<!-- Typification as individual -->								
  	<xsl:for-each select="record/metadata/schede/BNZ/SZ/TZI">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI, '-', position())" />
+				<xsl:value-of select="concat($NS,'Typification/', $itemURI, '-', position())" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification'" />
+					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Typification'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
@@ -1625,10 +1739,10 @@
 				<xsl:value-of 	select="concat('Identificazione del tipo nomenclaturale del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of 	select="concat('Identification of type specimen of cultural property ', $itemURI)" />
+				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of 	select="concat('Identification of type specimen of cultural property ', $itemURI)" />
+				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./TZIT">	
 				<arco-spe:hasTypeOfTypeSpecimen>
@@ -1762,22 +1876,37 @@
 						<xsl:with-param name="text" select="concat($sps-species-lab, $sps-subspecies-lab)" />
 					</xsl:call-template>
 				</xsl:variable>
-				<arco-core:isIdentifiedBy>
+				<arco-spe:isIdentifiedBy>
 					<xsl:attribute name="rdf:resource">
 		    			<xsl:value-of select="$BiologicalTaxon" />
 					</xsl:attribute>
-				</arco-core:isIdentifiedBy> 
-				<arco-core:isIdentifiedByCurrentTaxon>
+				</arco-spe:isIdentifiedBy> 
+				<arco-core:isClassifiedBy>
 					<xsl:attribute name="rdf:resource">
 		    			<xsl:value-of select="$BiologicalTaxon" />
 					</xsl:attribute>
-				</arco-core:isIdentifiedByCurrentTaxon>
+				</arco-core:isClassifiedBy> 
+				<arco-lite:isIdentifiedByCurrentTaxon>
+					<xsl:attribute name="rdf:resource">
+		    			<xsl:value-of select="$BiologicalTaxon" />
+					</xsl:attribute>
+				</arco-lite:isIdentifiedByCurrentTaxon>
+				<arco-lite:isClassifiedByCurrentTaxon>
+					<xsl:attribute name="rdf:resource">
+		    			<xsl:value-of select="$BiologicalTaxon" />
+					</xsl:attribute>
+				</arco-lite:isClassifiedByCurrentTaxon>
 				<!-- identification in time  -->
 				<arco-spe:hasIdentificationInTime>
 					<xsl:attribute name="rdf:resource">
 			    		<xsl:value-of select="concat($NS,'IdentificationInTime/', $itemURI)" />
 					</xsl:attribute>
 				</arco-spe:hasIdentificationInTime>
+				<arco-core:hasClassificationInTime>
+					<xsl:attribute name="rdf:resource">
+			    		<xsl:value-of select="concat($NS,'ClassificationInTime/', $itemURI)" />
+					</xsl:attribute>
+				</arco-core:hasClassificationInTime>
 			</xsl:if>
 			<!-- sex interpretation -->
 			<xsl:if test="record/metadata/schede/AT/DA/STS">
@@ -2041,6 +2170,33 @@
 	            </rdfs:label>
     	        <l0:name xml:lang="en">
         	    	<xsl:value-of select="concat('Identification of cultural property ', $itemURI)" />
+            	</l0:name>
+				<arco-spe:hasTaxon>
+					<xsl:attribute name="rdf:resource">
+	    		    	<xsl:value-of select="$BiologicalTaxon" />
+					</xsl:attribute>
+				</arco-spe:hasTaxon>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI)" />
+        		</xsl:attribute>
+	       		<rdf:type>
+					<xsl:attribute name="rdf:resource">
+        	        	<xsl:value-of select="'https://w3id.org/arco/ontology/core/ClassificationInTime'" />
+            		</xsl:attribute>
+				</rdf:type>
+				<rdfs:label xml:lang="it">
+        	    	 <xsl:value-of select="concat('Classificazione del bene culturale ', $itemURI)" />
+            	</rdfs:label>
+				<l0:name xml:lang="it">
+	            	<xsl:value-of select="concat('Classificazione del bene culturale ', $itemURI)" />
+    	        </l0:name>
+				<rdfs:label xml:lang="en">
+            		 <xsl:value-of select="concat('Classification of cultural property ', $itemURI)" />
+	            </rdfs:label>
+    	        <l0:name xml:lang="en">
+        	    	<xsl:value-of select="concat('Classification of cultural property ', $itemURI)" />
             	</l0:name>
 				<arco-spe:hasTaxon>
 					<xsl:attribute name="rdf:resource">

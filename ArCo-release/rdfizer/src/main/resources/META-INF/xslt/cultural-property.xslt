@@ -328,7 +328,7 @@
 								<xsl:when test="lower-case(normalize-space(record/metadata/schede/SCAN/OG/CTB))='beni mobili'">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/arco/MovableCulturalProperty'" />
 								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(record/metadata/schede/MODI/OG/CTB))='beni immateriali'">
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/SCAN/OG/CTB))='beni immateriali'">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/arco/IntangibleCulturalProperty'" />
 								</xsl:when>
 								<xsl:otherwise>
