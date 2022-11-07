@@ -25,7 +25,7 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco-lite">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/arco-lite/0.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.3"/>
@@ -106,6 +106,23 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>SM/SMM/SMMA</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasArea -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasArea">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isAreaOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla misura della sua area.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its area measurement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha area</rdfs:label>
+        <rdfs:label xml:lang="en">has area</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -495,6 +512,40 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasDepth -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasDepth">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isDepthOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua profondità misurata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its depth measurement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha profondità</rdfs:label>
+        <rdfs:label xml:lang="en">has depth</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasDiameter -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasDiameter">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isDiameterOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla misura del suo diametro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its diameter measurement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha diametro</rdfs:label>
+        <rdfs:label xml:lang="en">has diameter</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasDiapason -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasDiapason">
@@ -711,6 +762,21 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasHeight -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasHeight">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isHeightOf"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla misura della sua altezza.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the measurement of height to the measured entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha altezza</rdfs:label>
+        <rdfs:label xml:lang="en">has height</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasInventoryNumberResponsible -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasInventoryNumberResponsible">
@@ -781,6 +847,21 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUES - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTA</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasLenght -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasLenght">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isLenghtOf"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla misura della sua lunghezza.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the measurement of lenght to the measured entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha lunghezza</rdfs:label>
+        <rdfs:label xml:lang="en">has lenght</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1086,6 +1167,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasPerimeter -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasPerimeter">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPerimeterOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con la misura del suo perimetro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to the measurement of its perimeter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha perimetro</rdfs:label>
+        <rdfs:label xml:lang="en">has perimeter</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPhosphorescence -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasPhosphorescence">
@@ -1182,10 +1281,9 @@
     <!-- https://w3id.org/arco/ontology/arco-lite/hasPixelDimension -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasPixelDimension">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasTechnicalCharacteristic"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPixelDimensionOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;immagine digitale (es.: fotografia) alle dimensioni, in pixel, dell&apos;immagine.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a digital resource to its size in pixels.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -1414,10 +1512,9 @@
     <!-- https://w3id.org/arco/ontology/arco-lite/hasResolution -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasResolution">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasTechnicalCharacteristic"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isResolutionOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResolutionOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una fotografia alla risoluzione e al valore specifico utilizzati per la memorizzazione di una fotografia digitale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a digital resource to theresolution used for storing it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -1435,10 +1532,10 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa properietà collega un&apos;entità culturale con l&apos;agente che ha una responsabilità su di essa. 
+        <rdfs:comment xml:lang="it">Questa properietà collega un&apos;entità culturale con l&apos;agente che ha una responsabilità su di essa.
 Es: una scheda su cui si analizza un bene culturale per finalità diverse da quella della catalogazione del patrimonio all&apos;Ente o al soggetto che ha prodotto la scheda o che gestisce la banca dati di cui la scheda fa parte.
 Es: un bene culturale al suo valutatore.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a cultural entity to the agent that has a responsibility on it. 
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to the agent that has a responsibility on it.
 E.g. a cultural property record to the agency or the person that created that record or manages the database where the record is. (RecordResponsibleAgent).
 E.g. an estimate on a cultural property to the estimation responsible agent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -1747,6 +1844,23 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasThickness -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasThickness">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isThicknessOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla misura del suo spessore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to the measurement of its thickness.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha spessore</rdfs:label>
+        <rdfs:label xml:lang="en">has thickness</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasTransferor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasTransferor">
@@ -1862,6 +1976,57 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasVolume -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasVolume">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isVolumeOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con la misura del suo volume.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to the measurement of its volume.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha volume</rdfs:label>
+        <rdfs:label xml:lang="en">has volume</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasWeight -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasWeight">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isWeightOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla misura del suo peso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with the measurement of its depth.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha peso</rdfs:label>
+        <rdfs:label xml:lang="en">has weight</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasWidth -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasWidth">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isWidthOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla misura della sua ampiezza.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to the measurement of its width.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha ampiezza</rdfs:label>
+        <rdfs:label xml:lang="en">has width</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/involves -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/involves">
@@ -1912,6 +2077,22 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>SM/SMM/SMMA</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isAreaOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isAreaOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la misura di un&apos;area all&apos;entità misurata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an area measurement with the measured entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is area of</rdfs:label>
+        <rdfs:label xml:lang="it">è area di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2066,6 +2247,10 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf">
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/isMemberInvolvedIn"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/involvesCollection"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale con la sua collezione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural entity with its collection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -2308,6 +2493,38 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isDepthOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isDepthOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la misura della profondità all&apos;entità misurata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the measurement of depth to the measured entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is depth of</rdfs:label>
+        <rdfs:label xml:lang="it">è profondità di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isDiameterOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isDiameterOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la misura del diametro di un&apos;entità all&apos;entità misurata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a diameter measurement with the measured entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is diameter of</rdfs:label>
+        <rdfs:label xml:lang="it">è diametro di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isDiapasonOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isDiapasonOf">
@@ -2502,6 +2719,22 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isHeightOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isHeightOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la misura di altezza con l&apos;entità misurata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the measurement of height to the measured entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is height of</rdfs:label>
+        <rdfs:label xml:lang="it">è altezza di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isIdentifiedByCurrentTaxon -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isIdentifiedByCurrentTaxon">
@@ -2659,6 +2892,22 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="en">is issuing state in</rdfs:label>
         <rdfs:label xml:lang="it">è stato emittente in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isLenghtOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isLenghtOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una misura di lunghezza all&apos;entità misurata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the measurement of lenght to the measured entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is lenght of</rdfs:label>
+        <rdfs:label xml:lang="it">è lunghezza di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3009,6 +3258,21 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isPerimeterOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isPerimeterOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una misura di perimetro con l&apos;entità misurata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the measurement of perimeter to the measured entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is perimeter of</rdfs:label>
+        <rdfs:label xml:lang="it">è perimetro di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isPhosphorescenceOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isPhosphorescenceOf">
@@ -3097,8 +3361,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/arco-lite/isPixelDimensionOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isPixelDimensionOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTechnicalCharacteristicOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha dimensioni in pixel&quot;</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has pixel dimension&quot;</rdfs:comment>
@@ -3274,8 +3537,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/arco-lite/isResolutionOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isResolutionOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTechnicalCharacteristicOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha risoluzione&quot;</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has resolution&quot;</rdfs:comment>
@@ -3584,6 +3846,22 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isThicknessOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isThicknessOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la misura dello spessore con l&apos;entità misurata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the measurement of thickness to the measured entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is thickness of</rdfs:label>
+        <rdfs:label xml:lang="it">è spessore di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isTuningOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isTuningOf">
@@ -3652,6 +3930,54 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isVolumeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isVolumeOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la misura del volume all&apos;entità misurata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the measurement of volume to the measured entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is volume of</rdfs:label>
+        <rdfs:label xml:lang="it">è volume di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isWeightOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isWeightOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la misura del peso con l&apos;entità misurata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the measurement of weight to the measured entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is weight of</rdfs:label>
+        <rdfs:label xml:lang="it">è peso di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isWidthOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isWidthOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la misura dell&apos;ampiezza con l&apos;entità misurata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the measurement of width to the measured entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is width of</rdfs:label>
+        <rdfs:label xml:lang="it">è ampiezza di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo">
@@ -3682,6 +4008,12 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf"/>
     
 
 
@@ -3745,9 +4077,39 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasConservationStatus -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasConservationStatus"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isResolutionOf -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/isResolutionOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isResolutionOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf"/>
     
 
 
@@ -3826,6 +4188,18 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     <!-- https://w3id.org/italia/onto/CLV/isAddressFor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/isAddressFor"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/RO/hasRiT -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/hasRiT"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/RO/isRoleInTimeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
     
 
 
@@ -3968,7 +4342,6 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="en">current designation</rdfs:label>
         <rdfs:label xml:lang="it">denominazione attuale</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -4248,6 +4621,18 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/arco-lite/CrystallographicCharacteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco-lite/CrystallographicCharacteristic"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecord -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
     
 
 
