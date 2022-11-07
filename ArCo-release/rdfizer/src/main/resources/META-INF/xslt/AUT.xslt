@@ -689,7 +689,7 @@
 				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTL">
 					<cpv:hasBirthPlace>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Location/', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTL))" />
+							<xsl:value-of select="concat($NS, 'Feature/', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTL))" />
 						</xsl:attribute>
 					</cpv:hasBirthPlace>
 				</xsl:if>
@@ -798,11 +798,11 @@
 			<xsl:if test="record/metadata/schede/*/AU/AUT/AUTL">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Location/', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTL))" />
+						<xsl:value-of select="concat($NS, 'Feature/', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTL))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/italia/onto/l0/Location'" />
+							<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Feature'" />
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
@@ -816,11 +816,11 @@
 			<xsl:if test="record/metadata/schede/*/AU/AUT/AUTX">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Location/', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTX))" />
+						<xsl:value-of select="concat($NS, 'Feature/', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTX))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/italia/onto/l0/Location'" />
+							<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Feature'" />
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>

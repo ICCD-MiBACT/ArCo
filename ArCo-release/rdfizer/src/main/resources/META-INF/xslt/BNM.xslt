@@ -535,7 +535,7 @@
 		        	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Specimen'" />
 		        </xsl:attribute>
 			</rdf:type>
-			<arco-spe:isClassifiedByCurrentTaxon>
+			<arco-lite:isClassifiedByCurrentTaxon>
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
 						<xsl:attribute name="rdf:resource">
@@ -548,8 +548,8 @@
 		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
-			</arco-spe:isClassifiedByCurrentTaxon>
-			<arco-spe:isIdentifiedByCurrentTaxon>
+			</arco-lite:isClassifiedByCurrentTaxon>
+			<arco-lite:isIdentifiedByCurrentTaxon>
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
 						<xsl:attribute name="rdf:resource">
@@ -562,7 +562,7 @@
 		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
-			</arco-spe:isIdentifiedByCurrentTaxon>
+			</arco-lite:isIdentifiedByCurrentTaxon>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMN/*">
 			<arco-core:isClassifiedBy>
@@ -579,7 +579,7 @@
 		    		</xsl:otherwise>
 		    	</xsl:choose>
 			</arco-core:isClassifiedBy>
-			<arco-core:isIdentifiedBy>
+			<arco-spe:isIdentifiedBy>
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
 						<xsl:attribute name="rdf:resource">
@@ -592,7 +592,7 @@
 		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
-			</arco-core:isIdentifiedBy>
+			</arco-spe:isIdentifiedBy>
 		</xsl:if>
 		<xsl:for-each select="record/metadata/schede/BNM/RM/RMN">
 			<arco-core:isClassifiedBy>
@@ -609,7 +609,7 @@
 		    		</xsl:otherwise>
 		    	</xsl:choose>
 			</arco-core:isClassifiedBy>
-			<arco-core:isIdentifiedBy>
+			<arco-spe:isIdentifiedBy>
 				<xsl:choose>
 					<xsl:when test="./RMNI">
 						<xsl:attribute name="rdf:resource">
@@ -622,31 +622,31 @@
 		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
-			</arco-core:isIdentifiedBy>
+			</arco-spe:isIdentifiedBy>
 		</xsl:for-each>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMN/*">
 			<arco-core:hasClassificationInTime>
 				<xsl:attribute name="rdf:resource">
-		    		<xsl:value-of select="concat($NS,'IdentifcationInTime/',$itemURI)" />
+		    		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI)" />
 				</xsl:attribute>
 			</arco-core:hasClassificationInTime>
-			<arco-core:hasIdentificationInTime>
+			<arco-spe:hasIdentificationInTime>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI)" />
 				</xsl:attribute>
-			</arco-core:hasIdentificationInTime>
+			</arco-spe:hasIdentificationInTime>
 		</xsl:if>
 		<xsl:for-each select="record/metadata/schede/BNM/RM/RMN">
 			<arco-core:hasClassificationInTime>
 				<xsl:attribute name="rdf:resource">
-		    		<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-', position())" />
+		    		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-', position())" />
 				</xsl:attribute>
 			</arco-core:hasClassificationInTime>
-			<arco-core:hasIdentificationInTime>
+			<arco-spe:hasIdentificationInTime>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="concat($NS,'IdentifcationInTime/',$itemURI, '-', position())" />
 				</xsl:attribute>
-			</arco-core:hasIdentificationInTime>
+			</arco-spe:hasIdentificationInTime>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/BNM/SM/SME">
 			<arco-spe:hasLabel>
@@ -723,19 +723,19 @@
 			</xsl:if>
 		</xsl:if>					
 		<xsl:if test="record/metadata/schede/BNM/SM/SMT and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMT/SMTT)), 'non tipo'))">
-			<arco-spe:hasTypeSpecimenIdentification>
+			<arco-spe:hasTypification>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI)" />
+					<xsl:value-of select="concat($NS,'Typification/', $itemURI)" />
 				</xsl:attribute>
-			</arco-spe:hasTypeSpecimenIdentification>
+			</arco-spe:hasTypification>
 		</xsl:if>
 		<xsl:for-each select="record/metadata/schede/BNM/RM/RMT"> 
 			<xsl:if test="./RMTT and not(starts-with(lower-case(normalize-space(./RMTT)), 'non tipo'))">
-				<arco-spe:hasTypeSpecimenIdentification>
+				<arco-spe:hasTypification>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI, '-', position())" />
 					</xsl:attribute>
-				</arco-spe:hasTypeSpecimenIdentification>
+				</arco-spe:hasTypification>
 			</xsl:if>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/BNM/SM/SMA/SMAI">
@@ -2865,11 +2865,11 @@
 					<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSX" />
 				</arco-spe:strunzCode>
 			</xsl:if>
-			<arco-core:refersToClassificationSystem>
+			<arco-core:isDefinedByClassificationSystem>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/StrunzClassificationSystem'" />
 		    	</xsl:attribute>
-			</arco-core:refersToClassificationSystem>
+			</arco-core:isDefinedByClassificationSystem>
 		</rdf:Description>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSC">
@@ -2888,11 +2888,11 @@
 			<l0:name>
 				<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSC" />
 			</l0:name>
-			<arco-core:refersToClassificationSystem>
+			<arco-core:isDefinedByClassificationSystem>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/StrunzClassificationSystem'" />
 		    	</xsl:attribute>
-			</arco-core:refersToClassificationSystem>
+			</arco-core:isDefinedByClassificationSystem>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSX">
 				<xsl:if test="not(record/metadata/schede/BNM/SM/SMS/SMSS)">
 					<arco-spe:strunzCode>
@@ -2918,11 +2918,11 @@
 			<l0:name>
 				<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSD" />
 			</l0:name>
-			<arco-core:refersToClassificationSystem>
+			<arco-core:isDefinedByClassificationSystem>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/NewDanaClassificationSystem'" />
 		    	</xsl:attribute>
-			</arco-core:refersToClassificationSystem>
+			</arco-core:isDefinedByClassificationSystem>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSK">
 				<arco-spe:newDanaCode>
 					<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSK" />
@@ -2932,7 +2932,7 @@
 	</xsl:if>						
 						
 	<xsl:for-each select="record/metadata/schede/BNM/RM">					
-						<!-- Taxon Specificationof mineral property -->	
+						<!-- Taxon Specification of mineral property -->	
 	<xsl:if test="./RMN/RMNV">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -3076,11 +3076,11 @@
 					<xsl:value-of select="./RMS/RMSX" />
 				</arco-spe:strunzCode>
 			</xsl:if>
-			<arco-core:refersToClassificationSystem>
+			<arco-core:isDefinedByClassificationSystem>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/StrunzClassificationSystem'" />
 		    	</xsl:attribute>
-			</arco-core:refersToClassificationSystem>
+			</arco-core:isDefinedByClassificationSystem>
 		</xsl:if>
 	</rdf:Description>
 	<rdf:Description>
@@ -3106,11 +3106,11 @@
 					</arco-spe:strunzCode>
 				</xsl:if>
 			</xsl:if>
-			<arco-core:refersToClassificationSystem>
+			<arco-core:isDefinedByClassificationSystem>
 				<xsl:attribute name="rdf:resource">
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/StrunzClassificationSystem'" />
 		    	</xsl:attribute>
-			</arco-core:refersToClassificationSystem>
+			</arco-core:isDefinedByClassificationSystem>
 		</xsl:if>
 	</rdf:Description>
 	<rdf:Description>
@@ -3142,7 +3142,7 @@
 		</xsl:if>
 	</rdf:Description>
 	</xsl:for-each>
-	
+
 								<!-- Classification in time -->
 	<xsl:if test="record/metadata/schede/BNM/SM/SMN/*">
 		<rdf:Description>	
@@ -3169,7 +3169,7 @@
             <arco-core:current>
             	<xsl:value-of select="true()" />
             </arco-core:current>
-			<arco-spe:hasTaxon>
+			<arco-core:hasTaxon>
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
 						<xsl:attribute name="rdf:resource">
@@ -3182,7 +3182,46 @@
 		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
-			</arco-spe:hasTaxon>
+			</arco-core:hasTaxon>
+		</rdf:Description>
+		<rdf:Description>	
+			<xsl:attribute name="rdf:about">
+		    	<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+                	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime'" />
+            	</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+            	 <xsl:value-of select="concat('Identificazione del bene culturale ', $itemURI)" />
+            </rdfs:label>
+            <l0:name xml:lang="it">
+            	<xsl:value-of select="concat('Identificazione del bene culturale ', $itemURI)" />
+            </l0:name>
+			<rdfs:label xml:lang="en">
+            	 <xsl:value-of select="concat('Identification of cultural property ', $itemURI)" />
+            </rdfs:label>
+            <l0:name xml:lang="en">
+            	 <xsl:value-of select="concat('Identification of cultural property ', $itemURI)" />
+            </l0:name>
+            <arco-core:current>
+            	<xsl:value-of select="true()" />
+            </arco-core:current>
+			<arco-core:hasTaxon>
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNI)))" />
+		    			</xsl:attribute>
+		    		</xsl:when>
+		    		<xsl:otherwise>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMN/SMNA)))" />
+		    			</xsl:attribute>
+		    		</xsl:otherwise>
+		    	</xsl:choose>
+			</arco-core:hasTaxon>
 		</rdf:Description>
 	</xsl:if>
 	<xsl:for-each select="record/metadata/schede/BNM/RM/RMN">
@@ -3220,7 +3259,7 @@
             <arco-core:current>
             	<xsl:value-of select="false()" />
             </arco-core:current>
-			<arco-spe:hasTaxon>
+			<arco-core:hasTaxon>
 				<xsl:choose>
 					<xsl:when test="./RMNI">
 						<xsl:attribute name="rdf:resource">
@@ -3233,11 +3272,48 @@
 		    			</xsl:attribute>
 		    		</xsl:otherwise>
 		    	</xsl:choose>
-			</arco-spe:hasTaxon>
+			</arco-core:hasTaxon>
+		</rdf:Description>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+		    	<xsl:value-of select="concat($NS,'IdentificationInTime/',$itemURI, '-', position())" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+                	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime'" />
+            	</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+            	 <xsl:value-of select="concat('Identificazione ', position(), ' del bene culturale ', $itemURI)" />
+            </rdfs:label>
+            <l0:name xml:lang="it">
+            	<xsl:value-of select="concat('Identificazione ', position(), ' del bene culturale ', $itemURI)" />
+            </l0:name>
+			<rdfs:label xml:lang="en">
+            	 <xsl:value-of select="concat('Identification ', position(), ' of cultural property ', $itemURI)" />
+            </rdfs:label>
+            <l0:name xml:lang="en">
+            	 <xsl:value-of select="concat('Identification ', position(), ' of cultural property ', $itemURI)" />
+            </l0:name>
+            <arco-core:current>
+            	<xsl:value-of select="false()" />
+            </arco-core:current>
+			<arco-core:hasTaxon>
+				<xsl:choose>
+					<xsl:when test="./RMNI">
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMNI)))" />
+		    			</xsl:attribute>
+		    		</xsl:when>
+		    		<xsl:otherwise>
+						<xsl:attribute name="rdf:resource">
+		    				<xsl:value-of select="concat($NS,'MineralTaxon/', arco-fn:urify(normalize-space(./RMNA)))" />
+		    			</xsl:attribute>
+		    		</xsl:otherwise>
+		    	</xsl:choose>
+			</arco-core:hasTaxon>
 		</rdf:Description>
 	</xsl:for-each>
-	
-
 							<!-- Label as individual  -->
 	<xsl:for-each select="record/metadata/schede/BNM/SM/SME">
 		<rdf:Description>
@@ -6187,11 +6263,11 @@
 	<xsl:if test="record/metadata/schede/BNM/SM/SMT and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMT/SMTT)), 'non tipo'))">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI)" />
+				<xsl:value-of select="concat($NS,'Typification/', $itemURI)" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification'" />
+					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Typification'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
@@ -6201,10 +6277,10 @@
 				<xsl:value-of 	select="concat('Identificazione del tipo nomenclaturale del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of 	select="concat('Identification of type specimen of cultural property ', $itemURI)" />
+				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of 	select="concat('Identification of type specimen of cultural property ', $itemURI)" />
+				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</l0:name>
 			<arco-core:current>
             	<xsl:value-of select="true()" />
@@ -6364,11 +6440,11 @@
 	<xsl:if test="./RMT/RMTT and not(starts-with(lower-case(normalize-space(./RMT/RMTT)), 'non tipo'))">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI, '-', position())" />
+				<xsl:value-of select="concat($NS,'Typification/', $itemURI, '-', position())" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/TypeSpecimenIdentification'" />
+					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Typification'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
@@ -6378,10 +6454,10 @@
 				<xsl:value-of 	select="concat('Identificazione del tipo nomenclaturale del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of 	select="concat('Identification of type specimen of cultural property ', $itemURI)" />
+				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of 	select="concat('Identification of type specimen of cultural property ', $itemURI)" />
+				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</l0:name>
 			<arco-core:current>
             	<xsl:value-of select="false()" />

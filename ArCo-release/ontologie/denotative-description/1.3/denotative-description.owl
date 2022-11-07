@@ -449,6 +449,24 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasConservationMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasConservationMethod">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasMethod"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isConservationMethodOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationMethod"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega lo stato di conservazione ad un metodo di conservazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates conservation status to a conservation method</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha metodo di conservazione</rdfs:label>
+        <rdfs:label xml:lang="en">has conservation method</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/hasConservationStatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasConservationStatus">
@@ -1715,6 +1733,23 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isConservationMethodOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isConservationMethodOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isMethodOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationMethod"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il metodo di conservazione allo stato di conservazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates conservation method to a conservation status</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is conservation method of</rdfs:label>
+        <rdfs:label xml:lang="it">metodo di conservazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -3671,6 +3706,22 @@ resource:Inscription/1200865151-inscription-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/ConservationMethod -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ConservationMethod">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il metodo di conservazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the conservation method.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Conservation method</rdfs:label>
+        <rdfs:label xml:lang="it">Metodo di conservazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM, BNPE, BNPL: CO/STC/STCM</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/ConservationStatus -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ConservationStatus">
@@ -3679,6 +3730,12 @@ resource:Inscription/1200865151-inscription-1
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasConservationMethod"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

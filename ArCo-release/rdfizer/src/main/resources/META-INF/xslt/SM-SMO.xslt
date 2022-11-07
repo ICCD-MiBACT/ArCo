@@ -365,14 +365,14 @@
 				<l0:name>
 					<xsl:value-of select="./CHSN" />
 	   			</l0:name>
-	   			<arco-core:refersToClassificationSystem>
+	   			<arco-core:isDescribedByClassificationSystem>
 					<xsl:attribute name="rdf:resource">
 			    		<xsl:value-of select="concat($NS,'Hornbosel-SachsClassificationSystem')" />
 			    	</xsl:attribute>
-				</arco-core:refersToClassificationSystem>
-	   			<arco-mi:HSNumber>
+				</arco-core:isDescribedByClassificationSystem>
+	   			<arco-lite:HSNumber>
 					<xsl:value-of select="./CHSN" />
-	   			</arco-mi:HSNumber>
+	   			</arco-lite:HSNumber>
 	   			<xsl:if test="./CHSD">
 		   			<arco-mi:HSDefinition>
 						<xsl:value-of select="./CHSD" />
@@ -423,11 +423,11 @@
 				<l0:name>
 					<xsl:value-of select="./CLAT" />
 	   			</l0:name>
-	   			<arco-core:refersToClassificationSystem>
+	   			<arco-core:isDescribedByClassificationSystem>
 					<xsl:attribute name="rdf:resource">
 			    		<xsl:value-of select="concat($NS,'ClassificationSystem/', arco-fn:urify(normalize-space(./CLAA)))" />
 			    	</xsl:attribute>
-				</arco-core:refersToClassificationSystem>
+				</arco-core:isDescribedByClassificationSystem>
 		   </rdf:Description>
 		   <rdf:Description>
 				<xsl:attribute name="rdf:about">
