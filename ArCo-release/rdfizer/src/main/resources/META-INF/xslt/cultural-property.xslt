@@ -581,25 +581,29 @@
 				        </pico:preview>
 				    </xsl:for-each>
 				</xsl:for-each>
-				<xsl:for-each select="record/metadata/schede/*/DO/DCM/DCMN[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]"><!-- xslt2 multiple nodes normalize-space exception  -->
-				    <xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
-				    <xsl:for-each select="$url">
-				        <arco-lite:depiction>
-				            <xsl:attribute name="rdf:resource">
-				                <xsl:value-of select="." />
-				            </xsl:attribute>
-				        </arco-lite:depiction>
-				        <foaf:depiction>
-				            <xsl:attribute name="rdf:resource">
-				                <xsl:value-of select="." />
-				            </xsl:attribute>
-				        </foaf:depiction>
-				        <pico:preview>
-				            <xsl:attribute name="rdf:resource">
-				                <xsl:value-of select="." />
-				            </xsl:attribute>
-				        </pico:preview>
-				    </xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/DO/DCM"><!-- xslt2 multiple nodes normalize-space exception  -->
+					<xsl:if test="contains((./DCMP), 'documentazione fotografica')" >
+						<xsl:for-each select="./DCMN[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]"><!-- xslt2 multiple nodes normalize-space exception  -->
+					    <xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
+					    <xsl:for-each select="$url">
+					        <arco-lite:depiction>
+					            <xsl:attribute name="rdf:resource">
+				    	            <xsl:value-of select="." />
+				        	    </xsl:attribute>
+					        </arco-lite:depiction>
+					        <foaf:depiction>
+					            <xsl:attribute name="rdf:resource">
+					                <xsl:value-of select="." />
+					            </xsl:attribute>
+				    	    </foaf:depiction>
+				        	<pico:preview>
+				            	<xsl:attribute name="rdf:resource">
+				                	<xsl:value-of select="." />
+					            </xsl:attribute>
+					        </pico:preview>
+					    </xsl:for-each>
+					    </xsl:for-each>
+				    </xsl:if>
 				</xsl:for-each>
 				<!-- isDescribedBy -->
 				<arco-catalogue:isDescribedBy>
@@ -937,6 +941,14 @@
 		                	<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-', position())" />
 		                </xsl:attribute>
 					</arco-location:hasCadastralIdentity>
+				</xsl:for-each>
+				<!-- support for S -->
+				<xsl:for-each select="record/metadata/schede/MI/MT/MIF">
+					<arco-dd:hasSupport>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Support/', $itemURI, '-', position())" />
+						</xsl:attribute>
+					</arco-dd:hasSupport>
 				</xsl:for-each>
 				<!-- fruition (VeAC) -->
 				<xsl:if test="record/metadata/schede/*/AU/FRU">
@@ -2772,11 +2784,34 @@
 	                	</xsl:attribute>
 					</arco-cd:hasDocumentation>
 				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/DO/FTE">
+					<arco-cd:hasDocumentation>
+						<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'PhotographicDocumentation/', $itemURI, '-photographic-documentation-', position())" />
+	                	</xsl:attribute>
+					</arco-cd:hasDocumentation>
+				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/DO/DCM">
 					<arco-cd:hasDocumentation>
 						<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="concat($NS, 'Documentation/', $itemURI, '-documentation-', position())" />
-	                	</xsl:attribute>
+							<xsl:choose>
+								<xsl:when test="contains((./DCMP), 'documentazione fotografica')">
+									<xsl:value-of select="concat($NS, 'PhotographicDocumentation/', $itemURI, '-documentation-', position())" />
+								</xsl:when>
+								<xsl:when test="contains((./DCMP), 'documentazione grafica')">
+	                				<xsl:value-of select="concat($NS, 'GraphicOrCartographicDocumentation/', $itemURI, '-documentation-', position())" />
+								</xsl:when>
+								<xsl:when test="contains((./DCMP), 'documentazione audio')">
+	                				<xsl:value-of select="concat($NS, 'AudioDocumentation/', $itemURI, '-documentation-', position())" />
+								</xsl:when>
+								<xsl:when test="contains((./DCMP), 'documentazione video')">
+	                				<xsl:value-of select="concat($NS, 'FilmDocumentation/', $itemURI, '-documentation-', position())" />
+								</xsl:when>
+								<xsl:otherwise>
+	                				<xsl:value-of select="concat($NS, 'Documentation/', $itemURI, '-documentation-', position())" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:attribute>				
 					</arco-cd:hasDocumentation>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/AL/FTA">
@@ -2815,6 +2850,13 @@
 					<arco-cd:hasDocumentation>
 						<xsl:attribute name="rdf:resource">
 	                		<xsl:value-of select="concat($NS, 'SourceAndDocument/', $itemURI, '-source-document-', position())" />
+	                	</xsl:attribute>
+					</arco-cd:hasDocumentation>
+				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/DO/CTF">
+					<arco-cd:hasDocumentation>
+						<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'Documentation/', $itemURI, '-documentation-', position())" />
 	                	</xsl:attribute>
 					</arco-cd:hasDocumentation>
 				</xsl:for-each>
@@ -3024,9 +3066,9 @@
 				<!-- title -->
 				<xsl:for-each select="record/metadata/schede/*/OG/SGT/SGTT">
 					<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
-						<arco-cd:title>
+						<arco-lite:title>
 							<xsl:value-of select="normalize-space(.)" />
-						</arco-cd:title>
+						</arco-lite:title>
 						<arco-cd:hasTitle>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
@@ -3039,9 +3081,9 @@
 					<xsl:for-each select="record/metadata/schede/*/*/SGT/SGTP">
 						<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 							<xsl:if test="$sheetType='MI' or 'S'">
-								<arco-cd:properTitle>
+								<arco-lite:properTitle>
 									<xsl:value-of select="normalize-space(.)" />
-								</arco-cd:properTitle>
+								</arco-lite:properTitle>
 								<arco-cd:hasTitle>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
@@ -3057,9 +3099,9 @@
 							<xsl:value-of />
 						</xsl:when>
 						<xsl:otherwise>
-							<arco-cd:properTitle>
+							<arco-lite:properTitle>
 								<xsl:value-of select="normalize-space(.)" />
-							</arco-cd:properTitle>
+							</arco-lite:properTitle>
 							<arco-cd:hasTitle>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
@@ -3075,9 +3117,9 @@
 							<xsl:value-of />
 						</xsl:when>
 						<xsl:otherwise>
-							<arco-cd:attributedTitle>
+							<arco-lite:attributedTitle>
 								<xsl:value-of select="normalize-space(.)" />
-							</arco-cd:attributedTitle>
+							</arco-lite:attributedTitle>
 							<arco-cd:hasTitle>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
@@ -3089,9 +3131,9 @@
 				<!-- parallel title -->
 				<xsl:for-each select="record/metadata/schede/*/OG/SGT/SGTR">
 					<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
-						<arco-cd:parallelTitle>
+						<arco-lite:parallelTitle>
 							<xsl:value-of select="normalize-space(.)" />
-						</arco-cd:parallelTitle>
+						</arco-lite:parallelTitle>
 						<arco-cd:hasTitle>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
@@ -3105,9 +3147,9 @@
 							<xsl:value-of />
 						</xsl:when>
 						<xsl:otherwise>
-							<arco-cd:parallelTitle>
+							<arco-lite:parallelTitle>
 								<xsl:value-of select="normalize-space(.)" />
-							</arco-cd:parallelTitle>
+							</arco-lite:parallelTitle>
 							<arco-cd:hasTitle>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
@@ -3924,11 +3966,11 @@
  	                			</xsl:attribute>
 							</arco-cd:hasUse>
 							<xsl:if test="./USAD and (not(starts-with(lower-case(normalize-space(./USAD)), 'nr')) and not(starts-with(lower-case(normalize-space(./USAD)), 'n.r')))">
-								<arco-cd:hasUseFunction>
+								<arco-lite:hasCulturalEntityUseFunction>
 									<xsl:attribute name="rdf:resource">
 				        				<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(./USAD))" />
 									</xsl:attribute>
-								</arco-cd:hasUseFunction>
+								</arco-lite:hasCulturalEntityUseFunction>
 							</xsl:if>
 						</xsl:when>
 						<xsl:otherwise>
@@ -4458,7 +4500,7 @@
 							<xsl:otherwise>
 								<arco-core:hasPart>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./INP)))" />
+										<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./INDP)))" />
 									</xsl:attribute>
 								</arco-core:hasPart>
 							</xsl:otherwise>
