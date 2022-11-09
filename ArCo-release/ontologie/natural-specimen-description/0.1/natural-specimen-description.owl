@@ -900,6 +900,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasIdentificationInTime -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasIdentificationInTime">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasEventOrSituationInTime"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isIdentificationInTimeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime"/>
@@ -1305,7 +1306,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasTypification -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTypification">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasEventOrSituationInTime"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isTypificationOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Typification"/>
@@ -1862,6 +1863,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/isIdentificationInTimeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isIdentificationInTimeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una identificazione nel tempo a un&apos;entità</rdfs:comment>
@@ -2256,7 +2258,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/isTypificationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isTypificationOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Typification"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;individiazione del tipo nomenclaturale al campione</rdfs:comment>
