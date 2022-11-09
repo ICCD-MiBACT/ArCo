@@ -4298,32 +4298,32 @@
 						</arco-lite:hasStorageMethodOrColourDepth>
 					</xsl:if>
 				</xsl:if>
-				<!-- technical status - resolution of photograph (F) -->
+				<!-- resolution of photograph (F) -->
 				<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/F/MT/FVC/FVCU)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/F/MT/FVC/FVCU)), 'n.r'))">
 					<xsl:if test="record/metadata/schede/F/MT/FVC/FVCU">
-						<arco-dd:hasTechnicalStatus>
+						<arco-dd:hasMeasurementCollection>
 							<xsl:attribute name="rdf:resource">
- 	                			<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+ 	                			<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI)" />
  	                		</xsl:attribute>
-						</arco-dd:hasTechnicalStatus>
+						</arco-dd:hasMeasurementCollection>
 						<arco-lite:hasResolution>
 							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/F/MT/FVC/FVCU)))" />
+            					<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-resolution')" />
             				</xsl:attribute>
 						</arco-lite:hasResolution>
 					</xsl:if>
 				</xsl:if>
-				<!-- technical status - pixel dimension of photograph (F) -->
+				<!-- pixel dimension of photograph (F) -->
 				<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/F/MT/FVC/FVCM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/F/MT/FVC/FVCM)), 'n.r'))">
 					<xsl:if test="record/metadata/schede/F/MT/FVC/FVCM">
-						<arco-dd:hasTechnicalStatus>
+						<arco-dd:hasMeasurementCollection>
 							<xsl:attribute name="rdf:resource">
- 	                			<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+ 	                			<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI)" />
  	                		</xsl:attribute>
-						</arco-dd:hasTechnicalStatus>
+						</arco-dd:hasMeasurementCollection>
 						<arco-lite:hasPixelDimension>
 							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/F/MT/FVC/FVCM)))" />
+            					<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-pixel-dimension')" />
             				</xsl:attribute>
 						</arco-lite:hasPixelDimension>
 					</xsl:if>
