@@ -953,7 +953,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has copyright</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR. ICCD Normativa Trasversale 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, DO/BIB/BIBY - ICCD Normativa MI 3.00: DA/PLC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1493,6 +1493,24 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa VeAC: AU/FRU</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasUse"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isFunctionalPurposeOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto (es bene culturale, apparato iconografico/decorativo o elemento apposto su un bene culturale come un&apos;iscrizione) alla sua funzione di uso (decorativo, religioso, simbolico, magico-offensivo, etc.), inteso come funzione che deve svolgere.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property realtes an object (e.g. cultural entity, iconographic/decorative apparatus, affixed element like an inscription) to its functional purpose, intended as the function the object has to perform (decorative, religious, symbolic, magic-offensive etc.).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha scopo funzionale</rdfs:label>
+        <rdfs:label xml:lang="en">has functional purpose</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2510,6 +2528,23 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasReview -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasReview">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isReviewOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Review"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a un&apos;attività di revisione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to a review activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha revisione</rdfs:label>
+        <rdfs:label xml:lang="en">has review</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasSECCategory -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSECCategory">
@@ -2985,7 +3020,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasUseFunction">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isUseFunctionOf"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua funzione d&apos;uso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity to its use function.</rdfs:comment>
@@ -4405,6 +4440,22 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isFunctionalPurposeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isFunctionalPurposeOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha scopo funzionale&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has functional purpose&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is functional purpose of</rdfs:label>
+        <rdfs:label xml:lang="it">è scopo funzionale di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isGenusIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isGenusIn">
@@ -5454,6 +5505,22 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isReviewOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isReviewOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;attività di revisione a un&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a review activity to an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is review of</rdfs:label>
+        <rdfs:label xml:lang="it">è revisione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isSECCategoryOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isSECCategoryOf">
@@ -5830,7 +5897,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isUseFunctionOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la funzione d&apos;uso di un&apos;entità alla relativa entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the use function of an entity to the related entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -7882,6 +7949,7 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, DO/BIB/BIBY - ICCD Normativa MI 3.00: DA/PLC</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasCopyright"/>
     </owl:DatatypeProperty>
     
 
@@ -8024,8 +8092,10 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">documentazione tecnica</rdfs:label>
         <rdfs:label xml:lang="en">technical documentation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <a-cat:iccdNormTag>ICCD Normativa AT 3.01: IN/INI/INIZ</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -8484,6 +8554,12 @@ resource:AgentRole/1200865053-1-transferor
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasClassification"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/AnomalyClassification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/AnomalyType"/>
             </owl:Restriction>
@@ -8496,6 +8572,22 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIA</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/AnomalyClassification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AnomalyClassification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la classificazione di un&apos;anomalia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the classification of an anomaly.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Anomaly classification</rdfs:label>
+        <rdfs:label xml:lang="it">Classificazione di anomalia</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIF</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -10614,7 +10706,7 @@ resource:Intervention/0800640527-10-intervention-1
         <rdfs:label xml:lang="it">Tipo di intervento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: valori di CO/RST/RSTI - Normativa VeAC: CO/RIA (riadattamento/modifica) - Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: valori di CO/RST/RSTI - Normativa VeAC: CO/RIA (riadattamento/modifica) - Normativa CA: RO/RIS (intervento successivo). Normative per beni immobili: TU/STU/STUN</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11809,7 +11901,14 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Normativia BNB: RB/RBR. Normativa BNM: RM. Normativa BNPL: RP. Normativa BNPE: RR</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una revisione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a review.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Review</rdfs:label>
+        <rdfs:label xml:lang="it">Revisione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativia BNB: RB/RBR. Normativa BNM: RM. Normativa BNPL: RP. Normativa BNPE: RR</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11824,6 +11923,13 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Review"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di revisione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of review.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Review type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di revisione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa BNM: RM/RMD/RMDT. Normativa BNB: RB/RBR/RBRT. Normativa BNPL: RP/RPV/RPVT. Normativa BNPE: RR/RRD/RRDT</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -12546,7 +12652,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUF; LC/LDC/LDCF; LA/PRC/PRCF - BDM 2.00:UT/UTF - PST 3.01: DA/UTF
-ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF - Normative VeAC, MA e CA: OG/OGT/OGTF. CF: CF/CFU</a-cat:iccdNormTag>
+ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF - Normative VeAC, MA e CA: OG/OGT/OGTF. CF: CF/CFU. Normativa A e PG: US/USO/USOD, US/USA/USAD</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -13676,16 +13782,16 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 

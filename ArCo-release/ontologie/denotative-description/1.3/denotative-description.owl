@@ -797,9 +797,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha scopo funzionale</rdfs:label>
         <rdfs:label xml:lang="en">has functional purpose</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose"/>
     </owl:ObjectProperty>
     
 
@@ -2065,8 +2067,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is functional purpose of</rdfs:label>
         <rdfs:label xml:lang="it">è scopo funzionale di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isFunctionalPurposeOf"/>
     </owl:ObjectProperty>
     
 
@@ -4176,9 +4180,11 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">Functional purpose</rdfs:label>
         <rdfs:label xml:lang="it">Scopo funzionale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF - Normative MA e CA: OG/OGT/OGTF</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
     </owl:Class>
     
 
@@ -4947,7 +4953,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="it">Area</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa PG: CA/HAT</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/HAT. Normativa SAS e SI: MT/MIS/MISF</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -4999,8 +5005,10 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Back total length</rdfs:label>
         <rdfs:label xml:lang="it">Lunghezza totale parte posteriore</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/BackTotalLength"/>
     </owl:NamedIndividual>
     
 
@@ -5011,8 +5019,10 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Back Width</rdfs:label>
         <rdfs:label xml:lang="it">Larghezza dorso</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/BackWidth"/>
     </owl:NamedIndividual>
     
 
@@ -5039,6 +5049,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="it">Capacità</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>MT/MIS/MISC</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5049,8 +5060,10 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Chest Circumference</rdfs:label>
         <rdfs:label xml:lang="it">Circonferenza petto</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/ChestCircumference"/>
     </owl:NamedIndividual>
     
 
@@ -5176,6 +5189,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="it">Profondità</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normative precedenti a 4.00: MT/MIS/MISP</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5186,8 +5200,10 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Depth / Height</rdfs:label>
         <rdfs:label xml:lang="it">Profondità / Altezza</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/DepthOrHeight"/>
     </owl:NamedIndividual>
     
 
@@ -5228,9 +5244,11 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents the identified diapason (note, temperature and eventually humidity during the detection).</rdfs:comment>
         <rdfs:label xml:lang="it">Corista</rdfs:label>
         <rdfs:label xml:lang="en">Diapason</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAC</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/Diapason"/>
     </owl:NamedIndividual>
     
 
@@ -5254,8 +5272,10 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Circonferenza orlo</rdfs:label>
         <rdfs:label xml:lang="en">Edge circumference</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/EdgeCircumference"/>
     </owl:NamedIndividual>
     
 
@@ -5280,9 +5300,11 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents a musical instrument&apos;s musical extension.</rdfs:comment>
         <rdfs:label xml:lang="it">Estensione</rdfs:label>
         <rdfs:label xml:lang="en">Extension</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAE</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/Extension"/>
     </owl:NamedIndividual>
     
 
@@ -5293,8 +5315,10 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">External / Internal length</rdfs:label>
         <rdfs:label xml:lang="it">Lunghezza esterna / interna</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/ExternalInternalLength"/>
     </owl:NamedIndividual>
     
 
@@ -5342,8 +5366,10 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Front total length</rdfs:label>
         <rdfs:label xml:lang="it">Lunghezza totale parte anteriore</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/FrontTotalLength"/>
     </owl:NamedIndividual>
     
 
@@ -5356,9 +5382,11 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents the techincal definition of textured fabrics of an ancient or contemporary garment, according to the standard provided by C.I.E.T.A., or laces. It can also represent the dinstrinction between plain fabric and textured fabric.</rdfs:comment>
         <rdfs:label xml:lang="it">Analisi del vestimento</rdfs:label>
         <rdfs:label xml:lang="en">Garment analysis</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa VeAC: MT/MTC/MTCA</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/GarmentAnalysis"/>
     </owl:NamedIndividual>
     
 
@@ -5375,6 +5403,7 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa VeAC: MT/MTC/MTCC</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/Colour"/>
     </owl:NamedIndividual>
     
 
@@ -5411,6 +5440,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Height</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>MT/MIS/MISA</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5469,8 +5499,10 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Circonferenza fianchi</rdfs:label>
         <rdfs:label xml:lang="en">Hip circumference</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/HipCircumference"/>
     </owl:NamedIndividual>
     
 
@@ -5575,6 +5607,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="it">Lunghezza</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>MT/MIS/MISN</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5657,8 +5690,10 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Larghezza massima / minima</rdfs:label>
         <rdfs:label xml:lang="en">Maximum / minimum width</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/MaximumMinimumWidth"/>
     </owl:NamedIndividual>
     
 
@@ -5682,8 +5717,10 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Lunghezza totale massima</rdfs:label>
         <rdfs:label xml:lang="en">Maximum total length</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/MaximumTotalLength"/>
     </owl:NamedIndividual>
     
 
@@ -5694,8 +5731,10 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Larghezza totale massima</rdfs:label>
         <rdfs:label xml:lang="en">Maximum total width</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/MaximumTotalWidth"/>
     </owl:NamedIndividual>
     
 
@@ -5799,6 +5838,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="it">Perimetro</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BDM: MT/MIS/MISI</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5866,7 +5906,7 @@ resource:MeasurementCollection/1200865132-1
     <!-- https://w3id.org/arco/ontology/denotative-description/PixelDimension -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/PixelDimension">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le dimensioni, in pixel, di una fotografia digitale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a digital photograph size in pixels.</rdfs:comment>
         <rdfs:label xml:lang="it">Dimensioni in pixel</rdfs:label>
@@ -5886,6 +5926,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Power</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>MT/MIS/MISW</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5937,7 +5978,7 @@ resource:MeasurementCollection/1200865132-1
     <!-- https://w3id.org/arco/ontology/denotative-description/Resolution -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Resolution">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la risoluzione e il valore specifico utilizzati per la memorizzazione di una fotografia digitale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents the specific value and resolution used for storing a digital photograph.</rdfs:comment>
         <rdfs:label xml:lang="en">Resolution</rdfs:label>
@@ -6025,6 +6066,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Storage capacity</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa PST: MT/MIS/MISB</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6067,9 +6109,11 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents a musical instrument adopted temperament, especially in relation to an object in its original conditions, or after its restoration. For idiophones with fixed keys (e.g. xylophone, litophone, metallophone) the temperament represents the succession of intervals.</rdfs:comment>
         <rdfs:label xml:lang="en">Temperament</rdfs:label>
         <rdfs:label xml:lang="it">Temperamento</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAP</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/Temperament"/>
     </owl:NamedIndividual>
     
 
@@ -6094,6 +6138,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Thickness</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Versioni precedenti 4.00: MT/MIS/MISS</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6106,9 +6151,11 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents a musical instrument tuning.</rdfs:comment>
         <rdfs:label xml:lang="it">Accordatura</rdfs:label>
         <rdfs:label xml:lang="en">Tuning</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAA</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/Tuning"/>
     </owl:NamedIndividual>
     
 
@@ -6198,26 +6245,16 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/VolumetricDiamensions -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/VolumetricDiamensions">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="it">Ingombro</rdfs:label>
-        <rdfs:label xml:lang="en">Volumetric dimensions</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/WaistCircumference -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/WaistCircumference">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Circonferenza vita</rdfs:label>
         <rdfs:label xml:lang="en">Waist Circumference</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/WaistCircumference"/>
     </owl:NamedIndividual>
     
 
@@ -6230,6 +6267,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Weight</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>MT/MIS/MISG</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6242,6 +6280,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Width</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>MT/MIS/MISL</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6277,8 +6316,8 @@ resource:MeasurementCollection/1200865132-1
         <a-cat:iccdNormTag>ICCD Normative OA, D, F, S: MT/FIL</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <a-cat:iccdNormTag>MT/FIL</a-cat:iccdNormTag>
-        <rdfs:comment xml:lang="en">This individual represents the filigree of an artwork, painting, photography, print.</rdfs:comment>
         <rdfs:label xml:lang="en">Filigree</rdfs:label>
+        <rdfs:comment xml:lang="en">This individual represents the filigree of an artwork, painting, photography, print.</rdfs:comment>
     </rdf:Description>
     
 

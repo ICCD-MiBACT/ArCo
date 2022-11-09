@@ -31,6 +31,7 @@
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/natural-specimen-description">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/0.1"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.3"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
@@ -5007,6 +5008,14 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PaleopatologySurvey">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;indagine, intesa come attività, in cui viene elaborata una diagnosi di una paleopatologia di un reperto antropologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a particular type of survey on a cultural property, that is a survey in which is possible to make a diagnosis of a paleopathology of an anthropological material.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="it">Indagine su paleopatologia</rdfs:label>
+        <rdfs:label xml:lang="en">Paleopathology survey</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT: PT</a-cat:iccdNormTag>
     </owl:Class>
     
 
