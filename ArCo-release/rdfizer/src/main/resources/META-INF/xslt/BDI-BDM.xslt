@@ -290,6 +290,22 @@
 					</xsl:choose>
 				</arco-cd:hasDetectionMethod>
 			</xsl:if>	
+			<!-- detection method of cultural property -->
+			<xsl:if test="record/metadata/schede/*/LA/PRM">
+				<arco-cd:hasDetectionMethod>
+					<xsl:choose>
+						<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/LA/PRM))='archivio'">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalResearch'" />
+						</xsl:when>
+						<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/LA/PRM))='rilevamento nel contesto'">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DirectObservation'" />
+						</xsl:when>
+						<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/LA/PRM))='rilevamento decontestualizzato'">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DirectObservation'" />
+						</xsl:when>
+					</xsl:choose>
+				</arco-cd:hasDetectionMethod>
+			</xsl:if>
 			<!-- circumstance of cultural property -->
 			<xsl:if test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<xsl:if test="record/metadata/schede/*/CA/CAA">
