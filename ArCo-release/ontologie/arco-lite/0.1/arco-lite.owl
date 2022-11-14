@@ -10,6 +10,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:ADMS="https://w3id.org/italia/onto/ADMS/"
+     xmlns:a-ce="https://w3id.org/arco/ontology/cultural-event/"
      xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:a-dd="https://w3id.org/arco/ontology/denotative-description/"
      xmlns:a-mi="https://w3id.org/arco/ontology/musical-instrument/"
@@ -28,6 +29,7 @@
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/musical-instrument/0.1"/>
@@ -657,7 +659,25 @@
         <rdfs:label xml:lang="en">has musical extension</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAE</a-cat:iccdNormTag>
+        <a-cat:iccdNormsTag>ICCD Normativa SM 4.00: AA/AAE</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasFinalist -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasFinalist">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isFinalistOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/Competition"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una competizione ad un finalista.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates competition to a finalist.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha finalista</rdfs:label>
+        <rdfs:label xml:lang="en">has finalist</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
 
 
@@ -843,6 +863,24 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUES - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTA</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasJuryMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasJuryMember">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isJuryMemberOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/Competition"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una competizione ad un membro della giuria.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates competition to a jury member.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha membro della giuria</rdfs:label>
+        <rdfs:label xml:lang="en">has jury member</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
 
 
@@ -1159,6 +1197,24 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGS</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lit/hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasParticipant">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isParticipantOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/Competition"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una competizione ad un partecipante.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates competition to a participant.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha partecipante</rdfs:label>
+        <rdfs:label xml:lang="en">has participant</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
 
 
@@ -2023,6 +2079,24 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
 
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasWinner -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasWinner">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isWinnerOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/Competition"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una competizione al vincitore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates competition to the winner.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha vincitore</rdfs:label>
+        <rdfs:label xml:lang="en">has winner</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/involves -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/involves">
@@ -2629,6 +2703,23 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
 
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isFinalistOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isFinalistOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/Competition"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un finalista ad una competizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a finalist to a competition .</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is finalist of</rdfs:label>
+        <rdfs:label xml:lang="it">è finalista</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isFindingLocationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isFindingLocationOf">
@@ -2888,6 +2979,23 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="en">is issuing state in</rdfs:label>
         <rdfs:label xml:lang="it">è stato emittente in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isJuryMemberOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isJuryMemberOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/Competition"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un membro della giuria ad una competizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a jury member to a competition .</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is jury member</rdfs:label>
+        <rdfs:label xml:lang="it">è membro della giuria</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3250,6 +3358,23 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGS</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isParticipantOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isParticipantOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/Competition"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un partecipante ad una competizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a participant to a competition .</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is participant of</rdfs:label>
+        <rdfs:label xml:lang="it">è partecipante</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
 
 
@@ -3968,6 +4093,23 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="en">is width of</rdfs:label>
         <rdfs:label xml:lang="it">è ampiezza di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isWinnerOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isWinnerOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/Competition"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il vincitore ad una competizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the winner to a competition .</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is winner of</rdfs:label>
+        <rdfs:label xml:lang="it">è vincitore</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
