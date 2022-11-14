@@ -428,6 +428,7 @@
 			</xsl:for-each>
 
 			<!-- part of cultural property when there is MTCP -->
+		
 		<xsl:if test="not($sheetType='VeAC')" >
 		<xsl:for-each select="record/metadata/schede/*/MT/MTC">
 			<xsl:if test="./MTCP and not((starts-with(lower-case(normalize-space(./MTCP)), 'integrale')) or (starts-with(lower-case(normalize-space(./MTCP)), 'tutto')) or (starts-with(lower-case(normalize-space(./MTCP)), 'tutta')) or (starts-with(lower-case(normalize-space(./MTCP)), 'totale')) or (starts-with(lower-case(normalize-space(./MTCP)), 'nr')) or (starts-with(lower-case(normalize-space(./MTCP)), 'n.r')) or (starts-with(lower-case(normalize-space(./MTCP)), 'intero')) or (starts-with(lower-case(normalize-space(./MTCP)), 'intera')) or (starts-with(lower-case(normalize-space(./MTCP)), 'esemplar')))">
@@ -561,7 +562,72 @@
 			</xsl:if>
 		</xsl:if>
 		</xsl:for-each>	
-		
+		<!-- material of cultural property (PST) -->
+		<xsl:for-each select="record/metadata/schede/*/MT/MTW">
+			<xsl:if test="./MTWP and not ((./MTWP='intero bene' or ./MTWP='integrale' or ./MTWP='tutta' or ./MTWP='totale') or (starts-with(lower-case(normalize-space(./MTWP)), 'nr')) or (starts-with(lower-case(normalize-space(./MTWP)), 'n.r')) or (starts-with(lower-case(normalize-space(./MTWP)), 'intero')) or (starts-with(lower-case(normalize-space(./MTWP)), 'intera')) or (starts-with(lower-case(normalize-space(./MTWP)), 'esemplar')))">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MTWP)))" />
+					</xsl:attribute>
+					<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./MTCP)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./MTCP)" />
+					</l0:name>
+					<arco-dd:hasTechnicalStatus>
+						<xsl:attribute name="rdf:resource">
+	            			<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MTWP)))" />
+ 	               		</xsl:attribute>
+					</arco-dd:hasTechnicalStatus>
+					<xsl:for-each select="./MTWC">
+						<arco-lite:hasMaterial>
+							<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+            				</xsl:attribute>
+						</arco-lite:hasMaterial>
+					</xsl:for-each>	
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MTWP)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Stato tecnico della parte di bene culturale ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Stato tecnico della parte di bene culturale ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Technical status of part of cultural property ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Technical status of part of cultural property ', $itemURI)" />
+					</l0:name>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+					<xsl:if test="./MTWS">
+						<arco-core:note>
+							<xsl:value-of select="./MTWS" />
+						</arco-core:note>
+					</xsl:if>
+					<xsl:for-each select="./MTWC">
+						<arco-dd:includesTechnicalCharacteristic>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+							</xsl:attribute>
+						</arco-dd:includesTechnicalCharacteristic>
+					</xsl:for-each>
+				</rdf:Description>
+			</xsl:if>
+		</xsl:for-each>
 			<!-- inventory -->
 			<xsl:for-each select="record/metadata/schede/*/UB/INV">
 				<xsl:if test="./INVP and not((starts-with(lower-case(normalize-space(./INVP)), 'non accertabile')) or (starts-with(lower-case(normalize-space(./INVP)), 'nr')) or (starts-with(lower-case(normalize-space(./INVP)), 'n.r')) or (starts-with(lower-case(normalize-space(./INVP)), 'intero')) or (starts-with(lower-case(normalize-space(./INVP)), 'intera')))">

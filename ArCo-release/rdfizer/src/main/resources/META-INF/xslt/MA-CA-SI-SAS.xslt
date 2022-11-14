@@ -3,6 +3,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:arco-core="https://w3id.org/arco/ontology/core/"
 	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
+	xmlns:arco-lite="https://w3id.org/arco/ontology/arco-lite/"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
 	xmlns:cis="http://dati.beniculturali.it/cis/"
@@ -771,26 +772,33 @@
 				<l0:name  xml:lang="it">
 					<xsl:value-of select="concat('Elemento verticale del bene culturale ', $itemURI)" />
 				</l0:name>
+				<xsl:if test="./ELEX or ./ELET or ./ELEL or ./ELER">
+					<arco-dd:hasTechnicalStatus>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'TechnicalStatus/VericalElement', $itemURI, '-', position())" />
+				        </xsl:attribute>
+					</arco-dd:hasTechnicalStatus>
+				</xsl:if>
 				<xsl:for-each select="./ELEX">
-					<arco-dd:hasMaterial>
+					<arco-lite:hasMaterial>
 	 	                <xsl:attribute name="rdf:resource">
 	            			<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 	            		</xsl:attribute>
-					</arco-dd:hasMaterial>
+					</arco-lite:hasMaterial>
 				</xsl:for-each>
 				<xsl:for-each select="./ELEL">
-					<arco-dd:hasMaterial>
+					<arco-lite:hasMaterial>
 	 	                <xsl:attribute name="rdf:resource">
 	            			<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 	            		</xsl:attribute>
-					</arco-dd:hasMaterial>
+					</arco-lite:hasMaterial>
 				</xsl:for-each>
 				<xsl:for-each select="./ELER">
-					<arco-dd:hasMaterial>
+					<arco-lite:hasMaterial>
 	 	                <xsl:attribute name="rdf:resource">
 	            			<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 	            		</xsl:attribute>
-					</arco-dd:hasMaterial>
+					</arco-lite:hasMaterial>
 				</xsl:for-each>
 				<xsl:for-each select="./ELET">
 					<arco-dd:hasTechnique>
@@ -829,6 +837,62 @@
 	            	</arco-dd:hasMeasurementCollection>
 				</xsl:if>
 			</rdf:Description>
+			<!-- Technical Status as individual -->
+			<xsl:if test="./ELEX or ./ELET or ./ELEL or ./ELER">
+				<rdf:Description>
+				 	<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'TechnicalStatus/VerticalElement', $itemURI, '-', position())" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Stato tecnico dell elemento verticale del bene culturale ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Stato tecnico dell elemento verticale del bene culturale ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Technical status of vertical element of cultural property ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Technical status of vertical element of cultural property ', $itemURI)" />
+					</l0:name>
+					<xsl:if test="./ELEX">
+						<arco-dd:includesTechnicalCharacteristic>
+							<xsl:attribute name="rdf:resource">
+		         				<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./ELEX)))" />
+							</xsl:attribute>
+						</arco-dd:includesTechnicalCharacteristic>
+					</xsl:if>
+					<xsl:if test="./ELEL">
+						<arco-dd:includesTechnicalCharacteristic>
+							<xsl:attribute name="rdf:resource">
+		         				<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./ELEL)))" />
+							</xsl:attribute>
+						</arco-dd:includesTechnicalCharacteristic>
+					</xsl:if>
+					<xsl:if test="./ELET">
+						<arco-dd:includesTechnicalCharacteristic>
+							<xsl:attribute name="rdf:resource">
+		         				<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./ELET)))" />
+							</xsl:attribute>
+						</arco-dd:includesTechnicalCharacteristic>
+					</xsl:if>
+					<xsl:if test="./ELER">
+						<arco-dd:includesTechnicalCharacteristic>
+							<xsl:attribute name="rdf:resource">
+		         				<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./ELER)))" />
+							</xsl:attribute>
+						</arco-dd:includesTechnicalCharacteristic>
+					</xsl:if>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:if>
 		</xsl:for-each>	
 		<!-- Measurement collection as individual -->
 		<xsl:for-each select="record/metadata/schede/*/DA/ELE">
@@ -989,10 +1053,6 @@
 		</xsl:for-each>
 		<!-- Horizontal Element as individual -->
 		<xsl:for-each select="record/metadata/schede/*/DA/SOL">
-			<xsl:variable name="soff" select="normalize-space(./SOF/SOFF)" />
-			<xsl:variable name="sofq" select="normalize-space(./SOF/SOFQ)" />
-			<xsl:variable name="sofg" select="normalize-space(./SOF/SOFG)" />
-			<xsl:variable name="sofp" select="normalize-space(./SOF/SOFP)" />
 			<xsl:variable name="horElem" select="arco-fn:arcofy(.)" />
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -1023,6 +1083,11 @@
 					</arco-core:hasType>	
 				</xsl:if>
 				<xsl:if test="./SOLT">
+					<arco-dd:hasTechnicalStatus>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'TechnicalStatus/HorizontalElement', $itemURI, '-', position())" />
+				        </xsl:attribute>
+					</arco-dd:hasTechnicalStatus>
 					<arco-dd:hasTechnique>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SOLT)))" />
@@ -1066,6 +1131,41 @@
 			</rdf:Description>
 		</xsl:for-each>	
 		<!-- Technique as individual -->
+		<!-- Technical Status as individual -->
+		<xsl:for-each select="record/metadata/schede/*/DA/SOL">
+			<xsl:if test="./SOLT">
+				<rdf:Description>
+				 	<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'TechnicalStatus/HorizontalElement', $itemURI, '-', position())" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Stato tecnico dell elemento orizzontale del bene culturale ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Stato tecnico dell elemento orizzontale del bene culturale ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Technical status of horizontal element of cultural property ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Technical status of horizontal element of cultural property ', $itemURI)" />
+					</l0:name>
+					<arco-dd:includesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+	         				<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SOLT)))" />
+						</xsl:attribute>
+					</arco-dd:includesTechnicalCharacteristic>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:if>
+		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/*/DA/SOL/SOLT">
 			<rdf:Description>
 	 			<xsl:attribute name="rdf:about">
