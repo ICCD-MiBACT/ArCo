@@ -156,6 +156,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/replacedBy -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/core/replacedBy"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1375,25 +1381,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasFinalist -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasFinalist">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isFinalistOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Competition"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una competizione ad un finalista.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates competition to a finalist.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha finalista</rdfs:label>
-        <rdfs:label xml:lang="en">has finalist</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/hasFindingContext -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasFindingContext">
@@ -1746,25 +1733,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasJuryMember -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasJuryMember">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isJuryMemberOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Competition"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una competizione ad un membro della giuria.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates competition to a jury member.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha membro della giuria</rdfs:label>
-        <rdfs:label xml:lang="en">has jury member</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/hasLaboratoryTestType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasLaboratoryTestType">
@@ -2030,25 +1998,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasParticipant -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasParticipant">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isParticipantOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Competition"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una competizione ad un partecipante.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates competition to a participant.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha partecipante</rdfs:label>
-        <rdfs:label xml:lang="en">has participant</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/hasPhotographicSeries -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPhotographicSeries">
@@ -2167,22 +2116,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI 4.00: DU, DV, DF</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/hasPrize -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPrize">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isPrizeOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Competition"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una competizione ad un premio.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a competition to  a prize.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha premio</rdfs:label>
-        <rdfs:label xml:lang="en">has prize</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -3113,25 +3046,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative BDM 2.00: UT/UTN/UTNC</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/hasWinner -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasWinner">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isWinnerOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Competition"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una competizione al vincitore.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates competition to the winner.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha vincitore</rdfs:label>
-        <rdfs:label xml:lang="en">has winner</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4334,24 +4248,6 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/isFinalistOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isFinalistOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Competition"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un finalista ad una competizione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a finalist to a competition .</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is finalist of</rdfs:label>
-        <rdfs:label xml:lang="it">è finalista</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/isFindingContextOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isFindingContextOf">
@@ -4684,24 +4580,6 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/isJuryMemberOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isJuryMemberOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Competition"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un membro della giuria ad una competizione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a jury member to a competition .</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is jury member</rdfs:label>
-        <rdfs:label xml:lang="it">è membro della giuria</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/isLaboratoryTestTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isLaboratoryTestTypeOf">
@@ -5017,24 +4895,6 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/isParticipantOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isParticipantOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Competition"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un partecipante ad una competizione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a participant to a competition .</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is participant of</rdfs:label>
-        <rdfs:label xml:lang="it">è partecipante</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/isPhotographicSeriesIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isPhotographicSeriesIn">
@@ -5143,21 +5003,6 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:label xml:lang="it">è documentazione primaria di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/isPrizeOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isPrizeOf">
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Competition"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un premio a una competizione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a prize to a competition.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is prize of</rdfs:label>
-        <rdfs:label xml:lang="it">è premio di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -5990,24 +5835,6 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/isWinnerOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isWinnerOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Competition"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega il vincitore ad una competizione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the winner to a competition .</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is winner of</rdfs:label>
-        <rdfs:label xml:lang="it">è vincitore</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/isWorkRelatedTo -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isWorkRelatedTo">
@@ -6148,6 +5975,18 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/hasEventOrSituationInTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasEventOrSituationInTime"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/hasLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasLocation"/>
@@ -6175,6 +6014,24 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <!-- https://w3id.org/arco/ontology/core/hasType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/involves -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/involves"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/involvesAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/involvesAgent"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isAgentInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
     
 
 
@@ -6211,6 +6068,12 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <!-- https://w3id.org/arco/ontology/core/isConceptOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isConceptOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf"/>
     
 
 
@@ -8198,6 +8061,12 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/current -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/current"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/description -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/description"/>
@@ -9470,58 +9339,6 @@ resource:ArchivalSubseries/museo-civico-romano
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/CMM</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/Competition -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Competition">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConsequence"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyPlanning"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCommission"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Commission"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasFinalist"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasJuryMember"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasParticipant"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasWinner"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una competizione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a competition.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">Competition</rdfs:label>
-        <rdfs:label xml:lang="it">Competizione</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -12828,6 +12645,18 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/EventOrSituationInTime -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Identifier -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Identifier"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Method -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Method"/>
@@ -13834,12 +13663,12 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
