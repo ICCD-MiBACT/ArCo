@@ -1025,6 +1025,23 @@ viene descritta.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/construction-description/withoutFoundation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/withoutFoundation">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;assenza di fondamenta di una costruzione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the absence of foundation of a construction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction"/>
+        <rdfs:label xml:lang="it">senza fondamenta</rdfs:label>
+        <rdfs:label xml:lang="en">without foundation</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SI, CA, MA: DA/FNS/FNSR</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
