@@ -659,7 +659,7 @@
         <rdfs:label xml:lang="en">has musical extension</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormsTag>ICCD Normativa SM 4.00: AA/AAE</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
 
 
