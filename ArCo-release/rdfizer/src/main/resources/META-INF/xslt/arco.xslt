@@ -17977,7 +17977,7 @@
 							</l0:name>
 							<arco-dd:isCharacteristicClassifiedBy>
 								<xsl:attribute name="rdf:resource">
-            						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/GarmentColour'" />
+            						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Colour'" />
             					</xsl:attribute>
 							</arco-dd:isCharacteristicClassifiedBy>
 						</rdf:Description>
@@ -18095,7 +18095,71 @@
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
-			
+			<!-- material of cultural property (PST) -->
+		<xsl:for-each select="record/metadata/schede/*/MT/MTW">
+			<xsl:if test="(not(./MTWP) or ./MTWP='intero bene' or ./MTWP='integrale' or ./MTWP='tutta' or ./MTWP='totale') or (starts-with(lower-case(normalize-space(./MTWP)), 'nr')) or (starts-with(lower-case(normalize-space(./MTWP)), 'n.r')) or (starts-with(lower-case(normalize-space(./MTWP)), 'intero')) or (starts-with(lower-case(normalize-space(./MTWP)), 'intera')) or (starts-with(lower-case(normalize-space(./MTWP)), 'esemplar'))">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Stato tecnico del bene culturale ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Stato tecnico del bene culturale ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Technical status of cultural property ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Technical status of cultural property ', $itemURI)" />
+					</l0:name>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+					<xsl:if test="./MTWS">
+						<arco-core:note>
+							<xsl:value-of select="./MTWS" />
+						</arco-core:note>
+					</xsl:if>
+					<xsl:for-each select="./MTWC">
+						<arco-dd:includesTechnicalCharacteristic>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+							</xsl:attribute>
+						</arco-dd:includesTechnicalCharacteristic>
+					</xsl:for-each>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:for-each select="./MTWC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+          				<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+		           	</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(.)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:name>
+					<arco-dd:isCharacteristicClassifiedBy>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Material'" />
+            			</xsl:attribute>
+					</arco-dd:isCharacteristicClassifiedBy>
+				</rdf:Description>
+			</xsl:for-each>
+		</xsl:for-each>
 			<!-- shape of cultural property as an individual -->
 			<xsl:if
 				test="record/metadata/schede/*/MT/FRM and not(record/metadata/schede/F/MT/FRM)">
@@ -18542,7 +18606,6 @@
             			</xsl:attribute>
 					</arco-core:hasType>
 				</rdf:Description>
-				<!-- Technical detail as an individual -->
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
             			<xsl:value-of select="concat($NS, 'StorageMedium/', arco-fn:urify(normalize-space(record/metadata/schede/F/MT/FVM)))" />

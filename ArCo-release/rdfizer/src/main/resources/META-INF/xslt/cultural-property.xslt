@@ -839,6 +839,11 @@
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/DSO)" />
 					</arco-core:note>
 				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/MT/MTS">
+					<arco-core:specifications>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/MT/MTS)" />
+					</arco-core:specifications>
+				</xsl:if>
 				<xsl:if test="record/metadata/schede/FF/OG/OGT/OGTC">
 					<arco-core:description>
 						<xsl:value-of select="normalize-space(record/metadata/schede/FF/OG/OGT/OGTC)" />
@@ -4062,6 +4067,32 @@
 								</xsl:choose>
 							</xsl:if>
 						</xsl:if>
+					</xsl:for-each>	
+					<!-- material of cultural property (PST) -->
+					<xsl:for-each select="record/metadata/schede/*/MT/MTW">
+						<xsl:choose>
+							<xsl:when test="(not(./MTWP) or ./MTWP='intero bene' or ./MTWP='integrale' or ./MTWP='tutta' or ./MTWP='totale') or (starts-with(lower-case(normalize-space(./MTWP)), 'nr')) or (starts-with(lower-case(normalize-space(./MTWP)), 'n.r')) or (starts-with(lower-case(normalize-space(./MTWP)), 'intero')) or (starts-with(lower-case(normalize-space(./MTWP)), 'intera')) or (starts-with(lower-case(normalize-space(./MTWP)), 'esemplar'))">
+								<arco-dd:hasTechnicalStatus>
+									<xsl:attribute name="rdf:resource">
+	            						<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+ 	               					</xsl:attribute>
+								</arco-dd:hasTechnicalStatus>
+								<xsl:for-each select="./MTWC">
+									<arco-lite:hasMaterial>
+										<xsl:attribute name="rdf:resource">
+            								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+            							</xsl:attribute>
+									</arco-lite:hasMaterial>
+								</xsl:for-each>	
+							</xsl:when>
+							<xsl:otherwise>
+								<arco-core:hasPart>
+									<xsl:attribute name="rdf:resource">
+			        		    		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MTWP)))" />
+			                		</xsl:attribute>
+								</arco-core:hasPart>
+							</xsl:otherwise>
+						</xsl:choose>	
 					</xsl:for-each>								
 					<!-- technique of cultural property  -->
 					<xsl:if test="not($sheetType='VeAC')" >
