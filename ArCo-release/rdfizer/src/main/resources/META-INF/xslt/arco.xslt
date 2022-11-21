@@ -13,6 +13,7 @@
 	xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
 	xmlns:arco-ce="https://w3id.org/arco/ontology/cultural-event/"
+	xmlns:arco-con="https://w3id.org/arco/ontology/construction-description/"
 	xmlns:dcterms="http://purl.org/dc/terms/creator"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
@@ -2279,7 +2280,7 @@
 					<l0:name xml:lang="en">
 						<xsl:value-of select="concat('Decorative apparatus ', position(), ' of the cultural property ', $itemURI)" />
 					</l0:name>
-					<arco-dd:hasIconographicOrDecorativeApparatusType>
+					<arco-core:hasType>
 						<xsl:choose>
 							<xsl:when test="./DECT">
 								<xsl:choose>
@@ -2297,13 +2298,25 @@
 								</xsl:attribute>
 							</xsl:otherwise>
 						</xsl:choose>
-					</arco-dd:hasIconographicOrDecorativeApparatusType>
+					</arco-core:hasType>
 					<xsl:if test="./DECM[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<arco-dd:hasTechnicalStatus>
 							<xsl:attribute name="rdf:resource">
 			               		<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI, '-decorative-', position())" />
 		 	               	</xsl:attribute>
 						</arco-dd:hasTechnicalStatus>
+						<xsl:for-each select="./DECM">
+							<arco-lite:hasMaterial>
+								<xsl:attribute name="rdf:resource">
+					              		<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+		 	    		          	</xsl:attribute>
+							</arco-lite:hasMaterial>
+						</xsl:for-each>
+					</xsl:if>
+					<xsl:if test="./DECL">
+						<arco-con:spatialLocation>
+							<xsl:value-of 	select="normalize-space(./DECL)" />
+						</arco-con:spatialLocation>
 					</xsl:if>
 				</rdf:Description>
 				<!-- decorative apparatus type -->
@@ -7815,11 +7828,11 @@
 						<xsl:value-of select="concat('Change of availability of cultural property: ', $itemURI)" />
 					</l0:name>
 					<xsl:if test="./ALNT and (not(starts-with(lower-case(normalize-space(./ALNT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ALNT)), 'n.r')))">
-						<arco-cd:hasChangeOfAvailabilityType>
+						<arco-core:hasType>
 							<xsl:attribute name="rdf:resource">
             					<xsl:value-of select="concat($NS, 'ChangeOfAvailabilityType/', arco-fn:urify(normalize-space(./ALNT)))" />
             				</xsl:attribute>
-						</arco-cd:hasChangeOfAvailabilityType>
+						</arco-core:hasType>
 					</xsl:if>
 					<xsl:if test="./ALND and (not(starts-with(lower-case(normalize-space(./ALND)), 'nr')) and not(starts-with(lower-case(normalize-space(./ALND)), 'n.r')))">
 						<tiapit:atTime>
@@ -10373,6 +10386,11 @@
 					<xsl:if test="record/metadata/schede/*/TU/CDG/CDGN">
 						<arco-core:note>
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/TU/CDG/CDGN)" />
+						</arco-core:note>
+					</xsl:if>
+					<xsl:if test="record/metadata/schede/*/TU/CDG/CDGI">
+						<arco-core:note>
+							<xsl:value-of select="concat('Indirizzo: ', normalize-space(record/metadata/schede/*/TU/CDG/CDGI))" />
 						</arco-core:note>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/*/TU/CDG/CDGG">
@@ -14290,11 +14308,6 @@
 								<xsl:value-of select="normalize-space(./LSIT)" />
 							</arco-core:description>
 						</xsl:if>
-						<xsl:if test="./LSIU and (not(starts-with(lower-case(normalize-space(./LSIU)), 'nr')) and not(starts-with(lower-case(normalize-space(./LSIU)), 'n.r')))">
-							<arco-dd:positionOnCulturalProperty>
-								<xsl:value-of select="normalize-space(./LSIU)" />
-							</arco-dd:positionOnCulturalProperty>
-						</xsl:if>
 						<xsl:if test="./LSII and (not(starts-with(lower-case(normalize-space(./LSII)), 'nr')) and not(starts-with(lower-case(normalize-space(./LSII)), 'n.r')))">
 							<arco-dd:transcript>
 								<xsl:value-of select="normalize-space(./LSII)" />
@@ -14308,11 +14321,11 @@
 							</arco-dd:hasTechnicalStatus>
 						</xsl:if>
 						<xsl:for-each select="./LSIC">
-							<arco-dd:hasTechnique>
+							<arco-lite:hasTechnique>
 								<xsl:attribute name="rdf:resource">
 	                				<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 	                		</xsl:attribute>
-							</arco-dd:hasTechnique>
+							</arco-lite:hasTechnique>
 						</xsl:for-each>
 						<xsl:for-each select="./LSIM">
 							<arco-dd:hasMaterial>
@@ -14350,7 +14363,6 @@
 							</l0:name>
 						</rdf:Description>
 					</xsl:if>
-
 					<!-- technique as an individual -->
 					<xsl:if test="./LSIC and (not(starts-with(lower-case(normalize-space(./LSIC)), 'nr')) and not(starts-with(lower-case(normalize-space(./LSIC)), 'n.r')))">
 						<xsl:if test="./LSIC">
@@ -14963,11 +14975,11 @@
 									</xsl:attribute>
 								</arco-dd:hasTechnicalStatus>
 								<xsl:for-each select="./ISRS">
-									<arco-dd:hasTechnique>
+									<arco-lite:hasTechnique>
 										<xsl:attribute name="rdf:resource">
 											<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 										</xsl:attribute>
-									</arco-dd:hasTechnique>
+									</arco-lite:hasTechnique>
 								</xsl:for-each>
 							</xsl:if>
 						</xsl:if>
@@ -17300,11 +17312,11 @@
 							</xsl:attribute>
 						</tiapit:atTime>
 					</xsl:for-each>
-					<arco-cd:hasUseType>
+					<arco-core:hasType>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/HistoricalUse'" />
 						</xsl:attribute>
-					</arco-cd:hasUseType>
+					</arco-core:hasType>
 				</rdf:Description>
 				<!-- usefunction as an individual -->
 				<xsl:for-each select="./USOD[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]"> <!-- allow multiple values eg:ICCD14295730  -->
@@ -17410,11 +17422,11 @@
 								</xsl:attribute>
 							</arco-cd:hasUseFunction>
 						</xsl:if>
-						<arco-cd:hasUseType>
+						<arco-core:hasType>
 							<xsl:attribute name="rdf:resource">
 	                		       <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CurrentUse'" />
 							</xsl:attribute>
-						</arco-cd:hasUseType>
+						</arco-core:hasType>
 					</rdf:Description>
 				</xsl:if>
 				<!-- usefunction as an individual -->
@@ -18005,7 +18017,7 @@
 							</l0:name>
 							<arco-dd:isCharacteristicClassifiedBy>
 								<xsl:attribute name="rdf:resource">
-            						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/GarmentAnalysis'" />
+            						<xsl:value-of select="'https://w3id.org/arco/ontology/clothing-description/GarmentAnalysis'" />
             					</xsl:attribute>
 							</arco-dd:isCharacteristicClassifiedBy>
 						</rdf:Description>
