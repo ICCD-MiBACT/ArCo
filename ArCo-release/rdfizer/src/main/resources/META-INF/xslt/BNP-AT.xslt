@@ -1939,6 +1939,26 @@
                		</xsl:attribute>
 				</arco-cd:hasAgeInterpretation>
 			</xsl:if>
+			<xsl:if test="record/metadata/schede/AT/PR/PRR">
+				<arco-core:note>
+               		<xsl:value-of select="concat('Apposizione oggetti rituali a contatto: ', normalize-space(record/metadata/schede/AT/PR/PRR))" />
+				</arco-core:note>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/AT/PR/PRP">
+				<arco-core:note>
+               		<xsl:value-of select="concat('Trattamenti parti esterne: ', normalize-space(record/metadata/schede/AT/PR/PRP))" />
+				</arco-core:note>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/AT/PR/PRA">
+				<arco-core:note>
+               		<xsl:value-of select="concat('Trattamenti anomali: ', normalize-space(record/metadata/schede/AT/PR/PRA))" />
+				</arco-core:note>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/AT/PR/PRT">
+				<arco-core:note>
+               		<xsl:value-of select="concat('Trattamenti cosmetici: ', normalize-space(record/metadata/schede/AT/PR/PRT))" />
+				</arco-core:note>
+			</xsl:if>
 			<!-- numberOfElements -->
 			<xsl:if test="record/metadata/schede/AT/DA/NIA/NIAN">
 				<arco-arco:numberOfElements>
@@ -1949,21 +1969,6 @@
 				<arco-core:specifications>
                		<xsl:value-of select="normalize-space(record/metadata/schede/AT/DA/NIA/NIAC)" />
 				</arco-core:specifications>
-			</xsl:if>
-			<xsl:if test="record/metadata/schede/AT/PR/PRP">
-				<arco-core:note>
-               		<xsl:value-of select="normalize-space(record/metadata/schede/AT/PR/PRP)" />
-				</arco-core:note>
-			</xsl:if>
-			<xsl:if test="record/metadata/schede/AT/PR/PRA">
-				<arco-core:note>
-               		<xsl:value-of select="normalize-space(record/metadata/schede/AT/PR/PRA)" />
-				</arco-core:note>
-			</xsl:if>
-			<xsl:if test="record/metadata/schede/AT/PR/PRT">
-				<arco-core:note>
-               		<xsl:value-of select="normalize-space(record/metadata/schede/AT/PR/PRT)" />
-				</arco-core:note>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/AT/DA/SRM/SRMT and starts-with(lower-case(normalize-space(record/metadata/schede/AT/DA/SRM/SRMT)), 'naturale')">
 				<rdf:type>
@@ -1983,7 +1988,7 @@
 			<xsl:for-each select="record/metadata/schede/AT/PR/PRO">
 				<arco-cd:hasAssociatedObject>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Object/', arco-fn:urify(normalize-space(./PROD)))" />
+						<xsl:value-of select="concat($NS, 'Object/', $itemURI, arco-fn:urify(normalize-space(./PROD)))" />
 					</xsl:attribute>
 				</arco-cd:hasAssociatedObject>				
 			</xsl:for-each>	
@@ -1996,11 +2001,11 @@
 								<xsl:value-of select="concat($NS, 'Intervention/', $itemURI, '-handling-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasIntervention>
-						<arco-dd:hasPosition>
+						<arco-dd:hasArrangement>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Position/', arco-fn:urify(normalize-space(./PRMP)))" />
+								<xsl:value-of select="concat($NS, 'Arrangement/', arco-fn:urify(normalize-space(./PRMP)))" />
 							</xsl:attribute>
-						</arco-dd:hasPosition>
+						</arco-dd:hasArrangement>
 					</xsl:when>
 					<xsl:otherwise>
 						<arco-core:hasPart>
@@ -2049,7 +2054,7 @@
 				</xsl:choose>
 			</xsl:for-each>
 			<!-- part -->
-			<xsl:for-each select="record/metadata/schede/AT/VM/VMC/VMCE">
+			<xsl:for-each select="record/metadata/schede/AT/VM/VMC">
 				<arco-core:hasPart>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./VMCE)))" />
@@ -2548,7 +2553,7 @@
 		<xsl:for-each select="record/metadata/schede/AT/PR/PRO">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'Object/', arco-fn:urify(normalize-space(./PROD)))" />
+					<xsl:value-of select="concat($NS, 'Object/', $itemURI, arco-fn:urify(normalize-space(./PROD)))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -2626,13 +2631,13 @@
 						<xsl:value-of select="'manipolazione'" />
 					</l0:name>
 			</rdf:Description>
-			<!-- Position as an individual -->
+			<!-- Arrangement as an individual -->
 			<xsl:if test="./PRMP">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Position/', arco-fn:urify(normalize-space(./PRMP)))" />
+						<xsl:value-of select="concat($NS, 'Arrangement/', arco-fn:urify(normalize-space(./PRMP)))" />
 					</xsl:attribute>
-					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Position" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Arrangement" />
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(./PRMP)" />
 					</rdfs:label>
@@ -2748,11 +2753,11 @@
 					</arco-dd:hasMeasurementCollection>
 				</xsl:if>
 				<xsl:if test="./PRFM">
-					<arco-dd:hasPosition>
+					<arco-dd:hasArrangement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Position/', arco-fn:urify(normalize-space(./PRFM)))" />
+							<xsl:value-of select="concat($NS, 'Arrangement/', arco-fn:urify(normalize-space(./PRFM)))" />
 						</xsl:attribute>
-					</arco-dd:hasPosition>
+					</arco-dd:hasArrangement>
 				</xsl:if>
 				<xsl:if test="./PRFT">
 					<arco-core:hasType>
@@ -2912,13 +2917,13 @@
 					</rdf:Description>	
 				</xsl:if>
 			</xsl:if>
-			<!-- Position as an individual -->
+			<!-- Arrangement as an individual -->
 			<xsl:if test="./PRFM">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Position/', arco-fn:urify(normalize-space(./PRFM)))" />
+						<xsl:value-of select="concat($NS, 'Arrangement/', arco-fn:urify(normalize-space(./PRFM)))" />
 					</xsl:attribute>
-					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Position" />
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Arrangement" />
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(./PRFM)" />
 					</rdfs:label>
@@ -2991,7 +2996,28 @@
 				</xsl:choose>
 			</rdf:Description>
 		</xsl:for-each>
-		<xsl:for-each select="record/metadata/schede/AT/VM/VMC/VMCE">
+		<xsl:for-each select="record/metadata/schede/AT/PR/PRF">
+			<xsl:if test="./PRFP and not(./PRFP='intero bene' or ./PRFP='integrale' or ./PRFP='tutta' or ./PRFP='totale' or ./PRFP='carattere generale' or (starts-with(lower-case(normalize-space(./PRFP)), 'nr')) or (starts-with(lower-case(normalize-space(./PRFP)), 'n.r')) or (starts-with(lower-case(normalize-space(./PRFP)), 'intero')) or (starts-with(lower-case(normalize-space(./PRFP)), 'intera')) or (starts-with(lower-case(normalize-space(./PRFP)), 'esemplar')))">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./PRFP)))" />
+				</xsl:attribute>
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(./PRFP)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(./PRFP)" />
+				</l0:name>
+				<arco-dd:hasBandage>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Bandage/', $itemURI, '-', position())" />
+					</xsl:attribute>
+				</arco-dd:hasBandage>
+			</rdf:Description>
+		</xsl:if>
+		</xsl:for-each>
+		<xsl:for-each select="record/metadata/schede/AT/VM/VMC">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
 					<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./VMCE)))" />
@@ -3054,9 +3080,9 @@
 					<l0:name xml:lang="it">
 						<xsl:value-of select="concat('Misura della parte di bene culturale ', normalize-space(./VMCE), ': ',  normalize-space(./VMCV))" />
 					</l0:name>
-					<arco-dd:hasMeasurementType>
+					<arco-core:hasType>
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', arco-fn:uncamelize(arco-fn:map-measure(lower-case(./VMCT))))" />
-					</arco-dd:hasMeasurementType>
+					</arco-core:hasType>
 					<arco-dd:hasValue>
 						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(./VMCV))" />
 					</arco-dd:hasValue>

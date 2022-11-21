@@ -1311,16 +1311,19 @@
 					<xsl:variable name="dbl"><!-- allow multiple values ? ICCD11389099 ICCD13074440 -->
 						<xsl:value-of select="string-join(record/metadata/schede/*/DB/DBL[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))],', ')"/>
 					</xsl:variable>
+					<xsl:variable name="dbc"><!-- allow multiple values ? ICCD11389099 ICCD13074440 -->
+						<xsl:value-of select="string-join(record/metadata/schede/*/DB/DBC[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))],', ')"/>
+					</xsl:variable>
+					<xsl:variable name="dbd"><!-- allow multiple values ? ICCD11389099 ICCD13074440 -->
+						<xsl:value-of select="string-join(record/metadata/schede/*/DB/DBD[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))],', ')"/>
+					</xsl:variable>
 					<xsl:variable name="tmp-label">
 						<xsl:choose>
 							<xsl:when test="record/metadata/schede/*/DB/DBC">
-								<xsl:variable name="dbc"><!-- allow multiple values ? ICCD11389099 ICCD13074440 -->
-									<xsl:value-of select="string-join(record/metadata/schede/*/DB/DBC[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))],', ')"/>
-								</xsl:variable>
-								<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DB/DBD), ' - ', $dbl, ' (', normalize-space($dbc), ')')" />
+								<xsl:value-of select="concat($dbd, ' - ', $dbl, ' (', $dbc, ')')" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DB/DBD), ' - ', $dbl)" />
+								<xsl:value-of select="concat($dbd, ' - ', $dbl)" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:variable>
