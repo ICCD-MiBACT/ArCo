@@ -731,8 +731,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
         <rdfs:label xml:lang="en">is soil occupied by</rdfs:label>
         <rdfs:label xml:lang="it">è terreno di appoggio di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isSoilOccupiedBy"/>
     </owl:ObjectProperty>
     
 
@@ -815,8 +817,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
         <rdfs:label xml:lang="it">ha terreno di appoggio</rdfs:label>
         <rdfs:label xml:lang="en">lays on soil</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/laysOnSoil"/>
     </owl:ObjectProperty>
     
 
@@ -1571,6 +1575,12 @@ viene descritta.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/Facade">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/overlooking"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
