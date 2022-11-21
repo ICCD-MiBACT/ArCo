@@ -5352,14 +5352,6 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Filigree -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Filigree">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/FrontTotalLength -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/FrontTotalLength">
@@ -6297,27 +6289,6 @@ resource:MeasurementCollection/1200865132-1
     </rdf:Description>
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/Filigree">
-        <rdfs:comment xml:lang="it">Questo individuo rappresenta la filigrana di un&apos;opera d&apos;arte, un disegno, una fotografia, una stampa.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <rdfs:label xml:lang="it">Filigrana</rdfs:label>
-        <a-cat:iccdNormTag>ICCD Normative OA, D, F, S: MT/FIL</a-cat:iccdNormTag>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <a-cat:iccdNormTag>MT/FIL</a-cat:iccdNormTag>
-        <rdfs:comment xml:lang="en">This individual represents the filigree of an artwork, painting, photography, print.</rdfs:comment>
-        <rdfs:label xml:lang="en">Filigree</rdfs:label>
     </rdf:Description>
     
 

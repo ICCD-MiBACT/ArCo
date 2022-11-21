@@ -664,12 +664,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasBibliography -->
+    <!-- https://w3id.org/arco/ontology/context-description/hasBibliographicSource -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBibliography">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographyOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBibliographicSource">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua bibliografia. Per esempio, nell&apos;ambito del Catalogo Generale, collega un bene culturale alla bibliografia che riguarda il bene stesso, descritto in una scheda di catalogo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity to its bibliography.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -678,6 +678,14 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB; RE/RCG/RCGS</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasBibliography -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBibliography">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -928,6 +936,17 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasComparisonBibliographicSource -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasComparisonBibliographicSource">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isComparisonBibliographicSourceOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasConstructionCompany -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasConstructionCompany">
@@ -942,6 +961,17 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has construction company</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasContextBibliographicSource -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasContextBibliographicSource">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isContextBibliographicSourceOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
     </owl:ObjectProperty>
     
 
@@ -2606,6 +2636,17 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasSpecificBibliographicSource -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSpecificBibliographicSource">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSpecificBibliographicSourceOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasStorageMedium -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasStorageMedium">
@@ -3561,10 +3602,10 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/isBibliographyOf -->
+    <!-- https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isBibliographyOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una bibliografia all&apos;entità alla quale si riferisce.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a bibliography to the entity which is referred to.</rdfs:comment>
@@ -3574,6 +3615,14 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB; RE/RCG/RCGS</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isBibliographyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isBibliographyOf">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -3812,6 +3861,16 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isComparisonBibliographicSourceOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isComparisonBibliographicSourceOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isConstructionCompanyOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isConstructionCompanyOf">
@@ -3825,6 +3884,16 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:label xml:lang="it">è ditta costruttrice di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isContextBibliographicSourceOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isContextBibliographicSourceOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:ObjectProperty>
     
 
@@ -5464,6 +5533,16 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isSpecificBibliographicSourceOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isSpecificBibliographicSourceOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:ObjectProperty>
     
 
@@ -8969,13 +9048,90 @@ resource:ArchivalSubseries/museo-civico-romano
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/BibliographicEntry -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BibliographicEntry">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasEdition"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BibliographyCategory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BibliographyType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/completeBibliographicReference"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/abbreviation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/bibliographyICCDIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/specifications"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/SM/URL"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un riferimento bibliografico che riguarda un&apos;entità, per esempio un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the bibliography of an entity, e.g. a cultural property.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bibliographic entry</rdfs:label>
+        <rdfs:label xml:lang="it">Record bibliografico</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DO/BIB; RE/RCG/RCGS - Normative VeAC e AT 3.01: DO/BIB; DO/BSE.</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/BibliographicWork -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BibliographicWork">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Bibliography -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Bibliography">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographyOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -9032,6 +9188,7 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">Bibliografia</rdfs:label>
         <rdfs:label xml:lang="en">Bibliography</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DO/BIB; RE/RCG/RCGS - Normative VeAC e AT 3.01: DO/BIB; DO/BSE.</a-cat:iccdNormTag>
@@ -9065,6 +9222,7 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Bibliography type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di bibliografia</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale DO/BIB/BIBF - Normative VeAC e AT 3.01: DO/BSE/BSES.</a-cat:iccdNormTag>
@@ -9113,6 +9271,43 @@ resource:ArchivalSubseries/museo-civico-romano
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Certification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Certification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CertificationType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una certificazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents certification.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Certification</rdfs:label>
+        <rdfs:label xml:lang="it">Certificazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: CD/CTF</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/CertificationType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CertificationType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di certificazione di un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of certification of a cultural property .</rdfs:comment>
+        <rdfs:label xml:lang="en">Certification type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di certificazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale BNM: DO/CTF/CTFT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -13669,16 +13864,16 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 
