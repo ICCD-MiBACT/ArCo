@@ -179,11 +179,20 @@
 			<xsl:for-each select="record/metadata/schede/*/DA/FNS">
 				<xsl:choose>	
 					<xsl:when test="not(./FNSP) or ./FNSP='intero bene' or ./FNSP='integrale' or ./FNSP='tutta' or ./FNSP='totale' or ./FNSP='carattere generale' or (starts-with(lower-case(normalize-space(./FNSP)), 'nr')) or (starts-with(lower-case(normalize-space(./FNSP)), 'n.r')) or (starts-with(lower-case(normalize-space(./FNSP)), 'intero')) or (starts-with(lower-case(normalize-space(./FNSP)), 'intera')) or (starts-with(lower-case(normalize-space(./FNSP)), 'esemplar'))">
-						<arco-con:hasFoundation>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Foundation/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
-						</xsl:attribute>
-						</arco-con:hasFoundation>
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/A/FN/FNS/FNSR='fnp' or record/metadata/schede/A/FN/FNS/FNSR='FNP' or record/metadata/schede/A/FN/FNS/FNSR='f.n.p.' or record/metadata/schede/A/FN/FNS/FNSR='F.N.P.' ">
+								<arco-con:withoutFoundation>
+									<xsl:value-of select="true()" />
+								</arco-con:withoutFoundation>
+							</xsl:when>
+							<xsl:otherwise>
+								<arco-con:hasConstructionElement>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Foundation/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
+									</xsl:attribute>
+								</arco-con:hasConstructionElement>
+							</xsl:otherwise>
+						</xsl:choose>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:for-each select="./FNSP">
