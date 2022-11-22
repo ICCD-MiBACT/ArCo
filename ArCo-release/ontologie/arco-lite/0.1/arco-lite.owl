@@ -1473,6 +1473,25 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasProponentAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasProponentAgent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isProponentAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ProtectiveMeasure"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un provvedimento di tutela al&apos;agente proponente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a protective measure to its proponent agent.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha agente proponente</rdfs:label>
+        <rdfs:label xml:lang="en">has proponent agent</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasRadioactivity -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasRadioactivity">
@@ -3607,6 +3626,23 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/isProponentAgentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isProponentAgentOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ProtectiveMeasure"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;agente proponente con il suo provvedimento di tutela.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the proponent agent to its proposed protective measure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is proponent agent of</rdfs:label>
+        <rdfs:label xml:lang="it">è agente proponente di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/isRadioactivityOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isRadioactivityOf">
@@ -4529,6 +4565,56 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/bibliographicReference -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/bibliographicReference">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una voce della sua bibliografia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its bibliographic reference.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">bibliographic reference</rdfs:label>
+        <rdfs:label xml:lang="it">riferimento bibliografico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/comparisonBibliographicReference -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/comparisonBibliographicReference">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/bibliographicReference"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una voce della sua bibliografia di confronto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its comparison bibliographic reference.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">comparison bibliographic reference</rdfs:label>
+        <rdfs:label xml:lang="it">riferimento bibliografico di confronto</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/contextBibliographicReference -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/contextBibliographicReference">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/bibliographicReference"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una voce della sua bibliografia di contesto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its context bibliographic reference.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">context bibliographic reference</rdfs:label>
+        <rdfs:label xml:lang="it">riferimento bibliografico di contesto</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/culturalPropertyValue -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/culturalPropertyValue">
@@ -4788,6 +4874,23 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="it">denominazione gergale</rdfs:label>
         <rdfs:label xml:lang="en">slang designation</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/specificBibliographicReference -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/specificBibliographicReference">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/bibliographicReference"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una voce della sua bibliografia specifica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its specific bibliographic reference.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">riferimento bibliografico specifico</rdfs:label>
+        <rdfs:label xml:lang="en">specific bibliographic reference</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
