@@ -1098,8 +1098,12 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Facade"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa propiretà indica l&apos;affaccio della facciata dell&apos;edificio che si sta descrivendo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a facade with the view it overlooks.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
         <rdfs:label xml:lang="it">affaccio</rdfs:label>
         <rdfs:label xml:lang="en">overlooking</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
