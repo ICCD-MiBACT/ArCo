@@ -359,18 +359,13 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasArrangement">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isArrangementOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Bandage"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Arrangement"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una fasciatura alla sua disposizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a bandage to its arrangement, disposition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/hasAssociatedObject -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasAssociatedObject">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isAssociatedObjectOf"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha disposizione</rdfs:label>
+        <rdfs:label xml:lang="en">has arrangement</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1676,7 +1671,13 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/denotative-description/isArrangementOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isArrangementOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Arrangement"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Bandage"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la disposizione di una fasciatura alla fasciatura stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a bandage arrangement to the bandage itself.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is arrangement of</rdfs:label>
+        <rdfs:label xml:lang="it">è disposizione di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2979,6 +2980,24 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/associatedObject -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/associatedObject">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con il proprio oggetto associato. Es. nell&apos;antropologia fisica: un bene connesso ad eventuali oggetti posti a contatto con il corpo durante la sua preparazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its object associated with. 
+i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha oggetto associato</rdfs:label>
+        <rdfs:label xml:lang="en">has associated object</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT 3.01: PR/PRR</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/creationDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/creationDate">
@@ -3013,6 +3032,22 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/graphicSymbols -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/graphicSymbols">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità ai suoi simboli grafici. Es: un bene demoetnoatropologico con i simboli grafici coinvolti.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its graphic symbols. i.e. a demoethnoanthropological cultural property to its symbols.</rdfs:comment>
+        <rdfs:label xml:lang="en">graphic symbols</rdfs:label>
+        <rdfs:label xml:lang="it">simboli grafici</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BDI 3.01: CU/CUR/CURS</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3600,12 +3635,6 @@ resource:Inscription/1200865151-inscription-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasAssociatedObject"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasConservationStatus"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
             </owl:Restriction>
@@ -3614,6 +3643,12 @@ resource:Inscription/1200865151-inscription-1
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/associatedObject"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rapresenta le fasciature usate nei beni di antropogia fisica.</rdfs:comment>
