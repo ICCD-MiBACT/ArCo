@@ -1340,47 +1340,46 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if test="not(lower-case(normalize-space(./ISRY))='intero bene') and not(lower-case(normalize-space(./ISRY))='integrale') and not(lower-case(normalize-space(./ISRY))='tutta') and not(lower-case(normalize-space(./ISRY))='totale') and (not(starts-with(lower-case(normalize-space(./ISRY)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISRY)), 'n.r')) and not(starts-with(lower-case(normalize-space(./ISRY)), 'intero')) and not(starts-with(lower-case(normalize-space(./ISRY)), 'intera')) and not(starts-with(lower-case(normalize-space(./ISRY)), 'esemplar')))">
-					<xsl:for-each select="./ISRY">
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
-						 	</xsl:attribute>
-							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
-							<arco-dd:hasAffixedElement>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'Inscription/', $itemURI, '-inscription-', position())" />
-								</xsl:attribute>
-							</arco-dd:hasAffixedElement>
-							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
-							</rdfs:label>
-							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
-							</l0:name>
-						</rdf:Description>
-					</xsl:for-each>
-				</xsl:if>
-				<xsl:if test="not(lower-case(normalize-space(./ISRP))='intero bene') and not(lower-case(normalize-space(./ISRP))='integrale') and not(lower-case(normalize-space(./ISRP))='tutta') and not(lower-case(normalize-space(./ISRP))='totale') and (not(starts-with(lower-case(normalize-space(./ISRP)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISRP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./ISRP)), 'intero')) and not(starts-with(lower-case(normalize-space(./ISRP)), 'intera')) and not(starts-with(lower-case(normalize-space(./ISRP)), 'esemplar')))">
-					<xsl:for-each select="./ISRP">
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
-						 	</xsl:attribute>
-							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
-							<arco-dd:hasAffixedElement>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'Inscription/', $itemURI, '-inscription-', position())" />
-								</xsl:attribute>
-							</arco-dd:hasAffixedElement>
-							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
-							</rdfs:label>
-							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
-							</l0:name>
-						</rdf:Description>
-					</xsl:for-each>
+				<xsl:if test="./ISRY and not(lower-case(normalize-space(./ISRY))='intero bene') and not(lower-case(normalize-space(./ISRY))='integrale') and not(lower-case(normalize-space(./ISRY))='tutta') and not(lower-case(normalize-space(./ISRY))='totale') and (not(starts-with(lower-case(normalize-space(./ISRY)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISRY)), 'n.r')) and not(starts-with(lower-case(normalize-space(./ISRY)), 'intero')) and not(starts-with(lower-case(normalize-space(./ISRY)), 'intera')) and not(starts-with(lower-case(normalize-space(./ISRY)), 'esemplar')))">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+					 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./ISRY)))" />
+					 	</xsl:attribute>
+						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+						<arco-dd:hasAffixedElement>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Inscription/', $itemURI, '-inscription-', position())" />
+							</xsl:attribute>
+						</arco-dd:hasAffixedElement>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./ISRY)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./ISRY)" />
+						</l0:name>
+					</rdf:Description>
+				</xsl:if>			
+			</xsl:for-each>
+			<!-- part of cultural property when there is ISRY (4.00, affixed elements) -->
+			<xsl:for-each select="record/metadata/schede/*/DA/MNC">
+				<xsl:if test="./MNCP and not(lower-case(normalize-space(./MNCP))='intero bene') and not(lower-case(normalize-space(./MNCP))='integrale') and not(lower-case(normalize-space(./MNCP))='tutta') and not(lower-case(normalize-space(./MNCP))='totale') and (not(starts-with(lower-case(normalize-space(./MNCP)), 'nr')) and not(starts-with(lower-case(normalize-space(./MNCP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./MNCP)), 'intero')) and not(starts-with(lower-case(normalize-space(./MNCP)), 'intera')) and not(starts-with(lower-case(normalize-space(./MNCP)), 'esemplar')))">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MNCP)))" />
+							</xsl:attribute>
+						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+						<arco-dd:hasAffixedElement>
+						<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'QuarryOrMasonryMark/', $itemURI, position())" />
+							</xsl:attribute>
+						</arco-dd:hasAffixedElement>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./MNCP)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./MNCP)" />
+						</l0:name>
+					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
 			<!-- part of cultural property when there is ISER (4.00, affixed elements) -->
@@ -1415,27 +1414,6 @@
 				</xsl:variable>
 				<xsl:if test="not(lower-case(normalize-space(./STMY))='intero bene') and not(lower-case(normalize-space(./STMY))='integrale') and not(lower-case(normalize-space(./STMY))='tutta') and not(lower-case(normalize-space(./STMY))='totale') and (not(starts-with(lower-case(normalize-space(./STMY)), 'nr')) and not(starts-with(lower-case(normalize-space(./STMY)), 'n.r')) and not(starts-with(lower-case(normalize-space(./STMY)), 'intero')) and not(starts-with(lower-case(normalize-space(./STMY)), 'intera')) and not(starts-with(lower-case(normalize-space(./STMY)), 'esemplar')))">
 					<xsl:for-each select="./STMY">
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
-						 	</xsl:attribute>
-							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
-							<arco-dd:hasAffixedElement>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="$element" />
-								</xsl:attribute>
-							</arco-dd:hasAffixedElement>
-							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
-							</rdfs:label>
-							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
-							</l0:name>
-						</rdf:Description>
-					</xsl:for-each>
-				</xsl:if>
-				<xsl:if test="not(lower-case(normalize-space(./STMP))='intero bene') and not(lower-case(normalize-space(./STMP))='integrale') and not(lower-case(normalize-space(./STMP))='tutta') and not(lower-case(normalize-space(./STMP))='totale') and (not(starts-with(lower-case(normalize-space(./STMP)), 'nr')) and not(starts-with(lower-case(normalize-space(./STMP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./STMP)), 'intero')) and not(starts-with(lower-case(normalize-space(./STMP)), 'intera')) and not(starts-with(lower-case(normalize-space(./STMP)), 'esemplar')))">
-					<xsl:for-each select="./STMP">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />

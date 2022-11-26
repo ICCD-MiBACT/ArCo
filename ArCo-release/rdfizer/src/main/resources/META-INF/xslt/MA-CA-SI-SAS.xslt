@@ -374,7 +374,7 @@
 						</xsl:choose>
 					</arco-location:geographicalDescription>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/CA/USD">
+				<xsl:if test="record/metadata/schede/*/CA/USD or record/metadata/schede/*/CA/GEL or record/metadata/schede/*/CA/PED  or record/metadata/schede/*/CA/GEO">
 					<arco-location:hasSoil>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'Soil/', $itemURI)" />
@@ -430,7 +430,7 @@
 			</xsl:if>
 		</xsl:if>	
 		<!-- Soil as individual -->
-		<xsl:if test="record/metadata/schede/*/CA/USD">
+		<xsl:if test="record/metadata/schede/*/CA/USD or record/metadata/schede/*/CA/GEL or record/metadata/schede/*/CA/PED  or record/metadata/schede/*/CA/GEO">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about"> 			
 	 				<xsl:value-of select="concat($NS, 'Soil/', $itemURI)" />
@@ -452,9 +452,11 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Suolo del bene culturale: ', $itemURI)" />
 				</l0:name>
-				<arco-core:description>
-					<xsl:value-of select="record/metadata/schede/*/CA/USD/USDT" />
-				</arco-core:description>
+				<xsl:if test="record/metadata/schede/*/CA/USD/USDT">
+					<arco-core:description>
+						<xsl:value-of select="record/metadata/schede/*/CA/USD/USDT" />
+					</arco-core:description>
+				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/CA/USD/USDC">
 					<arco-location:hasMap>
 						<xsl:attribute name="rdf:resource">
