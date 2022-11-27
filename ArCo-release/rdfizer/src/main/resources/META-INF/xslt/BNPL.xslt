@@ -229,18 +229,18 @@
 			</arco-spe:hasIdentificationInTime>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/BNPL/SP/SPE">
-			<arco-spe:hasLabel>
+			<arco-dd:hasAffixedElement>
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'Label/', $itemURI, '-', position())" />
 				</xsl:attribute>
-			</arco-spe:hasLabel>			
+			</arco-dd:hasAffixedElement>		
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/BNPL/RP/RPE">
-			<arco-spe:hasLabel>
+			<arco-dd:hasAffixedElement>
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'Label/', $itemURI, '-revised-label-', position())" />
 				</xsl:attribute>
-			</arco-spe:hasLabel>			
+			</arco-dd:hasAffixedElement>			
 		</xsl:for-each>			
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPT and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNPL/SP/SPT/SPTT)), 'non tipo'))">
 			<arco-spe:hasTypification>
@@ -868,7 +868,7 @@
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-	            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Label'" />
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/AffixedElement'" />
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
@@ -883,6 +883,11 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of	select="concat('Label ', position(), ' of cultural property ', $itemURI)" />
 			</l0:name>
+			<arco-core:hasType>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Label'" />
+	            </xsl:attribute>
+			</arco-core:hasType>
 			<xsl:if test="./SPET">
 				<arco-spe:bodyTranscript>
 					<xsl:value-of select="normalize-space(./SPET)" />
@@ -905,7 +910,7 @@
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-	            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Label'" />
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/AffixedElement'" />
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
@@ -920,6 +925,11 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of	select="concat('Revised label ', position(), ' of cultural property ', $itemURI)" />
 			</l0:name>
+			<arco-core:hasType>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Label'" />
+	            </xsl:attribute>
+			</arco-core:hasType>
 			<xsl:if test="./RPET">
 				<arco-spe:bodyTranscript>
 					<xsl:value-of select="normalize-space(./RPET)" />
@@ -3847,11 +3857,14 @@
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPT/SPTB">	
-				<arco-cd:hasBibliography>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-type-specimen-bibliography')" />
-				</xsl:attribute>
-				</arco-cd:hasBibliography>
+				<arco-cd:hasBibliographicSource>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPT/SPTB)))" />
+	                </xsl:attribute>
+				</arco-cd:hasBibliographicSource>
+				<arco-lite:bibliographicReference>
+					<xsl:value-of select="normalize-space(record/metadata/schede/BNPL/SP/SPT/SPTB)" />
+				</arco-lite:bibliographicReference>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPT/SPTT">	
 				<arco-spe:hasTypeOfTypeSpecimen>
@@ -3878,28 +3891,22 @@
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPT/SPTB">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-type-specimen-bibliography')" />
-	        	</xsl:attribute>
+            		<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPT/SPTB)))" />
+            	</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-        	       		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Bibliography'" />
-            	   	</xsl:attribute>
+            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            		</xsl:attribute>
 				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('Bibliografia relativa al tipo nomenclaturale del bene ', $itemURI)" />
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/BNPL/SP/SPT/SPTB)" />
 				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('Bibliografia relativa al tipo nomenclaturale del bene ', $itemURI)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Bibliography about type specimen of cultural property ', $itemURI)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Bibliography about type specimen of cultural property ', $itemURI)" />
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/BNPL/SP/SPT/SPTB)" />
 				</l0:name>
 				<arco-cd:completeBibliographicReference>
-					<xsl:value-of select="record/metadata/schede/BNPL/SP/SPT/SPTB" />
-				</arco-cd:completeBibliographicReference>			
+					<xsl:value-of select="normalize-space(record/metadata/schede/BNPL/SP/SPT/SPTB)" />
+				</arco-cd:completeBibliographicReference>
 			</rdf:Description>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPT/SPTT">
@@ -3966,11 +3973,14 @@
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<xsl:if test="./RPT/RPTB">	
-				<arco-cd:hasBibliography>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-type-specimen-bibliography-', position())" />
-				</xsl:attribute>
-				</arco-cd:hasBibliography>
+				<arco-cd:hasBibliographicSource>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./RPT/RPTB)))" />
+	               	</xsl:attribute>
+				</arco-cd:hasBibliographicSource>
+				<arco-lite:bibliographicReference>
+					<xsl:value-of select="normalize-space(./RPT/RPTB)" />
+				</arco-lite:bibliographicReference>
 			</xsl:if>
 			<xsl:if test="./RPT/RPTT">	
 				<arco-spe:hasTypeOfTypeSpecimen>
@@ -4006,28 +4016,22 @@
 		<xsl:if test="./RPT/RPTB">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-type-specimen-bibliography-', position())" />
-	        	</xsl:attribute>
+            		<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./RPT/RPTB)))" />
+            	</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-        	       		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Bibliography'" />
-            	   	</xsl:attribute>
+            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            		</xsl:attribute>
 				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('Bibliografia relativa al tipo nomenclaturale del bene ', $itemURI)" />
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(./RPT/RPTB)" />
 				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('Bibliografia relativa al tipo nomenclaturale del bene ', $itemURI)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Bibliography about type specimen of cultural property ', $itemURI)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Bibliography about type specimen of cultural property ', $itemURI)" />
+				<l0:name>
+					<xsl:value-of select="normalize-space(./RPT/RPTB)" />
 				</l0:name>
 				<arco-cd:completeBibliographicReference>
-					<xsl:value-of select="./RPT/RPTB" />
-				</arco-cd:completeBibliographicReference>			
+					<xsl:value-of select="normalize-space(./RPT/RPTB)" />
+				</arco-cd:completeBibliographicReference>
 			</rdf:Description>
 		</xsl:if>
 		<xsl:if test="./RPT/RPTT">

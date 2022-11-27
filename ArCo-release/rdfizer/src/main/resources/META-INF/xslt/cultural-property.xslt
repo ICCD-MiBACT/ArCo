@@ -2888,11 +2888,107 @@
 				</xsl:for-each>
 				<!-- Bibliography of cultural property -->
 				<xsl:for-each select="record/metadata/schede/*/DO/BIB">
-					<arco-cd:hasBibliography>
+					<xsl:variable name="edition">
+						<xsl:choose>
+							<xsl:when test="./NCUN">
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./NCUN)))" />
+							</xsl:when>
+							<xsl:when test="./NUCN">
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./NUCN)))" />
+							</xsl:when>
+							<xsl:when test="./BIBK">
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBK)))" />
+							</xsl:when>
+							<xsl:when test="./BIBM">
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBM)))" />
+							</xsl:when>
+							<xsl:when test="./BIBH">
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBH)), 'local')" />
+							</xsl:when>
+							<xsl:when test="./BIBA and ./BIBD">
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:arcofy(normalize-space(./BIBA)), arco-fn:arcofy(normalize-space(./BIBD)))" />
+							</xsl:when>
+	                	</xsl:choose>
+					</xsl:variable>
+					<arco-cd:hasBibliographicSource>
 						<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-bibliography-', position())" />
+							<xsl:value-of select="$edition" />
 	                	</xsl:attribute>
-					</arco-cd:hasBibliography>
+					</arco-cd:hasBibliographicSource>
+					<xsl:choose>
+						<xsl:when test="./BIBM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+							<arco-lite:bibliographicReference>
+								<xsl:value-of select="normalize-space()" />
+							</arco-lite:bibliographicReference>      
+						</xsl:when>
+						<xsl:when test="./BIL[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+							<arco-lite:bibliographicReference>
+								<xsl:value-of select="normalize-space()" />
+							</arco-lite:bibliographicReference>      
+						</xsl:when>
+						<xsl:when test="./BIBA and ./BIBD">
+							<arco-lite:bibliographicReference>
+								<xsl:value-of select="concat(normalize-space(./BIBA), ' - ', normalize-space(./BIBD))" />
+							</arco-lite:bibliographicReference>
+						</xsl:when>
+					</xsl:choose>
+					<xsl:if test="contains(normalize-space(lower-case(./BIBX)), 'specifica')">
+						<arco-cd:hasSpecificBibliographicSource>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="$edition" />
+	        	        	</xsl:attribute>
+						</arco-cd:hasSpecificBibliographicSource>
+						<xsl:choose>
+							<xsl:when test="./BIBM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+								<arco-lite:specificBibliographicReference>
+									<xsl:value-of select="normalize-space()" />
+								</arco-lite:specificBibliographicReference>      
+							</xsl:when>
+							<xsl:when test="./BIBA and ./BIBD">
+								<arco-lite:specificBibliographicReference>
+									<xsl:value-of select="concat(normalize-space(./BIBA), ' - ', normalize-space(./BIBD))" />
+								</arco-lite:specificBibliographicReference>
+							</xsl:when>
+						</xsl:choose>
+					</xsl:if>
+					<xsl:if test="contains(normalize-space(lower-case(./BIBX)), 'corredo') or contains(normalize-space(lower-case(./BIBX)), 'contesto')">
+						<arco-cd:hasContextBibliographicSource>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="$edition" />
+	        	        	</xsl:attribute>
+						</arco-cd:hasContextBibliographicSource>
+						<xsl:choose>
+							<xsl:when test="./BIBM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+								<arco-lite:contextBibliographicReference>
+									<xsl:value-of select="normalize-space()" />
+								</arco-lite:contextBibliographicReference>      
+							</xsl:when>
+							<xsl:when test="./BIBA and ./BIBD">
+								<arco-lite:contextBibliographicReference>
+									<xsl:value-of select="concat(normalize-space(./BIBA), ' - ', normalize-space(./BIBD))" />
+								</arco-lite:contextBibliographicReference>
+							</xsl:when>
+						</xsl:choose>
+					</xsl:if>
+					<xsl:if test="contains(normalize-space(lower-case(./BIBX)), 'confront')">
+						<arco-cd:hasComparisonBibliographicSource>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="$edition" />
+	        	        	</xsl:attribute>
+						</arco-cd:hasComparisonBibliographicSource>
+						<xsl:choose>
+							<xsl:when test="./BIBM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+								<arco-lite:comparisonBibliographicReference>
+									<xsl:value-of select="normalize-space()" />
+								</arco-lite:comparisonBibliographicReference>     
+							</xsl:when>
+							<xsl:when test="./BIBA and ./BIBD">
+								<arco-lite:comparisonBibliographicReference>
+									<xsl:value-of select="concat(normalize-space(./BIBA), ' - ', normalize-space(./BIBD))" />
+								</arco-lite:comparisonBibliographicReference>
+							</xsl:when>
+						</xsl:choose>
+					</xsl:if>
 				</xsl:for-each>
 				<!-- Geometry of cultural property -->
 				<xsl:if test="record/metadata/schede/*/GP/*/*">
@@ -3311,7 +3407,7 @@
 				<xsl:for-each select="record/metadata/schede/NU/DA/CON">
 					<arco-dd:hasAffixedElement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Counterstamp/', $itemURI, '-counterstamp-', position())" />
+							<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-counterstamp-', position())" />
 						</xsl:attribute>
 					</arco-dd:hasAffixedElement>
 				</xsl:for-each>
@@ -3696,7 +3792,7 @@
 					<xsl:for-each select="record/metadata/schede/*/AU/DDC">
 						<arco-dd:hasAffixedElement>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Dedication/', $itemURI, '-dedication-', position())" />
+								<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-dedication-', position())" />
 							</xsl:attribute>
 						</arco-dd:hasAffixedElement>
 					</xsl:for-each>
@@ -3708,7 +3804,7 @@
 							<xsl:when test="./* and (not(./ISRY) or ./ISRY='intero bene' or ./ISRY='integrale' or ./ISRY='tutta' or ./ISRY='totale' or (starts-with(lower-case(normalize-space(./ISRY)), 'nr')) or (starts-with(lower-case(normalize-space(./ISRY)), 'n.r')) or (starts-with(lower-case(normalize-space(./ISRY)), 'intero')) or (starts-with(lower-case(normalize-space(./ISRY)), 'intera')) or (starts-with(lower-case(normalize-space(./ISRY)), 'esemplar')))">
 								<arco-dd:hasAffixedElement>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Inscription/', $itemURI, '-inscription-', position())" />
+										<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-inscription-', position())" />
 									</xsl:attribute>
 								</arco-dd:hasAffixedElement>
 							</xsl:when>
@@ -3731,7 +3827,7 @@
 							<xsl:when test="./* and (not(./MNCP) or ./MNCP='intero bene' or ./MNCP='integrale' or ./MNCP='tutta' or ./MNCP='totale' or (starts-with(lower-case(normalize-space(./MNCP)), 'nr')) or (starts-with(lower-case(normalize-space(./MNCP)), 'n.r')) or (starts-with(lower-case(normalize-space(./MNCP)), 'intero')) or (starts-with(lower-case(normalize-space(./MNCP)), 'intera')) or (starts-with(lower-case(normalize-space(./MNCP)), 'esemplar'))) and (not(./ISRP) or ./ISRP='intero bene' or ./ISRP='integrale' or ./ISRP='tutta' or ./ISRP='totale' or (starts-with(lower-case(normalize-space(./ISRP)), 'nr')) or (starts-with(lower-case(normalize-space(./ISRP)), 'n.r')) or (starts-with(lower-case(normalize-space(./ISRP)), 'intero')) or (starts-with(lower-case(normalize-space(./ISRP)), 'intera')) or (starts-with(lower-case(normalize-space(./ISRP)), 'esemplar')))">
 								<arco-dd:hasAffixedElement>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'QuarryOrMasonryMark/', $itemURI, position())" />
+										<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-quarry-or-masonry-mark-', position())" />
 									</xsl:attribute>
 								</arco-dd:hasAffixedElement>
 							</xsl:when>
@@ -3751,38 +3847,7 @@
 						<xsl:choose>
 							<xsl:when test="./* and (not(./STMY) or ./STMY='intero bene' or ./STMY='integrale' or ./STMY='tutta' or ./STMY='totale' or (starts-with(lower-case(normalize-space(./STMY)), 'nr')) or (starts-with(lower-case(normalize-space(./STMY)), 'n.r')) or (starts-with(lower-case(normalize-space(./STMY)), 'intero')) or (starts-with(lower-case(normalize-space(./STMY)), 'intera')) or (starts-with(lower-case(normalize-space(./STMY)), 'esemplar')))">
 								<arco-dd:hasAffixedElement>
-									<xsl:choose>
-										<xsl:when test="lower-case(normalize-space(./STMC))='timbro'">
-											<xsl:attribute name="rdf:resource">
-												<xsl:value-of select="concat($NS, 'Stamp/', $itemURI, '-affixed-element-', position())" />
-											</xsl:attribute>
-										</xsl:when>
-										<xsl:when test="lower-case(normalize-space(./STMC))='stemma'">
-											<xsl:attribute name="rdf:resource">
-												<xsl:value-of select="concat($NS, 'CoatOfArms/', $itemURI, '-affixed-element-', position())" />
-											</xsl:attribute>
-										</xsl:when>
-										<xsl:when test="lower-case(normalize-space(./STMC))='emblema'">
-											<xsl:attribute name="rdf:resource">
-												<xsl:value-of select="concat($NS, 'Emblem/', $itemURI, '-affixed-element-', position())" />
-											</xsl:attribute>
-										</xsl:when>
-										<xsl:when test="lower-case(normalize-space(./STMC))='marchio'">
-											<xsl:attribute name="rdf:resource">
-												<xsl:value-of select="concat($NS, 'Brand/', $itemURI, '-affixed-element-', position())" />
-											</xsl:attribute>
-										</xsl:when>
-										<xsl:when test="lower-case(normalize-space(./STMC))='logo'">
-											<xsl:attribute name="rdf:resource">
-												<xsl:value-of select="concat($NS, 'Logo/', $itemURI, '-affixed-element-', position())" />
-											</xsl:attribute>
-										</xsl:when>
-										<xsl:otherwise>
-											<xsl:attribute name="rdf:resource">
-												<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
-											</xsl:attribute>
-										</xsl:otherwise>
-									</xsl:choose>
+									<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
 								</arco-dd:hasAffixedElement>
 							</xsl:when>
 							<xsl:otherwise>
@@ -3802,43 +3867,7 @@
 						<xsl:choose>	
 						<xsl:when test="not(./LSIU) or ./LSIU='intero bene' or ./LSIU='integrale' or ./LSIU='tutta' or ./LSIU='totale' or ./LSIU='carattere generale' or (starts-with(lower-case(normalize-space(./LSIU)), 'nr')) or (starts-with(lower-case(normalize-space(./LSIU)), 'n.r')) or (starts-with(lower-case(normalize-space(./LSIU)), 'intero')) or (starts-with(lower-case(normalize-space(./LSIU)), 'intera')) or (starts-with(lower-case(normalize-space(./LSIU)), 'esemplar'))">
 						<arco-dd:hasAffixedElement>
-							<xsl:choose>
-								<xsl:when test="lower-case(normalize-space(./LSIG))='timbro'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Stamp/', $itemURI, '-affixed-element-', position())" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./LSIG))='stemma'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'CoatOfArms/', $itemURI, '-affixed-element-', position())" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./LSIG))='emblema'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Emblem/', $itemURI, '-affixed-element-', position())" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./LSIG))='marchio'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Brand/', $itemURI, '-affixed-element-', position())" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./LSIG))='logo'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Logo/', $itemURI, '-affixed-element-', position())" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./LSIG))='lapide'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'HistoricalPlaque/', $itemURI, '-affixed-element-', position())" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
-									</xsl:attribute>
-								</xsl:otherwise>
-							</xsl:choose>
+							<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
 						</arco-dd:hasAffixedElement>
 					</xsl:when>
 					<xsl:otherwise>
@@ -3855,43 +3884,7 @@
 					<xsl:choose>
 						<xsl:when test="./* and (not(./ISER) or ./ISER='intero bene' or ./ISER='integrale' or ./ISER='tutta' or ./ISER='totale') or (starts-with(lower-case(normalize-space(./ISER)), 'nr')) or (starts-with(lower-case(normalize-space(./ISER)), 'n.r')) or (starts-with(lower-case(normalize-space(./ISER)), 'intero')) or (starts-with(lower-case(normalize-space(./ISER)), 'intera')) or (starts-with(lower-case(normalize-space(./ISER)), 'esemplar'))">
 							<arco-dd:hasAffixedElement>
-								<xsl:choose>
-									<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'Stamp/', $itemURI, '-affixed-element-', position())" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='stemma'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'CoatOfArms/', $itemURI, '-affixed-element-', position())" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='emblema'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'Emblem/', $itemURI, '-affixed-element-', position())" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='marchio'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'Brand/', $itemURI, '-affixed-element-', position())" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='logo'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'Logo/', $itemURI, '-affixed-element-', position())" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='iscrizione'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'Inscription/', $itemURI, '-affixed-element-', position())" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
-										</xsl:attribute>
-									</xsl:otherwise>
-								</xsl:choose>
+								<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
 							</arco-dd:hasAffixedElement>
 						</xsl:when>
 						<xsl:otherwise>

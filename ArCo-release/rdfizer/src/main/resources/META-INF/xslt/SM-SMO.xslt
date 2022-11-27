@@ -456,11 +456,14 @@
 			        </xsl:attribute>
 	   			</arco-lite:hasAuthor>
 	   			<xsl:if test="./CLAR">
-					<arco-cd:hasBibliography>
+					<arco-cd:hasBibliographicSource>
 						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'Bibliography/', arco-fn:arcofy(./CLAR))" />
-            			</xsl:attribute>
-					</arco-cd:hasBibliography>
+							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./CLAR)))" />
+	    	            </xsl:attribute>
+					</arco-cd:hasBibliographicSource>
+					<arco-lite:bibliographicReference>
+						<xsl:value-of select="normalize-space(./CLAR)" />
+					</arco-lite:bibliographicReference>
 				</xsl:if>
 	   		</rdf:Description>
 	   		<!-- agent as an indiviual -->
@@ -488,29 +491,23 @@
 			<xsl:if test="./CLAR">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-		            	<xsl:value-of select="concat($NS, 'Bibliography/', arco-fn:arcofy(./CLAR))" />
-	    	        </xsl:attribute>
+            			<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./CLAR)))" />
+        	    	</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Bibliography'" />
-	                	</xsl:attribute>
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            			</xsl:attribute>
 					</rdf:type>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Bibliografia relativa al sistema di classificazione ', normalize-space(./CLAA))" />
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./CLAR)" />
 					</rdfs:label>
-					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Bibliografia relativa al sistema di classificazione ', normalize-space(./CLAA))" />
-					</l0:name>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Bibliography about the classification system ', normalize-space(./CLAA))" />
-					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Bibliography about the classification system ', normalize-space(./CLAA))" />
+					<l0:name>
+						<xsl:value-of select="normalize-space(./CLAR)" />
 					</l0:name>
 					<arco-cd:completeBibliographicReference>
 						<xsl:value-of select="normalize-space(./CLAR)" />
 					</arco-cd:completeBibliographicReference>
-			</rdf:Description>
+				</rdf:Description>
 			</xsl:if>
 		</xsl:for-each>
 		<!-- Cultural entity technical status -->

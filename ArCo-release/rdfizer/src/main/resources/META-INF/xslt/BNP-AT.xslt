@@ -271,11 +271,11 @@
 			</arco-core:hasClassificationInTime>
 		</xsl:for-each> 
 		<xsl:for-each select="record/metadata/schede/BNP/SP/SPE">
-			<arco-spe:hasLabel>
+			<arco-dd:hasAffixedElement>
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'Label/', $itemURI, '-', position())" />
 				</xsl:attribute>
-			</arco-spe:hasLabel>			
+			</arco-dd:hasAffixedElement>			
 		</xsl:for-each>
 		<!-- hostRock -->
 		<xsl:if test="record/metadata/schede/BNP/ET/ETA/ETAO">
@@ -839,7 +839,7 @@
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-	            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Label'" />
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/AffixedElement'" />
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
@@ -854,6 +854,11 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of	select="concat('Label ', position(), ' of cultural property ', $itemURI)" />
 			</l0:name>
+			<arco-core:hasType>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Label'" />
+	            </xsl:attribute>
+			</arco-core:hasType>
 			<xsl:if test="./SPET">
 				<arco-spe:bodyTranscript>
 					<xsl:value-of select="normalize-space(./SPET)" />
@@ -1156,11 +1161,11 @@
 			</arco-core:hasClassificationInTime>
 		</xsl:for-each> 
 		<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZE">
-			<arco-spe:hasLabel>
+			<arco-dd:hasAffixedElement>
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'Label/', $itemURI, '-', position())" />
 				</xsl:attribute>
-			</arco-spe:hasLabel>			
+			</arco-dd:hasAffixedElement>			
 		</xsl:for-each>
 		<!-- sex interpretation -->
 		<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZAS">
@@ -1640,7 +1645,7 @@
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-	            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Label'" />
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/AffixedElement'" />
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
@@ -1655,6 +1660,11 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of	select="concat('Label ', position(), ' of cultural property ', $itemURI)" />
 			</l0:name>
+			<arco-core:hasType>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Label'" />
+	            </xsl:attribute>
+			</arco-core:hasType>
 			<xsl:if test="./SZET">
 				<arco-spe:bodyTranscript>
 					<xsl:value-of select="normalize-space(./SZET)" />
@@ -3157,11 +3167,14 @@
 					</arco-cd:hasSurveyMethod>
 				</xsl:if>
 				<xsl:if test="./PTCZ">
-					<arco-cd:hasBibliography>
+					<arco-cd:hasBibliographicSource>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-paleopathology-survey-', position())" />
-						</xsl:attribute>
-					</arco-cd:hasBibliography>
+							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./PTCZ)))" />
+	                	</xsl:attribute>
+					</arco-cd:hasBibliographicSource>
+					<arco-lite:bibliographicReference>
+						<xsl:value-of select="normalize-space(./PTCZ)" />
+					</arco-lite:bibliographicReference>
 				</xsl:if>
 				<xsl:if test="./PTCD">
 					<arco-spe:diagnosis>
@@ -3197,30 +3210,24 @@
 			<!-- bibliography as an individual -->
 			<xsl:if test="./PTCZ">
 				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-bibliography-paleopathology-survey-', position())" />
-	        		</xsl:attribute>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-        	       			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Bibliography'" />
-	            	   	</xsl:attribute>
-					</rdf:type>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Bibliografia relativa all indagine di paleopatologia del bene ', $itemURI)" />
-					</rdfs:label>
-					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Bibliografia relativa all indagine di paleopatologia del bene ', $itemURI)" />
-					</l0:name>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Bibliography about the paleopathology survey of cultural property ', $itemURI)" />
-					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Bibliography about the opaleopathology survey of cultural property ', $itemURI)" />
-					</l0:name>
-					<arco-cd:completeBibliographicReference>
-						<xsl:value-of select="./PTCZ" />
-					</arco-cd:completeBibliographicReference>			
-				</rdf:Description>
+				<xsl:attribute name="rdf:about">
+            		<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./PTCZ)))" />
+            	</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            		</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(./PTCZ)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(./PTCZ)" />
+				</l0:name>
+				<arco-cd:completeBibliographicReference>
+					<xsl:value-of select="normalize-space(./PTCZ)" />
+				</arco-cd:completeBibliographicReference>
+			</rdf:Description>
 			</xsl:if>
 		</xsl:for-each>
 		<!-- survey -->
@@ -3254,11 +3261,14 @@
 					</arco-core:hasType>
 				</xsl:if>
 				<xsl:if test="./INIZ">
-					<arco-cd:hasBibliography>
+					<arco-cd:hasBibliographicSource>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-survey-', position())" />
-						</xsl:attribute>
-					</arco-cd:hasBibliography>
+							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./INIZ)))" />
+	                	</xsl:attribute>
+					</arco-cd:hasBibliographicSource>
+					<arco-lite:bibliographicReference>
+						<xsl:value-of select="normalize-space(./INIZ)" />
+					</arco-lite:bibliographicReference>
 				</xsl:if>
 				<xsl:if test="./INID">
 					<tiapit:atTime>
@@ -3473,28 +3483,22 @@
 			<xsl:if test="./INIZ">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-bibliography-paleopathology-survey-', position())" />
-	        		</xsl:attribute>
+    	        		<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./INIZ)))" />
+        	    	</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-        	       			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Bibliography'" />
-	            	   	</xsl:attribute>
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+	            		</xsl:attribute>
 					</rdf:type>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Bibliografia relativa all indagine di paleopatologia del bene ', $itemURI)" />
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./INIZ)" />
 					</rdfs:label>
-					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Bibliografia relativa all indagine di paleopatologia del bene ', $itemURI)" />
-					</l0:name>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Bibliography about the paleopathology survey of cultural property ', $itemURI)" />
-					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Bibliography about the opaleopathology survey of cultural property ', $itemURI)" />
+					<l0:name>
+						<xsl:value-of select="normalize-space(./INIZ)" />
 					</l0:name>
 					<arco-cd:completeBibliographicReference>
-						<xsl:value-of select="./INIZ" />
-					</arco-cd:completeBibliographicReference>			
+						<xsl:value-of select="normalize-space(./INIZ)" />
+					</arco-cd:completeBibliographicReference>
 				</rdf:Description>
 			</xsl:if>
 		</xsl:for-each>
