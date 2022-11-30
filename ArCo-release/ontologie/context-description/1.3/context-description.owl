@@ -21,7 +21,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
      xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:a-lite="https://w3id.org/arco/ontology/arco-lite/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/context-description">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/context-description/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
@@ -936,18 +937,18 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasComparisonBibliographicSource -->
+    <!-- https://w3id.org/arco/ontology/context-description/hasComparativeBibliographicSource -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasComparisonBibliographicSource">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasComparativeBibliographicSource">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isComparisonBibliographicSourceOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;edizione dell&apos;opera parte della bibliografia di confronto.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity with the edition of the involved conparison bibliographic work.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with the edition of the involved comparative bibliographic work.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha fonte bibliografica di confronto</rdfs:label>
-        <rdfs:label xml:lang="en">has comparison bibliographic entry</rdfs:label>
+        <rdfs:label xml:lang="en">has comparative bibliographic entry</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB/BIBX</a-cat:iccdNormTag>
@@ -1539,8 +1540,8 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isFunctionalPurposeOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto (es bene culturale, apparato iconografico/decorativo o elemento apposto su un bene culturale come un&apos;iscrizione) alla sua funzione di uso (decorativo, religioso, simbolico, magico-offensivo, etc.), inteso come funzione che deve svolgere.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property realtes an object (e.g. cultural entity, iconographic/decorative apparatus, affixed element like an inscription) to its functional purpose, intended as the function the object has to perform (decorative, religious, symbolic, magic-offensive etc.).</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità (es bene culturale, design, apparato iconografico/decorativo o elemento apposto su un bene culturale come un&apos;iscrizione) alla sua funzione di uso (decorativo, religioso, simbolico, magico-offensivo, etc.), inteso come funzione che deve svolgere.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property realtes an entity (e.g. cultural entity, design, iconographic/decorative apparatus, affixed element like an inscription) to its functional purpose, intended as the function the object has to perform (decorative, religious, symbolic, magic-offensive etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha scopo funzionale</rdfs:label>
         <rdfs:label xml:lang="en">has functional purpose</rdfs:label>
@@ -1776,7 +1777,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUES - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTA</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasIssuingState"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasIssuer"/>
     </owl:ObjectProperty>
     
 
@@ -2259,16 +2260,17 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasReferenceCatalogue">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isReferenceCatalogueOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Copy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ReferenceCatalogue"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la copia della stampa con il suo repertorio.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a print&apos;s copy to its reference catalogue.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al suo repertorio (es: la copia della stampa con il suo repertorio).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its reference catalogue (i.e. a print&apos;s copy to its reference catalogue.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha repertorio</rdfs:label>
         <rdfs:label xml:lang="en">has reference catalogue</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa S 3: RO/COP/COPR</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa S 3: RO/COP/COPR
+ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -3894,9 +3896,9 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;edizione dell&apos;opera parte della bibliografia di confronto con l&apos;entità di cui è bibliografia.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the edition of the work part of the comparison bibliography to the involved entity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the edition of the work part of the comparative bibliography to the involved entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is comparison bibliographic source of</rdfs:label>
+        <rdfs:label xml:lang="en">is comparative bibliographic source of</rdfs:label>
         <rdfs:label xml:lang="it">è fonte bibliografica di confronto di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -4686,7 +4688,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isIssuingStateOf"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isIssuerOf"/>
     </owl:ObjectProperty>
     
 
@@ -5205,7 +5207,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isReferenceCatalogueOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ReferenceCatalogue"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Copy"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha repertorio di riferimento&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has reference catalogue&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -6322,7 +6324,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <!-- https://w3id.org/arco/ontology/context-description/abbreviation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/abbreviation">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/BibliographicEntry"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;abbreviazione che identifica il riferimento bibliografico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the abbreviation that identifies the bibliographic reference.</rdfs:comment>
@@ -6809,6 +6811,8 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">bibliography ICCD identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice univoco ICCD della bibliografia</rdfs:label>
+        <owl:deprecated rdf:resource="https://w3id.org/arco/ontology/arco-lite/ICCDIdentifier"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB/BIBK</a-cat:iccdNormTag>
@@ -6828,9 +6832,11 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">bibliography local identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice identificativo locale della bibliografia</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB/BIBH</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/localIdentifier"/>
     </owl:DatatypeProperty>
     
 
@@ -6950,7 +6956,7 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/completeBibliographicReference">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il riferimento bibliografico completo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the complete bibliographic reference.</rdfs:comment>
@@ -8812,6 +8818,7 @@ resource:AgentRole/1200865053-1-transferor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Archival fonds</rdfs:label>
         <rdfs:label xml:lang="it">Fondo archivistico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF/UBFP</a-cat:iccdNormTag>
@@ -8831,7 +8838,7 @@ resource:AgentRole/1200865053-1-transferor
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/archivalRecordIdentifier"/>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -8860,6 +8867,12 @@ resource:AgentRole/1200865053-1-transferor
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isCollectionIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -8873,23 +8886,10 @@ resource:AgentRole/1200865053-1-transferor
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/archivalRecordSetIdentifier"/>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <opla:isNativeTo rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
-        <dc:description xml:lang="en">An example of usage of on of the subclasses of the class &apos;Archival Record Set&apos; is the following:
-resource:ArchivalSubseries/museo-civico-romano
-        a           cd:ArchivalSubseries ;
-        rdfs:label  &quot;Museo Civico Romano&quot; ;
-        cd:isArchivalRecordSetIn resource:ArchivalRecordSetMembership/1201251092 ;
-        core:isComponentOf resource:ArchivalSeries/brescia .</dc:description>
-        <dc:description xml:lang="it">Un esempio d&apos;uso di una delle sottoclassi di &apos;Unità archivistica complessa&apos; è il seguente:
-resource:ArchivalSubseries/museo-civico-romano
-        a           cd:ArchivalSubseries ;
-        rdfs:label  &quot;Museo Civico Romano&quot; ;
-        cd:isArchivalRecordSetIn resource:ArchivalRecordSetMembership/1201251092 ;
-        core:isComponentOf resource:ArchivalSeries/brescia .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;unità archivistica complessa (fondo, serie, sottoserie, etc.) di cui un bene culturale può fare parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an archival record set (fonds, series, subseries) of which a cultural property can be member.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -8966,6 +8966,7 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Archival series</rdfs:label>
         <rdfs:label xml:lang="it">Serie archivistica</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF/UBFS</a-cat:iccdNormTag>
@@ -8994,6 +8995,7 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Archival subseries</rdfs:label>
         <rdfs:label xml:lang="it">Sottoserie archivistica</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF/UBFT</a-cat:iccdNormTag>
@@ -9011,6 +9013,7 @@ resource:ArchivalSubseries/museo-civico-romano
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalSubseries"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <a-cat:iccdNormTag>Normativa F: UB/UBF/UBFU</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -9093,76 +9096,6 @@ resource:ArchivalSubseries/museo-civico-romano
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: AU/AAT; AU/ATB; AU/AUT. ICCD Normative F e FF: PD/PDF</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/BibliographicEntry -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BibliographicEntry">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasEdition"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BibliographyCategory"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BibliographyType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/completeBibliographicReference"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/abbreviation"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/bibliographyICCDIdentifier"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/specifications"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/SM/URL"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un riferimento bibliografico che riguarda un&apos;entità, per esempio un bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the bibliography of an entity, e.g. a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">Bibliographic entry</rdfs:label>
-        <rdfs:label xml:lang="it">Record bibliografico</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DO/BIB; RE/RCG/RCGS - Normative VeAC e AT 3.01: DO/BIB; DO/BSE.</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -9286,9 +9219,14 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Bibliography category</rdfs:label>
         <rdfs:label xml:lang="it">Genere della bibliografia</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative OA-OAC-MI-D-S-RA-TMA-CA-MA-SAS-SI 3.00: DO/BIB/BIBX - Normative VeAC e AT 3.01: DO/BSE/BSEX.</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasComparisonBibliographicSource"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasContextBibliographicSource"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasSpecificBibliographicSource"/>
     </owl:Class>
     
 
@@ -9505,26 +9443,8 @@ resource:ArchivalSubseries/museo-civico-romano
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasIssuer"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasIssuingState"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasMint"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasMinter"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;emissione di una moneta, intesa come un evento collocato nel tempo, cui partecipano diversi agenti con diversi ruoli (Stato emittente, Zecca, Monetiere, etc.)</rdfs:comment>
@@ -11333,6 +11253,7 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">Fondo fotografico</rdfs:label>
         <rdfs:label xml:lang="en">Photographic fonds</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD F:UB/UBF/UBFP </a-cat:iccdNormTag>
@@ -11344,7 +11265,31 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicRecordSet">
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un unità archivistisca fotografica complessa.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isCollectionIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasComponent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicRecordSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/RecordSetType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un unità archivistica fotografica complessa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the photographic record set.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Photographic record set</rdfs:label>
@@ -11386,6 +11331,7 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Photographic series</rdfs:label>
         <rdfs:label xml:lang="it">Serie fotografica</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: PD/SFI</a-cat:iccdNormTag>
@@ -11444,6 +11390,7 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Photographic subseries</rdfs:label>
         <rdfs:label xml:lang="it">Sottoserie fotografica</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/SSI</a-cat:iccdNormTag>
@@ -11678,6 +11625,24 @@ resource:PreparatoryOrFinalWork/0500212038-disegno
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/RecordSetType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/RecordSetType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment>ICCD Normativa FF: PA/PAC/PACT 
+ICCD Normativa F: UB/UBF/UBFU-UBFT-UBFS-UBFF-UBFP, 
+PA/SSI, PA/SFI</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di unità archivistica complessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of record set.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label>Record set type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di unità archivistica complessa</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unsable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Recording -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Recording">
@@ -11737,17 +11702,18 @@ resource:PreparatoryOrFinalWork/0500212038-disegno
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isReferenceCatalogueOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Copy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il repertorio che cita la copia di una stampa.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the reference catalogue that cites the copy of a print.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il repertorio che cita un&apos;entità, es: la copia di una stampa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the reference catalogue that cites another entity, e.g. the copy of a print.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Reference catalogue</rdfs:label>
         <rdfs:label xml:lang="it">Repertorio</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa S 3: RO/COP/COPR</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa S 3: RO/COP/COPR
+ICCD Normativa 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -13143,6 +13109,7 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
         <rdfs:comment xml:lang="en">This individual represents the definition relative to the genre of bibliography.</rdfs:comment>
         <rdfs:label xml:lang="en">Accompanying bibliography</rdfs:label>
         <rdfs:label xml:lang="it">Bibliografia di corredo</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -13303,6 +13270,7 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
         <rdfs:comment xml:lang="en">This individual represents the definition relative to the kind of bibliography used for comparisons.</rdfs:comment>
         <rdfs:label xml:lang="it">Bibliografia di confronto</rdfs:label>
         <rdfs:label xml:lang="en">Comparative bibliography</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -13853,6 +13821,7 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
         <rdfs:comment xml:lang="en">This individual represents the definition related to the kind of bibliography that specifically concerns the subject under examination.</rdfs:comment>
         <rdfs:label xml:lang="it">Bibliografia specifica</rdfs:label>
         <rdfs:label xml:lang="en">Specific bibliography</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -13945,14 +13914,14 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
