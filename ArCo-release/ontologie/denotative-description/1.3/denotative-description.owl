@@ -620,7 +620,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasDedicatee">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isDedicateeOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Dedication"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una dedica al dedicatario, cioè alla persona o ente cui è rivolta la dedica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a dedication to its dedicaatee, which is the person or institution to whom the dedication is addressed.</rdfs:comment>
@@ -1921,7 +1920,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDedicateeOf">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Dedication"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha dedicatario&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has dedicatee&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -3469,8 +3467,8 @@ i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3513,6 +3511,18 @@ i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasWritingSystem"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/WritingSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/refersToAgent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3680,22 +3690,6 @@ resource:Inscription/1200865151-inscription-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Brand -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Brand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un marchio, ovvero un segno, figura, simbolo impresso o applicato su qualcosa a scopo di distinzione e riconoscimento.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a brand, that is a sign, an image, a symbol affixed on an object for identification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Brand</rdfs:label>
-        <rdfs:label xml:lang="it">Marchio</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;marchio&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;marchio&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;marchio&apos;</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/ClimateSituation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ClimateSituation">
@@ -3720,54 +3714,6 @@ resource:Inscription/1200865151-inscription-1
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/CoatOfArms -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CoatOfArms">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno stemma, ovvero un insieme di figure e simboli che, in araldica, vengono rappresentati secondo determinate regole per contrassegnare persone o enti.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Coat of arms</rdfs:label>
-        <rdfs:label xml:lang="it">Stemma</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;stemma&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;stemma&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;stemma&apos;</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/CoinDesign -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CoinDesign">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/denotative-description/CoinLegend"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la raffigurazione presente sul dritto o sul rovescio di un bene numismatico, intesa come l&apos;insieme degli elementi grafici, che, uniti a una legenda (lettere e parole), fa parte dell&apos;impronta della moneta.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the design on the reverse or the obverse of a numismatic property, as the graphical part of what is represented on a side of a coin, together with the legend (lettering and wording).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Coin design</rdfs:label>
-        <rdfs:label xml:lang="it">Raffigurazione su moneta</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa NU 4.00: DA/DES/DESA; DA/DES/DESM</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/CoinLegend -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CoinLegend">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Inscription"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme di lettere e parole presenti sul dritto o sul rovescio di un bene numismatico, che, unito alla raffigurazione, fa parte dell&apos;impronta della moneta.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the lettering and wording on the reverse or the obverse of a numismatic property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Coin legend</rdfs:label>
-        <rdfs:label xml:lang="it">Legenda della moneta</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa NU 4.00: DA/DES/DELS; DA/DES/DESN; DA/DES/DEL; DA/DES/DESF; DA/DES/DESG; DA/DES/DESR; DA/DES/DEST.</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3939,28 +3885,6 @@ resource:ConservationStatus/0900750201-conservation-status-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>CO/STC/STCC</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/Counterstamp -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Counterstamp">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCoinIssuance"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una contromarca, ovvero una lettera o un altro segno punzonato su una moneta. Una contromarca viene apposta tramite un apposito punzone. La maggior parte delle monete vengono contromarcate per cambiarne il valore in seguito a una riforma monetaria. La contromarca è quindi un segno apposto dall&apos;autorità emittente nel dritto o nel rovescio della moneta in epoca posteriore alla sua emissione, per aumentarne o diminuirne il valore e, in caso di necessità, per rimettere in circolazione monete già ritirate.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represent a counterstamp (or countermark), that is a partial or complete over-stamping of a coin, generally affixed in order to change its value or issuing authority.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Contromarca</rdfs:label>
-        <rdfs:label xml:lang="en">Counterstamp</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa NU 4.00: DA/CON</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4161,33 +4085,6 @@ resource:TechnicalCharacteristic/pietra-scultura
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Dedication -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Dedication">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Inscription"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCircumstance"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/InterpretationCriterion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una dedica, intesa come iscrizione dell&apos;autore (dedicante) su un bene culturale contenente un testo che ha lo scopo di offrire l&apos;oggetto a una persona o un ente (dedicatario).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Dedica</rdfs:label>
-        <rdfs:label xml:lang="en">Dedication</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa MI 3.00: AU/DDC</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/DesignationInTime -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/DesignationInTime">
@@ -4252,21 +4149,6 @@ resource:TechnicalCharacteristic/pietra-scultura
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Emblem -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Emblem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un emblema, ovvero una figura o un&apos;immagine simbolica, talvolta accompagnata da un testo scritto (motto, testo in versi, ecc.)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Emblem</rdfs:label>
-        <rdfs:label xml:lang="it">Emblema</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;emblema&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;emblema&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;emblema&apos;</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/Filigree -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Filigree">
@@ -4327,21 +4209,6 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF - Normative MA e CA: OG/OGT/OGTF</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/HistoricalPlaque -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/HistoricalPlaque">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una lapide, intesa come una lastra di pietra o marmo recante iscrizioni, figure, simboli, a scopo commemorativo, celebrativo, ecc.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Historical Plaque</rdfs:label>
-        <rdfs:label xml:lang="it">Lapide</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa A: LI/LSI/LSIG = &apos;lapide&apos;</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4429,21 +4296,6 @@ resource:TechnicalCharacteristic/pietra-scultura
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Inscription -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Inscription">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;iscrizione, ovvero qualsiasi scritta o segno grafico volontario, realizzati con qualsiasi tecnica (incisione, pittura, stampa, ecc.)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Inscription</rdfs:label>
-        <rdfs:label xml:lang="it">Iscrizione</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;iscrizione&apos; - ICCD versioni precedenti: DA/ISR - ICCD Normativa A: LI/LSI/LSIG = &apos;iscrizione&apos;</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/Legibility -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Legibility">
@@ -4462,22 +4314,6 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa NU: CO/STC/STCL</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/Logo -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Logo">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un logo, ovvero, in ambito commerciale e pubblicitario, scritta e/o simbolo grafico che identifica un prodotto,
-un&apos;azienda, ecc.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Logo</rdfs:label>
-        <rdfs:label xml:lang="it">Logo</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;logo&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;logo&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;logo&apos;</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4712,6 +4548,45 @@ resource:MeasurementCollection/1200865132-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/Sample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Sample">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSampleCollectedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/positionOnCulturalProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un campione di un&apos;entità culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a sample of a cultural entity.</rdfs:comment>
+        <rdfs:label xml:lang="it">Campione</rdfs:label>
+        <rdfs:label xml:lang="en">Sample</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/SampleCollected -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SampleCollected">
@@ -4745,9 +4620,11 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">Campione prelevato</rdfs:label>
         <rdfs:label xml:lang="en">Sample collected</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
     </owl:Class>
     
 
@@ -4767,6 +4644,31 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">Sample collected type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di campione prelevato</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/SampleType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SampleType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di campione. 
+Es: campione naturalistico o prelevato da un bene archeologico (es.: carbone, ceramica, intonaco, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the sample type. 
+i.e. collected from an archaeologiacal property (i.e. coal, pottery, grout)</rdfs:comment>
+        <rdfs:label xml:lang="en">Sample type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di campione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</a-cat:iccdNormTag>
@@ -4842,21 +4744,6 @@ resource:MeasurementCollection/1200865132-1
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/Stamp -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Stamp">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il segno impresso con un timbro, ovvero uno strumento di gomma o di metallo per imprimere segni a inchiostro oppure a secco.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Stamp</rdfs:label>
-        <rdfs:label xml:lang="it">Timbro</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;timbro&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;timbro&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;timbro&apos;</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5167,6 +5054,14 @@ resource:MeasurementCollection/1200865132-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/Brand -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Brand">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Capacity -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Capacity">
@@ -5206,6 +5101,30 @@ resource:MeasurementCollection/1200865132-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/CoatOfArms -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/CoatOfArms">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CoinDesign -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/CoinDesign">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CoinLegend -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/CoinLegend">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Colour -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Colour">
@@ -5225,6 +5144,14 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
         <rdfs:label xml:lang="en">Complete legibility</rdfs:label>
         <rdfs:label xml:lang="it">Leggibilità totale</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Counterstamp -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Counterstamp">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
     </owl:NamedIndividual>
     
 
@@ -5303,6 +5230,14 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
         <rdfs:label xml:lang="it">Apparato decorativo</rdfs:label>
         <rdfs:label xml:lang="en">Decorative apparatus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Dedication -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Dedication">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
     </owl:NamedIndividual>
     
 
@@ -5402,6 +5337,14 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/EdgeCircumference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Emblem -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Emblem">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
     </owl:NamedIndividual>
     
 
@@ -5641,6 +5584,14 @@ resource:MeasurementCollection/1200865132-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/HistoricalPlaque -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/HistoricalPlaque">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/IconographicAndDecorativeApparatus -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicAndDecorativeApparatus">
@@ -5697,6 +5648,14 @@ resource:MeasurementCollection/1200865132-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/Inscription -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Inscription">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/InstrumentalCommunication -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/InstrumentalCommunication">
@@ -5713,6 +5672,22 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
         <rdfs:label xml:lang="it">Comunicazione cinesica</rdfs:label>
         <rdfs:label xml:lang="en">Kinetic communication</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Label -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Label">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta un&apos;etichetta, che è possibile trovare sovrapposta a un&apos;altra entità culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a label, a type of affixed element that could be found on a cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">Etichetta</rdfs:label>
+        <rdfs:label xml:lang="en">Label</rdfs:label>
+        <owl:versionInfo>ICCD Normativa BNB: SB/SBE</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -5742,6 +5717,14 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Logo -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Logo">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
     </owl:NamedIndividual>
     
 
@@ -6071,6 +6054,14 @@ resource:MeasurementCollection/1200865132-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/QuarryOrMasonryMark -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/QuarryOrMasonryMark">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Rainfall -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Rainfall">
@@ -6172,6 +6163,14 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa PG: CA/CAC</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Stamp -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Stamp">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
     </owl:NamedIndividual>
     
 
@@ -6344,6 +6343,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents a musical instrument vibrating length, in particular a chordophone.</rdfs:comment>
         <rdfs:label xml:lang="it">Lunghezza vibrante</rdfs:label>
         <rdfs:label xml:lang="en">Vibrating length</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAL</a-cat:iccdNormTag>
