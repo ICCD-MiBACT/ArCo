@@ -320,7 +320,8 @@
         <rdfs:label xml:lang="en">has committent</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/CMM/CMMN</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/CMM/CMMN
+ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -816,16 +817,22 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasIssuer">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isIssuerOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco-lite/CoinIssuance"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;emissione della moneta al soggetto emittente. Questa proprietà, esprimendo il significato della relazione nel nome, dà una rappresentazione semplificata della relazione che lega questa entità e l&apos;agente; la stessa relazione è rappresentata attraverso una n-ary relation, arco-core:AgentRole, che permette di collegare l&apos;agente al ruolo che riveste nei confronti dell&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;emissione della moneta alla realtà statuale emittente, coeva all&apos;emissione della moneta. Questa proprietà, esprimendo il significato della relazione nel nome, dà una rappresentazione semplificata della relazione che lega questa entità e l&apos;agente; la stessa relazione è rappresentata attraverso una n-ary relation, arco-core:AgentRole, che permette di collegare l&apos;agente al ruolo che riveste nei confronti dell&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the coin issuance to the issuing State of that historic period. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates to coin&apos;s issuance to the issuer agent. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha Stato emittente</rdfs:label>
         <rdfs:label xml:lang="it">ha soggetto emittente</rdfs:label>
         <rdfs:label xml:lang="en">has issuer</rdfs:label>
+        <rdfs:label xml:lang="en">has issuing State</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUEE - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTN. DA/CON/CONA</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUES - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -845,25 +852,6 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>TU/STU/STUE</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/arco-lite/hasIssuingState -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasIssuingState">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isIssuingStateOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco-lite/CoinIssuance"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;emissione della moneta alla realtà statuale emittente, coeva all&apos;emissione della moneta. Questa proprietà, esprimendo il significato della relazione nel nome, dà una rappresentazione semplificata della relazione che lega questa entità e l&apos;agente; la stessa relazione è rappresentata attraverso una n-ary relation, arco-core:AgentRole, che permette di collegare l&apos;agente al ruolo che riveste nei confronti dell&apos;entità.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the coin issuance to the issuing State of that historic period. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="it">ha Stato emittente</rdfs:label>
-        <rdfs:label xml:lang="en">has issuing State</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUES - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1443,6 +1431,25 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQN</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasPrintingPlate -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasPrintingPlate">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedWork"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPrintingPlateOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto con la sua matrice incisa, per esmpio una stampa con la rispettiva matrice.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an object to its printing plate. i.e.: a print with its printing plate</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">ha matrice incisa</rdfs:label>
+        <rdfs:label xml:lang="en">has printing plate</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa SI 2.00: RM/RSM</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2961,11 +2968,16 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha emittente&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha stato emittente&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has issuer&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has issuing state&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="en">is issuer in</rdfs:label>
+        <rdfs:label xml:lang="en">is issuing state in</rdfs:label>
         <rdfs:label xml:lang="it">è soggetto emittente di</rdfs:label>
+        <rdfs:label xml:lang="it">è stato emittente in</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
@@ -2982,23 +2994,6 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="en">is issuing agency of</rdfs:label>
         <rdfs:label xml:lang="it">è ente che ha emanato il provvedimento</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/arco-lite/isIssuingStateOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isIssuingStateOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
-        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha stato emittente&quot;.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has issuing state&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="en">is issuing state in</rdfs:label>
-        <rdfs:label xml:lang="it">è stato emittente in</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3597,6 +3592,24 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQN</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isPrintingPlateOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isPrintingPlateOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedWork"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isWorkRelatedTo"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa proprietà è l&apos;inversa di &quot;ha matrice&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property is the inverse property of &quot;has Printing Plate&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is printing plate of</rdfs:label>
+        <rdfs:label xml:lang="it">è matrice incisa di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4588,9 +4601,9 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una voce della sua bibliografia di confronto.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity to its comparison bibliographic reference.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its comparative bibliographic reference.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="en">comparison bibliographic reference</rdfs:label>
+        <rdfs:label xml:lang="en">comparative bibliographic reference</rdfs:label>
         <rdfs:label xml:lang="it">riferimento bibliografico di confronto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
