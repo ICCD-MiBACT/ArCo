@@ -48,7 +48,7 @@
 			</xsl:variable>
 			<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
 			<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
-			<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC[1]" />
+			<xsl:variable name="acc-space" select="record/metadata/schede/*/*/ACC[1]" />
 			<xsl:variable name="acc-nospace" select="translate($acc-space, ' ', '')" />
 			<xsl:variable name="acc" select="translate($acc-nospace, '/', '_')" />
 				<xsl:choose>
