@@ -1337,6 +1337,22 @@ viene descritta.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/construction-description/ConnectionElementType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/ConnectionElementType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di elemento di connessione architettonico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of an architectural connection element.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
+        <rdfs:label xml:lang="en">Connection type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di connessione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa A: SC/SCL/SCLG</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/construction-description/Construction -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/Construction">
@@ -1508,14 +1524,14 @@ viene descritta.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasDesignedFunction"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasLayout"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/Layout"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasLayout"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/Layout"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta i principali caratteri del design di una entità, relative alla  sua forma e alla sua funzione.</rdfs:comment>
@@ -2218,7 +2234,7 @@ viene descritta.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/VerticalConnectionType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/ConnectionElementType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2252,22 +2268,6 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Vertical connection</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/construction-description/VerticalConnectionType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/VerticalConnectionType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di connessione verticale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type od a vertical connection.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontologyconstruction-description"/>
-        <rdfs:label xml:lang="it">Tipo di connessione verticale</rdfs:label>
-        <rdfs:label xml:lang="en">Vertical connection type</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa A: SC/SCL/SCLG</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2675,11 +2675,11 @@ viene descritta.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/ConnectionElementType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/CoveringType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/FoundationType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/HorizontalElementType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/RoofType"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/VerticalConnectionType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/VerticalElementType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/WaterSystemType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/WindowType"/>

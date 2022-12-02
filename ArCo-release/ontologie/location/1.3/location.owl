@@ -609,7 +609,19 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <!-- https://w3id.org/arco/ontology/location/hasFluidDynamism -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasFluidDynamism"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasFluidDynamism">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isFluidDynamismOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/FluidDynamism"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale con il suo idrodinamismo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a natural environment with its fluid dynamism.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">ha idrodinamismo</rdfs:label>
+        <rdfs:label xml:lang="en">has flyuid dynamism</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB, BNP, BNZ: LR/LRI/LRID</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
     
 
 
@@ -723,7 +735,18 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <!-- https://w3id.org/arco/ontology/location/hasIncline -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasIncline"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasIncline">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isInclineOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Substrate"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Incline"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un substrato con la sua inclinazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a substrate with its incline.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">ha inclinazione</rdfs:label>
+        <rdfs:label xml:lang="en">has incline</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -752,6 +775,31 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isMapOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua mappa (es. il suolo con la sua carta geologica, pedologica, di utilizzazione dei suoli).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its map (i.e. a soil with its geological, pedological, land use map).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">ha mappa</rdfs:label>
+        <rdfs:label xml:lang="en">has map</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasMarineBiogeographicRealm -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasMarineBiogeographicRealm">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasLocation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isMarineBiogeographicRealmOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/MarineBiogeographicRealm"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale alla sua regione zoogeografica marina.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a natural environment with its marine biogeographic realm.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha regione biogeografica marina</rdfs:label>
+        <rdfs:label xml:lang="en">has marine biogeographic realm</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNZ: LR/LRM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -809,7 +857,19 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <!-- https://w3id.org/arco/ontology/location/hasShadeTolerance -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasShadeTolerance"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasShadeTolerance">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isShadeToleranceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/ShadeTolerance"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale alla sua situazione luminosa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a natural environment with its shade tolerance.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">ha situazione luminosa</rdfs:label>
+        <rdfs:label xml:lang="en">has shade tolerance</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB, BNP, BNZ: LR/LRI/LRIS</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
     
 
 
@@ -1346,7 +1406,20 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <!-- https://w3id.org/arco/ontology/location/isFluidDynamismOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isFluidDynamismOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isFluidDynamismOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/FluidDynamism"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;idrodinamismo, moto ondoso, di un ambiente naturale con l&apos;ambiente naturale stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the fluid dynamism, wave movement, of a natural environment with its natural environment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">is fluid dynamism of</rdfs:label>
+        <rdfs:label xml:lang="en">is wave movement of</rdfs:label>
+        <rdfs:label xml:lang="it">è idrodinamismo di</rdfs:label>
+        <rdfs:label xml:lang="it">è moto ondoso di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB; BNP; BNZ: LR/LRI/LRID</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
     
 
 
@@ -1451,7 +1524,17 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <!-- https://w3id.org/arco/ontology/location/isInclineOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isInclineOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isInclineOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Incline"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Substrate"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;inclinazione di un substrato al substrato stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the incline of a substrate to the substrate itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">is incline of</rdfs:label>
+        <rdfs:label xml:lang="it">è inclinazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -1493,6 +1576,31 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isMapOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà è l&apos;inversa di &quot;ha mappa&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has map&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">is map of</rdfs:label>
+        <rdfs:label xml:lang="it">è mappa di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isMarineBiogeographicRealmOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isMarineBiogeographicRealmOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isLocationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/MarineBiogeographicRealm"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una regione zoogeografica marina a un ambiente naturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a marine biogeographical realm to a natural environment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">is marine biogeographical realm of</rdfs:label>
+        <rdfs:label xml:lang="it">è regione zoogeografica marina di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNZ: LR/LRM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1547,7 +1655,18 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <!-- https://w3id.org/arco/ontology/location/isShadeToleranceOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isShadeToleranceOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isShadeToleranceOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/ShadeTolerance"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la situazione luminosa di un ambiente naturale all&apos;ambiente naturale stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the shade tolerance of a natural environment to the natural environment itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">is shade tolerance of</rdfs:label>
+        <rdfs:label xml:lang="it">è situazione luminosa di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB, BNP, BNZ: LR/LRI/LRIS</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
     
 
 
@@ -1997,6 +2116,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale con la sua descrizione geografica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a natural environment with its geographical description.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">descrizione geografica</rdfs:label>
+        <rdfs:label xml:lang="en">geographical description</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/GEF/GEFD-GEFI</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2007,6 +2134,15 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale con la sua descrizione geological.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a natural environment with its geological description.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">descrizione geologica</rdfs:label>
+        <rdfs:label xml:lang="en">geological description</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/GELD
+ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2017,6 +2153,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale con la sua descrizione geomorfologica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a natural environment with its geomorphological description.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">descizione geomorfologica</rdfs:label>
+        <rdfs:label xml:lang="en">geomorphological description</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/GEO/GEOD</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2025,6 +2169,16 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/historicalEnvironmentContextDescription">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale alla descrizione dei suoi caratteri ambientali storici.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a natural environment with a description of its historical and environmental context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">descrizione del contesto ambientale storico</rdfs:label>
+        <rdfs:label xml:lang="en">historical environment context description</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/CAS (CASD+CASF+CASA)</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2128,6 +2282,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale con la sua descrizione morfologica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a natural environment with its morphological description.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">descrizione morfologica</rdfs:label>
+        <rdfs:label xml:lang="en">morphological description</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa PG 3.00: CA/CAM</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2138,6 +2300,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/description"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale con la sua descrizione pedologica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a natural environment with its pedological description.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">descrizione pedologica</rdfs:label>
+        <rdfs:label xml:lang="en">pedological description</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/PED/PEDD+PEDE</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2210,6 +2380,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/soilUse">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Soil"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il suolo all&apos;utilizzazione del suolo in esame, con particolare riferimento ai popolamenti vegetali naturali, alle coltivazioni, agli usi urbanistici e alle attività estrattive di superficie.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a soil to its usage.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">soil use</rdfs:label>
+        <rdfs:label xml:lang="it">uso del suolo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/USD</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2235,9 +2413,9 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <!-- https://w3id.org/italia/onto/CLV/alt -->
 
-    <rdf:Description rdf:about="https://w3id.org/italia/onto/CLV/alt">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/CLV/alt">
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: GE/GEC/GECZ - Normative precedenti: GP/GPC/GPCL</a-cat:iccdNormTag>
-    </rdf:Description>
+    </owl:DatatypeProperty>
     
 
 
@@ -2750,7 +2928,7 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">Situazione climatica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa PG: CA/CLM, CA/CAT. Normativa MODI: CA/CAT. Normativa BNB: LR/LRI/LRIT</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CLM, CA/CAT. Normativa MODI: CA/CAT. Normativa BNB: LR/LRI/LRIH</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2894,6 +3072,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/FluidDynamism">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;idrodinamismo (moto ondoso) di un ambiente naturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the fluid dynamism of a natural environment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Fluid dynamism</rdfs:label>
+        <rdfs:label xml:lang="it">Idrodinamismo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB, BNP, BNZ: LR/LRI/LRID</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2984,6 +3170,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeologicalMap">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una carta geografica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a geological map.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Geological map</rdfs:label>
+        <rdfs:label xml:lang="it">Mappa geologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/GEL/GELC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3118,6 +3312,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Incline">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;inclinazione (qualitativa) del substrato di raccolta del campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the (qualitative) incline of a substrate.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Inclinazione</rdfs:label>
+        <rdfs:label xml:lang="en">Incline</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRII</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3126,6 +3328,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LandUseMap">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una carta utilizzazione dei suoli.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a land use map.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Land use map</rdfs:label>
+        <rdfs:label xml:lang="it">Mappa utilizzazione dei suoli</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/USD/USDC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3223,6 +3433,22 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/MarineBiogeographicRealm -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/MarineBiogeographicRealm">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ZoogeographicRegion"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una regione zoogeografica marina.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a marine biogeographic realm.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Marine biogeographic realm</rdfs:label>
+        <rdfs:label xml:lang="it">Regione zoogeografica marina</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNZ: LR/LRM</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/Mine -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Mine">
@@ -3300,6 +3526,12 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasFluidDynamism"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/FluidDynamism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasMarineBiogeographicRealm"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/MarineBiogeographicRealm"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3433,6 +3665,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/PedologicalMap">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una carta pedologica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a pedological map.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Mappa pedologica</rdfs:label>
+        <rdfs:label xml:lang="en">Pedological map</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/PED/PEDC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3441,6 +3681,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ShadeTolerance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la situazione luminosa di un ambiente naturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the shade tolerance of a natural environment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Shade tolerance</rdfs:label>
+        <rdfs:label xml:lang="it">Situazione luminosa</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BN 3.01: LR/LRI/LRIS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3592,6 +3840,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/Incline"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il substrato su cui è stato raccolto un campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the substrate on which the sample is taken.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Substrate</rdfs:label>
+        <rdfs:label xml:lang="it">Substrato</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIR</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3600,6 +3856,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/SubstrateType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di substrato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represent the type of substrate.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Substrate type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di substrato</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIJ</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3772,6 +4036,12 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     <!-- https://w3id.org/italia/onto/CLV/AddressInTime -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/AddressInTime"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/AdminUnitComponent -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/AdminUnitComponent"/>
     
 
 

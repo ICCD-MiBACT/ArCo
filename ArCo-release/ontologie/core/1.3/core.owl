@@ -369,7 +369,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
-        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedclassification.owl"/>
         <rdfs:comment xml:lang="it">La object property che associa un qualunque oggetto a un concetto, che lo classifica.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that associates any object with a concept, classifying it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1539,8 +1539,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">Classification</rdfs:label>
         <rdfs:label xml:lang="it">Classificazione</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <replacedBy rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
     </owl:Class>
     
 
@@ -1581,6 +1583,7 @@ In this module the following Ontology Design Patterns have been used:
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedclassification.owl"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una classificazione nel tempo</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a classification in time</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1627,7 +1630,7 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Concept">
         <owl:equivalentClass rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedclassification.owl"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta un concetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing a concept.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1663,6 +1666,8 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">Classificazione relativa a bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">Cultural entity classification</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <replacedBy rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
     </owl:Class>
     
 
@@ -1671,6 +1676,13 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Depiction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="en">This class represents the depiction of a cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Depiction</rdfs:label>
+        <rdfs:label xml:lang="it">Foto</rdfs:label>
+        <rdfs:label xml:lang="it">Ritratto</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 

@@ -504,9 +504,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha tipo di classificazione di bene fotografico</rdfs:label>
         <rdfs:label xml:lang="en">has photographic heritage classification type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasClassificationSystem"/>
     </owl:ObjectProperty>
     
 
@@ -903,8 +905,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is photographic heritage classification type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di classificazione di bene fotografico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/isClassificationSystemOf"/>
     </owl:ObjectProperty>
     
 
@@ -1136,6 +1140,12 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/context-description/hasResponsibility -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasResponsibility"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasSexInterpretation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSexInterpretation"/>
     
 
 
@@ -1489,6 +1499,21 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/archaeologicMaterialConcentration -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/archaeologicMaterialConcentration">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
+        <rdfs:label xml:lang="en">archaeologic material concentration</rdfs:label>
+        <rdfs:label xml:lang="it">densità di concentrazione del materiale archeologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SI: DA/MTP/MTPS</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/archaeologicalSiteIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/archaeologicalSiteIdentifier">
@@ -1704,9 +1729,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">numero di materiali archeologici componenti</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">number of archeological materials</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa TMA: MA/MAC/MACQ</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco/numberOfComponents"/>
     </owl:DatatypeProperty>
     
 
@@ -1716,7 +1743,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/numberOfComponents">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/numberOfParts"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ComplexCulturalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di oggetti componenti di un bene culturale identificato come serie o come insieme.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the number of components of a complex cultural property.</rdfs:comment>
@@ -1754,7 +1781,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/numberOfElements">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/numberOfParts"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
         <rdfs:comment xml:lang="it">Questa propietà rappresenta  il numero complessivo, espresso in cifre, degli elementi che costituiscono il bene catalogato, nel caso esso sia un insieme o una serie i cui esemplari/oggetti componenti comprendono ciascuno più elementi.</rdfs:comment>
         <rdfs:label xml:lang="en">This property represents the total number of elements of a complex cultural property, when it is composed by parts containing more elements.</rdfs:label>
@@ -3394,9 +3421,11 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Classificazione di bene fotografico</rdfs:label>
         <rdfs:label xml:lang="en">Photographic heritage classification</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F 4.00: SG/CLF</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
     </owl:Class>
     
 
@@ -3416,9 +3445,11 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">Photographic heritage classification type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di classificazione di bene fotografico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
     </owl:Class>
     
 
