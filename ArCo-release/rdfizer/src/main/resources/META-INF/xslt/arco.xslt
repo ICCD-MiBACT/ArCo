@@ -130,7 +130,7 @@
 		<rdf:RDF>
 		<!-- xsl:variable name="sheetType" select="record/metadata/schede/*/CD/TSK/text()"></xsl:variable -->
 		<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
-		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata) and not(root)" >
+		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata) and not(record/root)" >
 				
 			<xsl:variable name="itemURI">
 				<xsl:choose>
@@ -24557,33 +24557,6 @@
 							<xsl:value-of select="normalize-space(./COLV)" />
 						</arco-cd:estimatedValue>
 					</rdf:Description>
-					<rdf:Description>
-						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'EstimateInterpetation/', $itemURI, '-', arco-fn:urify(normalize-space(./COLV)))" />
-	                    </xsl:attribute>
-						<rdf:type>
-							<xsl:attribute name="rdf:resource">
-            	                <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Interpretation'" />
-                	        </xsl:attribute>
-						</rdf:type>
-						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Interpretazione ', position(), ' relativa alla stima del bene ', $itemURI)" />
-						</rdfs:label>
-						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Interpretazione ', position(), ' relativa alla stima del bene ', $itemURI)" />
-						</l0:name>
-						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Interpretation ', position(), ' about estimate of property ', $itemURI)" />
-						</rdfs:label>
-						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Interpretation ', position(), ' about estimate of property ', $itemURI)" />
-						</l0:name>
-						<arco-cd:involvesEntity>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Estimate/', $itemURI, '-', position())" />
-							</xsl:attribute>
-						</arco-cd:involvesEntity>
-					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
 			<xsl:if test="record/metadata/schede/*/UB/INP/INPA  and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/INP/INPA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/UB/INP/INPA)), 'n.r')))">
@@ -24611,63 +24584,12 @@
 					<arco-cd:estimatedValue>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/UB/INP/INPA)" />
 					</arco-cd:estimatedValue>
+					<arco-core:informationSource>
+						<xsl:value-of select="'inventario-patrimoniale'" />
+					</arco-core:informationSource>
 					<arco-core:current>
             			<xsl:value-of select="true()" />
             		</arco-core:current>
-				</rdf:Description>
-				<rdf:Description>
-						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'EstimateInterpetation/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/INP/INPA)))" />
-	                    </xsl:attribute>
-						<rdf:type>
-							<xsl:attribute name="rdf:resource">
-            	                <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Interpretation'" />
-                	        </xsl:attribute>
-						</rdf:type>
-						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Interpretazione ', position(), ' relativa alla stima del bene ', $itemURI)" />
-						</rdfs:label>
-						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Interpretazione ', position(), ' relativa alla stima del bene ', $itemURI)" />
-						</l0:name>
-						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Interpretation ', position(), ' about estimate of property ', $itemURI)" />
-						</rdfs:label>
-						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Interpretation ', position(), ' about estimate of property ', $itemURI)" />
-						</l0:name>
-						<arco-cd:involvesEntity>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Estimate/', $itemURI)" />
-							</xsl:attribute>
-						</arco-cd:involvesEntity>
-						<arco-cd:hasInterpretationCriterion>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'InterpretationCriterion/inventario-patrimoniale')" />
-							</xsl:attribute>
-						</arco-cd:hasInterpretationCriterion>
-				</rdf:Description>
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'InterpretationCriterion/inventario-patrimoniale')" />
-	                 </xsl:attribute>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-                        </xsl:attribute>
-					</rdf:type>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="'Inventario patrimoniale'" />
-					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="'Asset inventory'" />
-					</l0:name>
-					<l0:name xml:lang="it">
-						<xsl:value-of select="'Inventario patrimoniale'" />
-					</l0:name>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="'Asset inventory'" />
-					</rdfs:label>
 				</rdf:Description>
 			</xsl:if>			
 			<!-- Estimate for version 1.00 and 2.00 -->
@@ -24694,68 +24616,12 @@
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="concat('Estimate ', position(), ' of cultural property ', $itemURI)" />
 						</rdfs:label>
-						<arco-cd:hasInterpretationCriterion>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'InterpretationCriterion/inventario-patrimoniale')" />
-							</xsl:attribute>
-						</arco-cd:hasInterpretationCriterion>
+						<arco-core:informationSource>
+							<xsl:value-of select="'inventario-patrimoniale'" />
+						</arco-core:informationSource>
 						<arco-cd:estimatedValue>
 							<xsl:value-of select="normalize-space(.)" />
 						</arco-cd:estimatedValue>
-					</rdf:Description>
-					<rdf:Description>
-						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'EstimateInterpetation/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
-	                    </xsl:attribute>
-						<rdf:type>
-							<xsl:attribute name="rdf:resource">
-            	                <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Interpretation'" />
-                	        </xsl:attribute>
-						</rdf:type>
-						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Interpretazione ', position(), ' relativa alla stima del bene ', $itemURI)" />
-						</rdfs:label>
-						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Interpretazione ', position(), ' relativa alla stima del bene ', $itemURI)" />
-						</l0:name>
-						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Interpretation ', position(), ' about estimate of property ', $itemURI)" />
-						</rdfs:label>
-						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Interpretation ', position(), ' about estimate of property ', $itemURI)" />
-						</l0:name>
-						<arco-cd:involvesEntity>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Estimate/', $itemURI, position())" />
-							</xsl:attribute>
-						</arco-cd:involvesEntity>
-						<arco-cd:hasInterpretationCriterion>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'InterpretationCriterion/inventario-patrimoniale')" />
-							</xsl:attribute>
-						</arco-cd:hasInterpretationCriterion>
-					</rdf:Description>
-					<rdf:Description>
-						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'InterpretationCriterion/inventario-patrimoniale')" />
-						</xsl:attribute>
-						<rdf:type>
-							<xsl:attribute name="rdf:resource">
-    	                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-        	                </xsl:attribute>
-						</rdf:type>
-						<rdfs:label xml:lang="it">
-							<xsl:value-of select="'Inventario patrimoniale'" />
-						</rdfs:label>
-						<l0:name xml:lang="en">
-							<xsl:value-of select="'Asset inventory'" />
-						</l0:name>
-						<l0:name xml:lang="it">
-							<xsl:value-of select="'Inventario patrimoniale'" />
-						</l0:name>
-						<rdfs:label xml:lang="en">
-							<xsl:value-of select="'Asset inventory'" />
-						</rdfs:label>
 					</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -24793,65 +24659,17 @@
 							</xsl:attribute>
 						</tiapit:atTime>
 					</xsl:if>
+					<xsl:if test="./STIM">
+						<arco-core:informationSource>
+							<xsl:value-of select="normalize-space(./STIM)" />
+						</arco-core:informationSource>
+					</xsl:if>
 					<xsl:if test="./STIR">
 						<arco-core:note>
 							<xsl:value-of select="normalize-space(./STIR)" />
 						</arco-core:note>
 					</xsl:if>
 				</rdf:Description>
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'EstimateInterpetation/', $itemURI, '-', arco-fn:urify(normalize-space(./STIS)))" />
-					</xsl:attribute>
-						<rdf:type>
-							<xsl:attribute name="rdf:resource">
-            	                <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Interpretation'" />
-                	        </xsl:attribute>
-						</rdf:type>
-						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Interpretazione ', position(), ' relativa alla stima del bene ', $itemURI)" />
-						</rdfs:label>
-						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Interpretazione ', position(), ' relativa alla stima del bene ', $itemURI)" />
-						</l0:name>
-						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Interpretation ', position(), ' about estimate of property ', $itemURI)" />
-						</rdfs:label>
-						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Interpretation ', position(), ' about estimate of property ', $itemURI)" />
-						</l0:name>
-						<arco-cd:involvesEntity>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Estimate/', $itemURI, position())" />
-							</xsl:attribute>
-						</arco-cd:involvesEntity>
-					<xsl:if test="./STIM">
-						<arco-cd:hasInterpretationCriterion>
-							<xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./STIM)))" />
-							</xsl:attribute>
-						</arco-cd:hasInterpretationCriterion>
-					</xsl:if>
-				</rdf:Description>
-				<!-- Interpretation criterion as an individual -->
-				<xsl:if test="./STIM">
-					<rdf:Description>
-						<xsl:attribute name="rdf:about">
-               				<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./STIM)))" />
-               			</xsl:attribute>
-						<rdf:type>
-							<xsl:attribute name="rdf:resource">
-                           		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-                       		</xsl:attribute>
-						</rdf:type>
-						<rdfs:label>
-							<xsl:value-of select="normalize-space(./STIM)" />
-						</rdfs:label>
-						<l0:name>
-							<xsl:value-of select="normalize-space(./STIM)" />
-						</l0:name>
-					</rdf:Description>
-				</xsl:if>
 				<!-- Time interval as an individual -->
 				<xsl:if test="./STID">
 					<rdf:Description>

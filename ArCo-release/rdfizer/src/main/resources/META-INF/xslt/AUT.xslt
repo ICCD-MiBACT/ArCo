@@ -680,11 +680,11 @@
 					</arco-cd:historicalInformation>
 				</xsl:if>
 				<xsl:if test="string-length($sex)">
-					<arco-cd:hasSex>
+					<arco-lite:sex>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Sex/', $sex)" />
+							<xsl:value-of select="$sex" />
 						</xsl:attribute>
-					</arco-cd:hasSex>
+					</arco-lite:sex>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTL">
 					<cpv:hasBirthPlace>
@@ -777,24 +777,6 @@
 					</rdfs:label>
 				</rdf:Description>
 			</xsl:for-each>
-			<xsl:if test="string-length($sex)">
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Sex/', $sex)" />
-					</xsl:attribute>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Sex'" />
-						</xsl:attribute>
-					</rdf:type>
-					<rdfs:label>
-						<xsl:value-of select="normalize-space($sex)" />
-					</rdfs:label>
-					<l0:name>
-						<xsl:value-of select="normalize-space($sex)" />
-					</l0:name>
-				</rdf:Description>
-			</xsl:if>
 			<xsl:if test="record/metadata/schede/*/AU/AUT/AUTL">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">

@@ -53,7 +53,7 @@
 			<xsl:variable name="rvel" select="translate($rvel-punto, '.', '_')" />		
 		</xsl:if>  -->	
 	    <xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
-		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata) and not(root)" >
+		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata) and not(record/root)" >
 
 			<xsl:variable name="itemURI">
 				<xsl:choose>
@@ -1580,11 +1580,6 @@
 							<xsl:value-of select="concat($NS, 'Estimate/', $itemURI)" />
 						</xsl:attribute>
 					</arco-cd:hasEstimate>
-					<arco-cd:isSubjectOfInterpretation>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'EstimateInterpetation/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/INP/INPA)))" />
-						</xsl:attribute>
-					</arco-cd:isSubjectOfInterpretation>
 					<arco-lite:culturalPropertyValue>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/UB/INP/INPA)" />
 					</arco-lite:culturalPropertyValue>
@@ -1597,11 +1592,6 @@
 								<xsl:value-of select="concat($NS, 'Estimate/', $itemURI, '-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasEstimate>
-						<arco-cd:isSubjectOfInterpretation>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'EstimateInterpetation/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/INV/INVS)))" />
-						</xsl:attribute>
-						</arco-cd:isSubjectOfInterpretation>
 						<arco-lite:culturalPropertyValue>
 						<xsl:value-of select="normalize-space(.)" />
 					</arco-lite:culturalPropertyValue>
@@ -1613,11 +1603,6 @@
 							<xsl:value-of select="concat($NS, 'Estimate/', $itemURI, '-', position())" />
 						</xsl:attribute>
 					</arco-cd:hasEstimate>
-					<arco-cd:isSubjectOfInterpretation>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'EstimateInterpetation/', $itemURI, '-', arco-fn:urify(normalize-space(./STIS)))" />
-						</xsl:attribute>
-					</arco-cd:isSubjectOfInterpretation>
 					<arco-lite:culturalPropertyValue>
 						<xsl:value-of select="normalize-space(./STIS)" />
 					</arco-lite:culturalPropertyValue>
@@ -1629,11 +1614,6 @@
 								<xsl:value-of select="concat($NS, 'Estimate/', $itemURI, '-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasEstimate>
-						<arco-cd:isSubjectOfInterpretation>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'EstimateInterpetation/', $itemURI, '-', arco-fn:urify(normalize-space(./COLV)))" />
-						</xsl:attribute>
-						</arco-cd:isSubjectOfInterpretation>
 						<arco-lite:culturalPropertyValue>
 							<xsl:value-of select="normalize-space(./COLV)" />
 						</arco-lite:culturalPropertyValue>

@@ -288,11 +288,11 @@
 		<!-- sex interpretation -->
 		<xsl:for-each select="record/metadata/schede/BNP/SP/SPZ">
 			<xsl:if test="./SPZS">
-				<arco-cd:hasSexInterpretation>
+				<arco-cd:hasSex>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'SexInterpretation/', $itemURI, '-', position())" />
+						<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-', position())" />
 					</xsl:attribute>
-				</arco-cd:hasSexInterpretation>
+				</arco-cd:hasSex>
 			</xsl:if>		
 		</xsl:for-each>
 		<!-- development stage -->
@@ -895,24 +895,24 @@
 		<xsl:if test="./SPZS">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'SexInterpretation/', $itemURI, '-', position())" />
+		    	<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-', position())" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-	            	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SexInterpretation'" />
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Sex'" />
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione del sesso ',  position(), ' del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Sesso ',  position(), ' del bene ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione del sesso ',  position(), ' del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Sesso ',  position(), ' del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Sex interpretation ', position(), ' of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Sex ', position(), ' of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of	select="concat('Sex interpretation ', position(), ' of cultural property ', $itemURI)" />
+				<xsl:value-of	select="concat('Sex ', position(), ' of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./SPZS">
 				<arco-cd:sex>
@@ -922,7 +922,7 @@
 		</rdf:Description>
 		</xsl:if> 
 	</xsl:for-each>
-	<!-- Sex interpretation as individual  -->
+	<!-- Development stage as individual  -->
 	<xsl:for-each select="record/metadata/schede/BNP/SP/SPZ">
 		<xsl:if test="./SPZV">
 		<rdf:Description>
@@ -1170,11 +1170,11 @@
 		<!-- sex interpretation -->
 		<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZAS">
 			<xsl:if test="./SZAS">
-				<arco-cd:hasSexInterpretation>
+				<arco-cd:hasSex>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'SexInterpretation/', $itemURI, '-', position())" />
+						<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-', position())" />
 					</xsl:attribute>
-				</arco-cd:hasSexInterpretation>
+				</arco-cd:hasSex>
 			</xsl:if>		
 		</xsl:for-each>
 		<!-- development stage -->
@@ -1678,29 +1678,29 @@
 		</rdf:Description> 
 	</xsl:for-each>
 	
-	<!-- Sex interpretation as individual  -->
+	<!-- Sex as individual  -->
 	<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZA">
 		<xsl:if test="./SZAS">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'SexInterpretation/', $itemURI, '-', position())" />
+		    	<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-', position())" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-	            	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SexInterpretation'" />
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Sex'" />
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione del sesso ',  position(), ' del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Sesso ',  position(), ' del bene ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione del sesso ',  position(), ' del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Sesso ',  position(), ' del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Sex interpretation ', position(), ' of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Sex ', position(), ' of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of	select="concat('Sex interpretation ', position(), ' of cultural property ', $itemURI)" />
+				<xsl:value-of	select="concat('Sex ', position(), ' of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./SZAS">
 				<arco-cd:sex>
@@ -1920,11 +1920,11 @@
 			</xsl:if>
 			<!-- sex interpretation -->
 			<xsl:if test="record/metadata/schede/AT/DA/STS">
-				<arco-cd:hasSexInterpretation>
+				<arco-cd:hasSex>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'SexInterpretation/', $itemURI)" />
+						<xsl:value-of select="concat($NS,'Sex/', $itemURI)" />
 					</xsl:attribute>
-				</arco-cd:hasSexInterpretation>
+				</arco-cd:hasSex>
 			</xsl:if>
 			<!-- finding context	 -->
 			<xsl:if test="record/metadata/schede/AT/OG/OGC">
@@ -1943,11 +1943,11 @@
 			</xsl:if>
 			<!-- age interpretation -->
 			<xsl:if test="record/metadata/schede/AT/DA/SEM">
-				<arco-cd:hasAgeInterpretation>
+				<arco-cd:hasAge>
 					<xsl:attribute name="rdf:resource">
-               			<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI)" />
+               			<xsl:value-of select="concat($NS, 'Age/', $itemURI)" />
                		</xsl:attribute>
-				</arco-cd:hasAgeInterpretation>
+				</arco-cd:hasAge>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/AT/PR/PRR">
 				<arco-core:note>
@@ -2446,24 +2446,24 @@
 		<xsl:if test="record/metadata/schede/AT/DA/STS">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-			    	<xsl:value-of select="concat($NS,'SexInterpretation/', $itemURI)" />
+			    	<xsl:value-of select="concat($NS,'Sex/', $itemURI)" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SexInterpretation'" />
+	            		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Sex'" />
 		            </xsl:attribute>
 				</rdf:type>
 				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('Interpretazione del sesso del bene ', $itemURI)" />
+					<xsl:value-of select="concat('Sesso del bene ', $itemURI)" />
 				</rdfs:label>
 				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('Interpretazione del sesso del bene ', $itemURI)" />
+					<xsl:value-of select="concat('Sesso del bene ', $itemURI)" />
 				</l0:name>
 				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Sex interpretation of cultural property ', $itemURI)" />
+					<xsl:value-of select="concat('Sex of cultural property ', $itemURI)" />
 				</rdfs:label>
 				<l0:name xml:lang="en">
-					<xsl:value-of	select="concat('Sex interpretation of cultural property ', $itemURI)" />
+					<xsl:value-of	select="concat('Sex of cultural property ', $itemURI)" />
 				</l0:name>
 				<xsl:if test="record/metadata/schede/AT/DA/STS/STSS">
 					<arco-cd:sex>
@@ -2471,93 +2471,53 @@
 					</arco-cd:sex>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/AT/DA/STS/STSC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/AT/DA/STS/STSC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/AT/DA/STS/STSC)), 'n.r')))">
-					<arco-cd:hasInterpretationCriterion>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(record/metadata/schede/AT/DA/STS/STSC)))" />
-						</xsl:attribute>
-					</arco-cd:hasInterpretationCriterion>
+					<arco-core:informationSource>
+						<xsl:value-of select="normalize-space(record/metadata/schede/AT/DA/STS/STSC)" />
+					</arco-core:informationSource>
 				</xsl:if>		
 			</rdf:Description>
-			<xsl:if test="record/metadata/schede/AT/DA/STS/STSC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/AT/DA/STS/STSC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/AT/DA/STS/STSC)), 'n.r')))">
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(record/metadata/schede/AT/DA/STS/STSC)))" />
-					</xsl:attribute>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-						</xsl:attribute>
-					</rdf:type>
-					<rdfs:label>
-						<xsl:value-of select="normalize-space(record/metadata/schede/AT/DA/STS/STSC)" />
-					</rdfs:label>
-					<l0:name>
-						<xsl:value-of select="normalize-space(record/metadata/schede/AT/DA/STS/STSC)" />
-					</l0:name>
-				</rdf:Description>
-			</xsl:if>
 		</xsl:if>
-		<!-- age interpretation as individual -->
+		<!-- age as individual -->
 		<xsl:if test="record/metadata/schede/AT/DA/SEM">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-			    	<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI)" />
+			    	<xsl:value-of select="concat($NS, 'Age/', $itemURI)" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeInterpretation'" />
+	            		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Age'" />
 		            </xsl:attribute>
 				</rdf:type>
 				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+					<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 				</rdfs:label>
 				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+					<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 				</l0:name>
 				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+					<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 				</rdfs:label>
 				<l0:name xml:lang="en">
-					<xsl:value-of	select="concat('Age interpretation of cultural property ', $itemURI)" />
+					<xsl:value-of	select="concat('Age of cultural property ', $itemURI)" />
 				</l0:name>
 				<xsl:if test="record/metadata/schede/AT/DA/SEM/SEME">
-					<arco-cd:age>
+					<arco-cd:ageValue>
 						<xsl:value-of select="normalize-space(record/metadata/schede/AT/DA/SEM/SEME)" />
-					</arco-cd:age>
+					</arco-cd:ageValue>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/AT/DA/SEM/SEMC">
-					<arco-cd:hasInterpretationCriterion>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(record/metadata/schede/AT/DA/SEM/SEMC)))" />
-						</xsl:attribute>
-					</arco-cd:hasInterpretationCriterion>
+					<arco-core:informationSource>
+						<xsl:value-of select="normalize-space(record/metadata/schede/AT/DA/SEM/SEMC)" />
+					</arco-core:informationSource>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/AT/OG/OGC/OGCT">
-					<arco-cd:hasAgeType>
+					<arco-core:hasType>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeOfDeath'" />
 						</xsl:attribute>
-					</arco-cd:hasAgeType>
+					</arco-core:hasType>
 				</xsl:if>
 			</rdf:Description>
-			<xsl:if test="record/metadata/schede/AT/DA/SEM/SEMC">
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(record/metadata/schede/AT/DA/SEM/SEMC)))" />
-					</xsl:attribute>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-						</xsl:attribute>
-					</rdf:type>
-					<rdfs:label>
-						<xsl:value-of select="normalize-space(record/metadata/schede/AT/DA/SEM/SEMC)" />
-					</rdfs:label>
-					<l0:name>
-						<xsl:value-of select="normalize-space(record/metadata/schede/AT/DA/SEM/SEMC)" />
-					</l0:name>
-				</rdf:Description>
-			</xsl:if>
 		</xsl:if>
 		<!-- Associated object -->
 		<xsl:for-each select="record/metadata/schede/AT/PR/PRO">
