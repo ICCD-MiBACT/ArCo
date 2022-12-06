@@ -187,15 +187,61 @@
 			<xsl:when test="$sheetType='MODI'">
 				<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)), '/', $itemURI)" />
 			</xsl:when>
+			<xsl:when test="$sheetType='SCAN'">
+						<xsl:choose>
+							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni architettonici e paesaggistici'">
+								<xsl:value-of select="concat($NS, 'ArchitecturalOrLandscapeHeritage/', $itemURI)" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni storici e artistici'">
+								<xsl:value-of select="concat($NS, 'HistoricOrArtisticProperty/', $itemURI)" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni archeologici'">
+								<xsl:value-of select="concat($NS, 'ArchaeologicalProperty/', $itemURI)" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni demoetnoantopologici'">
+								<xsl:value-of select="concat($NS, 'DemoEthnoAnthropologicalHeritage/', $itemURI)" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni fotografici'">
+								<xsl:value-of select="concat($NS, 'PhotographicHeritage/', $itemURI)" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni musicali'">
+								<xsl:value-of select="concat($NS, 'MusicHeritage/', $itemURI)" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni naturalistici'">
+								<xsl:value-of select="concat($NS, 'NaturalHeritage/', $itemURI)" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni numismatici'">
+								<xsl:value-of select="concat($NS, 'NumismaticProperty/', $itemURI)" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/SET))='beni scientifici e tecnologici'">
+								<xsl:value-of select="concat($NS, 'ScientificOrTechnologicalHeritage/', $itemURI)" />
+							</xsl:when>
+						</xsl:choose>
+			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
 			</xsl:otherwise>
 		</xsl:choose>
-	</xsl:variable>		
+	</xsl:variable>
+	<xsl:variable name="culturalPropertyComponent" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />
+	<xsl:variable name="culturalPropertyResidual" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-residual')" />
+	<xsl:variable name="objectOfDescription">
+		<xsl:choose>
+			<xsl:when test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+				<xsl:value-of select="$culturalPropertyComponent" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/OG/OGT/OGTW and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+				<xsl:value-of select="$culturalPropertyResidual" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="$culturalProperty" />
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>	
 	<xsl:if test="$sheetType='BDI'">			
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-        		<xsl:value-of select="$culturalProperty" />
+        		<xsl:value-of select="$objectOfDescription" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -207,7 +253,7 @@
 	<xsl:if test="$sheetType='BDI' or $sheetType='BDM'">			
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-        		<xsl:value-of select="$culturalProperty" />
+        		<xsl:value-of select="$objectOfDescription" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -642,11 +688,6 @@
 						<xsl:value-of select="'https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation'" />
 					</xsl:attribute>
 				</rdf:type>
-				<arco-location:isTimeIndexedTypedLocationOf>
-					<xsl:attribute name="rdf:resource"> 
-						<xsl:value-of select="$culturalProperty" /> 
-					</xsl:attribute>
-				</arco-location:isTimeIndexedTypedLocationOf>
 				<rdfs:label xml:lang="it">
 					<xsl:value-of select="concat('Localizzazione di produzione/realizzazione del bene: ', $itemURI)" />
 				</rdfs:label>
@@ -949,11 +990,6 @@
 						<xsl:value-of select="'https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation'" />
 					</xsl:attribute>
 				</rdf:type>
-				<arco-location:isTimeIndexedTypedLocationOf>
-					<xsl:attribute name="rdf:resource"> 
-						<xsl:value-of select="$culturalProperty" /> 
-					</xsl:attribute>
-				</arco-location:isTimeIndexedTypedLocationOf>
 				<rdfs:label xml:lang="it">
 					<xsl:value-of select="concat('Localizzazione di origine del bene: ', $itemURI)" />
 				</rdfs:label>
@@ -4647,7 +4683,7 @@
 					</arco-cd:hasCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-cd:involvesMember>
 				</rdf:Description>
@@ -4668,7 +4704,7 @@
 					</l0:name>
 					<arco-lite:hasCollectionMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-lite:hasCollectionMember>
 				</rdf:Description>
@@ -4707,7 +4743,7 @@
 					</arco-cd:hasCollection>
 					<arco-cd_involvesMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-cd_involvesMember>
 				</rdf:Description>
@@ -4728,7 +4764,7 @@
 					</l0:name>
 					<arco-lite:hasCollectionMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-lite:hasCollectionMember>
 					<!-- Edition -->
@@ -6593,7 +6629,7 @@
 					</arco-cd:hasCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-cd:involvesMember>
 				</rdf:Description>
@@ -6614,7 +6650,7 @@
 					</l0:name>
 					<arco-lite:hasCollectionMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-lite:hasCollectionMember>
 				</rdf:Description>
@@ -6648,7 +6684,7 @@
 					</arco-cd:hasCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-cd:involvesMember>
 				</rdf:Description>
@@ -6669,7 +6705,7 @@
 					</l0:name>
 					<arco-lite:hasCollectionMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-lite:hasCollectionMember>
 				</rdf:Description>
@@ -10144,7 +10180,7 @@
 					</arco-cd:hasCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-cd:involvesMember>
 				</rdf:Description>
@@ -10165,7 +10201,7 @@
 					</l0:name>
 					<arco-lite:hasCollectionMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-lite:hasCollectionMember>
 				</rdf:Description>
@@ -10204,7 +10240,7 @@
 					</arco-cd:hasCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-cd:involvesMember>
 				</rdf:Description>
@@ -10225,7 +10261,7 @@
 					</l0:name>
 					<arco-lite:hasCollectionMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-lite:hasCollectionMember>
 					<!-- Edition -->
@@ -13185,7 +13221,7 @@
 					</arco-cd:hasCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-cd:involvesMember>
 				</rdf:Description>
@@ -13207,7 +13243,7 @@
 					</l0:name>
 					<arco-lite:hasCollectionMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-lite:hasCollectionMember>
 				</rdf:Description>
@@ -13246,7 +13282,7 @@
 					</arco-cd:hasCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-cd:involvesMember>
 				</rdf:Description>
@@ -13268,7 +13304,7 @@
 					</l0:name>
 					<arco-lite:hasCollectionMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-lite:hasCollectionMember>
 					<!-- Edition -->
@@ -13543,7 +13579,7 @@
 					</arco-cd:hasCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-cd:involvesMember>
 				</rdf:Description>
@@ -13565,7 +13601,7 @@
 					</l0:name>
 					<arco-lite:hasCollectionMember>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
+							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-lite:hasCollectionMember>
 				</rdf:Description>

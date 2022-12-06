@@ -154,10 +154,14 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 		</xsl:choose>
 	</xsl:variable>
 	<xsl:variable name="culturalPropertyComponent" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />
+	<xsl:variable name="culturalPropertyResidual" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-residual')" />
 	<xsl:variable name="objectOfDescription">
 		<xsl:choose>
 			<xsl:when test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<xsl:value-of select="$culturalPropertyComponent" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/OG/OGT/OGTW and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+				<xsl:value-of select="$culturalPropertyResidual" />
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="$culturalProperty" />

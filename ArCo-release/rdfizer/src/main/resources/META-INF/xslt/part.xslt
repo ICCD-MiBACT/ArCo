@@ -87,9 +87,8 @@
     <xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
     <xsl:variable name="cp-name" select="''" />
     
-	<xsl:variable name="culturalPropertyComponent"
-		select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />
-
+	<xsl:variable name="culturalPropertyComponent" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />
+	<xsl:variable name="culturalPropertyResidual" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-residual')" />
 	<xsl:variable name="culturalProperty">
 		<xsl:choose>
 			<xsl:when test="$sheetType='MODI'">
@@ -105,6 +104,9 @@
 		<xsl:choose>
 			<xsl:when test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<xsl:value-of select="$culturalPropertyComponent" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/OG/OGT/OGTW and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+				<xsl:value-of select="$culturalPropertyResidual" />
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="$culturalProperty" />
