@@ -1288,6 +1288,24 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/catalogueNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/catalogueNumber">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di associare il numero di catalogo generale a scheda catalografica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the general catalogue number associated to a catalogue record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">catalogue number</rdfs:label>
+        <rdfs:label xml:lang="it">numero catalogo generale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTN</iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/catalogueRecordIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/catalogueRecordIdentifier">
@@ -1452,6 +1470,35 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC/ACCP; AC/ACS/ACSP</iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/regionIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/regionIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di associare il codice regione a una scheda catalografica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the &quot;region identifier&quot; associated to a catalogue record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="it">codice regione</rdfs:label>
+        <rdfs:label xml:lang="en">region identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTR</iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/suffix -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/suffix">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTS</iccdNormTag>
     </owl:DatatypeProperty>
     
 
