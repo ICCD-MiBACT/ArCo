@@ -22,6 +22,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
      xmlns:a-loc="https://w3id.org/arco/ontology/location/"
+     xmlns:a-spe="https://w3id.org/arco/ontology/natural-specimen-description/"
      xmlns:opla1="http://ontologydesignpatterns.org/opla/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
@@ -157,6 +158,23 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/replacedBy -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/core/replacedBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
     
 
 
@@ -369,6 +387,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasAssociatedObject -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasAssociatedObject"/>
     
 
 
@@ -1224,7 +1248,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasSampleCollected">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSampleCollectedFrom"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene archeologico a un campione prelevato da esso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a archaeological entity to a sample collected from it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -1310,6 +1334,18 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasSortingCriterion -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasSortingCriterion">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSortingCriterionOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/SortingCriterion"/>
+        <rdfs:label xml:lang="it">ha criterio di ordinamento</rdfs:label>
+        <rdfs:label xml:lang="en">has sorting criterion</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1544,7 +1580,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesAccompanyingInstrument">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isAccompanyingInstrumentInvolvedIn"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MusicalInstrument"/>
     </owl:ObjectProperty>
     
 
@@ -1587,7 +1622,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesSoloInstrument">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSoloInstrumentInvolvedIn"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MusicalInstrument"/>
     </owl:ObjectProperty>
     
 
@@ -1610,9 +1644,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/denotative-description/isAccompanyingInstrumentInvolvedIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isAccompanyingInstrumentInvolvedIn">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MusicalInstrument"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isAccompanyingInstrumentInvolvedIn"/>
     
 
 
@@ -2509,7 +2541,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/denotative-description/isSampleCollectedFrom -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSampleCollectedFrom">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha campione prelevato&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has sample collected&quot;.</rdfs:comment>
@@ -2604,8 +2636,17 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/denotative-description/isSoloInstrumentInvolvedIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSoloInstrumentInvolvedIn">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MusicalInstrument"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSoloInstrumentInvolvedIn"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isSortingCriterionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSortingCriterionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/SortingCriterion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">is sorting criterion of</rdfs:label>
+        <rdfs:label xml:lang="it">è criterio di ordinamento di</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2925,6 +2966,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasPreservationType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasPreservationType"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/l0/hasDescription -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasDescription"/>
@@ -2984,7 +3031,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con il proprio oggetto associato. Es. nell&apos;antropologia fisica: un bene connesso ad eventuali oggetti posti a contatto con il corpo durante la sua preparazione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity to its object associated with. 
+        <rdfs:comment xml:lang="en">This property relates an entity to its object associated with.
 i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha oggetto associato</rdfs:label>
@@ -3184,9 +3231,11 @@ i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">position in complex cultural property</rdfs:label>
         <rdfs:label xml:lang="it">posizione rispetto al bene culturale complesso</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative D, OA, RA, BDM (v.1 e v.2): OG/OGT/OGTP</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/positionOnCulturalProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -3203,7 +3252,7 @@ i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
         <rdfs:label xml:lang="it">posizione su bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEP - Normative di versioni precedenti: DA/STM/STMP; DA/ISR/ISRP - Normativa A: LI/LSI/LSIU - Normativa PST: OG/SGT/SGTP - ICCD Normative MA, CA, SI, SAS: MC/CMN/CMNP</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEP - Normative di versioni precedenti: DA/STM/STMP; DA/ISR/ISRP - Normativa A: LI/LSI/LSIU - Normativa PST: OG/SGT/SGTP - ICCD Normative MA, CA, SI, SAS: MC/CMN/CMNP - ICCD Normative D, OA, RA, BDM (v.1 e v.2): OG/OGT/OGTP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3295,6 +3344,12 @@ i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/dateOfLastChangePreservative -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/dateOfLastChangePreservative"/>
     
 
 
@@ -4080,7 +4135,10 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:label xml:lang="it">Tipo di bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>OG/OGT</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>OG/OGT
+ICCD Normativa MODI e SCAN: OGD+OGT
+ICCD Normativa A e PG 1, 2: OGTT+OGTQ
+ICCD Normativa A e PG v3: OGTD+OGTQ</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4185,6 +4243,34 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAF, DO/DRA/DRAF, DO/FNT/FNTR (+ DO/VDC/VDCP, DO/REG/REGP). ICCD Normativa F: MT/FVC/FVCF</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/FruitSample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/FruitSample">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasPreservationType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PreservationType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/dateOfLastChangePreservative"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto carpologico (frutti)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a sample from the fruit collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Fruit  sample</rdfs:label>
+        <rdfs:label xml:lang="it">Reperto carpologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4443,20 +4529,6 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/MusicalInstrument -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MusicalInstrument">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSoloInstrumentInvolvedIn"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment">
@@ -4548,6 +4620,43 @@ resource:MeasurementCollection/1200865132-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/PlantSample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/PlantSample">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto botanico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a sample from the botanical collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Plant sample</rdfs:label>
+        <rdfs:label xml:lang="it">Reperto botanico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/PollenSample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/PollenSample">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnique"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto palinologico (pollini)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a sample from the pollen collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Pollen sample</rdfs:label>
+        <rdfs:label xml:lang="it">Reperto palinologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBP</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Sample -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Sample">
@@ -4578,6 +4687,7 @@ resource:MeasurementCollection/1200865132-1
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un campione di un&apos;entità culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a sample of a cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">Campione</rdfs:label>
         <rdfs:label xml:lang="en">Sample</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4663,15 +4773,32 @@ resource:MeasurementCollection/1200865132-1
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di campione. 
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di campione.
 Es: campione naturalistico o prelevato da un bene archeologico (es.: carbone, ceramica, intonaco, etc.)</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the sample type. 
+        <rdfs:comment xml:lang="en">This class represents the sample type.
 i.e. collected from an archaeologiacal property (i.e. coal, pottery, grout)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">Sample type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di campione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/SeedSample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SeedSample">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto spermologico (semi)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a sample from the seed collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">Reperto spermologico</rdfs:label>
+        <rdfs:label xml:lang="en">Seed  sample</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4744,6 +4871,20 @@ i.e. collected from an archaeologiacal property (i.e. coal, pottery, grout)</rdf
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/SortingCriterion -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SortingCriterion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">Criterio di ordinamento</rdfs:label>
+        <rdfs:label xml:lang="en">Sorting criterion</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa NU: OG/OGT/OGTO</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4843,6 +4984,28 @@ i.e. collected from an archaeologiacal property (i.e. coal, pottery, grout)</rdf
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/WoodSample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/WoodSample">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto xilologico (legni)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a sample from the wood collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">Reperto xilologico</rdfs:label>
+        <rdfs:label xml:lang="en">Wood sample</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBX</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/WritingSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/WritingSystem">
@@ -4874,6 +5037,12 @@ i.e. collected from an archaeologiacal property (i.e. coal, pottery, grout)</rdf
     <!-- https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/PreservationType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PreservationType"/>
     
 
 
