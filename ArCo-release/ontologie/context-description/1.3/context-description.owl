@@ -25,7 +25,6 @@
      xmlns:a-lite="https://w3id.org/arco/ontology/arco-lite/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/context-description">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/context-description/1.3"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/0.8"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -385,11 +384,9 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha agente con responsabilità</rdfs:label>
         <rdfs:label xml:lang="en">has agent with responsibility</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F e FF 4.00: PD/PDF/PDFN - ICCD Normativa F 3.00: PD/PDF/PDFN o PD/PDF/PDFB</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAttributedAuthor"/>
     </owl:ObjectProperty>
     
 
@@ -586,9 +583,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha autore attribuito</rdfs:label>
         <rdfs:label xml:lang="en">has attributed author</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>AU/AUT/AUTN (+ AU/AUT/AUTS); AU/AAT; AU/AAT/AATN. ICCD Normativa F e FF 4.00: PD/PDF/PDFN - ICCD Normativa F 3.00: PD/PDF/PDFN o PD/PDF/PDFB</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility"/>
     </owl:ObjectProperty>
     
 
@@ -658,9 +657,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha attribuzione di autore/responsabilità</rdfs:label>
         <rdfs:label xml:lang="en">has authorship attribution</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT; AU/ATB; AU/AAT</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasResponsibility"/>
     </owl:ObjectProperty>
     
 
@@ -1132,7 +1133,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCulturalScope">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasTopic"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isCulturalScopeOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScopeAttribution"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScope"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui viene attribuito un ambito culturale di un bene culturale all&apos;ambito culturale stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a situation, where a cultural scope is attributed to a cultural entity, to the cultural scope.</rdfs:comment>
@@ -1158,11 +1159,9 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description"/>
         <rdfs:label xml:lang="it">ha cronologia</rdfs:label>
         <rdfs:label xml:lang="en">has dating</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DT - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedEvent"/>
     </owl:ObjectProperty>
     
 
@@ -1182,7 +1181,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>DTN/DTNS; se non c&apos;è, Event = &quot;realizzazione&quot;. ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFD. ICCD Normativa Trasversale: DT/ADT.</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedEvent"/>
     </owl:ObjectProperty>
     
 
@@ -2162,9 +2160,11 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha documentazione primaria</rdfs:label>
         <rdfs:label xml:lang="en">has primary documentation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI 4.00: DU, DV, DF</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/primaryDocument"/>
     </owl:ObjectProperty>
     
 
@@ -2295,17 +2295,6 @@ ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: AU/NMC</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/hasRelatedEvent -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRelatedEvent">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isRelatedEventOf"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
     </owl:ObjectProperty>
     
 
@@ -2463,11 +2452,9 @@ ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha responsabilità</rdfs:label>
         <rdfs:label xml:lang="en">has responsibility</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/PDF</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasAthorshipAttribution"/>
     </owl:ObjectProperty>
     
 
@@ -3392,10 +3379,8 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is agent with responsibility in</rdfs:label>
         <rdfs:label xml:lang="it">è agente con responsabilità in</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isAttributedAuthorOf"/>
     </owl:ObjectProperty>
     
 
@@ -3557,8 +3542,10 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is attributed author in</rdfs:label>
         <rdfs:label xml:lang="it">è autore attribuito in</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentWithResponsibilityIn"/>
     </owl:ObjectProperty>
     
 
@@ -3623,9 +3610,11 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is authorship attribution of</rdfs:label>
         <rdfs:label xml:lang="it">è attribuzione di autore/responsabilità di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT; AU/ATB; AU/AAT</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isResponsibilityFor"/>
     </owl:ObjectProperty>
     
 
@@ -4068,7 +4057,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCulturalScopeOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isTopicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScope"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScopeAttribution"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ambito culturale attribuito a un bene culturale alla situazione in cui è avvenuta tale attribuzione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural scope of a cultural entity to the situation where this cultural scope is attributed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -4093,7 +4082,6 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isRelatedEventOf"/>
     </owl:ObjectProperty>
     
 
@@ -4109,10 +4097,8 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is dating of</rdfs:label>
         <rdfs:label xml:lang="it">è cronologia di</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isRelatedEventOf"/>
     </owl:ObjectProperty>
     
 
@@ -5114,6 +5100,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is primary documentation of</rdfs:label>
         <rdfs:label xml:lang="it">è documentazione primaria di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -5215,15 +5202,6 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:label xml:lang="it">è repertorio di riferimento di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/isRelatedEventOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isRelatedEventOf">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:ObjectProperty>
     
 
@@ -5402,11 +5380,9 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is responsibility for</rdfs:label>
         <rdfs:label xml:lang="it">è responsibilità su</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/PDF</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf"/>
     </owl:ObjectProperty>
     
 
@@ -6326,6 +6302,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/abbreviation">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment></rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;abbreviazione che identifica il riferimento bibliografico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the abbreviation that identifies the bibliographic reference.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -6503,6 +6480,15 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTE, AUTV. AU/AUV</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/alternativeOrOutdatedResponsibility -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/alternativeOrOutdatedResponsibility">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -6774,9 +6760,11 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">autore del riferimento bibliografico</rdfs:label>
         <rdfs:label xml:lang="en">bibliographic reference author</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>DO/BIB/BIBA</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
     </owl:DatatypeProperty>
     
 
@@ -7475,6 +7463,15 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/mainResponsibility -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/mainResponsibility">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/methodOfInsertion -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/methodOfInsertion">
@@ -7709,24 +7706,24 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/preferredInterpretation"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/preferredInterpretation -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/preferredInterpretation">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Interpretation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <a-cat:iccdNormTag>AU/AUT, AU/AAT</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
 
     <!-- https://w3id.org/arco/ontology/context-description/primaryDocument -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/primaryDocument"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/primaryDocument">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Recording"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica se il docuemento in esame fa parte della documentazione primaria.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents whether a document is primary documentation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">documentazione primaria</rdfs:label>
+        <rdfs:label xml:lang="en">primary document</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BDI 4.00: DU, DV, DF</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
     
 
 
@@ -7746,6 +7743,23 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normative S e MI: OG/SGT/SGTP - Normativa F: SG/SGL/SGLT</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/properTitle"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/proposedIntervention -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/proposedIntervention">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta le proposte per interventi conservativi di un bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the proposed intervention for conserving the involved cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">proposed intervention</rdfs:label>
+        <rdfs:label xml:lang="it">proposta di intervento</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa NT 4.00: CO/STP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -7971,6 +7985,7 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/sex">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Sex"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SexInterpretation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il sesso dei una entità.</rdfs:comment>
@@ -7978,11 +7993,9 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">sesso</rdfs:label>
         <rdfs:label xml:lang="en">sex</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa AT: DA/STS/STSS. Normativa BDI: AT/ATT/ATTS</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Sex"/>
     </owl:DatatypeProperty>
     
 
@@ -8032,9 +8045,11 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">soggetto</rdfs:label>
         <rdfs:label xml:lang="en">subject</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI. DA/DES/DESU</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCulturalPropertySubject"/>
     </owl:DatatypeProperty>
     
 
@@ -8088,9 +8103,11 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">autore e data del taxon</rdfs:label>
         <rdfs:label xml:lang="en">taxon author and date</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSA</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
     </owl:DatatypeProperty>
     
 
@@ -8204,6 +8221,12 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/core/description -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/description"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/informationSource -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/informationSource"/>
     
 
 
@@ -8394,8 +8417,20 @@ resource:AgentRole/1200865053-1-transferor
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isAgeOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/ageValue"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/informationSource"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;età di un &apos;entità (animale, vegetale, minerale).</rdfs:comment>
@@ -8510,7 +8545,6 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>AU/AAT</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/preferredInterpretation"/>
     </owl:Class>
     
 
@@ -8534,7 +8568,6 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT.</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/preferredInterpretation"/>
     </owl:Class>
     
 
@@ -9093,9 +9126,11 @@ resource:AgentRole/1200865053-1-transferor
         <rdfs:label xml:lang="it">Attribuzione di responsabilità</rdfs:label>
         <rdfs:label xml:lang="en">Authorship Attribution</rdfs:label>
         <rdfs:label xml:lang="en">Responsibility attribution</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: AU/AAT; AU/ATB; AU/AUT. ICCD Normative F e FF: PD/PDF</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
     </owl:Class>
     
 
@@ -9767,9 +9802,11 @@ Versioni 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, 
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description"/>
         <rdfs:label xml:lang="it">Attribuzione di Ambito Culturale</rdfs:label>
         <rdfs:label xml:lang="en">Cultural Scope Attribution</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>AU/ATB</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
     </owl:Class>
     
 
@@ -9850,7 +9887,6 @@ Versioni 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, 
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">Cronologia</rdfs:label>
         <rdfs:label xml:lang="en">Dating</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DT - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFD</a-cat:iccdNormTag>
@@ -10204,14 +10240,20 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isEstimateOf"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/informationSource"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -10612,12 +10654,6 @@ gioco, etc.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/InterpretationCriterion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/preferredInterpretation"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description xml:lang="en">An example of usage of one of the subclasses of the class &apos;Interpretation&apos; is the following:
@@ -11417,7 +11453,6 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>AU/AUT</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/preferredInterpretation"/>
     </owl:Class>
     
 
@@ -11712,8 +11747,10 @@ PA/SSI, PA/SFI</rdfs:comment>
         <rdfs:label xml:lang="it">Repertorio</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa S 3: RO/COP/COPR
-ICCD Normativa 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa NU: OG/OGT/OGTT 
+ICCD Normativa S 3: RO/COP/COPR
+ICCD Normativa 3.00: MA/MAC/MACP
+ICCD Normativa NT: OG/OGT/OGTS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11880,11 +11917,17 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
     <!-- https://w3id.org/arco/ontology/context-description/Responsibility -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Responsibility">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Interpretation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasInterventionRole"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -11895,14 +11938,8 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ResponsibilityType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthorityFileCataloguingAgency"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCulturalScope"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScope"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;individuazione di una responsabilità attribuibile a un agente relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici, quindi alle diverse personalità responsabili, a vario titolo, del ciclo produttivo del bene in esame, oltre che della sua circolazione, divulgazione, commercializzazione e promozione (committenti, stampatori, ritoccatori, coloritori, editori, distributori, sponsor, curatori e responsabili di edizioni e di serie, dedicanti e dedicatari, responsabili di collezioni e di collazioni, ecc.).</rdfs:comment>
@@ -11910,11 +11947,9 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">Responsabilità</rdfs:label>
         <rdfs:label xml:lang="en">Responsibility</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative F e FF: PD/PDF</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
     </owl:Class>
     
 
@@ -12121,6 +12156,24 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Sex">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isSexOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/sex"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/informationSource"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il sesso di un entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the sex of an entity.</rdfs:comment>
         <rdfs:label xml:lang="it">Sesso</rdfs:label>
@@ -12295,6 +12348,12 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isSubjectOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il soggetto rappresentato da un bene culturale o il suo motivo decorativo.</rdfs:comment>
@@ -13914,16 +13973,16 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>
     
 
