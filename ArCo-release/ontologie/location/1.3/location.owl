@@ -27,7 +27,6 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/location">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/location/1.3"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/1.0"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
@@ -81,6 +80,18 @@ In this module the following Ontology Design Patterns have been used:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate -->
+
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
@@ -178,6 +189,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/hasEventOrSituationInTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasEventOrSituationInTime"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/hasLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasLocation"/>
@@ -196,9 +213,21 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/isConceptOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isConceptOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf"/>
     
 
 
@@ -2005,6 +2034,12 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/description -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/description"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/administrativeOrderNumber -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/administrativeOrderNumber">
@@ -2515,6 +2550,12 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/core/Concept -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Concept"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/EventOrSituationInTime -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
     
 
 
