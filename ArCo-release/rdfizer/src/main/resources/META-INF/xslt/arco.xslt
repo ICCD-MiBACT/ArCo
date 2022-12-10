@@ -130,7 +130,7 @@
 		<rdf:RDF>
 		<!-- xsl:variable name="sheetType" select="record/metadata/schede/*/CD/TSK/text()"></xsl:variable -->
 		<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
-		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata) and not(record/root)" >
+		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata) and not(root)" >
 				
 			<xsl:variable name="itemURI">
 				<xsl:choose>
