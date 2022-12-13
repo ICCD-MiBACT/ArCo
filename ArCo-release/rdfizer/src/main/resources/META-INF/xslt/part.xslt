@@ -487,6 +487,13 @@
 						</arco-lite:hasMaterialOrTechnique>
 					</xsl:if>	
 					</xsl:if>
+					<xsl:if test="./MTCD or ./MTCN">
+						<arco-dd:hasIconographicOrDecorativeApparatus>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatus/', $itemURI, '-decorative-', position())" />
+							</xsl:attribute>
+						</arco-dd:hasIconographicOrDecorativeApparatus>
+					</xsl:if>
 				</rdf:Description>
 			</xsl:if>
 		</xsl:for-each>

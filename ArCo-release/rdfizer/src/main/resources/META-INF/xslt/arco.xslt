@@ -2371,6 +2371,7 @@
 						<xsl:value-of select="concat('Decorative apparatus ', position(), ' of the cultural property ', $itemURI)" />
 					</l0:name>
 					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
 						<xsl:choose>
 							<xsl:when test="./DECT">
 								<xsl:choose>
@@ -2383,11 +2384,10 @@
 								</xsl:choose>
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/DecorativeApparatus'" />
-								</xsl:attribute>
-							</xsl:otherwise>
+							</xsl:otherwise>	
 						</xsl:choose>
+						</xsl:attribute>
 					</arco-core:hasType>
 					<xsl:if test="./DECM[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<arco-dd:hasTechnicalStatus>
