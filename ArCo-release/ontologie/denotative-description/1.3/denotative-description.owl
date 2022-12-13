@@ -207,6 +207,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion"/>
@@ -3412,6 +3418,12 @@ i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/UseFunction -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Concept -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Concept"/>
@@ -4317,8 +4329,8 @@ ICCD Normativa A e PG v3: OGTD+OGTQ</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4334,7 +4346,7 @@ ICCD Normativa A e PG v3: OGTD+OGTQ</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">Iconographic or Decorative Apparatus</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID - ICCD Normative PST e BDM: DA/APF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID - ICCD Normative PST e BDM: DA/APF. VeAC: MT/MTC/MTCD e MTCN, DA/EDA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4356,7 +4368,7 @@ ICCD Normativa A e PG v3: OGTD+OGTQ</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">Tipo di apparato iconografico e decorativo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID/AIDO</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID/AIDO. VeAC: MT/MTC/MTCD, DA/EDA</a-cat:iccdNormTag>
     </owl:Class>
     
 
