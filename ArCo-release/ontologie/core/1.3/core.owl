@@ -148,6 +148,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/constructQuery -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/core/constructQuery"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/replacedBy -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/core/replacedBy"/>
@@ -1545,10 +1551,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">Classification</rdfs:label>
         <rdfs:label xml:lang="it">Classificazione</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <replacedBy rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
     </owl:Class>
     
 
@@ -1673,6 +1677,13 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
         <rdfs:label xml:lang="it">Classificazione relativa a bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">Cultural entity classification</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <constructQuery>CONSTRUCT {
+?class a core:ClassificationInTime .
+}
+
+WHERE {
+?class a core:CulturalEntityClassification .
+}</constructQuery>
         <replacedBy rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
     </owl:Class>
     
