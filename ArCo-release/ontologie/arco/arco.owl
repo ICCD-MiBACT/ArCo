@@ -59,9 +59,9 @@
         <dc:title xml:lang="en">ArCo Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia ArCo (ArCo network)</dc:title>
         <terms:issued>2019-03-05</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
-        <terms:modified>2020-03-27</terms:modified>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
+        <terms:modified>2023-01-09</terms:modified>
         <rdfs:comment xml:lang="it">Questo è il modulo centrale della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al dominio dei beni culturali, considerate top-level. Vengono importati tutti gli altri moduli della rete.
 In questo modulo sono riusati come template i seguenti Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/classification.owl
