@@ -46,9 +46,9 @@
         <dc:title xml:lang="en">Location Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia della Localizzazione (ArCo network)</dc:title>
         <terms:issued>2018-03-07</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
-        <terms:modified>2020-03-27</terms:modified>
+               <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
+        <terms:modified>2023-01-09</terms:modified>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative alle localizzazioni e alla georeferenziazione di un bene culturale.
 In questo modulo si riusano come template i seguenti Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl
