@@ -55,9 +55,9 @@
         <dc:title xml:lang="en">Movable property Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia dei Beni Mobili (ArCo network)</dc:title>
         <terms:issued>2020-06-23</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
-        <terms:modified>2020-06-23</terms:modified>
+               <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
+        <terms:modified>2023-01-09</terms:modified>
         <rdfs:comment xml:lang="it">Questo è il modulo dei Beni Mobili. Qui si modellano informazioni specifiche relative ai beni mobili.
 In questo modulo sono riusati come template i seguenti Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/partof.owl
