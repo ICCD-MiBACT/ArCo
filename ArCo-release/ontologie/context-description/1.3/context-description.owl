@@ -44,8 +44,8 @@
         <dc:title xml:lang="en">Context Description Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</dc:title>
         <terms:issued>2018-03-07</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
         <terms:modified>2020-03-27</terms:modified>
         <opla1:reusesPatternAsTemplate rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl"/>
@@ -245,13 +245,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQT</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-        <core:replacingQuery>CONSTRUCT   { ?acq a a-cd:Acquisition;
+        <core:constructQuery>CONSTRUCT   { ?acq a a-cd:Acquisition;
 core:hasType ?type.
  }
 WHERE       { ?acq a a-cd:Acquisition;
 a-cd:hasAcquisitionType ?type.
- }</core:replacingQuery>
+ }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
 
@@ -330,16 +330,6 @@ a-cd:hasAcquisitionType ?type.
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasAgeInterpretation -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgeInterpretation">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasAge"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/hasAgeOfDeathInterpretation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgeOfDeathInterpretation">
@@ -355,6 +345,13 @@ a-cd:hasAcquisitionType ?type.
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?cp a-cd:hasAge ?age .
+}
+
+WHERE {
+?cp a-cd:hasAgeOfDeathInterpretation ?age .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasAge"/>
     </owl:ObjectProperty>
     
@@ -594,6 +591,13 @@ a-cd:hasAcquisitionType ?type.
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>AU/AUT/AUTN (+ AU/AUT/AUTS); AU/AAT; AU/AAT/AATN. ICCD Normativa F e FF 4.00: PD/PDF/PDFN - ICCD Normativa F 3.00: PD/PDF/PDFN o PD/PDF/PDFB</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?respo a-cd:hasAgentWithResponsibility ?agent .
+}
+
+WHERE {
+?respo a-cd:hasAttributedAuthor ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility"/>
     </owl:ObjectProperty>
     
@@ -668,6 +672,13 @@ a-cd:hasAcquisitionType ?type.
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT; AU/ATB; AU/AAT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT  {
+?cp a-cd:hasResponsibility ?attrRespo .
+}
+
+WHERE {
+?cp a-cd:hasAuthorshipAttribution ?attrRespo .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasResponsibility"/>
     </owl:ObjectProperty>
     
@@ -736,6 +747,14 @@ a-cd:hasAcquisitionType ?type.
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?thing core:isClassifiedBy ?taxon .
+}
+
+WHERE {
+?thing a-cd:hasTaxon ?taxon .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
     </owl:ObjectProperty>
     
 
@@ -862,6 +881,15 @@ a-cd:hasAcquisitionType ?type.
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?coll a-lite:hasCollectionMember ?cp .
+}
+
+WHERE {
+?coll a-cd:hasCoinMember ?cp .
+}</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -1430,7 +1458,21 @@ a-cd:hasAcquisitionType ?type.
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ESP/ESPU</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?cert a-lite:hasExportOffice ?agent .
+}
+
+WHERE {
+?cert a-cd:hasExportOffice ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasExportOffice"/>
+        <core:replacingQuery>select * where {
+?cert core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole ?NEWrole ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1534,6 +1576,13 @@ a-cd:hasAcquisitionType ?type.
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa VeAC: AU/FRU</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?cp a-cd:hasUse ?use .
+}
+
+WHERE {
+?cp a-cd:hasFruition ?use .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasUse"/>
     </owl:ObjectProperty>
     
@@ -1572,6 +1621,14 @@ a-cd:hasAcquisitionType ?type.
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG. - Normativa BNB: RB/RBN/RBNA; SB/NAA/NAAA; SB/NAT/NATA</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?identificationOrClassification core:hasTaxon ?tax .
+}
+
+WHERE {
+?identificationOrClassification a-cd:hasGenus ?tax .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasTaxon"/>
     </owl:ObjectProperty>
     
 
@@ -2177,6 +2234,14 @@ core:hasRole &lt;https://w3id.org/arco/resource/Role/Transferor&gt; .
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI 4.00: DU, DV, DF</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?cp a-cd:hasRecording ?rec .
+?rec a-cd:primaryDocumentation True .
+}
+
+where {
+?cp a-cd:hasPrimaryDocumentation ?rec .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/primaryDocument"/>
     </owl:ObjectProperty>
     
@@ -2564,6 +2629,18 @@ ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP/INPS</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?inv a-lite:nationalIdentifier ?id .
+}
+
+WHERE {
+?inv a-cd:hasSECIdentifier ?id .
+}</core:constructQuery>
+        <core:replacingQuery>select * {
+?inv core:hasIdentifier ?NEWIdentifier .
+?NEWIdentifier core:hasType core:NationalIdentifer ;
+l0:identifier ?id .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -2632,6 +2709,13 @@ ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSexInterpretationOf"/>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?cp a-cd:hasSex ?sex .
+}
+
+WHERE {
+?cp a-cd:hasSexInterpretation ?sex .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasSex"/>
     </owl:ObjectProperty>
     
@@ -2652,6 +2736,13 @@ ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?identificationOrClassification core:hasTaxon ?tax .
+}
+
+WHERE {
+?identificationOrClassification a-cd:hasSpecies ?tax .
+}</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -2735,6 +2826,13 @@ ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGST. -  Normativa BNB: RB/RBN/RBND; SB/NAA/NAAD; SB/NAT/NATD</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?identificationOrClassification core:hasTaxon ?tax .
+}
+
+WHERE {
+?identificationOrClassification a-cd:hasSubspecies ?tax .
+}</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -3096,7 +3194,21 @@ ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUN; Normativa VeAC: AU/FRU/FRUF</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?cp a-lite:hasUser ?agent .
+}
+
+WHERE {
+?cp a-cd:hasUser ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasUser"/>
+        <core:replacingQuery>select * where {
+?cp core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole ?NEWrole ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -6400,7 +6512,20 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <!-- https://w3id.org/arco/ontology/context-description/age -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/age">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la situazione sull&apos;età di un bene al valore numerico dell&apos;età.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an age situation of a cultural property to the age value.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">age</rdfs:label>
+        <rdfs:label xml:lang="it">età</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?sit a-cd:ageValue ?age .
+}
+
+WHERE {
+?sit a-cd:age ?age .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/ageValue"/>
     </owl:DatatypeProperty>
     
@@ -6421,6 +6546,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>DA/SEM/SEME</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?sit a-cd:ageValue ?age . 
+}
+
+WHERE {
+?sit a-cd:estimatedAgeOfDeath ?age .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/age"/>
     </owl:DatatypeProperty>
     
@@ -6521,6 +6653,15 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDN</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?cp a-lite:alternativeTitle ?title .
+}
+
+WHERE {
+?cp a-cd:alternativeTitle ?title .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/alternativeTitle"/>
     </owl:DatatypeProperty>
     
@@ -6618,7 +6759,20 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa FF: PA/PAC/PACI; PA/PAC/PACA</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT  { ?doc a-lite:localIdentifier ?id .
+}
+
+WHERE 
+      { ?doc a-cd:archivalRecordIdentifier ?id .
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+        <core:replacingQuery>select * {
+?rec core:hasIdentifier ?NEWIdentifier .
+?NEWIdentifier core:hasType core:LocalIdentifer ;
+l0:identifier ?id .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -6637,6 +6791,14 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF/UBFC</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?doc l0:positionInSequence ?id .
+}
+
+WHERE {
+?doc a-cd:archivalRecordLocation ?id .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/positionInSequence"/>
     </owl:DatatypeProperty>
     
 
@@ -6657,7 +6819,20 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa FF: PA/PAC/PACI; PA/PAC/PACA</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT  { ?doc a-lite:localIdentifier ?id .
+}
+
+WHERE 
+      { ?doc a-cd:archivalRecordSetIdentifier ?id .
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+        <core:replacingQuery>select * {
+?set core:hasIdentifier ?NEWIdentifier .
+?NEWIdentifier core:hasType core:LocalIdentifer ;
+l0:identifier ?id .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -6713,6 +6888,15 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa F: SG/SGL/SGLA</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?cp a-lite:attributedTitle ?title .
+}
+
+WHERE {
+?cp a-cd:attributedTitle ?title .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/attributedTitle"/>
     </owl:DatatypeProperty>
     
@@ -6758,6 +6942,13 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>AU/AUT/AUTY</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?res a-cd:specifications ?int . 
+}
+
+WHERE {
+?res a-cd:authorIntervention ?int .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/specifications"/>
     </owl:DatatypeProperty>
     
@@ -6778,6 +6969,11 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>DO/BIB/BIBA</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+        <core:replacingQuery>select * where {
+?bib core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole ?NEWrole ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -6817,6 +7013,18 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB/BIBK</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?thing a-lite:ICCDIdentifier ?id .
+}
+
+WHERE {
+?thing a-cd:bibliographyICCDIdentifier ?id .
+}</core:constructQuery>
+        <core:replacingQuery>select * {
+?doc core:hasIdentifier ?NEWIdentifier .
+?NEWIdentifier core:hasType core:LocalIdentifer ;
+l0:identifier ?id .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -6837,7 +7045,21 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB/BIBH</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?edi a-lite:localIdentifier ?id .
+}
+
+WHERE {
+?edi a-cd:bibliographyLocalIdentifier ?id .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/localIdentifier"/>
+        <core:replacingQuery>select * {
+?edi core:hasIdentifier ?NEWIdentifier .
+?NEWIdentifier core:hasType core:LocalIdentifer ;
+l0:identifier ?id .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -6909,7 +7131,20 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT  { ?doc a-lite:localIdentifier ?id .
+}
+
+WHERE 
+      { ?doc a-cd:collectionIdentifier ?id .
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+        <core:replacingQuery>select * {
+?coll core:hasIdentifier ?NEWIdentifier .
+?NEWIdentifier core:hasType core:LocalIdentifer ;
+l0:identifier ?id .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -6948,6 +7183,14 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>UB/COL/COLI. OG/QNT/QNTO. Normativa BDI: VIRN, DURN, DUSN
 AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT  { ?doc l0:positionInSequence ?id .
+}
+
+WHERE 
+      { ?doc a-cd:collectionUnitIdentifier ?id .
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/positionInSequence"/>
     </owl:DatatypeProperty>
     
@@ -7016,6 +7259,15 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?thing a-lite:depiction ?uri .
+}
+
+WHERE {
+?thing a-cd:depiction ?uri .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/depiction"/>
     </owl:DatatypeProperty>
     
@@ -7035,6 +7287,13 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFC - Normativa S: RO/COP/COPC - Normativa F: RO/CRF/CRFC</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?work a-cd:relatedWorkLocation ?loc .
+}
+
+WHERE {
+?work a-cd:derivatedWorkLocation ?loc .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/relatedWorkLocation"/>
     </owl:DatatypeProperty>
     
@@ -7054,6 +7313,15 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: PT/PTC/PTCD</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-spe: &lt;https://w3id.org/arco/ontology/natural-specimen-description/&gt;
+
+CONSTRUCT {
+?cp a-spe:diagnosis ?diag .
+}
+
+WHERE {
+?cp a-cd:diagnosis ?diag .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/natrual-specimen-description/diagnosis"/>
     </owl:DatatypeProperty>
     
@@ -7093,7 +7361,20 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAN; DO/DRA/DRAN; DO/VDC/VDCN; DO/REG/REGN; DO/FNT/FNTI</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT  { ?doc a-lite:localIdentifier ?id .
+}
+
+WHERE 
+      { ?doc a-cd:documentationIdentifier ?id .
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+        <core:replacingQuery>select * {
+?doc core:hasIdentifier ?NEWidentifier .
+?NEWidentifier core:hasType core:LocalIdentifer ;
+l0:identifier ?id .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -7181,6 +7462,13 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/COL/COLV; UB/INP/INP/INPA; UB/STI</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?cp a-cd:culturalPropertyValue ?val .
+}
+
+WHERE {
+?cp a-cd:estimatedValue ?val .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/estimatedValue"/>
     </owl:DatatypeProperty>
     
@@ -7390,9 +7678,25 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/inventoryIdentifier">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la situazione inventariale di un bene culturale al numero di collocamento d&apos;inventario del bene stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Questa proprietà collega la situazione inventariale di un bene culturale al numero di collocamento d&apos;inventario del bene stesso.
+This property relates the inventory situation of a cultural property to the inventory identifier number of the cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">inventory identifier</rdfs:label>
+        <rdfs:label xml:lang="it">numero identificativo d&apos;inventario</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INV/INVN - UB/INP/INPC</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT  { ?doc a-cd:inventoryNumber ?id .
+}
+
+WHERE 
+      { ?doc a-cd:inventoryIdentifier ?id .
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/inventoryNumber"/>
     </owl:DatatypeProperty>
     
@@ -7427,8 +7731,7 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">inventory identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag></a-cat:iccdNormTag>
-        <a-cat:iccdNormTag>UB/INV/INVN. - UB/INP/INPC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INV/INVN - UB/INP/INPC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -7665,6 +7968,15 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa F: SG/SGL/SGLL - Normative S e MI: OG/SGT/SGTR</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?cp a-lite:parallelTitle ?title .
+}
+
+WHERE {
+?cp a-cd:parallelTitle ?title .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/parallelTitle"/>
     </owl:DatatypeProperty>
     
@@ -7719,6 +8031,14 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?sit a-cd:preferredAuthorshipAttribution ?bool .
+}
+
+WHERE {
+?sit a-cd:mainResponsibility ?bool .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/mainResponsibility"/>
     </owl:DatatypeProperty>
     
 
@@ -7749,12 +8069,21 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Rappresenta il titolo proprio del soggetto di una stampa, di una matrice incisa o di una fotografia. Per titolo proprio di una stampa si intende il titolo principale nella forma in cui appare sulla stampa o sulla matrice stessa. Per titolo proprio (principale) di una fotografia, si intende nella forma in cui appare nell&apos;immagine (o su uno dei suoi supporti, o nelle schede a campi testuali, o nei commenti sonori presenti all&apos;interno del file contenente l&apos;immagine digitale). Per la normativa F, Il titolo proprio include anche ogni eventuale titolo alternativo (altre denominazioni dell&apos;opera che appaiano insieme al titolo principale) e, facoltativamente, i complementi del titolo proprio (ossia sottotitoli od ulteriori indicazioni che contribuiscono a qualificare più specificamente il contenuto dell&apos;immagine).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the proper title of a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">propert title</rdfs:label>
+        <rdfs:label xml:lang="en">proper title</rdfs:label>
         <rdfs:label xml:lang="it">titolo proprio</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normative S e MI: OG/SGT/SGTP - Normativa F: SG/SGL/SGLT</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?cp a-lite:properTitle ?title .
+}
+
+WHERE {
+?cp a-cd:properTitle ?title .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/properTitle"/>
     </owl:DatatypeProperty>
     
@@ -7838,6 +8167,15 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: PT/PTC/PTCI</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-spe: &lt;https://w3id.org/arco/ontology/natural-specimen-description/&gt;
+
+CONSTRUCT {
+?sit a-spe:refersToSurvey ?sur .
+}
+
+WHERE {
+?sit a-cd:refersToSurvey ?sur .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/refersToSurveys"/>
     </owl:DatatypeProperty>
     
@@ -7929,7 +8267,20 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFX</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT  { ?doc a-lite:localIdentifier ?id .
+}
+
+WHERE 
+      { ?doc a-cd:relatedWorkRecordIdentifier ?id .
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+        <core:replacingQuery>select * {
+?cp core:hasIdentifier ?NEWIdentifier .
+?NEWIdentifier core:hasType core:LocalIdentifer ;
+l0:identifier ?id .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -7990,6 +8341,10 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, DO/BIB/BIBY - ICCD Normativa MI 3.00: DA/PLC</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasCopyright"/>
+        <core:replacingQuery>select * where {
+?cp a-cd:hasCopyright ?NEWcp .
+?NEWcp a-cd:specifications ?spec .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -8063,6 +8418,10 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI. DA/DES/DESU</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCulturalPropertySubject"/>
+        <core:replacingQuery>select * where {
+?cp a-lite:hasCulturalPropertySubject ?NEWsubj .
+?NEWsubj rdfs:label ?subj .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -8100,7 +8459,20 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOID</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT  { ?doc a-lite:localIdentifier ?id .
+}
+
+WHERE 
+      { ?doc a-cd:surveyImageIdentifier ?id .
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+        <core:replacingQuery>select * {
+?img core:hasIdentifier ?NEWIdentifier .
+?NEWIdentifier core:hasType core:LocalIdentifer ;
+l0:identifier ?id .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -8121,6 +8493,12 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSA</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+        <core:replacingQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+select * {
+?cp a-lite:hasAuthor ?NEWAuth .
+?NEWAuth rdfs:label ?auth .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -8138,8 +8516,12 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <a-cat:iccdNormTag>ICCD Normativa AT 3.01: IN/INI/INIZ</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
+        <core:replacingQuery>select * where {
+?sur a-cd:hasBibliographicSource ?NEWsource .
+?NEWsource rdfs:label ?doc .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -8184,6 +8566,15 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">Normativa trasversale: DA/AID/AIDT - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTT</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?cp a-lite:title ?title .
+}
+
+WHERE {
+?cp a-cd:title ?title .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/title"/>
     </owl:DatatypeProperty>
     
@@ -8220,7 +8611,16 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUF - BDM 2.00:UT/UTF - PST 3.01: DA/UTF</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasUseFunction"/>
+        <core:constructQuery></core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCulturalEntityUseFunction"/>
+        <core:replacingQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+select * where {
+?cp a-lite:hasCulturalEntityUseFunction ?NEWusefunction ;
+    a-cd:hasUse ?NEWUse .
+?NEWUse a-cd:hasUseFunction ?NEWusefunction .
+?NEWusefunction rdfs:label ?usef .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -8277,7 +8677,20 @@ AIRN, AISN. Normativa F: PD/SFI/SFIN, SSIN</a-cat:iccdNormTag>
 
     <!-- https://w3id.org/italia/onto/l0/identifier -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/identifier"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/identifier">
+        <core:constructQuery>CONSTRUCT   { ?acq a a-cd:Acquisition;
+core:hasType ?type.
+ }
+WHERE       { ?acq a a-cd:Acquisition;
+a-cd:hasAcquisitionType ?type.
+ }
+
+prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+CONSTRUCT   { ?cp a-lite:localIdentifier ?id.
+ }
+WHERE       { ?cp a-cd:surveyImageIdentifier ?id.
+ }</core:constructQuery>
+    </owl:DatatypeProperty>
     
 
 
@@ -10323,8 +10736,8 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasExportOffice"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una certificazione amministrativa per la circolazione e l&apos;esportazione/importazione di un bene culturale.</rdfs:comment>
@@ -14007,14 +14420,14 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
+        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
