@@ -31,6 +31,7 @@
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Luigi Asprino (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
@@ -42,8 +43,8 @@
         <dc:title xml:lang="en">Cataloguing Campaign Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia delle Campagne di Catalogazione (ArCo network)</dc:title>
         <terms:issued>2020-03-27</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
         <terms:modified>2020-03-27</terms:modified>
         <rdfs:comment xml:lang="it">Questo modulo permette di rappresentare i dati riguardanti le campagne di catalogazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This module allows to formalise data regarding the cataloguing campaigns.</rdfs:comment>

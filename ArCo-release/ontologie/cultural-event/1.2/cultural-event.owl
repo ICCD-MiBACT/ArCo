@@ -34,6 +34,7 @@
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
@@ -44,8 +45,8 @@
         <dc:title xml:lang="en">Cultural Event Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia degli Eventi Culturali (ArCo network)</dc:title>
         <terms:issued>2018-03-07</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
         <terms:modified>2019-06-01</terms:modified>
         <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
@@ -73,6 +74,18 @@ In this module are used as template the following Ontology Design Patterns:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
@@ -150,6 +163,12 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/context-description/isAgentRelatedTo -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasAgentRole -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasAgentRole"/>
     
 
 
@@ -608,6 +627,12 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/italia/onto/CLV/hasSpatialCoverage -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasSpatialCoverage"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/RO/hasRiT -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/hasRiT"/>
@@ -617,6 +642,12 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/italia/onto/RO/isRoleInTimeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/TI/atTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/TI/atTime"/>
     
 
 
@@ -699,6 +730,12 @@ In this module are used as template the following Ontology Design Patterns:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://dati.beniculturali.it/cis/CulturalEntity -->
+
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
     
 
 
@@ -905,6 +942,18 @@ cultualheritageobject:Il_Pescatorello
     
 
 
+    <!-- http://dati.beniculturali.it/cis/Site -->
+
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/Site"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/AgentRole -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/AgentRole"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Concept -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Concept"/>
@@ -930,8 +979,8 @@ cultualheritageobject:Il_Pescatorello
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riconoscimento conferito da un concorso</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the recognition conferred by a competition</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
-        <rdfs:label xml:lang="it">riconoscimento</rdfs:label>
         <rdfs:label xml:lang="en">acknowledgment</rdfs:label>
+        <rdfs:label xml:lang="it">riconoscimento</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -945,8 +994,8 @@ cultualheritageobject:Il_Pescatorello
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riconoscimento più alto previsto da una competizione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the highest award expected from a competition</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
-        <rdfs:label xml:lang="it">premio</rdfs:label>
         <rdfs:label xml:lang="en">award</rdfs:label>
+        <rdfs:label xml:lang="it">premio</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -1149,6 +1198,12 @@ cultualheritageobject:Il_Pescatorello
     
 
 
+    <!-- https://w3id.org/italia/onto/CLV/Feature -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Feature"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/CPEV/PublicEvent -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CPEV/PublicEvent"/>
@@ -1165,9 +1220,9 @@ cultualheritageobject:Il_Pescatorello
 
     <!-- https://w3id.org/italia/onto/TI/TimeInterval -->
 
-    <rdf:Description rdf:about="https://w3id.org/italia/onto/TI/TimeInterval">
+    <owl:Class rdf:about="https://w3id.org/italia/onto/TI/TimeInterval">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -1197,9 +1252,9 @@ cultualheritageobject:Il_Pescatorello
 
     <!-- https://w3id.org/italia/onto/l0/Description -->
 
-    <rdf:Description rdf:about="https://w3id.org/italia/onto/l0/Description">
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Description">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -1219,17 +1274,17 @@ cultualheritageobject:Il_Pescatorello
 
     <!-- https://w3id.org/italia/onto/l0/Location -->
 
-    <rdf:Description rdf:about="https://w3id.org/italia/onto/l0/Location">
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Location">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- https://w3id.org/italia/onto/l0/Object -->
 
-    <rdf:Description rdf:about="https://w3id.org/italia/onto/l0/Object">
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 

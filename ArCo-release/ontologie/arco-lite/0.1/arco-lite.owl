@@ -36,6 +36,10 @@
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/musical-instrument/0.1"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/0.1"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/1.0"/>
+        <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dc:creator>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
         <rdfs:label xml:lang="en">Arco Lite Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia Arco Leggera (ArCo network)</rdfs:label>
     </owl:Ontology>

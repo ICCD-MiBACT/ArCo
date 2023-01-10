@@ -44,6 +44,7 @@
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Luigi Asprino (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Letizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
@@ -54,8 +55,8 @@
         <dc:title xml:lang="en">Construction description Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia della descrizione delle costruzioni (ArCo network)</dc:title>
         <terms:issued>2021-04-23</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
         <terms:modified>2021-05-27</terms:modified>
         <rdfs:comment xml:lang="it">Questo è il modulo della descrizione delle costruzioni. Qui si modellano informazioni, relative al dominio dei beni architettonici. 
 In questo modulo sono riusati come template i seguenti Ontology Design Patterns:

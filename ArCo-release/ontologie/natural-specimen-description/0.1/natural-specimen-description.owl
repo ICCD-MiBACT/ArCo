@@ -45,6 +45,7 @@
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Luigi Asprino (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Letizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
@@ -55,8 +56,8 @@
         <dc:title xml:lang="en">Natural Specimen Description Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia della descrizione dei campioni naturalistici (ArCo network)</dc:title>
         <terms:issued>2021-05-12</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
         <terms:modified>2021-05-12</terms:modified>
         <rdfs:comment xml:lang="it">Questo è il modulo dei Beni Mobili. Qui si modellano informazioni specifiche relative ai beni mobili.
 In questo modulo sono riusati come template i seguenti Ontology Design Patterns:
@@ -245,9 +246,33 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/hasDirectHigherRank -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasDirectLowerRank -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasDirectLowerRank"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasHigherRank -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasHigherRank"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/hasLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasLocation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasLowerRank -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasLowerRank"/>
     
 
 
@@ -266,6 +291,12 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/hasSituation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasSituation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasTaxon -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasTaxon"/>
     
 
 
@@ -2991,6 +3022,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/Taxon -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Taxon"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/TimeIndexedEvent -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/TimeIndexedEvent"/>
@@ -3061,6 +3098,12 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/denotative-description/Orientation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Sample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Sample"/>
     
 
 
@@ -6859,8 +6902,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
-        <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <rdfs:comment xml:lang="it">Questa individuo rappresenta la riflettanza</rdfs:comment>
     </rdf:Description>
     
