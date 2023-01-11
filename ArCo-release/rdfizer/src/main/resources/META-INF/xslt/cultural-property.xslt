@@ -330,9 +330,15 @@
 										<xsl:when test="lower-case(normalize-space(record/metadata/schede/MODI/CM/IMD/IMDT))='bdm'">
 											<xsl:value-of select="'https://w3id.org/arco/ontology/arco/MovableCulturalProperty'" />
 										</xsl:when>
-										<xsl:otherwise>
+										<xsl:when test="lower-case(normalize-space(record/metadata/schede/MODI/CM/IMD/IMDT))='bdi'">
 											<xsl:value-of select="'https://w3id.org/arco/ontology/arco/IntangibleCulturalProperty'" />
-										</xsl:otherwise>									
+										</xsl:when>	
+										<xsl:when test="lower-case(normalize-space(record/metadata/schede/MODI/OG/AMA))='entità immateriali'">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/arco/IntangibleCulturalProperty'" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="'https://w3id.org/arco/ontology/arco/MovableCulturalProperty'" />
+										</xsl:otherwise>							
 									</xsl:choose>
 								</xsl:when>
 								<xsl:otherwise>
