@@ -171,6 +171,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x core:describes ?thing .
+}
+
+WHERE {
+?x a-cat:describes ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/describes"/>
     </owl:ObjectProperty>
     
@@ -191,6 +198,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x core:describesCulturalProperty ?thing .
+}
+
+WHERE {
+?x a-cat:describes ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/describes"/>
     </owl:ObjectProperty>
     
@@ -264,7 +278,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPE</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleAgent ?agent .
+}
+
+WHERE {
+?x a-cat:hasAdditionalFormResponsibleAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -276,6 +304,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isAdditionalFormTypeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalFormType"/>
+        <rdfs:comment>CONSTRUCT {
+?x core:hasType ?type .
+}
+
+WHERE {
+? a-cat:hasAdditionalFormType ?type .
+}</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà collega un modulo di approfondimento al tipo di modulo (Unità Stratigrafica, Tipo Murario, Epigrafia).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an additional form to its type (Stratigraphic Unit, Epigraphy, Wall Typology).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
@@ -312,6 +347,13 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?x a-cat:hasRecordVersion ?thing .
+}
+
+WHERE {
+?x a-cat:hasCatalogueRecordVersion ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/hasRecordVersion"/>
     </owl:ObjectProperty>
     
@@ -332,6 +374,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x core:hasAgentRole ?y .
+?y a core:AgentRole .
+
+?x a-cat:hasCatalogueRecordVersionRiT ?y .
+?y a a-cat:TimeIndexedRole .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
     </owl:ObjectProperty>
     
@@ -356,7 +405,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasCataloguingAgent ?agent .
+}
+
+WHERE {
+?x a-cat:hasCataloguingAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/CataloguingAgent&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -395,7 +458,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleAgent ?agent .
+}
+
+WHERE {
+?x a-cat:hasCulturalPropertyRecordResponsibleAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -415,7 +492,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/RVM/RVMN</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasOperator ?agent .
+}
+
+WHERE {
+?x a-cat:hasDigitalTranscriptorOperator ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOperator"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Operator&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -435,7 +526,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/RVM/RVME</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleAgent ?agent .
+}
+
+WHERE {
+?x a-cat:hasDigitalTranscriptionResponsibleAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -475,7 +580,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/FUR</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasOfficialInCharge ?agent .
+}
+
+WHERE {
+?x a-cat:hasOfficialInCharge ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOfficialInCharge"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/OfficialInCharge&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -568,7 +687,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/CMP/CMPN</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleResearchAndCompilation ?agent .
+}
+
+WHERE {
+?x a-cat:hasAdditionalFormResponsibleResearchAndCompilation ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleResearchAndCompilation&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -588,7 +721,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/RSR</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasScientificDirector ?agent .
+}
+
+WHERE {
+?x a-cat:hasScientificDirector ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasScientificDirector"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ScientificDirector&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -608,7 +755,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGF</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasOfficialInCharge ?agent .
+}
+
+WHERE {
+?x a-cat:hasUpdateOfficialInCharge ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOfficialInCharge"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/OfficialInCharge&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -628,7 +789,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGE</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleAgent ?agent .
+}
+
+WHERE {
+?x a-cat:hasUpdateResponsibleAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -648,7 +823,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGN</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleResearchAndCompilation ?agent .
+}
+
+WHERE {
+?x a-cat:hasUpdateResponsibleResearchAndCompilation ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleResearchAndCompilation&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -668,7 +857,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGR</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasScientificDirector ?agent .
+}
+
+WHERE {
+?x a-cat:hasUpdateScientificRevisor ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasScientificDirector"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ScientificDirector&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -704,7 +907,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleAgentOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isAdditionalFormResponsibleAgentOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -723,6 +940,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cat:isAdditionalFormTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -748,6 +972,13 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?x a-cat:isRecordVersionOf ?thing .
+}
+
+WHERE {
+?x a-cat:isCatalogueRecordVersionOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/isRecordVersionOf"/>
     </owl:ObjectProperty>
     
@@ -766,6 +997,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x core:isAgentRoleOf ?thing .
+}
+
+WHERE {
+?x a-cat:isCatalogueRecordVersionRiTOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isAgentRoleOf"/>
     </owl:ObjectProperty>
     
@@ -785,7 +1023,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isCataloguingAgentOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isCataloguingAgentOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCataloguingAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/CataloguingAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -820,6 +1072,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x core:isDescribedBy ?thing .
+}
+
+WHERE {
+?x a-cat:isDescribedBy ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isDescribedBy"/>
     </owl:ObjectProperty>
     
@@ -839,6 +1098,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x core:isDescribedBy ?thing .
+}
+
+WHERE {
+?x a-cat:isDescribedByCatalogueRecord ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/isDescribedBy"/>
     </owl:ObjectProperty>
     
@@ -858,7 +1124,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isOperatorOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isDigitalTranscriptorOperatorOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOperatorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Operator&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -877,7 +1157,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleAgentOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isDigitalTranscriptorResponsibleAgentOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -915,7 +1209,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isOfficialInChargeOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isOfficialInChargeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOfficialInChargeOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/OfficialInCharge&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1037,7 +1345,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOfRecord"/>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleAgentOfCulturalPropertyRecord ?thing .
+}
+
+WHERE {
+?agent a-cat:isUpdateResponsibleAgentOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1056,7 +1378,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleResearchAndCompilationOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isResponsibleResearchAndCompilationOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleResearchAndCompilationOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleResearchAndCompilation&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1075,7 +1411,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isScientificDirectorOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isScientificDirectorOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isScientificDirectorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ScientificDirector&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1094,7 +1444,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isOfficialInChargeOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isUpdateOfficialInChargeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOfficialInChargeOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/OfficialInCharge&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1113,7 +1477,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleAgentOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isUpdateResponsibleAgentOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1132,7 +1510,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleResearchAndCompilationOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isUpdateResponsibleResearchAndCompilationOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleResearchAndCompilationOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleResearchAndCompilation&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1151,7 +1543,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isScientificDirectorOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isUpdateScientificRevisorOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isScientificDirectorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ScientificDirector&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1266,6 +1672,15 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+
+CONSTRUCT {
+?thing l0:identifier ?id .
+}
+
+WHERE {
+?thing a-cat:ICCDIdentifier ?id .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
@@ -1303,6 +1718,15 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPC</iccdNormTag>
+        <core:constructQuery>prefix l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+
+CONSTRUCT {
+?thing l0:identifier ?id .
+}
+
+WHERE {
+?thing a-cat:additionalFormIdentifier ?id .
+}</core:constructQuery>
     </owl:DatatypeProperty>
     
 
@@ -1341,6 +1765,15 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag xml:lang="it">Concatenazione dei sottocampi di CD/NCT (NCTR, NCTN, NCTS) e RV/RVE/RVEL</iccdNormTag>
+        <core:constructQuery>prefix l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+
+CONSTRUCT {
+?thing l0:identifier ?id .
+}
+
+WHERE {
+?thing a-cat:CatalogueRecordIdentifier ?id .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
@@ -1360,6 +1793,15 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSC</iccdNormTag>
+        <core:constructQuery>prefix l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+
+CONSTRUCT {
+?thing l0:identifier ?id .
+}
+
+WHERE {
+?thing a-cat:CulturalPropertyRecordIdentifier ?id .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
@@ -1399,6 +1841,15 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/MOD/MODI</iccdNormTag>
+        <core:constructQuery>prefix l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+
+CONSTRUCT {
+?thing l0:identifier ?id .
+}
+
+WHERE {
+?thing a-cat:informationFormIdentifier ?id .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
@@ -1436,6 +1887,15 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+
+CONSTRUCT {
+?thing l0:identifier ?id .
+}
+
+WHERE {
+?thing a-cat:localIdentifier ?id .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
@@ -1537,6 +1997,15 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix arco-lite: &lt;https://w3id.org/italia/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?thing arco-lite:systemIdentifier ?id .
+}
+
+WHERE {
+?thing a-cat:systemRecordCode ?id .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/systemIdentifier"/>
     </owl:DatatypeProperty>
     
@@ -1641,14 +2110,14 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalFormType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalFormType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un modulo di approfondimento, utile a trattare secondo un approccio specialistico specifici aspetti del bene in esame (Documenti Epigrafici; Tipi Murari, Unità Stratigrafiche)</rdfs:comment>
@@ -1710,6 +2179,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC</iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a core:Identifier .
+}
+
+WHERE {
+?x a a-cat:AlternativeIdentifier .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
     </owl:Class>
     
@@ -2425,6 +2901,13 @@ resource:CatalogueRecordS/0500212038
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x a-cat:Record .
+}
+
+WHERE {
+?x a-cat:CulturalPropertyRecord .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
     </owl:Class>
     
@@ -2455,6 +2938,12 @@ resource:CatalogueRecordS/0500212038
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasvesale 4.00: AC/MOD</iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cat:CatalogueRecordMODI .
+
+WHERE{
+?x a a-cat:InformationForm .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordMODI"/>
     </owl:Class>
     
@@ -2522,6 +3011,12 @@ resource:CatalogueRecordS/0500212038
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasRecordVersion"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/RecordVersion"/>
             </owl:Restriction>
@@ -2530,12 +3025,6 @@ resource:CatalogueRecordS/0500212038
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

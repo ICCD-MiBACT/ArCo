@@ -272,6 +272,20 @@ a-cd:hasAcquisitionType ?type.
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: RE/IND/INDN; CO/RST/RSTN - ICCD Normativa SM e BDM 4.00: DR/DRL - ICCD normative di versioni precedenti: RE/AIN/AINR. RS/ALB/ALBO; CO/ALB/ALBO. Normativa BNB: RB/RBR/RBRA</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasOperator ?agent .
+}
+
+WHERE {
+?x a-cd:hasActivityOperator ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?activity core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Operator&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOperator"/>
     </owl:ObjectProperty>
     
@@ -293,6 +307,20 @@ a-cd:hasAcquisitionType ?type.
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGR; RE/DSC/DSCF; RE/IND/INDE; RE/FOI/FOIE - Normativa SM e BDM 4.00: DR/DRV. RS/RST/RSTE. CM/ISP/ISPN. RS/ALB/ALBE; CO/ALB/ALBE.</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleAgent ?agent .
+}
+
+WHERE {
+?x a-cd:hasActivityResponsible ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?activity core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
     </owl:ObjectProperty>
     
@@ -314,6 +342,20 @@ a-cd:hasAcquisitionType ?type.
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RS/RST/RSTR; RE/IND/INDR</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasSponsor ?agent .
+}
+
+WHERE {
+?x a-cd:hasActivitySponsor ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?activity core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Sponsor&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasSponsor"/>
     </owl:ObjectProperty>
     
@@ -372,6 +414,12 @@ WHERE {
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT   { ?age a a-cd:Age;
+core:hasType ?type.
+ }
+WHERE       { ?age a a-cd:AgeInterpretation;
+a-cd:hasAgeType ?type.
+ }</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -470,6 +518,12 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIQ</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?anm a a-cd:Anomaly;
+core:hasType ?type.
+ }
+WHERE       { ?anm a a-cd:Anomaly;
+a-cd:hasAnomalyType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -491,6 +545,12 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT 3.00: IN/INI/INIT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?surv a a-cd:ArchaeologicalPropertySurvey;
+core:hasType ?type.
+ }
+WHERE       { ?surv a a-cd:ArchaeologicalPropertySurvey;
+a-cd:hasArchaeologicalPropertySurveyType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -512,6 +572,12 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RE/IND/INDI - ICCD normative di versioni precedenti: RE/AIN/AINT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?surv a a-cd:ArchaeometricDiagnosticSurvey;
+core:hasType ?type.
+ }
+WHERE       { ?surv a a-cd:ArchaeometricDiagnosticSurvey;
+a-cd:hasArchaeometricDiagnosticSurveyType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -533,7 +599,14 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasCollection"/>
+        <core:constructQuery>CONSTRUCT {
+?colmemb a-cd:involvesCollection ?coll .
+}
+
+WHERE {
+?collmemb a-cd:hasArchivalRecordSet ?coll .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/involvesCollection"/>
     </owl:ObjectProperty>
     
 
@@ -593,6 +666,7 @@ WHERE {
         <a-cat:iccdNormTag>AU/AUT/AUTN (+ AU/AUT/AUTS); AU/AAT; AU/AAT/AATN. ICCD Normativa F e FF 4.00: PD/PDF/PDFN - ICCD Normativa F 3.00: PD/PDF/PDFN o PD/PDF/PDFB</a-cat:iccdNormTag>
         <core:constructQuery>CONSTRUCT {
 ?respo a-cd:hasAgentWithResponsibility ?agent .
+?respo a a-cd:Responsibility .
 }
 
 WHERE {
@@ -623,6 +697,20 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DO/FTA/FTAA, DO/DRA/DRAA, DO/VDC/VDCR, DO/REG/REGA, DO/FNT/FNTA, DO/BIB/BIBA - Normativa S 3: RO/ADL/ADLA - Normative VeAC e AT 3.01: DO/BSE/BSEA - Normativa MI 3.00: AU/DDC/DDCN</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasAuthor ?agent .
+}
+
+WHERE {
+?x a-cd:hasAuthor ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Author&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
     </owl:ObjectProperty>
     
@@ -644,6 +732,20 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTJ; DO/BIB/BIBJ; RE/RCG/RCGJ; RE/DSC/DSCJ - ICCD Normativa F: PD/PDF/PDFJ</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasCataloguingAcency ?agent .
+}
+
+WHERE {
+?x a-cd:hasAuthorityFileCataloguingAgency ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/CataloguingAcency&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgency"/>
     </owl:ObjectProperty>
     
@@ -705,7 +807,21 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/hasBibliography -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBibliography">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographyOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
+        <rdfs:label xml:lang="it">ha bibliografia</rdfs:label>
+        <rdfs:label xml:lang="en">has bibliography</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DO/BIB; RE/RCG/RCGS</a-cat:iccdNormTag>
+        <core:replacingQuery>select * {
+?thing a-cd:hasBibliographicSource ?edition .
+?edition a a-cd:Edition ;
+core:hasBibliographicEntry ?NEWbibEntry ;
+a-cd:hasTitle ?NEWtitle .
+?NEWbibEntry a BibliographicEntry ;
+a-cd:completeBibliographicReference ?ref .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -726,7 +842,12 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>BIB/BIBF</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+        <core:replacingQuery>select * where {
+?thing a-cd:hasBibliographicSource,
+a-cd:hasSpecificBibliographicSource,
+a-cd:hasContextBibliographicSource,
+a-cd:hasComparisonBibliographicSource ?edition .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -795,6 +916,12 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ALN/ALNT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?av a a-cd:ChangeOfAvailability;
+core:hasType ?type.
+ }
+WHERE       { ?av a a-cd:ChangeOfAvailability;
+a-cd:hasChangeOfAvailabilityType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -835,6 +962,12 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: CA/CAR; CA/CAC</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?circ a a-cd:Circumstance;
+core:hasType ?type.
+ }
+WHERE       { ?circ a a-cd:Circumstance;
+a-cd:hasCiscumstanceType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -869,7 +1002,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/hasCoinMember -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCoinMember">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasCollectionMember"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasMemberOfCollection"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isCoinMemberOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/NumismaticSeries"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
@@ -897,17 +1030,20 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/hasCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCollection">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;appartenenza a una collezione di un bene culturale alla collezione stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the collection membership of a cultural property to the collection itself.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha collezione</rdfs:label>
+        <rdfs:label xml:lang="en">has collection</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:ObjectProperty>
-    
+        <core:constructQuery>CONSTRUCT {
+?colmemb a-cd:involvesCollection ?coll .
+}
 
-
-    <!-- https://w3id.org/arco/ontology/context-description/hasCollectionMember -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCollectionMember">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCollectionMember"/>
+WHERE {
+?collmemb a-cd:hasCollection ?coll .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/involvesCollection"/>
     </owl:ObjectProperty>
     
 
@@ -928,6 +1064,20 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>UB/COL/COLN</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasCollector ?agent .
+}
+
+WHERE {
+?x a-cd:hasCollector ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Collector&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCollector"/>
     </owl:ObjectProperty>
     
@@ -968,23 +1118,37 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/CMM/CMMN</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasCommittent ?agent .
+}
+
+WHERE {
+?x a-cd:hasActivityCommittent ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Committent&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCommittent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasComparativeBibliographicSource -->
+    <!-- https://w3id.org/arco/ontology/context-description/hasComparisonBibliographicSource -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasComparativeBibliographicSource">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasComparisonBibliographicSource">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isComparisonBibliographicSourceOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;edizione dell&apos;opera parte della bibliografia di confronto.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity with the edition of the involved comparative bibliographic work.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with the edition of the involved comparison bibliographic work.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha fonte bibliografica di confronto</rdfs:label>
-        <rdfs:label xml:lang="en">has comparative bibliographic entry</rdfs:label>
+        <rdfs:label xml:lang="en">has comparison bibliographic entry</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB/BIBX</a-cat:iccdNormTag>
@@ -1063,6 +1227,20 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR/CPRN</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasCopyrightHolder ?agent .
+}
+
+WHERE {
+?x a-cd:hasCopyrightHolder ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/CopyrightHolder&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCopyrightHolder"/>
     </owl:ObjectProperty>
     
@@ -1085,6 +1263,15 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è stato realizzato in&apos; (versioni precedenti: &apos;sede di realizzazione&apos;)</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasCreationLocation ?y .
+}
+
+WHERE {
+?x a-cd:hasCreationLocation ?y .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCreationLocation"/>
     </owl:ObjectProperty>
     
@@ -1158,6 +1345,13 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, F: RO/ROF/ROFF</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?rws a-cd:hasRelationshipType ?type .
+}
+
+WHERE {
+?rws a-cd:hasCulturalPropertyStage ?type .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelationshipType"/>
     </owl:ObjectProperty>
     
@@ -1236,6 +1430,12 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa F: RO/CRF/CRFT - Normativa S: RO/ADL/ADLL - Normative RA, SMO, PST, S, OA, MI, D, NU: RO/REI/REIT - Normative CA, MA: RO/RIU/RIUT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?dw a a-cd:DerivatedWork;
+core:hasType ?type.
+ }
+WHERE       { ?dw a a-cd:DerivatedWork;
+a-cd:hasDerivatedWorkType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -1313,6 +1513,12 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>FTAP, DRAT, FNTP (+VDCP, REGP), ADMP (v. 3.00 e 3.01)</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?doc a a-cd:Documentation;
+core:hasType ?type.
+ }
+WHERE       { ?doc a a-cd:Documentation;
+a-cd:hasDocumentationType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -1369,6 +1575,20 @@ WHERE {
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasEditor ?agent .
+}
+
+WHERE {
+?x a-cd:hasEditor ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Editor&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasEditor"/>
     </owl:ObjectProperty>
     
@@ -1378,7 +1598,18 @@ WHERE {
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasEligibleIntervention">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isInterventionEligibleBy"/>
+        <rdfs:label xml:lang="it">ha intervento ammesso</rdfs:label>
+        <rdfs:label xml:lang="en">has eligible intervention</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/STU/STUN</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a-cd:definesEligibleIntervention ?intType .
+}
+
+WHERE {
+?x a-cd:hasEligibleIntervention ?int .
+?int a-cd:hasInterventionType ?intType .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/definesEligibleIntervention"/>
     </owl:ObjectProperty>
     
@@ -1437,6 +1668,12 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ESP/ESPT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?cert a a-cd:ExportImportCertification;
+core:hasType ?type.
+ }
+WHERE       { ?cert a a-cd:ExportImportCertification;
+a-cd:hasExportImportCertificationType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -1512,6 +1749,12 @@ core:hasAgent ?agent .
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT 3.01: OG/OGC/OGCT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?con a a-cd:FindingContext;
+core:hasType ?type.
+ }
+WHERE       { ?con a a-cd:FindingContext;
+a-cd:hasFindingContextType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -1534,6 +1777,15 @@ core:hasAgent ?agent .
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è stato rinvenuto in&apos; (versioni precedenti: &apos;sede di rinvenimento&apos;)</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasFindingLocation ?y .
+}
+
+WHERE {
+?x a-cd:hasFindingLocation ?y .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasFindingLocation"/>
     </owl:ObjectProperty>
     
@@ -1555,6 +1807,13 @@ core:hasAgent ?agent .
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: DO/FTA/FTAF, DO/DRA/DRAF, DO/DNT/FNTR</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?thing a-dd:hasFormat ?form .
+}
+
+WHERE  {
+?thing a-cd:hasFormat ?form .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFormat"/>
     </owl:ObjectProperty>
     
@@ -1717,6 +1976,12 @@ ICCD Normative F e FF: PD/PDF/PDFR</a-cat:iccdNormTag>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: valori di CO/RST/RSTI
 Normativa VeAC: CO/RIA (riadattamento/modifica)
 Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?int a a-cd:Intervention;
+core:hasType ?type.
+ }
+WHERE       { ?int a a-cd:Intervention;
+a-cd:hasInterventionType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -1747,7 +2012,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isInventoryIdentifierResponsibleOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasInventoryIdentifierResponsible"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un inventario al contenitore giuridico che conserva attualmente il bene o che lo ha conservato in passato, e che è responsabile dell&apos;assegnazione del numero di inventario.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an inventory to the juridical container responsible for the inventory identifier of the cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -1757,6 +2021,20 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: UB/INV/INVG</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleAgent ?agent .
+}
+
+WHERE {
+?x a-cd:hasInventoryIdentifierResponsible ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
     </owl:ObjectProperty>
     
@@ -1797,6 +2075,20 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUEE - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTN. DA/CON/CONA</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasIssuer ?agent .
+}
+
+WHERE {
+?x a-cd:hasIssuer ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Issuer&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasIssuer"/>
     </owl:ObjectProperty>
     
@@ -1818,6 +2110,20 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>TU/STU/STUE</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasIssuingAgency ?agent .
+}
+
+WHERE {
+?x a-cd:hasIssuingAgency ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/IssuingAgency&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasIssuingAgency"/>
     </owl:ObjectProperty>
     
@@ -1839,6 +2145,20 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUES - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTA</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasIssuer ?agent .
+}
+
+WHERE {
+?x a-cd:hasIssuingState ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Issuer&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasIssuer"/>
     </owl:ObjectProperty>
     
@@ -1860,6 +2180,12 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative NU, RA, BNB, MA, CA: RS/ALB/ALBT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?test a a-cd:LaboratoryTest;
+core:hasType ?type.
+ }
+WHERE       { ?test a a-cd:LaboratoryTest;
+a-cd:hasLaboratoryTestType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -1917,7 +2243,16 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasCollection"/>
+        <a-cat:iccdNormTag>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?collmembership a-cd:involvesMember ?cp .
+}
+
+WHERE {
+?collmembership a-cd:hasMemberOfArchivalRecordSet ?cp .
+}</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/involvesMember"/>
     </owl:ObjectProperty>
     
 
@@ -1925,6 +2260,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasMemberOfCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMemberOfCollection">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfCollectionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
@@ -1937,6 +2273,17 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>UB/COL</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">UB/COL</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?coll a-lite:hasCollectionMember ?cp .
+}
+
+WHERE {
+?coll a-cd:hasCollectionMember ?cp .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCollectionMember"/>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/involvesMember"/>
     </owl:ObjectProperty>
     
@@ -1958,6 +2305,15 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/SFI; PD/SSI</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?collmembership a-cd:involvesMember ?cp .
+}
+
+WHERE {
+?collmembership a-cd:hasMemberOfPhotographicSeries ?cp .
+}</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/involvesMember"/>
     </owl:ObjectProperty>
     
@@ -1978,6 +2334,15 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MI: OG/SGT/SGTS</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?collmembership a-cd:involvesMember ?cp .
+}
+
+WHERE {
+?collmembership a-cd:hasMemberOfPrintingPlatesSeries ?cp .
+}</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/involvesMember"/>
     </owl:ObjectProperty>
     
@@ -1999,6 +2364,20 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/ZEC - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTZ</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasMint ?agent .
+}
+
+WHERE {
+?x a-cd:hasMint ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Mint&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasMint"/>
     </owl:ObjectProperty>
     
@@ -2020,6 +2399,20 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa NU: DA/AUE/AUEZ</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasMinter ?agent .
+}
+
+WHERE {
+?x a-cd:hasMinter ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Minter&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasMinter"/>
     </owl:ObjectProperty>
     
@@ -2041,6 +2434,20 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: OS/OSD</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasMusicalEnsemble ?agent .
+}
+
+WHERE {
+?x a-cd:hasMusicalEnsemble ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/MusicalEnsemble&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasMusicalEnsemble"/>
     </owl:ObjectProperty>
     
@@ -2062,6 +2469,20 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: MU/MUTN</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasMusician ?agent .
+}
+
+WHERE {
+?x a-cd:hasMusician ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Musician&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasMusician"/>
     </owl:ObjectProperty>
     
@@ -2083,6 +2504,12 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI 4.00: LA/PRM</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?sur a a-cd:ObservationSurvey;
+core:hasType ?type.
+ }
+WHERE       { ?sur a a-cd:ObservationSurvey;
+a-cd:hasObservationSurveyType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -2104,6 +2531,20 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGS</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasOwner ?agent .
+}
+
+WHERE {
+?x a-cd:hasOwner ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Owner&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOwner"/>
     </owl:ObjectProperty>
     
@@ -2125,7 +2566,14 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: PD/SFI; PD/SSI</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasCollection"/>
+        <core:constructQuery>CONSTRUCT {
+?colmemb a-cd:involvesCollection ?coll .
+}
+
+WHERE {
+?collmemb a-cd:hasPhotographicSeries ?coll .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/involvesCollection"/>
     </owl:ObjectProperty>
     
 
@@ -2164,6 +2612,20 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DO/FTA/FTAA, DO/DRA/DRAA, DO/VDC/VDCR, DO/REG/REGA, DO/FNT/FNTA, DO/BIB/BIBA - Normativa S 3: RO/ADL/ADLA - Normative VeAC e AT 3.01: DO/BSE/BSEA - Normativa MI 3.00: AU/DDC/DDCN</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasPreferredAuthor ?agent .
+}
+
+WHERE {
+?x a-cd:hasPreferredAuthor ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/PreferredAuthor&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasPreferredAuthor"/>
     </owl:ObjectProperty>
     
@@ -2186,6 +2648,15 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;era contenuto in&apos; (versioni precedenti: &apos;sede di provenienza&apos;)</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasPreviousLocation ?y .
+}
+
+WHERE {
+?x a-cd:hasPreviousLocation ?y .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasPreviousLocation"/>
     </owl:ObjectProperty>
     
@@ -2207,6 +2678,15 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQN</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasPreviousOwner ?agent .
+}
+
+WHERE {
+?x a-cd:hasPreviousOwner ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasPreviousOwner"/>
         <core:replacingQuery>SELECT DISTINCT ?entity ?transferor WHERE{
 ?entity a-cd:hasAcquisition ?acq.
@@ -2288,6 +2768,20 @@ where {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA; Versioni precedenti: CD/EPR</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasProponentAgency ?agent .
+}
+
+WHERE {
+?x a-cd:hasProponentAgency ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ProponentAgency&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasProponentAgency"/>
     </owl:ObjectProperty>
     
@@ -2330,7 +2824,11 @@ where {
 
     <!-- https://w3id.org/arco/ontology/context-description/hasRecording -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRecording"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRecording">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isRecordingOf"/>
+        <rdfs:comment xml:lang="it">ha registrazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">has recording</rdfs:comment>
+    </owl:ObjectProperty>
     
 
 
@@ -2372,6 +2870,13 @@ ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: AU/NMC</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a-cd:involvesAgent ?agent .
+}
+
+WHERE {
+?x a-cd:hasRelatedAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
     </owl:ObjectProperty>
     
@@ -2391,6 +2896,15 @@ ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasRelatedWork ?y .
+}
+
+WHERE {
+?x a-cd:hasRelatedWork ?y .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedWork"/>
     </owl:ObjectProperty>
     
@@ -2514,6 +3028,20 @@ ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM e BDM 4.00: DR/DRR</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasScientificDirector ?agent .
+}
+
+WHERE {
+?x a-cd:hasResearchScientificDirector ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ScientificDirector&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasScientificDirector"/>
     </owl:ObjectProperty>
     
@@ -2553,6 +3081,12 @@ ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative F e FF: PD/PDF/PDFR</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?resp a a-cd:Responsibility;
+a-cd:hasInterventionRole ?role .
+ }
+WHERE       { ?resp a a-cd:Responsibility;
+a-cd:hasResponsibilityType ?role.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasRole"/>
     </owl:ObjectProperty>
     
@@ -2574,6 +3108,20 @@ ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP/INPE</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleAgent ?agent .
+}
+
+WHERE {
+?x a-cd:hasResponsibleForInsertion ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
     </owl:ObjectProperty>
     
@@ -2679,6 +3227,20 @@ l0:identifier ?id .
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative VeAC e AT 3.01: DO/BSE/BSER</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasSecondaryAuthor ?agent .
+}
+
+WHERE {
+?x a-cd:hasSecondaryAuthor ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/SecondaryAuthor&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasSecondaryAuthor"/>
     </owl:ObjectProperty>
     
@@ -2708,6 +3270,8 @@ l0:identifier ?id .
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSexInterpetation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSexInterpretationOf"/>
+        <rdfs:label xml:lang="it">ha interpretazione del sesso</rdfs:label>
+        <rdfs:label xml:lang="en">has sex interpretation</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <core:constructQuery>CONSTRUCT {
 ?cp a-cd:hasSex ?sex .
@@ -2889,6 +3453,12 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?img a a-cd:SurveyImage;
+core:hasType ?type .
+ }
+WHERE       { ?img a a-cd:SurveyImage;
+a-cd:hasSurveyImageType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -2956,6 +3526,20 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI 3.00: DR/DRG</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasPhotographer ?agent .
+}
+
+WHERE {
+?x a-cd:hasSurveyPhotographer ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Photographer&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasPhotographer"/>
     </owl:ObjectProperty>
     
@@ -2977,6 +3561,20 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGA; RE/DSC/DSCA; RE/FOI/FOIS</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasScientificDirector ?agent .
+}
+
+WHERE {
+?x a-cd:hasSurveyScientificDirector ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ScientificDirector&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasScientificDirector"/>
     </owl:ObjectProperty>
     
@@ -2998,6 +3596,20 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI 3.00: DR/DRF</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasSoundEngineer ?agent .
+}
+
+WHERE {
+?x a-cd:hasSurveySoundEngineer ?agent .
+}</core:constructQuery>
+        <core:constructQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/SoundEngineer&gt; ;
+core:hasAgent ?agent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasSoundEngineer"/>
     </owl:ObjectProperty>
     
@@ -3037,6 +3649,12 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>OG/SGT/SGTP; SG/SGL/SGLT; SG/SGL/SGLL; OG/SGT/SGTR; DA/AID/AIDN; SG/SGL/SGLA; DA/AID/AIDT; OG/SGT/SGTT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?title a a-cd:Title;
+core:hasType ?type .
+ }
+WHERE       { ?title a a-cd:Title;
+a-cd:hasTitleType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -3077,6 +3695,15 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è in relazione urbanistico - ambientale con&apos; (versioni precedenti: &apos;relazione urbanistico ambientale&apos;)</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasUrbanPlanningEnvironmentalRelationWith ?y .
+}
+
+WHERE {
+?x a-cd:hasUrbanPlanningEnvironmentalRelationWith ?y .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasUrbanPlanningEnvironmentalRelationWith"/>
     </owl:ObjectProperty>
     
@@ -3153,6 +3780,12 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { ?use a a-cd:Use;
+core:hasType ?type .
+ }
+WHERE       { ?use a a-cd:Use;
+a-cd:hasUseType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -3173,6 +3806,15 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: UT/UTUS</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?thing core:hasType ?type .
+?type a a-cd:UseType .
+}
+
+WHERE {
+?thing a-cd:hasUseTypeSpecification ?type .
+?type a a-cd:UseTypeSpecification .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -3240,6 +3882,15 @@ core:hasAgent ?agent .
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &apos;is involved in&apos;, che collega un bene culturale a un altro bene culturale collegato, di tipo immateriale, in cui è coinvolto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &apos;is involved in&apos;, which relates a cultural entity to another involved cultural entity (e.g. immaterial).</rdfs:comment>
+        <rdfs:comment>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:involves ?y .
+}
+
+WHERE {
+?x a-cd:involves ?y .
+}</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">coinvolge</rdfs:label>
         <rdfs:label xml:lang="en">involves</rdfs:label>
@@ -3356,6 +4007,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isAcquisitionTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -3375,7 +4033,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isOperatorOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isActivityOperatorOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOperatorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Operator&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -3394,7 +4066,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleAgentOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isActivityResponsibleOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -3408,12 +4094,26 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha sponsor dell&apos;attività&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has activity sponsor&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is activity responsible of</rdfs:label>
-        <rdfs:label xml:lang="it">è responsabile dell&apos;attività</rdfs:label>
+        <rdfs:label xml:lang="en">is activity sponsor of</rdfs:label>
+        <rdfs:label xml:lang="it">è sponsor dell&apos;attività</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isSponsorOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isActivitySponsorOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isSponsorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Sponsor&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -3422,7 +4122,22 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgeInterpretationOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;interpretazione dell&apos;età di un&apos;entità culturale con l&apos;entià cultural estessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the interpretation of age of a cultural entity to the cultural entity itself.</rdfs:comment>
+        <rdfs:comment xml:lang="en">is age interpretation of</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">è interpretazione dell&apos;età di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRL/SRLE, SR/SRR/SRRE</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?cultent a-cd:isAgeOf ?age .
+}
+
+WHERE {
+?cultent a-cd:isAgeInterpretationOf ?age .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isAgeOf"/>
     </owl:ObjectProperty>
     
@@ -3452,6 +4167,12 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?cultent a-cd:isAgeOf ?age .
+}
+
+WHERE {
+?cultent a-cd:isAgeOfDeathInterpretationOf ?age .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isAgeOf"/>
     </owl:ObjectProperty>
     
@@ -3471,6 +4192,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isAgeTypeOf ?thing .
+}</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -3488,6 +4216,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?agent core:isAgentInvolvedIn ?thing .
+}
+
+WHERE {
+?agent a-cd:isAgentRelatedTo ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isAgentinvolvedIn"/>
     </owl:ObjectProperty>
     
@@ -3524,6 +4259,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isAlternativeDatingTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -3577,6 +4319,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isAnomalyTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -3596,6 +4345,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isArchaeologicalPropertySurveyTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -3615,6 +4371,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isArchaeometricDiagnosticSurveyTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -3634,6 +4397,14 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?set a-cd:isCollectionIn ?collmemb .
+?collmemb a a-cd:CollectionMembership .
+}
+
+WHERE {
+?set a-cd:isArchivalRecordSetIn ?collmemb .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isCollectionIn"/>
     </owl:ObjectProperty>
     
@@ -3670,6 +4441,14 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?respo a a-cd:Responsibility .
+?agent a-cd:isAgentWithResponsibilityIn ?respo .
+}
+
+WHERE {
+?agent a-cd:isAttributedAuthorIn ?respo .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentWithResponsibilityIn"/>
     </owl:ObjectProperty>
     
@@ -3693,7 +4472,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isAuthorOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isAuthorOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isAuthorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Author&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -3712,7 +4505,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isCataloguingAgencyOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isAuthorityFileCataloguingAgencyOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCataloguingAgencyOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/CataloguingAgency&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -3739,6 +4546,14 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT; AU/ATB; AU/AAT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?respo a a-cd:Responsibility .
+?respo a-cd:isResponsibilityFor ?cp  .
+}
+
+WHERE {
+?respo a-cd:isAuthorshipAttributionOf ?cp .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isResponsibilityFor"/>
     </owl:ObjectProperty>
     
@@ -3764,7 +4579,25 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <!-- https://w3id.org/arco/ontology/context-description/isBibliographyOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isBibliographyOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una bibliografia all&apos;entità alla quale si riferisce.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a bibliography to the entity which is referred to.</rdfs:comment>
+        <rdfs:label xml:lang="en">is bibliography of</rdfs:label>
+        <rdfs:label xml:lang="it">è bibliografia di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag></a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB; RE/RCG/RCGS</a-cat:iccdNormTag>
+        <core:replacingQuery>select * {
+?thing a-cd:hasBibliographicSource ?edition .
+?edition a a-cd:Edition ;
+core:hasBibliographicEntry ?NEWbibEntry ;
+a-cd:hasTitle ?NEWtitle .
+?NEWbibEntry a BibliographicEntry ;
+a-cd:completeBibliographicReference ?ref .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -3783,7 +4616,14 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <core:replacingQuery>select * {
+?thing a-cd:hasBibliographicSource ?edition .
+?edition a a-cd:Edition ;
+core:hasBibliographicEntry ?NEWbibEntry ;
+a-cd:hasTitle ?NEWtitle .
+?NEWbibEntry a BibliographicEntry ;
+a-cd:completeBibliographicReference ?ref .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -3801,6 +4641,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?taxon core:classifies ?taxon .
+}
+
+WHERE {
+?taxon a-cd:isBiologicalTaxonOf ?thing .
+}</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -3836,6 +4683,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isChangeOfAvailabilityTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -3872,6 +4726,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isCircumstanceTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -3904,7 +4765,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <!-- https://w3id.org/arco/ontology/context-description/isCoinMemberOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCoinMemberOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isCollectionMemebrOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfCollectionOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/NumismaticSeries"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una moneta a una serie di monete di cui è membro.</rdfs:comment>
@@ -3915,6 +4776,14 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;http://w3id.org/arco/ontology/arco-lite/&gt;
+CONSTRUCT {
+?cp a-lite:isCollectionMemberOf ?coll .
+}
+
+WHERE {
+?cp a-cd:isCoinMemberOf ?coll .
+}</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -3936,16 +4805,6 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/isCollectionMemebrOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCollectionMemebrOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isMemberOf"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCollectionMemebrOf"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/isCollectorOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCollectorOf">
@@ -3961,7 +4820,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>UB/COL/COLN</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isCollectorOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isCollectorOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCollectorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Collector&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -3998,7 +4871,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/CMM/CMMN</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isCommittentOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isCommittentIn ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCommittentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Committent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -4068,7 +4955,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isCopyrhightHolderOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isCopyrightHolderIn ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCopyrightHolderOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/CopyrightHolder&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -4097,6 +4998,15 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha luogo di creazione&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has creation location&quot;.</rdfs:comment>
+        <rdfs:comment>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:isCreationLocationOf ?y .
+}
+
+WHERE {
+?x a-cd:isCreationLocationOf ?y .
+}</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is creation location of</rdfs:label>
         <rdfs:label xml:lang="it">è luogo di realizzazione di</rdfs:label>
@@ -4172,6 +5082,14 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, F: RO/ROF/ROFF</a-cat:iccdNormTag>
+        <core:constructQuery xml:lang="it">CONSTRUCT {
+?reltype a a-cd:RelationshipType ;
+a-cd:isRelationshipTypeOf ?rws .
+}
+
+WHERE {
+?reltype a-cd:isCulturalPropertyStageOf ?rws .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isRelationshipTypeOf"/>
     </owl:ObjectProperty>
     
@@ -4242,6 +5160,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isDerivatedWorkTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -4312,6 +5237,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isDocumentationTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -4364,7 +5296,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isEditorOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isEditorOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isEditorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Editor&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -4447,6 +5393,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isExportImportCertificationTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -4467,7 +5420,23 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ESP/ESPU</a-cat:iccdNormTag>
+        <core:constructQuery>PREFIX &lt;https://w3id.org/arco/ontology/arco-lite/isUserOf&gt;
+
+CONSTRUCT {
+?agent a-lite:isExportOfficeOf ?certif .
+}
+
+WHERE {
+?agent a-cd:isExportOfficeOf ?certif .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isExportOfficeOf"/>
+        <core:replacingQuery>prefix &lt;https://w3id.org/arco/ontology/arco-lite/isUserOf&gt;
+
+select * where {
+?NEWagent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole ?NEWrole ;
+core:isAgentRoleOf a-cd:ImportExportCertification .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -4503,6 +5472,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isFindingContextTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -4516,6 +5492,15 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &apos;ha luogo di ritrovamento&apos;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has finding location&quot;.</rdfs:comment>
+        <rdfs:comment>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?cult a-lite:isFindingLocationOf ?cultsec .
+}
+
+WHERE {
+?cult a-cd:isFindingLocationOf ?cultsec .
+}</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is finding location of</rdfs:label>
         <rdfs:label xml:lang="it">è luogo di ritrovamento di</rdfs:label>
@@ -4541,6 +5526,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?format a-dd:isFormatOf ?thing .
+}
+
+WHERE {
+?format a-cd:isFormatOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/isFormatOf"/>
     </owl:ObjectProperty>
     
@@ -4555,6 +5547,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:comment xml:lang="it">Questa proprietà collega una fruizione di un vestimento al vestimento stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the fruition of a garment to that garment.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:isDefinedBy>CONSTRUCT {
+?fruition a-cd:isUseOf ?cultent .
+}
+
+WHERE {
+?fruition a-cd:isFruitionOf ?cultent.
+}</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">is fruition of</rdfs:label>
         <rdfs:label xml:lang="it">è fruizione di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -4593,6 +5592,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?tax core:isTaxonOf ?identificationOrClassification . 
+}
+
+WHERE {
+?tax a-cd:isGenusOf ?identificationOrClassification .
+}</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -4617,7 +5623,19 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
     <!-- https://w3id.org/arco/ontology/context-description/isInterventionEligibleBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isInterventionEligibleBy">
+        <rdfs:comment xml:lang="it">Questa proprietà è l&apos;inversa di &quot;ha intervento ammesso&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;defines eligible intervention&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="en">is intervention eligible by</rdfs:label>
+        <rdfs:label xml:lang="it">è intervento ammesso da</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?intType a-cd:isEligibleInterventionDefinedBy ?x .
+}
+
+WHERE {
+?intType a-cd:isInterventionTypeOf ?int .
+?int a-cd:isInterventionEligibleBy ?x .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isEligibleInterventionDefinedBy"/>
     </owl:ObjectProperty>
     
@@ -4670,6 +5688,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isInterventionTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -4689,7 +5714,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleAgentOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isInventoryIdentifierResponsibleOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -4742,6 +5781,15 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è coinvolto in&apos; (versioni precedenti: &apos;esecuzione/evento di riferimento&apos;)</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:isInvolvedIn ?y .
+}
+
+WHERE {
+?x a-cd:isInvolvedIn ?y .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isInvolvedIn"/>
     </owl:ObjectProperty>
     
@@ -4761,7 +5809,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="it">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isIssuerOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isIssuerIn ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isIssuerOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Issuer&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -4780,7 +5842,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isIssuingAgencyOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isIssuingAgencyOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isIssuingAgencyOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/IssuingAgency&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -4799,7 +5875,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isIssuerOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isIssuingStateIn ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isIssuerOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Issuer&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -4818,6 +5908,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isLaboratoryTestTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -4873,6 +5970,15 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è contenuto in&apos; (versioni precedenti: &apos;luogo di collocazione/localizzazione&apos;; &apos;scheda contenitore&apos;)</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:isLocatedIn ?y .
+}
+
+WHERE {
+?x a-cd:isLocatedIn ?y .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isLocatedIn"/>
     </owl:ObjectProperty>
     
@@ -4886,6 +5992,15 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa di &apos;is located in&apos;, collega un bene culturale a un altro bene culturale collegato, che costituisce il luogo di collocazione del primo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property, inverse of &apos;is located in&apos;, relates a cultural entity to a connected cultural entity, which constitutes its location area.</rdfs:comment>
+        <rdfs:comment>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?cult a-lite:isLocationOf ?cultsec .
+}
+
+WHERE {
+?cult a-cd:isLocationOf ?cultsec .
+}</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is location of</rdfs:label>
         <rdfs:label xml:lang="it">è luogo di collocazione di</rdfs:label>
@@ -4926,7 +6041,23 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isCollectionIn"/>
+        <core:constructQuery>prefix a-lite: &lt;http://w3id.org/arco/ontology/arco-lite/&gt;
+CONSTRUCT {
+?cp a-lite:isCollectionMemberOf ?coll .
+}
+
+WHERE {
+?cp a-cd:isCoinMemberOf ?coll .
+}</core:constructQuery>
+        <core:constructQuery>prefix a-lite: &lt;http://w3id.org/arco/ontology/arco-lite/&gt;
+CONSTRUCT {
+?cp a-lite:isCollectionMemberOf ?coll .
+}
+
+WHERE {
+?cp a-cd:isMemberOfArchivalRecordSet ?coll .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf"/>
     </owl:ObjectProperty>
     
 
@@ -4945,6 +6076,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>UB/COL</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?cp a-cd:isMemberInvolvedIn ?collmem .
+}
+
+WHERE {
+?cp a-cd:isMemberOfCollectionOf ?collmem .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberInvolvedIn"/>
     </owl:ObjectProperty>
     
@@ -4965,6 +6103,14 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/SFI; PD/SSI</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;http://w3id.org/arco/ontology/arco-lite/&gt;
+CONSTRUCT {
+?cp a-lite:isCollectionMemberOf ?coll .
+}
+
+WHERE {
+?cp a-cd:isPhotographicSeriesMemberOf ?coll .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isCollectionIn"/>
     </owl:ObjectProperty>
     
@@ -4983,6 +6129,14 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;http://w3id.org/arco/ontology/arco-lite/&gt;
+CONSTRUCT {
+?cp a-lite:isMemberInvolvedIn ?collmemb .
+}
+
+WHERE {
+?cp a-cd:isMemberOfPrintingPlatesSeriesOf ?collmemb .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberInvolvedIn"/>
     </owl:ObjectProperty>
     
@@ -5002,7 +6156,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isMintOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isMintIn ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isMintOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Mint&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5021,7 +6189,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isMinterOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isMinterIn ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isMinterOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Minter&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5040,7 +6222,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isMusicalEnsembleOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isMusicalEnsembleOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isMusicalEnsembleOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/MusicalEnsemble&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5059,7 +6255,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isMusicianOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isMusicianOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isMusicianOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Musician&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5094,6 +6304,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isObservationSurveyTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -5114,7 +6331,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGS</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isOwnerOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isOwnerIn ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOwnerOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Owner&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5134,6 +6365,14 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: PD/SFI; PD/SSI</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;http://w3id.org/arco/ontology/arco-lite/&gt;
+CONSTRUCT {
+?coll a-lite:isCollectionIn ?collmemb .
+}
+
+WHERE {
+?coll a-cd:isPhotographicSeriesIn ?collmemb .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isCollectionIn"/>
     </owl:ObjectProperty>
     
@@ -5170,7 +6409,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isPreferredAuthorOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isPreferredAuthorOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPreferredAuthorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/PreferredAuthor&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5183,6 +6436,15 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha sede di provenienza&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has previous location&quot;.</rdfs:comment>
+        <rdfs:comment>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?cult a-lite:isPreviousLocationOf ?cultsec .
+}
+
+WHERE {
+?cult a-cd:isPreviousLocationOf ?cultsec .
+}</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is previous location of</rdfs:label>
         <rdfs:label xml:lang="it">è sede di provenienza di</rdfs:label>
@@ -5209,7 +6471,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQN</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isPreviousOwnerOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isPreviousOwnerOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPreviousOwnerOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Transferor&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5228,6 +6504,14 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?rec a-cd:isRecordingOf ?cp ;
+a-cd:primaryDocumentation &quot;True&quot; .
+}
+
+WHERE {
+?rec a-cd:isPrimaryDocumentationOf ?cp .
+}</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -5270,7 +6554,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isProponentAgencyOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isProponentAgencyOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isProponentAgencyOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ProponentAgency&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5337,6 +6635,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
+        <rdfs:comment>CONSTRUCT {
+?x a-cd:hasResearch ?reas .
+}
+
+WHERE {
+?x a-cd:isRelatedToResearch ?reas .
+}</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà collega un rilevamento di un bene musicale o demoetnoantropologico alla ricerca nell&apos;ambito della quale è stata redatta la scheda.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class relates an observation survey of musical or demoetnoanthropological heritage to the research in which the catalogue record describing a cultural property was recorded (e.g.: a cataloguing campaign)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -5491,7 +6796,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isScientificDirectorOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isResearchScientificDirectorOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isScientificDirectorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ScientificDirector&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5526,6 +6845,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isResponsibilityTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isRoleOf"/>
     </owl:ObjectProperty>
     
@@ -5545,7 +6871,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleAgentOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isResponsibleForInsertionOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5566,6 +6906,15 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è riutilizzato in&apos; (versioni precedenti: &apos;bene composto&apos;)</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:isReusedBy ?y .
+}
+
+WHERE {
+?x a-cd:isReusedBy ?y .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isReusedBy"/>
     </owl:ObjectProperty>
     
@@ -5634,7 +6983,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isAuthorOf"/>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isSecondaryAuthorOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isSecondaryAuthorOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isSecondaryAuthorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/SecondaryAuthor&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5643,7 +7006,18 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isSexInterpretationOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is sex interpretation of</rdfs:label>
+        <rdfs:label xml:lang="it">è interpretazione del sesso di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?sexint a a-cd:Sex .
+?sexint a-cd:isSexOf ?cultent .
+}
+
+WHERE {
+?sexint a-cd:isSexInterpretationOf ?cultent .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isSexOf"/>
     </owl:ObjectProperty>
     
@@ -5678,6 +7052,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?tax core:isTaxonOf ?identificationOrClassification . 
+}
+
+WHERE {
+?tax a-cd:isSpeciesOf ?identificationOrClassification .
+}</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -5760,6 +7141,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?tax core:isTaxonOf ?identificationOrClassification . 
+}
+
+WHERE {
+?tax a-cd:isSubspeciesOf ?identificationOrClassification .
+}</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -5794,6 +7182,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isSurveyImageTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -5864,7 +7259,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isPhotographerOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isSurveyPhotographerOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhotographerOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Photographer&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5883,7 +7292,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isScientificDirectorOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isSurveyScientificDirectorOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isScientificDirectorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ScientificDirector&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5902,7 +7325,21 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isSoundEngineerOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isSurveySoundEngineerOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isSoundEngineerOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/SoundEngineer&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -5938,6 +7375,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isTitleTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -6023,6 +7467,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cd:isUseTypeOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -6042,6 +7493,13 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?spec core:isTypeOf ?useType .
+}
+
+WHERE {
+?spec a-cd:isUseTypeSpecificationOf ?useType .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -6061,7 +7519,23 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>PREFIX &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?agent a-lite:isUserOf ?thing .
+}
+
+WHERE {
+?agent a-cd:isUserOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isUserOf"/>
+        <core:replacingQuery>prefix &lt;https://w3id.org/arco/ontology/arco-lite/isUserOf&gt;
+
+select * where {
+?NEWagent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole ?NEWrole ;
+core:isAgentRoleOf a-cd:Use .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -6073,6 +7547,15 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha opera collegata&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has related work&quot;.</rdfs:comment>
+        <rdfs:comment>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?cult a-lite:isWorkRelatedTo ?cultsec .
+}
+
+WHERE {
+?cult a-cd:isWorlRelatedTo ?cultsec .
+}</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is work related to</rdfs:label>
         <rdfs:label xml:lang="it">è opera collegata a</rdfs:label>
@@ -6109,6 +7592,15 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &apos;è riutilizzato da&apos;, che collega un bene culturale a un altro bene culturale collegato che lo riutilizza in tutto o in parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the invers property of &apos;is reused by&apos;, which relates a cultural entity to a connected cultural entity that reuse it or a part of it.</rdfs:comment>
+        <rdfs:comment>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?cult a-lite:reuses ?cultsec .
+}
+
+WHERE {
+?cult a-cd:reuses ?cultsec .
+}</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">reuses</rdfs:label>
         <rdfs:label xml:lang="it">riutilizza</rdfs:label>
@@ -8902,7 +10394,21 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRL/SRLE, SR/SRR/SRRE. ICCD Normativa AT: DA/SEM</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:Age .
+}
+
+WHERE {
+?x a a-cd.AgeInterpretation .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Age"/>
+        <core:replacingQuery>select * where {
+?x a-cd:hasAge ?age .
+?age a-cd:ageValue ?literal ;
+core:hasType ?type ;
+core:informationSource ?info .
+
+}</core:replacingQuery>
     </owl:Class>
     
 
@@ -8932,7 +10438,21 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: DA/SEM</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:Age .
+}
+
+WHERE {
+?x a a-cd.AgeOfDeathInterpretation .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Age"/>
+        <core:replacingQuery>select * where {
+?x a-cd:hasAge ?age .
+?age a-cd:ageValue ?literal ;
+core:hasType ?type ;
+core:informationSource ?info .
+
+}</core:replacingQuery>
     </owl:Class>
     
 
@@ -8971,6 +10491,14 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>AU/AAT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:Responsibility ;
+a-cd:alternativeOrOutdatedResponsibility &quot;True&quot; .
+}
+
+WHERE {
+?x a a-cd:AlternativeAuthorshipAttribution .
+}</core:constructQuery>
     </owl:Class>
     
 
@@ -9218,6 +10746,13 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT 3.01: IN/INI/INIT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:SurveyType .
+}
+
+WHERE {
+?x a a-cd:ArchaeologicalPropertySurveyType .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyType"/>
     </owl:Class>
     
@@ -9398,6 +10933,13 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:CollectionMembership .
+}
+
+WHERE {
+?x a a-cd:ArchivalRecordSetMembership .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
     </owl:Class>
     
@@ -9556,7 +11098,23 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: AU/AAT; AU/ATB; AU/AUT. ICCD Normative F e FF: PD/PDF</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:Responsibility .
+}
+
+WHERE {
+?x a a-cd:AuthorshipAttribution .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
+        <core:replacingQuery>select * {
+?x a-cd:hasResponsibility ?respo .
+?respo a a-cd:Responsibility ;
+a-cd:hasCulturalScope ?cultscope ;
+a-cd:hasInterventionRole ?role ;
+a-cd:hasAgentWithResponsibility ?agent;
+a-cd:informationSource ?info ;
+a-cd:alternativeOrOutdatedResponsibility, a-cd:mainResponsibility ?bool .
+}</core:replacingQuery>
     </owl:Class>
     
 
@@ -9667,6 +11225,14 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DO/BIB; RE/RCG/RCGS - Normative VeAC e AT 3.01: DO/BIB; DO/BSE.</a-cat:iccdNormTag>
+        <core:replacingQuery>select * {
+?thing a-cd:hasBibliographicSource ?edition .
+?edition a a-cd:Edition ;
+core:hasBibliographicEntry ?NEWbibEntry ;
+a-cd:hasTitle ?NEWtitle .
+?NEWbibEntry a BibliographicEntry ;
+a-cd:completeBibliographicReference ?ref .
+}</core:replacingQuery>
     </owl:Class>
     
 
@@ -9684,6 +11250,15 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative OA-OAC-MI-D-S-RA-TMA-CA-MA-SAS-SI 3.00: DO/BIB/BIBX - Normative VeAC e AT 3.01: DO/BSE/BSEX.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a-cd:hasBibliographicSource, a-cd:hasSpecificBibliographicSource, a-cd:ContextBibliographicSource, a-cd:hasComparisonBibliographicSource ?ed .
+}
+
+WHERE {
+?x a-cd:hasBibliography ?bib .
+?bib a-cd:hasCategory ?bibCat ;
+a-cd:hasEdition ?ed .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasComparisonBibliographicSource"/>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasContextBibliographicSource"/>
@@ -9706,6 +11281,17 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale DO/BIB/BIBF - Normative VeAC e AT 3.01: DO/BSE/BSES.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a-cd:hasBibliographicSource|
+a-cd:hasSpecificBibliographicSource|
+a-cd:hasContextBibliographicSource|
+a-cd:hasComparisonBibliographicSource ?y .
+}
+
+WHERE {
+?x a-cd:hasBibliography ?y .
+?y core:hasType a-cd:BibliographyType .
+}</core:constructQuery>
     </owl:Class>
     
 
@@ -9750,6 +11336,15 @@ resource:AgentRole/1200865053-1-transferor
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-spe: &lt;https://w3id.org/arco/ontology/natural-specimen-description/&gt;
+
+CONSTRUCT {
+?x a a-spe:BiologicalTaxon .
+}
+
+WHERE {
+?x a a-cd:BiologicalTaxon .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon"/>
     </owl:Class>
     
@@ -10120,6 +11715,12 @@ Versioni 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, 
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/STI</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:Estimate .
+}
+WHERE {
+?x a-cd:CulturalPropertyEstimate .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Estimate"/>
     </owl:Class>
     
@@ -10186,6 +11787,15 @@ Versioni 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, 
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, F: RO/ROF/ROFF</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?rws a-cd:hasRelationshipType ?reltype .
+?reltype a a-cd:RelationshipType.
+}
+
+WHERE {
+?rws a-cd:hasCulturalPropertyStage ?reltype .
+?reltype a a-cd:CulturalPropertyStage .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/RelationshipType"/>
     </owl:Class>
     
@@ -10232,6 +11842,15 @@ Versioni 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, 
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>AU/ATB</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:Responsibility ;
+a-cd:hasCulturalScope ?cultScope .
+}
+
+WHERE {
+?x a a-cd:CulturalScopeAttribution ;
+a-cd:hasCulturalScope ?cultScope .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
     </owl:Class>
     
@@ -10286,6 +11905,15 @@ Versioni 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, 
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: UB/INP</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCTION {
+?x a-cd:hasInvenotry ?inv .
+?inv a-cd:current &quot;True&quot; .
+}
+
+WHERE {
+?x a-cd:hasInventory ?inv .
+?inv a a-cd:CurrentInventory .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/current"/>
     </owl:Class>
     
@@ -10655,6 +12283,15 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/STU/STUN</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a-cd:definesEligibleIntervention ?intType .
+?intType a a-cd:InterventionType .
+}
+
+WHERE {
+?x a-cd:hasEligibleIntervention ?int .
+?int a-cd:hasInterventionType ?intType .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType"/>
     </owl:Class>
     
@@ -10713,6 +12350,15 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR (if CPRD = &apos;scaduti&apos; or &apos;diritti scaduti&apos; or &apos;in pubblico dominio&apos;)</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCTION {
+?x a-cd:hasCopyright ?copyright .
+?copyright a-cd:expired &quot;True&quot; .
+}
+
+WHERE {
+?x a-cd:hasCopyright ?copyright .
+?copyright a a-cd:ExpiredCopyright .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/expired"/>
     </owl:Class>
     
@@ -10937,6 +12583,16 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAF, DO/DRA/DRAF, DO/FNT/FNTR (+ DO/VDC/VDCP, DO/REG/REGP)</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-dd: &lt;hhtps://w3id.org/arco/ontology/denotative-description/&gt;
+
+CONSTRUCT {
+?x a a-dd:Format .
+}
+
+WHERE {
+?x a a-cd:Format .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/Format"/>
     </owl:Class>
     
 
@@ -10972,7 +12628,25 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa VeAC: AU/FRU</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a-cd:hasUse ?use .
+?use a a-cd:Use .
+}
+
+WHERE {
+?x a-cd:hasFruition ?use .
+?use a a-cd:Fruition .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
+        <core:replacingQuery>select * where {
+?x a-cd:hasUse ?use .
+?use a a-cd:Use;
+a-cd:hasUseFunction ?usefun ;
+a-cd:hasCircumstance ?circ ;
+core:hasType ?useType ;
+core:hasAgentRole ?agentrole ;
+a-cd:useConditions ?literal .
+}</core:replacingQuery>
     </owl:Class>
     
 
@@ -10996,6 +12670,15 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG. - Normativa BNB: RB/RBN/RBNA; SB/NAA/NAAA; SB/NAT/NATA</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-spe: &lt;https://w3id.org/arco/ontology/natural-specimen-description/&gt;
+
+CONSTRUCT {
+?x a a-spe:Genus .
+}
+
+WHERE {
+?x a-cd:Genus .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Genus"/>
     </owl:Class>
     
@@ -11559,6 +13242,13 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa NU: OG/OGT/OGTR</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:CollectionMembership .
+}
+
+WHERE {
+?x a a-cd:NumismaticSeriesMembership .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
     </owl:Class>
     
@@ -11633,6 +13323,15 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: PT</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-spe:  &lt;https://w3id.org/arco/ontology/natural-specimen-description/&gt;
+
+CONSTRUCT {
+?x a a-spe:PaleopathologySurvey .
+}
+
+WHERE {
+?x a a-cd:PaleopathologySurvey .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PaleopathologySurvey"/>
     </owl:Class>
     
@@ -11832,6 +13531,13 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/SFI; PD/SSI</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:CollectionMembership .
+}
+
+WHERE {
+?x a a-cd:PhotographicSeriesMembership .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
     </owl:Class>
     
@@ -11879,6 +13585,14 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>AU/AUT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:Responsibility ;
+a-cd:mainResponsibility &quot;True&quot; .
+}
+
+WHERE {
+?x a a-cd:PreferredAuthorshipAttribution .
+}</core:constructQuery>
     </owl:Class>
     
 
@@ -12110,12 +13824,6 @@ PA/SSI, PA/SFI</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCollectionMember"/>
-                <owl:allValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
             </owl:Restriction>
@@ -12134,6 +13842,12 @@ PA/SSI, PA/SFI</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/involvesMember"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/RecordingType"/>
             </owl:Restriction>
@@ -12144,6 +13858,14 @@ PA/SSI, PA/SFI</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la registrazione di un&apos;entità culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the recording of a cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Recording</rdfs:label>
+        <rdfs:label xml:lang="it">Registrazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICC Normativa BDI: DU</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -12199,8 +13921,8 @@ ICCD Normativa NT: OG/OGT/OGTS</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCulturalPropertyStage"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyStage"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelationshipType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/RelationshipType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description xml:lang="en">An example of usage of the class &apos;Related work situation&apos; is the following:
@@ -12393,6 +14115,13 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative F e FF: PD/PDF/PDFR</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?respo a-cd:hasInterventionRole ?x .
+}
+
+WHERE {
+?respo a-cd:hasResponsibilityType ?x .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
     </owl:Class>
     
@@ -12519,7 +14248,19 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP/INPS</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?x a core:Identifier .
+
+WHERE {
+?x a a-cd:SECIdentifier .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+        <core:replacingQuery>select * where {
+?x core:hasIdentifier ?id .
+?id core:hasType &lt;https://w3id.org/arco/ontology/arco-lite/localIdentifier&gt; .
+}</core:replacingQuery>
     </owl:Class>
     
 
@@ -12630,7 +14371,20 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: DA/STS</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:Sex .
+}
+
+WHERE {
+?x a a-cd:SexInterpretation .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Sex"/>
+        <core:replacingQuery>select * where {
+?x a-cd:hasSex ?sex .
+?sex a a-cd:Sex ;
+a-cd:sex ?literal ;
+a-cd:informationSource ?info .
+}</core:replacingQuery>
     </owl:Class>
     
 
@@ -12694,6 +14448,15 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-spe: &lt;https://w3id.org/arco/ontology/natural-specimen-description/&gt;
+
+CONSTRUCT {
+?x a a-spe:Species .
+}
+
+WHERE {
+?x a-cd:Species .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Species"/>
     </owl:Class>
     
@@ -12813,6 +14576,15 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGST</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-spe: &lt;https://w3id.org/arco/ontology/natural-specimen-description/&gt;
+
+CONSTRUCT {
+?x a a-spe:Subspecies .
+}
+
+WHERE {
+?x a-cd:Subspecies .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Subspecies"/>
     </owl:Class>
     
@@ -13309,6 +15081,15 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: UT/UTU/UTUS</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?thing core:hasType ?type .
+?type a a-cd:UseType .
+}
+
+WHERE {
+?thing a-cd:hasUseTypeSpecification ?type .
+?type a a-cd:UseTypeSpecification .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
     </owl:Class>
     
@@ -14422,14 +16203,21 @@ ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/I
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <core:constructQuery>CONSTRUCT {
+?use a a-cd:Use .
+}
+
+WHERE {
+?use a-cd:Reuse .
+}</core:constructQuery>
     </rdf:Description>
     
 
