@@ -3869,6 +3869,14 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;autore secondario di un&apos;opera all&apos;opera stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the secondary author of a work to the work itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is secondary author of</rdfs:label>
+        <rdfs:label xml:lang="it">è autore secondario di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative F 4.00: PD/PDF/PDFN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
