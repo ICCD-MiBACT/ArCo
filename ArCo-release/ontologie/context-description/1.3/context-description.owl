@@ -11251,7 +11251,7 @@ a-cd:completeBibliographicReference ?ref .
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative OA-OAC-MI-D-S-RA-TMA-CA-MA-SAS-SI 3.00: DO/BIB/BIBX - Normative VeAC e AT 3.01: DO/BSE/BSEX.</a-cat:iccdNormTag>
         <core:constructQuery>CONSTRUCT {
-?x a-cd:hasBibliographicSource, a-cd:hasSpecificBibliographicSource, a-cd:ContextBibliographicSource, a-cd:hasComparisonBibliographicSource ?ed .
+?x a-cd:hasBibliographicSource| a-cd:hasSpecificBibliographicSource| a-cd:ContextBibliographicSource| a-cd:hasComparisonBibliographicSource ?ed .
 }
 
 WHERE {
@@ -15399,6 +15399,16 @@ WHERE {
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x a-cd:hasBibliographicSource ?ed .
+}
+
+WHERE {
+?x a-cd:hasBibliography ?bib .
+?bib a-cd:hasCategory ?bibCat ;
+a-cd:hasEdition ?ed .
+?bibCat a a-cd:AccompanyingBibliography .
+}</core:constructQuery>
     </owl:NamedIndividual>
     
 
@@ -15560,6 +15570,16 @@ WHERE {
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x a-cd:hasComparativeBibliographicSource ?ed .
+}
+
+WHERE {
+?x a-cd:hasBibliography ?bib .
+?bib a-cd:hasCategory ?bibCat ;
+a-cd:hasEdition ?ed .
+?bibCat a a-cd:ComparativeBibliography .
+}</core:constructQuery>
     </owl:NamedIndividual>
     
 
@@ -16111,6 +16131,16 @@ WHERE {
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x a-cd:hasSpecificBibliographicSource ?ed .
+}
+
+WHERE {
+?x a-cd:hasBibliography ?bib .
+?bib a-cd:hasCategory ?bibCat ;
+a-cd:hasEdition ?ed .
+?bibCat a a-cd:SpecificBibliography .
+}</core:constructQuery>
     </owl:NamedIndividual>
     
 
@@ -16209,8 +16239,8 @@ WHERE {
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <core:constructQuery>CONSTRUCT {
 ?use a a-cd:Use .
 }

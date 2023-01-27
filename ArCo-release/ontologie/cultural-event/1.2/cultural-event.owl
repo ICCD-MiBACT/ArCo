@@ -1194,6 +1194,16 @@ cultualheritageobject:Il_Pescatorello
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x a-ce:hasUnifyingFactor ?y .
+?y a owl:Thing .
+}
+
+WHERE {
+?x a-cd:hasUnifyingFactor ?y .
+?y a a-cd:UnifyingFactor .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
     
 

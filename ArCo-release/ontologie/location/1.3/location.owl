@@ -144,9 +144,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/constructQuery -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/core/constructQuery"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/replacedBy -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/core/replacedBy"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/replacingQuery -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/core/replacingQuery">
+        <rdfs:comment xml:lang="en">CONSTRUCT query that generates triples following the new ontology model.</rdfs:comment>
+    </owl:AnnotationProperty>
     
 
 
@@ -277,6 +291,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/coordinate"/>
+        <core:replacingQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
+
+select * where {
+?thing clv:hasGeometry ?geo .
+?geo clv:coordinate ?coor .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -350,6 +370,17 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">quota minima: GP/GPC/GPCI - GA/GAQ/GAQI - GL/GLQ/GLQI - MT/MTA/MTAM; quota massima: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS - MT/MTA/MTAX; quota relativa: MT/MTA/MTAR; coordinata z: 4.00 GE/GEC/GECZ - 3.00GP/GPC/GPCL</a-cat:iccdNormTag>
+        <core:constructQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
+
+CONSTRUCT {
+?geo clv:alt ?alt .
+}
+
+WHERE {
+?geo a-loc:hasCoordinates ?coor .
+?coor a-loc:hasAltitude ?altclass .
+?altclass a-loc:alt ?alt .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/alt"/>
     </owl:ObjectProperty>
     
@@ -447,6 +478,15 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>CS/CTS/CTST</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { 
+?cad a a-loc:CadastralIdentity;
+core:hasType ?type.
+}
+
+WHERE       { 
+?cad a a-loc:CadastalIdentity;
+a-loc:hasCadastreType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -522,6 +562,15 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: GE/GEC - versioni precedenti: GP/GPD; GA/GAPD; GL/GLS</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/coordinate"/>
+        <core:replacingQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
+
+CONSTRUCT {
+?geo clv:coordinate ?coor .
+}
+
+WHERE {
+?geo a-loc:hasCoordinates ?coor .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -596,6 +645,17 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGT; CG/CGQ</a-cat:iccdNormTag>
+        <core:constructQuery>prefix cis: &lt;https://dati.benicutlurali.it/cis/&gt;
+
+CONSTRUCT   { 
+?x a cis:CulturalInstitureOrSite;
+core:hasType ?type.
+}
+
+WHERE       { 
+?x a cis:CulturalInstitureOrSite;
+a-loc:hasCulturalInstitureOrSiteType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -626,6 +686,15 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: LC/PVC</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?thing a-lite:hasCulturalPropertyAddress ?add .
+}
+
+WHERE {
+?thing a-loc:hasCulturalPropertyAddress ?add .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCulturalPropertyAddress"/>
     </owl:ObjectProperty>
     
@@ -752,6 +821,15 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un indirizzo a un&apos;area storico-geografica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links an address to a historical-geographical area.</rdfs:comment>
+        <rdfs:comment>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt;
+
+CONSTRUCT {
+?address a-loc:hasTerritorialArea ?y .
+}
+
+WHERE {
+?address a-loc:hasHistoricalArea ?y .
+}</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="it">ha area storica</rdfs:label>
         <rdfs:label xml:lang="en">has historical area</rdfs:label>
@@ -874,6 +952,15 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT   { 
+?x a a-loc:OldTown;
+core:hasType ?type.
+}
+
+WHERE       { 
+?x a a-loc:OldTown;
+a-loc:hasOldTownAdministrativeType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -955,6 +1042,17 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/LDC/LDCT; LC/LDC/LDCQ</a-cat:iccdNormTag>
+        <core:constructQuery>prefix cis: &lt;https://dati.benicutlurali.it/cis/&gt;
+
+CONSTRUCT   { 
+?x a cis:Site;
+core:hasType ?type.
+}
+
+WHERE       { 
+?x a cis:Site;
+a-loc:hasSiteType ?type.
+ }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -1080,6 +1178,15 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: LS/LCS/LCST</a-cat:iccdNormTag>
+        <core:constructQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt;
+
+CONSTRUCT {
+?address a-loc:hasTerritorialArea ?y .
+}
+
+WHERE {
+?address a-loc:hasTerritorialDivision ?y .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/hasTerritorialArea"/>
     </owl:ObjectProperty>
     
@@ -1158,6 +1265,13 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/ZUR/ZURD.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?town a-loc:hasTerritorialArea ?area.
+}
+
+WHERE {
+?town a-loc:hasUrbanArea ?area.
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/hasTerritorialArea"/>
     </owl:ObjectProperty>
     
@@ -1187,6 +1301,11 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/alt"/>
+        <core:replacingQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
+
+select * where {
+?geo clv:alt ?alt .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1270,6 +1389,15 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT   { 
+?type core:isTypeOf ?x .
+?x a a-loc:CadastralIdentity .
+}
+
+WHERE       { 
+?type core:isCadastreTypeOf ?x .
+?x a a-loc:CadastralIdentity .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -1405,6 +1533,17 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>prefix cis: &lt;http://dati.beniculturali.it/cis/&gt;
+
+CONSTRUCT   { 
+?type core:isTypeOf ?x .
+?x a cis:CulturalInstituteOrSite .
+}
+
+WHERE       { 
+?type a-loc:isCulturalInstituteOrSiteTypeof ?x .
+?x a cis:CulturalInstituteOrSite .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -1423,6 +1562,15 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?add a-lite:issCulturalPropertyAddressOf ?thing .
+}
+
+WHERE {
+?add a-loc:isCulturalPropertyAddressOf ?thing .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCulturalPropertyAddressOf"/>
     </owl:ObjectProperty>
     
@@ -1547,6 +1695,13 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x a-loc:isTerritorialAreaOf ?y .
+}
+
+WHERE {
+?x a-loc:isHistoricalAreaOf ?y .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/isTerritorialAreaOf"/>
     </owl:ObjectProperty>
     
@@ -1672,6 +1827,15 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT   { 
+?type core:isTypeOf ?x .
+?x a a-loc:OldTown .
+}
+
+WHERE       { 
+?type core:isOldTownAdministrativeTypeOf ?x .
+?x a a-loc:OldTown .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -1763,6 +1927,17 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix cis: &lt;http://dati.beniculturali.it/cis/&gt;
+
+CONSTRUCT   { 
+?type core:isTypeOf ?x .
+?x a cis:Site .
+}
+
+WHERE       { 
+?type a-loc:isSiteTypeOf ?x .
+?x a cis:Site .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
@@ -1877,6 +2052,13 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x a-loc:isTerritorialAreaOf ?y .
+}
+
+WHERE {
+?x a-loc:isTerritorialDivisionOf ?y .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/isTerritorialAreaOf"/>
     </owl:ObjectProperty>
     
@@ -2071,6 +2253,17 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECZ - Normative precedenti: GP/GPC/GPCL</a-cat:iccdNormTag>
+        <core:constructQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
+
+CONSTRUCT {
+?x clv:alt ?alt .
+}
+
+WHERE {
+?x a-loc:hasCoordinates ?coor .
+?coor a-loc:hasAltitude ?altclass .
+?altclass a-loc:alt ?alt .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/alt"/>
     </owl:DatatypeProperty>
     
@@ -2092,6 +2285,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: LS/CSS/CSSD</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:Cadastre ;
+rdfs:label ?name .
+}
+
+WHERE {
+?x a-loc:cadastreName ?name .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/Cadastre"/>
     </owl:DatatypeProperty>
     
@@ -2113,7 +2314,23 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/LDC/LDCG; LA/PRC/PRCG</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?thing a-lite:culturalInstituteOrSiteIdentifier ?id .
+}
+
+WHERE {
+?thing a-loc:culturalInstituteOrSiteIdentifier ?id .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/culturalInstituteOrSiteIdentifier"/>
+        <core:replacingQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+select * where {
+?x core:hasIdentifier ?idclass .
+?idclass l0:identifier ?id ;
+core:hasType ?type .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -2233,6 +2450,16 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECY - Normative precedenti: GP/GPD/GPDP/GPDPY; GA/GAD/GADP/GADPY; GL/GLD/GLDP/GLDPY</a-cat:iccdNormTag>
+        <core:constructQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
+
+CONSTRUCT {
+?x clv:lat ?lat .
+}
+
+WHERE {
+?x a-loc:hasCoordinates ?coor .
+?coor a-loc:lat ?lat .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/lat"/>
     </owl:DatatypeProperty>
     
@@ -2269,6 +2496,16 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECX - Normative precedenti: GP/GPD/GPDP/GPDPX; GA/GAD/GADP/GADPX; GL/GLD/GLDP/GLDPX</a-cat:iccdNormTag>
+        <core:constructQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
+
+CONSTRUCT {
+?x clv:long ?long .
+}
+
+WHERE {
+?x a-loc:hasCoordinates ?coor .
+?coor a-loc:long ?long .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/long"/>
     </owl:DatatypeProperty>
     
@@ -2406,7 +2643,23 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/LDC/LDCK; LA/PRC/PRCK</a-cat:iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?thing a-lite:iteIdentifier ?id .
+}
+
+WHERE {
+?thing a-loc:siteIdentifier ?id .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/siteIdentifier"/>
+        <core:replacingQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+select * where {
+?x core:hasIdentifier ?idclass .
+?idclass l0:identifier ?id ;
+core:hasType ?type .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -2442,6 +2695,15 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEP - Normative precedenti: GA/GAP; GL/GLP; GP/GPP</a-cat:iccdNormTag>
+        <core:constructQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
+
+CONSTRUCT {
+?x clv:coordinateSystem ?sys .
+}
+
+WHERE {
+?x a-loc:spatialReferenceSystem ?sys .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/coordinateSystem"/>
     </owl:DatatypeProperty>
     
@@ -2679,6 +2941,15 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">quota minima: GP/GPC/GPCI -GA/GAQ/GAQI - GL/GLQ/GLQI - MT/MTA/MTAM; quota massima: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS - MT/MTA/MTAX; quota relativa: MT/MTA/MTAR; coordinata z: 4.00 GE/GEC/GECZ - 3.00GP/GPC/GPCL</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?geo a-loc:alt ?alt .
+}
+
+WHERE {
+?geo a-loc:hasCoordinates ?coor .
+?coor a-loc:hasAltitude ?altclass .
+?alclass a-loc:alt ?alt .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/alt"/>
     </owl:Class>
     
@@ -3033,6 +3304,15 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: GE/GEC - Normative precedenti: GP/GPD; GA/GAPD; GL/GLS</a-cat:iccdNormTag>
+        <core:constructQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt;
+
+CONSTRUCT {
+?geo clv:coordinate ?coor .
+}
+
+WHERE {
+?geo a-loc:hasCoordinates ?coor .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/coordinate"/>
     </owl:Class>
     
@@ -4416,6 +4696,13 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type a a-loc:PreviousLocation .
+}
+
+WHERE {
+?type a a-loc:LastLocation .
+}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/PreviousLocation"/>
     </owl:NamedIndividual>
     
