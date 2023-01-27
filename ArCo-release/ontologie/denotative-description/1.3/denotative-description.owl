@@ -46,8 +46,8 @@
         <dc:title xml:lang="en">Denotative Description Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia della Descrizione Denotativa (ArCo network)</dc:title>
         <terms:issued>2018-03-07</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
         <terms:modified>2019-06-01</terms:modified>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl"/>
@@ -300,6 +300,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/isProducedByMusicalInstrument"/>
     </owl:ObjectProperty>
     
 
@@ -375,6 +376,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEE - Normative di versioni precedenti: DA/STM/STMQ</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class core:hasType ?type .}
+WHERE {?class a-dd:hasAffixedElementType ?type.}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
 
@@ -416,6 +420,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/producesMusicalNote"/>
+        <core:replacingQuery>prefix mi: &lt;https://w3id.org/arco/ontology/musical-instrument/&gt;
+select distinct * where {
+?cp mi:producesMusicalNote ?note.
+?note a mi:MusicalNote
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -434,6 +444,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/hasClimateSituation"/>
     </owl:ObjectProperty>
     
 
@@ -453,6 +464,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasColour&gt; ?char .}
+WHERE {?class a-dd:hasColour ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasColour"/>
     </owl:ObjectProperty>
     
 
@@ -492,6 +506,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: CU</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class core:hasType ?type .}
+WHERE {?class a-dd:hasCommunicationMediumType ?type.}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
 
@@ -549,6 +566,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>CO/STC/STCC</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class core:hasType ?type .}
+WHERE {?class a-dd:hasConservationStatusType ?type.}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
 
@@ -679,6 +699,8 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC. - Normativa NU: OG/OGT/OGTO. - OG/OGT/OGTU. Normativa SI: OG/OGT/OGTY</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class a-cd:hasDesignationInTime ?des .}
+WHERE {?class a-dd:hasDesignationInTime ?des. }</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -699,6 +721,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD/OGDT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class core:hasType ?type .}
+WHERE {?class a-dd:hasDesignationType ?type.}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
 
@@ -718,6 +743,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasDiapason&gt; ?char .}
+WHERE {?class a-dd:hasDiapason ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasDiapason"/>
     </owl:ObjectProperty>
     
 
@@ -735,6 +763,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/hasEnvironment"/>
     </owl:ObjectProperty>
     
 
@@ -754,6 +783,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasExtension&gt; ?char .}
+WHERE {?class a-dd:hasExtension ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasExtension"/>
     </owl:ObjectProperty>
     
 
@@ -847,7 +879,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose"/>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasCulturalEntityUseFunction&gt; ?fun .}
+WHERE {?class a-dd:hasFunctionalPurpose ?fun.}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCulturalEntityUseFunction"/>
     </owl:ObjectProperty>
     
 
@@ -867,6 +901,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasGarmentAnalysis&gt; ?char .}
+WHERE {?class a-dd:hasGarmentAnalysis ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasGarmentAnalysis"/>
     </owl:ObjectProperty>
     
 
@@ -886,6 +923,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasColour&gt; ?char .}
+WHERE {?class a-dd:hasColour ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasColour"/>
     </owl:ObjectProperty>
     
 
@@ -925,6 +965,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class core:hasType ?type .}
+WHERE {?class a-dd:hasIconographicOrDecorativeApparatusType ?type.}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
 
@@ -1017,6 +1060,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasMaterial&gt; ?char .}
+WHERE {?class a-dd:hasMaterial ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasMaterial"/>
     </owl:ObjectProperty>
     
 
@@ -1036,6 +1082,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasMaterialOrTechnique&gt; ?char .}
+WHERE {?class a-dd:hasMaterialOrTechnique ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasMaterialOrTechnicque"/>
     </owl:ObjectProperty>
     
 
@@ -1093,6 +1142,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class core:hasType ?type .}
+WHERE {?class a-dd:hasMeasurementType ?type.}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
 
@@ -1148,6 +1200,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasPhotoColour&gt; ?char .}
+WHERE {?class a-dd:hasPhotoColour ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasPhotoColour"/>
     </owl:ObjectProperty>
     
 
@@ -1168,6 +1223,12 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/usesSoftware"/>
+        <core:replacingQuery>select distinct * where {
+
+?cp a-dd:usesSoftware ?software.
+?software a a-dd:Software
+
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1187,6 +1248,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasPhotoSize&gt; ?char .}
+WHERE {?class a-dd:hasPhotoSize ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasPhotoSize"/>
     </owl:ObjectProperty>
     
 
@@ -1206,6 +1270,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasPixelDimension&gt; ?char .}
+WHERE {?class a-dd:hasPixelDimension ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasPixelDimension"/>
     </owl:ObjectProperty>
     
 
@@ -1225,7 +1292,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasResolution"/>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasResolution&gt; ?char .}
+WHERE {?class a-dd:hasQualityLevel ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResolution"/>
     </owl:ObjectProperty>
     
 
@@ -1245,6 +1314,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasResolution&gt; ?char .}
+WHERE {?class a-dd:hasResolution ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResolution"/>
     </owl:ObjectProperty>
     
 
@@ -1284,6 +1356,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class core:hasType ?type .}
+WHERE {?class a-dd:hasSampleCollectedType ?type.}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
 
@@ -1304,6 +1379,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa BNB: DB/DBX/DBXX</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasShape&gt; ?char .}
+WHERE {?class a-dd:hasShape ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasShape"/>
     </owl:ObjectProperty>
     
 
@@ -1371,6 +1449,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasStorageMethodOrColourDepth&gt; ?char .}
+WHERE {?class a-dd:hasStorageMethodOrColourDepth ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasStorageMethodOrColourDepth"/>
     </owl:ObjectProperty>
     
 
@@ -1448,6 +1529,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasTechnique&gt; ?char .}
+WHERE {?class a-dd:hasTechnique ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasTechnicque"/>
     </owl:ObjectProperty>
     
 
@@ -1467,6 +1551,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasTemperament&gt; ?char .}
+WHERE {?class a-dd:hasTemperament ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasTemperament"/>
     </owl:ObjectProperty>
     
 
@@ -1486,6 +1573,9 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasTuning&gt; ?char .}
+WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasTuning"/>
     </owl:ObjectProperty>
     
 
@@ -1668,6 +1758,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
 
@@ -1762,6 +1853,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/isClimateSituationOf"/>
     </owl:ObjectProperty>
     
 
@@ -1780,6 +1872,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isColourOf"/>
     </owl:ObjectProperty>
     
 
@@ -1815,6 +1908,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
 
@@ -1867,6 +1961,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
 
@@ -1989,6 +2084,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
 
@@ -2007,6 +2103,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isDiapasonOf"/>
     </owl:ObjectProperty>
     
 
@@ -2046,6 +2143,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/isEnvironmentOf"/>
     </owl:ObjectProperty>
     
 
@@ -2064,6 +2162,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isExtensionOf"/>
     </owl:ObjectProperty>
     
 
@@ -2149,7 +2248,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isFunctionalPurposeOf"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCulturalEntityUseFunctionOf"/>
     </owl:ObjectProperty>
     
 
@@ -2168,6 +2267,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isGarmentAnalysisOf"/>
     </owl:ObjectProperty>
     
 
@@ -2186,6 +2286,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isColourOf"/>
     </owl:ObjectProperty>
     
 
@@ -2220,6 +2321,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
 
@@ -2328,6 +2430,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isMaterialOf"/>
     </owl:ObjectProperty>
     
 
@@ -2346,6 +2449,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isMaterialOrTechniqueOf"/>
     </owl:ObjectProperty>
     
 
@@ -2398,6 +2502,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
 
@@ -2448,6 +2553,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhotoColourOf"/>
     </owl:ObjectProperty>
     
 
@@ -2485,6 +2591,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhotoSizeOf"/>
     </owl:ObjectProperty>
     
 
@@ -2503,6 +2610,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPixelDimensionOf"/>
     </owl:ObjectProperty>
     
 
@@ -2521,6 +2629,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResolutionOf"/>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/isResolutionOf"/>
     </owl:ObjectProperty>
     
@@ -2540,6 +2649,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResolutionOf"/>
     </owl:ObjectProperty>
     
 
@@ -2574,6 +2684,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
 
@@ -2592,6 +2703,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isShapeOf"/>
     </owl:ObjectProperty>
     
 
@@ -2671,6 +2783,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isStorageMethodOrColourDepthOf"/>
     </owl:ObjectProperty>
     
 
@@ -2773,6 +2886,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
     </owl:ObjectProperty>
     
 
@@ -2791,6 +2905,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTechniqueOf"/>
     </owl:ObjectProperty>
     
 
@@ -2809,6 +2924,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTemperamentOf"/>
     </owl:ObjectProperty>
     
 
@@ -2844,6 +2960,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTemperamentOf"/>
     </owl:ObjectProperty>
     
 
@@ -2878,6 +2995,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isVibratingLenghtOf"/>
     </owl:ObjectProperty>
     
 
@@ -3065,6 +3183,9 @@ i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AS/ASS/ASSD</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRealizationDate"/>
+        <core:replacingQuery>select distinct * where {
+?cp &lt;https://w3id.org/arco/ontology/arco-lite/hasRealizationDate&gt; ?date
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -3083,6 +3204,9 @@ i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/location/geologicalDescription&gt; ?des .}
+WHERE {?class a-dd:geologicalDescription ?des.}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/geologicalDescription"/>
     </owl:DatatypeProperty>
     
 
@@ -3150,6 +3274,9 @@ i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/location/morphologicalDescription&gt; ?des .}
+WHERE {?class a-dd:morphologicalDescription ?des.}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/morphologicalDescription"/>
     </owl:DatatypeProperty>
     
 
@@ -3241,6 +3368,8 @@ i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative D, OA, RA, BDM (v.1 e v.2): OG/OGT/OGTP</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class a-dd:positionOnCulturalProperty ?pos .}
+WHERE {?class a-dd:positionInComplexCulturalProperty ?pos.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/positionOnCulturalProperty"/>
     </owl:DatatypeProperty>
     
@@ -3277,6 +3406,8 @@ i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>CO/STP</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class a-cd:proposedIntervention ?int .}
+WHERE {?class a-dd:proposedIntervention ?int.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/proposedIntervention"/>
     </owl:DatatypeProperty>
     
@@ -3781,6 +3912,9 @@ resource:Inscription/1200865151-inscription-1
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class a a-loc:ClimateSituation .}
+WHERE {?class a a-dd:ClimateSituation .}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/ClimateSituation"/>
     </owl:Class>
     
 
@@ -4025,6 +4159,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; DA/APF/APFE</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class a a-dd:TechnicalStatus .}
+WHERE {?class a a-dd:CulturalEntityTechnicalStatus .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus"/>
     </owl:Class>
     
@@ -4192,6 +4328,9 @@ ICCD Normativa A e PG v3: OGTD+OGTQ</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC. - Normativa NU: OG/OGT/OGTO. - OG/OGT/OGTU. Normativa SI: OG/OGT/OGTY</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class a a-cd:DesignationInTime .}
+WHERE {?class a a-dd:DesignationInTime .}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/DesignationInTime"/>
     </owl:Class>
     
 
@@ -4215,6 +4354,9 @@ ICCD Normativa A e PG v3: OGTD+OGTQ</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class a a-cd:DesignationType .}
+WHERE {?class a a-dd:DesignationType .}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/DesignationType"/>
     </owl:Class>
     
 
@@ -4306,6 +4448,8 @@ ICCD Normativa A e PG v3: OGTD+OGTQ</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF - Normative MA e CA: OG/OGT/OGTF</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class a a-dd:UseFunction .}
+WHERE {?class a a-dd:FunctionalPurpose .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
     </owl:Class>
     
@@ -4584,6 +4728,9 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa PG: CA</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {?class a a-loc:NaturalEnvironment .}
+WHERE {?class a a-dd:NaturalEnvironment .}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
     </owl:Class>
     
 
@@ -4746,7 +4893,7 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
     </owl:Class>
     
 
@@ -4861,6 +5008,9 @@ i.e. collected from an archaeologiacal property (i.e. coal, pottery, grout)</rdf
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class a a-loc:Soil .}
+WHERE {?class a a-dd:Soil .}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/Soil"/>
     </owl:Class>
     
 
@@ -4985,6 +5135,28 @@ i.e. collected from an archaeologiacal property (i.e. coal, pottery, grout)</rdf
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of the class &apos;Technical status&apos; is the following:
+resource:CulturalEntityTechnicalStatus/0900281817-4
+        a           a-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  &quot;Technical status of cultural property 0900281817-4&quot;@en ;
+        a-dd:includesTechnicalCharacteristic
+                resource:TechnicalCharacteristic/centinato, resource:TechnicalCharacteristic/stone-sculpture .
+
+resource:TechnicalCharacteristic/stone-sculpture
+        a                    a-dd:TechnicalCharacteristic ;
+        rdfs:label           &quot;stone/ sculpture&quot; ;
+        a-dd:isClassifiedBy  a-dd:MaterialOrTechnique .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Stato tecnico&quot; è il seguente:
+resource:CulturalEntityTechnicalStatus/0900281817-4
+        a           a-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  &quot;Stato tecnico del bene culturale 0900281817-4&quot;@it ;
+        a-dd:includesTechnicalCharacteristic
+                resource:TechnicalCharacteristic/centinato, resource:TechnicalCharacteristic/pietra-scultura .
+
+resource:TechnicalCharacteristic/pietra-scultura
+        a                    a-dd:TechnicalCharacteristic ;
+        rdfs:label           &quot;pietra/ scultura&quot; ;
+        a-dd:isClassifiedBy  a-dd:MaterialOrTechnique .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato tecnico di un&apos;entità, cioè una situazione in cui un&apos;entità ha associate una serie di caratteristiche tecniche. Lo stato di un&apos;entità ha associata una validità temporale, relativa al momento in cui quelle caratteristiche sono state rilevate.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the technical status of an entity, that is a situation in which the entity is associated to technical characteristics. The technical status has a temporal validity, related to the moment when the characteristics were observed.</rdfs:comment>
         <rdfs:label xml:lang="it">Stato tecnico</rdfs:label>
