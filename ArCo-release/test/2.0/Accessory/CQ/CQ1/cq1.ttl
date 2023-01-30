@@ -16,8 +16,7 @@ ex:cq1_resultset.ttl a owlunit:CompetencyQuestionVerification ;
 					  rs:solution        [ rs:binding  [ rs:value     ex:Accessory1 ;
 									     rs:variable  "accessory"
 									   ]
-							     ]
-                                        [ rs:binding [ rs:value     ex:Accessory2 ;
+										[rs:value     ex:Accessory2 ;
 									     rs:variable  "accessory"
 									   ]
                                  ]
