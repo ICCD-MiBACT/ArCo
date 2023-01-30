@@ -4,5 +4,4 @@
 @prefix onto: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/Accessory.owl> .
 
 ex:cp1 onto:hasAccessory ex:Accessory1 .
-ex:cp1 onto:hasAccessory ex:Accessory2 .
 ex:cp2 onto:hasAccessory ex:Accessory3 .
