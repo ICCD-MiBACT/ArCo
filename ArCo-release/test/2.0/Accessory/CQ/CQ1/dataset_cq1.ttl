@@ -1,0 +1,8 @@
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/> .
+@prefix l0: <https://w3id.org/italia/onto/l0/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cis: <http://dati.beniculturali.it/cis/> .
+
+ex:cp1 a-dd:hasAccessory ex:Accessory1 .
+ex:cp1 a-dd:hasAccessory ex:Accessory2 .
+ex:cp2 a-dd:hasAccessory ex:Accessory3 .

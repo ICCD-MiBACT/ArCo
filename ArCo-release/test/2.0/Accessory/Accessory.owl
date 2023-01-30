@@ -1,0 +1,118 @@
+@prefix : <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/Accessory.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/Accessory.owl> .
+
+<https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/Accessory.owl> rdf:type owl:Ontology ;
+                                                                                                              owl:versionIRI <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/Accessory.owl> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isInvolvedIn
+<https://w3id.org/arco/ontology/core/isInvolvedIn> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasAccessory
+<https://w3id.org/arco/ontology/denotative-description/hasAccessory> rdf:type owl:ObjectProperty ;
+                                                                     owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isAccessoryOf> ;
+                                                                     rdfs:domain <http://dati.beniculturali.it/cis/CulturalEntity> ;
+                                                                     rdfs:range <https://w3id.org/arco/ontology/denotative-description/Accessory> ;
+                                                                     rdfs:comment "Questa proprietà collega un bene musicale a un suo accessorio, ovvero un oggetto collegabile al bene musicale, sia nel caso in cui sia funzionale alla produzione del suono, sia nel caso in cui sia di supporto alla produzione del suono o alla conservazione o alla prassi musicale del bene."@it ,
+                                                                                  "This property relates a musical good to one of its accessories. In other words, it is an object linkable to a musical object, whether it is functional to the sound production, or if it is the sound's production or conservation medium."@en ;
+                                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                     rdfs:label "ha accessorio"@it ,
+                                                                                "has accessory"@en ;
+                                                                     owl:versionInfo "stabile"@it ,
+                                                                                     "stable"@en ;
+                                                                     <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa SM 4.00: AS/ASS/ASST" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isAccessoryOf
+<https://w3id.org/arco/ontology/denotative-description/isAccessoryOf> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <https://w3id.org/arco/ontology/denotative-description/Accessory> ;
+                                                                      rdfs:range <http://dati.beniculturali.it/cis/CulturalEntity> ;
+                                                                      rdfs:comment "Questa è la proprietà inversa di \"ha accessorio\"."@it ,
+                                                                                   "This is the inverse property of \"has accessory\"."@en ;
+                                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                      rdfs:label "is accessory of"@en ,
+                                                                                 "è accessorio di"@it ;
+                                                                      owl:versionInfo "stabile"@it ,
+                                                                                      "stable"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.beniculturali.it/cis/CulturalEntity
+<http://dati.beniculturali.it/cis/CulturalEntity> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/Type
+<https://w3id.org/arco/ontology/core/Type> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Accessory
+<https://w3id.org/arco/ontology/denotative-description/Accessory> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/arco/ontology/core/isInvolvedIn> ;
+                                                                                    owl:someValuesFrom <https://w3id.org/arco/ontology/core/EventOrSituationInTime>
+                                                                                  ] ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isAccessoryOf> ;
+                                                                                    owl:someValuesFrom <https://w3id.org/italia/onto/l0/Object>
+                                                                                  ] ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                                    owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/AccessoryType>
+                                                                                  ] ;
+                                                                  rdfs:comment "Questa classe rappresenta un accessorio di un bene, ovvero un oggetto collegabile al bene, sia nel caso in cui sia funzionale alla produzione del suono, sia nel caso in cui sia di supporto alla produzione del suono o alla conservazione o alla prassi d'uso del bene."@it ,
+                                                                               "This class represents an accessory of a cultural property, both if it is functional to the sound production, or if it is the sound's production or conservation medium."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                  rdfs:label "Accessorio"@it ,
+                                                                             "Accessory"@en ;
+                                                                  owl:versionInfo "stabile"@it ,
+                                                                                  "stable"@en ;
+                                                                  <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa SM 4.00: AS/ASS" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/AccessoryType
+<https://w3id.org/arco/ontology/denotative-description/AccessoryType> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ;
+                                                                      rdfs:comment "Questa classe rappresenta un tipo accessorio di un bene culturale."@it ,
+                                                                                   "This class represents type of accessory of a cultural property."@en ;
+                                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                      rdfs:label "Accessory type"@en ,
+                                                                                 "Tipo di accessorio"@it ;
+                                                                      owl:versionInfo "instabile"@it ,
+                                                                                      "unstable"@en ;
+                                                                      <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa SM 4.00: AS/ASS/ASST" .
+
+
+###  https://w3id.org/italia/onto/l0/Object
+<https://w3id.org/italia/onto/l0/Object> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
