@@ -1,0 +1,231 @@
+<https://w3id.org/arco/resource/City/potenza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/City> .
+<https://w3id.org/arco/resource/City/potenza> <http://www.w3.org/2000/01/rdf-schema#label> "Potenza" .
+<https://w3id.org/arco/resource/City/potenza> <https://w3id.org/italia/onto/l0/name> "Potenza" .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-rainfall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/Measurement> .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-rainfall> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement of climate situation 1 of 1700203403: Precipitazioni"@en .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-rainfall> <https://w3id.org/italia/onto/l0/name> "Measurement of climate situation 1 of 1700203403: Precipitazioni"@en .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-rainfall> <http://www.w3.org/2000/01/rdf-schema#label> "Misura della situazone climatica 1 del bene 1700203403: Precipitazioni"@it .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-rainfall> <https://w3id.org/italia/onto/l0/name> "Misura della situazone climatica 1 del bene 1700203403: Precipitazioni"@it .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-rainfall> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/location/Rainfall> .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-rainfall> <https://w3id.org/arco/ontology/denotative-description/hasValue> <https://w3id.org/arco/resource/Value/1700203403-rainfall-precipitazioni> .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-rainfall> <https://w3id.org/italia/onto/MU/hasMeasurementUnit> <https://w3id.org/arco/resource/MeasurementUnit/mm> .
+<https://w3id.org/arco/resource/UniqueIdentifier/1700203403> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/Identifier> .
+<https://w3id.org/arco/resource/UniqueIdentifier/1700203403> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/core/UniqueIdentifier> .
+<https://w3id.org/arco/resource/UniqueIdentifier/1700203403> <http://www.w3.org/2000/01/rdf-schema#label> "1700203403" .
+<https://w3id.org/arco/resource/UniqueIdentifier/1700203403> <https://w3id.org/italia/onto/l0/name> "1700203403" .
+<https://w3id.org/arco/resource/UniqueIdentifier/1700203403> <https://w3id.org/italia/onto/l0/identifier> "1700203403" .
+<https://w3id.org/arco/resource/UniqueIdentifier/1700203403> <https://w3id.org/italia/onto/CLV/issuedBy> <https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> .
+<https://w3id.org/arco/resource/UniqueIdentifier/1700203403> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> <http://purl.org/dc/elements/1.1/publisher> <https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> .
+<https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordPG> .
+<https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> <https://w3id.org/arco/ontology/catalogue/describes> <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> .
+<https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> <https://w3id.org/arco/ontology/arco-lite/nationalIdentifier> "1700203403" .
+<https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> <https://w3id.org/arco/ontology/catalogue/systemRecordCode> "scheda" .
+<https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> <https://w3id.org/arco/ontology/catalogue/lastUpdateDate> "2015-12-29T00:00:00Z" .
+<https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion> <https://w3id.org/arco/resource/CatalogueRecordVersion/1700203403-compilation> .
+<https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> <https://w3id.org/arco/ontology/core/hasIdentifier> <https://w3id.org/arco/resource/CatalogueRecordIdentifier/1700203403> .
+<https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> <http://www.w3.org/2000/01/rdf-schema#label> "Scheda catalografica n: 1700203403"@it .
+<https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> <https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel> <https://w3id.org/arco/ontology/catalogue/P> .
+<https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> <http://www.w3.org/2000/01/rdf-schema#label> "Catalogue Record n: 1700203403"@en .
+<https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> <http://purl.org/dc/elements/1.1/language> "ita" .
+<https://w3id.org/arco/resource/TimeIndexedRole/1700203403-compilation-18c274684152df6b2efd4067628b8791> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1700203403-compilation-18c274684152df6b2efd4067628b8791> <http://www.w3.org/2000/01/rdf-schema#label> "Compilation by Labbattaglia, Anna"@en .
+<https://w3id.org/arco/resource/TimeIndexedRole/1700203403-compilation-18c274684152df6b2efd4067628b8791> <http://www.w3.org/2000/01/rdf-schema#label> "Compilazione da Labbattaglia, Anna"@it .
+<https://w3id.org/arco/resource/TimeIndexedRole/1700203403-compilation-18c274684152df6b2efd4067628b8791> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/ResponsibleCompilation> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1700203403-compilation-18c274684152df6b2efd4067628b8791> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/18c274684152df6b2efd4067628b8791> .
+<https://w3id.org/arco/resource/Agent/18c274684152df6b2efd4067628b8791> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/18c274684152df6b2efd4067628b8791> <http://www.w3.org/2000/01/rdf-schema#label> "Labbattaglia, Anna" .
+<https://w3id.org/arco/resource/MeasurementUnit/CelsiusDegrees> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/MeasurementUnit> .
+<https://w3id.org/arco/resource/MeasurementUnit/CelsiusDegrees> <http://www.w3.org/2000/01/rdf-schema#label> "Â°C" .
+<https://w3id.org/arco/resource/MeasurementUnit/CelsiusDegrees> <https://w3id.org/italia/onto/l0/name> "Â°C" .
+<https://w3id.org/arco/resource/AgentRole/1700203403-heritage-protection-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/1700203403-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela del bene 1700203403: Soprintendenza Archeologia, belle arti e paesaggio della Basilicata"@it .
+<https://w3id.org/arco/resource/AgentRole/1700203403-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage protection agency for cultural property 1700203403: Soprintendenza Archeologia, belle arti e paesaggio della Basilicata"@en .
+<https://w3id.org/arco/resource/AgentRole/1700203403-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/HeritageProtectionAgency> .
+<https://w3id.org/arco/resource/AgentRole/1700203403-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/48799508094afc03c84fc61eff6df4be> .
+<https://w3id.org/arco/resource/Feature/b3eb58358d45a39c86bd160612d36934> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Feature> .
+<https://w3id.org/arco/resource/Feature/b3eb58358d45a39c86bd160612d36934> <http://www.w3.org/2000/01/rdf-schema#label> "ITALIA Basilicata PZ Potenza Rione Santa Maria Via Angilla Vecchia s.n.c Via Angilla vecchia all'incrocio con via Ettore Ciccotti L'ingresso storico di Villa Santa Maria Ã¨ ubicato su via Angilla Vecchia, s.n.c., mentre su via Ettore Ciccotti vi Ã¨ un accesso secondario che ne permette l'ingresso diretto dal lato della Caserma" .
+<https://w3id.org/arco/resource/Feature/b3eb58358d45a39c86bd160612d36934> <https://w3id.org/italia/onto/CLV/hasAddress> <https://w3id.org/arco/resource/Address/889bdcabdaf5888c5806f059d314fdae> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1700203403-current> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1700203403-current> <https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf> <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1700203403-current> <https://w3id.org/arco/ontology/location/hasNaturalEnvironment> <https://w3id.org/arco/resource/NaturalEnvironment/1700203403> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1700203403-current> <http://www.w3.org/2000/01/rdf-schema#label> "Localizzazione fisica attuale del bene: 1700203403"@it .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1700203403-current> <https://w3id.org/arco/ontology/location/atLocation> <https://w3id.org/arco/resource/Feature/b3eb58358d45a39c86bd160612d36934> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1700203403-current> <https://w3id.org/italia/onto/l0/name> "Localizzazione fisica attuale del bene: 1700203403"@it .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1700203403-current> <https://w3id.org/arco/ontology/location/hasLocationType> <https://w3id.org/arco/ontology/location/CurrentPhysicalLocation> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1700203403-current> <https://w3id.org/italia/onto/l0/name> "Current physical location of cultural property: 1700203403"@en .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1700203403-current> <http://www.w3.org/2000/01/rdf-schema#label> "Current physical location of cultural property: 1700203403"@en .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1700203403-current> <https://w3id.org/arco/ontology/location/locationDetails> "Via Angilla vecchia all'incrocio con via Ettore Ciccotti" .
+<https://w3id.org/arco/resource/ClimateSituation/1700203403-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/ClimateSituation> .
+<https://w3id.org/arco/resource/ClimateSituation/1700203403-1> <http://www.w3.org/2000/01/rdf-schema#label> "Climate situation 1 of cultural property: 1700203403"@en .
+<https://w3id.org/arco/resource/ClimateSituation/1700203403-1> <https://w3id.org/italia/onto/l0/name> "Climate situation 1 of cultural property: 1700203403"@en .
+<https://w3id.org/arco/resource/ClimateSituation/1700203403-1> <http://www.w3.org/2000/01/rdf-schema#label> "Situazione climatica 1 del bene culturale: 1700203403"@it .
+<https://w3id.org/arco/resource/ClimateSituation/1700203403-1> <https://w3id.org/italia/onto/l0/name> "Situazione climatica 1 del bene culturale: 1700203403"@it .
+<https://w3id.org/arco/resource/ClimateSituation/1700203403-1> <https://w3id.org/italia/onto/TI/atTime> <https://w3id.org/arco/resource/TimeInterval/riferimento-stagionale-e-o-mensile> .
+<https://w3id.org/arco/resource/ClimateSituation/1700203403-1> <https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> <https://w3id.org/arco/resource/MeasurementCollection/1700203403-environment-measurement-collection-1> .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore"@it .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency"@en .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/1700203403-cataloguing-agency> .
+<https://w3id.org/arco/resource/Value/1700203403-rainfall-precipitazioni> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/Value> .
+<https://w3id.org/arco/resource/Value/1700203403-rainfall-precipitazioni> <http://www.w3.org/2000/01/rdf-schema#label> "Precipitazioni" .
+<https://w3id.org/arco/resource/Value/1700203403-rainfall-precipitazioni> <https://w3id.org/italia/onto/l0/name> "Precipitazioni" .
+<https://w3id.org/arco/resource/Facade/1700203403-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/construction-description/Facade> .
+<https://w3id.org/arco/resource/Facade/1700203403-1> <http://www.w3.org/2000/01/rdf-schema#label> "Facciata 1 del bene culturale: 1700203403"@it .
+<https://w3id.org/arco/resource/Facade/1700203403-1> <https://w3id.org/italia/onto/l0/name> "Facciata 1 del bene culturale: 1700203403"@it .
+<https://w3id.org/arco/resource/Facade/1700203403-1> <http://www.w3.org/2000/01/rdf-schema#label> "Facade 1 of cultural property: 1700203403"@en .
+<https://w3id.org/arco/resource/Facade/1700203403-1> <https://w3id.org/italia/onto/l0/name> "Facade 1 of cultural property: 1700203403"@en .
+<https://w3id.org/arco/resource/Facade/1700203403-1> <https://w3id.org/arco/ontology/core/note> "L'ingresso storico di Villa Santa Maria Ã¨ ubicato su via Angilla Vecchia, s.n.c., mentre su via Ettore Ciccotti vi Ã¨ un accesso secondario che ne permette l'ingresso diretto dal lato della Caserma" .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-minimum-temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/Measurement> .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-minimum-temperature> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement of climate situation 1 of 1700203403: Temperatura minima"@en .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-minimum-temperature> <https://w3id.org/italia/onto/l0/name> "Measurement of climate situation 1 of 1700203403: Temperatura minima"@en .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-minimum-temperature> <http://www.w3.org/2000/01/rdf-schema#label> "Misura della situazone climatica 1 del bene 1700203403: Temperatura minima"@it .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-minimum-temperature> <https://w3id.org/italia/onto/l0/name> "Misura della situazone climatica 1 del bene 1700203403: Temperatura minima"@it .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-minimum-temperature> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/denotative-description/MinimumTemperature> .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-minimum-temperature> <https://w3id.org/arco/ontology/denotative-description/hasValue> <https://w3id.org/arco/resource/Value/1700203403-minimum-temperature-temperatura-minima> .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-minimum-temperature> <https://w3id.org/italia/onto/MU/hasMeasurementUnit> <https://w3id.org/arco/resource/MeasurementUnit/CelsiusDegrees> .
+<https://w3id.org/arco/resource/AgentRole/1700203403-cataloguing-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/1700203403-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore del bene 1700203403: Soprintendenza Archeologia, belle arti e paesaggio della Basilicata"@it .
+<https://w3id.org/arco/resource/AgentRole/1700203403-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency for cultural property 1700203403: Soprintendenza Archeologia, belle arti e paesaggio della Basilicata"@en .
+<https://w3id.org/arco/resource/AgentRole/1700203403-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/CataloguinAgency> .
+<https://w3id.org/arco/resource/AgentRole/1700203403-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/48799508094afc03c84fc61eff6df4be> .
+<https://w3id.org/arco/resource/MeasurementUnit/mm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/MeasurementUnit> .
+<https://w3id.org/arco/resource/MeasurementUnit/mm> <http://www.w3.org/2000/01/rdf-schema#label> "mm" .
+<https://w3id.org/arco/resource/MeasurementUnit/mm> <https://w3id.org/italia/onto/l0/name> "mm" .
+<https://w3id.org/arco/resource/DesignationInTime/1700203403-villa-santa-maria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/DesignationInTime> .
+<https://w3id.org/arco/resource/DesignationInTime/1700203403-villa-santa-maria> <http://www.w3.org/2000/01/rdf-schema#label> "Villa Santa Maria" .
+<https://w3id.org/arco/resource/DesignationInTime/1700203403-villa-santa-maria> <https://w3id.org/italia/onto/l0/name> "Villa Santa Maria" .
+<https://w3id.org/arco/resource/DesignationInTime/1700203403-villa-santa-maria> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/Address/889bdcabdaf5888c5806f059d314fdae> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Address> .
+<https://w3id.org/arco/resource/Address/889bdcabdaf5888c5806f059d314fdae> <http://www.w3.org/2000/01/rdf-schema#label> "ITALIA, Basilicata, PZ, Potenza, Rione Santa Maria, Via Angilla Vecchia s.n.c, Via Angilla vecchia all'incrocio con via Ettore Ciccotti, L'ingresso storico di Villa Santa Maria Ã¨ ubicato su via Angilla Vecchia, s.n.c., mentre su via Ettore Ciccotti vi Ã¨ un accesso secondario che ne permette l'ingresso diretto dal lato della Caserma" .
+<https://w3id.org/arco/resource/Address/889bdcabdaf5888c5806f059d314fdae> <https://w3id.org/italia/onto/CLV/fullAddress> "Via Angilla Vecchia s.n.c" .
+<https://w3id.org/arco/resource/Address/889bdcabdaf5888c5806f059d314fdae> <https://w3id.org/italia/onto/CLV/hasCountry> <https://w3id.org/arco/resource/Country/italia> .
+<https://w3id.org/arco/resource/Address/889bdcabdaf5888c5806f059d314fdae> <https://w3id.org/italia/onto/CLV/hasRegion> <https://w3id.org/arco/resource/Region/basilicata> .
+<https://w3id.org/arco/resource/Address/889bdcabdaf5888c5806f059d314fdae> <https://w3id.org/italia/onto/CLV/hasProvince> <https://w3id.org/arco/resource/Province/pz> .
+<https://w3id.org/arco/resource/Address/889bdcabdaf5888c5806f059d314fdae> <https://w3id.org/italia/onto/CLV/hasCity> <https://w3id.org/arco/resource/City/potenza> .
+<https://w3id.org/arco/resource/Address/889bdcabdaf5888c5806f059d314fdae> <https://w3id.org/italia/onto/CLV/hasAddressArea> <https://w3id.org/arco/resource/AddressArea/rione-santa-maria> .
+<https://w3id.org/arco/resource/Address/889bdcabdaf5888c5806f059d314fdae> <https://w3id.org/arco/ontology/location/hasClericalAdministrativeArea> <https://w3id.org/arco/resource/ClericalAdministrativeArea/arcidiocesi-potenza-muro-lucano-marsico-nuovo> .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/parco> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition> .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/parco> <http://www.w3.org/2000/01/rdf-schema#label> "parco" .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/parco> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dati.beniculturali.it/vocabularies/beni_architettonici_e_paesaggistici/def/004.021> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1700203403-compilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1700203403-compilation> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/catalogue/Compiling> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1700203403-compilation> <http://www.w3.org/2000/01/rdf-schema#label> "COMPILAZIONE - 2019 Labbattaglia, Anna" .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1700203403-compilation> <https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf> <https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1700203403-compilation> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/1700203403-compilation-18c274684152df6b2efd4067628b8791> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1700203403-compilation> <https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation> <https://w3id.org/arco/resource/Agent/18c274684152df6b2efd4067628b8791> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1700203403-compilation> <https://w3id.org/arco/ontology/catalogue/editedAtTime> <https://w3id.org/arco/resource/TimeInterval/2019> .
+<https://w3id.org/arco/resource/TimeInterval/riferimento-stagionale-e-o-mensile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/riferimento-stagionale-e-o-mensile> <http://www.w3.org/2000/01/rdf-schema#label> "Riferimento stagionale e/o mensile" .
+<https://w3id.org/arco/resource/TimeInterval/riferimento-stagionale-e-o-mensile> <https://w3id.org/italia/onto/TI/startTime> "Riferimento stagionale e/o mensile" .
+<https://w3id.org/arco/resource/TimeInterval/riferimento-stagionale-e-o-mensile> <https://w3id.org/italia/onto/TI/endTime> "Riferimento stagionale e/o mensile" .
+<https://w3id.org/arco/resource/Value/1700203403-minimum-temperature-temperatura-minima> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/Value> .
+<https://w3id.org/arco/resource/Value/1700203403-minimum-temperature-temperatura-minima> <http://www.w3.org/2000/01/rdf-schema#label> "Temperatura minima" .
+<https://w3id.org/arco/resource/Value/1700203403-minimum-temperature-temperatura-minima> <https://w3id.org/italia/onto/l0/name> "Temperatura minima" .
+<https://w3id.org/arco/resource/CulturalPropertyType/93ba12005058ddb7063870090f28ec79> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> .
+<https://w3id.org/arco/resource/CulturalPropertyType/93ba12005058ddb7063870090f28ec79> <http://www.w3.org/2000/01/rdf-schema#label> "parco"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/93ba12005058ddb7063870090f28ec79> <https://w3id.org/italia/onto/l0/name> "parco"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/93ba12005058ddb7063870090f28ec79> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition> <https://w3id.org/arco/resource/CulturalPropertyDefinition/parco> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela"@it .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage Protection Agency"@en .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/1700203403-heritage-protection-agency> .
+<https://w3id.org/arco/resource/MeasurementCollection/1700203403-environment-measurement-collection-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> .
+<https://w3id.org/arco/resource/MeasurementCollection/1700203403-environment-measurement-collection-1> <http://www.w3.org/2000/01/rdf-schema#label> "Misure della situazione climatica  1  del bene culturale:  1700203403"@it .
+<https://w3id.org/arco/resource/MeasurementCollection/1700203403-environment-measurement-collection-1> <https://w3id.org/italia/onto/l0/name> "Misure della situazione climatica  1  del bene culturale:  1700203403"@it .
+<https://w3id.org/arco/resource/MeasurementCollection/1700203403-environment-measurement-collection-1> <http://www.w3.org/2000/01/rdf-schema#label> "Measurements of climate situation  1  of cultural property:  1700203403"@en .
+<https://w3id.org/arco/resource/MeasurementCollection/1700203403-environment-measurement-collection-1> <https://w3id.org/italia/onto/l0/name> "Measurements of climate situation  1  of cultural property:  1700203403"@en .
+<https://w3id.org/arco/resource/MeasurementCollection/1700203403-environment-measurement-collection-1> <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> <https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-minimum-temperature> .
+<https://w3id.org/arco/resource/MeasurementCollection/1700203403-environment-measurement-collection-1> <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> <https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-maximum-temperature> .
+<https://w3id.org/arco/resource/MeasurementCollection/1700203403-environment-measurement-collection-1> <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> <https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-rainfall> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/1700203403> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/Identifier> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/1700203403> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/core/NationalIdentifier> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/1700203403> <http://www.w3.org/2000/01/rdf-schema#label> "1700203403" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/1700203403> <https://w3id.org/italia/onto/l0/name> "1700203403" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/1700203403> <https://w3id.org/italia/onto/l0/identifier> "1700203403" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/1700203403> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-maximum-temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/Measurement> .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-maximum-temperature> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement of climate situation 1 of 1700203403: Temperatura massima"@en .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-maximum-temperature> <https://w3id.org/italia/onto/l0/name> "Measurement of climate situation 1 of 1700203403: Temperatura massima"@en .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-maximum-temperature> <http://www.w3.org/2000/01/rdf-schema#label> "Misura della situazone climatica 1 del bene 1700203403: Temperatura massima"@it .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-maximum-temperature> <https://w3id.org/italia/onto/l0/name> "Misura della situazone climatica 1 del bene 1700203403: Temperatura massima"@it .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-maximum-temperature> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/denotative-description/MaximumTemperature> .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-maximum-temperature> <https://w3id.org/arco/ontology/denotative-description/hasValue> <https://w3id.org/arco/resource/Value/1700203403-maximum-temperature-temperatura-massima> .
+<https://w3id.org/arco/resource/Measurement/ClimateSituation/1700203403-1-maximum-temperature> <https://w3id.org/italia/onto/MU/hasMeasurementUnit> <https://w3id.org/arco/resource/MeasurementUnit/CelsiusDegrees> .
+<https://w3id.org/arco/resource/Region/basilicata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Region> .
+<https://w3id.org/arco/resource/Region/basilicata> <http://www.w3.org/2000/01/rdf-schema#label> "Basilicata" .
+<https://w3id.org/arco/resource/Region/basilicata> <https://w3id.org/italia/onto/l0/name> "Basilicata" .
+<https://w3id.org/arco/resource/NaturalEnvironment/1700203403> <http://www.w3.org/2000/01/rdf-schema#label> "Environment of cultural property: 1700203403"@en .
+<https://w3id.org/arco/resource/NaturalEnvironment/1700203403> <https://w3id.org/italia/onto/l0/name> "Environment of cultural property: 1700203403"@en .
+<https://w3id.org/arco/resource/NaturalEnvironment/1700203403> <http://www.w3.org/2000/01/rdf-schema#label> "Ambiente del bene culturale: 1700203403"@it .
+<https://w3id.org/arco/resource/NaturalEnvironment/1700203403> <https://w3id.org/italia/onto/l0/name> "Ambiente del bene culturale: 1700203403"@it .
+<https://w3id.org/arco/resource/NaturalEnvironment/1700203403> <https://w3id.org/italia/onto/l0/name> "Ambiente naturale relativo al bene 1700203403"@it .
+<https://w3id.org/arco/resource/NaturalEnvironment/1700203403> <http://www.w3.org/2000/01/rdf-schema#label> "Ambiente naturale relativo al bene 1700203403"@it .
+<https://w3id.org/arco/resource/NaturalEnvironment/1700203403> <http://www.w3.org/2000/01/rdf-schema#label> "Natural environment of cultural property 1700203403"@en .
+<https://w3id.org/arco/resource/NaturalEnvironment/1700203403> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/NaturalEnvironment> .
+<https://w3id.org/arco/resource/NaturalEnvironment/1700203403> <https://w3id.org/italia/onto/l0/name> "Natural environment of cultural property 1700203403"@en .
+<https://w3id.org/arco/resource/NaturalEnvironment/1700203403> <https://w3id.org/arco/ontology/location/hasClimateSituation> <https://w3id.org/arco/resource/ClimateSituation/1700203403-1> .
+<https://w3id.org/arco/resource/TimeInterval/2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/2019> <http://www.w3.org/2000/01/rdf-schema#label> "2019" .
+<https://w3id.org/arco/resource/TimeInterval/2019> <https://w3id.org/italia/onto/TI/startTime> "2019" .
+<https://w3id.org/arco/resource/TimeInterval/2019> <https://w3id.org/italia/onto/TI/endTime> "2019" .
+<https://w3id.org/arco/resource/Province/pz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Province> .
+<https://w3id.org/arco/resource/Province/pz> <http://www.w3.org/2000/01/rdf-schema#label> "Pz" .
+<https://w3id.org/arco/resource/Province/pz> <https://w3id.org/italia/onto/l0/name> "Pz" .
+<https://w3id.org/arco/resource/ClericalAdministrativeArea/arcidiocesi-potenza-muro-lucano-marsico-nuovo> <http://www.w3.org/2000/01/rdf-schema#label> "Arcidiocesi Potenza-Muro Lucano-Marsico Nuovo" .
+<https://w3id.org/arco/resource/ClericalAdministrativeArea/arcidiocesi-potenza-muro-lucano-marsico-nuovo> <https://w3id.org/italia/onto/l0/name> "Arcidiocesi Potenza-Muro Lucano-Marsico Nuovo" .
+<https://w3id.org/arco/resource/ClericalAdministrativeArea/arcidiocesi-potenza-muro-lucano-marsico-nuovo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/ClericalAdministrativeArea> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsible research and compilation"@en .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile ricerca e redazione"@it .
+<https://w3id.org/arco/resource/Value/1700203403-maximum-temperature-temperatura-massima> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/Value> .
+<https://w3id.org/arco/resource/Value/1700203403-maximum-temperature-temperatura-massima> <http://www.w3.org/2000/01/rdf-schema#label> "Temperatura massima" .
+<https://w3id.org/arco/resource/Value/1700203403-maximum-temperature-temperatura-massima> <https://w3id.org/italia/onto/l0/name> "Temperatura massima" .
+<https://w3id.org/arco/resource/Country/italia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Country> .
+<https://w3id.org/arco/resource/Country/italia> <http://www.w3.org/2000/01/rdf-schema#label> "Italia" .
+<https://w3id.org/arco/resource/Country/italia> <https://w3id.org/italia/onto/l0/name> "Italia" .
+<https://w3id.org/arco/resource/AddressArea/rione-santa-maria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/AddressArea> .
+<https://w3id.org/arco/resource/AddressArea/rione-santa-maria> <http://www.w3.org/2000/01/rdf-schema#label> "Rione Santa Maria" .
+<https://w3id.org/arco/resource/AddressArea/rione-santa-maria> <https://w3id.org/italia/onto/l0/name> "Rione Santa Maria" .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/1700203403-heritage-protection-agency> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/location/hasCulturalPropertyAddress> <https://w3id.org/arco/resource/Address/889bdcabdaf5888c5806f059d314fdae> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://www.w3.org/2000/01/rdf-schema#label> "Villa Santa Maria (parco, commemorativo/ ai caduti della prima guerra mondiale) - Potenza (PZ) "@it .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://www.w3.org/2000/01/rdf-schema#label> "Villa Santa Maria (parco, commemorativo/ ai caduti della prima guerra mondiale) - Potenza (PZ) "@en .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/construction-description/hasConstructionElement> <https://w3id.org/arco/resource/Facade/1700203403-1> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/construction-description/OpenSpace> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://purl.org/dc/elements/1.1/type> "parco" .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/ImmovableCulturalProperty> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://purl.org/dc/elements/1.1/identifier> "1700203403" .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/ArchitecturalOrLandscapeHeritage> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType> <https://w3id.org/arco/resource/CulturalPropertyType/93ba12005058ddb7063870090f28ec79> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/arco-lite/hasCulturalPropertyAddress> <https://w3id.org/arco/resource/Address/889bdcabdaf5888c5806f059d314fdae> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://www.w3.org/2000/01/rdf-schema#comment> "parco, commemorativo/ ai caduti della prima guerra mondiale, Villa Santa Maria" .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://purl.org/dc/elements/1.1/subject> <http://culturaitalia.it/pico/thesaurus/4.1#giardini_e_parchi> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://purl.org/dc/elements/1.1/source> <http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode=scheda> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/denotative-description/hasDesignationInTime> <https://w3id.org/arco/resource/DesignationInTime/1700203403-villa-santa-maria> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://purl.org/dc/elements/1.1/title> "Villa Santa Maria (parco commemorativo/ ai caduti della prima guerra mondiale)" .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/catalogue/isDescribedBy> <https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/arco/hasCataloguingAgency> <https://w3id.org/arco/resource/Agent/48799508094afc03c84fc61eff6df4be> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/arco/regionIdentifier> "17" .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/arco/catalogueNumber> "00203403" .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://purl.org/dc/elements/1.1/description> "parco commemorativo/ ai caduti della prima guerra mondiale" .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://purl.org/dc/elements/1.1/source> <https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/arco/hasHeritageProtectionAgency> <https://w3id.org/arco/resource/Agent/48799508094afc03c84fc61eff6df4be> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://purl.org/dc/terms/isReferencedBy> <https://w3id.org/arco/resource/CatalogueRecordPG/1700203403> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://purl.org/dc/elements/1.1/coverage> "Potenza (PZ)" .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier> "1700203403" .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation> <https://w3id.org/arco/resource/TimeIndexedTypedLocation/1700203403-current> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/core/hasIdentifier> <https://w3id.org/arco/resource/UniqueIdentifier/1700203403> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://purl.org/dc/elements/1.1/subject> "Villa Santa Maria" .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/1700203403-cataloguing-agency> .
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> <http://purl.org/dc/terms/spatial> <https://w3id.org/arco/resource/Address/889bdcabdaf5888c5806f059d314fdae> .
+<https://w3id.org/arco/resource/Agent/48799508094afc03c84fc61eff6df4be> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/COV/Organization> .
+<https://w3id.org/arco/resource/Agent/48799508094afc03c84fc61eff6df4be> <http://www.w3.org/2000/01/rdf-schema#label> "Soprintendenza Archeologia, belle arti e paesaggio della Basilicata" .
+<https://w3id.org/arco/resource/Agent/48799508094afc03c84fc61eff6df4be> <https://w3id.org/italia/onto/l0/name> "Soprintendenza Archeologia, belle arti e paesaggio della Basilicata" .
+<https://w3id.org/arco/resource/Agent/48799508094afc03c84fc61eff6df4be> <https://w3id.org/arco/ontology/arco/isCataloguingAgencyOf> <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> .
+<https://w3id.org/arco/resource/Agent/48799508094afc03c84fc61eff6df4be> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/1700203403-cataloguing-agency> .
+<https://w3id.org/arco/resource/Agent/48799508094afc03c84fc61eff6df4be> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/1700203403-heritage-protection-agency> .
+<https://w3id.org/arco/resource/Agent/48799508094afc03c84fc61eff6df4be> <https://w3id.org/arco/ontology/arco/isHeritageProtectionAgencyOf> <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1700203403> .
+<https://w3id.org/arco/ontology/catalogue/P> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CataloguingLevel> .
+<https://w3id.org/arco/ontology/catalogue/P> <http://www.w3.org/2000/01/rdf-schema#label> "P" .
+<https://w3id.org/arco/ontology/catalogue/P> <https://w3id.org/italia/onto/l0/name> "P" .

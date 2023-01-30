@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11306860@</identifier>
+        <datestamp>2020-06-17T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <D version="2.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo di scheda">D</TSK>
+                    <LIR hint="Livello di ricerca">C</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">10</NCTR>
+                        <NCTN hint="Numero catalogo generale">00017424</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S38</ESC>
+                    <ECP hint="Ente competente">S38</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">disegno</OGTD>
+                    </OGT>
+                </OG>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="DESCRIZIONE">
+                        <DESS hint="Indicazioni sul soggetto">Architetture: Perugia: Palazzo Bonaini - Boldrini: prospetto delle due facciate</DESS>
+                    </DES>
+                    <ISR hint="ISCRIZIONI">
+                        <ISRC hint="Classe di appartenenza">di titolazione</ISRC>
+                        <ISRS hint="Tecnica di scrittura">a penna</ISRS>
+                        <ISRT hint="Tipo di caratteri">corsivo</ISRT>
+                        <ISRP hint="Posizione">in alto, entro cartiglio</ISRP>
+                        <ISRI hint="Trascrizione">PROSPETTO DELLE DUE FACCIATE DEL NUOVO/ PALAZZO DELL'ILL(USTRISS)IMO SIG(NOR) CO(N)TE ORA/ZIO BONAINI BOLDRINI IN PERUGIA</ISRI>
+                    </ISR>
+                    <ISR hint="ISCRIZIONI">
+                        <ISRC hint="Classe di appartenenza">documentaria</ISRC>
+                        <ISRS hint="Tecnica di scrittura">a penna</ISRS>
+                        <ISRT hint="Tipo di caratteri">corsivo</ISRT>
+                        <ISRP hint="Posizione">in basso a destra</ISRP>
+                        <ISRI hint="Trascrizione">LORENZINI F(ECIT) 177..</ISRI>
+                    </ISR>
+                    <NSC hint="Notizie storico critiche">L'opera, parte di un gruppo di tre tavole relative a palazzo Bonaini - Boldrini, è citata nell'inventario topografico della Galleria. Si tratta di un disegno del noto architetto perugino Alessio Lorenzini, da porre in relazione alla ristrutturazione settecentesca del palazzo. Verso la fine del secolo, Lorenzini si occupò della ristrutturazione di numerosi palazzi</NSC>
+                </DA>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">1989</CMPD>
+                        <CMPN hint="Nome compilatore">Rosi A.M</CMPN>
+                    </CMP>
+                </CM>
+            </D>
+        </schede>
+    </metadata>
+</record>

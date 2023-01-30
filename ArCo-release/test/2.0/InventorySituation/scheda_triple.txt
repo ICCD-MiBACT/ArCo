@@ -1,0 +1,164 @@
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/catalogue/Compiling> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <http://www.w3.org/2000/01/rdf-schema#label> "COMPILAZIONE - 2015 Vellini, Silvia" .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf> <https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation> <https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/catalogue/editedAtTime> <https://w3id.org/arco/resource/TimeInterval/2015> .
+<https://w3id.org/arco/resource/SECIdentifier/18e02dfa0fa522108d8405ab8244440e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/Identifier> .
+<https://w3id.org/arco/resource/SECIdentifier/18e02dfa0fa522108d8405ab8244440e> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/core/NationalIdentifier> .
+<https://w3id.org/arco/resource/SECIdentifier/18e02dfa0fa522108d8405ab8244440e> <http://www.w3.org/2000/01/rdf-schema#label> "Codice SEC (modello 15)" .
+<https://w3id.org/arco/resource/SECIdentifier/18e02dfa0fa522108d8405ab8244440e> <https://w3id.org/italia/onto/l0/name> "Codice SEC (modello 15)" .
+<https://w3id.org/arco/resource/SECIdentifier/18e02dfa0fa522108d8405ab8244440e> <https://w3id.org/italia/onto/l0/identifier> "Codice SEC (modello 15)" .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/disegno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition> .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/disegno> <http://www.w3.org/2000/01/rdf-schema#label> "disegno" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/Identifier> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/core/NationalIdentifier> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "0100350961" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <https://w3id.org/italia/onto/l0/name> "0100350961" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <https://w3id.org/italia/onto/l0/identifier> "0100350961" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/Agent/1c1e0c49d558ee594145da0a8c93f22a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/1c1e0c49d558ee594145da0a8c93f22a> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile Dellâ€™immissione In Patrimonio" .
+<https://w3id.org/arco/resource/Agent/1c1e0c49d558ee594145da0a8c93f22a> <https://w3id.org/italia/onto/l0/name> "Responsabile Dellâ€™immissione In Patrimonio" .
+<https://w3id.org/arco/resource/Agent/1c1e0c49d558ee594145da0a8c93f22a> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0100350961-inventory-number-responsible> .
+<https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> <https://w3id.org/arco/ontology/arco-lite/nationalIdentifier> "0100350961" .
+<https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> <https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel> <https://w3id.org/arco/ontology/catalogue/C> .
+<https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "Scheda catalografica n: 0100350961"@it .
+<https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> <https://w3id.org/arco/ontology/catalogue/describes> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> .
+<https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> <https://w3id.org/arco/ontology/catalogue/lastUpdateDate> "2015-12-30T00:00:00Z" .
+<https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> <http://purl.org/dc/elements/1.1/language> "ita" .
+<https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> <https://w3id.org/arco/ontology/catalogue/systemRecordCode> "scheda" .
+<https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "Catalogue Record n: 0100350961"@en .
+<https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordMI> .
+<https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> <http://purl.org/dc/elements/1.1/publisher> <https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> .
+<https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion> <https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> .
+<https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> <https://w3id.org/arco/ontology/core/hasIdentifier> <https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsible research and compilation"@en .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile ricerca e redazione"@it .
+<https://w3id.org/arco/resource/AgentRole/0100350961-inventory-number-responsible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-inventory-number-responsible> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile del numero di inventario del bene 0100350961: Responsabile dellâ€™immissione in patrimonio"@it .
+<https://w3id.org/arco/resource/AgentRole/0100350961-inventory-number-responsible> <http://www.w3.org/2000/01/rdf-schema#label> "Responsible for inventory number of cultural property 0100350961: Responsabile dellâ€™immissione in patrimonio"@en .
+<https://w3id.org/arco/resource/AgentRole/0100350961-inventory-number-responsible> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/InventoryNumberResponsible> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-inventory-number-responsible> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/1c1e0c49d558ee594145da0a8c93f22a> .
+<https://w3id.org/arco/resource/SECCategory/categoria-sec-modello-15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/SECCategory> .
+<https://w3id.org/arco/resource/SECCategory/categoria-sec-modello-15> <http://www.w3.org/2000/01/rdf-schema#label> "Categoria SEC (modello 15)" .
+<https://w3id.org/arco/resource/SECCategory/categoria-sec-modello-15> <https://w3id.org/italia/onto/l0/name> "Categoria SEC (modello 15)" .
+<https://w3id.org/arco/resource/SECCategory/categoria-sec-modello-15> <https://w3id.org/arco/ontology/core/hasIdentifier> <https://w3id.org/arco/resource/SECIdentifier/18e02dfa0fa522108d8405ab8244440e> .
+<https://w3id.org/arco/resource/SECCategory/categoria-sec-modello-15> <https://w3id.org/arco/ontology/arco-lite/nationalIdentifier> "Codice SEC (modello 15)" .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/COV/Organization> .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <http://www.w3.org/2000/01/rdf-schema#label> "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte" .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/italia/onto/l0/name> "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte" .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/arco/ontology/arco/isCataloguingAgencyOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/arco/ontology/arco/isHeritageProtectionAgencyOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> .
+<https://w3id.org/arco/resource/TimeInterval/2015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/2015> <http://www.w3.org/2000/01/rdf-schema#label> "2015" .
+<https://w3id.org/arco/resource/TimeInterval/2015> <https://w3id.org/italia/onto/TI/startTime> "2015" .
+<https://w3id.org/arco/resource/TimeInterval/2015> <https://w3id.org/italia/onto/TI/endTime> "2015" .
+<https://w3id.org/arco/resource/Inventory/denominazione-inventario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Inventory> .
+<https://w3id.org/arco/resource/Inventory/denominazione-inventario> <http://www.w3.org/2000/01/rdf-schema#label> "Denominazione inventario" .
+<https://w3id.org/arco/resource/Inventory/denominazione-inventario> <https://w3id.org/italia/onto/l0/name> "Denominazione inventario" .
+<https://w3id.org/arco/resource/Inventory/denominazione-inventario> <https://w3id.org/arco/ontology/context-description/inventoryLocation> "Collocazione" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/Identifier> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/core/UniqueIdentifier> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "0100350961" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/italia/onto/l0/name> "0100350961" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/italia/onto/l0/identifier> "0100350961" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/arco/ontology/core/issuedBy> <https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Silvia Vellini" .
+<https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> .
+<https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> <http://www.w3.org/2000/01/rdf-schema#label> "disegno"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> <https://w3id.org/italia/onto/l0/name> "disegno"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition> <https://w3id.org/arco/resource/CulturalPropertyDefinition/disegno> .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore"@it .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency"@en .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela"@it .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage Protection Agency"@en .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore del bene 0100350961: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte"@it .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency for cultural property 0100350961: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte"@en .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/CataloguinAgency> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Compilation by Vellini, Silvia"@en .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Compilazione da Vellini, Silvia"@it .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/ResponsibleCompilation> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/HistoricOrArtisticProperty> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <https://w3id.org/arco/ontology/catalogue/isDescribedBy> <https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <https://w3id.org/arco/ontology/arco/hasCataloguingAgency> <https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType> <https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <http://purl.org/dc/elements/1.1/title> "disegno" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "disegno"@it .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "disegno"@en .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <https://w3id.org/arco/ontology/arco-lite/currentInventoryNumber> "Codice inventario patrimoniale" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <https://w3id.org/arco/ontology/core/hasIdentifier> <https://w3id.org/arco/resource/UniqueIdentifier/0100350961> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <http://www.w3.org/2000/01/rdf-schema#comment> "disegno" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <http://purl.org/dc/elements/1.1/type> "disegno" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <https://w3id.org/arco/ontology/arco/hasHeritageProtectionAgency> <https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <https://w3id.org/arco/ontology/arco/regionIdentifier> "01" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier> "0100350961" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <https://w3id.org/arco/ontology/context-description/hasInventorySituation> <https://w3id.org/arco/resource/InventorySistuation/0100350961-current> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <http://purl.org/dc/terms/isReferencedBy> <https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <http://purl.org/dc/elements/1.1/source> <http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode=scheda> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <http://purl.org/dc/elements/1.1/subject> <http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/MovableCulturalProperty> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <http://purl.org/dc/elements/1.1/source> <https://w3id.org/arco/resource/CatalogueRecordMI/0100350961> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <https://w3id.org/arco/ontology/core/hasPart> <https://w3id.org/arco/resource/CulturalPropertyPart/0100350961-riferimento-alla-parte> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <https://w3id.org/arco/ontology/arco/catalogueNumber> "00350961" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <http://purl.org/dc/elements/1.1/identifier> "0100350961" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100350961> <http://purl.org/dc/elements/1.1/subject> "disegno" .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/arco/ontology/context-description/hasSECCategory> <https://w3id.org/arco/resource/SECCategory/categoria-sec-modello-15> .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/arco/ontology/core/note> "Note" .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/arco/ontology/context-description/RCSReason> "Causale RCS" .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/arco/ontology/context-description/inventoryNumber> "Codice inventario patrimoniale" .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/arco/ontology/core/description> "Descrizione (modello 15)" .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/arco/ontology/context-description/relevantLegalAct> "Riferimento agli atti" .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <http://www.w3.org/2000/01/rdf-schema#label> "Inventory situation of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/italia/onto/l0/name> "Inventory situation of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/InventorySituation> .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/arco/ontology/arco-lite/hasInventoryNumberResponsible> <https://w3id.org/arco/resource/Agent/1c1e0c49d558ee594145da0a8c93f22a> .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/arco/ontology/context-description/methodOfInsertion> "ModalitÃ  di acquisizione" .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/arco/ontology/context-description/provenance> "Provenienza" .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0100350961-inventory-number-responsible> .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/italia/onto/l0/name> "Situazione inventariale del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <http://www.w3.org/2000/01/rdf-schema#label> "Situazione inventariale del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/InventorySistuation/0100350961-current> <https://w3id.org/arco/ontology/context-description/insertionDate> "Data dellâ€™immissione in patrimonio" .
+<https://w3id.org/arco/resource/CulturalPropertyPart/0100350961-riferimento-alla-parte> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/CulturalEntity> .
+<https://w3id.org/arco/resource/CulturalPropertyPart/0100350961-riferimento-alla-parte> <http://www.w3.org/2000/01/rdf-schema#label> "Riferimento alla parte" .
+<https://w3id.org/arco/resource/CulturalPropertyPart/0100350961-riferimento-alla-parte> <https://w3id.org/italia/onto/l0/name> "Riferimento alla parte" .
+<https://w3id.org/arco/resource/CulturalPropertyPart/0100350961-riferimento-alla-parte> <https://w3id.org/arco/ontology/context-description/hasInventorySituation> <https://w3id.org/arco/resource/InventorySituation/0100350961-1> .
+<https://w3id.org/arco/resource/CulturalPropertyPart/0100350961-riferimento-alla-parte> <https://w3id.org/arco/ontology/arco-lite/alternativeInventoryNumber> "Codice inventario" .
+<https://w3id.org/arco/resource/Role/InventoryNumberResponsible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/InventoryNumberResponsible> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile del numero di inventario"@it .
+<https://w3id.org/arco/resource/Role/InventoryNumberResponsible> <http://www.w3.org/2000/01/rdf-schema#label> "Inventory Number Responsible"@en .
+<https://w3id.org/arco/resource/Role/InventoryNumberResponsible> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0100350961-inventory-number-responsible> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela del bene 0100350961: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte"@it .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage protection agency for cultural property 0100350961: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte"@en .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/HeritageProtectionAgency> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> .
+<https://w3id.org/arco/resource/InventorySituation/0100350961-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/InventorySituation> .
+<https://w3id.org/arco/resource/InventorySituation/0100350961-1> <http://www.w3.org/2000/01/rdf-schema#label> "Situazione inventariale del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/InventorySituation/0100350961-1> <https://w3id.org/italia/onto/l0/name> "Situazione inventariale del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/InventorySituation/0100350961-1> <http://www.w3.org/2000/01/rdf-schema#label> "Inventory situation of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/InventorySituation/0100350961-1> <https://w3id.org/italia/onto/l0/name> "Inventory situation of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/InventorySituation/0100350961-1> <https://w3id.org/arco/ontology/core/note> "Note" .
+<https://w3id.org/arco/resource/InventorySituation/0100350961-1> <https://w3id.org/arco/ontology/context-description/inventoryNumber> "Codice inventario" .
+<https://w3id.org/arco/resource/InventorySituation/0100350961-1> <https://w3id.org/arco/ontology/context-description/insertionDate> "Riferimento cronologico" .
+<https://w3id.org/arco/resource/InventorySituation/0100350961-1> <https://w3id.org/arco/ontology/context-description/hasInventory> <https://w3id.org/arco/resource/Inventory/denominazione-inventario> .
+<https://w3id.org/arco/ontology/catalogue/C> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CataloguingLevel> .
+<https://w3id.org/arco/ontology/catalogue/C> <http://www.w3.org/2000/01/rdf-schema#label> "C" .
+<https://w3id.org/arco/ontology/catalogue/C> <https://w3id.org/italia/onto/l0/name> "C" .

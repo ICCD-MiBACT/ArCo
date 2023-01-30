@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14756434@</identifier>
+        <datestamp>2014-12-23T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+<schede>
+<SM version="4.00_ICCD0" >
+<CD hint="CODICI" >
+<TSK hint="Tipo scheda" >SM</TSK>
+<LIR hint="Livello catalogazione" >I</LIR>
+<NCT hint="CODICE UNIVOCO" >
+<NCTR hint="Codice Regione" >20</NCTR>
+<NCTN hint="Numero catalogo generale" >00246883</NCTN>
+</NCT>
+<ESC hint="Ente schedatore" >S255</ESC>
+<ECP hint="Ente competente per tutela" >S255</ECP>
+</CD>
+<OG hint="BENE CULTURALE" >
+<AMB hint="Ambito di tutela MiBACT" >storico artistico</AMB>
+<OGT hint="DEFINIZIONE BENE" >
+<OGTD hint="Definizione" >violino</OGTD>
+</OGT>
+<OGM hint="Modalità di individuazione" >appartenenza ad una collezione o raccolta privata</OGM>
+</OG>
+<MU hint="MUSICISTA">
+<MUT hint="DATI IDENTIFICATIVI">DATI IDENTIFICATIVI
+<MUTI hint="Ruolo">Ruolo</MUTI>
+<MUTZ hint="Nazionalità">Nazionalità</MUTZ>
+<MUTB hint="Contesto culturale">Contesto culturale</MUTB>
+<MUTN hint="Nome">Nome</MUTN>
+<MUTS hint="Sesso">Sesso</MUTS>
+<MUTE hint="Età">Età</MUTE>
+<MUTO hint="Scolarità">Scolarità</MUTO>
+<MUTM hint="Mestiere o professione">Mestiere o professione</MUTM>
+</MUT>
+<DNA hint="DATI ANAGRAFICI">DATI ANAGRAFICI
+<DNAK hint="Continente/subcontinente">Continente/subcontinente</DNAK>
+<DNAS hint="Stato">Stato</DNAS>
+<DNAR hint="Regione">Regione</DNAR>
+<DNAP hint="Provincia">Provincia</DNAP>
+<DNAC hint="Comune">Comune</DNAC>
+<DNAE hint="Località estera">Località estera</DNAE>
+<DNAN hint="Data di nascita">Data di nascita</DNAN>
+</DNA>
+<DML hint="DOMICILIO">DOMICILIO
+<DMLK hint="Continente/subcontinente">Continente/subcontinente</DMLK>
+<DMLS hint="Stato">Stato</DMLS>
+<DMLR hint="Regione">Regione</DMLR>
+<DMLP hint="Provincia">Provincia</DMLP>
+<DMLC hint="Comune">Comune</DMLC>
+<DMLI hint="Indirizzo">Indirizzo</DMLI>
+</DML>
+<MUS hint="Note">Note</MUS>
+</MU>
+<CM hint="CERTIFICAZIONE E GESTIONE DEI DATI" >
+<CMP hint="REDAZIONE E VERIFICA SCIENTIFICA" >
+<CMPD hint="Anno di redazione" >2020</CMPD>
+<CMPN hint="Responsabile ricerca e redazione" >Salis, Mauro</CMPN>
+</CMP>
+<FUR hint="Funzionario responsabile" >Dettori, Maria Paola</FUR>
+</CM>
+</SM>
+<harvesting>
+<enteCompetente>S255</enteCompetente>
+<puntoPrincipale>
+<x>8.653740</x>
+<y>40.297169</y>
+</puntoPrincipale>
+<idProgetto>ICCD1065779</idProgetto>
+</harvesting>
+</schede>
+    </metadata>
+</record>

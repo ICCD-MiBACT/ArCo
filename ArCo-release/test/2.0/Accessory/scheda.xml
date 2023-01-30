@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD9706257@</identifier>
+        <datestamp>2015-04-17T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+<schede>
+<SM version="4.00_ICCD0" >
+<CD hint="CODICI" >
+<TSK hint="Tipo scheda" >SM</TSK>
+<LIR hint="Livello catalogazione" >I</LIR>
+<NCT hint="CODICE UNIVOCO" >
+<NCTR hint="Codice Regione" >03</NCTR>
+<NCTN hint="Numero catalogo generale" >00090766</NCTN>
+</NCT>
+<ESC hint="Ente schedatore" >S302</ESC>
+<ECP hint="Ente competente per tutela" >S302</ECP>
+</CD>
+<OG hint="BENE CULTURALE" >
+<OGT hint="DEFINIZIONE BENE" >
+<OGTD hint="Definizione" >violino</OGTD>
+</OGT>
+<OGD hint="DENOMINAZIONE" >
+<OGDN hint="Denominazione" >Quarestani</OGDN>
+</OGD>
+</OG>
+<LC hint="LOCALIZZAZIONE GEOGRAFICO - AMMINISTRATIVA" >
+<PVC hint="LOCALIZZAZIONE" >
+<PVCP hint="Provincia" >CR</PVCP>
+<PVCC hint="Comune" >Cremona</PVCC>
+</PVC>
+</LC>
+<AU hint="DEFINIZIONE CULTURALE" >
+<AUT hint="AUTORE" >
+<AUTR hint="Riferimento all'intervento" >disegnatore</AUTR>
+<AUTM hint="Motivazione dell'attribuzione" >bibliografia</AUTM>
+<AUTN hint="Nome scelto" >Raffaello Sanzio</AUTN>
+<AUTA hint="Dati anagrafici" >1483/ 1520</AUTA>
+<AUTH hint="Sigla per citazione" >00000248</AUTH>
+</AUT>
+</AU>
+<DT hint="CRONOLOGIA" >
+<DTZ hint="CRONOLOGIA GENERICA" >
+<DTZG hint="Fascia cronologica/periodo" >XVII</DTZG>
+<DTZS hint="Specifiche fascia cronologica/periodo" >ultimo quarto</DTZS>
+</DTZ>
+<DTS hint="CRONOLOGIA SPECIFICA" >
+<DTSI hint="Da" >1689</DTSI>
+<DTSF hint="A" >1689</DTSF>
+</DTS>
+</DT>
+<AS hint="ACCESSORIO">
+<ASS hint="ACCESSORIO">
+<ASST hint="Tipologia">Tipologia</ASST>
+<ASSD hint="Riferimento cronologico">Riferimento cronologico</ASSD>
+<ASSE hint="Descrizione">Descrizione</ASSE>
+</ASS>
+</AS>
+</SM>
+</schede>
+    </metadata>
+</record>

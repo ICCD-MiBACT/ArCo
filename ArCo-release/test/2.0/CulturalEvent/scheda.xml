@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11731349@</identifier>
+        <datestamp>2015-12-30T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <F version="3.01_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">F</TSK>
+                    <LIR hint="Livello ricerca">I</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">09</NCTR>
+                        <NCTN hint="Numero catalogo generale">00860338</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">UNISI</ESC>
+                    <ECP hint="Ente competente">S61</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">campione</OGTD>
+                    </OGT>
+                </OG>
+<MS hint="ALTRI INVENTARI">
+<PRM hint="MOSTRE">MOSTRE
+<PRMT hint="Titolo">Titolo</PRMT>
+<PRML hint="sede data">sede data</PRML>
+<PRME hint="agent">agent</PRME>
+<PRMR hint="premio">premio</PRMR>
+<PRMS hint="note">note</PRMS>
+</PRM>
+</MS>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2015</CMPD>
+                        <CMPN hint="Nome">Vellini, Silvia</CMPN>
+                    </CMP>
+                </CM>
+            </F>
+        </schede>
+    </metadata>
+</record>

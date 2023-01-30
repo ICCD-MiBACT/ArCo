@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11324026@</identifier>
+        <datestamp>2015-01-07T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <OAC version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo di scheda">OAC</TSK>
+                    <LIR hint="Livello ricerca">P</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">03</NCTR>
+                        <NCTN hint="Numero catalogo generale">02040489</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">R03</ESC>
+                    <ECP hint="Ente competente">S27</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">dipinto</OGTD>
+                    </OGT>
+                </OG>
+<UT hint="UTILIZZAZIONI">
+<UTU hint="DATI DI USO">DATI DI USO
+<UTUR hint="Riferimento alla parte">Riferimento alla parte</UTUR>
+<UTUT hint="Tipo">Tipo</UTUT>
+<UTUS hint="Specifiche      ">Specifiche      </UTUS>
+<UTUF hint="Funzione">Funzione</UTUF>
+<UTUM hint="Modalità di uso ">Modalità di uso </UTUM>
+<UTUO hint="Occasione">Occasione</UTUO>
+<UTUD hint="Riferimento cronologico">Riferimento cronologico</UTUD>
+<UTUN hint="Note">Note</UTUN>
+</UTU>
+</UT>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2005</CMPD>
+                        <CMPN hint="Nome">Giacon, Danka</CMPN>
+                    </CMP>
+                </CM>
+            </OAC>
+        </schede>
+    </metadata>
+</record>

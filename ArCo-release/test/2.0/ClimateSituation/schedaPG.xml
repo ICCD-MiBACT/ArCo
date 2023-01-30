@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14218293@</identifier>
+        <datestamp>2015-12-29T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+       <schede>
+<PG version="3.00_ICCD0" >
+<CD hint="CODICI" >
+<TSK hint="Tipo scheda" >PG</TSK>
+<LIR hint="Livello ricerca" >P</LIR>
+<NCT hint="CODICE UNIVOCO" >
+<NCTR hint="Codice regione" >17</NCTR>
+<NCTN hint="Numero catalogo generale" >00203403</NCTN>
+</NCT>
+<ESC hint="Ente schedatore" >S284</ESC>
+<ECP hint="Ente competente" >S284</ECP>
+</CD>
+<OG hint="OGGETTO" >
+<OGT hint="OGGETTO" >
+<OGTD hint="Definizione tipologica" >parco</OGTD>
+<OGTQ hint="Qualificazione" >commemorativo/ ai caduti della prima guerra mondiale</OGTQ>
+<OGTN hint="Denominazione" >Villa Santa Maria</OGTN>
+</OGT>
+</OG>
+<LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA" >
+<PVC hint="LOCALIZZAZIONE GEOGRAFICO AMMINISTRATIVA" >
+<PVCS hint="Stato" >ITALIA</PVCS>
+<PVCR hint="Regione" >Basilicata</PVCR>
+<PVCP hint="Provincia" >PZ</PVCP>
+<PVCC hint="Comune" >Potenza</PVCC>
+<PVCL hint="Località" >Rione Santa Maria</PVCL>
+<PVCI hint="Indirizzo" >Via Angilla Vecchia s.n.c</PVCI>
+<PVCV hint="Altre vie di comunicazione" >Via Angilla vecchia all'incrocio con via Ettore Ciccotti</PVCV>
+<PVCA hint="Altri indirizzi/affacci su spazi pubblici" >L'ingresso storico di Villa Santa Maria è ubicato su via Angilla Vecchia, s.n.c., mentre su via Ettore Ciccotti vi è un accesso secondario che ne permette l'ingresso diretto dal lato della Caserma</PVCA>
+</PVC>
+<PVE hint="Diocesi" >Arcidiocesi Potenza-Muro Lucano-Marsico Nuovo</PVE>
+</LC>
+<CA hint="CARATTERI AMBIENTALI">
+<CLM hint="CARATTERISTICHE CLIMATICHE">CARATTERISTICHE CLIMATICHE
+<CLMS hint="Riferimento stagionale e/o mensile">Riferimento stagionale e/o mensile</CLMS>
+<CLMF hint="Temperatura minima">Temperatura minima</CLMF>
+<CLMC hint="Temperatura massima">Temperatura massima</CLMC>
+<CLMP hint="Precipitazioni">Precipitazioni</CLMP>
+</CLM>
+</CA>
+<CM hint="COMPILAZIONE" >
+<CMP hint="COMPILAZIONE" >
+<CMPD hint="Data" >2019</CMPD>
+<CMPN hint="Nome" >Labbattaglia, Anna</CMPN>
+</CMP>
+</CM>
+</PG>
+</schede>
+    </metadata>
+</record>

@@ -1,0 +1,131 @@
+<https://w3id.org/arco/resource/AgentRole/0900860338-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0900860338-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Compilation by Vellini, Silvia"@en .
+<https://w3id.org/arco/resource/AgentRole/0900860338-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Compilazione da Vellini, Silvia"@it .
+<https://w3id.org/arco/resource/AgentRole/0900860338-compilation-7165a748d7a8c32f64cb624101bbdc02> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/ResponsibleCompilation> .
+<https://w3id.org/arco/resource/AgentRole/0900860338-compilation-7165a748d7a8c32f64cb624101bbdc02> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/ontology/catalogue/I> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CataloguingLevel> .
+<https://w3id.org/arco/ontology/catalogue/I> <http://www.w3.org/2000/01/rdf-schema#label> "I" .
+<https://w3id.org/arco/ontology/catalogue/I> <https://w3id.org/italia/onto/l0/name> "I" .
+<https://w3id.org/arco/resource/CulturalPropertyType/4fb10e3987dec959d77d3ae292bddda3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> .
+<https://w3id.org/arco/resource/CulturalPropertyType/4fb10e3987dec959d77d3ae292bddda3> <http://www.w3.org/2000/01/rdf-schema#label> "campione"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/4fb10e3987dec959d77d3ae292bddda3> <https://w3id.org/italia/onto/l0/name> "campione"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/4fb10e3987dec959d77d3ae292bddda3> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition> <https://w3id.org/arco/resource/CulturalPropertyDefinition/campione> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860338> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/Identifier> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860338> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/core/UniqueIdentifier> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860338> <http://www.w3.org/2000/01/rdf-schema#label> "0900860338" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860338> <https://w3id.org/italia/onto/l0/name> "0900860338" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860338> <https://w3id.org/italia/onto/l0/identifier> "0900860338" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860338> <https://w3id.org/arco/ontology/core/issuedBy> <https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860338> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/AgentRole/0900860338-competiotion-organiser-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0900860338-competiotion-organiser-1> <http://www.w3.org/2000/01/rdf-schema#label> "Organizzatore della competizione: agent"@it .
+<https://w3id.org/arco/resource/AgentRole/0900860338-competiotion-organiser-1> <https://w3id.org/italia/onto/l0/name> "Organizzatore della competizione: agent"@it .
+<https://w3id.org/arco/resource/AgentRole/0900860338-competiotion-organiser-1> <http://www.w3.org/2000/01/rdf-schema#label> "Organiser of competition: agent"@en .
+<https://w3id.org/arco/resource/AgentRole/0900860338-competiotion-organiser-1> <https://w3id.org/italia/onto/l0/name> "Organiser of competion: agent"@en .
+<https://w3id.org/arco/resource/AgentRole/0900860338-competiotion-organiser-1> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/Organiser> .
+<https://w3id.org/arco/resource/AgentRole/0900860338-competiotion-organiser-1> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/b33aed8f3134996703dc39f9a7c95783> .
+<https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/COV/Organization> .
+<https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> <http://www.w3.org/2000/01/rdf-schema#label> "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici  per le province di Siena e Grosseto" .
+<https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> <https://w3id.org/italia/onto/l0/name> "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici  per le province di Siena e Grosseto" .
+<https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0900860338-heritage-protection-agency> .
+<https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> <https://w3id.org/arco/ontology/arco/isHeritageProtectionAgencyOf> <https://w3id.org/arco/resource/PhotographicHeritage/0900860338> .
+<https://w3id.org/arco/resource/Acknowledgement/premio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/cultural-event/Acknowledgement> .
+<https://w3id.org/arco/resource/Acknowledgement/premio> <http://www.w3.org/2000/01/rdf-schema#label> "premio" .
+<https://w3id.org/arco/resource/Acknowledgement/premio> <https://w3id.org/italia/onto/l0/name> "premio" .
+<https://w3id.org/arco/resource/Acknowledgement/premio> <https://w3id.org/arco/ontology/cultural-event/isAckowledgementReceivedBy> <https://w3id.org/arco/resource/PhotographicHeritage/0900860338> .
+<https://w3id.org/arco/resource/Agent/b33aed8f3134996703dc39f9a7c95783> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/b33aed8f3134996703dc39f9a7c95783> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+<https://w3id.org/arco/resource/Agent/b33aed8f3134996703dc39f9a7c95783> <https://w3id.org/italia/onto/l0/name> "Agent" .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsible research and compilation"@en .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile ricerca e redazione"@it .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <http://purl.org/dc/elements/1.1/subject> <http://culturaitalia.it/pico/thesaurus/4.1#fotografie> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <https://w3id.org/arco/ontology/arco/catalogueNumber> "00860338" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0900860338-cataloguing-agency> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <http://purl.org/dc/elements/1.1/identifier> "0900860338" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <http://purl.org/dc/elements/1.1/title> "campione" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <https://w3id.org/arco/ontology/arco/hasHeritageProtectionAgency> <https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <http://www.w3.org/2000/01/rdf-schema#comment> "campione" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <http://purl.org/dc/elements/1.1/type> "campione" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <https://w3id.org/arco/ontology/core/hasIdentifier> <https://w3id.org/arco/resource/UniqueIdentifier/0900860338> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier> "0900860338" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0900860338-heritage-protection-agency> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/MovableCulturalProperty> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <https://w3id.org/arco/ontology/catalogue/isDescribedBy> <https://w3id.org/arco/resource/CatalogueRecordF/0900860338> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <http://purl.org/dc/terms/isReferencedBy> <https://w3id.org/arco/resource/CatalogueRecordF/0900860338> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <https://w3id.org/arco/ontology/arco/regionIdentifier> "09" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <http://purl.org/dc/elements/1.1/source> <http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode=scheda> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <https://w3id.org/arco/ontology/arco/hasCataloguingAgency> <https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType> <https://w3id.org/arco/resource/CulturalPropertyType/4fb10e3987dec959d77d3ae292bddda3> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <http://purl.org/dc/elements/1.1/subject> "campione" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/PhotographicHeritage> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0900860338> <http://purl.org/dc/elements/1.1/source> <https://w3id.org/arco/resource/CatalogueRecordF/0900860338> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860338-compilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860338-compilation> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/catalogue/Compiling> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860338-compilation> <http://www.w3.org/2000/01/rdf-schema#label> "COMPILAZIONE - 2015 Vellini, Silvia" .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860338-compilation> <https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf> <https://w3id.org/arco/resource/CatalogueRecordF/0900860338> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860338-compilation> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0900860338-compilation-7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860338-compilation> <https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation> <https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860338-compilation> <https://w3id.org/arco/ontology/catalogue/editedAtTime> <https://w3id.org/arco/resource/TimeInterval/2015> .
+<https://w3id.org/arco/resource/Competition/515e6b4f6f02e47533e6f8da0c93a0f1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/cultural-event/Competition> .
+<https://w3id.org/arco/resource/Competition/515e6b4f6f02e47533e6f8da0c93a0f1> <http://dati.beniculturali.it/cis/involvesCulturalEntity> <https://w3id.org/arco/resource/PhotographicHeritage/0900860338> .
+<https://w3id.org/arco/resource/Competition/515e6b4f6f02e47533e6f8da0c93a0f1> <https://w3id.org/italia/onto/l0/name> "Titolo" .
+<https://w3id.org/arco/resource/Competition/515e6b4f6f02e47533e6f8da0c93a0f1> <http://www.w3.org/2000/01/rdf-schema#label> "Titolo" .
+<https://w3id.org/arco/resource/Competition/515e6b4f6f02e47533e6f8da0c93a0f1> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0900860338-competition-organiser-1> .
+<https://w3id.org/arco/resource/Competition/515e6b4f6f02e47533e6f8da0c93a0f1> <https://w3id.org/arco/ontology/cultural-event/hasAcknowledgement> <https://w3id.org/arco/resource/Acknowledgement/premio> .
+<https://w3id.org/arco/resource/Competition/515e6b4f6f02e47533e6f8da0c93a0f1> <https://w3id.org/arco/ontology/cultural-event/eventTimeLocation> "sede data" .
+<https://w3id.org/arco/resource/Competition/515e6b4f6f02e47533e6f8da0c93a0f1> <https://w3id.org/arco/ontology/core/note> "note" .
+<https://w3id.org/arco/resource/AgentRole/0900860338-cataloguing-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0900860338-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore del bene 0900860338: UniversitÃ  di Siena"@it .
+<https://w3id.org/arco/resource/AgentRole/0900860338-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency for cultural property 0900860338: UniversitÃ  di Siena"@en .
+<https://w3id.org/arco/resource/AgentRole/0900860338-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/CataloguinAgency> .
+<https://w3id.org/arco/resource/AgentRole/0900860338-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> .
+<https://w3id.org/arco/resource/AgentRole/0900860338-heritage-protection-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0900860338-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela del bene 0900860338: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici  per le province di Siena e Grosseto"@it .
+<https://w3id.org/arco/resource/AgentRole/0900860338-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage protection agency for cultural property 0900860338: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici  per le province di Siena e Grosseto"@en .
+<https://w3id.org/arco/resource/AgentRole/0900860338-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/HeritageProtectionAgency> .
+<https://w3id.org/arco/resource/AgentRole/0900860338-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0900860338> <http://purl.org/dc/elements/1.1/publisher> <https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0900860338> <http://purl.org/dc/elements/1.1/language> "ita" .
+<https://w3id.org/arco/resource/CatalogueRecordF/0900860338> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion> <https://w3id.org/arco/resource/CatalogueRecordVersion/0900860338-compilation> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0900860338> <https://w3id.org/arco/ontology/core/hasIdentifier> <https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860338> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0900860338> <https://w3id.org/arco/ontology/arco-lite/nationalIdentifier> "0900860338" .
+<https://w3id.org/arco/resource/CatalogueRecordF/0900860338> <https://w3id.org/arco/ontology/catalogue/lastUpdateDate> "2015-12-30T00:00:00Z" .
+<https://w3id.org/arco/resource/CatalogueRecordF/0900860338> <http://www.w3.org/2000/01/rdf-schema#label> "Scheda catalografica n: 0900860338"@it .
+<https://w3id.org/arco/resource/CatalogueRecordF/0900860338> <http://www.w3.org/2000/01/rdf-schema#label> "Catalogue Record n: 0900860338"@en .
+<https://w3id.org/arco/resource/CatalogueRecordF/0900860338> <https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel> <https://w3id.org/arco/ontology/catalogue/I> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0900860338> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordF> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0900860338> <https://w3id.org/arco/ontology/catalogue/describes> <https://w3id.org/arco/resource/PhotographicHeritage/0900860338> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0900860338> <https://w3id.org/arco/ontology/arco-lite/systemIdentifier> "scheda" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860338> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/Identifier> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860338> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/core/NationalIdentifier> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860338> <http://www.w3.org/2000/01/rdf-schema#label> "0900860338" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860338> <https://w3id.org/italia/onto/l0/name> "0900860338" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860338> <https://w3id.org/italia/onto/l0/identifier> "0900860338" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860338> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/TimeInterval/2015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/2015> <http://www.w3.org/2000/01/rdf-schema#label> "2015" .
+<https://w3id.org/arco/resource/TimeInterval/2015> <https://w3id.org/italia/onto/TI/startTime> "2015" .
+<https://w3id.org/arco/resource/TimeInterval/2015> <https://w3id.org/italia/onto/TI/endTime> "2015" .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/campione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition> .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/campione> <http://www.w3.org/2000/01/rdf-schema#label> "campione" .
+<https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Silvia Vellini" .
+<https://w3id.org/arco/resource/Role/Organiser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/Organiser> <http://www.w3.org/2000/01/rdf-schema#label> "Organiser"@en .
+<https://w3id.org/arco/resource/Role/Organiser> <http://www.w3.org/2000/01/rdf-schema#label> "Ente/Soggetto organizzatore"@it .
+<https://w3id.org/arco/resource/Role/Organiser> <https://w3id.org/italia/onto/l0/name> "Ente/Soggetto organizzatore"@it .
+<https://w3id.org/arco/resource/Role/Organiser> <https://w3id.org/italia/onto/l0/name> "Organiser"@en .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore"@it .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency"@en .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0900860338-cataloguing-agency> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela"@it .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage Protection Agency"@en .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0900860338-heritage-protection-agency> .
+<https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/COV/Organization> .
+<https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> <http://www.w3.org/2000/01/rdf-schema#label> "UniversitÃ  di Siena" .
+<https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> <https://w3id.org/italia/onto/l0/name> "UniversitÃ  di Siena" .
+<https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> <https://w3id.org/arco/ontology/arco/isCataloguingAgencyOf> <https://w3id.org/arco/resource/PhotographicHeritage/0900860338> .
+<https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0900860338-cataloguing-agency> .

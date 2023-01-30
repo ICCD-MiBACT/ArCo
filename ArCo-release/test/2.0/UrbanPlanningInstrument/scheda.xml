@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11689075@</identifier>
+        <datestamp>2015-12-30T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MI version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo Scheda">D</TSK>
+                    <LIR hint="Livello ricerca">C</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">01</NCTR>
+                        <NCTN hint="Numero catalogo generale">00350961</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S67</ESC>
+                    <ECP hint="Ente competente">S67</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">disegno</OGTD>
+                    </OGT>
+                </OG>
+<TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+<STU hint="STRUMENTI URBANISTICO-TERRITORIALI   ">
+<STUE hint="Ente">Ente/amministrazione</STUE>
+<STUT hint="Tipo strumento">Tipo strumento</STUT>
+<STUN hint="Sintesi normativa">Sintesi normativa</STUN>
+<STUW hint="Indirizzo web (URL)">Indirizzo web (URL)</STUW>
+<STUS hint="Note">Note</STUS>
+</STU>
+</TU>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2015</CMPD>
+                        <CMPN hint="Nome">Vellini, Silvia</CMPN>
+                    </CMP>
+                </CM>
+            </MI>
+        </schede>
+    </metadata>
+</record>

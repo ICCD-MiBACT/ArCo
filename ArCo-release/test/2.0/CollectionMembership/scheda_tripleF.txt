@@ -1,0 +1,259 @@
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/COV/Organization> .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <http://www.w3.org/2000/01/rdf-schema#label> "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte" .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/italia/onto/l0/name> "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte" .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/arco/ontology/arco/isCataloguingAgencyOf> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/arco/ontology/arco/isHeritageProtectionAgencyOf> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/TimeInterval/data-ingresso-bene-nella-collezione-data-uscita-bene-dalla-collezione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/data-ingresso-bene-nella-collezione-data-uscita-bene-dalla-collezione> <https://w3id.org/arco/ontology/arco/startTime> "Data ingresso bene nella collezione" .
+<https://w3id.org/arco/resource/TimeInterval/data-ingresso-bene-nella-collezione-data-uscita-bene-dalla-collezione> <https://w3id.org/arco/ontology/arco/endTime> "Data uscita bene dalla collezione" .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-parallelo-della-serie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Title> .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-parallelo-della-serie> <http://www.w3.org/2000/01/rdf-schema#label> "Titolo parallelo della serie" .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-parallelo-della-serie> <https://w3id.org/italia/onto/l0/name> "Titolo parallelo della serie" .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-parallelo-della-serie> <https://w3id.org/arco/ontology/context-description/hasTitleType> <https://w3id.org/arco/ontology/context-description/ParallelTitle> .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-parallelo-della-serie> <https://w3id.org/arco/ontology/core/specifications> "Specifiche titolo" .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-della-serie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Title> .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-della-serie> <http://www.w3.org/2000/01/rdf-schema#label> "Titolo della serie" .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-della-serie> <https://w3id.org/italia/onto/l0/name> "Titolo della serie" .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-della-serie> <https://w3id.org/arco/ontology/context-description/hasTitleType> <https://w3id.org/arco/ontology/context-description/MainTitle> .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-della-serie> <https://w3id.org/arco/ontology/core/specifications> "Specifiche titolo" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/Identifier> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/core/NationalIdentifier> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "0100350961" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <https://w3id.org/italia/onto/l0/name> "0100350961" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <https://w3id.org/italia/onto/l0/identifier> "0100350961" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/PhotographicSubseriesMembership/01003509611> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/CollectionMembership> .
+<https://w3id.org/arco/resource/PhotographicSubseriesMembership/01003509611> <http://www.w3.org/2000/01/rdf-schema#label> "Appartenenza a sottoserie fotografica 1 del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/PhotographicSubseriesMembership/01003509611> <https://w3id.org/italia/onto/l0/name> "Appartenenza a sottoserie fotografica 1 del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/PhotographicSubseriesMembership/01003509611> <http://www.w3.org/2000/01/rdf-schema#label> "Photographic subseries membership 1 of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/PhotographicSubseriesMembership/01003509611> <https://w3id.org/italia/onto/l0/name> "Photographic subseries membership 1 of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/PhotographicSubseriesMembership/01003509611> <https://w3id.org/arco/ontology/context-description/involvesCollection> <https://w3id.org/arco/resource/PhotographicSubseries/galleria-sabauda-torino-titolo-della-sottoserie> .
+<https://w3id.org/arco/resource/PhotographicSubseriesMembership/01003509611> <https://w3id.org/arco/ontology/context-description/involvesMember> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-della-sottoserie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Title> .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-della-sottoserie> <http://www.w3.org/2000/01/rdf-schema#label> "Titolo della sottoserie" .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-della-sottoserie> <https://w3id.org/italia/onto/l0/name> "Titolo della sottoserie" .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-della-sottoserie> <https://w3id.org/arco/ontology/context-description/hasTitleType> <https://w3id.org/arco/ontology/context-description/MainTitle> .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-della-sottoserie> <https://w3id.org/arco/ontology/core/specifications> "Specifiche titolo" .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/disegno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition> .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/disegno> <http://www.w3.org/2000/01/rdf-schema#label> "disegno" .
+<https://w3id.org/arco/resource/PhotographicSeriesMembership/01003509611> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/CollectionMembership> .
+<https://w3id.org/arco/resource/PhotographicSeriesMembership/01003509611> <http://www.w3.org/2000/01/rdf-schema#label> "Appartenenza a serie fotografica 1 del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/PhotographicSeriesMembership/01003509611> <https://w3id.org/italia/onto/l0/name> "Appartenenza a serie fotografica 1 del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/PhotographicSeriesMembership/01003509611> <http://www.w3.org/2000/01/rdf-schema#label> "Photographic series membership 1 of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/PhotographicSeriesMembership/01003509611> <https://w3id.org/italia/onto/l0/name> "Photographic series membership 1 of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/PhotographicSeriesMembership/01003509611> <https://w3id.org/italia/onto/l0/positionInSequence> "Numerazione all'interno della serie" .
+<https://w3id.org/arco/resource/PhotographicSeriesMembership/01003509611> <https://w3id.org/arco/ontology/context-description/involvesCollection> <https://w3id.org/arco/resource/PhotographicSeries/galleria-sabauda-torino-titolo-della-serie> .
+<https://w3id.org/arco/resource/PhotographicSeriesMembership/01003509611> <https://w3id.org/arco/ontology/context-description/involvesMember> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/PhotographicSeries/galleria-sabauda-torino-titolo-della-serie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/PhotographicSeries> .
+<https://w3id.org/arco/resource/PhotographicSeries/galleria-sabauda-torino-titolo-della-serie> <http://www.w3.org/2000/01/rdf-schema#label> "Titolo della serie" .
+<https://w3id.org/arco/resource/PhotographicSeries/galleria-sabauda-torino-titolo-della-serie> <https://w3id.org/italia/onto/l0/name> "Titolo della serie" .
+<https://w3id.org/arco/resource/PhotographicSeries/galleria-sabauda-torino-titolo-della-serie> <https://w3id.org/arco/ontology/context-description/hasTitle> <https://w3id.org/arco/resource/Title/0100350961-titolo-della-serie> .
+<https://w3id.org/arco/resource/PhotographicSeries/galleria-sabauda-torino-titolo-della-serie> <https://w3id.org/arco/ontology/context-description/hasTitle> <https://w3id.org/arco/resource/Title/0100350961-titolo-parallelo-della-serie> .
+<https://w3id.org/arco/resource/PhotographicSeries/galleria-sabauda-torino-titolo-della-serie> <https://w3id.org/arco/ontology/arco-lite/hasCollectionMember> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-parallelo-della-sottoserie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Title> .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-parallelo-della-sottoserie> <http://www.w3.org/2000/01/rdf-schema#label> "Titolo parallelo della sottoserie" .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-parallelo-della-sottoserie> <https://w3id.org/italia/onto/l0/name> "Titolo parallelo della sottoserie" .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-parallelo-della-sottoserie> <https://w3id.org/arco/ontology/context-description/hasTitleType> <https://w3id.org/arco/ontology/context-description/ParallelTitle> .
+<https://w3id.org/arco/resource/Title/0100350961-titolo-parallelo-della-sottoserie> <https://w3id.org/arco/ontology/core/specifications> "Specifiche titolo" .
+<https://w3id.org/arco/resource/CISNameInTime/galleria-sabauda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/CISNameInTime> .
+<https://w3id.org/arco/resource/CISNameInTime/galleria-sabauda> <http://www.w3.org/2000/01/rdf-schema#label> "Denominazione nel tempo: Galleria Sabauda"@it .
+<https://w3id.org/arco/resource/CISNameInTime/galleria-sabauda> <https://w3id.org/italia/onto/l0/name> "Denominazione nel tempo: Galleria Sabauda"@it .
+<https://w3id.org/arco/resource/CISNameInTime/galleria-sabauda> <http://www.w3.org/2000/01/rdf-schema#label> "Name in time: Galleria Sabauda"@en .
+<https://w3id.org/arco/resource/CISNameInTime/galleria-sabauda> <https://w3id.org/italia/onto/l0/name> "Name in time: Galleria Sabauda"@en .
+<https://w3id.org/arco/resource/CISNameInTime/galleria-sabauda> <http://dati.beniculturali.it/cis/institutionalCISName> "Galleria Sabauda" .
+<https://w3id.org/arco/ontology/catalogue/C> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CataloguingLevel> .
+<https://w3id.org/arco/ontology/catalogue/C> <http://www.w3.org/2000/01/rdf-schema#label> "C" .
+<https://w3id.org/arco/ontology/catalogue/C> <https://w3id.org/italia/onto/l0/name> "C" .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore"@it .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency"@en .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> .
+<https://w3id.org/arco/resource/Address/de0ffb9ac0d0cfe3fc81462221b1d474> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Address> .
+<https://w3id.org/arco/resource/Address/de0ffb9ac0d0cfe3fc81462221b1d474> <http://www.w3.org/2000/01/rdf-schema#label> "TO, Torino" .
+<https://w3id.org/arco/resource/Address/de0ffb9ac0d0cfe3fc81462221b1d474> <https://w3id.org/italia/onto/CLV/fullAddress> "via XX Settembre, 86" .
+<https://w3id.org/arco/resource/Address/de0ffb9ac0d0cfe3fc81462221b1d474> <https://w3id.org/italia/onto/CLV/hasProvince> <https://w3id.org/arco/resource/Province/to> .
+<https://w3id.org/arco/resource/Address/de0ffb9ac0d0cfe3fc81462221b1d474> <https://w3id.org/italia/onto/CLV/hasCity> <https://w3id.org/arco/resource/City/torino> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0100350961-current> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0100350961-current> <https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0100350961-current> <http://www.w3.org/2000/01/rdf-schema#label> "Localizzazione fisica attuale del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0100350961-current> <https://w3id.org/italia/onto/l0/name> "Localizzazione fisica attuale del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0100350961-current> <http://www.w3.org/2000/01/rdf-schema#label> "Current physical location of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0100350961-current> <https://w3id.org/italia/onto/l0/name> "Current physical location of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0100350961-current> <https://w3id.org/arco/ontology/location/hasLocationType> <https://w3id.org/arco/ontology/location/CurrentPhysicalLocation> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0100350961-current> <https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSite> <https://w3id.org/arco/resource/CulturalInstituteOrSite/761f9e6d810c964f875178d9ae0293ae> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0100350961-current> <https://w3id.org/arco/ontology/location/atSite> <https://w3id.org/arco/resource/Site/577a95a65ad7bdaa0589f45a0fce3117> .
+<https://w3id.org/arco/resource/ArchivalSeries/galleria-sabauda-torino-serie-archivistica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/ArchivalSeries> .
+<https://w3id.org/arco/resource/ArchivalSeries/galleria-sabauda-torino-serie-archivistica> <http://www.w3.org/2000/01/rdf-schema#label> "Serie archivistica" .
+<https://w3id.org/arco/resource/ArchivalSeries/galleria-sabauda-torino-serie-archivistica> <https://w3id.org/italia/onto/l0/name> "Serie archivistica" .
+<https://w3id.org/arco/resource/ArchivalSeries/galleria-sabauda-torino-serie-archivistica> <https://w3id.org/arco/ontology/core/hasComponent> "https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-sottoserie-archivistica" .
+<https://w3id.org/arco/resource/ArchivalSeries/galleria-sabauda-torino-serie-archivistica> <https://w3id.org/arco/ontology/core/isComponentOf> <https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-fondo> .
+<https://w3id.org/arco/resource/ArchivalSeries/galleria-sabauda-torino-serie-archivistica> <https://w3id.org/arco/ontology/arco-lite/hasCollectionMember> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/Site/577a95a65ad7bdaa0589f45a0fce3117> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/Site> .
+<https://w3id.org/arco/resource/Site/577a95a65ad7bdaa0589f45a0fce3117> <http://www.w3.org/2000/01/rdf-schema#label> "Palazzo Reale, Manica Nuova" .
+<https://w3id.org/arco/resource/Site/577a95a65ad7bdaa0589f45a0fce3117> <https://w3id.org/italia/onto/l0/name> "Palazzo Reale, Manica Nuova" .
+<https://w3id.org/arco/resource/Site/577a95a65ad7bdaa0589f45a0fce3117> <http://dati.beniculturali.it/cis/siteAddress> <https://w3id.org/arco/resource/Address/de0ffb9ac0d0cfe3fc81462221b1d474> .
+<https://w3id.org/arco/resource/Site/577a95a65ad7bdaa0589f45a0fce3117> <http://dati.beniculturali.it/cis/isSiteOf> <https://w3id.org/arco/resource/CulturalInstituteOrSite/761f9e6d810c964f875178d9ae0293ae> .
+<https://w3id.org/arco/resource/Subject/feec4e188957ff3aab6e0844b1d98a62> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Subject> .
+<https://w3id.org/arco/resource/Subject/feec4e188957ff3aab6e0844b1d98a62> <http://www.w3.org/2000/01/rdf-schema#label> "Testa Di Donna Velata" .
+<https://w3id.org/arco/resource/Subject/feec4e188957ff3aab6e0844b1d98a62> <https://w3id.org/italia/onto/l0/name> "Testa Di Donna Velata" .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-fondo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/ArchivalFonds> .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-fondo> <http://www.w3.org/2000/01/rdf-schema#label> "Fondo" .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-fondo> <https://w3id.org/italia/onto/l0/name> "Fondo" .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-fondo> <https://w3id.org/arco/ontology/core/hasComponent> "https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-serie-archivistica" .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-fondo> <https://w3id.org/arco/ontology/arco-lite/hasCollectionMember> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-titolo-di-unita-archivistica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/ArchivalUnit> .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-titolo-di-unita-archivistica> <http://www.w3.org/2000/01/rdf-schema#label> "Titolo di unitÃ  archivistica" .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-titolo-di-unita-archivistica> <https://w3id.org/italia/onto/l0/name> "Titolo di unitÃ  archivistica" .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-titolo-di-unita-archivistica> <https://w3id.org/arco/ontology/core/isComponentOf> "https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-sottoserie-archivistica" .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-titolo-di-unita-archivistica> <https://w3id.org/arco/ontology/arco-lite/hasCollectionMember> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/catalogue/Compiling> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <http://www.w3.org/2000/01/rdf-schema#label> "COMPILAZIONE - 2015 Vellini, Silvia" .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf> <https://w3id.org/arco/resource/CatalogueRecordF/0100350961> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation> <https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/catalogue/editedAtTime> <https://w3id.org/arco/resource/TimeInterval/2015> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/Identifier> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/core/UniqueIdentifier> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "0100350961" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/italia/onto/l0/name> "0100350961" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/italia/onto/l0/identifier> "0100350961" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/italia/onto/CLV/issuedBy> <https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore del bene 0100350961: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte"@it .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency for cultural property 0100350961: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte"@en .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/CataloguinAgency> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> .
+<https://w3id.org/arco/resource/TimeInterval/2015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/2015> <http://www.w3.org/2000/01/rdf-schema#label> "2015" .
+<https://w3id.org/arco/resource/TimeInterval/2015> <https://w3id.org/italia/onto/TI/startTime> "2015" .
+<https://w3id.org/arco/resource/TimeInterval/2015> <https://w3id.org/italia/onto/TI/endTime> "2015" .
+<https://w3id.org/arco/resource/ArchivalRecordSetMembership/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/CollectionMembership> .
+<https://w3id.org/arco/resource/ArchivalRecordSetMembership/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "Appartenenza a unitÃ  archivistica complessa del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/ArchivalRecordSetMembership/0100350961> <https://w3id.org/italia/onto/l0/name> "Appartenenza a unitÃ  archivistica complessa del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/ArchivalRecordSetMembership/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "Archival record set membership of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/ArchivalRecordSetMembership/0100350961> <https://w3id.org/italia/onto/l0/name> "Archival record set membership of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/ArchivalRecordSetMembership/0100350961> <https://w3id.org/arco/ontology/context-description/involvesMember> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/ArchivalRecordSetMembership/0100350961> <https://w3id.org/arco/ontology/context-description/involvesCollection> "https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-titolo-di-unita-archivistica" .
+<https://w3id.org/arco/resource/ArchivalRecordSetMembership/0100350961> <https://w3id.org/italia/onto/l0/positionInSequence> "Collocazione" .
+<https://w3id.org/arco/resource/ArchivalRecordSetMembership/0100350961> <https://w3id.org/arco/ontology/core/note> "Specifiche" .
+<https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> .
+<https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> <http://www.w3.org/2000/01/rdf-schema#label> "disegno"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> <https://w3id.org/italia/onto/l0/name> "disegno"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition> <https://w3id.org/arco/resource/CulturalPropertyDefinition/disegno> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Compilation by Vellini, Silvia"@en .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Compilazione da Vellini, Silvia"@it .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/ResponsibleCompilation> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-sottoserie-archivistica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/ArchivalSubseries> .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-sottoserie-archivistica> <http://www.w3.org/2000/01/rdf-schema#label> "Sottoserie archivistica" .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-sottoserie-archivistica> <https://w3id.org/italia/onto/l0/name> "Sottoserie archivistica" .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-sottoserie-archivistica> <https://w3id.org/arco/ontology/core/isComponentOf> "https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-serie-archivistica" .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-sottoserie-archivistica> <https://w3id.org/arco/ontology/core/hasComponent> <https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-titolo-di-unita-archivistica> .
+<https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-sottoserie-archivistica> <https://w3id.org/arco/ontology/arco-lite/hasCollectionMember> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela del bene 0100350961: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte"@it .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage protection agency for cultural property 0100350961: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte"@en .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/HeritageProtectionAgency> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/761f9e6d810c964f875178d9ae0293ae> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/CulturalInstituteOrSite> .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/761f9e6d810c964f875178d9ae0293ae> <http://www.w3.org/2000/01/rdf-schema#label> "Galleria Sabauda" .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/761f9e6d810c964f875178d9ae0293ae> <https://w3id.org/italia/onto/l0/name> "Galleria Sabauda" .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/761f9e6d810c964f875178d9ae0293ae> <http://dati.beniculturali.it/cis/hasCISNameInTime> <https://w3id.org/arco/resource/CISNameInTime/galleria-sabauda> .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/761f9e6d810c964f875178d9ae0293ae> <http://dati.beniculturali.it/cis/hasSite> <https://w3id.org/arco/resource/Site/577a95a65ad7bdaa0589f45a0fce3117> .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/761f9e6d810c964f875178d9ae0293ae> <https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteOf> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/e87b06f3ecf459cee8d6669c5a37f706> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/arco/resource/CollectionCulEnt/galleria-sabauda-torino-denominazione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/CollectionCulEnt> .
+<https://w3id.org/arco/resource/CollectionCulEnt/galleria-sabauda-torino-denominazione> <http://www.w3.org/2000/01/rdf-schema#label> "Denominazione" .
+<https://w3id.org/arco/resource/CollectionCulEnt/galleria-sabauda-torino-denominazione> <https://w3id.org/italia/onto/l0/name> "Denominazione" .
+<https://w3id.org/arco/resource/CollectionCulEnt/galleria-sabauda-torino-denominazione> <https://w3id.org/arco/ontology/core/note> "Note" .
+<https://w3id.org/arco/resource/CollectionCulEnt/galleria-sabauda-torino-denominazione> <https://w3id.org/arco/ontology/arco-lite/hasCollectionMember> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/CollectionCulEnt/galleria-sabauda-torino-denominazione> <https://w3id.org/arco/ontology/core/note> "Nome del collezionista" .
+<https://w3id.org/arco/resource/CollectionMembership/01003509611> <https://w3id.org/arco/ontology/context-description/involvesCollection> <https://w3id.org/arco/resource/CollectionCulEnt/galleria-sabauda-torino-denominazione> .
+<https://w3id.org/arco/resource/CollectionMembership/01003509611> <https://w3id.org/italia/onto/l0/name> "Collection membership 1 of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/CollectionMembership/01003509611> <https://w3id.org/arco/ontology/context-description/involvesMember> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/CollectionMembership/01003509611> <https://w3id.org/italia/onto/l0/positionInSequence> "Codice inventario bene nella collezione" .
+<https://w3id.org/arco/resource/CollectionMembership/01003509611> <https://w3id.org/arco/ontology/context-description/collectionLeavingReason> "Motivazione uscita bene dalla collezione" .
+<https://w3id.org/arco/resource/CollectionMembership/01003509611> <https://w3id.org/italia/onto/l0/name> "Appartenenza a collezione 1 del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/CollectionMembership/01003509611> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/CollectionMembership> .
+<https://w3id.org/arco/resource/CollectionMembership/01003509611> <http://www.w3.org/2000/01/rdf-schema#label> "Collection membership 1 of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/CollectionMembership/01003509611> <https://w3id.org/italia/onto/TI/atTime> <https://w3id.org/arco/resource/TimeInterval/data-ingresso-bene-nella-collezione-data-uscita-bene-dalla-collezione> .
+<https://w3id.org/arco/resource/CollectionMembership/01003509611> <http://www.w3.org/2000/01/rdf-schema#label> "Appartenenza a collezione 1 del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela"@it .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage Protection Agency"@en .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0100350961> <https://w3id.org/arco/ontology/catalogue/lastUpdateDate> "2015-12-30T00:00:00Z" .
+<https://w3id.org/arco/resource/CatalogueRecordF/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordF> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0100350961> <https://w3id.org/arco/ontology/core/hasIdentifier> <https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "Scheda catalografica n: 0100350961"@it .
+<https://w3id.org/arco/resource/CatalogueRecordF/0100350961> <https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel> <https://w3id.org/arco/ontology/catalogue/C> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0100350961> <http://purl.org/dc/elements/1.1/publisher> <https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "Catalogue Record n: 0100350961"@en .
+<https://w3id.org/arco/resource/CatalogueRecordF/0100350961> <http://purl.org/dc/elements/1.1/language> "ita" .
+<https://w3id.org/arco/resource/CatalogueRecordF/0100350961> <https://w3id.org/arco/ontology/catalogue/describes> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0100350961> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion> <https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> .
+<https://w3id.org/arco/resource/CatalogueRecordF/0100350961> <https://w3id.org/arco/ontology/catalogue/systemRecordCode> "scheda" .
+<https://w3id.org/arco/resource/CatalogueRecordF/0100350961> <https://w3id.org/arco/ontology/arco-lite/nationalIdentifier> "0100350961" .
+<https://w3id.org/arco/resource/City/torino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/City> .
+<https://w3id.org/arco/resource/City/torino> <http://www.w3.org/2000/01/rdf-schema#label> "Torino" .
+<https://w3id.org/arco/resource/City/torino> <https://w3id.org/italia/onto/l0/name> "Torino" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/MovableCulturalProperty> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/context-description/isMemberInvolvedIn> <https://w3id.org/arco/resource/CollectionMembership/01003509611> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/context-description/isMemberOfCollectionOf> <https://w3id.org/arco/resource/CollectionMembership/0100350961-collection-membership-1> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/arco-lite/hasCulturalPropertyAddress> <https://w3id.org/arco/resource/Address/de0ffb9ac0d0cfe3fc81462221b1d474> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <http://purl.org/dc/elements/1.1/title> "disegno (opera isolata)" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/core/hasIdentifier> <https://w3id.org/arco/resource/UniqueIdentifier/0100350961> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/location/hasCulturalPropertyAddress> <https://w3id.org/arco/resource/Address/de0ffb9ac0d0cfe3fc81462221b1d474> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf> "https://w3id.org/arco/resource/CollectionCulEnt/galleria-sabauda-torino-denominazione" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <http://purl.org/dc/elements/1.1/coverage> "Torino (TO)" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <http://purl.org/dc/terms/spatial> <https://w3id.org/arco/resource/Address/de0ffb9ac0d0cfe3fc81462221b1d474> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType> <https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation> <https://w3id.org/arco/resource/TimeIndexedTypedLocation/0100350961-current> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf> "https://w3id.org/arco/resource/ArchivalRecordSet/galleria-sabauda-torino-titolo-di-unita-archivistica" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/arco/catalogueNumber> "00350961" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/arco/hasHeritageProtectionAgency> <https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/catalogue/isDescribedBy> <https://w3id.org/arco/resource/CatalogueRecordF/0100350961> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <http://purl.org/dc/terms/isReferencedBy> <https://w3id.org/arco/resource/CatalogueRecordF/0100350961> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier> "0100350961" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/context-description/isMemberInvolvedIn> <https://w3id.org/arco/resource/PhotographicSeriesMembership/01003509611> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <http://purl.org/dc/elements/1.1/identifier> "0100350961" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/context-description/subject> "testa di donna velata" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <http://www.w3.org/2000/01/rdf-schema#comment> "disegno, opera isolata" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/arco/hasCataloguingAgency> <https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/arco/regionIdentifier> "01" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf> <https://w3id.org/arco/resource/PhotographicSeries/titolo-della-sottoserie> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <http://purl.org/dc/elements/1.1/source> <http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode=scheda> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf> <https://w3id.org/arco/resource/PhotographicSeries/galleria-sabauda-torino-titolo-della-serie> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/arco/hasCulturalPropertyCataloguingCategory> <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/opera-isolata> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/context-description/isMemberInvolvedIn> <https://w3id.org/arco/resource/ArchivalRecordSetMembership/0100350961> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <http://purl.org/dc/elements/1.1/type> "disegno" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <http://purl.org/dc/elements/1.1/subject> <http://culturaitalia.it/pico/thesaurus/4.1#fotografie> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <http://purl.org/dc/elements/1.1/subject> "testa di donna velata" .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <http://purl.org/dc/elements/1.1/source> <https://w3id.org/arco/resource/CatalogueRecordF/0100350961> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/PhotographicHeritage> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSite> <https://w3id.org/arco/resource/CulturalInstituteOrSite/761f9e6d810c964f875178d9ae0293ae> .
+<https://w3id.org/arco/resource/PhotographicHeritage/0100350961> <https://w3id.org/arco/ontology/context-description/hasSubject> <https://w3id.org/arco/resource/Subject/feec4e188957ff3aab6e0844b1d98a62> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsible research and compilation"@en .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile ricerca e redazione"@it .
+<https://w3id.org/arco/resource/Province/to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Province> .
+<https://w3id.org/arco/resource/Province/to> <http://www.w3.org/2000/01/rdf-schema#label> "To" .
+<https://w3id.org/arco/resource/Province/to> <https://w3id.org/italia/onto/l0/name> "To" .
+<https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/opera-isolata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/CulturalPropertyCataloguingCategory> .
+<https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/opera-isolata> <http://www.w3.org/2000/01/rdf-schema#label> "opera isolata" .
+<https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/opera-isolata> <https://w3id.org/italia/onto/l0/name> "opera isolata" .
+<https://w3id.org/arco/resource/PhotographicSubseries/galleria-sabauda-torino-titolo-della-sottoserie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/PhotographicSeries> .
+<https://w3id.org/arco/resource/PhotographicSubseries/galleria-sabauda-torino-titolo-della-sottoserie> <http://www.w3.org/2000/01/rdf-schema#label> "Titolo della sottoserie" .
+<https://w3id.org/arco/resource/PhotographicSubseries/galleria-sabauda-torino-titolo-della-sottoserie> <https://w3id.org/italia/onto/l0/name> "Titolo della sottoserie" .
+<https://w3id.org/arco/resource/PhotographicSubseries/galleria-sabauda-torino-titolo-della-sottoserie> <https://w3id.org/arco/ontology/arco-lite/hasCollectionMember> <https://w3id.org/arco/resource/PhotographicHeritage/0100350961> .
+<https://w3id.org/arco/resource/PhotographicSubseries/galleria-sabauda-torino-titolo-della-sottoserie> <https://w3id.org/arco/ontology/context-description/hasTitle> <https://w3id.org/arco/resource/Title/0100350961-titolo-della-sottoserie> .
+<https://w3id.org/arco/resource/PhotographicSubseries/galleria-sabauda-torino-titolo-della-sottoserie> <https://w3id.org/arco/ontology/context-description/hasTitle> <https://w3id.org/arco/resource/Title/0100350961-titolo-parallelo-della-sottoserie> .
+<https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Vellini, Silvia" .

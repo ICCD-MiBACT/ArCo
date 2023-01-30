@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11689075@</identifier>
+        <datestamp>2015-12-30T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MI version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo Scheda">D</TSK>
+                    <LIR hint="Livello ricerca">C</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">01</NCTR>
+                        <NCTN hint="Numero catalogo generale">00350961</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S67</ESC>
+                    <ECP hint="Ente competente">S67</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">disegno</OGTD>
+                    </OGT>
+                </OG>
+<UB hint="DATI  PATRIMONIALI">
+<INP hint="INVENTARIO PATRIMONIALE IN VIGORE">INVENTARIO PATRIMONIALE IN VIGORE
+<INPC hint="Codice inventario patrimoniale">Codice inventario patrimoniale</INPC>
+<INPE hint="Responsabile dell’immissione in patrimonio">Responsabile dell’immissione in patrimonio</INPE>
+<INPR hint="Data dell’immissione in patrimonio">Data dell’immissione in patrimonio</INPR>
+<INPD hint="Descrizione (modello 15)           ">Descrizione (modello 15)           </INPD>
+<INPP hint="Provenienza      ">Provenienza      </INPP>
+<INPM hint="Modalità di acquisizione">Modalità di acquisizione</INPM>
+<INPO hint="Riferimento agli atti">Riferimento agli atti</INPO>
+<INPZ hint="Categoria SEC (modello 15)">Categoria SEC (modello 15)</INPZ>
+<INPS hint="Codice SEC (modello 15)">Codice SEC (modello 15)</INPS>
+<INPU hint="Causale RCS">Causale RCS</INPU>
+<INPV hint="Note">Note</INPV>
+</INP>
+<INV hint="ALTRI INVENTARI">ALTRI INVENTARI
+<INVN hint="Codice inventario">Codice inventario</INVN>
+<INVD hint="Riferimento cronologico">Riferimento cronologico</INVD>
+<INVG hint="Codice contenitore giuridico">Codice contenitore giuridico</INVG>
+<INVA hint="Denominazione inventario">Denominazione inventario</INVA>
+<INVC hint="Collocazione">Collocazione</INVC>
+<INVP hint="Riferimento alla parte">Riferimento alla parte</INVP>
+<INVS hint="Note">Note</INVS>
+</INV>
+</UB>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2015</CMPD>
+                        <CMPN hint="Nome">Vellini, Silvia</CMPN>
+                    </CMP>
+                </CM>
+            </MI>
+        </schede>
+    </metadata>
+</record>

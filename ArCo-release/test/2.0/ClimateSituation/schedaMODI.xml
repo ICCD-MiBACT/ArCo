@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13673242@</identifier>
+        <datestamp>2016-04-05T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+<schede>
+<MODI version="4.00_ICCD0" >
+<CD hint="IDENTIFICAZIONE" >
+<TSK hint="Tipo modulo" >MODI</TSK>
+<CDR hint="Codice Regione" >10</CDR>
+<CDM hint="Codice Modulo" >ICCD_MODI_7626265138051</CDM>
+<ESC hint="Ente schedatore" >S241</ESC>
+<ECP hint="Ente competente per tutela" >S241</ECP>
+<ACC hint="ALTRA IDENTIFICAZIONE" >
+<ACCE hint="Ente/soggetto responsabile" >Soprintendenza Archelogica Belle arti e Paesaggio dell'Umbria</ACCE>
+<ACCC hint="Codice identificativo" >S241</ACCC>
+</ACC>
+<OGM hint="Modalità di individuazione" >rilevamento sul campo</OGM>
+</CD>
+<OG hint="ENTITA'" >
+<AMB hint="Ambito di tutela MiBACT" >etnoantropologico</AMB>
+<AMA hint="Ambito di applicazione" >entità immateriali</AMA>
+<CTG hint="Definizione" >Categoria</CTG>
+<OGD hint="Definizione" >Infiorata</OGD>
+<OGT hint="Definizione" >del Corpus Domini</OGT>
+<OGS hint="Definizione" >classificazione</OGS>
+<OGN hint="Definizione" >nome bene</OGN>
+</OG>
+<LC hint="LOCALIZZAZIONE" >
+<LCS hint="Stato" >ITALIA</LCS>
+<LCR hint="Regione" >Umbria</LCR>
+<LCP hint="Provincia" >PG</LCP>
+<LCC hint="Comune" >Spello</LCC>
+<LCI hint="Comune" >Via Finta</LCI>
+<PVL hint="LOCALIZZAZIONE" >
+<PVLT hint="Comune" >Nome luogo</PVLT>
+<PVLR hint="Comune" >11/04/1988</PVLR>
+<PVLS hint="Comune" >Note luogo</PVLS>
+</PVL>
+<PVZ hint="Comune" >Tipo di contesto</PVZ>
+<PVG hint="Comune" >Area storica</PVG>
+<LCN hint="Stato" >note 2 luogo</LCN>
+<ACB hint="Stato" >
+<ACBA hint="Comune" >si</ACBA>
+</ACB>
+</LC>
+<CA>
+<CAT> Description </CAT>
+</CA>
+<CM hint="CERTIFICAZIONE E GESTIONE DEI DATI" >
+<CMR hint="Responsabile dei contenuti" >Luchetti, Elena</CMR>
+<CMA hint="Anno di redazione" >2017</CMA>
+<CMM hint="Motivo della redazione del MODI" >Inventario patrimonio culturale immateriale: tirocinio formativo Università degli Studi di Perugia</CMM>
+<IMD hint="MIGRAZIONE DATI NELLE SCHEDE DI CATALOGO" >
+<IMDT hint="Tipo scheda" >BDI</IMDT>
+</IMD>
+<ADP hint="Profilo di accesso" >1</ADP>
+</CM>
+</MODI>
+</schede>
+    </metadata>
+</record>

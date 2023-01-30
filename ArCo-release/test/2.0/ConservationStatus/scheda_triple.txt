@@ -1,0 +1,138 @@
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/catalogue/Compiling> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <http://www.w3.org/2000/01/rdf-schema#label> "COMPILAZIONE - 2015 Vellini, Silvia" .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf> <https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation> <https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> <https://w3id.org/arco/ontology/catalogue/editedAtTime> <https://w3id.org/arco/resource/TimeInterval/2015> .
+<https://w3id.org/arco/ontology/catalogue/C> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CataloguingLevel> .
+<https://w3id.org/arco/ontology/catalogue/C> <http://www.w3.org/2000/01/rdf-schema#label> "C" .
+<https://w3id.org/arco/ontology/catalogue/C> <https://w3id.org/italia/onto/l0/name> "C" .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/disegno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition> .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/disegno> <http://www.w3.org/2000/01/rdf-schema#label> "disegno" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/Identifier> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/core/NationalIdentifier> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "0100350961" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <https://w3id.org/italia/onto/l0/name> "0100350961" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <https://w3id.org/italia/onto/l0/identifier> "0100350961" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/ConservationMethod/modalita-di-conservazione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/ConservationMethod> .
+<https://w3id.org/arco/resource/ConservationMethod/modalita-di-conservazione> <http://www.w3.org/2000/01/rdf-schema#label> "ModalitÃ  di conservazione" .
+<https://w3id.org/arco/resource/ConservationMethod/modalita-di-conservazione> <https://w3id.org/italia/onto/l0/name> "ModalitÃ  di conservazione" .
+<https://w3id.org/arco/resource/SpecimenContainer/tipo-di-conservazione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/natural-specimen-description/SpecimenContainer> .
+<https://w3id.org/arco/resource/SpecimenContainer/tipo-di-conservazione> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo di conservazione" .
+<https://w3id.org/arco/resource/SpecimenContainer/tipo-di-conservazione> <https://w3id.org/italia/onto/l0/name> "Tipo di conservazione" .
+<https://w3id.org/arco/resource/SpecimenContainer/tipo-di-conservazione> <https://w3id.org/arco/ontology/core/specifications> "Specifiche tipo di conservazione" .
+<https://w3id.org/arco/resource/TimeInterval/data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/data> <http://www.w3.org/2000/01/rdf-schema#label> "Data" .
+<https://w3id.org/arco/resource/TimeInterval/data> <https://w3id.org/italia/onto/l0/name> "Data" .
+<https://w3id.org/arco/resource/TimeInterval/data> <https://w3id.org/italia/onto/TI/time> "Data" .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsible research and compilation"@en .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile ricerca e redazione"@it .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/COV/Organization> .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <http://www.w3.org/2000/01/rdf-schema#label> "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte" .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/italia/onto/l0/name> "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte" .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/arco/ontology/arco/isCataloguingAgencyOf> <https://w3id.org/arco/resource/MusicHeritage/0100350961> .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> .
+<https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> <https://w3id.org/arco/ontology/arco/isHeritageProtectionAgencyOf> <https://w3id.org/arco/resource/MusicHeritage/0100350961> .
+<https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/opera-isolata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/CulturalPropertyCataloguingCategory> .
+<https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/opera-isolata> <http://www.w3.org/2000/01/rdf-schema#label> "opera isolata" .
+<https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/opera-isolata> <https://w3id.org/italia/onto/l0/name> "opera isolata" .
+<https://w3id.org/arco/resource/TimeInterval/2015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/2015> <http://www.w3.org/2000/01/rdf-schema#label> "2015" .
+<https://w3id.org/arco/resource/TimeInterval/2015> <https://w3id.org/italia/onto/TI/startTime> "2015" .
+<https://w3id.org/arco/resource/TimeInterval/2015> <https://w3id.org/italia/onto/TI/endTime> "2015" .
+<https://w3id.org/arco/resource/ConservationStatusType/stato-di-conservazione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/ConservationStatusType> .
+<https://w3id.org/arco/resource/ConservationStatusType/stato-di-conservazione> <http://www.w3.org/2000/01/rdf-schema#label> "Stato di conservazione" .
+<https://w3id.org/arco/resource/ConservationStatusType/stato-di-conservazione> <https://w3id.org/italia/onto/l0/name> "Stato di conservazione" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/Identifier> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/core/UniqueIdentifier> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "0100350961" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/italia/onto/l0/name> "0100350961" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/italia/onto/l0/identifier> "0100350961" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/italia/onto/CLV/issuedBy> <https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0100350961> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion> <https://w3id.org/arco/resource/CatalogueRecordVersion/0100350961-compilation> .
+<https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "Catalogue Record n: 0100350961"@en .
+<https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> <https://w3id.org/arco/ontology/catalogue/systemRecordCode> "scheda" .
+<https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> <http://purl.org/dc/elements/1.1/language> "ita" .
+<https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordSM> .
+<https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> <https://w3id.org/arco/ontology/catalogue/lastUpdateDate> "2015-12-30T00:00:00Z" .
+<https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> <http://purl.org/dc/elements/1.1/publisher> <https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> .
+<https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "Scheda catalografica n: 0100350961"@it .
+<https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> <https://w3id.org/arco/ontology/core/hasIdentifier> <https://w3id.org/arco/resource/CatalogueRecordIdentifier/0100350961> .
+<https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> <https://w3id.org/arco/ontology/catalogue/describes> <https://w3id.org/arco/resource/MusicHeritage/0100350961> .
+<https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> <https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel> <https://w3id.org/arco/ontology/catalogue/C> .
+<https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> <https://w3id.org/arco/ontology/arco-lite/nationalIdentifier> "0100350961" .
+<https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Silvia Vellini" .
+<https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> .
+<https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> <http://www.w3.org/2000/01/rdf-schema#label> "disegno"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> <https://w3id.org/italia/onto/l0/name> "disegno"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition> <https://w3id.org/arco/resource/CulturalPropertyDefinition/disegno> .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore"@it .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency"@en .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela"@it .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage Protection Agency"@en .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore del bene 0100350961: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte"@it .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency for cultural property 0100350961: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte"@en .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/CataloguinAgency> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Compilation by Vellini, Silvia"@en .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Compilazione da Vellini, Silvia"@it .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/ResponsibleCompilation> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0100350961-compilation-7165a748d7a8c32f64cb624101bbdc02> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://www.w3.org/2000/01/rdf-schema#comment> "disegno, opera isolata" .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://purl.org/dc/elements/1.1/source> <https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/catalogue/isDescribedBy> <https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/arco/regionIdentifier> "01" .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/MovableCulturalProperty> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/core/hasIdentifier> <https://w3id.org/arco/resource/UniqueIdentifier/0100350961> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://purl.org/dc/terms/isReferencedBy> <https://w3id.org/arco/resource/CatalogueRecordSM/0100350961> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/arco/hasCulturalPropertyCataloguingCategory> <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/opera-isolata> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://purl.org/dc/elements/1.1/title> "disegno (opera isolata)" .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/context-description/proposedIntervention> "Proposte di interventi" .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/MusicalInstrument> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/context-description/isKeptIn> <https://w3id.org/arco/resource/SpecimenContainer/tipo-di-conservazione> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType> <https://w3id.org/arco/resource/CulturalPropertyType/ff5b440ba28d32ec3f3affeda37d3b48> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/arco/catalogueNumber> "00350961" .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://purl.org/dc/elements/1.1/subject> <http://culturaitalia.it/pico/thesaurus/4.1#strumenti_musicali> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/MusicHeritage> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://purl.org/dc/elements/1.1/subject> "disegno" .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://purl.org/dc/elements/1.1/source> <http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode=scheda> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/denotative-description/hasConservationStatus> <https://w3id.org/arco/resource/ConservationStatus/0100350961-conservation-status-1> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "disegno, opera isolata"@it .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://www.w3.org/2000/01/rdf-schema#label> "disegno, opera isolata"@en .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/MusicalHeritage> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/denotative-description/storageConditions> "ModalitÃ  di conservazione" .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/arco/hasHeritageProtectionAgency> <https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://purl.org/dc/elements/1.1/identifier> "0100350961" .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/arco/hasCataloguingAgency> <https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <http://purl.org/dc/elements/1.1/type> "disegno" .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0100350961-cataloguing-agency> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/arco-lite/hasConservationStatusType> <https://w3id.org/arco/resource/ConservationStatusType/stato-di-conservazione> .
+<https://w3id.org/arco/resource/MusicHeritage/0100350961> <https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier> "0100350961" .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela del bene 0100350961: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte"@it .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage protection agency for cultural property 0100350961: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte"@en .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/HeritageProtectionAgency> .
+<https://w3id.org/arco/resource/AgentRole/0100350961-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/ab0e18f88b67935608a177444ae08812> .
+<https://w3id.org/arco/resource/ConservationStatus/0100350961-conservation-status-1> <https://w3id.org/arco/ontology/denotative-description/hasConservationMethod> <https://w3id.org/arco/resource/ConservationMethod/modalita-di-conservazione> .
+<https://w3id.org/arco/resource/ConservationStatus/0100350961-conservation-status-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/ConservationStatus> .
+<https://w3id.org/arco/resource/ConservationStatus/0100350961-conservation-status-1> <https://w3id.org/italia/onto/TI/atTime> <https://w3id.org/arco/resource/TimeInterval/data> .
+<https://w3id.org/arco/resource/ConservationStatus/0100350961-conservation-status-1> <http://www.w3.org/2000/01/rdf-schema#label> "Conservation status 1 of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/ConservationStatus/0100350961-conservation-status-1> <https://w3id.org/arco/ontology/core/specifications> "Indicazioni specifiche" .
+<https://w3id.org/arco/resource/ConservationStatus/0100350961-conservation-status-1> <https://w3id.org/arco/ontology/core/specifications> "Condizione originale" .
+<https://w3id.org/arco/resource/ConservationStatus/0100350961-conservation-status-1> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/resource/ConservationStatusType/stato-di-conservazione> .
+<https://w3id.org/arco/resource/ConservationStatus/0100350961-conservation-status-1> <https://w3id.org/italia/onto/l0/name> "Conservation status 1 of cultural property: 0100350961"@en .
+<https://w3id.org/arco/resource/ConservationStatus/0100350961-conservation-status-1> <http://www.w3.org/2000/01/rdf-schema#label> "Stato di conservazione 1 del bene: 0100350961"@it .
+<https://w3id.org/arco/resource/ConservationStatus/0100350961-conservation-status-1> <https://w3id.org/italia/onto/l0/name> "Stato di conservazione 1 del bene: 0100350961"@it .

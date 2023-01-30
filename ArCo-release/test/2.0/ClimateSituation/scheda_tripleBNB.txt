@@ -1,0 +1,203 @@
+<https://w3id.org/arco/ontology/catalogue/I> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CataloguingLevel> .
+<https://w3id.org/arco/ontology/catalogue/I> <http://www.w3.org/2000/01/rdf-schema#label> "I" .
+<https://w3id.org/arco/ontology/catalogue/I> <https://w3id.org/italia/onto/l0/name> "I" .
+<https://w3id.org/arco/resource/Province/si> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Province> .
+<https://w3id.org/arco/resource/Province/si> <http://www.w3.org/2000/01/rdf-schema#label> "Si" .
+<https://w3id.org/arco/resource/Province/si> <https://w3id.org/italia/onto/l0/name> "Si" .
+<https://w3id.org/arco/resource/Feature/dbcfd796d87aaf50f68f429d3cf96d70> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Feature> .
+<https://w3id.org/arco/resource/Feature/dbcfd796d87aaf50f68f429d3cf96d70> <http://www.w3.org/2000/01/rdf-schema#label> " - Si - Siena" .
+<https://w3id.org/arco/resource/Feature/dbcfd796d87aaf50f68f429d3cf96d70> <https://w3id.org/italia/onto/l0/name> " - Si - Siena" .
+<https://w3id.org/arco/resource/Feature/dbcfd796d87aaf50f68f429d3cf96d70> <https://w3id.org/italia/onto/CLV/hasAddress> <https://w3id.org/arco/resource/Address/dbcfd796d87aaf50f68f429d3cf96d70> .
+<https://w3id.org/arco/resource/CulturalPropertySpecification/essiccato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification> .
+<https://w3id.org/arco/resource/CulturalPropertySpecification/essiccato> <http://www.w3.org/2000/01/rdf-schema#label> "essiccato" .
+<https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/COV/Organization> .
+<https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> <http://www.w3.org/2000/01/rdf-schema#label> "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici  per le province di Siena e Grosseto" .
+<https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> <https://w3id.org/italia/onto/l0/name> "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici  per le province di Siena e Grosseto" .
+<https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0900860282-heritage-protection-agency> .
+<https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> <https://w3id.org/arco/ontology/arco/isHeritageProtectionAgencyOf> <https://w3id.org/arco/resource/NaturalHeritage/0900860282> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860282> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/Identifier> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860282> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/core/NationalIdentifier> .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860282> <http://www.w3.org/2000/01/rdf-schema#label> "0900860282" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860282> <https://w3id.org/italia/onto/l0/name> "0900860282" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860282> <https://w3id.org/italia/onto/l0/identifier> "0900860282" .
+<https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860282> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/Value/27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/Value> .
+<https://w3id.org/arco/resource/Value/27> <http://www.w3.org/2000/01/rdf-schema#label> "27"@en .
+<https://w3id.org/arco/resource/Value/27> <https://w3id.org/italia/onto/l0/name> "27"@en .
+<https://w3id.org/arco/resource/Value/27> <http://www.w3.org/2000/01/rdf-schema#label> "27"@it .
+<https://w3id.org/arco/resource/Value/27> <https://w3id.org/italia/onto/l0/name> "27"@it .
+<https://w3id.org/arco/resource/Bibliography/0900860282-biological-taxon-bibliography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Bibliography> .
+<https://w3id.org/arco/resource/Bibliography/0900860282-biological-taxon-bibliography> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia relativa al taxon biologico del bene 0900860282"@it .
+<https://w3id.org/arco/resource/Bibliography/0900860282-biological-taxon-bibliography> <https://w3id.org/italia/onto/l0/name> "Bibliografia relativa al taxon biologico del bene 0900860282"@it .
+<https://w3id.org/arco/resource/Bibliography/0900860282-biological-taxon-bibliography> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography about biological taxon of cultural property 0900860282"@en .
+<https://w3id.org/arco/resource/Bibliography/0900860282-biological-taxon-bibliography> <https://w3id.org/italia/onto/l0/name> "Bibliography about biological taxon of cultural property 0900860282"@en .
+<https://w3id.org/arco/resource/Bibliography/0900860282-biological-taxon-bibliography> <https://w3id.org/arco/ontology/context-description/completeBibliographicReference> "Durand Th. 1888, Idex Generum Phanerogamorum- Bruxellis" .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860282-compilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860282-compilation> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/catalogue/Compiling> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860282-compilation> <http://www.w3.org/2000/01/rdf-schema#label> "COMPILAZIONE - 2015 Vellini, Silvia" .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860282-compilation> <https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf> <https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860282-compilation> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/0900860282-compilation-7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860282-compilation> <https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation> <https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0900860282-compilation> <https://w3id.org/arco/ontology/catalogue/editedAtTime> <https://w3id.org/arco/resource/TimeInterval/2015> .
+<https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> <https://w3id.org/arco/ontology/catalogue/describes> <https://w3id.org/arco/resource/NaturalHeritage/0900860282> .
+<https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> <http://purl.org/dc/elements/1.1/language> "ita" .
+<https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> <http://www.w3.org/2000/01/rdf-schema#label> "Catalogue Record n: 0900860282"@en .
+<https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> <http://purl.org/dc/elements/1.1/publisher> <https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> .
+<https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> <https://w3id.org/arco/ontology/catalogue/lastUpdateDate> "2015-12-30T00:00:00Z" .
+<https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordBNB> .
+<https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> <https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel> <https://w3id.org/arco/ontology/catalogue/I> .
+<https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> <https://w3id.org/arco/ontology/arco-lite/nationalIdentifier> "0900860282" .
+<https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> <https://w3id.org/arco/ontology/catalogue/systemRecordCode> "scheda" .
+<https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion> <https://w3id.org/arco/resource/CatalogueRecordVersion/0900860282-compilation> .
+<https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> <http://www.w3.org/2000/01/rdf-schema#label> "Scheda catalografica n: 0900860282"@it .
+<https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> <https://w3id.org/arco/ontology/core/hasIdentifier> <https://w3id.org/arco/resource/CatalogueRecordIdentifier/0900860282> .
+<https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/natural-specimen-description/BiologicalTaxon> .
+<https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp> <http://www.w3.org/2000/01/rdf-schema#label> "Cupressus sp" .
+<https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp> <https://w3id.org/italia/onto/l0/name> "Cupressus sp" .
+<https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp> <https://w3id.org/arco/ontology/context-description/hasBibliography> <https://w3id.org/arco/resource/Bibliography/0900860282-biological-taxon-bibliography> .
+<https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp> <https://w3id.org/arco/ontology/natural-specimen-description/genusNumber> "8329" .
+<https://w3id.org/arco/resource/AgentRole/0900860282-heritage-protection-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0900860282-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela del bene 0900860282: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici  per le province di Siena e Grosseto"@it .
+<https://w3id.org/arco/resource/AgentRole/0900860282-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage protection agency for cultural property 0900860282: Soprintendenza per i Beni Storici Artistici ed Etnoantropologici  per le province di Siena e Grosseto"@en .
+<https://w3id.org/arco/resource/AgentRole/0900860282-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/HeritageProtectionAgency> .
+<https://w3id.org/arco/resource/AgentRole/0900860282-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsible research and compilation"@en .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile ricerca e redazione"@it .
+<https://w3id.org/arco/resource/MeasurementCollection/0900860282-climate-situation-measurement-collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> .
+<https://w3id.org/arco/resource/MeasurementCollection/0900860282-climate-situation-measurement-collection> <http://www.w3.org/2000/01/rdf-schema#label> "Misure del luogo di raccolta"@it .
+<https://w3id.org/arco/resource/MeasurementCollection/0900860282-climate-situation-measurement-collection> <https://w3id.org/italia/onto/l0/name> "Misure del luogo di raccolta"@it .
+<https://w3id.org/arco/resource/MeasurementCollection/0900860282-climate-situation-measurement-collection> <http://www.w3.org/2000/01/rdf-schema#label> "Measuerements of collecting location"@en .
+<https://w3id.org/arco/resource/MeasurementCollection/0900860282-climate-situation-measurement-collection> <https://w3id.org/italia/onto/l0/name> "Measuerements of collecting location"@en .
+<https://w3id.org/arco/resource/MeasurementCollection/0900860282-climate-situation-measurement-collection> <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> <https://w3id.org/arco/resource/Measurement/0900860282-temperature-climate-situation> .
+<https://w3id.org/arco/resource/BiologicalTaxon/cupressaceae> <https://w3id.org/arco/ontology/core/hasLowerRank> <https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp> .
+<https://w3id.org/arco/resource/BiologicalTaxon/cupressaceae> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/natural-specimen-description/Family> .
+<https://w3id.org/arco/resource/BiologicalTaxon/cupressaceae> <http://www.w3.org/2000/01/rdf-schema#label> "Cupressaceae" .
+<https://w3id.org/arco/resource/BiologicalTaxon/cupressaceae> <https://w3id.org/italia/onto/l0/name> "Cupressaceae" .
+<https://w3id.org/arco/resource/Measurement/0900860282-temperature-climate-situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/Measurement> .
+<https://w3id.org/arco/resource/Measurement/0900860282-temperature-climate-situation> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement of climate situaion of 0900860282: 27 gradi"@en .
+<https://w3id.org/arco/resource/Measurement/0900860282-temperature-climate-situation> <https://w3id.org/italia/onto/l0/name> "Measurement of climate situaion of 0900860282: 27 gradi"@en .
+<https://w3id.org/arco/resource/Measurement/0900860282-temperature-climate-situation> <http://www.w3.org/2000/01/rdf-schema#label> "Misura della situazione climatica di 0900860282: 27 gradi"@it .
+<https://w3id.org/arco/resource/Measurement/0900860282-temperature-climate-situation> <https://w3id.org/italia/onto/l0/name> "Misura della situazione climatica di 0900860282: 27 gradi"@it .
+<https://w3id.org/arco/resource/Measurement/0900860282-temperature-climate-situation> <https://w3id.org/arco/ontology/denotative-description/hasMeasurementType> <https://w3id.org/arco/ontology/denotative-description/Temperature> .
+<https://w3id.org/arco/resource/Measurement/0900860282-temperature-climate-situation> <https://w3id.org/arco/ontology/denotative-description/hasValue> <https://w3id.org/arco/resource/Value/27> .
+<https://w3id.org/arco/resource/Measurement/0900860282-temperature-climate-situation> <https://w3id.org/italia/onto/MU/hasMeasurementUnit> <https://w3id.org/arco/resource/MeasurementUnit/C> .
+<https://w3id.org/arco/resource/City/siena> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/City> .
+<https://w3id.org/arco/resource/City/siena> <http://www.w3.org/2000/01/rdf-schema#label> "Siena" .
+<https://w3id.org/arco/resource/City/siena> <https://w3id.org/italia/onto/l0/name> "Siena" .
+<https://w3id.org/arco/resource/IdentificationInTime/0900860282-identification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime> .
+<https://w3id.org/arco/resource/IdentificationInTime/0900860282-identification> <http://www.w3.org/2000/01/rdf-schema#label> "Identificazione nel tempo  del bene culturale 0900860282"@it .
+<https://w3id.org/arco/resource/IdentificationInTime/0900860282-identification> <https://w3id.org/italia/onto/l0/name> "Identificazione nel tempo del bene culturale 0900860282"@it .
+<https://w3id.org/arco/resource/IdentificationInTime/0900860282-identification> <http://www.w3.org/2000/01/rdf-schema#label> "Identification in time of cultural property 0900860282"@en .
+<https://w3id.org/arco/resource/IdentificationInTime/0900860282-identification> <https://w3id.org/italia/onto/l0/name> "Identification in time of cultural property 0900860282"@en .
+<https://w3id.org/arco/resource/IdentificationInTime/0900860282-identification> <https://w3id.org/arco/ontology/natural-specimen-description/currentIdentification> "true" .
+<https://w3id.org/arco/resource/IdentificationInTime/0900860282-identification> <https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon> <https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp> .
+<https://w3id.org/arco/resource/MeasurementCollection/0900860282-natural-environment-measurement-collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> .
+<https://w3id.org/arco/resource/MeasurementCollection/0900860282-natural-environment-measurement-collection> <http://www.w3.org/2000/01/rdf-schema#label> "Misure del luogo di raccolta"@it .
+<https://w3id.org/arco/resource/MeasurementCollection/0900860282-natural-environment-measurement-collection> <https://w3id.org/italia/onto/l0/name> "Misure del luogo di raccolta"@it .
+<https://w3id.org/arco/resource/MeasurementCollection/0900860282-natural-environment-measurement-collection> <http://www.w3.org/2000/01/rdf-schema#label> "Measuerements of collecting location"@en .
+<https://w3id.org/arco/resource/MeasurementCollection/0900860282-natural-environment-measurement-collection> <https://w3id.org/italia/onto/l0/name> "Measuerements of collecting location"@en .
+<https://w3id.org/arco/resource/MeasurementCollection/0900860282-natural-environment-measurement-collection> <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> <https://w3id.org/arco/resource/Measurement/NaturalEnvironment/0900860282-temperature> .
+<https://w3id.org/arco/resource/Address/dbcfd796d87aaf50f68f429d3cf96d70> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Address> .
+<https://w3id.org/arco/resource/Address/dbcfd796d87aaf50f68f429d3cf96d70> <http://www.w3.org/2000/01/rdf-schema#label> " - Si - Siena" .
+<https://w3id.org/arco/resource/Address/dbcfd796d87aaf50f68f429d3cf96d70> <https://w3id.org/italia/onto/l0/name> " - Si - Siena" .
+<https://w3id.org/arco/resource/Address/dbcfd796d87aaf50f68f429d3cf96d70> <https://w3id.org/italia/onto/CLV/hasProvince> <https://w3id.org/arco/resource/Province/si> .
+<https://w3id.org/arco/resource/Address/dbcfd796d87aaf50f68f429d3cf96d70> <https://w3id.org/italia/onto/CLV/hasCity> <https://w3id.org/arco/resource/City/siena> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0900860282-collecting-location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0900860282-collecting-location> <http://www.w3.org/2000/01/rdf-schema#label> "Localizzazione della raccolta del bene 0900860282"@it .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0900860282-collecting-location> <https://w3id.org/italia/onto/l0/name> "Localizzazione della raccolta del bene 0900860282"@it .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0900860282-collecting-location> <http://www.w3.org/2000/01/rdf-schema#label> "Collecting location of cultural property 0900860282"@en .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0900860282-collecting-location> <https://w3id.org/italia/onto/l0/name> "Collecting location of cultural property 0900860282"@en .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0900860282-collecting-location> <https://w3id.org/arco/ontology/location/atLocation> <https://w3id.org/arco/resource/Feature/dbcfd796d87aaf50f68f429d3cf96d70> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0900860282-collecting-location> <https://w3id.org/arco/ontology/location/hasNaturalEnvironment> <https://w3id.org/arco/resource/NaturalEnvironment/0900860282> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0900860282-collecting-location> <https://w3id.org/arco/ontology/location/hasLocationType> <https://w3id.org/arco/ontology/location/CollectingLocation> .
+<https://w3id.org/arco/resource/TimeInterval/2015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/2015> <http://www.w3.org/2000/01/rdf-schema#label> "2015" .
+<https://w3id.org/arco/resource/TimeInterval/2015> <https://w3id.org/italia/onto/TI/startTime> "2015" .
+<https://w3id.org/arco/resource/TimeInterval/2015> <https://w3id.org/italia/onto/TI/endTime> "2015" .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/campione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition> .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/campione> <http://www.w3.org/2000/01/rdf-schema#label> "campione" .
+<https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Vellini, Silvia" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860282> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/Identifier> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860282> <https://w3id.org/arco/ontology/core/hasType> <https://w3id.org/arco/ontology/core/UniqueIdentifier> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860282> <http://www.w3.org/2000/01/rdf-schema#label> "0900860282" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860282> <https://w3id.org/italia/onto/l0/name> "0900860282" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860282> <https://w3id.org/italia/onto/l0/identifier> "0900860282" .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860282> <https://w3id.org/italia/onto/CLV/issuedBy> <https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> .
+<https://w3id.org/arco/resource/UniqueIdentifier/0900860282> <https://w3id.org/arco/ontology/core/current> "true" .
+<https://w3id.org/arco/resource/NaturalEnvironment/0900860282> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/NaturalEnvironment> .
+<https://w3id.org/arco/resource/NaturalEnvironment/0900860282> <http://www.w3.org/2000/01/rdf-schema#label> "Ambiente del bene culturale: 0900860282" .
+<https://w3id.org/arco/resource/NaturalEnvironment/0900860282> <https://w3id.org/italia/onto/l0/name> "Ambiente del bene culturale: 0900860282" .
+<https://w3id.org/arco/resource/NaturalEnvironment/0900860282> <https://w3id.org/arco/ontology/location/hasClimateSituation> <https://w3id.org/arco/resource/ClimateSituation/0900860282> .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore"@it .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency"@en .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0900860282-cataloguing-agency> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0900860282-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0900860282-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Compilation by Vellini, Silvia"@en .
+<https://w3id.org/arco/resource/TimeIndexedRole/0900860282-compilation-7165a748d7a8c32f64cb624101bbdc02> <http://www.w3.org/2000/01/rdf-schema#label> "Compilazione da Vellini, Silvia"@it .
+<https://w3id.org/arco/resource/TimeIndexedRole/0900860282-compilation-7165a748d7a8c32f64cb624101bbdc02> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/ResponsibleCompilation> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0900860282-compilation-7165a748d7a8c32f64cb624101bbdc02> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/7165a748d7a8c32f64cb624101bbdc02> .
+<https://w3id.org/arco/resource/AgentRole/0900860282-cataloguing-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0900860282-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore del bene 0900860282: UniversitÃ  di Siena"@it .
+<https://w3id.org/arco/resource/AgentRole/0900860282-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency for cultural property 0900860282: UniversitÃ  di Siena"@en .
+<https://w3id.org/arco/resource/AgentRole/0900860282-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/CataloguinAgency> .
+<https://w3id.org/arco/resource/AgentRole/0900860282-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela"@it .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage Protection Agency"@en .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0900860282-heritage-protection-agency> .
+<https://w3id.org/arco/resource/MeasurementUnit/C> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/MeasurementUnit> .
+<https://w3id.org/arco/resource/MeasurementUnit/C> <http://www.w3.org/2000/01/rdf-schema#label> "Â°C" .
+<https://w3id.org/arco/resource/MeasurementUnit/C> <https://w3id.org/italia/onto/l0/name> "Â°C" .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/arco/regionIdentifier> "09" .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <http://www.w3.org/2000/01/rdf-schema#label> "Cupressus sp - campione, Herbarium Universitatis Senensis, Collezione xiloteca"@it .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <http://www.w3.org/2000/01/rdf-schema#label> "Cupressus sp - campione, Herbarium Universitatis Senensis, Collezione xiloteca"@en .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/natural-specimen-description/hasIdentificationInTime> <https://w3id.org/arco/resource/IdentificationInTime/0900860282-identification> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/BotanicalHeritage> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <http://purl.org/dc/terms/isReferencedBy> <https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <http://purl.org/dc/elements/1.1/source> <http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode=scheda> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedByCurrentTaxon> <https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType> <https://w3id.org/arco/resource/CulturalPropertyType/ba25be98587438b1ddc0e1ca2cb3c280> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0900860282-cataloguing-agency> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <http://purl.org/dc/elements/1.1/identifier> "0900860282" .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/arco/hasHeritageProtectionAgency> <https://w3id.org/arco/resource/Agent/1161010044c7871d9c46ae4c5e20d359> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/natural-specimen-description/hasSpecimenHarvesting> <https://w3id.org/arco/resource/SpecimenHarvesting/0900860282> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/MovableCulturalProperty> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation> <https://w3id.org/arco/resource/TimeIndexedTypedLocation/0900860282-collecting-location> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <http://purl.org/dc/elements/1.1/title> "Cupressus sp - campione, Herbarium Universitatis Senensis)" .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/arco/catalogueNumber> "00860282" .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <http://purl.org/dc/elements/1.1/subject> <http://culturaitalia.it/pico/thesaurus/4.3#piante> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier> "0900860282" .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/NaturalHeritage> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0900860282-heritage-protection-agency> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <http://purl.org/dc/elements/1.1/source> <https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/core/isIdentifiedBy> <https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/arco/hasCataloguingAgency> <https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/catalogue/isDescribedBy> <https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <http://purl.org/dc/elements/1.1/type> "campione essiccato" .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <http://www.w3.org/2000/01/rdf-schema#comment> "campione, Herbarium Universitatis Senensis, erbario generale, Collezione xiloteca, collezione fanerogamica, essiccato" .
+<https://w3id.org/arco/resource/NaturalHeritage/0900860282> <https://w3id.org/arco/ontology/core/hasIdentifier> <https://w3id.org/arco/resource/UniqueIdentifier/0900860282> .
+<https://w3id.org/arco/resource/SpecimenHarvesting/0900860282> <https://w3id.org/italia/onto/CLV/hasSpatialCoverage> <https://w3id.org/arco/resource/Feature/d41d8cd98f00b204e9800998ecf8427e> .
+<https://w3id.org/arco/resource/SpecimenHarvesting/0900860282> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/natural-specimen-description/SpecimenHarvesting> .
+<https://w3id.org/arco/resource/SpecimenHarvesting/0900860282> <http://www.w3.org/2000/01/rdf-schema#label> "Raccolta del bene 0900860282"@it .
+<https://w3id.org/arco/resource/SpecimenHarvesting/0900860282> <https://w3id.org/italia/onto/l0/name> "Raccolta del bene 0900860282"@it .
+<https://w3id.org/arco/resource/SpecimenHarvesting/0900860282> <http://www.w3.org/2000/01/rdf-schema#label> "Harvesting of cultural property 0900860282"@en .
+<https://w3id.org/arco/resource/SpecimenHarvesting/0900860282> <https://w3id.org/italia/onto/l0/name> "Harvesting of cultural property 0900860282"@en .
+<https://w3id.org/arco/resource/ClimateSituation/0900860282-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/ClimateSituation> .
+<https://w3id.org/arco/resource/ClimateSituation/0900860282-1> <http://www.w3.org/2000/01/rdf-schema#label> "Climate situation 1 of cultural property: 0900860282"@en .
+<https://w3id.org/arco/resource/ClimateSituation/0900860282-1> <https://w3id.org/italia/onto/l0/name> "Climate situation 1 of cultural property: 0900860282"@en .
+<https://w3id.org/arco/resource/ClimateSituation/0900860282-1> <http://www.w3.org/2000/01/rdf-schema#label> "Situazione climatica 1 del bene culturale: 0900860282"@it .
+<https://w3id.org/arco/resource/ClimateSituation/0900860282-1> <https://w3id.org/italia/onto/l0/name> "Situazione climatica 1 del bene culturale: 0900860282"@it .
+<https://w3id.org/arco/resource/ClimateSituation/0900860282-1> <https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> <https://w3id.org/arco/resource/MeasurementCollection/0900860282-environment-measurement-collection-1> .
+<https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/COV/Organization> .
+<https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> <http://www.w3.org/2000/01/rdf-schema#label> "UniversitÃ  di Siena" .
+<https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> <https://w3id.org/italia/onto/l0/name> "UniversitÃ  di Siena" .
+<https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> <https://w3id.org/arco/ontology/arco/isCataloguingAgencyOf> <https://w3id.org/arco/resource/NaturalHeritage/0900860282> .
+<https://w3id.org/arco/resource/Agent/4a6af0eb1b57ae0a9c62e5a5c4efced1> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0900860282-cataloguing-agency> .
+<https://w3id.org/arco/resource/CulturalPropertyType/ba25be98587438b1ddc0e1ca2cb3c280> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> .
+<https://w3id.org/arco/resource/CulturalPropertyType/ba25be98587438b1ddc0e1ca2cb3c280> <http://www.w3.org/2000/01/rdf-schema#label> "campione essiccato"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/ba25be98587438b1ddc0e1ca2cb3c280> <https://w3id.org/italia/onto/l0/name> "campione essiccato"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/ba25be98587438b1ddc0e1ca2cb3c280> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition> <https://w3id.org/arco/resource/CulturalPropertyDefinition/campione> .
+<https://w3id.org/arco/resource/CulturalPropertyType/ba25be98587438b1ddc0e1ca2cb3c280> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertySpecification> <https://w3id.org/arco/resource/CulturalPropertySpecification/essiccato> .

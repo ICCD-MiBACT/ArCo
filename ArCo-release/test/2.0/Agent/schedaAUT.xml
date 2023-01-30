@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13067244@</identifier>
+        <datestamp>2014-12-21T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+<schede>
+<AUT version="3.00_ICCD0" >
+<CD hint="CODICI" >
+<TSK hint="Tipo scheda" >AUT</TSK>
+<ESC hint="Ente schedatore" >S156</ESC>
+<ECP hint="Ente competente" >S156</ECP>
+</CD>
+<AU hint="AUTORE" >
+<AUT hint="AUTORE" >
+<AUTN hint="Nome scelto" >Sanzio Raffaello</AUTN>
+<AUTA hint="Dati anagrafici" >1483/ 1520</AUTA>
+<AUTC hint="Cognome" >Schedoni</AUTC>
+<AUTO hint="Nome" >Bartolomeo</AUTO>
+<AUTP hint="Pseudonimo" >Barty</AUTP>
+<AUTF hint="Firma" >SB</AUTF>
+<AUTE >Schedoni</AUTE>
+<AUTV hint="Variante" >Bartolomeuccio</AUTV>
+<AUTZ hint="Sesso" >M</AUTZ>
+<AUTL hint="Luogo di nascita" >Formigine (MO)</AUTL>
+<AUTD hint="Data di nascita" >1578 ca</AUTD>
+<AUTX hint="Luogo di morte" >Parma</AUTX>
+<AUTT hint="Data di morte" >1615</AUTT>
+<AUTG hint="Attività" >Roma, Rinascimento</AUTG>
+<AUTU hint="Scuola di appartenenza" >scuola emiliana</AUTU>
+<AUTQ hint="Qualifica" >pittore</AUTQ>
+<AUTH hint="Sigla per citazione" >x0001582</AUTH>
+</AUT>
+</AU>
+<CM hint="COMPILAZIONE" >
+<CMP hint="COMPILAZIONE" >
+<CMPD hint="Data" >2016</CMPD>
+<CMPN hint="Nome" >Manco C</CMPN>
+</CMP>
+<FUR hint="Funzionario responsabile" >Casciu S</FUR>
+</CM>
+</AUT>
+<harvesting>
+<idProgetto>ICCD1007384</idProgetto>
+</harvesting>
+</schede>
+    </metadata>
+</record>
