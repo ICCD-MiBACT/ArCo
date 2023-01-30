@@ -12,11 +12,8 @@ ex:cq1_resultset.ttl a owlunit:CompetencyQuestionVerification ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
 					  rs:resultVariable  "accessory" ;
-					  rs:size            "2"^^xsd:int ;
+					  rs:size            "1"^^xsd:int ;
 					  rs:solution        [ rs:binding  [ rs:value     ex:Accessory1 ;
-									     rs:variable  "accessory"
-									   ]
-										[rs:value     ex:Accessory2 ;
 									     rs:variable  "accessory"
 									   ]
                                  ]
