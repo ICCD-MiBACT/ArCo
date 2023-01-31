@@ -301,6 +301,11 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/isProducedByMusicalInstrument"/>
+        <core:replacingQuery>prefix mi: &lt;https://w3id.org/arco/ontology/musical-instrument/&gt;
+select distinct * where {
+?note a mi:MusicalNote ;
+a-mi:areAvailableNotesOf ?cp .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -444,6 +449,10 @@ select distinct * where {
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>prefix a-loc: &lt;https://w3id.org/arco/ontology/location/&gt;
+
+CONSTRUCT {?x a-loc:hasClimateSituation ?y .}
+WHERE {?x a-dd:hasClimateSituation ?y.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/hasClimateSituation"/>
     </owl:ObjectProperty>
     
@@ -763,6 +772,10 @@ WHERE {?class a-dd:hasDiapason ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>prefix a-loc: &lt;https://w3id.org/arco/ontology/location/&gt;
+
+CONSTRUCT {?x a-loc:hasEnvironment ?y .}
+WHERE {?x a-dd:hasEnvironment ?y.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/hasEnvironment"/>
     </owl:ObjectProperty>
     
@@ -1041,6 +1054,10 @@ WHERE {?class a-dd:hasIconographicOrDecorativeApparatusType ?type.}</core:constr
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacingQuery>select * where {
+?x a-cd:hasStorageMedium ?medium .
+?medium core:hasType ?storageMediumType .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1400,6 +1417,10 @@ WHERE {?class a-dd:hasShape ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>prefix a-loc: &lt;https://w3id.org/arco/ontology/location/&gt;
+
+CONSTRUCT {?x a-loc:hasSoil ?y .}
+WHERE {?x a-dd:hasSoil ?y.}</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -1418,6 +1439,10 @@ WHERE {?class a-dd:hasShape ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>prefix a-loc: &lt;https://w3id.org/arco/ontology/location/&gt;
+
+CONSTRUCT {?x a-loc:soilUse ?y .}
+WHERE {?x a-dd:hasSoilUse ?y.}</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -1612,6 +1637,9 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?class &lt;https://w3id.org/arco/ontology/arco-lite/hasLength&gt; ?char .}
+WHERE {?class a-dd:isVibratingLenghtOf ?char. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasLength"/>
     </owl:ObjectProperty>
     
 
@@ -1758,6 +1786,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?type core:isTypeOf ?class .}
+WHERE {?type a-dd:isAffixedElementTypeOf ?class.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -1853,6 +1883,10 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>prefix a-loc: &lt;https://w3id.org/arco/ontology/location/&gt;
+
+CONSTRUCT {?x a-loc:isClimateSituationOf ?y .}
+WHERE {?x a-dd:isClimateSituationOf ?y.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/isClimateSituationOf"/>
     </owl:ObjectProperty>
     
@@ -1872,6 +1906,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isColourOf&gt; ?class .}
+WHERE {?char a-dd:isColourOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isColourOf"/>
     </owl:ObjectProperty>
     
@@ -1908,6 +1944,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?type core:isTypeOf ?class .}
+WHERE {?type a-dd:isCommunicationMediumOf ?class.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -1961,6 +1999,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?type core:isTypeOf ?class .}
+WHERE {?type a-dd:isConservationStatusOf ?class.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -2084,6 +2124,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?type core:isTypeOf ?class .}
+WHERE {?type a-dd:isDesignationTypeOf ?class.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -2103,6 +2145,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isDiapasonOf&gt; ?class .}
+WHERE {?char a-dd:isDiapasonOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isDiapasonOf"/>
     </owl:ObjectProperty>
     
@@ -2143,6 +2187,10 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>prefix a-loc: &lt;https://w3id.org/arco/ontology/location/&gt;
+
+CONSTRUCT {?x a-loc:isEnvironmentOf ?y .}
+WHERE {?x a-dd:isEnvironmentOf ?y.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/isEnvironmentOf"/>
     </owl:ObjectProperty>
     
@@ -2162,6 +2210,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isExtensionOf&gt; ?class .}
+WHERE {?char a-dd:isExtensionOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isExtensionOf"/>
     </owl:ObjectProperty>
     
@@ -2181,6 +2231,9 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?format a-dd:isFileFormat ?x ;
+a a-dd:Format .}
+WHERE {?format a-dd:isFormatOf ?x. }</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -2267,6 +2320,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isGarmentAnalysisOf&gt; ?class .}
+WHERE {?char a-dd:isGarmentAnalysisOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isGarmentAnalysisOf"/>
     </owl:ObjectProperty>
     
@@ -2286,6 +2341,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isColourOf&gt; ?class .}
+WHERE {?char a-dd:isGarmentColourOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isColourOf"/>
     </owl:ObjectProperty>
     
@@ -2321,6 +2378,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?type core:isTypeOf ?class .}
+WHERE {?type a-dd:isIconographicOrDecorativeApparatusOf ?class.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -2412,6 +2471,10 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacingQuery>select * where {
+?storageMediumType core:isTypeOf ?medium .
+?medum a-cd:isMassStorageOf ?x .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -2430,6 +2493,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isMaterialOf&gt; ?class .}
+WHERE {?char a-dd:isMeterialOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isMaterialOf"/>
     </owl:ObjectProperty>
     
@@ -2449,6 +2514,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isMaterialOrTechniqueOf&gt; ?class .}
+WHERE {?char a-dd:isMaterialOrTechniqueOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isMaterialOrTechniqueOf"/>
     </owl:ObjectProperty>
     
@@ -2502,6 +2569,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?type core:isTypeOf ?class .}
+WHERE {?type a-dd:isMeasurementTypeOf ?class.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -2553,6 +2622,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isPhotoColourOf&gt; ?class .}
+WHERE {?char a-dd:isPhotoColourOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhotoColourOf"/>
     </owl:ObjectProperty>
     
@@ -2572,7 +2643,11 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/osSoftwareUsedFor"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSoftwareUsedFor"/>
+        <core:replacingQuery>select distinct * where {
+?software a a-dd:Software ;
+a-dd:isSoftwareUsedFor ?cp .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -2591,6 +2666,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isPhotoSizeOf&gt; ?class .}
+WHERE {?char a-dd:isPhotoSizeOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPhotoSizeOf"/>
     </owl:ObjectProperty>
     
@@ -2610,6 +2687,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isPixelDimensionOf&gt; ?class .}
+WHERE {?char a-dd:isPixelDimensionOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPixelDimensionOf"/>
     </owl:ObjectProperty>
     
@@ -2629,6 +2708,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isResolutionOf&gt; ?class .}
+WHERE {?char a-dd:isQualityLevelOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResolutionOf"/>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/isResolutionOf"/>
     </owl:ObjectProperty>
@@ -2649,6 +2730,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isResolutionOf&gt; ?class .}
+WHERE {?char a-dd:isResolutionOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResolutionOf"/>
     </owl:ObjectProperty>
     
@@ -2684,6 +2767,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?type core:isTypeOf ?class .}
+WHERE {?type a-dd:isSampleCollectedTypeOf ?class.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
@@ -2703,6 +2788,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isShapeOf&gt; ?class .}
+WHERE {?char a-dd:isShapeOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isShapeOf"/>
     </owl:ObjectProperty>
     
@@ -2731,6 +2818,10 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>prefix a-loc: &lt;https://w3id.org/arco/ontology/location/&gt;
+
+CONSTRUCT {?x a-loc:isSoilOf ?y .}
+WHERE {?x a-dd:isSoilOf ?y.}</core:constructQuery>
     </owl:ObjectProperty>
     
 
@@ -2748,6 +2839,10 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:replacedBy>prefix a-loc: &lt;https://w3id.org/arco/ontology/location/&gt;
+
+select * where {
+?x a-loc:soilUse ?y .}</core:replacedBy>
     </owl:ObjectProperty>
     
 
@@ -2783,6 +2878,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isStorageMethodOrColourDepthOf&gt; ?class .}
+WHERE {?char a-dd:isStorageMethodOrColourDepthOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isStorageMethodOrColourDepthOf"/>
     </owl:ObjectProperty>
     
@@ -2905,6 +3002,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isTechniqueOf&gt; ?class .}
+WHERE {?char a-dd:isTechniqueOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTechniqueOf"/>
     </owl:ObjectProperty>
     
@@ -2924,6 +3023,8 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isTemperamentOf&gt; ?class .}
+WHERE {?char a-dd:isTemperamentOf ?class. }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTemperamentOf"/>
     </owl:ObjectProperty>
     
@@ -2942,6 +3043,18 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy>prefix tiapit: &lt;https://w3id.org/italia/onto/TI/&gt;
+
+select * where {
+?x a a-dd:TechnicalStatus ;
+tiapit:atTime tiapit:TimeInterval .
+}AC</core:replacedBy>
+        <core:replacingQuery>prefix tiapit: &lt;https://w3id.org/italia/onto/TI/&gt;
+
+select * where {
+?x a a-dd:TechnicalStatus ;
+tiapit:atTime tiapit:TimeInterval .
+}AC</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -2960,7 +3073,9 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTemperamentOf"/>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isTuningOf&gt; ?class .}
+WHERE {?char a-dd:isTuningOf ?class. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isTuningOf"/>
     </owl:ObjectProperty>
     
 
@@ -2995,7 +3110,9 @@ WHERE {?class a-dd:hasTuning ?char. }</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isVibratingLenghtOf"/>
+        <core:constructQuery>CONSTRUCT {?char &lt;https://w3id.org/arco/ontology/arco-lite/isVibratingLengthOf&gt; ?class .}
+WHERE {?char a-dd:isVibratingLenghtOf ?class. }</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isVibratingLengthOf"/>
     </owl:ObjectProperty>
     
 
@@ -5336,6 +5453,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a a-cd:AssignedDesignation .}
+WHERE {?x a a-dd:AssignedDesignation . }</core:constructQuery>
     </owl:NamedIndividual>
     
 
@@ -5374,6 +5493,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/clothing-description/BackTotalLength&gt; .}
+WHERE {?x a a-dd:BackTotalLength .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/BackTotalLength"/>
     </owl:NamedIndividual>
     
@@ -5388,6 +5509,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/clothing-description/BackWidth&gt; .}
+WHERE {?x a a-dd:BackWidth .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/BackWidth"/>
     </owl:NamedIndividual>
     
@@ -5437,6 +5560,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/clothing-description/ChestCircumference&gt; .}
+WHERE {?x a a-dd:ChestCircumference .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/ChestCircumference"/>
     </owl:NamedIndividual>
     
@@ -5533,6 +5658,9 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normativa A 3: OGA/OGAG.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a a-cd:DesignationInTime .
+core:current &quot;True&quot; . }
+WHERE {?x a a-dd:CurrentDesignation . }</core:constructQuery>
     </owl:NamedIndividual>
     
 
@@ -5549,6 +5677,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a a-cd:CustomaryDesignation .}
+WHERE {?x a a-dd:CustomaryDesignation . }</core:constructQuery>
     </owl:NamedIndividual>
     
 
@@ -5617,6 +5747,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/clothing-description/DepthOrHeight&gt; .}
+WHERE {?x a a-dd:DepthOrHeight .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/DepthOrHeight"/>
     </owl:NamedIndividual>
     
@@ -5634,6 +5766,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a a-cd:DialectalDesignation .}
+WHERE {?x a a-dd:DialectalDesignation . }</core:constructQuery>
     </owl:NamedIndividual>
     
 
@@ -5662,6 +5796,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAC</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/musical-instrument/Diapason&gt; .}
+WHERE {?x a a-dd:Diapason .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/Diapason"/>
     </owl:NamedIndividual>
     
@@ -5689,6 +5825,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/clothing-description/EdgeCircumference&gt; .}
+WHERE {?x a a-dd:EdgeCircumference .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/EdgeCircumference"/>
     </owl:NamedIndividual>
     
@@ -5726,6 +5864,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAE</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/musical-instrument/Extension&gt; .}
+WHERE {?x a a-dd:Extension .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/Extension"/>
     </owl:NamedIndividual>
     
@@ -5740,6 +5880,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/clothing-description/ExternalInternalLength&gt; .}
+WHERE {?x a a-dd:ExternalInternalLength .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/ExternalInternalLength"/>
     </owl:NamedIndividual>
     
@@ -5757,6 +5899,10 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: MT/FVC/FVCF</a-cat:iccdNormTag>
+        <core:replacingQuery>select * where {
+?x a-dd:hasFormat ?format .
+?format a-dd:Format .
+}</core:replacingQuery>
     </owl:NamedIndividual>
     
 
@@ -5783,6 +5929,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/clothing-description/FrontTotalLength&gt; .}
+WHERE {?x a a-dd:FrontTotalLength .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/FrontTotalLength"/>
     </owl:NamedIndividual>
     
@@ -5800,6 +5948,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa VeAC: MT/MTC/MTCA</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/clothing-description/GarmentAnalysis&gt; .}
+WHERE {?x a a-dd:GarmentAnalysis .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/GarmentAnalysis"/>
     </owl:NamedIndividual>
     
@@ -5817,6 +5967,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa VeAC: MT/MTC/MTCC</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/denotative-description/Colour&gt; .}
+WHERE {?x a a-dd:GarmentColour .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/Colour"/>
     </owl:NamedIndividual>
     
@@ -5916,6 +6068,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/clothing-description/HipCircumference&gt; .}
+WHERE {?x a a-dd:HipCircumference .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/HipCircumference"/>
     </owl:NamedIndividual>
     
@@ -5933,6 +6087,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a a-cd:HistoricalDesignation .}
+WHERE {?x a a-dd:HistoricalDesignation . }</core:constructQuery>
     </owl:NamedIndividual>
     
 
@@ -5977,6 +6133,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a a-cd:IdiomaticDesignation .}
+WHERE {?x a a-dd:IdiomaticDesignation . }</core:constructQuery>
     </owl:NamedIndividual>
     
 
@@ -6070,6 +6228,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a a-cd:LocalDesignation .}
+WHERE {?x a a-dd:LocalDesignation . }</core:constructQuery>
     </owl:NamedIndividual>
     
 
@@ -6104,6 +6264,11 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: MT/FVM</a-cat:iccdNormTag>
+        <core:replacingQuery>select * where {
+?x a-cd:hasStorageMedium ?y .
+?y a a-dd:StorageMedium ;
+core:hasType ?type .
+}</core:replacingQuery>
     </owl:NamedIndividual>
     
 
@@ -6147,6 +6312,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/clothing-description/MaximumMinimumWidth&gt; .}
+WHERE {?x a a-dd:MaximumMinimumWidth .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/MaximumMinimumWidth"/>
     </owl:NamedIndividual>
     
@@ -6174,6 +6341,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/clothing-description/MaximumTotalLength&gt; .}
+WHERE {?x a a-dd:MaximumTotalLength .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/MaximumTotalLength"/>
     </owl:NamedIndividual>
     
@@ -6188,6 +6357,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/clothing-description/MaximumTotalWidth&gt; .}
+WHERE {?x a a-dd:MaximumTotalWidth .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/MaximumTotalWidth"/>
     </owl:NamedIndividual>
     
@@ -6254,6 +6425,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a a-cd:OriginalDesignation .}
+WHERE {?x a a-dd:OriginalDesignation . }</core:constructQuery>
     </owl:NamedIndividual>
     
 
@@ -6270,6 +6443,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a a-cd:AlternativeDesignation .}
+WHERE {?x a a-dd:OtherLanguageDesignation . }</core:constructQuery>
     </owl:NamedIndividual>
     
 
@@ -6425,6 +6600,14 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa PG: CA/CLM/CLMP. Normativa BNB: LR/LRI/LRIT</a-cat:iccdNormTag>
+        <core:replacingQuery>select * where {
+?x a a-loc:ClimateSituation ;
+a-dd:hasMeasurementCollection ?measCol .
+?measCol a-dd:hasMeasurement ?meas .
+?meas a-dd:hasValue ?value ;
+mu:hasMeasurementUnit ?unit ;
+core:hasType ?rainfalltype .
+}</core:replacingQuery>
     </owl:NamedIndividual>
     
 
@@ -6502,6 +6685,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a a-cd:SlangDesignation .}
+WHERE {?x a a-dd:SlangDesignation . }</core:constructQuery>
     </owl:NamedIndividual>
     
 
@@ -6583,6 +6768,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAP</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/musical-instrument/Temperament&gt; .}
+WHERE {?x a a-dd:Temperament .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/Temperament"/>
     </owl:NamedIndividual>
     
@@ -6625,6 +6812,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAA</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/musical-instrument/Tuning&gt; .}
+WHERE {?x a a-dd:Tuning .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/Tuning"/>
     </owl:NamedIndividual>
     
@@ -6700,6 +6889,10 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAL</a-cat:iccdNormTag>
+        <core:replacingQuery>select * where {
+?musicalinstrument a-mi:hasString ?string .
+?string a-dd:hasMeasurementCollection ?meascol .
+}</core:replacingQuery>
     </owl:NamedIndividual>
     
 
@@ -6725,6 +6918,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/clothing-description/WaistCircumference&gt; .}
+WHERE {?x a a-dd:WaistCircumference .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description/WaistCircumference"/>
     </owl:NamedIndividual>
     
