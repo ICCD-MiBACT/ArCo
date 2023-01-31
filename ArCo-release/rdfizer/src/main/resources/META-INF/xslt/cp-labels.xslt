@@ -29,8 +29,18 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
-			<xsl:when test="record/metadata/schede/MODI/CD/CDM">
-				<xsl:value-of select="concat(arco-fn:urify(record/metadata/schede/*/CD/CDR), arco-fn:urify(record/metadata/schede/*/CD/CDM))" />
+			<xsl:when test="record/metadata/schede/*/CD/CDM">
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/CD/CBC">
+						<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/CD/CBC)" />
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/*/CD/CDR">
+						<xsl:value-of select="concat(arco-fn:urify(record/metadata/schede/*/CD/CDR), arco-fn:urify(record/metadata/schede/*/CD/CDM))" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/CD/CDM)" />
+					</xsl:otherwise>
+				</xsl:choose>
 			</xsl:when>
 			<xsl:when test="record/metadata/schede/*/CD/CBC">
 				<xsl:value-of select="record/metadata/schede/*/CD/CBC" />
@@ -119,6 +129,9 @@
 						<xsl:value-of select="concat($NS, 'ScientificOrTechnologicalHeritage/', $itemURI)" />
 					</xsl:when>
 				</xsl:choose>
+			</xsl:when>
+			<xsl:when test="$sheetType='MINP'">
+				<xsl:value-of select="concat($NS, 'ArchaeologicalProperty/', $itemURI)" />
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
@@ -586,6 +599,25 @@
 	
 	<xsl:template name="label">
 							<!-- labels of cultural property -->		
+		<!-- MINP -->
+		<xsl:if test="$sheetType='MINP'">
+			<xsl:variable name="tmp-label">
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/OG/OGT[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))] and record/metadata/schede/*/OG/SGT/SGTI[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+						<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/OG/OGD), ' ', normalize-space(record/metadata/schede/*/OG/OGT))" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGD)" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<rdfs:label xml:lang="it">									
+				<xsl:value-of select="concat($tmp-label, ', ', normalize-space(record/metadata/schede/*/DT/DTR))" />
+			</rdfs:label>
+			<rdfs:label xml:lang="en">			
+				<xsl:value-of select="concat($tmp-label, ', ', normalize-space(record/metadata/schede/*/DT/DTR))" />
+			</rdfs:label>
+		</xsl:if>
 		<!-- SMO -->
 		<xsl:if test="$sheetType='SMO'">
 			<xsl:variable name="ogtv">
