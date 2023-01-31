@@ -1,12 +1,12 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
 @prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/IV/IV1/dataset_iv1.ttl/> .
 @prefix test: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/IV/IV1/> .
-@prefix onto: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/Accessory/> .
-@prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix onto: <https://w3id.org/arco/test/2.0/Accessory/> .
+@prefix core: <https://w3id.org/arco/ontology/core/> .
 
 test:testcase_iv1.ttl a owlunit:InferenceVerification ;
 	owlunit:hasInputData test:dataset_iv1.ttl;
-	owlunit:hasSPARQLUnitTest "PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/> PREFIX  ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/IV/IV1/dataset_iv1.ttl/> ASK { ex:accessory1 a <https://w3id.org/italia/onto/l0/Object> }" ;
+	owlunit:hasSPARQLUnitTest "PREFIX core: <https://w3id.org/arco/ontology/core/> PREFIX  ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/IV/IV1/dataset_iv1.ttl/> ASK { ex:accessoryType1 core:isTypeOf ex:accessory1 }" ;
 	owlunit:hasExpectedResult true ;
 	owlunit:hasReasoner owlunit:HermiT ;
- 	owlunit:testsOntology a-dd: .
+ 	owlunit:testsOntology core: .
