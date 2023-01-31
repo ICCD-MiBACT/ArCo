@@ -888,12 +888,12 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/arco-lite/hasLenght -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasLenght">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isLenghtOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isLengthOf"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla misura della sua lunghezza.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the measurement of lenght to the measured entity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the measurement of length to the measured entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="it">ha lunghezza</rdfs:label>
-        <rdfs:label xml:lang="en">has lenght</rdfs:label>
+        <rdfs:label xml:lang="en">has length</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3047,15 +3047,15 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/isLenghtOf -->
+    <!-- https://w3id.org/arco/ontology/arco-lite/isLengthOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isLenghtOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isLengthOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una misura di lunghezza all&apos;entità misurata.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the measurement of lenght to the measured entity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the measurement of length to the measured entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="en">is lenght of</rdfs:label>
+        <rdfs:label xml:lang="en">is length of</rdfs:label>
         <rdfs:label xml:lang="it">è lunghezza di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
