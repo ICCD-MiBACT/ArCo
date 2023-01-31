@@ -21,12 +21,45 @@
 #    Object Properties
 #################################################################
 
+###  https://w3id.org/arco/ontology/core/hasConcept
+<https://w3id.org/arco/ontology/core/hasConcept> rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/arco/ontology/core/hasType
-<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty .
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasConcept> ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range <https://w3id.org/arco/ontology/core/Type> ;
+                                              rdfs:comment "La object property che associa un qualunque oggetto a un tipo."@it ,
+                                                           "The object property that associates any object with a type."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "ha tipo"@it ,
+                                                         "has type"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isConceptOf
+<https://w3id.org/arco/ontology/core/isConceptOf> rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/arco/ontology/core/isInvolvedIn
 <https://w3id.org/arco/ontology/core/isInvolvedIn> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isTypeOf
+<https://w3id.org/arco/ontology/core/isTypeOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isConceptOf> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/Type> ;
+                                               rdfs:range owl:Thing ;
+                                               rdfs:comment "La object property che associa un tipo a un qualunque oggetto."@it ,
+                                                            "The object property that associates a type to any object."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "is type of"@en ,
+                                                          "è tipo di"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
 
 
 ###  https://w3id.org/arco/ontology/denotative-description/hasAccessory
