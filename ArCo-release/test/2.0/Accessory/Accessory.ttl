@@ -7,7 +7,7 @@
 @base <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/Accessory.ttl> .
 
 <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/Accessory.ttl> rdf:type owl:Ontology ;
-                                                                                                              owl:versionIRI <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/Accessory.owl> .
+                                                                                                              owl:versionIRI <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/Accessory.ttl> .
 
 #################################################################
 #    Annotation properties
