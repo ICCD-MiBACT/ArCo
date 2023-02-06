@@ -3,5 +3,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix core: <https://w3id.org/arco/ontology/core/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> .
 
-ex:accessoryType1 rdf:type core:Type.
+ex:accessoryType1 rdf:type a-dd:AccessoryType.
