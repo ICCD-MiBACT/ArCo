@@ -2,5 +2,6 @@
 @prefix l0: <https://w3id.org/italia/onto/l0/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix core: <https://w3id.org/arco/ontology/core/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-ex:accessory1 core:hasType ex:accessoryType1.
+ex:accessoryType1 rdf:type core:Type.
