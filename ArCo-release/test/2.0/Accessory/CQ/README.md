@@ -21,15 +21,3 @@ a-dd:hasAccessory ?accessory.
 ?accessory arco-core:hasType ?type.
 }
 limit 100
-
-**CQ3**
-
-Quando è stato creato l’accessorio x?
-
-When was accessory x created?
-
-SELECT DISTINCT ?accessory ?time WHERE{
-?accessory arco-core:isInvolvedIn ?event.
-?event ti:atTime ?time
-}
-limit 100
