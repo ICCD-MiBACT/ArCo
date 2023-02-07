@@ -1,20 +1,26 @@
 @prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
-@prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/CQ/CQ1/dataset_cq1.ttl/> .
-@prefix test: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/CQ/CQ1/> .
+@prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Use/CQ/CQ1/dataset_cq1.ttl/> .
+@prefix test: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Use/CQ/CQ1/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
 
 test:testcase_cq1.ttl a owlunit:CompetencyQuestionVerification ;
- 	owlunit:hasCompetencyQuestion "What are accessories associated to the cultural property cp1?" ;
-	owlunit:hasSPARQLUnitTest "prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/CQ/CQ1/dataset_cq1.ttl/> prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> SELECT DISTINCT ?accessory WHERE {ex:cp1 a-dd:hasAccessory ?accessory}" ;
-	owlunit:hasInputData <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/CQ/CQ1/dataset_cq1.ttl> ;
+ 	owlunit:hasCompetencyQuestion "What are the uses of cp1? What kind of use are they?" ;
+	owlunit:hasSPARQLUnitTest "prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Use/CQ/CQ1/dataset_cq1.ttl/> prefix a-cd: <https://w3id.org/arco/ontology/context-description/> prefix core: <https://w3id.org/arco/ontology/core/> SELECT distinct ?function ?type where { ex:cp1 a-cd:hasUse ?use. ?use core:hasType ?type; a-cd:hasUseFunction ?function .} limit 100" ;
+	owlunit:hasInputData <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Use/CQ/CQ1/dataset_cq1.ttl> ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
-					  rs:resultVariable  "accessory" ;
+					  rs:resultVariable  "function" ;
 					  rs:size            "1"^^xsd:int ;
-					  rs:solution        [ rs:binding  [ rs:value     ex:Accessory1 ;
-									     rs:variable  "accessory"
+					  rs:solution        [ rs:binding  [ rs:value     ex:UseFunction1 ;
+									     rs:variable  "function"
+									   ]
+                                 ];
+					  rs:resultVariable  "type" ;
+					  rs:size            "1"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     ex:UseType1 ;
+									     rs:variable  "type"
 									   ]
                                  ]
 					] ;
-	owlunit:testsOntology <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/Accessory.ttl> .
+	owlunit:testsOntology <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Use/Use.ttl> .
