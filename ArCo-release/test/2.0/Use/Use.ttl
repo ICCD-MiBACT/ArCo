@@ -1,0 +1,613 @@
+@prefix : <https://w3id.org/arco/test/2.0/Use#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/Use> .
+
+<https://w3id.org/arco/test/2.0/Use> rdf:type owl:Ontology ;
+                                      owl:versionIRI <https://w3id.org/arco/test/2.0/Use> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasInfluencedBy
+<http://www.w3.org/ns/prov#wasInfluencedBy> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/hasCircumstance
+<https://w3id.org/arco/ontology/context-description/hasCircumstance> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                                     owl:inverseOf <https://w3id.org/arco/ontology/context-description/isCircumstanceOf> ;
+                                                                     rdfs:domain owl:Thing ;
+                                                                     rdfs:range <https://w3id.org/arco/ontology/context-description/Circumstance> ;
+                                                                     rdfs:comment "Questa proprietà collega una situazione all'occasione che ha determinato quella situazione. Per esempio, può collegare una situazione in cui viene indicata la committenza di un bene culturale all'occasione che ha determinato quella committenza, oppure un luogo di ripresa di un bene fotografico all'occasione che ha determinato il motivo della ripresa, o ancora l'uso di un bene culturale all'occasione d'uso."@it ,
+                                                                                  "This property relates a situation to the circumstance which led to the situation. For example it can connect a situation where is indicated a cultural entity's committment to its circumstance."@en ;
+                                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                     rdfs:label "ha circostanza"@it ,
+                                                                                "has circumstance"@en ;
+                                                                     owl:versionInfo "stabile"@it ,
+                                                                                     "stable"@en ;
+                                                                     <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: UT/UTU/UTUO; normativa BDM: UT/UTO; AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO - ICCD Normativa MI: AU/DDC/DDCC" .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasUseFunction
+<https://w3id.org/arco/ontology/context-description/hasUseFunction> rdf:type owl:ObjectProperty ;
+                                                                    owl:inverseOf <https://w3id.org/arco/ontology/context-description/isUseFunctionOf> ;
+                                                                    rdfs:domain <https://w3id.org/arco/ontology/context-description/Use> ;
+                                                                    rdfs:range <https://w3id.org/arco/ontology/context-description/UseFunction> ;
+                                                                    rdfs:comment "Questa proprietà collega un'entità alla sua funzione d'uso."@it ,
+                                                                                 "This property relates an entity to its use function."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                    rdfs:label "ha funzione d'uso"@it ,
+                                                                               "has use function"@en ;
+                                                                    owl:versionInfo "stabile"@it ,
+                                                                                    "stable"@en ;
+                                                                    <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: UT/UTU/UTUF; LC/LDC/LDCF; LA/PRC/PRCF - BDM 2.00:UT/UTF - PST 3.01: DA/UTF" .
+
+
+###  https://w3id.org/arco/ontology/context-description/isCircumstanceOf
+<https://w3id.org/arco/ontology/context-description/isCircumstanceOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/isUseFunctionOf
+<https://w3id.org/arco/ontology/context-description/isUseFunctionOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgent
+<https://w3id.org/arco/ontology/core/hasAgent> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/italia/onto/RO/isRoleInTimeOf> ;
+                                               owl:inverseOf <https://w3id.org/arco/ontology/core/isAgentOf> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                               rdfs:range <https://w3id.org/italia/onto/l0/Agent> ;
+                                               rdfs:comment "Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente all'agente che lo ricopre."@it ,
+                                                            "This property relates a situation in which an agent holds a role to that agent."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "ha agente"@it ,
+                                                          "has agent"@en ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgentRole
+<https://w3id.org/arco/ontology/core/hasAgentRole> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasSituation> ;
+                                                   owl:inverseOf <https://w3id.org/arco/ontology/core/isAgentRoleOf> ;
+                                                   rdfs:domain owl:Thing ;
+                                                   rdfs:range <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                                   rdfs:comment "Questa proprietà collega un'entità a una situazione in cui un agente ricopre un ruolo."@it ,
+                                                                "This property relates an entity to a situation in which an agent holds a role connected to that entity."@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                   rdfs:label "ha ruolo ricoperto da agente"@it ,
+                                                              "has agent role"@en ;
+                                                   owl:versionInfo "stabile"@it ,
+                                                                   "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasConcept
+<https://w3id.org/arco/ontology/core/hasConcept> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasEventOrSituationInTime
+<https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasRole
+<https://w3id.org/arco/ontology/core/hasRole> rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isRoleOf> .
+
+
+###  https://w3id.org/arco/ontology/core/hasSituation
+<https://w3id.org/arco/ontology/core/hasSituation> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasConcept> ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range <https://w3id.org/arco/ontology/core/Type> ;
+                                              rdfs:comment "La object property che associa un qualunque oggetto a un tipo."@it ,
+                                                           "The object property that associates any object with a type."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "ha tipo"@it ,
+                                                         "has type"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isAgentOf
+<https://w3id.org/arco/ontology/core/isAgentOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isAgentRoleOf
+<https://w3id.org/arco/ontology/core/isAgentRoleOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isRoleOf
+<https://w3id.org/arco/ontology/core/isRoleOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <https://w3id.org/italia/onto/RO/Role> ;
+                                               rdfs:range <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                               rdfs:comment "Questa proprietà collega un ruolo a una situazione in cui il ruolo viene ricoperto da un agente."@it ,
+                                                            "This property relates a role to a situation in which an agent holds that role."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "is role of"@en ,
+                                                          "è ruolo in"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isTypeOf
+<https://w3id.org/arco/ontology/core/isTypeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasCadastralIdentity
+<https://w3id.org/arco/ontology/location/hasCadastralIdentity> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasGeometry
+<https://w3id.org/italia/onto/CLV/hasGeometry> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasSOValidity
+<https://w3id.org/italia/onto/CLV/hasSOValidity> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasSpatialCoverage
+<https://w3id.org/italia/onto/CLV/hasSpatialCoverage> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain owl:Thing ;
+                                                      rdfs:range <https://w3id.org/italia/onto/CLV/Feature> ;
+                                                      rdfs:comment "Property used to model the spatial coverage of a thing of the modelled domain."@en ,
+                                                                   "Proprietà che consente di esprimere la copertura spaziale di una cosa del dominio da modellare."@it ;
+                                                      rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                                      rdfs:label "ha copertura spaziale"@it ,
+                                                                 "ha giurisdizione"@it ,
+                                                                 "has spatial coverage"@en ;
+                                                      owl:versionInfo "stabile"@it ,
+                                                                      "stable"@en .
+
+
+###  https://w3id.org/italia/onto/RO/isRoleInTimeOf
+<https://w3id.org/italia/onto/RO/isRoleInTimeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/isKeptIn
+<https://w3id.org/arco/ontology/context-description/isKeptIn> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <https://w3id.org/arco/ontology/context-description/Use> ;
+                                                              rdfs:range rdfs:Literal ;
+                                                              rdfs:comment "Questa proprietà rappresenta la collocazione del bene nel suo ambiente, ovvero il luogo dove esso viene riposto quando non viene usato."@it ,
+                                                                           "This property represents the location of the asset in its environment, i.e. the place where it is stored when not in use."@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                              rdfs:label "is kept in"@en ,
+                                                                         "è mantenuto in"@it ;
+                                                              owl:versionInfo "stabile"@it ,
+                                                                              "stable"@en ;
+                                                              <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BDM 2.00: UT/UTA. Normativa BNM, BNPE, BNPL: CO/STC/STCT" .
+
+
+###  https://w3id.org/arco/ontology/context-description/useConditions
+<https://w3id.org/arco/ontology/context-description/useConditions> rdf:type owl:DatatypeProperty ,
+                                                                            owl:FunctionalProperty ;
+                                                                   rdfs:domain <https://w3id.org/arco/ontology/context-description/Use> ;
+                                                                   rdfs:range rdfs:Literal ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                   rdfs:label "modalità di uso"@it ,
+                                                                              "use conditions"@en ;
+                                                                   owl:versionInfo "stabile"@it ,
+                                                                                   "stable"@en ;
+                                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: UT/UTU/UTUM - BDM 2.00: UT/UTM - SMO, PTS 3.01: DA/UTM" .
+
+
+###  https://w3id.org/italia/onto/TI/modified
+<https://w3id.org/italia/onto/TI/modified> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/Acquisition
+<https://w3id.org/arco/ontology/context-description/Acquisition> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/AcquisitionType
+<https://w3id.org/arco/ontology/context-description/AcquisitionType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/AlternativeDatingType
+<https://w3id.org/arco/ontology/context-description/AlternativeDatingType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Anomaly
+<https://w3id.org/arco/ontology/context-description/Anomaly> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/AnomalyType
+<https://w3id.org/arco/ontology/context-description/AnomalyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType
+<https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType
+<https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/BibliographyType
+<https://w3id.org/arco/ontology/context-description/BibliographyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ChangeOfAvailability
+<https://w3id.org/arco/ontology/context-description/ChangeOfAvailability> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType
+<https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Circumstance
+<https://w3id.org/arco/ontology/context-description/Circumstance> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/arco/ontology/context-description/isCircumstanceOf> ;
+                                                                                    owl:someValuesFrom owl:Thing
+                                                                                  ] ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                                    owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/CircumstanceType>
+                                                                                  ] ;
+                                                                  rdfs:comment "Questa classe rappresenta un'occasione che ha determinato una certa situazione, per esempio l'occasione per cui è stato commissionato un bene culturale, l'occasione che ha determinato la ripresa di un bene fotografico, l'occasione d'uso di un bene, l'occasione di un bene demoetnoantropologico immateriale."@it ,
+                                                                               "This class represents a circumstance that influenced a particular situation, e.g. the circumstance for which a cultural property was commissioned, tha circumstance in which a cultural property was used, etc."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                  rdfs:label "Circumstance"@en ,
+                                                                             "Occasion"@en ,
+                                                                             "Occasione"@it ;
+                                                                  owl:versionInfo "stabile"@it ,
+                                                                                  "stable"@en ;
+                                                                  <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: UT/UTU/UTUO - Normativa BDM: UT/UTO; AU/CMM/CMMC - Normativa VeAC: AU/FRU/FRUC, OG/OGT/OGTL - Normativa F: LR/LRO - Normativa BDI: CA" .
+
+
+###  https://w3id.org/arco/ontology/context-description/CircumstanceType
+<https://w3id.org/arco/ontology/context-description/CircumstanceType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/CoinIssuance
+<https://w3id.org/arco/ontology/context-description/CoinIssuance> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/DerivatedWorkType
+<https://w3id.org/arco/ontology/context-description/DerivatedWorkType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/DocumentationType
+<https://w3id.org/arco/ontology/context-description/DocumentationType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ExportImportCertification
+<https://w3id.org/arco/ontology/context-description/ExportImportCertification> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ExportImportCertificationType
+<https://w3id.org/arco/ontology/context-description/ExportImportCertificationType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Format
+<https://w3id.org/arco/ontology/context-description/Format> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/InterpretationCriterion
+<https://w3id.org/arco/ontology/context-description/InterpretationCriterion> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/InterventionType
+<https://w3id.org/arco/ontology/context-description/InterventionType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/LaboratoryTestType
+<https://w3id.org/arco/ontology/context-description/LaboratoryTestType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/LegalSituation
+<https://w3id.org/arco/ontology/context-description/LegalSituation> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Membership
+<https://w3id.org/arco/ontology/context-description/Membership> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ObservationSurveyType
+<https://w3id.org/arco/ontology/context-description/ObservationSurveyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Profession
+<https://w3id.org/arco/ontology/context-description/Profession> rdf:type owl:Class ;
+                                                                owl:disjointWith <https://w3id.org/arco/ontology/context-description/UseFunction> .
+
+
+###  https://w3id.org/arco/ontology/context-description/RelatedWorkSituation
+<https://w3id.org/arco/ontology/context-description/RelatedWorkSituation> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ResponsibilityType
+<https://w3id.org/arco/ontology/context-description/ResponsibilityType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/SurveyImageType
+<https://w3id.org/arco/ontology/context-description/SurveyImageType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/SurveyMotivation
+<https://w3id.org/arco/ontology/context-description/SurveyMotivation> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/TitleType
+<https://w3id.org/arco/ontology/context-description/TitleType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Use
+<https://w3id.org/arco/ontology/context-description/Use> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/context-description/hasUseFunction> ;
+                                                                           owl:someValuesFrom <https://w3id.org/arco/ontology/context-description/UseFunction>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/core/hasAgentRole> ;
+                                                                           owl:someValuesFrom <https://w3id.org/arco/ontology/core/AgentRole>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/context-description/hasCircumstance> ;
+                                                                           owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/Circumstance>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/core/hasAgentRole> ;
+                                                                           owl:allValuesFrom <https://w3id.org/arco/ontology/core/AgentRole>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                           owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/UseType>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/italia/onto/CLV/hasSpatialCoverage> ;
+                                                                           owl:allValuesFrom <https://w3id.org/italia/onto/CLV/Feature>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/context-description/useConditions> ;
+                                                                           owl:allValuesFrom rdfs:Literal
+                                                                         ] ;
+                                                         rdfs:comment "Questa classe rappresenta l'uso del bene, che può variare nel corso del tempo, a seconda delle diverse occasioni e delle parti utilizzate del bene."@it ,
+                                                                      "This class represents the use of a cultural property, that can change over time, depending on the circumstances and on which parts of the cultural property are used."@en ;
+                                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                         rdfs:label "Use"@en ,
+                                                                    "Uso"@it ;
+                                                         owl:versionInfo "stabile"@it ,
+                                                                         "stable"@en ;
+                                                         <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: UT. Normativa VeAC: AU/FRU. ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = 'reimpiego'. Normative A e PG: US/USO e US/USA. Normativa SM: MU, OS" .
+
+
+###  https://w3id.org/arco/ontology/context-description/UseFunction
+<https://w3id.org/arco/ontology/context-description/UseFunction> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://w3id.org/italia/onto/RO/Role> ;
+                                                                 rdfs:comment "Questa classe rappresenta la funzione d'uso che ha un oggetto."@it ,
+                                                                              "This class represents the use function of an object."@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                 rdfs:label "Funzione d'uso"@it ,
+                                                                            "Use function"@en ;
+                                                                 owl:versionInfo "stabile"@it ,
+                                                                                 "stable"@en ;
+                                                                 <https://w3id.org/arco/ontology/catalogue/iccdNormTag> """ICCD Normativa Trasversale: UT/UTU/UTUF; LC/LDC/LDCF; LA/PRC/PRCF - BDM 2.00:UT/UTF - PST 3.01: DA/UTF
+ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF - Normative VeAC, MA e CA: OG/OGT/OGTF. CF: CF/CFU. Normativa A e PG: US/USO/USOD, US/USA/USAD""" .
+
+
+###  https://w3id.org/arco/ontology/context-description/UseType
+<https://w3id.org/arco/ontology/context-description/UseType> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ;
+                                                             rdfs:comment "Questa classe rappresenta il tipo di uso del bene."@it ,
+                                                                          "This class represents the type of use of a cultural property"@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                             rdfs:label "Tipo d'uso"@it ,
+                                                                        "Use type"@en ;
+                                                             owl:versionInfo "stabile"@it ,
+                                                                             "stable"@en ;
+                                                             <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: UT/UTU/UTUT, UT/UTU/UTUS" .
+
+
+###  https://w3id.org/arco/ontology/context-description/UseTypeSpecification
+<https://w3id.org/arco/ontology/context-description/UseTypeSpecification> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/AgentRole
+<https://w3id.org/arco/ontology/core/AgentRole> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/arco/ontology/core/Situation> ,
+                                                                <https://w3id.org/italia/onto/RO/TimeIndexedRole> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasAgent> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/l0/Agent>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasRole> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/RO/Role>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                ] ;
+                                                owl:disjointWith <https://w3id.org/arco/ontology/core/Classification> ;
+                                                rdfs:comment "Questa classe rappresenta una situazione relativa a un agente che ricopre un ruolo, senza la specificazione della dimensione tempo."@it ,
+                                                             "This class represents a situation in which an agent holds a role, regardless of the timing."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                rdfs:label "Agent Role"@en ,
+                                                           "Ruolo ricoperto da agente"@it ;
+                                                owl:versionInfo "stabile"@it ,
+                                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/Classification
+<https://w3id.org/arco/ontology/core/Classification> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/Situation
+<https://w3id.org/arco/ontology/core/Situation> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/Type
+<https://w3id.org/arco/ontology/core/Type> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/CadastralIdentity
+<https://w3id.org/arco/ontology/location/CadastralIdentity> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/Feature
+<https://w3id.org/italia/onto/CLV/Feature> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/italia/onto/CLV/SpatialObject> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/arco/ontology/location/hasCadastralIdentity> ;
+                                                             owl:allValuesFrom <https://w3id.org/arco/ontology/location/CadastralIdentity>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasGeometry> ;
+                                                             owl:allValuesFrom <https://w3id.org/italia/onto/CLV/Geometry>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasSOValidity> ;
+                                                             owl:allValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/TI/modified> ;
+                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                             owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                                               owl:unionOf ( xsd:date
+                                                                                             xsd:dateTime
+                                                                                             xsd:time
+                                                                                           )
+                                                                             ]
+                                                           ] ;
+                                           owl:disjointWith <https://w3id.org/italia/onto/CLV/Geometry> ;
+                                           rdfs:comment "Questa classe è utilizzata per rappresentare un'entittà geografica o localizzazione."@it ,
+                                                        "This class is used to represent any geographical entity."@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                           rdfs:label "Feature (Location)"@en ,
+                                                      "Luogo"@it ;
+                                           owl:versionInfo "stabile"@it ,
+                                                           "stable"@en ;
+                                           <http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.opengis.net/ont/geosparql#Feature> ;
+                                           <http://www.w3.org/ns/prov#wasInfluencedBy> <http://https://www.w3.org/ns/locn#Location> ,
+                                                                                       <http://www.geonames.org/ontology#Feature> .
+
+
+###  https://w3id.org/italia/onto/CLV/Geometry
+<https://w3id.org/italia/onto/CLV/Geometry> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/SpatialObject
+<https://w3id.org/italia/onto/CLV/SpatialObject> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/RO/Role
+<https://w3id.org/italia/onto/RO/Role> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/RO/TimeIndexedRole
+<https://w3id.org/italia/onto/RO/TimeIndexedRole> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Agent
+<https://w3id.org/italia/onto/l0/Agent> rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/Acquisition>
+                <https://w3id.org/arco/ontology/context-description/Anomaly>
+                <https://w3id.org/arco/ontology/context-description/ChangeOfAvailability>
+                <https://w3id.org/arco/ontology/context-description/Circumstance>
+                <https://w3id.org/arco/ontology/context-description/CoinIssuance>
+                <https://w3id.org/arco/ontology/context-description/ExportImportCertification>
+                <https://w3id.org/arco/ontology/context-description/LegalSituation>
+                <https://w3id.org/arco/ontology/context-description/Membership>
+                <https://w3id.org/arco/ontology/context-description/RelatedWorkSituation>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/AcquisitionType>
+                <https://w3id.org/arco/ontology/context-description/AlternativeDatingType>
+                <https://w3id.org/arco/ontology/context-description/AnomalyType>
+                <https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType>
+                <https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType>
+                <https://w3id.org/arco/ontology/context-description/BibliographyType>
+                <https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType>
+                <https://w3id.org/arco/ontology/context-description/CircumstanceType>
+                <https://w3id.org/arco/ontology/context-description/DerivatedWorkType>
+                <https://w3id.org/arco/ontology/context-description/DocumentationType>
+                <https://w3id.org/arco/ontology/context-description/ExportImportCertificationType>
+                <https://w3id.org/arco/ontology/context-description/InterventionType>
+                <https://w3id.org/arco/ontology/context-description/LaboratoryTestType>
+                <https://w3id.org/arco/ontology/context-description/ObservationSurveyType>
+                <https://w3id.org/arco/ontology/context-description/ResponsibilityType>
+                <https://w3id.org/arco/ontology/context-description/SurveyImageType>
+                <https://w3id.org/arco/ontology/context-description/TitleType>
+                <https://w3id.org/arco/ontology/context-description/UseType>
+                <https://w3id.org/arco/ontology/context-description/UseTypeSpecification>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/Format>
+                <https://w3id.org/arco/ontology/context-description/InterpretationCriterion>
+                <https://w3id.org/arco/ontology/context-description/SurveyMotivation>
+                <https://w3id.org/arco/ontology/context-description/Use>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
