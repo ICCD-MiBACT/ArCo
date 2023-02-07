@@ -14,7 +14,7 @@ test:testcase_cq1.ttl a owlunit:CompetencyQuestionVerification ;
 					  rs:size            "1"^^xsd:int ;
 					  rs:solution        [ rs:binding  [ rs:value     ex:UseFunction1 ;
 									     rs:variable  "function"
-									   ]
+									   ];
                                  ];
 					  rs:resultVariable  "type" ;
 					  rs:size            "1"^^xsd:int ;
