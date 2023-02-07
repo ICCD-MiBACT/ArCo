@@ -18,14 +18,6 @@
 
 
 #################################################################
-#    Datatypes
-#################################################################
-
-###  http://www.w3.org/2001/XMLSchema#date
-xsd:date rdf:type rdfs:Datatype .
-
-
-#################################################################
 #    Object Properties
 #################################################################
 
@@ -135,10 +127,6 @@ xsd:date rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  https://w3id.org/italia/onto/TI/date
-<https://w3id.org/italia/onto/TI/date> rdf:type owl:DatatypeProperty .
-
-
 ###  https://w3id.org/italia/onto/TI/endTime
 <https://w3id.org/italia/onto/TI/endTime> rdf:type owl:DatatypeProperty .
 
@@ -217,6 +205,55 @@ xsd:date rdf:type rdfs:Datatype .
                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa SM 4.00: AS/ASS/ASST" .
 
 
+###  https://w3id.org/arco/ontology/denotative-description/AffixedElement
+<https://w3id.org/arco/ontology/denotative-description/AffixedElement> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/AffixedElementType
+<https://w3id.org/arco/ontology/denotative-description/AffixedElementType> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/AffixedElement>
+                                                                                           ] ;
+                                                                           rdfs:comment "Questa classe rappresenta il tipo (es.: gentilizio, civile, religioso, etc.) di un'iscrizione, un emblema, un timbro, uno stemma, etc."@it ,
+                                                                                        "This class represents the type (i.e. civil, religious) of an inscription, emblem, postmark, crest, etc."@en ;
+                                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                           rdfs:label "Affixed element type"@en ,
+                                                                                      "Tipo di elemento apposto"@it ;
+                                                                           owl:versionInfo "stabile"@it ,
+                                                                                           "stable"@en ;
+                                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: DA/ISE/ISEE - Normative di versioni precedenti: DA/STM/STMQ"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType
+<https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/ConservationStatusType
+<https://w3id.org/arco/ontology/denotative-description/ConservationStatusType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType
+<https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/DesignationType
+<https://w3id.org/arco/ontology/denotative-description/DesignationType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType
+<https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/MeasurementType
+<https://w3id.org/arco/ontology/denotative-description/MeasurementType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/SampleCollectedType
+<https://w3id.org/arco/ontology/denotative-description/SampleCollectedType> rdf:type owl:Class .
+
+
 ###  https://w3id.org/italia/onto/TI/TemporalEntity
 <https://w3id.org/italia/onto/TI/TemporalEntity> rdf:type owl:Class .
 
@@ -233,10 +270,6 @@ xsd:date rdf:type rdfs:Datatype .
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <https://w3id.org/italia/onto/TI/hasTimeInstantInside> ;
                                                                  owl:allValuesFrom <https://w3id.org/italia/onto/TI/TimeInstant>
-                                                               ] ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <https://w3id.org/italia/onto/TI/date> ;
-                                                                 owl:allValuesFrom xsd:date
                                                                ] ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <https://w3id.org/italia/onto/TI/endTime> ;
@@ -266,6 +299,23 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/italia/onto/l0/Object
 <https://w3id.org/italia/onto/l0/Object> rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/denotative-description/AffixedElementType>
+                <https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType>
+                <https://w3id.org/arco/ontology/denotative-description/ConservationStatusType>
+                <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType>
+                <https://w3id.org/arco/ontology/denotative-description/DesignationType>
+                <https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType>
+                <https://w3id.org/arco/ontology/denotative-description/MeasurementType>
+                <https://w3id.org/arco/ontology/denotative-description/SampleCollectedType>
+              )
+] .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
