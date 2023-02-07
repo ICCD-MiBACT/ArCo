@@ -1,7 +1,9 @@
-@prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/CQ/CQ1/dataset_cq1.ttl/> .
+@prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Use/CQ/CQ1/dataset_cq1.ttl/> .
 @prefix l0: <https://w3id.org/italia/onto/l0/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix core: <https://w3id.org/arco/ontology/core/> .
 
-ex:cp1 a-dd:hasAccessory ex:Accessory1 .
-ex:cp2 a-dd:hasAccessory ex:Accessory3 .
+ex:cp1 a-cd:hasUse ex:Use1 .
+ex:Use1 core:hasType ex:UseType1 ;
+a-cd:hasUseFunction ex:UseFunction1 .
