@@ -6,8 +6,8 @@
 @prefix core: <https://w3id.org/arco/ontology/core/> .
 
 ex:cp1 a arco:MusicHeritage ;
-core:hasAccessory ex:accessory1 .
+a-dd:hasAccessory ex:accessory1 .
 ex:accessory1 core:hasType ex:accessoryType1 .
 ex:cp2 a arco:NaturalHeritage ;
-core:hasAccessory ex:accessory2 .
+a-dd:hasAccessory ex:accessory2 .
 ex:accessory2 core:hasType ex:accessoryType2 .
