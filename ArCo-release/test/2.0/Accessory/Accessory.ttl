@@ -18,6 +18,14 @@
 
 
 #################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -40,12 +48,26 @@
                                                               "stable"@en .
 
 
+###  https://w3id.org/arco/ontology/core/involves
+<https://w3id.org/arco/ontology/core/involves> rdf:type owl:ObjectProperty ;
+                                               owl:inverseOf <https://w3id.org/arco/ontology/core/isInvolvedIn> .
+
+
 ###  https://w3id.org/arco/ontology/core/isConceptOf
 <https://w3id.org/arco/ontology/core/isConceptOf> rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/arco/ontology/core/isInvolvedIn
-<https://w3id.org/arco/ontology/core/isInvolvedIn> rdf:type owl:ObjectProperty .
+<https://w3id.org/arco/ontology/core/isInvolvedIn> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain owl:Thing ;
+                                                   rdfs:range <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ;
+                                                   rdfs:comment "La object property inversa a coinvolge."@it ,
+                                                                "The inverse object property of involves."@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                   rdfs:label "is involved in"@en ,
+                                                              "è coinvolto in"@it ;
+                                                   owl:versionInfo "instabile"@it ,
+                                                                   "unstable"@en .
 
 
 ###  https://w3id.org/arco/ontology/core/isTypeOf
@@ -90,12 +112,63 @@
                                                                                       "stable"@en .
 
 
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <https://w3id.org/italia/onto/TI/hasTemporalEntity> ;
+                                         rdfs:domain owl:Thing ;
+                                         rdfs:range <https://w3id.org/italia/onto/TI/TimeInterval> ;
+                                         rdfs:comment "Relation between any thing and time interval"@en ,
+                                                      "Relazione tra qualsiasi cosa e intervallo di tempo."@it ;
+                                         rdfs:label "al tempo"@it ,
+                                                    "at time"@en .
+
+
+###  https://w3id.org/italia/onto/TI/hasTemporalEntity
+<https://w3id.org/italia/onto/TI/hasTemporalEntity> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/TI/hasTimeInstantInside
+<https://w3id.org/italia/onto/TI/hasTimeInstantInside> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/italia/onto/TI/date
+<https://w3id.org/italia/onto/TI/date> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/italia/onto/TI/endTime
+<https://w3id.org/italia/onto/TI/endTime> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/italia/onto/TI/startTime
+<https://w3id.org/italia/onto/TI/startTime> rdf:type owl:DatatypeProperty .
+
+
 #################################################################
 #    Classes
 #################################################################
 
 ###  http://dati.beniculturali.it/cis/CulturalEntity
 <http://dati.beniculturali.it/cis/CulturalEntity> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/arco/MovableCulturalProperty
+<https://w3id.org/arco/ontology/arco/MovableCulturalProperty> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/arco/MusicHeritage
+<https://w3id.org/arco/ontology/arco/MusicHeritage> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/arco/ontology/arco/MovableCulturalProperty> ;
+                                                    rdfs:comment "Questa classe rappresenta un bene culturale musicale. Strumenti musicali: oggetti nati appositamente per produrre suoni organizzati secondo le diverse culture musicali, senza limiti spazio-temporali (strumenti e accessori di interesse archeologico, storico artistico, etnoantropologico). Strumenti musicali-Organo: oggetto nato per produrre suoni,  costituito da una serie di canne metalliche,  di forma, lunghezza e diametro diversi, nelle quali viene immessa, per mezzo di un mantice o altro meccanismo, una quantità d’aria regolata da una o più tastiere e da una pedaliera (corredato da accessori), caratterizzato da specifici aspetti  morfologici-decorativi e fonico-strumentali (organo idraulico, organo positivo, organo portativo, organo elettronico ecc.)"@it ,
+                                                                 "This class represents a music heritage. Musical instruments: objects created specifically to produce sounds according to different musical cultures, without space-time limits (instruments and accessories of archaeological, artistic, ethno-anthropological interest). Musical instruments-Organ: an object created to produce sounds, consisting of a series of metal rods, of different shape, length and diameter, in which a quantity of air is introduced, by means of a bellows or other mechanism, regulated by one or more keyboards and a pedal board (accompanied by accessories), characterized by specific morphological-decorative and phonic-instrumental aspects (hydraulic organ, positive organ, portative organ, electronic organ, etc.)"@en ;
+                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/arco> ;
+                                                    rdfs:label "Bene Musicale"@it ,
+                                                               "Music Heritage"@en ;
+                                                    owl:versionInfo "stabile"@it ,
+                                                                    "stable"@en .
 
 
 ###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
@@ -142,6 +215,53 @@
                                                                       owl:versionInfo "instabile"@it ,
                                                                                       "unstable"@en ;
                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa SM 4.00: AS/ASS/ASST" .
+
+
+###  https://w3id.org/italia/onto/TI/TemporalEntity
+<https://w3id.org/italia/onto/TI/TemporalEntity> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInstant
+<https://w3id.org/italia/onto/TI/TimeInstant> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/italia/onto/TI/TemporalEntity> ,
+                                                               <https://w3id.org/italia/onto/l0/Characteristic> ,
+                                                               <https://w3id.org/italia/onto/l0/Entity> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://w3id.org/italia/onto/TI/hasTimeInstantInside> ;
+                                                                 owl:allValuesFrom <https://w3id.org/italia/onto/TI/TimeInstant>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://w3id.org/italia/onto/TI/date> ;
+                                                                 owl:allValuesFrom xsd:date
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://w3id.org/italia/onto/TI/endTime> ;
+                                                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                 owl:onDataRange xsd:dateTime
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://w3id.org/italia/onto/TI/startTime> ;
+                                                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                 owl:onDataRange xsd:dateTime
+                                                               ] ;
+                                               rdfs:comment "A time interval"@en ,
+                                                            "Rappresentazione di intervallo di tempo."@it ;
+                                               rdfs:isDefinedBy <https://w3id.org/italia/onto/TI> ,
+                                                                <https://w3id.org/italia/onto/TI/> ;
+                                               rdfs:label "Intervallo di tempo"@it ,
+                                                          "Time interval"@en .
+
+
+###  https://w3id.org/italia/onto/l0/Characteristic
+<https://w3id.org/italia/onto/l0/Characteristic> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Entity
+<https://w3id.org/italia/onto/l0/Entity> rdf:type owl:Class .
 
 
 ###  https://w3id.org/italia/onto/l0/Object
