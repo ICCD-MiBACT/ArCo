@@ -1,4 +1,4 @@
-**CQ1**
+##CQ1
 
 Quali sono gli accessori associati al bene x?
 
@@ -9,7 +9,7 @@ SELECT DISTINCT ?accessory WHERE{
 }
 limit 100
 
-**CQ2**
+##CQ2
 
 Di che tipo sono gli accessori collegati ai beni musicali?
 
