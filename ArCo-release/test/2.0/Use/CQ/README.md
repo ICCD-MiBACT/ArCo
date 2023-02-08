@@ -14,16 +14,16 @@ limit 100
 
 **CQ2**
 
-In quale circostanze e in quale area geografica il bene ha avuto un dato uso?
+In quale circostanza il bene ha avuto un dato uso?
 
-What circumstances and geographical area involved the usage1 of cp1?
+What circumstances involve the usage1 of cp1?
 
-SELECT DISTINCT ?type WHERE{
-?entity a arco:MusicalHeritage;
-a-dd:hasAccessory ?accessory.
-?accessory arco-core:hasType ?type.
+select distinct ?circumstance where {
+?entity a-cd:hasUse ?use.
+?use a-cd:hasCircumstance ?circumstance;
 }
-limit 100
+LIMIT 100
+
 
 **CQ3**
 
