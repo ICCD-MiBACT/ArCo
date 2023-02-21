@@ -1,0 +1,33 @@
+Acronimo,Definizione,,A,AT,BDI,BDM,BNB,BNM,BNP,BNPE,BNPL,BNZ,CA,D,F,FF,MA,MI,MODI,NT,NU,OA,OAC,PG,PST,RA,S,SAS,SCAN,SI,SM,SMO,TMA,VEAC
+BIB,BIBLIOGRAFIA,a-cd:Edition,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,,1,1,1,1,1
+BIBX,Genere,"owl:Thing a-cd:hasBibliographicSource
+a-cd:hasSpecificBibliographicSource
+a-cd:hasContextBibliographicSource
+a-cd:hasComparisonBibliographicSource a-cd:Edition.",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,,1,1,1,1,1
+NCUN,Codice univoco ICCD,a-cd:Edition core:hasIdentifier core:Identifier (local),1,1,1 (v 4: BIBK,BIBK,1,1,1,1,1,1,1,1,1,BIBK,1,1,,BIBK,1,1,1,1,BIBK,1,1,1 (v 4: BIBK,,1,BIBK,1,1,1
+BIBA,Autore,a-cd:Edition lite:hasAuthor l0:Author (AgentRole),1,1,1,1,1,1,1,1,1,1,1,1,1,,1,1,,,1,1,1,1,1,1,1,1,,1,,1,1,1
+BIBD,Anno di edizione,a-cd:Edition ti:atTime ti:TimeInterval,1,1,1,1,1,1,1,1,1,1,1,1,1,,1,1,,,1,1,1,1,1,1,1,1,,1,,1,1,1
+BIBH,Sigla per citazione,a-cd:Edition core:hasIdentifier core:Identifier (local),1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,,1,1,1,1,1,1,1,1,1,,1,1,1,1,1
+BIBN,"V., p., n.",-,1,1,1,1,1,1,1,1,1,1,1,1,1,,1,1,,,1,1,1,1,1,1,1,1,,1,,1,1,1
+BIBI,"V., tav., fig.",-,1,1,1,1,1,1,1,1,1,1,1,1,1,,1,1,,,1,1,1,1,1,1,1,1,,1,,1,1,1
+BIBM,Riferimento bibliografico completo,a-cd:Edition a-cd:completeBibliographicReference literal,,,1,1,,,,,,,,,,1,,,1,1,,,,,1,,,,,,1,,,
+BIBW,Indirizzo web (URL),a-cd:Edition smapit:url literal,,,1,1,,,,,,,,,,1,,,1,1,,,,,1,,,,,,1,,,
+BIBY,Gestione diritti,a-cd:Edition a-cd:hasCopyright a-cd:Copyright,,,1,1,,,,,,,,,,1,,,1,1,,,,,1,,,,,,1,,,
+BIBN,Note,a-cd:Edition core:note literal,,,1,1,,,,,,,,,,1,,,1,1,,,,,1,,,,,,1,,,
+BIBR,Abbreviazione,a-cd:Edition a-cd:abbreviation literal,,,1,,,,,,,,,,,1,,,1,1,,,,,,,,,,,1,,,
+BIBJ,Ente schedatore,a-cd:Edition a-core:hasAgentRole core:AgentRole,,,1,1,,,,,,,,,,1,,,,1,,,,,1,,,,,,1,,,
+BIBF,Tipo,-,,,1,1,,,,,,,,,,1,,,1,1,,,,,1,,,,,,1,,,
+BIL,Citazione completa,a-cd:Edition a-cd:completeBibliographicReference literal,1,1,1,,1,1,1,1,1,1,1,1,1,,1,1,,,1,1,1,1,,1,1,1,,1,,1,1,1
+BSE,BIBLIOGRAFIA SU SUPPORTO ELETTRONICO,-,,1,,,1,1,1,1,1,1,,,1,,,,,,,,,,1,,,,,,,1,1,1
+BSEX,Genere,-,,1,,,1,1,1,1,1,1,,,1,,,,,,,,,,1,,,,,,,1,1,1
+BSES,Tipo di supporto,-,,1,,,1,1,1,1,1,1,,,1,,,,,,,,,,1,,,,,,,1,1,1
+BSEA,Autore/Curatore dell'opera,-,,1,,,1,1,1,1,1,1,,,1,,,,,,,,,,1,,,,,,,1,1,1
+BSET,Titolo dell'opera,-,,1,,,1,1,1,1,1,1,,,1,,,,,,,,,,1,,,,,,,1,1,1
+BSEL,Luogo di edizione,-,,1,,,1,1,1,1,1,1,,,1,,,,,,,,,,1,,,,,,,1,1,1
+BSEE,Editore/Produttore/Distributore,-,,1,,,1,1,1,1,1,1,,,1,,,,,,,,,,1,,,,,,,1,1,1
+BSED,Data di edizione,-,,1,,,1,1,1,1,1,1,,,1,,,,,,,,,,1,,,,,,,1,1,1
+BSEN,Edizione,-,,1,,,1,1,1,1,1,1,,,1,,,,,,,,,,1,,,,,,,1,1,1
+BSER,Autore del contributo,-,,1,,,1,1,1,1,1,1,,,1,,,,,,,,,,1,,,,,,,1,1,1
+BSEC,Titolo del contributo/parte componente,-,,1,,,1,1,1,1,1,1,,,1,,,,,,,,,,1,,,,,,,1,1,1
+BSEK,Specifiche,-,,1,,,1,1,1,1,1,1,,,1,,,,,,,,,,1,,,,,,,1,1,1
+BSEI,Indirizzo di rete,-,,1,,,1,1,1,1,1,1,,,1,,,,,,,,,,1,,,,,,,1,1,1

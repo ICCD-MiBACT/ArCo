@@ -1,0 +1,30 @@
+,,,A,AT,BDI,BDM,BNB,BNM,BNP,BNPE,BNPL,BNZ,CA,D,F,FF,MA,MI,MODI,NT,NU,OA,OAC,PG,PST,RA,S,SAS,SCAN,SI,SM,SMO,TMA,VEAC
+CS,UBICAZIONE,CP loc:hasCadastralIdentity loc:CadastralIdentity,x (versione 2.00: UB),x,,x (no v.3.01),,,,,,,x,,,,x,,x,x,x,,,x (versione 2.00: UB),x (no v.4.00),x (no v.2.00),,x,,x,,,,x
+CTL,Tipo di localizzazione,loc:CadastralIdentity loc:hasLocationType loc:LocationType,x (no v.2.00),x,,x (no v.3.01),,,,,,,x,,,,x,,,x,x,,,x (no v.2.00),x (no v.4.00),x (no v.2.00),,x,,x,,,,x
+CTS,CATASTO,,x,x,,x (no v.3.01),,,,,,,x,,,,x,,x,x,x,,,x,x (no v.4.00),x (no v.2.00),,x,,x,,,,x
+CTSC,Comune,loc:CadastralIdentity loc:hasCadastralCity CLV:City,x (no v.2.00),x,,x (no v.3.01),,,,,,,x,,,,x,,x,x,x,,,x (no v.2.00),x (no v.4.00),x (no v.2.00),,x,,x,,,,x
+CTST,Tipo catasto,"loc:CadastralIdentity  loc:isContainedInCadastre loc:Cadastre
+loc:Cadastre core:hasType loc:CadastreType",,,,x (no v.3.01),,,,,,,,,,,,,x,x,,,,,,,,,,,,,,
+CTSF,Foglio/Data,loc:CadastralIdentity loc:hasCadastralEntity loc:CadastralFolio,"x (v.2.00 solo foglio, data p CTSD)",x,,x (no v.2),,,,,,,x,,,,x,,x,x,x,,,"x (v.2.00 solo foglio, data p CTSD)",x (no v.4.00),x (no v.2.00),,x,,x,,,,x
+CTSD,Data foglio,loc:CadastralIdentity loc:hasCadastralEntity loc:CadastralFolio,x (no v 3.00),,,,,,,,,,,,,,,,,,,,,x (no v 3.00),,,,,,,,,,
+CTSN,Particelle,loc:CadastralIdentity loc:hasCadastralEntity loc:CadastralUnitCollection,x (v2.00: CTSP),x,,x (no v.2),,,,,,,x,,,,x,,x,x,x,,,x (v2.00: CTSP),x (no v.4.00),x (no v.2.00),,x,,x,,,,x
+CTSP,Proprietari,loc:CadastralUnitCollection lite:hasOwner l0:Agent,"x (v2.00: non esiste, CTSP sono le particelle)",,,x (no v.2),,,,,,,x,,,,x,,x,x,,,,"x (v2.00: non esiste, CTSP sono le particelle)",,x (no v.2.00),,x,,x,,,,
+CTSE,Particelle ed altri elementi di confine,loc:CadastralIdentity loc:hasCadastralEntity loc:NeighbouringCadastralEntity,x (no v.2.00),,,"x (CTE per v.4, no v.2)",,,,,,,x,,,,x,,x (CTE),x (CTE),,,,x (no v.2.00),,,,x,,x,,,,
+CTN,Note,loc:CadastralIdentity core:note CTN,,,,x (no v.2),,,,,,,,,,,,,x,x,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+LS,LOCALIZZAZIONE STORICA,CP loc:hasCadastralIdentity loc:CadastralIdentity,x,,,,,,,,,,x,,,,x,,,x,,,,x,,,,,,x,,,,
+CSS,LOCALIZZAZIONE CATASTALE STORICA,loc:CadastralIdentity loc:hasLocationType loc:HistoricalLocation,x,,,,,,,,,,x,,,,x,,,x,,,,x,,,,,,x,,,,
+CSSD,Denominazione e tipologia del catasto,loc:CadastralIdentity  loc:isContainedInCadastre loc:Cadastre,x,,,,,,,,,,x,,,,x,,,x,,,,x,,,,,,x,,,,
+CSSF,Denominazione dell'unita' cartografica catastale,loc:CadastralIdentity loc:hasCadastralEntity loc:CadastralFolio,x,,,,,,,,,,x,,,,x,,,x,,,,x,,,,,,x,,,,
+CSSN,Particelle,loc:CadastralIdentity loc:hasCadastralEntity loc:CadastralUnitCollection,x,,,,,,,,,,x,,,,x,,,x,,,,x,,,,,,x,,,,
+CSSP,Proprietari,loc:CadastralUnitCollection lite:hasOwner l0:Agent,x,,,,,,,,,,x,,,,x,,,x,,,,x,,,,,,x,,,,
+CSSE,Particelle ed altri elementi di confine,loc:CadastralIdentity loc:hasCadastralEntity loc:NeighbouringCadastralEntity,x,,,,,,,,,,x,,,,x,,,x,,,,x,,,,,,,,,,
+CSST,Data,loc:CadastralIdentity ti:atTime ti:TimeInterval,x,,,,,,,,,,x,,,,x,,,x,,,,x,,,,,,x,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+RP,REPERIMENTO,CP loc:hasCadastralIdentity loc:CadastralIdentity,,,,,,,,,,,,,,,,,,,,,,,,x (solo v.2.00),,,,,,,,
+LGC,PARTICELLE CATASTALI,loc:CadastralIdentity loc:hasLocationType loc:FindingLocation,,,,,,,,,,,,,,,,,,,,,,,,x,,,,,,,,
+LGCC,Comune,loc:CadastralIdentity loc:hasCadastralCity CLV:City,,,,,,,,,,,,,,,,,,,,,,,,x,,,,,,,,
+LGCM,Foglio,loc:CadastralIdentity loc:hasCadastralEntity loc:CadastralFolio,,,,,,,,,,,,,,,,,,,,,,,,x,,,,,,,,
+LGCA,Data foglio,loc:CadastralIdentity loc:hasCadastralEntity loc:CadastralFolio,,,,,,,,,,,,,,,,,,,,,,,,x,,,,,,,,
+LGCR,Particelle,loc:CadastralIdentity loc:hasCadastralEntity loc:CadastralUnitCollection,,,,,,,,,,,,,,,,,,,,,,,,x,,,,,,,,
+LGCO,Proprietari,loc:CadastralUnitCollection lite:hasOwner l0:Agent,,,,,,,,,,,,,,,,,,,,,,,,x,,,,,,,,
