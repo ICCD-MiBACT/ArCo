@@ -1,0 +1,24 @@
+Acronimo,,,A,AT,BDI,BDM,BNB,BNM,BNP,BNPE,BNPL,BNZ,CA,D,F,FF,MA,MI,MODI,NT,NU,OA,OAC,PG,PST,RA,S,SAS,SCAN,SI,SM,SMO,TMA,VEAC
+UB,DATI PATRIMONIALI E COLLEZIONI,, v. 1 e 2: UB è Ubicazione (come CS),1,,1,1,1,1,1,1,1,,1,1,1,,1,1,1,1,1,1,,1,1,1,,,,1,1,1,1
+INP,INVENTARIO PATRIMONIALE IN VIGORE,"owl:Thing a-cd:hasInventorySituation a-cd:InventorySituation . 
+a-cd:InventorySituation core:current xsd:True",,,,v4,,,,,,,,,v4,1,,,1,1,,,,,v4,,,,,,1,,,
+INPC,Codice inventario patrimoniale,a-cd:InventorySituation a-cd:inventoryNumber Literal,,,,v4,,,,,,,,,v4,1,,,1,1,,,,,v4,,,,,,1,,,
+INPE,Responsabile dell'immissione in patrimonio,a-cd:InventorySituation lite:hasInventoryNumberResponsible l0:Agent (o AgentRole),,,,v4,,,,,,,,,v4,1,,,1,1,,,,,v4,,,,,,1,,,
+INPR,Data dell'immissione in patrimonio,a-cd:InventorySituation a-cd:insertionDate Literal,,,,v4,,,,,,,,,v4,1,,,1,1,,,,,v4,,,,,,1,,,
+INPD,Descrizione (modello 15),a-cd:InventorySituation core:description Literal,,,,v4,,,,,,,,,v4,1,,,1,1,,,,,v4,,,,,,1,,,
+INPP,Provenienza,a-cd:InventorySituation a-cd:provenance Literal,,,,v4,,,,,,,,,v4,1,,,1,1,,,,,v4,,,,,,1,,,
+INPM,Modalità  di acquisizione,a-cd:InventorySituation a-cd:methodOfInsertion Literal,,,,v4,,,,,,,,,v4,1,,,1,1,,,,,v4,,,,,,1,,,
+INPO,Riferimento agli atti,a-cd:InventorySituation a-cd:relevantLegalAct Literal,,,,v4,,,,,,,,,v4,1,,,1,1,,,,,v4,,,,,,1,,,
+INPZ,Categoria SEC (modello 15),a-cd:InventorySituation a-cd:hasSECCategory a-cd:SECCategory,,,,v4,,,,,,,,,v4,1,,,1,1,,,,,v4,,,,,,1,,,
+INPS,Codice SEC (modello 15),a-cd:SECCategory core:hasIdentifier core:Identifier (national),,,,v4,,,,,,,,,v4,1,,,1,1,,,,,v4,,,,,,1,,,
+INPU,Causale RCS,a-cd:InventorySituation a-cd:relevantLegalAct Literal,,,,v4,,,,,,,,,v4,1,,,1,1,,,,,v4,,,,,,1,,,
+INPV,Note,a-cd:InventorySituation core:note Literal,,,,v4,,,,,,,,,v4,1,,,1,1,,,,,v4,,,,,,1,,,
+INV,ALTRI INVENTARI,owl:Thing a-cd:hasInventorySituation a-cd:InventorySituation .,,(INV: no divisione tra attuale e precedenti),,"1 (1 e 2: INV: no divisione tra attuale e precedenti, l'attuale èil primo che viene inserito) ","(INV: no divisione tra attuale e precedenti, l'attuale èil primo che viene inserito)","(INV: no divisione tra attuale e precedenti, l'attuale èil primo che viene inserito)","(INV: no divisione tra attuale e precedenti, l'attuale èil primo che viene inserito)","(INV: no divisione tra attuale e precedenti, l'attuale èil primo che viene inserito)","(INV: no divisione tra attuale e precedenti, l'attuale èil primo che viene inserito)","(INV: no divisione tra attuale e precedenti, l'attuale èil primo che viene inserito)",,1,1,1,,1,1,1,1,1,1,,1,1,1,,,,1,,,
+INVN,Codice inventario,a-cd:InventorySituation a-cd:inventoryNumber Literal,,1,,1,1,1,1,1,1,1,,1,1,1,,1,1,1,1,1,1,,1,1,1,,,,1,1,1,1
+INVD,Riferimento cronologico,a-cd:InventorySituation a-cd:insertionDate Literal,,1,,1,1,1,1,1,1,1,,1,1,1,,1,1,1,1,1,1,,1,1,1,,,,1,1,1,1
+INVG,Codice contenitore giuridico,a-cd:InventorySituation lite:hasInventoryNumberResponsible l0:Agent (o AgentRole),,,,v4,,,,,,,,,v4,1,,,1,1,,,,,v4,,,,,,1,,,
+INVA,Denominazione inventario,a-cd:InventorySituation a-cd:hasInventory a-cd:Inventory,,1,,v4,1,1,1,1,1,1,,,v4,1,,,1,1,,,,,1,,,,,,1,1,,1
+INVC,Collocazione,a-cd:Inventory a-cd:inventoryLocation INVC,,1,,1,1,1,1,1,1,1,,1,1,1,,1,1,1,1,1,1,,1,1,1,,,,1,1,1,1
+INVP,Riferimento alla parte,,,1,,v4,1,1,1,1,1,1,,,1,1,,,1,1,,,,,1,,,,,,1,1,,1
+INVS,Note,a-cd:InventorySituation core:note Literal,,,,1,,,,,,,,stima v2,"stima v2, v4 note",1,,stima v2,1,1,,stima v2,,,v4,stima v2,stima v2,,,,1,,,
+INVT,Numero di inventario di categoria,-,,,,,,,,,,,,,v2-3,,,,,,,,,,,,,,,,,,,
