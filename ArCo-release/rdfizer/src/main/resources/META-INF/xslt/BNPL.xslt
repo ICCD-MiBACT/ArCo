@@ -418,60 +418,60 @@
 			</arco-spe:hasChondrulePresence>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDE">
-			<arco-cd:hasAgeInterpretation>
+			<arco-cd:hasAge>
 				<xsl:attribute name="rdf:resource">
-                	<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-igneous-age')" />
+                	<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-igneous-age')" />
  				</xsl:attribute>
-			</arco-cd:hasAgeInterpretation>
+			</arco-cd:hasAge>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDG">
-			<arco-cd:hasAgeInterpretation>
+			<arco-cd:hasAge>
 				<xsl:attribute name="rdf:resource">
-                	<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-shok-age')" />
+                	<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-shok-age')" />
  				</xsl:attribute>
-			</arco-cd:hasAgeInterpretation>
+			</arco-cd:hasAge>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDX">
-			<arco-cd:hasAgeInterpretation>
+			<arco-cd:hasAge>
 				<xsl:attribute name="rdf:resource">
-                	<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-cosmic-ray-exposure-age')" />
+                	<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-cosmic-ray-exposure-age')" />
  				</xsl:attribute>
-			</arco-cd:hasAgeInterpretation>
+			</arco-cd:hasAge>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDT">
-			<arco-cd:hasAgeInterpretation>
+			<arco-cd:hasAge>
 				<xsl:attribute name="rdf:resource">
-                	<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-terrestrial-age')" />
+                	<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-terrestrial-age')" />
  				</xsl:attribute>
-			</arco-cd:hasAgeInterpretation>
+			</arco-cd:hasAge>
 		</xsl:if>
 		<xsl:for-each select="record/metadata/schede/BNPL/RP/RPD/RPDE">
-			<arco-cd:hasAgeInterpretation>
+			<arco-cd:hasAge>
 				<xsl:attribute name="rdf:resource">
-                	<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-igneous-age-', position())" />
+                	<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-igneous-age-', position())" />
  				</xsl:attribute>
-			</arco-cd:hasAgeInterpretation>
+			</arco-cd:hasAge>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/BNPL/RP/RPD/RPDG">
-			<arco-cd:hasAgeInterpretation>
+			<arco-cd:hasAge>
 				<xsl:attribute name="rdf:resource">
-                	<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-shok-age-', position())" />
+                	<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-shok-age-', position())" />
  				</xsl:attribute>
-			</arco-cd:hasAgeInterpretation>
+			</arco-cd:hasAge>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/BNPL/RP/RPD/RPDX">
-			<arco-cd:hasAgeInterpretation>
+			<arco-cd:hasAge>
 				<xsl:attribute name="rdf:resource">
-                	<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-cosmic-ray-exposure-age-', position())" />
+                	<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-cosmic-ray-exposure-age-', position())" />
  				</xsl:attribute>
-			</arco-cd:hasAgeInterpretation>
+			</arco-cd:hasAge>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/BNPL/RP/RPD/RPDT">
-			<arco-cd:hasAgeInterpretation>
+			<arco-cd:hasAge>
 				<xsl:attribute name="rdf:resource">
-                	<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-terrestrial-age-', position())" />
+                	<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-terrestrial-age-', position())" />
  				</xsl:attribute>
-			</arco-cd:hasAgeInterpretation>
+			</arco-cd:hasAge>
 		</xsl:for-each>
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPN/SPNM or record/metadata/schede/BNPL/SP/SPN/SPNK or record/metadata/schede/BNPL/SP/SPN/SPNW">
 			<arco-core:isPartOf>
@@ -3210,623 +3210,337 @@
 	<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDE">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-igneous-age')" />
+				<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-igneous-age')" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeInterpretation'" />
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Age'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
 			<arco-core:current>
             	<xsl:value-of select="true()" />
             </arco-core:current>
-			<arco-cd:age>
+			<arco-cd:ageValue>
 				<xsl:value-of select="normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDE)" />
-			</arco-cd:age>
-			<arco-cd:hasAgeType>
+			</arco-cd:ageValue>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource">
 		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/IngeousAge'" />
 				</xsl:attribute>
-			</arco-cd:hasAgeType>
+			</arco-core:hasType>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDR">
-				<arco-cd:hasInterpretationCriterion>
-					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of select="concat($NS, 'InterpretationCriterion/87Rb-86Sr', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDR)))" />
-	            	</xsl:attribute>
-				</arco-cd:hasInterpretationCriterion>
+				<arco-core:informationSource>
+					<xsl:value-of select="concat('Rapporto isotopico 87 Rb/ 86 Sr: ', record/metadata/schede/BNPL/SP/SPD/SPDR)" />
+				</arco-core:informationSource>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDS">
-				<arco-cd:hasInterpretationCriterion>
-					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of select="concat($NS, 'InterpretationCriterion/147Sm-144Nd', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDS)))" />
-	            	</xsl:attribute>
-				</arco-cd:hasInterpretationCriterion>
+				<arco-core:informationSource>
+					<xsl:value-of select="concat('Rapporto isotopico 147 Sm/ 144 Nd: ', record/metadata/schede/BNPL/SP/SPD/SPDS)" />
+				</arco-core:informationSource>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDU">
-				<arco-cd:hasInterpretationCriterion>
-					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of select="concat($NS, 'InterpretationCriterion/238U-206Pb', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDU)))" />
-	            	</xsl:attribute>
-				</arco-cd:hasInterpretationCriterion>
+				<arco-core:informationSource>
+					<xsl:value-of select="concat('Rapporto isotopico 238 U/ 206 Pb: ', record/metadata/schede/BNPL/SP/SPD/SPDU)" />
+				</arco-core:informationSource>
 			</xsl:if>
 		</rdf:Description>
-		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDR">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'InterpretationCriterion/87Rb-86Sr', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDR)))" />
-				</xsl:attribute>
-				<rdf:type>
-					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-					</xsl:attribute>
-				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('Rapporto isotopico 87 Rb/ 86 Sr: ', record/metadata/schede/BNPL/SP/SPD/SPDR)" />
-				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('Rapporto isotopico 87 Rb/ 86 Sr: ', record/metadata/schede/BNPL/SP/SPD/SPDR)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Isotope ratio 87 Rb/ 86 Sr: ', record/metadata/schede/BNPL/SP/SPD/SPDR)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Isotope ratio 87 Rb/ 86 Sr: ', record/metadata/schede/BNPL/SP/SPD/SPDR)" />
-				</l0:name>
-			</rdf:Description>
-		</xsl:if>
-		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDS">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'InterpretationCriterion/147Sm-144Nd', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDS)))" />
-				</xsl:attribute>
-				<rdf:type>
-					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-					</xsl:attribute>
-				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('Rapporto isotopico 147 Sm/ 144 Nd: ', record/metadata/schede/BNPL/SP/SPD/SPDS)" />
-				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('Rapporto isotopico 147 Sm/ 144 Nd: ', record/metadata/schede/BNPL/SP/SPD/SPDS)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Isotope ratio 147 Sm/ 144 Nd: ', record/metadata/schede/BNPL/SP/SPD/SPDS)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Isotope ratio 147 Sm/ 144 Nd: ', record/metadata/schede/BNPL/SP/SPD/SPDS)" />
-				</l0:name>
-			</rdf:Description>
-		</xsl:if>
-		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDU">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'InterpretationCriterion/238U-206Pb', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDU)))" />
-				</xsl:attribute>
-				<rdf:type>
-					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-					</xsl:attribute>
-				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('Rapporto isotopico 238 U/ 206 Pb: ', record/metadata/schede/BNPL/SP/SPD/SPDU)" />
-				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('Rapporto isotopico 238 U/ 206 Pb: ', record/metadata/schede/BNPL/SP/SPD/SPDU)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Isotope ratio 238 U/ 206 Pb: ', record/metadata/schede/BNPL/SP/SPD/SPDU)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Isotope ratio 238 U/ 206 Pb: ', record/metadata/schede/BNPL/SP/SPD/SPDU)" />
-				</l0:name>
-			</rdf:Description>
-		</xsl:if>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDG">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-shok-age')" />
+				<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-shok-age')" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeInterpretation'" />
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Age'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
 			<arco-core:current>
             	<xsl:value-of select="true()" />
             </arco-core:current>
-			<arco-cd:age>
+			<arco-cd:ageValue>
 				<xsl:value-of select="normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDG)" />
-			</arco-cd:age>
-			<arco-cd:hasAgeType>
+			</arco-cd:ageValue>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource">
 		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ShokAge'" />
 				</xsl:attribute>
-			</arco-cd:hasAgeType>
+			</arco-core:hasType>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDD">
-				<arco-cd:hasInterpretationCriterion>
-					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of select="concat($NS, 'InterpretationCriterion/87Rb-86Sr', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDD)))" />
-	            	</xsl:attribute>
-				</arco-cd:hasInterpretationCriterion>
+				<arco-core:informationSource>
+					<xsl:value-of select="concat('Rapporto isotopico 87 Rb/ 86 Sr: ', record/metadata/schede/BNPL/SP/SPD/SPDD)" />
+				</arco-core:informationSource>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDP">
-				<arco-cd:hasInterpretationCriterion>
-					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of select="concat($NS, 'InterpretationCriterion/40Ar-40K', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDP)))" />
-	            	</xsl:attribute>
-				</arco-cd:hasInterpretationCriterion>
+				<arco-core:informationSource>
+					<xsl:value-of select="concat('Rapporto isotopico 40 Ar/ 40 K: ', record/metadata/schede/BNPL/SP/SPD/SPDP)" />
+				</arco-core:informationSource>
 			</xsl:if>
 		</rdf:Description>
-		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDD">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'InterpretationCriterion/87Rb-86Sr', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDD)))" />
-				</xsl:attribute>
-				<rdf:type>
-					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-					</xsl:attribute>
-				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('Rapporto isotopico 87 Rb/ 86 Sr: ', record/metadata/schede/BNPL/SP/SPD/SPDD)" />
-				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('Rapporto isotopico 87 Rb/ 86 Sr: ', record/metadata/schede/BNPL/SP/SPD/SPDD)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Isotope ratio 87 Rb/ 86 Sr: ', record/metadata/schede/BNPL/SP/SPD/SPDD)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Isotope ratio 87 Rb/ 86 Sr: ', record/metadata/schede/BNPL/SP/SPD/SPDD)" />
-				</l0:name>
-			</rdf:Description>
-		</xsl:if>
-		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDP">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'InterpretationCriterion/40Ar-40K', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDP)))" />
-				</xsl:attribute>
-				<rdf:type>
-					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-					</xsl:attribute>
-				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('Rapporto isotopico 40 Ar/ 40 K: ', record/metadata/schede/BNPL/SP/SPD/SPDP)" />
-				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('Rapporto isotopico 40 Ar/ 40 K: ', record/metadata/schede/BNPL/SP/SPD/SPDP)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Isotope ratio 40 Ar/ 40 K: ', record/metadata/schede/BNPL/SP/SPD/SPDP)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Isotope ratio 40 Ar/ 40 K: ', record/metadata/schede/BNPL/SP/SPD/SPDP)" />
-				</l0:name>
-			</rdf:Description>
-		</xsl:if>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDX">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-cosmic-ray-exposure-age')" />
+				<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-cosmic-ray-exposure-age')" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeInterpretation'" />
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Age'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
 			<arco-core:current>
             	<xsl:value-of select="true()" />
             </arco-core:current>
-			<arco-cd:age>
+			<arco-cd:ageValue>
 				<xsl:value-of select="normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDX)" />
-			</arco-cd:age>
-			<arco-cd:hasAgeType>
+			</arco-cd:ageValue>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource">
 		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CosmicRayExposureAge'" />
 				</xsl:attribute>
-			</arco-cd:hasAgeType>
+			</arco-core:hasType>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDH">
-				<arco-cd:hasInterpretationCriterion>
-					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of select="concat($NS, 'InterpretationCriterion/3He', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDH)))" />
-	            	</xsl:attribute>
-				</arco-cd:hasInterpretationCriterion>
+				<arco-core:informationSource>
+					<xsl:value-of select="concat('3 He concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDH)" />
+				</arco-core:informationSource>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDN">
-				<arco-cd:hasInterpretationCriterion>
-					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of select="concat($NS, 'InterpretationCriterion/21Ne', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDN)))" />
-	            	</xsl:attribute>
-				</arco-cd:hasInterpretationCriterion>
+				<arco-core:informationSource>
+					<xsl:value-of select="concat('21 Ne concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDN)" />
+				</arco-core:informationSource>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDA">
-				<arco-cd:hasInterpretationCriterion>
-					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of select="concat($NS, 'InterpretationCriterion/38Ar', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDA)))" />
-	            	</xsl:attribute>
-				</arco-cd:hasInterpretationCriterion>
+				<arco-core:informationSource>
+					<xsl:value-of select="concat('38 Ar concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDA)" />
+				</arco-core:informationSource>
 			</xsl:if>
 		</rdf:Description>
-		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDH">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'InterpretationCriterion/3He', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDH)))" />
-				</xsl:attribute>
-				<rdf:type>
-					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-					</xsl:attribute>
-				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('3 He concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDH)" />
-				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('3 He concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDH)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Concentrazione 3 He: ', record/metadata/schede/BNPL/SP/SPD/SPDH)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Concentrazione 3 He: ', record/metadata/schede/BNPL/SP/SPD/SPDH)" />
-				</l0:name>
-			</rdf:Description>
-		</xsl:if>
-		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDN">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'InterpretationCriterion/21Ne', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDN)))" />
-				</xsl:attribute>
-				<rdf:type>
-					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-					</xsl:attribute>
-				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('21 Ne concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDN)" />
-				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('21 Ne concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDN)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Concentrazione 21 Ne: ', record/metadata/schede/BNPL/SP/SPD/SPDN)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Concentrazione 21 Ne: ', record/metadata/schede/BNPL/SP/SPD/SPDN)" />
-				</l0:name>
-			</rdf:Description>
-		</xsl:if>
-		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDA">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'InterpretationCriterion/38Ar', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDA)))" />
-				</xsl:attribute>
-				<rdf:type>
-					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-					</xsl:attribute>
-				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('38 Ar concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDA)" />
-				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('38 Ar concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDA)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Concentrazione 38 Ar: ', record/metadata/schede/BNPL/SP/SPD/SPDA)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Concentrazione 38 Ar: ', record/metadata/schede/BNPL/SP/SPD/SPDA)" />
-				</l0:name>
-			</rdf:Description>
-		</xsl:if>
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDT">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-terrestrial-age')" />
+				<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-terrestrial-age')" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeInterpretation'" />
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Age'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
 			<arco-core:current>
             	<xsl:value-of select="true()" />
             </arco-core:current>
-			<arco-cd:age>
+			<arco-cd:ageValue>
 				<xsl:value-of select="normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDT)" />
-			</arco-cd:age>
-			<arco-cd:hasAgeType>
+			</arco-cd:ageValue>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource">
 		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/TerrestrialAge'" />
 				</xsl:attribute>
-			</arco-cd:hasAgeType>
+			</arco-core:hasType>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDC">
-				<arco-cd:hasInterpretationCriterion>
-					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of select="concat($NS, 'InterpretationCriterion/14C', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDC)))" />
-	            	</xsl:attribute>
-				</arco-cd:hasInterpretationCriterion>
+				<arco-core:informationSource>
+					<xsl:value-of select="concat('Concentrazione 14 C: ', record/metadata/schede/BNPL/SP/SPD/SPDC)" />
+				</arco-core:informationSource>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDB">
-				<arco-cd:hasInterpretationCriterion>
-					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of select="concat($NS, 'InterpretationCriterion/10Be', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDB)))" />
-	            	</xsl:attribute>
-				</arco-cd:hasInterpretationCriterion>
+				<arco-core:informationSource>
+					<xsl:value-of select="concat('Concentrazione 10 Be: ', record/metadata/schede/BNPL/SP/SPD/SPDB)" />
+				</arco-core:informationSource>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDL">
-				<arco-cd:hasInterpretationCriterion>
-					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of select="concat($NS, 'InterpretationCriterion/36Cl', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDL)))" />
-	            	</xsl:attribute>
-				</arco-cd:hasInterpretationCriterion>
+				<arco-core:informationSource>
+					<xsl:value-of select="concat('Concentrazione 36 Cl: ', record/metadata/schede/BNPL/SP/SPD/SPDL)" />
+				</arco-core:informationSource>
 			</xsl:if>
 		</rdf:Description>
-		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDC">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'InterpretationCriterion/14C', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDC)))" />
-				</xsl:attribute>
-				<rdf:type>
-					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-					</xsl:attribute>
-				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('14 C concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDC)" />
-				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('14 C concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDC)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Concentrazione 14 C: ', record/metadata/schede/BNPL/SP/SPD/SPDC)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Concentrazione 14 C: ', record/metadata/schede/BNPL/SP/SPD/SPDC)" />
-				</l0:name>
-			</rdf:Description>
-		</xsl:if>
-		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDB">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'InterpretationCriterion/10Be', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDB)))" />
-				</xsl:attribute>
-				<rdf:type>
-					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-					</xsl:attribute>
-				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('10 Be concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDB)" />
-				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('10 Be concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDB)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Concentrazione 10 Be: ', record/metadata/schede/BNPL/SP/SPD/SPDB)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Concentrazione 10 Be: ', record/metadata/schede/BNPL/SP/SPD/SPDB)" />
-				</l0:name>
-			</rdf:Description>
-		</xsl:if>
-		<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDL">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'InterpretationCriterion/36Cl', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPD/SPDL)))" />
-				</xsl:attribute>
-				<rdf:type>
-					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-					</xsl:attribute>
-				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('36 Cl concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDL)" />
-				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('36 Cl concentration: ', record/metadata/schede/BNPL/SP/SPD/SPDL)" />
-				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Concentrazione 36 Cl: ', record/metadata/schede/BNPL/SP/SPD/SPDL)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Concentrazione 36 Cl: ', record/metadata/schede/BNPL/SP/SPD/SPDL)" />
-				</l0:name>
-			</rdf:Description>
-		</xsl:if>
 	</xsl:if>
 	<xsl:for-each select="record/metadata/schede/BNPL/RP/RPD">
 	<xsl:if test="./RPDE">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-igneous-age-', position())" />
+				<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-igneous-age-', position())" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeInterpretation'" />
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Age'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
 			<arco-core:current>
             	<xsl:value-of select="false()" />
             </arco-core:current>
-			<arco-cd:age>
+			<arco-cd:ageValue>
 				<xsl:value-of select="normalize-space(./RPDE)" />
-			</arco-cd:age>
-			<arco-cd:hasAgeType>
+			</arco-cd:ageValue>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource">
 		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/IngeousAge'" />
 				</xsl:attribute>
-			</arco-cd:hasAgeType>
+			</arco-core:hasType>
 		</rdf:Description>
 	</xsl:if>
 	<xsl:if test="./RPDG">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-shok-age-', position())" />
+				<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-shok-age-', position())" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeInterpretation'" />
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Age'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
 			<arco-core:current>
             	<xsl:value-of select="false()" />
             </arco-core:current>
-			<arco-cd:age>
+			<arco-cd:ageValue>
 				<xsl:value-of select="normalize-space(./RPDG)" />
-			</arco-cd:age>
-			<arco-cd:hasAgeType>
+			</arco-cd:ageValue>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource">
 		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ShokAge'" />
 				</xsl:attribute>
-			</arco-cd:hasAgeType>
+			</arco-core:hasType>
 		</rdf:Description>
 	</xsl:if>
 	<xsl:if test="./RPDX">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-cosmic-ray-exposure-age-', position())" />
+				<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-cosmic-ray-exposure-age-', position())" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeInterpretation'" />
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Age'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
 			<arco-core:current>
             	<xsl:value-of select="false()" />
             </arco-core:current>
-			<arco-cd:age>
+			<arco-cd:ageValue>
 				<xsl:value-of select="normalize-space(./RPDX)" />
-			</arco-cd:age>
-			<arco-cd:hasAgeType>
+			</arco-cd:ageValue>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource">
 		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CosmicRayExposureAge'" />
 				</xsl:attribute>
-			</arco-cd:hasAgeType>
+			</arco-core:hasType>
 		</rdf:Description>
 	</xsl:if>
 	<xsl:if test="./RPDT">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'AgeInterpretation/', $itemURI, '-terrestrial-age-', position())" />
+				<xsl:value-of select="concat($NS, 'Age/', $itemURI, '-terrestrial-age-', position())" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AgeInterpretation'" />
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Age'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Interpretazione dell età del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Età del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Age interpretation of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
 			<arco-core:current>
             	<xsl:value-of select="false()" />
             </arco-core:current>
-			<arco-cd:age>
+			<arco-cd:ageValue>
 				<xsl:value-of select="normalize-space(./RPDT)" />
-			</arco-cd:age>
-			<arco-cd:hasAgeType>
+			</arco-cd:ageValue>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource">
 		        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/TerrestrialAge'" />
 				</xsl:attribute>
-			</arco-cd:hasAgeType>
+			</arco-core:hasType>
 		</rdf:Description>
 	</xsl:if>
 	</xsl:for-each>

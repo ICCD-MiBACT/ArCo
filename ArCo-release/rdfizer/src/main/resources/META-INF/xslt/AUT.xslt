@@ -206,9 +206,9 @@
 					<xsl:value-of select="concat('Scheda catalografica dell autore ', $nameAuthor)" />
 				</rdfs:label>
 					<!-- proprietà per avere sempre un collegamento col nome del file xml "ICCD..." -->
-				<arco-catalogue:systemRecordCode>
+				<arco-lite:systemIdentifier>
 					<xsl:value-of select="$item" />
-				</arco-catalogue:systemRecordCode>
+				</arco-lite:systemIdentifier>
 				<xsl:if test="record/metadata/schede/*/CM/CMP or record/metadata/schede/*/CM/RSR or record/metadata/schede/*/CM/FUR">
 					<arco-catalogue:hasCatalogueRecordVersion>
 						<xsl:attribute name="rdf:resource">
@@ -675,9 +675,9 @@
 				</xsl:for-each>
 				<!-- historical information -->
 				<xsl:if test="record/metadata/schede/*/AU/NSC">
-					<arco-cd:historicalInformation>
+					<arco-cd:historicalBiographicalInformation>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/NSC)" />
-					</arco-cd:historicalInformation>
+					</arco-cd:historicalBiographicalInformation>
 				</xsl:if>
 				<xsl:if test="string-length($sex)">
 					<arco-lite:sex>

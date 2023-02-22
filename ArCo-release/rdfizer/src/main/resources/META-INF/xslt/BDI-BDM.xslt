@@ -3732,7 +3732,7 @@
 				<xsl:if test="./ATT/ATTS">
 					<arco-cd:hasSex>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-', position())" />
+							<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-atts-', position())" />
 						</xsl:attribute>
 					</arco-cd:hasSex>
 				</xsl:if>
@@ -3826,7 +3826,7 @@
 			<xsl:if test="./ATT/ATTS">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-				    	<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-', position())" />
+				    	<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-atts-', position())" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -3844,7 +3844,7 @@
 					</arco-cd:sex>
 				</rdf:Description>
 			</xsl:if>
-			<!-- age interpretation as individual -->
+			<!-- age as individual -->
 			<xsl:if test="./ATT/ATTE">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
@@ -5942,11 +5942,11 @@
 					</l0:name>
 					<!-- acquisition type -->
 					<xsl:if test="record/metadata/schede/*/DU/DUQ/DUQT and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DU/DUQ/DUQT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DU/DUQ/DUQT)), 'n.r')))">
-						<arco-cd:hasAcquisitionType>
+						<arco-core:hasType>
 							<xsl:attribute name="rdf:resource">
             					<xsl:value-of select="concat($NS, 'AcquisitionType/', arco-fn:urify(normalize-space(record/metadata/schede/*/DU/DUQ/DUQT)))" />
             				</xsl:attribute>
-						</arco-cd:hasAcquisitionType>
+						</arco-core:hasType>
 					</xsl:if>
 					<!-- transferor -->
 					<xsl:for-each select="record/metadata/schede/*/DU/DUQ/DUQN[not(starts-with(lower-case(normalize-space(.)), 'nr') or starts-with(lower-case(normalize-space(.)), 'n.r'))]">
@@ -7508,11 +7508,11 @@
 					</l0:name>
 					<!-- acquisition type -->
 					<xsl:if test="record/metadata/schede/*/DV/DVQ/DVQT and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DV/DVQ/DVQT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DV/DVQ/DVQT)), 'n.r')))">
-						<arco-cd:hasAcquisitionType>
+						<arco-core:hasType>
 							<xsl:attribute name="rdf:resource">
             					<xsl:value-of select="concat($NS, 'AcquisitionType/', arco-fn:urify(normalize-space(record/metadata/schede/*/DV/DVQ/DVQT)))" />
             				</xsl:attribute>
-						</arco-cd:hasAcquisitionType>
+						</arco-core:hasType>
 					</xsl:if>
 					<!-- transferor -->
 					<xsl:for-each select="record/metadata/schede/*/DV/DVQ/DVQN[not(starts-with(lower-case(normalize-space(.)), 'nr') or starts-with(lower-case(normalize-space(.)), 'n.r'))]">
@@ -9226,11 +9226,11 @@
 						<xsl:value-of select="concat('Acquisition of photo of cultural property: ', $itemURI)" />
 					</l0:name>
 					<xsl:if test="record/metadata/schede/*/DF/DFQ/DFQT and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DF/DFQ/DFQT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DF/DFQ/DFQT)), 'n.r')))">
-						<arco-cd:hasAcquisitionType>
+						<arco-core:hasType>
 							<xsl:attribute name="rdf:resource">
             					<xsl:value-of select="concat($NS, 'AcquisitionType/', arco-fn:urify(normalize-space(record/metadata/schede/*/DF/DFQ/DFQT)))" />
             				</xsl:attribute>
-						</arco-cd:hasAcquisitionType>
+						</arco-core:hasType>
 					</xsl:if>
 					<xsl:for-each select="record/metadata/schede/*/DF/DFQ/DFQN[not(starts-with(lower-case(normalize-space(.)), 'nr') or starts-with(lower-case(normalize-space(.)), 'n.r'))]">
 						<arco-core:hasAgentRole>
@@ -12480,11 +12480,11 @@
 					</l0:name>
 					<!-- acquisition type -->
 					<xsl:if test="./AIQ/AIQT and (not(starts-with(lower-case(normalize-space(./AIQ/AIQT)), 'nr')) and not(starts-with(lower-case(normalize-space(./AIQ/AIQT)), 'n.r')))">
-						<arco-cd:hasAcquisitionType>
+						<arco-core:hasType>
 							<xsl:attribute name="rdf:resource">
             					<xsl:value-of select="concat($NS, 'AcquisitionType/', arco-fn:urify(normalize-space(./AIQ/AIQT)))" />
             				</xsl:attribute>
-						</arco-cd:hasAcquisitionType>
+						</arco-core:hasType>
 					</xsl:if>
 					<!-- transferor -->
 					<xsl:for-each select="./AIQ/AIQN[not(starts-with(lower-case(normalize-space(.)), 'nr') or starts-with(lower-case(normalize-space(.)), 'n.r'))]">
@@ -14047,7 +14047,7 @@
 				<xsl:if test="./VIFO">
 					<arco-cd:hasSex>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS,'Sex/', arco-fn:arcofy(normalize-space(./VIFO)))" />
+							<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-vif-', position())" />
 						</xsl:attribute>
 					</arco-cd:hasSex>
 				</xsl:if>
@@ -14135,7 +14135,7 @@
 			<xsl:if test="./VIFO">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-				    	<xsl:value-of select="concat($NS, 'Sex/', arco-fn:arcofy(normalize-space(./VIFO)))" />
+				    	<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-vif-', position())" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -14148,6 +14148,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./VIFO)" />
 					</l0:name>
+					<arco-cd:sex>
+						<xsl:value-of select="normalize-space(./VIFO)" />
+					</arco-cd:sex>
 				</rdf:Description>
 			</xsl:if>
 			<!-- age as individual -->
@@ -15594,11 +15597,11 @@
 					</l0:name>
 					<!-- acquisition type -->
 					<xsl:if test="./VIQ/VIQT and (not(starts-with(lower-case(normalize-space(./VIQ/VIQT)), 'nr')) and not(starts-with(lower-case(normalize-space(./VIQ/VIQT)), 'n.r')))">
-						<arco-cd:hasAcquisitionType>
+						<arco-core:hasType>
 							<xsl:attribute name="rdf:resource">
             					<xsl:value-of select="concat($NS, 'AcquisitionType/', arco-fn:urify(normalize-space(./VIQ/VIQT)))" />
             				</xsl:attribute>
-						</arco-cd:hasAcquisitionType>
+						</arco-core:hasType>
 					</xsl:if>
 					<!-- transferor -->
 					<xsl:for-each select="./VIQ/VIQN[not(starts-with(lower-case(normalize-space(.)), 'nr') or starts-with(lower-case(normalize-space(.)), 'n.r'))]">
@@ -17591,7 +17594,7 @@
 				<xsl:if test="./FIFO">
 					<arco-cd:hasSex>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS,'Sex/', arco-fn:arcofy(normalize-space(./FIFO)))" />
+							<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-fif-', position())" />
 						</xsl:attribute>
 					</arco-cd:hasSex>
 				</xsl:if>
@@ -17679,7 +17682,7 @@
 			<xsl:if test="./FIFO">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-				    	<xsl:value-of select="concat($NS, 'Sex/', arco-fn:arcofy(normalize-space(./FIFO)))" />
+				    	<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-fif-', position())" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -17692,6 +17695,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./FIFO)" />
 					</l0:name>
+					<arco-cd:sex>
+						<xsl:value-of select="normalize-space(./FIFO)" />
+					</arco-cd:sex>
 				</rdf:Description>
 			</xsl:if>
 			<!-- age interpretation as individual -->
@@ -18911,11 +18917,11 @@
 					</l0:name>
 					<!-- acquisition type -->
 					<xsl:if test="./FIQ/FIQT and (not(starts-with(lower-case(normalize-space(./FIQ/FIQT)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIQ/FIQT)), 'n.r')))">
-						<arco-cd:hasAcquisitionType>
+						<arco-core:hasType>
 							<xsl:attribute name="rdf:resource">
             					<xsl:value-of select="concat($NS, 'AcquisitionType/', arco-fn:urify(normalize-space(./FIQ/FIQT)))" />
             				</xsl:attribute>
-						</arco-cd:hasAcquisitionType>
+						</arco-core:hasType>
 					</xsl:if>
 					<!-- transferor -->
 					<xsl:for-each select="./FIQ/FIQN[not(starts-with(lower-case(normalize-space(.)), 'nr') or starts-with(lower-case(normalize-space(.)), 'n.r'))]">
