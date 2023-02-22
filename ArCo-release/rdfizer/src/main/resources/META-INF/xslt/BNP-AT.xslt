@@ -1172,7 +1172,7 @@
 			<xsl:if test="./SZAS">
 				<arco-cd:hasSex>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-', position())" />
+						<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-revised-', position())" />
 					</xsl:attribute>
 				</arco-cd:hasSex>
 			</xsl:if>		
@@ -1683,7 +1683,7 @@
 		<xsl:if test="./SZAS">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-', position())" />
+		    	<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-revised-', position())" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">

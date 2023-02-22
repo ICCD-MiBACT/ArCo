@@ -2510,28 +2510,28 @@
 					<xsl:when test="record/metadata/schede/harvesting/enteCompetente">
 						<arco-core:hasAgentRole>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
 							</xsl:attribute>
 						</arco-core:hasAgentRole>
-						<arco-arco:hasHeritageProtectionAgency>
+						<arco-lite:hasHeritageProtectionAgency>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/harvesting/enteCompetente))" />
 							</xsl:attribute>
-						</arco-arco:hasHeritageProtectionAgency>
+						</arco-lite:hasHeritageProtectionAgency>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:for-each select="record/metadata/schede/*/CD/ECP">
 							<xsl:if test=".">
 								<arco-core:hasAgentRole>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
+										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
 									</xsl:attribute>
 								</arco-core:hasAgentRole>
-								<arco-arco:hasHeritageProtectionAgency>
+								<arco-lite:hasHeritageProtectionAgency>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 									</xsl:attribute>
-								</arco-arco:hasHeritageProtectionAgency>
+								</arco-lite:hasHeritageProtectionAgency>
 							</xsl:if>
 						</xsl:for-each>
 					</xsl:otherwise>
@@ -2541,14 +2541,14 @@
 					<xsl:if test=".">
 						<arco-core:hasAgentRole>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agent')" />
 							</xsl:attribute>
 						</arco-core:hasAgentRole>
-						<arco-arco:hasCataloguingAgency>
+						<arco-lite:hasCataloguingAgent>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 							</xsl:attribute>
-						</arco-arco:hasCataloguingAgency>
+						</arco-lite:hasCataloguingAgent>
 					</xsl:if>
 				</xsl:for-each>
 				<!-- proponent agency -->
@@ -2559,11 +2559,11 @@
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-proponent-agency')" />
 							</xsl:attribute>
 						</arco-core:hasAgentRole>
-						<arco-cd:hasProponentAgency>
+						<arco-lite:hasProponentAgent>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 							</xsl:attribute>
-						</arco-cd:hasProponentAgency>
+						</arco-lite:hasProponentAgent>
 					</xsl:if>
 				</xsl:for-each>
 				<!-- Type of context for LC and LA-->
@@ -3940,19 +3940,19 @@
 				<xsl:if test="record/metadata/schede/*/*/LSI/*">
 					<xsl:for-each select="record/metadata/schede/*/*/LSI">
 						<xsl:choose>	
-						<xsl:when test="not(./LSIU) or ./LSIU='intero bene' or ./LSIU='integrale' or ./LSIU='tutta' or ./LSIU='totale' or ./LSIU='carattere generale' or (starts-with(lower-case(normalize-space(./LSIU)), 'nr')) or (starts-with(lower-case(normalize-space(./LSIU)), 'n.r')) or (starts-with(lower-case(normalize-space(./LSIU)), 'intero')) or (starts-with(lower-case(normalize-space(./LSIU)), 'intera')) or (starts-with(lower-case(normalize-space(./LSIU)), 'esemplar'))">
-						<arco-dd:hasAffixedElement>
-							<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
-						</arco-dd:hasAffixedElement>
-					</xsl:when>
-					<xsl:otherwise>
-						<arco-core:hasPart>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./LSIU)))" />
-							</xsl:attribute>
-						</arco-core:hasPart>
-					</xsl:otherwise>
-					</xsl:choose>
+							<xsl:when test="not(./LSIU) or ./LSIU='intero bene' or ./LSIU='integrale' or ./LSIU='tutta' or ./LSIU='totale' or ./LSIU='carattere generale' or (starts-with(lower-case(normalize-space(./LSIU)), 'nr')) or (starts-with(lower-case(normalize-space(./LSIU)), 'n.r')) or (starts-with(lower-case(normalize-space(./LSIU)), 'intero')) or (starts-with(lower-case(normalize-space(./LSIU)), 'intera')) or (starts-with(lower-case(normalize-space(./LSIU)), 'esemplar'))">
+								<arco-dd:hasAffixedElement>
+									<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
+								</arco-dd:hasAffixedElement>
+							</xsl:when>
+							<xsl:otherwise>
+								<arco-core:hasPart>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./LSIU)))" />
+									</xsl:attribute>
+								</arco-core:hasPart>
+							</xsl:otherwise>
+						</xsl:choose>
 					</xsl:for-each>
 				</xsl:if>
 				<xsl:for-each select="record/metadata/schede/*/DA/ISE">
@@ -5160,11 +5160,11 @@
 							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-main-agent-group', position())" />
 						</xsl:attribute>
 					</arco-core:hasAgentRole>
-					<arco-cd:involvesMainAgent>
+					<arco-lite:involvesMainAgent>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 						</xsl:attribute>
-					</arco-cd:involvesMainAgent>
+					</arco-lite:involvesMainAgent>
 				</xsl:for-each>
 				<xsl:if test="record/metadata/schede/SCAN/BI/RIL">
 					<arco-cd:hasSurvey>

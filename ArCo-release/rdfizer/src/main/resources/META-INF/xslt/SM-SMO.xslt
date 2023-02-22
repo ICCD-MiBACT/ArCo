@@ -374,7 +374,7 @@
 	   			</l0:name>
 	   			<arco-core:isDescribedByClassificationSystem>
 					<xsl:attribute name="rdf:resource">
-			    		<xsl:value-of select="concat($NS,'Hornbosel-SachsClassificationSystem')" />
+			    		<xsl:value-of select="'https://w3id.org/arco/ontology/musical-instrument/Hornbosel-SachsClassificationSystem'" />
 			    	</xsl:attribute>
 				</arco-core:isDescribedByClassificationSystem>
 	   			<arco-lite:HSNumber>
@@ -391,28 +391,6 @@
 	   				</arco-mi:HSEdition>
 	   			</xsl:if>
 		   </rdf:Description>
-		   <rdf:Description>
-				<xsl:attribute name="rdf:about">
-		    		<xsl:value-of select="concat($NS,'Hornbosel-SachsClassificationSystem')" />
-			    </xsl:attribute>
-				<rdf:type>
-					<xsl:attribute name="rdf:resource">
-        		       	<xsl:value-of select="'https://w3id.org/arco/ontology/core/ClassificationSystem'" />
-            		</xsl:attribute>
-				</rdf:type>
-				<rdfs:label xml:lang="en">
-	   				<xsl:value-of select="'Hornbosel-Sachs Classification System'" />
-		   		</rdfs:label>
-		   		<rdfs:label xml:lang="it">
-	   				<xsl:value-of select="'Sistema di classificazione Hornbosel-Sachs'" />
-		   		</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="'Hornbosel-Sachs Classification System'" />
-	   			</l0:name >
-	   			<l0:name xml:lang="it">
-					<xsl:value-of select="'Sistema di classificazione Hornbosel-Sachs'" />
-	   			</l0:name >
-	   		</rdf:Description>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/SM/CL/CLA">
 			<rdf:Description>
@@ -1310,7 +1288,7 @@
 				<xsl:if test="./MUT/MUTS">
 					<arco-cd:hasSex>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS,'Sex/', arco-fn:arcofy(normalize-space(./MUT/MUTS)))" />
+							<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-', position())" />
 						</xsl:attribute>
 					</arco-cd:hasSex>
 				</xsl:if>
@@ -1324,11 +1302,6 @@
 					<arco-lite:age>
 						<xsl:value-of select="normalize-space(./MUT/MUTE)" />
 					</arco-lite:age>
-					<arco-cd:isSubjectOfInterpretation>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'AgeInterpetation/', $itemURI, '-', arco-fn:urify(./MUT/MUTE))" />
-						</xsl:attribute>
-					</arco-cd:isSubjectOfInterpretation>
 				</xsl:if>
 				<!-- birth place -->
 				<xsl:if test="./DNA/DNAP or ./DNA/DNAC or ./DNA/DNAE">
@@ -1409,7 +1382,7 @@
 			<xsl:if test="./MUT/MUTS">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-				    	<xsl:value-of select="concat($NS, 'Sex/', arco-fn:arcofy(normalize-space(./MUT/MUTS)))" />
+				    	<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-', position())" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -1422,51 +1395,13 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./MUT/MUTS)" />
 					</l0:name>
+					<arco-cd:sex>
+						<xsl:value-of select="normalize-space(./MUT/MUTS)" />
+					</arco-cd:sex>
 				</rdf:Description>
 			</xsl:if>
 			<!-- age interpretation as individual -->
 			<xsl:if test="./MUT/MUTE">
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'AgeInterpetation/', $itemURI, '-', arco-fn:urify(./MUT/MUTE))" />
-					</xsl:attribute>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Interpretation'" />
-						</xsl:attribute>
-					</rdf:type>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Interpretazione relativa alla età di  ', normalize-space(./MUT/MUTN))" />
-					</rdfs:label>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Interpretation of age of ', normalize-space(./MUT/MUTN))" />
-					</rdfs:label>
-					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Interpretazione relativa alla età di  ', normalize-space(./MUT/MUTN))" />
-					</l0:name>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Interpretation of age of ', normalize-space(./MUT/MUTN))" />
-					</l0:name>
-					<arco-cd:involvesEntity>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Age/', arco-fn:arcofy(normalize-space(./MUT/MUTE)))" />
-						</xsl:attribute>
-					</arco-cd:involvesEntity>
-					<arco-cd:hasInterpretationCriterion>
-						<xsl:choose>
-							<xsl:when test="contains(lower-case(normalize-space(./MUT/MUTE)), 'ca')">
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'InterpretationCriterion/CataloguerAttribution')" />
-								</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'InterpretationCriterion/AgentDeclaration')" />
-								</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
-					</arco-cd:hasInterpretationCriterion>
-				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 				    	<xsl:value-of select="concat($NS, 'Age/', arco-fn:arcofy(normalize-space(./MUT/MUTE)))" />
@@ -1496,65 +1431,16 @@
 							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ChronologicalAge'" />
 						</xsl:attribute>
 					</arco-core:hasType>
-				</rdf:Description>
-				<rdf:Description>
-					<xsl:choose>
-						<xsl:when test="contains(lower-case(normalize-space(./MUT/MUTE)), 'ca')">
-							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'InterpretationCriterion/CataloguerAttribution')" />
-							</xsl:attribute>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'InterpretationCriterion/AgentDeclaration')" />
-							</xsl:attribute>
-						</xsl:otherwise>
-					</xsl:choose>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-						</xsl:attribute>
-					</rdf:type>
-					<rdfs:label  xml:lang="it">
+					<arco-cd:informationSource>
 						<xsl:choose>
 							<xsl:when test="contains(lower-case(normalize-space(./MUT/MUTE)), 'ca')">
-								<xsl:value-of select="'attribuzione del catalogatore'" />
+								<xsl:value-of select="'Attribuzione del catalogatore'" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="'agent declaration'" />
+								<xsl:value-of select="'Dichiarazione del soggetto'" />
 							</xsl:otherwise>
 						</xsl:choose>
-					</rdfs:label>
-					<rdfs:label  xml:lang="en">
-						<xsl:choose>
-							<xsl:when test="contains(lower-case(normalize-space(./MUT/MUTE)), 'ca')">
-								<xsl:value-of select="'cataloguer attribution'" />
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:value-of select="'agent declaration'" />
-							</xsl:otherwise>
-						</xsl:choose>
-					</rdfs:label>
-					<l0:name  xml:lang="it">
-						<xsl:choose>
-							<xsl:when test="contains(lower-case(normalize-space(./MUT/MUTE)), 'ca')">
-								<xsl:value-of select="'attribuzione del catalogatore'" />
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:value-of select="'agent declaration'" />
-							</xsl:otherwise>
-						</xsl:choose>
-					</l0:name>
-					<l0:name  xml:lang="en">
-						<xsl:choose>
-							<xsl:when test="contains(lower-case(normalize-space(./MUT/MUTE)), 'ca')">
-								<xsl:value-of select="'cataloguer attribution'" />
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:value-of select="'agent declaration'" />
-							</xsl:otherwise>
-						</xsl:choose>
-					</l0:name>
+					</arco-cd:informationSource>
 				</rdf:Description>
 			</xsl:if>
 			<!-- birth place -->
