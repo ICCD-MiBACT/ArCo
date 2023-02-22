@@ -815,9 +815,9 @@
 				<l0:name>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACE" />
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACE" />
-				</l0:identifier>
+				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>
@@ -846,9 +846,9 @@
 				<l0:name>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACI" />
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACI" />
-				</l0:identifier>
+				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>
@@ -877,9 +877,9 @@
 				<l0:name>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACO" />
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACO" />
-				</l0:identifier>
+				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>
@@ -908,9 +908,9 @@
 				<l0:name>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACJ" />
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACJ" />
-				</l0:identifier>
+				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>
@@ -939,9 +939,9 @@
 				<l0:name>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACK" />
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACK" />
-				</l0:identifier>
+				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>
@@ -970,9 +970,9 @@
 				<l0:name>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACN" />
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACN" />
-				</l0:identifier>
+				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>
@@ -3523,9 +3523,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del luogo di raccolta di ', $itemURI, ': ', record/metadata/schede/BNB/LR/LRI/LRIO)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Depth')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(record/metadata/schede/BNB/LR/LRI/LRIO))" />
 			</arco-dd:hasValue>
@@ -3743,9 +3743,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura della situazione climatica di ', $itemURI, ': ', record/metadata/schede/BNB/LR/LRI/LRIT)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Temperature')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(record/metadata/schede/BNB/LR/LRI/LRIT))" />
 			</arco-dd:hasValue>
@@ -4345,9 +4345,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura del reperto xilologico ',  position(), ': ', (./DBXA))" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Height')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(./DBXA))" />
 				</arco-dd:hasValue>
@@ -4372,9 +4372,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura del reperto xilologico ',  position(), ': ', (./DBXL))" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Width')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(./DBXL))" />
 				</arco-dd:hasValue>
@@ -4399,9 +4399,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura del reperto xilologico ',  position(), ': ', (./DBXN))" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Length')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(./DBXN))" />
 				</arco-dd:hasValue>
@@ -4426,9 +4426,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura del reperto xilologico ',  position(), ': ', (./DBXD))" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Diameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(./DBXD))" />
 				</arco-dd:hasValue>
@@ -4453,9 +4453,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura del reperto xilologico ',  position(), ': ', (./DBXP))" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Weight')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(./DBXP))" />
 				</arco-dd:hasValue>

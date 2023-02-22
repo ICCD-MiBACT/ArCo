@@ -2780,6 +2780,13 @@
 	                		<xsl:value-of select="concat($NS, 'PhotographicDocumentation/', $itemURI, '-photographic-documentation-', position())" />
 	                	</xsl:attribute>
 					</arco-cd:hasDocumentation>
+					<xsl:if test="contains((./FTAX), 'allegat')">
+						<arco-cd:hasAttachedDocumentation>
+							<xsl:attribute name="rdf:resource">
+	        	        		<xsl:value-of select="concat($NS, 'PhotographicDocumentation/', $itemURI, '-photographic-documentation-', position())" />
+	    	            	</xsl:attribute>
+						</arco-cd:hasAttachedDocumentation>
+					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/DO/FTE">
 					<arco-cd:hasDocumentation>
@@ -2825,6 +2832,13 @@
 	                		<xsl:value-of select="concat($NS, 'GraphicOrCartographicDocumentation/', $itemURI, '-graphic-cartographic-documentation-', position())" />
 	                	</xsl:attribute>
 					</arco-cd:hasDocumentation>
+					<xsl:if test="contains((./DRAX), 'allegat')">
+						<arco-cd:hasAttachedDocumentation>
+							<xsl:attribute name="rdf:resource">
+	                			<xsl:value-of select="concat($NS, 'GraphicOrCartographicDocumentation/', $itemURI, '-graphic-cartographic-documentation-', position())" />
+	                		</xsl:attribute>
+						</arco-cd:hasAttachedDocumentation>
+					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/AL/ALG">
 					<arco-cd:hasDocumentation>
@@ -2840,6 +2854,13 @@
 	                		<xsl:value-of select="concat($NS, 'FilmDocumentation/', $itemURI, '-film-documentation-', position())" />
 	                	</xsl:attribute>
 					</arco-cd:hasDocumentation>
+					<xsl:if test="contains((./VDCX), 'allegat')">
+						<arco-cd:hasAttachedDocumentation>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'FilmDocumentation/', $itemURI, '-film-documentation-', position())" />
+	                		</xsl:attribute>
+	                	</arco-cd:hasAttachedDocumentation>
+	                </xsl:if>
 				</xsl:for-each>
 				<!-- Audio Documentation of cultural property -->
 				<xsl:for-each select="record/metadata/schede/*/DO/REG">
@@ -2848,6 +2869,13 @@
 	                		<xsl:value-of select="concat($NS, 'AudioDocumentation/', $itemURI, '-audio-documentation-', position())" />
 	                	</xsl:attribute>
 					</arco-cd:hasDocumentation>
+					<xsl:if test="contains((./REGX), 'allegat')">
+						<arco-cd:hasAttachedDocumentation>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'AudioDocumentation/', $itemURI, '-audio-documentation-', position())" />
+	                		</xsl:attribute>
+	                	</arco-cd:hasAttachedDocumentation>
+	                </xsl:if>
 				</xsl:for-each>
 				<!-- Sources and Documents of cultural property -->
 				<xsl:for-each select="record/metadata/schede/*/DO/FNT">
@@ -2856,6 +2884,13 @@
 	                		<xsl:value-of select="concat($NS, 'SourceAndDocument/', $itemURI, '-source-document-', position())" />
 	                	</xsl:attribute>
 					</arco-cd:hasDocumentation>
+					<xsl:if test="contains((./FNTX), 'allegat')">
+						<arco-cd:hasAttachedDocumentation>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'SourceAndDocument/', $itemURI, '-source-document-', position())" />
+							</xsl:attribute>
+						</arco-cd:hasAttachedDocumentation>
+					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/DO/ADM">
 					<arco-cd:hasDocumentation>
@@ -2863,6 +2898,13 @@
 	                		<xsl:value-of select="concat($NS, 'MultimediaDocumentation/', $itemURI, '-multimedia-documentation-', position())" />
 	                	</xsl:attribute>
 					</arco-cd:hasDocumentation>
+					<xsl:if test="contains((./ADMX), 'allegat')">
+						<arco-cd:hasAttachedDocumentation>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'MultimediaDocumentation/', $itemURI, '-multimedia-documentation-', position())" />
+							</xsl:attribute>
+						</arco-cd:hasAttachedDocumentation>
+					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/DO/CTF">
 					<arco-cd:hasDocumentation>
@@ -4510,7 +4552,7 @@
 				<xsl:if test="record/metadata/schede/*/MT/CDG">
 					<arco-cd:hasLegalSituation>
 						<xsl:attribute name="rdf:resource">
-                			<xsl:value-of select="concat($NS, 'LegalSituation/', $itemURI, '-legal-situation-', arco-fn:urify(normalize-space(record/metadata/schede/*/TU/CDG/CDGG)))" />
+                			<xsl:value-of select="concat($NS, 'LegalSituation/', $itemURI, '-legal-situation-', arco-fn:urify(normalize-space(record/metadata/schede/*/TU/CDG)))" />
                 		</xsl:attribute>
 					</arco-cd:hasLegalSituation>
 				</xsl:if>
@@ -4526,9 +4568,7 @@
 				<xsl:for-each select="record/metadata/schede/*/CO/STC">
 					<xsl:if test="./STCT and not($sheetType='BNB' or $sheetType='BNP' or $sheetType='BNZ')">
 						<arco-cd:isKeptIn>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'SpecimenContainer/', arco-fn:urify(normalize-space(./STCT)))" />
-							</xsl:attribute>
+							<xsl:value-of select="normalize-space(./STCT)" />
 						</arco-cd:isKeptIn>
 					</xsl:if>
 				</xsl:for-each>
@@ -4596,6 +4636,13 @@
                 			<xsl:value-of select="concat($NS, 'UrbanPlanningInstrument/', $itemURI, '-urban-planning-instrument-', position())" />
                 		</xsl:attribute>
 					</arco-cd:hasUrbanPlanningInstrument>
+					<xsl:if test="./STUN and (not(starts-with(lower-case(normalize-space(./STUN)), 'nr')) and not(starts-with(lower-case(normalize-space(./STUN)), 'n.r')))">
+						<arco-lite:hasEligibleIntervention>
+							<xsl:attribute name="rdf:resource">
+	                			<xsl:value-of select="concat($NS, 'InterventionType/', arco-fn:urify(normalize-space(./STUN)))" />
+							</xsl:attribute>
+						</arco-lite:hasEligibleIntervention>
+					</xsl:if>
 				</xsl:for-each>
 				<!-- Other related agents of cultural property -->
 				<xsl:for-each select="record/metadata/schede/*/AU/NMC">

@@ -3474,9 +3474,9 @@
 					<l0:name xml:lang="it">
 						<xsl:value-of select="concat('Misura del suolo del bene ', $itemURI, ': ', normalize-space(record/metadata/schede/PG/CA/CAC))" />
 					</l0:name>
-					<arco-dd:hasMeasurementType>
+					<arco-core:hasType>
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Slope')" />
-					</arco-dd:hasMeasurementType>
+					</arco-core:hasType>
 					<arco-dd:hasValue>
 						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Soil', $itemURI, '-slope-', arco-fn:urify(record/metadata/schede/PG/CA/CAC))" />
 					</arco-dd:hasValue>
@@ -4202,12 +4202,15 @@
 					<l0:name xml:lang="it">
 						<xsl:value-of select="concat('Misura di ', normalize-space(./FVPD), ' bene culturale ', $itemURI, ': ', normalize-space(./FVPS))" />
 					</l0:name>
-					<arco-dd:hasMeasurementType>
+					<arco-core:hasType>
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Area')" />
-					</arco-dd:hasMeasurementType>
+					</arco-core:hasType>
 					<arco-dd:hasValue>
 						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-part-', arco-fn:urify(normalize-space(./FVPD)), '-area-', arco-fn:urify(./FVPS))" />
 					</arco-dd:hasValue>
+					<mu:hasMeasurementUnit>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/mq')" />
+					</mu:hasMeasurementUnit>
 				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-part-', arco-fn:urify(normalize-space(./FVPD)), '-area-', arco-fn:urify(./FVPS))" />
@@ -4218,9 +4221,6 @@
 					<l0:name>
 						<xsl:value-of select="./FVPS" />
 					</l0:name>
-					<mu:hasMeasurementUnit>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/mq')" />
-					</mu:hasMeasurementUnit>
 				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/mq')" />
