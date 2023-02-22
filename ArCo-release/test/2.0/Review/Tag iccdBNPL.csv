@@ -1,0 +1,5 @@
+Acronimo,Definizione,,
+RP,ALTRE ATTRIBUZIONI,,
+RPV,DATI REVISIONE,owl:Thing a-cd:hasReview a-cd:Review,
+RPVT,Tipologia,a-cd:Review core:hasType a-cd:ReviewType,
+RPVA,Autore,a-cd:Review core:hasAgentRole core:AgentRole (Author),

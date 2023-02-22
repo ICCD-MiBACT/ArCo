@@ -1,0 +1,5 @@
+Acronimo,Definizione,
+RR,ALTRE ATTRIBUZIONI,
+RRD,DATI,owl:Thing a-cd:hasReview a-cd:Review
+RRDT,Tipologia,a-cd:Review core:hasType a-cd:ReviewType
+RRDA,Autore,a-cd:Review core:hasAgentRole core:AgentRole (Author)
