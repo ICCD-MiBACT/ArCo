@@ -1,0 +1,16 @@
+Acronimo,,,A,AT,BDI,BDM,BNB,BNM,BNP,BNPE,BNPL,BNZ,CA,D,F,FF,MA,MI,MODI,NT,NU,OA,OAC,PG,PST,RA,S,SAS,SCAN,SI,SM,SMO,TMA,VEAC
+CO,CONSERVAZIONE,,,,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,MT,x,x,x,x,x
+STC,STATO DI CONSERVAZIONE,,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+STCP,Riferimento alla parte,,STCR,x,,x v4,x,x,x,x,x,x,,,,x,,,x,x,,,,STCR,x,,,,,,x,x,,x
+STCD,Data,,,x,,,x,x,x,x,x,x,,,,,,,,,,,,,x,,,,,,,x,,x
+STCC,Stato di conservazione,,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,,x,x,x,x,x
+STCS,Indicazioni specifiche,,STCO,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,STCO,x,x,x,,,x,x,x,x,x
+STCM,Modalita' di conservazione,,,x,,,x,x,x,x,x,x,,,,,,,,,,,x,,x v3,,,,,,,x,,x
+STCN,Note,,,,,x v4,,,,,,,,,,x,,,x,x,,,,,x v4,,,,,,x,,,
+STCT,Tipo,,,,,,x,x,x,x,x,x,,,,,,,,,,,,,,,,,,,,,,
+STCE,Specifiche,,,,,,x,x,x,x,x,x,,,,,,,,,,,,,,,,,,,,,,
+STCO,Condizione originale,,indicazioni specifiche,,,,x,x,x,x,x,x,,,,,,,,,,,,indicazioni specifiche,,,,,,,,,,
+STCL,Leggibilità,,,,,,,,,,,,,,,,,,,,x,,,,,,,,,,,,,
+STS,Stato di efficienza complessivo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,x,,
+STD,Modalità di conservazione,,,,,,,,,,,,,,,,,,,x,,,,,,,,,,,x,,,
+STP,Proposte di interventi,,,,,,,,,,,,,,,,,,,x,,,,,,,,,,,x,,,
