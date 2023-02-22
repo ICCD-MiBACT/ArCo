@@ -685,9 +685,11 @@ WHERE {?class a-dd:hasConservationStatusType ?type.}</core:constructQuery>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha dedicatario</rdfs:label>
         <rdfs:label xml:lang="en">has dedicatee</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MI 3.00: AU/DDC/DDCM</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasDedicatee"/>
     </owl:ObjectProperty>
     
 
@@ -2098,8 +2100,10 @@ WHERE {?type a-dd:isConservationStatusOf ?class.}</core:constructQuery>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is dedicatee of</rdfs:label>
         <rdfs:label xml:lang="it">è dedicatario di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isDedicateeOf"/>
     </owl:ObjectProperty>
     
 
@@ -3162,7 +3166,7 @@ WHERE {?char a-dd:isVibratingLenghtOf ?class. }</core:constructQuery>
         <rdfs:label xml:lang="it">si riferisce ad agente</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISES - Normative di versioni precedenti: DA/STM/STMI</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEO - Normative di versioni precedenti: DA/STM/STMI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -3542,9 +3546,11 @@ WHERE {?class a-dd:proposedIntervention ?int.}</core:constructQuery>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">identificativo del campione prelevato</rdfs:label>
         <rdfs:label xml:lang="en">sample collected identifier</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/localIdentifier"/>
     </owl:DatatypeProperty>
     
 
@@ -3852,24 +3858,26 @@ WHERE {?class a-dd:proposedIntervention ?int.}</core:constructQuery>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description xml:lang="en">An example of usage of one of the subclasses of the class &apos;Affixed element&apos; is the following:
+        <dc:description xml:lang="en">An example of usage of one of the class &apos;Affixed element&apos; is the following:
 resource:Inscription/1200865151-inscription-1
-        a   dd:Inscription ;
+        a   dd:AffixedElement ;
         rdfs:label &quot;Inscription 1 of cultural property 1200865151&quot;@en ;
         dd:hasFontStyle resource:FontStyle/lettere-capitali ;
-        dd:hasTechnicalDetailOccurrence resource:TechnicalDetailOccurrence/1200865151-inscription-1-material-technique-1 ;
         dd:positionOnCulturalProperty &quot;in the middle&quot; ;
         dd:transcript &quot;PAVLVS VENETVS PAPA SECVNDVS SVIS IMPENSIS FIERI FECIT ANNO CRISTI MCCCLXVII&quot; ;
-        language:hasLanguage resource:Language/latino .</dc:description>
-        <dc:description xml:lang="it">Un esempio d&apos;uso di una delle sottoclassi della classe &quot;Elemento apposto su bene culturale&quot; è il seguente:
+        language:hasLanguage resource:Language/latino ;
+        dd:hasType resource:AffixedElement/IscrizioneMilitare .
+resource:AffixedElement/IscrizioneMilitare skos:broader dd:Inscription .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Elemento apposto su bene culturale&quot; è il seguente:
 resource:Inscription/1200865151-inscription-1
-        a   dd:Inscription ;
-        rdfs:label &quot;Iscrizione 1 del bene culturale 1200865151&quot;@en ;
+        a   dd:AffixedElement ;
+        rdfs:label &quot;Inscription 1 of cultural property 1200865151&quot;@en ;
         dd:hasFontStyle resource:FontStyle/lettere-capitali ;
-        dd:hasTechnicalDetailOccurrence resource:TechnicalDetailOccurrence/1200865151-inscription-1-material-technique-1 ;
-        dd:positionOnCulturalProperty &quot;al centro&quot; ;
+        dd:positionOnCulturalProperty &quot;in the middle&quot; ;
         dd:transcript &quot;PAVLVS VENETVS PAPA SECVNDVS SVIS IMPENSIS FIERI FECIT ANNO CRISTI MCCCLXVII&quot; ;
-        language:hasLanguage resource:Language/latino .</dc:description>
+        language:hasLanguage resource:Language/latino ;
+        dd:hasType resource:AffixedElement/IscrizioneMilitare .
+resource:AffixedElement/IscrizioneMilitare skos:broader dd:Inscription .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un elemento (stemma, marchio, timbro, emblema, logo, iscrizione, etc.) apposto su un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an element (i.e. crest, trademark, postmark, inscription) which is affixed on a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -4715,14 +4723,18 @@ WHERE {?class a a-dd:FunctionalPurpose .}</core:constructQuery>
 resource:Measurement/0500212021-1-height
         a  dd:Measurement ;
         rdfs:label  &quot;Measurement of cultural property 0500212021: 795mm.&quot;@en ;
-        dd:hasMeasurementType dd:Height ;
-        dd:hasValue resource:Value/0500212021-1-height-795 .</dc:description>
+        core:hasType dd:Height ;
+        dd:hasValue resource:Value/0500212021-1-height-795 ;
+        mu:hasMeasurementUnit
+resource:Unit/meters .</dc:description>
         <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Misura&quot; è il seguente:
 resource:Measurement/0500212021-1-height
         a  dd:Measurement ;
-        rdfs:label  &quot;Misura del bene culturale 0500212021: 795mm.&quot;@it ;
-        dd:hasMeasurementType dd:Height ;
-        dd:hasValue resource:Value/0500212021-1-height-795 .</dc:description>
+        rdfs:label  &quot;Measurement of cultural property 0500212021: 795mm.&quot;@en ;
+        core:hasType dd:Height ;
+        dd:hasValue resource:Value/0500212021-1-height-795 ;
+        mu:hasMeasurementUnit
+resource:Unit/meters .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una misura osservata per un oggetto. Le misure sono relative alle dimensioni del bene in esame. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all&apos;ingombro per l&apos;immagazzinaggio; alla base (individuano l&apos;oggetto e la conformazione fisica del proprietario e sono fondamentali per l&apos;allestimento museale, per individuare i tipi di supporti necessari per l&apos;esposizione); alle maniche.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a measurement of an object. Measurements realte to the cultural property&apos;s dimensions.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -4786,7 +4798,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementTypeOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5253,8 +5265,8 @@ WHERE {?class a a-dd:Soil .}</core:constructQuery>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description xml:lang="en">An example of usage of the class &apos;Technical status&apos; is the following:
-resource:CulturalEntityTechnicalStatus/0900281817-4
-        a           a-dd:CulturalEntityTechnicalStatus ;
+resource:TechnicalStatus/0900281817-4
+        a           a-dd:TechnicalStatus ;
         rdfs:label  &quot;Technical status of cultural property 0900281817-4&quot;@en ;
         a-dd:includesTechnicalCharacteristic
                 resource:TechnicalCharacteristic/centinato, resource:TechnicalCharacteristic/stone-sculpture .
@@ -5262,18 +5274,18 @@ resource:CulturalEntityTechnicalStatus/0900281817-4
 resource:TechnicalCharacteristic/stone-sculpture
         a                    a-dd:TechnicalCharacteristic ;
         rdfs:label           &quot;stone/ sculpture&quot; ;
-        a-dd:isClassifiedBy  a-dd:MaterialOrTechnique .</dc:description>
+        a-dd:isCharacteristicClassifiedBy  a-dd:MaterialOrTechnique .</dc:description>
         <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Stato tecnico&quot; è il seguente:
-resource:CulturalEntityTechnicalStatus/0900281817-4
-        a           a-dd:CulturalEntityTechnicalStatus ;
-        rdfs:label  &quot;Stato tecnico del bene culturale 0900281817-4&quot;@it ;
+resource:TechnicalStatus/0900281817-4
+        a           a-dd:TechnicalStatus ;
+        rdfs:label  &quot;Technical status of cultural property 0900281817-4&quot;@en ;
         a-dd:includesTechnicalCharacteristic
-                resource:TechnicalCharacteristic/centinato, resource:TechnicalCharacteristic/pietra-scultura .
+                resource:TechnicalCharacteristic/centinato, resource:TechnicalCharacteristic/stone-sculpture .
 
-resource:TechnicalCharacteristic/pietra-scultura
+resource:TechnicalCharacteristic/stone-sculpture
         a                    a-dd:TechnicalCharacteristic ;
-        rdfs:label           &quot;pietra/ scultura&quot; ;
-        a-dd:isClassifiedBy  a-dd:MaterialOrTechnique .</dc:description>
+        rdfs:label           &quot;stone/ sculpture&quot; ;
+        a-dd:isCharacteristicClassifiedBy  a-dd:MaterialOrTechnique .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato tecnico di un&apos;entità, cioè una situazione in cui un&apos;entità ha associate una serie di caratteristiche tecniche. Lo stato di un&apos;entità ha associata una validità temporale, relativa al momento in cui quelle caratteristiche sono state rilevate.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the technical status of an entity, that is a situation in which the entity is associated to technical characteristics. The technical status has a temporal validity, related to the moment when the characteristics were observed.</rdfs:comment>
         <rdfs:label xml:lang="it">Stato tecnico</rdfs:label>
