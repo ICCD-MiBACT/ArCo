@@ -277,9 +277,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha ente schedatore</rdfs:label>
         <rdfs:label xml:lang="en">has cataloguing agency</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ESC</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgency"/>
     </owl:ObjectProperty>
     
 
@@ -398,9 +400,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha ente competente per la tutela</rdfs:label>
         <rdfs:label xml:lang="en">has heritage protection agency</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasHeritageProtectionAgency"/>
     </owl:ObjectProperty>
     
 
@@ -700,9 +704,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is cataloguing agency of</rdfs:label>
         <rdfs:label xml:lang="it">è ente schedatore di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ESC</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCataloguingAgencyOf"/>
     </owl:ObjectProperty>
     
 
@@ -813,9 +819,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is heritage protection agency of</rdfs:label>
         <rdfs:label xml:lang="it">è ente competente per la tutela di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isHeritageProtectionAgencyOf"/>
     </owl:ObjectProperty>
     
 
@@ -1574,6 +1582,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">catalogue number</rdfs:label>
         <rdfs:label xml:lang="it">numero catalogo generale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTN</a-cat:iccdNormTag>
@@ -2036,6 +2045,14 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/context-description/title -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/title"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/identifier -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/identifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+    </rdf:Description>
     
 
 
@@ -3954,6 +3971,29 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/authorICCDIdentifier">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/ICCDIdentifier"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/historicalBiographicalInformation">
+        <rdfs:label xml:lang="en">historical biographic information</rdfs:label>
+        <rdfs:label xml:lang="it">informazioni biografiche storiche</rdfs:label>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa F: PD/PDF/PDFB 
+ICCD Normativa AUT: AU/NSC</a-cat:iccdNormTag>
+    </rdf:Description>
     
 
 
