@@ -1765,10 +1765,10 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag xml:lang="it">Concatenazione dei sottocampi di CD/NCT (NCTR, NCTN, NCTS) e RV/RVE/RVEL</iccdNormTag>
-        <core:constructQuery>prefix l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
 
 CONSTRUCT {
-?thing l0:identifier ?id .
+?thing a-lite:nationalIdentifier ?id .
 }
 
 WHERE {
