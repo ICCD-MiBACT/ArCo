@@ -1094,9 +1094,9 @@
 				<l0:name>
 					<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
-				</l0:identifier>
+				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>
@@ -2134,9 +2134,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMF/SMFV)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Radioactivity')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMF/SMFV)))" />
 			</arco-dd:hasValue>
@@ -2160,9 +2160,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMF/SMFG)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Gladstone-DaleRelation')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMF/SMFG)))" />
 			</arco-dd:hasValue>
@@ -2186,9 +2186,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMF/SMFI)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Gladstone-DaleRelation')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMF/SMFI)))" />
 			</arco-dd:hasValue>
@@ -2210,9 +2210,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMF/SMFD)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'MeasuredDensity')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMF/SMFD)))" />
 			</arco-dd:hasValue>
@@ -2234,9 +2234,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMF/SMFF)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'CalculatedDensity')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMF/SMFF)))" />
 			</arco-dd:hasValue>
@@ -2258,9 +2258,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMF/SMFH)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'MohsHardness')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMF/SMFH)))" />
 			</arco-dd:hasValue>
@@ -2282,9 +2282,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMF/SMFN)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'VhnHardness')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMF/SMFN)))" />
 			</arco-dd:hasValue>
@@ -2474,9 +2474,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RMFV)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Radioactivity')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMFV)))" />
 			</arco-dd:hasValue>
@@ -2498,9 +2498,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RMFG)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Gladstone-DaleRelation')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMFG)))" />
 			</arco-dd:hasValue>
@@ -2522,9 +2522,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RMFI)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Gladstone-DaleRelation')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMFI)))" />
 			</arco-dd:hasValue>
@@ -2546,9 +2546,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RMFD)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'MeasuredDensity')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMFD)))" />
 			</arco-dd:hasValue>
@@ -2570,9 +2570,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RMFF)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'CalculatedDensity')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMFF)))" />
 			</arco-dd:hasValue>
@@ -2594,9 +2594,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RMFH)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'MohsHardness')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMFH)))" />
 			</arco-dd:hasValue>
@@ -2618,9 +2618,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', ./RMFN)" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'VhnHardness')" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMFN)))" />
 			</arco-dd:hasValue>
@@ -3797,12 +3797,15 @@
 					<l0:name xml:lang="it">
 						<xsl:value-of select="concat('Misura del luogo di raccolta di ', $itemURI, ': ', record/metadata/schede/*/LR/LRI/LRIO)" />
 					</l0:name>
-					<arco-dd:hasMeasurementType>
+					<arco-core:hasType>
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Depth')" />
-					</arco-dd:hasMeasurementType>
+					</arco-core:hasType>
 					<arco-dd:hasValue>
 						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(record/metadata/schede/*/LR/LRI/LRIO))" />
 					</arco-dd:hasValue>
+					<mu:hasMeasurementUnit>
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(record/metadata/schede/*/LR/LRI/LRIO))" />
+					</mu:hasMeasurementUnit>
 				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:extract-value(record/metadata/schede/*/LR/LRI/LRIO))" />
@@ -3819,9 +3822,6 @@
 					<l0:name xml:lang="it">
 						<xsl:value-of select="arco-fn:extract-value(record/metadata/schede/*/LR/LRI/LRIO)" />
 					</l0:name>
-					<mu:hasMeasurementUnit>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(record/metadata/schede/*/LR/LRI/LRIO))" />
-					</mu:hasMeasurementUnit>
 				</rdf:Description>
 			</xsl:if>
 		</xsl:if>
@@ -5998,9 +5998,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura dello strato: ', (.))" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="'https://w3id.org/arco/ontology/denotative-description/Thickness'" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAS))" />
 			</arco-dd:hasValue>
@@ -6086,9 +6086,9 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Misura dello strato: ', (.))" />
 			</l0:name>
-			<arco-dd:hasMeasurementType>
+			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="'https://w3id.org/arco/ontology/denotative-description/Thickness'" />
-			</arco-dd:hasMeasurementType>
+			</arco-core:hasType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/IR/IRA/IRAS))" />
 			</arco-dd:hasValue>
@@ -7056,9 +7056,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMC/SMCA)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'aParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCA)))" />
 				</arco-dd:hasValue>
@@ -7090,9 +7090,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMC/SMCB)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'bParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCB)))" />
 				</arco-dd:hasValue>
@@ -7124,9 +7124,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMC/SMCC)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'cParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCC)))" />
 				</arco-dd:hasValue>
@@ -7158,9 +7158,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMC/SMCF)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'alfaParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCF)))" />
 				</arco-dd:hasValue>
@@ -7192,9 +7192,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMC/SMCE)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'betaParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCE)))" />
 				</arco-dd:hasValue>
@@ -7226,9 +7226,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMC/SMCM)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'gammaParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCM)))" />
 				</arco-dd:hasValue>
@@ -7260,9 +7260,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMC/SMCV)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Volume')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCV)))" />
 				</arco-dd:hasValue>
@@ -7294,9 +7294,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMC/SMCZ)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'zParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCZ)))" />
 				</arco-dd:hasValue>
@@ -7601,9 +7601,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', ./RMC/RMCA)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'aParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMC/RMCA)))" />
 				</arco-dd:hasValue>
@@ -7635,9 +7635,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', ./RMC/RMCB)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'bParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMC/RMCB)))" />
 				</arco-dd:hasValue>
@@ -7669,9 +7669,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', ./RMC/RMCC)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'cParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMC/RMCC)))" />
 				</arco-dd:hasValue>
@@ -7703,9 +7703,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', ./RMC/RMCF)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'alfaParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMC/RMCF)))" />
 				</arco-dd:hasValue>
@@ -7737,9 +7737,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', ./RMC/RMCE)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'betaParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMC/RMCE)))" />
 				</arco-dd:hasValue>
@@ -7771,9 +7771,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', ./RMC/RMCM)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'gammaParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMC/RMCM)))" />
 				</arco-dd:hasValue>
@@ -7805,9 +7805,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', ./RMC/RMCV)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Volume')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMC/RMCV)))" />
 				</arco-dd:hasValue>
@@ -7839,9 +7839,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della cella del minerale ', $itemURI, ': ', ./RMC/RMCZ)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'zParameter')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMC/RMCZ)))" />
 				</arco-dd:hasValue>
@@ -8095,9 +8095,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMM/SMMF)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Reflectance')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMM/SMMF)))" />
 				</arco-dd:hasValue>
@@ -8129,9 +8129,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMM/SMMB)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Bireflectance')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMM/SMMB)))" />
 				</arco-dd:hasValue>
@@ -8232,9 +8232,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMMF)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Reflectance')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMMF)))" />
 				</arco-dd:hasValue>
@@ -8266,9 +8266,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMMB)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Bireflectance')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMMB)))" />
 				</arco-dd:hasValue>
@@ -8420,9 +8420,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOI)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'RefractiveIndex')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOI)))" />
 				</arco-dd:hasValue>
@@ -8454,9 +8454,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOR)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Birefringence')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOR)))" />
 				</arco-dd:hasValue>
@@ -8488,9 +8488,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOO)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'OmegaRefractiveIndex')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOO)))" />
 				</arco-dd:hasValue>
@@ -8522,9 +8522,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOE)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'EpsilonRefractiveIndex')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOE)))" />
 				</arco-dd:hasValue>
@@ -8556,9 +8556,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOA)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'AlfaRefractiveIndex')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOA)))" />
 				</arco-dd:hasValue>
@@ -8590,9 +8590,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOB)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'BetaRefractiveIndex')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOB)))" />
 				</arco-dd:hasValue>
@@ -8624,9 +8624,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOG)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'GammaRefractiveIndex')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOG)))" />
 				</arco-dd:hasValue>
@@ -8658,9 +8658,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOV)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', '2vAngle')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOV)))" />
 				</arco-dd:hasValue>
@@ -8692,9 +8692,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOD)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Dispersion')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/',  arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOD)))" />
 				</arco-dd:hasValue>
@@ -8845,9 +8845,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOI)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'RefractiveIndex')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMO/RMOI)))" />
 				</arco-dd:hasValue>
@@ -8879,9 +8879,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOR)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Birefringence')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMO/RMOR)))" />
 				</arco-dd:hasValue>
@@ -8913,9 +8913,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOO)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'OmegaRefractiveIndex')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMO/RMOO)))" />
 				</arco-dd:hasValue>
@@ -8947,9 +8947,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOE)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'EpsilonRefractiveIndex')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMO/RMOE)))" />
 				</arco-dd:hasValue>
@@ -8981,9 +8981,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOA)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'AlfaRefractiveIndex')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMO/RMOA)))" />
 				</arco-dd:hasValue>
@@ -9015,9 +9015,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOB)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'BetaRefractiveIndex')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMO/RMOB)))" />
 				</arco-dd:hasValue>
@@ -9049,9 +9049,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOG)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'GammaRefractiveIndex')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMO/RMOG)))" />
 				</arco-dd:hasValue>
@@ -9083,9 +9083,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOV)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', '2vAngle')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMO/RMOV)))" />
 				</arco-dd:hasValue>
@@ -9117,9 +9117,9 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOD)" />
 				</l0:name>
-				<arco-dd:hasMeasurementType>
+				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'Dispersion')" />
-				</arco-dd:hasMeasurementType>
+				</arco-core:hasType>
 				<arco-dd:hasValue>
 					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(./RMO/RMOD)))" />
 				</arco-dd:hasValue>
@@ -9339,9 +9339,9 @@
 				<l0:name>
 					<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
-				</l0:identifier>
+				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>

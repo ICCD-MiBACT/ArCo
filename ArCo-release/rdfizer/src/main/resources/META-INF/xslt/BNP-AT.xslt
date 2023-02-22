@@ -355,9 +355,9 @@
 				<l0:name>
 					<xsl:value-of select="record/metadata/schede/BNP/AC/ACO" />
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNP/AC/ACO" />
-				</l0:identifier>
+				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>
@@ -386,9 +386,9 @@
 				<l0:name>
 					<xsl:value-of select="record/metadata/schede/BNP/AC/ACK" />
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNP/AC/ACK" />
-				</l0:identifier>
+				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>
@@ -1227,9 +1227,9 @@
 				<l0:name>
 					<xsl:value-of select="record/metadata/schede/BNZ/AC/ACO" />
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNZ/AC/ACO" />
-				</l0:identifier>
+				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>
@@ -1258,9 +1258,9 @@
 				<l0:name>
 					<xsl:value-of select="record/metadata/schede/BNZ/AC/ACK" />
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNZ/AC/ACK" />
-				</l0:identifier>
+				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>

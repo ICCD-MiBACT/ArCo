@@ -204,8 +204,8 @@
 				<xsl:variable name="aut-position">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:variable name="authorAttribution">
-					<xsl:value-of select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
+				<xsl:variable name="authorResponsibility">
+					<xsl:value-of select="concat($NS, 'PreferredResponsibility/', $itemURI, '-', position())" />
 				</xsl:variable>
 				<xsl:variable name="author">
 					<xsl:choose>
@@ -247,11 +247,11 @@
 						<l0:name>
 							<xsl:value-of select="$partLabel" />
 						</l0:name>
-						<arco-cd:hasAuthorshipAttribution>
+						<arco-cd:hasResponsibility>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="$authorAttribution" />
+								<xsl:value-of select="$authorResponsibility" />
 		                   </xsl:attribute>
-						</arco-cd:hasAuthorshipAttribution>
+						</arco-cd:hasResponsibility>
 						<arco-lite:hasAuthor>
 							<xsl:attribute name="rdf:resource">               		
 								<xsl:choose>
@@ -264,9 +264,9 @@
 								<xsl:otherwise>
 									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy($author))" />
 								</xsl:otherwise>
-							</xsl:choose>
-						</xsl:attribute>
-					</arco-lite:hasAuthor>
+								</xsl:choose>
+							</xsl:attribute>
+						</arco-lite:hasAuthor>
 							<dc:creator>
 								<xsl:attribute name="rdf:resource">		                    		
 		                            <xsl:choose>
@@ -297,13 +297,6 @@
 	                            </xsl:choose>
 	                    	</xsl:attribute>
 						</pico:author>
-						<xsl:for-each select="./AUTM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]"><!-- allow multiple values es: ICCD13074493 -->
-							<arco-cd:isSubjectOfInterpretation>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'AuthorshipAttributionInterpretation/', $itemURI, '-', $aut-position, position())" />
-								</xsl:attribute>
-							</arco-cd:isSubjectOfInterpretation>
-						</xsl:for-each>
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
@@ -315,11 +308,11 @@
 				</xsl:variable>
 				<xsl:if test="./AUIY and not(lower-case(normalize-space(./AUIY))='intero bene') and not(lower-case(normalize-space(./AUIY))='integrale') and not(lower-case(normalize-space(./AUIY))='tutta') and not(lower-case(normalize-space(./AUIY))='totale') and (not(starts-with(lower-case(normalize-space(./AUIY)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUIY)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUIY)), 'intero')) and not(starts-with(lower-case(normalize-space(./AUIY)), 'intera')) and not(starts-with(lower-case(normalize-space(./AUIY)), 'esemplar')))">
 					<xsl:if test="./AUIN and (not(starts-with(lower-case(normalize-space(./AUIN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUIN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUIN)), '-')))">
-						<arco-cd:hasAuthorshipAttribution>
+						<arco-cd:hasResponsibility>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
+								<xsl:value-of select="concat($NS, 'PreferredResponsibility/', $itemURI, '-', position())" />
 							</xsl:attribute>
-						</arco-cd:hasAuthorshipAttribution>
+						</arco-cd:hasResponsibility>
 						<arco-lite:hasAuthor>
 							<xsl:attribute name="rdf:resource">
 		                   		<xsl:variable name="author">
@@ -335,20 +328,13 @@
 								<xsl:value-of select="$author" />
 		                    </xsl:attribute>
 						</arco-lite:hasAuthor>
-						<xsl:for-each select="./AUIM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]"><!-- allow multiple values es: ICCD13074493 -->
-							<arco-cd:isSubjectOfInterpretation>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'AuthorshipAttributionInterpretation/', $itemURI, '-', $aut-position, position())" />
-								</xsl:attribute>
-							</arco-cd:isSubjectOfInterpretation>
-						</xsl:for-each>
 					</xsl:if>
 					<xsl:if test="./AUIB and (not(starts-with(lower-case(normalize-space(./AUIB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUIB)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUIB)), '-')))">
-						<arco-cd:hasAuthorshipAttribution>
+						<arco-cd:hasResponsibility>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
+								<xsl:value-of select="concat($NS, 'PreferredResponsibility/', $itemURI, '-', position())" />
 							</xsl:attribute>
-						</arco-cd:hasAuthorshipAttribution>
+						</arco-cd:hasResponsibility>
 						<arco-lite:hasAuthor>
 							<xsl:attribute name="rdf:resource">
 		                   		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUIB))" />
@@ -369,7 +355,6 @@
 				<xsl:if
 					test="./NVCP and not(lower-case(normalize-space(./NVCP))='intero bene') and not(lower-case(normalize-space(./NVCP))='integrale') and not(lower-case(normalize-space(./NVCP))='tutta') and not(lower-case(normalize-space(./NVCP))='totale') and (not(starts-with(lower-case(normalize-space(./NVCP)), 'nr')) and not(starts-with(lower-case(normalize-space(./NVCP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./NVCP)), 'intero')) and not(starts-with(lower-case(normalize-space(./NVCP)), 'intera')) and not(starts-with(lower-case(normalize-space(./NVCP)), 'esemplar')))">
 					<xsl:for-each select="./NVCP">
-
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 						 		<xsl:value-of
@@ -688,11 +673,6 @@
 						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
-							<arco-cd:isSubjectOfInterpretation>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'EventInterpetation/', $itemURI, '-', position())" />
-								</xsl:attribute>
-							</arco-cd:isSubjectOfInterpretation>
 							<arco-cd:hasRelatedEvent>
 								<xsl:attribute name="rdf:resource">
 									 <xsl:choose>
@@ -1121,11 +1101,6 @@
 								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
-							<arco-cd:isSubjectOfInterpretation>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="$dating" />
-								</xsl:attribute>
-							</arco-cd:isSubjectOfInterpretation>
 							<arco-cd:hasRelatedEvent>
 								<xsl:attribute name="rdf:resource">
 									 <xsl:choose>
@@ -1607,9 +1582,6 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./SGTP)" />
 							</l0:name>
-							<arco-cd:subject>
-								<xsl:value-of select="normalize-space(./SGTI)" />
-							</arco-cd:subject>
 							<arco-cd:hasSubject>
 								<xsl:attribute name="rdf:resource">
 	                    			<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./SGTI))" />
@@ -1631,9 +1603,6 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./SGTA)" />
 							</l0:name>
-							<arco-cd:subject>
-								<xsl:value-of select="normalize-space(./SGTI)" />
-							</arco-cd:subject>
 							<arco-cd:hasSubject>
 								<xsl:attribute name="rdf:resource">
 	                    			<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./SGTI))" />
