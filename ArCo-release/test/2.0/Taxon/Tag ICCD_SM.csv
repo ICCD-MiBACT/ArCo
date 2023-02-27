@@ -1,0 +1,13 @@
+Acronimo,,,Definizione,
+CL,,,CLASSIFICAZIONE,
+,CHS,,CLASSIFICAZIONE HORNBOSTEL-SACHS,a-mi:MusicalInstrument core:isClassifiedBy a-mi:HornbostelSachsClass . a-mi:HornbostelSachsClass core:refersToClassificationSystem a-mi:HornbostelSachsClassificationSystem .
+,,CHSN,Codice numerico Hornbostel-Sachs,a-mi:HornbostelSachsClass a-lite:HSNumber Literal
+,,CHSD,Definizione Hornbostel-Sachs,a-mi:HornbostelSachsClass a-mi:HSDefinition Literal
+,,CHSE,Edizione Hornbostel-Sachs,a-mi:HornbostelSachsClass a-mi:HSEdition Literal
+,,CHSS,Note,a-mi:HornbostelSachsClass core:note Literal
+,CLA,,ALTRA CLASSIFICAZIONE,
+,,CLAA,Autore,core:ClassificationSystem lite:hasAuthor Agent
+,,CLAR,Referenza bibliografica,core:ClassificationSystem cd:hasBibliography cd:Bibliography
+,,CLAT,Taxon,a-mi:MusicalInstrument core:isClassifiedBy mi:MusicalInstrumentTaxon
+,,CLAO,Note,mi:MusicalInstrumentTaxon core:note rdfs:Literal
+,CLN,,Classificazione non applicabile,
