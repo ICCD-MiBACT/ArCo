@@ -2623,7 +2623,18 @@ WHERE {
 
     <!-- https://w3id.org/arco/ontology/location/seaOrOcean -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/seaOrOcean"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/seaOrOcean">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica il mare o l&apos;oceano dove è stato raccolto il bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the sea or ocean where the culrutal entity was harvested.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">mare o oceano</rdfs:label>
+        <rdfs:label xml:lang="en">sea or ocean</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM 3.01: LT/MAO</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
     
 
 
@@ -4787,6 +4798,8 @@ WHERE {
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Rainfall">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Precipitazioni</rdfs:label>
+        <rdfs:label xml:lang="en">Rainfall</rdfs:label>
         <a-cat:iccdNormTag>Normativa PG: CA/CLM/CLMP</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     

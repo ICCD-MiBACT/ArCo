@@ -8082,9 +8082,11 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">agent local identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice identificativo locale dell&apos;agente</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTH - ICCD Normativa F 4.00: RO/CRF/CRFX; PD/PDF/PDFH - ICCD Normativa F 3.00: RO/CRF/CRFH</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/local-identifier"/>
     </owl:DatatypeProperty>
     
 
@@ -8095,8 +8097,8 @@ WHERE {
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/name"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta una variante del nome.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents an alternative name of a person.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta una variante del nome di un agente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents an alternative name of an agent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">alternative name</rdfs:label>
         <rdfs:label xml:lang="it">variante del nome</rdfs:label>
@@ -10024,8 +10026,16 @@ select * {
     <!-- https://w3id.org/arco/ontology/context-description/thesaurus -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/thesaurus">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Subject"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un concetto alla fonte (thesaurus) da cui proviene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the source of information (thesaurus) of a concept.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">denominazione thesaurus</rdfs:label>
+        <rdfs:label xml:lang="en">thesaurus</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa F: SG/THS/THST</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -11794,7 +11804,7 @@ WHERE {
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isCulturalScopeOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScopeAttribution"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambito culturale a cui può essere riferito un bene culturale. Per l&apos;ambito culturale si usano definizioni quali: ambito, cultura, periodo, produzione, scuola, manifattura, ecc.; a questi termini segue la qualificazione geografica o il nome dell&apos;ambito, della cultura, del periodo, della produzione, della scuola, della manifattura, ecc. Nel caso della normativa VeAC, questa classe rappresenta l&apos;ambito sartoriale/di produzione, ovvero il contesto sartoriale (oppure la manifattura, la maestranza, ecc.) a cui può essere ricondotta la realizzazione del bene catalogato.</rdfs:comment>
@@ -12128,12 +12138,6 @@ WHERE {
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/rights"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/SM/URL"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
@@ -12141,18 +12145,18 @@ WHERE {
         <dc:description xml:lang="en">An example of usage of one of the subclasses of the class &apos;Documentation&apos; is the following:
 resource:AudioDocumentation/1200924650-audio-documentation-1
         a   cd:AudioDocumentation ;
-        rdfs:label  &quot;Audio documentation 1 of cultural property: 1200924650&quot;@en ;
-        cd:documentationIdentifier &quot;New_1401358982589&quot; ;
-        cd:hasDocumentationType resource:DocumentationType/cassetta-dat ;
-        cd:hasFormat resource:Format/cassetta-dat ;
+        rdfs:label  &quot;Documentazione audio 1 del bene culturale: 1200924650&quot;@it ;
+        lite:localIdentifier &quot;New_1401358982589&quot; ;
+        core:hasType resource:DocumentationType/cassetta-dat ;
+        dd:hasFormat resource:Format/cassetta-dat ;
         core:hasCategory cd:AttachedDocumentation .</dc:description>
         <dc:description xml:lang="it">Un esempio d&apos;uso di una delle sottoclassi della classe &apos;Documentazione&apos; è il seguente:
 resource:AudioDocumentation/1200924650-audio-documentation-1
         a   cd:AudioDocumentation ;
         rdfs:label  &quot;Documentazione audio 1 del bene culturale: 1200924650&quot;@it ;
-        cd:documentationIdentifier &quot;New_1401358982589&quot; ;
-        cd:hasDocumentationType resource:DocumentationType/cassetta-dat ;
-        cd:hasFormat resource:Format/cassetta-dat ;
+        lite:localIdentifier &quot;New_1401358982589&quot; ;
+        core:hasType resource:DocumentationType/cassetta-dat ;
+        dd:hasFormat resource:Format/cassetta-dat ;
         core:hasCategory cd:AttachedDocumentation .</dc:description>
         <rdfs:comment xml:lang="it">Classe che rappresenta la documentazione, specializzata nelle sottoclassi che rappresentano tipi specifici di documentazione di corredo (immagini, disegni e rilievi, cartografia, documenti audio e video, fonti e documenti editi e inediti, referenze bibliografiche).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the documentation, with subclasses for each specific type of documentation (images, drawings, audio, video, etc.)</rdfs:comment>
@@ -12436,19 +12440,6 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/FilmDocumentation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasFormat"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/DocumentationType"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Format"/>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la documentazione video-cinematografica relativa a un oggetto, per esempio a un bene culturale</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the film documentation of an object, e.g. a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -12890,7 +12881,7 @@ resource:Intervention/0800640527-10-intervention-1
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un inventario, di vario tipo, relativo a un bene culturale o relativo a una delle entità o attività collegate al bene culturale (per esempio un inventario di scavo archeologico).</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il registro di inventario.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an inventory about a cultural property or about an entity or an activity related to the cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">Inventario</rdfs:label>
@@ -14074,6 +14065,12 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCulturalScope"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/mainResponsibility"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;individuazione di una responsabilità attribuibile a un agente relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici, quindi alle diverse personalità responsabili, a vario titolo, del ciclo produttivo del bene in esame, oltre che della sua circolazione, divulgazione, commercializzazione e promozione (committenti, stampatori, ritoccatori, coloritori, editori, distributori, sponsor, curatori e responsabili di edizioni e di serie, dedicanti e dedicatari, responsabili di collezioni e di collazioni, ecc.).</rdfs:comment>
@@ -16234,6 +16231,9 @@ a-cd:hasEdition ?ed .
 WHERE {
 ?use a-cd:Reuse .
 }</core:constructQuery>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/isValidAt">
+        <a-cat:iccdNormTag>ICCD Normativa OA: MT/MIS/MIST</a-cat:iccdNormTag>
     </rdf:Description>
     
 

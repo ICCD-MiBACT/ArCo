@@ -179,25 +179,6 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgency -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgency">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCataloguingAgencyOf"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità descritta in una scheda di Authority File all&apos;ente schedatore dell&apos;authority file stesso. Per esempio, l&apos;attribuzione di un autore a un bene culturale, uno scavo archeologico, una ricognizione archeologica, una bibliografia. Questa proprietà, esprimendo il significato della relazione nel nome, dà una rappresentazione semplificata della relazione che lega questa entità, l&apos;authority file, e l&apos;ente schedatore dell&apos;authority file.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity described in a authority file to the file&apos;s cataloguing institution.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="it">ha ente schedatore</rdfs:label>
-        <rdfs:label xml:lang="en">has cataloguing agency</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTJ; DO/BIB/BIBJ; RE/RCG/RCGJ; RE/DSC/DSCJ - ICCD Normativa F: PD/PDF/PDFJ</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent">
@@ -212,6 +193,7 @@
         <rdfs:label xml:lang="en">has cataloguing agent</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="en">ICCD Normativa Trasversale 4.00: AU/AUT/AUTJ; DO/BIB/BIBJ; RE/RCG/RCGJ; RE/DSC/DSCJ - ICCD Normativa F: PD/PDF/PDFJ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -820,6 +802,24 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has height</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasHeritageProtectionAgency -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasHeritageProtectionAgency">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isHeritageProtectionAgencyOf"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale al relativo ente competente per la tutela. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;ente e il suo ruolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to its heritage protection agency. The relation is declared in the name of the property, but within the ontology this relation is also modeled, in a more expressive way, through the class AgentRole.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
+        <rdfs:label xml:lang="it">ha ente competente per la tutela</rdfs:label>
+        <rdfs:label xml:lang="en">has heritage protection agency</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: CD/ECP</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1483,32 +1483,6 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/hasProponentAgency -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasProponentAgency">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isProponentAgencyOf"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ProtectiveMeasure"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità, che può essere direttamente il bene culturale o specificamente il provvedimento di tutela relativo al bene culturale, all&apos;ente proponente, ovvero al soggetto che ha proposto il provvedimento, identificato per mezzo della denominazione per esteso oppure, nel caso di Enti accreditati dall&apos;ICCD, del relativo codice assegnato dall&apos;Istituto. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity (e.g a cultural entity or a cultual entity&apos;s protective measure) to the proposing institution. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="it">ha ente proponente</rdfs:label>
-        <rdfs:label xml:lang="en">has proponet agency</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA; Versioni precedenti: CD/EPR</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/arco-lite/hasProponentAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasProponentAgent">
@@ -1523,7 +1497,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has proponent agent</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA; Versioni precedenti: CD/EPR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2276,29 +2250,11 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/isCataloguingAgencyOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCataloguingAgencyOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
-        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha agente coinvolto nella catalogazione&quot;, rappresenta la relazione che collega un agente che riveste un ruolo nelle attività di catalogazione di una scheda di catalogo alla scheda stessa.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property, inverse of &quot;has cataloguin agent&quot;, is used to associate an agent playing a role in cataloguing activities to the catalogue record.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="en">is cataloguing agency of</rdfs:label>
-        <rdfs:label xml:lang="it">è ente schedatore di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/arco-lite/isCataloguingAgentOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCataloguingAgentOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà è l&apos;inversa di &quot;ha agente coinvolto nella catalogazione&quot;, usata per associare l&apos;agente che si occupa della catalogazione al record catalografico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property, inverse of &quot;has cataloguing agent&quot;, is used to associate an agent playing a role in cataloguing activities to the catalogue record.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -2909,6 +2865,23 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">è altezza di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isHeritageProtectionAgencyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isHeritageProtectionAgencyOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un ente competente per la tutela al relativo bene culturale della cui tutela è competente. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;ente e il suo ruolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an heritage protection agency to the cultural property. The relation is declared in the name of the property, but within the ontology this relation is also modeled, in a more expressive way, through the class AgentRole.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="en">is heritage protection agency of</rdfs:label>
+        <rdfs:label xml:lang="it">è ente competente per la tutela di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -3692,31 +3665,6 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">è matrice incisa di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/arco-lite/isProponentAgencyOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isProponentAgencyOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ProtectiveMeasure"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:comment xml:lang="it">Questa proprietà collega all&apos;ente proponente, ovvero il soggetto che ha proposto il provvedimento (identificato per mezzo della denominazione per esteso oppure, nel caso di Enti accreditati dall&apos;ICCD, del relativo codice assegnato dall&apos;Istituto) al provvedimento di tutela relativo al bene culturale, oppure direttamente al bene culturale. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an agent that is a proponent agency of a protective measure of a cultural property to the protective measure or to the cultural entity itself. The relation is declared in the name of the property, but within the ontology this relation is also modeled, in a more expressive way, through the class AgentRole.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
-        <rdfs:label xml:lang="en">is proponent agency of</rdfs:label>
-        <rdfs:label xml:lang="it">è ente proponente di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 

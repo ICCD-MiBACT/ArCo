@@ -1,0 +1,16 @@
+Acronimo,Definizione,,A,AT,BDI,BDM,BNB,BNM,BNP,BNPE,BNPL,BNZ,CA,D,F,FF,MA,MI,MODI,NT,NU,OA,OAC,PG,PST,RA,S,SAS,SCAN,SI,SM,SMO,TMA,VEAC
+(MS),,,,DO,,"DO v2, MS v4",DO,DO,DO,DO,DO,DO,,DO,"DO, MS v4",1,,DO,,1,DO,DO,DO,,1 (v3.01: sottopar di DO),DO,DO,,,,1,DO,,DO
+MST,MOSTRE,a-ce:Exhibition,,1,,1,1,1,1,1,1,1,,1,1,1,,1,,1,1,1,1,,1,1,1,,,,1,1,,1
+MSTI,Tipo,cis:CulturalEntity cis:isInvolvedInCulturalEvent a-ce:CulturalEvent/a-ce:EXhibition,,,,1 v4,,,,,,,,,v4,1,,,,1,,,,,v4,,,,,,1,,,
+MSTT,Titolo,a-ce:Exhibition l0:name Literal,,1,,1,1,1,1,1,1,1,,1,1,1,,1,,1,1,1,1,,1,1,1,,,,1,1,,1
+MSTL,"Luogo, sede espositiva, data","cis:CulturralEvent ce:eventTimeLocation literal, se no clv:hasSpatialCoverage clv:Feature Spatial",,1,,1 v4 (v. 2: solo luogo),1,1,1,1,1,1,,Solo luogo,"Solo luogo, v4 Luogo, sedeespositiva, data",1,,Solo luogo,,1,Solo luogo,Solo luogo,Solo luogo,,1,Solo luogo,Solo luogo,,,,1,1,,1
+MSTM,Sede,cis:CulturalEvent cis:isHostedBy cis:Site,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,
+MSTE,Ente/soggetto organizzatore,cis:CulturalEvent core:hasAgentRole core:AgentRole,,,,1 v4,,,,,,,,,"MSTO, v4 1",1,,,,1,,,,,v4,,,,,,1,,,
+MSTS,Specifiche,a-ce:CulturalEvent cis:isHostedBy (se F),,1,,1,1,1,1,1,1,1,,,"sede espositiva, v4 note",1,,,,1,,,,,1,,,,,,1,1,,1
+MSTD,Data,a-ce:CulturalEvent ti:atTime ti:TimeInterval,,,,,,,,,,,,1,1,,,1,,,1,1,1,,,1,1,,,,,,,
+PRM,PREMI,,,,,,,,,,,,,,v4,,,,,,,,,,,,,,,,,,,
+PRMT,Denominazione,cis:CulturalEntity cis:isInvolvedInCulturalEvent a-ce:Competition,,,,,,,,,,,,,v4,,,,,,,,,,,,,,,,,,,
+PRML,"Luogo, sede, data",a-ce:Competition ce:eventTimeLocation literal,,,,,,,,,,,,,v4,,,,,,,,,,,,,,,,,,,
+PRME,Ente/istituto promotore,a-ce:Competition core:hasAgentRole core:AgentRole,,,,,,,,,,,,,v4,,,,,,,,,,,,,,,,,,,
+PRMR,Riconoscimento ottenuto,,,,,,,,,,,,,,v4,,,,,,,,,,,,,,,,,,,
+PRMS,Note,core:note,,,,,,,,,,,,,v4,,,,,,,,,,,,,,,,,,,
