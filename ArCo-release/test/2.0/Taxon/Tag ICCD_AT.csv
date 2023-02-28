@@ -1,0 +1,8 @@
+Acronimo,Definizione,
+OG,OGGETTO,
+OGS,DEFINIZIONE TASSONOMICA,spe:Specimen core:hasClassificationInTime core:ClassificationInTime
+OGSG,Genere,core:ClassificationInTime core:hasTaxon spe:BiologicalGenus
+OGSN,Specie,core:ClassificationInTime core:hasTaxon spe:BiologicalSpecies
+OGSA,Autore e anno specie,spe:BiologicalSpecies lite:hasAuthor l0:Agent
+OGST,Sottospecie,core:ClassificationInTime core:hasTaxon spe:BiologicalSubspecies
+OGSS,Note,spe:BiologicalTaxon core:note literal
