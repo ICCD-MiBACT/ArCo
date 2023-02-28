@@ -4176,14 +4176,6 @@
 	                	</xsl:attribute>
 					</arco-core:hasPart>
 				</xsl:for-each>
-				<!-- sex estimate -->
-				<xsl:if test="record/metadata/schede/AT/DA/STS">
-					<arco-cd:hasSexInterpretation>
-						<xsl:attribute name="rdf:resource">
-                			<xsl:value-of select="concat($NS, 'SexInterpretation/', $itemURI)" />
-                		</xsl:attribute>
-					</arco-cd:hasSexInterpretation>
-				</xsl:if>
 				<!-- technical status of cultural property (version 4.00) -->
 				<xsl:if test="record/metadata/schede/*/MT/MTC/*">
 					<!-- material of cultural property (version 4.00) -->

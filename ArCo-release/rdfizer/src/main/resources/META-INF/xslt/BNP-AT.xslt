@@ -293,6 +293,9 @@
 						<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-', position())" />
 					</xsl:attribute>
 				</arco-cd:hasSex>
+				<arco-lite:sexInformation>
+					<xsl:value-of select="normalize-space(./SPZS)" />
+				</arco-lite:sexInformation>
 			</xsl:if>		
 		</xsl:for-each>
 		<!-- development stage -->
@@ -890,7 +893,7 @@
             </l0:name>
 		</rdf:Description>
 	</xsl:if>
-	<!-- Sex interpretation as individual  -->
+	<!-- Sex as individual  -->
 	<xsl:for-each select="record/metadata/schede/BNP/SP/SPZ">
 		<xsl:if test="./SPZS">
 		<rdf:Description>
@@ -1175,6 +1178,9 @@
 						<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-revised-', position())" />
 					</xsl:attribute>
 				</arco-cd:hasSex>
+				<arco-lite:sexInformation>
+					<xsl:value-of select="normalize-space(./SZAS)" />
+				</arco-lite:sexInformation>
 			</xsl:if>		
 		</xsl:for-each>
 		<!-- development stage -->
@@ -1925,6 +1931,9 @@
 						<xsl:value-of select="concat($NS,'Sex/', $itemURI)" />
 					</xsl:attribute>
 				</arco-cd:hasSex>
+				<arco-lite:sexInformation>
+					<xsl:value-of select="normalize-space(record/metadata/schede/AT/DA/STS)" />
+				</arco-lite:sexInformation>
 			</xsl:if>
 			<!-- finding context	 -->
 			<xsl:if test="record/metadata/schede/AT/OG/OGC">
