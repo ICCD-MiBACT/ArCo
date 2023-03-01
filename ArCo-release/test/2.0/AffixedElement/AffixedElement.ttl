@@ -1,0 +1,665 @@
+@prefix : <https://w3id.org/arco/test/2.0/AffixedElement#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/AffixedElement> .
+
+<https://w3id.org/arco/test/2.0/AffixedElement> rdf:type owl:Ontology ;
+                                                 owl:versionIRI <https://w3id.org/arco/test/2.0/AffixedElement> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ontologydesignpatterns.org/opla/isNativeTo
+<http://ontologydesignpatterns.org/opla/isNativeTo> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose
+<https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgent
+<https://w3id.org/arco/ontology/core/hasAgent> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgentRole
+<https://w3id.org/arco/ontology/core/hasAgentRole> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://w3id.org/arco/ontology/core/isAgentRoleOf> ;
+                                                   rdfs:domain owl:Thing ;
+                                                   rdfs:range <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                                   rdfs:comment "Questa proprietà collega un'entità a una situazione in cui un agente ricopre un ruolo."@it ,
+                                                                "This property relates an entity to a situation in which an agent holds a role connected to that entity."@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                   rdfs:label "ha ruolo ricoperto da agente"@it ,
+                                                              "has agent role"@en ;
+                                                   owl:versionInfo "stabile"@it ,
+                                                                   "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasConcept
+<https://w3id.org/arco/ontology/core/hasConcept> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasEventOrSituationInTime
+<https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasRole
+<https://w3id.org/arco/ontology/core/hasRole> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasConcept> ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range <https://w3id.org/arco/ontology/core/Type> ;
+                                              rdfs:comment "La object property che associa un qualunque oggetto a un tipo."@it ,
+                                                           "The object property that associates any object with a type."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "ha tipo"@it ,
+                                                         "has type"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isAgentRoleOf
+<https://w3id.org/arco/ontology/core/isAgentRoleOf> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                                    rdfs:range owl:Thing ;
+                                                    rdfs:comment "Questa proprietà collega una situazione in cui un agente ricopre un ruolo relativo a un'entità all'entità."@it ,
+                                                                 "This property relates a situation in which an agent holds a role connected to an entity to that entity."@en ;
+                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                    rdfs:label "is agent role of"@en ,
+                                                               "è ruolo ricoperto da agente di"@it ;
+                                                    owl:versionInfo "stabile"@it ,
+                                                                    "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isConceptOf
+<https://w3id.org/arco/ontology/core/isConceptOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isTypeOf
+<https://w3id.org/arco/ontology/core/isTypeOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isConceptOf> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/Type> ;
+                                               rdfs:range owl:Thing ;
+                                               rdfs:comment "La object property che associa un tipo a un qualunque oggetto."@it ,
+                                                            "The object property that associates a type to any object."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "is type of"@en ,
+                                                          "è tipo di"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isValidAt
+<https://w3id.org/arco/ontology/core/isValidAt> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasAffixedElement
+<https://w3id.org/arco/ontology/denotative-description/hasAffixedElement> rdf:type owl:ObjectProperty ;
+                                                                          owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isElementAffixedOn> ;
+                                                                          rdfs:domain <http://dati.beniculturali.it/cis/CulturalEntity> ;
+                                                                          rdfs:range <https://w3id.org/arco/ontology/denotative-description/AffixedElement> ;
+                                                                          rdfs:comment "Questa proprietà collega un bene culturale a un elemento apposto sul bene (es.: emblema, timbro, iscrizione, etc.)"@it ,
+                                                                                       "This property relates a cultural property to an element affixed on it (e.g. inscription, stamp, etc.)"@en ;
+                                                                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                          rdfs:label "ha elemento apposto sul bene"@it ,
+                                                                                     "has element affixed to cultural property"@en ;
+                                                                          owl:versionInfo "stabile"@it ,
+                                                                                          "stable"@en ;
+                                                                          <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI - ICCD Normativa MI: AU/DDC. -  Normativa NU: DA/DES/DESA, DESL, DESN, DESF, DESM, DESG, DESR, DEST"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasFontStyle
+<https://w3id.org/arco/ontology/denotative-description/hasFontStyle> rdf:type owl:ObjectProperty ;
+                                                                     owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isFontStyleOf> ;
+                                                                     rdfs:domain <https://w3id.org/arco/ontology/denotative-description/AffixedElement> ;
+                                                                     rdfs:range <https://w3id.org/arco/ontology/denotative-description/FontStyle> ;
+                                                                     rdfs:comment "Questa proprietà collega un'iscrizione, uno stemma, un timbro, etc., al tipo di caratteri che viene adottato (es.: corsivo, grassetto, caratteri gotici, etc.)."@it ,
+                                                                                  "This property connects an inscription or emblem, postmark, crest, etc. to the font style which has been adopted (e.g.: italic, bold, gothic etc)."@en ;
+                                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                     rdfs:label "ha tipo di caratteri"@it ,
+                                                                                "has font style"@en ;
+                                                                     owl:versionInfo "stabile"@it ,
+                                                                                     "stable"@en ;
+                                                                     <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Traversale 4.00: DA/ISE/ISET - Normative di versioni precedenti: DA/ISR/ISRT. Normativa BNB: SB/SBE/SBEC" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose
+<https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasMeasurement
+<https://w3id.org/arco/ontology/denotative-description/hasMeasurement> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection
+<https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> rdf:type owl:ObjectProperty ;
+                                                                                 owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf> ;
+                                                                                 rdfs:domain owl:Thing ;
+                                                                                 rdfs:range <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> ;
+                                                                                 rdfs:comment "Questa proprietà collega un oggetto all'insieme delle misure osservate per quell'oggetto."@it ,
+                                                                                              "This property connects an object to the collection of observed measures on it."@en ;
+                                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                 rdfs:label "ha collezione di misure"@it ,
+                                                                                            "has measurement collection"@en ;
+                                                                                 owl:versionInfo "stabile"@it ,
+                                                                                                 "stable"@en ;
+                                                                                 <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM - Normativa BNB: LR/LRI/LRIT, LRIH, LRIO)"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasSupport
+<https://w3id.org/arco/ontology/denotative-description/hasSupport> rdf:type owl:ObjectProperty ;
+                                                                   owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isSupportOf> ;
+                                                                   rdfs:domain <https://w3id.org/arco/ontology/denotative-description/AffixedElement> ;
+                                                                   rdfs:range <https://w3id.org/arco/ontology/denotative-description/Support> ;
+                                                                   rdfs:comment "Questa proprietà collega una iscrizione, un timbro, un emblema, etc., rappresentato su un bene culturale al supporto su cui si trova l'elemento."@it ,
+                                                                                "This property connects an inscription, stamp, emblem etc., represented on a cultural entity to the support on which the entity is located."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                   rdfs:label "ha supporto"@it ,
+                                                                              "has support"@en ;
+                                                                   owl:versionInfo "stabile"@it ,
+                                                                                   "stable"@en ;
+                                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: DA/ISE/ISES" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus
+<https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus> rdf:type owl:ObjectProperty ;
+                                                                           rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                                           owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf> ;
+                                                                           rdfs:domain owl:Thing ;
+                                                                           rdfs:range <https://w3id.org/arco/ontology/denotative-description/TechnicalStatus> ;
+                                                                           rdfs:comment "Questa proprietà collega un'entità culturale al suo stato tecnico, valido fino a determinato momento, che è rappresentato dalle caratteristiche tecniche che il bene culturale ha in quel momento."@it ,
+                                                                                        "This property connects a cultural entity to its technical status, valid until a specific moment, that is represented by the technical characteristics that a cultural entity has in that moment."@en ;
+                                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                           rdfs:label "ha stato tecnico"@it ,
+                                                                                      "has technical status"@en ;
+                                                                           owl:versionInfo "stabile"@it ,
+                                                                                           "stable"@en ;
+                                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; DA/APF/APFE" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasWritingSystem
+<https://w3id.org/arco/ontology/denotative-description/hasWritingSystem> rdf:type owl:ObjectProperty ;
+                                                                         owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isWritingSystemOf> ;
+                                                                         rdfs:domain <https://w3id.org/arco/ontology/denotative-description/AffixedElement> ;
+                                                                         rdfs:range <https://w3id.org/arco/ontology/denotative-description/WritingSystem> ;
+                                                                         rdfs:comment "Questa proprietà collega una iscrizione, un timbro, uno stemma, etc., al sistema di scrittura/alfabeto adottati."@it ,
+                                                                                      "This property connects an inscription, stamp, crest etc., to the adopted writing system or alphabet."@en ;
+                                                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                         rdfs:label "ha sistema di scrittura"@it ,
+                                                                                    "has writing system"@en ;
+                                                                         owl:versionInfo "stabile"@it ,
+                                                                                         "stable"@en ;
+                                                                         <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: DA/ISE/ISEF. DA/DES/DEST, DESF" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic
+<https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isElementAffixedOn
+<https://w3id.org/arco/ontology/denotative-description/isElementAffixedOn> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isFontStyleOf
+<https://w3id.org/arco/ontology/denotative-description/isFontStyleOf> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <https://w3id.org/arco/ontology/denotative-description/FontStyle> ;
+                                                                      rdfs:range owl:Thing ;
+                                                                      rdfs:comment "Questa è la proprietà inversa a \"ha tipo di caratteri\"."@it ,
+                                                                                   "This is the inverse property of \"has font style\"."@en ;
+                                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                      rdfs:label "is font style of"@en ,
+                                                                                 "è tipo di caratteri di"@it ;
+                                                                      owl:versionInfo "stabile"@it ,
+                                                                                      "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf
+<https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> ;
+                                                                                  rdfs:range owl:Thing ;
+                                                                                  rdfs:comment "Questa è la proprietà inversa di \"ha collezione di misure\"."@it ,
+                                                                                               "This is the inverse property of \"has measurement collection\"."@en ;
+                                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description/> ;
+                                                                                  rdfs:label "is measurement collection of"@en ,
+                                                                                             "è collezione di misure di"@it ;
+                                                                                  owl:versionInfo "stabile"@it ,
+                                                                                                  "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isSupportOf
+<https://w3id.org/arco/ontology/denotative-description/isSupportOf> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <https://w3id.org/arco/ontology/denotative-description/Support> ;
+                                                                    rdfs:range <https://w3id.org/arco/ontology/denotative-description/AffixedElement> ;
+                                                                    rdfs:comment "Questa proprietà, inversa di \"ha supporto\", collega un supporto (es.: \"etichetta di carta\") all'elemento (timbro, emblema, iscrizione, marchio) che vi viene rappresentato."@it ,
+                                                                                 "This property connects a support (e.g. \"paper label\") to an element (stamp, embelem, inscription, mark) which has been represented on it. It is the inverse property of hasSupport."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/arco/denotative-description> ;
+                                                                    rdfs:label "is support of"@en ,
+                                                                               "è supporto di"@it ;
+                                                                    owl:versionInfo "stabile"@it ,
+                                                                                    "stable"@en ;
+                                                                    <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: DA/ISE/ISES" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf
+<https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isWritingSystemOf
+<https://w3id.org/arco/ontology/denotative-description/isWritingSystemOf> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain <https://w3id.org/arco/ontology/denotative-description/WritingSystem> ;
+                                                                          rdfs:range <https://w3id.org/arco/ontology/denotative-description/AffixedElement> ;
+                                                                          rdfs:comment "Questa è la proprietà inversa di \"ha sistema di scrittura\"."@it ,
+                                                                                       "This is the inverse property of \"has writing system\"."@en ;
+                                                                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                          rdfs:label "is writing system of"@en ,
+                                                                                     "è sistema di scrittura di"@it ;
+                                                                          owl:versionInfo "stabile"@it ,
+                                                                                          "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/refersToAgent
+<https://w3id.org/arco/ontology/denotative-description/refersToAgent> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/denotative-description/italianTranslation
+<https://w3id.org/arco/ontology/denotative-description/italianTranslation> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/transcript
+<https://w3id.org/arco/ontology/denotative-description/transcript> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.beniculturali.it/cis/CulturalEntity
+<http://dati.beniculturali.it/cis/CulturalEntity> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/UseFunction
+<https://w3id.org/arco/ontology/context-description/UseFunction> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/AgentRole
+<https://w3id.org/arco/ontology/core/AgentRole> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/italia/onto/RO/TimeIndexedRole> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasAgent> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/l0/Agent>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasRole> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/RO/Role>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                ] ;
+                                                owl:disjointWith <https://w3id.org/arco/ontology/core/Classification> ;
+                                                rdfs:comment "Questa classe rappresenta una situazione relativa a un agente che ricopre un ruolo, senza la specificazione della dimensione tempo."@it ,
+                                                             "This class represents a situation in which an agent holds a role, regardless of the timing."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                rdfs:label "Agent Role"@en ,
+                                                           "Ruolo ricoperto da agente"@it ;
+                                                owl:versionInfo "stabile"@it ,
+                                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/Classification
+<https://w3id.org/arco/ontology/core/Classification> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/Type
+<https://w3id.org/arco/ontology/core/Type> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/AffixedElement
+<https://w3id.org/arco/ontology/denotative-description/AffixedElement> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isElementAffixedOn> ;
+                                                                                         owl:someValuesFrom <http://dati.beniculturali.it/cis/CulturalEntity>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/arco/ontology/core/hasAgentRole> ;
+                                                                                         owl:allValuesFrom <https://w3id.org/arco/ontology/core/AgentRole>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                                         owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/AffixedElementType>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasFontStyle> ;
+                                                                                         owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/FontStyle>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose> ;
+                                                                                         owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> ;
+                                                                                         owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasSupport> ;
+                                                                                         owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/Support>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus> ;
+                                                                                         owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/TechnicalStatus>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasWritingSystem> ;
+                                                                                         owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/WritingSystem>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/arco/ontology/denotative-description/refersToAgent> ;
+                                                                                         owl:allValuesFrom <https://w3id.org/italia/onto/l0/Agent>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                                         owl:allValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/arco/ontology/denotative-description/italianTranslation> ;
+                                                                                         owl:allValuesFrom rdfs:Literal
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/arco/ontology/denotative-description/transcript> ;
+                                                                                         owl:allValuesFrom rdfs:Literal
+                                                                                       ] ;
+                                                                       <http://purl.org/dc/elements/1.1/description> """An example of usage of one of the class 'Affixed element' is the following:
+resource:Inscription/1200865151-inscription-1
+        a   dd:AffixedElement ;
+        rdfs:label \"Inscription 1 of cultural property 1200865151\"@en ;
+        dd:hasFontStyle resource:FontStyle/lettere-capitali ;
+        dd:positionOnCulturalProperty \"in the middle\" ;
+        dd:transcript \"PAVLVS VENETVS PAPA SECVNDVS SVIS IMPENSIS FIERI FECIT ANNO CRISTI MCCCLXVII\" ;
+        language:hasLanguage resource:Language/latino ;
+        dd:hasType resource:AffixedElement/IscrizioneMilitare .
+resource:AffixedElement/IscrizioneMilitare skos:broader dd:Inscription ."""@en ,
+                                                                                                                     """Un esempio d'uso della classe \"Elemento apposto su bene culturale\" è il seguente:
+resource:Inscription/1200865151-inscription-1
+        a   dd:AffixedElement ;
+        rdfs:label \"Inscription 1 of cultural property 1200865151\"@en ;
+        dd:hasFontStyle resource:FontStyle/lettere-capitali ;
+        dd:positionOnCulturalProperty \"in the middle\" ;
+        dd:transcript \"PAVLVS VENETVS PAPA SECVNDVS SVIS IMPENSIS FIERI FECIT ANNO CRISTI MCCCLXVII\" ;
+        language:hasLanguage resource:Language/latino ;
+        dd:hasType resource:AffixedElement/IscrizioneMilitare .
+resource:AffixedElement/IscrizioneMilitare skos:broader dd:Inscription ."""@it ;
+                                                                       rdfs:comment "Questa classe rappresenta un elemento (stemma, marchio, timbro, emblema, logo, iscrizione, etc.) apposto su un bene culturale."@it ,
+                                                                                    "This class represents an element (i.e. crest, trademark, postmark, inscription) which is affixed on a cultural property."@en ;
+                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                       rdfs:label "Element affixed on cultural property"@en ,
+                                                                                  "Elemento apposto su bene culturale"@it ;
+                                                                       owl:versionInfo "stabile"@it ,
+                                                                                       "stable"@en ;
+                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/AffixedElementType
+<https://w3id.org/arco/ontology/denotative-description/AffixedElementType> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/AffixedElement>
+                                                                                           ] ;
+                                                                           rdfs:comment "Questa classe rappresenta il tipo (es.: gentilizio, civile, religioso, etc.) di un'iscrizione, un emblema, un timbro, uno stemma, etc."@it ,
+                                                                                        "This class represents the type (i.e. civil, religious) of an inscription, emblem, postmark, crest, etc."@en ;
+                                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                           rdfs:label "Affixed element type"@en ,
+                                                                                      "Tipo di elemento apposto"@it ;
+                                                                           owl:versionInfo "stabile"@it ,
+                                                                                           "stable"@en ;
+                                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: DA/ISE/ISEE - Normative di versioni precedenti: DA/STM/STMQ"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType
+<https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/ConservationStatusType
+<https://w3id.org/arco/ontology/denotative-description/ConservationStatusType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType
+<https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/DesignationType
+<https://w3id.org/arco/ontology/denotative-description/DesignationType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/FontStyle
+<https://w3id.org/arco/ontology/denotative-description/FontStyle> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <https://w3id.org/italia/onto/l0/Characteristic> ;
+                                                                  rdfs:comment "Questa classe rappresenta il tipo di caratteri utilizzato in un testo (es.: corsivo, grassetto, caratteri gotici, etc.)"@it ,
+                                                                               "This class represents the font style used in a text (i.e. italic, bold, gothic)"@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                  rdfs:label "Font style"@en ,
+                                                                             "Tipo di caratteri"@it ;
+                                                                  owl:versionInfo "stabile"@it ,
+                                                                                  "stable"@en ;
+                                                                  <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Traversale 4.00: DA/ISE/ISET - Normative di versioni precedenti: DA/ISR/ISRT. Normativa BNB: SB/SBE/SBEC"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose
+<https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType
+<https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Measurement
+<https://w3id.org/arco/ontology/denotative-description/Measurement> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/MeasurementCollection
+<https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <https://w3id.org/italia/onto/l0/Collection> ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://w3id.org/arco/ontology/core/isValidAt> ;
+                                                                                                owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> ;
+                                                                                                owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/Measurement>
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf> ;
+                                                                                                owl:someValuesFrom owl:Thing
+                                                                                              ] ;
+                                                                              <http://ontologydesignpatterns.org/opla/isNativeTo> <https://w3id.org/arco/pattern/object-collection/> ;
+                                                                              <http://purl.org/dc/elements/1.1/description> """An example of usage of the class 'Measurement collection' is the following:
+resource:MeasurementCollection/1200865132-1
+        a  dd:MeasurementCollection ;
+        rdfs:label \"Measurements of cultural property 1200865132 7\"@en ;
+        dd:hasMeasurement resource:Measurement/1200865132-1-width , resource:Measurement/1200865132-1-height , resource:Measurement/1200865132-1-depth ."""@en ,
+                                                                                                                            """Un esempio d'uso della classe \"Collezione di misure\" è il seguente:
+resource:MeasurementCollection/1200865132-1
+        a  dd:MeasurementCollection ;
+        rdfs:label \"Misure del bene culturale 1200865132 7\"@it ;
+        dd:hasMeasurement resource:Measurement/1200865132-1-width , resource:Measurement/1200865132-1-height , resource:Measurement/1200865132-1-depth ."""@it ;
+                                                                              rdfs:comment "Questa classe rappresenta l'insieme delle misurazioni osservate per un oggetto. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all'ingombro per l'immagazzinaggio; alla base (individuano l'oggetto e la conformazione fisica del proprietario e sono fondamentali per l'allestimento museale, per individuare i tipi di supporti necessari per l'esposizione); alle maniche."@it ,
+                                                                                           "This class represents the set of measurments observed for an object."@en ;
+                                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                              rdfs:label "Collezione di misure"@it ,
+                                                                                         "Measurement collection"@en ;
+                                                                              owl:versionInfo "stabile"@it ,
+                                                                                              "stable"@en ;
+                                                                              <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/MeasurementType
+<https://w3id.org/arco/ontology/denotative-description/MeasurementType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/SampleCollectedType
+<https://w3id.org/arco/ontology/denotative-description/SampleCollectedType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Support
+<https://w3id.org/arco/ontology/denotative-description/Support> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isSupportOf> ;
+                                                                                  owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/AffixedElement>
+                                                                                ] ;
+                                                                rdfs:comment "Questa classe rappresenta il supporto sul quale può trovarsi un elemento, per esempio un'iscrizione, un emblema, un timbro, etc., rappresentati su un bene culturale (es. \"etichetta di carta\")."@it ,
+                                                                             "This class represents the support on which an element can be located, for instance an inscription, emblem, postmark represented on a cultural property (i.e. \"paper label\")."@en ;
+                                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                rdfs:label "Support"@en ,
+                                                                           "Supporto"@it ;
+                                                                owl:versionInfo "stabile"@it ,
+                                                                                "stable"@en ;
+                                                                <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: DA/ISE/ISES" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic
+<https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/TechnicalStatus
+<https://w3id.org/arco/ontology/denotative-description/TechnicalStatus> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic>
+                                                                                        ] ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf> ;
+                                                                                          owl:someValuesFrom owl:Thing
+                                                                                        ] ;
+                                                                        <http://purl.org/dc/elements/1.1/description> """An example of usage of the class 'Technical status' is the following:
+resource:TechnicalStatus/0900281817-4
+        a           a-dd:TechnicalStatus ;
+        rdfs:label  \"Technical status of cultural property 0900281817-4\"@en ;
+        a-dd:includesTechnicalCharacteristic
+                resource:TechnicalCharacteristic/centinato, resource:TechnicalCharacteristic/stone-sculpture .
+
+resource:TechnicalCharacteristic/stone-sculpture
+        a                    a-dd:TechnicalCharacteristic ;
+        rdfs:label           \"stone/ sculpture\" ;
+        a-dd:isCharacteristicClassifiedBy  a-dd:MaterialOrTechnique ."""@en ,
+                                                                                                                      """Un esempio d'uso della classe \"Stato tecnico\" è il seguente:
+resource:TechnicalStatus/0900281817-4
+        a           a-dd:TechnicalStatus ;
+        rdfs:label  \"Technical status of cultural property 0900281817-4\"@en ;
+        a-dd:includesTechnicalCharacteristic
+                resource:TechnicalCharacteristic/centinato, resource:TechnicalCharacteristic/stone-sculpture .
+
+resource:TechnicalCharacteristic/stone-sculpture
+        a                    a-dd:TechnicalCharacteristic ;
+        rdfs:label           \"stone/ sculpture\" ;
+        a-dd:isCharacteristicClassifiedBy  a-dd:MaterialOrTechnique ."""@it ;
+                                                                        rdfs:comment "Questa classe rappresenta lo stato tecnico di un'entità, cioè una situazione in cui un'entità ha associate una serie di caratteristiche tecniche. Lo stato di un'entità ha associata una validità temporale, relativa al momento in cui quelle caratteristiche sono state rilevate."@it ,
+                                                                                     "This class represents the technical status of an entity, that is a situation in which the entity is associated to technical characteristics. The technical status has a temporal validity, related to the moment when the characteristics were observed."@en ;
+                                                                        rdfs:label "Stato tecnico"@it ,
+                                                                                   "Technical status"@en ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; DA/APF/APFE" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/WritingSystem
+<https://w3id.org/arco/ontology/denotative-description/WritingSystem> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <https://w3id.org/italia/onto/l0/System> ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isWritingSystemOf> ;
+                                                                                        owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/AffixedElement>
+                                                                                      ] ;
+                                                                      rdfs:comment "Questa classe rappresenta il sistema di scrittura/alfabeto adottati in una iscrizione, un timbro, uno stemma, etc."@it ,
+                                                                                   "This class represents the writing system or alphabet of an inscription, postmark, crest etc."@en ;
+                                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                      rdfs:label "Sistema di scrittura"@it ,
+                                                                                 "Writing system"@en ;
+                                                                      owl:versionInfo "stabile"@it ,
+                                                                                      "stable"@en ;
+                                                                      <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: DA/ISE/ISEF" .
+
+
+###  https://w3id.org/italia/onto/RO/Role
+<https://w3id.org/italia/onto/RO/Role> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/RO/TimeIndexedRole
+<https://w3id.org/italia/onto/RO/TimeIndexedRole> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Agent
+<https://w3id.org/italia/onto/l0/Agent> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Characteristic
+<https://w3id.org/italia/onto/l0/Characteristic> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Collection
+<https://w3id.org/italia/onto/l0/Collection> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Object
+<https://w3id.org/italia/onto/l0/Object> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/System
+<https://w3id.org/italia/onto/l0/System> rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/denotative-description/AffixedElementType>
+                <https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType>
+                <https://w3id.org/arco/ontology/denotative-description/ConservationStatusType>
+                <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType>
+                <https://w3id.org/arco/ontology/denotative-description/DesignationType>
+                <https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType>
+                <https://w3id.org/arco/ontology/denotative-description/MeasurementType>
+                <https://w3id.org/arco/ontology/denotative-description/SampleCollectedType>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
