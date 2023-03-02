@@ -1950,7 +1950,7 @@
 					</xsl:attribute>
 				</arco-cd:hasFindingContext>
 			</xsl:if>
-			<!-- age interpretation -->
+			<!-- age -->
 			<xsl:if test="record/metadata/schede/AT/DA/SEM">
 				<arco-cd:hasAge>
 					<xsl:attribute name="rdf:resource">

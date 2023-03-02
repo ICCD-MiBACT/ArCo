@@ -372,11 +372,11 @@
 				<l0:name>
 					<xsl:value-of select="./CHSN" />
 	   			</l0:name>
-	   			<arco-core:isDescribedByClassificationSystem>
+	   			<arco-core:isDefinedByClassificationSystem>
 					<xsl:attribute name="rdf:resource">
 			    		<xsl:value-of select="'https://w3id.org/arco/ontology/musical-instrument/Hornbosel-SachsClassificationSystem'" />
 			    	</xsl:attribute>
-				</arco-core:isDescribedByClassificationSystem>
+				</arco-core:isDefinedByClassificationSystem>
 	   			<arco-lite:HSNumber>
 					<xsl:value-of select="./CHSN" />
 	   			</arco-lite:HSNumber>
@@ -408,11 +408,11 @@
 				<l0:name>
 					<xsl:value-of select="./CLAT" />
 	   			</l0:name>
-	   			<arco-core:isDescribedByClassificationSystem>
+	   			<arco-core:isDefinedByClassificationSystem>
 					<xsl:attribute name="rdf:resource">
 			    		<xsl:value-of select="concat($NS,'ClassificationSystem/', arco-fn:urify(normalize-space(./CLAA)))" />
 			    	</xsl:attribute>
-				</arco-core:isDescribedByClassificationSystem>
+				</arco-core:isDefinedByClassificationSystem>
 		   </rdf:Description>
 		   <rdf:Description>
 				<xsl:attribute name="rdf:about">
