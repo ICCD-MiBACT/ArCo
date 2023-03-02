@@ -1,0 +1,361 @@
+@prefix : <https://w3id.org/arco/test/2.0/Responsibility#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/Responsibility> .
+
+<https://w3id.org/arco/test/2.0/Responsibility> rdf:type owl:Ontology ;
+                                                 owl:versionIRI <https://w3id.org/arco/test/2.0/Responsibility> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility
+<https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility> rdf:type owl:ObjectProperty ;
+                                                                                owl:inverseOf <https://w3id.org/arco/ontology/context-description/isAgentWithResponsibilityIn> ;
+                                                                                rdfs:domain <https://w3id.org/arco/ontology/context-description/Responsibility> ;
+                                                                                rdfs:range <https://w3id.org/italia/onto/l0/Agent> ;
+                                                                                rdfs:comment "Questa proprietà collega l'individuazione di una responsabilità relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici all'agente che ha quella specifica responsabilità."@it ,
+                                                                                             "This property relates the responsibility's identification to the agent which has that specific responsibility, focusing on the production process and dissemination of the photographic heritage."@en ;
+                                                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                                rdfs:label "ha agente con responsabilità"@it ,
+                                                                                           "has agent with responsibility"@en ;
+                                                                                owl:versionInfo "stabile"@it ,
+                                                                                                "stable"@en ;
+                                                                                <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa F e FF 4.00: PD/PDF/PDFN - ICCD Normativa F 3.00: PD/PDF/PDFN o PD/PDF/PDFB" .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasCulturalScope
+<https://w3id.org/arco/ontology/context-description/hasCulturalScope> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <https://w3id.org/italia/onto/l0/hasTopic> ;
+                                                                      owl:inverseOf <https://w3id.org/arco/ontology/context-description/isCulturalScopeOf> ;
+                                                                      rdfs:domain <https://w3id.org/arco/ontology/context-description/Responsibility> ;
+                                                                      rdfs:range <https://w3id.org/arco/ontology/context-description/CulturalScope> ;
+                                                                      rdfs:comment "Questa proprietà collega una situazione in cui viene attribuito un ambito culturale di un bene culturale all'ambito culturale stesso."@it ,
+                                                                                   "This property relates a situation, where a cultural scope is attributed to a cultural entity, to the cultural scope."@en ;
+                                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                      rdfs:label "ha ambito culturale"@it ,
+                                                                                 "has cultural scope"@en ;
+                                                                      owl:versionInfo "stabile"@it ,
+                                                                                      "stable"@en ;
+                                                                      <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: AU/ATB" .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasInterventionRole
+<https://w3id.org/arco/ontology/context-description/hasInterventionRole> rdf:type owl:ObjectProperty ;
+                                                                         owl:inverseOf <https://w3id.org/arco/ontology/context-description/isInterventionRoleIn> ;
+                                                                         rdfs:domain <https://w3id.org/arco/ontology/context-description/Responsibility> ;
+                                                                         rdfs:range <https://w3id.org/italia/onto/RO/Role> ;
+                                                                         rdfs:comment "Questa proprietà associa un'attribuzione di autore/responsabilità al ruolo rivestito dall'autore/responsabilità o dall'ambito culturale."@it ,
+                                                                                      "This property relates an authorship attribution to the agent's role."@en ;
+                                                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                         rdfs:label "ha ruolo nell'intervento"@it ,
+                                                                                    "has intervention role"@en ;
+                                                                         owl:versionInfo "stabile"@it ,
+                                                                                         "stable"@en ;
+                                                                         <https://w3id.org/arco/ontology/catalogue/iccdNormTag> """AU/ATB/ATBR; AU/AUT/AUTR.
+ICCD Normative F e FF: PD/PDF/PDFR""" .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasResponsibility
+<https://w3id.org/arco/ontology/context-description/hasResponsibility> rdf:type owl:ObjectProperty ;
+                                                                       owl:inverseOf <https://w3id.org/arco/ontology/context-description/isResponsibilityFor> ;
+                                                                       rdfs:domain owl:Thing ;
+                                                                       rdfs:range <https://w3id.org/arco/ontology/context-description/Responsibility> ;
+                                                                       rdfs:comment "Questa proprietà collega un bene fotografico (fotografia o fondo fotografico) all'individuazione di una responsabilità attribuibile a un agente relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici, quindi alle diverse personalità responsabili, a vario titolo, del ciclo produttivo del bene in esame, oltre che della sua circolazione, divulgazione, commercializzazione e promozione (committenti, stampatori, ritoccatori, coloritori, editori, distributori, sponsor, curatori e responsabili di edizioni e di serie, dedicanti e dedicatari, responsabili di collezioni e di collazioni, ecc.)."@it ,
+                                                                                    "This property relates a photographic cultural entity (photography or photographic fond) to the responsibility attribution of an agent. The agent is in charge of the production or disclosure process which characterises photographic heritage (i.e. printers, editors, distributors, sposors, collection responsibles etc.)"@en ;
+                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                       rdfs:label "ha responsabilità"@it ,
+                                                                                  "has responsibility"@en ;
+                                                                       owl:versionInfo "stabile"@it ,
+                                                                                       "stable"@en ;
+                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa F: PD/PDF" .
+
+
+###  https://w3id.org/arco/ontology/context-description/isAgentWithResponsibilityIn
+<https://w3id.org/arco/ontology/context-description/isAgentWithResponsibilityIn> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:domain <https://w3id.org/italia/onto/l0/Agent> ;
+                                                                                 rdfs:range <https://w3id.org/arco/ontology/context-description/Responsibility> ;
+                                                                                 rdfs:comment "Questa è la proprietà inversa a \"ha agente con responsabilità\"."@it ,
+                                                                                              "This is the inverse property of \"has agent with responsibility\"."@en ;
+                                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                                 rdfs:label "is agent with responsibility in"@en ,
+                                                                                            "è agente con responsabilità in"@it ;
+                                                                                 owl:versionInfo "stabile"@it ,
+                                                                                                 "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/context-description/isCulturalScopeOf
+<https://w3id.org/arco/ontology/context-description/isCulturalScopeOf> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:subPropertyOf <https://w3id.org/italia/onto/l0/isTopicOf> ;
+                                                                       rdfs:domain <https://w3id.org/arco/ontology/context-description/CulturalScope> ;
+                                                                       rdfs:range <https://w3id.org/arco/ontology/context-description/Responsibility> ;
+                                                                       rdfs:comment "Questa proprietà collega l'ambito culturale attribuito a un bene culturale alla situazione in cui è avvenuta tale attribuzione."@it ,
+                                                                                    "This property relates a cultural scope of a cultural entity to the situation where this cultural scope is attributed."@en ;
+                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                       rdfs:label "is cultural scope of"@en ,
+                                                                                  "è ambito culturale di"@it ;
+                                                                       owl:versionInfo "stabile"@it ,
+                                                                                       "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/context-description/isInterventionRoleIn
+<https://w3id.org/arco/ontology/context-description/isInterventionRoleIn> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain <https://w3id.org/italia/onto/RO/Role> ;
+                                                                          rdfs:range <https://w3id.org/arco/ontology/context-description/Responsibility> ;
+                                                                          rdfs:comment "Questa è la proprietà inversa di \"ha ruolo nell'intervento\"."@it ,
+                                                                                       "This is the inverse property of \"has intervention role\"."@en ;
+                                                                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                          rdfs:label "is intervention role in"@en ,
+                                                                                     "è ruolo nell'intervento"@it ;
+                                                                          owl:versionInfo "stabile"@it ,
+                                                                                          "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/context-description/isResponsibilityFor
+<https://w3id.org/arco/ontology/context-description/isResponsibilityFor> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <https://w3id.org/arco/ontology/context-description/Responsibility> ;
+                                                                         rdfs:range owl:Thing ;
+                                                                         rdfs:comment "This property relates the attribution of a responsibility to an agent, relating to the activities of production and dissemination of photographic heritage (e.g.: committent, editor, printer, dedicatee, etc.) to photographic heritage."@en ;
+                                                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                         rdfs:label "is responsibility for"@en ,
+                                                                                    "è responsibilità su"@it ;
+                                                                         owl:versionInfo "stabile"@it ,
+                                                                                         "stable"@en ;
+                                                                         <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa F: PD/PDF" .
+
+
+###  https://w3id.org/arco/ontology/core/involves
+<https://w3id.org/arco/ontology/core/involves> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/l0/hasTopic
+<https://w3id.org/italia/onto/l0/hasTopic> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/l0/isTopicOf
+<https://w3id.org/italia/onto/l0/isTopicOf> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/alternativeOrOutdatedResponsibility
+<https://w3id.org/arco/ontology/context-description/alternativeOrOutdatedResponsibility> rdf:type owl:DatatypeProperty ;
+                                                                                         rdfs:domain <https://w3id.org/arco/ontology/context-description/Responsibility> ;
+                                                                                         rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/arco/ontology/context-description/mainResponsibility
+<https://w3id.org/arco/ontology/context-description/mainResponsibility> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:domain <https://w3id.org/arco/ontology/context-description/Responsibility> ;
+                                                                        rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/arco/ontology/core/informationSource
+<https://w3id.org/arco/ontology/core/informationSource> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain owl:Thing ;
+                                                        rdfs:range rdfs:Literal ;
+                                                        rdfs:comment "Questa proprietà rappresenta la fonte da cui vengono prese le informazioni."@it ,
+                                                                     "This property represents the source of information."@en ;
+                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                        rdfs:label "fonte dell'informazione"@it ,
+                                                                   "information source"@en ;
+                                                        owl:versionInfo "instabile"@it ,
+                                                                        "unstable"@en ;
+                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "AU/CMM/CMMF" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.beniculturali.it/cis/CulturalEntity
+<http://dati.beniculturali.it/cis/CulturalEntity> rdf:type owl:Class ;
+                                                  rdfs:subClassOf owl:Thing .
+
+
+###  http://dati.gov.it/onto/dcatapit#Agent
+<http://dati.gov.it/onto/dcatapit#Agent> rdf:type owl:Class ;
+                                         owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  https://w3id.org/arco/ontology/context-description/AuthorshipAttribution
+<https://w3id.org/arco/ontology/context-description/AuthorshipAttribution> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Commission
+<https://w3id.org/arco/ontology/context-description/Commission> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/CulturalScope
+<https://w3id.org/arco/ontology/context-description/CulturalScope> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://w3id.org/italia/onto/l0/Topic> ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/context-description/isCulturalScopeOf> ;
+                                                                                     owl:someValuesFrom <https://w3id.org/arco/ontology/context-description/Responsibility>
+                                                                                   ] ;
+                                                                   rdfs:comment "Questa classe rappresenta l'ambito culturale a cui può essere riferito un bene culturale. Per l'ambito culturale si usano definizioni quali: ambito, cultura, periodo, produzione, scuola, manifattura, ecc.; a questi termini segue la qualificazione geografica o il nome dell'ambito, della cultura, del periodo, della produzione, della scuola, della manifattura, ecc. Nel caso della normativa VeAC, questa classe rappresenta l'ambito sartoriale/di produzione, ovvero il contesto sartoriale (oppure la manifattura, la maestranza, ecc.) a cui può essere ricondotta la realizzazione del bene catalogato."@it ,
+                                                                                "This class represents the cultural scope related to a cultural property (e.g.: neoclassical, Milanese manifacturing, etc.)"@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                   rdfs:label "Ambito culturale"@it ,
+                                                                              "Cultural Scope"@en ;
+                                                                   owl:versionInfo "stabile"@it ,
+                                                                                   "stable"@en ;
+                                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: AU/ATB" .
+
+
+###  https://w3id.org/arco/ontology/context-description/Dating
+<https://w3id.org/arco/ontology/context-description/Dating> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Estimate
+<https://w3id.org/arco/ontology/context-description/Estimate> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Fruition
+<https://w3id.org/arco/ontology/context-description/Fruition> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Responsibility
+<https://w3id.org/arco/ontology/context-description/Responsibility> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility> ;
+                                                                                      owl:someValuesFrom <https://w3id.org/italia/onto/l0/Agent>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/context-description/hasInterventionRole> ;
+                                                                                      owl:someValuesFrom <https://w3id.org/italia/onto/RO/Role>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/context-description/isResponsibilityFor> ;
+                                                                                      owl:someValuesFrom <http://dati.beniculturali.it/cis/CulturalEntity>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/context-description/hasCulturalScope> ;
+                                                                                      owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/CulturalScope>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/context-description/mainResponsibility> ;
+                                                                                      owl:someValuesFrom xsd:boolean
+                                                                                    ] ;
+                                                                    rdfs:comment "Questa classe rappresenta l'individuazione di una responsabilità attribuibile a un agente relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici, quindi alle diverse personalità responsabili, a vario titolo, del ciclo produttivo del bene in esame, oltre che della sua circolazione, divulgazione, commercializzazione e promozione (committenti, stampatori, ritoccatori, coloritori, editori, distributori, sponsor, curatori e responsabili di edizioni e di serie, dedicanti e dedicatari, responsabili di collezioni e di collazioni, ecc.)."@it ,
+                                                                                 "This class represents the attribution of a responsibility to an agent, relating to the activities of production and dissemination of photographic heritage (e.g.: committent, editor, printer, dedicatee, etc.)"@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                    rdfs:label "Responsabilità"@it ,
+                                                                               "Responsibility"@en ;
+                                                                    owl:versionInfo "stabile"@it ,
+                                                                                    "stable"@en ;
+                                                                    <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normative F e FF: PD/PDF" .
+
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/italia/onto/l0/EventOrSituation> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/core/involves> ;
+                                                                               owl:someValuesFrom owl:Thing
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                               owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                               owl:allValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                             ] ;
+                                                             rdfs:comment "La classe che rappresenta una situazione o un evento nel tempo."@it ,
+                                                                          "The class that models a situation or an event in time."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                             rdfs:label "Event or situation in time"@en ,
+                                                                        "Evento o situazione nel tempo"@it .
+
+
+###  https://w3id.org/italia/onto/RO/Role
+<https://w3id.org/italia/onto/RO/Role> rdf:type owl:Class ;
+                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normative F e FF: PD/PDF/PDFR" .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class ;
+                                               rdfs:isDefinedBy <https://w3id.org/italia/onto/TI/> .
+
+
+###  https://w3id.org/italia/onto/l0/Agent
+<https://w3id.org/italia/onto/l0/Agent> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/italia/onto/l0/Entity> ,
+                                                        <https://w3id.org/italia/onto/l0/Object> ;
+                                        owl:disjointWith <https://w3id.org/italia/onto/l0/Concept> ,
+                                                         <https://w3id.org/italia/onto/l0/Description> ,
+                                                         <https://w3id.org/italia/onto/l0/EventOrSituation> ;
+                                        rdfs:comment "Any agentive Object , either physical (e.g. a person, a robot, an oak), or social (e.g. a corporation, an institution, a community)."@en ,
+                                                     "Un agente, sia fisico (ex. una persona, un robot, una quercia), o sociale (ex. una società, un'istituzione, una comunità)."@it ;
+                                        rdfs:isDefinedBy <https://w3id.org/italia/onto/l0> ;
+                                        rdfs:label "Agent"@en ,
+                                                   "Agente"@it ;
+                                        owl:versionInfo "stabile"@it ,
+                                                        "stable"@en .
+
+
+###  https://w3id.org/italia/onto/l0/Concept
+<https://w3id.org/italia/onto/l0/Concept> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Description
+<https://w3id.org/italia/onto/l0/Description> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Entity
+<https://w3id.org/italia/onto/l0/Entity> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/EventOrSituation
+<https://w3id.org/italia/onto/l0/EventOrSituation> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Object
+<https://w3id.org/italia/onto/l0/Object> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Topic
+<https://w3id.org/italia/onto/l0/Topic> rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/AuthorshipAttribution>
+                <https://w3id.org/arco/ontology/context-description/Commission>
+                <https://w3id.org/arco/ontology/context-description/Dating>
+                <https://w3id.org/arco/ontology/context-description/Estimate>
+                <https://w3id.org/arco/ontology/context-description/Fruition>
+                <https://w3id.org/arco/ontology/context-description/Responsibility>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

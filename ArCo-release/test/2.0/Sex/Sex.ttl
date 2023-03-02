@@ -1,0 +1,132 @@
+@prefix : <https://w3id.org/arco/test/2.0/Sex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/Sex> .
+
+<https://w3id.org/arco/test/2.0/Sex> rdf:type owl:Ontology ;
+                                      owl:versionIRI <https://w3id.org/arco/test/2.0/Sex> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/hasSex
+<https://w3id.org/arco/ontology/context-description/hasSex> rdf:type owl:ObjectProperty ;
+                                                            rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                            owl:inverseOf <https://w3id.org/arco/ontology/context-description/isSexOf> ;
+                                                            rdfs:domain owl:Thing ;
+                                                            rdfs:range <https://w3id.org/arco/ontology/context-description/Sex> ;
+                                                            rdfs:comment "Questa proprietà collega un'entità al sesso."@it ,
+                                                                         "This property relates an entity to its sex."@en ;
+                                                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                            rdfs:label "ha sesso"@it ,
+                                                                       "has sex"@en ;
+                                                            owl:versionInfo "instabile"@it ,
+                                                                            "unstable"@en ;
+                                                            <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa AT: DA/STS. Normativa BDI: AT/ATT/ATTS, AI/AIF/AIFO, VI/VIF/VIFO, FI/FIF/FIFO. Normativa SM: MU/MUT/MUTS" .
+
+
+###  https://w3id.org/arco/ontology/context-description/isSexOf
+<https://w3id.org/arco/ontology/context-description/isSexOf> rdf:type owl:ObjectProperty ;
+                                                             rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> ;
+                                                             rdfs:domain <https://w3id.org/arco/ontology/context-description/Sex> ;
+                                                             rdfs:range owl:Thing ;
+                                                             rdfs:comment "Questa proprietà collega il sesso di un'entità all'entità stessa."@it ,
+                                                                          "This property relates the sex to the entity."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                             rdfs:label "is sex of"@en ,
+                                                                        "è sesso di"@it ;
+                                                             owl:versionInfo "instabile"@it ,
+                                                                             "unstable"@it .
+
+
+###  https://w3id.org/arco/ontology/core/hasEventOrSituationInTime
+<https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf
+<https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/sex
+<https://w3id.org/arco/ontology/context-description/sex> rdf:type owl:DatatypeProperty ,
+                                                                  owl:FunctionalProperty ;
+                                                         rdfs:domain <https://w3id.org/arco/ontology/context-description/Sex> ,
+                                                                     <https://w3id.org/arco/ontology/context-description/SexInterpretation> ;
+                                                         rdfs:range rdfs:Literal ;
+                                                         rdfs:comment "Questa proprietà rappresenta il sesso dei una entità."@it ,
+                                                                      "This property represents the sex of an entity."@en ;
+                                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                         rdfs:label "sesso"@it ,
+                                                                    "sex"@en ;
+                                                         owl:versionInfo "instabile"@it ,
+                                                                         "unstable"@en ;
+                                                         <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "Normativa AT: DA/STS/STSS. Normativa BDI: AT/ATT/ATTS" .
+
+
+###  https://w3id.org/arco/ontology/core/informationSource
+<https://w3id.org/arco/ontology/core/informationSource> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain owl:Thing ;
+                                                        rdfs:range rdfs:Literal ;
+                                                        rdfs:comment "Questa proprietà rappresenta la fonte da cui vengono prese le informazioni."@it ,
+                                                                     "This property represents the source of information."@en ;
+                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                        rdfs:label "fonte dell'informazione"@it ,
+                                                                   "information source"@en ;
+                                                        owl:versionInfo "instabile"@it ,
+                                                                        "unstable"@en ;
+                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "AU/CMM/CMMF" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/Sex
+<https://w3id.org/arco/ontology/context-description/Sex> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/context-description/isSexOf> ;
+                                                                           owl:allValuesFrom owl:Thing
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/context-description/sex> ;
+                                                                           owl:allValuesFrom rdfs:Literal
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/core/informationSource> ;
+                                                                           owl:allValuesFrom rdfs:Literal
+                                                                         ] ;
+                                                         rdfs:comment "Questa classe rappresenta il sesso di un entità."@it ,
+                                                                      "This class represents the sex of an entity."@en ;
+                                                         rdfs:label "Sesso"@it ,
+                                                                    "Sex"@en ;
+                                                         owl:versionInfo "instabile"@it ,
+                                                                         "unstable"@en ;
+                                                         <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa AT: DA/STS. Normativa BDI: AT/ATT/ATTS, AI/AIF/AIFO, VI/VIF/VIFO, FI/FIF/FIFO. Normativa SM: MU/MUT/MUTS. Normativa AUT: AU/AUT/AUTZ" .
+
+
+###  https://w3id.org/arco/ontology/context-description/SexInterpretation
+<https://w3id.org/arco/ontology/context-description/SexInterpretation> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

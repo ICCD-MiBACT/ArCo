@@ -1,0 +1,158 @@
+@prefix : <https://w3id.org/arco/test/2.0/Subject#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/Subject> .
+
+<https://w3id.org/arco/test/2.0/Subject> rdf:type owl:Ontology ;
+                                          owl:versionIRI <https://w3id.org/arco/test/2.0/Subject> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ontologydesignpatterns.org/opla/isNativeTo
+<http://ontologydesignpatterns.org/opla/isNativeTo> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/hasSubject
+<https://w3id.org/arco/ontology/context-description/hasSubject> rdf:type owl:ObjectProperty ;
+                                                                owl:inverseOf <https://w3id.org/arco/ontology/context-description/isSubjectOf> ;
+                                                                rdfs:domain owl:Thing ;
+                                                                rdfs:range <https://w3id.org/arco/ontology/context-description/Subject> ;
+                                                                rdfs:comment "Questa proprietà collega un bene culturale, un'opera correlata a un bene culturale in quanto sua fase preparatoria o finale, o un apparato iconografico-decorativo di un bene culturale al suo soggetto o motivo ornamentale."@it ,
+                                                                             "This property relates a cultural property or a preparatory or final work of a cultural property to ist subject or ornamental motif."@en ;
+                                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                rdfs:label "ha soggetto"@it ,
+                                                                           "has subject"@en ;
+                                                                owl:versionInfo "stabile"@it ,
+                                                                                "stable"@en ;
+                                                                <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS. DA/DES/DESU" .
+
+
+###  https://w3id.org/arco/ontology/context-description/isSubjectOf
+<https://w3id.org/arco/ontology/context-description/isSubjectOf> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <https://w3id.org/arco/ontology/context-description/Subject> ;
+                                                                 rdfs:range owl:Thing ;
+                                                                 rdfs:comment "Questa proprietà, inversa a \"ha soggetto\", collega un soggetto o motivo ornamentale al bene culturale o a un'opera correlata a un bene culturale in quanto sua fase preparatoria o finale o a un apparato iconografico-decorativo su cui è rappresentato."@it ,
+                                                                              "This property relates a subject or ornamental motif to the cultural property or to the final or preparatory work of a cultural property."@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                 rdfs:label "is subject of"@en ,
+                                                                            "è soggetto di"@it ;
+                                                                 owl:versionInfo "stabile"@it ,
+                                                                                 "stable"@en ;
+                                                                 <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS"@it .
+
+
+###  https://w3id.org/arco/ontology/core/classifies
+<https://w3id.org/arco/ontology/core/classifies> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <https://w3id.org/arco/ontology/core/isClassifiedBy> ;
+                                                 rdfs:domain <https://w3id.org/arco/ontology/core/Concept> ;
+                                                 rdfs:range owl:Thing ;
+                                                 rdfs:comment "Questa proprietà collega un concetto ad un'entità"@it ,
+                                                              "This property relates a concept to an entity"@en ;
+                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                 rdfs:label "classifica"@it ,
+                                                            "classifies"@en ;
+                                                 owl:versionInfo "instabile"@it ,
+                                                                 "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isClassifiedBy
+<https://w3id.org/arco/ontology/core/isClassifiedBy> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain owl:Thing ;
+                                                     rdfs:range <https://w3id.org/arco/ontology/core/Concept> ;
+                                                     rdfs:comment "Questa proprietà collega un'entità ad un concetto"@it ,
+                                                                  "This property relates an entity and a concept"@en ;
+                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                     rdfs:label "is classified by"@en ,
+                                                                "è classificato da"@it ;
+                                                     owl:versionInfo "instabile"@it ,
+                                                                     "unstable"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/subjectDescription
+<https://w3id.org/arco/ontology/context-description/subjectDescription> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:domain <http://dati.beniculturali.it/cis/CulturalEntity> ;
+                                                                        rdfs:range rdfs:Literal ;
+                                                                        rdfs:comment "Questa proprietà rappresanta la descrizione del soggetto"@it ,
+                                                                                     "This property represents the description of a subject of a cultural property"@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                        rdfs:label "descrizione del soggetto"@it ,
+                                                                                   "subject description"@en ;
+                                                                        owl:versionInfo "instabile"@it ,
+                                                                                        "unstable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "Normativa D e F: OG/SGT/SGTD, SG/SGT/SGTD"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.beniculturali.it/cis/CulturalEntity
+<http://dati.beniculturali.it/cis/CulturalEntity> rdf:type owl:Class ;
+                                                  rdfs:subClassOf owl:Thing .
+
+
+###  https://w3id.org/arco/ontology/context-description/Subject
+<https://w3id.org/arco/ontology/context-description/Subject> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/italia/onto/l0/Topic> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/context-description/isSubjectOf> ;
+                                                                               owl:someValuesFrom owl:Thing
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/core/isClassifiedBy> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/core/Concept>
+                                                                             ] ;
+                                                             rdfs:comment "Questa classe rappresenta il soggetto rappresentato da un bene culturale o il suo motivo decorativo."@it ,
+                                                                          "This class represents the subject of a cultural property, or its ornamental motif."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                             rdfs:label "Soggetto"@it ,
+                                                                        "Subject"@en ;
+                                                             owl:versionInfo "stabile"@it ,
+                                                                             "stable"@en ;
+                                                             <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS. DA/DES/DESU. VeAC: OG/PGT/OGTV" .
+
+
+###  https://w3id.org/arco/ontology/core/Concept
+<https://w3id.org/arco/ontology/core/Concept> rdf:type owl:Class ;
+                                              owl:equivalentClass <https://w3id.org/italia/onto/l0/Concept> ;
+                                              rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ;
+                                              <http://ontologydesignpatterns.org/opla/isNativeTo> <http://www.ontologydesignpatterns.org/cp/owl/timeindexedclassification.owl> ;
+                                              rdfs:comment "La classe che rappresenta un concetto."@it ,
+                                                           "The class representing a concept."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "Concept"@en ,
+                                                         "Concetto"@it ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
+###  https://w3id.org/italia/onto/l0/Concept
+<https://w3id.org/italia/onto/l0/Concept> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Object
+<https://w3id.org/italia/onto/l0/Object> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Topic
+<https://w3id.org/italia/onto/l0/Topic> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

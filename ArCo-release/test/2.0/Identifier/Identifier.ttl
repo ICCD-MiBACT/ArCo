@@ -1,0 +1,250 @@
+@prefix : <https://w3id.org/arco/test/2.0/Identifier#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/Identifier> .
+
+<https://w3id.org/arco/test/2.0/Identifier> rdf:type owl:Ontology ;
+                                             owl:versionIRI <https://w3id.org/arco/test/2.0/Identifier> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/hasConcept
+<https://w3id.org/arco/ontology/core/hasConcept> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasIdentifier
+<https://w3id.org/arco/ontology/core/hasIdentifier> rdf:type owl:ObjectProperty ;
+                                                    owl:inverseOf <https://w3id.org/arco/ontology/core/isIdentifierOf> ;
+                                                    rdfs:domain owl:Thing ;
+                                                    rdfs:range <https://w3id.org/arco/ontology/core/Identifier> ;
+                                                    rdfs:comment "La object property che collega una entità a un identificativo."@it ,
+                                                                 "The object property that links an entity to an identifier."@en ;
+                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                    rdfs:label "ha identificativo"@it ,
+                                                               "has identifier"@en ;
+                                                    owl:versionInfo "instabile"@it ,
+                                                                    "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasConcept> ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range <https://w3id.org/arco/ontology/core/Type> ;
+                                              rdfs:comment "La object property che associa un qualunque oggetto a un tipo."@it ,
+                                                           "The object property that associates any object with a type."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "ha tipo"@it ,
+                                                         "has type"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isConceptOf
+<https://w3id.org/arco/ontology/core/isConceptOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isIdentifierOf
+<https://w3id.org/arco/ontology/core/isIdentifierOf> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <https://w3id.org/arco/ontology/core/Identifier> ;
+                                                     rdfs:range owl:Thing ;
+                                                     rdfs:comment "La object property che collega un identificativo a una entità."@it ,
+                                                                  "The object property that links an identifier to an entity."@en ;
+                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                     rdfs:label "is identifier of"@en ,
+                                                                "è identificativo di"@it ;
+                                                     owl:versionInfo "instabile"@it ,
+                                                                     "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isTypeOf
+<https://w3id.org/arco/ontology/core/isTypeOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isConceptOf> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/Type> ;
+                                               rdfs:range owl:Thing ;
+                                               rdfs:comment "La object property che associa un tipo a un qualunque oggetto."@it ,
+                                                            "The object property that associates a type to any object."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "is type of"@en ,
+                                                          "è tipo di"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/issuedBy
+<https://w3id.org/arco/ontology/core/issuedBy> rdf:type owl:ObjectProperty ;
+                                               owl:inverseOf <https://w3id.org/arco/ontology/core/issues> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/Identifier> ;
+                                               rdfs:range <https://w3id.org/italia/onto/COV/Organization> .
+
+
+###  https://w3id.org/arco/ontology/core/issues
+<https://w3id.org/arco/ontology/core/issues> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <https://w3id.org/italia/onto/COV/Organization> ;
+                                             rdfs:range <https://w3id.org/arco/ontology/core/Identifier> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/current
+<https://w3id.org/arco/ontology/core/current> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range xsd:boolean ;
+                                              rdfs:comment "Questa porprietà indica se i dati relativi all'istanza di un pattern sono attuali o no."@it ,
+                                                           "This property indicates if data releated to an instance of a pattern is current or not"@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "attuale"@it ,
+                                                         "current"@en ;
+                                              owl:versionInfo "instabile"@it ,
+                                                              "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/identifier
+<https://w3id.org/arco/ontology/core/identifier> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://w3id.org/arco/ontology/core/Identifier> ;
+                                                 rdfs:range rdfs:Literal ;
+                                                 rdfs:comment "Questa proprietà collega un'entità al suo codice identificativo."@it ,
+                                                              "This property relates an entity with its identifier code." ;
+                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                 rdfs:label "identificativo"@it ,
+                                                            "identifier"@en ;
+                                                 owl:versionInfo "instabile"@it ,
+                                                                 "unstable"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.gov.it/onto/dcatapit#Organization
+<http://dati.gov.it/onto/dcatapit#Organization> rdf:type owl:Class ;
+                                                owl:equivalentClass <http://www.w3.org/2006/vcard/ns#Organization> ;
+                                                rdfs:subClassOf <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  http://www.w3.org/2006/vcard/ns#Organization
+<http://www.w3.org/2006/vcard/ns#Organization> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/Identifier
+<https://w3id.org/arco/ontology/core/Identifier> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/italia/onto/l0/Characteristic> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <https://w3id.org/arco/ontology/core/issuedBy> ;
+                                                                   owl:someValuesFrom <https://w3id.org/italia/onto/COV/Organization>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                   owl:allValuesFrom <https://w3id.org/arco/ontology/core/IdentifierType>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <https://w3id.org/arco/ontology/core/isIdentifierOf> ;
+                                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <https://w3id.org/arco/ontology/core/identifier> ;
+                                                                   owl:someValuesFrom rdfs:Literal
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <https://w3id.org/arco/ontology/core/current> ;
+                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                   owl:onDataRange xsd:boolean
+                                                                 ] ;
+                                                 rdfs:comment "Questa classe rappresenta in identificativo."@it ,
+                                                              "This class represents identifier."@en ;
+                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                 rdfs:label "Identificativo"@it ,
+                                                            "Identifier"@en ;
+                                                 owl:versionInfo "instabile"@it ,
+                                                                 "unstable"@en ;
+                                                 <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "NC/NCT, AC/ACC/ACCC, AC/ACS/ACSC, AC/MOD/MODI. ICCD Normativa Trasversale 4.00: UB/INP/INPS. ICCD Normativa FF: PA/PAC/PACI; PA/PAC/PACA. ICCD Normativa Trasversale 4.00: DO/FTA/FTAN; DO/DRA/DRAN; DO/VDC/VDCN; DO/REG/REGN; DO/FNT/FNTI. ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFX. ICCD Normativa Trasversale 4.00: RE/FOI/FOID. UB/COL/COLI." .
+
+
+###  https://w3id.org/arco/ontology/core/IdentifierType
+<https://w3id.org/arco/ontology/core/IdentifierType> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ;
+                                                     rdfs:comment "Questa classe rappresenta in tipo di identificativo."@it ,
+                                                                  "This class represents identifier type."@en ;
+                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                     rdfs:label "Identifier type"@en ,
+                                                                "Tipo di identificativo"@it ;
+                                                     owl:versionInfo "instabile"@it ,
+                                                                     "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/Type
+<https://w3id.org/arco/ontology/core/Type> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/COV/Organization
+<https://w3id.org/italia/onto/COV/Organization> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Agent
+<https://w3id.org/italia/onto/l0/Agent> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Characteristic
+<https://w3id.org/italia/onto/l0/Characteristic> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/InternationalIdentifier
+<https://w3id.org/arco/ontology/core/InternationalIdentifier> rdf:type owl:NamedIndividual ,
+                                                                       <https://w3id.org/arco/ontology/core/IdentifierType> ;
+                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                              rdfs:label "Identificativo internazionale"@it ,
+                                                                         "International identifier"@en ;
+                                                              owl:versionInfo "instabile"@it ,
+                                                                              "unstable"@en ;
+                                                              <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa PST: AC/ACI"@it .
+
+
+###  https://w3id.org/arco/ontology/core/LocalIdentifier
+<https://w3id.org/arco/ontology/core/LocalIdentifier> rdf:type owl:NamedIndividual ,
+                                                               <https://w3id.org/arco/ontology/core/IdentifierType> ;
+                                                      rdfs:label "Identificativo locale"@it ,
+                                                                 "Local identifier"@en ;
+                                                      owl:versionInfo "instabile"@it ,
+                                                                      "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/NationalIdentifier
+<https://w3id.org/arco/ontology/core/NationalIdentifier> rdf:type owl:NamedIndividual ,
+                                                                  <https://w3id.org/arco/ontology/core/IdentifierType> ;
+                                                         rdfs:label "Identificativo nazionale"@it ,
+                                                                    "National identifier"@en ;
+                                                         owl:versionInfo "instabile"@it ,
+                                                                         "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/UniqueIdentifier
+<https://w3id.org/arco/ontology/core/UniqueIdentifier> rdf:type owl:NamedIndividual ,
+                                                                <https://w3id.org/arco/ontology/core/IdentifierType> ;
+                                                       rdfs:comment "Instabile"@it ,
+                                                                    "Unstable"@en ;
+                                                       rdfs:label "Identificativo univoco"@it ,
+                                                                  "Unique identifier"@en ;
+                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "Normativa trasversale: CD/NCT/NCTR + CD/NCT/NCTN + CD/NCT/NCTS"@it .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

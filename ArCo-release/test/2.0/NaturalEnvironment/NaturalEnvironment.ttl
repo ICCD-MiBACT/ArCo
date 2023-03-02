@@ -1,0 +1,1084 @@
+@prefix : <https://w3id.org/arco/test/2.0/NaturalEnvironment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/NaturalEnvironment> .
+
+<https://w3id.org/arco/test/2.0/NaturalEnvironment> rdf:type owl:Ontology ;
+                                                     owl:versionIRI <https://w3id.org/arco/test/2.0/NaturalEnvironment> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ontologydesignpatterns.org/opla/isNativeTo
+<http://ontologydesignpatterns.org/opla/isNativeTo> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/construction-description/hasModeOfIrrigation
+<https://w3id.org/arco/ontology/construction-description/hasModeOfIrrigation> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasTechnicalSystem
+<https://w3id.org/arco/ontology/construction-description/hasTechnicalSystem> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasWaterAvailability
+<https://w3id.org/arco/ontology/construction-description/hasWaterAvailability> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasWaterDistribution
+<https://w3id.org/arco/ontology/construction-description/hasWaterDistribution> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasWaterElement
+<https://w3id.org/arco/ontology/construction-description/hasWaterElement> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasWaterSystem
+<https://w3id.org/arco/ontology/construction-description/hasWaterSystem> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:subPropertyOf <https://w3id.org/arco/ontology/construction-description/hasTechnicalSystem> ;
+                                                                         owl:inverseOf <https://w3id.org/arco/ontology/construction-description/isWaterSystemOf> ;
+                                                                         rdfs:domain owl:Thing ;
+                                                                         rdfs:range <https://w3id.org/arco/ontology/construction-description/WaterSystem> ;
+                                                                         rdfs:comment "Questa proprietà collega un ambiente naturale con il suo sistema delle acque."@it ,
+                                                                                      "This property relates a natural environment with its water system."@en ;
+                                                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                                                                         rdfs:label "ha sistema delle acque"@it ,
+                                                                                    "has water system"@en ;
+                                                                         owl:versionInfo "instabile"@it ,
+                                                                                         "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isTechnicalSystemOf
+<https://w3id.org/arco/ontology/construction-description/isTechnicalSystemOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isWaterSystemOf
+<https://w3id.org/arco/ontology/construction-description/isWaterSystemOf> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:subPropertyOf <https://w3id.org/arco/ontology/construction-description/isTechnicalSystemOf> ;
+                                                                          rdfs:domain owl:Thing ;
+                                                                          rdfs:range <https://w3id.org/arco/ontology/construction-description/WaterSystem> ;
+                                                                          rdfs:comment "Questa proprietà collega un sistema delle acque al suo ambiente naturale."@it ,
+                                                                                       "This property relates the water system of a natural environment with its natural environment."@en ;
+                                                                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/contruction-description> ;
+                                                                          rdfs:label "is water system of"@en ,
+                                                                                     "è sistema delle acque di"@it ;
+                                                                          owl:versionInfo "instabile"@it ,
+                                                                                          "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasEventOrSituationInTime
+<https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasLocation
+<https://w3id.org/arco/ontology/core/hasLocation> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf
+<https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isLocationOf
+<https://w3id.org/arco/ontology/core/isLocationOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isTypeOf
+<https://w3id.org/arco/ontology/core/isTypeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isValidAt
+<https://w3id.org/arco/ontology/core/isValidAt> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasMeasurement
+<https://w3id.org/arco/ontology/denotative-description/hasMeasurement> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection
+<https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> rdf:type owl:ObjectProperty ;
+                                                                                 owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf> ;
+                                                                                 rdfs:domain owl:Thing ;
+                                                                                 rdfs:range <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> ;
+                                                                                 rdfs:comment "Questa proprietà collega un oggetto all'insieme delle misure osservate per quell'oggetto."@it ,
+                                                                                              "This property connects an object to the collection of observed measures on it."@en ;
+                                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                 rdfs:label "ha collezione di misure"@it ,
+                                                                                            "has measurement collection"@en ;
+                                                                                 owl:versionInfo "stabile"@it ,
+                                                                                                 "stable"@en ;
+                                                                                 <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM - Normativa BNB: LR/LRI/LRIT, LRIH, LRIO)"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasOrientation
+<https://w3id.org/arco/ontology/denotative-description/hasOrientation> rdf:type owl:ObjectProperty ;
+                                                                       owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isOrientationOf> ;
+                                                                       rdfs:domain owl:Thing ;
+                                                                       rdfs:range <https://w3id.org/arco/ontology/denotative-description/Orientation> ;
+                                                                       rdfs:comment "Questa proprietà collega un oggetto al suo orientamento, secondo l'asse principale individuato."@it ,
+                                                                                    "This property connects an object to its orientation, considering its major axis."@en ;
+                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                       rdfs:label "ha orientamento"@it ,
+                                                                                  "has orientation"@en ;
+                                                                       owl:versionInfo "stabile"@it ,
+                                                                                       "stable"@en ;
+                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT - Normativa BNB: LR/LRI/LRIP - Normativa PG: CA/CAE"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf
+<https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> ;
+                                                                                  rdfs:range owl:Thing ;
+                                                                                  rdfs:comment "Questa è la proprietà inversa di \"ha collezione di misure\"."@it ,
+                                                                                               "This is the inverse property of \"has measurement collection\"."@en ;
+                                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description/> ;
+                                                                                  rdfs:label "is measurement collection of"@en ,
+                                                                                             "è collezione di misure di"@it ;
+                                                                                  owl:versionInfo "stabile"@it ,
+                                                                                                  "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isOrientationOf
+<https://w3id.org/arco/ontology/denotative-description/isOrientationOf> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:domain <https://w3id.org/arco/ontology/denotative-description/Orientation> ;
+                                                                        rdfs:range owl:Thing ;
+                                                                        rdfs:comment "Questa è la proprietà inversa di \"ha orientamento\"."@it ,
+                                                                                     "This is the inverse property of \"has orientation\"."@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                        rdfs:label "is orientation of"@en ,
+                                                                                   "è orientamento di"@it ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/atLocation
+<https://w3id.org/arco/ontology/location/atLocation> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/atSite
+<https://w3id.org/arco/ontology/location/atSite> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasBaseMap
+<https://w3id.org/arco/ontology/location/hasBaseMap> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasClimateSituation
+<https://w3id.org/arco/ontology/location/hasClimateSituation> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                              owl:inverseOf <https://w3id.org/arco/ontology/location/isClimateSituationOf> ;
+                                                              rdfs:domain owl:Thing ;
+                                                              rdfs:range <https://w3id.org/arco/ontology/location/ClimateSituation> ;
+                                                              rdfs:comment "Questa proprietà collega l'ambiente alla situazione climatica"@it ,
+                                                                           "This property relates the ambient to the climate situation"@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                              rdfs:label "ha situazione clumatica"@it ,
+                                                                         "has climate situation"@en ;
+                                                              owl:versionInfo "instabile"@it ,
+                                                                              "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSite
+<https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSite> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasFluidDynamism
+<https://w3id.org/arco/ontology/location/hasFluidDynamism> rdf:type owl:ObjectProperty ;
+                                                           owl:inverseOf <https://w3id.org/arco/ontology/location/isFluidDynamismOf> ;
+                                                           rdfs:domain <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                           rdfs:range <https://w3id.org/arco/ontology/location/FluidDynamism> ;
+                                                           rdfs:comment "Questa proprietà collega un ambiente naturale con il suo idrodinamismo."@it ,
+                                                                        "This property relates a natural environment with its fluid dynamism."@en ;
+                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                           rdfs:label "ha idrodinamismo"@it ,
+                                                                      "has flyuid dynamism"@en ;
+                                                           owl:versionInfo "instabile"@it ,
+                                                                           "unstable"@en ;
+                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNB, BNP, BNZ: LR/LRI/LRID" .
+
+
+###  https://w3id.org/arco/ontology/location/hasGeologicalContext
+<https://w3id.org/arco/ontology/location/hasGeologicalContext> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasGeometryMethod
+<https://w3id.org/arco/ontology/location/hasGeometryMethod> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasGeometryTechnique
+<https://w3id.org/arco/ontology/location/hasGeometryTechnique> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasIncline
+<https://w3id.org/arco/ontology/location/hasIncline> rdf:type owl:ObjectProperty ;
+                                                     owl:inverseOf <https://w3id.org/arco/ontology/location/isInclineOf> ;
+                                                     rdfs:domain <https://w3id.org/arco/ontology/location/Substrate> ;
+                                                     rdfs:range <https://w3id.org/arco/ontology/location/Incline> ;
+                                                     rdfs:comment "Questa proprietà collega un substrato con la sua inclinazione."@it ,
+                                                                  "This property relates a substrate with its incline."@en ;
+                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                     rdfs:label "ha inclinazione"@it ,
+                                                                "has incline"@en ;
+                                                     owl:versionInfo "instabile"@it ,
+                                                                     "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/hasLocationType
+<https://w3id.org/arco/ontology/location/hasLocationType> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasMap
+<https://w3id.org/arco/ontology/location/hasMap> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <https://w3id.org/arco/ontology/location/isMapOf> ;
+                                                 rdfs:domain owl:Thing ;
+                                                 rdfs:range <https://w3id.org/arco/ontology/location/Map> ;
+                                                 rdfs:comment "Questa proprietà collega un'entità alla sua mappa (es. il suolo con la sua carta geologica, pedologica, di utilizzazione dei suoli)."@it ,
+                                                              "This property relates an entity with its map (i.e. a soil with its geological, pedological, land use map)."@en ;
+                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                 rdfs:label "ha mappa"@it ,
+                                                            "has map"@en ;
+                                                 owl:versionInfo "instabile"@it ,
+                                                                 "unstable"@it .
+
+
+###  https://w3id.org/arco/ontology/location/hasMarineBiogeographicRealm
+<https://w3id.org/arco/ontology/location/hasMarineBiogeographicRealm> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasLocation> ;
+                                                                      owl:inverseOf <https://w3id.org/arco/ontology/location/isMarineBiogeographicRealmOf> ;
+                                                                      rdfs:domain <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                                      rdfs:range <https://w3id.org/arco/ontology/location/MarineBiogeographicRealm> ;
+                                                                      rdfs:comment "Questa proprietà collega un ambiente naturale alla sua regione zoogeografica marina."@it ,
+                                                                                   "This property connects a natural environment with its marine biogeographic realm."@en ;
+                                                                      rdfs:label "ha regione biogeografica marina"@it ,
+                                                                                 "has marine biogeographic realm"@en ;
+                                                                      owl:versionInfo "instabile"@it ,
+                                                                                      "unstable"@en ;
+                                                                      <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNZ: LR/LRM" .
+
+
+###  https://w3id.org/arco/ontology/location/hasNaturalEnvironment
+<https://w3id.org/arco/ontology/location/hasNaturalEnvironment> rdf:type owl:ObjectProperty ;
+                                                                rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                                owl:inverseOf <https://w3id.org/arco/ontology/location/isNaturalEnvironmentOf> ;
+                                                                rdfs:domain owl:Thing ;
+                                                                rdfs:range <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                rdfs:label "Questa proprietà collega una cosa all'ambiente naturale in cui è inserita"@it ,
+                                                                           "This property relates a thing to its natural environment"@en ,
+                                                                           "ha ambiente naturale"@it ,
+                                                                           "has natual environment"@en ;
+                                                                owl:versionInfo "instabile"@it ,
+                                                                                "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/hasShadeTolerance
+<https://w3id.org/arco/ontology/location/hasShadeTolerance> rdf:type owl:ObjectProperty ;
+                                                            owl:inverseOf <https://w3id.org/arco/ontology/location/isShadeToleranceOf> ;
+                                                            rdfs:domain <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                            rdfs:range <https://w3id.org/arco/ontology/location/ShadeTolerance> ;
+                                                            rdfs:comment "Questa proprietà collega un ambiente naturale alla sua situazione luminosa."@it ,
+                                                                         "This property relates a natural environment with its shade tolerance."@en ;
+                                                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                            rdfs:label "ha situazione luminosa"@it ,
+                                                                       "has shade tolerance"@en ;
+                                                            owl:versionInfo "instabile"@it ,
+                                                                            "unstable"@en ;
+                                                            <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNB, BNP, BNZ: LR/LRI/LRIS" .
+
+
+###  https://w3id.org/arco/ontology/location/hasSoil
+<https://w3id.org/arco/ontology/location/hasSoil> rdf:type owl:ObjectProperty ;
+                                                  owl:inverseOf <https://w3id.org/arco/ontology/location/isSoilOf> ;
+                                                  rdfs:domain owl:Thing ;
+                                                  rdfs:range <https://w3id.org/arco/ontology/location/Soil> ;
+                                                  rdfs:comment "Questa proprietà collega una cosa al suolo"@it ,
+                                                               "This property relates a thing to the soil"@en ;
+                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                  rdfs:label "ha suolo"@it ,
+                                                             "has soil"@en ;
+                                                  owl:versionInfo "instabile"@it ,
+                                                                  "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/hasSubstrate
+<https://w3id.org/arco/ontology/location/hasSubstrate> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/isClimateSituationOf
+<https://w3id.org/arco/ontology/location/isClimateSituationOf> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> ;
+                                                               rdfs:domain <https://w3id.org/arco/ontology/location/ClimateSituation> ;
+                                                               rdfs:range owl:Thing ;
+                                                               rdfs:comment "Questa proprietà collega la situazione climatica all'ambiente"@it ,
+                                                                            "This property relates the climate situation to the ambient"@en ;
+                                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                               rdfs:label "is climate situation of"@en ,
+                                                                          "è situazione climatica di"@it ;
+                                                               owl:versionInfo "instabile"@it ,
+                                                                               "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/isFluidDynamismOf
+<https://w3id.org/arco/ontology/location/isFluidDynamismOf> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain <https://w3id.org/arco/ontology/location/FluidDynamism> ;
+                                                            rdfs:range <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                            rdfs:comment "Questa proprietà collega l'idrodinamismo, moto ondoso, di un ambiente naturale con l'ambiente naturale stesso."@it ,
+                                                                         "This property relates the fluid dynamism, wave movement, of a natural environment with its natural environment."@en ;
+                                                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                            rdfs:label "is fluid dynamism of"@en ,
+                                                                       "is wave movement of"@en ,
+                                                                       "è idrodinamismo di"@it ,
+                                                                       "è moto ondoso di"@it ;
+                                                            owl:versionInfo "instabile"@it ,
+                                                                            "unstable"@en ;
+                                                            <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNB; BNP; BNZ: LR/LRI/LRID" .
+
+
+###  https://w3id.org/arco/ontology/location/isInclineOf
+<https://w3id.org/arco/ontology/location/isInclineOf> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain <https://w3id.org/arco/ontology/location/Incline> ;
+                                                      rdfs:range <https://w3id.org/arco/ontology/location/Substrate> ;
+                                                      rdfs:comment "Questa proprietà collega l'inclinazione di un substrato al substrato stesso."@it ,
+                                                                   "This property relates the incline of a substrate to the substrate itself."@en ;
+                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                      rdfs:label "is incline of"@en ,
+                                                                 "è inclinazione di"@it ;
+                                                      owl:versionInfo "instabile"@it ,
+                                                                      "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/isMapOf
+<https://w3id.org/arco/ontology/location/isMapOf> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <https://w3id.org/arco/ontology/location/Map> ;
+                                                  rdfs:range owl:Thing ;
+                                                  rdfs:comment "Questa proprietà è l'inversa di \"ha mappa\"."@it ,
+                                                               "This is the inverse property of \"has map\"."@en ;
+                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                  rdfs:label "is map of"@en ,
+                                                             "è mappa di"@it ;
+                                                  owl:versionInfo "instabile"@it ,
+                                                                  "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/isMarineBiogeographicRealmOf
+<https://w3id.org/arco/ontology/location/isMarineBiogeographicRealmOf> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isLocationOf> ;
+                                                                       rdfs:domain <https://w3id.org/arco/ontology/location/MarineBiogeographicRealm> ;
+                                                                       rdfs:range <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                                       rdfs:comment "Questa proprietà collega una regione zoogeografica marina a un ambiente naturale."@it ,
+                                                                                    "This property relates a marine biogeographical realm to a natural environment."@en ;
+                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                       rdfs:label "is marine biogeographical realm of"@en ,
+                                                                                  "è regione zoogeografica marina di"@it ;
+                                                                       owl:versionInfo "instabile"@it ,
+                                                                                       "unstable"@en ;
+                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNZ: LR/LRM" .
+
+
+###  https://w3id.org/arco/ontology/location/isNaturalEnvironmentOf
+<https://w3id.org/arco/ontology/location/isNaturalEnvironmentOf> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> ;
+                                                                 rdfs:domain <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                                 rdfs:range owl:Thing ;
+                                                                 rdfs:comment "Questa proprietà collega l'ambiente naturale al bene culturale"@it ,
+                                                                              "This property relates the natural environment to the cultural property"@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                 rdfs:label "is natural environment of"@en ,
+                                                                            "è ambiente naturale di"@it ;
+                                                                 owl:versionInfo "instabile"@it ,
+                                                                                 "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/isShadeToleranceOf
+<https://w3id.org/arco/ontology/location/isShadeToleranceOf> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <https://w3id.org/arco/ontology/location/ShadeTolerance> ;
+                                                             rdfs:range <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                             rdfs:comment "Questa proprietà collega la situazione luminosa di un ambiente naturale all'ambiente naturale stesso."@it ,
+                                                                          "This property relates the shade tolerance of a natural environment to the natural environment itself."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                             rdfs:label "is shade tolerance of"@en ,
+                                                                        "è situazione luminosa di"@it ;
+                                                             owl:versionInfo "instabile"@it ,
+                                                                             "unstable"@en ;
+                                                             <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNB, BNP, BNZ: LR/LRI/LRIS" .
+
+
+###  https://w3id.org/arco/ontology/location/isSoilOf
+<https://w3id.org/arco/ontology/location/isSoilOf> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://w3id.org/arco/ontology/location/Soil> ;
+                                                   rdfs:range owl:Thing ;
+                                                   rdfs:comment "Questa proprietà collega il suolo ad una cosa"@it ,
+                                                                "This property relates the soil to a thing"@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                   rdfs:label "is soil of"@en ,
+                                                              "è suolo di"@it ;
+                                                   owl:versionInfo "instabile"@it ,
+                                                                   "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/isSubstrateOf
+<https://w3id.org/arco/ontology/location/isSubstrateOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf
+<https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasGeometry
+<https://w3id.org/italia/onto/CLV/hasGeometry> rdf:type owl:ObjectProperty ;
+                                               owl:inverseOf <https://w3id.org/italia/onto/CLV/isGeometryFor> ;
+                                               rdfs:domain owl:Thing ;
+                                               rdfs:range <https://w3id.org/italia/onto/CLV/Geometry> ;
+                                               rdfs:comment "Questa proprietà lega una qualsiasi cosa del dominio a una geometria."@it ,
+                                                            "This property links any thing of the domain to the geometry."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                               rdfs:label "ha geometria"@it ,
+                                                          "has geometry"@en ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CLV/isGeometryFor
+<https://w3id.org/italia/onto/CLV/isGeometryFor> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <https://w3id.org/italia/onto/CLV/Geometry> ;
+                                                 rdfs:range owl:Thing ;
+                                                 rdfs:comment "Inverse property of \"hasGeometry\" that links a geometry to the related Thing of the domain."@en ,
+                                                              "Proprietà inversa di \"ha geometria\" che lega una geometria a una cosa del dominio modellato."@it ;
+                                                 rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                                 rdfs:label "is geometry for"@en ,
+                                                            "è geometria per"@it ;
+                                                 owl:versionInfo "stabile"@it ,
+                                                                 "stable"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/description
+<https://w3id.org/arco/ontology/core/description> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/arco/ontology/location/geographicalDescription
+<https://w3id.org/arco/ontology/location/geographicalDescription> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/description> ;
+                                                                  rdfs:domain <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                                  rdfs:range rdfs:Literal ;
+                                                                  rdfs:comment "Questa proprietà collega un ambiente naturale con la sua descrizione geografica."@it ,
+                                                                               "This property relates a natural environment with its geographical description."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                  rdfs:label "descrizione geografica"@it ,
+                                                                             "geographical description"@en ;
+                                                                  owl:versionInfo "instabile"@it ,
+                                                                                  "unstable"@en ;
+                                                                  <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa SI 3.00: CA/GEF/GEFD-GEFI" .
+
+
+###  https://w3id.org/arco/ontology/location/geologicalDescription
+<https://w3id.org/arco/ontology/location/geologicalDescription> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/description> ;
+                                                                rdfs:domain <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                                rdfs:range rdfs:Literal ;
+                                                                rdfs:comment "Questa proprietà collega un ambiente naturale con la sua descrizione geological."@it ,
+                                                                             "This property relates a natural environment with its geological description."@en ;
+                                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                rdfs:label "descrizione geologica"@it ,
+                                                                           "geological description"@en ;
+                                                                owl:versionInfo "instabile"@it ,
+                                                                                "unstable"@en ;
+                                                                <https://w3id.org/arco/ontology/catalogue/iccdNormTag> """ICCD Normativa SI 3.00: CA/GELD
+ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP""" .
+
+
+###  https://w3id.org/arco/ontology/location/geomorphologicalDescription
+<https://w3id.org/arco/ontology/location/geomorphologicalDescription> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/description> ;
+                                                                      rdfs:domain <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                                      rdfs:range rdfs:Literal ;
+                                                                      rdfs:comment "Questa proprietà collega un ambiente naturale con la sua descrizione geomorfologica."@it ,
+                                                                                   "This property relates a natural environment with its geomorphological description."@en ;
+                                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                      rdfs:label "descizione geomorfologica"@it ,
+                                                                                 "geomorphological description"@en ;
+                                                                      owl:versionInfo "instabile"@it ,
+                                                                                      "unstable"@en ;
+                                                                      <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa SI 3.00: CA/GEO/GEOD" .
+
+
+###  https://w3id.org/arco/ontology/location/historicalEnvironmentContextDescription
+<https://w3id.org/arco/ontology/location/historicalEnvironmentContextDescription> rdf:type owl:DatatypeProperty ;
+                                                                                  rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/description> ;
+                                                                                  rdfs:domain <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                                                  rdfs:range rdfs:Literal ;
+                                                                                  rdfs:comment "Questa proprietà collega un ambiente naturale alla descrizione dei suoi caratteri ambientali storici."@it ,
+                                                                                               "This property relates a natural environment with a description of its historical and environmental context."@en ;
+                                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                                  rdfs:label "descrizione del contesto ambientale storico"@it ,
+                                                                                             "historical environment context description"@en ;
+                                                                                  owl:versionInfo "instabile"@it ,
+                                                                                                  "unstable"@en ;
+                                                                                  <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa SI 3.00: CA/CAS (CASD+CASF+CASA)" .
+
+
+###  https://w3id.org/arco/ontology/location/morphologicalDescription
+<https://w3id.org/arco/ontology/location/morphologicalDescription> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/description> ;
+                                                                   rdfs:domain <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                                   rdfs:range rdfs:Literal ;
+                                                                   rdfs:comment "Questa proprietà collega un ambiente naturale con la sua descrizione morfologica."@it ,
+                                                                                "This property relates a natural environment with its morphological description."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                   rdfs:label "descrizione morfologica"@it ,
+                                                                              "morphological description"@en ;
+                                                                   owl:versionInfo "instabile"@it ,
+                                                                                   "unstable"@en ;
+                                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa PG 3.00: CA/CAM" .
+
+
+###  https://w3id.org/arco/ontology/location/pedologicalDescription
+<https://w3id.org/arco/ontology/location/pedologicalDescription> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/description> ;
+                                                                 rdfs:domain <https://w3id.org/arco/ontology/location/NaturalEnvironment> ;
+                                                                 rdfs:range rdfs:Literal ;
+                                                                 rdfs:comment "Questa proprietà collega un ambiente naturale con la sua descrizione pedologica."@it ,
+                                                                              "This property relates a natural environment with its pedological description."@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                 rdfs:label "descrizione pedologica"@it ,
+                                                                            "pedological description"@en ;
+                                                                 owl:versionInfo "instabile"@it ,
+                                                                                 "unstable"@en ;
+                                                                 <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa SI 3.00: CA/PED/PEDD+PEDE" .
+
+
+###  https://w3id.org/arco/ontology/location/soilUse
+<https://w3id.org/arco/ontology/location/soilUse> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <https://w3id.org/arco/ontology/location/Soil> ;
+                                                  rdfs:range rdfs:Literal ;
+                                                  rdfs:comment "Questa proprietà collega il suolo all'utilizzazione del suolo in esame, con particolare riferimento ai popolamenti vegetali naturali, alle coltivazioni, agli usi urbanistici e alle attività estrattive di superficie."@it ,
+                                                               "This property relates a soil to its usage."@en ;
+                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                  rdfs:label "soil use"@en ,
+                                                             "uso del suolo"@it ;
+                                                  owl:versionInfo "instabile"@it ,
+                                                                  "unstable"@en ;
+                                                  <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa SI 3.00: CA/USD" .
+
+
+###  https://w3id.org/italia/onto/CLV/alt
+<https://w3id.org/italia/onto/CLV/alt> rdf:type owl:DatatypeProperty ,
+                                                owl:FunctionalProperty ;
+                                       rdfs:domain <https://w3id.org/italia/onto/CLV/Geometry> ;
+                                       rdfs:range rdfs:Literal ;
+                                       rdfs:comment "Questa proprietà rappresenta l'altitudine, ovvero l'altezza di un oggetto spaziale rispetto alla superficie del livello medio del mare.. E'  proprietà associata alla geometria. Nel caso di geometria associata all'indirizzo, la proprietà  rappresenta l'altezza ortometrica dell’accesso esterno (civico) espressa nei sistemi di riferimento altimetrici nazionali ufficiali."@it ,
+                                                    "The property represents the altitude, i.e., the height of an object or point in relation to sea level or ground level. It is associated with the geometry."@en ;
+                                       rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                       rdfs:label "altitude"@en ,
+                                                  "altitudine"@it ,
+                                                  "quota"@it ;
+                                       owl:versionInfo "stabile"@it ,
+                                                       "stable"@en ;
+                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: GE/GEC/GECZ - Normative precedenti: GP/GPC/GPCL" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.beniculturali.it/cis/CulturalInstituteOrSite
+<http://dati.beniculturali.it/cis/CulturalInstituteOrSite> rdf:type owl:Class .
+
+
+###  http://dati.beniculturali.it/cis/Site
+<http://dati.beniculturali.it/cis/Site> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ModeOfIrrigation
+<https://w3id.org/arco/ontology/construction-description/ModeOfIrrigation> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/construction-description/TechnicalSystem
+<https://w3id.org/arco/ontology/construction-description/TechnicalSystem> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/construction-description/WaterAvailability
+<https://w3id.org/arco/ontology/construction-description/WaterAvailability> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/construction-description/WaterDistribution
+<https://w3id.org/arco/ontology/construction-description/WaterDistribution> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/construction-description/WaterElement
+<https://w3id.org/arco/ontology/construction-description/WaterElement> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/construction-description/WaterSystem
+<https://w3id.org/arco/ontology/construction-description/WaterSystem> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <https://w3id.org/arco/ontology/construction-description/TechnicalSystem> ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <https://w3id.org/arco/ontology/construction-description/hasModeOfIrrigation> ;
+                                                                                        owl:allValuesFrom <https://w3id.org/arco/ontology/construction-description/ModeOfIrrigation>
+                                                                                      ] ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <https://w3id.org/arco/ontology/construction-description/hasWaterAvailability> ;
+                                                                                        owl:allValuesFrom <https://w3id.org/arco/ontology/construction-description/WaterAvailability>
+                                                                                      ] ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <https://w3id.org/arco/ontology/construction-description/hasWaterDistribution> ;
+                                                                                        owl:allValuesFrom <https://w3id.org/arco/ontology/construction-description/WaterDistribution>
+                                                                                      ] ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <https://w3id.org/arco/ontology/construction-description/hasWaterElement> ;
+                                                                                        owl:allValuesFrom <https://w3id.org/arco/ontology/construction-description/WaterElement>
+                                                                                      ] ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                                        owl:allValuesFrom <https://w3id.org/arco/ontology/construction-description/WaterSystemType>
+                                                                                      ] ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <https://w3id.org/arco/ontology/core/description> ;
+                                                                                        owl:allValuesFrom rdfs:Literal
+                                                                                      ] ;
+                                                                      rdfs:comment "Questa classe rappresenta l'impianto idrico di una costruzione (."@it ,
+                                                                                   "This class represents the water system of a construction."@en ;
+                                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontologyconstruction-description> ;
+                                                                      rdfs:label "Impianto idrico"@it ,
+                                                                                 "Water system"@en ;
+                                                                      owl:versionInfo "instabile"@it ,
+                                                                                      "unstable"@en ;
+                                                                      <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "Normativa PG: CA/CAI, IM/IMP/IMPT" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/WaterSystemType
+<https://w3id.org/arco/ontology/construction-description/WaterSystemType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/Type
+<https://w3id.org/arco/ontology/core/Type> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Measurement
+<https://w3id.org/arco/ontology/denotative-description/Measurement> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/MeasurementCollection
+<https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <https://w3id.org/italia/onto/l0/Collection> ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://w3id.org/arco/ontology/core/isValidAt> ;
+                                                                                                owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> ;
+                                                                                                owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/Measurement>
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf> ;
+                                                                                                owl:someValuesFrom owl:Thing
+                                                                                              ] ;
+                                                                              <http://ontologydesignpatterns.org/opla/isNativeTo> <https://w3id.org/arco/pattern/object-collection/> ;
+                                                                              <http://purl.org/dc/elements/1.1/description> """An example of usage of the class 'Measurement collection' is the following:
+resource:MeasurementCollection/1200865132-1
+        a  dd:MeasurementCollection ;
+        rdfs:label \"Measurements of cultural property 1200865132 7\"@en ;
+        dd:hasMeasurement resource:Measurement/1200865132-1-width , resource:Measurement/1200865132-1-height , resource:Measurement/1200865132-1-depth ."""@en ,
+                                                                                                                            """Un esempio d'uso della classe \"Collezione di misure\" è il seguente:
+resource:MeasurementCollection/1200865132-1
+        a  dd:MeasurementCollection ;
+        rdfs:label \"Misure del bene culturale 1200865132 7\"@it ;
+        dd:hasMeasurement resource:Measurement/1200865132-1-width , resource:Measurement/1200865132-1-height , resource:Measurement/1200865132-1-depth ."""@it ;
+                                                                              rdfs:comment "Questa classe rappresenta l'insieme delle misurazioni osservate per un oggetto. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all'ingombro per l'immagazzinaggio; alla base (individuano l'oggetto e la conformazione fisica del proprietario e sono fondamentali per l'allestimento museale, per individuare i tipi di supporti necessari per l'esposizione); alle maniche."@it ,
+                                                                                           "This class represents the set of measurments observed for an object."@en ;
+                                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                              rdfs:label "Collezione di misure"@it ,
+                                                                                         "Measurement collection"@en ;
+                                                                              owl:versionInfo "stabile"@it ,
+                                                                                              "stable"@en ;
+                                                                              <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Orientation
+<https://w3id.org/arco/ontology/denotative-description/Orientation> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://w3id.org/italia/onto/l0/Characteristic> ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isOrientationOf> ;
+                                                                                      owl:someValuesFrom owl:Thing
+                                                                                    ] ;
+                                                                    rdfs:comment "Questa classe rappresenta l'orientamento di un oggetto (NO, SE, etc.), secondo l'asse principale individuato."@it ,
+                                                                                 "This class represents the orientation of an object (i.e. N.W., S.E.), considering the main axis."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                    rdfs:label "Orientamento"@it ,
+                                                                               "Orientation"@en ;
+                                                                    owl:versionInfo "stabile"@it ,
+                                                                                    "stable"@en ;
+                                                                    <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT - Normativa BNB: LR/LRI/LRIP - Normativa PG: CA/CAE" .
+
+
+###  https://w3id.org/arco/ontology/location/BaseMap
+<https://w3id.org/arco/ontology/location/BaseMap> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/ClimateSituation
+<https://w3id.org/arco/ontology/location/ClimateSituation> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> ;
+                                                                             owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/arco/ontology/location/isClimateSituationOf> ;
+                                                                             owl:someValuesFrom <https://w3id.org/arco/ontology/location/NaturalEnvironment>
+                                                                           ] ;
+                                                           rdfs:comment "Questa classe rappresenta la situazione climatica"@en ,
+                                                                        "This class represents class situation"@en ;
+                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                           rdfs:label "Climate situation"@en ,
+                                                                      "Situazione climatica"@en ;
+                                                           owl:versionInfo "instabile"@it ,
+                                                                           "unstable"@en ;
+                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "Normativa PG: CA/CLM, CA/CAT. Normativa MODI: CA/CAT. Normativa BNB: LR/LRI/LRIH" .
+
+
+###  https://w3id.org/arco/ontology/location/FluidDynamism
+<https://w3id.org/arco/ontology/location/FluidDynamism> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://w3id.org/italia/onto/l0/Characteristic> ;
+                                                        rdfs:comment "Questa classe rappresenta l'idrodinamismo (moto ondoso) di un ambiente naturale."@it ,
+                                                                     "This class represents the fluid dynamism of a natural environment."@en ;
+                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                        rdfs:label "Fluid dynamism"@en ,
+                                                                   "Idrodinamismo"@it ;
+                                                        owl:versionInfo "instabile"@it ,
+                                                                        "unstable"@en ;
+                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNB, BNP, BNZ: LR/LRI/LRID" .
+
+
+###  https://w3id.org/arco/ontology/location/GeologicalContext
+<https://w3id.org/arco/ontology/location/GeologicalContext> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/GeologicalMap
+<https://w3id.org/arco/ontology/location/GeologicalMap> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://w3id.org/arco/ontology/location/Map> ;
+                                                        rdfs:comment "Questa classe rappresenta una carta geografica."@it ,
+                                                                     "This class represents a geological map."@en ;
+                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                        rdfs:label "Geological map"@en ,
+                                                                   "Mappa geologica"@it ;
+                                                        owl:versionInfo "instabile"@it ,
+                                                                        "unstable"@en ;
+                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa SI 3.00: CA/GEL/GELC" .
+
+
+###  https://w3id.org/arco/ontology/location/Geometry
+<https://w3id.org/arco/ontology/location/Geometry> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/italia/onto/CLV/Geometry> ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/hasGeometryMethod> ;
+                                                                     owl:someValuesFrom <https://w3id.org/arco/ontology/location/GeometryMethod>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/hasBaseMap> ;
+                                                                     owl:allValuesFrom <https://w3id.org/arco/ontology/location/BaseMap>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/hasGeometryMethod> ;
+                                                                     owl:allValuesFrom <https://w3id.org/arco/ontology/location/GeometryMethod>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/hasGeometryTechnique> ;
+                                                                     owl:allValuesFrom <https://w3id.org/arco/ontology/location/GeometryTechnique>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/hasLocationType> ;
+                                                                     owl:allValuesFrom <https://w3id.org/arco/ontology/location/LocationType>
+                                                                   ] ;
+                                                   rdfs:comment "Questa classe rappresenta la geometria associabile a una entità spaziale."@it ,
+                                                                "This class represents the geometry of a spatial entity."@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                   rdfs:label "Geometria"@it ,
+                                                              "Geometry"@en ;
+                                                   owl:versionInfo "instabile"@it ,
+                                                                   "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/GeometryMethod
+<https://w3id.org/arco/ontology/location/GeometryMethod> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/GeometryTechnique
+<https://w3id.org/arco/ontology/location/GeometryTechnique> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/Incline
+<https://w3id.org/arco/ontology/location/Incline> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/italia/onto/l0/Characteristic> ;
+                                                  rdfs:comment "Questa classe rappresenta l'inclinazione (qualitativa) del substrato di raccolta del campione."@it ,
+                                                               "This class represents the (qualitative) incline of a substrate."@en ;
+                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                  rdfs:label "Inclinazione"@it ,
+                                                             "Incline"@en ;
+                                                  owl:versionInfo "instabile"@it ,
+                                                                  "unstable"@en ;
+                                                  <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNB: LR/LRI/LRII" .
+
+
+###  https://w3id.org/arco/ontology/location/LandUseMap
+<https://w3id.org/arco/ontology/location/LandUseMap> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/LocationType
+<https://w3id.org/arco/ontology/location/LocationType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/Map
+<https://w3id.org/arco/ontology/location/Map> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/MarineBiogeographicRealm
+<https://w3id.org/arco/ontology/location/MarineBiogeographicRealm> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://w3id.org/arco/ontology/location/ZoogeographicRegion> ;
+                                                                   rdfs:comment "Questa classe rappresenta una regione zoogeografica marina."@it ,
+                                                                                "This class represents a marine biogeographic realm."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                   rdfs:label "Marine biogeographic realm"@en ,
+                                                                              "Regione zoogeografica marina"@it ;
+                                                                   owl:versionInfo "instabile"@it ,
+                                                                                   "unstable"@en ;
+                                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNZ: LR/LRM" .
+
+
+###  https://w3id.org/arco/ontology/location/NaturalEnvironment
+<https://w3id.org/arco/ontology/location/NaturalEnvironment> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/location/NaturalEnvironmentType>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/location/hasClimateSituation> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/location/ClimateSituation>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/location/hasFluidDynamism> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/location/FluidDynamism>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/location/hasMarineBiogeographicRealm> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/location/MarineBiogeographicRealm>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/location/hasShadeTolerance> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/location/ShadeTolerance>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/location/hasSubstrate> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/location/Substrate>
+                                                                             ] ;
+                                                             rdfs:comment "Questa classe rappresenta l'ambiente naturale collegato a un oggetto"@it ,
+                                                                          "This class represents the natural environment related to a thing"@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                             rdfs:label "Ambiente naturale"@it ,
+                                                                        "Natural environment"@en ;
+                                                             owl:versionInfo "instabile"@it ,
+                                                                             "unstable"@en ;
+                                                             <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa PG: CA"@it .
+
+
+###  https://w3id.org/arco/ontology/location/NaturalEnvironmentType
+<https://w3id.org/arco/ontology/location/NaturalEnvironmentType> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ;
+                                                                 rdfs:comment "Questa classe rappresenta un tipo di ambiente naturale."@it ,
+                                                                              "This class represents a type of natural environment."@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                 rdfs:label "Natural environment type"@en ,
+                                                                            "Tipo di ambiente naturale"@it ;
+                                                                 owl:versionInfo "instabile"@it ,
+                                                                                 "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/PedologicalMap
+<https://w3id.org/arco/ontology/location/PedologicalMap> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/arco/ontology/location/Map> ;
+                                                         rdfs:comment "Questa classe rappresenta una carta pedologica."@it ,
+                                                                      "This class represents a pedological map."@en ;
+                                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                         rdfs:label "Mappa pedologica"@it ,
+                                                                    "Pedological map"@en ;
+                                                         owl:versionInfo "instabile"@it ,
+                                                                         "unstable"@en ;
+                                                         <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa SI 3.00: CA/PED/PEDC" .
+
+
+###  https://w3id.org/arco/ontology/location/ShadeTolerance
+<https://w3id.org/arco/ontology/location/ShadeTolerance> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/italia/onto/l0/Characteristic> ;
+                                                         rdfs:comment "Questa classe rappresenta la situazione luminosa di un ambiente naturale."@it ,
+                                                                      "This class represents the shade tolerance of a natural environment."@en ;
+                                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                         rdfs:label "Shade tolerance"@en ,
+                                                                    "Situazione luminosa"@it ;
+                                                         owl:versionInfo "instabile"@it ,
+                                                                         "unstable"@en ;
+                                                         <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BN 3.01: LR/LRI/LRIS" .
+
+
+###  https://w3id.org/arco/ontology/location/Soil
+<https://w3id.org/arco/ontology/location/Soil> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://w3id.org/arco/ontology/location/hasMap> ;
+                                                                 owl:someValuesFrom <https://w3id.org/arco/ontology/location/LandUseMap>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> ;
+                                                                 owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection>
+                                                               ] ;
+                                               rdfs:comment "Questa classe rappresenta il suolo"@it ,
+                                                            "This class represents the soil"@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                               rdfs:label "Soil"@en ,
+                                                          "Suolo"@it ;
+                                               owl:versionInfo "instabile"@it ,
+                                                               "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/Substrate
+<https://w3id.org/arco/ontology/location/Substrate> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                      owl:allValuesFrom <https://w3id.org/arco/ontology/location/SubstrateType>
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/arco/ontology/location/hasIncline> ;
+                                                                      owl:allValuesFrom <https://w3id.org/arco/ontology/location/Incline>
+                                                                    ] ;
+                                                    rdfs:comment "Questa classe rappresenta il substrato su cui è stato raccolto un campione."@it ,
+                                                                 "This class represents the substrate on which the sample is taken."@en ;
+                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                    rdfs:label "Substrate"@en ,
+                                                               "Substrato"@it ;
+                                                    owl:versionInfo "instabile"@it ,
+                                                                    "unstable"@en ;
+                                                    <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNB: LR/LRI/LRIR" .
+
+
+###  https://w3id.org/arco/ontology/location/SubstrateType
+<https://w3id.org/arco/ontology/location/SubstrateType> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ;
+                                                        rdfs:comment "Questa classe rappresenta il tipo di substrato."@it ,
+                                                                     "This class represent the type of substrate."@en ;
+                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                        rdfs:label "Substrate type"@en ,
+                                                                   "Tipo di substrato"@it ;
+                                                        owl:versionInfo "instabile"@it ,
+                                                                        "unstable"@en ;
+                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNB: LR/LRI/LRIJ" .
+
+
+###  https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation
+<https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/hasLocationType> ;
+                                                                                     owl:someValuesFrom <https://w3id.org/arco/ontology/location/LocationType>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf> ;
+                                                                                     owl:someValuesFrom owl:Thing
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/atLocation> ;
+                                                                                     owl:allValuesFrom <https://w3id.org/italia/onto/CLV/Feature>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/atSite> ;
+                                                                                     owl:allValuesFrom <http://dati.beniculturali.it/cis/Site>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSite> ;
+                                                                                     owl:allValuesFrom <http://dati.beniculturali.it/cis/CulturalInstituteOrSite>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/hasGeologicalContext> ;
+                                                                                     owl:allValuesFrom <https://w3id.org/arco/ontology/location/GeologicalContext>
+                                                                                   ] ;
+                                                                   <http://purl.org/dc/elements/1.1/description> """An example of usage of the class 'Time Indexed Typed Location' is the following:
+resource:TimeIndexedTypedLocation/0800055566-alternative-1
+        a  a-loc:TimeIndexedTypedLocation ;
+        rdfs:label \"Alternative location 1 of cultural property: 0800055566\"@en ;  a-loc:atSite  resource:Site/7761991208459c29ef5c7cee8ff29deb ;
+        a-loc:hasLocationType a-loc:LastLocation ;
+        tiapit:atTime resource:TimeInterval/2002 ."""@en ,
+                                                                                                                 """Un esempio d'uso della classe \"Localizzazione tipizzata nel tempo' è il seguente:
+resource:TimeIndexedTypedLocation/0800055566-alternative-1
+        a           a-loc:TimeIndexedTypedLocation ;
+        rdfs:label \"Altra localizzazione 1 del bene culturale: 0800055566\"@en ;
+       a-loc:atSite  resource:Site/7761991208459c29ef5c7cee8ff29deb ;
+        a-loc:hasLocationType a-loc:LastLocation ;
+        tiapit:atTime resource:TimeInterval/2002 ."""@it ;
+                                                                   rdfs:comment "Questa classe rappresenta una localizzazione di un bene culturale, inserita in un arco temporale e qualificata in base al ruolo che la localizzazione riveste nei confronti del bene culturale."@it ,
+                                                                                "This class represents a localization of a cultural property, within a timeframe and qualified according to the role that the localization plays in relation to the cultural property."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                   rdfs:label "Localizzazione tipizzata nel tempo"@it ,
+                                                                              "Time Indexed Typed Location"@en ;
+                                                                   owl:versionInfo "stabile"@it ,
+                                                                                   "stable"@en ;
+                                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: LC; LA; per normativa F: anche LR. Normativa BDI: OC, AT/DML, DU/DUG, DV/DVG, DF/DFG, AI/AIA, AI/AIF, AI/AIG, VI/VIA, VI/VIF, VIG, FI/FIA, FIF, FIG" .
+
+
+###  https://w3id.org/arco/ontology/location/ZoogeographicRegion
+<https://w3id.org/arco/ontology/location/ZoogeographicRegion> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/Feature
+<https://w3id.org/italia/onto/CLV/Feature> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/Geometry
+<https://w3id.org/italia/onto/CLV/Geometry> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Characteristic
+<https://w3id.org/italia/onto/l0/Characteristic> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Collection
+<https://w3id.org/italia/onto/l0/Collection> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Object
+<https://w3id.org/italia/onto/l0/Object> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
