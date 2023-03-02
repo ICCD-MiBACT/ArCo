@@ -1,0 +1,380 @@
+@prefix : <https://w3id.org/arco/test/2.0/ClassificationInTime#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/ClassificationInTime> .
+
+<https://w3id.org/arco/test/2.0/ClassificationInTime> rdf:type owl:Ontology ;
+                                                       owl:versionIRI <https://w3id.org/arco/test/2.0/ClassificationInTime> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ontologydesignpatterns.org/opla/isNativeTo
+<http://ontologydesignpatterns.org/opla/isNativeTo> rdf:type owl:AnnotationProperty .
+
+
+###  http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate
+<http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/classifies
+<https://w3id.org/arco/ontology/core/classifies> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <https://w3id.org/arco/ontology/core/isClassifiedBy> ;
+                                                 rdfs:domain <https://w3id.org/arco/ontology/core/Concept> ;
+                                                 rdfs:range owl:Thing ;
+                                                 rdfs:comment "Questa proprietà collega un concetto ad un'entità"@it ,
+                                                              "This property relates a concept to an entity"@en ;
+                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                 rdfs:label "classifica"@it ,
+                                                            "classifies"@en ;
+                                                 owl:versionInfo "instabile"@it ,
+                                                                 "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/definesConcept
+<https://w3id.org/arco/ontology/core/definesConcept> rdf:type owl:ObjectProperty ;
+                                                     owl:inverseOf <https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem> .
+
+
+###  https://w3id.org/arco/ontology/core/hasClassificationInTime
+<https://w3id.org/arco/ontology/core/hasClassificationInTime> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isClassificationInTimeOf> ;
+                                                              rdfs:domain owl:Thing ;
+                                                              rdfs:range <https://w3id.org/arco/ontology/core/ClassificationInTime> ;
+                                                              rdfs:comment "Questa proprietà collega un'entità ad una classificazione nel tempo"@it ,
+                                                                           "This property relates an entity to a classification in time"@en ;
+                                                              rdfs:isDefinedBy "https://w3id.org/arco/ontology/core" ;
+                                                              rdfs:label "ha classificazione nel tempo"@it ,
+                                                                         "has classification in time"@en ;
+                                                              owl:versionInfo "instabile"@it ,
+                                                                              "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasClassificationSystem
+<https://w3id.org/arco/ontology/core/hasClassificationSystem> rdf:type owl:ObjectProperty ;
+                                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isClassificationSystemOf> ;
+                                                              rdfs:domain <https://w3id.org/arco/ontology/core/Classification> ;
+                                                              rdfs:range <https://w3id.org/arco/ontology/core/ClassificationSystem> ;
+                                                              rdfs:comment "Questa proprietà collega una classificazione nel tempo ad un sistema di classificazione"@it ,
+                                                                           "This property relates a classification in time to a classification system"@en ;
+                                                              rdfs:isDefinedBy "https://w3id.org/arco/ontology/core" ;
+                                                              rdfs:label "ha sistema di classificazione"@it ,
+                                                                         "has classification system"@en ;
+                                                              owl:versionInfo "instabile"@it ,
+                                                                              "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasConcept
+<https://w3id.org/arco/ontology/core/hasConcept> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <https://w3id.org/arco/ontology/core/isConceptOf> ;
+                                                 rdfs:domain owl:Thing ;
+                                                 rdfs:range <https://w3id.org/arco/ontology/core/Concept> ;
+                                                 <http://ontologydesignpatterns.org/opla/isNativeTo> <http://www.ontologydesignpatterns.org/cp/owl/timeindexedclassification.owl> ;
+                                                 rdfs:comment "La object property che associa un qualunque oggetto a un concetto, che lo classifica."@it ,
+                                                              "The object property that associates any object with a concept, classifying it."@en ;
+                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                 rdfs:label "ha concetto"@it ,
+                                                            "has concept"@en ;
+                                                 owl:versionInfo "stabile"@it ,
+                                                                 "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasEventOrSituationInTime
+<https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/involves
+<https://w3id.org/arco/ontology/core/involves> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/involvesAgent
+<https://w3id.org/arco/ontology/core/involvesAgent> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/involves> ;
+                                                    owl:inverseOf <https://w3id.org/arco/ontology/core/isAgentInvolvedIn> ;
+                                                    rdfs:domain <https://w3id.org/italia/onto/l0/EventOrSituation> ;
+                                                    rdfs:range <https://w3id.org/italia/onto/l0/Agent> ;
+                                                    rdfs:comment "Questa proprietà rappresenta la partecipazione di un agente."@it ,
+                                                                 "This property represents an agent partecipation"@en ;
+                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                    rdfs:label "coinvolge agente"@it ,
+                                                               "involves agent"@en ;
+                                                    owl:versionInfo "instabile"@it ,
+                                                                    "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isAgentInvolvedIn
+<https://w3id.org/arco/ontology/core/isAgentInvolvedIn> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isInvolvedIn> ;
+                                                        rdfs:domain <https://w3id.org/italia/onto/l0/Agent> ;
+                                                        rdfs:range <https://w3id.org/italia/onto/l0/EventOrSituation> ;
+                                                        rdfs:comment "Questa proprietà rappresenta la partecipazione di un agente."@it ,
+                                                                     "This property represents an agent partecipation"@en ;
+                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                        rdfs:label "is agent involved in"@en ,
+                                                                   "è agente coinvolto in"@it ;
+                                                        owl:versionInfo "instabile"@it ,
+                                                                        "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isClassificationInTimeOf
+<https://w3id.org/arco/ontology/core/isClassificationInTimeOf> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> ;
+                                                               rdfs:domain <https://w3id.org/arco/ontology/core/ClassificationInTime> ;
+                                                               rdfs:range owl:Thing ;
+                                                               rdfs:comment "Questa proprietà collega una classificazione nel tempo ad un'entità"@it ,
+                                                                            "This property relates a classification in time to an entity"@en ;
+                                                               rdfs:isDefinedBy "https://w3id.org/arco/ontology/core" ;
+                                                               rdfs:label "is classification in time of"@en ,
+                                                                          "è classificazione nel tempo di"@it ;
+                                                               owl:versionInfo "instabile"@it ,
+                                                                               "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isClassificationSystemOf
+<https://w3id.org/arco/ontology/core/isClassificationSystemOf> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <https://w3id.org/arco/ontology/core/ClassificationSystem> ;
+                                                               rdfs:range <https://w3id.org/arco/ontology/core/Classification> ;
+                                                               rdfs:comment "La proprietà inversa di hasClassificationSystem, che collega un sistema di classificazione a una sua classificazione."@it ,
+                                                                            "The inverse object property of hasClassificationSystem, that links classification system to a classification."@en ;
+                                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                               rdfs:label "is classification system of"@en ,
+                                                                          "è sistema di classificazione di"@it ;
+                                                               owl:versionInfo "instabile"@it ,
+                                                                               "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isClassifiedBy
+<https://w3id.org/arco/ontology/core/isClassifiedBy> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain owl:Thing ;
+                                                     rdfs:range <https://w3id.org/arco/ontology/core/Concept> ;
+                                                     rdfs:comment "Questa proprietà collega un'entità ad un concetto"@it ,
+                                                                  "This property relates an entity and a concept"@en ;
+                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                     rdfs:label "is classified by"@en ,
+                                                                "è classificato da"@it ;
+                                                     owl:versionInfo "instabile"@it ,
+                                                                     "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isConceptOf
+<https://w3id.org/arco/ontology/core/isConceptOf> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <https://w3id.org/arco/ontology/core/Concept> ;
+                                                  rdfs:range owl:Thing ;
+                                                  <http://ontologydesignpatterns.org/opla/isNativeTo> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#> ;
+                                                  rdfs:comment "La proprietà inversa di hasConcept, che collega un concetto a un qualunque oggetto."@it ,
+                                                               "The inverse property of hasConcept, that relates a concept to any object."@en ;
+                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                  rdfs:label "is concept of"@en ,
+                                                             "è concetto di"@it ;
+                                                  owl:versionInfo "stabile"@it ,
+                                                                  "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem
+<https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <https://w3id.org/italia/onto/l0/Concept> ;
+                                                                      rdfs:range <https://w3id.org/arco/ontology/core/ClassificationSystem> ;
+                                                                      rdfs:comment "La object property che collega un concetto al sistema di classificazione."@it ,
+                                                                                   "The object property that links a concept to a classification system."@it ;
+                                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                                      rdfs:label "is defined by classification system"@en ,
+                                                                                 "è definito da sistema di classificazione"@it ;
+                                                                      owl:versionInfo "instabile"@it ,
+                                                                                      "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf
+<https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isInvolvedIn
+<https://w3id.org/arco/ontology/core/isInvolvedIn> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/current
+<https://w3id.org/arco/ontology/core/current> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range xsd:boolean ;
+                                              rdfs:comment "Questa porprietà indica se i dati relativi all'istanza di un pattern sono attuali o no."@it ,
+                                                           "This property indicates if data releated to an instance of a pattern is current or not"@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "attuale"@it ,
+                                                         "current"@en ;
+                                              owl:versionInfo "instabile"@it ,
+                                                              "unstable"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.gov.it/onto/dcatapit#Agent
+<http://dati.gov.it/onto/dcatapit#Agent> rdf:type owl:Class ;
+                                         owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  https://w3id.org/arco/ontology/core/Classification
+<https://w3id.org/arco/ontology/core/Classification> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/ClassificationInTime
+<https://w3id.org/arco/ontology/core/ClassificationInTime> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://w3id.org/arco/ontology/core/Classification> ,
+                                                                           <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/arco/ontology/core/hasConcept> ;
+                                                                             owl:someValuesFrom <https://w3id.org/arco/ontology/core/Concept>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/arco/ontology/core/involvesAgent> ;
+                                                                             owl:someValuesFrom <https://w3id.org/italia/onto/l0/Agent>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/arco/ontology/core/hasConcept> ;
+                                                                             owl:allValuesFrom <https://w3id.org/arco/ontology/core/Concept>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/arco/ontology/core/hasClassificationSystem> ;
+                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                             owl:onClass <https://w3id.org/arco/ontology/core/ClassificationSystem>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/arco/ontology/core/isClassificationInTimeOf> ;
+                                                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                           ] ;
+                                                           <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/timeindexedclassification.owl> ;
+                                                           rdfs:comment "Questa classe rappresenta una classificazione nel tempo"@it ,
+                                                                        "This class represents a classification in time"@en ;
+                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                           rdfs:label "Classification in time"@en ,
+                                                                      "Classificazione nel tempo"@it ;
+                                                           owl:versionInfo "instabile"@it ,
+                                                                           "unstable"@en ;
+                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> """Normativa SM: CL/CHS, CL/CLA. Normativa BNB: SB/NBN/NBNA, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN.
+Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normativa BNPL:  SP/SPN. Normativa BNZ: SZ/SZS""" .
+
+
+###  https://w3id.org/arco/ontology/core/ClassificationSystem
+<https://w3id.org/arco/ontology/core/ClassificationSystem> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://w3id.org/italia/onto/l0/System> ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/arco/ontology/core/definesConcept> ;
+                                                                             owl:allValuesFrom <https://w3id.org/arco/ontology/core/Concept>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/arco/ontology/core/isClassificationSystemOf> ;
+                                                                             owl:allValuesFrom <https://w3id.org/arco/ontology/core/ClassificationInTime>
+                                                                           ] ;
+                                                           rdfs:comment "Questa classe rappresenta il sistema di classificazione in base a cui un'entità è stata classificata."@it ,
+                                                                        "This class represents classification system used to classify an entity."@en ;
+                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                           rdfs:label "Classification system"@en ,
+                                                                      "Sistema di classificazione"@it ;
+                                                           owl:versionInfo "instabile"@it ,
+                                                                           "unstable"@en ;
+                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNM: SM/SMS/SMSG, SMSD, SMSC, SMSS. Normativa SM: CL/CLA. - Normativa BNB: SB/SBS/SBSC" .
+
+
+###  https://w3id.org/arco/ontology/core/Concept
+<https://w3id.org/arco/ontology/core/Concept> rdf:type owl:Class ;
+                                              owl:equivalentClass <https://w3id.org/italia/onto/l0/Concept> ;
+                                              rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ;
+                                              <http://ontologydesignpatterns.org/opla/isNativeTo> <http://www.ontologydesignpatterns.org/cp/owl/timeindexedclassification.owl> ;
+                                              rdfs:comment "La classe che rappresenta un concetto."@it ,
+                                                           "The class representing a concept."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "Concept"@en ,
+                                                         "Concetto"@it ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/italia/onto/l0/EventOrSituation> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/core/involves> ;
+                                                                               owl:someValuesFrom owl:Thing
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                               owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                               owl:allValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                             ] ;
+                                                             rdfs:comment "La classe che rappresenta una situazione o un evento nel tempo."@it ,
+                                                                          "The class that models a situation or an event in time."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                             rdfs:label "Event or situation in time"@en ,
+                                                                        "Evento o situazione nel tempo"@it .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class ;
+                                               rdfs:isDefinedBy <https://w3id.org/italia/onto/TI/> .
+
+
+###  https://w3id.org/italia/onto/l0/Agent
+<https://w3id.org/italia/onto/l0/Agent> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ;
+                                        owl:disjointWith <https://w3id.org/italia/onto/l0/Concept> ,
+                                                         <https://w3id.org/italia/onto/l0/Description> ,
+                                                         <https://w3id.org/italia/onto/l0/EventOrSituation> ;
+                                        rdfs:comment "Any agentive Object , either physical (e.g. a person, a robot, an oak), or social (e.g. a corporation, an institution, a community)."@en ,
+                                                     "Un agente, sia fisico (ex. una persona, un robot, una quercia), o sociale (ex. una società, un'istituzione, una comunità)."@it ;
+                                        rdfs:isDefinedBy <https://w3id.org/italia/onto/l0> ;
+                                        rdfs:label "Agent"@en ,
+                                                   "Agente"@it ;
+                                        owl:versionInfo "stabile"@it ,
+                                                        "stable"@en .
+
+
+###  https://w3id.org/italia/onto/l0/Concept
+<https://w3id.org/italia/onto/l0/Concept> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Description
+<https://w3id.org/italia/onto/l0/Description> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/EventOrSituation
+<https://w3id.org/italia/onto/l0/EventOrSituation> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Object
+<https://w3id.org/italia/onto/l0/Object> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/System
+<https://w3id.org/italia/onto/l0/System> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

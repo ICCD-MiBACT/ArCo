@@ -29,8 +29,62 @@
 #    Object Properties
 #################################################################
 
+###  https://w3id.org/arco/ontology/context-description/hasCircumstance
+<https://w3id.org/arco/ontology/context-description/hasCircumstance> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                                     owl:inverseOf <https://w3id.org/arco/ontology/context-description/isCircumstanceOf> ;
+                                                                     rdfs:domain owl:Thing ;
+                                                                     rdfs:range <https://w3id.org/arco/ontology/context-description/Circumstance> ;
+                                                                     rdfs:comment "Questa proprietà collega una situazione all'occasione che ha determinato quella situazione. Per esempio, può collegare una situazione in cui viene indicata la committenza di un bene culturale all'occasione che ha determinato quella committenza, oppure un luogo di ripresa di un bene fotografico all'occasione che ha determinato il motivo della ripresa, o ancora l'uso di un bene culturale all'occasione d'uso."@it ,
+                                                                                  "This property relates a situation to the circumstance which led to the situation. For example it can connect a situation where is indicated a cultural entity's committment to its circumstance."@en ;
+                                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                     rdfs:label "ha circostanza"@it ,
+                                                                                "has circumstance"@en ;
+                                                                     owl:versionInfo "stabile"@it ,
+                                                                                     "stable"@en ;
+                                                                     <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: UT/UTU/UTUO; normativa BDM: UT/UTO; AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO - ICCD Normativa MI: AU/DDC/DDCC" .
+
+
 ###  https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose
-<https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose> rdf:type owl:ObjectProperty .
+<https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose> rdf:type owl:ObjectProperty ;
+                                                                          owl:inverseOf <https://w3id.org/arco/ontology/context-description/isFunctionalPurposeOf> ;
+                                                                          rdfs:domain owl:Thing ;
+                                                                          rdfs:range <https://w3id.org/arco/ontology/context-description/UseFunction> ;
+                                                                          rdfs:comment "Questa proprietà collega un'entità (es bene culturale, design, apparato iconografico/decorativo o elemento apposto su un bene culturale come un'iscrizione) alla sua funzione di uso (decorativo, religioso, simbolico, magico-offensivo, etc.), inteso come funzione che deve svolgere."@it ,
+                                                                                       "This property realtes an entity (e.g. cultural entity, design, iconographic/decorative apparatus, affixed element like an inscription) to its functional purpose, intended as the function the object has to perform (decorative, religious, symbolic, magic-offensive etc.)."@en ;
+                                                                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                          rdfs:label "ha scopo funzionale"@it ,
+                                                                                     "has functional purpose"@en ;
+                                                                          owl:versionInfo "instabile"@it ,
+                                                                                          "unstable"@en ;
+                                                                          <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/isCircumstanceOf
+<https://w3id.org/arco/ontology/context-description/isCircumstanceOf> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> ;
+                                                                      rdfs:domain <https://w3id.org/arco/ontology/context-description/Circumstance> ;
+                                                                      rdfs:range owl:Thing ;
+                                                                      rdfs:comment "Questa proprietà, inversa di 'ha circostanza', collega l'occasione che ha determinato una situazione (es. la committenza di un bene culturale, l'uso di un bene culturale ecc.) alla relativa situazione."@it ,
+                                                                                   "This property, inverse of 'has circumstance' relates the circumstance which led to a situation (e.g. a cultural entity committment, a cultural entity use, etc.) to the related situation."@en ;
+                                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                      rdfs:label "is circumstance of"@en ,
+                                                                                 "è circostanza di"@it ;
+                                                                      owl:versionInfo "stabile"@it ,
+                                                                                      "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/context-description/isFunctionalPurposeOf
+<https://w3id.org/arco/ontology/context-description/isFunctionalPurposeOf> rdf:type owl:ObjectProperty ;
+                                                                           rdfs:domain <https://w3id.org/arco/ontology/context-description/UseFunction> ;
+                                                                           rdfs:range owl:Thing ;
+                                                                           rdfs:comment "Questa è la proprietà inversa di \"ha scopo funzionale\"."@it ,
+                                                                                        "This is the inverse property of \"has functional purpose\"."@en ;
+                                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                           rdfs:label "is functional purpose of"@en ,
+                                                                                      "è scopo funzionale di"@it ;
+                                                                           owl:versionInfo "instabile"@it ,
+                                                                                           "unstable"@en .
 
 
 ###  https://w3id.org/arco/ontology/core/hasAgent
@@ -93,6 +147,10 @@
 
 ###  https://w3id.org/arco/ontology/core/isConceptOf
 <https://w3id.org/arco/ontology/core/isConceptOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf
+<https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/arco/ontology/core/isTypeOf
@@ -217,7 +275,16 @@
 
 
 ###  https://w3id.org/arco/ontology/denotative-description/isElementAffixedOn
-<https://w3id.org/arco/ontology/denotative-description/isElementAffixedOn> rdf:type owl:ObjectProperty .
+<https://w3id.org/arco/ontology/denotative-description/isElementAffixedOn> rdf:type owl:ObjectProperty ;
+                                                                           rdfs:domain <https://w3id.org/arco/ontology/denotative-description/AffixedElement> ;
+                                                                           rdfs:range <http://dati.beniculturali.it/cis/CulturalEntity> ;
+                                                                           rdfs:comment "Questa è la proprietà inversa a \"ha elemento affisso\"."@it ,
+                                                                                        "This is the inverse property of \"has affixed element\"."@en ;
+                                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                           rdfs:label "is element affixed on"@en ,
+                                                                                      "è elemento apposto su"@it ;
+                                                                           owl:versionInfo "stabile"@it ,
+                                                                                           "stable"@en .
 
 
 ###  https://w3id.org/arco/ontology/denotative-description/isFontStyleOf
@@ -303,6 +370,64 @@
 
 ###  http://dati.beniculturali.it/cis/CulturalEntity
 <http://dati.beniculturali.it/cis/CulturalEntity> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Acquisition
+<https://w3id.org/arco/ontology/context-description/Acquisition> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Anomaly
+<https://w3id.org/arco/ontology/context-description/Anomaly> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ChangeOfAvailability
+<https://w3id.org/arco/ontology/context-description/ChangeOfAvailability> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Circumstance
+<https://w3id.org/arco/ontology/context-description/Circumstance> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/arco/ontology/context-description/isCircumstanceOf> ;
+                                                                                    owl:someValuesFrom owl:Thing
+                                                                                  ] ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                                    owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/CircumstanceType>
+                                                                                  ] ;
+                                                                  rdfs:comment "Questa classe rappresenta un'occasione che ha determinato una certa situazione, per esempio l'occasione per cui è stato commissionato un bene culturale, l'occasione che ha determinato la ripresa di un bene fotografico, l'occasione d'uso di un bene, l'occasione di un bene demoetnoantropologico immateriale."@it ,
+                                                                               "This class represents a circumstance that influenced a particular situation, e.g. the circumstance for which a cultural property was commissioned, tha circumstance in which a cultural property was used, etc."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                  rdfs:label "Circumstance"@en ,
+                                                                             "Occasion"@en ,
+                                                                             "Occasione"@it ;
+                                                                  owl:versionInfo "stabile"@it ,
+                                                                                  "stable"@en ;
+                                                                  <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: UT/UTU/UTUO - Normativa BDM: UT/UTO; AU/CMM/CMMC - Normativa VeAC: AU/FRU/FRUC, OG/OGT/OGTL - Normativa F: LR/LRO - Normativa BDI: CA" .
+
+
+###  https://w3id.org/arco/ontology/context-description/CircumstanceType
+<https://w3id.org/arco/ontology/context-description/CircumstanceType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/CoinIssuance
+<https://w3id.org/arco/ontology/context-description/CoinIssuance> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ExportImportCertification
+<https://w3id.org/arco/ontology/context-description/ExportImportCertification> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/LegalSituation
+<https://w3id.org/arco/ontology/context-description/LegalSituation> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Membership
+<https://w3id.org/arco/ontology/context-description/Membership> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/RelatedWorkSituation
+<https://w3id.org/arco/ontology/context-description/RelatedWorkSituation> rdf:type owl:Class .
 
 
 ###  https://w3id.org/arco/ontology/context-description/UseFunction
@@ -646,8 +771,99 @@ resource:TechnicalCharacteristic/stone-sculpture
 
 
 #################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/arco/ontology/denotative-description/Brand
+<https://w3id.org/arco/ontology/denotative-description/Brand> rdf:type owl:NamedIndividual ,
+                                                                       <https://w3id.org/arco/ontology/denotative-description/AffixedElementType> .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CoatOfArms
+<https://w3id.org/arco/ontology/denotative-description/CoatOfArms> rdf:type owl:NamedIndividual ,
+                                                                            <https://w3id.org/arco/ontology/denotative-description/AffixedElementType> .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CoinDesign
+<https://w3id.org/arco/ontology/denotative-description/CoinDesign> rdf:type owl:NamedIndividual ,
+                                                                            <https://w3id.org/arco/ontology/denotative-description/AffixedElementType> .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CoinLegend
+<https://w3id.org/arco/ontology/denotative-description/CoinLegend> rdf:type owl:NamedIndividual ,
+                                                                            <https://w3id.org/arco/ontology/denotative-description/AffixedElementType> .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Counterstamp
+<https://w3id.org/arco/ontology/denotative-description/Counterstamp> rdf:type owl:NamedIndividual ,
+                                                                              <https://w3id.org/arco/ontology/denotative-description/AffixedElementType> .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Dedication
+<https://w3id.org/arco/ontology/denotative-description/Dedication> rdf:type owl:NamedIndividual ,
+                                                                            <https://w3id.org/arco/ontology/denotative-description/AffixedElementType> .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Emblem
+<https://w3id.org/arco/ontology/denotative-description/Emblem> rdf:type owl:NamedIndividual ,
+                                                                        <https://w3id.org/arco/ontology/denotative-description/AffixedElementType> .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/HistoricalPlaque
+<https://w3id.org/arco/ontology/denotative-description/HistoricalPlaque> rdf:type owl:NamedIndividual ,
+                                                                                  <https://w3id.org/arco/ontology/denotative-description/AffixedElementType> .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Inscription
+<https://w3id.org/arco/ontology/denotative-description/Inscription> rdf:type owl:NamedIndividual ,
+                                                                             <https://w3id.org/arco/ontology/denotative-description/AffixedElementType> .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Label
+<https://w3id.org/arco/ontology/denotative-description/Label> rdf:type owl:NamedIndividual ,
+                                                                       <https://w3id.org/arco/ontology/denotative-description/AffixedElementType> ;
+                                                              rdfs:comment "Questo individuo rappresenta un'etichetta, che è possibile trovare sovrapposta a un'altra entità culturale."@it ,
+                                                                           "This individual represents a label, a type of affixed element that could be found on a cultural entity."@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                              rdfs:label "Etichetta"@it ,
+                                                                         "Label"@en ;
+                                                              owl:versionInfo "ICCD Normativa BNB: SB/SBE" ,
+                                                                              "instabile"@it ,
+                                                                              "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Logo
+<https://w3id.org/arco/ontology/denotative-description/Logo> rdf:type owl:NamedIndividual ,
+                                                                      <https://w3id.org/arco/ontology/denotative-description/AffixedElementType> .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/QuarryOrMasonryMark
+<https://w3id.org/arco/ontology/denotative-description/QuarryOrMasonryMark> rdf:type owl:NamedIndividual ,
+                                                                                     <https://w3id.org/arco/ontology/denotative-description/AffixedElementType> .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Stamp
+<https://w3id.org/arco/ontology/denotative-description/Stamp> rdf:type owl:NamedIndividual ,
+                                                                       <https://w3id.org/arco/ontology/denotative-description/AffixedElementType> .
+
+
+#################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/Acquisition>
+                <https://w3id.org/arco/ontology/context-description/Anomaly>
+                <https://w3id.org/arco/ontology/context-description/ChangeOfAvailability>
+                <https://w3id.org/arco/ontology/context-description/Circumstance>
+                <https://w3id.org/arco/ontology/context-description/CoinIssuance>
+                <https://w3id.org/arco/ontology/context-description/ExportImportCertification>
+                <https://w3id.org/arco/ontology/context-description/LegalSituation>
+                <https://w3id.org/arco/ontology/context-description/Membership>
+                <https://w3id.org/arco/ontology/context-description/RelatedWorkSituation>
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( <https://w3id.org/arco/ontology/denotative-description/AffixedElementType>

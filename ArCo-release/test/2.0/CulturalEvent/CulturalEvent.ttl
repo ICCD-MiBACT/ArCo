@@ -1,0 +1,734 @@
+@prefix : <https://w3id.org/arco/test/2.0/CulturalEvent#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/CulturalEvent> .
+
+<https://w3id.org/arco/test/2.0/CulturalEvent> rdf:type owl:Ontology ;
+                                                owl:versionIRI <https://w3id.org/arco/test/2.0/CulturalEvent> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/italia/onto/l0/controlledVocabulary
+<https://w3id.org/italia/onto/l0/controlledVocabulary> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://dati.beniculturali.it/cis/involvesCulturalEntity
+<http://dati.beniculturali.it/cis/involvesCulturalEntity> rdf:type owl:ObjectProperty .
+
+
+###  http://dati.beniculturali.it/cis/isHostedBySite
+<http://dati.beniculturali.it/cis/isHostedBySite> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasCircumstance
+<https://w3id.org/arco/ontology/context-description/hasCircumstance> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasCommission
+<https://w3id.org/arco/ontology/context-description/hasCommission> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                                   owl:inverseOf <https://w3id.org/arco/ontology/context-description/isCommissionOf> ;
+                                                                   rdfs:domain owl:Thing ;
+                                                                   rdfs:range <https://w3id.org/arco/ontology/context-description/Commission> ;
+                                                                   rdfs:comment "Questa proprietà collega un bene culturale alla sua committenza."@it ,
+                                                                                "This property relates a cultural entity to its commission."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/arco/context-description> ;
+                                                                   rdfs:label "ha committenza"@it ,
+                                                                              "has commission"@en ;
+                                                                   owl:versionInfo "stabile"@it ,
+                                                                                   "stable"@en ;
+                                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "AU/CMM" .
+
+
+###  https://w3id.org/arco/ontology/context-description/isCommissionOf
+<https://w3id.org/arco/ontology/context-description/isCommissionOf> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> ;
+                                                                    rdfs:domain <https://w3id.org/arco/ontology/context-description/Commission> ;
+                                                                    rdfs:range owl:Thing ;
+                                                                    rdfs:comment "Questa proprietà collega l'individuazione di una committenza all'entità culturale che è stata commissionata."@it ,
+                                                                                 "This property relates a commission to the cultural entity that was commissioned."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                    rdfs:label "is commission of"@en ,
+                                                                               "è committenza di"@it ;
+                                                                    owl:versionInfo "stabile"@it ,
+                                                                                    "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgent
+<https://w3id.org/arco/ontology/core/hasAgent> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/italia/onto/RO/isRoleInTimeOf> ;
+                                               owl:inverseOf <https://w3id.org/arco/ontology/core/isAgentOf> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                               rdfs:range <https://w3id.org/italia/onto/l0/Agent> ;
+                                               rdfs:comment "Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente all'agente che lo ricopre."@it ,
+                                                            "This property relates a situation in which an agent holds a role to that agent."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "ha agente"@it ,
+                                                          "has agent"@en ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgentRole
+<https://w3id.org/arco/ontology/core/hasAgentRole> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://w3id.org/arco/ontology/core/isAgentRoleOf> ;
+                                                   rdfs:domain owl:Thing ;
+                                                   rdfs:range <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                                   rdfs:comment "Questa proprietà collega un'entità a una situazione in cui un agente ricopre un ruolo."@it ,
+                                                                "This property relates an entity to a situation in which an agent holds a role connected to that entity."@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                   rdfs:label "ha ruolo ricoperto da agente"@it ,
+                                                              "has agent role"@en ;
+                                                   owl:versionInfo "stabile"@it ,
+                                                                   "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasEventOrSituationInTime
+<https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasRole
+<https://w3id.org/arco/ontology/core/hasRole> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/italia/onto/RO/withRole> ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isRoleOf> ;
+                                              rdfs:domain <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                              rdfs:range <https://w3id.org/italia/onto/RO/Role> ;
+                                              rdfs:comment "Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente al ruolo stesso."@it ,
+                                                           "This property relates a situation in which an agent holds a role to that role."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "ha ruolo"@it ,
+                                                         "has role"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en ;
+                                              <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normative F e FF: PD/PDF/PDFR" .
+
+
+###  https://w3id.org/arco/ontology/core/isAgentOf
+<https://w3id.org/arco/ontology/core/isAgentOf> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/italia/onto/l0/Agent> ;
+                                                rdfs:range <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                                rdfs:comment "Questa proprietà, inversa a \"ha agente\", collega un agente alla situazione in cui l'agente ha ricoperto un ruolo."@it ,
+                                                             "This property relates an agent to a situation in which that agent holds a role."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                rdfs:label "is agent of"@en ,
+                                                           "è agente in"@it ;
+                                                owl:versionInfo "stabile"@it ,
+                                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isAgentRoleOf
+<https://w3id.org/arco/ontology/core/isAgentRoleOf> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                                    rdfs:range owl:Thing ;
+                                                    rdfs:comment "Questa proprietà collega una situazione in cui un agente ricopre un ruolo relativo a un'entità all'entità."@it ,
+                                                                 "This property relates a situation in which an agent holds a role connected to an entity to that entity."@en ;
+                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                    rdfs:label "is agent role of"@en ,
+                                                               "è ruolo ricoperto da agente di"@it ;
+                                                    owl:versionInfo "stabile"@it ,
+                                                                    "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf
+<https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isRoleOf
+<https://w3id.org/arco/ontology/core/isRoleOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <https://w3id.org/italia/onto/RO/Role> ;
+                                               rdfs:range <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                               rdfs:comment "Questa proprietà collega un ruolo a una situazione in cui il ruolo viene ricoperto da un agente."@it ,
+                                                            "This property relates a role to a situation in which an agent holds that role."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "is role of"@en ,
+                                                          "è ruolo in"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/cultural-event/hasAcknowledgment
+<https://w3id.org/arco/ontology/cultural-event/hasAcknowledgment> rdf:type owl:ObjectProperty ;
+                                                                  owl:inverseOf <https://w3id.org/arco/ontology/cultural-event/isAcknowledgmentOf> ;
+                                                                  rdfs:domain <https://w3id.org/arco/ontology/cultural-event/Competition> ;
+                                                                  rdfs:range <https://w3id.org/arco/ontology/cultural-event/Acknowledgment> ;
+                                                                  rdfs:comment "Questa proprietà rappresenta la relazione che collega una competizione al riconoscimento che rilascia."@it ,
+                                                                               "This property relates a competition to the acknowledgment."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/cultural-event> ;
+                                                                  rdfs:label "ha riconoscimento"@it ,
+                                                                             "has acknowledgment"@en ;
+                                                                  owl:versionInfo "instabile"@it ,
+                                                                                  "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/cultural-event/hasAward
+<https://w3id.org/arco/ontology/cultural-event/hasAward> rdf:type owl:ObjectProperty ;
+                                                         owl:inverseOf <https://w3id.org/arco/ontology/cultural-event/isAwardOf> ;
+                                                         rdfs:domain <https://w3id.org/arco/ontology/cultural-event/Competition> ;
+                                                         rdfs:range <https://w3id.org/arco/ontology/cultural-event/Award> ;
+                                                         rdfs:comment "Questa proprietà collega una competizione ad un premio."@it ,
+                                                                      "This property relates a competition to  a prize."@en ;
+                                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/cultural-event> ;
+                                                         rdfs:label "ha premio"@it ,
+                                                                    "has prize"@en ;
+                                                         owl:versionInfo "instabile"@it ,
+                                                                         "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/cultural-event/isAcknowledgmentOf
+<https://w3id.org/arco/ontology/cultural-event/isAcknowledgmentOf> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <https://w3id.org/arco/ontology/cultural-event/Acknowledgment> ;
+                                                                   rdfs:range <https://w3id.org/arco/ontology/cultural-event/Competition> ;
+                                                                   rdfs:comment "Questa proprietà è inversa di ha riconoscimento."@it ,
+                                                                                "This property is inverse of has acknowledgment."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/cultural-event> ;
+                                                                   rdfs:label "is acknowledgment of"@en ,
+                                                                              "è riconoscimento di"@it ;
+                                                                   owl:versionInfo "instabile"@it ,
+                                                                                   "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/cultural-event/isAcknowledgmentReceivedBy
+<https://w3id.org/arco/ontology/cultural-event/isAcknowledgmentReceivedBy> rdf:type owl:ObjectProperty ;
+                                                                           owl:inverseOf <https://w3id.org/arco/ontology/cultural-event/receivesAcknowledgment> ;
+                                                                           rdfs:domain <https://w3id.org/arco/ontology/cultural-event/Acknowledgment> ;
+                                                                           rdfs:range owl:Thing ;
+                                                                           rdfs:comment "Questa proprietà rappresenta la relazione che collega un riconoscimento a una entità."@it ,
+                                                                                        "This property relates an acknowledgment to an entity."@en ;
+                                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/cultural-event> ;
+                                                                           rdfs:label "ha riconoscimento"@it ,
+                                                                                      "has acknowledgment"@en ;
+                                                                           owl:versionInfo "instabile"@it ,
+                                                                                           "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/cultural-event/isAwardOf
+<https://w3id.org/arco/ontology/cultural-event/isAwardOf> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <https://w3id.org/arco/ontology/cultural-event/Award> ;
+                                                          rdfs:range <https://w3id.org/arco/ontology/cultural-event/Competition> ;
+                                                          rdfs:comment "Questa proprietà collega un premio a una competizione."@it ,
+                                                                       "This property relates a prize to a competition."@en ;
+                                                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/cultural-event> ;
+                                                          rdfs:label "is prize of"@en ,
+                                                                     "è premio di"@it ;
+                                                          owl:versionInfo "instabile"@it ,
+                                                                          "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/cultural-event/receivesAcknowledgment
+<https://w3id.org/arco/ontology/cultural-event/receivesAcknowledgment> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain owl:Thing ;
+                                                                       rdfs:range <https://w3id.org/arco/ontology/cultural-event/Acknowledgment> ;
+                                                                       rdfs:comment "Questa proprietà rappresenta la relazione che collega una entità a un riconoscimento."@it ,
+                                                                                    "This class relates an entity to an acknowledgment."@en ;
+                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/cultural-event> ;
+                                                                       rdfs:label "ha riconoscimento"@it ,
+                                                                                  "has acknowledgment"@en ;
+                                                                       owl:versionInfo "instabile"@it ,
+                                                                                       "unstable"@en .
+
+
+###  https://w3id.org/italia/onto/CLV/hasSpatialCoverage
+<https://w3id.org/italia/onto/CLV/hasSpatialCoverage> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/RO/isRoleInTimeOf
+<https://w3id.org/italia/onto/RO/isRoleInTimeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/RO/withRole
+<https://w3id.org/italia/onto/RO/withRole> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/cultural-event/eventTimeLocation
+<https://w3id.org/arco/ontology/cultural-event/eventTimeLocation> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:domain <http://dati.beniculturali.it/cis/CulturalEvent> ;
+                                                                  rdfs:range rdfs:Literal ;
+                                                                  rdfs:comment "Questa proprietà rappresenta il luogo e il tempo di un evento culturale, quando espressi unitamente."@it ,
+                                                                               "This property represents the time and location of a cultural event, when they are recorded together."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/cultural-event> ;
+                                                                  rdfs:label "event time and location"@en ,
+                                                                             "tempo e luogo dell'evento"@it ;
+                                                                  owl:versionInfo "stabile"@it ,
+                                                                                  "stable"@en ;
+                                                                  <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale e normative di versione 4.00: MS/MST/MSTL"@it .
+
+
+###  https://w3id.org/italia/onto/l0/name
+<https://w3id.org/italia/onto/l0/name> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain owl:Thing ;
+                                       rdfs:range rdfs:Literal ;
+                                       rdfs:isDefinedBy <https://w3id.org/italia/onto/l0/> ;
+                                       <https://w3id.org/italia/onto/l0/controlledVocabulary> <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities> ,
+                                                                                              <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces> ,
+                                                                                              <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions> ,
+                                                                                              <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/foreign-countries> ,
+                                                                                              <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://w3id.org/italia/onto/l0/name> ;
+   owl:annotatedProperty <https://w3id.org/italia/onto/l0/controlledVocabulary> ;
+   owl:annotatedTarget <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities> ;
+   <http://www.w3.org/ns/prov#wasDerivedFrom> <https://w3id.org/italia/onto/CLV>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://w3id.org/italia/onto/l0/name> ;
+   owl:annotatedProperty <https://w3id.org/italia/onto/l0/controlledVocabulary> ;
+   owl:annotatedTarget <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces> ;
+   <http://www.w3.org/ns/prov#wasDerivedFrom> <https://w3id.org/italia/onto/CLV>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://w3id.org/italia/onto/l0/name> ;
+   owl:annotatedProperty <https://w3id.org/italia/onto/l0/controlledVocabulary> ;
+   owl:annotatedTarget <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions> ;
+   <http://www.w3.org/ns/prov#wasDerivedFrom> <https://w3id.org/italia/onto/CLV>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://w3id.org/italia/onto/l0/name> ;
+   owl:annotatedProperty <https://w3id.org/italia/onto/l0/controlledVocabulary> ;
+   owl:annotatedTarget <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/foreign-countries> ;
+   <http://www.w3.org/ns/prov#wasDerivedFrom> <https://w3id.org/italia/onto/CLV>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://w3id.org/italia/onto/l0/name> ;
+   owl:annotatedProperty <https://w3id.org/italia/onto/l0/controlledVocabulary> ;
+   owl:annotatedTarget <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy> ;
+   <http://www.w3.org/ns/prov#wasDerivedFrom> <https://w3id.org/italia/onto/CLV>
+ ] .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.beniculturali.it/cis/CulturalEntity
+<http://dati.beniculturali.it/cis/CulturalEntity> rdf:type owl:Class ;
+                                                  rdfs:subClassOf owl:Thing .
+
+
+###  http://dati.beniculturali.it/cis/CulturalEvent
+<http://dati.beniculturali.it/cis/CulturalEvent> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/arco/ontology/core/Event> ,
+                                                                 <https://w3id.org/italia/onto/CPEV/PublicEvent> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://dati.beniculturali.it/cis/isHostedBySite> ;
+                                                                   owl:someValuesFrom <http://dati.beniculturali.it/cis/Site>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <https://w3id.org/arco/ontology/core/hasAgentRole> ;
+                                                                   owl:someValuesFrom <https://w3id.org/arco/ontology/core/AgentRole>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <https://w3id.org/italia/onto/CLV/hasSpatialCoverage> ;
+                                                                   owl:someValuesFrom <https://w3id.org/italia/onto/CLV/Feature>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                   owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://dati.beniculturali.it/cis/involvesCulturalEntity> ;
+                                                                   owl:allValuesFrom <http://dati.beniculturali.it/cis/CulturalEntity>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <https://w3id.org/italia/onto/CLV/hasSpatialCoverage> ;
+                                                                   owl:allValuesFrom <https://w3id.org/italia/onto/CLV/Feature>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                   owl:allValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                 ] ;
+                                                 owl:disjointWith <http://dati.beniculturali.it/cis/NameInTime> ;
+                                                 <http://purl.org/dc/elements/1.1/description> """An example of usage of the class cis:CulturalEvent is the following:
+
+<pre>
+
+culturalEvent:Vincenzo_Gemito_al_Museo_di_Capodimonte
+    a cis:CulturalEvent, cpevapit:PublicEvent ;
+    cis:isHostedBySite site:Museo_di_Capodimonte;
+    cpevapit:eventTitle \"Vincenzo Gemito, dal salotto Minozzi al Museo di Capodimonte\" ;
+    rdfs:comment \"Apre al pubblico al Museo di Capodimonte la mostra ‘Vincenzo Gemito, dal salotto Minozzi
+    al Museo di Capodimonte’,
+    organizzata dalla Soprintendenza speciale per il patrimonio storico\"@it ;
+    cis:involvesCulturalEntity culturalheritageobject:Il_giocatore_di_carte ;
+    cpevapit:hasPublicEventTypology <https://w3id.org/italia/controlled-vocabulary/public-event-types/11_Exposure> ;
+    cpevapit:hasRiT rit:Role_Org_Vincenzo_Gemito_al_Museo_di_Capodimonte ;
+    l0:identifier \"Gemito-1\" ;
+    cpevapit:hasSubEvent culturaleEvent:Vincenzo_Gemito_Il_Pescatorello ;
+    l0:description \"Apre al pubblico al Museo di Capodimonte la mostra ‘Vincenzo Gemito, dal salotto Minozzi
+    al Museo di Capodimonte’,
+    organizzata dalla Soprintendenza speciale per il patrimonio storico\"@it ;
+    rdfs:label \"Vincenzo Gemito, dal salotto Minozzi al Museo di Capodimonte\"@it ;
+    tiapit::atTime ti:Durata_di_Vincenzo_Gemito_dal_salotto_Minozzi_al_Museo_di_Capodimonte .
+
+culturalEvent:Vincenzo_Gemito_Il_Pescatorello
+    a cis:CulturalEvent , cpevapit:PublicEvent ;
+    cis:isHostedBySite site:Museo_di_Capodimonte;
+    rdfs:label \"Vincenzo Gemito, esposizione de Il Pescatorello\"@it ;
+    cpevapit:eventTitle \"Vincenzo Gemito, esposizione de Il Pescatorello&apos@it\" ;
+    l0:description \"Evento racchiuso nell'esposizione generale Vincenzo Gemito\"@it ;
+    l0:identifier \"Gemito-Pescatorello-2\";
+   cpevapit:hasRiT rit:Role_Org_Vincenzo_Gemito_al_Museo_di_Capodimonte ;
+    cpevapit:hasPublicEventTypology <https://w3id.org/italia/controlled-vocabulary/public-event-types/11_Exposure> ;
+    cis:involvesCulturalEntity culturalheritageobject:Il_Pescatorello ;
+    tiapit:atTime ti:urata_di_Vincenzo_Gemito_dal_salotto_Minozzi_al_Museo_di_Capodimonte .
+
+rit:Role_Org_Vincenzo_Gemito_al_Museo_di_Capodimonte
+   a roapit:TimeIndexedRole ;
+   roapit:forEntity culturalEvent:Vincenzo_Gemito_al_Museo_di_Capodimonte ;
+   roapit:withRole role:Organizer ;
+   tiapit:hasTemporalEntity ti:Durata_incarico ;
+   roapit:isRoleInTimeOf <https://w3id.org/italia/data/organization/public-organization/m_bac> .
+
+role:Organizer
+    a roapit:Role ;
+    l0name \"Organizzatore\"@it .
+
+ti:Durata_incarico
+  a tiapit:TimeInterval ;
+  tiapit:startTime \"2013-11-28T00:00:00\"^^xsd:dateTime;
+  tiapit:endTime \"2015-07-16T00:00:00\"^^xsd:dateTime .
+
+ti:Durata_di_Vincenzo_Gemito_dal_salotto_Minozzi_al_Museo_di_Capodimonte
+    a tiapit:TimeInterval ;
+    rdfs:label \"Intervallo di durata dell'evento 'Vincenzo Gemito, dal salotto Minozzi al Museo di Capodimonte'\" ;
+    tiapit:startTime \"2014-11-28T00:00:00\"^^xsd:dateTime;
+    tiapit:endTime \"2015-07-16T00:00:00\"^^xsd:dateTime .
+
+culturalheritageobject:Il_giocatore_di_carte
+    a cis:CulturalHeritageObject ;
+    rdfs:label \"Il giocatore di carte\" ;;
+    l0:name \"l giocatore di carte\" ;
+    cis:isInSite site:Museo_di_Capodimonte .
+
+cultualheritageobject:Il_Pescatorello
+    a cis:CulturalHeritageObject ;
+    rdfs:label \"Il Pescatorello\" ;
+    l0:name \"Il Pescatorello&quot\" ;
+    cis:isInSite site:Museo_di_Capodimonte .
+
+</pre>"""@en ,
+                                                                                               """Un esempio di utilizzo della classe cis:Event è il seguente:
+
+<pre>
+
+culturalEvent:Vincenzo_Gemito_al_Museo_di_Capodimonte
+    a cis:CulturalEvent, cpevapit:PublicEvent ;
+    cis:isHostedBySite site:Museo_di_Capodimonte;
+    cpevapit:eventTitle \"Vincenzo Gemito, dal salotto Minozzi al Museo di Capodimonte\" ;
+    rdfs:comment \"Apre al pubblico al Museo di Capodimonte la mostra ‘Vincenzo Gemito, dal salotto Minozzi
+    al Museo di Capodimonte’,
+    organizzata dalla Soprintendenza speciale per il patrimonio storico\"@it ;
+    cis:involvesCulturalEntity culturalheritageobject:Il_giocatore_di_carte ;
+    cpevapit:hasPublicEventTypology <https://w3id.org/italia/controlled-vocabulary/public-event-types/11_Exposure> ;
+    cpevapit:hasRiT rit:Role_Org_Vincenzo_Gemito_al_Museo_di_Capodimonte ;
+    l0:identifier \"Gemito-1\" ;
+    cpevapit:hasSubEvent culturaleEvent:Vincenzo_Gemito_Il_Pescatorello ;
+    l0:description \"Apre al pubblico al Museo di Capodimonte la mostra ‘Vincenzo Gemito, dal salotto Minozzi
+    al Museo di Capodimonte’,
+    organizzata dalla Soprintendenza speciale per il patrimonio storico\"@it ;
+    rdfs:label \"Vincenzo Gemito, dal salotto Minozzi al Museo di Capodimonte\"@it ;
+    tiapit::atTime ti:Durata_di_Vincenzo_Gemito_dal_salotto_Minozzi_al_Museo_di_Capodimonte .
+
+culturalEvent:Vincenzo_Gemito_Il_Pescatorello
+    a cis:CulturalEvent , cpevapit:PublicEvent ;
+    cis:isHostedBySite site:Museo_di_Capodimonte;
+    rdfs:label \"Vincenzo Gemito, esposizione de Il Pescatorello\"@it ;
+    cpevapit:eventTitle \"Vincenzo Gemito, esposizione de Il Pescatorello&apos@it\" ;
+    l0:description \"Evento racchiuso nell'esposizione generale Vincenzo Gemito\"@it ;
+    l0:identifier \"Gemito-Pescatorello-2\";
+   cpevapit:hasRiT rit:Role_Org_Vincenzo_Gemito_al_Museo_di_Capodimonte ;
+    cpevapit:hasPublicEventTypology <https://w3id.org/italia/controlled-vocabulary/public-event-types/11_Exposure> ;
+    cis:involvesCulturalEntity culturalheritageobject:Il_Pescatorello ;
+    tiapit:atTime ti:urata_di_Vincenzo_Gemito_dal_salotto_Minozzi_al_Museo_di_Capodimonte .
+
+rit:Role_Org_Vincenzo_Gemito_al_Museo_di_Capodimonte
+   a roapit:TimeIndexedRole ;
+   roapit:forEntity culturalEvent:Vincenzo_Gemito_al_Museo_di_Capodimonte ;
+   roapit:withRole role:Organizer ;
+   tiapit:hasTemporalEntity ti:Durata_incarico ;
+   roapit:isRoleInTimeOf <https://w3id.org/italia/data/organization/public-organization/m_bac> .
+
+role:Organizer
+    a roapit:Role ;
+    l0name \"Organizzatore\"@it .
+
+ti:Durata_incarico
+  a tiapit:TimeInterval ;
+  tiapit:startTime \"2013-11-28T00:00:00\"^^xsd:dateTime;
+  tiapit:endTime \"2015-07-16T00:00:00\"^^xsd:dateTime .
+
+ti:Durata_di_Vincenzo_Gemito_dal_salotto_Minozzi_al_Museo_di_Capodimonte
+    a tiapit:TimeInterval ;
+    rdfs:label \"Intervallo di durata dell'evento 'Vincenzo Gemito, dal salotto Minozzi al Museo di Capodimonte'\" ;
+    tiapit:startTime \"2014-11-28T00:00:00\"^^xsd:dateTime;
+    tiapit:endTime \"2015-07-16T00:00:00\"^^xsd:dateTime .
+
+culturalheritageobject:Il_giocatore_di_carte
+    a cis:CulturalHeritageObject ;
+    rdfs:label \"Il giocatore di carte\" ;;
+    l0:name \"l giocatore di carte\" ;
+    cis:isInSite site:Museo_di_Capodimonte .
+
+cultualheritageobject:Il_Pescatorello
+    a cis:CulturalHeritageObject ;
+    rdfs:label \"Il Pescatorello\" ;
+    l0:name \"Il Pescatorello&quot\" ;
+    cis:isInSite site:Museo_di_Capodimonte .
+
+</pre>"""@it ;
+                                                 rdfs:comment "Rappresenta un evento culturale."@it ,
+                                                              "it represents an event that typically is related to the cultural domain"@en ;
+                                                 rdfs:isDefinedBy <http://dati.beniculturali.it/cis/> ;
+                                                 rdfs:label "Cultural Event"@en ,
+                                                            "Evento Culturale"@it ;
+                                                 owl:versionInfo "stabile"@it ,
+                                                                 "stable"@en .
+
+
+###  http://dati.beniculturali.it/cis/NameInTime
+<http://dati.beniculturali.it/cis/NameInTime> rdf:type owl:Class .
+
+
+###  http://dati.beniculturali.it/cis/Site
+<http://dati.beniculturali.it/cis/Site> rdf:type owl:Class .
+
+
+###  http://dati.gov.it/onto/dcatapit#Agent
+<http://dati.gov.it/onto/dcatapit#Agent> rdf:type owl:Class ;
+                                         owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  https://w3id.org/arco/ontology/context-description/AuthorshipAttribution
+<https://w3id.org/arco/ontology/context-description/AuthorshipAttribution> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Circumstance
+<https://w3id.org/arco/ontology/context-description/Circumstance> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Commission
+<https://w3id.org/arco/ontology/context-description/Commission> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasAgentRole> ;
+                                                                                  owl:someValuesFrom <https://w3id.org/arco/ontology/core/AgentRole>
+                                                                                ] ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/arco/ontology/context-description/hasCircumstance> ;
+                                                                                  owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/Circumstance>
+                                                                                ] ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasAgentRole> ;
+                                                                                  owl:allValuesFrom <https://w3id.org/arco/ontology/core/AgentRole>
+                                                                                ] ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/arco/ontology/context-description/isCommissionOf> ;
+                                                                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                                ] ;
+                                                                rdfs:comment "Questa classe rappresenta l'individuazione della committenza relativa a un bene culturale."@it ,
+                                                                             "This class represents the commission of a cultural property."@en ;
+                                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                rdfs:label "Commission"@en ,
+                                                                           "Committenza"@it ;
+                                                                owl:versionInfo "stabile"@it ,
+                                                                                "stable"@en ;
+                                                                <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: AU/CMM" .
+
+
+###  https://w3id.org/arco/ontology/context-description/Dating
+<https://w3id.org/arco/ontology/context-description/Dating> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Estimate
+<https://w3id.org/arco/ontology/context-description/Estimate> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Fruition
+<https://w3id.org/arco/ontology/context-description/Fruition> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Responsibility
+<https://w3id.org/arco/ontology/context-description/Responsibility> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/AgentRole
+<https://w3id.org/arco/ontology/core/AgentRole> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/italia/onto/RO/TimeIndexedRole> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasAgent> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/l0/Agent>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasRole> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/RO/Role>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                ] ;
+                                                owl:disjointWith <https://w3id.org/arco/ontology/core/Classification> ;
+                                                rdfs:comment "Questa classe rappresenta una situazione relativa a un agente che ricopre un ruolo, senza la specificazione della dimensione tempo."@it ,
+                                                             "This class represents a situation in which an agent holds a role, regardless of the timing."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                rdfs:label "Agent Role"@en ,
+                                                           "Ruolo ricoperto da agente"@it ;
+                                                owl:versionInfo "stabile"@it ,
+                                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/Classification
+<https://w3id.org/arco/ontology/core/Classification> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/Event
+<https://w3id.org/arco/ontology/core/Event> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/cultural-event/Acknowledgment
+<https://w3id.org/arco/ontology/cultural-event/Acknowledgment> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ;
+                                                               rdfs:comment "Questa classe rappresenta il riconoscimento conferito da un concorso"@it ,
+                                                                            "This class represents the recognition conferred by a competition"@en ;
+                                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/cultural-event> ;
+                                                               rdfs:label "acknowledgment"@en ,
+                                                                          "riconoscimento"@it ;
+                                                               owl:versionInfo "instabile"@it ,
+                                                                               "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/cultural-event/Award
+<https://w3id.org/arco/ontology/cultural-event/Award> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://w3id.org/arco/ontology/cultural-event/Acknowledgment> ;
+                                                      rdfs:comment "Questa classe rappresenta il riconoscimento più alto previsto da una competizione"@it ,
+                                                                   "This class represents the highest award expected from a competition"@en ;
+                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/cultural-event> ;
+                                                      rdfs:label "award"@en ,
+                                                                 "premio"@it ;
+                                                      owl:versionInfo "instabile"@it ,
+                                                                      "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/cultural-event/Competition
+<https://w3id.org/arco/ontology/cultural-event/Competition> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://dati.beniculturali.it/cis/CulturalEvent> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/cultural-event/hasAcknowledgment> ;
+                                                                              owl:allValuesFrom <https://w3id.org/arco/ontology/cultural-event/Acknowledgment>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/cultural-event/hasAward> ;
+                                                                              owl:allValuesFrom <https://w3id.org/arco/ontology/cultural-event/Award>
+                                                                            ] ;
+                                                            rdfs:comment "Questa classe rappresenta una competizione."@it ,
+                                                                         "This class represents a competition."@en ;
+                                                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/cultural-event> ;
+                                                            rdfs:label "Competition"@en ,
+                                                                       "Competizione"@it ;
+                                                            owl:versionInfo "instabile"@it ,
+                                                                            "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/cultural-event/Exhibition
+<https://w3id.org/arco/ontology/cultural-event/Exhibition> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://dati.beniculturali.it/cis/CulturalEvent> ;
+                                                           rdfs:comment "Questa classe rappresenta una mostra, come sottocategoria di un generico evento culturale."@it ,
+                                                                        "This class represents an exhibition, as a particular type of cultural event."@en ;
+                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/cultural-event> ;
+                                                           rdfs:label "Exhibition"@en ,
+                                                                      "Mostra"@it ;
+                                                           owl:versionInfo "stabile"@it ,
+                                                                           "stable"@en ;
+                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale e altre normative di versione 4.00: se MS/MST/MSTI= \"mostra\""@it .
+
+
+###  https://w3id.org/italia/onto/CLV/Feature
+<https://w3id.org/italia/onto/CLV/Feature> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CPEV/PublicEvent
+<https://w3id.org/italia/onto/CPEV/PublicEvent> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/RO/Role
+<https://w3id.org/italia/onto/RO/Role> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/RO/TimeIndexedRole
+<https://w3id.org/italia/onto/RO/TimeIndexedRole> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Agent
+<https://w3id.org/italia/onto/l0/Agent> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/italia/onto/l0/Entity> .
+
+
+###  https://w3id.org/italia/onto/l0/Entity
+<https://w3id.org/italia/onto/l0/Entity> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Object
+<https://w3id.org/italia/onto/l0/Object> rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/AuthorshipAttribution>
+                <https://w3id.org/arco/ontology/context-description/Commission>
+                <https://w3id.org/arco/ontology/context-description/Dating>
+                <https://w3id.org/arco/ontology/context-description/Estimate>
+                <https://w3id.org/arco/ontology/context-description/Fruition>
+                <https://w3id.org/arco/ontology/context-description/Responsibility>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

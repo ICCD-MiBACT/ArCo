@@ -1,0 +1,242 @@
+@prefix : <https://w3id.org/arco/test/2.0/CulturalPropertyType#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/CulturalPropertyType> .
+
+<https://w3id.org/arco/test/2.0/CulturalPropertyType> rdf:type owl:Ontology ;
+                                                       owl:versionIRI <https://w3id.org/arco/test/2.0/CulturalPropertyType> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isTypeOf
+<https://w3id.org/arco/ontology/core/isTypeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition
+<https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition> rdf:type owl:ObjectProperty ;
+                                                                                      owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isCulturalPropertyDefinitionOf> ;
+                                                                                      rdfs:domain <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> ;
+                                                                                      rdfs:range <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition> ;
+                                                                                      rdfs:comment "Questa proprietà collega la tipologia di un bene culturale a una delle sue componenti, cioè la definizione."@it ,
+                                                                                                   "This property relates a cultural entity's typology to one of its components, i.e.  its definition."@en ;
+                                                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                      rdfs:label "ha definizione del bene culturale"@it ,
+                                                                                                 "has cultural property definition"@en ;
+                                                                                      owl:versionInfo "stabile"@it ,
+                                                                                                      "stable"@en ;
+                                                                                      <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "OG/OGT/OGTD" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertySpecification
+<https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertySpecification> rdf:type owl:ObjectProperty ;
+                                                                                         owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isCulturalPropertySpecificationOf> ;
+                                                                                         rdfs:domain <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> ;
+                                                                                         rdfs:range <https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification> ;
+                                                                                         rdfs:comment "Questa proprietà collega la tipologia di un bene culturale a una delle sue componenti, cioè alle specifiche morfologiche e funzionali."@it ,
+                                                                                                      "This property relates a cultural entity's typology to its components, i.e. morphological and functional specifications."@en ;
+                                                                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                         rdfs:label "ha specifiche del bene culturale"@it ,
+                                                                                                    "has cultural property specification"@en ;
+                                                                                         owl:versionInfo "stabile"@it ,
+                                                                                                         "stable"@en ;
+                                                                                         <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "OG/OGT/OGTT. Scheda A e PG (v. 1 e v.2): OG/OGT/OGTQ. - Normativa BNB: OG/OGT/OGTK, OGTZ" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType
+<https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType> rdf:type owl:ObjectProperty ;
+                                                                                rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                                owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isCulturalPropertyTypeOf> ;
+                                                                                rdfs:domain <http://dati.beniculturali.it/cis/CulturalEntity> ;
+                                                                                rdfs:range <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> ;
+                                                                                rdfs:comment "Questa proprietà collega un bene culturale al tipo di bene, per permettere la corretta e precisa individuazione del bene."@it ,
+                                                                                             "This property relates a cultural property to its type."@en ;
+                                                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                rdfs:label "ha tipo di bene culturale"@it ,
+                                                                                           "has cultural property type"@en ;
+                                                                                owl:versionInfo "stabile"@it ,
+                                                                                                "stable"@en ;
+                                                                                <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "OG/OGT" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isCulturalPropertyDefinitionOf
+<https://w3id.org/arco/ontology/denotative-description/isCulturalPropertyDefinitionOf> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:domain <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition> ;
+                                                                                       rdfs:range <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> ;
+                                                                                       rdfs:comment "Questa è la proprietà inversa di \"ha definizione di bene culturale\"."@it ,
+                                                                                                    "This is the inverse property of \"has cultural property definition\"."@en ;
+                                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                       rdfs:label "is cultural property definition of"@en ,
+                                                                                                  "è definizione di bene culturale"@it ;
+                                                                                       owl:versionInfo "stabile"@it ,
+                                                                                                       "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isCulturalPropertySpecificationOf
+<https://w3id.org/arco/ontology/denotative-description/isCulturalPropertySpecificationOf> rdf:type owl:ObjectProperty ;
+                                                                                          rdfs:domain <https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification> ;
+                                                                                          rdfs:range <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> ;
+                                                                                          rdfs:comment "Questa è la proprietà inversa di \"ha specifiche del bene culturale\"."@it ,
+                                                                                                       "This is the inverse property of \"has cultural property specification\"."@en ;
+                                                                                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                          rdfs:label "is cultural property specification"@en ,
+                                                                                                     "sono specifiche del bene culturale"@it ;
+                                                                                          owl:versionInfo "stabile"@it ,
+                                                                                                          "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isCulturalPropertyTypeOf
+<https://w3id.org/arco/ontology/denotative-description/isCulturalPropertyTypeOf> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                                                                 rdfs:domain <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> ;
+                                                                                 rdfs:range <http://dati.beniculturali.it/cis/CulturalEntity> ;
+                                                                                 rdfs:comment "Questa è la proprietà inversa di \"ha tipo di bene culturale\"."@it ,
+                                                                                              "This is the inverse property of \"has cultural property type\"."@en ;
+                                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                 rdfs:label "is cultural property type of"@en ,
+                                                                                            "è tipo di bene culturale"@it ;
+                                                                                 owl:versionInfo "stabile"@it ,
+                                                                                                 "stable"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.beniculturali.it/cis/CulturalEntity
+<http://dati.beniculturali.it/cis/CulturalEntity> rdf:type owl:Class ;
+                                                  rdfs:subClassOf owl:Thing .
+
+
+###  https://w3id.org/arco/ontology/core/Type
+<https://w3id.org/arco/ontology/core/Type> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/AffixedElementType
+<https://w3id.org/arco/ontology/denotative-description/AffixedElementType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType
+<https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/ConservationStatusType
+<https://w3id.org/arco/ontology/denotative-description/ConservationStatusType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition
+<https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <https://w3id.org/italia/onto/l0/Description> ,
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isCulturalPropertyDefinitionOf> ;
+                                                                                                     owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType>
+                                                                                                   ] ;
+                                                                                   rdfs:comment "Questa classe rappresenta la definizione di un bene culturale, cioè il termine o la locuzione che individua il bene che si sta catalogando."@it ,
+                                                                                                "This class represents the definition of a cultural property. It is the term or expression which identifies the property that is being catalogued."@en ;
+                                                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                   rdfs:label "Cultural Property Definition"@en ,
+                                                                                              "Definizione del bene culturale"@it ;
+                                                                                   owl:versionInfo "stabile"@it ,
+                                                                                                   "stable"@en ;
+                                                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "OG/OGT/OGTD" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification
+<https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <https://w3id.org/italia/onto/l0/Description> ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isCulturalPropertySpecificationOf> ;
+                                                                                                        owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType>
+                                                                                                      ] ;
+                                                                                      rdfs:comment "Questa classe rappresenta specifiche morfologiche o funzionali, utili a completare la definizione del bene per una sua più puntuale individuazione."@it ,
+                                                                                                   "This class represents the morphological or functional specification, which are useful to define a cultural property for a more precise individuation."@en ;
+                                                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                      rdfs:label "Cultural Property Specification"@en ,
+                                                                                                 "Specifiche del bene culturale"@it ;
+                                                                                      owl:versionInfo "stabile"@it ,
+                                                                                                      "stable"@en ;
+                                                                                      <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "OG/OGT/OGTT. Scheda A e PG (v. 1 e v.2): OG/OGT/OGTQ. - Normativa BNB: OG/OGT/OGTK, OGTZ" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType
+<https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ,
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition> ;
+                                                                                               owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition>
+                                                                                             ] ,
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isCulturalPropertyTypeOf> ;
+                                                                                               owl:someValuesFrom <http://dati.beniculturali.it/cis/CulturalEntity>
+                                                                                             ] ,
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertySpecification> ;
+                                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification>
+                                                                                             ] ;
+                                                                             rdfs:comment "Questa classe rappresenta il tipo di bene culturale, cioè il termine o la locuzione che individua il bene che si sta catalogando ed eventuali ulteriori specifiche sulla definizione del bene."@it ,
+                                                                                          "This class represents a cultural property's type, that is the term or expression which specifies the cultural propery that is being catalogued and additional information on the cultural property's definition."@en ;
+                                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                             rdfs:label "Cultural property Type"@en ,
+                                                                                        "Tipo di bene culturale"@it ;
+                                                                             owl:versionInfo "stabile"@it ,
+                                                                                             "stable"@en ;
+                                                                             <https://w3id.org/arco/ontology/catalogue/iccdNormTag> """OG/OGT
+ICCD Normativa MODI e SCAN: OGD+OGT
+ICCD Normativa A e PG 1, 2: OGTT+OGTQ
+ICCD Normativa A e PG v3: OGTD+OGTQ""" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/DesignationType
+<https://w3id.org/arco/ontology/denotative-description/DesignationType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType
+<https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/MeasurementType
+<https://w3id.org/arco/ontology/denotative-description/MeasurementType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/SampleCollectedType
+<https://w3id.org/arco/ontology/denotative-description/SampleCollectedType> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Description
+<https://w3id.org/italia/onto/l0/Description> rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/denotative-description/AffixedElementType>
+                <https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType>
+                <https://w3id.org/arco/ontology/denotative-description/ConservationStatusType>
+                <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType>
+                <https://w3id.org/arco/ontology/denotative-description/DesignationType>
+                <https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType>
+                <https://w3id.org/arco/ontology/denotative-description/MeasurementType>
+                <https://w3id.org/arco/ontology/denotative-description/SampleCollectedType>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
