@@ -427,7 +427,6 @@ a-cd:hasAgeType ?type.
     <!-- https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentWithResponsibilityIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
@@ -1399,7 +1398,6 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha evento relativo a datazione</rdfs:label>
         <rdfs:label xml:lang="en">has event related to dating</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>DTN/DTNS; se non c&apos;è, Event = &quot;realizzazione&quot;. ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFD. ICCD Normativa Trasversale: DT/ADT.</a-cat:iccdNormTag>
@@ -3608,6 +3606,16 @@ core:hasAgent ?agent .
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasTimeInterval -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasTimeInterval">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isTimeIntervalFor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Dating"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasTitle -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasTitle">
@@ -4224,7 +4232,6 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/isAgentWithResponsibilityIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgentWithResponsibilityIn">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha agente con responsabilità&quot;.</rdfs:comment>
@@ -5108,7 +5115,6 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is dating event of</rdfs:label>
         <rdfs:label xml:lang="it">è evento relativo alla datazione di</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -5557,7 +5563,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha scopo funzionale&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has functional purpose&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is functional purpose of</rdfs:label>
         <rdfs:label xml:lang="it">è scopo funzionale di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -7326,6 +7332,15 @@ WHERE {
 ?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/SoundEngineer&gt; ;
 core:isAgentRoleOf ?thing .
 }</core:replacingQuery>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isTimeIntervalFor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isTimeIntervalFor">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Dating"/>
     </owl:ObjectProperty>
     
 
@@ -11918,7 +11933,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/Dating -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Dating">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Interpretation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDatingEvent"/>
@@ -16214,16 +16229,16 @@ a-cd:hasEdition ?ed .
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <core:constructQuery>CONSTRUCT {
 ?use a a-cd:Use .
 }
