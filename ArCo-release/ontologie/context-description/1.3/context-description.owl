@@ -9413,6 +9413,14 @@ WHERE
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/outdatedDating -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/outdatedDating">
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 3.00: DT/ADT/ADTT</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/overlapSpecifications -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/overlapSpecifications">
@@ -9534,6 +9542,14 @@ WHERE {
 ?sit a-cd:mainResponsibility ?bool .
 }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/mainResponsibility"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/preferredDating -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/preferredDating">
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 3.00: DT/ADT/ADTT</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -11936,15 +11952,14 @@ WHERE {
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDatingEvent"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTimeInterval"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/context-description/InterpretationCriterion"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDatingEvent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la cronologia di un&apos;entità, cioè i dati cronologici che riguardano la storia dell&apos;entità (es.: un bene culturale o un&apos;opera collegata a un bene culturale). In relazione alle diverse situazioni, indicheranno un periodo esteso nel tempo oppure una singola data. Per ciascun bene viene fornita la cronologia della sua realizzazione, o, nel caso di immobili che presentano diverse fasi edilizie o diversi momenti di vita, un arco cronologico di riferimento; possono essere fornite anche altre notizie cronologiche relative ad altri eventi che hanno riguardato il bene (demolizione, progettazione, rimaneggiamenti, etc.)</rdfs:comment>
