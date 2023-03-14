@@ -411,7 +411,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/construction-description/hasTechnicalSystem -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/hasTechnicalSystem">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isTechnicalsSystemOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isTechnicalSystemOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/TechnicalSystem"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione all&apos;impianto tecnico.</rdfs:comment>
@@ -476,6 +476,24 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa PG: FO/FOT</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction-description/hasWaterSystem -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/hasWaterSystem">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/construction-description/hasTechnicalSystem"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isWaterSystemOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterSystem"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale con il suo sistema delle acque.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a natural environment with its water system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
+        <rdfs:label xml:lang="it">ha sistema delle acque</rdfs:label>
+        <rdfs:label xml:lang="en">has water system</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -740,9 +758,9 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/construction-description/isTechnicalsSystemOf -->
+    <!-- https://w3id.org/arco/ontology/construction-description/isTechnicalSystemOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isTechnicalsSystemOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isTechnicalSystemOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/TechnicalSystem"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;impianto tecnico ad una costruzione.</rdfs:comment>
@@ -804,6 +822,23 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa PG: FO/FOT</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction-description/isWaterSystemOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isWaterSystemOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isTechnicalSystemOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterSystem"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un sistema delle acque al suo ambiente naturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the water system of a natural environment with its natural environment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/contruction-description"/>
+        <rdfs:label xml:lang="en">is water system of</rdfs:label>
+        <rdfs:label xml:lang="it">è sistema delle acque di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
