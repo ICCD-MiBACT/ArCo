@@ -1149,7 +1149,6 @@ WHERE {?class a-dd:hasMaterialOrTechnique ?char. }</core:constructQuery>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMeasurementType">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementTypeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una misura al tipo di misura (altezza, larghezza, diametro, etc.)</rdfs:comment>
@@ -2306,6 +2305,7 @@ WHERE {?format a-dd:isFormatOf ?x. }</core:constructQuery>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCulturalEntityUseFunctionOf"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasFunctionalPurpose"/>
     </owl:ObjectProperty>
     
 
@@ -2555,27 +2555,6 @@ WHERE {?char a-dd:isMaterialOrTechniqueOf ?class. }</core:constructQuery>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/isMeasurementTypeOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMeasurementTypeOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
-        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha tipo di misura&quot;.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has measurement type&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">is measurement type of</rdfs:label>
-        <rdfs:label xml:lang="it">è tipo di misura</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:constructQuery>CONSTRUCT {?type core:isTypeOf ?class .}
-WHERE {?type a-dd:isMeasurementTypeOf ?class.}</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
 
