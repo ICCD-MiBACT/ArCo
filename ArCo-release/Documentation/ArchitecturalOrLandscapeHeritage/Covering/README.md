@@ -10,7 +10,7 @@
 
 ## Competency questions
 
-**QC1**
+**CQ1**
 
 What color is the cp x's covering?  
 Quale è il colore della copertura del bene x?  
@@ -21,7 +21,7 @@ select ?x ?y where {
 }  
 
 
-**QC2**
+**CQ2**
 
 Which is the covering layout?  
 quale è lo schema di posa della pavimentazione del bene?  
@@ -33,7 +33,7 @@ select ?x ?y where {
 }  
 
 
-**QC3**
+**CQ3**
 
 What type is the Roof of cp x?  
 Di che tipo è il tetto del bene x?  

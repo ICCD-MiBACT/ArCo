@@ -10,7 +10,7 @@
 
 ## Competency questions
 
-**QC1**   
+**CQ1**   
 
 What is the type of storage medium of recording x?   
 Qual è il tipo di supporto memoria della registrazione x?  
@@ -22,7 +22,7 @@ select ?type where {
 
  
 
-**QC2**  
+**CQ2**  
 What events/changes involved audio storage medium x?  
 Quali eventi/cambiamenti hanno coinvolto il supporto audio x?  
 
@@ -33,7 +33,7 @@ a-cd:hasRelatedEvent ?event .
 
   
 
-**QC3**   
+**CQ3**   
 What is the location of storage medium x?  
 Qual è la collocazione del supporto audio x?  
 

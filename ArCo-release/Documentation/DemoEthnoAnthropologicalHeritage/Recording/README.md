@@ -9,7 +9,7 @@
 
 ## Competency questions
 
-**QC1a**  
+**CQ1a**  
 
 What is the audio recording of cp x in which person y is present?  
 Qual è la registrazione audio del bene x in cui è presente la persona y?  
@@ -21,7 +21,7 @@ core:hasAgentRole ?agro .
 }  
  
  
-**QC1b**
+**CQ1b**
 
 select ?rec where {  
 ?x a-cd:hasRecording ?rec .  
@@ -30,7 +30,7 @@ lite:hasRecordedAgent ?agent .
 }  
 
 
-**QC2**  
+**CQ2**  
 What is the duration of registration x?   
 Qual è la durata della registrazione x?  
 

@@ -9,7 +9,7 @@
 
 ## Competency questions
 
-**QC1a**
+**CQ1a**
 
 Which type of fountain has the garden and how's named?  
 Che tipo di fontana ha il giardino x e come si chiama?  
@@ -24,7 +24,7 @@ select ?name ?type where {
 }  
 
 
-**QC1b**  
+**CQ1b**  
 
 select ?name ?type where {  
 ?x a-con:hasTechnicalSystem ?y .  
@@ -35,7 +35,7 @@ select ?name ?type where {
 }  
 
 
-**QC2a**
+**CQ2a**
 
 What are technical chracteristic of fountain x?  
 Che catatteristiche tecniche (materiale e tecnica) ha la fontana x?  
@@ -47,7 +47,7 @@ a-dd:hasTechnicalStatus ?techstat .
 }   
 
 
-**QC2b**
+**CQ2b**
 
 select ?mat ?techn where {  
 ?x a-con:Fountain ;  
@@ -56,7 +56,7 @@ a-lite:hasTechnique ?techn .
 }  
 
 
-**QC3**  
+**CQ3**  
 
 Which type of water system has cp x?  
 Quale è il tipo di sistema delle acque del bene x?  
@@ -67,7 +67,7 @@ select ?x ?type where {
 a-core:hasType ?type .  
 }  
 
-**QC4**
+**CQ4**
 
 Which mode of irrigation has cp x?  
 Quale è la modalità di irrigazione usata nel bene x?  
@@ -79,7 +79,7 @@ a-con:hasModeOfIrrigation ?mode .
 }  
 
 
-**QC5**
+**CQ5**
 
 Which is the water distribution of cp x?  
 Quale è la distribuzione delle acque nel bene x?  

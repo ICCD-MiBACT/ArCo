@@ -10,7 +10,7 @@
 
 ## Competency questions
 
-**QC1**  
+**CQ1**  
 What are the characteristics of cp x's design?  
 Quali sono le caratteristiche del design del bene x?
 
