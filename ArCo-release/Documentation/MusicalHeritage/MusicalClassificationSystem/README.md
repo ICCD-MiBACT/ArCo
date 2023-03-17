@@ -1,32 +1,53 @@
-# RecurrentSituationSeries 
+# MusicalClassificationSystem 
 
 **UPDATE PATTERN**
 
 
-![RecurrentSituationSeries pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/DemoEthnoAnthropologicalHeritage/RecurrentSituationSeries/RecurrentSituation-Pattern.drawio.png?raw=true)
+![MusicalClassificationSystem pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/MusicalHeritage/MusicalClassificationSystem/MusicalClassificationSystem.drawio.png?raw=true)
 
 
 
 ## Competency questions
 
 **QC1**    
-How often does event x recur?  
-Con quale scadenza ricorre l'evento x?  
+A quale sistema di classificazione si riferisce la classe dello strumento x?  
+Which classification system does the instrument class x refer to?  
 
-select ?recurrentTime ?value ?unit where {  
-?x a:ce:hasRecurrentTimePeriod ?recurrentTime .  
-?recurrentTime a-ce:hasTimePeriodMeasurementUnit ?unit;  
-a-ce:timePeriodValue ?value .  
+SELECT DISTINCT ?entity ?classSyst   
+WHERE{  
+?entity core:isClassifiedBy ?class;  
+?entity a arco:MusicHeritage.  
+?class core:refersToClassificationSystem ?classSyst  
 }  
+limit 100  
+ 
  
  
 
 **QC2**  
+Chi è l’autore del sistema di classificazione?  
+Who is the author of the classification system?  
 
-What are the unifying factors of RecurrentSituationSeries x events?  
-Quali sono i fattori unificanti degli eventi della RecurrentSituationSeries x?  
-
-select ?factor where {  
-?x a:ce:hasUnifyingFactor ?factor.  
+SELECT DISTINCT ?classSyst ?aut  
+WHERE{  
+?classSyst a core:ClassificationSystem ;
+a-lite:hasAuthor ?aut  
 }  
+limit 100  
+
+
+**CQ3**
+A quale classe Hornbostel-Sachs appartiene lo strumento musicale?  
+Which Hornbostel-Sachs class does the musical instrument belong to?  
+
+SELECT DISTINCT ?entity ?num ?def ?edi   
+WHERE{  
+?entity core:isClassifiedBy ?class.  
+?class a a-mi:Honrbostel-SachsClass;  
+a-mi:HSNumber ?num;  
+a-mi:HSDefinition ?def;  
+a-mi:HSEdition ?edi  
+}  
+limit 100
+ 
   
