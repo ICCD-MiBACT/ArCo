@@ -20,6 +20,7 @@ select (count(?part) as ?count) where {
 }  
 
 
+
 **CQ2**
 What are the spaces that constitute co x?  
 Quali sono gli spazi che costituiscono il bene x?  
