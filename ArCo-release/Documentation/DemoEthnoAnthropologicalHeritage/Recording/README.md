@@ -1,50 +1,43 @@
-# CommunicationMedium 
+# Recording 
 
 **UPDATE PATTERN**
 
 
-![CommunicationMedium pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/DemoEthnoAnthropologicalHeritage/CommunicationMedium/CommunicationMedium-Versione1.2.drawio.png?raw=true)
-
-
-**DEPRECATED VERSION**
-
-
-**UPDATE PATTERN**
-
-
-![CommunicationMedium pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/DemoEthnoAnthropologicalHeritage/CommunicationMedium/CommunicationMedium-Pattern.drawio.png?raw=true)
+![Recording pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/DemoEthnoAnthropologicalHeritage/Recording/Recording-Pattern.drawio.png?raw=true)
 
 
 
 ## Competency questions
 
-**QC1**  
-What are the accompanying instruments of cp x?  
-Quali sono gli strumenti di accompagnamento del bene x?  
+**QC1a**  
 
-select ?strum where {  
-?x a a-dd:CommunicationMedium;  
-a-mi:involvesSoloInstrument ?strum  
+What is the audio recording of cp x in which person y is present?  
+Qual è la registrazione audio del bene x in cui è presente la persona y?  
+select ?rec where {  
+?x a-cd:hasRecording ?rec .  
+?y a a-cd:AudioRecording ;   
+core:hasAgentRole ?agro .  
+?agro core:hasAgent ?agent .  
 }  
  
+ 
+**QC1b**
 
-**QC2**
-Which goods have a type of kinetic communication?  
-Quali beni hanno un tipo di comunicazione cinetica?  
-
-select ?x {  
-?x a-dd:hasCommunicationMedium ?commed .  
-?commed core:hasType <https://w3id.org/arco/ontology/denotative-description/KineticCommunication> .  
+select ?rec where {  
+?x a-cd:hasRecording ?rec .  
+?y a a-cd:AudioRecording ;  
+lite:hasRecordedAgent ?agent .  
 }  
-  
 
 
-**QC3**  
-How many male participants did cp x have?  
-Quanti partecipanti uomini ha avuto il bene x?  
+**QC2**  
+What is the duration of registration x?   
+Qual è la durata della registrazione x?  
 
-select ?men where {  
-?x a-dd:hasCommunicationMedium ?commed .  
-?commed a-dd:numberOfMaleParticipants ?men .  
+select ?dur where {  
+?x a a-cd:Recording ;  
+a-dd:hasMeasurementCollection ?mescol .
+?meascol a-dd:hasMeasurement ?dur .  
 }  
+ 
  
