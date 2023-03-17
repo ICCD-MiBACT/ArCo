@@ -22,7 +22,8 @@
      xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/0.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/COV"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/TI"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
