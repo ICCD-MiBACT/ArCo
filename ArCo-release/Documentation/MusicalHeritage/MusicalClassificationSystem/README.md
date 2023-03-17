@@ -9,7 +9,7 @@
 
 ## Competency questions
 
-**QC1**    
+**CQ1**    
 A quale sistema di classificazione si riferisce la classe dello strumento x?  
 Which classification system does the instrument class x refer to?  
 
@@ -24,7 +24,7 @@ limit 100
  
  
 
-**QC2**  
+**CQ2**  
 Chi è l’autore del sistema di classificazione?  
 Who is the author of the classification system?  
 
