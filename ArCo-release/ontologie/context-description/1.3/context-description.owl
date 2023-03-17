@@ -26,8 +26,6 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/context-description">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/context-description/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
-        <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV"/>
-        <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/0.8"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
@@ -16252,8 +16250,8 @@ a-cd:hasEdition ?ed .
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <core:constructQuery>CONSTRUCT {
 ?use a a-cd:Use .
 }
