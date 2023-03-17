@@ -16,10 +16,7 @@ Quali sono le caratteristiche del design del bene x?
 
 
 select ?z ?y where {
-
 ?x a-con:hasDesign ?design .
-
 ?desing ?z ?y .
-
 }
 
