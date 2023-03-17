@@ -1,4 +1,5 @@
-# ClassificationInTime (NaturalHeritage variant) 
+# ClassificationInTime 
+### (NaturalHeritage variant) 
 
 
 **UPDATE PATTERN**
