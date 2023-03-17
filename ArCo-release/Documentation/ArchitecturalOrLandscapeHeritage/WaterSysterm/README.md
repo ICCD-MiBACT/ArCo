@@ -3,12 +3,13 @@
 **UPDATE PATTERN**
 
 
-![WaterSystem pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/DocumentationArchitecturalOrLandscapeHeritage\WaterSystem\WaterSystem-Pattern.drawio.png?raw=true)
+![WaterSystem pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/ArchitecturalOrLandscapeHeritage\WaterSystem\WaterSystem-Pattern.drawio.png?raw=true)
 
 
 ##Competency questions
 
 **QC1a**
+
 Which type of fountain has the garden and how's named?
 Che tipo di fontana ha il giardino x e come si chiama?
 
@@ -23,6 +24,7 @@ select ?name ?type where {
 
 
 **QC1b**
+
 select ?name ?type where {
 ?x a-con:hasTechnicalSystem ?y .
 ?y a a-con:WaterSystem .
@@ -33,6 +35,7 @@ select ?name ?type where {
 
 
 **QC2a**
+
 What are technical chracteristic of fountain x?
 Che catatteristiche tecniche (materiale e tecnica) ha la fontana x?
 
@@ -44,6 +47,7 @@ a-dd:hasTechnicalStatus ?techstat .
 
 
 **QC2b**
+
 select ?mat ?techn where {
 ?x a-con:Fountain ;
 a-lite:hasMaterial ?mat ;
@@ -52,6 +56,7 @@ a-lite:hasTechnique ?techn .
 
 
 **QC3**
+
 Which type of water system has cp x?
 Quale è il tipo di sistema delle acque del bene x?
 
@@ -62,6 +67,7 @@ a-core:hasType ?type .
 }
 
 **QC4**
+
 Which mode of irrigation has cp x?
 Quale è la modalità di irrigazione usata nel bene x?
 
@@ -73,6 +79,7 @@ a-con:hasModeOfIrrigation ?mode .
 
 
 **QC5**
+
 Which is the water distribution of cp x?
 Quale è la distribuzione delle acque nel bene x?
 
