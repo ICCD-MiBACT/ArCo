@@ -10,7 +10,7 @@
 ## Competency questions
 
 
-**CQ1** 
+**CQ1**   
 Which type of vertical connection element has cp x?   
 Che tipo di elemento di connessione verticale ha il bene X?  
 
