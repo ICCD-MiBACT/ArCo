@@ -3,7 +3,7 @@
 **UPDATE PATTERN**
 
 
-![WaterSystem pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/ArchitecturalOrLandscapeHeritage/WaterSysterm/WaterSystem-Pattern.drawio.png?raw=true)
+![WaterSystem pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/ArchitecturalOrLandscapeHeritage/WaterSystem/WaterSystem-Pattern.drawio.png?raw=true)
 
 
 
