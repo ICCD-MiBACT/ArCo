@@ -1,18 +1,17 @@
 # CommunicationMedium 
 
-**UPDATE PATTERN**
-
-
-![CommunicationMedium pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/DemoEthnoAnthropologicalHeritage/CommunicationMedium/CommunicationMedium-Versione1.2.drawio.png?raw=true)
-
-
 **DEPRECATED VERSION**
+
 
 
 **UPDATE PATTERN**
 
 
 ![CommunicationMedium pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/DemoEthnoAnthropologicalHeritage/CommunicationMedium/CommunicationMedium-Pattern.drawio.png?raw=true)
+
+
+
+![CommunicationMedium pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/DemoEthnoAnthropologicalHeritage/CommunicationMedium/CommunicationMedium-Versione1.2.drawio.png?raw=true)
 
 
 
