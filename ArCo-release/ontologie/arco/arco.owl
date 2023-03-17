@@ -3,16 +3,20 @@
      xml:base="https://w3id.org/arco/ontology/arco/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
+     xmlns:mu="https://w3id.org/italia/onto/MU/"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:sm="https://w3id.org/italia/onto/SM/"
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
      xmlns:cis="http://dati.beniculturali.it/cis/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:poi="https://w3id.org/italia/onto/POI/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:a-ce="https://w3id.org/arco/ontology/cultural-event/"
      xmlns:a-dd="https://w3id.org/arco/ontology/denotative-description/"
+     xmlns:a-mi="https://w3id.org/arco/ontology/musical-instrument/"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
@@ -22,21 +26,26 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:a-clo="https://w3id.org/arco/ontology/clothing-descritpion/"
+     xmlns:a-con="https://w3id.org/arco/ontology/construction-description/"
      xmlns:a-loc="https://w3id.org/arco/ontology/location/"
+     xmlns:a-spe="https://w3id.org/arco/ontology/natural-specimen-description/"
      xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco">
-        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/arco/1.2"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/1.2"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/arco/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/0.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/construction/0.1"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/clothing-description/0.1"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/construction-description/0.1"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/1.3"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event/1.1"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/musical-instrument/0.1"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/0.1"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
@@ -59,8 +68,8 @@
         <dc:title xml:lang="en">ArCo Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia ArCo (ArCo network)</dc:title>
         <terms:issued>2019-03-05</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
         <terms:modified>2020-03-27</terms:modified>
         <rdfs:comment xml:lang="it">Questo è il modulo centrale della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al dominio dei beni culturali, considerate top-level. Vengono importati tutti gli altri moduli della rete.
 In questo modulo sono riusati come template i seguenti Ontology Design Patterns:
@@ -190,9 +199,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha categoria di materiale archeologico</rdfs:label>
         <rdfs:label xml:lang="en">has archaeological material category</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa TMA: MA/MAC/MACC</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
     </owl:ObjectProperty>
     
 
@@ -266,9 +277,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha ente schedatore</rdfs:label>
         <rdfs:label xml:lang="en">has cataloguing agency</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ESC</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgency"/>
     </owl:ObjectProperty>
     
 
@@ -285,9 +298,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha categoria di bene culturale basata su catalogazione</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property cataloguing category</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTV</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
     </owl:ObjectProperty>
     
 
@@ -304,9 +319,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha categoria</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property category</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/CTG -  Normativa AT: OG/OGT/OGTP - Normativa RA: OG/CLS - Normative CA e MA e Normativa VeAC: OG/OGT/OGTC</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
     </owl:ObjectProperty>
     
 
@@ -343,9 +360,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha categoria basata su repertorio</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property inventory category</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
     </owl:ObjectProperty>
     
 
@@ -381,9 +400,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha ente competente per la tutela</rdfs:label>
         <rdfs:label xml:lang="en">has heritage protection agency</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasHeritageProtectionAgency"/>
     </owl:ObjectProperty>
     
 
@@ -436,8 +457,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/arco/"/>
         <rdfs:label xml:lang="it">ha classificazione di strumento musicale</rdfs:label>
         <rdfs:label xml:lang="en">has musical instrument classification</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
     </owl:ObjectProperty>
     
 
@@ -454,9 +477,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha categoria di bene numismatico</rdfs:label>
         <rdfs:label xml:lang="en">has numismatic property category</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
     </owl:ObjectProperty>
     
 
@@ -473,9 +498,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha classificazione di bene fotografico</rdfs:label>
         <rdfs:label xml:lang="en">has photographic heritage classification</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F 4.00: SG/CLF</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasClassificationInTime"/>
     </owl:ObjectProperty>
     
 
@@ -492,9 +519,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha tipo di classificazione di bene fotografico</rdfs:label>
         <rdfs:label xml:lang="en">has photographic heritage classification type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasClassificationSystem"/>
     </owl:ObjectProperty>
     
 
@@ -569,9 +598,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha categoria tematica</rdfs:label>
         <rdfs:label xml:lang="en">has thematic category</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMC</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
     </owl:ObjectProperty>
     
 
@@ -603,8 +634,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is archaeological material category of</rdfs:label>
         <rdfs:label xml:lang="it">è categoria di materiale archeologico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
     </owl:ObjectProperty>
     
 
@@ -671,9 +704,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is cataloguing agency of</rdfs:label>
         <rdfs:label xml:lang="it">è ente schedatore di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ESC</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCataloguingAgencyOf"/>
     </owl:ObjectProperty>
     
 
@@ -689,8 +724,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is cultural property cataloguing category of</rdfs:label>
         <rdfs:label xml:lang="it">è categoria di bene culturale basata su catalogazione di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
     </owl:ObjectProperty>
     
 
@@ -706,8 +743,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is cultural property category of</rdfs:label>
         <rdfs:label xml:lang="it">è categoria di bene culturale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
     </owl:ObjectProperty>
     
 
@@ -742,9 +781,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is cultural property inventory category of</rdfs:label>
         <rdfs:label xml:lang="it">è categoria basata su repertorio di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
     </owl:ObjectProperty>
     
 
@@ -778,9 +819,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is heritage protection agency of</rdfs:label>
         <rdfs:label xml:lang="it">è ente competente per la tutela di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isHeritageProtectionAgencyOf"/>
     </owl:ObjectProperty>
     
 
@@ -827,8 +870,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is musical instrument classification of</rdfs:label>
         <rdfs:label xml:lang="it">è classificazione di strumento musicale di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/classifies"/>
     </owl:ObjectProperty>
     
 
@@ -843,9 +888,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is numismatic property category of</rdfs:label>
         <rdfs:label xml:lang="it">è categoria di bene numismatico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
     </owl:ObjectProperty>
     
 
@@ -859,9 +906,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is photographic heritage classification of</rdfs:label>
         <rdfs:label xml:lang="it">è classificazione di bene fotografico di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">Questa proprietà, inversa a &quot;ha classificazione di bene fotografico&quot;, collega una classificazione di un bene fotografico secondo un sistema di classificazione alternativo a Iconclass, a un bene fotografico.</owl:versionInfo>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isClassificationInTimeOf"/>
     </owl:ObjectProperty>
     
 
@@ -877,8 +926,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is photographic heritage classification type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di classificazione di bene fotografico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/isClassificationSystemOf"/>
     </owl:ObjectProperty>
     
 
@@ -943,8 +994,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is thematic category of</rdfs:label>
         <rdfs:label xml:lang="it">è categoria tematica di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
     </owl:ObjectProperty>
     
 
@@ -1108,6 +1161,12 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/context-description/hasResponsibility -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasResponsibility"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasSexInterpretation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSexInterpretation"/>
     
 
 
@@ -1365,12 +1424,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/hasAccession -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasAccession"/>
-    
-
-
     <!-- https://w3id.org/italia/onto/CLV/hasGeometry -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasGeometry"/>
@@ -1404,9 +1457,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">Hornbostel-Sachs definition</rdfs:label>
         <rdfs:label xml:lang="it">definizione Hornbostel-Sachs</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa SM 4.00: CL/CHS/CHSD</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/HSDefinition"/>
     </owl:DatatypeProperty>
     
 
@@ -1421,9 +1476,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">Hornbostel-Sachs edition</rdfs:label>
         <rdfs:label xml:lang="it">edizione Hornbostel-Sachs</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa SM 4.00: CL/CHS/CHSE</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/HSEdition"/>
     </owl:DatatypeProperty>
     
 
@@ -1440,9 +1497,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Codice numerico Hornbostel-Sachs</rdfs:label>
         <rdfs:label xml:lang="en">Hornbostel-Sachs number</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa SM 4.00: CL/CHS/CHSN</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/HSNumber"/>
     </owl:DatatypeProperty>
     
 
@@ -1451,6 +1510,21 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/RVERidentifier">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/archaeologicMaterialConcentration -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/archaeologicMaterialConcentration">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
+        <rdfs:label xml:lang="en">archaeologic material concentration</rdfs:label>
+        <rdfs:label xml:lang="it">densità di concentrazione del materiale archeologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SI: DA/MTP/MTPS</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1467,9 +1541,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">archaeological site identifier</rdfs:label>
         <rdfs:label xml:lang="it">sigla identificativa del saggio stratigrafico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SAS: OG/OGT/OGTI</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1485,9 +1561,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">cartographic symbol identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo del simbolo cartografico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMS</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1504,9 +1582,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">catalogue number</rdfs:label>
         <rdfs:label xml:lang="it">numero catalogo generale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTN</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/catalogueNumber"/>
     </owl:DatatypeProperty>
     
 
@@ -1626,9 +1706,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">codice internazionale</rdfs:label>
         <rdfs:label xml:lang="en">international identifier</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa PST: AC/ACI</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1664,9 +1746,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">numero di materiali archeologici componenti</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">number of archeological materials</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa TMA: MA/MAC/MACQ</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco/numberOfComponents"/>
     </owl:DatatypeProperty>
     
 
@@ -1676,7 +1760,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/numberOfComponents">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/numberOfParts"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ComplexCulturalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di oggetti componenti di un bene culturale identificato come serie o come insieme.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the number of components of a complex cultural property.</rdfs:comment>
@@ -1714,7 +1798,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/numberOfElements">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/numberOfParts"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
         <rdfs:comment xml:lang="it">Questa propietà rappresenta  il numero complessivo, espresso in cifre, degli elementi che costituiscono il bene catalogato, nel caso esso sia un insieme o una serie i cui esemplari/oggetti componenti comprendono ciascuno più elementi.</rdfs:comment>
         <rdfs:label xml:lang="en">This property represents the total number of elements of a complex cultural property, when it is composed by parts containing more elements.</rdfs:label>
@@ -1810,9 +1894,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">identificativo precedente</rdfs:label>
         <rdfs:label xml:lang="en">previous identifier</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">Instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1829,9 +1915,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">codice regione</rdfs:label>
         <rdfs:label xml:lang="en">region identifier</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTR</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/regionIdentifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1865,9 +1953,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">suffisso</rdfs:label>
         <rdfs:label xml:lang="en">suffix</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTS</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/suffix"/>
     </owl:DatatypeProperty>
     
 
@@ -1901,9 +1991,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">codice univoco</rdfs:label>
         <rdfs:label xml:lang="en">unique identifier</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: concat(CD/NCT/NCTR + CD/NCT/NCTN + CD/NCT/NCTS); RV/RVE/RVER (identificativo univoco delle schede collegate); scheda A e PG, v. 1 e v. 2: RV/RVE/RVES (identificativo univoco delle schede collegate). RV/RSE/RSEC (identificativo univoco delle schede collegate)</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1956,6 +2048,14 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/identifier -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/identifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+    </rdf:Description>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/note -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/note"/>
@@ -1994,7 +2094,10 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/italia/onto/l0/identifier -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/identifier"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/identifier">
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMS
+ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
     
 
 
@@ -2061,9 +2164,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">Alternative musical instrument classification</rdfs:label>
         <rdfs:label xml:lang="it">Classificazione alternativa di strumento musicale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa SM 4.00: CL/CLA</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalinstrumentClass"/>
     </owl:Class>
     
 
@@ -2071,16 +2176,16 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/arco/ArchaeologicalMaterial -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterial">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalProperty"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasArchaeologicalMaterialCategory"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterialCategory"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/numberOfArchaeologicalMaterials"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/numberOfComponents"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2102,7 +2207,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/isArchaeologicalMaterialCategoryOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterial"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2124,32 +2229,14 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/TangibleCulturalProperty"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAgeOfDeathInterpretation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/AgeOfDeathInterpretation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBiologicalTaxonomy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasFindingContext"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/FindingContext"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSexInterpretation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SexInterpretation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasSampleCollected"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2168,12 +2255,6 @@ In this module the following Ontology Design Patterns have been used:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasStratigraphicSquare"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/anthropologicalMaterialMorphology"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale archeologico, che può essere un complesso archeologico, un monumento archeologico, un reperto archeologico, un reperto antropologico, un saggio stratigrafico, un sito archeologico, o una tabella materiali archeologici. Complessi archeologici: complessi monumentali costituiti da più unità edilizie (abitati, centri fortificati, santuari, complessi termali, ecc.), catalogati a prescindere dal loro attuale stato di conservazione. Monumenti archeologici: singole unità edilizie (una torre, una domus, un tempio, ecc.) catalogate a prescindere dal loro attuale stato di conservazione. Reperti antropologici: testimonianze biologiche in relazione con contesti archeologici e paleontologici. Reperti archeologici: beni mobili di provenienza archeologica (gioielli e monili, vestimenti, arredi, elementi architettonici, opere di pittura, reperti archeobotanici e archeozoologici, scultura, strumenti e oggetti d’uso, ecc.). Saggi stratigrafici: sequenze stratigrafiche rinvenute in contesti di scavo archeologico. Siti archeologici: porzioni di territorio che conservano testimonianze archeologiche. Tabella materiali archeologici: lotti di materiali di provenienza archeologica</rdfs:comment>
@@ -2208,14 +2289,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasAccession"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Accession"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasAccession"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Accession"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta esemplari del mondo vegetale provenienti da collezioni di botanica  (raccolte di piante essiccate: erbari)</rdfs:comment>
@@ -2231,7 +2306,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/arco/CartographicClassification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/CartographicClassification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityClassification"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasCartographicSymbol"/>
@@ -2327,7 +2402,7 @@ In this module the following Ontology Design Patterns have been used:
                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/CulturalPropertyCollection"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasCulturalPropertyComponent"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyComponent"/>
+                        <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
@@ -2367,13 +2442,13 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasCulturalPropertyComponent"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyComponent"/>
+                <owl:allValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasCulturalPropertyResidual"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyResidual"/>
+                <owl:allValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2396,14 +2471,8 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthorshipAttribution"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliography"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2420,8 +2489,20 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCopyright"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Copyright"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDating"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Dating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDesignationInTime"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/DesignationInTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2444,8 +2525,8 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasInventory"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Inventory"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasInventorySituation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2464,6 +2545,18 @@ In this module the following Ontology Design Patterns have been used:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWorkSituation"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasResearch"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasResponsibility"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2504,6 +2597,12 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyCategory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasAffixedElement"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
             </owl:Restriction>
@@ -2534,18 +2633,6 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasDesignationInTime"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationInTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasIconographicOrDecorativeApparatus"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
             </owl:Restriction>
@@ -2571,19 +2658,13 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasCadastralIdentity"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/CadastralIdentity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasCulturalPropertyAddress"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2624,19 +2705,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/rights"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/subject"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/title"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2650,30 +2719,6 @@ In this module the following Ontology Design Patterns have been used:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/storageConditions"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/catalogueNumber"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/regionIdentifier"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/suffix"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/uniqueIdentifier"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale, sia materiale che immateriale. Un bene culturale è una testimonianza materiale o immateriale, riconosciuta come parte del patrimonio culturale nazionale in quanto utile alla conoscenza e alla ricostruzione della storia e del paesaggio.</rdfs:comment>
@@ -2693,7 +2738,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/isCulturalPropertyCataloguingCategoryOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2770,7 +2815,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/positionInComplexCulturalProperty"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/positionOnCulturalProperty"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2780,9 +2825,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">Cultural Property Component</rdfs:label>
         <rdfs:label xml:lang="it">Parte Componente di Bene Culturale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>OG/OGT/OGTP</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
     </owl:Class>
     
 
@@ -2824,9 +2871,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">Cultural Property Part</rdfs:label>
         <rdfs:label xml:lang="it">Parte di Bene Culturale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD - ICCD Normativa AT 3.01: EL/ELE</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
     </owl:Class>
     
 
@@ -2852,9 +2901,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">Cultural Property Residual</rdfs:label>
         <rdfs:label xml:lang="it">Parte Residuale di Bene Culturale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>OG/OGT/OGTW</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
     </owl:Class>
     
 
@@ -2865,14 +2916,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasPrimaryDocumentation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasResearch"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasRecording"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Recording"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale demoetnoantropologico, che può essere di tipo immateriale e materiale. I beni demoetnoantropologici immateriali sono beni consistenti in performance uniche e irrepetibili strutturalmente connesse al territorio e a prassi socialmente condivise trasmesse attraverso l’oralità e le tecniche corporali, tanto in ambito italiano quanto in ambito europeo ed extra-europeo (comunicazioni non verbali, danze, feste e cerimonie, giochi, letterature orali, musiche, norme consuetudinarie, rappresentazioni e spettacoli, saperi, tecniche). I beni demoetnoantropologici materiali sono beni la cui costruzione e/o il cui uso sono strutturalmente associati a prassi socialmente condivise, trasmesse attraverso l&apos;oralità e le tecniche corporali, tanto in ambito italiano quanto in ambito europeo ed extra-europeo (abbigliamento e ornamenti del corpo, arredi e suppellettili, mezzi di trasporto, ritualità, strumenti e accessori, beni sul territorio).</rdfs:comment>
@@ -2890,18 +2935,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/HistoricOrArtisticProperty">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/MovableCulturalProperty"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasFruition"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Fruition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/numberInCirculation"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale storico e artistico, che può essere un disegno, una matrice incisa, un&apos;opera o oggetto d&apos;arte (contemporanea e non), una stampa, un vestimento antico o contemporaneo. Disegni: opere fatte a mano su qualsiasi supporto (carta, cartoncino, cartone, intonaco, legno, pergamena, pietra, seta, tavola, tela ecc.) e con particolari strumenti (carboncino, gessetto, inchiostro, lapis, matita, pastello, penna ecc.) e specifiche tecniche (acquarellatura, sanguigna ecc.). Matrici incise: lastre di vario materiale (acciaio, legno, linoleum, ottone, pietra, zinco rame ecc.) su cui vengono tracciate rappresentazioni pittoriche con particolari strumenti (bulino, punte di acciaio o di diamante, punzoni, raschietti ecc.) e con specifiche tecniche di incisione (acquaforte, acquatinta, litografia, mezzatinta, serigrafia, silografia, zincografia ecc.). Opere e oggetti d&apos;arte: beni mobili costituenti parte integrante di monumenti artistici e storici o provenienti dallo smembramento dei monumenti stessi, conservati in collezioni, musei e pinacoteche (armi ed armature, arredi civili e religiosi, oggetti per il culto, oggetti d&apos;uso, opere di pittura, tessuti e arazzi, sulture, ecc.). Opere e oggetti d&apos;arte contemporanea: opere rappresentative  delle nuove correnti artistiche dei secc. XX e  XXI (assemblaggio, computer art, istallazione, istallazione ambientale, istallazione audio, istallazione video, istallazione multimediale interattiva, opera cinetico-visuale, performance, ready made, realtà virtuale, video arte ecc.). Stampe: esemplari prodotti dall&apos;operazione mediante la quale da una matrice di incisione si ottengono copie uguali di rappresentazioni pittoriche su carta, cartoncino, cuoio,  pergamena, seta ecc. con varie tecniche di incisione (acquaforte, acquatinta, litografia, zincografia ecc.). Vestimenti antichi e contemporanei: abiti e costumi riguardanti l’abbigliamento maschile, femminile e infantile ad uso civile, connessi alle principali finalità d’uso e alle diverse occasioni della vita privata e sociale,  secondo le tipologie storiche dei secoli XVIII, XIX, XX  (abiti, biancheria intima, calzetteria, calzoni, camicie, costumi, cuffie, gonne, giacche, grembiuli, livree, maglie, mantelli, scialli, sciarpe, veli ecc.).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an historic or artistic property: drawing, printing plate, (contemporary) artworks, print, historic and contemporary garment. Drawings: works done by hand on any support (paper, cardboard, plaster, wood, parchment, stone, silk, table, canvas, etc.) and with special tools (charcoal, chalk, ink, pencil, pastel, pen etc.) and technical specifications (watercolor, blood, etc.). Printing plates: plates of various materials (steel, wood, linoleum, brass, stone, copper zinc, etc.) on which pictorial representations are traced with particular tools (burin, steel or diamond points, punches, scrapers, etc.) and with technical specifications for etching (etching, aquatint, lithography, halftone, screen printing, silica, zincography, etc.). Artworks: movable cultural properties that are integral part of artistic and historical monuments or coming from the dismemberment of the monuments themselves, preserved in collections, museums and art galleries (weapons and armor, civil and religious furnishings, objects for worship, everyday objects, paintings, fabrics and tapestries, walls, etc.). Contemporary artworks: cultural properties representative of the new artistic currents of the centuries XX and XXI (assembly, computer art, installation, environmental installation, audio installation, video installation, interactive multimedia installation, kinetic-visual work, performance, ready-made, virtual reality, video art, etc.). Prints: specimens created through this process: equal copies of pictorial representations on paper, cardboard, leather, parchment, silk, etc. are obtained from a printing plate, with various engraving techniques (etching, aquatint, lithography, zincography, etc.). Historic and contemporary garments: clothes and costumes for men&apos;s, women&apos;s and children&apos;s clothing for civil use, connected to the main intended use and to different occasions of private and social life, according to the historical typologies of the XVIII, XIX and XX centuries (dresses, underwear, hosiery, trousers, shirts, costumes, headphones, skirts, jackets, aprons, liveries, sweaters, cloaks, shawls, scarves, veils, etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
@@ -2940,9 +2973,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Classificazione Hornbostel-Sachs</rdfs:label>
         <rdfs:label xml:lang="en">Hornbostel-Sachs classification</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa SM 4.00: CL/CHS</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClass"/>
     </owl:Class>
     
 
@@ -3054,36 +3089,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/MusicHeritage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/MovableCulturalProperty"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasMusicalInstrumentClassification"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/MusicalInstrumentClassification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasMusicalEnsemble"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasMusician"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasResearch"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasAccessory"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Accessory"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale musicale. Strumenti musicali: oggetti nati appositamente per produrre suoni organizzati secondo le diverse culture musicali, senza limiti spazio-temporali (strumenti e accessori di interesse archeologico, storico artistico, etnoantropologico). Strumenti musicali-Organo: oggetto nato per produrre suoni,  costituito da una serie di canne metalliche,  di forma, lunghezza e diametro diversi, nelle quali viene immessa, per mezzo di un mantice o altro meccanismo, una quantità d’aria regolata da una o più tastiere e da una pedaliera (corredato da accessori), caratterizzato da specifici aspetti  morfologici-decorativi e fonico-strumentali (organo idraulico, organo positivo, organo portativo, organo elettronico ecc.)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a music heritage. Musical instruments: objects created specifically to produce sounds according to different musical cultures, without space-time limits (instruments and accessories of archaeological, artistic, ethno-anthropological interest). Musical instruments-Organ: an object created to produce sounds, consisting of a series of metal rods, of different shape, length and diameter, in which a quantity of air is introduced, by means of a bellows or other mechanism, regulated by one or more keyboards and a pedal board (accompanied by accessories), characterized by specific morphological-decorative and phonic-instrumental aspects (hydraulic organ, positive organ, portative organ, electronic organ, etc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
@@ -3110,9 +3115,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Classificazione di strumento musicale</rdfs:label>
         <rdfs:label xml:lang="en">Musical instrument classification</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa SM 4.00: CL</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentClass"/>
     </owl:Class>
     
 
@@ -3138,20 +3145,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/MovableCulturalProperty"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasNumismaticPropertyCategory"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticProperty"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCoinIssuance"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isCoinMemberOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/NumismaticSeries"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale numismatico, ovvero monete e altri oggetti di interesse numismatico (reperti premonetali e paramonetali, conii e punzoni monetali, pesi per il controllo monetale, sigilli e medaglie), pertinenti a  qualsiasi epoca.</rdfs:comment>
@@ -3180,6 +3175,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Classificazione di bene numismatico</rdfs:label>
         <rdfs:label xml:lang="en">Numismatic property classification</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
@@ -3200,9 +3196,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="en">This class represents a functional category of a numismatic property, referring to a classification related to the function or the commission of the cultural property, according to the most common classifications.</rdfs:comment>
         <rdfs:label xml:lang="it">Classificazione funzionale di bene numismatico</rdfs:label>
         <rdfs:label xml:lang="en">Numismatic property functional category</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification"/>
     </owl:Class>
     
 
@@ -3221,8 +3219,10 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="en">This class represents a category of a numismatic property, referring to a classification related to the type, according to the most common classifications.</rdfs:comment>
         <rdfs:label xml:lang="it">Classificazione tipologica di bene numismatico</rdfs:label>
         <rdfs:label xml:lang="en">Numismatic property typological category</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/ReferenceCatalogue"/>
     </owl:Class>
     
 
@@ -3259,37 +3259,6 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/PhotographicHeritage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/MovableCulturalProperty"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasPhotographicHeritageClassification"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/PhotographicHeritageClassification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasResponsibility"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeries"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeriesMembership"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecord"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/numberInCirculation"/>
@@ -3334,9 +3303,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Classificazione di bene fotografico</rdfs:label>
         <rdfs:label xml:lang="en">Photographic heritage classification</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F 4.00: SG/CLF</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
     </owl:Class>
     
 
@@ -3356,9 +3327,11 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">Photographic heritage classification type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di classificazione di bene fotografico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
     </owl:Class>
     
 
@@ -3876,12 +3849,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/Accession -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Accession"/>
-    
-
-
     <!-- https://w3id.org/italia/onto/CLV/Address -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Address"/>
@@ -4004,6 +3971,29 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/authorICCDIdentifier">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/ICCDIdentifier"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/historicalBiographicalInformation">
+        <rdfs:label xml:lang="en">historical biographic information</rdfs:label>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <rdfs:label xml:lang="it">informazioni biografiche storiche</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa F: PD/PDF/PDFB 
+ICCD Normativa AUT: AU/NSC</a-cat:iccdNormTag>
+    </rdf:Description>
     
 
 

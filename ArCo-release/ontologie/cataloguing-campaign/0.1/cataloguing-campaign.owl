@@ -22,16 +22,15 @@
      xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/0.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/COV"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/TI"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Luigi Asprino (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
@@ -43,8 +42,8 @@
         <dc:title xml:lang="en">Cataloguing Campaign Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia delle Campagne di Catalogazione (ArCo network)</dc:title>
         <terms:issued>2020-03-27</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
         <terms:modified>2020-03-27</terms:modified>
         <rdfs:comment xml:lang="it">Questo modulo permette di rappresentare i dati riguardanti le campagne di catalogazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This module allows to formalise data regarding the cataloguing campaigns.</rdfs:comment>
@@ -53,6 +52,35 @@
         <owl:versionInfo xml:lang="en">Version 0.1</owl:versionInfo>
         <owl:versionInfo xml:lang="it">Versione 0.1</owl:versionInfo>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
@@ -309,6 +337,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/hasType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasType"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/involvesAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/involvesAgent"/>
@@ -318,6 +352,12 @@
     <!-- https://w3id.org/arco/ontology/core/isAgentInvolvedIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isAgentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentOf"/>
     
 
 
@@ -760,6 +800,24 @@
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/AgentRole -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/AgentRole"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Situation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Situation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Type -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Type"/>
     
 
 

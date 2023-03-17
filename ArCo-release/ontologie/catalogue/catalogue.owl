@@ -3,14 +3,18 @@
      xml:base="https://w3id.org/arco/ontology/catalogue/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
+     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ADMS="https://w3id.org/italia/onto/ADMS/"
      xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -18,8 +22,8 @@
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/catalogue">
-        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/catalogue/1.2"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/catalogue/1.3"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -27,6 +31,7 @@
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Margherita Porena  (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Letizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
@@ -37,8 +42,8 @@
         <dc:title xml:lang="en">Catalogue Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia del Catalogo (ArCo network)</dc:title>
         <terms:issued>2018-03-07</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
         <terms:modified>2020-03-27</terms:modified>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative al Catalogo Generale dei Beni Culturali (ICCD-MiBAC) e alle schede di catalogo che descrivono un bene culturale.
 In questo modulo sono riusati come template i seguenti Ontology Design Patterns:
@@ -50,8 +55,8 @@ In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/sequence.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Catalogue Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia del Catalogo (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.2</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.2</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.3</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.3</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -135,6 +140,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/replacedBy -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/core/replacedBy"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -157,8 +168,17 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">describes</rdfs:label>
         <rdfs:label xml:lang="it">descrive</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x core:describes ?thing .
+}
+
+WHERE {
+?x a-cat:describes ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/describes"/>
     </owl:ObjectProperty>
     
 
@@ -175,8 +195,17 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">describes</rdfs:label>
         <rdfs:label xml:lang="it">descrive</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x core:describesCulturalProperty ?thing .
+}
+
+WHERE {
+?x a-cat:describes ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/describes"/>
     </owl:ObjectProperty>
     
 
@@ -245,9 +274,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha responsabile di modulo di approfondimento</rdfs:label>
         <rdfs:label xml:lang="en">has additional form responsible agent</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPE</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleAgent ?agent .
+}
+
+WHERE {
+?x a-cat:hasAdditionalFormResponsibleAgent ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -259,14 +304,23 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isAdditionalFormTypeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalFormType"/>
+        <rdfs:comment>CONSTRUCT {
+?x core:hasType ?type .
+}
+
+WHERE {
+? a-cat:hasAdditionalFormType ?type .
+}</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà collega un modulo di approfondimento al tipo di modulo (Unità Stratigrafica, Tipo Murario, Epigrafia).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an additional form to its type (Stratigraphic Unit, Epigraphy, Wall Typology).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha tipo di modulo di approfondimento</rdfs:label>
         <rdfs:label xml:lang="en">has additional form type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPT</iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
 
@@ -292,16 +346,15 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
-        <rdfs:comment xml:lang="en">Property used to associate a catalogue record to one of its versions (e.g. after update)</rdfs:comment>
-        <rdfs:comment xml:lang="it">Proprietà che permette di collegare una scheda di catalogo, intesa come oggetto informativo che descrive un bene culturale, a una sua versione (corrispondente a un particolare stato dovuto a operazioni di redazione, aggiornamento, revisione).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <rdfs:label xml:lang="it">ha versione</rdfs:label>
-        <rdfs:label xml:lang="en">has version</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?x a-cat:hasRecordVersion ?thing .
+}
+
+WHERE {
+?x a-cat:hasCatalogueRecordVersion ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/hasRecordVersion"/>
     </owl:ObjectProperty>
     
 
@@ -318,8 +371,17 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha ruolo nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has role in time</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x core:hasAgentRole ?y .
+?y a core:AgentRole .
+
+?x a-cat:hasCatalogueRecordVersionRiT ?y .
+?y a a-cat:TimeIndexedRole .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
     </owl:ObjectProperty>
     
 
@@ -340,8 +402,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha agente coinvolto nella catalogazione</rdfs:label>
         <rdfs:label xml:lang="en">has cataloguing agent</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasCataloguingAgent ?agent .
+}
+
+WHERE {
+?x a-cat:hasCataloguingAgent ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/CataloguingAgent&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -369,16 +447,32 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasCulturalPropertyRecordResponsibleAgent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isResponsibleAgentOfCulturalPropertyRecord"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una scheda in cui si analizza un bene culturale per finalità diverse da quella della catalogazione del patrimonio all&apos;Ente o al soggetto che ha prodotto la scheda o che gestisce la banca dati di cui la scheda fa parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property record to the agency or the person that created that record or manages the database where the record is.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha agente responsabile della scheda su bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property record responsible agent</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleAgent ?agent .
+}
+
+WHERE {
+?x a-cat:hasCulturalPropertyRecordResponsibleAgent ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -394,9 +488,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha operatore di trascrizione per informatizzazione</rdfs:label>
         <rdfs:label xml:lang="en">has digital transcription operator</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/RVM/RVMN</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasOperator ?agent .
+}
+
+WHERE {
+?x a-cat:hasDigitalTranscriptorOperator ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOperator"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Operator&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -412,9 +522,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha ente o soggetto responsabile di trascrizione per informatizzazione</rdfs:label>
         <rdfs:label xml:lang="en">has digital transcription responsible agent</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/RVM/RVME</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleAgent ?agent .
+}
+
+WHERE {
+?x a-cat:hasDigitalTranscriptionResponsibleAgent ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -450,9 +576,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha funzionario responsabile</rdfs:label>
         <rdfs:label xml:lang="en">has official in charge</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/FUR</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasOfficialInCharge ?agent .
+}
+
+WHERE {
+?x a-cat:hasOfficialInCharge ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOfficialInCharge"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/OfficialInCharge&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -513,6 +655,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/hasRecordVersion -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasRecordVersion">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isRecordVersionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/RecordVersion"/>
+        <rdfs:comment xml:lang="en">Property used to associate a catalogue record to one of its versions (e.g. after update)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Proprietà che permette di collegare una scheda di catalogo, intesa come oggetto informativo che descrive un bene culturale, a una sua versione (corrispondente a un particolare stato dovuto a operazioni di redazione, aggiornamento, revisione).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="it">ha versione</rdfs:label>
+        <rdfs:label xml:lang="en">has version</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/hasResponsibleResearchAndCompilation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasResponsibleResearchAndCompilation">
@@ -524,9 +683,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha responsabile ricerca e redazione</rdfs:label>
         <rdfs:label xml:lang="en">has responsible research and compilation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/CMP/CMPN</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleResearchAndCompilation ?agent .
+}
+
+WHERE {
+?x a-cat:hasAdditionalFormResponsibleResearchAndCompilation ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleResearchAndCompilation&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -542,9 +717,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha referente verifica scientifica</rdfs:label>
         <rdfs:label xml:lang="en">has scientific director</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/RSR</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasScientificDirector ?agent .
+}
+
+WHERE {
+?x a-cat:hasScientificDirector ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasScientificDirector"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ScientificDirector&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -560,9 +751,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha funzionario responsabile di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update official in charge</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGF</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasOfficialInCharge ?agent .
+}
+
+WHERE {
+?x a-cat:hasUpdateOfficialInCharge ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOfficialInCharge"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/OfficialInCharge&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -578,9 +785,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha ente o soggetto responsabile di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update responsible agency or person</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGE</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleAgent ?agent .
+}
+
+WHERE {
+?x a-cat:hasUpdateResponsibleAgent ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -596,9 +819,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha responsabile di ricerca e redazione di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update responsible research and compilation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGN</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasResponsibleResearchAndCompilation ?agent .
+}
+
+WHERE {
+?x a-cat:hasUpdateResponsibleResearchAndCompilation ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleResearchAndCompilation&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -614,9 +853,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha referente verifica scientifica di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update scientific revisor</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGR</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?x a-lite:hasScientificDirector ?agent .
+}
+
+WHERE {
+?x a-cat:hasUpdateScientificRevisor ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasScientificDirector"/>
+        <core:replacingQuery>select * where {
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ScientificDirector&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -649,8 +904,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is additional form responsible agent of</rdfs:label>
         <rdfs:label xml:lang="it">è responsabile di modulo di approfondimento</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleAgentOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isAdditionalFormResponsibleAgentOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -666,8 +937,17 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is additional form type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di modulo di approfondimento di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?type core:isTypeOf ?thing .
+}
+
+WHERE {
+?type a-cat:isAdditionalFormTypeOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
     </owl:ObjectProperty>
     
 
@@ -691,15 +971,15 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
-        <rdfs:comment xml:lang="en">Property, inverse of &quot;has catalogue record version&quot;, used to associate a catalogue record version (e.g. after update) to the catalogue record.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Proprietà, inversa di &quot;ha versione&quot;, che permette di collegare una versione  (corrispondente a un particolare stato dovuto a operazioni di redazione, aggiornamento, revisione) di una scheda di catalogo alla scheda di catalogo intesa come oggetto informativo che descrive un bene culturale.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <rdfs:label xml:lang="en">is catalogue record version of</rdfs:label>
-        <rdfs:label xml:lang="it">è versione di</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?x a-cat:isRecordVersionOf ?thing .
+}
+
+WHERE {
+?x a-cat:isCatalogueRecordVersionOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/isRecordVersionOf"/>
     </owl:ObjectProperty>
     
 
@@ -714,8 +994,17 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is role in time of</rdfs:label>
         <rdfs:label xml:lang="it">è ruolo nel tempo di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x core:isAgentRoleOf ?thing .
+}
+
+WHERE {
+?x a-cat:isCatalogueRecordVersionRiTOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isAgentRoleOf"/>
     </owl:ObjectProperty>
     
 
@@ -731,8 +1020,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is cataloguing agent of</rdfs:label>
         <rdfs:label xml:lang="it">è agente coinvolto nella catalogazione di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isCataloguingAgentOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isCataloguingAgentOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCataloguingAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/CataloguingAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -764,8 +1069,17 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is described by</rdfs:label>
         <rdfs:label xml:lang="it">è descritto da</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x core:isDescribedBy ?thing .
+}
+
+WHERE {
+?x a-cat:isDescribedBy ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isDescribedBy"/>
     </owl:ObjectProperty>
     
 
@@ -781,8 +1095,17 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is described by</rdfs:label>
         <rdfs:label xml:lang="it">è descritto da</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x core:isDescribedBy ?thing .
+}
+
+WHERE {
+?x a-cat:isDescribedByCatalogueRecord ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/isDescribedBy"/>
     </owl:ObjectProperty>
     
 
@@ -798,8 +1121,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is digital transcription operator of</rdfs:label>
         <rdfs:label xml:lang="it">è operatore di trascrizione per informatizzazione di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isOperatorOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isDigitalTranscriptorOperatorOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOperatorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Operator&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -815,8 +1154,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is digital transcription responsible agent of</rdfs:label>
         <rdfs:label xml:lang="it">è ente o soggetto responsabile di trascrizione per informatizzazione di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleAgentOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isDigitalTranscriptorResponsibleAgentOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -851,8 +1206,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is official in charge of</rdfs:label>
         <rdfs:label xml:lang="it">è funzionario responsabile di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isOfficialInChargeOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isOfficialInChargeOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOfficialInChargeOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/OfficialInCharge&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -910,6 +1281,22 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/isRecordVersionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isRecordVersionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/RecordVersion"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
+        <rdfs:comment xml:lang="en">Property, inverse of &quot;has catalogue record version&quot;, used to associate a catalogue record version (e.g. after update) to the catalogue record.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Proprietà, inversa di &quot;ha versione&quot;, che permette di collegare una versione  (corrispondente a un particolare stato dovuto a operazioni di redazione, aggiornamento, revisione) di una scheda di catalogo alla scheda di catalogo intesa come oggetto informativo che descrive un bene culturale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is catalogue record version of</rdfs:label>
+        <rdfs:label xml:lang="it">è versione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/isRelatedToAdditionalForm -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isRelatedToAdditionalForm">
@@ -948,15 +1335,31 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isResponsibleAgentOfCulturalPropertyRecord">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha agente responsabile di scheda su bene culturale&quot;, collega l&apos;Ente o il soggetto che ha prodotto la scheda o che gestisce la banca dati di cui la scheda fa parte alla scheda stessa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property, inverse of &quot;has cultural property record responsible agent&quot;, relates the agency or the person that created the record or manages the database where the record is to the record itself.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is responsible agent of cultural property record</rdfs:label>
         <rdfs:label xml:lang="it">è ente responsabile della scheda su bene culturale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleAgentOfCulturalPropertyRecord ?thing .
+}
+
+WHERE {
+?agent a-cat:isUpdateResponsibleAgentOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -972,8 +1375,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is responsible research and compilation of</rdfs:label>
         <rdfs:label xml:lang="it">è responsabile ricerca e redazione di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleResearchAndCompilationOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isResponsibleResearchAndCompilationOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleResearchAndCompilationOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleResearchAndCompilation&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -989,8 +1408,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is scientific director of</rdfs:label>
         <rdfs:label xml:lang="it">è referente verifica scientifica di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isScientificDirectorOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isScientificDirectorOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isScientificDirectorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ScientificDirector&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1006,8 +1441,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is update official in charge of</rdfs:label>
         <rdfs:label xml:lang="it">è funzionario responsabile di aggiornamento di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isOfficialInChargeOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isUpdateOfficialInChargeOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOfficialInChargeOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/OfficialInCharge&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1023,8 +1474,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is update responsible agent of</rdfs:label>
         <rdfs:label xml:lang="it">è ente o soggetto responsabile di aggiornamento di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleAgentOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isUpdateResponsibleAgentOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1040,8 +1507,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is update responsible research and compilation of</rdfs:label>
         <rdfs:label xml:lang="it">è responsabile di ricerca e redazione di aggiornamento di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isResponsibleResearchAndCompilationOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isUpdateResponsibleResearchAndCompilationOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleResearchAndCompilationOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleResearchAndCompilation&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1057,8 +1540,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is update scientific revisor of</rdfs:label>
         <rdfs:label xml:lang="it">è referente verifica scientifica di aggiornamento di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?agent a-lite:isScientificDirectorOf ?thing .
+}
+
+WHERE {
+?agent a-cat:isUpdateScientificRevisorOf ?thing .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isScientificDirectorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ScientificDirector&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1072,6 +1571,18 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/context-description/isAgentRelatedTo -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/describes -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/describes"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasAgentRole -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasAgentRole"/>
     
 
 
@@ -1158,8 +1669,35 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">ICCD identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice univoco ICCD</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+
+CONSTRUCT {
+?thing l0:identifier ?id .
+}
+
+WHERE {
+?thing a-cat:ICCDIdentifier ?id .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/ICCDUsageContext -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/ICCDUsageContext">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;ambito di applicazione ICCD scelto. Es: pubblicazione sul Catalogo o sulla Fototeca</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the usage context chose by ICCD for an entity. i.e. the publication on the Catalogue website, on the Fototeca website</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="it">ICCD ambito di applicazione</rdfs:label>
+        <rdfs:label xml:lang="en">ICCD usage context</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -1176,9 +1714,37 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">additional form identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo del modulo di approfondimento</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPC</iccdNormTag>
+        <core:constructQuery>prefix l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+
+CONSTRUCT {
+?thing l0:identifier ?id .
+}
+
+WHERE {
+?thing a-cat:additionalFormIdentifier ?id .
+}</core:constructQuery>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/catalogueNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/catalogueNumber">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di associare il numero di catalogo generale a scheda catalografica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the general catalogue number associated to a catalogue record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">catalogue number</rdfs:label>
+        <rdfs:label xml:lang="it">numero catalogo generale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTN</iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1195,9 +1761,20 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">catalogue record identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo della scheda di catalogo</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag xml:lang="it">Concatenazione dei sottocampi di CD/NCT (NCTR, NCTN, NCTS) e RV/RVE/RVEL</iccdNormTag>
+        <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+
+CONSTRUCT {
+?thing a-lite:nationalIdentifier ?id .
+}
+
+WHERE {
+?thing a-cat:CatalogueRecordIdentifier ?id .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1206,15 +1783,26 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/culturalPropertyRecordIdentifier">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare l&apos;identificativo a una scheda in cui si analizza un bene culturale per finalità diverse da quella specificazione della catalogazione del patrimonio culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property is used to associate the identifier to a catalogue record that analyze the cultural property for reasons other than cataloguing the cultural heritage.</rdfs:comment>
         <rdfs:label xml:lang="en">cultural property record identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo di scheda su bene culturale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSC</iccdNormTag>
+        <core:constructQuery>prefix l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+
+CONSTRUCT {
+?thing l0:identifier ?id .
+}
+
+WHERE {
+?thing a-cat:CulturalPropertyRecordIdentifier ?id .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1249,9 +1837,20 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">identificativo del modulo informativo</rdfs:label>
         <rdfs:label xml:lang="en">information form identifier</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/MOD/MODI</iccdNormTag>
+        <core:constructQuery>prefix l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+
+CONSTRUCT {
+?thing l0:identifier ?id .
+}
+
+WHERE {
+?thing a-cat:informationFormIdentifier ?id .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1260,7 +1859,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/lastUpdateDate">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/TI/date"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data dell&apos;ultimo aggiornamento della scheda di catalogo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents information about the last update date of a catalogue record.</rdfs:comment>
@@ -1285,8 +1884,36 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">identificativo di repertorio locale</rdfs:label>
         <rdfs:label xml:lang="it">local identifier</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix l0: &lt;https://w3id.org/italia/onto/l0/&gt; 
+
+CONSTRUCT {
+?thing l0:identifier ?id .
+}
+
+WHERE {
+?thing a-cat:localIdentifier ?id .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/public -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/public">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta lo stato di visibilità di un&apos;entità: visibile/pubblicata oppure non visibile.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the visibility state of an entity: public or not.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="it">pubblico</rdfs:label>
+        <rdfs:label xml:lang="en">public</rdfs:label>
+        <rdfs:label xml:lang="it">visibile</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -1312,14 +1939,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/catalogue/referenceProject -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/referenceProject">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/AlternativeIdentifier"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il progetto nell&apos;ambito del quale è stata prodotta una scheda, quella a cui si associa un codice alternativo, assegnato da enti diversi da ICCD, o quella che analizza un bene culturale per finalità diverse da quella specifica della catalogazione del patrimonio culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the reference project of a record about a cultural property.</rdfs:comment>
@@ -1329,6 +1949,35 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC/ACCP; AC/ACS/ACSP</iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/regionIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/regionIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di associare il codice regione a una scheda catalografica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the &quot;region identifier&quot; associated to a catalogue record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="it">codice regione</rdfs:label>
+        <rdfs:label xml:lang="en">region identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTR</iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/suffix -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/suffix">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTS</iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1345,8 +1994,19 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">identificativo di sistema</rdfs:label>
         <rdfs:label xml:lang="en">system record code</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>prefix arco-lite: &lt;https://w3id.org/italia/arco/ontology/arco-lite/&gt; 
+
+CONSTRUCT {
+?thing arco-lite:systemIdentifier ?id .
+}
+
+WHERE {
+?thing a-cat:systemRecordCode ?id .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/systemIdentifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1354,6 +2014,12 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/context-description/expiryDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/expiryDate"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/hasIdentifier"/>
     
 
 
@@ -1383,6 +2049,12 @@ In this module the following Ontology Design Patterns have been used:
     <!-- http://dati.beniculturali.it/cis/CulturalEntity -->
 
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/Identifier -->
+
+    <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Identifier"/>
     
 
 
@@ -1432,23 +2104,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/describes"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/describes"/>
                 <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasAdditionalFormType"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalFormType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/additionalFormIdentifier"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalFormType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/catalogue/InformationForm"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un modulo di approfondimento, utile a trattare secondo un approccio specialistico specifici aspetti del bene in esame (Documenti Epigrafici; Tipi Murari, Unità Stratigrafiche)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an additional form, that describes specific information about a cultural property (epigraphic documents, stratigraphy, unit, wall typology)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
@@ -1467,8 +2138,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isAdditionalFormTypeOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di modulo di approfondimento (Unità Stratigrafica, Tipo Murario, Epigrafia)</rdfs:comment>
@@ -1504,9 +2175,18 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Alternative Identifier</rdfs:label>
         <rdfs:label xml:lang="it">Codice alternativo</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC</iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a core:Identifier .
+}
+
+WHERE {
+?x a a-cat:AlternativeIdentifier .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
     </owl:Class>
     
 
@@ -1514,35 +2194,31 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecord -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecord">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasAccessProfile"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CataloguingLevel"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/describesCulturalProperty"/>
-                <owl:allValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasRecordVersion"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/lastUpdateDate"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasAccessProfile"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/catalogueRecordIdentifier"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/catalogue/CataloguingLevel"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1894,6 +2570,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:comment xml:lang="en">This class represents the MODI catalogue record.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">MODI catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Modulo informativo</rdfs:label>
         <rdfs:label xml:lang="it">Scheda MODI</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -2099,25 +2776,7 @@ resource:CatalogueRecordS/0500212038
     <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/editedAtTime"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCataloguingAgent"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/RecordVersion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasImmediatePreviousVersion"/>
@@ -2132,30 +2791,56 @@ resource:CatalogueRecordS/0500212038
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isRecordVersionOf"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isImmediatePreviousVersionOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isPreviousVersionOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Rappresenta una versione (relativa a operazioni di redazione, aggiornamento, revisione) di una scheda di catalogo, cioè un modello descrittivo che raccoglie in modo organizzato le informazioni sui beni.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a version (after creation, editing, updating) of a catalogue record on a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Catalogue record version</rdfs:label>
-        <rdfs:label xml:lang="it">Versione della scheda</rdfs:label>
+        <rdfs:label xml:lang="it">Versione della scheda di catalogo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/CMP; CM/RVM; CM/AGG</iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di versione della scheda di catalogo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of the catalog record version</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">Catalogue record version type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di versione di scheda di catalogo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>CM/CMO, RVM, AGG</iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/CataloguerecordSCAN -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CataloguerecordSCAN">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda SCAN-Scheda anagrafica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents SCAn catalogue record</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">SCAN Catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda SCAN</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda anagrafica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2210,33 +2895,20 @@ resource:CatalogueRecordS/0500212038
     <!-- https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/describes"/>
-                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/culturalPropertyRecordIdentifier"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/referenceProject"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una scheda che analizza il bene in esame per finalità diverse da quella specifica della catalogazione del patrimonio culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a record describing a cultural property for purposes other than cataloguing cultural heritage.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
         <rdfs:label xml:lang="en">Catalogue property record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda su bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS</iccdNormTag>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x a-cat:Record .
+}
+
+WHERE {
+?x a-cat:CulturalPropertyRecord .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
     </owl:Class>
     
 
@@ -2244,7 +2916,7 @@ resource:CatalogueRecordS/0500212038
     <!-- https://w3id.org/arco/ontology/catalogue/InformationForm -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/InformationForm">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/describes"/>
@@ -2262,9 +2934,17 @@ resource:CatalogueRecordS/0500212038
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Information form</rdfs:label>
         <rdfs:label xml:lang="it">Modulo informativo</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasvesale 4.00: AC/MOD</iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cat:CatalogueRecordMODI .
+
+WHERE{
+?x a a-cat:InformationForm .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordMODI"/>
     </owl:Class>
     
 
@@ -2310,6 +2990,123 @@ resource:CatalogueRecordS/0500212038
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS/ADSM</iccdNormTag>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/Record -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/Record">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/describes"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasRecordVersion"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/RecordVersion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/lastUpdateDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una scheda che analizza il bene in esame per finalità diverse da quella specifica della catalogazione del patrimonio culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a record describing an entity for purposes other than cataloguing cultural heritage.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">Record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS</iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/RecordVersion -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/RecordVersion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/editedAtTime"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasImmediatePreviousVersion"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/RecordVersion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasPreviousVersion"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/RecordVersion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isRecordVersionOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/editedAtTime"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Rappresenta una versione (relativa a operazioni di redazione, aggiornamento, revisione) di una scheda.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a version (after creation, editing, updating) of a record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">Record version</rdfs:label>
+        <rdfs:label xml:lang="it">Versione della scheda</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/AgentRole -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/AgentRole"/>
     
 
 
@@ -2374,6 +3171,22 @@ resource:CatalogueRecordS/0500212038
         <rdfs:label xml:lang="it">Livello di Catalogo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/Compiling -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/Compiling">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/DigitalTranscription -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/DigitalTranscription">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
     </owl:NamedIndividual>
     
 
@@ -2452,6 +3265,14 @@ resource:CatalogueRecordS/0500212038
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/Updating -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/Updating">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/WallTypologyForm -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/WallTypologyForm">
@@ -2473,20 +3294,19 @@ resource:CatalogueRecordS/0500212038
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/AlternativeIdentifier"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/InformationForm"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CataloguingLevel"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CataloguingLevel"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/AlternativeIdentifier"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/InformationForm"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/Record"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
