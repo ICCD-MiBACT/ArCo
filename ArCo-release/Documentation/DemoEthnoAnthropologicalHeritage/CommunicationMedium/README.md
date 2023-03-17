@@ -17,7 +17,7 @@
 
 ## Competency questions
 
-**QC1**  
+**CQ1**  
 What are the accompanying instruments of cp x?  
 Quali sono gli strumenti di accompagnamento del bene x?  
 
@@ -27,7 +27,7 @@ a-mi:involvesSoloInstrument ?strum
 }  
  
 
-**QC2**
+**CQ2**
 Which goods have a type of kinetic communication?  
 Quali beni hanno un tipo di comunicazione cinetica?  
 
@@ -38,7 +38,7 @@ select ?x {
   
 
 
-**QC3**  
+**CQ3**  
 How many male participants did cp x have?  
 Quanti partecipanti uomini ha avuto il bene x?  
 
