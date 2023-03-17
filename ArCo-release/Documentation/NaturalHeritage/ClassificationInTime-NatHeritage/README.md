@@ -1,45 +1,39 @@
-# StorageMedium 
+# ClassificationInTime (NaturalHeritage variant) 
 
 
 **UPDATE PATTERN**
 
 
-![StorageMedium pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/DemoEthnoAnthropologicalHeritage/StorageMedium/StorageMedium-Pattern.drawio.png?raw=true)
+![ClassificationInTime pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/NaturalHeritage/ClassificationInTime-NatHeritage/ClassificationInTimeNaturalHeritage.drawio.png?raw=true)
 
 
 
 ## Competency questions
 
-**CQ1**   
+**CQ1a**   
+According to which classification system was cp x classified?  
+Secondo quale sistema di classificazione è stato classificato il bene x?  
 
-What is the type of storage medium of recording x?   
-Qual è il tipo di supporto memoria della registrazione x?  
+select ?syst where {  
+?x core:hasClassificationInTime ?class .  
+?class spee:hasTaxon ?taxon .  
+?concept core:refersToClassificationSystem ?syst .  
 
-select ?type where {  
-?x a-cd:hasStorageMedium ?med .  
-?med core:hasType ?type .  
+
+**CQ1b**  
+select ?syst where {  
+?x lite:isClassifiedByCurrentTaxon ?taxon .  
+?taxon core:refersToClassificationSystem ?syst .  
 }  
 
- 
 
-**CQ2**  
-What events/changes involved audio storage medium x?  
-Quali eventi/cambiamenti hanno coinvolto il supporto audio x?  
 
-select ?event where {  
-?x a a-cd:StorageMedium ;  
-a-cd:hasRelatedEvent ?event .  
-}  
+**CQ2**    
+What are the studies and tests that led to the current classification of cp x?
+Quali sono gli studi e i test che hanno portato alla classificazione corrente del bene x?
 
-  
-
-**CQ3**   
-What is the location of storage medium x?  
-Qual è la collocazione del supporto audio x?  
-
-select ?cis where {  
-	?x a a-cd:StorageMedium ;  
-	<<http://dati.beniculturali.it/cis/hasCIS>> ?cis .  
-}  
-
+select ?y where {  
+?x core:hasClassificationInTime ?cit .  
+?cit core:isConsequence of ?y .  
+}   
  
