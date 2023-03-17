@@ -14,7 +14,7 @@ Quando è stata fatta la rilevazione (foto-video) del bene?
 
 select ?time where {  
 ?x a a-cd:ObservationSurvey;  
-<https://w3id.org/italia/onto/TI/TimeInterval> ?time .  
+<<https://w3id.org/italia/onto/TI/TimeInterval>> ?time .  
 }  
 
  
