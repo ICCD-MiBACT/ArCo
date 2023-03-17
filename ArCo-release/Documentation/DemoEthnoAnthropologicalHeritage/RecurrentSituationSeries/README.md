@@ -9,7 +9,7 @@
 
 ## Competency questions
 
-**QC1**    
+**CQ1**    
 How often does event x recur?  
 Con quale scadenza ricorre l'evento x?  
 
@@ -21,7 +21,7 @@ a-ce:timePeriodValue ?value .
  
  
 
-**QC2**  
+**CQ2**  
 
 What are the unifying factors of RecurrentSituationSeries x events?  
 Quali sono i fattori unificanti degli eventi della RecurrentSituationSeries x?  
