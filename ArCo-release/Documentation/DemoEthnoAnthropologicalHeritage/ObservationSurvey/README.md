@@ -8,7 +8,7 @@
 
 ## Competency questions
 
-**QC1**  
+**CQ1**  
 When was the survey (photo-video) of the cp made?  
 Quando è stata fatta la rilevazione (foto-video) del bene?  
 
@@ -19,7 +19,7 @@ select ?time where {
 
  
 
-**QC2a**  
+**CQ2a**  
 Who was the video operator of the observation survey?  
 Chi era l’operatore video della rilevazione?  
 
@@ -32,7 +32,7 @@ FILTER (regex(?role, “operatore video”, “i”))
 
  
 
-**QC2b**  
+**CQ2b**  
 select ?operator where {  
 ?x a-lite:hasVideoOperator ?operator .  
 }  
