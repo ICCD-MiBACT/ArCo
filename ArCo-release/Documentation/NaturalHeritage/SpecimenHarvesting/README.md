@@ -18,7 +18,7 @@ select ?agent ?time where {
 ?x a-spe:hasSpecimenHarvesting ?spehar .  
 ?spehar core:hasAgentRole ?hagrol .  
 ?agrol core:hasAgent ?agent .  
-?spehar <https://w3id.org/italia/onto/TI/atTime> ?time .  
+?spehar <<https://w3id.org/italia/onto/TI/atTime>> ?time .  
 }  
 
  
