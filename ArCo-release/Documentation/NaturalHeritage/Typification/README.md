@@ -4,7 +4,7 @@
 **UPDATE PATTERN**
 
 
-![Typification pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/NaturalHeritage/IdentificationInTime/IdentificationInTime-Pattern.drawio.png?raw=true)
+![Typification pattern graph](https://github.com/ICCD-MiBACT/ArCo/blob/DEV-1.3.0/ArCo-release/Documentation/NaturalHeritage/Typification/Typification-Pattern.drawio.png?raw=true)
 
 
 
