@@ -840,8 +840,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha operatore</rdfs:label>
         <rdfs:label xml:lang="en">has harvesting operator</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?speharv a-lite:hasOperator ?agent.
+}
+
+WHERE {
+?speharv a-spe:hasHarvestingOperator ?agent.
+}</core:constructQuery>
+        <core:replacingQuery rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOperator"/>
+        <core:replacingQuery>select * where {
+?spehar core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole ?NEWrole ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -858,8 +872,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha responsabile della raccolta</rdfs:label>
         <rdfs:label xml:lang="en">has harvesting responsible</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?speharv a-lite:hasResponsibleAgent ?agent .
+}
+
+WHERE {
+?speharv a-spe:hasHarvestingResponsible ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
+        <core:replacingQuery>select * where {
+?bib core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResponsibleAgent&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -876,8 +904,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha sponsor</rdfs:label>
         <rdfs:label xml:lang="en">has harvesting sponsor</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?speharv a-lite:hasSponsor ?agent .
+}
+
+WHERE {
+?speharv a-spe:hasHarvestingSponsor ?agent .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasSponsor"/>
+        <core:replacingQuery>select * where {
+?bib core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Sponsor&gt; ;
+core:hasAgent ?agent .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1114,9 +1156,18 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha tipo di conservazione</rdfs:label>
         <rdfs:label xml:lang="en">has preservation type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: DB/DBC/DBCX</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?preservation core:hasType ?presType .
+}
+
+WHERE {
+?preservation spe:hasPreservationType ?presType .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
 
@@ -1805,6 +1856,19 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è operatore della raccolta di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?agent a-lite:isOperatorOf ?speharv .
+}
+
+WHERE {
+?agent a-spe:isHarvestingOperatorOf ?speharv.
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOperatorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Operator&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1820,8 +1884,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is harvesting responsible of</rdfs:label>
         <rdfs:label xml:lang="it">è responsabile della raccolta di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?agent a-lite:isResponsibleAgentOf ?speharv .
+}
+
+WHERE {
+?agent a-spe:isHarvestingResponsibleOf ?speharv .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResposibleAgentOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ResposibleAgent&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -1837,8 +1915,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is harvesting sponsor of</rdfs:label>
         <rdfs:label xml:lang="it">è sponsor della raccolta di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?agent a-lite:isSponsorOf ?speharv .
+}
+
+WHERE {
+?agent a-spe:hasHarvestingSponsor ?speharv .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isSponsorOf"/>
+        <core:replacingQuery>select * where {
+?agent core:isAgentOf ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/Sponsor&gt; ;
+core:isAgentRoleOf ?thing .
+}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -2065,6 +2157,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is preservation type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di conservazione di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -5730,8 +5823,14 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasSpatialCoverage"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5744,24 +5843,6 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasHarvestingMotivation"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/HarvestingMotivation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasHarvestingOperator"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasHarvestingResponsible"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasHarvestingSponsor"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6882,13 +6963,13 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
      -->
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Reflectance">
-        <rdfs:comment xml:lang="en">This individual represents the reflectance</rdfs:comment>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <rdfs:label xml:lang="en">Reflectance</rdfs:label>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <rdfs:comment xml:lang="it">Questa individuo rappresenta la riflettanza</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the reflectance</rdfs:comment>
+        <rdfs:label xml:lang="en">Reflectance</rdfs:label>
+        <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
     </rdf:Description>
     
 
@@ -6975,5 +7056,5 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
 

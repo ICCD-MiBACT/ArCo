@@ -3267,6 +3267,19 @@ i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/bodyTranscript -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/bodyTranscript">
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SBET
+ICCD Normativa BNM: SMET, RMET
+ICCD Normativa BNP: SPET
+ICCD Normativa BNPE: SRET, RRET
+ICCD Normativa BNPL: SPET
+ICCD Normativa BNZ: SZET</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/creationDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/creationDate">
@@ -3322,7 +3335,8 @@ WHERE {?class a-dd:geologicalDescription ?des.}</core:constructQuery>
         <rdfs:label xml:lang="it">simboli grafici</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BDI 3.01: CU/CUR/CURS</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BDI 3.01: CU/CUR/CURS
+ICCD Normativa BNB: SBEG</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3339,6 +3353,19 @@ WHERE {?class a-dd:geologicalDescription ?des.}</core:constructQuery>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEA</a-cat:iccdNormTag>
         <a-cat:iccdNormTag xml:lang="it">Questa proprietà indica se l&apos;etichetta è autografa o meno</a-cat:iccdNormTag>
         <a-cat:iccdNormTag xml:lang="en">This property indicates if the label is handwritten or not</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/headingTranscript -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/headingTranscript">
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SBEI
+ICCD Normativa BNM: SMEI, RMEI
+ICCD Normativa BNP: SPEI
+ICCD Normativa BNPE: SPEI, RREI
+ICCD Normativa BNPL: SPEI, RPEI
+ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3399,6 +3426,32 @@ WHERE {?class a-dd:morphologicalDescription ?des.}</core:constructQuery>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfElements -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfElements">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="it">Questa proprietá rappresenta il numero di elementi di un&apos;entitá culturale.
+es: il numero di fogli o parti che costituiscono un campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of elements that constitutes a cultural entity.
+es: the number of elements of a specimen.</rdfs:comment>
+        <rdfs:label xml:lang="en">number of elements</rdfs:label>
+        <rdfs:label xml:lang="it">numero di elementi</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPF</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfEnvelopes -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfEnvelopes">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <a-cat:iccdNormTag>Normativa BNB: SB/CBP/CBPB</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants">
@@ -3413,6 +3466,16 @@ WHERE {?class a-dd:morphologicalDescription ?des.}</core:constructQuery>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVF; CU/CUM/CUMF; CU/CUC/CUCF</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfLabels -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfLabels">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPB</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3582,6 +3645,16 @@ WHERE {?class a-dd:proposedIntervention ?int.}</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/writingMethod -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/writingMethod">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SBEA
+ICCD Normativa BNP: SPEP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -6983,5 +7056,5 @@ WHERE {?x a a-dd:WaistCircumference .}</core:constructQuery>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
 
