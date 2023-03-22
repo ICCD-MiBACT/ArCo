@@ -29,7 +29,7 @@ Chi ha tipificato il campione x e in quale momento?
 select ?agent ?time where {  
 ?x spe:hasTypification ?typification .  
 ?typification core:involvesAgent ?agent ;  
-<https://w3id.org/italia/onto/TI/atTime> ?time .  
+<<https://w3id.org/italia/onto/TI/atTime>> ?time .  
 }  
  
 
