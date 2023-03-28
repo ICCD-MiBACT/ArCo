@@ -18,7 +18,7 @@
 
 **CQ1**   
 
-What type is photographic record set x?
+What type is photographic record set x?   
 Di che tipo è l’unità archivistica fotografica complessa x?
 
 select ?type where {   
