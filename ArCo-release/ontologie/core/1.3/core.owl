@@ -169,6 +169,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/italia/onto/ADMS/hasTask -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasTask"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -202,7 +208,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/definesConcept">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega sistema di classificazione al concetto</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a classification system to a concept</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -237,7 +243,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente all&apos;agente che lo ricopre.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a situation in which an agent holds a role to that agent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -289,7 +295,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasCharacteristic">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Characteristic"/>
         <rdfs:comment xml:lang="it">La object property che collega un&apos;entità a una sua caratteristica.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that links an entity to one of its characteristics.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -454,6 +460,29 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isDepictionOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Depiction"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua raffigurazione/foto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its depiction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha foto</rdfs:label>
+        <rdfs:label xml:lang="it">ha raffigurazione</rdfs:label>
+        <rdfs:label xml:lang="en">has depiction</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasDescription -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasDescription">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isDescriptionOf"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con la sua descrizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its description.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha descrizione</rdfs:label>
+        <rdfs:label xml:lang="en">has description</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -550,7 +579,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasLocation">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isLocationOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Location"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
         <rdfs:comment xml:lang="it">La object property che collega un&apos;entità a un luogo in cui si trova.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that associates an entity to a location.</rdfs:comment>
@@ -582,7 +611,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/hasMethod -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasMethod">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasDescription"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isMethodOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
@@ -672,6 +701,21 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/hasTopic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasTopic">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isTopicOf"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;argomento corrispondente.</rdfs:comment>
+        <rdfs:comment xml:lang="it">This property relates an entity with its topic.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha argomento</rdfs:label>
+        <rdfs:label xml:lang="en">has topic</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/hasType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasType">
@@ -712,8 +756,8 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/involvesAgent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/involves"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la partecipazione di un agente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents an agent partecipation</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -729,8 +773,8 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentInvolvedIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isInvolvedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la partecipazione di un agente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents an agent partecipation</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -745,7 +789,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isAgentOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentOf">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha agente&quot;, collega un agente alla situazione in cui l&apos;agente ha ricoperto un ruolo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an agent to a situation in which that agent holds a role.</rdfs:comment>
@@ -794,7 +838,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isCharacteristicOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isCharacteristicOf">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Characteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">La object property che collega una caratteristica di un&apos;entità all&apos;entità stessa.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that links an entity characteristic to the entity.</rdfs:comment>
@@ -963,7 +1007,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
         <rdfs:comment xml:lang="it">La object property che collega un concetto al sistema di classificazione.</rdfs:comment>
         <rdfs:comment xml:lang="it">The object property that links a concept to a classification system.</rdfs:comment>
@@ -981,6 +1025,14 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDepictionOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Depiction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Questa proprietà collega la raffigurazione/foto di un&apos;entità all&apos;entità stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the depiction of an entity to the entity itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is depiction of</rdfs:label>
+        <rdfs:label xml:lang="it">è foto di</rdfs:label>
+        <rdfs:label xml:lang="it">è raffigurazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -995,6 +1047,20 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">is described by</rdfs:label>
         <rdfs:label xml:lang="it">è descritto da</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDescriptionOf">
+        <rdfs:comment xml:lang="it">Questa proprietà collega una descrizione all&apos;entità che descrive.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property the description of an entity to the entity itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is description of</rdfs:label>
+        <rdfs:label xml:lang="it">è descrizione di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1053,7 +1119,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isLocationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isLocationOf">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Location"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
         <rdfs:comment xml:lang="it">La object property che collega un luogo a un&apos;entità che si trova in quel luogo.</rdfs:comment>
@@ -1070,7 +1136,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isMethodOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isMethodOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isDescriptionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">L&apos;object property che collega un metodo a un&apos;entità.</rdfs:comment>
@@ -1172,6 +1238,20 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/isTopicOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTopicOf">
+        <rdfs:comment xml:lang="it">Questa proprietà collega un argomento ad un&apos;entità collegata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a topic with its related entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is topic of</rdfs:label>
+        <rdfs:label xml:lang="it">è argomento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/isTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTypeOf">
@@ -1212,6 +1292,13 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/issues"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un identificativo con l&apos;organizzazione che l&apos;ha emesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an identifier to the organization that has issued it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">issued by</rdfs:label>
+        <rdfs:label xml:lang="it">rilasciato da</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1221,6 +1308,14 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/issues">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;organizzazione con  l&apos;identificativo che ha rilasciato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an issuing organization with an identifier.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">emette</rdfs:label>
+        <rdfs:label xml:lang="en">issues</rdfs:label>
+        <rdfs:label xml:lang="it">rilascia</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1255,30 +1350,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/italia/onto/l0/hasDescription -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasDescription"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/hasTopic -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasTopic"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/isDescriptionOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/isTopicOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/isTopicOf"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1295,6 +1366,14 @@ In this module the following Ontology Design Patterns have been used:
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/abstract">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;abstract di un testo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the abstract of an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">abstract</rdfs:label>
+        <rdfs:label xml:lang="it">abstract</rdfs:label>
+        <rdfs:label xml:lang="it">riassunto</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -1475,7 +1554,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- http://dati.gov.it/onto/dcatapit#Agent -->
 
     <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Agent">
-        <owl:equivalentClass rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
     </owl:Class>
     
 
@@ -1484,7 +1563,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Organization">
         <owl:equivalentClass rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
     </owl:Class>
     
 
@@ -1492,7 +1571,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- http://www.w3.org/2006/vcard/ns#Organization -->
 
     <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Organization">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
     </owl:Class>
     
 
@@ -1500,7 +1579,21 @@ In this module the following Ontology Design Patterns have been used:
     <!-- http://xmlns.com/foaf/0.1/Agent -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
-        <owl:equivalentClass rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Agent -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Agent">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un agente, fisico (e.g. una persona) o sociale (e.g. un&apos;organizzazione).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an agent, either physical (e.g. a person) or social (e.g. an orgamization).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+        <rdfs:label xml:lang="it">Agente</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1512,7 +1605,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1554,10 +1647,24 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/Characteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Characteristic">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">Caratteristica</rdfs:label>
+        <rdfs:label xml:lang="en">Characteristic</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <ADMS:hasTask xml:lang="it">Questa classe rappresenta la caratteristica che appartiene a un&apos;entità.</ADMS:hasTask>
+        <ADMS:hasTask xml:lang="en">This class represents the characteristic of an entity.</ADMS:hasTask>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Classification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Classification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasClassificationSystem"/>
@@ -1590,7 +1697,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1622,7 +1729,7 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
     <!-- https://w3id.org/arco/ontology/core/ClassificationSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/System"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/definesConcept"/>
@@ -1650,8 +1757,7 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
     <!-- https://w3id.org/arco/ontology/core/Concept -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Concept">
-        <owl:equivalentClass rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Object"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedclassification.owl"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta un concetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing a concept.</rdfs:comment>
@@ -1667,7 +1773,7 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
     <!-- https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Characteristic"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta una caratteristica di un&apos;entità di carattere culturale come ad esempio un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing the characteristic of a cultural entity (e.g. a cultural property).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1704,7 +1810,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/core/Depiction -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Depiction">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Object"/>
         <rdfs:comment xml:lang="en">This class represents the depiction of a cultural entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">Depiction</rdfs:label>
@@ -1716,10 +1822,52 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/Description -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Description">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una descrizione, una concettualizzazione utilizzata per definire concetti a partire da un insieme di dati o osservazioni.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a description, a conceptualization used for defining concepts out of a set of data or observations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <rdfs:label xml:lang="it">Descrizione</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Entity -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Entity">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;entità, qualsiasi cosa reale o immaginaria.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an entity, anything real, possible, or imaginary.</rdfs:comment>
+        <rdfs:comment xml:lang="it">stabile</rdfs:comment>
+        <rdfs:comment xml:lang="en">stable</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Entity</rdfs:label>
+        <rdfs:label xml:lang="it">Entità</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/EventOrSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/EventOrSituation">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un evento o una situazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an event or a situation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Event or situation</rdfs:label>
+        <rdfs:label xml:lang="it">Evento o situazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/EventOrSituationInTime -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/EventOrSituationInTime">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/involves"/>
@@ -1750,7 +1898,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/core/Identifier -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Identifier">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Characteristic"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/issuedBy"/>
@@ -1809,10 +1957,23 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/Location -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Location">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la posizione (e.g. di un &apos;entità culturale).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the location of an entity (e.g. of a cultural entity).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+        <rdfs:label xml:lang="it">Luogo</rdfs:label>
+        <rdfs:label xml:lang="it">Posizione</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Method -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Method">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Description"/>
         <rdfs:comment xml:lang="it">Classe che rappresenta il concetto di metodo.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing the concept of method.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1824,10 +1985,22 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/Object -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Object">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Object</rdfs:label>
+        <rdfs:label xml:lang="it">Oggetto</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Situation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Situation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta il generico concetto di situazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing the generic concept of situation.</rdfs:comment>
@@ -1836,6 +2009,18 @@ WHERE {
         <rdfs:label xml:lang="it">Situazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/System -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/System">
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un sistema.</rdfs:comment>
+        <rdfs:comment xml:lang="en">System</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a system.</rdfs:comment>
+        <rdfs:label xml:lang="it">Sistema</rdfs:label>
     </owl:Class>
     
 
@@ -1909,17 +2094,17 @@ WHERE {
     <!-- https://w3id.org/italia/onto/RO/TimeIndexedRole -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/RO/TimeIndexedRole">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/forEntity"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Entity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1954,62 +2139,6 @@ WHERE {
     <!-- https://w3id.org/italia/onto/TI/TimeInterval -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/TI/TimeInterval"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/Agent -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Agent"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/Characteristic -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/Concept -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Concept">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/Description -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Description"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/Entity -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Entity"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/EventOrSituation -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/EventOrSituation"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/Location -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Location"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/Object -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/System -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/System"/>
     
 
 
