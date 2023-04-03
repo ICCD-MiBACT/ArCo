@@ -366,6 +366,10 @@ core:hasAgent ?agent .
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgeOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Age"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua età biologica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its biological age.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha età</rdfs:label>
+        <rdfs:label xml:lang="en">has age</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1308,7 +1312,7 @@ WHERE {
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasEstimate"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isCulturalPropertyEstimateOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyEstimate"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Estimate"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla stima effettuata sul bene stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property to the estimate of that cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -2815,8 +2819,14 @@ core:hasAgent ?agent .
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRecording">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isRecordingOf"/>
-        <rdfs:comment xml:lang="it">ha registrazione</rdfs:comment>
-        <rdfs:comment xml:lang="en">has recording</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Recording"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità culturale alla sua registrazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to its recording.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha registrazione</rdfs:label>
+        <rdfs:label xml:lang="en">has recording</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2924,6 +2934,15 @@ WHERE {
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isRelationshipTypeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/RelationshipType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una situazione di relazione tra beni culturali (RelatedWorkSituation) con il tipo di relazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a related work situation with the defined type of relationship.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha tipo di relazione</rdfs:label>
+        <rdfs:label xml:lang="en">has relationship type</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: ROFF
+ICCD Normativa VeAC: AU/AUT/AUTO</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -3323,6 +3342,15 @@ WHERE {
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasStorageMedium">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isStorageMediumOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Recording"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/StorageMedium"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una registrazione al suo supporto di memoria.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a recording to its storage medium.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha supporto di memorizzazione</rdfs:label>
+        <rdfs:label xml:lang="en">has storage medium</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -3610,6 +3638,13 @@ core:hasAgent ?agent .
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isTimeIntervalFor"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Dating"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con il suo intervallo di tempo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its time interval.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha intervallo di tempo</rdfs:label>
+        <rdfs:label xml:lang="en">has time interval</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -3921,7 +3956,19 @@ WHERE {
 
     <!-- https://w3id.org/arco/ontology/context-description/involvesElement -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/involvesElement"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/involvesElement">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isElementInvolvedIn"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment>ICCD Normativa BDI: DA/DRM/DRME-RDMO-DRMV-DRMA-DRMM</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una entità culturale a un suo elemento (animale, vegetale o minerale).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to its element (animal, vegetal or mineral).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">coinvolge elemento</rdfs:label>
+        <rdfs:label xml:lang="en">involves element</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -4148,6 +4195,13 @@ WHERE {
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Age"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">This property relates the biological age of an entity with the entity itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Questa proprietà collega l&apos;età di un&apos;entità con l&apos;entità stessa.</rdfs:label>
+        <rdfs:label xml:lang="en">is age of</rdfs:label>
+        <rdfs:label xml:lang="it">è età di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -5046,7 +5100,7 @@ WHERE {
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCulturalPropertyEstimateOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isEstimateOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyEstimate"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Estimate"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una stima di un bene culturale al bene culturale stimato.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property estimate to the estimated cultural property.</rdfs:comment>
@@ -5307,7 +5361,17 @@ core:isAgentRoleOf ?thing .
 
     <!-- https://w3id.org/arco/ontology/context-description/isElementInvolvedIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isElementInvolvedIn"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isElementInvolvedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un elemento (animale, vegetale o minerale) a un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an element (animal, vegetal or mineral) to the related cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is element involved in</rdfs:label>
+        <rdfs:label xml:lang="it">è elemento coinvolto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -5748,7 +5812,7 @@ core:isAgentRoleOf ?thing .
         <rdfs:comment xml:lang="it">Questa proprietà collega la situazione inventariale a una cosa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the inventory situation to an entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">ias inventory situation of</rdfs:label>
+        <rdfs:label xml:lang="en">is inventory situation of</rdfs:label>
         <rdfs:label xml:lang="it">è situazione inventariale di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -6012,6 +6076,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is member involved in</rdfs:label>
         <rdfs:label xml:lang="it">è membro coinvolto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -6599,7 +6665,16 @@ core:isAgentRoleOf ?thing .
 
     <!-- https://w3id.org/arco/ontology/context-description/isRecordingOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isRecordingOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isRecordingOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Recording"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una registrazione alla rispettiva entità culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a recording to the related cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is recording of</rdfs:label>
+        <rdfs:label xml:lang="it">è registrazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -6684,6 +6759,13 @@ WHERE {
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelationshipType"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di relazione tra due beni alla situazione che ne descrive la relazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the type of relationship between two cultural property and the related work situation itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is relationship type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di relazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -7072,7 +7154,17 @@ WHERE {
 
     <!-- https://w3id.org/arco/ontology/context-description/isStorageMediumOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isStorageMediumOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isStorageMediumOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/StorageMedium"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Recording"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il supporto di archiviazione di una registrazione con la registrazione stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the storage medium of a recording to the recording itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is storage medium of</rdfs:label>
+        <rdfs:label xml:lang="it">è supporto di memoria di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -7339,6 +7431,13 @@ core:isAgentRoleOf ?thing .
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isTimeIntervalFor">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Dating"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un intervallo di tempo con la datazione di un evento relativo a un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a time interval to the dating related to a cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is time interval for</rdfs:label>
+        <rdfs:label xml:lang="it">è intervallo di tempo per</rdfs:label>
+        <owl:versionInfo xml:lang="it">intabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -7829,6 +7928,18 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/italia/onto/CLV/hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasIdentifier"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/hasSpatialCoverage -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasSpatialCoverage"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/TI/atTime -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/TI/atTime"/>
@@ -8127,6 +8238,13 @@ WHERE {
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/alternativeOrOutdatedResponsibility">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa properietà indica se la responsabilità di un agente rispetto a un&apos;entotà culturale è alternativa o sorpassata/obsoleta.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates whether an agent&apos;s responsibility for a cultural entity is alternative or outdated.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">alternative or outdated responsibility</rdfs:label>
+        <rdfs:label xml:lang="it">responsabilità alternativa o sorpassata</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -8988,7 +9106,15 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/expired -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/expired">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Copyright"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica se il copyright di un&apos;entità è scaduto o meno.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the expired copyright of an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">expired</rdfs:label>
+        <rdfs:label xml:lang="it">scaduto</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -9088,6 +9214,11 @@ WHERE {
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta informazioni di natura storico biografica relative a un agente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents historical biographical information about an agent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">historical biographical information</rdfs:label>
+        <rdfs:label xml:lang="it">profilo storico biografico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa FF: PD/PDF/PDFB</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -9163,6 +9294,14 @@ WHERE {
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/insertionDate">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="it">Questa propretà rappresenta la data di inventariazione patrimoniale di un bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the date of insertion of an object in an inventory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">data di inserimento</rdfs:label>
+        <rdfs:label xml:lang="en">insertion date</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: UB/INP/INPR, UN/INV/INVD</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -9277,6 +9416,14 @@ WHERE
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/mainResponsibility">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica la responsabilità principale, la più accreditata o convincente, di un agente su un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the main, most credited or convincing, responsibility of an agent for a cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">main responsibility</rdfs:label>
+        <rdfs:label xml:lang="it">responsabilità principale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: AU/AUT</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -9407,6 +9554,14 @@ WHERE
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/originalStorageMedium">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/StorageMedium"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica l&apos;originalità del supporto di memorizzazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the originality of the storage medium.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">original storage medium</rdfs:label>
+        <rdfs:label xml:lang="it">supporto di memoria originale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BDI: DU/DUO, DV/DVO, AI/AIO, VI/VIO</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -9414,6 +9569,15 @@ WHERE
     <!-- https://w3id.org/arco/ontology/context-description/outdatedDating -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/outdatedDating">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Dating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la datazione obsoleta di un&apos;entità culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the outdated dating of a cultural enity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">datazione obsoleta</rdfs:label>
+        <rdfs:label xml:lang="en">outdated dating</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 3.00: DT/ADT/ADTT</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -9547,6 +9711,15 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/preferredDating -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/preferredDating">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Dating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica la datazione preferita associata a un&apos;entità culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the preferred dating of a cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">datazione preferita</rdfs:label>
+        <rdfs:label xml:lang="en">preferred dating</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 3.00: DT/ADT/ADTT</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -9652,13 +9825,33 @@ WHERE {
 
     <!-- https://w3id.org/arco/ontology/context-description/recordingEquipment -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/recordingEquipment"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/recordingEquipment">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Recording"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;attrezzatura tecnica impiegata per eseguire la registrazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the recording equipment used for making the recording.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">attrezzatura tecnica</rdfs:label>
+        <rdfs:label xml:lang="en">recording equipment</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://w3id.org/arco/ontology/context-description/recordingLocation -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/recordingLocation"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/recordingLocation">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Recording"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il luogo dove è avvenuta la registrazione di un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the location where the recording of the cultural property took place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">luogo di registrazione</rdfs:label>
+        <rdfs:label xml:lang="en">recording location</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
     
 
 
@@ -10214,6 +10407,12 @@ WHERE       { ?cp a-cd:surveyImageIdentifier ?id.
     <!-- https://w3id.org/italia/onto/l0/name -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/name"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/positionInSequence -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/positionInSequence"/>
     
 
 
@@ -11078,6 +11277,11 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AudioRecording">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Recording"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la registrazione audio di un&apos;entità culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an audio recording of a cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Audio recording</rdfs:label>
+        <rdfs:label xml:lang="it">Registrazione audio</rdfs:label>
     </owl:Class>
     
 
@@ -13472,6 +13676,11 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicRecording">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Recording"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la registrazione fotografica di un&apos;entità culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the photographic recording of a cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Photographic recording</rdfs:label>
+        <rdfs:label xml:lang="it">Registrazione fotografica</rdfs:label>
     </owl:Class>
     
 
@@ -13879,6 +14088,11 @@ PA/SSI, PA/SFI</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/RecordingType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo di registrazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a type of recording.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Recording type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di registrazione</rdfs:label>
     </owl:Class>
     
 
@@ -14505,6 +14719,10 @@ WHERE {
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il supporto di memoria di un&apos;entità culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the storage medium of a cultural entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Storage medium</rdfs:label>
+        <rdfs:label xml:lang="it">Supporto di memoria</rdfs:label>
     </owl:Class>
     
 
@@ -14513,6 +14731,11 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/StorageMediumType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di supporto di memeoria di un&apos;entità culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the storage medium type of a cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Storage medium type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di supporto di memoria</rdfs:label>
         <a-cat:iccdNormTag>Normativa F: MT/FVM. Normativa BDI: DU/DUO/DUOF, DV/DVO/DVOF, AI/AIO/AIOF, VI/VIO/VIOF</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -15126,6 +15349,11 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/VideoRecording">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Recording"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la registrazione video di un&apos;entità culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a video recording of a cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Registrazione video</rdfs:label>
+        <rdfs:label xml:lang="en">Video recording</rdfs:label>
     </owl:Class>
     
 
@@ -15394,6 +15622,8 @@ WHERE {
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AbsoluteAge">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
+        <rdfs:label xml:lang="en">Absolute age</rdfs:label>
+        <rdfs:label xml:lang="it">Età assoluta</rdfs:label>
         <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRR/SRRE</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -15438,6 +15668,8 @@ a-cd:hasEdition ?ed .
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AgeOfDeath">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
+        <rdfs:label xml:lang="en">Age of death</rdfs:label>
+        <rdfs:label xml:lang="it">Età di morte</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -15484,6 +15716,9 @@ a-cd:hasEdition ?ed .
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalResearch">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DetectionMethod"/>
+        <rdfs:label xml:lang="en">Archival research</rdfs:label>
+        <rdfs:label xml:lang="it">Dati di archivio</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: OG/OGM</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -15534,6 +15769,8 @@ a-cd:hasEdition ?ed .
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/BiologicalAge">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
+        <rdfs:label xml:lang="en">Biological age</rdfs:label>
+        <rdfs:label xml:lang="it">Età biologica</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -15556,6 +15793,8 @@ a-cd:hasEdition ?ed .
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ChronologicalAge">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
+        <rdfs:label xml:lang="en">Chronological age</rdfs:label>
+        <rdfs:label xml:lang="it">Età cronologica</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -15693,6 +15932,9 @@ a-cd:hasEdition ?ed .
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/DirectObservation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DetectionMethod"/>
+        <rdfs:label xml:lang="en">Direct observation</rdfs:label>
+        <rdfs:label xml:lang="it">Rilevamento sul campo</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: OG/OGM</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -16057,6 +16299,8 @@ a-cd:hasEdition ?ed .
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/RelativeAge">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeType"/>
+        <rdfs:label xml:lang="it">Età relativa</rdfs:label>
+        <rdfs:label xml:lang="en">Relative age</rdfs:label>
         <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRL/SRLE</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
