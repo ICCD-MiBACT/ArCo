@@ -1886,6 +1886,26 @@
 			<l0:name xml:lang="it">
 				<xsl:value-of select="concat('Meteorite ', normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)) " />
 			</l0:name>
+			<arco-lite:isClassifiedByCurrentTaxon>
+				<xsl:attribute name="rdf:resource">
+		    		<xsl:value-of select="concat($NS,'PlanetologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)))" />
+		    	</xsl:attribute>
+			</arco-lite:isClassifiedByCurrentTaxon>
+			<arco-lite:isIdentifiedByCurrentTaxon>
+				<xsl:attribute name="rdf:resource">
+		    		<xsl:value-of select="concat($NS,'PlanetologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)))" />
+		    	</xsl:attribute>
+			</arco-lite:isIdentifiedByCurrentTaxon>
+			<arco-core:isClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+		    		<xsl:value-of select="concat($NS,'PlanetologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)))" />
+		    	</xsl:attribute>
+			</arco-core:isClassifiedBy>
+			<arco-spe:isIdentifiedBy>
+				<xsl:attribute name="rdf:resource">
+		    		<xsl:value-of select="concat($NS,'PlanetologicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)))" />
+		    	</xsl:attribute>
+			</arco-spe:isIdentifiedBy>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPN/SPNW">
 				<arco-dd:hasMeasurementCollection>
 					<xsl:attribute name="rdf:resource">
