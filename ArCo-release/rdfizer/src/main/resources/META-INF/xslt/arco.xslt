@@ -27197,7 +27197,7 @@
 									</xsl:attribute>
 						 	        <rdf:type>
 										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AdministrativeUnitComponent'" />
+											<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AdminUnitComponent'" />
 										</xsl:attribute>
 									</rdf:type>
 									<rdfs:label>
@@ -27638,7 +27638,7 @@
 					</xsl:if>
 				</xsl:for-each>
 			</xsl:if>
-			<xsl:if test="record/metadata/schede/MODI/LC/* or recod/metadata/schede/scan/LC/*">
+			<xsl:if test="record/metadata/schede/MODI/LC/* or record/metadata/schede/SCAN/LC/*">
 				<xsl:variable name="lcs">
 					<xsl:choose>
 						<xsl:when test="record/metadata/schede/*/LC/LCS">
@@ -29715,7 +29715,7 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(record/metadata/schede/F/LR/LRG)" />
 						</l0:name>
-						<rdf:type rdf:resource="https://w3id.org/italia/onto/CLV/AdministrativeUnitComponent" />
+						<rdf:type rdf:resource="https://w3id.org/italia/onto/CLV/AdminUnitComponent" />
 					</rdf:Description>
 				</xsl:if>
 				<!-- Country LR -->
