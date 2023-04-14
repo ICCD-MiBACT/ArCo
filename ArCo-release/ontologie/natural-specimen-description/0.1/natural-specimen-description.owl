@@ -554,6 +554,24 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasChondrule -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasChondrule">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Texture"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Chondrule"/>
+        <rdfs:comment>ICCD Normativa BNPL: SPCC</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasChondrulePresence -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasChondrulePresence">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isChondrulePresenceOf"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasCleavage -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasCleavage">
@@ -967,9 +985,9 @@ core:hasAgent ?agent .
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isIdentificationInTimeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime"/>
+        <rdfs:comment xml:lang="en">This property relates an entity to an identification in time</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Questa proprietà collega un&apos;entità a un&apos;identificazione nel tempo</rdfs:label>
-        <rdfs:label xml:lang="en">This property relates an entity to an identification in time</rdfs:label>
         <rdfs:label xml:lang="it">ha classificazione nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has classification in time</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1021,7 +1039,7 @@ core:hasAgent ?agent .
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasLabel">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isLabelOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Label"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/SpecimenLabel"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale ad un&apos;etichetta</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property to a label.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
@@ -1048,23 +1066,6 @@ core:hasAgent ?agent .
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRC/SRCX</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasMineral -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasMineral">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isChondruleInvolvedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChondrulePresence"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Chondrule"/>
-        <rdfs:comment xml:lang="it">Questa proprietà mette collega la presenza di condrule con un campione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the chondrule presence to the specimen</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">ha minerale</rdfs:label>
-        <rdfs:label xml:lang="en">has mineral</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1415,6 +1416,8 @@ WHERE {
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/identifies">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy"/>
+        <rdfs:comment xml:lang="it">Questa proprietà mette in relazione un taxon con lo specimen che identifica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a taxon to the specimen it identifies.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">identifica</rdfs:label>
         <rdfs:label xml:lang="en">identifies</rdfs:label>
@@ -1433,8 +1436,8 @@ WHERE {
         <rdfs:comment xml:lang="it">Questa proprietà collega la presenza di condrule al campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the chondrule presence to the specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">ha minerale</rdfs:label>
-        <rdfs:label xml:lang="en">has mineral</rdfs:label>
+        <rdfs:label xml:lang="it">coinvolge condrula</rdfs:label>
+        <rdfs:label xml:lang="en">involves chondrule</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRM/SRMP, SR/SRM/SRMS, SR/SRM/SRMT</a-cat:iccdNormTag>
@@ -1451,8 +1454,8 @@ WHERE {
         <rdfs:comment xml:lang="it">Questa proprietà collega la presenza del minerale al minerale</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the mineral presence to the mineral</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">ha minerale</rdfs:label>
-        <rdfs:label xml:lang="en">has mineral</rdfs:label>
+        <rdfs:label xml:lang="it">coinvolge minerale</rdfs:label>
+        <rdfs:label xml:lang="en">involves mineral</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNPE: SR/SRM/SRMP, SR/SRM/SRMS, SR/SRM/SRMT</a-cat:iccdNormTag>
@@ -1575,6 +1578,12 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/isChondruleOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isChondruleOf"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/isChondrulePresenceOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isChondrulePresenceOf">
@@ -1596,6 +1605,7 @@ WHERE {
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isClassificationSystemOf">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/refersToClassificationSystem"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un sistema di classificazione al concetto</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a classification system to a concept</rdfs:comment>
@@ -1606,7 +1616,7 @@ WHERE {
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMSD/SMSC</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isClassificationSystemOf"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/definesConcept"/>
     </owl:ObjectProperty>
     
 
@@ -2032,7 +2042,7 @@ core:isAgentRoleOf ?thing .
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/isLabelOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isLabelOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Label"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/SpecimenLabel"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;etichetta ad un bene culturale</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a label to a cultural property.</rdfs:comment>
@@ -2425,7 +2435,7 @@ core:isAgentRoleOf ?thing .
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/refersToClassificationSystem"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
     </owl:ObjectProperty>
     
 
@@ -2487,7 +2497,7 @@ core:isAgentRoleOf ?thing .
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/bodyTranscript">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/transcript"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Label"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/SpecimenLabel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il testo scritto nel corpo dell&apos;etichetta</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the text written in the body of the label</rdfs:comment>
@@ -2497,6 +2507,16 @@ core:isAgentRoleOf ?thing .
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBET</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/chondruleMatrixRatio -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/chondruleMatrixRatio">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Texture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SPCR</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2640,27 +2660,10 @@ core:isAgentRoleOf ?thing .
     
 
 
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/graphicSymbols -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/graphicSymbols">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Label"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta i simboli grafici scritti nell&apos;etichetta</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents graphic symbols written in the label</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="en">graphic symbols</rdfs:label>
-        <rdfs:label xml:lang="it">simboli grafici</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEG</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/handWriting -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/handWriting">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Label"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/SpecimenLabel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="it">Questa proprietà indica se l&apos;etichetta è autografa o meno</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates if the label is handwritten or not</rdfs:comment>
@@ -2678,7 +2681,7 @@ core:isAgentRoleOf ?thing .
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/headingTranscript">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/transcript"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Label"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/SpecimenLabel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il testo scritto nell&apos;intestazione dell&apos;etichetta</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the heading of the label</rdfs:comment>
@@ -2687,7 +2690,12 @@ core:isAgentRoleOf ?thing .
         <rdfs:label xml:lang="it">trascrizione dell&apos;intestazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEI</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEI
+ICCD Normativa BNM: SMEI, RMEI
+ICCD Normativa BNP: SPEI
+ICCD Normativa BNPE: SPEI, RREI
+ICCD Normativa BNPL: SPEI, RPEI
+ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2798,6 +2806,23 @@ core:isAgentRoleOf ?thing .
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SM/SMS/SMSK</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/numberOfEnvelopes -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/numberOfEnvelopes">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/SpecimenLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di buste dell&apos;etichetta di un campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of envelopes of a specimen label.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="en">number of envelopes</rdfs:label>
+        <rdfs:label xml:lang="it">numero di buste</rdfs:label>
+        <owl:versionInfo xml:lang="en">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: SB/CBP/CBPB</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2926,7 +2951,17 @@ core:isAgentRoleOf ?thing .
 
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/refersToSurveys -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/refersToSurveys"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/refersToSurveys">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property refers to the surveys carried out to detect the character of the property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="it">Questa proprietà indica l indagini specifiche che hanno consentito di rilevare il carattere di un bene (es: antropologia fisica)</rdfs:label>
+        <rdfs:label xml:lang="en">refers to surveys</rdfs:label>
+        <rdfs:label xml:lang="it">riferimenti a indagini</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT: PTCI</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
     
 
 
@@ -3218,7 +3253,7 @@ core:isAgentRoleOf ?thing .
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/Accession -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Accession">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isAccessionOf"/>
@@ -3298,6 +3333,13 @@ core:isAgentRoleOf ?thing .
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Animal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un animale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an animal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="en">Animal</rdfs:label>
+        <rdfs:label xml:lang="it">Animale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -3741,7 +3783,7 @@ core:isAgentRoleOf ?thing .
         <rdfs:label xml:lang="it">Condrule</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNPE: SP/SPC/SPCC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPC/SPCC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3749,7 +3791,13 @@ core:isAgentRoleOf ?thing .
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/ChondrulePresence -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/ChondrulePresence">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/involvesChondrule"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Chondrule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la presenza di condrule in un campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the presence of chondrules in a specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
@@ -3757,7 +3805,7 @@ core:isAgentRoleOf ?thing .
         <rdfs:label xml:lang="it">Presenza di condrule</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNPE: SP/SPC/SPCC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPC/SPCC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4061,7 +4109,7 @@ core:isAgentRoleOf ?thing .
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/DevelopmentStage -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/DevelopmentStage">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Development stage</rdfs:label>
         <rdfs:label xml:lang="it">Stadio di sviluppo</rdfs:label>
@@ -4173,10 +4221,10 @@ core:isAgentRoleOf ?thing .
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/FruitSample -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/FruitSample">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Sample"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasPreservationType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PreservationType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4191,11 +4239,9 @@ core:isAgentRoleOf ?thing .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Fruit  sample</rdfs:label>
         <rdfs:label xml:lang="it">Reperto carpologico</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBC</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/FruitSample"/>
     </owl:Class>
     
 
@@ -4484,58 +4530,6 @@ core:isAgentRoleOf ?thing .
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAI</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Label -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Label">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isLabelOf"/>
-                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFontStyle"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/bodyTranscript"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/graphicSymbols"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/handWriting"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/headingTranscript"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il cartellino o l&apos;etichetta presente sul o insieme al campione oggetto della scheda o al contenitore.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the label located on a specimen or on a specimen container.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">Etichetta</rdfs:label>
-        <rdfs:label xml:lang="en">Label</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">untable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4862,7 +4856,7 @@ core:isAgentRoleOf ?thing .
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasMineral"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/involvesChondrule"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Mineral"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4973,8 +4967,8 @@ core:isAgentRoleOf ?thing .
         <rdfs:comment xml:lang="it">Questa classe rappresenta un campione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">Campione</rdfs:label>
-        <rdfs:label xml:lang="en">Specimen</rdfs:label>
+        <rdfs:label xml:lang="it">Campione mineralogico</rdfs:label>
+        <rdfs:label xml:lang="en">Mineral specimen</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -5184,6 +5178,12 @@ core:isAgentRoleOf ?thing .
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAge"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Age"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasAlterationGrade"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/AlterationGrade"/>
             </owl:Restriction>
@@ -5375,14 +5375,32 @@ core:isAgentRoleOf ?thing .
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAge"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Age"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasAlterationGrade"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/WeatheringGrade"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasChondrulePresence"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChondrulePresence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasMineralPresence"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralPresence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasTexture"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Texture"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un campione di meteorite</rdfs:comment>
@@ -5415,16 +5433,14 @@ core:isAgentRoleOf ?thing .
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/PlantSample -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PlantSample">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Sample"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto botanico</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a sample from the botanical collection</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Plant sample</rdfs:label>
         <rdfs:label xml:lang="it">Reperto botanico</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/PlantSample"/>
     </owl:Class>
     
 
@@ -5432,7 +5448,7 @@ core:isAgentRoleOf ?thing .
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/PollenSample -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PollenSample">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Sample"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnique"/>
@@ -5444,11 +5460,9 @@ core:isAgentRoleOf ?thing .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Pollen sample</rdfs:label>
         <rdfs:label xml:lang="it">Reperto palinologico</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBP</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/PollenSample"/>
     </owl:Class>
     
 
@@ -5684,17 +5698,15 @@ core:isAgentRoleOf ?thing .
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/SeedSample -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/SeedSample">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Sample"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto spermologico (semi)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a sample from the seed collection</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Reperto spermologico</rdfs:label>
         <rdfs:label xml:lang="en">Seed  sample</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBS</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/SeedSample"/>
     </owl:Class>
     
 
@@ -5796,7 +5808,7 @@ core:isAgentRoleOf ?thing .
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasLabel"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Label"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/SpecimenLabel"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5865,6 +5877,52 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa BNB: LR/LRD. BNM: LR</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/SpecimenLabel -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/SpecimenLabel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isLabelOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFontStyle"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/bodyTranscript"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/handWriting"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/headingTranscript"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il cartellino o l&apos;etichetta presente sul o insieme al campione oggetto della scheda o al contenitore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the label located on a specimen or on a specimen container.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="it">Etichetta del campione</rdfs:label>
+        <rdfs:label xml:lang="en">Specimen label</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">untable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5963,6 +6021,12 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasChondrule"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Chondrule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasGrains"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Grains"/>
             </owl:Restriction>
@@ -5971,6 +6035,18 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasMatrix"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Matrix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isTextureOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/chondruleMatrixRatio"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tessitura di un campione</rdfs:comment>
@@ -6099,6 +6175,13 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Vegetal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;entità vegetale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a vegetal entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="it">Vegetal</rdfs:label>
+        <rdfs:label xml:lang="it">Vegetale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -6122,7 +6205,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/WoodSample -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/WoodSample">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Sample"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
@@ -6134,11 +6217,9 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Reperto xilologico</rdfs:label>
         <rdfs:label xml:lang="en">Wood sample</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBX</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/WoodSample"/>
     </owl:Class>
     
 
@@ -6963,13 +7044,13 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
      -->
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Reflectance">
-        <rdfs:comment xml:lang="it">Questa individuo rappresenta la riflettanza</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents the reflectance</rdfs:comment>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
         <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
+        <rdfs:comment xml:lang="it">Questa individuo rappresenta la riflettanza</rdfs:comment>
     </rdf:Description>
     
 
@@ -7056,5 +7137,5 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

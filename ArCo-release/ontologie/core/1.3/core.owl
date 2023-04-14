@@ -2124,45 +2124,6 @@ WHERE {
     
 
 
-    <!-- https://w3id.org/italia/onto/RO/TimeIndexedRole -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/RO/TimeIndexedRole">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/forEntity"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Entity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/withRole"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/hasTemporalEntity"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TemporalEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Rappresentazione di un ruolo associato ad un intervallo temporale determinato.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Representation of Role with a clearly defined time extension.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/RO"/>
-        <rdfs:label xml:lang="it">Ruolo nel tempo</rdfs:label>
-        <rdfs:label xml:lang="en">Time indexed role</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/italia/onto/TI/TemporalEntity -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/TI/TemporalEntity"/>
