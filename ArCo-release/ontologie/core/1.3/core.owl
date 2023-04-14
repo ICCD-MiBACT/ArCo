@@ -23,6 +23,7 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/core">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/1.0"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/0.8"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
@@ -183,6 +184,12 @@ In this module the following Ontology Design Patterns have been used:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://dati.beniculturali.it/cis/isInvolvedInCulturalEvent -->
+
+    <owl:ObjectProperty rdf:about="http://dati.beniculturali.it/cis/isInvolvedInCulturalEvent"/>
     
 
 
@@ -1540,8 +1547,27 @@ In this module the following Ontology Design Patterns have been used:
     <!-- http://dati.beniculturali.it/cis/CulturalEntity -->
 
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://dati.beniculturali.it/cis/isInvolvedInCulturalEvent"/>
+                <owl:allValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Class that provides a generalization of three classes; that is , cultural institute or site, collection and cultural heritage object. It does not correspond to a concept used typically in the cultural domain but it is used in order to model properties and property restrictions that are common to all the these three classes. The class will never be directly instanziated.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Classe che fornisce una generalizzazione per le tre classi di istituto e luogo della cultura,  collezione e oggetto culturale. Non corrisponde ad un concetto usato normalmente nel linguaggio del dominio, ma risponde all&apos;esigenza di modellare proprietà e assiomi di property-restriction comuni ad ognuna di queste tre classi. La classe CulturalEntity non sarà mai istanziata direttamente</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://dati.beniculturali.it/cis/"/>
+        <rdfs:label xml:lang="en">Cultural Entity</rdfs:label>
+        <rdfs:label xml:lang="it">Entità culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
+    
+
+
+    <!-- http://dati.beniculturali.it/cis/CulturalEvent -->
+
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEvent"/>
     
 
 
@@ -1601,7 +1627,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/AgentRole -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/AgentRole">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgent"/>
@@ -1650,6 +1676,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/Characteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Characteristic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">Caratteristica</rdfs:label>
         <rdfs:label xml:lang="en">Characteristic</rdfs:label>
@@ -1664,7 +1691,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/Classification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Classification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasClassificationSystem"/>
@@ -1757,7 +1784,7 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
     <!-- https://w3id.org/arco/ontology/core/Concept -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Concept">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedclassification.owl"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta un concetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing a concept.</rdfs:comment>
@@ -1810,7 +1837,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/core/Depiction -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Depiction">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:comment xml:lang="en">This class represents the depiction of a cultural entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">Depiction</rdfs:label>
@@ -1825,6 +1852,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/core/Description -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Description">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una descrizione, una concettualizzazione utilizzata per definire concetti a partire da un insieme di dati o osservazioni.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a description, a conceptualization used for defining concepts out of a set of data or observations.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1839,13 +1867,14 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/core/Entity -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Entity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;entità, qualsiasi cosa reale o immaginaria.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an entity, anything real, possible, or imaginary.</rdfs:comment>
-        <rdfs:comment xml:lang="it">stabile</rdfs:comment>
-        <rdfs:comment xml:lang="en">stable</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">Entity</rdfs:label>
         <rdfs:label xml:lang="it">Entità</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1853,6 +1882,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/core/EventOrSituation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/EventOrSituation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un evento o una situazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an event or a situation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1960,6 +1990,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/core/Location -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Location">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la posizione (e.g. di un &apos;entità culturale).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the location of an entity (e.g. of a cultural entity).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1973,7 +2004,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/core/Method -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Method">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Description"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:comment xml:lang="it">Classe che rappresenta il concetto di metodo.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing the concept of method.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1988,6 +2019,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/core/Object -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Object">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -2016,6 +2048,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/core/System -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/System">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/System"/>
         <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un sistema.</rdfs:comment>
         <rdfs:comment xml:lang="en">System</rdfs:comment>
