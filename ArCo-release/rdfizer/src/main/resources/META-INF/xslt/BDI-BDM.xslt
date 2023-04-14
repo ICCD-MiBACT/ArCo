@@ -6357,10 +6357,10 @@
 						</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./DUYN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./DUYN)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./DUYN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./DUYN)" />
 						</l0:name>
 						<xsl:if test="./DUYI">
 							<arco-cd:address>
@@ -7922,10 +7922,10 @@
 						</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./DVYN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./DVYN)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./DVYN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./DVYN)" />
 						</l0:name>
 						<xsl:if test="./DVYI">
 							<arco-cd:address>
@@ -9639,10 +9639,10 @@
 						</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./DFYN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./DFYN)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./DFYN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./DFYN)" />
 						</l0:name>
 						<xsl:if test="./DFYI">
 							<arco-cd:address>
@@ -12895,10 +12895,10 @@
 						</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./AIYN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./AIYN)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./AIYN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./AIYN)" />
 						</l0:name>
 						<xsl:if test="./AIYI">
 							<arco-cd:address>
@@ -16012,10 +16012,10 @@
 						</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./VIYN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./VIYN)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./VIYN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./VIYN)" />
 						</l0:name>
 						<xsl:if test="./VIYI">
 							<arco-cd:address>
@@ -18874,10 +18874,10 @@
 	            			<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 	            		</xsl:attribute>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(.)" />
+							<xsl:value-of select="arco-fn:name-cleaner(.)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(.)" />
+							<xsl:value-of select="arco-fn:name-cleaner(.)" />
 						</l0:name>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -19332,10 +19332,10 @@
 						</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./FIYN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./FIYN)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./FIYN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./FIYN)" />
 						</l0:name>
 						<xsl:if test="./FIYI">
 							<arco-cd:address>

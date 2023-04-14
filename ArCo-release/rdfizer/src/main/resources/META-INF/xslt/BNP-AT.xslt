@@ -1047,10 +1047,10 @@
 	    	    	    </xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
-						<xsl:value-of select="normalize-space(.)" />
+						<xsl:value-of select="arco-fn:name-cleaner(.)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="normalize-space(.)" />
+						<xsl:value-of select="arco-fn:name-cleaner(.)" />
 					</l0:name>
 				</rdf:Description>
 			</xsl:for-each>
@@ -1668,7 +1668,7 @@
 			</l0:name>
 			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource">
-	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Label'" />
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/SpecimenLabel'" />
 	            </xsl:attribute>
 			</arco-core:hasType>
 			<xsl:if test="./SZET">
@@ -1825,10 +1825,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="normalize-space(.)" />
+				<xsl:value-of select="arco-fn:name-cleaner(.)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="normalize-space(.)" />
+				<xsl:value-of select="arco-fn:name-cleaner(.)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:for-each>
@@ -3374,10 +3374,10 @@
 						</xsl:attribute>
 						<rdf:type rdf:resource="'https://w3id.org/italia/onto/l0/Agent'" />
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(.)" />
+							<xsl:value-of select="arco-fn:name-cleaner(.)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(.)" />
+							<xsl:value-of select="arco-fn:name-cleaner(.)" />
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
@@ -3440,10 +3440,10 @@
 						</xsl:attribute>
 						<rdf:type rdf:resource="'https://w3id.org/italia/onto/l0/Agent'" />
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(.)" />
+							<xsl:value-of select="arco-fn:name-cleaner(.)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(.)" />
+							<xsl:value-of select="arco-fn:name-cleaner(.)" />
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>

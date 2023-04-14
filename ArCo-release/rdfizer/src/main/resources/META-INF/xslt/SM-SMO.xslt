@@ -457,14 +457,10 @@
 	            	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./CLAA))" />
 	            </xsl:attribute>
 				<rdfs:label>
-					<xsl:call-template name="CamelCase">
-						<xsl:with-param name="text" select="normalize-space(./CLAA)" />
-					</xsl:call-template>
+					<xsl:value-of select="arco-fn:name-cleaner(./CLAA)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:call-template name="CamelCase">
-						<xsl:with-param name="text" select="normalize-space(./CLAA)" />
-					</xsl:call-template>
+					<xsl:value-of select="arco-fn:name-cleaner(./CLAA)" />
 				</l0:name>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -1246,9 +1242,7 @@
 				<l0:name>
 					<xsl:choose>
 						<xsl:when test="./MUT/MUTN[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
-							<xsl:call-template name="CamelCase">
-								<xsl:with-param name="text" select="normalize-space(./MUT/MUTN)" />
-							</xsl:call-template>				
+							<xsl:value-of select="arco-fn:name-cleaner(./MUT/MUTN)" />				
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="normalize-space(./MUT/MUTI)" />

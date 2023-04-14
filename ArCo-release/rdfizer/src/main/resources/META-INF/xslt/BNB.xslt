@@ -2677,10 +2677,10 @@
 						</xsl:attribute>
 					</rdf:type>   
 					<rdfs:label>
-						<xsl:value-of select="." />
+						<xsl:value-of select="arco-fn:name-cleaner(.)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="." />
+						<xsl:value-of select="arco-fn:name-cleaner(.)" />
 					</l0:name>
 				</rdf:Description>
 			</xsl:for-each>
@@ -2780,7 +2780,7 @@
 			</l0:name>
 			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource">
-	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Label'" />
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/SpecimenLabel'" />
 	            </xsl:attribute>
 			</arco-core:hasType>
 			<xsl:if test="./SBEC">
@@ -4950,10 +4950,10 @@
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>
@@ -4974,10 +4974,10 @@
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>
@@ -4998,10 +4998,10 @@
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>
@@ -5022,10 +5022,10 @@
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>
@@ -5046,10 +5046,10 @@
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>
@@ -5065,10 +5065,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAA/NAAC)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAA/NAAC)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAA/NAAC)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAA/NAAC)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>    
@@ -5083,10 +5083,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAA/NAAE)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAA/NAAE)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAA/NAAE)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAA/NAAE)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>    
@@ -5101,10 +5101,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAA/NAAG)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAA/NAAG)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAA/NAAG)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAA/NAAG)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>
@@ -5119,10 +5119,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAA/NAAI)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAA/NAAI)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAA/NAAI)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAA/NAAI)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:if> 
@@ -5137,10 +5137,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAT/NATC)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAT/NATC)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAT/NATC)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAT/NATC)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>    
@@ -5155,10 +5155,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAT/NATE)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAT/NATE)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAT/NATE)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAT/NATE)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>    
@@ -5173,10 +5173,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAT/NATG)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAT/NATG)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAT/NATG)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAT/NATG)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>
@@ -5191,10 +5191,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAT/NATI)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAT/NATI)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/NAT/NATI)" />
+				<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNB/SB/NAT/NATI)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:if>
@@ -5209,10 +5209,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="normalize-space(.)" />
+				<xsl:value-of select="arco-fn:name-cleaner(.)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="normalize-space(.)" />
+				<xsl:value-of select="arco-fn:name-cleaner(.)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:for-each>  
@@ -5227,10 +5227,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="normalize-space(.)" />
+				<xsl:value-of select="arco-fn:name-cleaner(.)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="normalize-space(.)" />
+				<xsl:value-of select="arco-fn:name-cleaner(.)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:for-each>    
@@ -5245,10 +5245,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="normalize-space(.)" />
+				<xsl:value-of select="arco-fn:name-cleaner(.)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="normalize-space(.)" />
+				<xsl:value-of select="arco-fn:name-cleaner(.)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:for-each>
@@ -5263,10 +5263,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="normalize-space(.)" />
+				<xsl:value-of select="arco-fn:name-cleaner(.)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="normalize-space(.)" />
+				<xsl:value-of select="arco-fn:name-cleaner(.)" />
 			</l0:name>
 		</rdf:Description>
 	</xsl:for-each>    
@@ -5286,10 +5286,10 @@
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>
@@ -5310,10 +5310,10 @@
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>
@@ -5334,10 +5334,10 @@
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>
@@ -5358,10 +5358,10 @@
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>
@@ -5382,10 +5382,10 @@
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>

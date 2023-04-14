@@ -885,7 +885,7 @@
 			</l0:name>
 			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource">
-	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Label'" />
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/SpecimenLabel'" />
 	            </xsl:attribute>
 			</arco-core:hasType>
 			<xsl:if test="./SPET">
@@ -927,7 +927,7 @@
 			</l0:name>
 			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource">
-	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Label'" />
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/SpecimenLabel'" />
 	            </xsl:attribute>
 			</arco-core:hasType>
 			<xsl:if test="./RPET">
@@ -2067,10 +2067,10 @@
 		            	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNPL/SP/SPN/SPNS))" />
 		            </xsl:attribute>
 					<rdfs:label>
-						<xsl:value-of select="normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNS)" />
+						<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNPL/SP/SPN/SPNS)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNS)" />
+						<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNPL/SP/SPN/SPNS)" />
 					</l0:name>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -2338,10 +2338,10 @@
 		            	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/BNPL/SP/SPN/SPNM))" />
 		            </xsl:attribute>
 					<rdfs:label>
-						<xsl:value-of select="normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNM)" />
+						<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNPL/SP/SPN/SPNM)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNM)" />
+						<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNPL/SP/SPN/SPNM)" />
 					</l0:name>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -3672,10 +3672,10 @@
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
-					<xsl:value-of select="record/metadata/schede/BNPL/SP/SPT/SPTA" />
+					<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNPL/SP/SPT/SPTA)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="record/metadata/schede/BNPL/SP/SPT/SPTA" />
+					<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNPL/SP/SPT/SPTA)" />
 				</l0:name>
 			</rdf:Description>
 		</xsl:if>
@@ -3797,10 +3797,10 @@
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
-					<xsl:value-of select="./RPT/RPTA" />
+					<xsl:value-of select="arco-fn:name-cleaner(./RPT/RPTA)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="./RPT/RPTA" />
+					<xsl:value-of select="arco-fn:name-cleaner(./RPT/RPTA)" />
 				</l0:name>
 			</rdf:Description>
 		</xsl:if>
