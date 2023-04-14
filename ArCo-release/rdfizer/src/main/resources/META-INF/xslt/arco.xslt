@@ -31972,11 +31972,11 @@
 									<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./ASSD)))" />
 								</xsl:attribute>
 							</arco-lite:hasRealizationDate>
-							<arco-core:isInvolvedIn>
+							<arco-cd:hasDating>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'Event/Accessory', $itemURI, '-creation')" />
+									<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-accessory-', arco-fn:urify(normalize-space(./ASST)), position())" />
 								</xsl:attribute>
-							</arco-core:isInvolvedIn>
+							</arco-cd:hasDating>
 						</xsl:if>
 						<xsl:if test="./ASSE">
 							<arco-core:description>
@@ -31997,33 +31997,66 @@
 							<xsl:value-of select="normalize-space(./ASST)" />
 						</l0:name>
 					</rdf:Description>
-					<!-- Event as individual -->
+					<!-- Dating as individual -->
 					<xsl:if test="./ASSD">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-                        		<xsl:value-of select="concat($NS, 'Event/Accessory', $itemURI, '-creation')" />
-                        	</xsl:attribute>
+								<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-accessory-', arco-fn:urify(normalize-space(./ASST)), position())" />
+							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-                		            <xsl:value-of select="'https://w3id.org/arco/ontology/core/EventOrSituationInTime'" />
-                        		</xsl:attribute>
+									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Dating'" />
+								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="'Realizzazione'" />
+								<xsl:value-of select="concat('Datazione dell accessorio del bene ', $itemURI)" />
 							</rdfs:label>
 							<rdfs:label xml:lang="en">
-								<xsl:value-of select="'Realization'" />
+								<xsl:value-of select="concat('Dating of accessory of cultural property ', $itemURI)" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of select="'Realizzazione'" />
+								<xsl:value-of select="concat('Datazione dell accessorio del bene ', $itemURI)" />
 							</l0:name>
 							<l0:name xml:lang="en">
-								<xsl:value-of select="'Realization'" />
+								<xsl:value-of select="concat('Dating of accessory  of cultural property ', $itemURI)" />
+							</l0:name>
+							<arco-cd:hasDatingEvent>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Event/', $itemURI, '-', arco-fn:urify(normalize-space(./ASST)), '-creation')" />
+								</xsl:attribute>
+							</arco-cd:hasDatingEvent>
+							<arco-cd:hasTimeInterval>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./ASSD)))" />
+								</xsl:attribute>
+							</arco-cd:hasTimeInterval>
+						</rdf:Description>
+						<!-- event of dating as individual -->
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Event/', $itemURI, '-', arco-fn:urify(normalize-space(./ASST)), '-creation')" />
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Realizzazione dell''accessorio del bene ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Realizzazione dell''accessorio del bene ', $itemURI)" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Creation of accessory of cultural property ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="concat('Creation of accessory of cultural property ', $itemURI)" />
 							</l0:name>
 							<tiapit:atTime>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./ASSD)))" />
-                            	</xsl:attribute>
+								</xsl:attribute>
 							</tiapit:atTime>
 						</rdf:Description>
 						<rdf:Description>
