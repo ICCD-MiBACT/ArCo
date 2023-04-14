@@ -2805,9 +2805,9 @@
 				</xsl:for-each>
 			</xsl:if>
 			<xsl:if test="./SBEG">
-				<arco-spe:graphicSymbols>
+				<arco-dd:graphicSymbols>
 					<xsl:value-of select="normalize-space(./SBEG)" />
-				</arco-spe:graphicSymbols>
+				</arco-dd:graphicSymbols>
 			</xsl:if>
 			<xsl:if test="./SBEI">
 				<arco-spe:headingTranscript>

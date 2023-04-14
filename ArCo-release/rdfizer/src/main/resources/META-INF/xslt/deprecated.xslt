@@ -784,7 +784,7 @@
 				</arco-cd:hasSubject>
 			</xsl:if>
 		</xsl:for-each>
-		<!-- technical caracteristic of cultural property (version 4.00) -->
+		<!-- technical characteristic of cultural property (version 4.00) -->
 		<xsl:if test="record/metadata/schede/*/MT/MTC/*">
 			<xsl:for-each select="record/metadata/schede/*/MT/MTC">
 				<xsl:if test="not(starts-with(lower-case(normalize-space(./MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(./MTCM)), 'n.r'))">
@@ -1091,6 +1091,14 @@
 					</xsl:attribute>
 				</arco-cd:hasFruition>
 			</xsl:for-each>
+		</xsl:if>
+		<!--  functional purpose -->
+		<xsl:if test="record/metadata/schede/*/OG/OGT/OGTF and ($sheetType='CA' or $sheetType='MA')">
+			<arco-dd:hasFunctionalPurpose>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'FunctionalPurpose/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTF)))" />
+				</xsl:attribute>
+			</arco-dd:hasFunctionalPurpose>
 		</xsl:if>
 	</rdf:Description>
 	</xsl:if>
@@ -1843,6 +1851,7 @@
 			</rdf:Description>
 		</xsl:for-each>
 	</xsl:if>
+
 	<!-- numismatic property counterstamp -->
 	<xsl:for-each select="record/metadata/schede/NU/DA/CON">
 		<rdf:Description>

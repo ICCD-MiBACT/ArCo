@@ -2499,11 +2499,11 @@
 				</xsl:if>
 				<!-- functional purpose for MA and CA -->
 				<xsl:if test="record/metadata/schede/*/OG/OGT/OGTF and ($sheetType='CA' or $sheetType='MA')">
-					<arco-dd:hasFunctionalPurpose>
+					<arco-cd:hasFunctionalPurpose>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'FunctionalPurpose/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTF)))" />
+							<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTF)))" />
 						</xsl:attribute>
-					</arco-dd:hasFunctionalPurpose>
+					</arco-cd:hasFunctionalPurpose>
 				</xsl:if>
 				<!-- heritage protection agency -->
 				<xsl:choose>
