@@ -6399,10 +6399,10 @@
 						</xsl:attribute>
 					</rdf:type>   
 					<rdfs:label>
-						<xsl:value-of select="." />
+						<xsl:value-of select="arco-fn:name-cleaner(.)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="." />
+						<xsl:value-of select="arco-fn:name-cleaner(.)" />
 					</l0:name>
 				</rdf:Description>
 			</xsl:for-each>
@@ -6583,10 +6583,10 @@
 						</xsl:attribute>
 					</rdf:type>   
 					<rdfs:label>
-						<xsl:value-of select="." />
+						<xsl:value-of select="arco-fn:name-cleaner(.)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="." />
+						<xsl:value-of select="arco-fn:name-cleaner(.)" />
 					</l0:name>
 				</rdf:Description>
 			</xsl:for-each>
@@ -9155,10 +9155,10 @@
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="." />
+					<xsl:value-of select="arco-fn:name-cleaner(.)" />
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>

@@ -3690,10 +3690,10 @@
 						</xsl:attribute>
 					</rdf:type>   
 					<rdfs:label>
-						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRT/SRTA" />
+						<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNPE/SR/SRT/SRTA)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="record/metadata/schede/BNPE/SR/SRT/SRTA" />
+						<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/BNPE/SR/SRT/SRTA)" />
 					</l0:name>
 				</rdf:Description>
 			</xsl:if>
@@ -3710,10 +3710,10 @@
 						</xsl:attribute>
 					</rdf:type>   
 					<rdfs:label>
-						<xsl:value-of select="./RRD/RRDA" />
+						<xsl:value-of select="arco-fn:name-cleaner(./RRD/RRDA)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="./RRD/RRDA" />
+						<xsl:value-of select="arco-fn:name-cleaner(./RRD/RRDA)" />
 					</l0:name>
 				</rdf:Description>
 			</xsl:if>
@@ -3833,10 +3833,10 @@
 						</xsl:attribute>
 					</rdf:type>   
 					<rdfs:label>
-						<xsl:value-of select="./RRT/RRTA" />
+						<xsl:value-of select="arco-fn:name-cleaner(./RRT/RRTA)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="./RRT/RRTA" />
+						<xsl:value-of select="arco-fn:name-cleaner(./RRT/RRTA)" />
 					</l0:name>
 				</rdf:Description>
 			</xsl:if>

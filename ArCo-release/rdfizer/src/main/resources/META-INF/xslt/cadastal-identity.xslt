@@ -988,14 +988,10 @@
 	            					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 	            				</xsl:attribute>
 								<rdfs:label>
-									<xsl:call-template name="CamelCase">
-										<xsl:with-param name="text" select="normalize-space(.)" />
-									</xsl:call-template>
+									<xsl:value-of select="arco-fn:name-cleaner(.)" />
 								</rdfs:label>
 								<l0:name>
-									<xsl:call-template name="CamelCase">
-										<xsl:with-param name="text" select="normalize-space(.)" />
-									</xsl:call-template>
+									<xsl:value-of select="arco-fn:name-cleaner(.)" />
 								</l0:name>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -1230,10 +1226,10 @@
 						</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./LGCO)"/>
+							<xsl:value-of select="arco-fn:name-cleaner(./LGCO)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./LGCO)"/>
+							<xsl:value-of select="arco-fn:name-cleaner(./LGCO)"/>
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>

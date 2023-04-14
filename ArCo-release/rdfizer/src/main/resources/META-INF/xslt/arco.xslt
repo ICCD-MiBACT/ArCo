@@ -971,10 +971,80 @@
 								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="record/metadata/schede/*/DR/DRV" />
+								<xsl:value-of select="arco-fn:name-cleaner(.)" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="record/metadata/schede/*/DR/DRV" />
+								<xsl:value-of select="arco-fn:name-cleaner(.)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/CM/CMR">
+					<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+            	           		 <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-compilation-', arco-fn:arcofy(.))" />
+           	    	   		</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	                   	    	    <xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+		                       	</xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Ente responsabile della compilazione della scheda del bene culturale ', $itemURI, ': ', normalize-space(record/metadata/schede/*/DR/DRV))" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Ente responsabile della compilazione della scheda del bene culturale ', $itemURI, ': ', normalize-space(record/metadata/schede/*/DR/DRV))" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Responsible agency of catalogue record compilation of cultural property ', $itemURI, ': ', normalize-space(record/metadata/schede/*/DR/DRV))" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="concat('Responsible agency of catalogue record compilation of cultural property ', $itemURI, ': ', normalize-space(record/metadata/schede/*/DR/DRV))" />
+							</l0:name>
+							<arco-core:hasRole>
+								<xsl:attribute name="rdf:resource">
+	            	   	            <xsl:value-of select="concat($NS, 'Role/ResponsibleAgent')" />
+	                	   	    </xsl:attribute>
+							</arco-core:hasRole>
+							<arco-core:hasAgent>
+								<xsl:attribute name="rdf:resource">
+	    	   	                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	        	   	            </xsl:attribute>
+							</arco-core:hasAgent>
+						</rdf:Description>
+						<!-- Role as an individual -->
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+	        	   	            <xsl:value-of select="concat($NS, 'Role/ResponsibleAgent')" />
+	            	   	    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	                        	   	<xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+		                       </xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="'Responsabile dell''attività'" />
+							</rdfs:label>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="'Responsible agent'" />
+							</rdfs:label>
+						</rdf:Description>
+						<!-- Agent as an individual -->
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+	           		            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	               		    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	                           		<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="arco-fn:name-cleaner(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="arco-fn:name-cleaner(.)" />
 							</l0:name>
 						</rdf:Description>
 					</xsl:if>
@@ -1134,6 +1204,9 @@
 						<rdfs:label>
 							<xsl:value-of select="arco-fn:name-cleaner(.)" />
 						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="arco-fn:name-cleaner(.)" />
+						</l0:name>
 					</rdf:Description>
 					<!-- Role: Referente verifica scientifica -->
 					<rdf:Description>
@@ -1327,6 +1400,9 @@
 							<rdfs:label>
 								<xsl:value-of select="arco-fn:name-cleaner(.)" />
 							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="arco-fn:name-cleaner(.)" />
+							</l0:name>
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
@@ -1390,6 +1466,9 @@
 							<rdfs:label>
 								<xsl:value-of select="arco-fn:name-cleaner(.)" />
 							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="arco-fn:name-cleaner(.)" />
+							</l0:name>
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
@@ -1453,6 +1532,9 @@
 							<rdfs:label>
 								<xsl:value-of select="arco-fn:name-cleaner(.)" />
 							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="arco-fn:name-cleaner(.)" />
+							</l0:name>
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
@@ -1499,6 +1581,9 @@
 						<rdfs:label>
 							<xsl:value-of select="arco-fn:name-cleaner(.)" />
 						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="arco-fn:name-cleaner(.)" />
+						</l0:name>
 					</rdf:Description>
 					<!-- Role: Funzionario responsabile -->
 					<rdf:Description>
@@ -1561,6 +1646,9 @@
 						<rdfs:label>
 							<xsl:value-of select="arco-fn:name-cleaner(.)" />
 						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="arco-fn:name-cleaner(.)" />
+						</l0:name>
 					</rdf:Description>
 					<!-- Role funzionario responsabile -->
 					<rdf:Description>
@@ -1671,6 +1759,9 @@
 						<rdfs:label>
 							<xsl:value-of select="arco-fn:name-cleaner(.)" />
 						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="arco-fn:name-cleaner(.)" />
+						</l0:name>
 					</rdf:Description>
 					<!-- responsible research and compilation role -->
 					<rdf:Description>
@@ -1732,6 +1823,9 @@
 					<rdfs:label>
 						<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/*/CM/RVM/RVME)" />
 					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/*/CM/RVM/RVME)" />
+					</l0:name>
 				</rdf:Description>
 				<!-- digital transcription responsible agent role -->
 				<rdf:Description>
@@ -1792,6 +1886,9 @@
 					<rdfs:label>
 						<xsl:value-of select="arco-fn:name-cleaner(.)" />
 					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="arco-fn:name-cleaner(.)" />
+					</l0:name>
 				</rdf:Description>
 				<!-- digital transcription operator role -->
 				<rdf:Description>
@@ -10106,10 +10203,10 @@
             				</xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of select="./CTFC" />
+							<xsl:value-of select="arco-fn:name-cleaner(./CTFC)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="./CTFC" />
+							<xsl:value-of select="arco-fn:name-cleaner(./CTFC)" />
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
@@ -10518,10 +10615,10 @@
 						</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./BIBA)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./BIBA)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./BIBA)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./BIBA)" />
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
@@ -10692,10 +10789,10 @@
 						</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./BSEA)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./BSEA)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./BSEA)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./BSEA)" />
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
@@ -10855,12 +10952,12 @@
 	            		</xsl:attribute>
 						<rdfs:label>
 							<xsl:call-template name="CamelCase">
-								<xsl:with-param name="text" select="normalize-space(.)" />
+								<xsl:with-param name="text" select="arco-fn:name-cleaner(.)" />
 							</xsl:call-template>
 						</rdfs:label>
 						<l0:name>
 							<xsl:call-template name="CamelCase">
-								<xsl:with-param name="text" select="normalize-space(.)" />
+								<xsl:with-param name="text" select="arco-fn:name-cleaner(.)" />
 							</xsl:call-template>
 						</l0:name>
 						<rdf:type>
@@ -15055,10 +15152,10 @@
 	                            </xsl:attribute>
 							<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(./ISEO)" />
+								<xsl:value-of select="arco-fn:name-cleaner(./ISEO)" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(./ISEO)" />
+								<xsl:value-of select="arco-fn:name-cleaner(./ISEO)" />
 							</l0:name>
 						</rdf:Description>
 					</xsl:if>
@@ -15830,10 +15927,10 @@
                             </xsl:attribute>
 							<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
+								<xsl:value-of select="arco-fn:name-cleaner(.)" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
+								<xsl:value-of select="arco-fn:name-cleaner(.)" />
 							</l0:name>
 						</rdf:Description>
 					</xsl:for-each>
@@ -15895,10 +15992,10 @@
                             </xsl:attribute>
 							<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
+								<xsl:value-of select="arco-fn:name-cleaner(.)" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
+								<xsl:value-of select="arco-fn:name-cleaner(.)" />
 							</l0:name>
 						</rdf:Description>
 					</xsl:for-each>
@@ -16217,10 +16314,10 @@
 						</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./CPRN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./CPRN)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./CPRN)" />
+							<xsl:value-of select="arco-fn:name-cleaner(./CPRN)" />
 						</l0:name>
 						<xsl:if test="./CPRI">
 							<arco-cd:address>
