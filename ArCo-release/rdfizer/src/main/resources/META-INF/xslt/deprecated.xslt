@@ -4067,6 +4067,29 @@
 					</xsl:for-each>
 		</rdf:Description>
 	</xsl:for-each>
+	<!-- other cultural property records -->
+	<xsl:for-each select="record/metadata/schede/*/AC/ACS">
+		<xsl:if test="./*">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'CulturalPropertyRecord/', $itemURI, '-', position())" />
+				</xsl:attribute>
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord" />
+				<xsl:if test="./ACSC">
+					<arco-catalogue:culturalPropertyRecordIdentifier>
+						<xsl:value-of select="normalize-space(./ACSC)" />
+					</arco-catalogue:culturalPropertyRecordIdentifier>
+				</xsl:if>
+				<xsl:if test="./ACSE and (not(starts-with(lower-case(normalize-space(./ACSE)), 'nr')) and not(starts-with(lower-case(normalize-space(./ACSE)), 'n.r')))">
+					<arco-cd:hasCulturalPropertyRecordResponsibleAgent>
+						<xsl:attribute name="rdf:resource">
+			              		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./ACSE))" />
+			              	</xsl:attribute>
+					</arco-cd:hasCulturalPropertyRecordResponsibleAgent>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:for-each>
 	<!-- Authorship -->
 	<!-- authorship attribution as an individual -->
 	<xsl:if test="not ($sheetType='F' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0' or $sheetVersion='2.00' or $sheetVersion='2.00_ICCD0' or $sheetVersion='1.00' or $sheetVersion='1.00_ICCD0'))">
@@ -4596,6 +4619,7 @@
 			</rdf:Description>
 		</xsl:if>
 	</xsl:for-each>
+
 	<!-- sex estimate -->
 	<xsl:if test="record/metadata/schede/AT/DA/STS">
 		<rdf:Description>

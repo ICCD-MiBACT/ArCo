@@ -2756,7 +2756,7 @@
 				<xsl:if test="./*">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'Record/', $itemURI, '-', position())" />
+							<xsl:value-of select="concat($NS, 'CulturalPropertyRecord/', $itemURI, '-', position())" />
 						</xsl:attribute>
 						<arco-catalogue:describes>
 							<xsl:attribute name="rdf:resource">
