@@ -673,18 +673,11 @@
 						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
-							<arco-cd:hasRelatedEvent>
+							<arco-cd:hasDating>
 								<xsl:attribute name="rdf:resource">
-									 <xsl:choose>
-          				                  <xsl:when test="./DTN/DTNS and (not(starts-with(lower-case(normalize-space(./DTN/DTNS)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTN/DTNS)), 'n.r')))">
-                        			        <xsl:value-of select="concat($NS, 'Event/', $itemURI, '-', arco-fn:urify(normalize-space(./DTN/DTNS)))" />
-			                            </xsl:when>
-            			                <xsl:otherwise>
-                        			        <xsl:value-of select="concat($NS, 'Event/', $itemURI, '-creation-', position())" />
-			                            </xsl:otherwise>
-            			            </xsl:choose>
+									<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', $parentPosition)" />
 								</xsl:attribute>
-							</arco-cd:hasRelatedEvent>
+							</arco-cd:hasDating>
 							<rdfs:label>
 								<xsl:value-of select="normalize-space(.)" />
 							</rdfs:label>
@@ -987,9 +980,6 @@
 
 			<!-- part of cultural property when there is RE/REN/RENR (A and PG, dating) -->
 			<xsl:for-each select="record/metadata/schede/A/RE">
-				<xsl:variable name="dating">
-					<xsl:value-of select="concat($NS, 'EventInterpetation/', $itemURI, '-', position())" />
-				</xsl:variable>
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
@@ -1101,18 +1091,11 @@
 								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
-							<arco-cd:hasRelatedEvent>
+							<arco-cd:hasDating>
 								<xsl:attribute name="rdf:resource">
-									 <xsl:choose>
-										<xsl:when test="./REN/RENS and (not(starts-with(lower-case(normalize-space(./REN/RENS)), 'nr')) and not(starts-with(lower-case(normalize-space(./REN/RENS)), 'n.r')))">
-											<xsl:value-of select="concat($NS, 'Event/', $itemURI, '-', arco-fn:urify(normalize-space(./REN/RENS)))" />
-										</xsl:when>
-										<xsl:otherwise>
-											<xsl:value-of select="concat($NS, 'Event/', $itemURI, '-creation-', position())" />
-										</xsl:otherwise>
-									</xsl:choose>
+									<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', $parentPosition)" />
 								</xsl:attribute>
-							</arco-cd:hasRelatedEvent>
+							</arco-cd:hasDating>
 							<rdfs:label>
 								<xsl:value-of select="normalize-space(.)" />
 							</rdfs:label>

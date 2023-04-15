@@ -5681,7 +5681,221 @@
 			</xsl:for-each>
 		</rdf:Description>
 	</xsl:for-each>
-							
+	<!-- dating of cultural property -->
+	<xsl:for-each select="record/metadata/schede/*/DT">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', position())" />
+			</xsl:attribute>
+			<!-- Source of dating -->
+			<xsl:for-each select="./DTM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]"><!--  allow multiple sources es:ICCD11574733 -->
+				<arco-cd:hasInterpretationCriterion>
+					<xsl:choose>
+						<xsl:when test="./DTMM">
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./DTMM)))" />
+							</xsl:attribute>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space()))" />
+							</xsl:attribute>
+						</xsl:otherwise>
+					</xsl:choose>
+				</arco-cd:hasInterpretationCriterion>
+			</xsl:for-each>
+		</rdf:Description>
+		<!-- Source of dating as individual -->
+		<xsl:for-each select="./DTM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]"><!--  allow multiple sources es:ICCD11574733 -->
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:choose>
+						<xsl:when test="./DTMM">
+							<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./DTMM)))" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space()))" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:choose>
+						<xsl:when test="./DTMM">
+							<xsl:value-of select="normalize-space(./DTMM)" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="normalize-space()" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</rdfs:label>
+				<l0:name>
+					<xsl:choose>
+						<xsl:when test="./DTMM">
+							<xsl:value-of select="normalize-space(./DTMM)" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="normalize-space()" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</l0:name>
+				<xsl:if test="./DTMS">
+					<arco-core:specifications>
+						<xsl:value-of select="normalize-space(./DTMS)" />
+					</arco-core:specifications>
+				</xsl:if>
+			</rdf:Description>
+		</xsl:for-each>
+	</xsl:for-each>
+	<!-- dating of cultural property for A norm -->
+	<xsl:for-each select="record/metadata/schede/A/RE">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', position())" />
+			</xsl:attribute>
+			<!-- Source of dating -->
+			<xsl:for-each select="./REN/RENF[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+				<arco-cd:hasInterpretationCriterion>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space()))" />
+					</xsl:attribute>
+				</arco-cd:hasInterpretationCriterion>
+			</xsl:for-each>
+		</rdf:Description>
+		<!-- Source of dating as individual -->
+		<xsl:for-each select="./REN/RENF[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space()))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space()" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space()" />
+				</l0:name>
+				<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+			</rdf:Description>
+		</xsl:for-each>
+	</xsl:for-each>	
+	<!-- dating for related work -->
+	<xsl:if test="./ROFD and (not(starts-with(lower-case(normalize-space(./ROFD)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFD)), 'n.r')))">
+		<xsl:if test="./ROFD and (not(starts-with(lower-case(normalize-space(./ROFD)), 'nr')) and not(starts-with(lower-case(normalize-space(./ROFD)), 'n.r')))">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+        			<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />
+				</xsl:attribute>
+				<!-- Source of dating -->
+				<xsl:for-each select="./ROFM[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+					<arco-cd:hasInterpretationCriterion>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space()))" />
+						</xsl:attribute>
+					</arco-cd:hasInterpretationCriterion>
+				</xsl:for-each>
+			</rdf:Description>
+			<!-- Source of dating as individual -->
+			<xsl:for-each select="./ROFM[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space()))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
+						</xsl:attribute>
+					</rdf:type>
+					<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space()" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space()" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:for-each>
+		</xsl:if>
+	</xsl:if>
+	<xsl:for-each select="record/metadata/schede/*/OG/SGT/SGTT">
+		<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+				</xsl:attribute>
+				<xsl:if test="../SGTL and (not(starts-with(lower-case(normalize-space(../SGTL)), 'nr')) and not(starts-with(lower-case(normalize-space(../SGTL)), 'n.r')))">
+					<arco-cd:hasInterpretationCriterion>
+						<xsl:attribute name="rdf:resource">
+	            			<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(../SGTL)))" />
+	            		</xsl:attribute>
+					</arco-cd:hasInterpretationCriterion>
+				</xsl:if>
+			</rdf:Description>
+			<!-- Title source as an individual -->
+			<xsl:if test="../SGTL">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+              			<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(../SGTL)))" />
+                	</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
+						</xsl:attribute>
+					</rdf:type>
+					<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(../SGTL)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(../SGTL)" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+		</xsl:if>
+	</xsl:for-each>
+	<xsl:for-each select="record/metadata/schede/*/OG/SGT/SGTR">
+		<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+				</xsl:attribute>
+				<xsl:if test="../SGTL and (not(starts-with(lower-case(normalize-space(../SGTL)), 'nr')) and not(starts-with(lower-case(normalize-space(../SGTL)), 'n.r')))">
+					<arco-cd:hasInterpretationCriterion>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(../SGTL)))" />
+	       				</xsl:attribute>
+					</arco-cd:hasInterpretationCriterion>
+				</xsl:if>
+			</rdf:Description>
+			<!-- Title source as an individual -->
+			<xsl:if test="../SGTL">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(../SGTL)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(../SGTL)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(../SGTL)" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+		</xsl:if>
+	</xsl:for-each>
 	</rdf:RDF>
 </xsl:template>								
 </xsl:stylesheet>
