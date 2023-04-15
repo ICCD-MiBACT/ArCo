@@ -733,6 +733,19 @@
 							</xsl:if>
 						</rdf:Description>
 					</xsl:for-each>
+					<xsl:for-each select="./ADT">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<arco-cd:hasDating>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'AlternativeDating/', $itemURI, '-', position())" />
+								</xsl:attribute>
+							</arco-cd:hasDating>
+						</rdf:Description>
+					</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
 			<!-- part of cultural property when there is RIAP -->

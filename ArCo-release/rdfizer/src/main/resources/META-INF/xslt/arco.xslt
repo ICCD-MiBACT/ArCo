@@ -5789,6 +5789,108 @@
 					</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
+			<!-- alternative dating -->
+			<xsl:for-each select="record/metadata/schede/*/DT">
+				<xsl:for-each select="./ADT">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+                        <xsl:value-of select="concat($NS, 'AlternativeDating/', $itemURI, '-', position())" />
+                    </xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Dating'" />
+                        </xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Cronologia alternativa', position(), ' del bene ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Alternative dating ', position(), ' of cultural property ', $itemURI)" />
+					</l0:name>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Cronologia alternativa', position(), ' del bene ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Alternative dating ', position(), ' of cultural property ', $itemURI)" />
+					</rdfs:label>
+					<arco-core:hasType>
+						<xsl:choose>
+							<xsl:when test="contains(normalize-space(lower-case(./ADTT)), 'alternativa')">
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeDating'" />
+								</xsl:attribute>
+							</xsl:when>
+							<xsl:when test="contains(normalize-space(lower-case(./ADTT)), 'superata')">
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ObsoleteDating'" />
+								</xsl:attribute>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DifferentDating'" />
+								</xsl:attribute>
+							</xsl:otherwise>
+						</xsl:choose>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/PreferredDating'" />
+						</xsl:attribute>
+					</arco-core:hasType>
+					<arco-cd:hasDatingEvent>
+						<xsl:choose>
+							<xsl:when test="../DTN/DTNS and (not(starts-with(lower-case(normalize-space(../DTN/DTNS)), 'nr')) and not(starts-with(lower-case(normalize-space(../DTN/DTNS)), 'n.r')))">
+								<xsl:attribute name="rdf:resource">
+                                    <xsl:value-of select="concat($NS, 'Event/', $itemURI, '-', arco-fn:urify(normalize-space(../DTN/DTNS)))" />
+                                </xsl:attribute>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:attribute name="rdf:resource">
+                                    <xsl:value-of select="concat($NS, 'Event/', $itemURI, '-creation-', position())" />
+                                </xsl:attribute>
+							</xsl:otherwise>
+						</xsl:choose>
+					</arco-cd:hasDatingEvent>
+					<xsl:if test="./ADTD">
+						<arco-cd:hasTimeInterval>
+							<xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./ADTD)))" />
+                            </xsl:attribute>
+						</arco-cd:hasTimeInterval>
+					</xsl:if>
+					<xsl:if test="./ADTM">
+						<arco-core:informationSource>
+							<xsl:value-of select="normalize-space(./ADTM)" />
+						</arco-core:informationSource>
+					</xsl:if>
+					<xsl:if test="./ADTN">
+						<arco-core:note>
+							<xsl:value-of select="normalize-space(./ADTN)" />
+						</arco-core:note>
+					</xsl:if>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./ADTD)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./ADTD)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./ADTD)" />
+					</l0:name>
+					<arco-arco:startTime>
+						<xsl:value-of select="normalize-space(./ADTD)" />
+					</arco-arco:startTime>
+					<arco-arco:endTime>
+						<xsl:value-of select="normalize-space(./ADTD)" />
+					</arco-arco:endTime>
+				</rdf:Description>
+			</xsl:for-each>
+			</xsl:for-each>
 			<!-- dating of cultural property for A norm -->
 			<xsl:for-each select="record/metadata/schede/A/RE">
 				<rdf:Description>
