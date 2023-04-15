@@ -441,11 +441,6 @@
 			        </xsl:attribute>
 	   			</arco-lite:hasAuthor>
 	   			<xsl:if test="./CLAR">
-					<arco-cd:hasBibliographicSource>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./CLAR)))" />
-	    	            </xsl:attribute>
-					</arco-cd:hasBibliographicSource>
 					<arco-lite:bibliographicReference>
 						<xsl:value-of select="normalize-space(./CLAR)" />
 					</arco-lite:bibliographicReference>
@@ -468,28 +463,6 @@
 					</xsl:attribute>
 				</rdf:type>
 			</rdf:Description>
-			<!-- bibliography as an indiviual -->
-			<xsl:if test="./CLAR">
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./CLAR)))" />
-        	    	</xsl:attribute>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
-            			</xsl:attribute>
-					</rdf:type>
-					<rdfs:label>
-						<xsl:value-of select="normalize-space(./CLAR)" />
-					</rdfs:label>
-					<l0:name>
-						<xsl:value-of select="normalize-space(./CLAR)" />
-					</l0:name>
-					<arco-cd:completeBibliographicReference>
-						<xsl:value-of select="normalize-space(./CLAR)" />
-					</arco-cd:completeBibliographicReference>
-				</rdf:Description>
-			</xsl:if>
 		</xsl:for-each>
 		<!-- observation survey -->
 		<xsl:if test="record/metadata/schede/*/DR/*">

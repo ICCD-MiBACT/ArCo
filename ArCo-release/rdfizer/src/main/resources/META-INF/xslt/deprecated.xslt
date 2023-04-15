@@ -5651,6 +5651,37 @@
 			</rdf:Description>
 		</xsl:for-each>
 	</xsl:if>
+	<!-- cadastral identity -->
+	<xsl:for-each select="record/metadata/schede/*/CS">
+		<xsl:variable name="parentPosition">
+			<xsl:value-of select="position()" />
+		</xsl:variable>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-', position())" />
+			</xsl:attribute>
+			<xsl:for-each select="./CTS">
+				<xsl:if test="./CTST and (not(starts-with(lower-case(normalize-space(./CTST)), 'nr')) and not(starts-with(lower-case(normalize-space(./CTST)), 'n.r')))">
+					<arco-location:hasCadastreType>
+						<xsl:attribute name="rdf:resource">
+							<xsl:choose>
+								<xsl:when test="lower-case(normalize-space(./CTST))='catasto terreni'">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/location/LandCadastre'" />
+								</xsl:when>
+								<xsl:when test="lower-case(normalize-space(./CTST))='catasto fabbricati'">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/location/BuildingCadastre'" />
+								</xsl:when>
+								<xsl:when test="lower-case(normalize-space(./CTST))='catasto misto'">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/location/BuildingAndLandCadastre'" />
+								</xsl:when>
+							</xsl:choose>
+						</xsl:attribute>
+					</arco-location:hasCadastreType>
+				</xsl:if>
+			</xsl:for-each>
+		</rdf:Description>
+	</xsl:for-each>
+							
 	</rdf:RDF>
 </xsl:template>								
 </xsl:stylesheet>

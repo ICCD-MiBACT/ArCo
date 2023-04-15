@@ -495,7 +495,7 @@
 							</xsl:attribute>
 						</arco-lite:hasCity>
 						<xsl:if test="./CTST and (not(starts-with(lower-case(normalize-space(./CTST)), 'nr')) and not(starts-with(lower-case(normalize-space(./CTST)), 'n.r')))">
-							<arco-location:hasCadastreType>
+							<arco-core:hasType>
 								<xsl:attribute name="rdf:resource">
 									<xsl:choose>
 										<xsl:when test="lower-case(normalize-space(./CTST))='catasto terreni'">
@@ -509,7 +509,7 @@
 										</xsl:when>
 									</xsl:choose>
 								</xsl:attribute>
-							</arco-location:hasCadastreType>
+							</arco-core:hasType>
 						</xsl:if>
 					</rdf:Description>
 					</xsl:if>
