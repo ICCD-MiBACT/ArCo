@@ -461,6 +461,16 @@
 				</xsl:attribute>
 			</arco-arco:hasCulturalPropertyInventoryCategory>
 		</xsl:if>
+		<!-- alternative photographic heritage classification -->
+		<xsl:if test="record/metadata/schede/*/SG/CLF/*">
+			<xsl:for-each select="record/metadata/schede/*/SG/CLF">
+				<arco-arco:hasPhotographicHeritageClassification>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'PhotographicHeritageClassification/', $itemURI, '-alternative-classification-', position())" />
+					</xsl:attribute>
+				</arco-arco:hasPhotographicHeritageClassification>
+			</xsl:for-each>
+		</xsl:if>
 		<!-- numismatic property functional classification -->
 		<xsl:if test="record/metadata/schede/NU/OG/OGT/OGTH">
 			<arco-arco:hasNumismaticPropertyCategory>
@@ -3491,6 +3501,63 @@
 				<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGS)" />
 			</l0:name>
 		</rdf:Description>
+	</xsl:if>
+	<!-- alternative photographic heritage classification -->
+	<xsl:if test="record/metadata/schede/*/SG/CLF/*">
+		<xsl:for-each select="record/metadata/schede/*/SG/CLF">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'PhotographicHeritageClassification/', $itemURI, '-alternative-classification-', position())" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/arco/PhotographicHeritageClassification'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Alternative classification ', position(), ' of photographic heritage ', $itemURI)" />
+				</rdfs:label>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Classificazione alternativa ', position(), ' del bene fotografico ', $itemURI)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Alternative classification ', position(), ' of photographic heritage ', $itemURI)" />
+				</l0:name>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Classificazione alternativa ', position(), ' del bene fotografico ', $itemURI)" />
+				</l0:name>
+				<xsl:if test="./CLFS">
+					<arco-arco:classifiedSubject>
+						<xsl:value-of select="normalize-space(./CLFS)" />
+					</arco-arco:classifiedSubject>
+				</xsl:if>
+				<xsl:if test="./CLFT">
+					<arco-arco:hasPhotographicHeritageClassificationType>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'PhotographicHeritageClassificationType/', arco-fn:urify(normalize-space(./CLFT)))" />
+						</xsl:attribute>
+					</arco-arco:hasPhotographicHeritageClassificationType>
+				</xsl:if>
+			</rdf:Description>
+			<xsl:if test="./CLFT">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'PhotographicHeritageClassificationType/', arco-fn:urify(normalize-space(./CLFT)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/arco/PhotographicHeritageClassificationType'" />
+						</xsl:attribute>
+					</rdf:type>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./CLFT)" />
+					</l0:name>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./CLFT)" />
+					</rdfs:label>
+				</rdf:Description>
+			</xsl:if>
+		</xsl:for-each>
 	</xsl:if>
 	<!-- numismatic property category -->
 	<xsl:if test="record/metadata/schede/NU/OG/OGT/OGTH">

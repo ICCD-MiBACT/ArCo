@@ -487,11 +487,11 @@
 					</arco-core:involvesAgent>
 				</xsl:for-each>
 			</xsl:if>
-			<arco-spe:hasTaxon>
+			<arco-core:hasTaxon>
 				<xsl:attribute name="rdf:resource">
 	    	    	<xsl:value-of select="$BiologicalTaxon" />
 				</xsl:attribute>
-			</arco-spe:hasTaxon>
+			</arco-core:hasTaxon>
 		</rdf:Description>
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -534,11 +534,11 @@
 					</arco-core:involvesAgent>
 				</xsl:for-each>
 			</xsl:if>
-			<arco-spe:hasTaxon>
+			<arco-core:hasTaxon>
 				<xsl:attribute name="rdf:resource">
 	    	    	<xsl:value-of select="$BiologicalTaxon" />
 				</xsl:attribute>
-			</arco-spe:hasTaxon>
+			</arco-core:hasTaxon>
 		</rdf:Description>
 	</xsl:for-each> 
 	<!-- BiologicalTaxon as individual 	--> 
@@ -1362,11 +1362,11 @@
 					</arco-core:involvesAgent>
 				</xsl:for-each>
 			</xsl:if>
-			<arco-spe:hasTaxon>
+			<arco-core:hasTaxon>
 				<xsl:attribute name="rdf:resource">
 	    	    	<xsl:value-of select="$BiologicalTaxon" />
 				</xsl:attribute>
-			</arco-spe:hasTaxon>
+			</arco-core:hasTaxon>
 		</rdf:Description>
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -1409,11 +1409,11 @@
 					</arco-core:involvesAgent>
 				</xsl:for-each>
 			</xsl:if>
-			<arco-spe:hasTaxon>
+			<arco-core:hasTaxon>
 				<xsl:attribute name="rdf:resource">
 	    	    	<xsl:value-of select="$BiologicalTaxon" />
 				</xsl:attribute>
-			</arco-spe:hasTaxon>
+			</arco-core:hasTaxon>
 		</rdf:Description>
 		<!-- BiologicalTaxon as individual 	--> 
 		<rdf:Description>
@@ -2195,11 +2195,11 @@
     	        <l0:name xml:lang="en">
         	    	<xsl:value-of select="concat('Identification of cultural property ', $itemURI)" />
             	</l0:name>
-				<arco-spe:hasTaxon>
+				<arco-core:hasTaxon>
 					<xsl:attribute name="rdf:resource">
 	    		    	<xsl:value-of select="$BiologicalTaxon" />
 					</xsl:attribute>
-				</arco-spe:hasTaxon>
+				</arco-core:hasTaxon>
 			</rdf:Description>
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -2222,11 +2222,11 @@
     	        <l0:name xml:lang="en">
         	    	<xsl:value-of select="concat('Classification of cultural property ', $itemURI)" />
             	</l0:name>
-				<arco-spe:hasTaxon>
+				<arco-core:hasTaxon>
 					<xsl:attribute name="rdf:resource">
 	    		    	<xsl:value-of select="$BiologicalTaxon" />
 					</xsl:attribute>
-				</arco-spe:hasTaxon>
+				</arco-core:hasTaxon>
 			</rdf:Description>
 			<!-- BiologicalTaxon as individual 	-->
 			<rdf:Description>
@@ -2260,11 +2260,11 @@
 							<xsl:with-param name="text" select="concat($sps-species-lab, $sps-subspecies-lab)" />
 						</xsl:call-template>
 		            </l0:name>
-					<arco-spe:hasDirectHigherRank>
+					<arco-corehasDirectHigherRank>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS,'BiologicalTaxon/', $sps-species)" />
 						</xsl:attribute>	
-					</arco-spe:hasDirectHigherRank>	
+					</arco-corehasDirectHigherRank>	
 	  			</rdf:Description>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/AT/OG/OGS/OGSN">
@@ -2273,11 +2273,11 @@
 						<xsl:value-of select="concat($NS,'BiologicalTaxon/', $sps-species)" />
 					</xsl:attribute>
 					<xsl:if test="record/metadata/schede/AT/OG/OGS/OGSG">
-						<arco-spe:hasDirectHigherRank>
+						<arco-corehasDirectHigherRank>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/AT/OG/OGS/OGSG))" />
 							</xsl:attribute>
-						</arco-spe:hasDirectHigherRank>
+						</arco-corehasDirectHigherRank>
 					</xsl:if>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">

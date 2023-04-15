@@ -693,14 +693,14 @@
 			</arco-arco:numberOfElements>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNB/SB/CBP/CBPE">
-			<arco-spe:numberOfLabels>
+			<arco-dd:numberOfLabels>
 				<xsl:value-of select="record/metadata/schede/BNB/SB/CBP/CBPE" />			
-			</arco-spe:numberOfLabels>
+			</arco-dd:numberOfLabels>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNB/SB/CBP/CBPB">
-			<arco-spe:numberOfEnvelopes>
+			<arco-dd:numberOfEnvelopes>
 				<xsl:value-of select="record/metadata/schede/BNB/SB/CBP/CBPB" />			
-			</arco-spe:numberOfEnvelopes>
+			</arco-dd:numberOfEnvelopes>
 		</xsl:if>
 		<xsl:for-each select="record/metadata/schede/BNB/SB/SBE">
 			<arco-dd:hasAffixedElement>
@@ -1334,11 +1334,6 @@
 					</tiapit:atTime>
 				</xsl:if>
 				<xsl:if test="./RBR/RBRB">
-					<arco-cd:hasBibliographicSource>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./RBR/RBRB)))" />
-	                	</xsl:attribute>
-					</arco-cd:hasBibliographicSource>
 					<arco-lite:bibliographicReference>
 						<xsl:value-of select="normalize-space(./RBR/RBRB)" />
 					</arco-lite:bibliographicReference>
@@ -1428,11 +1423,6 @@
 					</tiapit:atTime>
 				</xsl:if>
 				<xsl:if test="./RBR/RBRB">
-					<arco-cd:hasBibliographicSource>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./RBR/RBRB)))" />
-	                	</xsl:attribute>
-					</arco-cd:hasBibliographicSource>
 					<arco-lite:bibliographicReference>
 						<xsl:value-of select="normalize-space(./RBR/RBRB)" />
 					</arco-lite:bibliographicReference>
@@ -1524,11 +1514,6 @@
 					</tiapit:atTime>
 				</xsl:if>
 				<xsl:if test="./RBR/RBRB">
-					<arco-cd:hasBibliographicSource>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./RBR/RBRB)))" />
-	                	</xsl:attribute>
-					</arco-cd:hasBibliographicSource>
 					<arco-lite:bibliographicReference>
 						<xsl:value-of select="normalize-space(./RBR/RBRB)" />
 					</arco-lite:bibliographicReference>
@@ -1613,11 +1598,6 @@
 					</tiapit:atTime>
 				</xsl:if>
 				<xsl:if test="./RBR/RBRB">
-					<arco-cd:hasBibliographicSource>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./RBR/RBRB)))" />
-	                	</xsl:attribute>
-					</arco-cd:hasBibliographicSource>
 					<arco-lite:bibliographicReference>
 						<xsl:value-of select="normalize-space(./RBR/RBRB)" />
 					</arco-lite:bibliographicReference>
@@ -1663,11 +1643,6 @@
     	       	<xsl:value-of select="record/metadata/schede/BNB/SB/NBN/NBNA" />
             </l0:name>
 			<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'n.r')))">
-				<arco-cd:hasBibliographicSource>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)))" />
-	                	</xsl:attribute>
-					</arco-cd:hasBibliographicSource>
 					<arco-lite:bibliographicReference>
 						<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)" />
 					</arco-lite:bibliographicReference>
@@ -1690,11 +1665,6 @@
         		<xsl:value-of select="$BiologicalTaxon" />
 	        </xsl:attribute>    
 			<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'n.r')))">
-				<arco-cd:hasBibliographicSource>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)))" />
-	               	</xsl:attribute>
-				</arco-cd:hasBibliographicSource>
 				<arco-lite:bibliographicReference>
 					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)" />
 				</arco-lite:bibliographicReference>
@@ -1966,11 +1936,6 @@
             	<xsl:value-of select="record/metadata/schede/BNB/SB/TBI/TBIN" />
             </l0:name>
 			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIL and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'n.r')))">
-				<arco-cd:hasBibliographicSource>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)))" />
-	                </xsl:attribute>
-				</arco-cd:hasBibliographicSource>
 				<arco-lite:bibliographicReference>
 					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)" />
 				</arco-lite:bibliographicReference>
@@ -1983,11 +1948,6 @@
         		<xsl:value-of select="$TypespecimenTaxon" />
 	        </xsl:attribute>    
 			<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'n.r')))">
-				<arco-cd:hasBibliographicSource>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)))" />
-	               	</xsl:attribute>
-				</arco-cd:hasBibliographicSource>
 				<arco-lite:bibliographicReference>
 					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)" />
 				</arco-lite:bibliographicReference>
@@ -2319,11 +2279,6 @@
         			<xsl:value-of select="$RevisedTaxon" />
 	        	</xsl:attribute>    
 				<xsl:if test="./RBR/RBRB and (not(starts-with(lower-case(normalize-space(./RBR/RBRB)), 'nr')) and not(starts-with(lower-case(normalize-space(./RBR/RBRB)), 'n.r')))">
-					<arco-cd:hasBibliographicSource>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./RBR/RBRB)))" />
-	    	           	</xsl:attribute>
-					</arco-cd:hasBibliographicSource>
 					<arco-lite:bibliographicReference>
 						<xsl:value-of select="normalize-space(./RBR/RBRB)" />
 					</arco-lite:bibliographicReference>
@@ -3895,12 +3850,7 @@
 					</arco-lite:hasOperator>
 				</xsl:for-each>
 			</xsl:for-each>
-			<xsl:if test="./RBR/RBRB">	
-				<arco-cd:hasBibliographicSource>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./RBR/RBRB)))" />
-	    	        </xsl:attribute>
-				</arco-cd:hasBibliographicSource>
+			<xsl:if test="./RBR/RBRB">
 				<arco-lite:bibliographicReference>
 					<xsl:value-of select="normalize-space(./RBR/RBRB)" />
 				</arco-lite:bibliographicReference>
@@ -4614,21 +4564,16 @@
 				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIL">	
-				<arco-cd:hasBibliographicSource>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)))" />
-	                </xsl:attribute>
-				</arco-cd:hasBibliographicSource>
 				<arco-lite:bibliographicReference>
 					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)" />
 				</arco-lite:bibliographicReference>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIT">	
-				<arco-spe:hasTypeOfTypeSpecimen>
+				<arco-spe:hasTypification>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'TypeOfTypeSpecimen/', arco-fn:urify(record/metadata/schede/BNB/SB/TBI/TBIT))" />
+					<xsl:value-of select="concat($NS, 'Typification/', arco-fn:urify(record/metadata/schede/BNB/SB/TBI/TBIT))" />
 				</xsl:attribute>
-				</arco-spe:hasTypeOfTypeSpecimen>
+				</arco-spe:hasTypification>
 			</xsl:if>								
 			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIN">
 				<arco-spe:producesTaxon>
@@ -4696,11 +4641,11 @@
 		<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIT">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'TypeSpecimenType/', arco-fn:urify(record/metadata/schede/BNB/SB/TBI/TBIT))" />
+					<xsl:value-of select="concat($NS, 'Typification/', arco-fn:urify(record/metadata/schede/BNB/SB/TBI/TBIT))" />
 		        </xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-	        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/TypeOfTypeSpecimen'" />
+	        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Typification'" />
 	            	</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
@@ -5463,72 +5408,6 @@
 			</l0:name>
 		</rdf:Description>
 	</xsl:for-each>
-	<!-- BIBLIOGRAPHY AS INDIVIDUAL -->
-	<xsl:for-each select="record/metadata/schede/BNB/RB">
-		<xsl:if test="./RBR/RBRB">
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-            		<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./RBR/RBRB)))" />
-            	</xsl:attribute>
-				<rdf:type>
-					<xsl:attribute name="rdf:resource">
-            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
-            		</xsl:attribute>
-				</rdf:type>
-				<rdfs:label>
-					<xsl:value-of select="normalize-space(./RBR/RBRB)" />
-				</rdfs:label>
-				<l0:name>
-					<xsl:value-of select="normalize-space(./RBR/RBRB)" />
-				</l0:name>
-				<arco-cd:completeBibliographicReference>
-					<xsl:value-of select="normalize-space(./RBR/RBRB)" />
-				</arco-cd:completeBibliographicReference>
-			</rdf:Description>
-		</xsl:if>
-	</xsl:for-each>
-	<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'n.r')))">
-		<rdf:Description>
-			<xsl:attribute name="rdf:about">
-            	<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)))" />
-            </xsl:attribute>
-			<rdf:type>
-				<xsl:attribute name="rdf:resource">
-            		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
-            	</xsl:attribute>
-			</rdf:type>
-			<rdfs:label>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)" />
-			</rdfs:label>
-			<l0:name>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)" />
-			</l0:name>
-			<arco-cd:completeBibliographicReference>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)" />
-			</arco-cd:completeBibliographicReference>
-		</rdf:Description>
-	</xsl:if>
-	<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIL and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)), 'n.r')))">
-		<rdf:Description>
-			<xsl:attribute name="rdf:about">
-            	<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)))" />
-            </xsl:attribute>
-			<rdf:type>
-				<xsl:attribute name="rdf:resource">
-            		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
-            	</xsl:attribute>
-			</rdf:type>
-			<rdfs:label>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)" />
-			</rdfs:label>
-			<l0:name>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)" />
-			</l0:name>
-			<arco-cd:completeBibliographicReference>
-				<xsl:value-of select="normalize-space(record/metadata/schede/BNB/SB/TBI/TBIL)" />
-			</arco-cd:completeBibliographicReference>
-		</rdf:Description>
-	</xsl:if>
 	</xsl:if>
 	
 	</rdf:RDF>

@@ -16098,11 +16098,11 @@
 								<xsl:value-of select="normalize-space(./CLFS)" />
 							</rdfs:label>
 							<xsl:if test="./CLFT">
-								<arco-core:isDefinedBy>
+								<arco-core:isDefinedByClassificationSystem>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'ClassificationSystem/', arco-fn:urify(normalize-space(./CLFT)))" />
 									</xsl:attribute>
-								</arco-core:isDefinedBy>
+								</arco-core:isDefinedByClassificationSystem>
 							</xsl:if>
 						</rdf:Description>
 					</xsl:if>
@@ -30537,16 +30537,16 @@
 	                       			</xsl:attribute>
 								</rdf:type>
 								<rdfs:label xml:lang="it">
-									<xsl:value-of select="concat('Organizzatore dell'evento del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+									<xsl:value-of select="concat('Organizzatore dell evento del bene culturale ', $itemURI, ': ', normalize-space(.))" />
 								</rdfs:label>
 								<l0:name xml:lang="it">
-									<xsl:value-of select="concat('Ente responsabile del rilevamento del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+									<xsl:value-of select="concat('Organizzatore dell evento del bene culturale ', $itemURI, ': ', normalize-space(.))" />
 								</l0:name>
 								<rdfs:label xml:lang="en">
-									<xsl:value-of select="concat('Responsible agency of obervation of cultural property ', $itemURI, ': ', normalize-space(.))" />
+									<xsl:value-of select="concat('Organizer of event related to cultural property ', $itemURI, ': ', normalize-space(.))" />
 								</rdfs:label>
 								<l0:name xml:lang="en">
-									<xsl:value-of select="concat('Responsible agency of observation of cultural property ', $itemURI, ': ', normalize-space(.))" />
+									<xsl:value-of select="concat('Organizer of event related to cultural property ', $itemURI, ': ', normalize-space(.))" />
 								</l0:name>
 								<arco-core:hasRole>
 									<xsl:attribute name="rdf:resource">
