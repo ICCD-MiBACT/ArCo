@@ -566,7 +566,7 @@
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la lunghezza vibrante di uno strumento, in particolare di un cordofono.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a musical instrument vibrating length, in particular a chordophone.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/"/>
-        <rdfs:label xml:lang="en">Lunghezza vibrante</rdfs:label>
+        <rdfs:label xml:lang="it">Lunghezza vibrante</rdfs:label>
         <rdfs:label xml:lang="en">Vibrating length</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>

@@ -474,6 +474,10 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCulturalPropertySubjectOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasSubject"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;entità culturale con il concetto del soggetto rappresentato nel bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural entity to the concept found in its subject.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -2420,6 +2424,10 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isConservationStatusTypeOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/hasConservationStatus"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasType"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha tipo di stato di conservazione&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has conservation status type&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -2504,6 +2512,10 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCulturalEntityUseFunctionOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasUse"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasUseFunction"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega la funzione d&apos;uso di un&apos;entità alla relativa entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the use function of an entity to the related entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -2547,6 +2559,10 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCulturalPropertySubjectOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/classifies"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco-lite/isSubjectOf"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega il concetto del soggetto di un bene culturale al bene stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the concept found in the subject of a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>

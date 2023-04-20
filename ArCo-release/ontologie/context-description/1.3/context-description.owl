@@ -3978,8 +3978,17 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">coinvolge elemento</rdfs:label>
         <rdfs:label xml:lang="en">involves element</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x &lt;https://w3id.org/arco/ontology/denotative-description/involvesElement&gt; ?y.
+}
+
+WHERE {
+?x a-cd:involvesElement ?y.
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/involvesElement"/>
     </owl:ObjectProperty>
     
 
@@ -5381,8 +5390,17 @@ core:isAgentRoleOf ?thing .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is element involved in</rdfs:label>
         <rdfs:label xml:lang="it">è elemento coinvolto in</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x &lt;https://w3id.org/arco/ontology/denotative-description/isElementInvolvedIn&gt; ?y.
+}
+
+WHERE {
+?x a-cd:isElementInvolvedIn ?y.
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/isElementInvolvedIn"/>
     </owl:ObjectProperty>
     
 
@@ -14334,6 +14352,12 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/mainResponsibility"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/alternativeOrOutdatedResponsibility"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;individuazione di una responsabilità attribuibile a un agente relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici, quindi alle diverse personalità responsabili, a vario titolo, del ciclo produttivo del bene in esame, oltre che della sua circolazione, divulgazione, commercializzazione e promozione (committenti, stampatori, ritoccatori, coloritori, editori, distributori, sponsor, curatori e responsabili di edizioni e di serie, dedicanti e dedicatari, responsabili di collezioni e di collazioni, ecc.).</rdfs:comment>

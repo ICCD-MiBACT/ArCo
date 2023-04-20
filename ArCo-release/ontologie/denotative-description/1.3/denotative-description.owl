@@ -1699,6 +1699,15 @@ WHERE {?class a-dd:isVibratingLenghtOf ?char. }</core:constructQuery>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesAccompanyingInstrument">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isAccompanyingInstrumentInvolvedIn"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?x &lt;https://w3id.org/arco/ontology/musical-instrument/involvesAccompanyingInstrument&gt; ?y.
+}
+
+WHERE {
+?x &lt;https://w3id.org/arco/ontology/musical-instrument/involvesAccompanyingInstrument&gt; ?y.
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/involvesAccompanyingInstrument"/>
     </owl:ObjectProperty>
     
 
@@ -1725,6 +1734,14 @@ WHERE {?class a-dd:isVibratingLenghtOf ?char. }</core:constructQuery>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesElement">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isElementInvolvedIn"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità (es: un bene demoetnoantropologico) a un elemento materiale coinvolto nel bene (oggetto, enimale, vegetale, minerale, ecc).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class relates an entity (a demoethnoantropological cp) to an element involved in the cp (e.g. an object, an animal, a vegetal, a mineral etc).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">coinvolge elemento</rdfs:label>
+        <rdfs:label xml:lang="en">involves element</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="en">ICCD Normativa BDI: DA/DRM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1733,6 +1750,15 @@ WHERE {?class a-dd:isVibratingLenghtOf ?char. }</core:constructQuery>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesMainAgent">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMainAgentInvolvedIn"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?x &lt;https://w3id.org/arco/ontology/arco-lite/involvesMainAgent&gt; ?y.
+}
+
+WHERE {
+?x &lt;https://w3id.org/arco/ontology/denotative-description/involvesMainAgent&gt; ?y.
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/involvesMainAgent"/>
     </owl:ObjectProperty>
     
 
@@ -1741,6 +1767,16 @@ WHERE {?class a-dd:isVibratingLenghtOf ?char. }</core:constructQuery>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesSoloInstrument">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSoloInstrumentInvolvedIn"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?x &lt;https://w3id.org/arco/ontology/musical-instrument/involvesSoloInstrument&gt; ?y.
+}
+
+WHERE {
+?x 
+&lt;https://w3id.org/arco/ontology/denotative-description/involvesSoloInstrument&gt; ?y.
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/involvesSoloInstrument"/>
     </owl:ObjectProperty>
     
 
@@ -1763,7 +1799,17 @@ WHERE {?class a-dd:isVibratingLenghtOf ?char. }</core:constructQuery>
 
     <!-- https://w3id.org/arco/ontology/denotative-description/isAccompanyingInstrumentInvolvedIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isAccompanyingInstrumentInvolvedIn"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isAccompanyingInstrumentInvolvedIn">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?x &lt;https://w3id.org/arco/ontology/musical-instrument/isAccompanyingInstrumentInvolvedIn&gt; ?y.
+}
+
+WHERE {
+?x &lt;https://w3id.org/arco/ontology/musical-instrument/involvesAccompanyingInstrument&gt; ?y.
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/isAccompanyingInstrumentInvolvedIn"/>
+    </owl:ObjectProperty>
     
 
 
@@ -2103,7 +2149,16 @@ WHERE {?type a-dd:isConservationStatusOf ?class.}</core:constructQuery>
 
     <!-- https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?x a-cd:isDesignationInTimeOf ?y.
+}
+WHERE {
+?x a-dd:isDesignationInTimeOf ?y.
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isDesignationInTimeOf"/>
+    </owl:ObjectProperty>
     
 
 
@@ -2167,7 +2222,16 @@ WHERE {?char a-dd:isDiapasonOf ?class. }</core:constructQuery>
 
     <!-- https://w3id.org/arco/ontology/denotative-description/isElementInvolvedIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isElementInvolvedIn"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isElementInvolvedIn">
+        <rdfs:comment xml:lang="it">Questa proprietà è l&apos;inversa di &quot;ha elemento coinvolto&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has involved element&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is element involved in</rdfs:label>
+        <rdfs:label xml:lang="it">è elemento coinvolto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BDI: DA/DRM</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
     
 
 
@@ -2451,7 +2515,17 @@ WHERE {?type a-dd:isIconographicOrDecorativeApparatusOf ?class.}</core:construct
 
     <!-- https://w3id.org/arco/ontology/denotative-description/isMainAgentInvolvedIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMainAgentInvolvedIn"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMainAgentInvolvedIn">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?x &lt;https://w3id.org/arco/ontology/arco-lite/isMainAgentInvolvedIn&gt; ?y.
+}
+
+WHERE {
+?x &lt;https://w3id.org/arco/ontology/denotative-description/isMainAgentInvolvedIn&gt; ?y.
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isMainAgentInvolvedIn"/>
+    </owl:ObjectProperty>
     
 
 
@@ -2778,6 +2852,14 @@ WHERE {?char a-dd:isShapeOf ?class. }</core:constructQuery>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/usesSoftware"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Software"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà è l&apos;inversa di &quot;usa software&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;uses software&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is software used for</rdfs:label>
+        <rdfs:label xml:lang="it">è software usato per</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa F: FVCP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2826,7 +2908,17 @@ select * where {
 
     <!-- https://w3id.org/arco/ontology/denotative-description/isSoloInstrumentInvolvedIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSoloInstrumentInvolvedIn"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSoloInstrumentInvolvedIn">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <core:constructQuery>CONSTRUCT {
+?x &lt;https://w3id.org/arco/ontology/musical-instrument/isSoloInstrumentInvolvedIn&gt; ?y.
+}
+
+WHERE {
+?x &lt;https://w3id.org/arco/ontology/musical-instrument/isSoloInstrumentInvolvedIn&gt; ?y.
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/isSoloInstrumentInvolvedIn"/>
+    </owl:ObjectProperty>
     
 
 
@@ -3170,6 +3262,14 @@ WHERE {?char a-dd:isVibratingLenghtOf ?class. }</core:constructQuery>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/usesSoftware">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Software"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene (e.g. fotografico) con il programma informatico utilizzato per visualizzare, memorizzare ed elaborare il bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an object (e.g. photographic cp) to the software used for visualizing, saving and editing the object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">usa software</rdfs:label>
+        <rdfs:label xml:lang="en">uses software</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa F: FVCP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -3614,6 +3714,13 @@ WHERE {?class a-dd:proposedIntervention ?int.}</core:constructQuery>
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/writingMethod">
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica il metodo di scrittura utilizzato. Per esempio, se la scritta in esame è autografa, manoscritta, stampata, ecc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the writing method of a text. E.g. handritten, printed, signed etc.</rdfs:comment>
+        <rdfs:label xml:lang="it">metodo di scrittura</rdfs:label>
+        <rdfs:label xml:lang="en">writing method</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SBEA
 ICCD Normativa BNP: SPEP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>

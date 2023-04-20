@@ -287,16 +287,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="en">are coordinates of</rdfs:label>
         <rdfs:label xml:lang="it">sono coordinate di</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/coordinate"/>
-        <core:replacingQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
-
-select * where {
-?thing clv:hasGeometry ?geo .
-?geo clv:coordinate ?coor .
-}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -557,20 +549,9 @@ a-loc:hasCadastreType ?type.
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="it">ha coordinate</rdfs:label>
         <rdfs:label xml:lang="en">has coordinates</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: GE/GEC - versioni precedenti: GP/GPD; GA/GAPD; GL/GLS</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/coordinate"/>
-        <core:replacingQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
-
-CONSTRUCT {
-?geo clv:coordinate ?coor .
-}
-
-WHERE {
-?geo a-loc:hasCoordinates ?coor .
-}</core:replacingQuery>
     </owl:ObjectProperty>
     
 
@@ -2446,21 +2427,9 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="en">latitude</rdfs:label>
         <rdfs:label xml:lang="it">latitudine</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECY - Normative precedenti: GP/GPD/GPDP/GPDPY; GA/GAD/GADP/GADPY; GL/GLD/GLDP/GLDPY</a-cat:iccdNormTag>
-        <core:constructQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
-
-CONSTRUCT {
-?x clv:lat ?lat .
-}
-
-WHERE {
-?x a-loc:hasCoordinates ?coor .
-?coor a-loc:lat ?lat .
-}</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/lat"/>
     </owl:DatatypeProperty>
     
 
@@ -2492,21 +2461,9 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="en">longitude</rdfs:label>
         <rdfs:label xml:lang="it">longitudine</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECX - Normative precedenti: GP/GPD/GPDP/GPDPX; GA/GAD/GADP/GADPX; GL/GLD/GLDP/GLDPX</a-cat:iccdNormTag>
-        <core:constructQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt; 
-
-CONSTRUCT {
-?x clv:long ?long .
-}
-
-WHERE {
-?x a-loc:hasCoordinates ?coor .
-?coor a-loc:long ?long .
-}</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/long"/>
     </owl:DatatypeProperty>
     
 
@@ -3185,6 +3142,16 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ChronostratigraphicClass">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la cronostratigrafia del contesto in cui il bene si trovava prima di essere raccolto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the chronostratigraphic class of the context from which the cp was taken.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Chronostratigraphic class</rdfs:label>
+        <rdfs:label xml:lang="it">Classe cronostratigrafica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG
+ICCD Normativa BNP: ETG
+ICCD Normativa BNPE: IRG</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3193,6 +3160,16 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ChronostratigraphicSeries">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità cronostratigrafica della serie.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the chronostratigraphic unit &quot;series&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Chronostratigraphic series</rdfs:label>
+        <rdfs:label xml:lang="it">Serie cronostratigrafica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGO
+ICCD Normativa BNP: ETG/ETGO
+ICCD Normativa BNPE: IRG/IRGO</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3201,6 +3178,16 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ChronostratigraphicStage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità cronostratigrafica fondamentale del piano.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the chronostratigraphic fundamental unit &quot;stage&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Chronostratigraphic stage</rdfs:label>
+        <rdfs:label xml:lang="it">Piano cronostratigrafico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGT
+ICCD Normativa BNP: ETG/ETGT
+ICCD Normativa BNPE: IRG/IRGT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3209,6 +3196,14 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ChronostratigraphicSubstage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+        <rdfs:comment xml:lang="it">Questaclasse rappresenta l&apos;unità cronostratigrafica del sottopiano.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the chronostratigraphic unit &quot;substage&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Chrnonostratigraphic substage</rdfs:label>
+        <rdfs:label xml:lang="it">Sottopiano cronostratigrafico</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGS
+ICCD Normativa BNP: ETG/ETGS
+ICCD Normativa BNPE: IRG/IRGS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3217,6 +3212,16 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ChronostratigraphicSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità cronostratigrafica &quot;sistema&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the chronostratigraphic unit &quot;system&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Chronostratigraphic system</rdfs:label>
+        <rdfs:label xml:lang="it">Sistema cronostratigrafico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGP
+ICCD Normativa BNP: ETG/ETGP
+ICCD Normativa BNPE: IRG/IRGP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3225,6 +3230,15 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Chronozone">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità cronostratigrafica &quot;cronozona&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the chronostratigraphic unit &quot;chronozone&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Chronozone</rdfs:label>
+        <rdfs:label xml:lang="en">Cronozona</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGC
+ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3249,7 +3263,7 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents class situation</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="en">Climate situation</rdfs:label>
-        <rdfs:label xml:lang="en">Situazione climatica</rdfs:label>
+        <rdfs:label xml:lang="it">Situazione climatica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa PG: CA/CLM, CA/CAT. Normativa MODI: CA/CAT. Normativa BNB: LR/LRI/LRIH</a-cat:iccdNormTag>
@@ -3290,12 +3304,6 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasAltitude"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/Altitude"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/lat"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
@@ -3311,20 +3319,9 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="it">Coordinate</rdfs:label>
         <rdfs:label xml:lang="en">Coordinates</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: GE/GEC - Normative precedenti: GP/GPD; GA/GAPD; GL/GLS</a-cat:iccdNormTag>
-        <core:constructQuery>prefix clv: &lt;https://w3id.org/italia/onto/CLV/&gt;
-
-CONSTRUCT {
-?geo clv:coordinate ?coor .
-}
-
-WHERE {
-?geo a-loc:hasCoordinates ?coor .
-}</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/coordinate"/>
     </owl:Class>
     
 
@@ -3389,6 +3386,16 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Eontem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità cronostratigrafica di rango più alto dell&apos;eonotema. L&apos;unità geocronologica corrispondente è l&apos;Eon.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the cronostratigraphic unit &quot;Eontem&quot;, corrisponding to the chronostratigraphic &quot;Eon&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Eonotema</rdfs:label>
+        <rdfs:label xml:lang="en">Eontem</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGE
+ICCD Normativa BNP: ETG/ETGE
+ICCD Normativa BNPE: IRG/IRGE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3397,6 +3404,16 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Erathem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità cronostratigrafica era.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the cronostratigraphic class &quot;erathem&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Eratema</rdfs:label>
+        <rdfs:label xml:lang="en">Erathem</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGR
+ICCD Normativa BNP: ETG/ETGR
+ICCD Normativa BNPE: IRG/IRGR</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3421,6 +3438,16 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeochronologicalAge">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica età.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the geochronological class &quot;age&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Età geocronologica</rdfs:label>
+        <rdfs:label xml:lang="en">Geochronological age</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGT
+ICCD Normativa BNP: ETG/ETGT
+ICCD Normativa BNPE: IRG/IRGT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3429,6 +3456,14 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeochronologicalClass">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una classe geocronologica usata per descrivere il contesto in cui si trovava un bene prima di essere raccolto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the geochronological class of the context of a cp before its harvesting.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Classe geocronologica</rdfs:label>
+        <rdfs:label xml:lang="en">Geochronological class</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG
+ICCD Normativa BNP: ETG
+ICCD Normativa BNPE: IRG</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3437,6 +3472,16 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeochronologicalEpoch">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica epoca.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the geochronological class &quot;epoch&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Epoca geocronologica</rdfs:label>
+        <rdfs:label xml:lang="en">Geochronological epoch</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGO
+ICCD Normativa BNP: ETG/ETGO
+ICCD Normativa BNPE: IRG/IRGO</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3445,6 +3490,16 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeochronologicalEra">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica era.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the geochronological class &quot;era&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Era geocronologica</rdfs:label>
+        <rdfs:label xml:lang="en">Geochronological era</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGR
+ICCD Normativa BNP: ETG/ETGR
+ICCD Normativa BNPE: IRG/IRGR</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3453,6 +3508,16 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeochronologicalPeriod">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica periodo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the geochronological class &quot;period&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Geochronological period</rdfs:label>
+        <rdfs:label xml:lang="it">Periodo geocronologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGP
+ICCD Normativa BNP: ETG/ETGP
+ICCD Normativa BNPE: IRG/IRGP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3461,6 +3526,16 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeochronologicalSubage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica sottoetà.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the geochronological class &quot;subage&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Geochronological subage</rdfs:label>
+        <rdfs:label xml:lang="it">Sottoerà geocronologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGS
+ICCD Normativa BNP: ETG/ETGS
+ICCD Normativa BNPE: IRG/IRGS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3495,6 +3570,16 @@ WHERE {
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/Stratum"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il contesto geologico da cui proviene il bene catalogato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the geological context from which the cp originates.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Contesto geologico</rdfs:label>
+        <rdfs:label xml:lang="en">Geological context</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMAC
+ICCD Normativa BNP: ET/ETA/ETAC
+ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3677,6 +3762,7 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicBed">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
     </owl:Class>
     
 
@@ -3685,6 +3771,16 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicClass">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una classe litostratigrafica, per descrivere l&apos;unità stratigrafica a cui il bene appartiene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a lithostratigraphic class, a lithostratigraphic unit to which the cp belongs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Classe litostratigrafica</rdfs:label>
+        <rdfs:label xml:lang="en">Lithostratigraphic class</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNP: ETL
+ICCD Normativa BNM: IML
+ICCD Normativa BNPE: IRL</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3693,6 +3789,16 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicComplex">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità litostratigrafica complesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the lithostratigraphic class &quot;complex&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Complesso litostratigrafico</rdfs:label>
+        <rdfs:label xml:lang="en">Lithostratigraphic complex</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNP: ETL/ETLC
+ICCD Normativa BNM: IML/IMLC
+ICCD Normativa BNPE: IRL/IRLC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3701,6 +3807,16 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicFormation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità litostratigrafica formazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the lithostratigraphic class &quot;formation&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Formazione litostratigrafico</rdfs:label>
+        <rdfs:label xml:lang="en">Lithostratigraphic formation</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNP: ETL/ETLF
+ICCD Normativa BNM: IML/IMLF
+ICCD Normativa BNPE: IRL/IRLF</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3709,6 +3825,16 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicGroup">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità litostratigrafica gruppo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the lithostratigraphic class &quot;group&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Gruppo litostratigrafico</rdfs:label>
+        <rdfs:label xml:lang="en">Lithostratigraphic group</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNP: ETL/ETLG
+ICCD Normativa BNM: IML/IMLG
+ICCD Normativa BNPE: IRL/IRLG</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3717,14 +3843,34 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicMember">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità litostratigrafica membro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the lithostratigraphic class &quot;member&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Lithostratigraphic member</rdfs:label>
+        <rdfs:label xml:lang="it">Membro litostratigrafico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNP: ETL/ETLM
+ICCD Normativa BNM: IML/IMLM
+ICCD Normativa BNPE: IRL/IRLM</a-cat:iccdNormTag>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/arco/ontology/location/LithostratigraphicSoupergroup -->
+    <!-- https://w3id.org/arco/ontology/location/LithostratigraphicSupergroup -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicSoupergroup">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicSupergroup">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità litostratigrafica supergruppo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the lithostratigraphic class &quot;supergroup&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Lithostratigraphic supergroup</rdfs:label>
+        <rdfs:label xml:lang="it">Supergruppo litostratigrafico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNP: ETL/ETLS
+ICCD Normativa BNM: IML/IMLS
+ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3742,7 +3888,7 @@ WHERE {
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di localizzazione di un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of location of a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
-        <rdfs:label xml:lang="en">Location Type</rdfs:label>
+        <rdfs:label xml:lang="en">Location type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di localizzazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
@@ -3982,6 +4128,7 @@ WHERE {
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
     </owl:Class>
     
 
@@ -3990,6 +4137,7 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/OutcropType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
     </owl:Class>
     
 
@@ -4095,7 +4243,7 @@ WHERE {
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di contenitore fisico, cioè la tipologia del contenitore fisico ed eventuali aggettivi o locuzioni che precisano, integrano o caratterizzano il contenitore fisico dal punto di vista della condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of a physical container, i.e. it contains adjectives or phrases that specify, integrate or characterize the physical container from the point of view of the legal-administrative or functional condition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
-        <rdfs:label xml:lang="en">Site Type</rdfs:label>
+        <rdfs:label xml:lang="en">Site type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di Contenitore Fisico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
@@ -4153,6 +4301,7 @@ WHERE {
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
     </owl:Class>
     
 
@@ -4337,6 +4486,14 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ZoogeographicRegion">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una regione zoogeografica (i.e. la regione dove è stato raccolto un bene.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a zoogeographic region (i.e. where the cp was harvested.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Regione zoogeografica</rdfs:label>
+        <rdfs:label xml:lang="en">Zoogeographic region</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNZ: LR/LRVZ</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4954,6 +5111,29 @@ WHERE {
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/location/Chron">
+        <rdfs:label xml:lang="it">Crono</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGC
+ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica crono.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the geochronological class &quot;chron&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <rdfs:label xml:lang="en">Chron</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/location/Eon">
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <rdfs:comment xml:lang="en">This class represents the geochronological class &quot;eon&quot;.</rdfs:comment>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGE
+ICCD Normativa BNP: ETG/ETGE
+ICCD Normativa BNPE: IRG/IRGE</a-cat:iccdNormTag>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica Eon.</rdfs:comment>
+        <rdfs:label xml:lang="it">Eon</rdfs:label>
+        <rdfs:label xml:lang="en">Eon</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/italia/onto/CLV/coordinate">
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: GE/GEC - versioni precedenti: GP/GPD; GA/GAPD; GL/GLS</a-cat:iccdNormTag>
     </rdf:Description>
