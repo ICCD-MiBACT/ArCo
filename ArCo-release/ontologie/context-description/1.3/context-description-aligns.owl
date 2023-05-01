@@ -20,7 +20,6 @@
      xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/context-description-aligns/">
         <owl:imports rdf:resource="http://id.loc.gov/ontologies/bibframe-2-0-1/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <dc:creator>STLab (ISTC-CNR)</dc:creator>
         <rdfs:label xml:lang="it">Questi sono gli allineamenti del modulo Context Description (ArCo ontology network) verso ontologie esterne del Web semantico standard e ampiamente utilizzate.</rdfs:label>
         <rdfs:label xml:lang="en">These are the alignments of Context Description module (ArCo ontology network) to external ontologies widely used and available at the state of the art.</rdfs:label>
@@ -483,6 +482,31 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isProfessionOf">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/vernacularName -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/vernacularName">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/context-description/synonym"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/synonym -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/synonym"/>
     
 
 

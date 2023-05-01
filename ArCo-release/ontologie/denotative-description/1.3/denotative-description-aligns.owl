@@ -20,7 +20,6 @@
      xmlns:denotative="https://w3id.org/arco/ontology/denotative-description/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/denotative-description-aligns/">
         <owl:imports rdf:resource="http://id.loc.gov/ontologies/bibframe-2-0-1/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <dc:creator>STLab (ISTC-CNR)</dc:creator>
         <rdfs:label xml:lang="it">Questi sono gli allineamenti del moduloDenotative Description (ArCo ontology network) verso ontologie esterne del Web semantico standard e ampiamente utilizzate.</rdfs:label>
         <rdfs:label xml:lang="en">These are the alignments of Denotative Description module (ArCo ontology network) to external ontologies widely used and available at the state of the art.</rdfs:label>
@@ -53,6 +52,22 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/measurementValue -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/measurementValue">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/sampleSizeValue -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/sampleSizeValue">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasValue"/>
+    </owl:ObjectProperty>
     
 
 
@@ -130,6 +145,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasValue -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasValue"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic">
@@ -191,6 +212,31 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/usesTechnicalConcept">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#usesConcept"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/individualCount -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/individualCount">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/numberOfElements"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfElements -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfElements"/>
     
 
 

@@ -1,127 +1,181 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF
-	xmlns="https://w3id.org/arco/ontology/natural-specimen-description-aligns/"
-	xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-	xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
-	xmlns:owl="http://www.w3.org/2002/07/owl#"
-	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	xmlns:spe="https://w3id.org/arco/ontology/natural-specimen-description/"
-	xmlns:xml="http://www.w3.org/XML/1998/namespace"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/natural-specimen-description-aligns/"
+     xml:base="https://w3id.org/arco/ontology/natural-specimen-description-aligns/"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:spe="https://w3id.org/arco/ontology/natural-specimen-description/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/natural-specimen-description-aligns/"/>
+    
 
-<rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description-aligns/">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-</rdf:Description>
-<!--  -->
-<!--  -->
-<!-- ################################################################# -->
-<!-- # -->
-<!-- #    Object Properties -->
-<!-- # -->
-<!-- ################################################################# -->
-<!--  -->
-<!--  -->
-<!-- http://rs.tdwg.org/dwc/terms/associatedTaxa -->
 
-<rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/associatedTaxa">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy"/>
-</rdf:Description>
-<!--  -->
-<!-- http://rs.tdwg.org/dwc/terms/lifeStage -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-<rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/lifeStage">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDevelopmentStage"/>
-</rdf:Description>
-<!--  -->
-<!-- http://rs.tdwg.org/dwc/terms/preparations -->
+    
 
-<rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/preparations">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasAssociatedPreparation"/>
-</rdf:Description>
-<!--  -->
-<!-- https://w3id.org/arco/ontology/natural-specimen-description/hasAssociatedPreparation -->
 
-<rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasAssociatedPreparation">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-</rdf:Description>
-<!--  -->
-<!-- https://w3id.org/arco/ontology/natural-specimen-description/hasDevelopmentStage -->
+    <!-- http://rs.tdwg.org/dwc/iri/lifeStage -->
 
-<rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasDevelopmentStage">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-</rdf:Description>
-<!--  -->
-<!-- https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy -->
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/lifeStage">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasDevelopmentStage"/>
+    </owl:ObjectProperty>
+    
 
-<rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-</rdf:Description>
-<!--  -->
-<!--  -->
-<!--  -->
-<!-- ################################################################# -->
-<!-- # -->
-<!-- #    Classes -->
-<!-- # -->
-<!-- ################################################################# -->
-<!--  -->
-<!--  -->
-<!-- http://rs.tdwg.org/dwc/terms/FossilSpecimen -->
 
-<rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/FossilSpecimen">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Fossil"/>
-</rdf:Description>
-<!--  -->
-<!-- http://rs.tdwg.org/dwc/terms/Identification -->
+    <!-- http://rs.tdwg.org/dwc/terms/associatedTaxa -->
 
-<rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/Identification">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime"/>
-</rdf:Description>
-<!--  -->
-<!-- http://rs.tdwg.org/dwc/terms/LivingSpecimen -->
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/associatedTaxa">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy"/>
+    </owl:ObjectProperty>
+    
 
-<rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/LivingSpecimen">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecimen"/>
-</rdf:Description>
-<!--  -->
-<!-- http://rs.tdwg.org/dwc/terms/Occurrence -->
 
-<rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/Occurrence">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
-</rdf:Description>
-<!--  -->
-<!-- https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecimen -->
+    <!-- http://rs.tdwg.org/dwc/terms/samplingProtocol -->
 
-<rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecimen">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-</rdf:Description>
-<!--  -->
-<!-- https://w3id.org/arco/ontology/natural-specimen-description/Fossil -->
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/samplingProtocol">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasHarvestingMethod"/>
+    </owl:ObjectProperty>
+    
 
-<rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Fossil">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-</rdf:Description>
-<!--  -->
-<!-- https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime -->
 
-<rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-</rdf:Description>
-<!--  -->
-<!-- https://w3id.org/arco/ontology/natural-specimen-description/Specimen -->
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasAssociatedPreparation -->
 
-<rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Specimen">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-</rdf:Description>
-<!--  -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasAssociatedPreparation">
+        <rdfs:comment>In Darwin Core there is the data property http://rs.tdwg.org/dwc/terms/preparations</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasDevelopmentStage -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasDevelopmentStage"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasHarvestingMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasHarvestingMethod"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasIdentificationInTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasIdentificationInTime">
+        <rdfs:comment>In Darwin Core there is the data property http://rs.tdwg.org/dwc/terms/previousIdentifications</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/preparations -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/preparations">
+        <rdfs:comment>In Natural Specimen Description there is the object property https://w3id.org/arco/ontology/natural-specimen-description/hasAssociatedPreparation</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/previousIdentifications -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/previousIdentifications">
+        <rdfs:comment>In Natural Specimen Description there is the object property https://w3id.org/arco/ontology/natural-specimen-description/hasIdentificationInTime</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/FossilSpecimen -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/dwc/terms/FossilSpecimen">
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Fossil"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/Identification -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/dwc/terms/Identification">
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/LivingSpecimen -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/dwc/terms/LivingSpecimen">
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecimen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/Occurrence -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/dwc/terms/Occurrence">
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecimen -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecimen"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Fossil -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Fossil"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Specimen -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+</rdf:RDF>
+
+
+
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
-</rdf:RDF>
