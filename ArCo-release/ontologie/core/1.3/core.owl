@@ -534,6 +534,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasEventOrSituationInTime">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
         <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <rdfs:comment xml:lang="it">La proprietà che collega un qualsiasi oggetto a una situazione indicizzata nel tempo.</rdfs:comment>
         <rdfs:comment xml:lang="en">The property that links any object to a time indexed situation.</rdfs:comment>

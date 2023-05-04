@@ -7,7 +7,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:lite="https://w3id.org/arco/ontology/arco-lite-description/"
+     xmlns:lite="https://w3id.org/arco/ontology/arco-lite/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco-lite-aligns/"/>
     
@@ -24,6 +24,62 @@
     
 
 
+    <!-- http://rs.tdwg.org/abcd/terms/hasAssemblage -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasAssemblage">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasAuthor">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasCreator -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasCreator">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasLastEditor -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasLastEditor">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasOwner -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasOwner">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOwner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasPreparationAgent -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasPreparationAgent">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/wasAcquiredFrom -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/wasAcquiredFrom">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasPreviousOwner"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/iri/recordedBy -->
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/recordedBy">
@@ -32,9 +88,33 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasOwner -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasOwner"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasPreviousOwner -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasPreviousOwner"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf"/>
     
 
 
@@ -46,6 +126,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/age -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/abcd/terms/age">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/age"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -134,6 +222,12 @@
     <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/recordedByID">
         <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/age -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/age"/>
     
 
 

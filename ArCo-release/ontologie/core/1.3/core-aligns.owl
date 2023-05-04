@@ -23,6 +23,30 @@
     
 
 
+    <!-- http://rs.tdwg.org/abcd/terms/hasGathering -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasGathering">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasEventOrSituationInTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasStratigraphicTerm -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasStratigraphicTerm">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/iri/identifiedBy -->
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/identifiedBy">
@@ -267,6 +291,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/hasEventOrSituationInTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasEventOrSituationInTime"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/hasIdentifier -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasIdentifier"/>
@@ -380,10 +410,26 @@
     
 
 
+    <!-- http://rs.tdwg.org/abcd/terms/FieldNumber -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/FieldNumber">
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/Gathering -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/Gathering">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
+    </owl:Class>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/terms/Event -->
 
     <owl:Class rdf:about="http://rs.tdwg.org/dwc/terms/Event">
-        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
     </owl:Class>
     
 
@@ -407,6 +453,12 @@
     <!-- https://w3id.org/arco/ontology/core/EventOrSituationInTime -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Identifier -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Identifier"/>
     
 
 

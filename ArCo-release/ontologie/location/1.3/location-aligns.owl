@@ -220,6 +220,12 @@
     
 
 
+    <!-- http://rs.tdwg.org/abcd/terms/StratigraphicTerm -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/StratigraphicTerm"/>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/terms/GeologicalContext -->
 
     <owl:Class rdf:about="http://rs.tdwg.org/dwc/terms/GeologicalContext">
@@ -252,6 +258,22 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/CadastralIdentity">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/ChronostratigraphicClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ChronostratigraphicClass">
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/abcd/terms/StratigraphicTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/LithostratigraphicClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicClass">
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/abcd/terms/StratigraphicTerm"/>
     </owl:Class>
     
 

@@ -1157,18 +1157,9 @@ core:hasAgent ?agent .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha tipo di conservazione</rdfs:label>
         <rdfs:label xml:lang="en">has preservation type</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: DB/DBC/DBCX</a-cat:iccdNormTag>
-        <core:constructQuery>CONSTRUCT {
-?preservation core:hasType ?presType .
-}
-
-WHERE {
-?preservation spe:hasPreservationType ?presType .
-}</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
     
 
@@ -2167,7 +2158,6 @@ core:isAgentRoleOf ?thing .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is preservation type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di conservazione di</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3073,6 +3063,22 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Herbarium -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Herbarium">
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un erbario</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an herbarium</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Erbario</rdfs:label>
+        <rdfs:label xml:lang="en">Herbarium</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: OG/OGT/OGTE</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Interpretation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Interpretation"/>
@@ -3653,7 +3659,7 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecimen -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/BiologicalSpecimen">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/NaturalSpecimen"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasAssociatedPreparation"/>
@@ -4224,7 +4230,7 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasPreservationType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PreservationType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4408,6 +4414,14 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: LR/LRI/LRIU</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Herbarium -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Herbarium">
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
     </owl:Class>
     
 
@@ -4945,7 +4959,7 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecimen -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecimen">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/NaturalSpecimen"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
@@ -5157,7 +5171,7 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/PetrologicSpecimen -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PetrologicSpecimen">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/NaturalSpecimen"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConstituent"/>
@@ -5354,7 +5368,7 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicSpecimen -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PlanetologicSpecimen">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/NaturalSpecimen"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConstituent"/>
@@ -7048,8 +7062,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
-        <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <rdfs:comment xml:lang="it">Questa individuo rappresenta la riflettanza</rdfs:comment>
     </rdf:Description>
     

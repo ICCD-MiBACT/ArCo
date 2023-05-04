@@ -108,6 +108,30 @@
     
 
 
+    <!-- http://rs.tdwg.org/abcd/terms/hasLicense -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasLicense">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLicense"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasMultimediaObject -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasMultimediaObject">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDocumentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasReference -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasReference">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/terms/sex -->
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/sex">
@@ -258,6 +282,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasBibliographicSource -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCollection">
@@ -282,6 +312,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasDocumentation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDocumentation"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasEvent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasEvent">
@@ -301,6 +337,12 @@
     <!-- https://w3id.org/arco/ontology/context-description/hasLegalSituation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasLicense -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasLicense"/>
     
 
 
@@ -496,11 +538,25 @@
     
 
 
+    <!-- http://rs.tdwg.org/abcd/terms/captureEquipment -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/abcd/terms/captureEquipment">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/context-description/recordingEquipment"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/terms/vernacularName -->
 
     <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/vernacularName">
         <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/context-description/synonym"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/recordingEquipment -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/recordingEquipment"/>
     
 
 
@@ -518,6 +574,53 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/AudioObject -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/AudioObject">
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/context-description/AudioDocumentation"/>
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/abcd/terms/MultimediaObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/ImageObject -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/ImageObject">
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicDocumentation"/>
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/abcd/terms/MultimediaObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/LegalStatement -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/LegalStatement"/>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/MultimediaObject -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/MultimediaObject">
+        <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/ObservationUnit -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/ObservationUnit"/>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/VideoObject -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/VideoObject">
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/context-description/FilmDocumentation"/>
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/abcd/terms/MultimediaObject"/>
+    </owl:Class>
     
 
 
@@ -599,6 +702,14 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/AudioDocumentation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AudioDocumentation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Bibliography -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Bibliography">
@@ -610,9 +721,7 @@
     <!-- https://w3id.org/arco/ontology/context-description/Copyright -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Copyright">
-        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/CopyrightRegistration"/>
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E30_Right"/>
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/abcd/terms/LegalStatement"/>
     </owl:Class>
     
 
@@ -641,6 +750,14 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/FilmDocumentation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/FilmDocumentation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Intervention -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Intervention">
@@ -653,6 +770,22 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Inventory">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/License -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/License">
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/abcd/terms/LegalStatement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/PhotographicDocumentation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicDocumentation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
     </owl:Class>
     
 

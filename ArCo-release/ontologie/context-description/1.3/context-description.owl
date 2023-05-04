@@ -2282,13 +2282,12 @@ WHERE {
         <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
 
 CONSTRUCT {
-?coll a-lite:hasCollectionMember ?cp .
+?coll a-cd:involvesMember ?cp .
 }
 
 WHERE {
 ?coll a-cd:hasCollectionMember ?cp .
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCollectionMember"/>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/involvesMember"/>
     </owl:ObjectProperty>
     
