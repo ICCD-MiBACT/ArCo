@@ -662,11 +662,11 @@
 					</arco-cd:alternativeName>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/AU/AUT/AUTQ">
-					<arco-core:isAgentOf>
+					<arco-cd:hasProfession>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, arco-fn:urify(.))" />
+							<xsl:value-of select="concat($NS, 'Profession/', arco-fn:urify(normalize-space(.)))" />
 						</xsl:attribute>
-					</arco-core:isAgentOf>
+					</arco-cd:hasProfession>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/AU/AUT/AUTV">
 					<arco-cd:alternativeName>
@@ -680,12 +680,22 @@
 					</arco-cd:historicalBiographicalInformation>
 				</xsl:if>
 				<xsl:if test="string-length($sex)">
-					<arco-lite:sex>
-						<xsl:attribute name="rdf:resource">
+					<arco-lite:sexInformation>
 							<xsl:value-of select="$sex" />
+					</arco-lite:sexInformation>
+					<arco-cd:hasSex>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Sex/', arco-fn:arcofy($sex))" />
 						</xsl:attribute>
-					</arco-lite:sex>
+					</arco-cd:hasSex>
 				</xsl:if>
+				<xsl:for-each select="record/metadata/schede/*/AU/AUT/AUTU">
+					<arco-cd:hasCulturalScope>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'CulturalScope/', arco-fn:urify(normalize-space(.)))" />
+						</xsl:attribute>
+					</arco-cd:hasCulturalScope>
+				</xsl:for-each>
 				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTL">
 					<cpv:hasBirthPlace>
 						<xsl:attribute name="rdf:resource">
@@ -737,44 +747,59 @@
 			<xsl:for-each select="record/metadata/schede/*/AU/AUT/AUTQ">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, arco-fn:urify(.))" />
+						<xsl:value-of select="concat($NS, 'Profession/', arco-fn:urify(normalize-space(.)))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
-						</xsl:attribute>
-					</rdf:type>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Ruolo ricoperto da ', $nameAuthor, ': ', normalize-space(.))" />
-					</rdfs:label>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Role of ', $nameAuthor, ': ', normalize-space(.))" />
-					</rdfs:label>
-					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Ruolo ricoperto da ', $nameAuthor, ': ', normalize-space(.))" />
-					</l0:name>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Role of ', $nameAuthor, ': ', normalize-space(.))" />
-					</l0:name>
-					<arco-core:hasRole>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Role/', arco-fn:urify(.))" />
-						</xsl:attribute>
-					</arco-core:hasRole>
-				</rdf:Description>
-				<!-- role as an individual -->
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'Role/', arco-fn:urify(.))" />
-					</xsl:attribute>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Profession'" />
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
 						<xsl:value-of select="normalize-space(.)" />
 					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:for-each>
+			<xsl:if test="string-length($sex)">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'Sex/', arco-fn:arcofy($sex))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Sex'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="normalize-space($sex)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="normalize-space($sex)" />
+					</l0:name>
+					<arco-cd:sex>
+						<xsl:value-of select="normalize-space($sex)" />
+					</arco-cd:sex>
+				</rdf:Description>
+			</xsl:if>
+			<!-- cultural context -->
+			<xsl:for-each select="record/metadata/schede/*/AU/AUT/AUTU">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'CulturalScope/', arco-fn:urify(normalize-space(.)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CulturalScope'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(.)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:name>
 				</rdf:Description>
 			</xsl:for-each>
 			<xsl:if test="record/metadata/schede/*/AU/AUT/AUTL">

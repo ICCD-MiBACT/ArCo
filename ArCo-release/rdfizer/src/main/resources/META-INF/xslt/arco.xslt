@@ -22629,11 +22629,11 @@
 								</arco-cd:hasProfession>
 							</xsl:if>
 							<xsl:if test="./AUTC">
-								<arco-cd:hasCulturalContext>
+								<arco-cd:hasCulturalScope>
 									<xsl:attribute name="rdf:resource">
-                           				<xsl:value-of select="concat($NS, 'CulturalContext/', arco-fn:urify(normalize-space(./AUTC)))" />
+                           				<xsl:value-of select="concat($NS, 'CulturalScope/', arco-fn:urify(normalize-space(./AUTC)))" />
 									</xsl:attribute>
-								</arco-cd:hasCulturalContext>
+								</arco-cd:hasCulturalScope>
 							</xsl:if>
 							<xsl:if test="./AUTH and (not(starts-with(lower-case(normalize-space(./AUTH)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTH)), 'n.r')))">
 								<arco-lite:localIdentifier>
@@ -22831,11 +22831,11 @@
 						<xsl:if test="./AUTC">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-	            					<xsl:value-of select="concat($NS, 'CulturalContext/', arco-fn:urify(normalize-space(./AUTC)))" />
+	            					<xsl:value-of select="concat($NS, 'CulturalScope/', arco-fn:urify(normalize-space(./AUTC)))" />
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
-	            						<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CulturalContext'" />
+	            						<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CulturalScope'" />
 									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
@@ -28540,13 +28540,7 @@
 									</xsl:attribute>
 								</cis:isPartOf>
 							</xsl:if>
-							<xsl:if test="./PRT/PRTK and (not(starts-with(lower-case(normalize-space(./PRT/PRTK)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRT/PRTK)), 'n.r')))">
-								<arco-location:hasContinent>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Continent/', arco-fn:urify(normalize-space(./PRT/PRTK)))" />
-									</xsl:attribute>
-								</arco-location:hasContinent>
-							</xsl:if>
+							
 							<!-- Site Type -->
 							<xsl:if test="./PRC/PRCT and not(normalize-space(./PRC/PRCT)='.') and (not(starts-with(lower-case(normalize-space(./PRC/PRCT)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRC/PRCT)), 'n.r')))">
 								<arco-core:hasType>
@@ -33497,13 +33491,13 @@
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(record/metadata/schede/*/OC/OCD)" />
+							<xsl:value-of select="normalize-space(.)" />
 						</rdfs:label>
 						<tiapit:startTime>
-							<xsl:value-of select="normalize-space(record/metadata/schede/*/OC/OCD)" />
+							<xsl:value-of select="normalize-space(.)" />
 						</tiapit:startTime>
 						<tiapit:endTime>
-							<xsl:value-of select="normalize-space(record/metadata/schede/*/OC/OCD)" />
+							<xsl:value-of select="normalize-space(.)" />
 						</tiapit:endTime>
 					</rdf:Description>
 				</xsl:for-each>

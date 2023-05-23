@@ -649,11 +649,11 @@
 				    </xsl:if>
 				</xsl:for-each>
 				<!-- isDescribedBy -->
-				<arco-catalogue:isDescribedBy>
+				<arco-core:isDescribedBy>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
 					</xsl:attribute>
-				</arco-catalogue:isDescribedBy>
+				</arco-core:isDescribedBy>
 				<!-- Cultural institute or site -->
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/harvesting/idContenitoreGiuridico">

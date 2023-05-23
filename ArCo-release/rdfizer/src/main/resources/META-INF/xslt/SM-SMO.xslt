@@ -1245,11 +1245,11 @@
 					</arco-cd:hasProfession>
 				</xsl:if>
 				<xsl:if test="./MUT/MUTB">
-					<arco-cd:hasCulturalContext>
+					<arco-cd:hasCulturalScope>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'CulturalContext/', arco-fn:urify(normalize-space(./MUT/MUTB)))" />
+							<xsl:value-of select="concat($NS, 'CulturalScope/', arco-fn:urify(normalize-space(./MUT/MUTB)))" />
 						</xsl:attribute>
-					</arco-cd:hasCulturalContext>
+					</arco-cd:hasCulturalScope>
 				</xsl:if>
 				<!-- sex -->
 				<xsl:if test="./MUT/MUTS">
@@ -1330,11 +1330,11 @@
 			<xsl:if test="./MUT/MUTB">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'CulturalContext/', arco-fn:urify(normalize-space(./MUT/MUTB)))" />
+						<xsl:value-of select="concat($NS, 'CulturalScope/', arco-fn:urify(normalize-space(./MUT/MUTB)))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CulturalContext'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CulturalScope'" />
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>

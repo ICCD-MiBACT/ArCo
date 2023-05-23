@@ -285,7 +285,7 @@
 				</xsl:attribute>
 			</arco-spe:hasHostRock>
 		</xsl:if>
-		<!-- sex interpretation -->
+		<!-- sex -->
 		<xsl:for-each select="record/metadata/schede/BNP/SP/SPZ">
 			<xsl:if test="./SPZS">
 				<arco-cd:hasSex>
@@ -1170,7 +1170,7 @@
 				</xsl:attribute>
 			</arco-dd:hasAffixedElement>			
 		</xsl:for-each>
-		<!-- sex interpretation -->
+		<!-- sex -->
 		<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZAS">
 			<xsl:if test="./SZAS">
 				<arco-cd:hasSex>
@@ -1957,6 +1957,9 @@
                			<xsl:value-of select="concat($NS, 'Age/', $itemURI)" />
                		</xsl:attribute>
 				</arco-cd:hasAge>
+				<arco-lite:age>
+					<xsl:value-of select="normalize-space(record/metadata/schede/AT/DA/SEM)" />
+				</arco-lite:age>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/AT/PR/PRR">
 				<arco-core:note>
@@ -2451,7 +2454,7 @@
 				</rdf:Description>
 			</xsl:if>
 		</xsl:if>
-		<!-- sex interpretation -->
+		<!-- sex -->
 		<xsl:if test="record/metadata/schede/AT/DA/STS">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
