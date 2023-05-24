@@ -53,10 +53,16 @@
 			<xsl:variable name="rvel" select="translate($rvel-punto, '.', '_')" />		
 		</xsl:if>  -->	
 	    <xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
-		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata) and not(root)" >
+		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='BIB') and not(administrativeDataRecord/metadata) and not(root)" >
 
 			<xsl:variable name="itemURI">
 				<xsl:choose>
+					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
+						<xsl:value-of select="arco-fn:urify(record/metadata/schede/DSC/*/*/DSCH)" />
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/RCG/*/*/RCGH">
+						<xsl:value-of select="arco-fn:urify(record/metadata/schede/RCG/*/*/RCGH)" />
+					</xsl:when>
 					<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
 						<xsl:choose>
 							<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
@@ -157,6 +163,12 @@
 					</xsl:when>
 					<xsl:when test="$sheetType='MINP'">
 						<xsl:value-of select="concat($NS, 'ArchaeologicalProperty/', $itemURI)" />
+					</xsl:when>
+					<xsl:when test="$sheetType='DSC'">
+						<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', $itemURI)" />
+					</xsl:when>
+					<xsl:when test="$sheetType='RCG'">
+						<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', $itemURI)" />
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
@@ -363,6 +375,20 @@
 								<xsl:otherwise>
 								</xsl:otherwise>
 							</xsl:choose>
+						</xsl:attribute>
+					</rdf:type>
+				</xsl:if>
+				<xsl:if test="$sheetType='DSC'">
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation'" />
+						</xsl:attribute>
+					</rdf:type>
+				</xsl:if>
+				<xsl:if test="$sheetType='RCG'">
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchaeologicalFieldSurvey'" />
 						</xsl:attribute>
 					</rdf:type>
 				</xsl:if>
@@ -2475,6 +2501,16 @@
 				<xsl:if test="record/metadata/schede/*/DA/NSC">
 					<arco-cd:historicalInformation>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/NSC)" />
+					</arco-cd:historicalInformation>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/DSC/DS/NSC">
+					<arco-cd:historicalInformation>
+						<xsl:value-of select="normalize-space(record/metadata/schede/DSC/DS/NSC)" />
+					</arco-cd:historicalInformation>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/RCG/RG/NSC">
+					<arco-cd:historicalInformation>
+						<xsl:value-of select="normalize-space(record/metadata/schede/RCG/RG/NSC)" />
 					</arco-cd:historicalInformation>
 				</xsl:if>
 				<!-- explanation note -->				
@@ -4659,6 +4695,7 @@
 				</xsl:for-each>
 				<!-- Surveys -->
 				<!-- Archaeological field survey of cultural property -->
+				<xsl:if test="not($sheetType='RCG')" >
 				<xsl:if test="not(record/metadata/schede/*/RE/RCG/RCGD='0000/00/00' or record/metadata/schede/*/RE/RCG/RCGD='/') and record/metadata/schede/*/RE/RCG/*">
 					<xsl:for-each select="record/metadata/schede/*/RE/RCG">
 						<arco-cd:hasSurvey>
@@ -4667,6 +4704,7 @@
                 			</xsl:attribute>
 						</arco-cd:hasSurvey>
 					</xsl:for-each>
+				</xsl:if>
 				</xsl:if>
 				<!-- Archaeometric and diagnostic survey -->
 				<xsl:if test="not(record/metadata/schede/*/RE/IND/INDD='0000/00/00' or record/metadata/schede/*/RE/IND/INDD='/') and record/metadata/schede/*/RE/IND/*">
@@ -4690,14 +4728,23 @@
 					</xsl:for-each>
 				</xsl:if>
 				<!-- Archaeological excavation of cultural property -->
+				<xsl:if test="not($sheetType='DSC')" >
 				<xsl:if test="not(record/metadata/schede/*/*/DSC/DSCD='0000/00/00' or record/metadata/schede/*/*/DSC/DSCD='/') and record/metadata/schede/*/*/DSC/*">
 					<xsl:for-each select="record/metadata/schede/*/*/DSC">
 						<arco-cd:hasSurvey>
 							<xsl:attribute name="rdf:resource">
-                				<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', $itemURI, '-survey-', position())" />
+                				<xsl:choose>
+                					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
+                						<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', arco-fn:urify(record/metadata/schede/DSC/*/*/DSCH))" />
+                					</xsl:when>
+                					<xsl:otherwise>
+                						<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', $itemURI, '-survey-', position())" />
+                					</xsl:otherwise>
+                				</xsl:choose>
                 			</xsl:attribute>
 						</arco-cd:hasSurvey>
 					</xsl:for-each>
+				</xsl:if>
 				</xsl:if>
 				<!-- Photo interpretation rendering of cultural property -->
 				<xsl:if test="record/metadata/schede/*/*/FOI/*">
@@ -4783,6 +4830,12 @@
 						 <xsl:choose>
 							<xsl:when test="$sheetType='MODI'">
 								<xsl:value-of select="arco-fn:getPropertyType(record/metadata/schede/MODI/OG/AMB)" />
+							</xsl:when>
+							<xsl:when test="$sheetType='DSC'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation'" />
+							</xsl:when>
+							<xsl:when test="$sheetType='RCG'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchaeologicalFieldSurvey'" />
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="arco-fn:getPropertyType($sheetType)" />
@@ -4878,6 +4931,12 @@
 					</xsl:for-each>
 					<xsl:if test="record/metadata/schede/*/SGT/SGTI">
 						<xsl:value-of select="concat(' ', string-join(record/metadata/schede/*/OG/SGT/SGTI,', '))" />
+					</xsl:if>
+					<xsl:if test="record/metadata/schede/DSC/DS/DSC/DSCV">
+						<xsl:value-of select="record/metadata/schede/DSC/DS/DSC/DSCV" />
+					</xsl:if>
+					<xsl:if test="record/metadata/schede/RCG/RG/RCG/RCGV">
+						<xsl:value-of select="record/metadata/schede/RCG/RG/RCG/RCGV" />
 					</xsl:if>
 				</rdfs:comment>
 				<!-- hasCulturalPropertyType -->

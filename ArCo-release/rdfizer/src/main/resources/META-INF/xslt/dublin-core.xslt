@@ -58,12 +58,18 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 		
 <xsl:template match="/">
 	<rdf:RDF>
-	<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata) and not(root)" >
+	<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='BIB') and not(administrativeDataRecord/metadata) and not(root)" >
 	
 	<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version" />
 	<xsl:variable name="cp-name" select="''" />
 	<xsl:variable name="itemURI">
 		<xsl:choose>
+			<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
+				<xsl:value-of select="arco-fn:urify(record/metadata/schede/DSC/*/*/DSCH)" />
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/RCG/*/*/RCGH">
+						<xsl:value-of select="arco-fn:urify(record/metadata/schede/RCG/*/*/RCGH)" />
+					</xsl:when>
 			<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
@@ -158,6 +164,12 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 			<xsl:when test="$sheetType='MINP'">
 				<xsl:value-of select="concat($NS, 'ArchaeologicalProperty/', $itemURI)" />
 			</xsl:when>
+			<xsl:when test="$sheetType='DSC'">
+				<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', $itemURI)" />
+			</xsl:when>
+			<xsl:when test="$sheetType='RCG'">
+						<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', $itemURI)" />
+					</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
 			</xsl:otherwise>
