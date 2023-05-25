@@ -1068,6 +1068,11 @@
 				<xsl:value-of select="'https://w3id.org/arco/ontology/arco/ZoologicalHeritage'" />
 			</xsl:attribute>
 		</rdf:type>
+		<rdf:type>
+			<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Animal'" />
+			</xsl:attribute>
+		</rdf:type>
 		<!-- identifier -->
 		<xsl:if test="$sheetType='BNZ' and (record/metadata/schede/BNZ/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNZ/OG/OGT/OGTD)), 'collezione'))">
 			<xsl:if test="record/metadata/schede/BNZ/AC/ACO">

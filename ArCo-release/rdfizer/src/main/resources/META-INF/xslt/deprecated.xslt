@@ -5,6 +5,7 @@
 	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
+	xmlns:arco-spe="https://w3id.org/arco/ontology/natural-specimen-description/"
 	xmlns:cis="http://dati.beniculturali.it/cis/"
 	xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
 	xmlns:cpv="https://w3id.org/italia/onto/CPV/"
@@ -286,6 +287,36 @@
 				<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
 			</xsl:attribute>
 		</arco-catalogue:isDescribedByCatalogueRecord>
+		<xsl:for-each select="record/metadata/schede/*/CD/ESC">
+			<xsl:if test=".">
+				<arco-arco:hasCataloguingAgency>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+					</xsl:attribute>
+				</arco-arco:hasCataloguingAgency>
+			</xsl:if>
+		</xsl:for-each>
+		<!-- heritage protection agency -->
+		<xsl:choose>
+			<xsl:when test="record/metadata/schede/harvesting/enteCompetente">
+				<arco-arco:hasHeritageProtectionAgency>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/harvesting/enteCompetente))" />
+					</xsl:attribute>
+				</arco-arco:hasHeritageProtectionAgency>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:for-each select="record/metadata/schede/*/CD/ECP">
+					<xsl:if test=".">
+						<arco-arco:hasHeritageProtectionAgency>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+							</xsl:attribute>
+						</arco-arco:hasHeritageProtectionAgency>
+					</xsl:if>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
 		<!-- cultural property address -->
 		<xsl:if test="record/metadata/schede/*/LC/PVC/*">
 			<arco-location:hasCulturalPropertyAddress>
@@ -1253,6 +1284,7 @@
 		</xsl:if>
 	</xsl:if>
 	<!-- Acquisition -->
+	<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata)" >
 	<xsl:for-each select="record/metadata/schede/*/TU/ACQ">
 		<xsl:if test="./ACQT and (not(starts-with(lower-case(normalize-space(./ACQT)), 'nr')) and not(starts-with(lower-case(normalize-space(./ACQT)), 'n.r.')) and not(starts-with(lower-case(normalize-space(./ACQT)), 'dato non')) and not(starts-with(lower-case(normalize-space(./ACQT)), 'non ')) and not(starts-with(lower-case(normalize-space(./ACQT)), 'ignota')) and not(starts-with(lower-case(normalize-space(./ACQT)), '-')))">
 			<rdf:Description>
@@ -4674,7 +4706,6 @@
 			</rdf:Description>
 		</xsl:if>
 	</xsl:for-each>
-
 	<!-- sex estimate -->
 	<xsl:if test="record/metadata/schede/AT/DA/STS">
 		<rdf:Description>
@@ -5474,7 +5505,6 @@
 			</xsl:if>
 		</xsl:if>
 	</xsl:for-each>
-							
 		<!-- part of cultural property when there is AUTW (author) -->
 		<xsl:for-each select="record/metadata/schede/*/AU/AUT">
 			<xsl:if test="./AUTW and not(lower-case(normalize-space(./AUTW))='intero bene') and not(lower-case(normalize-space(./AUTW))='integrale') and not(lower-case(normalize-space(./AUTW))='tutta') and not(lower-case(normalize-space(./AUTW))='totale') and (not(starts-with(lower-case(normalize-space(./AUTW)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'intero')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'intera')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'esemplar')))">
@@ -6342,6 +6372,35 @@
 			</rdf:type>
 		</rdf:Description>
 	</xsl:if>
+	<xsl:if test="$sheetType='BNM'">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+        		<xsl:value-of select="$culturalProperty" />
+			</xsl:attribute>
+			<xsl:if test="record/metadata/schede/BNM/IM/IMA/IMAO">
+				<arco-spe:hasHostRock>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'HostRock/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAO))" />
+					</xsl:attribute>
+				</arco-spe:hasHostRock>
+			</xsl:if>
+		</rdf:Description>
+		<!-- Host rock as individual -->							
+		<xsl:if test="record/metadata/schede/*/IM/IMA/IMAO">
+			<rdf:Description>	
+				<xsl:attribute name="rdf:about">
+		    		<xsl:value-of select="concat($NS,'HostRock/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAO))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+            	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/HostRock'" />
+            		</xsl:attribute>
+				</rdf:type>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
+	</xsl:if>	
+	
 	<xsl:if test="$sheetType='CF'" >
 		<xsl:variable name="idCF">
 			<xsl:choose>
@@ -6462,7 +6521,8 @@
                 </xsl:attribute>
 			</arco-catalogue:isDescribedByCatalogueRecord>
 		</rdf:Description>	
-	</xsl:if>             
+	</xsl:if>  
+	           
 	</rdf:RDF>
 </xsl:template>								
 </xsl:stylesheet>

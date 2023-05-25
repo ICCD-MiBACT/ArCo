@@ -169,6 +169,11 @@
 				<xsl:value-of select="'https://w3id.org/arco/ontology/arco/PlanetaryScienceHeritage'" />
 			</xsl:attribute>
 		</rdf:type>
+		<rdf:type>
+			<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Meteorite'" />
+			</xsl:attribute>
+		</rdf:type>
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPN">
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">

@@ -2583,14 +2583,14 @@
 					<xsl:if test=".">
 						<arco-core:hasAgentRole>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agent')" />
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
 							</xsl:attribute>
 						</arco-core:hasAgentRole>
-						<arco-lite:hasCataloguingAgent>
+						<arco-lite:hasCataloguingAgency>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 							</xsl:attribute>
-						</arco-lite:hasCataloguingAgent>
+						</arco-lite:hasCataloguingAgency>
 					</xsl:if>
 				</xsl:for-each>
 				<!-- proponent agency -->

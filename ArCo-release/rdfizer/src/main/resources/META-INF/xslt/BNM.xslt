@@ -431,6 +431,11 @@
 					<xsl:value-of select="'https://w3id.org/arco/ontology/arco/MineralHeritage'" />
 				</xsl:attribute>
 			</rdf:type>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Mineral'" />
+				</xsl:attribute>
+			</rdf:type>
 		</xsl:if>
 		<xsl:if test="not($sheetType='BNB')">
 			<xsl:if test="record/metadata/schede/*/AC/ACK">
@@ -715,11 +720,11 @@
 		</xsl:for-each>
 		<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">
 			<xsl:if test="record/metadata/schede/BNM/IM/IMA/IMAO">
-				<arco-spe:hasHostRock>
+				<arco-spe:hasHostIndividual>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'HostRock/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAO))" />
+						<xsl:value-of select="concat($NS,'Rock/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAO))" />
 					</xsl:attribute>
-				</arco-spe:hasHostRock>
+				</arco-spe:hasHostIndividual>
 			</xsl:if>
 		</xsl:if>					
 		<xsl:if test="record/metadata/schede/BNM/SM/SMT and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMT/SMTT)), 'non tipo'))">
@@ -6673,11 +6678,11 @@
 	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAO">
 		<rdf:Description>	
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS,'HostRock/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAO))" />
+		    	<xsl:value-of select="concat($NS,'Rock/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAO))" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-                	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/HostRock'" />
+                	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Rock'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>

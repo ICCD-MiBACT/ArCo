@@ -165,6 +165,11 @@
 					<xsl:value-of select="'https://w3id.org/arco/ontology/arco/PetrologicHeritage'" />
 				</xsl:attribute>
 			</rdf:type>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Rock'" />
+				</xsl:attribute>
+			</rdf:type>
 			<xsl:if test="record/metadata/schede/BNPE/SR/SRN">
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">

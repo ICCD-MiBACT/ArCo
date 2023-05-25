@@ -447,6 +447,11 @@
 				<xsl:value-of select="'https://w3id.org/arco/ontology/arco/BotanicalHeritage'" />
 			</xsl:attribute>
 		</rdf:type>
+		<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Vegetal'" />
+				</xsl:attribute>
+			</rdf:type>
 		<!-- identifier -->
 		<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'erbario'))">
 			<xsl:if test="record/metadata/schede/BNB/AC/ACE">
