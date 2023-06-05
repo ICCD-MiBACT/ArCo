@@ -2614,19 +2614,19 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
 
 CONSTRUCT {
-?thing a-lite:iteIdentifier ?id .
+?thing a-lite:nationalIdentifier ?id .
 }
 
 WHERE {
 ?thing a-loc:siteIdentifier ?id .
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/siteIdentifier"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/nationalIdentifier"/>
         <core:replacingQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt; 
 
 select * where {
 ?x core:hasIdentifier ?idclass .
 ?idclass l0:identifier ?id ;
-core:hasType ?type .
+core:hasType core:NationalIdentifier .
 }</core:replacingQuery>
     </owl:DatatypeProperty>
     
@@ -5116,11 +5116,11 @@ WHERE {
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGC
 ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica crono.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the geochronological class &quot;chron&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:comment xml:lang="en">This class represents the geochronological class &quot;chron&quot;.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <rdfs:label xml:lang="en">Chron</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <rdfs:label xml:lang="en">Chron</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/location/Eon">
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -5129,8 +5129,8 @@ ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGE
 ICCD Normativa BNP: ETG/ETGE
 ICCD Normativa BNPE: IRG/IRGE</a-cat:iccdNormTag>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica Eon.</rdfs:comment>
         <rdfs:label xml:lang="it">Eon</rdfs:label>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica Eon.</rdfs:comment>
         <rdfs:label xml:lang="en">Eon</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
     </rdf:Description>
