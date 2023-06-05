@@ -971,9 +971,18 @@ core:hasAgent ?agent .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha roccia ospitante</rdfs:label>
         <rdfs:label xml:lang="en">has host rock</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: IM/IMA/IMAO</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a-spe:hasHostIndividual ?y .
+}
+
+WHERE {
+?x a-spe:hasHostRock ?y .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasHostIndividual"/>
     </owl:ObjectProperty>
     
 
@@ -1962,8 +1971,17 @@ core:isAgentRoleOf ?thing .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is host rock of</rdfs:label>
         <rdfs:label xml:lang="it">è roccia ospite di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x a-spe:isHostIndividualOf ?y .
+}
+
+WHERE {
+?x a-spe:isHostRock ?y .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isHostIndividualOf"/>
     </owl:ObjectProperty>
     
 
@@ -4457,9 +4475,18 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Host rock</rdfs:label>
         <rdfs:label xml:lang="it">Roccia ospite</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAO</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a a-spe:Rock .
+}
+
+WHERE {
+?x a a-spe:HostRock .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Rock"/>
     </owl:Class>
     
 
@@ -5610,6 +5637,16 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM 3.01: SM/SMO/SMOI</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Rock -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Rock">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:label xml:lang="en">Rock</rdfs:label>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE</a-cat:iccdNormTag>
     </owl:Class>
     
 
