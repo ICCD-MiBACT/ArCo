@@ -5645,7 +5645,13 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Rock">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una roccia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a rock.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="it">Roccia</rdfs:label>
         <rdfs:label xml:lang="en">Rock</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNPE</a-cat:iccdNormTag>
     </owl:Class>
     
