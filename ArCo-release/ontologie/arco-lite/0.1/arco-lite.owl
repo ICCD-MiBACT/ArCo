@@ -179,18 +179,18 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent -->
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgency -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgency">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCataloguingAgentOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione di una scheda di catalogo a un agente che riveste un ruolo nelle attività di catalogazione di quella scheda. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Questa relazione è poi specializzata da sottoproprietà. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l’ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property is used to associate a catalogue record to an agent playing a role in cataloguing activities.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="it">ha agente coinvolto nella catalogazione</rdfs:label>
-        <rdfs:label xml:lang="en">has cataloguing agent</rdfs:label>
+        <rdfs:label xml:lang="en">has cataloguing agency</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="en">ICCD Normativa Trasversale 4.00: AU/AUT/AUTJ; DO/BIB/BIBJ; RE/RCG/RCGJ; RE/DSC/DSCJ - ICCD Normativa F: PD/PDF/PDFJ</a-cat:iccdNormTag>
@@ -1637,7 +1637,7 @@ E.g. an estimate on a cultural property to the estimation responsible agent.</rd
     <!-- https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasResponsibleResearchAndCompilation">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasResponsibleAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isResponsibleResearchAndCompilationOf"/>
         <rdfs:domain>
             <owl:Class>
@@ -1654,7 +1654,8 @@ E.g. an estimate on a cultural property to the estimation responsible agent.</rd
         <rdfs:label xml:lang="en">has responsible research and compilation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
-        <iccdNormTag>CM/CMP/CMPN</iccdNormTag>
+        <iccdNormTag>CM/CMP/CMPN
+CM/AGG/AGGN</iccdNormTag>
     </owl:ObjectProperty>
     
 
