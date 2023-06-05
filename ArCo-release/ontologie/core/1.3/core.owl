@@ -2137,6 +2137,54 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/italia/onto/l0/Characteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Concept -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Concept"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Description -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Description"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Entity -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Entity"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/EventOrSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Location -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Location"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Object -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/System -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/System"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2180,6 +2228,19 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
         <rdfs:label xml:lang="it">Identificativo nazionale</rdfs:label>
         <rdfs:label xml:lang="en">National identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/SystemIdentifier -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/SystemIdentifier">
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;identificativo dato dal sistema alla scheda di catalogo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the id given by the IT system to the catalogue record.</rdfs:comment>
+        <rdfs:label xml:lang="it">Identificativo del sistema</rdfs:label>
+        <rdfs:label xml:lang="en">System identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
