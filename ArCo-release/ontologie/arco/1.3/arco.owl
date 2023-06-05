@@ -3246,7 +3246,7 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/PalaeontologicalHeritage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta eperti fossili (animali, vegetali, ichnofossili, campioni e preparati per microscopio, ecc.)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta reperti fossili (animali, vegetali, ichnofossili, campioni e preparati per microscopio, ecc.)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents fossil finds (animals, plants, ichnofossils, samples and microscope preparations, etc.).</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Paleontologico</rdfs:label>
         <rdfs:label xml:lang="en">Palaeontological Heritage</rdfs:label>
@@ -3355,6 +3355,13 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/PhysicalAnthropologyHeritage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un campione di un reprerto antropologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a specimen of a physical anthropology heritage.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
+        <rdfs:label xml:lang="en">Physical Anthropology Heritage</rdfs:label>
+        <rdfs:label xml:lang="it">Reperto Atropologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT</a-cat:iccdNormTag>
     </owl:Class>
     
