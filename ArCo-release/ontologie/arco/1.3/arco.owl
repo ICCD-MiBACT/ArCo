@@ -578,8 +578,16 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">ha ente collegato</rdfs:label>
         <rdfs:label xml:lang="en">has related agency</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x &lt;https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent&gt; ?y .
+}
+WHERE {
+?x arco:hasRelatedAgency ?y .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
     </owl:ObjectProperty>
     
 
@@ -975,8 +983,17 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">is related agency of</rdfs:label>
         <rdfs:label xml:lang="it">è ente collegato a</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x &lt;https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf&gt; ?y .
+}
+
+WHERE {
+?x arco:isRelatedAgencyOf ?y .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
     </owl:ObjectProperty>
     
 
@@ -3330,6 +3347,15 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/PhysicalAnthropologyHeritage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/PhysicalAnthropologyHeritage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
+        <a-cat:iccdNormTag>ICCD Normativa AT</a-cat:iccdNormTag>
     </owl:Class>
     
 
