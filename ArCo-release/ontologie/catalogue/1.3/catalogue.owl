@@ -1681,7 +1681,7 @@ CONSTRUCT {
 WHERE {
 ?thing a-cat:ICCDIdentifier ?id .
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/ICCDIdentifier"/>
     </owl:DatatypeProperty>
     
 
