@@ -6,6 +6,7 @@
 	xmlns:arco-event="https://w3id.org/arco/ontology/cultural-event/" xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
 	xmlns:arco-lite="https://w3id.org/arco/ontology/arco-lite/"
+	xmlns:arco-con="https://w3id.org/arco/ontology/construction-description/"
 	xmlns:cis="http://dati.beniculturali.it/cis/" xmlns:l0="https://w3id.org/italia/onto/l0/"
 	xmlns:clvapit="https://w3id.org/italia/onto/CLV/" xmlns:tiapit="https://w3id.org/italia/onto/TI/"
 	xmlns:roapit="https://w3id.org/italia/onto/RO/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -1606,6 +1607,27 @@
 							</arco-cd:hasSubject>
 						</rdf:Description>
 					</xsl:if>
+				</xsl:if>
+			</xsl:for-each>
+			<xsl:for-each select="record/metadata/schede/*/MT/PLT">
+				<xsl:if test="./PLTP">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./PLTP)))" />
+						</xsl:attribute>
+						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./PLTP)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./PLTP)" />
+						</l0:name>
+						<arco-con:hasPositionOnGroundLavel>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'PositionOnGroundLevel/', $itemURI, position())" />
+							</xsl:attribute>
+						</arco-con:hasPositionOnGroundLavel>
+					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
 		</rdf:RDF>

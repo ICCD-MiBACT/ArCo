@@ -484,7 +484,7 @@
 					<xsl:if test="./MTCD">
 						<arco-core:hasType>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'DecorativeApparatusType/', $itemURI, arco-fn:urify(normalize-space(./MTCD)))" />
+								<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatusType/', arco-fn:urify(normalize-space(./MTCD)))" />
 							</xsl:attribute>
 						</arco-core:hasType>
 					</xsl:if>
@@ -505,11 +505,11 @@
 				<xsl:if test="./MTCD">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-		           			<xsl:value-of select="concat($NS, 'DecorativeApparatusType/', $itemURI, arco-fn:urify(normalize-space(./MTCD)))" />
+		           			<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatusType/', arco-fn:urify(normalize-space(./MTCD)))" />
 		           		</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/DecorativeApparatusType'" />
+								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
@@ -605,14 +605,14 @@
 						<xsl:when test="record/metadata/schede/VeAC/DA/EDA/EDAV">
 							<arco-core:hasType>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'DecorativeApparatusType/', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAT)), '-', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAV)))" />
+									<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatusType/', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAT)), '-', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAV)))" />
 								</xsl:attribute>
 							</arco-core:hasType>
 						</xsl:when>
 						<xsl:otherwise>
 							<arco-core:hasType>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'DecorativeApparatusType/', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAT)))" />
+								<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatusType/', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAT)))" />
 							</xsl:attribute>
 						</arco-core:hasType>
 						</xsl:otherwise>
@@ -647,16 +647,16 @@
 					<xsl:attribute name="rdf:about">
 						<xsl:choose>
 							<xsl:when test="record/metadata/schede/VeAC/DA/EDA/EDAV">
-								<xsl:value-of select="concat($NS, 'DecorativeApparatusType/', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAT)), '-', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAV)))" />
+								<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatusType/', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAT)), '-', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAV)))" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="concat($NS, 'DecorativeApparatusType/', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAT)))" />
+								<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatusType/', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAT)))" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/DecorativeApparatusType'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType'" />
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
