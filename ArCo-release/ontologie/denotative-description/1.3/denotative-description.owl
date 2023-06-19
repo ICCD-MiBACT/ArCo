@@ -4509,6 +4509,14 @@ ICCD Normativa A e PG v3: OGTD+OGTQ</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/DecorativeApparatus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/DecorativeApparatus">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/DesignationInTime -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/DesignationInTime">
@@ -4654,6 +4662,14 @@ WHERE {?class a a-dd:FunctionalPurpose .}</core:constructQuery>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/IconographicApparatus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicApparatus">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus">
@@ -4662,6 +4678,12 @@ WHERE {?class a a-dd:FunctionalPurpose .}</core:constructQuery>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4680,6 +4702,12 @@ WHERE {?class a a-dd:FunctionalPurpose .}</core:constructQuery>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasOrnamentalMotif"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/OrnamentalMotif"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;apparato iconografico e/o decorativo di un bene culturale, inteso come l&apos;insieme, che può essere più o meno complesso, delle rappresentazioni iconografiche e/o delle decorazioni presenti sul bene.</rdfs:comment>
@@ -4711,7 +4739,7 @@ WHERE {?class a a-dd:FunctionalPurpose .}</core:constructQuery>
         <rdfs:label xml:lang="it">Tipo di apparato iconografico e decorativo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID/AIDO. VeAC: MT/MTC/MTCD, DA/EDA</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DE/DEC/DECT+DECQ. VeAC: MT/MTC/MTCD, DA/EDA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5496,6 +5524,7 @@ WHERE {?x a a-dd:AssignedDesignation . }</core:constructQuery>
         <rdfs:comment xml:lang="en">This individual represents playable notes by a musical instrument, from low to high.</rdfs:comment>
         <rdfs:label xml:lang="en">Available notes</rdfs:label>
         <rdfs:label xml:lang="it">Note produbicili</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAN</a-cat:iccdNormTag>
@@ -5728,11 +5757,7 @@ WHERE {?x a a-dd:CustomaryDesignation . }</core:constructQuery>
 
     <!-- https://w3id.org/arco/ontology/denotative-description/DecorativeApparatus -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/DecorativeApparatus">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
-        <rdfs:label xml:lang="it">Apparato decorativo</rdfs:label>
-        <rdfs:label xml:lang="en">Decorative apparatus</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/DecorativeApparatus"/>
     
 
 
@@ -6123,7 +6148,6 @@ WHERE {?x a a-dd:HistoricalDesignation . }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/IconographicAndDecorativeApparatus -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicAndDecorativeApparatus">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
         <rdfs:label xml:lang="it">Apparato iconografico e decorativo</rdfs:label>
         <rdfs:label xml:lang="en">Iconographic and Decorative apparatus</rdfs:label>
     </owl:NamedIndividual>
@@ -6132,11 +6156,7 @@ WHERE {?x a a-dd:HistoricalDesignation . }</core:constructQuery>
 
     <!-- https://w3id.org/arco/ontology/denotative-description/IconographicApparatus -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicApparatus">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
-        <rdfs:label xml:lang="it">Apparato iconografico</rdfs:label>
-        <rdfs:label xml:lang="en">Iconographic apparatus</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicApparatus"/>
     
 
 
@@ -6982,6 +7002,35 @@ WHERE {?x a a-dd:WaistCircumference .}</core:constructQuery>
     </rdf:Description>
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/DecorativeApparatus">
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID - ICCD Normative PST e BDM: DA/APF. VeAC: MT/MTC/MTCD e MTCN, DA/EDA</a-cat:iccdNormTag>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;apparato decorativo di un bene culturale, inteso come l&apos;insieme, che può essere più o meno complesso, delle decorazioni presenti sul bene.</rdfs:comment>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <rdfs:comment xml:lang="en">This class represents the decorative apparaturs of a cultural property. It is intended as the more or less complex set of decorative representations on the cultural property.</rdfs:comment>
+        <rdfs:label xml:lang="en">Decorative Apparatus</rdfs:label>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <rdfs:label xml:lang="it">Apparato decorativo</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicApparatus">
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <rdfs:comment xml:lang="en">This class represents the iconographic apparaturs of a cultural property. It is intended as the more or less complex set of iconographic representations on the cultural property.</rdfs:comment>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID, DE/DEC - ICCD Normative PST e BDM: DA/APF. VeAC: MT/MTC/MTCD e MTCN, DA/EDA</a-cat:iccdNormTag>
+        <rdfs:label xml:lang="en">Iconographic Apparatus</rdfs:label>
+        <rdfs:label xml:lang="it">Apparato iconografico</rdfs:label>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;apparato iconografico di un bene culturale, inteso come l&apos;insieme, che può essere più o meno complesso, delle rappresentazioni iconografiche presenti sul bene.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </rdf:Description>
     
 
