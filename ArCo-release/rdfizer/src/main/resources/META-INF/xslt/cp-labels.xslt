@@ -542,14 +542,18 @@
        			</xsl:choose>
 			</xsl:when>
 			<xsl:when test="$sheetType='MODI'">
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/MODI/DT/DTR">					
-						<xsl:value-of select="concat(' (', record/metadata/schede/MODI/DT/DTR, ')')" /><!-- multiple DTF eg:ICCD8531832 -->
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:value-of select="''" />
-					</xsl:otherwise>
-				</xsl:choose>
+				<xsl:for-each select="record/metadata/schede/*/DT">
+					<xsl:if test="./* and (not(./DTP) or ./DTP='intero bene' or ./DTP='carattere generale' or ./DTP='integrale' or ./DTP='tutta' or ./DTP='totale') or (starts-with(lower-case(normalize-space(./DTP)), 'nr')) or (starts-with(lower-case(normalize-space(./DTP)), 'n.r')) or (starts-with(lower-case(normalize-space(./DTP)), 'intero')) or (starts-with(lower-case(normalize-space(./DTP)), 'intera')) or (starts-with(lower-case(normalize-space(./DTP)), 'esemplar'))">
+						<xsl:choose>
+							<xsl:when test="./DTR">					
+								<xsl:value-of select="concat(' (', ./DTR, ')')" /><!-- multiple DTF eg:ICCD8531832 -->
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="''" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:if>
+				</xsl:for-each>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:choose>

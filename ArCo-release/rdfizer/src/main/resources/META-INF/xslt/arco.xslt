@@ -1089,6 +1089,12 @@
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="'Responsible agent'" />
 							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="'Responsabile dell''attività'" />
+							</l0:name>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="'Responsible agent'" />
+							</l0:name>
 						</rdf:Description>
 						<!-- Agent as an individual -->
 						<rdf:Description>
