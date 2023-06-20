@@ -2268,11 +2268,11 @@
 							<xsl:with-param name="text" select="concat($sps-species-lab, $sps-subspecies-lab)" />
 						</xsl:call-template>
 		            </l0:name>
-					<arco-corehasDirectHigherRank>
+					<arco-core:hasDirectHigherRank>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS,'BiologicalTaxon/', $sps-species)" />
 						</xsl:attribute>	
-					</arco-corehasDirectHigherRank>	
+					</arco-core:hasDirectHigherRank>
 	  			</rdf:Description>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/AT/OG/OGS/OGSN">
@@ -2281,11 +2281,11 @@
 						<xsl:value-of select="concat($NS,'BiologicalTaxon/', $sps-species)" />
 					</xsl:attribute>
 					<xsl:if test="record/metadata/schede/AT/OG/OGS/OGSG">
-						<arco-corehasDirectHigherRank>
+						<arco-core:hasDirectHigherRank>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/AT/OG/OGS/OGSG))" />
 							</xsl:attribute>
-						</arco-corehasDirectHigherRank>
+						</arco-core:hasDirectHigherRank>
 					</xsl:if>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -3257,7 +3257,7 @@
 				<xsl:for-each select="./INIL">
 					<arco-lite:hasOperator>
 						<xsl:attribute name="rdf:resource">
-		              		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./INIL))" />
+		              		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 						</xsl:attribute>
 					</arco-lite:hasOperator>
 					<arco-core:hasAgentRole>
@@ -3269,7 +3269,7 @@
 				<xsl:for-each select="./INIO">
 					<arco-lite:hasResponsibleAgent>
 						<xsl:attribute name="rdf:resource">
-		              		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./INIO))" />
+		              		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 						</xsl:attribute>
 					</arco-lite:hasResponsibleAgent>
 					<arco-core:hasAgentRole>
@@ -3380,7 +3380,11 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 						</xsl:attribute>
-						<rdf:type rdf:resource="'https://w3id.org/italia/onto/l0/Agent'" />
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+							</xsl:attribute>
+						</rdf:type>
 						<rdfs:label>
 							<xsl:value-of select="arco-fn:name-cleaner(.)" />
 						</rdfs:label>
@@ -3446,7 +3450,11 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 						</xsl:attribute>
-						<rdf:type rdf:resource="'https://w3id.org/italia/onto/l0/Agent'" />
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+							</xsl:attribute>
+						</rdf:type>
 						<rdfs:label>
 							<xsl:value-of select="arco-fn:name-cleaner(.)" />
 						</rdfs:label>
