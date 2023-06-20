@@ -636,7 +636,7 @@
 					<arco-con:overlooking>
 						<xsl:choose>
 							<xsl:when test="./UBVN">
-								<xsl:value-of select="concat(./UBVD, ' ', ./UBVN)" />
+								<xsl:value-of select="concat(./UBVD, ' ', normalize-space(string-join(./UBVN,' ; ')))" />
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="./UBVD" />
