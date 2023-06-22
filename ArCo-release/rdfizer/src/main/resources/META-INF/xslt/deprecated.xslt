@@ -4067,18 +4067,18 @@
 						</arco-catalogue:hasDigitalTranscriptionOperator>
 					</xsl:for-each>
 					<!-- Catalogue record version Role in Time -->
-					<xsl:if test="record/metadata/schede/*/CM/RVM/RVME">
+					<xsl:for-each select="record/metadata/schede/*/CM/RVM/RVME">
 						<arco-catalogue:hasCatalogueRecordVersionRiT>
 							<xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-rvm-', arco-fn:arcofy(record/metadata/schede/*/CM/RVM/RVME))" />
+                                <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-rvm-', arco-fn:arcofy(.))" />
                             </xsl:attribute>
 						</arco-catalogue:hasCatalogueRecordVersionRiT>
 						<arco-catalogue:hasDigitalTranscriptionResponsibleAgent>
 							<xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/CM/RVM/RVME))" />
+                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
                             </xsl:attribute>
 						</arco-catalogue:hasDigitalTranscriptionResponsibleAgent>
-					</xsl:if>
+					</xsl:for-each>
 					<!-- Referente verifica scientifica -->
 					<xsl:for-each select="record/metadata/schede/*/CM/RSR">
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
