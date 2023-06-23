@@ -546,13 +546,13 @@
                         </xsl:attribute>
 					</arco-catalogue:hasRecordVersion>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/CM/RVM">
+				<xsl:for-each select="record/metadata/schede/*/CM/RVM">
 					<arco-catalogue:hasRecordVersion>
 						<xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'CatalogueRecordVersion/', $itemURI, '-rvm')" />
+                            <xsl:value-of select="concat($NS, 'CatalogueRecordVersion/', $itemURI, '-rvm', position())" />
                         </xsl:attribute>
 					</arco-catalogue:hasRecordVersion>
-				</xsl:if>
+				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/CM/AGG">
 					<arco-catalogue:hasRecordVersion>
 						<xsl:attribute name="rdf:resource">
@@ -1138,10 +1138,10 @@
 				</xsl:for-each>
 			</xsl:if>
 			<!-- Catalogue record version RVM -->
-			<xsl:if test="record/metadata/schede/*/CM/RVM">
+			<xsl:for-each select="record/metadata/schede/*/CM/RVM">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS, 'CatalogueRecordVersion/', $itemURI, '-rvm')" />
+                        <xsl:value-of select="concat($NS, 'CatalogueRecordVersion/', $itemURI, '-rvm', position())" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -1154,15 +1154,18 @@
                         </xsl:attribute>
 					</arco-core:hasType>
 					<rdfs:label>
-						<xsl:value-of select="concat(record/metadata/schede/*/CM/RVM/@hint, ' - ', normalize-space(record/metadata/schede/*/CM/RVM))" />
+						<xsl:value-of select="concat(./@hint, ' - ', normalize-space(./RVMD))" />
 					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="concat(./@hint, ' - ', normalize-space(./RVMD))" />
+					</l0:name>
 					<arco-catalogue:isRecordVersionOf>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
                         </xsl:attribute>
 					</arco-catalogue:isRecordVersionOf>
 					<!-- Catalogue record version Role in Time -->
-					<xsl:for-each select="record/metadata/schede/*/CM/RVM/RVMN[not(starts-with(lower-case(normalize-space(.)), 'nr') or starts-with(lower-case(normalize-space(.)), 'n.r'))]">
+					<xsl:for-each select="./RVMN[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<arco-core:hasAgentRole>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-rvm-', arco-fn:arcofy(.))" />
@@ -1175,7 +1178,7 @@
 						</arco-lite:hasOperator>
 					</xsl:for-each>
 					<!-- Catalogue record version Role in Time -->
-					<xsl:for-each select="record/metadata/schede/*/CM/RVM/RVME">
+					<xsl:for-each select="./RVME">
 						<arco-core:hasAgentRole>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-rvm-', arco-fn:arcofy(.))" />
@@ -1188,15 +1191,15 @@
 						</arco-lite:hasResponsibleAgent>
 					</xsl:for-each>
 					<!-- edited at time -->
-					<xsl:if test="record/metadata/schede/*/CM/RVM/RVMD and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CM/RVM/RVMD)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CM/RVM/RVMD)), 'n.r')))">
+					<xsl:if test="./RVMD and (not(starts-with(lower-case(normalize-space(./RVMD)), 'nr')) and not(starts-with(lower-case(normalize-space(./RVMD)), 'n.r')))">
 						<arco-catalogue:editedAtTime>
 							<xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(record/metadata/schede/*/CM/RVM/RVMD)))" />
+                                <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./RVMD)))" />
                             </xsl:attribute>
 						</arco-catalogue:editedAtTime>
 					</xsl:if>
 					<!-- Referente verifica scientifica -->
-					<xsl:for-each select="record/metadata/schede/*/CM/RSR">
+					<xsl:for-each select="../RSR">
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 							<arco-core:hasAgentRole>
 								<xsl:attribute name="rdf:resource">
@@ -1211,7 +1214,7 @@
 						</xsl:if>
 					</xsl:for-each>
 					<!-- Funzionario responsabile -->
-					<xsl:for-each select="record/metadata/schede/*/CM/FUR">
+					<xsl:for-each select="../FUR">
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 							<arco-core:hasAgentRole>
 								<xsl:attribute name="rdf:resource">
@@ -1226,11 +1229,10 @@
 						</xsl:if>
 					</xsl:for-each>
 				</rdf:Description>
-			</xsl:if>
+			</xsl:for-each>
 			<!-- Referente verifica scientifica -->
 			<xsl:for-each select="record/metadata/schede/*/CM/RSR">
 				<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
-					
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 	                        <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
@@ -1764,10 +1766,10 @@
 				</rdf:Description>
 			</xsl:for-each>
 			<!-- Version time interval - RVM -->
-			<xsl:if test="record/metadata/schede/*/CM/RVM/RVMD and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CM/RVM/RVMD)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CM/RVM/RVMD)), 'n.r')))">
+			<xsl:for-each select="record/metadata/schede/*/CM/RVM/RVMD[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(record/metadata/schede/*/CM/RVM/RVMD)))" />
+                        <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(.)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -1775,16 +1777,16 @@
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/CM/RVM/RVMD)" />
+						<xsl:value-of select="normalize-space()" />
 					</rdfs:label>
 					<tiapit:startTime>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/CM/RVM/RVMD)" />
+						<xsl:value-of select="normalize-space()" />
 					</tiapit:startTime>
 					<tiapit:endTime>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/CM/RVM/RVMD)" />
+						<xsl:value-of select="normalize-space()" />
 					</tiapit:endTime>
 				</rdf:Description>
-			</xsl:if>
+			</xsl:for-each>
 			<!-- Participant role - Compilation -->
 			<xsl:for-each select="record/metadata/schede/*/CM/CMP/CMPN">
 				<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
@@ -24116,7 +24118,7 @@
 									<xsl:value-of select="normalize-space(./AUIB)" />
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="arco-fn:name-cleaner(./AUTN)" />
+									<xsl:value-of select="arco-fn:name-cleaner(./AUIN)" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</rdfs:label>
@@ -24126,7 +24128,7 @@
 									<xsl:value-of select="normalize-space(./AUIB)" />
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="arco-fn:name-cleaner(./AUTN)" />
+									<xsl:value-of select="arco-fn:name-cleaner(./AUIN)" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</l0:name>
@@ -25125,11 +25127,11 @@
 							<xsl:value-of select="normalize-space(./CMMY)" />
 						</arco-core:note>
 					</xsl:if>
-					<xsl:if test="./CMMF">
+					<xsl:for-each select="./CMMF">
 						<arco-core:informationSource>
-							<xsl:value-of select="normalize-space(./CMMF)" />
+							<xsl:value-of select="normalize-space(.)" />
 						</arco-core:informationSource>
-					</xsl:if>
+					</xsl:for-each>
 				</rdf:Description>
 				<!-- Time interval as an individual -->
 				<xsl:if test="./CMMD">
