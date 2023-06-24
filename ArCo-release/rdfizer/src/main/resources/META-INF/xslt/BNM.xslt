@@ -235,7 +235,7 @@
 	</xsl:variable>
 	<xsl:variable name="acm">
 		<xsl:if test="record/metadata/schede/*/AC/ACM">
-			<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/AC/ACM)" />
+			<xsl:value-of select="arco-fn:urify(.)" />
 		</xsl:if>
 	</xsl:variable>
 	<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
@@ -438,16 +438,16 @@
 			</rdf:type>
 		</xsl:if>
 		<xsl:if test="not($sheetType='BNB')">
-			<xsl:if test="record/metadata/schede/*/AC/ACK">
+			<xsl:for-each select="record/metadata/schede/*/AC/ACK">
 				<arco-lite:localIdentifier>
-               		<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
+               		<xsl:value-of select="." />
 				</arco-lite:localIdentifier>
 				<arco-core:hasIdentifier>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'SpecimenIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/AC/ACK))" />
+						<xsl:value-of select="concat($NS, 'SpecimenIdentifier/', $itemURI, arco-fn:arcofy(.))" />
 					</xsl:attribute>
 				</arco-core:hasIdentifier>
-			</xsl:if>
+			</xsl:for-each>
 		</xsl:if>
 		<xsl:if test="$sheetType='BNM' or $sheetType='BNPE' or $sheetType='BNPL' or $sheetType='BNZ'">
 			<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
@@ -1078,10 +1078,10 @@
 	</rdf:Description>
 	<!-- identifier -->
 	<xsl:if test="not($sheetType='BNB')">
-		<xsl:if test="record/metadata/schede/*/AC/ACK">
+		<xsl:for-each select="record/metadata/schede/*/AC/ACK">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'SpecimenIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/AC/ACK))" />
+					<xsl:value-of select="concat($NS, 'SpecimenIdentifier/', $itemURI, arco-fn:arcofy(.))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -1094,19 +1094,19 @@
 			        </xsl:attribute>
 				</arco-core:hasType>
 				<rdfs:label>
-					<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
+					<xsl:value-of select="." />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
+					<xsl:value-of select="." />
 				</l0:name>
 				<arco-core:identifier>
-					<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
+					<xsl:value-of select="." />
 				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
-		</xsl:if>
+		</xsl:for-each>
 	</xsl:if>
 	<!-- Cultural entity technical status -->
 	<xsl:if test="record/metadata/schede/BNM/SM/SMF or record/metadata/schede/BNM/SM/SMO or record/metadata/schede/BNM/SM/SMM">
