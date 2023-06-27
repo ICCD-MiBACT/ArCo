@@ -1590,11 +1590,13 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./SGTP)" />
 							</l0:name>
-							<arco-cd:hasSubject>
-								<xsl:attribute name="rdf:resource">
-	                    			<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./SGTI))" />
-	  			              	</xsl:attribute>
-							</arco-cd:hasSubject>
+							<xsl:for-each select="./SGTI">
+								<arco-cd:hasSubject>
+									<xsl:attribute name="rdf:resource">
+	    	                			<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
+	  				              	</xsl:attribute>
+								</arco-cd:hasSubject>
+							</xsl:for-each>
 						</rdf:Description>
 					</xsl:if>
 				</xsl:if>
@@ -1611,11 +1613,13 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./SGTA)" />
 							</l0:name>
-							<arco-cd:hasSubject>
-								<xsl:attribute name="rdf:resource">
-	                    			<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./SGTI))" />
-	  			              	</xsl:attribute>
-							</arco-cd:hasSubject>
+							<xsl:for-each select="./SGTI">
+								<arco-cd:hasSubject>
+									<xsl:attribute name="rdf:resource">
+	    	                			<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
+	  				              	</xsl:attribute>
+								</arco-cd:hasSubject>
+							</xsl:for-each>
 						</rdf:Description>
 					</xsl:if>
 				</xsl:if>

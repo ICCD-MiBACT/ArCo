@@ -1600,7 +1600,7 @@
 					</xsl:if>
 				</xsl:variable>
 				<xsl:variable name="tmp-label">
-					<xsl:value-of select="concat($ogtp, normalize-space(record/metadata/schede/*/OG/OGD/OGDN))" />
+					<xsl:value-of select="concat($ogtp, normalize-space(string-join(record/metadata/schede/*/OG/OGD/OGDN,' ; ')))" />
 				</xsl:variable>
 			<rdfs:label xml:lang="it">
 				<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />

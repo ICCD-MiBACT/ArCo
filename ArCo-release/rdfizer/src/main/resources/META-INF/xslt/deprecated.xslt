@@ -1062,15 +1062,13 @@
 			</xsl:if>
 		</xsl:if>
 		<!-- technical status - pixel dimension of photograph (F) -->
-		<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/F/MT/FVC/FVCM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/F/MT/FVC/FVCM)), 'n.r'))">
-			<xsl:if test="record/metadata/schede/F/MT/FVC/FVCM">
-				<arco-dd:hasPixelDimension>
-					<xsl:attribute name="rdf:resource">
-            			<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/F/MT/FVC/FVCM)))" />
-            		</xsl:attribute>
-				</arco-dd:hasPixelDimension>
-			</xsl:if>
-		</xsl:if>
+		<xsl:for-each select="record/metadata/schede/F/MT/FVC/FVCM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+			<arco-dd:hasPixelDimension>
+				<xsl:attribute name="rdf:resource">
+           			<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+           		</xsl:attribute>
+			</arco-dd:hasPixelDimension>
+		</xsl:for-each>
 		<!-- technical status - mass storage of photograph (F) -->
 		<xsl:if test="record/metadata/schede/F/MT/FVM and (not(starts-with(lower-case(normalize-space(record/metadata/schede/F/MT/FVM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/F/MT/FVM)), 'n.r')))">
 			<arco-dd:hasMassStorage>
@@ -5056,11 +5054,10 @@
 			</rdf:Description>
 		</xsl:if>
 	</xsl:if>
-	<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/F/MT/FVC/FVCM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/F/MT/FVC/FVCM)), 'n.r'))">
-		<xsl:if test="record/metadata/schede/F/MT/FVC/FVCM">
+	<xsl:for-each select="record/metadata/schede/F/MT/FVC/FVCM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-            		<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/F/MT/FVC/FVCM)))" />
+            		<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
             	</xsl:attribute>
             	<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
 				<owl:sameAs>
@@ -5074,10 +5071,10 @@
 					</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
-					<xsl:value-of select="normalize-space(record/metadata/schede/F/MT/FVC/FVCM)" />
+					<xsl:value-of select="normalize-space(.)" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="normalize-space(record/metadata/schede/F/MT/FVC/FVCM)" />
+					<xsl:value-of select="normalize-space(.)" />
 				</l0:name>
 				<arco-dd:isCharacteristicClassifiedBy>
 					<xsl:attribute name="rdf:resource">
@@ -5085,8 +5082,7 @@
             		</xsl:attribute>
 				</arco-dd:isCharacteristicClassifiedBy>
 			</rdf:Description>
-		</xsl:if>
-	</xsl:if>
+	</xsl:for-each>
 	<!-- urban planning instrument -->
 	<xsl:for-each select="record/metadata/schede/*/TU/STU">
 		<xsl:variable name="upinstrument-position">

@@ -1006,14 +1006,14 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 	<xsl:for-each select="record/metadata/schede/*/*/SGT">
 		<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 			<dc:subject>
-				<xsl:if test="./SGTI">
-					<xsl:variable name="sgti" select="string-join(SGTI,' ; ')" /><!-- multiple SGTI eg:ICCD13074493 -->
+				<xsl:for-each select="./SGTI">
+					<xsl:variable name="sgti" select="string-join(.,' ; ')" /><!-- multiple SGTI eg:ICCD13074493 -->
 					<xsl:choose>
-						<xsl:when test="./SGTD">
-							<xsl:value-of select="concat($sgti, ', ', ./SGTD)" />   
+						<xsl:when test="../SGTD">
+							<xsl:value-of select="concat($sgti, ', ', ../SGTD)" />   
 						</xsl:when>
-						<xsl:when test="./SGTT and not (./SGTD)">
-							<xsl:variable name="sgtt" select="string-join(SGTT,' ; ')" /><!-- multiple SGTT eg:ICCD11314516 -->
+						<xsl:when test="../SGTT and not (../SGTD)">
+							<xsl:variable name="sgtt" select="string-join(../SGTT,' ; ')" /><!-- multiple SGTT eg:ICCD11314516 -->
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/OG/CLS" >
 									<xsl:value-of select="concat($sgti, ', ', $sgtt, ', ', record/metadata/schede/OG/CLS)" />
@@ -1027,7 +1027,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 							<xsl:value-of select="$sgti" />
 						</xsl:otherwise>
 					</xsl:choose>
-				</xsl:if>
+				</xsl:for-each>
 			</dc:subject>
 		</xsl:if>
 	</xsl:for-each>
