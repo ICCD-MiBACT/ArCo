@@ -1505,10 +1505,10 @@
 					</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
-					<xsl:value-of select="normalize-space(./SPAT)" />
+					<xsl:value-of select="normalize-space(string-join(./SPAT,' '))" />
 				</rdfs:label>
 				<l0:name >
-					<xsl:value-of select="normalize-space(./SPAT)" />
+					<xsl:value-of select="normalize-space(string-join(./SPAT,' '))" />
 				</l0:name>
 				<xsl:for-each select="./SPAC">
 					<arco-dd:hasTechnicalStatus>
@@ -1553,13 +1553,13 @@
 					<l0:name xml:lang="en">
 						<xsl:value-of select="concat('Technical status of open space of cultural property ', $itemURI)" />
 					</l0:name>
-					<xsl:if test="./SPAC">
+					<xsl:for-each select="./SPAC">
 						<arco-dd:includesTechnicalCharacteristic>
 							<xsl:attribute name="rdf:resource">
-		         				<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SPAC)))" />
+		         				<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 							</xsl:attribute>
 						</arco-dd:includesTechnicalCharacteristic>
-					</xsl:if>
+					</xsl:for-each>
 					<arco-core:current>
 						<xsl:value-of select="true()" />
 					</arco-core:current>

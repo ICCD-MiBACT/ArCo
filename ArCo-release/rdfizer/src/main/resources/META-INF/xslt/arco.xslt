@@ -26791,13 +26791,13 @@
 						</clvapit:hasAddressArea>
 					</xsl:if>
 					<!-- ClericalAdministrativeArea -->
-					<xsl:if test="record/metadata/schede/*/LC/PVE">
+					<xsl:for-each select="record/metadata/schede/*/LC/PVE">
 						<arco-location:hasClericalAdministrativeArea>
 							<xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="concat($NS, 'ClericalAdministrativeArea/', arco-fn:urify(record/metadata/schede/*/LC/PVE))" />
+                                <xsl:value-of select="concat($NS, 'ClericalAdministrativeArea/', arco-fn:urify(.))" />
                             </xsl:attribute>
 						</arco-location:hasClericalAdministrativeArea>
-					</xsl:if>
+					</xsl:for-each>
 					<!-- Old Town -->
 					<xsl:if test="record/metadata/schede/*/LC/CST/CSTD">
 						<clvapit:hasAddressComponent>
@@ -26824,21 +26824,20 @@
 					</xsl:if>
 				</rdf:Description>
 				<!-- Clerical Administrative Area : if any exists -->
-				<xsl:if test="record/metadata/schede/*/LC/PVE">
+				<xsl:for-each select="record/metadata/schede/*/LC/PVE">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'ClericalAdministrativeArea/', arco-fn:urify(record/metadata/schede/*/LC/PVE))" />
+							<xsl:value-of select="concat($NS, 'ClericalAdministrativeArea/', arco-fn:urify(.))" />
 		                </xsl:attribute>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/PVE)" />
+							<xsl:value-of select="normalize-space(.)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/PVE)" />
+							<xsl:value-of select="normalize-space(.)" />
 						</l0:name>
-						<rdf:type
-							rdf:resource="http://dati.beniculturali.it/cis/ClericalAdministrativeArea" />
+						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/ClericalAdministrativeArea" />
 					</rdf:Description>
-				</xsl:if>
+				</xsl:for-each>
 				<!-- Old Town : if any exists -->
 				<xsl:if test="record/metadata/schede/*/LC/CST/CSTD">
 					<rdf:Description>
