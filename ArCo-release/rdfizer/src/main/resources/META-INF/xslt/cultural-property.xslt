@@ -3963,11 +3963,11 @@
 					</arco-cd:hasReferenceCatalogue>
 				</xsl:if>
 				<!-- numismatic property specification -->
-				<xsl:if test="record/metadata/schede/NU/OG/OGT/OGTS">
+				<xsl:for-each select="record/metadata/schede/NU/OG/OGT/OGTS">
 					<arco-core:specifications>
-						<xsl:value-of select="normalize-space(record/metadata/schede/NU/OG/OGT/OGTS)" />
+						<xsl:value-of select="normalize-space(.)" />
 					</arco-core:specifications>
-				</xsl:if>
+				</xsl:for-each>
 				<!-- copyright -->
 				<xsl:for-each select="record/metadata/schede/*/TU/CPR">
 					<arco-cd:hasCopyright>

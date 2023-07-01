@@ -3047,7 +3047,7 @@
 				</xsl:if>
 			</xsl:for-each>
 		</rdf:Description>	
-		<xsl:if test="record/metadata/schede/PG/CA/CAC or record/metadata/schede/PG/CA/CAM or record/metadata/schede/PG/CA/CAG">>
+		<xsl:if test="record/metadata/schede/PG/CA/CAC or record/metadata/schede/PG/CA/CAM or record/metadata/schede/PG/CA/CAG">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
 	    	   		<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" />

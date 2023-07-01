@@ -2015,13 +2015,11 @@
 				<xsl:value-of select="concat('Contromarca del bene culturale ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./CONA or ./CONC">
-				<xsl:if test="(not(starts-with(lower-case(normalize-space(./CONA)), 'nr')) and not(starts-with(lower-case(normalize-space(./CONA)), 'n.r')))">
 					<arco-cd:hasCoinIssuance>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'CoinIssuance/', $itemURI, '-counterstamp-', position())" />
 						</xsl:attribute>
 					</arco-cd:hasCoinIssuance>
-				</xsl:if>
 			</xsl:if>
 			<xsl:if test="./COND">
 				<arco-core:description>
