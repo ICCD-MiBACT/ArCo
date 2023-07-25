@@ -199,13 +199,13 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:constructQuery>CONSTRUCT {
-?x core:describesCulturalProperty ?thing .
+?x core:describes ?thing .
 }
 
 WHERE {
-?x a-cat:describes ?thing .
+?x a-cat:describesCulturalProperty ?thing .
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/describes"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/describes"/>
     </owl:ObjectProperty>
     
 
@@ -1105,7 +1105,7 @@ WHERE {
 WHERE {
 ?x a-cat:isDescribedByCatalogueRecord ?thing .
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/isDescribedBy"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isDescribedBy"/>
     </owl:ObjectProperty>
     
 
@@ -1977,6 +1977,12 @@ WHERE {
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta un suffisso di due lettere che può essere aggiunto all&apos;identificativo delle schede di catalogo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents a two-character suffix that might be added to the catalogue record number.</rdfs:comment>
+        <rdfs:label xml:lang="it">suffisso</rdfs:label>
+        <rdfs:label xml:lang="en">suffix</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTS</iccdNormTag>
     </owl:DatatypeProperty>
     
