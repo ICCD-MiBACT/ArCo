@@ -483,6 +483,8 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasDescription">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isDescriptionOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Description"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con la sua descrizione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity to its description.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -713,6 +715,8 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasTopic">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isTopicOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;argomento corrispondente.</rdfs:comment>
         <rdfs:comment xml:lang="it">This property relates an entity with its topic.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1064,6 +1068,8 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isDescriptionOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDescriptionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una descrizione all&apos;entità che descrive.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property the description of an entity to the entity itself.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1078,6 +1084,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <rdfs:comment xml:lang="it">La proprietà che collega una situazione indicizzata nel tempo ad un qualsiasi oggetto. La proprietà è modellata come proprietà inversa di hasTimeIndexedSituation.</rdfs:comment>
@@ -1249,6 +1256,8 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isTopicOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTopicOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un argomento ad un&apos;entità collegata.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a topic with its related entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -2252,9 +2261,9 @@ WHERE {
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/UniqueIdentifier">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
         <rdfs:comment xml:lang="it">Instabile</rdfs:comment>
-        <rdfs:comment xml:lang="en">Unstable</rdfs:comment>
         <rdfs:label xml:lang="it">Identificativo univoco</rdfs:label>
         <rdfs:label xml:lang="en">Unique identifier</rdfs:label>
+        <owl:versionInfo xml:lang="en">Unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">Normativa trasversale: CD/NCT/NCTR + CD/NCT/NCTN + CD/NCT/NCTS</a-cat:iccdNormTag>
     </owl:NamedIndividual>
 </rdf:RDF>
