@@ -1265,7 +1265,6 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasPerimeter">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isPerimeterOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con la misura del suo perimetro.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity to the measurement of its perimeter.</rdfs:comment>
@@ -4431,15 +4430,33 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasIdentificationInTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasIdentificationInTime"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasTaxon"/>
     
 
 
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/identifies -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/identifies"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/isCrystalSystemOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isCrystalSystemOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy"/>
     
 
 
@@ -5067,7 +5084,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
 
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/refersToSurveys -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/refersToSurveys">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/refersToSurveys">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con le indagini specifiche che hanno permesso di caratterizzare l&apos;entitità.</rdfs:comment>
@@ -5077,7 +5094,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">riferimenti a indagini</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </rdf:Description>
+    </owl:DatatypeProperty>
     
 
 
