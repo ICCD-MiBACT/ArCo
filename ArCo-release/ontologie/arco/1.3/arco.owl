@@ -539,6 +539,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has RFId identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: RF/RFI/RFID</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1825,7 +1826,7 @@ WHERE {
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
         <rdfs:comment xml:lang="it">Questa propietà rappresenta  il numero complessivo, espresso in cifre, degli elementi che costituiscono il bene catalogato, nel caso esso sia un insieme o una serie i cui esemplari/oggetti componenti comprendono ciascuno più elementi.</rdfs:comment>
-        <rdfs:label xml:lang="en">This property represents the total number of elements of a complex cultural property, when it is composed by parts containing more elements.</rdfs:label>
+        <rdfs:comment xml:lang="en">This property represents the total number of elements of a complex cultural property, when it is composed by parts containing more elements.</rdfs:comment>
         <rdfs:label xml:lang="en">number of elements</rdfs:label>
         <rdfs:label xml:lang="it">numero di elementi</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4028,8 +4029,8 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/historicalBiographicalInformation">
         <rdfs:label xml:lang="en">historical biographic information</rdfs:label>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:label xml:lang="it">informazioni biografiche storiche</rdfs:label>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/PDF/PDFB 
 ICCD Normativa AUT: AU/NSC</a-cat:iccdNormTag>

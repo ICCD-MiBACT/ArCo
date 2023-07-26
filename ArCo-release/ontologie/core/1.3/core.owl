@@ -240,6 +240,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">descrive</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: AC/ACS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -327,6 +328,9 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">ha classificazione</rdfs:label>
         <rdfs:label xml:lang="en">has classification</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: RE/FOI/FOIF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -500,7 +504,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasDirectHigherRank">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasHigherRank"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/hasDirectLowerRank"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega due taxa, dove la prima è più specifica della seconda e non ci sono altri taxa che siano più generali del primo e più specifici del secondo.</rdfs:comment>
@@ -1815,10 +1819,12 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Depiction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa entità rappresenta la raffigurazione di un&apos;entità culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the depiction of a cultural entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">Depiction</rdfs:label>
         <rdfs:label xml:lang="it">Foto</rdfs:label>
+        <rdfs:label xml:lang="it">Raffigurazione</rdfs:label>
         <rdfs:label xml:lang="it">Ritratto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>

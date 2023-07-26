@@ -5127,6 +5127,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/isCulturalScopeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCulturalScopeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isTopicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScope"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ambito culturale attribuito a un bene culturale alla situazione in cui è avvenuta tale attribuzione.</rdfs:comment>

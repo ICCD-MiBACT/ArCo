@@ -3177,6 +3177,7 @@ WHERE{
         <rdfs:label xml:lang="it">Livello di Catalogo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale: CD/LIR</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3185,6 +3186,10 @@ WHERE{
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/Compiling">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la redazione e verifica scientifica di una scheda di catalogo.</rdfs:comment>
+        <rdfs:label xml:lang="en">Compiling</rdfs:label>
+        <rdfs:label xml:lang="it">Redazione e verifica scientifica</rdfs:label>
+        <iccdNormTag>CM/CMP</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3193,6 +3198,9 @@ WHERE{
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/DigitalTranscription">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
+        <rdfs:label xml:lang="en">Digital Transcription</rdfs:label>
+        <rdfs:label xml:lang="it">Trascrizione per informatizzazione</rdfs:label>
+        <iccdNormTag>CM/RVM</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3215,6 +3223,7 @@ WHERE{
         <rdfs:label xml:lang="en">Minimum Level</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale: CD/LIR</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3225,6 +3234,7 @@ WHERE{
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
         <rdfs:label xml:lang="it">Livello alto di riservatezza</rdfs:label>
         <rdfs:label xml:lang="en">Maximum privacy</rdfs:label>
+        <iccdNormTag>ICCD Normativa Trasversale: AD/ADS/ADSP</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3235,6 +3245,7 @@ WHERE{
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
         <rdfs:label xml:lang="it">Livello medio di riservatezza</rdfs:label>
         <rdfs:label xml:lang="en">Medium privacy</rdfs:label>
+        <iccdNormTag>ICCD Normativa Trasversale: AD/ADS/ADSP</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3245,6 +3256,7 @@ WHERE{
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
         <rdfs:label xml:lang="it">Livello basso di riservatezza</rdfs:label>
         <rdfs:label xml:lang="en">Minimum privacy</rdfs:label>
+        <iccdNormTag>ICCD Normativa Trasversale: AD/ADS/ADSP</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3257,6 +3269,7 @@ WHERE{
         <rdfs:label xml:lang="en">Medium Level</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale: CD/LIR</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3275,6 +3288,9 @@ WHERE{
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/Updating">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
+        <rdfs:label xml:lang="it">Aggiornamento/Revisione</rdfs:label>
+        <rdfs:label xml:lang="en">Updating</rdfs:label>
+        <iccdNormTag>CM/AGG</iccdNormTag>
     </owl:NamedIndividual>
     
 
