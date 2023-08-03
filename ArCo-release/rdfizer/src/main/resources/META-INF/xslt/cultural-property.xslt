@@ -267,12 +267,12 @@
                     <xsl:value-of
 					select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
                 </xsl:attribute>
-				<arco-catalogue:describes>
+				<arco-core:describes>
 					<xsl:attribute name="rdf:resource">
                         <xsl:value-of
 						select="$culturalProperty" />
                     </xsl:attribute>
-				</arco-catalogue:describes>
+				</arco-core:describes>
 				<arco-catalogue:lastUpdateDate>
 					<xsl:value-of select="record/header/datestamp" />
 				</arco-catalogue:lastUpdateDate>

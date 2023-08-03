@@ -374,7 +374,7 @@
 	   			</l0:name>
 	   			<arco-core:isDefinedByClassificationSystem>
 					<xsl:attribute name="rdf:resource">
-			    		<xsl:value-of select="'https://w3id.org/arco/ontology/musical-instrument/Hornbosel-SachsClassificationSystem'" />
+			    		<xsl:value-of select="concat($NS,'ClassificationSystem/Hornbosel-SachsClassificationSystem')" />
 			    	</xsl:attribute>
 				</arco-core:isDefinedByClassificationSystem>
 	   			<arco-lite:HSNumber>
@@ -390,16 +390,48 @@
 						<xsl:value-of select="./CHSE" />
 	   				</arco-mi:HSEdition>
 	   			</xsl:if>
+	   			<arco-core:classifies>
+					<xsl:attribute name="rdf:resource">
+		    			<xsl:value-of select="$culturalProperty" />
+		    		</xsl:attribute>
+				</arco-core:classifies>
 		   </rdf:Description>
+		    <rdf:Description>
+				<xsl:attribute name="rdf:about">
+		    		<xsl:value-of select="concat($NS,'ClassificationSystem/Hornbosel-SachsClassificationSystem')" />
+			    </xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+        		       	<xsl:value-of select="'https://w3id.org/arco/ontology/core/ClassificationSystem'" />
+            		</xsl:attribute>
+				</rdf:type>
+				<rdfs:label xml:lang="en">
+	   				<xsl:value-of select="'Hornbosel-Sachs classification system'" />
+		   		</rdfs:label>
+		   		<rdfs:label xml:lang="it">
+	   				<xsl:value-of select="'Sistema di classificazione Hornbosel-Sachs'" />
+		   		</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="'Hornbosel-Sachs classification system'" />
+	   			</l0:name >
+	   			<l0:name xml:lang="it">
+					<xsl:value-of select="'Sistema di classificazione Hornbosel-Sachs'" />
+	   			</l0:name >
+				<arco-core:definesConcept>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'HornbostelSachsClass/', arco-fn:urify(normalize-space(./CHSN)))" />
+					</xsl:attribute>
+				</arco-core:definesConcept>
+	   		</rdf:Description>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/SM/CL/CLA">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-		    		<xsl:value-of select="concat($NS,'MusicalInstrumentClass/', arco-fn:urify(normalize-space(./CLAA)), arco-fn:urify(normalize-space(./CLAT)))" />
+		    		<xsl:value-of select="concat($NS,'MusicalInstrumentTaxon/', arco-fn:urify(normalize-space(./CLAA)), arco-fn:urify(normalize-space(./CLAT)))" />
 			    </xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-        		       	<xsl:value-of select="'https://w3id.org/arco/ontology/musical-istrument/MusicalInstrumentClass'" />
+        		       	<xsl:value-of select="'https://w3id.org/arco/ontology/musical-istrument/MusicalInstrumentTaxon'" />
             		</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
@@ -413,6 +445,11 @@
 			    		<xsl:value-of select="concat($NS,'ClassificationSystem/', arco-fn:urify(normalize-space(./CLAA)))" />
 			    	</xsl:attribute>
 				</arco-core:isDefinedByClassificationSystem>
+				<arco-core:classifies>
+					<xsl:attribute name="rdf:resource">
+		    			<xsl:value-of select="$culturalProperty" />
+		    		</xsl:attribute>
+				</arco-core:classifies>
 		   </rdf:Description>
 		   <rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -445,8 +482,13 @@
 						<xsl:value-of select="normalize-space(./CLAR)" />
 					</arco-lite:bibliographicReference>
 				</xsl:if>
+				<arco-core:definesConcept>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'MusicalInstrumentTaxon/', arco-fn:urify(normalize-space(./CLAA)), arco-fn:urify(normalize-space(./CLAT)))" />
+					</xsl:attribute>
+				</arco-core:definesConcept>
 	   		</rdf:Description>
-	   		<!-- agent as an indiviual -->
+	   		<!-- agent as an individual -->
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
 	            	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./CLAA))" />

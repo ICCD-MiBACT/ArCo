@@ -440,6 +440,11 @@
 						<xsl:with-param name="text" select="normalize-space(record/metadata/schede/VeAC/OG/OGT/OGTV)" />
 					</xsl:call-template>
 				</l0:name>
+				<arco-core:classifies>
+					<xsl:attribute name="rdf:resource">
+        	      		<xsl:value-of select="concat($NS, 'Subject/', $itemURI, arco-fn:arcofy(record/metadata/schede/VeAC/OG/OGT/OGTV))" />
+               		</xsl:attribute>
+				</arco-core:classifies>
 			</rdf:Description>
 		</xsl:if>
 		<!-- Circumstance as an individual -->

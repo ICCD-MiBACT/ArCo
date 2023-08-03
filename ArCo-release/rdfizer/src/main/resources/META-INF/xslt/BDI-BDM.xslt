@@ -4552,10 +4552,10 @@
 	    	           		<xsl:value-of select="concat($NS, 'Copyright/AudioRecording-original-', $itemURI, '-copyright-', position())" />
 	        	       	</xsl:attribute>
 					</arco-cd:hasCopyright>
-					<xsl:if test="record/metadata/schede/*/DU/DUYN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DU/DUYN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DU/DUYN)), 'n.r')))">
+					<xsl:if test="record/metadata/schede/*/DU/DUY/DUYN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DU/DUYN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DU/DUYN)), 'n.r')))">
 						<arco-lite:hasRightstHolder>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/DU/DUYN))" />
+								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/DU/DUY/DUYN))" />
 							</xsl:attribute>
 						</arco-lite:hasRightstHolder>
 					</xsl:if>
