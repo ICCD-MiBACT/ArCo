@@ -228,6 +228,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha agente collegato a evento culturale</rdfs:label>
         <rdfs:label xml:lang="en">has agent related to cultural event</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -254,7 +255,7 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/cultural-event/hasEventOrganiser -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasEventOrganiser">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasAgentRelatedToCulturalEvent"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isEventOrganiserOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
@@ -263,9 +264,18 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha ente o soggetto organizzatore</rdfs:label>
         <rdfs:label xml:lang="en">has event organiser</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">Versioni 4.00 e ICCD Normativa Trasversale: MS/MST/MSTE - Versioni precedenti a 4.00: DO/MST/MSTO</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a-ce:hasEventOrganiser ?y .
+}
+
+WHERE {
+?x arco-lite:hasOrganiser ?y .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOrganiser"/>
     </owl:ObjectProperty>
     
 
@@ -385,6 +395,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="en">has recurrent time period</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>SCAN: BI/DTC/DTCP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -486,6 +497,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="en">is agent related to cultural event of</rdfs:label>
         <rdfs:label xml:lang="it">è agente collegato a evento culturale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -511,7 +523,7 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/cultural-event/isEventOrganiserOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isEventOrganiserOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isAgentRelatedToCulturalEventOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha ente o soggetto organizzatore&quot;.</rdfs:comment>
@@ -519,8 +531,10 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="en">is event organiser of</rdfs:label>
         <rdfs:label xml:lang="it">è organizzatore di evento</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOrganiserOf"/>
     </owl:ObjectProperty>
     
 
@@ -537,6 +551,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="it">è periodo di tempo di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>SCAN: BI/DTC/DTCP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1134,6 +1149,7 @@ cultualheritageobject:Il_Pescatorello
         <rdfs:label xml:lang="en">Recurrent time period</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>SCAN: BI/DTC/DTCP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1147,6 +1163,7 @@ cultualheritageobject:Il_Pescatorello
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">Periodo di tempo</rdfs:label>
         <rdfs:label xml:lang="en">Time period</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
