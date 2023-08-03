@@ -1650,8 +1650,9 @@ WHERE {?class a-dd:isVibratingLenghtOf ?char. }</core:constructQuery>
         <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una dell misure, quando questa sia relativa all&apos;ingombro di un vestimento antico o contemporaneo. Le misure ingombro determinano l&apos;ingombro per l&apos;immagazzinaggio e si possono quindiconsiderare le coordinate ortogonali dell&apos;oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a collection of observed measures on an object to one of these measures, when the latter is relative to an ancient or contemporary apparel&apos;s size. The volumetric dimensions measurements determine the size for storage and can be considered as the object&apos;s orthogonal coordinates.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label>ha misura di imgombro</rdfs:label>
+        <rdfs:label>ha misura di ingombro</rdfs:label>
         <rdfs:label>has volumetric dimensions measurement</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa VeAC: MT/MII</a-cat:iccdNormTag>
@@ -3203,6 +3204,7 @@ WHERE {?char a-dd:isVibratingLenghtOf ?class. }</core:constructQuery>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is volumetric dimensions measurement in</rdfs:label>
         <rdfs:label xml:lang="it">è misura di ingombro di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -5465,13 +5467,20 @@ resource:TechnicalCharacteristic/stone-sculpture
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility"/>
         <rdfs:label xml:lang="it">Accessibile</rdfs:label>
         <rdfs:label xml:lang="en">Accessible</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/AccessibleWithAutorisation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/AccessibleWithAutorisation"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/AccessibleWithAutorisation">
+        <rdfs:label xml:lang="it">Accessibile su autorizzazione</rdfs:label>
+        <rdfs:label xml:lang="en">Accessible with authorization</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
     
 
 
@@ -5512,6 +5521,8 @@ WHERE {?x a a-dd:AssignedDesignation . }</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAvailability"/>
         <rdfs:label xml:lang="en">Available</rdfs:label>
         <rdfs:label xml:lang="it">Disponibile</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -5582,6 +5593,11 @@ WHERE {?x a a-dd:BackWidth .}</core:constructQuery>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Brand">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+        <rdfs:label xml:lang="en">Brand</rdfs:label>
+        <rdfs:label xml:lang="it">Marca</rdfs:label>
+        <owl:versionInfo xml:lang="en">Unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: DA/ISE/ISED</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5631,6 +5647,10 @@ WHERE {?x a a-dd:ChestCircumference .}</core:constructQuery>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/CoatOfArms">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+        <rdfs:label xml:lang="en">Coat of arms</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: DA/ISE/ISED</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5639,6 +5659,10 @@ WHERE {?x a a-dd:ChestCircumference .}</core:constructQuery>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/CoinDesign">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+        <rdfs:label xml:lang="en">Coin design</rdfs:label>
+        <rdfs:label xml:lang="it">Disegno della moneta</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -5647,6 +5671,10 @@ WHERE {?x a a-dd:ChestCircumference .}</core:constructQuery>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/CoinLegend">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+        <rdfs:label xml:lang="en">Coin legend</rdfs:label>
+        <rdfs:label xml:lang="it">Legenda della moneta</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -5670,6 +5698,8 @@ WHERE {?x a a-dd:ChestCircumference .}</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
         <rdfs:label xml:lang="en">Complete legibility</rdfs:label>
         <rdfs:label xml:lang="it">Leggibilità totale</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -5678,6 +5708,11 @@ WHERE {?x a a-dd:ChestCircumference .}</core:constructQuery>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Counterstamp">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+        <rdfs:label xml:lang="it">Contromarca</rdfs:label>
+        <rdfs:label xml:lang="en">Counterstamp</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: DA/ISE/ISED</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5751,6 +5786,8 @@ WHERE {?x a a-dd:CustomaryDesignation . }</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
         <rdfs:label xml:lang="en">Decent Legibility</rdfs:label>
         <rdfs:label xml:lang="it">Leggibilità decente</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -5765,6 +5802,11 @@ WHERE {?x a a-dd:CustomaryDesignation . }</core:constructQuery>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Dedication">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+        <rdfs:label xml:lang="it">Dedica</rdfs:label>
+        <rdfs:label xml:lang="en">Dedication</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: DA/ISE/ISED</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5880,6 +5922,11 @@ WHERE {?x a a-dd:EdgeCircumference .}</core:constructQuery>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Emblem">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+        <rdfs:label xml:lang="en">Emblem</rdfs:label>
+        <rdfs:label xml:lang="it">Emblema</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: DA/ISE/ISED</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6038,6 +6085,8 @@ WHERE {?x a a-dd:GarmentColour .}</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
         <rdfs:label xml:lang="it">Buona leggibilità</rdfs:label>
         <rdfs:label xml:lang="en">Good legibility</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6141,6 +6190,11 @@ WHERE {?x a a-dd:HistoricalDesignation . }</core:constructQuery>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/HistoricalPlaque">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+        <rdfs:label xml:lang="en">Historical plaque</rdfs:label>
+        <rdfs:label xml:lang="it">Targa storica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: DA/ISE/ISED</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6150,6 +6204,8 @@ WHERE {?x a a-dd:HistoricalDesignation . }</core:constructQuery>
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicAndDecorativeApparatus">
         <rdfs:label xml:lang="it">Apparato iconografico e decorativo</rdfs:label>
         <rdfs:label xml:lang="en">Iconographic and Decorative apparatus</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6184,6 +6240,8 @@ WHERE {?x a a-dd:IdiomaticDesignation . }</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
         <rdfs:label xml:lang="en">Impossible legibility</rdfs:label>
         <rdfs:label xml:lang="it">Leggibilità assente</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6194,6 +6252,8 @@ WHERE {?x a a-dd:IdiomaticDesignation . }</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility"/>
         <rdfs:label xml:lang="it">Inaccessibile</rdfs:label>
         <rdfs:label xml:lang="en">Inaccessible</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6202,6 +6262,11 @@ WHERE {?x a a-dd:IdiomaticDesignation . }</core:constructQuery>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Inscription">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+        <rdfs:label xml:lang="en">Inscription</rdfs:label>
+        <rdfs:label xml:lang="it">Iscrizione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: DA/ISE/ISED</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6212,6 +6277,8 @@ WHERE {?x a a-dd:IdiomaticDesignation . }</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
         <rdfs:label xml:lang="it">Comunicazione musicale strumentale</rdfs:label>
         <rdfs:label xml:lang="en">Instrumental communication</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6222,6 +6289,8 @@ WHERE {?x a a-dd:IdiomaticDesignation . }</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
         <rdfs:label xml:lang="it">Comunicazione cinesica</rdfs:label>
         <rdfs:label xml:lang="en">Kinetic communication</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6277,6 +6346,9 @@ WHERE {?x a a-dd:LocalDesignation . }</core:constructQuery>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Logo">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: DA/ISE/ISED</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6287,6 +6359,8 @@ WHERE {?x a a-dd:LocalDesignation . }</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
         <rdfs:label xml:lang="it">Leggibilità ridotta</rdfs:label>
         <rdfs:label xml:lang="en">Lowered legibility</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6436,6 +6510,8 @@ WHERE {?x a a-dd:MaximumTotalWidth .}</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAvailability"/>
         <rdfs:label xml:lang="en">No longer available</rdfs:label>
         <rdfs:label xml:lang="it">Non più disponibile</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6494,6 +6570,8 @@ WHERE {?x a a-dd:OtherLanguageDesignation . }</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility"/>
         <rdfs:label xml:lang="en">Partially accessible</rdfs:label>
         <rdfs:label xml:lang="it">Parzialmente accessibile</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6605,6 +6683,8 @@ WHERE {?x a a-dd:OtherLanguageDesignation . }</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
         <rdfs:label xml:lang="it">Comunicazione prossemica</rdfs:label>
         <rdfs:label xml:lang="en">Proxemics communication</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6617,6 +6697,8 @@ WHERE {?x a a-dd:OtherLanguageDesignation . }</core:constructQuery>
         <rdfs:comment xml:lang="en">This individual represents a digital resource&apos;s quality level, e.g. high-resolution, low-resolution, preview.</rdfs:comment>
         <rdfs:label xml:lang="it">Livello di qualità</rdfs:label>
         <rdfs:label xml:lang="en">Quality level</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6625,6 +6707,11 @@ WHERE {?x a a-dd:OtherLanguageDesignation . }</core:constructQuery>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/QuarryOrMasonryMark">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+        <rdfs:label xml:lang="it">Marchio di fabbrica o cava</rdfs:label>
+        <rdfs:label xml:lang="en">Quarry or masonry mark</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: DA/ISE/ISED</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6655,6 +6742,10 @@ core:hasType ?rainfalltype .
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/RecordingSpeed">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Recording speed</rdfs:label>
+        <rdfs:label xml:lang="it">Velocità di registrazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6695,6 +6786,8 @@ core:hasType ?rainfalltype .
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
         <rdfs:label xml:lang="it">Comunicazione musicale vocale</rdfs:label>
         <rdfs:label xml:lang="en">Singing communication</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6748,6 +6841,11 @@ WHERE {?x a a-dd:SlangDesignation . }</core:constructQuery>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Stamp">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+        <rdfs:label xml:lang="it">Francobollo</rdfs:label>
+        <rdfs:label xml:lang="en">Stamp</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: DA/ISE/ISED</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6874,7 +6972,8 @@ WHERE {?x a a-dd:Tuning .}</core:constructQuery>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/UndetectedMeasurements">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <owl:versionInfo xml:lang="it">Misure non rilevate</owl:versionInfo>
+        <rdfs:label xml:lang="it">Misure non rilevate</rdfs:label>
+        <rdfs:label xml:lang="en">Undetected measurements</rdfs:label>
         <owl:versionInfo xml:lang="en">Undetected Measurements</owl:versionInfo>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
@@ -6900,6 +6999,8 @@ WHERE {?x a a-dd:Tuning .}</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
         <rdfs:label xml:lang="it">Comunicazione verbale</rdfs:label>
         <rdfs:label xml:lang="en">Verbal communication</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -6996,6 +7097,8 @@ WHERE {?x a a-dd:WaistCircumference .}</core:constructQuery>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
         <rdfs:label xml:lang="it">Comunicazione scritta</rdfs:label>
         <rdfs:label xml:lang="en">Written communication</rdfs:label>
+        <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>

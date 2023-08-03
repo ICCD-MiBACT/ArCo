@@ -206,6 +206,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">classifies</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: */SGT/SGTI, DA/AID/AIDI, RO/ROF/ROFS, */THS/THSD. VeAC: OG/OGT/OGTV. SM: CL/CHS/CHSN, CL/CLA/CLAT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -223,6 +224,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">definisce concetto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale e normative precedenti 4.00: SG/CLF/CLFT. SM: CL/CLA/CLAA. Normativa BNM: SM/SMS/SMSX, SMSC, SMSD, RM/RMS/RMSX, RMSK</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -240,7 +242,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">descrive</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale: AC/ACS</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Tutte le schede di catalogo descrivono un bene. ICCD Normativa Tr: AC/ACS, AC/MOD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -259,6 +261,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has agent</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE. UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa SM: CL/CLA/CLAA. Normativa BNB: SB/NAA/NAAG, NAAI, NAAE, NAAC, SB/NAT/NATG, NATI, NATE, NATC, RB/RBR/RBNG, RBNI, RBNE, RBNC, LR/LRD/LRDA, DB/DBR/DBRA, DB/DBC/DBCA, DB/DBX/DBXT, DB/DBP/DBPA, DB/DBS/DBSR. Normativa BNM: LR/LRI/LRIL, LRIZ, LRIG, LRIX,. Normativa BNP: SP/SPS/SPSA, SPSD. Normativa BNZ: SZ/SZS/SZSE, SZSD. Normativa ATOG/OGS/OGSA, IN/INI/INIL, INIO. Normativa BNPL: SP/SPN/SPNS, SPNM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -276,6 +279,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has agent role</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE. UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa SM: CL/CLA/CLAA. Normativa BNB: SB/NAA/NAAG, NAAI, NAAE, NAAC, SB/NAT/NATG, NATI, NATE, NATC, RB/RBR/RBNG, RBNI, RBNE, RBNC, LR/LRD/LRDA, DB/DBR/DBRA, DB/DBC/DBCA, DB/DBX/DBXT, DB/DBP/DBPA, DB/DBS/DBSR. Normativa BNM: LR/LRI/LRIL, LRIZ, LRIG, LRIX,. Normativa BNP: SP/SPS/SPSA, SPSD. Normativa BNZ: SZ/SZS/SZSE, SZSD. Normativa ATOG/OGS/OGSA, IN/INI/INIL, INIO. Normativa BNPL: SP/SPN/SPNS, SPNM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -294,6 +298,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has category</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/CTG -  Normativa AT: OG/OGT/OGTP - Normativa RA: OG/CLS - Normative CA e MA e Normativa VeAC: OG/OGT/OGTC, Normativa BDM: OG/OGT/OGTG. ICCD Normativa TMA: MA/MAC/MACC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -328,9 +333,6 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">ha classificazione</rdfs:label>
         <rdfs:label xml:lang="en">has classification</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale: RE/FOI/FOIF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -349,6 +351,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has classification in time</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -363,8 +366,8 @@ In this module the following Ontology Design Patterns have been used:
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasConcept"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
         </owl:propertyChainAxiom>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione nel tempo ad un sistema di classificazione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a classification in time to a classification system</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione ad un sistema di classificazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a classification to a classification system</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/arco/ontology/core</rdfs:isDefinedBy>
         <rdfs:label xml:lang="it">ha sistema di classificazione</rdfs:label>
         <rdfs:label xml:lang="en">has classification system</rdfs:label>
@@ -407,6 +410,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has concept</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF/CLFS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -424,6 +428,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has consequence</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: RB/RBR/RBRN, RB/RBN.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -443,6 +448,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has constituent</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNPE: SR/SRM/SRMP, SRMA; SR/SRL/SRLP. Normativa BNPL: SP/SPM/SPMO, SPMP, SPML, SPMM, SPMS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -504,7 +510,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasDirectHigherRank">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasHigherRank"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/hasDirectLowerRank"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/hasDirectHigherRank"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega due taxa, dove la prima è più specifica della seconda e non ci sono altri taxa che siano più generali del primo e più specifici del secondo.</rdfs:comment>
@@ -514,6 +520,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has direct higher rank</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF. Normativa BNB: SB/NBN, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN. Normativa BNP: SP/SPS. Normativa BNZ: SZ/SZS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN, RR/RRN. Normativa BNPL: SP/SPN, RP/RPN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -531,6 +538,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has direct lower rank</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF. Normativa BNB: SB/NBN, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN. Normativa BNP: SP/SPS. Normativa BNZ: SZ/SZS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN, RR/RRN. Normativa BNPL: SP/SPN, RP/RPN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -567,6 +575,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has higher rank</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF. Normativa BNB: SB/NBN, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN. Normativa BNP: SP/SPS. Normativa BNZ: SZ/SZS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN, RR/RRN. Normativa BNPL: SP/SPN, RP/RPN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -584,6 +593,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/NTC, AC/ACC, ACI, ACS/ACSC, AC/MOD/MODI; OG/OGT/OGTI; RO/ROF/ROFX, RO/CRF/CRFH, DO/BIB/BIBH, BIBK, NCUN, RE/RCG/RCGK, NCUN, NUCN, RCGH, RE/DSC/DSCK, NUCN, NCUN, DSCH, RE/FOI/FOID; AU/AUT/AUTH, AUTK, NUCN, NCUN; AU/AUF/AUFH, NUCN, NCUN; PD/PDF/PDFH; UB/INP/INPS: LC/LDC/LDCK, LDCG; LA/PRC/PRCK; MC/CMN/CMNN. MODI: CD/CDR, CDM. Normativa BDI: DU/DUC, DU/DUO/DUOC, DU/DUM/DUMC, DV/DVC, DV/DVO/DVOC, DV/DVM/DVMC, DF/DFC, DF/DFO/DFOC, DF/DFM/DFMC, AI/AIC, AI/AIO/AIOC, AI/AIM/AIMC, VI/VIC, VI/VIO/VIOC, VI/VIM/VIMC, FI/FIC, FI/FIO/FIOC, FI/FIM/FIMC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -618,6 +628,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has lower rank</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF. Normativa BNB: SB/NBN, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN. Normativa BNP: SP/SPS. Normativa BNZ: SZ/SZS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN, RR/RRN. Normativa BNPL: SP/SPN, RP/RPN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -674,7 +685,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has role</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative F e FF: PD/PDF/PDFR</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE. UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa SM: CL/CLA/CLAA. Normativa BNB: SB/NAA/NAAG, NAAI, NAAE, NAAC, SB/NAT/NATG, NATI, NATE, NATC, RB/RBR/RBNG, RBNI, RBNE, RBNC, LR/LRD/LRDA, DB/DBR/DBRA, DB/DBC/DBCA, DB/DBX/DBXT, DB/DBP/DBPA, DB/DBS/DBSR. Normativa BNM: LR/LRI/LRIL, LRIZ, LRIG, LRIX,. Normativa BNP: SP/SPS/SPSA, SPSD. Normativa BNZ: SZ/SZS/SZSE, SZSD. Normativa ATOG/OGS/OGSA, IN/INI/INIL, INIO. Normativa BNPL: SP/SPN/SPNS, SPNM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -710,7 +721,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has taxon</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. BNB: SB/SBS/SBSA, SB/NBN/NBNA, SB/NAA, SB/TBI/TBIN, SB/NAT, RB/RBR/RBRN, RB/RBN</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa BNB: SB/NBN, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN. Normativa BNP: SP/SPS. Normativa BNZ: SZ/SZS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN, RR/RRN. Normativa BNPL: SP/SPN, RP/RPN</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasTopic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasTopic">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isTopicOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;argomento corrispondente.</rdfs:comment>
+        <rdfs:comment xml:lang="it">This property relates an entity with its topic.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha argomento</rdfs:label>
+        <rdfs:label xml:lang="en">has topic</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -764,6 +792,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">involves agent</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: SB/DBV/DBVA, RB/RBR/RBRA, SB/ABC/ABCA, TB/TBI/TBIA. Normativa BNM: SM/SMT/SMTA, RM/RMT/RMTA. Normativa BNP: SP/SPS/SPSL. Normativa BNZ: SZ/SZS/SZSL. Normativa BNPE: RR/RRD/RRDA, SR/SRT/SRTA, RR/RRT/RRTA. Normativa BNPL: SP/SPT/SPTA, RP/RPT/RPTA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -781,6 +810,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è agente coinvolto in</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: SB/DBV/DBVA, RB/RBR/RBRA, SB/ABC/ABCA, TB/TBI/TBIA. Normativa BNM: SM/SMT/SMTA, RM/RMT/RMTA. Normativa BNP: SP/SPS/SPSL. Normativa BNZ: SZ/SZS/SZSL. Normativa BNPE: RR/RRD/RRDA, SR/SRT/SRTA, RR/RRT/RRTA. Normativa BNPL: SP/SPT/SPTA, RP/RPT/RPTA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -797,6 +827,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è agente in</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE. UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa SM: CL/CLA/CLAA. Normativa BNB: SB/NAA/NAAG, NAAI, NAAE, NAAC, SB/NAT/NATG, NATI, NATE, NATC, RB/RBR/RBNG, RBNI, RBNE, RBNC, LR/LRD/LRDA, DB/DBR/DBRA, DB/DBC/DBCA, DB/DBX/DBXT, DB/DBP/DBPA, DB/DBS/DBSR. Normativa BNM: LR/LRI/LRIL, LRIZ, LRIG, LRIX,. Normativa BNP: SP/SPS/SPSA, SPSD. Normativa BNZ: SZ/SZS/SZSE, SZSD. Normativa ATOG/OGS/OGSA, IN/INI/INIL, INIO. Normativa BNPL: SP/SPN/SPNS, SPNM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -813,6 +844,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è ruolo ricoperto da agente di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE. UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa SM: CL/CLA/CLAA. Normativa BNB: SB/NAA/NAAG, NAAI, NAAE, NAAC, SB/NAT/NATG, NATI, NATE, NATC, RB/RBR/RBNG, RBNI, RBNE, RBNC, LR/LRD/LRDA, DB/DBR/DBRA, DB/DBC/DBCA, DB/DBX/DBXT, DB/DBP/DBPA, DB/DBS/DBSR. Normativa BNM: LR/LRI/LRIL, LRIZ, LRIG, LRIX,. Normativa BNP: SP/SPS/SPSA, SPSD. Normativa BNZ: SZ/SZS/SZSE, SZSD. Normativa ATOG/OGS/OGSA, IN/INI/INIL, INIO. Normativa BNPL: SP/SPN/SPNS, SPNM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -830,6 +862,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è categoria di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/CTG -  Normativa AT: OG/OGT/OGTP - Normativa RA: OG/CLS - Normative CA e MA e Normativa VeAC: OG/OGT/OGTC, Normativa BDM: OG/OGT/OGTG. ICCD Normativa TMA: MA/MAC/MACC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -863,6 +896,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è classificazione nel tempo di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -897,6 +931,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è sistema di classificazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: SG/CLF/CLFT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -913,6 +948,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è classificato da</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: */SGT/SGTI, DA/AID/AIDI, RO/ROF/ROFS, */THS/THSD. VeAC: OG/OGT/OGTV. SM: CL/CHS/CHSN, CL/CLA/CLAT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -948,6 +984,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è concetto di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF/CLFS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -964,6 +1001,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è conseguenza di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: RB/RBR/RBRN, RB/RBN.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -982,6 +1020,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è costituente di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNPE: SR/SRM/SRMP, SRMA; SR/SRL/SRLP. Normativa BNPL: SP/SPM/SPMO, SPMP, SPML, SPMM, SPMS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1015,6 +1054,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è definito da sistema di classificazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale e normative precedenti 4.00: SG/CLF/CLFT. SM: CL/CLA/CLAA. Normativa BNM: SM/SMS/SMSX, SMSC, SMSD, RM/RMS/RMSX, RMSK</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1048,6 +1088,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è descritto da</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Tutte le schede di catalogo descrivono un bene. ICCD Normativa Tr: AC/ACS, AC/MOD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1098,6 +1139,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è identificativo di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/NTC, AC/ACC, ACI, ACS/ACSC, AC/MOD/MODI; OG/OGT/OGTI; RO/ROF/ROFX, RO/CRF/CRFH, DO/BIB/BIBH, BIBK, NCUN, RE/RCG/RCGK, NCUN, NUCN, RCGH, RE/DSC/DSCK, NUCN, NCUN, DSCH, RE/FOI/FOID; AU/AUT/AUTH, AUTK, NUCN, NCUN; AU/AUF/AUFH, NUCN, NCUN; PD/PDF/PDFH; UB/INP/INPS: LC/LDC/LDCK, LDCG; LA/PRC/PRCK; MC/CMN/CMNN. MODI: CD/CDR, CDM. Normativa BDI: DU/DUC, DU/DUO/DUOC, DU/DUM/DUMC, DV/DVC, DV/DVO/DVOC, DV/DVM/DVMC, DF/DFC, DF/DFO/DFOC, DF/DFM/DFMC, AI/AIC, AI/AIO/AIOC, AI/AIM/AIMC, VI/VIC, VI/VIO/VIOC, VI/VIM/VIMC, FI/FIC, FI/FIO/FIOC, FI/FIM/FIMC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1183,6 +1225,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è ruolo in</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE. UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa SM: CL/CLA/CLAA. Normativa BNB: SB/NAA/NAAG, NAAI, NAAE, NAAC, SB/NAT/NATG, NATI, NATE, NATC, RB/RBR/RBNG, RBNI, RBNE, RBNC, LR/LRD/LRDA, DB/DBR/DBRA, DB/DBC/DBCA, DB/DBX/DBXT, DB/DBP/DBPA, DB/DBS/DBSR. Normativa BNM: LR/LRI/LRIL, LRIZ, LRIG, LRIX,. Normativa BNP: SP/SPS/SPSA, SPSD. Normativa BNZ: SZ/SZS/SZSE, SZSD. Normativa ATOG/OGS/OGSA, IN/INI/INIL, INIO. Normativa BNPL: SP/SPN/SPNS, SPNM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1218,6 +1261,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è taxon di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: SB/NBN, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN. Normativa BNP: SP/SPS. Normativa BNZ: SZ/SZS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN, RR/RRN. Normativa BNPL: SP/SPN, RP/RPN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1234,6 +1278,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">is time interval valid for</rdfs:label>
         <rdfs:label xml:lang="it">è intervallo di tempo valido per</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isTopicOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTopicOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un argomento ad un&apos;entità collegata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a topic with its related entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is topic of</rdfs:label>
+        <rdfs:label xml:lang="it">è argomento di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1287,6 +1347,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">rilasciato da</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>AC/ACC/ACCE. Usato per tutti gli identificativi emessi da ICCD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1304,6 +1365,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">rilascia</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>AC/ACC/ACCE. Usato per tutti gli identificativi emessi da ICCD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1427,6 +1489,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>AU/CMM/CMMF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale e precedenti: *SGT/SGTL, RO/ROF/ROFM,, DT/DTM/DTMM, DT/ADT/ADTM, RE/REN/RENF, AU/DDC/DDCF, AU/FRU/FRUF, AU/ATB/ATBM, AU/AUT/AUTM, AU/AUF/AUFM, AU/AUI/AUIM, AU/AFB/AFBM, AU/AAT/AATM, AUAAFAAFM, PD/PDF/PDFM, UB/INP/INPA, UB/INV/INVS, UB/STI/STIM, AU/CMM/CMMF, LS/LTS/LTSF, LS/LVS/LVSF. Normativa BDI: AT/ATT/ATTE; AI/AIF/AIFH, VI/VIF/VIFH, FI/FIF/FIFH. Normativa SM: MU/MUT/MUTE. Normativa AT: DA/STS/STSC, DA/SEM/SEMC. Normativa BNPE: SR/SRRSRRM, RR/RRR/RRRM. Normativa BNPL: SP/SPD/SPDR, SPDS, SPDU, SPDD, SPDP, SPDH, SPDN, SPDA, SPDC, SPDB, SPDL</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1601,6 +1664,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Agente</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; AU/EDT/EDTN; PD/EDI/EDIR, TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, AU/NMC/NMCN, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; DA/STM/STMI; DA/ISE/ISEO, ISEA; DA/ISR/ISRA; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE, AU/AUT/AUTN,  AUTB, AU/AAU/AAUN, AU/AUF/AUFN, AUFB; AU/AAF/AAFN, AU/AUI/AUIN, AUIB, AU/AAT/AATN, AU/AAT, AU/AAF/AAFN, AAFB; PD/PDF/PDFN, PDFB, UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: AT/ATT/ATTN; TCTCD; DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa MODI: RI/ATI/ATID, RI/ATC/ATCD. Normativa SM: MU/MUT/MUTN, OS/OSD, CL/CLA/CLAA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1774,6 +1838,7 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
         <rdfs:label xml:lang="it">Concetto</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: */SGT/SGTI, DA/DES/DESU, DA/AID/AIDI, RO/ROF/ROFS, */THS/THSD. VeAC: OG/OGT/OGTV. SM: CL/CHS/CHSN, CL/CLA/CLAT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1819,12 +1884,10 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Depiction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:comment xml:lang="it">Questa entità rappresenta la raffigurazione di un&apos;entità culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the depiction of a cultural entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">Depiction</rdfs:label>
         <rdfs:label xml:lang="it">Foto</rdfs:label>
-        <rdfs:label xml:lang="it">Raffigurazione</rdfs:label>
         <rdfs:label xml:lang="it">Ritratto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -1951,6 +2014,7 @@ WHERE {
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>NC/NCT, AC/ACC/ACCC, AC/ACS/ACSC, AC/MOD/MODI. ICCD Normativa Trasversale 4.00: UB/INP/INPS. ICCD Normativa FF: PA/PAC/PACI; PA/PAC/PACA. ICCD Normativa Trasversale 4.00: DO/FTA/FTAN; DO/DRA/DRAN; DO/VDC/VDCN; DO/REG/REGN; DO/FNT/FNTI. ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFX. ICCD Normativa Trasversale 4.00: RE/FOI/FOID. UB/COL/COLI.</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/NTC, AC/ACC, ACI, ACS/ACSC, AC/MOD/MODI; OG/OGT/OGTI; RO/ROF/ROFX, RO/CRF/CRFH, DO/BIB/BIBH, BIBK, NCUN, RE/RCG/RCGK, NCUN, NUCN, RCGH, RE/DSC/DSCK, NUCN, NCUN, DSCH, RE/FOI/FOID; AU/AUT/AUTH, AUTK, NUCN, NCUN; AU/AUF/AUFH, NUCN, NCUN; PD/PDF/PDFH; UB/INP/INPS: LC/LDC/LDCK, LDCG; LA/PRC/PRCK; MC/CMN/CMNN. MODI: CD/CDR, CDM. Normativa BDI: DU/DUC, DU/DUO/DUOC, DU/DUM/DUMC, DV/DVC, DV/DVO/DVOC, DV/DVM/DVMC, DF/DFC, DF/DFO/DFOC, DF/DFM/DFMC, AI/AIC, AI/AIO/AIOC, AI/AIM/AIMC, VI/VIC, VI/VIO/VIOC, VI/VIM/VIMC, FI/FIC, FI/FIO/FIOC, FI/FIM/FIMC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1966,6 +2030,7 @@ WHERE {
         <rdfs:label xml:lang="it">Tipo di identificativo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/NTC, AC/ACC, ACI, ACS/ACSC, AC/MOD/MODI; OG/OGT/OGTI; RO/ROF/ROFX, RO/CRF/CRFH, DO/BIB/BIBH, BIBK, NCUN, RE/RCG/RCGK, NCUN, NUCN, RCGH, RE/DSC/DSCK, NUCN, NCUN, DSCH, RE/FOI/FOID; AU/AUT/AUTH, AUTK, NUCN, NCUN; AU/AUF/AUFH, NUCN, NCUN; PD/PDF/PDFH; UB/INP/INPS: LC/LDC/LDCK, LDCG; LA/PRC/PRCK; MC/CMN/CMNN. MODI: CD/CDR, CDM. Normativa BDI: DU/DUC, DU/DUO/DUOC, DU/DUM/DUMC, DV/DVC, DV/DVO/DVOC, DV/DVM/DVMC, DF/DFC, DF/DFO/DFOC, DF/DFM/DFMC, AI/AIC, AI/AIO/AIOC, AI/AIM/AIMC, VI/VIC, VI/VIO/VIOC, VI/VIM/VIMC, FI/FIC, FI/FIO/FIOC, FI/FIM/FIMC</a-cat:iccdNormTag>
     </owl:Class>
     
 
