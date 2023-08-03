@@ -389,6 +389,7 @@ WHERE {?class a-dd:hasAffixedElementType ?type.}</core:constructQuery>
         <rdfs:label xml:lang="en">has arrangement</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT 3.01: PR/PRF/PRFM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -524,6 +525,7 @@ WHERE {?class a-dd:hasCommunicationMediumType ?type.}</core:constructQuery>
         <rdfs:label xml:lang="en">has conservation method</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM, BNPE, BNPL: CO/STC/STCM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -862,6 +864,7 @@ WHERE {?class a-dd:hasExtension ?char. }</core:constructQuery>
         <rdfs:label xml:lang="en">has format</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAF, DO/DRA/DRAF, DO/FNT/FNTR (+ DO/VDC/VDCP, DO/REG/REGP). ICCD Normativa F: MT/FVC/FVCF. ICCD Normative OA, D, S, MI: MT/FRM. Normativa BNB: DB/DBX/DBXX</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1880,6 +1883,7 @@ WHERE {?type a-dd:isAffixedElementTypeOf ?class.}</core:constructQuery>
         <rdfs:label xml:lang="it">è disposizione di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT 3.01: PR/PRF/PRFM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -4300,6 +4304,8 @@ resource:ConservationStatus/0900750201-conservation-status-1
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di stato di conservazione (buono, cattivo, eccellente, etc)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of the conservation status (good, bad, excellent, etc)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">Conservation Status Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di stato di conservazione</rdfs:label>
@@ -4600,6 +4606,8 @@ WHERE {?class a a-dd:DesignationType .}</core:constructQuery>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Filigree">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la filigrana</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a filigree</rdfs:comment>
         <rdfs:label xml:lang="it">Filigrana</rdfs:label>
         <rdfs:label xml:lang="en">Filigree</rdfs:label>
     </owl:Class>
@@ -4633,7 +4641,7 @@ WHERE {?class a a-dd:DesignationType .}</core:constructQuery>
         <rdfs:label xml:lang="it">Formato</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAF, DO/DRA/DRAF, DO/FNT/FNTR (+ DO/VDC/VDCP, DO/REG/REGP). ICCD Normativa F: MT/FVC/FVCF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAF, DO/DRA/DRAF, DO/FNT/FNTR (+ DO/VDC/VDCP, DO/REG/REGP). ICCD Normativa F: MT/FVC/FVCF. ICCD Normative OA, D, S, MI: MT/FRM. Normativa BNB: DB/DBX/DBXX</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5235,12 +5243,14 @@ WHERE {?class a a-dd:Soil .}</core:constructQuery>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SortingCriterion">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il criterio di ordinamento di un fondo, una serie, etc</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the sorting criterion of a series, fond, etc</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">Criterio di ordinamento</rdfs:label>
         <rdfs:label xml:lang="en">Sorting criterion</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa NU: OG/OGT/OGTO</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa FF: OG/OGT/OGTO</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5648,6 +5658,7 @@ WHERE {?x a a-dd:ChestCircumference .}</core:constructQuery>
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/CoatOfArms">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
         <rdfs:label xml:lang="en">Coat of arms</rdfs:label>
+        <rdfs:label xml:lang="it">Stemma</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa trasversale: DA/ISE/ISED</a-cat:iccdNormTag>
@@ -5789,12 +5800,6 @@ WHERE {?x a a-dd:CustomaryDesignation . }</core:constructQuery>
         <owl:versionInfo xml:lang="en">Stable</owl:versionInfo>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/DecorativeApparatus -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/DecorativeApparatus"/>
     
 
 
@@ -6196,23 +6201,6 @@ WHERE {?x a a-dd:HistoricalDesignation . }</core:constructQuery>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa trasversale: DA/ISE/ISED</a-cat:iccdNormTag>
     </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/IconographicAndDecorativeApparatus -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicAndDecorativeApparatus">
-        <rdfs:label xml:lang="it">Apparato iconografico e decorativo</rdfs:label>
-        <rdfs:label xml:lang="en">Iconographic and Decorative apparatus</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/IconographicApparatus -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicApparatus"/>
     
 
 
@@ -6765,21 +6753,6 @@ core:hasType ?rainfalltype .
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Shape -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Shape">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
-        <rdfs:comment xml:lang="it">Questo individuo rappresenta la forma di un oggetto, per oggetti bidimensionali (es.: ottagonale, tondo)</rdfs:comment>
-        <rdfs:comment xml:lang="en">This individual represents an object&apos;s shape. It is used for bidimensional objects, e.g. octagonal or round shape.</rdfs:comment>
-        <rdfs:label xml:lang="it">Formato</rdfs:label>
-        <rdfs:label xml:lang="en">Shape</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative OA, D, S, MI: MT/FRM. Normativa BNB: DB/DBX/DBXX</a-cat:iccdNormTag>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/SingingCommunication -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/SingingCommunication">
@@ -7105,35 +7078,6 @@ WHERE {?x a a-dd:WaistCircumference .}</core:constructQuery>
     </rdf:Description>
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/DecorativeApparatus">
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID - ICCD Normative PST e BDM: DA/APF. VeAC: MT/MTC/MTCD e MTCN, DA/EDA</a-cat:iccdNormTag>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;apparato decorativo di un bene culturale, inteso come l&apos;insieme, che può essere più o meno complesso, delle decorazioni presenti sul bene.</rdfs:comment>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:comment xml:lang="en">This class represents the decorative apparaturs of a cultural property. It is intended as the more or less complex set of decorative representations on the cultural property.</rdfs:comment>
-        <rdfs:label xml:lang="en">Decorative Apparatus</rdfs:label>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <rdfs:label xml:lang="it">Apparato decorativo</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicApparatus">
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:comment xml:lang="en">This class represents the iconographic apparaturs of a cultural property. It is intended as the more or less complex set of iconographic representations on the cultural property.</rdfs:comment>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID, DE/DEC - ICCD Normative PST e BDM: DA/APF. VeAC: MT/MTC/MTCD e MTCN, DA/EDA</a-cat:iccdNormTag>
-        <rdfs:label xml:lang="en">Iconographic Apparatus</rdfs:label>
-        <rdfs:label xml:lang="it">Apparato iconografico</rdfs:label>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;apparato iconografico di un bene culturale, inteso come l&apos;insieme, che può essere più o meno complesso, delle rappresentazioni iconografiche presenti sul bene.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </rdf:Description>
     
 
