@@ -336,9 +336,18 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha altro codice identificativo</rdfs:label>
         <rdfs:label xml:lang="en">has alternative identifier</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: AC/ACC</iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?thing core:hasIdentifier ?id .
+}
+
+WHERE {
+?thing a-cat:hasAlternativeIdentifier ?id 
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
     </owl:ObjectProperty>
     
 
@@ -962,8 +971,10 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is alternative identifier of</rdfs:label>
         <rdfs:label xml:lang="it">è altro codice identificativo di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isIdentifierOf"/>
     </owl:ObjectProperty>
     
 
@@ -1307,9 +1318,18 @@ core:isAgentRoleOf ?thing .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is related to additional form</rdfs:label>
         <rdfs:label xml:lang="it">è collegato a modulo di approfondimento</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP</iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?thing core:isDescribedBy ?form .
+}
+
+WHERE {
+?thing a-cat:isRelatedToAdditionalForm ?form 
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isDescribedBy"/>
     </owl:ObjectProperty>
     
 
@@ -1324,9 +1344,18 @@ core:isAgentRoleOf ?thing .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is related to information form</rdfs:label>
         <rdfs:label xml:lang="it">è collegato a modulo informativo</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasvesale 4.00: AC/MOD</iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?thing core:isDescribedBy ?form .
+}
+
+WHERE {
+?thing a-cat:isRelatedToInformationForm ?form 
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isDescribedBy"/>
     </owl:ObjectProperty>
     
 
@@ -2568,6 +2597,38 @@ resource:CatalogueRecordS/0500212038
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordMINP -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordMINP">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda MINP-Modulo per l&apos;inventariazione patrimoniale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the MINP catalogue record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">MINP catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Modulo per l&apos;inventariazione patrimoniale</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda MINP</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordMINV -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordMINV">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda MINV-Modulo per l&apos;inventariazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the MINV catalogue record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">MINV catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Modulo per l&apos;inventariazione</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda MINV</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordMODI -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordMODI">
@@ -2575,6 +2636,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda MODI-Modulo informativo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the MODI catalogue record.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">Information form</rdfs:label>
         <rdfs:label xml:lang="en">MODI catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Modulo informativo</rdfs:label>
         <rdfs:label xml:lang="it">Scheda MODI</rdfs:label>
@@ -2700,6 +2762,22 @@ resource:CatalogueRecordS/0500212038
         <rdfs:label xml:lang="en">Stratigraphic records catalogue record</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordSCAN -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordSCAN">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda SCAN-Scheda anagrafica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents SCAn catalogue record</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">SCAN Catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda SCAN</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda anagrafica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2831,22 +2909,6 @@ resource:CatalogueRecordS/0500212038
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <iccdNormTag>CM/CMO, RVM, AGG</iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/catalogue/CataloguerecordSCAN -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CataloguerecordSCAN">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda SCAN-Scheda anagrafica</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents SCAn catalogue record</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <rdfs:label xml:lang="en">SCAN Catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda SCAN</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda anagrafica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
