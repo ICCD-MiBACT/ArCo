@@ -328,33 +328,11 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClass">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClassificationSystem"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una classe della classificazione Hornbostel-Sachs per gli strumenti musicali</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the Hornbostel-Sachs class</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="it">Classe Hornbostel-Sachs</rdfs:label>
         <rdfs:label xml:lang="en">Hornbostel-Sachs class</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa SM 4.00: CL/CHS</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClassificationSystem -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClassificationSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema di classificazione Hornbostel-Sachs per strumenti musicali.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the Hornbostel-Sachs classification system for musical instruments.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
-        <rdfs:label xml:lang="en">Hornbostel-Sachs classification system</rdfs:label>
-        <rdfs:label xml:lang="it">Sistema di classificazione Hornbostel-Sachs</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: CL/CHS</a-cat:iccdNormTag>
@@ -402,28 +380,6 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentClass -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentClass">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/classifies"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la classificazione di strumenti musicali</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the classification of musical instrument</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
-        <rdfs:label xml:lang="it">Classificazione di strumenti musicali</rdfs:label>
-        <rdfs:label xml:lang="en">Musical instrument class</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa SM 4.00: CL/CLA/CLAT</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentTaxon -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentTaxon">
@@ -437,6 +393,7 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta il taxon, ovvero il concetto che appartiene a una classificazione gerarchizzata degli strumenti musicali.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the taxon, that is a concept related to a hierarchical classification system of musical instruments.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">Classe degli strumenti musicali</rdfs:label>
         <rdfs:label xml:lang="en">Musical instrument taxon</rdfs:label>
         <rdfs:label xml:lang="it">Taxon degli strumenti musicali</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>

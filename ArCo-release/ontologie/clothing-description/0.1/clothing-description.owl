@@ -249,8 +249,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà indica se la decorazione di un capo è applicata oppure no (e.g. ricamata)</rdfs:comment>
         <rdfs:comment xml:lang="en">This property claims if a decoration is applied on the clothing or not (e.g. embrodered)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description"/>
-        <rdfs:label xml:lang="en">is applied decoration</rdfs:label>
-        <rdfs:label xml:lang="it">è decorazione applicata</rdfs:label>
+        <rdfs:label xml:lang="en">applied decoration</rdfs:label>
+        <rdfs:label xml:lang="it">decorazione applicata</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -272,8 +272,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega un costume alle sue specifiche</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a costume with its specification</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description"/>
-        <rdfs:label xml:lang="it">ha specifiche di costume</rdfs:label>
-        <rdfs:label xml:lang="en">has costume specification</rdfs:label>
+        <rdfs:label xml:lang="en">costume specification</rdfs:label>
+        <rdfs:label xml:lang="it">specifiche di costume</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -288,8 +288,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega un vestimento al tipo di utente per cui è stato realizzato</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a clothing with the indended user type</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description"/>
-        <rdfs:label xml:lang="it">ha utente designato</rdfs:label>
-        <rdfs:label xml:lang="en">has intended user</rdfs:label>
+        <rdfs:label xml:lang="en">intended user</rdfs:label>
+        <rdfs:label xml:lang="it">utente designato</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa VeAC 3.01: OG/OGT/OGTG, OG/OGTA+OGTR/Q</catalogue:iccdNormTag>
@@ -311,8 +311,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;uniforme con le sue specifiche</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/clothing-description"/>
-        <rdfs:label xml:lang="it">ha specifiche di uniforme</rdfs:label>
-        <rdfs:label xml:lang="en">has uniform specification</rdfs:label>
+        <rdfs:label xml:lang="it">specifiche di uniforme</rdfs:label>
+        <rdfs:label xml:lang="en">uniform specification</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
