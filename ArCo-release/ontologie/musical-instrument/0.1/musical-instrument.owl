@@ -125,9 +125,9 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/musical-instrument/isAccompanyingInstrumentInvolvedIn">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale di accompagnamento con un&apos;entità</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an accompanying musical instrument with an entity</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
-        <rdfs:label xml:lang="it">Questa proprietà collega uno strumento musicale di accompagnamento con un&apos;entità</rdfs:label>
-        <rdfs:label xml:lang="it">This property relates an accompanying musical instrument with an entity</rdfs:label>
         <rdfs:label xml:lang="en">is accompanying instrument involved in</rdfs:label>
         <rdfs:label xml:lang="it">è strumento musicale di accompagnamento coinvolto in</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -149,6 +149,7 @@
         <rdfs:label xml:lang="it">è prodotta da strumento musicale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SM 3.01: AA/AAN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -197,6 +198,7 @@
         <rdfs:label xml:lang="en">produces musical note</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SM 3.01: AA/AAN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
