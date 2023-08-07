@@ -799,6 +799,8 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasHeight">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isHeightOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla misura della sua altezza.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the measurement of height to the measured entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -911,6 +913,8 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasLenght">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isLengthOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla misura della sua lunghezza.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the measurement of length to the measured entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -5107,9 +5111,9 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/toponym">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment rdf:resource="https:w3id.org/arco/ontology/arco-lite"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un luogo al suo toponimo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a feature with its toponym.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https:w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="it">toponimo</rdfs:label>
         <rdfs:label xml:lang="it">toponym</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
