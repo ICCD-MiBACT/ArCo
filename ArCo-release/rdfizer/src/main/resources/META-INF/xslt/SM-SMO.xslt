@@ -923,6 +923,11 @@
 						</xsl:attribute>
 					</arco-dd:includesTechnicalCharacteristic>
 				</xsl:if>
+				<xsl:if test="record/metadata/schede/SM/AA/AAS">
+					<arco-core:note>
+						<xsl:value-of select="normalize-space(record/metadata/schede/SM/AA/AAS)" />
+					</arco-core:note>
+				</xsl:if>
 			</rdf:Description>
 		</xsl:if>
 		<!-- Technical characteristic as individual -->

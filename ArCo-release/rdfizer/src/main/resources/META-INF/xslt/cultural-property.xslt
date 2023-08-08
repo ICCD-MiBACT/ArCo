@@ -1055,9 +1055,9 @@
 				</xsl:if>
 				<!-- definition and position of components (OGCD) -->
 				<xsl:if test="not($sheetType='AT') and record/metadata/schede/*/OG/OGC/OGCD">
-					<arco-arco:definitionAndPositionOfComponents><!-- multiple OGCD eg:ICCD14371179 -->
-						<xsl:value-of select="normalize-space(string-join(record/metadata/schede/*/OG/OGC/OGCD, ' ; '))" />
-					</arco-arco:definitionAndPositionOfComponents>
+					<arco-core:note><!-- multiple OGCD eg:ICCD14371179 -->
+						<xsl:value-of select="concat('Definizione e posizione dei componenti: ', normalize-space(string-join(record/metadata/schede/*/OG/OGC/OGCD, ' ; ')))" />
+					</arco-core:note>
 				</xsl:if>
 				<!-- cadastral identity -->
 				<xsl:for-each select="record/metadata/schede/*/CS">
@@ -4601,7 +4601,7 @@
 				</xsl:if>
 				<!-- digital photo note (F) -->
 				<xsl:if test="record/metadata/schede/F/MT/FVC/FVCV or record/metadata/schede/F/MT/FVC/FVCN">
-					<arco-dd:digitalPhotographNote>
+					<arco-core:note>
 						<xsl:choose>
 							<xsl:when test="record/metadata/schede/F/MT/FVC/FVCV">
 								<xsl:value-of select="record/metadata/schede/F/MT/FVC/FVCV" />
@@ -4610,7 +4610,7 @@
 								<xsl:value-of select="record/metadata/schede/F/MT/FVC/FVCN" />
 							</xsl:otherwise>
 						</xsl:choose>
-					</arco-dd:digitalPhotographNote>
+					</arco-core:note>
 				</xsl:if>	
 				<!-- Legal situation of cultural property -->
 				<xsl:if test="record/metadata/schede/*/TU/CDG">

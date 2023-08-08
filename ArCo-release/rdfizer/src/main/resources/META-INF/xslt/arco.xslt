@@ -1128,12 +1128,12 @@
 						<rdfs:label>
 							<xsl:value-of select="normalize-space()" />
 						</rdfs:label>
-						<tiapit:startTime>
+						<arco-arco:startTime>
 							<xsl:value-of select="normalize-space()" />
-						</tiapit:startTime>
-						<tiapit:endTime>
+						</arco-arco:startTime>
+						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space()" />
-						</tiapit:endTime>
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -1401,12 +1401,12 @@
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./AGGD)" />
 						</rdfs:label>
-						<tiapit:startTime>
+						<arco-arco:startTime>
 							<xsl:value-of select="normalize-space(./AGGD)" />
-						</tiapit:startTime>
-						<tiapit:endTime>
+						</arco-arco:startTime>
+						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(./AGGD)" />
-						</tiapit:endTime>
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- Participant role AGGN -->
@@ -1757,12 +1757,12 @@
 					<rdfs:label>
 						<xsl:value-of select="normalize-space()" />
 					</rdfs:label>
-					<tiapit:startTime>
+					<arco-arco:startTime>
 						<xsl:value-of select="normalize-space()" />
-					</tiapit:startTime>
-					<tiapit:endTime>
+					</arco-arco:startTime>
+					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space()" />
-					</tiapit:endTime>
+					</arco-arco:endTime>
 				</rdf:Description>
 			</xsl:for-each>
 			<!-- Version time interval - RVM -->
@@ -1779,12 +1779,12 @@
 					<rdfs:label>
 						<xsl:value-of select="normalize-space()" />
 					</rdfs:label>
-					<tiapit:startTime>
+					<arco-arco:startTime>
 						<xsl:value-of select="normalize-space()" />
-					</tiapit:startTime>
-					<tiapit:endTime>
+					</arco-arco:startTime>
+					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space()" />
-					</tiapit:endTime>
+					</arco-arco:endTime>
 				</rdf:Description>
 			</xsl:for-each>
 			<!-- Participant role - Compilation -->
@@ -3677,12 +3677,12 @@
 									<l0:name>
 									<xsl:value-of select="normalize-space(./ROFD)" />
 								</l0:name>
-								<tiapit:startTime>
+								<arco-arco:startTime>
 									<xsl:value-of select="normalize-space(./ROFD)" />
-								</tiapit:startTime>
-								<tiapit:endTime>
+								</arco-arco:startTime>
+								<arco-arco:endTime>
 									<xsl:value-of select="normalize-space(./ROFD)" />
-								</tiapit:endTime>
+								</arco-arco:endTime>
 							</rdf:Description>
 						</xsl:if>
 					</xsl:if>
@@ -4504,12 +4504,12 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space()" />
 							</l0:name>
-							<tiapit:startTime>
+							<arco-arco:startTime>
 								<xsl:value-of select="normalize-space()" />
-							</tiapit:startTime>
-							<tiapit:endTime>
+							</arco-arco:startTime>
+							<arco-arco:endTime>
 								<xsl:value-of select="normalize-space()" />
-							</tiapit:endTime>
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:for-each>
 					<!-- use type as an individual -->
@@ -4591,12 +4591,12 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space()" />
 							</l0:name>
-							<tiapit:startTime>
+							<arco-arco:startTime>
 								<xsl:value-of select="normalize-space()" />
-							</tiapit:startTime>
-							<tiapit:endTime>
+							</arco-arco:startTime>
+							<arco-arco:endTime>
 								<xsl:value-of select="normalize-space()" />
-							</tiapit:endTime>
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:for-each>
 					<!-- use type as an individual -->
@@ -5119,12 +5119,12 @@
 							<rdfs:label>
 								<xsl:value-of select="normalize-space(./EDTE)" />
 							</rdfs:label>
-							<tiapit:startTime>
+							<arco-arco:startTime>
 								<xsl:value-of select="normalize-space(./EDTE)" />
-							</tiapit:startTime>
-							<tiapit:endTime>
+							</arco-arco:startTime>
+							<arco-arco:endTime>
 								<xsl:value-of select="normalize-space(./EDTE)" />
-							</tiapit:endTime>
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:if>
 					<!-- spatial coverage -->
@@ -8666,12 +8666,12 @@
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./DCMR)" />
 						</rdfs:label>
-						<tiapit:startTime>
+						<arco-arco:startTime>
 							<xsl:value-of select="normalize-space(./DCMR)" />
-						</tiapit:startTime>
-						<tiapit:endTime>
+						</arco-arco:startTime>
+						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(./DCMR)" />
-						</tiapit:endTime>
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- License as individual -->
@@ -8907,12 +8907,12 @@
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./FTAD)" />
 						</rdfs:label>
-						<tiapit:startTime>
+						<arco-arco:startTime>
 							<xsl:value-of select="normalize-space(./FTAD)" />
-						</tiapit:startTime>
-						<tiapit:endTime>
+						</arco-arco:startTime>
+						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(./FTAD)" />
-						</tiapit:endTime>
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- documentation type of photographic documentation as an individual -->
@@ -9285,12 +9285,12 @@
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./DRAD)" />
 						</rdfs:label>
-						<tiapit:startTime>
+						<arco-arco:startTime>
 							<xsl:value-of select="normalize-space(./DRAD)" />
-						</tiapit:startTime>
-						<tiapit:endTime>
+						</arco-arco:startTime>
+						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(./DRAD)" />
-						</tiapit:endTime>
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- documentation scale of graphic or cartographic documentation as 
@@ -9619,12 +9619,12 @@
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./VDCD)" />
 						</rdfs:label>
-						<tiapit:startTime>
+						<arco-arco:startTime>
 							<xsl:value-of select="normalize-space(./VDCD)" />
-						</tiapit:startTime>
-						<tiapit:endTime>
+						</arco-arco:startTime>
+						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(./VDCD)" />
-						</tiapit:endTime>
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- documentation type of film documentation as an individual - for 
@@ -9879,12 +9879,12 @@
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(./REGD)" />
 					</rdfs:label>
-					<tiapit:startTime>
+					<arco-arco:startTime>
 						<xsl:value-of select="normalize-space(./REGD)" />
-					</tiapit:startTime>
-					<tiapit:endTime>
+					</arco-arco:startTime>
+					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space(./REGD)" />
-					</tiapit:endTime>
+					</arco-arco:endTime>
 				</rdf:Description>
 				</xsl:if>
 				<!-- documentation type of audio documentation as an individual - for 
@@ -10376,12 +10376,12 @@
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./ADMD)" />
 						</rdfs:label>
-						<tiapit:startTime>
+						<arco-arco:startTime>
 							<xsl:value-of select="normalize-space(./ADMD)" />
-						</tiapit:startTime>
-						<tiapit:endTime>
+						</arco-arco:startTime>
+						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(./ADMD)" />
-						</tiapit:endTime>
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- documentation author of sources and documents as an individual -->
@@ -10491,12 +10491,12 @@
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./CTFD)" />
 						</rdfs:label>
-						<tiapit:startTime>
+						<arco-arco:startTime>
 							<xsl:value-of select="normalize-space(./CTFD)" />
-						</tiapit:startTime>
-						<tiapit:endTime>
+						</arco-arco:startTime>
+						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(./CTFD)" />
-						</tiapit:endTime>
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- documentation type of photographic documentation as an individual -->
@@ -12117,9 +12117,9 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./INDD)" />
 							</l0:name>
-							<tiapit:startTime>
+							<arco-arco:startTime>
 								<xsl:value-of select="normalize-space(./INDD)" />
-							</tiapit:startTime>
+							</arco-arco:startTime>
 						</rdf:Description>
 					</xsl:if>
 					<!-- ArchaeometricDiagnosticSurveyType as an individual -->
@@ -12726,12 +12726,12 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./RCGD)" />
 							</l0:name>
-							<tiapit:startTime>
+							<arco-arco:startTime>
 								<xsl:value-of select="normalize-space(./RCGD)" />
-							</tiapit:startTime>
-							<tiapit:endTime>
+							</arco-arco:startTime>
+							<arco-arco:endTime>
 								<xsl:value-of select="normalize-space(./RCGD)" />
-							</tiapit:endTime>
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:if>
 					<!-- bibliography of survey as an individual -->
@@ -13615,12 +13615,12 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./DSCD)" />
 							</l0:name>
-							<tiapit:startTime>
+							<arco-arco:startTime>
 								<xsl:value-of select="normalize-space(./DSCD)" />
-							</tiapit:startTime>
-							<tiapit:endTime>
+							</arco-arco:startTime>
+							<arco-arco:endTime>
 								<xsl:value-of select="normalize-space(./DSCD)" />
-							</tiapit:endTime>
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:if>
 					<!-- bibliography of survey as an individual -->
@@ -14110,12 +14110,12 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./ISPD)" />
 							</l0:name>
-							<tiapit:startTime>
+							<arco-arco:startTime>
 								<xsl:value-of select="normalize-space(./ISPD)" />
-							</tiapit:startTime>
-							<tiapit:endTime>
+							</arco-arco:startTime>
+							<arco-arco:endTime>
 								<xsl:value-of select="normalize-space(./ISPD)" />
-							</tiapit:endTime>
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:if>
 					<!-- agent role of activity responsible as an individual -->
@@ -14595,12 +14595,12 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./FOIR)" />
 							</l0:name>
-							<tiapit:startTime>
+							<arco-arco:startTime>
 								<xsl:value-of select="normalize-space(./FOIR)" />
-							</tiapit:startTime>
-							<tiapit:endTime>
+							</arco-arco:startTime>
+							<arco-arco:endTime>
 								<xsl:value-of select="normalize-space(./FOIR)" />
-							</tiapit:endTime>
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:if>
 					<!-- anomaly of survey as an individual -->
@@ -15005,12 +15005,12 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./AIND)" />
 							</l0:name>
-							<tiapit:startTime>
+							<arco-arco:startTime>
 								<xsl:value-of select="normalize-space(./AIND)" />
-							</tiapit:startTime>
-							<tiapit:endTime>
+							</arco-arco:startTime>
+							<arco-arco:endTime>
 								<xsl:value-of select="normalize-space(./AIND)" />
-							</tiapit:endTime>
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:if>
 					<!-- SurveyType as an individual -->
@@ -17950,9 +17950,9 @@
 							<tiapit:statTime>
 								<xsl:value-of select="normalize-space(.)" />
 							</tiapit:statTime>
-							<tiapit:endTime>
+							<arco-arco:endTime>
 								<xsl:value-of select="normalize-space(.)" />
-							</tiapit:endTime>
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:for-each>
 					<xsl:for-each select="(./UTS)[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
@@ -17974,9 +17974,9 @@
 							<tiapit:statTime>
 								<xsl:value-of select="normalize-space(.)" />
 							</tiapit:statTime>
-							<tiapit:endTime>
+							<arco-arco:endTime>
 								<xsl:value-of select="normalize-space(.)" />
-							</tiapit:endTime>
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:for-each>
 					<!-- usefunction as an individual -->
@@ -18454,9 +18454,9 @@
 						<tiapit:statTime>
 							<xsl:value-of select="normalize-space(.)" />
 						</tiapit:statTime>
-						<tiapit:endTime>
+						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(.)" />
-						</tiapit:endTime>
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:for-each>
 
@@ -18545,9 +18545,9 @@
 						<tiapit:statTime>
 							<xsl:value-of select="normalize-space(.)" />
 						</tiapit:statTime>
-						<tiapit:endTime>
+						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(.)" />
-						</tiapit:endTime>
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:for-each>
 				<!-- part as an individual -->
@@ -19798,7 +19798,7 @@
 						<xsl:value-of select="concat('Misura del bene ', $itemURI, ': ', .)" />
 					</l0:name>
 					<arco-core:hasType>
-						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'PixelRevolution')" />
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'PixelDimension')" />
 					</arco-core:hasType>
 					<arco-dd:hasValue>
 						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(.))" />
@@ -22509,12 +22509,12 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./FRUD)" />
 							</l0:name>
-							<tiapit:startTime>
+							<arco-arco:startTime>
 								<xsl:value-of select="normalize-space(./FRUD)" />
-							</tiapit:startTime>
-							<tiapit:endTime>
+							</arco-arco:startTime>
+							<arco-arco:endTime>
 								<xsl:value-of select="normalize-space(./FRUD)" />
-							</tiapit:endTime>
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:if>
 					<xsl:if test="./FRUN and (not(starts-with(lower-case(normalize-space(./FRUN)), 'nr')) and not(starts-with(lower-case(normalize-space(./FRUN)), 'n.r')))">
@@ -25086,12 +25086,12 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(./STID)" />
 						</l0:name>
-						<tiapit:startTime>
+						<arco-arco:startTime>
 							<xsl:value-of select="normalize-space(./STID)" />
-						</tiapit:startTime>
-						<tiapit:endTime>
+						</arco-arco:startTime>
+						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(./STID)" />
-						</tiapit:endTime>
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
@@ -25181,12 +25181,12 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(./CMMD)" />
 						</l0:name>
-						<tiapit:startTime>
+						<arco-arco:startTime>
 							<xsl:value-of select="normalize-space(./CMMD)" />
-						</tiapit:startTime>
-						<tiapit:endTime>
+						</arco-arco:startTime>
+						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(./CMMD)" />
-						</tiapit:endTime>
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- agentrole -->
@@ -26540,12 +26540,12 @@
 								<rdfs:label>
 									<xsl:value-of select="normalize-space(./COND)" />
 								</rdfs:label>
-								<tiapit:startTime>
+								<arco-arco:startTime>
 									<xsl:value-of select="normalize-space(./COND)" />
-								</tiapit:startTime>
-								<tiapit:endTime>
+								</arco-arco:startTime>
+								<arco-arco:endTime>
 									<xsl:value-of select="normalize-space(./COND)" />
-								</tiapit:endTime>
+								</arco-arco:endTime>
 							</rdf:Description>
 						</xsl:if>
 					</xsl:if>
@@ -34088,12 +34088,12 @@
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(.)" />
 						</rdfs:label>
-						<tiapit:startTime>
+						<arco-arco:startTime>
 							<xsl:value-of select="normalize-space(.)" />
-						</tiapit:startTime>
-						<tiapit:endTime>
+						</arco-arco:startTime>
+						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(.)" />
-						</tiapit:endTime>
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/SCAN/BI/RIL/RILR">
