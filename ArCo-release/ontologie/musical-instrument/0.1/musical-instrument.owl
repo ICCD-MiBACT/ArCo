@@ -431,7 +431,6 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">ICCD Normativa SM 4.00: AA/AAL</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa entità rappresenta la corda di uno strumento musicale cordofono</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the string of a chordophone musical instrument</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
@@ -439,6 +438,7 @@
         <rdfs:label xml:lang="en">String</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAL</a-cat:iccdNormTag>
     </owl:Class>
     
 
