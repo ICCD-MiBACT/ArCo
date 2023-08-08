@@ -677,6 +677,7 @@ core:hasAgent ?agent .
         <rdfs:label xml:lang="en">has version</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag>CM/CMP; CM/RVM; CM/AGG</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2008,6 +2009,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta un suffisso di due lettere che può essere aggiunto all&apos;identificativo delle schede di catalogo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents a two-character suffix that might be added to the catalogue record number.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">suffisso</rdfs:label>
         <rdfs:label xml:lang="en">suffix</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>

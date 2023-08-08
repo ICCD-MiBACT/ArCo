@@ -1260,9 +1260,7 @@ WHERE {
 
     <!-- https://w3id.org/arco/ontology/core/hasComponent -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasComponent">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/hasCulturalPropertyResidual"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasComponent"/>
     
 
 
@@ -1526,6 +1524,7 @@ WHERE {
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/RVERidentifier">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
     </owl:DatatypeProperty>
     
 
@@ -1535,6 +1534,8 @@ WHERE {
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/archaeologicMaterialConcentration">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterial"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la densità di concentrazione del materiale archeologico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the archaeologic material concentration</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">archaeologic material concentration</rdfs:label>
         <rdfs:label xml:lang="it">densità di concentrazione del materiale archeologico</rdfs:label>
@@ -1633,6 +1634,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="it">Questa proprietà segnala se la serie risulta completa o incompleta</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates if the collection is completed or not</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">collezione completa</rdfs:label>
         <rdfs:label xml:lang="en">completed collection</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1676,9 +1678,17 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">definition and position of components</rdfs:label>
         <rdfs:label xml:lang="it">definizione e posizione delle parti componenti</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGC/OGCD</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a-core:note ?y .
+}
+
+WHERE {
+?x a-arco:definitionAndPOsitionOfComponents ?y .
+}</core:constructQuery>
     </owl:DatatypeProperty>
     
 
@@ -1695,9 +1705,18 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">digital photograph note</rdfs:label>
         <rdfs:label xml:lang="it">note sulla fotografia digitale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: MT/FVC/FVCV</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a-core:note ?y .
+}
+
+WHERE {
+?x a-arco:digitalPhotographNote ?y .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/note"/>
     </owl:DatatypeProperty>
     
 
@@ -1752,9 +1771,18 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">musical instrument note</rdfs:label>
         <rdfs:label xml:lang="it">note sullo strumento musicale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAS</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a-core:note ?y .
+}
+
+WHERE {
+?x a-arco:musicalInstrumentNote ?y .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/note"/>
     </owl:DatatypeProperty>
     
 
@@ -1827,6 +1855,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
         <rdfs:comment xml:lang="it">Questa propietà rappresenta  il numero complessivo, espresso in cifre, degli elementi che costituiscono il bene catalogato, nel caso esso sia un insieme o una serie i cui esemplari/oggetti componenti comprendono ciascuno più elementi.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the total number of elements of a complex cultural property, when it is composed by parts containing more elements.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">number of elements</rdfs:label>
         <rdfs:label xml:lang="it">numero di elementi</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1899,7 +1928,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la posizione o il numero d’ordine dell’elemento all’interno del bene preso in considerazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the position of a cultural property component in the sequence to which it belogns.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">numero d&apos;ordine</rdfs:label>
         <rdfs:label xml:lang="en">position in sequence</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1997,9 +2026,19 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">taxon</rdfs:label>
         <rdfs:label xml:lang="it">taxon</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa SM 4.00: CL/CLA/CLAT</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+        <core:replacingQuery>CONSTRUCT {
+?x a-core:isClassifiedBy ?class.
+?class rdfs:label ?y .
+}
+
+WHERE {
+?x a-arco:taxon ?y .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -2070,14 +2109,6 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/title -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/title"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/core/identifier -->
-
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/identifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
-    </rdf:Description>
     
 
 
@@ -2289,6 +2320,7 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">Bene Archeologico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa RA, SI</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2304,6 +2336,7 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">Bene Architettonico o Paesaggistico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa A, PG</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2320,10 +2353,12 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta esemplari del mondo vegetale provenienti da collezioni di botanica  (raccolte di piante essiccate: erbari)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents specimens of the plant world from botanical collections (collections of dried plants: herbaria)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Bene Botanico</rdfs:label>
         <rdfs:label xml:lang="en">Botanical Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2952,6 +2987,7 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">Demo-ethno-anthropological Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BDI e BDM</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2967,6 +3003,7 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">Historic Or Artistic Property</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa OA, S, MI, D</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3065,6 +3102,7 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">MiBAC Scope of protection</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: OG/AMB</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3075,10 +3113,12 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta esemplari di minerali provenienti da collezioni di mineralogia (Augite, Goethite, scatola di quarzi ecc. ).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents specimens of minerals from collections of mineralogy (Augite, Goethite, box of quartz etc.).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Bene Minerale</rdfs:label>
         <rdfs:label xml:lang="en">Mineral Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3121,6 +3161,7 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">Music Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SM, SMO</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3181,6 +3222,7 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">Numismatic Property</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa NU</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3258,10 +3300,12 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta reperti fossili (animali, vegetali, ichnofossili, campioni e preparati per microscopio, ecc.)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents fossil finds (animals, plants, ichnofossils, samples and microscope preparations, etc.).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Bene Paleontologico</rdfs:label>
         <rdfs:label xml:lang="en">Palaeontological Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3272,10 +3316,12 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta esemplari di rocce provenienti da collezioni (Riolite, Trachiandesite ecc).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents specimens of rocks from collections (Riolite, Trachiandesite etc.).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Bene Petrologico</rdfs:label>
         <rdfs:label xml:lang="en">Pertologic Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3297,6 +3343,7 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">Photographic Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa F, FF</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3365,8 +3412,8 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/PhysicalAnthropologyHeritage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un campione di un reprerto antropologico.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a specimen of a physical anthropology heritage.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un reprerto antropologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a physical anthropology heritage.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">Physical Anthropology Heritage</rdfs:label>
         <rdfs:label xml:lang="it">Reperto Atropologico</rdfs:label>
@@ -3383,10 +3430,12 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta esemplari di meteoriti provenienti da collezioni ( Aubrite, Ureilite, Eucrite ecc.).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents meteorites from collections (Aubrite, Ureilite, Eucrite, etc.).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Bene della Scienza Planetaria</rdfs:label>
         <rdfs:label xml:lang="en">Planetary Science Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3451,6 +3500,7 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">Scientific Or Technological Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa PST</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3498,10 +3548,12 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta esemplari del mondo animale provenienti da collezioni di zoologia (ustiolo, toporagno, mammifero, artropode, scatola di farfalle, collezione elmintologica, ecc.)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents specimens of the animal world from zoology collections (ustiolo, shrew, mammal, arthropod, butterfly box, elmintological collection, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Bene Zoologico</rdfs:label>
         <rdfs:label xml:lang="en">Zoological Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNZ</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4029,8 +4081,8 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/historicalBiographicalInformation">
         <rdfs:label xml:lang="en">historical biographic information</rdfs:label>
-        <rdfs:label xml:lang="it">informazioni biografiche storiche</rdfs:label>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <rdfs:label xml:lang="it">informazioni biografiche storiche</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/PDF/PDFB 
 ICCD Normativa AUT: AU/NSC</a-cat:iccdNormTag>
@@ -4052,60 +4104,6 @@ ICCD Normativa AUT: AU/NSC</a-cat:iccdNormTag>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/CartographicClassification"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/MusicalInstrumentClassification"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/PhotographicHeritageClassification"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/CulturalPropertyCollection"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/location/Coordinates"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/AnomalyOrigin"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAvailability"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/CulturalPropertyStage"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAvailability"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reliability"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/AgeRange"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/location/Altitude"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reliability"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/AgeRange"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/location/Altitude"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
