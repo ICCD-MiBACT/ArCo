@@ -69,12 +69,6 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/iccdNormTag -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/iccdNormTag"/>
-    
-
-
     <!-- https://w3id.org/italia/onto/CLV/hasRankOrder -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/CLV/hasRankOrder"/>
@@ -243,7 +237,7 @@
         <rdfs:label xml:lang="en">has collection member</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>UB/COL. ICCD Normativa F: UB/UBF. ICCD Normativa NU: OG/OGT/OGTR. ICCD Normativa F: PD/SFI; PD/SSI. Normativa BDI: DU/DUR, DU/DUS, VI/VIR, VI/VIV, AI/AIR, AI/AIS</iccdNormTag>
+        <a-cat:iccdNormTag>UB/COL. ICCD Normativa F: UB/UBF. ICCD Normativa NU: OG/OGT/OGTR. ICCD Normativa F: PD/SFI; PD/SSI. Normativa BDI: DU/DUR, DU/DUS, VI/VIR, VI/VIV, AI/AIR, AI/AIS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -284,7 +278,7 @@
         <rdfs:label xml:lang="en">has colour</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Veac: MT/MTC/MTCC. Normativa BNM: SM/SMF/SMFC, SM/SMM/SMMC</iccdNormTag>
+        <a-cat:iccdNormTag>Veac: MT/MTC/MTCC. Normativa BNM: SM/SMF/SMFC, SM/SMM/SMMC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -518,7 +512,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <owl:inverseOf></owl:inverseOf>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa BDI: DU/DUX/DUXC, AI/AIX/AIXC, VI/VIX/VIXC</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa BDI: DU/DUX/DUXC, AI/AIX/AIXC, VI/VIX/VIXC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -554,7 +548,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has depth</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa precedente 4.00: MT/MIS/MISP</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa precedente 4.00: MT/MIS/MISP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -572,7 +566,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has diameter</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa precedente 4.00: MT/MIS/MISD</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa precedente 4.00: MT/MIS/MISD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -591,7 +585,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has diapason</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa SM 4.00: AA/AAC&apos;</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAC&apos;</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -656,7 +650,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has eligible intervention</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa trasversale: TU/STU/STUN</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: TU/STU/STUN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -826,7 +820,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has height</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa precedente 4.00: MT/MIS/MISA</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa precedente 4.00: MT/MIS/MISA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -844,7 +838,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has heritage protection agency</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: CD/ECP</iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: CD/ECP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -942,7 +936,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has length</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa precedente 4.00: MT/MIS/MISN</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa precedente 4.00: MT/MIS/MISN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1037,7 +1031,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has material or technique</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa precedente 4.00: MT/MTC/MTCI</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa precedente 4.00: MT/MTC/MTCI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1189,8 +1183,8 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has official in charge</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasvesale 4.00: CM/FUR, CM/AGG/AGGF</iccdNormTag>
-        <iccdNormTag>ICCD Normativa trasversale e precendenti: CM/FUR, CM/AGG/AGGF</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasvesale 4.00: CM/FUR, CM/AGG/AGGF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale e precendenti: CM/FUR, CM/AGG/AGGF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1265,7 +1259,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has event organiser</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normative precedenti a trasversale: */MST/MSTE</iccdNormTag>
+        <a-cat:iccdNormTag>Normative precedenti a trasversale: */MST/MSTE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1320,7 +1314,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has perimeter</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa BDM: MT/MIS/MISI</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa BDM: MT/MIS/MISI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1358,7 +1352,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has photo colour</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa F: MT/MTX</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa F: MT/MTX</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1377,7 +1371,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has photo size</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa F: MT/FRM</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa F: MT/FRM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1433,7 +1427,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has pixel dimension</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa F: MT/FVC/FVCM</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa F: MT/FVC/FVCM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1532,8 +1526,8 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has printing plate</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa SI 2.00: RM/RSM</iccdNormTag>
-        <iccdNormTag>ICCD normativa S: RM/RSM</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa SI 2.00: RM/RSM</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD normativa S: RM/RSM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1589,7 +1583,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has realization date</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa trasversale e precedenti: DT/DTZ</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale e precedenti: DT/DTZ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1660,7 +1654,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has resolution</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa F: MT/FVC/FVCU</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa F: MT/FVC/FVCU</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1707,9 +1701,9 @@ E.g. an estimate on a cultural property to the estimation responsible agent.</rd
         <rdfs:label xml:lang="en">has responsible research and compilation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
-        <iccdNormTag>CM/CMP/CMPN
-CM/AGG/AGGN</iccdNormTag>
-        <iccdNormTag>ICCD Normativa trasversale e precendenti: CM/CMP/CMPN, CM/CMC, CMCMR, CM/AGG/AGGN</iccdNormTag>
+        <a-cat:iccdNormTag>CM/CMP/CMPN
+CM/AGG/AGGN</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale e precendenti: CM/CMP/CMPN, CM/CMC, CMCMR, CM/AGG/AGGN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1809,7 +1803,7 @@ CM/AGG/AGGN</iccdNormTag>
         <rdfs:label xml:lang="en">has sound engineer</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa BDI: DR/DRF, AI/AID/AIDF</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa BDI: DR/DRF, AI/AID/AIDF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1867,7 +1861,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has storage method or colour depth</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa F: MT/FVC/FVCC</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa F: MT/FVC/FVCC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1964,7 +1958,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has temperament</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa SM 4.00: AA/AAP&apos;</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAP&apos;</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2001,7 +1995,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has thickness</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa precedente 4.00: MT/MIS/MISS</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa precedente 4.00: MT/MIS/MISS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2019,7 +2013,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has transferor</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa trasversale e precedenti: TU/ACQ/ACQN. Normativa BDI: DU/DUQ/DUQN, DV/DVQ/DVQN, DF/DFQ/DFQN, AI/AIQ/AIQN, VI/VIQ/VIQN, FI/FIQ/FIQN</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale e precedenti: TU/ACQ/ACQN. Normativa BDI: DU/DUQ/DUQN, DV/DVQ/DVQN, DF/DFQ/DFQN, AI/AIQ/AIQN, VI/VIQ/VIQN, FI/FIQ/FIQN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2153,8 +2147,8 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has weight</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa precedente 4.00: MT/MIS/MISG</iccdNormTag>
-        <iccdNormTag>Normativa precedente 4.00: MT/MIS/MISL</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa precedente 4.00: MT/MIS/MISG</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa precedente 4.00: MT/MIS/MISL</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2977,7 +2971,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">è ente competente per la tutela di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -4575,7 +4569,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">Hornbostel-Sachs number</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa SM 3.01: CL/CHS/CHSN</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa SM 3.01: CL/CHS/CHSN</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4626,7 +4620,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">denominazione alternativa</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4644,8 +4638,8 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">identificativo alternativo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale: AC/ACC</iccdNormTag>
-        <iccdNormTag>Normativa trasversale: AC/ACC</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: AC/ACC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale: AC/ACC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4662,8 +4656,8 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">numero d&apos;inventario alternativo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INV</iccdNormTag>
-        <iccdNormTag>ICCD Normativa Trasvrsale 4.00: UB/INV</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INV</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasvrsale 4.00: UB/INV</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4698,7 +4692,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">denominazione attribuita</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4733,7 +4727,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">riferimento bibliografico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa trasversale e precedenti: DO/BIB</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale e precedenti: DO/BIB</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4751,7 +4745,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">riferimento bibliografico di confronto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa trasversale e precedenti: DO/BIB</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale e precedenti: DO/BIB</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4769,7 +4763,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">riferimento bibliografico di contesto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa trasversale e precedenti: DO/BIB</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale e precedenti: DO/BIB</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4803,7 +4797,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">denominazione attuale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4820,8 +4814,8 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">numero di inventario corrente</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP</iccdNormTag>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INV</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INV</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4838,7 +4832,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">denominazione consuetudinaria</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4871,7 +4865,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">dialectal designation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4888,7 +4882,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">historical designation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4905,7 +4899,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">idiomatic designation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4923,7 +4917,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">international identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa trasversale: AC/ACC</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale: AC/ACC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4940,7 +4934,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">local designation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4958,8 +4952,8 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">local identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa trasversale: AC/ACC</iccdNormTag>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAN, DO/DRA7DRAN, DO/VDC/VDCN, DO/REG/REGN, DO/FNT/FNTI</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale: AC/ACC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4969,14 +4963,14 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/nationalIdentifier">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al suo identificativo nazionale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity with its national identifier</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="it">identificativo nazionale</rdfs:label>
         <rdfs:label xml:lang="en">national ientifier</rdfs:label>
-        <rdfs:seeAlso xml:lang="it">Questa proprietà collega un&apos;entità al suo identificativo nazionale</rdfs:seeAlso>
-        <rdfs:seeAlso xml:lang="en">This property relates an entity with its national identifier</rdfs:seeAlso>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa trasversale: AC/ACC</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale: AC/ACC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4993,7 +4987,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">original designation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -5046,7 +5040,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">sex information</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa AT: DA/STS. Normativa BDI: AT/ATT/ATTSAI/AIF/AIFOVI/VIF/VIFOFI/FIF/FIFO. Normativa SM: MU/MUT/MUTS</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa AT: DA/STS. Normativa BDI: AT/ATT/ATTSAI/AIF/AIFOVI/VIF/VIFOFI/FIF/FIFO. Normativa SM: MU/MUT/MUTS</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -5063,7 +5057,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">slang designation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -5081,7 +5075,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">specific bibliographic reference</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa trasversale e precedenti: DO/BIB</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale e precedenti: DO/BIB</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -5098,7 +5092,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">system identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa trasversale: AC/ACC</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale: AC/ACC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -5116,8 +5110,8 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">taxon number</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSG</iccdNormTag>
-        <iccdNormTag>Normativa BNB: SB/SBS/SBSG</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSG</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa BNB: SB/SBS/SBSG</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -5151,7 +5145,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">toponym</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale: LC/PVL/PVLT; LA/PRL/PRLT. - Versioni precedenti: LC/PVLLA/PRL&apos;</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: LC/PVL/PVLT; LA/PRL/PRLT. - Versioni precedenti: LC/PVLLA/PRL&apos;</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -5169,7 +5163,7 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">unique identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>Normativa trasversale: AC/ACC</iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale: AC/ACC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
