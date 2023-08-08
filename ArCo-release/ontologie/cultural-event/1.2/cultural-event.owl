@@ -1235,9 +1235,7 @@ WHERE {
 
     <!-- https://w3id.org/italia/onto/MU/MeasurementUnit -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/MU/MeasurementUnit">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/MU/MeasurementUnit"/>
     
 
 
