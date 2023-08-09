@@ -562,6 +562,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Chondrule"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la tessitura alle condrule.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates texture to chondrules.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha condrule</rdfs:label>
         <rdfs:label xml:lang="en">has chondrule</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -579,6 +580,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChondrulePresence"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il campione alla situazione che descrive la presenza di condrule.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the sample to the situation describing the presence of chondrules.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha presenza di condrule</rdfs:label>
         <rdfs:label xml:lang="en">has chondrule presence</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1614,6 +1616,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Texture"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega le condrule alla tessitura.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates chondrules to  texture.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is chondrule of</rdfs:label>
         <rdfs:label xml:lang="it">è condrula di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2574,6 +2577,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà indica il rapporto tra condrule e matrice</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates the relationship between chondrule and matrix</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">chondrule-matrix ratio</rdfs:label>
         <rdfs:label xml:lang="it">rapporto condrule-matrice</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNPL: SPCR</a-cat:iccdNormTag>
@@ -7177,6 +7181,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
+        <owl:deprecated rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <rdfs:comment xml:lang="it">Questa individuo rappresenta la riflettanza</rdfs:comment>
