@@ -3401,6 +3401,24 @@ i.e. a physical antropology cultural entity with an amulet.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/bodyTranscript -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/bodyTranscript">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/transcript"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il testo scritto nel corpo dell&apos;etichetta</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the text written in the body of the label</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">body transcript</rdfs:label>
+        <rdfs:label xml:lang="it">trascrizione del corpo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBET</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/creationDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/creationDate">
@@ -3480,6 +3498,29 @@ ICCD Normativa BNB: SBEG</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/headingTranscript -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/headingTranscript">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/transcript"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il testo scritto nell&apos;intestazione dell&apos;etichetta</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the heading of the label</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">heading transcript</rdfs:label>
+        <rdfs:label xml:lang="it">trascrizione dell&apos;intestazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEI
+ICCD Normativa BNM: SMEI, RMEI
+ICCD Normativa BNP: SPEI
+ICCD Normativa BNPE: SPEI, RREI
+ICCD Normativa BNPL: SPEI, RPEI
+ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/italianTranslation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/italianTranslation">
@@ -3553,6 +3594,23 @@ es: the number of elements of a specimen.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfEnvelopes -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfEnvelopes">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di buste dell&apos;etichetta di un campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of envelopes of a specimen label.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">number of envelopes</rdfs:label>
+        <rdfs:label xml:lang="it">numero di buste</rdfs:label>
+        <owl:versionInfo xml:lang="en">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: SB/CBP/CBPB</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants">
@@ -3567,6 +3625,23 @@ es: the number of elements of a specimen.</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVF; CU/CUM/CUMF; CU/CUC/CUCF</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfLabels -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfLabels">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta etichette presenti assieme al campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of labels with the specimen</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/denotative-description</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">number of labels</rdfs:label>
+        <rdfs:label xml:lang="it">numero di etichette</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPE</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 

@@ -557,9 +557,16 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasChondrule -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasChondrule">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isChondruleOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Texture"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Chondrule"/>
-        <rdfs:comment>ICCD Normativa BNPL: SPCC</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la tessitura alle condrule.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates texture to chondrules.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha condrule</rdfs:label>
+        <rdfs:label xml:lang="en">has chondrule</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPC/SPCC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -568,6 +575,15 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasChondrulePresence">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isChondrulePresenceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChondrulePresence"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il campione alla situazione che descrive la presenza di condrule.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links the sample to the situation describing the presence of chondrules.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha presenza di condrule</rdfs:label>
+        <rdfs:label xml:lang="en">has chondrule presence</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPC/SPCC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -706,11 +722,17 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasDevelopmentStage">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isDevelopmentStageOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/DevelopmentStage"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il cmapione allo stadio di sviluppo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links the sample to the development stage.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha stadio di sviluppo</rdfs:label>
         <rdfs:label xml:lang="en">has development stage</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNP: SP/SPZ/SPZV</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -994,13 +1016,14 @@ WHERE {
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isIdentificationInTimeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a un&apos;identificazione nel tempo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity to an identification in time</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">Questa proprietà collega un&apos;entità a un&apos;identificazione nel tempo</rdfs:label>
-        <rdfs:label xml:lang="it">ha classificazione nel tempo</rdfs:label>
-        <rdfs:label xml:lang="en">has classification in time</rdfs:label>
+        <rdfs:label xml:lang="it">ha identificazione nel tempo</rdfs:label>
+        <rdfs:label xml:lang="en">has identification in time</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI. BNM: SM/SMT&apos;</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1054,6 +1077,7 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha etichetta</rdfs:label>
         <rdfs:label xml:lang="en">has label</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE</a-cat:iccdNormTag>
@@ -1206,6 +1230,7 @@ WHERE {
         <rdfs:label xml:lang="en">has reflectance</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1224,6 +1249,7 @@ WHERE {
         <rdfs:label xml:lang="en">has refraction</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM 3.01: SM/SMO/SMOI&apos;</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1335,6 +1361,7 @@ WHERE {
         <rdfs:label xml:lang="en">has taxon specification</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/NAA/NAAF, SB/NAT/NATF, RB/RBN/RBNF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1416,6 +1443,8 @@ WHERE {
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/identifies">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
         <rdfs:comment xml:lang="it">Questa proprietà mette in relazione un taxon con lo specimen che identifica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a taxon to the specimen it identifies.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
@@ -1580,7 +1609,17 @@ WHERE {
 
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/isChondruleOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isChondruleOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isChondruleOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Chondrule"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Texture"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega le condrule alla tessitura.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates chondrules to  texture.</rdfs:comment>
+        <rdfs:label xml:lang="en">is chondrule of</rdfs:label>
+        <rdfs:label xml:lang="it">è condrula di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPC/SPCC</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
     
 
 
@@ -1743,6 +1782,8 @@ WHERE {
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isDevelopmentStageOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega lo stadio di sviluppo al cmapione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links the development stage to the sample.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is development stage of</rdfs:label>
         <rdfs:label xml:lang="it">è stadio di sviluppo di</rdfs:label>
@@ -1864,6 +1905,7 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is harvesting operator of</rdfs:label>
         <rdfs:label xml:lang="it">è operatore della raccolta di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:constructQuery>CONSTRUCT {
@@ -2006,6 +2048,10 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:comment xml:lang="it">Questa proprietà mette in relazione il campione  con il taxon che lo identifica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the sample to the taxon that identifies it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is identified by</rdfs:label>
         <rdfs:label xml:lang="it">è identificato da</rdfs:label>
@@ -2058,6 +2104,7 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is label of</rdfs:label>
         <rdfs:label xml:lang="it">è etichetta di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2512,6 +2559,7 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">body transcript</rdfs:label>
         <rdfs:label xml:lang="it">trascrizione del corpo</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBET</a-cat:iccdNormTag>
@@ -2524,6 +2572,10 @@ WHERE {
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/chondruleMatrixRatio">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Texture"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica il rapporto tra condrule e matrice</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the relationship between chondrule and matrix</rdfs:comment>
+        <rdfs:label xml:lang="en">chondrule-matrix ratio</rdfs:label>
+        <rdfs:label xml:lang="it">rapporto condrule-matrice</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNPL: SPCR</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2603,6 +2655,7 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">current identification</rdfs:label>
         <rdfs:label xml:lang="it">identificazione corrente</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative BNB,BNM,BNPE,BNPL: OG/OGT/OGTV</a-cat:iccdNormTag>
@@ -2696,6 +2749,7 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">heading transcript</rdfs:label>
         <rdfs:label xml:lang="it">trascrizione dell&apos;intestazione</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEI
@@ -2780,11 +2834,16 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/modalAnalysis -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/modalAnalysis">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica l&apos;analisi modale di un campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the modal analysis of a specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">analisi modale</rdfs:label>
         <rdfs:label xml:lang="en">modal analysis</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPM/SPMO</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2792,11 +2851,16 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/molePercent -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/molePercent">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica la mole percentuale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the mole percent</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">mole percent</rdfs:label>
         <rdfs:label xml:lang="it">mole percentuale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL: SP/SPM/SPMO</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2828,6 +2892,7 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">number of envelopes</rdfs:label>
         <rdfs:label xml:lang="it">numero di buste</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="en">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa BNB: SB/CBP/CBPB</a-cat:iccdNormTag>
@@ -2845,6 +2910,7 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
         <rdfs:isDefinedBy>https://w3id.org/arco/ontology/natural-specimen-description</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">number of labels</rdfs:label>
         <rdfs:label xml:lang="it">numero di etichette</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPE</a-cat:iccdNormTag>
@@ -2883,6 +2949,7 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">identificazione originale</rdfs:label>
         <rdfs:label xml:lang="en">original identification</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -3009,7 +3076,7 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa proprietà indica il minerale secondario all&apos;interno del campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates the secondary mineral within the specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
-        <rdfs:label xml:lang="it">monerale secondario</rdfs:label>
+        <rdfs:label xml:lang="it">minerale secondario</rdfs:label>
         <rdfs:label xml:lang="en">secondary mineral</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -3078,22 +3145,6 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/Bibliography -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Bibliography"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/Herbarium -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Herbarium">
-        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un erbario</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents an herbarium</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">Erbario</rdfs:label>
-        <rdfs:label xml:lang="en">Herbarium</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa BNB: OG/OGT/OGTE</a-cat:iccdNormTag>
-    </owl:Class>
     
 
 
@@ -3364,6 +3415,7 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">Animale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNZ. Normativa BDI: DADRM/DRMA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3380,6 +3432,7 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">Campione artificiale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Iccd Normativa AT: DA/SRM/SRMT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3689,7 +3742,7 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Biological specimen</rdfs:label>
         <rdfs:label xml:lang="en">Campione biologico</rdfs:label>
-        <owl:backwardCompatibleWith>ICCD Normativa BNB: DB</owl:backwardCompatibleWith>
+        <owl:backwardCompatibleWith>ICCD Normativa BNB, BNZ, AT. ICCD Normativa BNB: DB.</owl:backwardCompatibleWith>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -4134,6 +4187,8 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/DevelopmentStage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta lo stadio di sviluppo di un campione paleonotologico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the stage of development of a paleontological specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Development stage</rdfs:label>
         <rdfs:label xml:lang="it">Stadio di sviluppo</rdfs:label>
@@ -4440,6 +4495,14 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Herbarium">
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un erbario</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an herbarium</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="it">Erbario</rdfs:label>
+        <rdfs:label xml:lang="en">Herbarium</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: OG/OGT/OGTE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4525,13 +4588,15 @@ WHERE {
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Questa classe rappresenta una classificazione nel tempo</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;identificazione nel tempo</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an identification in time</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Identification in time</rdfs:label>
         <rdfs:label xml:lang="it">Identificazione nel tempo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: SB/NBN/NBNA, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN.
+Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normativa BNPL:  SP/SPN. Normativa BNZ: SZ/SZS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5012,6 +5077,7 @@ WHERE {
         <rdfs:label xml:lang="en">Mineral specimen</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5059,6 +5125,7 @@ WHERE {
         <rdfs:label xml:lang="en">Natural specimen</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Iccd Normativa AT: DA/SRM/SRMT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5288,6 +5355,7 @@ WHERE {
         <rdfs:label xml:lang="it">Taxon petrologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRN/SRNR, RR/RRN/RRNR</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5467,6 +5535,7 @@ WHERE {
         <rdfs:label xml:lang="it">Taxon planeotologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNPL:  SP/SPN.</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5977,6 +6046,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Etichetta del campione</rdfs:label>
         <rdfs:label xml:lang="en">Specimen label</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">untable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE</a-cat:iccdNormTag>
@@ -6038,6 +6108,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Substrate Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di substrato</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIJ</a-cat:iccdNormTag>
@@ -6239,6 +6310,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="it">Vegetale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BDI: DA/DRM/DRMV</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -7105,8 +7177,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF, SMMB</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
-        <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <rdfs:comment xml:lang="it">Questa individuo rappresenta la riflettanza</rdfs:comment>
     </rdf:Description>
     
