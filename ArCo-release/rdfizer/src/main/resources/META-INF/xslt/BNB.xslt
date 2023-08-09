@@ -1301,9 +1301,6 @@
     	        	<l0:name xml:lang="en">
         	    		<xsl:value-of select="concat('Identification in time of cultural property ', $itemURI)" />
 	            	</l0:name>
-		            <arco-spe:originalIdentification>
-    		        	<xsl:value-of select="false()" />
-        		    </arco-spe:originalIdentification>
 					<xsl:if test="./RBD/RBDB">
 						<xsl:variable name="startDate">
 						<xsl:choose>
@@ -1390,9 +1387,6 @@
     	        	<l0:name xml:lang="en">
         	    		<xsl:value-of select="concat('Classification in time of cultural property ', $itemURI)" />
 	            	</l0:name>
-		            <arco-spe:originalClassification>
-    		        	<xsl:value-of select="false()" />
-        		    </arco-spe:originalClassification>
 					<xsl:if test="./RBD/RBDB">
 						<xsl:variable name="startDate">
 						<xsl:choose>
@@ -1481,9 +1475,6 @@
     	        <l0:name xml:lang="en">
         	    	<xsl:value-of select="concat('Identification in time of cultural property ', $itemURI)" />
 	            </l0:name>
-				<arco-spe:originalIdentification>
-    		       	<xsl:value-of select="false()" />
-        		</arco-spe:originalIdentification>
 				<xsl:if test="./RBD/RBDB">
 					<xsl:variable name="startDate">
 						<xsl:choose>
@@ -1565,9 +1556,6 @@
     	        <l0:name xml:lang="en">
         	    	<xsl:value-of select="concat('Classification in time of cultural property ', $itemURI)" />
 	            </l0:name>
-				<arco-spe:originalClassification>
-    		       	<xsl:value-of select="false()" />
-        		</arco-spe:originalClassification>
 				<xsl:if test="./RBD/RBDB">
 					<xsl:variable name="startDate">
 						<xsl:choose>
