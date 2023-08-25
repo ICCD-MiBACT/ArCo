@@ -1177,7 +1177,6 @@ core:hasAgent ?agent .
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasConstructionCompany">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isConstructionCompanyOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyRealization"/>
         <rdfs:range rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la realizzazione del bene culturale ad una ditta.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the realization of a cultural property to a construction company.</rdfs:comment>
@@ -1198,8 +1197,8 @@ WHERE {
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasConstructionCompany"/>
         <core:replacingQuery>select * where {
-a-cd:CulturalPropertyRealization core:hasAgentRole ?NEWagentRole .
-?NEWagentRole core:hasRole ?NEWrole ;
+?x core:hasAgentRole ?NEWagentRole .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ConstructionCompany&gt; ;
 core:hasAgent ?agent .
 }</core:replacingQuery>
     </owl:ObjectProperty>
@@ -1320,8 +1319,19 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha area geografico-culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural geographic area</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x a a-cd:Use ;
+&lt;https://w3id.org/italia/onto/CLV/hasSpatialCoverage&gt; ?feat .
+}
+
+WHERE {
+?x a a-cd:Use ;
+a-cd:hasCulturalGeographicArea ?feat .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/CLV/hasSpatialCoverage"/>
     </owl:ObjectProperty>
     
 
@@ -1338,8 +1348,17 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha stima di bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property estimate</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x a-cd:hasEstimate ?y .
+}
+
+WHERE {
+?x a-cd:hasCulturalPropertyEstimate ?y .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/hasEstimate"/>
     </owl:ObjectProperty>
     
 
@@ -2602,24 +2621,6 @@ WHERE {
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasPlanning -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPlanning">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasEventOrSituationInTime"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isPlanningOf"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyPlanning"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla sua progettazione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a cultural property to its planning.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha progettazione</rdfs:label>
-        <rdfs:label xml:lang="en">has planning</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/hasPreferredAuthor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPreferredAuthor">
@@ -2824,24 +2825,6 @@ core:hasAgent ?agent .
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/hasRealization -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRealization">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasEventOrSituationInTime"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isRealizationOf"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyRealization"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla sua realizzazione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a cultural property to its realization.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha realizzazione</rdfs:label>
-        <rdfs:label xml:lang="en">has realization</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -3200,6 +3183,7 @@ core:hasAgent ?agent .
         <rdfs:label xml:lang="en">has SEC category</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normtiva Trasversale 4.00: UB/INP/INPZ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -3929,6 +3913,7 @@ core:hasAgent ?agent .
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasUserSocialCategory">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isUserSocialCategoryOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/UserSocialCategory"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;utente di un bene culturale con la sua categoria sociale.</rdfs:comment>
@@ -5019,7 +5004,6 @@ core:isAgentRoleOf ?thing .
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isConstructionCompanyOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
         <rdfs:domain rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyRealization"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una ditta alla realizzazione del bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a construction company to the realization of a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -5042,8 +5026,8 @@ WHERE {
 
 select * where {
 ?NEWagent core:isAgentOf ?NEWagentRole .
-?NEWagentRole core:hasRole ?NEWrole ;
-core:isAgentRoleOf a-cd:CultrualPropertyRealization  .
+?NEWagentRole core:hasRole &lt;https://w3id.org/arco/resource/Role/ConstructionCompany&gt; ;
+core:isAgentRoleOf ?y  .
 }</core:replacingQuery>
     </owl:ObjectProperty>
     
@@ -5153,6 +5137,7 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is cultural geographic area of</rdfs:label>
         <rdfs:label xml:lang="it">è area geografico-culturale di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -5170,8 +5155,17 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is cultural property estimate of</rdfs:label>
         <rdfs:label xml:lang="it">è stima del bene culturale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:constructQuery>CONSTRUCT {
+?x a-cd:isEstimateOf ?y .
+}
+
+WHERE {
+?x a-cd:isCulturalPropertyEstimateOf ?y .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isEstimateOf"/>
     </owl:ObjectProperty>
     
 
@@ -5216,6 +5210,7 @@ WHERE {
         <rdfs:label xml:lang="it">è ambito culturale di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/ATB. Normativa BDM e SM: AU/AUT/AUTC. BDI: AT/ATT/ATTB, AI/AIF/AIFB, VI/VIF/VOFB, FI/FI/FIFB. Normativa SM: MU/MUT/MUTB. Normativa AUT: AU/AUT/AUTU</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5232,6 +5227,7 @@ WHERE {
         <rdfs:label xml:lang="it">è evento relativo alla datazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>DTN/DTNS; se non c&apos;è, Event = &quot;realizzazione&quot;. ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFD. ICCD Normativa Trasversale: DT/ADT.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5249,6 +5245,7 @@ WHERE {
         <rdfs:label xml:lang="it">è cronologia di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DT - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5292,6 +5289,7 @@ WHERE {
         <rdfs:label xml:lang="it">è denominazione nel tempo di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC. - Normativa NU: OG/OGT/OGTO. - OG/OGT/OGTU. Normativa SI: OG/OGT/OGTY</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5309,6 +5307,7 @@ WHERE {
         <rdfs:label xml:lang="it">è metodo di individuazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5368,6 +5367,7 @@ WHERE {
         <rdfs:label xml:lang="it">è domicilio di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BDI: AT/DML. Normativa SM: MU/DML.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5459,6 +5459,7 @@ WHERE {
         <rdfs:label xml:lang="it">è intervento ammesso da</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/STU/STUN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5485,6 +5486,7 @@ WHERE {
         <rdfs:label xml:lang="it">è stima di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/STI - ICCD Normative di versione 2.00: UB/INV/INVS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5501,6 +5503,7 @@ WHERE {
         <rdfs:label xml:lang="it">è certificato di importazione/esportazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ESP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5580,6 +5583,7 @@ core:isAgentRoleOf a-cd:ImportExportCertification .
         <rdfs:label xml:lang="it">è contesto di rinvenimento di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT 3.01: OG/OGC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5702,6 +5706,7 @@ WHERE {
         <rdfs:label xml:lang="it">è scopo funzionale di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5797,6 +5802,8 @@ WHERE {
         <rdfs:label xml:lang="it">è ruolo nell&apos;intervento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>AU/ATB/ATBR; AU/AUT/AUTR.
+ICCD Normative F e FF: PD/PDF/PDFR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5872,6 +5879,7 @@ core:isAgentRoleOf ?thing .
         <rdfs:label xml:lang="it">è inventario di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>UB/INV; ICCD Normativa Trasversale: UB/INP. -  ICCD Normativa RA 3.00 RE/DSC/DSCI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5889,6 +5897,7 @@ core:isAgentRoleOf ?thing .
         <rdfs:label xml:lang="it">è situazione inventariale di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>UB/INV; ICCD Normativa Trasversale: UB/INP.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -6060,6 +6069,7 @@ WHERE {
         <rdfs:label xml:lang="it">è condizione giuridica di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG. - RP/LGC/LGCO. LS/CSS/CSSP. - CS/CTS/CTSP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -6076,6 +6086,7 @@ WHERE {
         <rdfs:label xml:lang="it">è licenza di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SCAN: DO/DCM/DCML</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -6415,6 +6426,7 @@ core:isAgentRoleOf ?thing .
         <rdfs:label xml:lang="it">è oggetto associato a</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT 3.01: OG/OGC/OGCE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -6503,23 +6515,6 @@ WHERE {
 ?coll a-cd:isPhotographicSeriesIn ?collmemb .
 }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/isCollectionIn"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/isPlanningOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isPlanningOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyPlanning"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la progettazione ad un bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the planning to a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is planning of</rdfs:label>
-        <rdfs:label xml:lang="it">è progettazione di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -6657,6 +6652,7 @@ WHERE {
         <rdfs:label xml:lang="it">è professione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BDM 2.00: UT/UTN/UTNM - ICCD Normativa BDM 4.00: AU/AUT/AUTE. BDI: AT/ATT/ATTM, AI/AIF/AIFM, VI/VIF/VIFM, FI/FIF/FIFM. SM: MU/MUT/MUTM. Normativa AUT 4.00: AU/AUT/AUTQ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -6719,27 +6715,11 @@ core:isAgentRoleOf ?thing .
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/isRealizationOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isRealizationOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyRealization"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la realizzazione ad un bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the realization to a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is realization of</rdfs:label>
-        <rdfs:label xml:lang="it">è realizzazione di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/isRecordingOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isRecordingOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Recording"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una registrazione alla rispettiva entità culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a recording to the related cultural entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -6747,6 +6727,7 @@ core:isAgentRoleOf ?thing .
         <rdfs:label xml:lang="it">è registrazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BDI: DU</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -6763,6 +6744,8 @@ core:isAgentRoleOf ?thing .
         <rdfs:label xml:lang="it">è repertorio di riferimento di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa S 3: RO/COP/COPR
+ICCD Normativa TMA 3.00: MA/MAC/MACP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -6839,6 +6822,8 @@ WHERE {
         <rdfs:label xml:lang="it">è tipo di relazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: ROFF
+ICCD Normativa VeAC: AU/AUT/AUTO</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -6890,6 +6875,7 @@ WHERE {
         <rdfs:label xml:lang="it">è riproduzione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa S 3: RO/ADL</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -6906,6 +6892,7 @@ WHERE {
         <rdfs:label xml:lang="it">è posizione della riproduzione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa S 3: RO/ADL/ADLP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -7077,6 +7064,7 @@ WHERE {
         <rdfs:label xml:lang="it">è revisione di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativia BNB: RB/RBR. Normativa BNM: RM. Normativa BNPL: RP. Normativa BNPE: RR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -7094,6 +7082,7 @@ WHERE {
         <rdfs:label xml:lang="it">è categoria SEC di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normtiva Trasversale 4.00: UB/INP/INPZ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -7237,6 +7226,7 @@ WHERE {
         <rdfs:label xml:lang="it">è supporto di memoria di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BDI: DU/DUO, DU/DUM, DV/DVM, DV/DVO, AI/AIO, AI/AIM, VI/VIO, VI/VIM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -7254,6 +7244,7 @@ WHERE {
         <rdfs:label xml:lang="it">è unità stratigrafica di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/DSC/DSCU</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -7319,6 +7310,7 @@ WHERE {
         <rdfs:label xml:lang="it">è immagine di indagine</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIT + FOID</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -7362,6 +7354,7 @@ WHERE {
         <rdfs:label xml:lang="it">è metodo di indagine di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGM; RE/DSC/DSCM - ICCD Normativa AT: PT/PTC/PTCM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -7379,6 +7372,7 @@ WHERE {
         <rdfs:label xml:lang="it">è motivo di indagine di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa Trasversale: RE/RCG/RCGE; RE/DSC/DSCT; RE/IND/INDM; RE/FOI/FOIM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -7570,6 +7564,7 @@ WHERE {
         <rdfs:label xml:lang="it">è deposizione funeraria di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/DSC/DSCS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -7620,6 +7615,7 @@ WHERE {
         <rdfs:label xml:lang="it">è uso di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: UT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -7707,6 +7703,24 @@ select * where {
 ?NEWagentRole core:hasRole ?NEWrole ;
 core:isAgentRoleOf a-cd:Use .
 }</core:replacingQuery>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isUserSocialCategoryOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isUserSocialCategoryOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UserSocialCategory"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha categoria sociale dell&apos;utente di&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has user social category&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is user social category of</rdfs:label>
+        <rdfs:label xml:lang="it">è categoria sociale dell&apos;utente di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative BDM 2.00: UT/UTN/UTNC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -7814,6 +7828,7 @@ WHERE {
         <rdfs:label xml:lang="en">specific time of</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: DT/DTS/DTSI + DT/DTS/DTSV + DT/DTS/DTSF + DT/DTS/DTSL</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -8363,9 +8378,18 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">archaeological excavation ICCD identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice univoco ICCD dello scavo archeologico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/DSC/DSCK</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/ICCDIdentifier"/>
+        <core:replacingQuery>CONSTRUCT {
+?thing a-lite:ICCDIdentifier ?id .
+}
+
+WHERE {
+?thing a-cd:archaeologicalExcavationICCDIdentifier ?id .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -8382,9 +8406,18 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">archaeological excavation local identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice identificativo locale dello scavo archeologico</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/DSC/DSCH</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?thing a-lite:localIdentifier ?id .
+}
+
+WHERE {
+?thing a-cd:archaeologicalExcavationLocalIdentifier ?id .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/localIdentifier"/>
     </owl:DatatypeProperty>
     
 
@@ -8401,9 +8434,18 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">archaeological field survey ICCD identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice univoco ICCD della ricognizione archeologica</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGK</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/ICCDIdentifier"/>
+        <core:replacingQuery>CONSTRUCT {
+?thing a-lite:ICCDIdentifier ?id .
+}
+
+WHERE {
+?thing a-cd:archaeologicalFieldSurveyICCDIdentifier ?id .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -8420,9 +8462,18 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">archaeological field survey local identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice identificativo locale della ricognizione archeologica</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGH, NUNC</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?thing a-lite:localIdentifier ?id .
+}
+
+WHERE {
+?thing a-cd:archaeologicalFieldSurveyLocalIdentifier ?id .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/localIdentifier"/>
     </owl:DatatypeProperty>
     
 
@@ -8598,9 +8649,17 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">author ICCD identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice univoco ICCD dell&apos;autore</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTK</a-cat:iccdNormTag>
+        <core:replacingQuery>CONSTRUCT {
+?thing a-lite:ICCDIdentifier ?id .
+}
+
+WHERE {
+?thing a-cd:authorICCDIdentifier ?id .
+}</core:replacingQuery>
     </owl:DatatypeProperty>
     
 
@@ -8918,15 +8977,24 @@ WHERE
     <!-- https://w3id.org/arco/ontology/context-description/culturalPropertyInventoryDescription -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/culturalPropertyInventoryDescription">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CurrentInventory"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Inventory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la descrizione patrimoniale del bene, con riferimento a quanto inserito nel modello 15 RCS a cura dell&apos;ente competente per tutela. Il dato viene richiesto direttamente agli uffici di catalogo/inventario dei relativi Istituti.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents a cultural entity inventory description.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">cultural property inventory description</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP/INPD</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x core:description ?y .
+}
+
+WHERE {
+?x a-cd:culturalPropertyInventoryDescription ?y .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/description"/>
     </owl:DatatypeProperty>
     
 
@@ -9908,6 +9976,7 @@ WHERE {
         <rdfs:label xml:lang="en">recording equipment</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BDI: DU/DUO/DUOA</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -9924,6 +9993,7 @@ WHERE {
         <rdfs:label xml:lang="en">recording location</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BDI: DUOQL, DVQL, DFQL, AIQL, VIQL, FIQL</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -12006,48 +12076,6 @@ WHERE {
 ?x a-cd:CulturalPropertyEstimate .
 }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Estimate"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/CulturalPropertyPlanning -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CulturalPropertyPlanning">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la progettazione di un bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the planning of a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">Cultural property planning</rdfs:label>
-        <rdfs:label xml:lang="it">Progettazione di bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/CulturalPropertyRealization -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CulturalPropertyRealization">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la realizzazione di un bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the realization of a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">Cultural property realization</rdfs:label>
-        <rdfs:label xml:lang="it">Realizzazione di bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -14566,18 +14594,18 @@ WHERE {
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
                         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasSECCategory"/>
                     </rdf:Description>
                 </owl:onProperty>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CurrentInventory"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria patrimoniale del bene, con riferimento alla classificazione del Sistema Europeo dei Conti 1995</rdfs:comment>
@@ -16730,16 +16758,16 @@ a-cd:hasEdition ?ed .
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <core:constructQuery>CONSTRUCT {
 ?use a a-cd:Use .
 }
