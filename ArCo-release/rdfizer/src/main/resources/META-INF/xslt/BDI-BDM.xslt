@@ -10,6 +10,7 @@
 	xmlns:arco-spe="https://w3id.org/arco/ontology/natural-specimen-description/"
 	xmlns:cis="http://dati.beniculturali.it/cis/"
 	xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
+	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
 	xmlns:smapit="https://w3id.org/italia/onto/SM/"
 	xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
@@ -134,6 +135,9 @@
 	<xsl:variable name="cp-name" select="''" />
 	<xsl:variable name="itemURI">
 		<xsl:choose>
+					<xsl:when test="record/metadata/schede/EVE/CD/NCU">
+						<xsl:value-of select="arco-fn:urify(record/metadata/schede/EVE/CD/NCU)" />
+					</xsl:when>
 					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
 						<xsl:value-of select="arco-fn:urify(record/metadata/schede/DSC/*/*/DSCH)" />
 					</xsl:when>
@@ -197,6 +201,9 @@
 	</xsl:variable>
 	<xsl:variable name="culturalProperty">
 		<xsl:choose>
+			<xsl:when test="$sheetType='EVE'">
+				<xsl:value-of select="concat($NS, 'Event/', $itemURI)" />
+			</xsl:when>
 			<xsl:when test="$sheetType='MODI'">
 				<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)), '/', $itemURI)" />
 			</xsl:when>
@@ -3011,18 +3018,12 @@
 							<xsl:value-of select="'https://w3id.org/arco/ontology/cultural-event/RecurrentTimePeriod'" />
     					</xsl:attribute>
 					</rdf:type>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Periodo di tempo ricorrente ', normalize-space(record/metadata/schede/*/RC/RCP))" />
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/RC/RCP)" />
 					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Recurrent time period ', normalize-space(record/metadata/schede/*/RC/RCP))" />
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/RC/RCP)" />
 					</l0:name>
-					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Periodo di tempo ricorrente ', normalize-space(record/metadata/schede/*/RC/RCP))" />
-					</l0:name>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Recurrent time period ', normalize-space(record/metadata/schede/*/RC/RCP))" />
-					</rdfs:label>
 				</rdf:Description>
 			</xsl:if>
 		</xsl:if>
@@ -3066,18 +3067,12 @@
 							<xsl:value-of select="'https://w3id.org/arco/ontology/cultural-event/RecurrentTimePeriod'" />
     					</xsl:attribute>
 					</rdf:type>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Periodo di tempo ricorrente ', normalize-space(record/metadata/schede/*/RC/RCR/RCRP))" />
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/RC/RCR/RCRP)" />
 					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Recurrent time period ', normalize-space(record/metadata/schede/*/RC/RCR/RCRP))" />
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/RC/RCR/RCRP)" />
 					</l0:name>
-					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Periodo di tempo ricorrente ', normalize-space(record/metadata/schede/*/RC/RCR/RCRP))" />
-					</l0:name>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Recurrent time period ', normalize-space(record/metadata/schede/*/RC/RCR/RCRP))" />
-					</rdfs:label>
 				</rdf:Description>
 			</xsl:if>
 		</xsl:if>
@@ -19663,18 +19658,12 @@
 							<xsl:value-of select="'https://w3id.org/arco/ontology/cultural-event/RecurrentTimePeriod'" />
     					</xsl:attribute>
 					</rdf:type>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Periodo di tempo ricorrente ', normalize-space(record/metadata/schede/*/RI/RIC/RICP))" />
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/RI/RIC/RICP)" />
 					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Recurrent time period ', normalize-space(record/metadata/schede/*/RI/RIC/RICP))" />
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/RI/RIC/RICP)" />
 					</l0:name>
-					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Periodo di tempo ricorrente ', normalize-space(record/metadata/schede/*/RI/RIC/RICP))" />
-					</l0:name>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Recurrent time period ', normalize-space(record/metadata/schede/*/RI/RIC/RICP))" />
-					</rdfs:label>
 				</rdf:Description>
 			</xsl:if>
 		<xsl:if test="record/metadata/schede/*/RI/RIC/RICI or record/metadata/schede/*/RI/RIC/RICF">
@@ -19943,6 +19932,1169 @@
 					</arco-core:note>
 				</xsl:if>
 			</rdf:Description>
+		</xsl:for-each>
+	</xsl:if>
+	<xsl:if test="$sheetType='EVE'">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+        		<xsl:value-of select="$objectOfDescription" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:choose>
+					<xsl:when test="(lower-case(normalize-space(record/metadata/schede/*/EV/DTC/DTCC))='si')">
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries'" />
+    					</xsl:attribute>
+					</xsl:when>
+					<xsl:when test="(lower-case(normalize-space(record/metadata/schede/*/EV/EVE/EVEM))='serie di eventi')">
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries'" />
+    					</xsl:attribute>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/EventOrSituationInTime'" />
+    					</xsl:attribute>
+					</xsl:otherwise>
+				</xsl:choose>	
+			</rdf:type>
+			<rdfs:label>
+				<xsl:choose>
+					<xsl:when test="contains(normalize-space(lower-case(record/metadata/schede/*/EV/OGD/OGDT)), 'attuale')">
+						<xsl:value-of select="record/metadata/schede/*/EV/OGD/OGDN" />				
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="concat(record/metadata/schede/*/EV/EVE/EVEF, ' ', record/metadata/schede/*/EV/EVE/EVET)" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</rdfs:label>
+			<l0:name>
+				<xsl:choose>
+					<xsl:when test="contains(normalize-space(lower-case(record/metadata/schede/*/EV/OGD/OGDT)), 'attuale')">
+						<xsl:value-of select="record/metadata/schede/*/EV/OGD/OGDN" />				
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="concat(record/metadata/schede/*/EV/EVE/EVEF, ' ', record/metadata/schede/*/EV/EVE/EVET)" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</l0:name>
+			<xsl:if test="record/metadata/schede/*/EV/DAD/DADD">
+				<arco-core:description>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/DAD/DADD)" />
+				</arco-core:description>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/EV/DAD/DADN">
+				<arco-core:note>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/DAD/DADN)" />
+				</arco-core:note>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/EV/NRL">
+				<arco-cd:informationGatheredOnSite>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/NRL)" />
+				</arco-cd:informationGatheredOnSite>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/EV/NSC">
+				<arco-cd:historicalInformation>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/NSC)" />
+				</arco-cd:historicalInformation>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/EV/EVE/EVEH">
+				<arco-lite:localIdentifier>
+  			   		<xsl:value-of select="record/metadata/schede/*/EV/EVE/EVEH" />
+				</arco-lite:localIdentifier>
+				<arco-core:hasIdentifier>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'LocalIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/EV/EVE/EVEH))" />
+					</xsl:attribute>
+				</arco-core:hasIdentifier>
+			</xsl:if>
+			<!-- time interval -->
+			<xsl:if test="record/metadata/schede/*/EV/DTC/DTCD">
+				<tiapit:atTime>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(record/metadata/schede/*/EV/DTC/DTCD)))" />
+					</xsl:attribute>
+				</tiapit:atTime>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/EV/DTC/DTCU">
+				<xsl:choose>
+					<xsl:when test="(lower-case(normalize-space(record/metadata/schede/*/EV/EVE/EVEM))='serie di eventi')">
+						<arco-ce:hasUnifyingFactor>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-duration')" />
+    						</xsl:attribute>
+	    				</arco-ce:hasUnifyingFactor>
+					</xsl:when>
+					<xsl:otherwise>
+						<arco-dd:hasMeasurementCollection>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-', position())" />
+					        </xsl:attribute>
+						</arco-dd:hasMeasurementCollection>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:if>
+			<!-- documentation -->
+			<xsl:for-each select="record/metadata/schede/*/DO/DCM"><!-- xslt2 multiple nodes normalize-space exception  -->
+				<xsl:if test="contains((./DCMP), 'documentazione fotografica')" >
+					<xsl:for-each select="./DCMN[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]"><!-- xslt2 multiple nodes normalize-space exception  -->
+				    <xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
+					    <xsl:for-each select="$url">
+					        <arco-lite:depiction>
+					            <xsl:attribute name="rdf:resource">
+				    	            <xsl:value-of select="." />
+				        	    </xsl:attribute>
+					        </arco-lite:depiction>
+					        <foaf:depiction>
+					            <xsl:attribute name="rdf:resource">
+					                <xsl:value-of select="." />
+					            </xsl:attribute>
+				    	    </foaf:depiction>
+				        	<pico:preview>
+				            	<xsl:attribute name="rdf:resource">
+				                	<xsl:value-of select="." />
+					            </xsl:attribute>
+					        </pico:preview>
+					    </xsl:for-each>
+					</xsl:for-each>
+				</xsl:if>
+			</xsl:for-each>
+			<xsl:for-each select="record/metadata/schede/*/DO/DCM">
+				<arco-cd:hasDocumentation>
+					<xsl:attribute name="rdf:resource">
+						<xsl:choose>
+							<xsl:when test="contains((./DCMP), 'documentazione fotografica')">
+								<xsl:value-of select="concat($NS, 'PhotographicDocumentation/', $itemURI, '-documentation-', position())" />
+							</xsl:when>
+							<xsl:when test="contains((./DCMP), 'documentazione grafica')">
+	               				<xsl:value-of select="concat($NS, 'GraphicOrCartographicDocumentation/', $itemURI, '-documentation-', position())" />
+							</xsl:when>
+							<xsl:when test="contains((./DCMP), 'documentazione audio')">
+	               				<xsl:value-of select="concat($NS, 'AudioDocumentation/', $itemURI, '-documentation-', position())" />
+							</xsl:when>
+							<xsl:when test="contains((./DCMP), 'documentazione video')">
+	               				<xsl:value-of select="concat($NS, 'FilmDocumentation/', $itemURI, '-documentation-', position())" />
+							</xsl:when>
+							<xsl:otherwise>
+	               				<xsl:value-of select="concat($NS, 'Documentation/', $itemURI, '-documentation-', position())" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:attribute>				
+				</arco-cd:hasDocumentation>
+			</xsl:for-each>
+			<!-- isDescribedBy -->
+			<arco-core:isDescribedBy>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
+				</xsl:attribute>
+			</arco-core:isDescribedBy>
+			<!-- current physical location -->
+			<xsl:if test="record/metadata/schede/*/LC">
+				<arco-location:hasTimeIndexedTypedLocation>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" />
+					</xsl:attribute>
+				</arco-location:hasTimeIndexedTypedLocation>
+			</xsl:if>
+			<!-- alternative locations -->
+			<xsl:for-each select="record/metadata/schede/*/LA">
+				<arco-location:hasTimeIndexedTypedLocation>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-alternative-', position())" />
+					</xsl:attribute>
+				</arco-location:hasTimeIndexedTypedLocation>
+			</xsl:for-each>
+			<!-- agent -->
+			<xsl:for-each select="record/metadata/schede/*/*/AUT">
+				<xsl:variable name="aut-position">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
+				<arco-core:hasAgentRole>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-main-agent-', position())" />
+					</xsl:attribute>
+				</arco-core:hasAgentRole>
+				<arco-lite:involvesMainAgent>
+					<xsl:attribute name="rdf:resource">
+						<xsl:variable name="author">
+			                 <xsl:choose>
+								<xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTN, '-', ./AUTA)))" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUTN))" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:variable>
+						<xsl:value-of select="$author" />
+					</xsl:attribute>
+				</arco-lite:involvesMainAgent>
+			</xsl:for-each>
+			<!-- cataloguing agency -->
+			<xsl:for-each select="record/metadata/schede/*/CD/ESC">
+				<xsl:if test=".">
+					<arco-core:hasAgentRole>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
+						</xsl:attribute>
+					</arco-core:hasAgentRole>
+					<arco-lite:hasCataloguingAgency>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+						</xsl:attribute>
+					</arco-lite:hasCataloguingAgency>
+				</xsl:if>
+			</xsl:for-each>
+			<!-- Type of context for LC and LA-->
+			<xsl:for-each select="record/metadata/schede/*/LC/PVZ">
+				<arco-location:hasTypeOfContext>
+					<xsl:attribute name="rdf:resource">
+						<xsl:choose>
+							<xsl:when test="lower-case(normalize-space(.)) = 'contesto urbano'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/location/UrbanContext'" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(.)) = 'contesto suburbano'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/location/SuburbanContext'" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(.)) = 'contesto territoriale'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/location/TerritorialContext'" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(.)) = 'contesto subacqueo'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/location/UnderwaterContext'" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat($NS, 'TypeOfContext/', arco-fn:urify(normalize-space(.)))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:attribute>
+				</arco-location:hasTypeOfContext>
+			</xsl:for-each>
+			<xsl:for-each select="record/metadata/schede/*/LA/PRZ">
+				<arco-location:hasTypeOfContext>
+					<xsl:attribute name="rdf:resource">
+						<xsl:choose>
+							<xsl:when test="lower-case(normalize-space(.)) = 'contesto urbano'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/location/UrbanContext'" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(.)) = 'contesto suburbano'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/location/SuburbanContext'" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(.)) = 'contesto territoriale'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/location/TerritorialContext'" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(.)) = 'contesto subacqueo'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/location/UnderwaterContext'" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat($NS, 'TypeOfContext/', arco-fn:urify(normalize-space(.)))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:attribute>
+				</arco-location:hasTypeOfContext>
+			</xsl:for-each>
+			<!-- category -->
+			<xsl:for-each select="record/metadata/schede/*/EV/EVE/EVEC">
+				<arco-core:hasCategory>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space()))" />
+					</xsl:attribute>
+				</arco-core:hasCategory>
+			</xsl:for-each>
+			<!-- designation -->
+			<xsl:for-each select="record/metadata/schede/*/EV/OGD">
+				<arco-cd:hasDesignationInTime>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(./OGDN)))" />                      	                            
+			  	   	</xsl:attribute>
+				</arco-cd:hasDesignationInTime>
+				<xsl:if test="contains(normalize-space(lower-case(./OGDT)), 'attuale') or contains(normalize-space(lower-case(./OGDT)), 'corrente')">
+					<arco-lite:currentDesignation>
+						<xsl:value-of select="normalize-space(./OGDN)" />
+					</arco-lite:currentDesignation>
+				</xsl:if>
+			</xsl:for-each>
+			<!-- cultural property type -->
+			<xsl:if test="record/metadata/schede/*/EV/EVE/EVEF">
+				<arco-dd:hasCulturalPropertyType>
+					<xsl:attribute name="rdf:resource">
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/EV/EVE/EVET">
+								<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(record/metadata/schede/*/EV/EVE/EVEF, '-', record/metadata/schede/*/EV/EVE/EVET)))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(record/metadata/schede/*/EV/EVE/EVEF))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:attribute>
+				</arco-dd:hasCulturalPropertyType>
+			</xsl:if>
+			<!-- recurrent time period -->
+			<xsl:if test="record/metadata/schede/*/EV/DTC/DTCP">
+				<arco-ce:hasRecurrentTimePeriod>
+					<xsl:attribute name="rdf:resource">
+           	    		<xsl:value-of select="concat($NS, 'RecurrentTimePeriod/', arco-fn:urify(normalize-space(record/metadata/schede/*/EV/DTC/DTCP)))" />
+               		</xsl:attribute>
+				</arco-ce:hasRecurrentTimePeriod>
+			</xsl:if>
+			<!-- geometry -->
+			<xsl:for-each select="record/metadata/schede/*/GE">
+					<clvapit:hasGeometry>
+						<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-', position())" />
+	                	</xsl:attribute>
+					</clvapit:hasGeometry>
+			</xsl:for-each>
+			<!-- bibliography -->
+			<xsl:for-each select="record/metadata/schede/*/DO/BIB">
+					<xsl:variable name="edition">
+						<xsl:choose>
+							<xsl:when test="./NCUN">
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./NCUN)))" />
+							</xsl:when>
+							<xsl:when test="./NUCN">
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./NUCN)))" />
+							</xsl:when>
+							<xsl:when test="./BIBK">
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBK)))" />
+							</xsl:when>
+							<xsl:when test="./BIBM">
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBM)))" />
+							</xsl:when>
+							<xsl:when test="./BIBH">
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBH)), 'local')" />
+							</xsl:when>
+							<xsl:when test="./BIBA and ./BIBD">
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:arcofy(normalize-space(./BIBA)), arco-fn:arcofy(normalize-space(./BIBD)))" />
+							</xsl:when>
+	                	</xsl:choose>
+					</xsl:variable>
+					<arco-cd:hasBibliographicSource>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="$edition" />
+	                	</xsl:attribute>
+					</arco-cd:hasBibliographicSource>
+					<xsl:choose>
+						<xsl:when test="./BIBM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+							<arco-lite:bibliographicReference>
+								<xsl:value-of select="normalize-space(./BIBM)" />
+							</arco-lite:bibliographicReference>      
+						</xsl:when>
+						<xsl:when test="./BIL[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+							<arco-lite:bibliographicReference>
+								<xsl:value-of select="normalize-space()" />
+							</arco-lite:bibliographicReference>      
+						</xsl:when>
+						<xsl:when test="./BIBA and ./BIBD">
+							<arco-lite:bibliographicReference>
+								<xsl:value-of select="concat(normalize-space(./BIBA), ' - ', normalize-space(./BIBD))" />
+							</arco-lite:bibliographicReference>
+						</xsl:when>
+					</xsl:choose>
+					<xsl:if test="contains(normalize-space(lower-case(./BIBX)), 'specifica')">
+						<arco-cd:hasSpecificBibliographicSource>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="$edition" />
+	        	        	</xsl:attribute>
+						</arco-cd:hasSpecificBibliographicSource>
+						<xsl:choose>
+							<xsl:when test="./BIBM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+								<arco-lite:specificBibliographicReference>
+									<xsl:value-of select="normalize-space()" />
+								</arco-lite:specificBibliographicReference>      
+							</xsl:when>
+							<xsl:when test="./BIBA and ./BIBD">
+								<arco-lite:specificBibliographicReference>
+									<xsl:value-of select="concat(normalize-space(./BIBA), ' - ', normalize-space(./BIBD))" />
+								</arco-lite:specificBibliographicReference>
+							</xsl:when>
+						</xsl:choose>
+					</xsl:if>
+					<xsl:if test="contains(normalize-space(lower-case(./BIBX)), 'corredo') or contains(normalize-space(lower-case(./BIBX)), 'contesto')">
+						<arco-cd:hasContextBibliographicSource>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="$edition" />
+	        	        	</xsl:attribute>
+						</arco-cd:hasContextBibliographicSource>
+						<xsl:choose>
+							<xsl:when test="./BIBM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+								<arco-lite:contextBibliographicReference>
+									<xsl:value-of select="normalize-space()" />
+								</arco-lite:contextBibliographicReference>      
+							</xsl:when>
+							<xsl:when test="./BIBA and ./BIBD">
+								<arco-lite:contextBibliographicReference>
+									<xsl:value-of select="concat(normalize-space(./BIBA), ' - ', normalize-space(./BIBD))" />
+								</arco-lite:contextBibliographicReference>
+							</xsl:when>
+						</xsl:choose>
+					</xsl:if>
+					<xsl:if test="contains(normalize-space(lower-case(./BIBX)), 'confront')">
+						<arco-cd:hasComparativeBibliographicSource>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="$edition" />
+	        	        	</xsl:attribute>
+						</arco-cd:hasComparativeBibliographicSource>
+						<xsl:choose>
+							<xsl:when test="./BIBM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+								<arco-lite:comparativeBibliographicReference>
+									<xsl:value-of select="normalize-space()" />
+								</arco-lite:comparativeBibliographicReference>     
+							</xsl:when>
+							<xsl:when test="./BIBA and ./BIBD">
+								<arco-lite:comparativeBibliographicReference>
+									<xsl:value-of select="concat(normalize-space(./BIBA), ' - ', normalize-space(./BIBD))" />
+								</arco-lite:comparativeBibliographicReference>
+							</xsl:when>
+						</xsl:choose>
+					</xsl:if>
+				</xsl:for-each>
+			<!-- related event -->
+			<xsl:for-each select="record/metadata/schede/*/RV/AVE">
+				<xsl:choose>
+					<xsl:when test="lower-case(normalize-space(./AVER))='evento correlato'">
+						<arco-ce:hasRelatedEvent>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(./AVEH))" />
+		            	    </xsl:attribute>
+						</arco-ce:hasRelatedEvent>
+					</xsl:when>
+					<xsl:otherwise>
+						<arco-ce:hasComponentEvent>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(./AVEH))" />
+		            	    </xsl:attribute>
+						</arco-ce:hasComponentEvent>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:for-each>
+		</rdf:Description>
+		<!-- local identifier -->
+		<xsl:if test="record/metadata/schede/*/EV/EVE/EVEH">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'LocalIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/EV/EVE/EVEH))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		                </xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+				               <xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+					  	    </xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/EVE/EVEH)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/EVE/EVEH)" />
+					</l0:name>
+					<arco-core:identifier>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/EVE/EVEH)" />
+					</arco-core:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+		</xsl:if>
+		<!-- Time interval as an individual -->
+		<xsl:if test="record/metadata/schede/*/EV/DTC/DTCD">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(record/metadata/schede/*/EV/DTC/DTCD)))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/DTC/DTCD)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/DTC/DTCD)" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<!-- duration -->
+		<xsl:if test="record/metadata/schede/*/EV/DTC/DTCU">
+			<xsl:if test="not(lower-case(normalize-space(record/metadata/schede/*/EV/EVE/EVEM))='serie di eventi')">
+				<rdf:Description>
+				 	<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-', position())" />
+					</xsl:attribute>
+				 	<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MeasurementCollection'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="'Misure dell evento ', $itemURI" />
+					</rdfs:label>
+					<l0:name  xml:lang="it">
+						<xsl:value-of select="'Misure dell evento ', $itemURI" />
+					</l0:name>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="'Measuerements of event ', $itemURI" />
+					</rdfs:label>
+					<l0:name  xml:lang="en">
+						<xsl:value-of select="'Measuerements of event ', $itemURI" />
+					</l0:name>
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-duration')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</rdf:Description>
+			</xsl:if>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/', $itemURI, '-duration')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Durata: ', (record/metadata/schede/*/EV/DTC/DTCU))" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Durata: ', (record/metadata/schede/*/EV/DTC/DTCU))" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Durata: ', (record/metadata/schede/*/EV/DTC/DTCU))" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Durata: ', (record/metadata/schede/*/EV/DTC/DTCU))" />
+				</l0:name>
+				<!-- has measurement type -->
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Duration')" />
+				</arco-dd:hasMeasurementType>
+				<!-- has value -->
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/',  arco-fn:urify(normalize-space(record/metadata/schede/*/EV/DTC/DTCU)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<!-- Value -->
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/',  arco-fn:urify(record/metadata/schede/*/EV/DTC/DTCU))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/*/EV/DTC/DTCU" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/*/EV/DTC/DTCU" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<!-- AU/AUT -->
+		<xsl:for-each select="record/metadata/schede/*/*/AUT">
+			<xsl:variable name="aut-position">
+				<xsl:value-of select="position()" />
+			</xsl:variable>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+     				 <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-main-agent-', position())" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+        				<xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Agente principale relativo all evento ricorrente ', $itemURI, ': ', normalize-space(./AUTN))" />
+				</rdfs:label>
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Main agent involved in recurrent event ', $itemURI, ': ', normalize-space(./AUTN))" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Agente principale relativo all evento ricorrente ', $itemURI, ': ', normalize-space(./AUTN))" />
+				</l0:name>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Main agent involved in recurrent event ', $itemURI, ': ', normalize-space(./AUTN))" />
+				</l0:name>
+				<!-- hasRole -->
+				<xsl:if test="./AUTR">
+					<arco-core:hasRole>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Role/', arco-fn:urify(normalize-space(./AUTR)) )" />
+						</xsl:attribute>
+					</arco-core:hasRole>
+				</xsl:if>
+				<!-- has agent -->
+				<arco-core:hasAgent>
+					<xsl:variable name="author">
+						<xsl:choose>
+							<xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTN, '-', ./AUTA)))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUTN))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:value-of select="$author" />
+				</arco-core:hasAgent>
+			</rdf:Description>
+			<xsl:if test="./AUTR and not(lower-case(normalize-space(./AUTR))='nr' or lower-case(normalize-space(./AUTR))='nr (recupero pregresso)' or lower-case(normalize-space(./AUTR))='n.r.' or lower-case(normalize-space(./AUTR))='nr [non rilevabile]' or lower-case(normalize-space(./AUTR))='n.r. (non rilevabile)')">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'Role/', arco-fn:urify(normalize-space(./AUTR)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./AUTR)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./AUTR)" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:variable name="author">
+				<xsl:choose>
+					<xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTN, '-', ./AUTA)))" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUTN))" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+                     	<xsl:value-of select="$author" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:choose>
+							<xsl:when test="lower-case(normalize-space(./AUTP))='p'">
+								<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./AUTP))='e'">
+								<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:choose>
+						<xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+							<xsl:choose>
+								<xsl:when test="lower-case(normalize-space(./AUTP))='p'">
+									<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', normalize-space(./AUTA), ')')" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat(./AUTN, ' (', normalize-space(./AUTA), ')')" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:choose>
+								<xsl:when test="lower-case(normalize-space(./AUTP))='p'">
+									<xsl:value-of select="arco-fn:name-cleaner(./AUTN)" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="./AUTN" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:otherwise>
+					</xsl:choose>
+				</rdfs:label>
+				<l0:name>
+					<xsl:choose>
+						<xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+							<xsl:choose>
+								<xsl:when test="lower-case(normalize-space(./AUTP))='p'">
+									<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', normalize-space(./AUTA), ')')" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat(./AUTN, ' (', normalize-space(./AUTA), ')')" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:choose>
+								<xsl:when test="lower-case(normalize-space(./AUTP))='p'">
+									<xsl:value-of select="arco-fn:name-cleaner(./AUTN)" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="./AUTN" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:otherwise>
+					</xsl:choose>
+				</l0:name>
+				<xsl:if test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+					<arco-cd:agentDate>
+						<xsl:value-of select="normalize-space(./AUTA)" />
+					</arco-cd:agentDate>
+				</xsl:if>
+				<xsl:if test="./AUTH and (not(starts-with(lower-case(normalize-space(./AUTH)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTH)), 'n.r')))">
+					<arco-lite:localIdentifier>
+  			          			<xsl:value-of select="./AUTH" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'AuthorIdentifier/', $itemURI, arco-fn:arcofy(./AUTH))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
+				</xsl:if>
+				<xsl:if test="./AUTZ">
+					<arco-core:note>
+  			            	<xsl:value-of select="./AUTZ" />
+					</arco-core:note>
+				</xsl:if>
+			</rdf:Description>
+			<xsl:if test="./AUTH">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'AuthorIdentifier/', arco-fn:arcofy(./AUTH))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		                </xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+				               <xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+					  	    </xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./AUTH)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./AUTH)" />
+					</l0:name>
+					<arco-core:identifier>
+						<xsl:value-of select="normalize-space(./AUTH)" />
+					</arco-core:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:if>
+		</xsl:for-each>
+		<!-- Cultural property category -->
+		<xsl:for-each select="record/metadata/schede/*/EV/EVE/EVEC">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space()))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/arco/CulturalPropertyCategory'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space()" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space()" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:for-each>
+		<!-- Cultural property type -->
+		<xsl:if test="record/metadata/schede/*/EV/EVE/EVEF">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:choose>
+						<xsl:when test="record/metadata/schede/*/EV/EVE/EVET">
+							<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(record/metadata/schede/*/EV/EVE/EVEF, '-', record/metadata/schede/*/EV/EVE/EVET)))" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(record/metadata/schede/*/EV/EVE/EVEF))" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label  xml:lang="it">
+					<xsl:choose>
+						<xsl:when test="record/metadata/schede/*/EV/EVE/EVET">
+							<xsl:call-template name="CamelCase1">
+								<xsl:with-param name="text" select="concat(record/metadata/schede/*/EV/EVE/EVEF, ' ', record/metadata/schede/*/EV/EVE/EVET)" />
+							</xsl:call-template>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:call-template name="CamelCase1">
+								<xsl:with-param name="text" select="record/metadata/schede/*/EV/EVE/EVEF" />
+							</xsl:call-template>
+						</xsl:otherwise>
+					</xsl:choose>
+				</rdfs:label>
+				<l0:name  xml:lang="it">
+					<xsl:choose>
+						<xsl:when test="record/metadata/schede/*/EV/EVE/EVET">
+							<xsl:call-template name="CamelCase1">
+								<xsl:with-param name="text" select="concat(record/metadata/schede/*/EV/EVE/EVEF, ' ', record/metadata/schede/*/EV/EVE/EVET)" />
+							</xsl:call-template>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:call-template name="CamelCase1">
+								<xsl:with-param name="text" select="record/metadata/schede/*/EV/EVE/EVEF" />
+							</xsl:call-template>
+						</xsl:otherwise>
+					</xsl:choose>
+				</l0:name>
+				<arco-dd:hasCulturalPropertyDefinition>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(record/metadata/schede/*/EV/EVE/EVEF)))" />
+					</xsl:attribute>
+				</arco-dd:hasCulturalPropertyDefinition>
+				<xsl:if test="record/metadata/schede/*/EV/EVE/EVET">
+					<arco-dd:hasCulturalPropertySpecification>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/EV/EVE/EVET)))" />
+						</xsl:attribute>
+					</arco-dd:hasCulturalPropertySpecification>
+				</xsl:if>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(record/metadata/schede/*/EV/EVE/EVEF)))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/EVE/EVEF)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/EVE/EVEF)" />
+				</l0:name>
+			</rdf:Description>
+			<xsl:if test="record/metadata/schede/*/EV/EVE/EVET">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/EV/EVE/EVET)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/EVE/EVET)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/EVE/EVET)" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+		</xsl:if>
+		<!-- recurrent time period -->
+		<xsl:if test="record/metadata/schede/*/EV/DTC/DTCP">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'RecurrentTimePeriod/', arco-fn:urify(normalize-space(record/metadata/schede/*/EV/DTC/DTCP)))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/cultural-event/RecurrentTimePeriod'" />
+    				</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/DTC/DTCP)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/DTC/DTCP)" />
+				</l0:name>
+				<arco-core:note>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/DTC/DTCN)" />
+				</arco-core:note>
+			</rdf:Description>
+		</xsl:if>
+		<!-- related/component event -->
+		<xsl:for-each select="record/metadata/schede/*/RV/AVE">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(./AVEH))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:choose>
+						<xsl:when test="(lower-case(normalize-space(./AVEM))='serie di eventi')">
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries'" />
+    						</xsl:attribute>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/EventOrSituationInTime'" />
+	    					</xsl:attribute>
+						</xsl:otherwise>
+					</xsl:choose>	
+				</rdf:type>
+				<rdfs:label>
+					<xsl:choose>
+						<xsl:when test="./AVEN">
+							<xsl:value-of select="./AVEN" />				
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="concat(./AVEF, ' ', ./AVET)" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</rdfs:label>
+				<l0:name>
+					<xsl:choose>
+						<xsl:when test="./AVEN">
+							<xsl:value-of select="./AVEN" />				
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="concat(./AVEF, ' ', ./AVET)" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</l0:name>
+				<xsl:if test="./AVEZ">
+					<arco-core:note>
+						<xsl:value-of select="normalize-space(./AVEZ)" />
+					</arco-core:note>
+				</xsl:if>
+				<xsl:if test="./AVEH">
+					<arco-lite:localIdentifier>
+  				   		<xsl:value-of select="./AVEH" />
+					</arco-lite:localIdentifier>
+					<arco-core:hasIdentifier>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LocalIdentifier/', arco-fn:urify(./AVEH), arco-fn:arcofy(./AVEH))" />
+						</xsl:attribute>
+					</arco-core:hasIdentifier>
+				</xsl:if>
+				<xsl:for-each select="./AVEC">
+					<arco-core:hasCategory>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space()))" />
+						</xsl:attribute>
+					</arco-core:hasCategory>
+				</xsl:for-each>
+				<!-- designation -->
+				<xsl:for-each select="./AVEN">
+					<arco-cd:hasDesignationInTime>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS,'DesignationInTime/', arco-fn:urify(./AVEH), '-', arco-fn:urify(normalize-space(.)))" />                      	                            
+				  	   	</xsl:attribute>
+					</arco-cd:hasDesignationInTime>
+					<arco-lite:currentDesignation>
+						<xsl:value-of select="normalize-space(.)" />
+					</arco-lite:currentDesignation>
+				</xsl:for-each>
+				<!-- cultural property type -->
+				<xsl:if test="./AVEF">
+					<arco-dd:hasCulturalPropertyType>
+						<xsl:attribute name="rdf:resource">
+							<xsl:choose>
+								<xsl:when test="./AVET">
+									<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./AVEF, '-', ./AVET)))" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./AVEF))" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:attribute>
+					</arco-dd:hasCulturalPropertyType>
+				</xsl:if>
+				<!-- time interval -->
+				<xsl:if test="./AVED">
+					<tiapit:atTime>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(AVED)))" />
+						</xsl:attribute>
+					</tiapit:atTime>
+				</xsl:if>
+			</rdf:Description>
+			<!-- local identifier -->
+			<xsl:if test="./AVEH">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'LocalIdentifier/', arco-fn:urify(./AVEH), arco-fn:arcofy(./AVEH))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+		                </xsl:attribute>
+					</rdf:type>
+					<arco-core:hasType>
+						<xsl:attribute name="rdf:resource">
+				               <xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+					  	    </xsl:attribute>
+					</arco-core:hasType>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./AVEH)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./AVEH)" />
+					</l0:name>
+					<arco-core:identifier>
+						<xsl:value-of select="normalize-space(./AVEH)" />
+					</arco-core:identifier>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description>
+			</xsl:if>
+			<!-- category -->
+			<xsl:for-each select="./AVEC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space()))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/arco/CulturalPropertyCategory'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space()" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space()" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:for-each>
+			<!-- designation -->
+			<xsl:for-each select="./AVEN">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+                        <xsl:value-of select="concat($NS,'DesignationInTime/', arco-fn:urify(./AVEH), '-', arco-fn:urify(normalize-space(.)))" />
+                    </xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DesignationInTime'" />
+                        </xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(.)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(.)" />
+					</l0:name>
+					<arco-core:current>
+						<xsl:value-of select="true()" />
+					</arco-core:current>
+				</rdf:Description> 
+			</xsl:for-each>
+			<!-- Cultural property type -->
+			<xsl:if test="./AVEF">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:choose>
+							<xsl:when test="./AVET">
+								<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./AVEF, '-', ./AVET)))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./AVEF))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label  xml:lang="it">
+						<xsl:choose>
+							<xsl:when test="./AVET">
+								<xsl:call-template name="CamelCase1">
+									<xsl:with-param name="text" select="concat(./AVEF, ' ', ./AVET)" />
+								</xsl:call-template>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:call-template name="CamelCase1">
+									<xsl:with-param name="text" select="./AVEF" />
+								</xsl:call-template>
+							</xsl:otherwise>
+						</xsl:choose>
+					</rdfs:label>
+					<l0:name  xml:lang="it">
+						<xsl:choose>
+							<xsl:when test="./AVET">
+								<xsl:call-template name="CamelCase1">
+									<xsl:with-param name="text" select="concat(./AVEF, ' ', ./AVET)" />
+								</xsl:call-template>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:call-template name="CamelCase1">
+									<xsl:with-param name="text" select="./AVEF" />
+								</xsl:call-template>
+							</xsl:otherwise>
+						</xsl:choose>
+					</l0:name>
+					<arco-dd:hasCulturalPropertyDefinition>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./AVEF)))" />
+						</xsl:attribute>
+					</arco-dd:hasCulturalPropertyDefinition>
+					<xsl:if test="./AVET">
+						<arco-dd:hasCulturalPropertySpecification>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(./AVET)))" />
+							</xsl:attribute>
+						</arco-dd:hasCulturalPropertySpecification>
+					</xsl:if>
+				</rdf:Description>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./AVEF)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./AVEF)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./AVEF)" />
+					</l0:name>
+				</rdf:Description>
+				<xsl:if test="./AVET">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(./AVET)))" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification'" />
+							</xsl:attribute>
+						</rdf:type>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./AVET)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./AVET)" />
+						</l0:name>
+					</rdf:Description>
+				</xsl:if>
+			</xsl:if>
+			<!-- Time interval as an individual -->
+			<xsl:if test="./AVED">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./AVED)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./AVED)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./AVED)" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
 		</xsl:for-each>
 	</xsl:if>
 	</rdf:RDF>

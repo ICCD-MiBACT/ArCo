@@ -57,6 +57,9 @@
 
 			<xsl:variable name="itemURI">
 				<xsl:choose>
+					<xsl:when test="record/metadata/schede/EVE/CD/NCU">
+						<xsl:value-of select="arco-fn:urify(record/metadata/schede/EVE/CD/NCU)" />
+					</xsl:when>
 					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
 						<xsl:value-of select="arco-fn:urify(record/metadata/schede/DSC/*/*/DSCH)" />
 					</xsl:when>
@@ -127,6 +130,9 @@
 					<!-- variable culturalProperty -->	
 			<xsl:variable name="culturalProperty">
 				<xsl:choose>
+					<xsl:when test="record/metadata/schede/EVE/CD/NCU">
+						<xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(record/metadata/schede/EVE/CD/NCU))" />
+					</xsl:when>
 					<xsl:when test="$sheetType='MODI'">
 						<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)), '/', $itemURI)" />
 					</xsl:when>
@@ -278,6 +284,7 @@
 				</arco-catalogue:lastUpdateDate>
 			</rdf:Description>
 					<!-- cultural property direct relations -->
+			<xsl:if test="not($sheetType='EVE')">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
 					<xsl:value-of select="$objectOfDescription" />
@@ -3245,13 +3252,11 @@
 					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/GE">
-					<xsl:if test="record/metadata/schede/*/GE/*/*">
 						<clvapit:hasGeometry>
 							<xsl:attribute name="rdf:resource">
 	                			<xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-', position())" />
 	                		</xsl:attribute>
 						</clvapit:hasGeometry>
-					</xsl:if>
 				</xsl:for-each>
 				<!-- Geometry for geocoding|puntoPrincipale -->
 				<xsl:if test="record/metadata/schede/harvesting/*[name()='geocoding' or name()='puntoPrincipale']/*">
@@ -5341,7 +5346,7 @@
 					</arco-ce:isSituationMemberOf>
 				</xsl:if>
 			</rdf:Description>
-
+			</xsl:if>
 			<!-- Images retrieved from the OAI-PMH service of ICCD-MiBAC > <xsl:variable 
 				name="image-link" select="arco-fn:find-image($item)" /> <xsl:if test="$image-link 
 				!= ''"> <rdf:Description> <xsl:attribute name="rdf:about"> <xsl:value-of 

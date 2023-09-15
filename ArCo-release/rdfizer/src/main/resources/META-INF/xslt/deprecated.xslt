@@ -289,7 +289,7 @@
 	</xsl:variable>
 	<xsl:variable name="ldcm"><xsl:for-each select="record/metadata/schede/*/LC/LDC/LDCM"><xsl:value-of select="arco-fn:urify(.)"/></xsl:for-each></xsl:variable>
 			<xsl:variable name="pvcc"><xsl:for-each select="record/metadata/schede/*/LC/PVC/PVCC"><xsl:value-of select="arco-fn:urify(.)"/></xsl:for-each></xsl:variable>
-	<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata)" >
+	<xsl:if test="not($sheetType='EVE' or $sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata)" >
 	<!-- Cultural Property -->
 	<rdf:Description>
 		<xsl:attribute name="rdf:about">
@@ -872,6 +872,13 @@
 					</xsl:attribute>
 				</arco-cd:hasSubject>
 			</xsl:if>
+		</xsl:for-each>
+		<xsl:for-each select="record/metadata/schede/*/DO/BIB">
+			<arco-cd:hasBibliography> <!-- forse proprietà da deprecare e lasciare solo Bibliographic Source? -->
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-bibliography-', position())" />
+				</xsl:attribute>
+			</arco-cd:hasBibliography>
 		</xsl:for-each>
 		<!-- technical characteristic of cultural property (version 4.00) -->
 		<xsl:if test="record/metadata/schede/*/MT/MTC/*">
@@ -6451,7 +6458,193 @@
 			</xsl:if>
 		</rdf:Description>
 	</xsl:for-each>
-	           
+	<!-- Bibliography of cultural property as an individual -->
+	<xsl:for-each select="record/metadata/schede/*/DO/BIB">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-bibliography-', position())" />
+            </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+            		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Bibliography'" />
+            	</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Bibliography ', position(), ' of cultural property: ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Bibliography ', position(), ' of cultural property: ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Bibliografia ', position(), ' del bene culturale: ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Bibliografia ', position(), ' del bene culturale: ', $itemURI)" />
+			</l0:name>
+			<arco-cd:isBibliographyOf>
+				<xsl:attribute name="rdf:resource"> 
+					<xsl:value-of select="$culturalProperty" /> 
+				</xsl:attribute>
+			</arco-cd:isBibliographyOf>
+			<xsl:if test="./BIBA">
+				<arco-cd:bibliographicReferenceAuthor>
+					<xsl:value-of select="normalize-space(./BIBA)" />
+				</arco-cd:bibliographicReferenceAuthor>
+			</xsl:if>
+			<xsl:if test="./BIBD">
+				<arco-cd:bibliographicReferenceDate>
+					<xsl:value-of select="normalize-space(./BIBD)" />
+				</arco-cd:bibliographicReferenceDate>
+			</xsl:if>
+			<xsl:if test="./BIBA and ./BIBD">
+				<arco-cd:bibliographicReference>
+					<xsl:choose>
+						<xsl:when test="./BIBX">
+							<xsl:value-of select="concat(normalize-space(./BIBX), ': ', normalize-space(./BIBA), ' - ', normalize-space(./BIBD))" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="concat(normalize-space(./BIBA), ' - ', normalize-space(./BIBD))" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</arco-cd:bibliographicReference>
+			</xsl:if>
+			<xsl:if test="./BIBH and (not(starts-with(lower-case(normalize-space(./BIBH)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBH)), 'n.r')))">
+				<arco-cd:bibliographyLocalIdentifier>
+					<xsl:value-of select="normalize-space(./BIBH)" />
+				</arco-cd:bibliographyLocalIdentifier>
+			</xsl:if>
+			<xsl:if test="./BIBK or ./NCUN and (not(starts-with(lower-case(normalize-space(./BIBK)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBK)), 'n.r')) and not(starts-with(lower-case(normalize-space(./NCUN)), 'nr')) and not(starts-with(lower-case(normalize-space(./NCUN)), 'n.r')))">
+				<arco-cd:bibliographyICCDIdentifier>
+					<xsl:choose>
+						<xsl:when test="./BIBK">
+							<xsl:value-of select="normalize-space(./BIBK)" />
+						</xsl:when>
+						<xsl:when test="./NCUN">
+							<xsl:value-of select="normalize-space(./NCUN)" />
+						</xsl:when>
+					</xsl:choose>
+				</arco-cd:bibliographyICCDIdentifier>
+			</xsl:if>
+			<xsl:choose><!-- allow multiple values es: ICCD11254061 -->
+				<xsl:when test="./BIBM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+					<xsl:for-each select="./BIBM">
+						<arco-cd:completeBibliographicReference>
+							<xsl:value-of select="normalize-space()" />
+						</arco-cd:completeBibliographicReference>
+					</xsl:for-each>      
+				</xsl:when>
+				<xsl:when test="../BIL[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+					<xsl:for-each select="../BIL">
+						<arco-cd:completeBibliographicReference>
+							<xsl:value-of select="normalize-space()" />
+						</arco-cd:completeBibliographicReference>
+					</xsl:for-each>      
+				</xsl:when>
+			</xsl:choose> 
+			<xsl:if test="./BIBR and (not(starts-with(lower-case(normalize-space(./BIBR)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBR)), 'n.r')))">
+				<arco-cd:abbreviation>
+					<xsl:value-of select="normalize-space(./BIBR)" />
+				</arco-cd:abbreviation>
+			</xsl:if>
+			<xsl:if test="./BIBY and (not(starts-with(lower-case(normalize-space(./BIBY)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBY)), 'n.r')))">
+				<arco-cd:rights>
+					<xsl:value-of select="normalize-space(./BIBY)" />
+				</arco-cd:rights>
+			</xsl:if>
+			<xsl:if test="./BIBN or ./BIBI">
+				<arco-core:note>
+					<xsl:choose>
+						<xsl:when test="./BIBI">
+							<xsl:value-of select="concat(normalize-space(./BIBM), normalize-space(./BIBI))" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="normalize-space(./BIBN)" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</arco-core:note>
+			</xsl:if>
+			<xsl:if test="./BIBW">
+				<smapit:URL>
+					<xsl:value-of select="normalize-space(./BIBW)" />
+				</smapit:URL>
+			</xsl:if>
+			<xsl:if test="./BIBJ and (not(starts-with(lower-case(normalize-space(./BIBJ)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBJ)), 'n.r')))">
+				<arco-cd:hasAuthorityFileCataloguingAgency>
+					<xsl:attribute name="rdf:resource">
+            			<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./BIBJ))" />
+            		</xsl:attribute>
+				</arco-cd:hasAuthorityFileCataloguingAgency>
+			</xsl:if>
+			<xsl:if test="./BIBX and not(lower-case(normalize-space(./BIBX))='nr' or lower-case(normalize-space(./BIBX))='n.r.' or lower-case(normalize-space(./BIBX))='nr (recupero pregresso)')">
+				<arco-core:hasCategory>
+					<xsl:attribute name="rdf:resource">
+						<xsl:choose>
+							<xsl:when test="lower-case(normalize-space(./BIBX))='bibliografia di corredo'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AccompanyingBibliography'" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./BIBX))='bibliografia di confronto'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ComparativeBibliography'" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./BIBX))='bibliografia specifica'">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SpecificBibliography'" />
+							</xsl:when>
+							<xsl:when test="./BIBX">
+								<xsl:value-of select="concat($NS, 'BibliographyCategory/', arco-fn:urify(normalize-space(./BIBX)))" />
+							</xsl:when>
+						</xsl:choose>
+					</xsl:attribute>
+				</arco-core:hasCategory>
+			</xsl:if>
+			<xsl:if test="./BIBF and (not(starts-with(lower-case(normalize-space(./BIBF)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBF)), 'n.r')))">
+				<arco-cd:hasBibliographyType>
+					<xsl:attribute name="rdf:resource">
+            			<xsl:value-of select="concat($NS, 'BibliographyType/', arco-fn:urify(normalize-space(./BIBF)))" />
+            		</xsl:attribute>
+				</arco-cd:hasBibliographyType>
+			</xsl:if>
+		</rdf:Description>
+		<!-- bibliography category as an individual -->
+		<xsl:if test="./BIBX and not(lower-case(normalize-space(./BIBX))='nr' or lower-case(normalize-space(./BIBX))='n.r.' or lower-case(normalize-space(./BIBX))='nr (recupero pregresso)')">
+			<xsl:choose>
+				<xsl:when test="lower-case(normalize-space(./BIBX))='bibliografia di corredo'" />
+				<xsl:when test="lower-case(normalize-space(./BIBX))='bibliografia di confronto'" />
+				<xsl:when test="lower-case(normalize-space(./BIBX))='bibliografia specifica'" />
+				<xsl:when test="./BIBX">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'BibliographyCategory/', arco-fn:urify(normalize-space(./BIBX)))" />
+						</xsl:attribute>
+						<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/BibliographyCategory" />
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./BIBX)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./BIBX)" />
+						</l0:name>
+					</rdf:Description>
+				</xsl:when>
+			</xsl:choose>
+		</xsl:if>
+		<!-- bibliography cataloguing agent as an individual -->
+		<xsl:if test="./BIBJ and (not(starts-with(lower-case(normalize-space(./BIBJ)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBJ)), 'n.r')))">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./BIBJ))" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(./BIBJ)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(./BIBJ)" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:for-each>          
 	</rdf:RDF>
 </xsl:template>								
 </xsl:stylesheet>
