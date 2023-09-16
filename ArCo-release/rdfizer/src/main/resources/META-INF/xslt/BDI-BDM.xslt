@@ -1459,6 +1459,9 @@
 				</l0:name>
 				<!-- Source of dating -->
 				<xsl:if test="./DTFM and (not(starts-with(lower-case(normalize-space(./DTFM)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTFM)), 'n.r')))">
+					<arco-core:informationSource>
+						<xsl:value-of select="normalize-space(./DTFM)" />
+					</arco-core:informationSource>
 					<arco-cd:hasInterpretationCriterion>
 						<xsl:attribute name="rdf:resource">
 		            		<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./DTFM)))" />
@@ -1472,25 +1475,6 @@
 		    	    </xsl:attribute>
 				</arco-cd:hasDatingEvent>
 			</rdf:Description>
-			<!-- Source of dating as individual -->
-			<xsl:if test="./DTFM and (not(starts-with(lower-case(normalize-space(./DTFM)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTFM)), 'n.r')))">
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-		            	<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./DTFM)))" />
-			        </xsl:attribute>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-		    	        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
-		        	    </xsl:attribute>
-					</rdf:type>
-					<rdfs:label>
-						<xsl:value-of select="normalize-space(./DTFM)" />
-					</rdfs:label>
-					<l0:name>
-						<xsl:value-of select="normalize-space(./DTFM)" />
-					</l0:name>
-				</rdf:Description>
-			</xsl:if>
 			<!-- event of dating as individual -->
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">

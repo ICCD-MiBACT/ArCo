@@ -3961,11 +3961,11 @@
 				</xsl:if>
 				<!-- reference catalogue -->
 				<xsl:if test="record/metadata/schede/NU/OG/OGT/OGTT">
-					<arco-cd:hasReferenceCatalogue>
+					<arco-core:isClassifiedBy>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'ReferenceCatalogue/', arco-fn:urify(normalize-space(record/metadata/schede/NU/OG/OGT/OGTT)))" />
-						</xsl:attribute>
-					</arco-cd:hasReferenceCatalogue>
+        	       			<xsl:value-of select="concat($NS, 'Concept/', arco-fn:arcofy(record/metadata/schede/NU/OG/OGT/OGTT))" />
+            	   		</xsl:attribute>
+					</arco-core:isClassifiedBy>
 				</xsl:if>
 				<!-- numismatic property specification -->
 				<xsl:for-each select="record/metadata/schede/NU/OG/OGT/OGTS">
