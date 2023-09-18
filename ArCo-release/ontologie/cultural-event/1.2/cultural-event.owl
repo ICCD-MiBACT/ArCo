@@ -252,6 +252,17 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasComponentEvent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasComponentEvent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isComponentEventOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/cultural-event/hasEventOrganiser -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasEventOrganiser">
@@ -400,6 +411,16 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasRelatedEvent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasRelatedEvent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/cultural-event/hasTimePeriodBeforeNextEvent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasTimePeriodBeforeNextEvent">
@@ -516,6 +537,16 @@ WHERE {
         <rdfs:label xml:lang="it">è premio di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/isComponentEventOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isComponentEventOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
     </owl:ObjectProperty>
     
 

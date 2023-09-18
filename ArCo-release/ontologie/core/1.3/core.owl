@@ -2285,6 +2285,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/core/SystemIdentifier -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/SystemIdentifier">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;identificativo dato dal sistema alla scheda di catalogo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents the id given by the IT system to the catalogue record.</rdfs:comment>
         <rdfs:label xml:lang="it">Identificativo del sistema</rdfs:label>
