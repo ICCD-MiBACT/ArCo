@@ -14184,16 +14184,16 @@
 							<arco-cd:hasReliability>
 								<xsl:attribute name="rdf:resource">
 									<xsl:choose>
-										<xsl:when test="lower-case(normalize-space(./FOIA))='scarsa'">
+										<xsl:when test="lower-case(normalize-space(./FOIO))='scarsa'">
 											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InsufficientReliability'" />
 										</xsl:when>
-										<xsl:when test="lower-case(normalize-space(./FOIA))='discreta'">
+										<xsl:when test="lower-case(normalize-space(./FOIO))='discreta'">
 											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DecentReliability'" />
 										</xsl:when>
-										<xsl:when test="lower-case(normalize-space(./FOIA))='buona'">
+										<xsl:when test="lower-case(normalize-space(./FOIO))='buona'">
 											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/GoodReliability'" />
 										</xsl:when>
-										<xsl:when test="lower-case(normalize-space(./FOIA))='ottima'">
+										<xsl:when test="lower-case(normalize-space(./FOIO))='ottima'">
 											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ExcellentReliability'" />
 										</xsl:when>
 									</xsl:choose>
