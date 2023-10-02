@@ -138,10 +138,10 @@
 						<xsl:value-of select="arco-fn:urify(record/metadata/schede/EVE/CD/NCU)" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
-						<xsl:value-of select="arco-fn:urify(record/metadata/schede/DSC/*/*/DSCH)" />
+						<xsl:value-of select="arco-fn:urify(concat('dsc-', record/metadata/schede/DSC/CD/ESC,'-', record/metadata/schede/DSC/*/*/DSCH))" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/RCG/*/*/RCGH">
-						<xsl:value-of select="arco-fn:urify(record/metadata/schede/RCG/*/*/RCGH)" />
+						<xsl:value-of select="arco-fn:urify(concat('rcg-', record/metadata/schede/RCG/CD/ESC,'-', record/metadata/schede/RCG/*/*/RCGH))" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
 						<xsl:choose>
@@ -12791,7 +12791,7 @@
 						<xsl:attribute name="rdf:about">
                 			<xsl:choose>
                 				<xsl:when test="$sheetType='DSC'">
-                					<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', arco-fn:urify(./DSCH))" />
+                					<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', $itemURI)" />
                 				</xsl:when>
                 				<xsl:otherwise>
                 					<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', $itemURI, '-survey-', position())" />
@@ -22812,60 +22812,48 @@
 							<rdfs:label>
 								<xsl:choose>
 									<xsl:when test="./AUTS and (not(starts-with(lower-case(normalize-space(./AUTS)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTS)), 'n.r')))">
-										<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', normalize-space(./AUTS), ')')" />
+										<xsl:call-template name="CamelCase">
+											<xsl:with-param name="text" select="concat(./AUTN, ' (', normalize-space(./AUTS), ')')" />
+										</xsl:call-template>
 									</xsl:when>
 									<xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
-										<xsl:choose>
-											<xsl:when test="$sheetType='EVE'">
-												<xsl:value-of select="concat(./AUTN, ' (', normalize-space(./AUTA), ')')" />
-											</xsl:when>
-											<xsl:otherwise>
-												<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', normalize-space(./AUTA), ')')" />
-											</xsl:otherwise>
-										</xsl:choose>
+										<xsl:call-template name="CamelCase">
+											<xsl:with-param name="text" select="concat(./AUTN, ' (', normalize-space(./AUTA), ')')" />
+										</xsl:call-template>	
 									</xsl:when>
 									<xsl:when test="./AUTB and (not(starts-with(lower-case(normalize-space(./AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTB)), 'n.r')))">
-										<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', normalize-space(./AUTB), ')')" />
+										<xsl:call-template name="CamelCase">
+											<xsl:with-param name="text" select="concat(./AUTN, ' (', normalize-space(./AUTB), ')')" />
+										</xsl:call-template>
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:choose>
-											<xsl:when test="$sheetType='EVE'">
-												<xsl:value-of select="./AUTN" />
-											</xsl:when>
-											<xsl:otherwise>
-												<xsl:value-of select="arco-fn:name-cleaner(./AUTN)" />
-											</xsl:otherwise>
-										</xsl:choose>
+										<xsl:call-template name="CamelCase">
+											<xsl:with-param name="text" select="./AUTN" />
+										</xsl:call-template>
 									</xsl:otherwise>
 								</xsl:choose>
 							</rdfs:label>
 							<l0:name>
 								<xsl:choose>
 									<xsl:when test="./AUTS and (not(starts-with(lower-case(normalize-space(./AUTS)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTS)), 'n.r')))">
-										<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', normalize-space(./AUTS), ')')" />
+										<xsl:call-template name="CamelCase">
+											<xsl:with-param name="text" select="concat(./AUTN, ' (', normalize-space(./AUTS), ')')" />
+										</xsl:call-template>
 									</xsl:when>
 									<xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
-										<xsl:choose>
-											<xsl:when test="$sheetType='EVE'">
-												<xsl:value-of select="concat(./AUTN, ' (', normalize-space(./AUTA), ')')" />
-											</xsl:when>
-											<xsl:otherwise>
-												<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', normalize-space(./AUTA), ')')" />
-											</xsl:otherwise>
-										</xsl:choose>
+										<xsl:call-template name="CamelCase">
+											<xsl:with-param name="text" select="concat(./AUTN, ' (', normalize-space(./AUTA), ')')" />
+										</xsl:call-template>
 									</xsl:when>
 									<xsl:when test="./AUTB and (not(starts-with(lower-case(normalize-space(./AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTB)), 'n.r')))">
-										<xsl:value-of select="concat(arco-fn:name-cleaner(./AUTN), ' (', normalize-space(./AUTB), ')')" />
+										<xsl:call-template name="CamelCase">
+											<xsl:with-param name="text" select="concat(./AUTN, ' (', normalize-space(./AUTB), ')')" />
+										</xsl:call-template>
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:choose>
-											<xsl:when test="$sheetType='EVE'">
-												<xsl:value-of select="./AUTN" />
-											</xsl:when>
-											<xsl:otherwise>
-												<xsl:value-of select="arco-fn:name-cleaner(./AUTN)" />
-											</xsl:otherwise>
-										</xsl:choose>
+										<xsl:call-template name="CamelCase">
+											<xsl:with-param name="text" select="./AUTN" />
+										</xsl:call-template>
 									</xsl:otherwise>
 								</xsl:choose>
 							</l0:name>
@@ -22897,11 +22885,25 @@
 							</xsl:if>
 							<xsl:if test="./AUTH and (not(starts-with(lower-case(normalize-space(./AUTH)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTH)), 'n.r')))">
 								<arco-lite:localIdentifier>
-   			            			<xsl:value-of select="./AUTH" />
+									<xsl:choose>
+										<xsl:when test="./AUTJ">
+											<xsl:value-of select="concat('aut-', lower-case(normalize-space(./AUTJ)), '-', lower-case(normalize-space(./AUTH)))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat('aut-', lower-case(normalize-space(./AUTH)))" />
+										</xsl:otherwise>
+									</xsl:choose>
 								</arco-lite:localIdentifier>
 								<arco-core:hasIdentifier>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'AuthorIdentifier/', $itemURI, arco-fn:arcofy(./AUTH))" />
+										<xsl:choose>
+											<xsl:when test="./AUTJ">
+												<xsl:value-of select="concat($NS, 'AuthorIdentifier/aut-', arco-fn:arcofy(./AUTJ), '-', arco-fn:arcofy(./AUTH))" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="concat($NS, 'AuthorIdentifier/aut-', arco-fn:arcofy(./AUTH))" />
+											</xsl:otherwise>
+										</xsl:choose>
 									</xsl:attribute>
 								</arco-core:hasIdentifier>
 							</xsl:if>
@@ -23042,7 +23044,14 @@
 						<xsl:if test="./AUTH">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS, 'AuthorIdentifier/', arco-fn:arcofy(./AUTH))" />
+									<xsl:choose>
+										<xsl:when test="./AUTJ">
+											<xsl:value-of select="concat($NS, 'AuthorIdentifier/aut-', arco-fn:arcofy(./AUTJ), '-', arco-fn:arcofy(./AUTH))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'AuthorIdentifier/aut-', arco-fn:arcofy(./AUTH))" />
+										</xsl:otherwise>
+									</xsl:choose>
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -23055,13 +23064,34 @@
 						    	    </xsl:attribute>
 								</arco-core:hasType>
 								<rdfs:label>
-									<xsl:value-of select="normalize-space(./AUTH)" />
+									<xsl:choose>
+										<xsl:when test="./AUTJ">
+											<xsl:value-of select="concat('aut-', lower-case(normalize-space(./AUTJ)), '-', lower-case(normalize-space(./AUTH)))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat('aut-', lower-case(normalize-space(./AUTH)))" />
+										</xsl:otherwise>
+									</xsl:choose>
 								</rdfs:label>
 								<l0:name>
-									<xsl:value-of select="normalize-space(./AUTH)" />
+									<xsl:choose>
+										<xsl:when test="./AUTJ">
+											<xsl:value-of select="concat('aut-', lower-case(normalize-space(./AUTJ)), '-', lower-case(normalize-space(./AUTH)))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat('aut-', lower-case(normalize-space(./AUTH)))" />
+										</xsl:otherwise>
+									</xsl:choose>
 								</l0:name>
 								<arco-core:identifier>
-									<xsl:value-of select="normalize-space(./AUTH)" />
+									<xsl:choose>
+										<xsl:when test="./AUTJ">
+											<xsl:value-of select="concat('aut-', lower-case(normalize-space(./AUTJ)), '-', lower-case(normalize-space(./AUTH)))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat('aut-', lower-case(normalize-space(./AUTH)))" />
+										</xsl:otherwise>
+									</xsl:choose>
 								</arco-core:identifier>
 								<arco-core:current>
 									<xsl:value-of select="true()" />

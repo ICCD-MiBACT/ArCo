@@ -1245,6 +1245,60 @@
 			</rdf:Description>
 		</xsl:if>
 	</xsl:if>
+	<xsl:for-each select="record/metadata/schede/*/*/AUT">
+		<xsl:if test="not($sheetType='EVE')">
+			<xsl:if test="./AUTN and (not(starts-with(lower-case(normalize-space(./AUTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUTN)), '-')))">
+				<xsl:variable name="author">
+							<xsl:choose>
+								<xsl:when test="./AUTS and (not(starts-with(lower-case(normalize-space(./AUTS)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTS)), 'n.r')))">
+									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTN, '-', ./AUTS)))" />
+								</xsl:when>
+								<xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTN, '-', ./AUTA)))" />
+								</xsl:when>
+								 <xsl:when test="./AUTB and (not(starts-with(lower-case(normalize-space(./AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTB)), 'n.r')))">
+									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTN, '-', ./AUTB)))" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUTN))" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:variable>
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+                       	<xsl:value-of select="$author" />
+					</xsl:attribute>
+					<xsl:if test="./AUTH and (not(starts-with(lower-case(normalize-space(./AUTH)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTH)), 'n.r')))">
+						<arco-cd:agentlLocalIdentifier>
+							<xsl:choose>
+								<xsl:when test="./AUTJ">
+									<xsl:value-of select="concat('aut-', lower-case(normalize-space(./AUTJ)), '-', lower-case(normalize-space(./AUTH)))" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat('aut-', lower-case(normalize-space(./AUTH)))" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</arco-cd:agentlLocalIdentifier>
+					</xsl:if>
+					<xsl:if test="./AUTK and (not(starts-with(lower-case(normalize-space(./AUTK)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTK)), 'n.r')))">
+						<arco-cd:authorICCDIdentifier>
+   			            	<xsl:value-of select="./AUTK" />
+						</arco-cd:authorICCDIdentifier>
+					</xsl:if>
+					<xsl:if test="./NCUN and (not(starts-with(lower-case(normalize-space(./NCUN)), 'nr')) and not(starts-with(lower-case(normalize-space(./NCUN)), 'n.r')))">
+						<arco-cd:authorICCDIdentifier>
+   			            	<xsl:value-of select="./NCUN" />
+						</arco-cd:authorICCDIdentifier>
+					</xsl:if>
+					<xsl:if test="./NUCN and (not(starts-with(lower-case(normalize-space(./NUCN)), 'nr')) and not(starts-with(lower-case(normalize-space(./NUCN)), 'n.r')))">
+						<arco-cd:authorICCDIdentifier>
+   			            	<xsl:value-of select="./NUCN" />
+						</arco-cd:authorICCDIdentifier>
+					</xsl:if>
+				</rdf:Description>
+			</xsl:if>
+		</xsl:if>
+	</xsl:for-each>
 	<!-- Acquisition -->
 	<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata)" >
 	<xsl:for-each select="record/metadata/schede/*/TU/ACQ">

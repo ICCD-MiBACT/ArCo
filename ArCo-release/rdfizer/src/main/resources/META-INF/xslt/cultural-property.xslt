@@ -61,10 +61,10 @@
 						<xsl:value-of select="arco-fn:urify(record/metadata/schede/EVE/CD/NCU)" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
-						<xsl:value-of select="arco-fn:urify(record/metadata/schede/DSC/*/*/DSCH)" />
+						<xsl:value-of select="arco-fn:urify(concat('dsc-', record/metadata/schede/DSC/CD/ESC,'-', record/metadata/schede/DSC/*/*/DSCH))" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/RCG/*/*/RCGH">
-						<xsl:value-of select="arco-fn:urify(record/metadata/schede/RCG/*/*/RCGH)" />
+						<xsl:value-of select="arco-fn:urify(concat('rcg-', record/metadata/schede/RCG/CD/ESC,'-', record/metadata/schede/RCG/*/*/RCGH))" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
 						<xsl:choose>
@@ -4857,8 +4857,8 @@
 						<arco-cd:hasSurvey>
 							<xsl:attribute name="rdf:resource">
                 				<xsl:choose>
-                					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
-                						<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', arco-fn:urify(record/metadata/schede/DSC/*/*/DSCH))" />
+                					<xsl:when test="./DSCJ">
+                						<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', arco-fn:urify(concat('dsc-', ./DSCJ,'-', ./DSCH)))" />
                 					</xsl:when>
                 					<xsl:otherwise>
                 						<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', $itemURI, '-survey-', position())" />
