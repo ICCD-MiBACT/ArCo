@@ -739,7 +739,7 @@
 					</arco-lite:localIdentifier>
 					<arco-core:hasIdentifier>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'AuthorIdentifier/aut-', arco-fn:arcofy(record/metadata/schede/*/CD/ESC), '-', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTH))" />
+							<xsl:value-of select="concat($NS, 'AuthorIdentifier/aut-', arco-fn:urify(record/metadata/schede/*/CD/ESC), '-', arco-fn:urify(record/metadata/schede/*/AU/AUT/AUTH))" />
 						</xsl:attribute>
 					</arco-core:hasIdentifier>
 				</xsl:if>
@@ -841,7 +841,7 @@
 			<xsl:if test="record/metadata/schede/*/AU/AUT/AUTH and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)), 'n.r')))">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'AuthorIdentifier/aut-', arco-fn:arcofy(record/metadata/schede/*/CD/ESC), '-', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTH))" />
+						<xsl:value-of select="concat($NS, 'AuthorIdentifier/aut-', arco-fn:urify(record/metadata/schede/*/CD/ESC), '-', arco-fn:urify(record/metadata/schede/*/AU/AUT/AUTH))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
