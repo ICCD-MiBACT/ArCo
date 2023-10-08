@@ -60,6 +60,9 @@
 					<xsl:when test="record/metadata/schede/EVE/CD/NCU">
 						<xsl:value-of select="arco-fn:urify(record/metadata/schede/EVE/CD/NCU)" />
 					</xsl:when>
+					<xsl:when test="record/metadata/schede/EVE/EV/EVE/EVEH">
+						<xsl:value-of select="arco-fn:urify(concat('eve-', record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH))" />
+					</xsl:when>
 					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
 						<xsl:value-of select="arco-fn:urify(concat('dsc-', record/metadata/schede/DSC/CD/ESC,'-', record/metadata/schede/DSC/*/*/DSCH))" />
 					</xsl:when>
@@ -130,11 +133,8 @@
 					<!-- variable culturalProperty -->	
 			<xsl:variable name="culturalProperty">
 				<xsl:choose>
-					<xsl:when test="record/metadata/schede/EVE/CD/NCU">
-						<xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(record/metadata/schede/EVE/CD/NCU))" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/EVE/EV/EVE/EVEH">
-						<xsl:value-of select="concat($NS, 'Event/', 'eve-', arco-fn:urify(concat(record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH)))" />
+					<xsl:when test="$sheetType='EVE'">
+						<xsl:value-of select="concat($NS, 'Event/', $itemURI)" />
 					</xsl:when>
 					<xsl:when test="$sheetType='MODI'">
 						<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)), '/', $itemURI)" />

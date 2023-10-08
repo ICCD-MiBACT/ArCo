@@ -138,7 +138,7 @@
 						<xsl:value-of select="arco-fn:urify(record/metadata/schede/EVE/CD/NCU)" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/EVE/EV/EVE/EVEH">
-						<xsl:value-of select="concat($NS, 'Event/', 'eve-', arco-fn:urify(concat(record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH)))" />
+						<xsl:value-of select="arco-fn:urify(concat('eve-', record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH))" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
 						<xsl:value-of select="arco-fn:urify(concat('dsc-', record/metadata/schede/DSC/CD/ESC,'-', record/metadata/schede/DSC/*/*/DSCH))" />

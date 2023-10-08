@@ -133,13 +133,16 @@
 	<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
 	<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version" />
 	<xsl:variable name="cp-name" select="''" />
+	<xsl:variable name="esc">
+		<xsl:value-of select="record/metadata/schede/*/CD/ESC" />
+	</xsl:variable>
 	<xsl:variable name="itemURI">
 		<xsl:choose>
 					<xsl:when test="record/metadata/schede/EVE/CD/NCU">
 						<xsl:value-of select="arco-fn:urify(record/metadata/schede/EVE/CD/NCU)" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/EVE/EV/EVE/EVEH">
-						<xsl:value-of select="concat($NS, 'Event/', 'eve-', arco-fn:urify(concat(record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH)))" />
+						<xsl:value-of select="arco-fn:urify(concat('eve-', record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH))" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
 						<xsl:value-of select="arco-fn:urify(record/metadata/schede/DSC/*/*/DSCH)" />
@@ -20341,14 +20344,14 @@
 					<xsl:when test="lower-case(normalize-space(./AVER))='evento correlato'">
 						<arco-ce:hasRelatedEvent>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(./AVEH))" />
+								<xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(concat('eve-', $esc, '-', (./AVEH))))" />
 		            	    </xsl:attribute>
 						</arco-ce:hasRelatedEvent>
 					</xsl:when>
 					<xsl:otherwise>
 						<arco-ce:hasComponentEvent>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(./AVEH))" />
+								<xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(concat('eve-', $esc, '-', (./AVEH))))" />
 		            	    </xsl:attribute>
 						</arco-ce:hasComponentEvent>
 					</xsl:otherwise>
@@ -20805,7 +20808,7 @@
 		<xsl:for-each select="record/metadata/schede/*/RV/AVE">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(./AVEH))" />
+					<xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(concat('eve-', $esc, '-', (./AVEH))))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:choose>
@@ -20848,11 +20851,11 @@
 				</xsl:if>
 				<xsl:if test="./AVEH">
 					<arco-lite:localIdentifier>
-  				   		<xsl:value-of select="./AVEH" />
+  				   		<xsl:value-of select="concat('eve-', $esc, '-', ./AVEH)" />
 					</arco-lite:localIdentifier>
 					<arco-core:hasIdentifier>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'LocalIdentifier/', arco-fn:urify(./AVEH), arco-fn:arcofy(./AVEH))" />
+							<xsl:value-of select="concat($NS, 'LocalIdentifier/', arco-fn:urify(concat('eve-', $esc, '-', (./AVEH))))" />
 						</xsl:attribute>
 					</arco-core:hasIdentifier>
 				</xsl:if>
@@ -20902,7 +20905,7 @@
 			<xsl:if test="./AVEH">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'LocalIdentifier/', arco-fn:urify(./AVEH), arco-fn:arcofy(./AVEH))" />
+						<xsl:value-of select="concat($NS, 'LocalIdentifier/', arco-fn:urify(concat('eve-', $esc, '-', (./AVEH))))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -20915,13 +20918,13 @@
 					  	    </xsl:attribute>
 					</arco-core:hasType>
 					<rdfs:label>
-						<xsl:value-of select="normalize-space(./AVEH)" />
+						<xsl:value-of select="concat('eve-', $esc, '-', ./AVEH)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="normalize-space(./AVEH)" />
+						<xsl:value-of select="concat('eve-', $esc, '-', ./AVEH)" />
 					</l0:name>
 					<arco-core:identifier>
-						<xsl:value-of select="normalize-space(./AVEH)" />
+						<xsl:value-of select="concat('eve-', $esc, '-', ./AVEH)" />
 					</arco-core:identifier>
 					<arco-core:current>
 						<xsl:value-of select="true()" />
