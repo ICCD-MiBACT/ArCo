@@ -5290,22 +5290,22 @@
 				<xsl:if test="record/metadata/schede/*/UB/UBF/*">
 					<arco-cd:isMemberInvolvedIn>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'ArchivalRecordSetMembership/', $itemURI)" />
+							<xsl:value-of select="concat($NS, 'ArchivalCollectionMembership/', $itemURI)" />
 						</xsl:attribute>
 					</arco-cd:isMemberInvolvedIn>
 					<arco-lite:isCollectionMemberOf>
 						<xsl:choose>
 							<xsl:when test="record/metadata/schede/*/UB/UBF/UBFU">
-								<xsl:value-of select="concat($NS, 'ArchivalRecordSet/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFU)))" />
+								<xsl:value-of select="concat($NS, 'ArchivalUnit/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFU)))" />
 							</xsl:when>
 							<xsl:when test="record/metadata/schede/*/UB/UBF/UBFT">
-								<xsl:value-of select="concat($NS, 'ArchivalRecordSet/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFT)))" />
+								<xsl:value-of select="concat($NS, 'ArchivalSubseries/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFT)))" />
 							</xsl:when>
 							<xsl:when test="record/metadata/schede/*/UB/UBF/UBFS">
-								<xsl:value-of select="concat($NS, 'ArchivalRecordSet/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFS)))" />
+								<xsl:value-of select="concat($NS, 'ArchivalSeries/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFS)))" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="concat($NS, 'ArchivalRecordSet/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFP)))" />
+								<xsl:value-of select="concat($NS, 'ArchivalFonds/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFP)))" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</arco-lite:isCollectionMemberOf>
