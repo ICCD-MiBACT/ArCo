@@ -138,6 +138,9 @@
 					<xsl:when test="record/metadata/schede/EVE/CD/NCU">
 						<xsl:value-of select="arco-fn:urify(record/metadata/schede/EVE/CD/NCU)" />
 					</xsl:when>
+					<xsl:when test="record/metadata/schede/EVE/EV/EVE/EVEH">
+						<xsl:value-of select="concat($NS, 'Event/', 'eve-', arco-fn:urify(concat(record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH)))" />
+					</xsl:when>
 					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
 						<xsl:value-of select="arco-fn:urify(record/metadata/schede/DSC/*/*/DSCH)" />
 					</xsl:when>
@@ -19984,7 +19987,7 @@
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/*/EV/EVE/EVEH">
 				<arco-lite:localIdentifier>
-  			   		<xsl:value-of select="record/metadata/schede/*/EV/EVE/EVEH" />
+  			   		<xsl:value-of select="concat('eve-', record/metadata/schede/*/CD/ESC, '-', record/metadata/schede/*/EV/EVE/EVEH)" />
 				</arco-lite:localIdentifier>
 				<arco-core:hasIdentifier>
 					<xsl:attribute name="rdf:resource">
@@ -20369,13 +20372,13 @@
 					  	    </xsl:attribute>
 					</arco-core:hasType>
 					<rdfs:label>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/EVE/EVEH)" />
+						<xsl:value-of select="concat('eve-', record/metadata/schede/*/CD/ESC, '-', record/metadata/schede/*/EV/EVE/EVEH)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/EVE/EVEH)" />
+						<xsl:value-of select="concat('eve-', record/metadata/schede/*/CD/ESC, '-', record/metadata/schede/*/EV/EVE/EVEH)" />
 					</l0:name>
 					<arco-core:identifier>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/EVE/EVEH)" />
+						<xsl:value-of select="concat('eve-', record/metadata/schede/*/CD/ESC, '-', record/metadata/schede/*/EV/EVE/EVEH)" />
 					</arco-core:identifier>
 					<arco-core:current>
 						<xsl:value-of select="true()" />

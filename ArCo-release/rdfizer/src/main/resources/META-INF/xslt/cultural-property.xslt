@@ -133,6 +133,9 @@
 					<xsl:when test="record/metadata/schede/EVE/CD/NCU">
 						<xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(record/metadata/schede/EVE/CD/NCU))" />
 					</xsl:when>
+					<xsl:when test="record/metadata/schede/EVE/EV/EVE/EVEH">
+						<xsl:value-of select="concat($NS, 'Event/', 'eve-', arco-fn:urify(concat(record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH)))" />
+					</xsl:when>
 					<xsl:when test="$sheetType='MODI'">
 						<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)), '/', $itemURI)" />
 					</xsl:when>

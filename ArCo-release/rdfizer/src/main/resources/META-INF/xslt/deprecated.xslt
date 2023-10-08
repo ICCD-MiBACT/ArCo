@@ -292,7 +292,8 @@
 	</xsl:variable>
 	<xsl:variable name="ldcm"><xsl:for-each select="record/metadata/schede/*/LC/LDC/LDCM"><xsl:value-of select="arco-fn:urify(.)"/></xsl:for-each></xsl:variable>
 			<xsl:variable name="pvcc"><xsl:for-each select="record/metadata/schede/*/LC/PVC/PVCC"><xsl:value-of select="arco-fn:urify(.)"/></xsl:for-each></xsl:variable>
-	<xsl:if test="not($sheetType='EVE' or $sheetType='MINV' or $sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata)" >
+	<xsl:if test="not($sheetType='MINV' or $sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata)" >
+	<xsl:if test="not($sheetType='EVE')">
 	<!-- Cultural Property -->
 	<rdf:Description>
 		<xsl:attribute name="rdf:about">
@@ -1305,6 +1306,7 @@
 			</xsl:if>
 		</xsl:if>
 	</xsl:for-each>
+	</xsl:if>
 	<!-- Acquisition -->
 	<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata)" >
 	<xsl:for-each select="record/metadata/schede/*/TU/ACQ">
