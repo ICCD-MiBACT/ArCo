@@ -735,11 +735,11 @@
 				</xsl:for-each>
 				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTH and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)), 'n.r')))">
 					<arco-lite:localIdentifier>
-   			        	<xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTH" />
+   			        	<xsl:value-of select="concat('aut-', lower-case(normalize-space(record/metadata/schede/*/CD/ESC)), '-', lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)))" />
 					</arco-lite:localIdentifier>
 					<arco-core:hasIdentifier>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'AuthorIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTH))" />
+							<xsl:value-of select="concat($NS, 'AuthorIdentifier/aut-', arco-fn:urify(record/metadata/schede/*/CD/ESC), '-', arco-fn:urify(record/metadata/schede/*/AU/AUT/AUTH))" />
 						</xsl:attribute>
 					</arco-core:hasIdentifier>
 				</xsl:if>
@@ -841,7 +841,7 @@
 			<xsl:if test="record/metadata/schede/*/AU/AUT/AUTH and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)), 'n.r')))">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'AuthorIdentifier/', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTH))" />
+						<xsl:value-of select="concat($NS, 'AuthorIdentifier/aut-', arco-fn:urify(record/metadata/schede/*/CD/ESC), '-', arco-fn:urify(record/metadata/schede/*/AU/AUT/AUTH))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -854,13 +854,13 @@
 						</xsl:attribute>
 					</arco-core:hasType>
 					<rdfs:label>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTH)" />
+						<xsl:value-of select="concat('aut-', lower-case(normalize-space(record/metadata/schede/*/CD/ESC)), '-', lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)))" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTH)" />
+						<xsl:value-of select="concat('aut-', lower-case(normalize-space(record/metadata/schede/*/CD/ESC)), '-', lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)))" />
 					</l0:name>
 					<l0:identifier>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTH)" />
+						<xsl:value-of select="concat('aut-', lower-case(normalize-space(record/metadata/schede/*/CD/ESC)), '-', lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)))" />
 					</l0:identifier>
 					<arco-core:current>
 						<xsl:value-of select="true()" />

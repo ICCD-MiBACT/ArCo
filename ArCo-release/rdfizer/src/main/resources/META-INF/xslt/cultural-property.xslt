@@ -60,11 +60,14 @@
 					<xsl:when test="record/metadata/schede/EVE/CD/NCU">
 						<xsl:value-of select="arco-fn:urify(record/metadata/schede/EVE/CD/NCU)" />
 					</xsl:when>
+					<xsl:when test="record/metadata/schede/EVE/EV/EVE/EVEH">
+						<xsl:value-of select="arco-fn:urify(concat('eve-', record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH))" />
+					</xsl:when>
 					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
-						<xsl:value-of select="arco-fn:urify(record/metadata/schede/DSC/*/*/DSCH)" />
+						<xsl:value-of select="arco-fn:urify(concat('dsc-', record/metadata/schede/DSC/CD/ESC,'-', record/metadata/schede/DSC/*/*/DSCH))" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/RCG/*/*/RCGH">
-						<xsl:value-of select="arco-fn:urify(record/metadata/schede/RCG/*/*/RCGH)" />
+						<xsl:value-of select="arco-fn:urify(concat('rcg-', record/metadata/schede/RCG/CD/ESC,'-', record/metadata/schede/RCG/*/*/RCGH))" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
 						<xsl:choose>
@@ -130,8 +133,8 @@
 					<!-- variable culturalProperty -->	
 			<xsl:variable name="culturalProperty">
 				<xsl:choose>
-					<xsl:when test="record/metadata/schede/EVE/CD/NCU">
-						<xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(record/metadata/schede/EVE/CD/NCU))" />
+					<xsl:when test="$sheetType='EVE'">
+						<xsl:value-of select="concat($NS, 'Event/', $itemURI)" />
 					</xsl:when>
 					<xsl:when test="$sheetType='MODI'">
 						<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)), '/', $itemURI)" />
@@ -4857,8 +4860,8 @@
 						<arco-cd:hasSurvey>
 							<xsl:attribute name="rdf:resource">
                 				<xsl:choose>
-                					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
-                						<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', arco-fn:urify(record/metadata/schede/DSC/*/*/DSCH))" />
+                					<xsl:when test="./DSCJ">
+                						<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', arco-fn:urify(concat('dsc-', ./DSCJ,'-', ./DSCH)))" />
                 					</xsl:when>
                 					<xsl:otherwise>
                 						<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', $itemURI, '-survey-', position())" />
@@ -5290,22 +5293,22 @@
 				<xsl:if test="record/metadata/schede/*/UB/UBF/*">
 					<arco-cd:isMemberInvolvedIn>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'ArchivalRecordSetMembership/', $itemURI)" />
+							<xsl:value-of select="concat($NS, 'ArchivalCollectionMembership/', $itemURI)" />
 						</xsl:attribute>
 					</arco-cd:isMemberInvolvedIn>
 					<arco-lite:isCollectionMemberOf>
 						<xsl:choose>
 							<xsl:when test="record/metadata/schede/*/UB/UBF/UBFU">
-								<xsl:value-of select="concat($NS, 'ArchivalRecordSet/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFU)))" />
+								<xsl:value-of select="concat($NS, 'ArchivalUnit/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFU)))" />
 							</xsl:when>
 							<xsl:when test="record/metadata/schede/*/UB/UBF/UBFT">
-								<xsl:value-of select="concat($NS, 'ArchivalRecordSet/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFT)))" />
+								<xsl:value-of select="concat($NS, 'ArchivalSubseries/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFT)))" />
 							</xsl:when>
 							<xsl:when test="record/metadata/schede/*/UB/UBF/UBFS">
-								<xsl:value-of select="concat($NS, 'ArchivalRecordSet/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFS)))" />
+								<xsl:value-of select="concat($NS, 'ArchivalSeries/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFS)))" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="concat($NS, 'ArchivalRecordSet/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFP)))" />
+								<xsl:value-of select="concat($NS, 'ArchivalFonds/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/UB/UBF/UBFP)))" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</arco-lite:isCollectionMemberOf>
