@@ -288,7 +288,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/isProducedByMusicalInstrument"/>
         <core:replacingQuery>prefix mi: &lt;https://w3id.org/arco/ontology/musical-instrument/&gt;
 select distinct * where {
 ?note a mi:MusicalNote ;
@@ -424,7 +423,6 @@ WHERE {?class a-dd:hasAffixedElementType ?type.}</core:constructQuery>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/producesMusicalNote"/>
         <core:replacingQuery>prefix mi: &lt;https://w3id.org/arco/ontology/musical-instrument/&gt;
 select distinct * where {
 ?cp mi:producesMusicalNote ?note.
@@ -1723,7 +1721,6 @@ WHERE {?class a-dd:isVibratingLenghtOf ?char. }</core:constructQuery>
 WHERE {
 ?x &lt;https://w3id.org/arco/ontology/musical-instrument/involvesAccompanyingInstrument&gt; ?y.
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/involvesAccompanyingInstrument"/>
     </owl:ObjectProperty>
     
 
@@ -1792,7 +1789,6 @@ WHERE {
 ?x 
 &lt;https://w3id.org/arco/ontology/denotative-description/involvesSoloInstrument&gt; ?y.
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/involvesSoloInstrument"/>
     </owl:ObjectProperty>
     
 
@@ -1824,7 +1820,6 @@ WHERE {
 WHERE {
 ?x &lt;https://w3id.org/arco/ontology/musical-instrument/involvesAccompanyingInstrument&gt; ?y.
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/isAccompanyingInstrumentInvolvedIn"/>
     </owl:ObjectProperty>
     
 
@@ -2939,7 +2934,6 @@ select * where {
 WHERE {
 ?x &lt;https://w3id.org/arco/ontology/musical-instrument/isSoloInstrumentInvolvedIn&gt; ?y.
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/isSoloInstrumentInvolvedIn"/>
     </owl:ObjectProperty>
     
 
@@ -6069,7 +6063,6 @@ WHERE {?x a a-dd:EdgeCircumference .}</core:constructQuery>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAE</a-cat:iccdNormTag>
         <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/musical-instrument/Extension&gt; .}
 WHERE {?x a a-dd:Extension .}</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/Extension"/>
     </owl:NamedIndividual>
     
 
@@ -6987,7 +6980,6 @@ WHERE {?x a a-dd:SlangDesignation . }</core:constructQuery>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAP</a-cat:iccdNormTag>
         <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/musical-instrument/Temperament&gt; .}
 WHERE {?x a a-dd:Temperament .}</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/Temperament"/>
     </owl:NamedIndividual>
     
 
@@ -7031,7 +7023,6 @@ WHERE {?x a a-dd:Temperament .}</core:constructQuery>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAA</a-cat:iccdNormTag>
         <core:constructQuery>CONSTRUCT { ?x a &lt;https://w3id.org/arco/ontology/musical-instrument/Tuning&gt; .}
 WHERE {?x a a-dd:Tuning .}</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/Tuning"/>
     </owl:NamedIndividual>
     
 

@@ -432,6 +432,7 @@ a-cd:hasAgeType ?type.
     <!-- https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentWithResponsibilityIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
@@ -1985,6 +1986,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/hasInterventionRole -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasInterventionRole">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasRole"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isInterventionRoleIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
@@ -3074,6 +3076,7 @@ core:hasAgent ?agent .
     <!-- https://w3id.org/arco/ontology/context-description/hasResponsibility -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasResponsibility">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isResponsibilityFor"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
@@ -4314,6 +4317,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/isAgentWithResponsibilityIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgentWithResponsibilityIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha agente con responsabilità&quot;.</rdfs:comment>
@@ -5793,6 +5797,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/isInterventionRoleIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isInterventionRoleIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isRoleOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha ruolo nell&apos;intervento&quot;.</rdfs:comment>
@@ -6950,6 +6955,7 @@ core:isAgentRoleOf ?thing .
     <!-- https://w3id.org/arco/ontology/context-description/isResponsibilityFor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isResponsibilityFor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentRoleOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">This property relates the attribution of a responsibility to an agent, relating to the activities of production and dissemination of photographic heritage (e.g.: committent, editor, printer, dedicatee, etc.) to photographic heritage.</rdfs:comment>
@@ -9295,21 +9301,6 @@ WHERE {
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/extent -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/extent">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalResource"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="en">This property indicates the number and type of elements that compose the archival resource</rdfs:comment>
-        <rdfs:comment xml:lang="it">questa proprietà indica il numero e il tipo di elementi che compongono la risorsa archivistica</rdfs:comment>
-        <rdfs:label xml:lang="it">consistenza</rdfs:label>
-        <rdfs:label xml:lang="en">extent</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/findingNote -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/findingNote">
@@ -11172,39 +11163,6 @@ WHERE {
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/ArchivalCollection -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalCollection">
-        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTitle"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Title"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isCollectionIn"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una collezione archivistica, cioè un&apos;unione di risorse archivistiche legate in maniera logica e necessaria.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents an archival collection.</rdfs:comment>
-        <rdfs:label xml:lang="en">Archival collection</rdfs:label>
-        <rdfs:label xml:lang="it">Collezione archivistica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF. Normativa F: PD/SFI, SSI. Normativa FF: PAC</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/ArchivalFonds -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalFonds">
@@ -11294,6 +11252,13 @@ WHERE {
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>CONSTRUCT {
+?x a a-arch:ArchivalResource .
+}
+
+WHERE {
+?x a a-cd:ArchivalRecordSet.
+}</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;unità archivistica complessa (fondo, serie, sottoserie, etc.) di cui un bene culturale può fare parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an archival record set (fonds, series, subseries) of which a cultural property can be member.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -11362,19 +11327,7 @@ WHERE {
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalResourceType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/documentationLocation"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/extent"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -11386,23 +11339,6 @@ WHERE {
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF. Normativa F: PD/SFI, SSI. Normativa FF: PAC</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/ArchivalResourceType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalResourceType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di risorsa archivistica</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of an archival record</rdfs:comment>
-        <rdfs:label xml:lang="en">Archival resource type</rdfs:label>
-        <rdfs:label xml:lang="it">Tipo di risorsa archivistica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unsable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa FF: PA/PAC/PACT 
-ICCD Normativa F: UB/UBF/UBFU-UBFT-UBFS-UBFF-UBFP, 
-PA/SSI, PA/SFI</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -14540,7 +14476,7 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
     <!-- https://w3id.org/arco/ontology/context-description/Responsibility -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Responsibility">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility"/>
@@ -16860,11 +16796,11 @@ a-cd:hasEdition ?ed .
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
@@ -16961,17 +16897,6 @@ WHERE {
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Scale"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Title"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Tomb"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Commission"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Dating"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Estimate"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Fruition"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
