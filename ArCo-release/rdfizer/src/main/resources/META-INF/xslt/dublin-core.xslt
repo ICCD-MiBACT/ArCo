@@ -483,7 +483,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 					</xsl:otherwise>	
 				</xsl:choose>
 			</xsl:if>
-			<xsl:if test="not($sheetType='A' or $sheetType='PG' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0' or $sheetVersion='1.00' or $sheetVersion='1.00_ICCD0'))">
+			<xsl:if test="not(($sheetType='A' or $sheetType='PG') and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0' or $sheetVersion='1.00' or $sheetVersion='1.00_ICCD0'))">
 			<xsl:if test="record/metadata/schede/*/OG/OGT/OGTD and not (record/metadata/schede/*/OG/OGT/OGTN or record/metadata/schede/*/OG/OGD/OGDN or record/metadata/schede/*/OG/SGT/SGTT)">
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/*/OG/OGT/OGTT">
@@ -537,7 +537,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 				</xsl:choose>
 			</xsl:if>
 			</xsl:if>
-			<xsl:if test="$sheetType='A' or $sheetType='PG' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0' or $sheetVersion='1.00' or $sheetVersion='1.00_ICCD0')">
+			<xsl:if test="($sheetType='A' or $sheetType='PG') and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0' or $sheetVersion='1.00' or $sheetVersion='1.00_ICCD0')">
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/*/OG/OGT/OGTD">
 						<xsl:value-of select="concat(record/metadata/schede/*/OG/OGT/OGTD, ' (', record/metadata/schede/*/OG/OGT/OGTT, ' ', record/metadata/schede/*/OG/OGT/OGTQ, ')')" />

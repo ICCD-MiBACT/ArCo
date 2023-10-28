@@ -588,9 +588,6 @@
 									</arco-arco:isCulturalPropertyComponentOf>
 								</xsl:when>
 								<xsl:otherwise>
-									<arco-arco:RVERidentifier>
-										<xsl:value-of select="record/metadata/schede/*/RV/RVE/RVER" />
-									</arco-arco:RVERidentifier>
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:if>
@@ -2663,6 +2660,11 @@
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
 							</xsl:attribute>
 						</arco-core:hasAgentRole>
+						<arco-cd:hasResponsibility>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+							</xsl:attribute>
+						</arco-cd:hasResponsibility>
 						<arco-lite:hasHeritageProtectionAgency>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/harvesting/enteCompetente))" />
@@ -2677,6 +2679,11 @@
 										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
 									</xsl:attribute>
 								</arco-core:hasAgentRole>
+								<arco-cd:hasResponsibility>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+									</xsl:attribute>
+								</arco-cd:hasResponsibility>
 								<arco-lite:hasHeritageProtectionAgency>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
@@ -3910,7 +3917,7 @@
                         </xsl:attribute>
 					</arco-cd:hasDesignationInTime>
 					<arco-lite:currentDesignation>
-						<xsl:value-of select="normalize-space(./OGTN)" />
+						<xsl:value-of select="normalize-space(.)" />
 					</arco-lite:currentDesignation>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/OG/OGT/OGTU">
@@ -3943,7 +3950,7 @@
                         	</xsl:attribute>
 						</arco-cd:hasDesignationInTime>
 						<arco-lite:currentDesignation>
-							<xsl:value-of select="normalize-space(./OGTD)" />
+							<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTD)" />
 						</arco-lite:currentDesignation>
 					</xsl:if>
 				</xsl:if>

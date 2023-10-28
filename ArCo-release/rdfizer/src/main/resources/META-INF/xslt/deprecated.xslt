@@ -6888,7 +6888,7 @@
 						<xsl:value-of select="concat('Bibliography about archaeological field survey of cultural property ', $itemURI)" />
 					</l0:name>
 					<arco-cd:completeBibliographicReference>
-						<xsl:value-of select="normalize-space(string-join(./RCGS,' ; '))" />
+						<xsl:value-of select="normalize-space(.)" />
 					</arco-cd:completeBibliographicReference>
 				</rdf:Description>
 			</xsl:for-each>
@@ -7055,7 +7055,7 @@
 								<xsl:value-of select="concat('Bibliography about archaeological excavation of cultural property ', $itemURI)" />
 							</l0:name>
 							<arco-cd:completeBibliographicReference>
-								<xsl:value-of select="normalize-space(string-join(./DSCZ, ' ; '))" />
+								<xsl:value-of select="normalize-space(string-join(./DSCZ, ' -'))" />
 							</arco-cd:completeBibliographicReference>
 						</rdf:Description>
 					</xsl:if>

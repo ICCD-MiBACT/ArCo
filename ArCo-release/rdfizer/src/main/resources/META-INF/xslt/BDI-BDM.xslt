@@ -386,6 +386,7 @@
 						<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/RD/RDM))='terreno'">
 							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DirectObservation'" />
 						</xsl:when>
+						<xsl:otherwise></xsl:otherwise>
 					</xsl:choose>
 				</arco-cd:hasDetectionMethod>
 			</xsl:if>	
@@ -456,12 +457,14 @@
 						</xsl:attribute>
 					</arco-cd:hasCircumstance>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/CA/CAO">
-					<arco-cd:hasCircumstance>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Circumstance/', $itemURI, arco-fn:urify(record/metadata/schede/*/CA/CAO))" />
-						</xsl:attribute>
-					</arco-cd:hasCircumstance>
+				<xsl:if test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+					<xsl:if test="record/metadata/schede/*/CA/CAO">
+						<arco-cd:hasCircumstance>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Circumstance/', $itemURI, arco-fn:urify(record/metadata/schede/*/CA/CAO))" />
+							</xsl:attribute>
+						</arco-cd:hasCircumstance>
+					</xsl:if>
 				</xsl:if>
 			</xsl:if>
 			<xsl:if test="$sheetVersion='4.00_ICCD0' or $sheetVersion='4.00'">
@@ -755,7 +758,7 @@
 					</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
-					<xsl:value-of select="normalize-space(.)" />
+					<xsl:value-of select="normalize-space(./*)" />
 				</rdfs:label>
 				<clvapit:hasAddress>
 					<xsl:attribute name="rdf:resource">
@@ -1914,7 +1917,7 @@
 						<xsl:value-of select="normalize-space(.)" />
 					</tiapit:startTime>
 					<tiapit:endTime>
-						<xsl:value-of select="normalize-space(record/metadata/schede/*/DR/DRD)" />
+						<xsl:value-of select="normalize-space(.)" />
 					</tiapit:endTime>
 				</rdf:Description>
 			</xsl:for-each>
@@ -2747,6 +2750,7 @@
 					</arco-core:hasType>
 				</rdf:Description>
 			</xsl:if>
+			<xsl:if test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 			<xsl:if test="record/metadata/schede/*/CA/CAO">			
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
@@ -2769,6 +2773,7 @@
 	                	</xsl:attribute>
 					</arco-core:hasType>
 				</rdf:Description>
+			</xsl:if>
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="$sheetVersion='4.00_ICCD0' or $sheetVersion='4.00'">
@@ -4919,10 +4924,10 @@
 								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="Editore" />
+								<xsl:value-of select="'Editore'" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="Editore" />
+								<xsl:value-of select="'Editore'" />
 							</l0:name>
 						</rdf:Description>
 						<rdf:Description>
@@ -4987,10 +4992,10 @@
 								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="Curatore" />
+								<xsl:value-of select="'Curatore'" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="Curatore" />
+								<xsl:value-of select="'Curatore'" />
 							</l0:name>
 						</rdf:Description>
 						<rdf:Description>
@@ -8052,13 +8057,13 @@
 					</arco-cd:hasTitle>
 				</xsl:if>
 				<!-- has measurement collection -->
-				<xsl:if test="record/metadata/schede/*/DF/DFM">
+				<xsl:for-each select="record/metadata/schede/*/DF/DFM">
 					<arco-dd:hasMeasurementCollection>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'MeasurementCollection/PhotographicRecording', $itemURI, '-', position())" />
 				        </xsl:attribute>
 					</arco-dd:hasMeasurementCollection>
-				</xsl:if>
+				</xsl:for-each>
 				<xsl:if test="record/metadata/schede/*/DF/DFC/DFCF">
 					<arco-dd:hasMeasurementCollection>
 						<xsl:attribute name="rdf:resource">
@@ -8323,7 +8328,10 @@
 				</rdf:Description>
 			</xsl:if>
 			<!-- measurement collection -->
-			<xsl:if test="record/metadata/schede/*/DF/DFM">
+			<xsl:for-each select="record/metadata/schede/*/DF/DFM">
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
 				<rdf:Description>
 				 	<xsl:attribute name="rdf:about">
 						<xsl:value-of select="concat($NS, 'MeasurementCollection/PhotographicRecording', $itemURI, '-', position())" />
@@ -8346,131 +8354,131 @@
 						<xsl:value-of select="'Measuerements of photographic recording of cultural property ', $itemURI" />
 					</l0:name>
 					<!-- has measurement -->
-					<xsl:if test="record/metadata/schede/*/DF/DFM/DFME">
+					<xsl:if test="./DFME">
 						<arco-dd:hasMeasurement>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Measurement/Recording', $itemURI, position(), '1-photosize')" />
 							</xsl:attribute>
 						</arco-dd:hasMeasurement>
 					</xsl:if>
-					<xsl:if test="record/metadata/schede/*/DF/DFM/DFMO">
+					<xsl:for-each select="./DFMO">
 						<arco-dd:hasMeasurement>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Measurement/Recording', $itemURI, position(), '2-photosize')" />
+								<xsl:value-of select="concat($NS, 'Measurement/Recording', $itemURI, $parentPosition, position(), '2-photosize')" />
 							</xsl:attribute>
 						</arco-dd:hasMeasurement>
-					</xsl:if>
-					<xsl:if test="record/metadata/schede/*/DF/DFM/DFMG">
+					</xsl:for-each>
+					<xsl:for-each select="./DFMG">
 						<arco-dd:hasMeasurement>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Measurement/Recording', $itemURI, position(), '3-photosize')" />
+								<xsl:value-of select="concat($NS, 'Measurement/Recording', $itemURI, $parentPosition, position(), '3-photosize')" />
 							</xsl:attribute>
 						</arco-dd:hasMeasurement>
-					</xsl:if>
+					</xsl:for-each>
 				</rdf:Description>
-				<xsl:if test="record/metadata/schede/*/DF/DFM/DFME">
+				<xsl:if test="./DFME">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Recording', $itemURI, position(), '1-photosize')" />
 						<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Measurement of recording ', position(), ': ', (record/metadata/schede/*/DF/DFM/DFME))" />
+							<xsl:value-of select="concat('Measurement of recording ', position(), ': ', (./DFME))" />
 						</rdfs:label>
 						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Measurement of recording ', position(), ': ', (record/metadata/schede/*/DF/DFM/DFME))" />
+							<xsl:value-of select="concat('Measurement of recording ', position(), ': ', (./DFME))" />
 							</l0:name>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Misura della registrazione: ', (record/metadata/schede/*/DF/DFM/DFME))" />
+							<xsl:value-of select="concat('Misura della registrazione: ', (./DFME))" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Misura della registrazione: ', (record/metadata/schede/*/DF/DFM/DFME))" />
+							<xsl:value-of select="concat('Misura della registrazione: ', (./DFME))" />
 						</l0:name>
 						<arco-dd:hasMeasurementType>
 							<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'PhotoSize')" />
 						</arco-dd:hasMeasurementType>
 						<arco-dd:hasValue>
-							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFME))" />
+							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(./DFME))" />
 						</arco-dd:hasValue>
 					</rdf:Description>
 					<rdf:Description>
-						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFME))" />
+						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(./DFME))" />
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 						<rdfs:label>
-							<xsl:value-of select="record/metadata/schede/*/DF/DFM/DFME" />
+							<xsl:value-of select="./DFME" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="record/metadata/schede/*/DF/DFM/DFME" />
+							<xsl:value-of select="./DFME" />
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/DF/DFM/DFMO">
+				<xsl:for-each select="./DFMO">
 					<rdf:Description>
-						<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Recording', $itemURI, position(), '2-photosize')" />
+						<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Recording', $itemURI, $parentPosition, position(), '2-photosize')" />
 						<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Measurement of recording ', position(), ': ', (record/metadata/schede/*/DF/DFM/DFMO))" />
+							<xsl:value-of select="concat('Measurement of recording ', position(), ': ', (.))" />
 						</rdfs:label>
 						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Measurement of recording ', position(), ': ', (record/metadata/schede/*/DF/DFM/DFMO))" />
+							<xsl:value-of select="concat('Measurement of recording ', position(), ': ', (.))" />
 							</l0:name>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Misura della registrazione: ', (record/metadata/schede/*/DF/DFM/DFMO))" />
+							<xsl:value-of select="concat('Misura della registrazione: ', (.))" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Misura della registrazione: ', (record/metadata/schede/*/DF/DFM/DFMO))" />
+							<xsl:value-of select="concat('Misura della registrazione: ', (.))" />
 						</l0:name>
 						<arco-dd:hasMeasurementType>
 							<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'PhotoSize')" />
 						</arco-dd:hasMeasurementType>
 						<arco-dd:hasValue>
-							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFMO))" />
+							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(.))" />
 						</arco-dd:hasValue>
 					</rdf:Description>
 					<rdf:Description>
-						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFMO))" />
+						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(.))" />
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 						<rdfs:label>
-							<xsl:value-of select="record/metadata/schede/*/DF/DFM/DFMO" />
+							<xsl:value-of select="." />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="record/metadata/schede/*/DF/DFM/DFMO" />
+							<xsl:value-of select="." />
 						</l0:name>
 					</rdf:Description>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/DF/DFM/DFMG">
+				</xsl:for-each>
+				<xsl:for-each select="./DFMG">
 					<rdf:Description>
-						<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Recording', $itemURI, position(), '3-photosize')" />
+						<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Recording', $itemURI, $parentPosition, position(), '3-photosize')" />
 						<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Measurement of recording ', position(), ': ', (record/metadata/schede/*/DF/DFM/DFMG))" />
+							<xsl:value-of select="concat('Measurement of recording ', position(), ': ', (.))" />
 						</rdfs:label>
 						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Measurement of recording ', position(), ': ', (record/metadata/schede/*/DF/DFM/DFMG))" />
+							<xsl:value-of select="concat('Measurement of recording ', position(), ': ', (.))" />
 							</l0:name>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Misura della registrazione: ', (record/metadata/schede/*/DF/DFM/DFMG))" />
+							<xsl:value-of select="concat('Misura della registrazione: ', (.))" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Misura della registrazione: ', (record/metadata/schede/*/DF/DFM/DFMG))" />
+							<xsl:value-of select="concat('Misura della registrazione: ', (.))" />
 						</l0:name>
 						<arco-dd:hasMeasurementType>
 							<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'PhotoSize')" />
 						</arco-dd:hasMeasurementType>
 						<arco-dd:hasValue>
-							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFMG))" />
+							<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(.))" />
 						</arco-dd:hasValue>
 					</rdf:Description>
 					<rdf:Description>
-						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(record/metadata/schede/*/DF/DFM/DFMG))" />
+						<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:urify(.))" />
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 						<rdfs:label>
-							<xsl:value-of select="record/metadata/schede/*/DF/DFM/DFMG" />
+							<xsl:value-of select="." />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="record/metadata/schede/*/DF/DFM/DFMG" />
+							<xsl:value-of select="." />
 						</l0:name>
 					</rdf:Description>
-				</xsl:if>
-			</xsl:if>
+				</xsl:for-each>
+			</xsl:for-each>
 			<xsl:if test="record/metadata/schede/*/DF/DFC/DFCF">
 				<rdf:Description>
 				 	<xsl:attribute name="rdf:about">
@@ -10415,10 +10423,10 @@
 								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="Editore" />
+								<xsl:value-of select="'Editore'" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="Editore" />
+								<xsl:value-of select="'Editore'" />
 							</l0:name>
 						</rdf:Description>
 						<rdf:Description>
@@ -10483,10 +10491,10 @@
 								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="Curatore" />
+								<xsl:value-of select="'Curatore'" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="Curatore" />
+								<xsl:value-of select="'Curatore'" />
 							</l0:name>
 						</rdf:Description>
 						<rdf:Description>
@@ -10578,7 +10586,7 @@
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
-						<xsl:value-of select="normalize-space(concat(./AIAS, ./AIAR, ./AIAP, ./AIAC, ./AIAL, ./AIAE))" />
+						<xsl:value-of select="'Localizzazione'" />
 					</rdfs:label>
 					<clvapit:hasAddress>
 						<xsl:attribute name="rdf:resource">
@@ -13461,10 +13469,10 @@
 								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="Editore" />
+								<xsl:value-of select="'Editore'" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="Editore" />
+								<xsl:value-of select="'Editore'" />
 							</l0:name>
 						</rdf:Description>
 						<rdf:Description>
@@ -13529,10 +13537,10 @@
 								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="Curatore" />
+								<xsl:value-of select="'Curatore'" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="Curatore" />
+								<xsl:value-of select="'Curatore'" />
 							</l0:name>
 						</rdf:Description>
 						<rdf:Description>
