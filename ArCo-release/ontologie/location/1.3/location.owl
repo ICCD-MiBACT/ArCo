@@ -2561,6 +2561,22 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/naturalWaterArrangement -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/naturalWaterArrangement">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà descrive la disposizione e la disponibilità delle acque naturali di un ambiente naturale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property describes the arrangement and availability of natural waters in a natural environment</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">assetto delle acque naturali</rdfs:label>
+        <rdfs:label xml:lang="en">natural water arrangement</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/pedologicalDescription -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/pedologicalDescription">
@@ -3091,6 +3107,21 @@ resource:CadastralIdentity/1400055239-1
         <a-cat:iccdNormTag>ICCD Normativa Traversale 4.00: CS; LS.
 Normativa A e PG v.2.: UB
 Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/CadastralSubordinate -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/CadastralSubordinate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/CadastralEntity"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un subalterno catastale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a cadastral subordinate.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">Cadastral subordinate</rdfs:label>
+        <rdfs:label xml:lang="it">Subalterno catastale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
