@@ -5669,6 +5669,13 @@
                             </xsl:attribute>
 						</arco-cd:hasTimeInterval>
 					</xsl:if>
+					<xsl:if test="./ADTA">
+						<arco-cd:hasTimeInterval>
+							<xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./ADTA)))" />
+                            </xsl:attribute>
+						</arco-cd:hasTimeInterval>
+					</xsl:if>
 					<xsl:for-each select="./ADTM">
 						<arco-core:informationSource>
 							<xsl:value-of select="normalize-space(.)" />
@@ -5680,6 +5687,7 @@
 						</arco-core:note>
 					</xsl:if>
 				</rdf:Description>
+				<xsl:if test="./ADTD">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./ADTD)))" />
@@ -5702,6 +5710,31 @@
 						<xsl:value-of select="normalize-space(./ADTD)" />
 					</arco-arco:endTime>
 				</rdf:Description>
+				</xsl:if>
+				<xsl:if test="./ADTA">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./ADTA)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./ADTA)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./ADTA)" />
+					</l0:name>
+					<arco-arco:startTime>
+						<xsl:value-of select="normalize-space(./ADTA)" />
+					</arco-arco:startTime>
+					<arco-arco:endTime>
+						<xsl:value-of select="normalize-space(./ADTA)" />
+					</arco-arco:endTime>
+				</rdf:Description>
+				</xsl:if>
 			</xsl:for-each>
 			</xsl:for-each>
 			<!-- dating of cultural property for A norm -->
@@ -10763,6 +10796,7 @@
 				</xsl:if>
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/*/DO/BSE">
+				<xsl:if test="./BSET">
 				<xsl:variable name="edition">
 					<xsl:choose>
 						<xsl:when test="./BSEA and ./BSED">
@@ -10887,6 +10921,7 @@
 							<xsl:value-of select="./BSED" />
 						</arco-arco:endTime>
 					</rdf:Description>
+				</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
 			<!-- Legal situation of cultural property as an individual -->

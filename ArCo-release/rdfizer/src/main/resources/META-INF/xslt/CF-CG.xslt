@@ -1486,7 +1486,7 @@
 				</xsl:if>
 				<!-- geometry coordinates for GE as an individual -->
 				<xsl:for-each select="./GEC">
-					<xsl:if test="./GECX and (not(starts-with(lower-case(normalize-space(./GECX)), 'nr')) and not(starts-with(lower-case(normalize-space(./GECX)), 'n.r'))) or ./GECY and (not(starts-with(lower-case(normalize-space(./GECY)), 'nr')) and not(starts-with(lower-case(normalize-space(./GECY)), 'n.r'))) or ./GECZ">
+					<xsl:if test="./GECX and (not(starts-with(lower-case(normalize-space(./GECX)), 'nr')) and not(starts-with(lower-case(normalize-space(./GECX)), 'n.r'))) or ./GECY and (not(starts-with(lower-case(normalize-space(./GECY)), 'nr')) and not(starts-with(lower-case(normalize-space(./GECY)), 'n.r')))">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
             					<xsl:value-of select="concat($NS, 'Coordinates/', $idCF, '-geometry-', $geometry-position, '-coordinates', '-', position())" />
@@ -1601,7 +1601,7 @@
 					</rdf:Description>
 				</xsl:if>
 					<!-- altitude for GE as an individual -->
-				<xsl:if test="./GEC/GECZ">
+				<xsl:for-each select="./GEC/GECZ">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
             				<xsl:value-of select="concat($NS, 'Altitude/', $idCF, '-geometry-', $geometry-position, '-altitude')" />
@@ -1619,13 +1619,13 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Altitude of site: ', $idCF)" />
 						</l0:name>
-						<xsl:if test="./GEC/GECZ and (not(starts-with(lower-case(normalize-space(./GEC/GECZ)), 'nr')) and not(starts-with(lower-case(normalize-space(./GEC/GECZ)), 'n.r')))">
+						<xsl:if test="./GEC/GECZ and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 							<arco-location:alt>
-								<xsl:value-of select="normalize-space(./GEC/GECZ)" />
+								<xsl:value-of select="normalize-space(.)" />
 							</arco-location:alt>
 						</xsl:if>
 					</rdf:Description>
-				</xsl:if>
+				</xsl:for-each>
 			</xsl:for-each>
 		</xsl:if>
 		

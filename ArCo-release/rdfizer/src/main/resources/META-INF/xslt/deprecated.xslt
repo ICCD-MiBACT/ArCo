@@ -7100,13 +7100,13 @@
 				<xsl:attribute name="rdf:about">
 					<xsl:value-of select="concat($NS, 'Inspection/', $itemURI, '-inspection-', position())" />
 				</xsl:attribute>
-				<xsl:if test="./ISPN and (not(starts-with(lower-case(normalize-space(./ISPN)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISPN)), 'n.r')))">
+				<xsl:for-each select="./ISPN[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 					<arco-cd:hasActivityResponsible>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./ISPN))" />
+							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 						</xsl:attribute>
 					</arco-cd:hasActivityResponsible>
-				</xsl:if>
+				</xsl:for-each>
 			</rdf:Description>
 		</xsl:for-each>
 	</xsl:if>

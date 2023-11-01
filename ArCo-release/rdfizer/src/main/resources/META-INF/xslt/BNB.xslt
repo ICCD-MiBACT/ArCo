@@ -4205,7 +4205,7 @@
 			<xsl:if test="./DBXA or ./DBXL or ./DBXN or ./DBXD or ./DBXP">
 				<arco-cd:hasMeasurementCollection>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'MeasurementCollection/', 'WoodSample', '-', position(), '-related-sample-measurement-collection')" />
+						<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-', 'WoodSample', '-', position(), '-related-sample-measurement-collection')" />
 					</xsl:attribute>
 				</arco-cd:hasMeasurementCollection>
 			</xsl:if>
@@ -4214,7 +4214,7 @@
 		<xsl:if test="./DBXA or ./DBXL or ./DBXN or ./DBXD or ./DBXP">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'MeasurementCollection/', 'WoodSample', '-', position(), '-related-sample-measurement-collection')" />
+					<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-', 'WoodSample', '-', position(), '-related-sample-measurement-collection')" />
 	    		</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -4236,35 +4236,35 @@
 				<xsl:if test="./DBXA">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/WoodSample/', '-', position(), '-height')" />
+							<xsl:value-of select="concat($NS, 'Measurement/WoodSample/', $itemURI, '-', position(), '-height')" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>
 				<xsl:if test="./DBXL">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/WoodSample/', '-', position(), '-width')" />
+							<xsl:value-of select="concat($NS, 'Measurement/WoodSample/', $itemURI, '-', position(), '-width')" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>
 				<xsl:if test="./DBXN">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/WoodSample/', '-', position(), '-length')" />
+							<xsl:value-of select="concat($NS, 'Measurement/WoodSample/', $itemURI, '-', position(), '-length')" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>
 				<xsl:if test="./DBXD">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/WoodSample/', '-', position(), '-diameter')" />
+							<xsl:value-of select="concat($NS, 'Measurement/WoodSample/', $itemURI, '-', position(), '-diameter')" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>
 				<xsl:if test="./DBXP">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/WoodSample/', '-', position(), '-weight')" />
+							<xsl:value-of select="concat($NS, 'Measurement/WoodSample/', $itemURI, '-', position(), '-weight')" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>					
@@ -4274,7 +4274,7 @@
 		<xsl:variable name="parent-id" select="position()" />
 		<xsl:if test="./DBXA">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/WoodSample/', '-', position(), '-height')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/WoodSample/', $itemURI, '-', position(), '-height')" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of wood sample ', position(), ': ', (./DBXA))" />
@@ -4301,7 +4301,7 @@
 		</xsl:if>		
 		<xsl:if test="./DBXL">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/WoodSample/', '-', position(), '-width')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/WoodSample/', $itemURI, '-', position(), '-width')" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of wood sample ', position(), ': ', (./DBXL))" />
@@ -4328,7 +4328,7 @@
 		</xsl:if>
 		<xsl:if test="./DBXN">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/WoodSample/', '-', position(), '-length')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/WoodSample/', $itemURI, '-', position(), '-length')" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of wood sample ', position(), ': ', (./DBXN))" />
@@ -4355,7 +4355,7 @@
 		</xsl:if>
 		<xsl:if test="./DBXD">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/WoodSample/', '-', position(), '-diameter')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/WoodSample/', $itemURI, '-', position(), '-diameter')" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of wood sample ', position(), ': ', (./DBXD))" />
@@ -4382,7 +4382,7 @@
 		</xsl:if>
 		<xsl:if test="./DBXP">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/WoodSample/', '-', position(), '-weight')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/WoodSample/', $itemURI, '-', position(), '-weight')" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of wood sample ', position(), ': ', (./DBXP))" />
