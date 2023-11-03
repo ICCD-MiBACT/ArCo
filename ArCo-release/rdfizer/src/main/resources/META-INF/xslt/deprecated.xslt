@@ -1606,6 +1606,11 @@
 							<xsl:value-of select="concat($NS, 'HistoricalPlaque/', $itemURI, '-affixed-element-', position())" />
 						</xsl:attribute>
 					</xsl:when>
+					<xsl:when test="lower-case(normalize-space(./LSIG))='iscrizione'">
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'Inscription/', $itemURI, '-affixed-element-', position())" />
+						</xsl:attribute>
+					</xsl:when>
 				</xsl:choose>
 				<rdf:type>
 					<xsl:choose>
@@ -1637,6 +1642,11 @@
 						<xsl:when test="lower-case(normalize-space(./LSIG))='lapide'">
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/HistoricalPlaque'" />
+							</xsl:attribute>
+						</xsl:when>
+						<xsl:when test="lower-case(normalize-space(./LSIG))='iscrizione'">
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Inscription'" />
 							</xsl:attribute>
 						</xsl:when>
 					</xsl:choose>
@@ -1692,6 +1702,9 @@
 						<xsl:when test="lower-case(normalize-space(./LSIG))='lapide'">
 							<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI, ': lapide')" />
 						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="concat('Element ', position(), ' affixed to cultural property ', $itemURI, ': ', normalize-space(./LSIG))" />
+						</xsl:otherwise>
 					</xsl:choose>
 				</rdfs:label>
 				<xsl:if test="./LSIT and (not(starts-with(lower-case(normalize-space(./LSIT)), 'nr')) and not(starts-with(lower-case(normalize-space(./LSIT)), 'n.r')))">
@@ -3313,6 +3326,13 @@
 				<arco-cd:documentationIdentifier>
 					<xsl:value-of select="normalize-space(./FNTH)" />
 				</arco-cd:documentationIdentifier>
+			</xsl:if>
+			<xsl:if test="./FNTN and (not(starts-with(lower-case(normalize-space(./FNTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./FNTN)), 'n.r')))">
+				<arco-cd:hasArchive>
+					<xsl:attribute name="rdf:resource">
+            			<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./FNTN))" />
+            		</xsl:attribute>
+				</arco-cd:hasArchive>
 			</xsl:if>
 			<xsl:if test="./FNTD and (not(starts-with(lower-case(normalize-space(./FNTD)), 'nr')) and not(starts-with(lower-case(normalize-space(./FNTD)), 'n.r')))">
 				<xsl:choose>
@@ -6805,15 +6825,24 @@
 			</xsl:variable>
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:choose>
-						<xsl:when test="./RCGH">
-							<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', arco-fn:urify(./RCGH))" />
-						</xsl:when>
-           				<xsl:otherwise>
-							<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', $itemURI, '-survey-', position())" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', $itemURI, '-survey-', position())" />
 				</xsl:attribute>
+				<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+				<owl:sameAs>
+					<xsl:attribute name="rdf:resource">
+						<xsl:choose>
+								<xsl:when test="./RCGJ">
+                					<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', 'rcg-', arco-fn:urify(./RCGJ), '-', arco-fn:urify(./RCGH))" />
+                				</xsl:when>
+								<xsl:when test="./RCGH">
+                					<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', 'rcg-', arco-fn:urify($esc), '-', arco-fn:urify(./RCGH))" />
+                				</xsl:when>
+                				<xsl:otherwise>
+                					<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', $itemURI, '-survey-rcg-', position())" />
+                				</xsl:otherwise>
+                			</xsl:choose>
+					</xsl:attribute>
+				</owl:sameAs>
 				<xsl:if test="./RCGK and (not(starts-with(lower-case(normalize-space(./RCGK)), 'nr')) and not(starts-with(lower-case(normalize-space(./RCGK)), 'n.r')))">
 					<arco-cd:archeologicalFieldSurveyICCDIdentifier>
 						<xsl:value-of select="normalize-space(./RCGK)" />
