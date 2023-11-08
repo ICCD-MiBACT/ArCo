@@ -18782,6 +18782,13 @@
 							</xsl:attribute>
 						</arco-dd:hasWritingSystem>
 					</xsl:for-each>
+					<xsl:if test="record/metadata/schede/NU/DA/DES/DESL_FONT">
+						<arco-dd:hasFontStyle>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'FontStyle/', arco-fn:urify(normalize-space(record/metadata/schede/NU/DA/DES/DESL_FONT)))" />
+							</xsl:attribute>
+						</arco-dd:hasFontStyle>
+					</xsl:if>
 					<xsl:for-each select="record/metadata/schede/NU/DA/DES/DESN[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]"><!-- allow mutiple values eg:ICCD4689511 -->
 						<language:hasLanguage>
 							<xsl:attribute name="rdf:resource">
@@ -18790,6 +18797,20 @@
 						</language:hasLanguage>
 					</xsl:for-each>
 				</rdf:Description>
+				<xsl:if test="record/metadata/schede/NU/DA/DES/DESL_FONT">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+                               <xsl:value-of select="concat($NS, 'FontStyle/', arco-fn:urify(normalize-space(record/metadata/schede/NU/DA/DES/DESL_FONT)))" />
+                           </xsl:attribute>
+						<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle" />
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(record/metadata/schede/NU/DA/DES/DESL_FONT)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(record/metadata/schede/NU/DA/DES/DESL_FONT)" />
+						</l0:name>
+					</rdf:Description>
+				</xsl:if>
 				<xsl:for-each select="record/metadata/schede/NU/DA/DES/DESF[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
@@ -18912,6 +18933,13 @@
 					<l0:name xml:lang="en">
 						<xsl:value-of select="concat('Legend on reverse of numismatic property ', $itemURI)" />
 					</l0:name>
+					<xsl:if test="record/metadata/schede/NU/DA/DES/DESG_FONT">
+						<arco-dd:hasFontStyle>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'FontStyle/', arco-fn:urify(normalize-space(record/metadata/schede/NU/DA/DES/DESG_FONT)))" />
+							</xsl:attribute>
+						</arco-dd:hasFontStyle>
+					</xsl:if>
 					<xsl:for-each select="record/metadata/schede/NU/DA/DES/DEST[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<arco-dd:hasWritingSystem>
 							<xsl:attribute name="rdf:resource">
@@ -18927,6 +18955,20 @@
 						</language:hasLanguage>
 					</xsl:for-each>
 				</rdf:Description>
+				<xsl:if test="record/metadata/schede/NU/DA/DES/DESG_FONT">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+                               <xsl:value-of select="concat($NS, 'FontStyle/', arco-fn:urify(normalize-space(record/metadata/schede/NU/DA/DES/DESG_FONT)))" />
+                           </xsl:attribute>
+						<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle" />
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(record/metadata/schede/NU/DA/DES/DESG_FONT)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(record/metadata/schede/NU/DA/DES/DESG_FONT)" />
+						</l0:name>
+					</rdf:Description>
+				</xsl:if>
 				<xsl:for-each select="record/metadata/schede/NU/DA/DES/DEST[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
@@ -20008,9 +20050,9 @@
 							</xsl:if>
 						</xsl:for-each>
 						<xsl:if test="./GEP and (not(starts-with(lower-case(normalize-space(./GEP)), 'nr')) and not(starts-with(lower-case(normalize-space(./GEP)), 'n.r')))">
-							<arco-location:spacialReferenceSystem>
+							<arco-location:spatialReferenceSystem>
 								<xsl:value-of select="normalize-space(./GEP)" />
-							</arco-location:spacialReferenceSystem>
+							</arco-location:spatialReferenceSystem>
 						</xsl:if>
 						<xsl:if test="./GPT and (not(starts-with(lower-case(normalize-space(./GPT)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPT)), 'n.r')))">
 							<arco-location:hasGeometryTechnique>
@@ -20357,9 +20399,9 @@
 						</arco-location:hasCoordinates>
 					</xsl:for-each>
 					<xsl:if test="./GPP and (not(starts-with(lower-case(normalize-space(./GPP)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPP)), 'n.r')))">
-						<arco-location:spacialReferenceSystem>
+						<arco-location:spatialReferenceSystem>
 							<xsl:value-of select="normalize-space(./GPP)" />
-						</arco-location:spacialReferenceSystem>
+						</arco-location:spatialReferenceSystem>
 					</xsl:if>
 					<xsl:if test="./GPC/GPCT and (not(starts-with(lower-case(normalize-space(./GPC/GPCT)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPC/GPCT)), 'n.r')))">
 						<arco-location:pointType>
@@ -20735,9 +20777,9 @@
 							</clvapit:alt>
 						</xsl:if>
 					<xsl:if test="record/metadata/schede/*/CR/CRD/CRDR and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CR/CRD/CRDR)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CR/CRD/CRDR)), 'n.r')))">
-						<arco-location:spacialReferenceSystem>
+						<arco-location:spatialReferenceSystem>
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/CR/CRD/CRDR)" />
-						</arco-location:spacialReferenceSystem>
+						</arco-location:spatialReferenceSystem>
 					</xsl:if>
 				</rdf:Description>
 			</xsl:if>
@@ -20784,9 +20826,9 @@
 							</arco-location:hasCoordinates>
 						</xsl:for-each>
 						<xsl:if test="./GLP and (not(starts-with(lower-case(normalize-space(./GLP)), 'nr')) and not(starts-with(lower-case(normalize-space(./GLP)), 'n.r')))">
-							<arco-location:spacialReferenceSystem>
+							<arco-location:spatialReferenceSystem>
 								<xsl:value-of select="normalize-space(./GLP)" />
-							</arco-location:spacialReferenceSystem>
+							</arco-location:spatialReferenceSystem>
 						</xsl:if>
 						<xsl:if test="./GLT and (not(starts-with(lower-case(normalize-space(./GLT)), 'nr')) and not(starts-with(lower-case(normalize-space(./GLT)), 'n.r')))">
 							<arco-location:hasGeometryTechnique>
@@ -21017,9 +21059,9 @@
 							</arco-location:hasCoordinates>
 						</xsl:for-each>
 						<xsl:if test="./GAP and (not(starts-with(lower-case(normalize-space(./GAP)), 'nr')) and not(starts-with(lower-case(normalize-space(./GAP)), 'n.r')))">
-							<arco-location:spacialReferenceSystem>
+							<arco-location:spatialReferenceSystem>
 								<xsl:value-of select="normalize-space(./GAP)" />
-							</arco-location:spacialReferenceSystem>
+							</arco-location:spatialReferenceSystem>
 						</xsl:if>
 						<xsl:if test="./GAT and (not(starts-with(lower-case(normalize-space(./GAT)), 'nr')) and not(starts-with(lower-case(normalize-space(./GAT)), 'n.r')))">
 							<arco-location:hasGeometryTechnique>
