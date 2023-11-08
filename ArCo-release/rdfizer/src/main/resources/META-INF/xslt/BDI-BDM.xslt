@@ -758,7 +758,7 @@
 					</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
-					<xsl:value-of select="normalize-space(./*)" />
+					<xsl:value-of select="concat(normalize-space(./LDFS), normalize-space(./LDFR), normalize-space(./LDFP), normalize-space(./LDFC), normalize-space(./LDFF), normalize-space(./LDFL))" />
 				</rdfs:label>
 				<clvapit:hasAddress>
 					<xsl:attribute name="rdf:resource">
@@ -19958,8 +19958,12 @@
 			</rdf:type>
 			<rdfs:label>
 				<xsl:choose>
-					<xsl:when test="contains(normalize-space(lower-case(record/metadata/schede/*/EV/OGD/OGDT)), 'attuale')">
-						<xsl:value-of select="record/metadata/schede/*/EV/OGD/OGDN" />				
+					<xsl:when test="record/metadata/schede/*/EV/OGD">
+						<xsl:for-each select="record/metadata/schede/*/EV/OGD">
+						<xsl:if test="contains(normalize-space(lower-case(record/metadata/schede/*/EV/OGD/OGDT)), 'attuale')">
+						<xsl:value-of select="record/metadata/schede/*/EV/OGD/OGDN" />	
+						</xsl:if>
+						</xsl:for-each>			
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="concat(record/metadata/schede/*/EV/EVE/EVEF, ' ', record/metadata/schede/*/EV/EVE/EVET)" />
@@ -19968,8 +19972,12 @@
 			</rdfs:label>
 			<l0:name>
 				<xsl:choose>
-					<xsl:when test="contains(normalize-space(lower-case(record/metadata/schede/*/EV/OGD/OGDT)), 'attuale')">
-						<xsl:value-of select="record/metadata/schede/*/EV/OGD/OGDN" />				
+					<xsl:when test="record/metadata/schede/*/EV/OGD">
+						<xsl:for-each select="record/metadata/schede/*/EV/OGD">
+						<xsl:if test="contains(normalize-space(lower-case(record/metadata/schede/*/EV/OGD/OGDT)), 'attuale')">
+						<xsl:value-of select="record/metadata/schede/*/EV/OGD/OGDN" />	
+						</xsl:if>
+						</xsl:for-each>			
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="concat(record/metadata/schede/*/EV/EVE/EVEF, ' ', record/metadata/schede/*/EV/EVE/EVET)" />
@@ -20878,7 +20886,7 @@
 				<xsl:for-each select="./AVEN">
 					<arco-cd:hasDesignationInTime>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS,'DesignationInTime/', arco-fn:urify(./AVEH), '-', arco-fn:urify(normalize-space(.)))" />                      	                            
+							<xsl:value-of select="concat($NS,'DesignationInTime/', arco-fn:urify(../AVEH), '-', arco-fn:urify(normalize-space(.)))" />                      	                            
 				  	   	</xsl:attribute>
 					</arco-cd:hasDesignationInTime>
 					<arco-lite:currentDesignation>
@@ -20962,7 +20970,7 @@
 			<xsl:for-each select="./AVEN">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS,'DesignationInTime/', arco-fn:urify(./AVEH), '-', arco-fn:urify(normalize-space(.)))" />
+                        <xsl:value-of select="concat($NS,'DesignationInTime/', arco-fn:urify(../AVEH), '-', arco-fn:urify(normalize-space(.)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">

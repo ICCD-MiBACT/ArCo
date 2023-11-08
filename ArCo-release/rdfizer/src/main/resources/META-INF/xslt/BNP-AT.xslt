@@ -1444,14 +1444,14 @@
 	            </rdf:type>
 	            <xsl:if test="./SZSA">
 					<arco-cd:synonym>
-						<xsl:value-of select="." />
+						<xsl:value-of select="./SZSA" />
 					</arco-cd:synonym>
 				</xsl:if>
-				<xsl:if test="./SZSN">
+				<xsl:for-each select="./SZSN">
 					<arco-cd:synonym>
 						<xsl:value-of select="." />
 					</arco-cd:synonym>
-				</xsl:if>
+				</xsl:for-each>
     	        <rdfs:label>
 					<xsl:call-template name="CamelCase1">
 						<xsl:with-param name="text" select="concat($sps-species-lab, $sps-subspecies-lab)" />

@@ -229,9 +229,9 @@
 		</xsl:element>
 	</xsl:template>
 	<xsl:variable name="aco">
-		<xsl:if test="record/metadata/schede/*/AC/ACO">
-			<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/AC/ACO)" />
-		</xsl:if>
+		<xsl:for-each select="record/metadata/schede/*/AC/ACO">
+			<xsl:value-of select="arco-fn:urify(.)" />
+		</xsl:for-each>
 	</xsl:variable>
 	<xsl:variable name="acm">
 		<xsl:if test="record/metadata/schede/*/AC/ACM">
@@ -450,7 +450,11 @@
 			</xsl:for-each>
 		</xsl:if>
 		<xsl:if test="$sheetType='BNM' or $sheetType='BNPE' or $sheetType='BNPL' or $sheetType='BNZ'">
-			<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
+			<xsl:variable name="aco">
+				<xsl:for-each select="record/metadata/schede/*/AC/ACO">
+					<xsl:value-of select="arco-fn:urify(.)" />
+				</xsl:for-each>
+			</xsl:variable>
 			<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
 			<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
 			<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
@@ -5996,16 +6000,16 @@
 			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IM/IMA/IMAS))" />
 			<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Measurement of stratum: ', (.))" />
+				<xsl:value-of select="concat('Measurement of stratum: ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Measurement of stratum: ', (.))" />
+				<xsl:value-of select="concat('Measurement of stratum: ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Misura dello strato: ', (.))" />
+				<xsl:value-of select="concat('Misura dello strato: ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Misura dello strato: ', (.))" />
+				<xsl:value-of select="concat('Misura dello strato: ', $itemURI)" />
 			</l0:name>
 			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="'https://w3id.org/arco/ontology/denotative-description/Thickness'" />
@@ -6084,16 +6088,16 @@
 			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IR/IRA/IRAS))" />
 			<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Measurement of stratum: ', (.))" />
+				<xsl:value-of select="concat('Measurement of stratum: ', (record/metadata/schede/*/IR/IRA/IRAS))" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Measurement of stratum: ', (.))" />
+				<xsl:value-of select="concat('Measurement of stratum: ', (record/metadata/schede/*/IR/IRA/IRAS))" />
 			</l0:name>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Misura dello strato: ', (.))" />
+				<xsl:value-of select="concat('Misura dello strato: ', (record/metadata/schede/*/IR/IRA/IRAS))" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Misura dello strato: ', (.))" />
+				<xsl:value-of select="concat('Misura dello strato: ', (record/metadata/schede/*/IR/IRA/IRAS))" />
 			</l0:name>
 			<arco-core:hasType>
 				<xsl:attribute name="rdf:resource" select="'https://w3id.org/arco/ontology/denotative-description/Thickness'" />
@@ -9277,7 +9281,11 @@
 			</rdf:Description>
 	</xsl:for-each>
 	<xsl:if test="$sheetType='BNM' or $sheetType='BNPE' or $sheetType='BNPL' or $sheetType='BNZ'">
-		<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
+		<xsl:variable name="aco">
+			<xsl:for-each select="record/metadata/schede/*/AC/ACO">
+				<xsl:value-of select="arco-fn:urify(.)" />
+			</xsl:for-each>
+		</xsl:variable>
 		<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
 		<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
 		<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
@@ -9302,35 +9310,37 @@
 					</l0:name>
 				</xsl:when>
 				<xsl:otherwise>
+					<xsl:for-each select="record/metadata/schede/*/AC/ACO">
 					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Specimen collection ', record/metadata/schede/*/AC/ACO)" />
+						<xsl:value-of select="concat('Specimen collection ', .)" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Specimen collection ', record/metadata/schede/*/AC/ACO)" />
+						<xsl:value-of select="concat('Specimen collection ', .)" />
 					</l0:name>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Collezione di beni naturalistici ', record/metadata/schede/*/AC/ACO)" />
+						<xsl:value-of select="concat('Collezione di beni naturalistici ', .)" />
 					</rdfs:label>
 					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Collezione di beni naturalistici ', record/metadata/schede/*/AC/ACO)" />
+						<xsl:value-of select="concat('Collezione di beni naturalistici ', .)" />
 					</l0:name>
+					</xsl:for-each>
 				</xsl:otherwise>
 			</xsl:choose>
-			<xsl:if test="record/metadata/schede/*/AC/ACO">
+			<xsl:for-each select="record/metadata/schede/*/AC/ACO">
 				<arco-lite:localIdentifier>
-               		<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
+               		<xsl:value-of select="." />
 				</arco-lite:localIdentifier>
 				<arco-core:hasIdentifier>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'CollectionIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/AC/ACO))" />
+						<xsl:value-of select="concat($NS, 'CollectionIdentifier/', $itemURI, arco-fn:arcofy(.))" />
 					</xsl:attribute>
 				</arco-core:hasIdentifier>
-			</xsl:if>
+			</xsl:for-each>
 		</rdf:Description>
-		<xsl:if test="record/metadata/schede/*/AC/ACO">
+		<xsl:for-each select="record/metadata/schede/*/AC/ACO">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'CollectionIdentifier/', $itemURI, arco-fn:arcofy(record/metadata/schede/*/AC/ACO))" />
+					<xsl:value-of select="concat($NS, 'CollectionIdentifier/', $itemURI, arco-fn:arcofy(.))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -9343,23 +9353,27 @@
 			        </xsl:attribute>
 				</arco-core:hasType>
 				<rdfs:label>
-					<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
+					<xsl:value-of select="." />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
+					<xsl:value-of select="." />
 				</l0:name>
 				<arco-core:identifier>
-					<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
+					<xsl:value-of select="." />
 				</arco-core:identifier>
 				<arco-core:current>
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
-		</xsl:if>
+		</xsl:for-each>
 	</xsl:if>
 				<!-- natural heritage collection membership membership -->
  	<xsl:if test="$sheetType='BNM' or $sheetType='BNPE' or $sheetType='BNPL' or $sheetType='BNZ'">
-	<xsl:variable name="aco" select="arco-fn:urify(record/metadata/schede/*/AC/ACO)"></xsl:variable>
+	<xsl:variable name="aco">
+		<xsl:for-each select="record/metadata/schede/*/AC/ACO">
+			<xsl:value-of select="arco-fn:urify(.)" />
+		</xsl:for-each>
+	</xsl:variable>
 			<xsl:variable name="acm" select="arco-fn:urify(record/metadata/schede/*/AC/ACM)"></xsl:variable>
 			<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
 			<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
