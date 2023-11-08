@@ -663,8 +663,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà collega un elemento divisorio ad uno spazio.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a divisory element to a space.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
-        <rdfs:label xml:lang="it">è elemento divisorio di</rdfs:label>
         <rdfs:label xml:lang="en">is divisory element of</rdfs:label>
+        <rdfs:label xml:lang="it">è elemento divisorio di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -679,8 +679,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà è inversa di ha schema in elevato.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property is the inverse of has elevation layout.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
-        <rdfs:label xml:lang="it">è schema in elevato di</rdfs:label>
         <rdfs:label xml:lang="en">is elevation layout of</rdfs:label>
+        <rdfs:label xml:lang="it">è schema in elevato di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -779,8 +779,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà è inversa di ha schema in pianta.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property is the inverse of has plan layout.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
-        <rdfs:label xml:lang="it">è schema in pianta di</rdfs:label>
         <rdfs:label xml:lang="en">is plan layout of</rdfs:label>
+        <rdfs:label xml:lang="it">è schema in pianta di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1134,8 +1134,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà indica se la trave è a incastro.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property rindicates if a beam is encastrated.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
-        <rdfs:label xml:lang="en">encastrated</rdfs:label>
         <rdfs:label xml:lang="it">a incastro</rdfs:label>
+        <rdfs:label xml:lang="en">encastrated</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -1150,8 +1150,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà indica se un elemento architettonico è a vista.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property rindicates if an architectural element is exposed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
-        <rdfs:label xml:lang="en">exposed</rdfs:label>
         <rdfs:label xml:lang="it">a vista</rdfs:label>
+        <rdfs:label xml:lang="en">exposed</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -1211,13 +1211,12 @@ In this module the following Ontology Design Patterns have been used:
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isolatedElementOrSpace">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/construction-description/Construction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:label xml:lang="it">elemento o spazio isolato</rdfs:label>
-        <rdfs:label xml:lang="en">isolatedElementOrSpace</rdfs:label>
         <rdfs:comment xml:lang="it">Questa proprietà indica se la costruzione (spazio o elemtno) è isolata</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates whether the construction (space or element) is isolated</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
         <rdfs:label xml:lang="it">elemento o spazio isolato</rdfs:label>
         <rdfs:label xml:lang="en">isolated element or space</rdfs:label>
+        <rdfs:label xml:lang="en">isolatedElementOrSpace</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -1575,8 +1574,8 @@ viene descritta.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà indica se è presente un transetto</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates whether there is a transept</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
-        <rdfs:label xml:lang="it">transept presente</rdfs:label>
         <rdfs:label xml:lang="en">presenza del transetto</rdfs:label>
+        <rdfs:label xml:lang="it">transept presente</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -1756,6 +1755,12 @@ viene descritta.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/construction-description/ArchitecturalSpace -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/ArchitecturalSpace"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/construction-description/Beam -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/Beam">
@@ -1859,14 +1864,6 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di soffitto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/construction-description/Chapel -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/Chapel">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/ConstructionSpace"/>
     </owl:Class>
     
 
@@ -2240,6 +2237,7 @@ viene descritta.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di facciata.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of facade.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
         <rdfs:label xml:lang="en">Facade type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di facciata</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2461,6 +2459,7 @@ viene descritta.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di elemento di mobilio.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of an furnishing element.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
         <rdfs:label xml:lang="en">Furnishing element type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di elemento di mobilio</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2534,14 +2533,6 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Lift</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/construction-description/Martyrium -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/Martyrium">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/Chapel"/>
     </owl:Class>
     
 
@@ -2763,8 +2754,8 @@ viene descritta.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un elemento di rinforzo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a reinforcement element.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
-        <rdfs:label xml:lang="en">Reinforcement element</rdfs:label>
         <rdfs:label xml:lang="it">Elemento di rinforzo</rdfs:label>
+        <rdfs:label xml:lang="en">Reinforcement element</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -2896,14 +2887,6 @@ viene descritta.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/construction-description/Sacellum -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/Sacellum">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/Chapel"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/construction-description/ShadingDevice -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/ShadingDevice">
@@ -3009,8 +2992,8 @@ viene descritta.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un transetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a transept.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
-        <rdfs:label xml:lang="it">Transetto</rdfs:label>
         <rdfs:label xml:lang="en">Transept</rdfs:label>
+        <rdfs:label xml:lang="it">Transetto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -3357,6 +3340,7 @@ viene descritta.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/construction-description/Column">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/construction-description/VerticalElementType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
         <rdfs:label xml:lang="it">Colonna</rdfs:label>
         <rdfs:label xml:lang="en">Column</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3369,6 +3353,7 @@ viene descritta.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/construction-description/HorizontalElementShape">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
         <rdfs:label xml:lang="it">Forma dell&apos;elemento orizzontale</rdfs:label>
         <rdfs:label xml:lang="en">Horizontal element shape</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3381,6 +3366,7 @@ viene descritta.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/construction-description/Pillar">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/construction-description/VerticalElementType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
         <rdfs:label xml:lang="en">Pilastro</rdfs:label>
         <rdfs:label xml:lang="it">Pillar</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3401,6 +3387,7 @@ viene descritta.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/construction-description/RoofShape">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
         <rdfs:label xml:lang="it">Forma della copertura</rdfs:label>
         <rdfs:label xml:lang="en">Roof shape</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3425,6 +3412,7 @@ viene descritta.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/construction-description/VerticalElementShape">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
         <rdfs:label xml:lang="it">Forma dell&apos;elemento verticale</rdfs:label>
         <rdfs:label xml:lang="en">Vertical element shape</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3451,6 +3439,7 @@ viene descritta.</rdfs:comment>
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/Wall">
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:label xml:lang="it">Parete</rdfs:label>
         <rdfs:label xml:lang="en">Wall</rdfs:label>
