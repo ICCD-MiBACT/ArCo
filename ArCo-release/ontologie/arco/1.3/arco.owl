@@ -51,13 +51,9 @@
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
-        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Luigi Asprino (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Letizia Mancinelli (MiBAC, ICCD)</dc:creator>
-        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
         <dc:description xml:lang="it">Questo è il modulo centrale della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al dominio dei beni culturali, considerate top-level. Vengono importati tutti gli altri moduli della rete.</dc:description>
         <dc:description xml:lang="en">The ArCo module is the root of the network ArCo - Architecture of Knowledge. It imports all the other modules and models top-level distinctions from the cultural heritage domain.</dc:description>
@@ -332,7 +328,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasComponent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco/isCulturalPropertyComponentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ComplexCulturalProperty"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
         <opla:isNativeTo>https://w3id.org/arco/pattern/cultural-property-component-of/</opla:isNativeTo>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale complesso a una delle sue parti componenti.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property to its components.</rdfs:comment>
@@ -762,7 +758,7 @@ WHERE {
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/isCulturalPropertyComponentOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyComponent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/ComplexCulturalProperty"/>
         <opla:isNativeTo>https://w3id.org/arco/pattern/cultural-property-component-of/</opla:isNativeTo>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha componente&quot;, collega una delle parti componenti di un bene culturale complesso al bene complesso stesso.</rdfs:comment>
@@ -1619,6 +1615,7 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">classified subject</rdfs:label>
         <rdfs:label xml:lang="it">soggetto classificato</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F 4.00: SG/CLF/CLFS</a-cat:iccdNormTag>
@@ -4081,8 +4078,8 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/historicalBiographicalInformation">
         <rdfs:label xml:lang="en">historical biographic information</rdfs:label>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:label xml:lang="it">informazioni biografiche storiche</rdfs:label>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/PDF/PDFB 
 ICCD Normativa AUT: AU/NSC</a-cat:iccdNormTag>

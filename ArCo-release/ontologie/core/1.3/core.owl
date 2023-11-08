@@ -32,14 +32,9 @@
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
-        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Luigi Asprino (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
-        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
         <dc:description xml:lang="it">Questo modulo rappresenta concetti trasversali a tutta la network, che sono quindi importati da tutti gli altri moduli ontologici (es.: relazione parte-tutto, classificazione).</dc:description>
         <dc:description xml:lang="en">The Core module represents general-purpose concepts orthogonal to the whole network, which are imported by all other ontology modules (e.g. part-whole relation, classification).</dc:description>
@@ -333,6 +328,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">ha classificazione</rdfs:label>
         <rdfs:label xml:lang="en">has classification</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -346,7 +343,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità ad una classificazione nel tempo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity to a classification in time</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/core</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">ha classificazione nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has classification in time</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -368,7 +365,7 @@ In this module the following Ontology Design Patterns have been used:
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione ad un sistema di classificazione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a classification to a classification system</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/core</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">ha sistema di classificazione</rdfs:label>
         <rdfs:label xml:lang="en">has classification system</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -703,6 +700,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">ha situazione</rdfs:label>
         <rdfs:label xml:lang="en">has situation</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -891,7 +890,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione nel tempo ad un&apos;entità</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a classification in time to an entity</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/core</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">is classification in time of</rdfs:label>
         <rdfs:label xml:lang="it">è classificazione nel tempo di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1962,6 +1961,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">Event or situation in time</rdfs:label>
         <rdfs:label xml:lang="it">Evento o situazione nel tempo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2040,6 +2041,8 @@ WHERE {
         <rdfs:label xml:lang="en">Location</rdfs:label>
         <rdfs:label xml:lang="it">Luogo</rdfs:label>
         <rdfs:label xml:lang="it">Posizione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2055,19 +2058,6 @@ WHERE {
         <rdfs:label xml:lang="it">Metodo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/core/Object -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Object">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un oggetto.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents an object.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
-        <rdfs:label xml:lang="en">Object</rdfs:label>
-        <rdfs:label xml:lang="it">Oggetto</rdfs:label>
     </owl:Class>
     
 
@@ -2092,11 +2082,13 @@ WHERE {
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/System">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/System"/>
-        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un sistema.</rdfs:comment>
         <rdfs:comment xml:lang="en">System</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">Sistema</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2256,6 +2248,7 @@ WHERE {
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/LocalIdentifier">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">Identificativo locale</rdfs:label>
         <rdfs:label xml:lang="en">Local identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2268,6 +2261,7 @@ WHERE {
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/NationalIdentifier">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">Identificativo nazionale</rdfs:label>
         <rdfs:label xml:lang="en">National identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2282,6 +2276,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;identificativo dato dal sistema alla scheda di catalogo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents the id given by the IT system to the catalogue record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">Identificativo del sistema</rdfs:label>
         <rdfs:label xml:lang="en">System identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2295,6 +2290,7 @@ WHERE {
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/UniqueIdentifier">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
         <rdfs:comment xml:lang="it">Instabile</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">Identificativo univoco</rdfs:label>
         <rdfs:label xml:lang="en">Unique identifier</rdfs:label>
         <owl:versionInfo xml:lang="en">Unstable</owl:versionInfo>

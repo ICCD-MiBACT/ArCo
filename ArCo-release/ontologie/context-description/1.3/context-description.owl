@@ -628,6 +628,7 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha archivio</rdfs:label>
         <rdfs:label xml:lang="en">has archive</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FNT/FNTN</a-cat:iccdNormTag>
@@ -4508,6 +4509,7 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is archived in</rdfs:label>
         <rdfs:label xml:lang="it">è archiviato in</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -9412,9 +9414,22 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">Codifica Iconclass</rdfs:label>
         <rdfs:label xml:lang="en">Iconclass Code</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>DA/DES/DESI (tranne per normativa TMA). DA/AID/AIDC</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a-cd:hasSubject ?y.
+?y rdf.type a-cd:Subject;
+core:isClassifiedBy ?z.
+?z rdf:type core:Concept;
+rdfs:label ?iconclass;
+a-core:hasClassificationSystem &lt;https://w3id.org/arco/resource/ClassificationSystem/Iconclass&gt;.
+}
+
+WHERE {
+?x a-cd:iconclassCode ?z .
+}</core:constructQuery>
     </owl:DatatypeProperty>
     
 
@@ -14834,6 +14849,12 @@ a-cd:informationSource ?info .
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasResponsibility"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/folio"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
@@ -15136,6 +15157,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">Immagine di indagine</rdfs:label>
         <rdfs:label xml:lang="en">Survey Image</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIT + FOID</a-cat:iccdNormTag>
@@ -15152,6 +15174,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Survey image type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di immagine di indagine</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIT</a-cat:iccdNormTag>
