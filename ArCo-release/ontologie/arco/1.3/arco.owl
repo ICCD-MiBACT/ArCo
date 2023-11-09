@@ -3092,10 +3092,11 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambito di tutela del MiBAC (archeologico, architettonico e paesaggistico, etnoantropologico, storico artistico), nel quale ricade il bene culturale in esame.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the MiBAC scope of protection (historical artistic, ethnoanthropological, architectural landscape, archaeological) of a cultural property.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambito di tutela del Ministero della Cultura (un tempo MiBAC) (archeologico, architettonico e paesaggistico, etnoantropologico, storico artistico), nel quale ricade il bene culturale in esame.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the National Italian (formerly represented by the MiBAC) scope of protection (historical artistic, ethnoanthropological, architectural landscape, archaeological) of a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Ambito di tutela MiBAC</rdfs:label>
+        <rdfs:label xml:lang="en">Italian Scope of protection</rdfs:label>
         <rdfs:label xml:lang="en">MiBAC Scope of protection</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
