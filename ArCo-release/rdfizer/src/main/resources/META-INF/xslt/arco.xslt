@@ -11175,9 +11175,14 @@
 						</tiapit:atTime>
 					</xsl:if>
 					<xsl:choose>
-						<xsl:when test="./BIBM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+						<xsl:when test="./BIBM">
 							<arco-cd:completeBibliographicReference>
-								<xsl:value-of select="normalize-space()" />
+								<xsl:value-of select="normalize-space(./BIBM)" />
+							</arco-cd:completeBibliographicReference>  
+						</xsl:when>
+						<xsl:when test="./BIB_NU_1">
+							<arco-cd:completeBibliographicReference>
+								<xsl:value-of select="normalize-space(./BIB_NU_1)" />
 							</arco-cd:completeBibliographicReference>  
 						</xsl:when>
 						<xsl:when test="./BIBA and ./BIBD">

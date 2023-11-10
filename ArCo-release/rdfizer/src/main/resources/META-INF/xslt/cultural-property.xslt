@@ -936,6 +936,12 @@
 					</arco-cd:hasScale>
 				</xsl:if>
 				<!-- cultural property description -->
+				
+				<xsl:if test="record/metadata/schede/NU/LC/LDC/LDC_NU_1">
+					<arco-core:location>
+						<xsl:value-of select="normalize-space(record/metadata/schede/NU/LC/LDC/LDC_NU_1)" />
+					</arco-core:location>
+				</xsl:if>
 				<xsl:if test="record/metadata/schede/A/IS">
 					<arco-core:description>
 						<xsl:choose>
@@ -3149,10 +3155,15 @@
 	                	</xsl:attribute>
 					</arco-cd:hasBibliographicSource>
 					<xsl:choose>
-						<xsl:when test="./BIBM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
+						<xsl:when test="./BIBM">
 							<arco-lite:bibliographicReference>
-								<xsl:value-of select="normalize-space()" />
+								<xsl:value-of select="normalize-space(./BIBM)" />
 							</arco-lite:bibliographicReference>      
+						</xsl:when>
+						<xsl:when test="./BIB_NU_1">
+							<arco-lite:bibliographicReference>
+								<xsl:value-of select="normalize-space(./BIB_NU_1)" />
+							</arco-lite:bibliographicReference>
 						</xsl:when>
 						<xsl:when test="./BIL[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<arco-lite:bibliographicReference>
