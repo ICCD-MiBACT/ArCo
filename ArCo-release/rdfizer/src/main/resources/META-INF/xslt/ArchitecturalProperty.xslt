@@ -3167,12 +3167,12 @@
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(./CLMS)" />
 					</rdfs:label>
-					<tiapit:startTime>
+					<arco-arco:startTime>
 						<xsl:value-of select="normalize-space(./CLMS)" />
-					</tiapit:startTime>
-					<tiapit:endTime>
+					</arco-arco:startTime>
+					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space(./CLMS)" />
-					</tiapit:endTime>
+					</arco-arco:endTime>
 				</rdf:Description>
 			</xsl:if>
 			<!-- Measurement collection  as individual -->

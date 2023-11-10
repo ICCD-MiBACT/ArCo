@@ -3321,6 +3321,12 @@
 					<tiapit:time>
 						<xsl:value-of select="normalize-space(./INID)" />
 					</tiapit:time>
+					<arco-arco:startTime>
+						<xsl:value-of select="normalize-space(./INID)" />
+					</arco-arco:startTime>
+					<arco-arco:endTime>
+						<xsl:value-of select="normalize-space(./INID)" />
+					</arco-arco:endTime>
 				</rdf:Description>
 			</xsl:if>
 			<!-- Agent and agent role as an individual -->

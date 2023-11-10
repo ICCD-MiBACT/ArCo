@@ -391,6 +391,12 @@
 					<tiapit:time>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/CM/CMP/CMPD)" />
 					</tiapit:time>
+					<arco-arco:startTime>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/CM/CMP/CMPD)" />
+					</arco-arco:startTime>
+					<arco-arco:endTime>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/CM/CMP/CMPD)" />
+					</arco-arco:endTime>
 				</rdf:Description>
 			</xsl:if>
 			<!-- Referente verifica scientifica -->

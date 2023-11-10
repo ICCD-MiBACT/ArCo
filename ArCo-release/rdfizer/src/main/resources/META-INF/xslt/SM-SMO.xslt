@@ -594,12 +594,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
-					<tiapit:startTime>
+					<arco-arco:startTime>
 						<xsl:value-of select="normalize-space(.)" />
-					</tiapit:startTime>
-					<tiapit:endTime>
+					</arco-arco:startTime>
+					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space(.)" />
-					</tiapit:endTime>
+					</arco-arco:endTime>
 				</rdf:Description>
 			</xsl:for-each>
 			<!-- Activity responsible as an individual -->

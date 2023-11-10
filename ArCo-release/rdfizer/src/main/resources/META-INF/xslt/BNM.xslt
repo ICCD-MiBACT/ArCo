@@ -3545,6 +3545,12 @@
 			<tiapit:time>
 				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
 			</tiapit:time>
+			<arco-arco:startTime>
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
+			</arco-arco:startTime>
+			<arco-arco:endTime>
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
+			</arco-arco:endTime>
 		</rdf:Description>
 	</xsl:if>
 	<!-- Harvesting Method as individual -->

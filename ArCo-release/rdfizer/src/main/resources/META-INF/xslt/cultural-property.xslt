@@ -176,6 +176,9 @@
 					<xsl:when test="$sheetType='MINP'">
 						<xsl:value-of select="concat($NS, 'ArchaeologicalProperty/', $itemURI)" />
 					</xsl:when>
+					<xsl:when test="$sheetType='MIDF'">
+						<xsl:value-of select="concat($NS, 'PhotographicHeritage/', $itemURI)" />
+					</xsl:when>
 					<xsl:when test="$sheetType='MINV'">
 						<xsl:choose>
 							<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/AMB))='storico artistico'">
@@ -715,6 +718,8 @@
 								<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCG)" />
 							</xsl:attribute>
 						</arco-location:hasCulturalInstituteOrSite>
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/harvesting/idContenitoreFisico and not(record/metadata/schede/harvesting/idContenitoreGiuridico)">
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:choose>
@@ -3910,7 +3915,7 @@
 						<xsl:value-of select="normalize-space(record/metadata/schede/VeAC/OG/OGT/OGTS)" />
 					</arco-lite:historicalDesignation>
 				</xsl:if>
-				<xsl:if test="not($sheetType='MODI') and not($sheetType='SCAN') and not($sheetType='MINP') and not($sheetType='MINV')">
+				<xsl:if test="not($sheetType='MODI') and not($sheetType='SCAN') and not($sheetType='MINP') and not($sheetType='MINV')  and not($sheetType='MIDF')">
 					<xsl:for-each select="record/metadata/schede/*/OG/OGD">
 						<arco-cd:hasDesignationInTime>
 							<xsl:attribute name="rdf:resource">
@@ -3924,7 +3929,7 @@
 						</xsl:if>
 					</xsl:for-each> 
 				</xsl:if>
-				<xsl:if test="($sheetType='MODI') or ($sheetType='SCAN') or ($sheetType='MINV')">
+				<xsl:if test="($sheetType='MODI') or ($sheetType='SCAN') or ($sheetType='MINV')  or ($sheetType='MIDF')">
 					<xsl:for-each select="record/metadata/schede/*/OG/OGN">
 						<arco-cd:hasDesignationInTime>
 							<xsl:attribute name="rdf:resource">

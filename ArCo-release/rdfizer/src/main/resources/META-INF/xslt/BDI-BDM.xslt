@@ -1072,12 +1072,12 @@
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/OC/OCD)" />
 					</rdfs:label>
-					<tiapit:startTime>
+					<arco-arco:startTime>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/OC/OCD)" />
-					</tiapit:startTime>
-					<tiapit:endTime>
+					</arco-arco:startTime>
+					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/OC/OCD)" />
-					</tiapit:endTime>
+					</arco-arco:endTime>
 				</rdf:Description>
 			</xsl:if>
 			<!-- feature for BDM < version 4.00 -->
@@ -1532,6 +1532,12 @@
 				<tiapit:time>
 					<xsl:value-of select="normalize-space(./DTFZ)" />
 				</tiapit:time>
+				<arco-arco:startTime>
+					<xsl:value-of select="normalize-space(./DTFZ)" />
+				</arco-arco:startTime>
+				<arco-arco:endTime>
+					<xsl:value-of select="normalize-space(./DTFZ)" />
+				</arco-arco:endTime>
 			</rdf:Description>
 		</xsl:for-each>
 		<xsl:if test="($sheetVersion='3.00_ICCD0' or $sheetVersion='3.00' or $sheetVersion='3.01_ICCD0' or $sheetVersion='3.01')">
@@ -1889,12 +1895,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DR/DRV/DRVD)" />
 					</l0:name>
-					<tiapit:startTime>
+					<arco-arco:startTime>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DR/DRV/DRVD)" />
-					</tiapit:startTime>
-					<tiapit:endTime>
+					</arco-arco:startTime>
+					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DR/DRV/DRVD)" />
-					</tiapit:endTime>
+					</arco-arco:endTime>
 				</rdf:Description>
 			</xsl:if>
 			<xsl:for-each select="record/metadata/schede/*/DR/DRD[not(()='0000/00/00' or ()='/')]">
@@ -1913,12 +1919,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
-					<tiapit:startTime>
+					<arco-arco:startTime>
 						<xsl:value-of select="normalize-space(.)" />
-					</tiapit:startTime>
-					<tiapit:endTime>
+					</arco-arco:startTime>
+					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space(.)" />
-					</tiapit:endTime>
+					</arco-arco:endTime>
 				</rdf:Description>
 			</xsl:for-each>
 			<!-- Activity responsible as an individual -->
@@ -4877,6 +4883,12 @@
 							<tiapit:time>
 								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUX/DUXP)" />
 							</tiapit:time>
+							<arco-arco:startTime>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUX/DUXP)" />
+							</arco-arco:startTime>
+							<arco-arco:endTime>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUX/DUXP)" />
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:if>
 					<!-- editor as an individual -->
@@ -6249,6 +6261,12 @@
 						<tiapit:time>
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUND)" />
 						</tiapit:time>
+						<arco-arco:startTime>
+							<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUND)" />
+						</arco-arco:startTime>
+						<arco-arco:endTime>
+							<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUND)" />
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- ChangeOfAvailability type as an individual -->
@@ -7813,6 +7831,12 @@
 						<tiapit:time>
 							<xsl:value-of select="normalize-space(./DVND)" />
 						</tiapit:time>
+						<arco-arco:startTime>
+							<xsl:value-of select="normalize-space(./DVND)" />
+						</arco-arco:startTime>
+						<arco-arco:endTime>
+							<xsl:value-of select="normalize-space(./DVND)" />
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- ChangeOfAvailability type as an individual -->
@@ -9533,6 +9557,12 @@
 						<tiapit:time>
 							<xsl:value-of select="normalize-space(./DFND)" />
 						</tiapit:time>
+						<arco-arco:startTime>
+							<xsl:value-of select="normalize-space(./DFND)" />
+						</arco-arco:startTime>
+						<arco-arco:endTime>
+							<xsl:value-of select="normalize-space(./DFND)" />
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- ChangeOfAvailability type as an individual -->
@@ -10376,6 +10406,12 @@
 							<tiapit:time>
 								<xsl:value-of select="normalize-space(./AIX/AIXP)" />
 							</tiapit:time>
+							<arco-arco:startTime>
+								<xsl:value-of select="normalize-space(./AIX/AIXP)" />
+							</arco-arco:startTime>
+							<arco-arco:endTime>
+								<xsl:value-of select="normalize-space(./AIX/AIXP)" />
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:if>
 					<!-- editor as an individual -->
@@ -11684,6 +11720,12 @@
 					<tiapit:time>
 						<xsl:value-of select="normalize-space(.)" />
 					</tiapit:time>
+					<arco-arco:startTime>
+						<xsl:value-of select="normalize-space(.)" />
+					</arco-arco:startTime>
+					<arco-arco:endTime>
+						<xsl:value-of select="normalize-space(.)" />
+					</arco-arco:endTime>
 				</rdf:Description>
 			</xsl:for-each>
 			<!-- storage medium  -->
@@ -12792,6 +12834,12 @@
 						<tiapit:time>
 							<xsl:value-of select="normalize-space(./AIND)" />
 						</tiapit:time>
+						<arco-arco:startTime>
+							<xsl:value-of select="normalize-space(./AIND)" />
+						</arco-arco:startTime>
+						<arco-arco:endTime>
+							<xsl:value-of select="normalize-space(./AIND)" />
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- ChangeOfAvailability type as an individual -->
@@ -13422,6 +13470,12 @@
 							<tiapit:time>
 								<xsl:value-of select="normalize-space(./VIX/VIXP)" />
 							</tiapit:time>
+							<arco-arco:startTime>
+								<xsl:value-of select="normalize-space(./VIX/VIXP)" />
+							</arco-arco:startTime>
+							<arco-arco:endTime>
+								<xsl:value-of select="normalize-space(./VIX/VIXP)" />
+							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:if>
 					<!-- editor as an individual -->
@@ -14818,6 +14872,12 @@
 					<tiapit:time>
 						<xsl:value-of select="normalize-space(./VID/VIDD)" />
 					</tiapit:time>
+					<arco-arco:startTime>
+						<xsl:value-of select="normalize-space(./VID/VIDD)" />
+					</arco-arco:startTime>
+					<arco-arco:endTime>
+						<xsl:value-of select="normalize-space(./VID/VIDD)" />
+					</arco-arco:endTime>
 				</rdf:Description>
 			</xsl:if>
 			<!-- storage medium  -->
@@ -15912,6 +15972,12 @@
 						<tiapit:time>
 							<xsl:value-of select="normalize-space(./VIND)" />
 						</tiapit:time>
+						<arco-arco:startTime>
+							<xsl:value-of select="normalize-space(./VIND)" />
+						</arco-arco:startTime>
+						<arco-arco:endTime>
+							<xsl:value-of select="normalize-space(./VIND)" />
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- ChangeOfAvailability type as an individual -->
@@ -16210,12 +16276,14 @@
 					</arco-core:hasType>
 				</xsl:if>
 				<!-- recording location -->
-				<xsl:if test="./FIA and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+				<xsl:if test="$sheetVersion='4.00_ICCD0' or $sheetVersion='4.00'">
+				<xsl:for-each select="./FIA">
 					<arco-location:hasTimeIndexedTypedLocation>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-integrative-photographic-recording-location')" />
+							<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-integrative-photographic-recording-location-', position())" />
 						</xsl:attribute>
 					</arco-location:hasTimeIndexedTypedLocation>
+				</xsl:for-each>
 				</xsl:if>
 				<!-- recording location -->
 				<xsl:if test="./FIC and not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
@@ -16850,14 +16918,15 @@
 				</rdf:Description>
 			</xsl:if>
 			<!-- recording location -->
-			<xsl:if test="./FIA and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+			<xsl:if test="$sheetVersion='4.00_ICCD0' or $sheetVersion='4.00'">
+			<xsl:for-each select="./FIA">
 				<xsl:variable name="address">
 					<xsl:choose>
-						<xsl:when test="./FIA/FIAS and not(lower-case(normalize-space(./FIA/FIAS))='italia')">
-							<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(./FIA/FIAS)), normalize-space(lower-case(./FIA/FIAE))))))" />
+						<xsl:when test="./FIAS and not(lower-case(normalize-space(./FIAS))='italia')">
+							<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(./FIAS)), normalize-space(lower-case(./FIAE))))))" />
 						</xsl:when>
 						<xsl:otherwise>
-							<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./FIA/FIAP)), normalize-space(lower-case(./FIA/FIAC)), normalize-space(lower-case(./FIA/FIAL)))))" />
+							<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./FIAP)), normalize-space(lower-case(./FIAC)), normalize-space(lower-case(./FIAL)))))" />
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:variable>
@@ -16897,9 +16966,9 @@
             	               <xsl:value-of select="'https://w3id.org/arco/ontology/location/RecordingLocation'" />
                 	       </xsl:attribute>
 					</arco-location:hasLocationType>				
-					<xsl:if test="./FIH/FIHL and not(lower-case(normalize-space(./FIH/FIHL))='nr' or lower-case(normalize-space(./FIH/FIHL))='n.r.' or lower-case(normalize-space(./FIH/FIHL))='nr (recupero pregresso)' or lower-case(normalize-space(./FIH/FIHL))='.' or lower-case(normalize-space(./FIH/FIHL))='-')">
+					<xsl:if test="../FIH/FIHL and not(lower-case(normalize-space(../FIH/FIHL))='nr' or lower-case(normalize-space(../FIH/FIHL))='n.r.' or lower-case(normalize-space(../FIH/FIHL))='nr (recupero pregresso)' or lower-case(normalize-space(../FIH/FIHL))='.' or lower-case(normalize-space(../FIH/FIHL))='-')">
 						<arco-location:locationDetails>
-							<xsl:value-of select="normalize-space(./FIH/FIHL)" />
+							<xsl:value-of select="normalize-space(../FIH/FIHL)" />
 						</arco-location:locationDetails>
 					</xsl:if>
 					<arco-location:atLocation>
@@ -16938,7 +17007,7 @@
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
-						<xsl:for-each select="./FIA/*">
+						<xsl:for-each select="./*">
 							<xsl:choose>
 								<xsl:when test="position() = 1">
 									<xsl:value-of select="./text()" />
@@ -16950,7 +17019,7 @@
 						</xsl:for-each>
 					</rdfs:label>
 					<clvapit:fullAddress>
-						<xsl:for-each select="./FIA/*">
+						<xsl:for-each select="./*">
 							<xsl:choose>
 								<xsl:when test="position() = 1">
 									<xsl:value-of select="./text()" />
@@ -16962,24 +17031,24 @@
 						</xsl:for-each>
 					</clvapit:fullAddress>
 					<!-- Stato -->
-					<xsl:if test="./FIA/FIAS and (not(starts-with(lower-case(normalize-space(./FIA/FIAS)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIA/FIAS)), 'n.r')))">
+					<xsl:if test="./FIAS and (not(starts-with(lower-case(normalize-space(./FIAS)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIAS)), 'n.r')))">
 						<clvapit:hasCountry>
 							<xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="concat($NS, 'Country/', arco-fn:urify(./FIA/FIAS))" />
+                                <xsl:value-of select="concat($NS, 'Country/', arco-fn:urify(./FIAS))" />
                             </xsl:attribute>
 						</clvapit:hasCountry>
 					</xsl:if>
 					<!-- Regione -->
-					<xsl:if test="./FIA/FIAR and (not(starts-with(lower-case(normalize-space(./FIA/FIAR)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIA/FIAR)), 'n.r')))">
+					<xsl:if test="./FIAR and (not(starts-with(lower-case(normalize-space(./FIAR)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIAR)), 'n.r')))">
 						<xsl:choose>
-							<xsl:when test="./FIA/FIAC and (starts-with(lower-case(normalize-space(./FIA/FIAC)), 'firenze') or starts-with(lower-case(normalize-space(./FIA/FIAC)), 'siena') or starts-with(lower-case(normalize-space(./FIA/FIAC)), 'san severino marche') or starts-with(lower-case(normalize-space(./FIA/FIAC)), 'modena'))">		
+							<xsl:when test="./FIAC and (starts-with(lower-case(normalize-space(./FIAC)), 'firenze') or starts-with(lower-case(normalize-space(./FIAC)), 'siena') or starts-with(lower-case(normalize-space(./FIAC)), 'san severino marche') or starts-with(lower-case(normalize-space(./FIAC)), 'modena'))">		
 								<xsl:choose>
-									<xsl:when test="./FIA/FIAR and (starts-with(lower-case(normalize-space(./FIA/FIAR)), 'lombardia'))">
+									<xsl:when test="./FIAR and (starts-with(lower-case(normalize-space(./FIAR)), 'lombardia'))">
 									</xsl:when>
 									<xsl:otherwise>
 										<clvapit:hasRegion>
 											<xsl:attribute name="rdf:resource">
-                	        	                 <xsl:value-of select="concat($NS, 'Region/', arco-fn:urify(./FIA/FIAR))" />
+                	        	                 <xsl:value-of select="concat($NS, 'Region/', arco-fn:urify(./FIAR))" />
 		            	           	        </xsl:attribute>
 										</clvapit:hasRegion>
 									</xsl:otherwise>
@@ -16988,49 +17057,49 @@
 							<xsl:otherwise>
 								<clvapit:hasRegion>
 									<xsl:attribute name="rdf:resource">
-        	        	   	            <xsl:value-of select="concat($NS, 'Region/', arco-fn:urify(./FIA/FIAR))" />
+        	        	   	            <xsl:value-of select="concat($NS, 'Region/', arco-fn:urify(./FIAR))" />
                         		    </xsl:attribute>
 								</clvapit:hasRegion>
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:if>
 					<!-- Provincia -->
-					<xsl:if test="./FIA/FIAP and (not(starts-with(lower-case(normalize-space(./FIA/FIAP)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIA/FIAP)), 'n.r')))">
+					<xsl:if test="./FIAP and (not(starts-with(lower-case(normalize-space(./FIAP)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIAP)), 'n.r')))">
 						<clvapit:hasProvince>
 							<xsl:attribute name="rdf:resource">
-                               <xsl:value-of select="concat($NS, 'Province/', arco-fn:urify(./FIA/FIAP))" />
+                               <xsl:value-of select="concat($NS, 'Province/', arco-fn:urify(./FIAP))" />
                            </xsl:attribute>
 						</clvapit:hasProvince>
 					</xsl:if>
 					<!-- Comune -->
-					<xsl:if test="./FIA/FIAC and (not(starts-with(lower-case(normalize-space(./FIA/FIAC)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIA/FIAC)), 'n.r')))">
+					<xsl:if test="./FIAC and (not(starts-with(lower-case(normalize-space(./FIAC)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIAC)), 'n.r')))">
 						<clvapit:hasCity>
 							<xsl:attribute name="rdf:resource">
-                        	       <xsl:value-of select="concat($NS, 'City/', arco-fn:urify(./FIA/FIAC))" />
+                        	       <xsl:value-of select="concat($NS, 'City/', arco-fn:urify(./FIAC))" />
 	                           </xsl:attribute>
 						</clvapit:hasCity>
 					</xsl:if>
 					<!-- Località -->
-					<xsl:if test="./FIA/FIAL and (not(starts-with(lower-case(normalize-space(./FIA/FIAL)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIA/FIAL)), 'n.r')))">
+					<xsl:if test="./FIAL and (not(starts-with(lower-case(normalize-space(./FIAL)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIAL)), 'n.r')))">
 						<clvapit:hasAddressArea>
 							<xsl:attribute name="rdf:resource">
-                               <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./FIA/FIAL))" />
+                               <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./FIAL))" />
                            </xsl:attribute>
 						</clvapit:hasAddressArea>
 					</xsl:if>
-					<xsl:if test="./FIA/FIAE and (not(starts-with(lower-case(normalize-space(./FIA/FIAE)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIA/FIAE)), 'n.r')))">
+					<xsl:if test="./FIAE and (not(starts-with(lower-case(normalize-space(./FIAE)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIAE)), 'n.r')))">
 						<clvapit:hasAddressArea>
 							<xsl:attribute name="rdf:resource">
-                               <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./FIA/FIAE))" />
+                               <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./FIAE))" />
                            </xsl:attribute>
 						</clvapit:hasAddressArea>
 					</xsl:if>
 				</rdf:Description>
 				<!-- Stato -->
-				<xsl:if test="./FIA/FIAS and (not(starts-with(lower-case(normalize-space(./FIA/FIAS)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIA/FIAS)), 'n.r')))">
+				<xsl:if test="./FIAS and (not(starts-with(lower-case(normalize-space(./FIAS)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIAS)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-                           <xsl:value-of select="concat($NS, 'Country/', arco-fn:urify(./FIA/FIAS))" />
+                           <xsl:value-of select="concat($NS, 'Country/', arco-fn:urify(./FIAS))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -17038,18 +17107,18 @@
                            </xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./FIA/FIAS)" />
+							<xsl:value-of select="normalize-space(./FIAS)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./FIA/FIAS)" />
+							<xsl:value-of select="normalize-space(./FIAS)" />
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
 				<!-- Regione -->
-				<xsl:if test="./FIA/FIAR and (not(starts-with(lower-case(normalize-space(./FIA/FIAR)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIA/FIAR)), 'n.r')))">
+				<xsl:if test="./FIAR and (not(starts-with(lower-case(normalize-space(./FIAR)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIAR)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-                           <xsl:value-of select="concat($NS, 'Region/', arco-fn:urify(./FIA/FIAR))" />
+                           <xsl:value-of select="concat($NS, 'Region/', arco-fn:urify(./FIAR))" />
                        </xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -17058,21 +17127,21 @@
 						</rdf:type>
 						<rdfs:label>
 							<xsl:call-template name="CamelCase">
-								<xsl:with-param name="text" select="normalize-space(./FIA/FIAR)" />
+								<xsl:with-param name="text" select="normalize-space(./FIAR)" />
 							</xsl:call-template>
 						</rdfs:label>
 						<l0:name>
 							<xsl:call-template name="CamelCase">
-								<xsl:with-param name="text" select="normalize-space(./FIA/FIAR)" />
+								<xsl:with-param name="text" select="normalize-space(./FIAR)" />
 							</xsl:call-template>
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
 				<!-- Provincia -->
-				<xsl:if test="./FIA/FIAP and (not(starts-with(lower-case(normalize-space(./FIA/FIAP)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIA/FIAP)), 'n.r')))">
+				<xsl:if test="./FIAP and (not(starts-with(lower-case(normalize-space(./FIAP)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIAP)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-                           <xsl:value-of select="concat($NS, 'Province/', arco-fn:urify(./FIA/FIAP))" />
+                           <xsl:value-of select="concat($NS, 'Province/', arco-fn:urify(./FIAP))" />
                        </xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -17081,21 +17150,21 @@
 						</rdf:type>
 						<rdfs:label>
 							<xsl:call-template name="CamelCase">
-								<xsl:with-param name="text" select="normalize-space(./FIA/FIAP)" />
+								<xsl:with-param name="text" select="normalize-space(./FIAP)" />
 							</xsl:call-template>
 						</rdfs:label>
 						<l0:name>
 							<xsl:call-template name="CamelCase">
-								<xsl:with-param name="text" select="normalize-space(./FIA/FIAP)" />
+								<xsl:with-param name="text" select="normalize-space(./FIAP)" />
 							</xsl:call-template>
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
 				<!-- Comune -->
-				<xsl:if test="./FIA/FIAC and (not(starts-with(lower-case(normalize-space(./FIA/FIAC)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIA/FIAC)), 'n.r')))">
+				<xsl:if test="./FIAC and (not(starts-with(lower-case(normalize-space(./FIAC)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIAC)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-            				<xsl:value-of select="concat($NS, 'City/', arco-fn:urify(./FIA/FIAC))" />
+            				<xsl:value-of select="concat($NS, 'City/', arco-fn:urify(./FIAC))" />
                 		</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -17104,21 +17173,21 @@
 						</rdf:type>
 						<rdfs:label>
 							<xsl:call-template name="CamelCase">
-								<xsl:with-param name="text" select="normalize-space(./FIA/FIAC)" />
+								<xsl:with-param name="text" select="normalize-space(./FIAC)" />
 							</xsl:call-template>
 							</rdfs:label>
 						<l0:name>
 							<xsl:call-template name="CamelCase">
-								<xsl:with-param name="text" select="normalize-space(./FIA/FIAC)" />
+								<xsl:with-param name="text" select="normalize-space(./FIAC)" />
 							</xsl:call-template>
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
 				<!-- Address Area -->
-				<xsl:if test="./FIA/FIAL and (not(starts-with(lower-case(normalize-space(./FIA/FIAL)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIA/FIAL)), 'n.r')))">
+				<xsl:if test="./FIAL and (not(starts-with(lower-case(normalize-space(./FIAL)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIAL)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-                	          <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./FIA/FIAL))" />
+                	          <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./FIAL))" />
                     	</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -17127,20 +17196,20 @@
 						</rdf:type>
 						<rdfs:label>
 							<xsl:call-template name="CamelCase">
-								<xsl:with-param name="text" select="normalize-space(./FIA/FIAL)" />
+								<xsl:with-param name="text" select="normalize-space(./FIAL)" />
 							</xsl:call-template>
 						</rdfs:label>
 						<l0:name>
 							<xsl:call-template name="CamelCase">
-								<xsl:with-param name="text" select="normalize-space(./FIA/FIAL)" />
+								<xsl:with-param name="text" select="normalize-space(./FIAL)" />
 							</xsl:call-template>
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
-				<xsl:if test="./FIA/FIAE and (not(starts-with(lower-case(normalize-space(./FIA/FIAE)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIA/FIAE)), 'n.r')))">
+				<xsl:if test="./FIAE and (not(starts-with(lower-case(normalize-space(./FIAE)), 'nr')) and not(starts-with(lower-case(normalize-space(./FIAE)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-                           <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./FIA/FIAE))" />
+                           <xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(./FIAE))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -17148,13 +17217,14 @@
                            </xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./FIA/FIAE)" />
+							<xsl:value-of select="normalize-space(./FIAE)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./FIA/FIAE)" />
+							<xsl:value-of select="normalize-space(./FIAE)" />
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
+			</xsl:for-each>
 			</xsl:if>
 			<xsl:if test="./FIC and not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<xsl:variable name="address">
@@ -18386,6 +18456,12 @@
 					<tiapit:time>
 						<xsl:value-of select="normalize-space(.)" />
 					</tiapit:time>
+					<arco-arco:startTime>
+						<xsl:value-of select="normalize-space(.)" />
+					</arco-arco:startTime>
+					<arco-arco:endTime>
+						<xsl:value-of select="normalize-space(.)" />
+					</arco-arco:endTime>
 				</rdf:Description>
 			</xsl:for-each>
 			<!-- CIS -->
@@ -19238,6 +19314,12 @@
 						<tiapit:time>
 							<xsl:value-of select="normalize-space(./FIND)" />
 						</tiapit:time>
+						<arco-arco:startTime>
+							<xsl:value-of select="normalize-space(./FIND)" />
+						</arco-arco:startTime>
+						<arco-arco:endTime>
+							<xsl:value-of select="normalize-space(./FIND)" />
+						</arco-arco:endTime>
 					</rdf:Description>
 				</xsl:if>
 				<!-- ChangeOfAvailability type as an individual -->
@@ -19516,12 +19598,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
-					<tiapit:startTime>
+					<arco-arco:startTime>
 						<xsl:value-of select="normalize-space(.)" />
-					</tiapit:startTime>
-					<tiapit:endTime>
+					</arco-arco:startTime>
+					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space(.)" />
-					</tiapit:endTime>
+					</arco-arco:endTime>
 				</rdf:Description>
 			</xsl:for-each>
 			<!-- Activity operator as an individual -->
