@@ -567,7 +567,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Status"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato associato ad un&apos;attività</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the status related to an activity</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Activity status</rdfs:label>
         <rdfs:label xml:lang="it">Stato dell&apos;attività</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -611,7 +611,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la richiesta dei numeri identificativi univoci da parte dell&apos;ente schedatore</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the application of unique identifier by a cataloguing agency</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Application</rdfs:label>
         <rdfs:label xml:lang="it">Richiesta</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -626,7 +626,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Status"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato associato alla assegnazione di numeri di catalogo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the status related to a catalogue numbers assignment.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Application status</rdfs:label>
         <rdfs:label xml:lang="it">Stato della richiesta</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -641,7 +641,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Status"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato associato asd una campagna</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the status related to a campaign</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Campaign status</rdfs:label>
         <rdfs:label xml:lang="it">Stato della campagna</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -656,7 +656,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di campagna (es. campagna di catalogazione, campagna di digitalizzazione)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of a campaign (e.g. cataloguing campaign, digitization campaign)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Campaign type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di campagna</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -683,7 +683,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il processo di assegnazione dei numeri di catalogo univoci agli enti richiedenti</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the process to assign unique identifiers to an applicant agency.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="it">Assegnazione dei numeri di catalogo</rdfs:label>
         <rdfs:label xml:lang="en">Catalogue Numbers Assignment</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -716,7 +716,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;attività di catalogazione o digitalizzazione collegata ad una campagna</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents cataloguing activity related to a campaign.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="it">Attività di catalogazione</rdfs:label>
         <rdfs:label xml:lang="en">Cataloguing activity</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -767,7 +767,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la campagna di catalogazione o di digitalizzazione pianificata e organizzata dall&apos;ente schedatore</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents cataloguing or digitization campaign, organized by a cataloguing agency.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="it">Campagna di catalogazione o digitalizzazione</rdfs:label>
         <rdfs:label xml:lang="en">Cataloguing or Digitization Campaign</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -782,7 +782,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tipologia di ente (Ministeri e Presidenza del Consiglio, Universita&apos; ed Istituti di Istruzione, etc).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of an organization.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Organization type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di ente</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -809,7 +809,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il protocollo associato a una cosa</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the protocol related to a thing</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Protocol</rdfs:label>
         <rdfs:label xml:lang="it">Protocollo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -824,7 +824,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la condizione giuridica o temporale di una cosa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the juridical or temporal status of a Thing.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Status</rdfs:label>
         <rdfs:label xml:lang="it">Status</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
