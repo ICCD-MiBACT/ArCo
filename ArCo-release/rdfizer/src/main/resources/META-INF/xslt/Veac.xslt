@@ -1764,7 +1764,7 @@
 			</xsl:if>
 		</xsl:if>
 		<!-- Fastener  as individual -->
-		<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREA or record/metadata/schede/VeAC/DA/SRE/SREZ">>
+		<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREA or record/metadata/schede/VeAC/DA/SRE/SREZ">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
 					<xsl:value-of select="concat($NS, 'Fastener/', $itemURI, '-allacciatura')" />
@@ -1818,7 +1818,7 @@
 				</rdf:Description>
 			</xsl:if>
 		</xsl:if>
-		<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREA or record/metadata/schede/VeAC/DA/SRE/SREZ">>
+		<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREA or record/metadata/schede/VeAC/DA/SRE/SREZ">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
 					<xsl:value-of select="concat($NS, 'Fastener/', $itemURI, '-bottone')" />
