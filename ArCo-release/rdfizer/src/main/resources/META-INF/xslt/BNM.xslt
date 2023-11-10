@@ -473,7 +473,7 @@
 				</xsl:attribute>
 			</arco-lite:isCollectionMemberOf>
 		</xsl:if>
-		<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">
+		<xsl:if test="not($sheetType='F' or $sheetType='MIDF' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">
 			<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM or record/metadata/schede/*/IR or record/metadata/schede/*/ET">
 				<arco-location:hasTimeIndexedTypedLocation>
 					<xsl:attribute name="rdf:resource">
@@ -671,7 +671,7 @@
 				</xsl:attribute>
 			</arco-dd:hasAffixedElement>			
 		</xsl:for-each>
-		<xsl:if test="not($sheetType='F' or $sheetType='PG')">
+		<xsl:if test="not($sheetType='F' or $sheetType='MIDF' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">
 			<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM  or record/metadata/schede/*/IR or record/metadata/schede/*/ET">
 				<arco-spe:hasSpecimenHarvesting>
 					<xsl:attribute name="rdf:resource">
@@ -3410,7 +3410,7 @@
 	</xsl:for-each>
 
 								<!-- Specimen Harvesting as individual -->
-	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">
+	<xsl:if test="not($sheetType='F' or $sheetType='MIDF' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">
 	<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM or record/metadata/schede/*/IR or record/metadata/schede/*/ET">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -4296,7 +4296,7 @@
 	</xsl:for-each>		
 	</xsl:if>				
 	<!-- Address Area -->
-	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">
+	<xsl:if test="not($sheetType='F' or $sheetType='MIDF' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">
 	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAR">
 		<xsl:call-template name="address-area">
 			<xsl:with-param name="ctx" select="record/metadata/schede/*/IM/IMA/IMAR"/>
@@ -4334,7 +4334,7 @@
 	</xsl:if>			
 	</xsl:if>
 	<!-- Geological context as individual -->
-	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A')">					
+	<xsl:if test="not($sheetType='F' or $sheetType='MIDF' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">					
 	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAS or record/metadata/schede/*/IR/IRA/IRAS or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
