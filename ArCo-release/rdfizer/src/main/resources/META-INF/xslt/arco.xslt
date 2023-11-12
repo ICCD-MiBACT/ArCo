@@ -1189,6 +1189,9 @@
 						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space()" />
 						</arco-arco:endTime>
+						<tiapit:time>
+							<xsl:value-of select="normalize-space()" />
+						</tiapit:time>
 					</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -21637,7 +21640,7 @@
 				</xsl:for-each>
 			</xsl:if>
 			<!-- Name in time for 4.00 -->
-			<xsl:if test="not($sheetType='MODI') and not($sheetType='SCAN')  and not($sheetType='MINV')  and not($sheetType='MIDF')">
+			<xsl:if test="not($sheetType='MODI') and not($sheetType='SCAN') and not($sheetType='MINP') and not($sheetType='MINV')  and not($sheetType='MIDF')">
 			<xsl:for-each select="record/metadata/schede/*/*/OGD">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
@@ -24882,7 +24885,7 @@
 						</xsl:if>
 						<xsl:for-each select="./AATM [not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<arco-core:informationSource>
-								<xsl:value-of select="normalize-space(./AATM)" />
+								<xsl:value-of select="normalize-space(.)" />
 							</arco-core:informationSource>
 						</xsl:for-each>
 					</rdf:Description>

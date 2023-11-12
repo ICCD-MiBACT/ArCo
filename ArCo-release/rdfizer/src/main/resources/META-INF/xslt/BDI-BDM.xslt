@@ -19464,10 +19464,10 @@
 			<xsl:if test="record/metadata/schede/*/RI/RIM">
 				<arco-cd:hasDetectionMethod>
 					<xsl:choose>
-						<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/RD/RDM))='rilevamento decontestualizzato'">
+						<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/RI/RIM))='rilevamento decontestualizzato'">
 							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DecontextualizedSurvey'" />
 						</xsl:when>
-						<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/RD/RDM))='rilevamento nel contesto'">
+						<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/RI/RIM))='rilevamento nel contesto'">
 							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DirectObservation'" />
 						</xsl:when>
 					</xsl:choose>
@@ -20039,32 +20039,10 @@
 				</xsl:choose>	
 			</rdf:type>
 			<rdfs:label>
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/EV/OGD">
-						<xsl:for-each select="record/metadata/schede/*/EV/OGD">
-						<xsl:if test="contains(normalize-space(lower-case(record/metadata/schede/*/EV/OGD/OGDT)), 'attuale')">
-						<xsl:value-of select="record/metadata/schede/*/EV/OGD/OGDN" />	
-						</xsl:if>
-						</xsl:for-each>			
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:value-of select="concat(record/metadata/schede/*/EV/EVE/EVEF, ' ', record/metadata/schede/*/EV/EVE/EVET)" />
-					</xsl:otherwise>
-				</xsl:choose>
+				<xsl:value-of select="concat(record/metadata/schede/*/EV/EVE/EVEF, ' ', record/metadata/schede/*/EV/EVE/EVET)" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/EV/OGD">
-						<xsl:for-each select="record/metadata/schede/*/EV/OGD">
-						<xsl:if test="contains(normalize-space(lower-case(record/metadata/schede/*/EV/OGD/OGDT)), 'attuale')">
-						<xsl:value-of select="record/metadata/schede/*/EV/OGD/OGDN" />	
-						</xsl:if>
-						</xsl:for-each>			
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:value-of select="concat(record/metadata/schede/*/EV/EVE/EVEF, ' ', record/metadata/schede/*/EV/EVE/EVET)" />
-					</xsl:otherwise>
-				</xsl:choose>
+				<xsl:value-of select="concat(record/metadata/schede/*/EV/EVE/EVEF, ' ', record/metadata/schede/*/EV/EVE/EVET)" />
 			</l0:name>
 			<xsl:if test="record/metadata/schede/*/EV/DAD/DADD">
 				<arco-core:description>
