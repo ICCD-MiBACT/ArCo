@@ -2894,11 +2894,11 @@
 			</xsl:attribute>
 			<!-- Technical system -->
 			<xsl:if test="record/metadata/schede/PG/CA/CAI">
-				<arco-con:hasTechnicalSystem>
+				<arco-con:hasWaterSystem>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'WaterSystem/', $itemURI)" />
 					</xsl:attribute>
-				</arco-con:hasTechnicalSystem>
+				</arco-con:hasWaterSystem>
 			</xsl:if>
 			<!-- Layout -->
 			<xsl:for-each select="record/metadata/schede/PG/MP/MPT">
@@ -2964,14 +2964,14 @@
 			</xsl:for-each>
 			<!-- Technical system -->
 			<xsl:for-each select="record/metadata/schede/PG/IM/IMP">
-				<xsl:if test="./IMPT and contains(normalize-space(lower-case(./IMPT)), 'idrico')">
+				<xsl:if test="./IMPT and (contains(normalize-space(lower-case(./IMPT)), 'idric') or contains(normalize-space(lower-case(./IMPT)), 'irrigazione') or contains(normalize-space(lower-case(./IMPT)), 'acqu'))">
 					<xsl:choose>	
 						<xsl:when test="not(./IMPU) or ./IMPU='intero bene' or ./IMPU='integrale' or ./IMPU='tutta' or ./IMPU='totale' or ./IMPU='carattere generale' or (starts-with(lower-case(normalize-space(./IMPU)), 'nr')) or (starts-with(lower-case(normalize-space(./IMPU)), 'n.r')) or (starts-with(lower-case(normalize-space(./IMPU)), 'intero')) or (starts-with(lower-case(normalize-space(./IMPU)), 'intera')) or (starts-with(lower-case(normalize-space(./IMPU)), 'esemplar'))">
-							<arco-con:hasTechnicalSystem>
+							<arco-con:hasWaterSystem>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'WaterSystem/', $itemURI)" />
 								</xsl:attribute>
-							</arco-con:hasTechnicalSystem>
+							</arco-con:hasWaterSystem>
 						</xsl:when>
 						<xsl:otherwise>
 							<arco-core:hasPart>
@@ -2982,7 +2982,7 @@
 						</xsl:otherwise>
 					</xsl:choose>	
 				</xsl:if>
-				<xsl:if test="./IMPT and not (contains(normalize-space(lower-case(./IMPT)), 'idrico'))">
+				<xsl:if test="./IMPT and not(contains(normalize-space(lower-case(./IMPT)), 'idric') or contains(normalize-space(lower-case(./IMPT)), 'irrigazione') or contains(normalize-space(lower-case(./IMPT)), 'acqu'))">
 					<xsl:choose>	
 						<xsl:when test="not(./IMPU) or ./IMPU='intero bene' or ./IMPU='integrale' or ./IMPU='tutta' or ./IMPU='totale' or ./IMPU='carattere generale' or (starts-with(lower-case(normalize-space(./IMPU)), 'nr')) or (starts-with(lower-case(normalize-space(./IMPU)), 'n.r')) or (starts-with(lower-case(normalize-space(./IMPU)), 'intero')) or (starts-with(lower-case(normalize-space(./IMPU)), 'intera')) or (starts-with(lower-case(normalize-space(./IMPU)), 'esemplar'))">
 							<arco-con:hasTechnicalSystem>
@@ -3007,7 +3007,7 @@
 					<xsl:when test="not(./FOTU) or ./FOTU='intero bene' or ./FOTU='integrale' or ./FOTU='tutta' or ./FOTU='totale' or ./FOTU='carattere generale' or (starts-with(lower-case(normalize-space(./FOTU)), 'nr')) or (starts-with(lower-case(normalize-space(./FOTU)), 'n.r')) or (starts-with(lower-case(normalize-space(./FOTU)), 'intero')) or (starts-with(lower-case(normalize-space(./FOTU)), 'intera')) or (starts-with(lower-case(normalize-space(./FOTU)), 'esemplar'))">
 						<arco-con:hasWaterElement>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'WaterElement/', $itemURI, position())" />
+								<xsl:value-of select="concat($NS, 'WaterElement/Fountain', $itemURI, position())" />
 							</xsl:attribute>
 						</arco-con:hasWaterElement>
 					</xsl:when>
@@ -3021,11 +3021,11 @@
 				</xsl:choose>
 				<xsl:choose>	
 					<xsl:when test="not(./FOTU) or ./FOTU='intero bene' or ./FOTU='integrale' or ./FOTU='tutta' or ./FOTU='totale' or ./FOTU='carattere generale' or (starts-with(lower-case(normalize-space(./FOTU)), 'nr')) or (starts-with(lower-case(normalize-space(./FOTU)), 'n.r')) or (starts-with(lower-case(normalize-space(./FOTU)), 'intero')) or (starts-with(lower-case(normalize-space(./FOTU)), 'intera')) or (starts-with(lower-case(normalize-space(./FOTU)), 'esemplar'))">
-						<arco-con:hasTechnicalSystem>
+						<arco-con:hasWaterSystem>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'WaterSystem/', $itemURI)" />
 							</xsl:attribute>
-						</arco-con:hasTechnicalSystem>
+						</arco-con:hasWaterSystem>
 					</xsl:when>
 					<xsl:otherwise>
 						<arco-core:hasPart>
@@ -3494,7 +3494,7 @@
 			</xsl:if>
 		</xsl:if>
 		<!-- Technical system as individual -->
-		<xsl:if test="record/metadata/schede/PG/CA/CAI or record/metadata/schede/PG/FO/FOT">
+		<xsl:if test="record/metadata/schede/PG/CA/CAI">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about"> 			
 	 				<xsl:value-of select="concat($NS, 'WaterSystem/', $itemURI)" />
@@ -3508,31 +3508,56 @@
 					<xsl:value-of select="concat('Water system of cultural property: ', $itemURI)" />
 				</rdfs:label>
 				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('Impianto idrico del bene culturale: ', $itemURI)" />
+					<xsl:value-of select="concat('Sistema delle acque del bene culturale: ', $itemURI)" />
 				</rdfs:label>
 				<l0:name xml:lang="en">
 					<xsl:value-of select="concat('Water system of cultural property: ', $itemURI)" />
 				</l0:name>
 				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('Impianto idrico del bene culturale: ', $itemURI)" />
+					<xsl:value-of select="concat('Sistema delle acque del bene culturale: ', $itemURI)" />
 				</l0:name>
 				<xsl:if test="record/metadata/schede/PG/CA/CAI">
 					<arco-core:description>
 						<xsl:value-of select="record/metadata/schede/PG/CA/CAI" />
 					</arco-core:description>
 				</xsl:if>
-				<xsl:for-each select="record/metadata/schede/PG/FO/FOT">
-					<arco-con:hasWaterElement>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'WaterElement/', $itemURI, '-', position())" />
-						</xsl:attribute>
-					</arco-con:hasWaterElement>
-				</xsl:for-each>
 			</rdf:Description>
 		</xsl:if>
+		<xsl:for-each select="record/metadata/schede/PG/FO/FOT">
+			<xsl:if test="not(./FOTU) or ./FOTU='intero bene' or ./FOTU='integrale' or ./FOTU='tutta' or ./FOTU='totale' or ./FOTU='carattere generale' or (starts-with(lower-case(normalize-space(./FOTU)), 'nr')) or (starts-with(lower-case(normalize-space(./FOTU)), 'n.r')) or (starts-with(lower-case(normalize-space(./FOTU)), 'intero')) or (starts-with(lower-case(normalize-space(./FOTU)), 'intera')) or (starts-with(lower-case(normalize-space(./FOTU)), 'esemplar'))">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about"> 			
+	 					<xsl:value-of select="concat($NS, 'WaterSystem/', $itemURI)" />
+					</xsl:attribute>
+		 	   	    <rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/construction-description/WaterSystem'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Water system of cultural property: ', $itemURI)" />
+					</rdfs:label>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Sistema delle acque del bene culturale: ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Water system of cultural property: ', $itemURI)" />
+					</l0:name>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Sistema delle acque del bene culturale: ', $itemURI)" />
+					</l0:name>
+					<arco-con:hasWaterElement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'WaterElement/Fountain', $itemURI, '-', position())" />
+						</xsl:attribute>
+					</arco-con:hasWaterElement>
+				</rdf:Description>
+			</xsl:if>
+		</xsl:for-each>
 		<!-- Water system as individual -->
 		<xsl:for-each select="record/metadata/schede/PG/IM/IMP">		
-			<xsl:if test="./IMPT and contains(normalize-space(lower-case(./IMPT)), 'idrico')">
+			<xsl:if test="./IMPT and (contains(normalize-space(lower-case(./IMPT)), 'idric') or contains(normalize-space(lower-case(./IMPT)), 'irrigazione') or contains(normalize-space(lower-case(./IMPT)), 'acqu'))">
+				<xsl:if test="not(./IMPU) or ./IMPU='intero bene' or ./IMPU='integrale' or ./IMPU='tutta' or ./IMPU='totale' or ./IMPU='carattere generale' or (starts-with(lower-case(normalize-space(./IMPU)), 'nr')) or (starts-with(lower-case(normalize-space(./IMPU)), 'n.r')) or (starts-with(lower-case(normalize-space(./IMPU)), 'intero')) or (starts-with(lower-case(normalize-space(./IMPU)), 'intera')) or (starts-with(lower-case(normalize-space(./IMPU)), 'esemplar'))">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about"> 			
 	 					<xsl:value-of select="concat($NS, 'WaterSystem/', $itemURI)" />
@@ -3546,17 +3571,64 @@
 						<xsl:value-of select="concat('Water system of cultural property: ', $itemURI)" />
 					</rdfs:label>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Impianto idrico del bene culturale: ', $itemURI)" />
+						<xsl:value-of select="concat('Sistema delle acque del bene culturale: ', $itemURI)" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
 						<xsl:value-of select="concat('Water system of cultural property: ', $itemURI)" />
 					</l0:name>
 					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Impianto idrico del bene culturale: ', $itemURI)" />
+						<xsl:value-of select="concat('Sistema delle acque del bene culturale: ', $itemURI)" />
 					</l0:name>
+					<xsl:if test="./IMPT">
+						<arco-con:hasWaterElement>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'WaterElement/', $itemURI, '-', position())" />
+							</xsl:attribute>
+						</arco-con:hasWaterElement>
+					</xsl:if>
 				</rdf:Description>
+				<xsl:if test="./IMPT">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'WaterElement/', $itemURI, '-', position())" />
+						</xsl:attribute>
+						 <rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/construction-description/WaterElement'" />
+							</xsl:attribute>
+						</rdf:type>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./IMPT)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./IMPT)" />
+						</l0:name>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'WaterElementType/', arco-fn:urify(normalize-space(./IMPT)))" />
+							</xsl:attribute>
+						</arco-core:hasType>
+					</rdf:Description>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'WaterElementType/', arco-fn:urify(normalize-space(./IMPT)))" />
+						</xsl:attribute>
+						 <rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/construction-description/WaterElementType'" />
+							</xsl:attribute>
+						</rdf:type>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./IMPT)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./IMPT)" />
+						</l0:name>
+					</rdf:Description>
+				</xsl:if>
+				</xsl:if>
 			</xsl:if>
-			<xsl:if test="./IMPT and not (contains(normalize-space(lower-case(./IMPT)), 'idrico'))">
+			<xsl:if test="./IMPT and not(contains(normalize-space(lower-case(./IMPT)), 'idric') or contains(normalize-space(lower-case(./IMPT)), 'irrigazione') or contains(normalize-space(lower-case(./IMPT)), 'acqu'))">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about"> 			
 	 					<xsl:value-of select="concat($NS, 'TechnicalSystem/', $itemURI, '-', arco-fn:urify(normalize-space(./IMPT)))" />
@@ -3581,7 +3653,7 @@
 			<xsl:variable name="fotg" select="normalize-space(./FOTG)" />
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'WaterElement/', $itemURI, '-', position())" />
+					<xsl:value-of select="concat($NS, 'WaterElement/Fountain', $itemURI, '-', position())" />
 				</xsl:attribute>
 				 <rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -3798,12 +3870,39 @@
 							<xsl:value-of select="concat($NS, 'WaterElement/', $itemURI, '-', position())" />
 						</xsl:attribute>
 					</arco-con:hasWaterElement>	
-					<arco-con:hasTechnicalSystem>
+					<arco-con:hasWaterSystem>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'WaterSystem/', $itemURI)" />
+							<xsl:value-of select="concat($NS, 'WaterSystem/', $itemURI,'-part-', arco-fn:urify(normalize-space(./FOTU)))" />
 						</xsl:attribute>
-					</arco-con:hasTechnicalSystem>
+					</arco-con:hasWaterSystem>
 				</rdf:Description>
+				<rdf:Description>
+				<xsl:attribute name="rdf:about"> 			
+	 				<xsl:value-of select="concat($NS, 'WaterSystem/', $itemURI,'-part-', arco-fn:urify(normalize-space(./FOTU)))" />
+				</xsl:attribute>
+	 	   	    <rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/construction-description/WaterSystem'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="'Water system'" />
+				</rdfs:label>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="'Sistema delle acque'" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="'Water system'" />
+				</l0:name>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="'Sistema delle acque'" />
+				</l0:name>
+				<arco-con:hasWaterElement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'WaterElement/', $itemURI, '-', position())" />
+					</xsl:attribute>
+				</arco-con:hasWaterElement>	
+			</rdf:Description>
 			</xsl:if>
 		</xsl:for-each>
 		<!-- Design as individual -->
@@ -3951,22 +4050,55 @@
 					</rdfs:label>
 					<l0:name>
 						<xsl:value-of select="normalize-space(./IMPU)" />
-					</l0:name>
-					<arco-con:hasTechnicalSystem>
-						<xsl:choose>
-							<xsl:when test="./IMPT and contains(normalize-space(lower-case(./IMPT)), 'idrico')">
+					</l0:name>	
+					<xsl:choose>
+						<xsl:when test="./IMPT and (contains(normalize-space(lower-case(./IMPT)), 'idric') or contains(normalize-space(lower-case(./IMPT)), 'irrigazione') or contains(normalize-space(lower-case(./IMPT)), 'acqu'))">
+							<arco-con:hasWaterSystem>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'WaterSystem/', $itemURI)" />
+									<xsl:value-of select="concat($NS, 'WaterSystem/', $itemURI, '-part-', arco-fn:urify(normalize-space(./IMPU)))" />
 								</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
+							</arco-con:hasWaterSystem>
+						</xsl:when>
+						<xsl:otherwise>
+							<arco-con:hasTechnicalSystem>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TechnicalSystem/', $itemURI, '-', arco-fn:urify(normalize-space(./IMPT)))" />
 								</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
-					</arco-con:hasTechnicalSystem>
-				</rdf:Description>	
+							</arco-con:hasTechnicalSystem>
+						</xsl:otherwise>
+					</xsl:choose>
+				</rdf:Description>
+				<xsl:if test="./IMPT and (contains(normalize-space(lower-case(./IMPT)), 'idric') or contains(normalize-space(lower-case(./IMPT)), 'irrigazione') or contains(normalize-space(lower-case(./IMPT)), 'acqu'))">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about"> 			
+	 						<xsl:value-of select="concat($NS, 'WaterSystem/', $itemURI, '-part-', arco-fn:urify(normalize-space(./IMPU)))" />
+						</xsl:attribute>
+	 			   	    <rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/construction-description/WaterSystem'" />
+							</xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="'Water system'" />
+						</rdfs:label>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="'Sistema delle acque'" />
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:value-of select="'Water system'" />
+						</l0:name>
+						<l0:name xml:lang="it">
+							<xsl:value-of select="'Sistema delle acque'" />
+						</l0:name>
+						<xsl:for-each select="record/metadata/schede/PG/FO/FOT">
+							<arco-con:hasWaterElement>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'WaterElement/Fountain', $itemURI, '-', position())" />
+								</xsl:attribute>
+							</arco-con:hasWaterElement>
+						</xsl:for-each>
+					</rdf:Description>
+				</xsl:if>
 			</xsl:if>
 		</xsl:for-each>	
 		<!-- Cultural property part as individual -->	
