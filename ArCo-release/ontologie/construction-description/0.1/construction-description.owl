@@ -540,7 +540,6 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/construction-description/hasWaterSystem -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/hasWaterSystem">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/construction-description/hasTechnicalSystem"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isWaterSystemOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterSystem"/>
@@ -958,7 +957,6 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/construction-description/isWaterSystemOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/isWaterSystemOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/construction-description/isTechnicalSystemOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterSystem"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un sistema delle acque al suo ambiente naturale.</rdfs:comment>
@@ -2966,7 +2964,7 @@ viene descritta.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/construction-description/TechnicalSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/TechnicalSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/System"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;impianto tecnico di una costruzione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the technical system of a construction.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
@@ -3188,7 +3186,7 @@ viene descritta.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/construction-description/WaterSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/WaterSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/construction-description/TechnicalSystem"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/System"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasModeOfIrrigation"/>
@@ -3225,7 +3223,7 @@ viene descritta.</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;impianto idrico di una costruzione (.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema delle acque, inclusi elementi artificiali e naturali, di uno spazio (per es: una costruzione, un parco, un giardine, ecc).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the water system of a construction.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/construction-description"/>
         <rdfs:label xml:lang="it">Impianto idrico</rdfs:label>
@@ -3463,6 +3461,7 @@ viene descritta.</rdfs:comment>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/ArchitecturalElement"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/FurnishingElement"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/NaturalElement"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/construction-description/TransportElement"/>
         </owl:members>
     </rdf:Description>
