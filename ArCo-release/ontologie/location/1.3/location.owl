@@ -192,6 +192,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/construction-description/hasWaterSystem -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/construction-description/hasWaterSystem"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasLegalSituation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
@@ -284,7 +290,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha coordinate&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has coordinates&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">are coordinates of</rdfs:label>
         <rdfs:label xml:lang="it">sono coordinate di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -301,7 +307,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una localizzazione tipizzata nel tempo al luogo cui si riferisce.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a typed location over time to its related geographical entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">at location</rdfs:label>
         <rdfs:label xml:lang="it">presso luogo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -320,7 +326,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/Site"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una localizzazione tipizzata nel tempo al contenitore fisico cui si riferisce.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a typified location over time to its physical container (Site).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">at site</rdfs:label>
         <rdfs:label xml:lang="it">presso contenitore fisico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -338,7 +344,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CadastralIdentity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il catasto all identità catastale contenuta in esso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a cadastre to the cadastral identity containded in it.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">contains cadastral identity</rdfs:label>
         <rdfs:label xml:lang="it">contiene identità catastale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -355,7 +361,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Altitude"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega le coordinate relative alla georeferenziazione di un oggetto (Geometry) alla sua altitudine.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the georeferencing coordinates of an object (Geometry) to its altitude.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha altitudine</rdfs:label>
         <rdfs:label xml:lang="en">has altitude</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -386,7 +392,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/BaseMap"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una georeferenziazione di un oggetto alla base cartografica eventualmente utilizzata.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links an object georeferencing to the base map possibly used.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha base cartografica</rdfs:label>
         <rdfs:label xml:lang="en">has base map</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -405,7 +411,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/City"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;identità catastale di un&apos;entità al comune a cui è intestato il foglio di mappa catastale, riportato nella forma attestata nel catasto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a cadastral identity of an entity to the municipality to which the cadastral map is registered, as attested by the cadastre.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha città catastale</rdfs:label>
         <rdfs:label xml:lang="en">has cadastral city</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -423,7 +429,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CadastralEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;identità catastale di un&apos;entità a una delle entità catastali, intese come oggetti spaziali, che la definiscono.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a cadastral identity of an entity to one of the cadastral entities, understood as spatial objects, that define it.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha entità catastale</rdfs:label>
         <rdfs:label xml:lang="en">has cadastral entity</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -441,7 +447,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CadastralIdentity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale all&apos;insieme delle informazioni catastali che lo riguardano, relativamente a una delle sue localizzazioni (storica, attuale, di rinvenimento, ecc.)</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a cultural property to all its cadastral information related to one of its locations: i.e. historical location, current location, finding location, etc.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha identità catastale</rdfs:label>
         <rdfs:label xml:lang="en">has cadastral identity</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -463,7 +469,7 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CadastreType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una identità catastale relativa a un&apos;entità al tipo di catasto (ad es. catasto terreni, catasto fabbricati, catasto misto).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cadastral identity of an entity to the type of cadastre (e.g. land cadastre, building cadastre, mixed cadastre).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha tipo di catasto</rdfs:label>
         <rdfs:label xml:lang="en">has cadastre type</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -493,7 +499,7 @@ a-loc:hasCadastreType ?type.
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/ClericalAdministrativeArea"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un indirizzo a un&apos;area amministrativa ecclesiastica (ad es. una diocesi).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an address to a clerical administrative area (e.g. a diocese).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha area amministrativa ecclesiastica</rdfs:label>
         <rdfs:label xml:lang="en">has clerical administrative area</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -512,7 +518,7 @@ a-loc:hasCadastreType ?type.
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/ClimateSituation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ambiente alla situazione climatica</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the ambient to the climate situation</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha situazione clumatica</rdfs:label>
         <rdfs:label xml:lang="en">has climate situation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -529,7 +535,7 @@ a-loc:hasCadastreType ?type.
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Continent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la localizzazione di un&apos;entità al continente in cui si trova.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the location of an entity to the continent where it is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha continente</rdfs:label>
         <rdfs:label xml:lang="en">has continent</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -546,7 +552,7 @@ a-loc:hasCadastreType ?type.
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Coordinates"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la georeferenziazione di un oggetto (Geometry) alle coordinate (x, y, z).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the object georeferencing (Geometry) to its coordinates (x, y, z).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha coordinate</rdfs:label>
         <rdfs:label xml:lang="en">has coordinates</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -565,7 +571,7 @@ a-loc:hasCadastreType ?type.
         <rdfs:comment xml:lang="en"></rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale al luogo o istituto della cultura (contenitore giuridico) in cui è contenuta</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a cultural property to the cultural institute or site</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha luogo o istituto della cultura</rdfs:label>
         <rdfs:label xml:lang="en">has cultural institute or site</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -582,7 +588,7 @@ a-loc:hasCadastreType ?type.
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteDefinition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un contenitore giuridico a una delle sue componenti, cioè alla definizione della sua tipologia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the type of a cultural institute or site to one of its components, that is to the definition of its type.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha definizione del contenitore giuridico</rdfs:label>
         <rdfs:label xml:lang="en">has cultiral institute or site definition</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -600,7 +606,7 @@ a-loc:hasCadastreType ?type.
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteSpecification"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un contenitore giuridico a una delle sue componenti, cioè alle specifiche sulla sua tipologia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the type of a cultural institute or site to one of its components, that is to the specifications of its type.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha qualificazione del contenitore giuridico</rdfs:label>
         <rdfs:label xml:lang="en">has cultural institute or site specification</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -619,7 +625,7 @@ a-loc:hasCadastreType ?type.
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un contenitore giuridico al tipo di contenitore giuridico, per permetterne la corretta e precisa individuazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a Cultural institute or site to its type, to allow its correct and precise identification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha tipo di contenitore giuridico</rdfs:label>
         <rdfs:label xml:lang="en">has cultural institute or site type</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -660,7 +666,7 @@ a-loc:hasCulturalInstitureOrSiteType ?type.
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale all&apos;indirizzo della sua localizzazione fisica attuale, al momento della catalogazione. La relazione fornisce una rappresentazione semplificata, con ridotta espressività, della localizzazione attuale del bene culturale, e provoca la perdita delle altre informazioni che riguardano la collocazione del bene (continente, eventuale contenitore fisico, collocazione specifica nel contenitore fisico, ecc.).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the relationship that links a cultural property to the address of its current physical location at the cataloging time. The report provides a simplified representation, with a reduced expressivity, of the current location of the cultural property, and it causes the loss of other information regarding its location (i.e. the continent, the possible physical container, the specific location in the physical container, etc.).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">cultural property address</rdfs:label>
         <rdfs:label xml:lang="it">indirizzo del bene culturale</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -695,7 +701,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/FluidDynamism"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale con il suo idrodinamismo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a natural environment with its fluid dynamism.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha idrodinamismo</rdfs:label>
         <rdfs:label xml:lang="en">has flyuid dynamism</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -720,7 +726,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/GeologicalContext"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la localizzazione tipizzata nel tempo con il suo contesto geologico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a time indexed typed location with its geological contex.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha contesto geologico</rdfs:label>
         <rdfs:label xml:lang="en">has geological context</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -738,7 +744,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/GeometryMethod"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una georeferenziazione al metodo utilizzato per il posizionamento.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a georeferencing to the method used for the object positioning.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha metodo di georeferenziazione</rdfs:label>
         <rdfs:label xml:lang="en">has geometry method</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -756,7 +762,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/GeometryTechnique"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una georeferenziazione alla tecnica di georeferenziazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a georeferencing to the georeferencing technique.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha tecnica di georeferenziazione</rdfs:label>
         <rdfs:label xml:lang="en">has geometry technique</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -774,7 +780,7 @@ WHERE {
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/HistoricalAddress"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un indirizzo a un&apos;area di appartenenza amministrativa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links an address to a governmental administrative area.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha area di appartenenza amministrativa</rdfs:label>
         <rdfs:label xml:lang="en">has governamental administrative area</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -793,7 +799,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/HistoricalAddress"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;indirizzo storico di una localizzazione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the historical address of a Location</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha indirizzo storico</rdfs:label>
         <rdfs:label xml:lang="en">has historical address</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -820,7 +826,7 @@ CONSTRUCT {
 WHERE {
 ?address a-loc:hasHistoricalArea ?y .
 }</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha area storica</rdfs:label>
         <rdfs:label xml:lang="en">has historical area</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -839,7 +845,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Incline"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un substrato con la sua inclinazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a substrate with its incline.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha inclinazione</rdfs:label>
         <rdfs:label xml:lang="en">has incline</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -858,7 +864,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità, per esempio un situazione in cui un luogo riveste un certo ruolo nei confronti di un bene culturale in un intervallo di tempo, o una georeferenziazione, o un&apos;identità catastale al ruolo della localizzazione (fisica attuale, precedente, di rinvenimento, ecc.) cui si riferisce.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links an entity (e.g. a situation in which a place plays a certain role in relation to a cultural property in a time frame, or a georeferencing, or a cadastral identity) to the role of the localization referring to it (i.e current physical location, previous location, finding location, etc.).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha tipo di localizzazione cui si riferisce</rdfs:label>
         <rdfs:label xml:lang="en">has referred location type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -876,7 +882,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua mappa (es. il suolo con la sua carta geologica, pedologica, di utilizzazione dei suoli).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity with its map (i.e. a soil with its geological, pedological, land use map).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha mappa</rdfs:label>
         <rdfs:label xml:lang="en">has map</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -916,7 +922,7 @@ WHERE {
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isNaturalEnvironmentOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Questa proprietà collega una cosa all&apos;ambiente naturale in cui è inserita</rdfs:label>
         <rdfs:label xml:lang="en">This property relates a thing to its natural environment</rdfs:label>
         <rdfs:label xml:lang="it">ha ambiente naturale</rdfs:label>
@@ -936,7 +942,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/OldTownAdmistrativeType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un centro storico con le informazioni relative al tipo del suo carattere amministrativo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a historical center with information related to its administrative type.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Old town administrative type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo amministrativo del centro storico</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -971,7 +977,7 @@ a-loc:hasOldTownAdministrativeType ?type.
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/ShadeTolerance"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale alla sua situazione luminosa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a natural environment with its shade tolerance.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha situazione luminosa</rdfs:label>
         <rdfs:label xml:lang="en">has shade tolerance</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -989,7 +995,7 @@ a-loc:hasOldTownAdministrativeType ?type.
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/SiteDefinition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un contenitore fisico a una delle sue componenti, cioè alla definizione della sua tipologia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the type of a physical container to one of its components, that is to the definition of its type.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha definizione del contenitore fisico</rdfs:label>
         <rdfs:label xml:lang="en">has site definition</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1007,7 +1013,7 @@ a-loc:hasOldTownAdministrativeType ?type.
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/SiteSpecification"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un contenitore fisico a una delle sue componenti, cioè alle specifiche sulla sua tipologia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the type of a physical container to one of its components, that is to the specifications of its type.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha qualificazione del contenitore fisico</rdfs:label>
         <rdfs:label xml:lang="en">has site specification</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1026,7 +1032,7 @@ a-loc:hasOldTownAdministrativeType ?type.
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/SiteType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un contenitore fisico al tipo di contenitore fisico, per permetterne la corretta e precisa individuazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a physical container (Site) to its type, to allow its correct and precise identification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha tipo di contenitore fisico</rdfs:label>
         <rdfs:label xml:lang="en">has site type</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -1057,7 +1063,7 @@ a-loc:hasSiteType ?type.
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Soil"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una cosa al suolo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a thing to the soil</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha suolo</rdfs:label>
         <rdfs:label xml:lang="en">has soil</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1075,7 +1081,7 @@ a-loc:hasSiteType ?type.
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un saggio stratigrafico all&apos;ambiente in un il saggio è stato effettuato.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a stratigraphic record to the area in which it took place.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha ambiente</rdfs:label>
         <rdfs:label xml:lang="en">has stratigraphic area</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1094,7 +1100,7 @@ a-loc:hasSiteType ?type.
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un saggio stratigrafico al settore in cui il saggio è stato effettuato.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a stratigraphic record to the room in which it took place.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha settore</rdfs:label>
         <rdfs:label xml:lang="en">has stratigraphic room</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1113,7 +1119,7 @@ a-loc:hasSiteType ?type.
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un saggio stratigrafico al quadrato in un il saggio è stato effettuato.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a stratigraphic record to the square in which it took place.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha quadrato</rdfs:label>
         <rdfs:label xml:lang="en">has stratigraphic square</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1144,7 +1150,7 @@ a-loc:hasSiteType ?type.
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un indirizzo a un&apos;area di appartenenza territoriale, che può non coincidere con l&apos;area amministrativa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links an address to a territorial area, which may not coincide with the administrative area, to which a cultural property belongs.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha area di appartenenza territoriale</rdfs:label>
         <rdfs:label xml:lang="en">has territorial area</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1162,7 +1168,7 @@ a-loc:hasSiteType ?type.
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un indirizzo a una ripartizione territoriale interna a un&apos;area territoriale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links an address to a territorial division within a territorial area.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha ripartizione territoriale</rdfs:label>
         <rdfs:label xml:lang="en">has territorial division</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -1192,7 +1198,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una sua localizzazione tipizzata nel tempo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links an entity to its typified location over time.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha localizzazione tipizzata nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has time indexed typed location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1211,7 +1217,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/ToponymInTime"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di collegare un luogo a una denominazione che cambia nel tempo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a geographical entity to a toponym chianging over time.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha toponimo nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has toponym in time</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1230,7 +1236,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di collegare un&apos;entità al tipo di contesto (urbano, suburbano, extraurbano, territoriale, subacqueo) in cui si trova.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity to the type of context where the cultural property is located (i.e. urban context, suburban context, extra-urban context, territorial context, underwater context).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha tipo di contesto geografico</rdfs:label>
         <rdfs:label xml:lang="en">has type of geographical context</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1249,7 +1255,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/UrbanArea"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il centro storico con la zona urbana che ne fa parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the old town with the urban area that is part of it.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha zona urbana</rdfs:label>
         <rdfs:label xml:lang="en">has urban area</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -1276,7 +1282,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/ZoogeographicRegion"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una localizzazione alla regione zoogeografica di cui fa parte</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a feature to its zoogeographic region</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha regione zoogeografica</rdfs:label>
         <rdfs:label xml:lang="en">has zoogeographic region</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1293,7 +1299,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Coordinates"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega le coordinate relative alla georeferenziazione dell&apos;altitudine a un oggetto (Geometry).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the georeferencing coordinates of the altitude to an object (Geometry).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is altitude of</rdfs:label>
         <rdfs:label xml:lang="it">è altitudine di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -1316,7 +1322,7 @@ select * where {
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una base cartografica alla georeferenziazione di un oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a base map to an object georeferencing.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is base map of</rdfs:label>
         <rdfs:label xml:lang="it">è base cartografica di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1333,7 +1339,7 @@ select * where {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CadastralIdentity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il comune a cui è intestato il foglio di mappa catastale, riportato nella forma attestata nel catasto all&apos;identità catastale di un&apos;entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the municipality to which the cadastral map is registered, as attested by the cadastre, to a cadastral identity of an entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is cadastral city of</rdfs:label>
         <rdfs:label xml:lang="it">è città catastale di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1349,7 +1355,7 @@ select * where {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CadastralIdentity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità catastale, intesa come oggetti spaziali, a alla sua identità catastale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a cadastral entity, understood as spatial object, to its cadastral identity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is cadastral entity of</rdfs:label>
         <rdfs:label xml:lang="it">è entità catastale di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1365,7 +1371,7 @@ select * where {
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;insieme delle informazioni catastali, relative a una delle sue localizzazioni (storica, attuale, di rinvenimento, ecc.), a un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links all the cadastral information related to one of its locations: i.e. historical location, current location, finding location, etc., to a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is cadastral identity of</rdfs:label>
         <rdfs:label xml:lang="it">è identitià catastale di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1382,7 +1388,7 @@ select * where {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CadastralIdentity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un tipo di catasto (ad es. catasto terreni, catasto fabbricati, catasto misto) a una identità catastale relativa a un&apos;entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the type of cadastre (e.g. land cadastre, building cadastre, mixed cadastre) to a cadastral identity of an entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is cadastre type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di catasto di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -1410,7 +1416,7 @@ WHERE       {
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;area amministrativa ecclesiastica (ad es. una diocesi) al suo indirizzo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a clerical administrative area (e.g. a diocese) to its address.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is clerical administrative area of</rdfs:label>
         <rdfs:label xml:lang="it">è area amministrativa ecclesiastica di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1428,7 +1434,7 @@ WHERE       {
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la situazione climatica all&apos;ambiente</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the climate situation to the ambient</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is climate situation of</rdfs:label>
         <rdfs:label xml:lang="it">è situazione climatica di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1444,7 +1450,7 @@ WHERE       {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Cadastre"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una identità catastale al catasto in cui è registrata.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a cadastral identity to the cadastre in which it is registered.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is contained in cadastre</rdfs:label>
         <rdfs:label xml:lang="it">è contenuta nel catasto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1461,7 +1467,7 @@ WHERE       {
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un continente alla localizzazione di un&apos;entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the continent to the location of an entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is continent of</rdfs:label>
         <rdfs:label xml:lang="it">è continente di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1477,7 +1483,7 @@ WHERE       {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la definizione del contenitore giuridico alla sua tipologia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the definition of a cultural institute or site to its type.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is cultural institute or site definition of</rdfs:label>
         <rdfs:label xml:lang="it">è definizione del contenitore giuridico di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1493,7 +1499,7 @@ WHERE       {
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un luogo o istituto della cultura (contenitore giuridico) al bene culturale</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a cultural institute or site to a cultural property</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is cultural institute or site of</rdfs:label>
         <rdfs:label xml:lang="it">è luogo o istituto della cultura di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1509,7 +1515,7 @@ WHERE       {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega le specifiche sulla qualificazione del contenitore giuridico alla sua tipologia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the specification of a cultural institute or site to one of its type.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is cultural institute or site specification of</rdfs:label>
         <rdfs:label xml:lang="it">è specificazione di contenitore giuridico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1526,7 +1532,7 @@ WHERE       {
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalInstituteOrSite"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di contenitore giuridico a un contenitore giuridico, per permetterne la corretta e precisa individuazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the type of cultural institute or site to a cultural institute or site, to allow its correct and precise identification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is cultural institute or site type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di contenitore giuridico di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -1555,7 +1561,7 @@ WHERE       {
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega l&apos;indirizzo della localizzazione fisica attuale, al momento della catalogazione, con il bene culturale catalogato.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the relationship that links the address of the current physical location at the cataloging time to the catalogued cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is cultural property address of</rdfs:label>
         <rdfs:label xml:lang="it">è indirizzo del bene culturale</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -1588,7 +1594,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;idrodinamismo, moto ondoso, di un ambiente naturale con l&apos;ambiente naturale stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the fluid dynamism, wave movement, of a natural environment with its natural environment.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is fluid dynamism of</rdfs:label>
         <rdfs:label xml:lang="en">is wave movement of</rdfs:label>
         <rdfs:label xml:lang="it">è idrodinamismo di</rdfs:label>
@@ -1614,7 +1620,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il contesto geologico con la localizzazione tipizzata nel tempo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the geological contex with a time indexed typed location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is geological context of</rdfs:label>
         <rdfs:label xml:lang="it">è contesto geologico di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1631,7 +1637,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il metodo utilizzato per il posizionamento alla georeferenziazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the method used for the object positioning to the georeferencing.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is geometry method of</rdfs:label>
         <rdfs:label xml:lang="it">è metodo di georeferenziazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1647,7 +1653,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la tecnica di georeferenziazione alla georeferenziazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the georeferencing technique to the georeferencing.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is geometry technique of</rdfs:label>
         <rdfs:label xml:lang="it">è tecnica di georeferenziazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1663,7 +1669,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/HistoricalAddress"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;area di appartenenza amministrativa al suo indirizzo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a governmental administrative area to its address.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is governmental administrative area of</rdfs:label>
         <rdfs:label xml:lang="it">è area di appartenenza amministrativa di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1680,7 +1686,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha indirizzo storico&quot;</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has historical address&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is historical address</rdfs:label>
         <rdfs:label xml:lang="it">è indirizzo storico di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1696,7 +1702,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;area storico-geografica al suo indirizzo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a historical-geographical area to its address.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is historical area of</rdfs:label>
         <rdfs:label xml:lang="it">è area storica di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -1721,7 +1727,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/Substrate"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;inclinazione di un substrato al substrato stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the incline of a substrate to the substrate itself.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is incline of</rdfs:label>
         <rdfs:label xml:lang="it">è inclinazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1737,7 +1743,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un luogo fisico a una localizzazione tipizzata nel tempo che si riferisce a quel luogo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a geographical feature to a time indexed typed location that refers to that feature.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is location in</rdfs:label>
         <rdfs:label xml:lang="it">è luogo in</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1754,7 +1760,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il ruolo della localizzazione (fisica attuale, precedente, di rinvenimento, ecc.) all&apos;entità cui si riferisce, per esempio un situazione in cui un luogo riveste un certo ruolo nei confronti di un bene culturale in un intervallo di tempo, o una georeferenziazione, o un&apos;identità catastale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the role of a localization (i.e current physical location, previous location, finding location, etc.) to an entity referring to it (e.g. a situation in which a place plays a certain role in relation to a cultural property in a time frame, or a georeferencing, or a cadastral identity).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is referred location type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di localizzazione cui si riferisce</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1770,7 +1776,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà è l&apos;inversa di &quot;ha mappa&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has map&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is map of</rdfs:label>
         <rdfs:label xml:lang="it">è mappa di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1787,7 +1793,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una regione zoogeografica marina a un ambiente naturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a marine biogeographical realm to a natural environment.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is marine biogeographical realm of</rdfs:label>
         <rdfs:label xml:lang="it">è regione zoogeografica marina di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1811,7 +1817,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ambiente naturale al bene culturale</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the natural environment to the cultural property</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is natural environment of</rdfs:label>
         <rdfs:label xml:lang="it">è ambiente naturale di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1828,7 +1834,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/OldTown"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di carattere amministrativo alle informazioni relative al suo centro storico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the administrative type with the information related to its historical center.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is old town administrative type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo amministrativo del centro storico</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -1861,7 +1867,7 @@ WHERE       {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la situazione luminosa di un ambiente naturale all&apos;ambiente naturale stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the shade tolerance of a natural environment to the natural environment itself.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is shade tolerance of</rdfs:label>
         <rdfs:label xml:lang="it">è situazione luminosa di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1878,7 +1884,7 @@ WHERE       {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/SiteType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la definizione del contenitore fisico alla sua tipologia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the definition of a physical container to of its type.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is site definition of</rdfs:label>
         <rdfs:label xml:lang="it">è definizione del contenitore fisico di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1895,7 +1901,7 @@ WHERE       {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un contenitore fisico a una localizzazione tipizzata nel tempo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural site to the time indexed typed location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is site in</rdfs:label>
         <rdfs:label xml:lang="it">è contenitore fisico in</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1911,7 +1917,7 @@ WHERE       {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/SiteType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega le specifiche sulla qualificazione del contenitore fisico alla sua tipologia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links the specification of a physical container to one of its type.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is site specification of</rdfs:label>
         <rdfs:label xml:lang="it">è specificazione di contenitore fisico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1928,7 +1934,7 @@ WHERE       {
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/Site"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di contenitore fisico a un contenitore fisico, per permetterne la corretta e precisa individuazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the type of physical container to a physical container (Site), to allow its correct and precise identification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is site type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di contenitore fisico di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -1957,7 +1963,7 @@ WHERE       {
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il suolo ad una cosa</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the soil to a thing</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is soil of</rdfs:label>
         <rdfs:label xml:lang="it">è suolo di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -1974,7 +1980,7 @@ WHERE       {
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha ambiente&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has stratigraphic area&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is stratigraphic area of</rdfs:label>
         <rdfs:label xml:lang="it">è ambiente di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1991,7 +1997,7 @@ WHERE       {
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha settore&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has stratigraphic room&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is stratigraphic room of</rdfs:label>
         <rdfs:label xml:lang="it">è settore di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2008,7 +2014,7 @@ WHERE       {
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha quadrato&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has stratigraphic square&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is stratigraphic square of</rdfs:label>
         <rdfs:label xml:lang="it">è quadrato di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2037,7 +2043,7 @@ WHERE       {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/HistoricalAddress"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;area di appartenenza territoriale, che può non coincidere con l&apos;area amministrativa, al suo indirizzo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a territorial area (which may not coincide with the administrative area) to which a cultural property belongs to its address.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is territorial area of</rdfs:label>
         <rdfs:label xml:lang="it">è area di appartenenza territoriale di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2053,7 +2059,7 @@ WHERE       {
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una ripartizione territoriale interna a un&apos;area territoriale a un indirizzo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a territorial division within a territorial area to an address.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is territorial division of</rdfs:label>
         <rdfs:label xml:lang="it">è ripartizione territoriale di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -2079,7 +2085,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una  localizzazione tipizzata nel tempo a un&apos;entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links a typified location over time to an entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is time indexed typed location of</rdfs:label>
         <rdfs:label xml:lang="it">è localizzazione tipizzata nel tempo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2096,7 +2102,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di collegare una denominazione che cambia nel tempo a un luogo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a toponym chianging over time to a geographical entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is toponym in time of</rdfs:label>
         <rdfs:label xml:lang="it">è toponimo nel tempo di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2113,7 +2119,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di collegare tipo di contesto (urbano, suburbano, extraurbano, territoriale, subacqueo) all&apos;entità che vi si trova.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the type of context (i.e. urban context, suburban context, extra-urban context, territorial context, underwater context) an entity where it is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is type of geographical context of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di contesto geografico di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2130,7 +2136,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/OldTown"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la zona urbana con il suo centro storico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the the urban area with the its old town.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is urban area of</rdfs:label>
         <rdfs:label xml:lang="it">è area urbana di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -2148,7 +2154,7 @@ WHERE {
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la regione zoogeografica a una localizzazione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the zoogeographic region to a feature</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is zoogeographic region of</rdfs:label>
         <rdfs:label xml:lang="it">è regione zoogeografica di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2244,7 +2250,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa il numero d&apos;ordine che identifica una località intesa come unità amministrativa, ovvero un centro storico, una zona urbana e un settore.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property associates the order number that identifies a location intended as an administrative unit, i.e. an old town, an urban area and a sector.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">administrative order number</rdfs:label>
         <rdfs:label xml:lang="it">numero d&apos;ordine amministrativo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2261,7 +2267,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la coordinata z di un oggetto, che ne definisce l&apos;altitudine rispetto al livello del mare.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the z coordinate of an object, which defines its altitude above sea level.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">altitude</rdfs:label>
         <rdfs:label xml:lang="it">altitudine</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -2293,7 +2299,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione con cui è noto un catasto storico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the designation of a historical cadastre.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">cadastre name</rdfs:label>
         <rdfs:label xml:lang="it">denominazione del catasto</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -2322,7 +2328,7 @@ WHERE {
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare un contenitore giuridico al codice assegnatogli dall&apos;ICCD.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property allows to associate a legal container to its code assigned by the ICCD.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">cultural institute or site identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo del contenitore giuridico</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -2357,7 +2363,7 @@ core:hasType ?type .
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero progressivo che individua il settore dove si trova il bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the progressive number that identifies the district where the cultural property is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">district number</rdfs:label>
         <rdfs:label xml:lang="it">numero del settore</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2389,7 +2395,7 @@ core:hasType ?type .
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale con la sua descrizione geografica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a natural environment with its geographical description.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">descrizione geografica</rdfs:label>
         <rdfs:label xml:lang="en">geographical description</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2407,7 +2413,7 @@ core:hasType ?type .
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale con la sua descrizione geological.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a natural environment with its geological description.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">descrizione geologica</rdfs:label>
         <rdfs:label xml:lang="en">geological description</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2426,7 +2432,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale con la sua descrizione geomorfologica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a natural environment with its geomorphological description.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">descizione geomorfologica</rdfs:label>
         <rdfs:label xml:lang="en">geomorphological description</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2444,7 +2450,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale alla descrizione dei suoi caratteri ambientali storici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a natural environment with a description of its historical and environmental context.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">descrizione del contesto ambientale storico</rdfs:label>
         <rdfs:label xml:lang="en">historical environment context description</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2461,7 +2467,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la coordinata y, ovvero la latitudine.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the y coordinate, that is the latitude.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">latitude</rdfs:label>
         <rdfs:label xml:lang="it">latitudine</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2478,7 +2484,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà è utilizzata per rappresentare informazioni sui percorsi che permettono l’accesso al bene o che lo delimitano, o ulteriori specifiche per la localizzazione del bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property is used to represent other paths and details about the cultural property location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">dettagli della localizzazione</rdfs:label>
         <rdfs:label xml:lang="en">location details</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2495,7 +2501,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la coordinata x, ovvero la longitudine.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the x coordinate, that is the longitude.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">longitude</rdfs:label>
         <rdfs:label xml:lang="it">longitudine</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2513,7 +2519,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;altitudine massima assoluta rispetto al livello del mare.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the absolute maximum altitude above sea level.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">altitudine massima</rdfs:label>
         <rdfs:label xml:lang="en">maximum altitude</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2532,7 +2538,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;altitudine minima assoluta rispetto al livello del mare.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the absolute minimum altitude above sea level.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">altitudine minima</rdfs:label>
         <rdfs:label xml:lang="en">minimum altitude</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2551,7 +2557,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale con la sua descrizione morfologica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a natural environment with its morphological description.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">descrizione morfologica</rdfs:label>
         <rdfs:label xml:lang="en">morphological description</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2568,7 +2574,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà descrive la disposizione e la disponibilità delle acque naturali di un ambiente naturale</rdfs:comment>
         <rdfs:comment xml:lang="en">This property describes the arrangement and availability of natural waters in a natural environment</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">assetto delle acque naturali</rdfs:label>
         <rdfs:label xml:lang="en">natural water arrangement</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2585,7 +2591,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un ambiente naturale con la sua descrizione pedologica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a natural environment with its pedological description.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">descrizione pedologica</rdfs:label>
         <rdfs:label xml:lang="en">pedological description</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2602,7 +2608,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il tipo di punto che georeferenzia il bene catalogato. La definizione del tipo di punto non è univoca e dipende dalla tipologia e dalla conformazione del bene e dal tipo di localizzazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the type of point that georeferences the catalogued cultural property. The definition of the point type is not univocal and depends on the cultural property&apos;s type and conformation as well as on the type of location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">point type</rdfs:label>
         <rdfs:label xml:lang="it">tipo di punto</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2620,7 +2626,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;altezza relativa dell&apos;oggetto rispetto a un punto, un elemento o una situazione da specificare.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the object relative height by reference to a point or an element or a situation to be specified.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">altitudine relativa</rdfs:label>
         <rdfs:label xml:lang="en">relative altitude</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2638,7 +2644,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà indica il mare o l&apos;oceano dove è stato raccolto il bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates the sea or ocean where the culrutal entity was harvested.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">mare o oceano</rdfs:label>
         <rdfs:label xml:lang="en">sea or ocean</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2657,7 +2663,7 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare un contenitore fisico al codice assegnatogli dall&apos;ICCD.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property allows to associate a physical container to its code assigned by the ICCD.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">identificativo del contenitore fisico</rdfs:label>
         <rdfs:label xml:lang="en">site identifier</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -2692,7 +2698,7 @@ core:hasType core:NationalIdentifier .
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il suolo all&apos;utilizzazione del suolo in esame, con particolare riferimento ai popolamenti vegetali naturali, alle coltivazioni, agli usi urbanistici e alle attività estrattive di superficie.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a soil to its usage.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">soil use</rdfs:label>
         <rdfs:label xml:lang="it">uso del suolo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2709,7 +2715,7 @@ core:hasType core:NationalIdentifier .
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il sistema di riferimento utilizzato per la georeferenziazione (ad es. WGS84, WGS84 UTM32, ecc.).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the reference system used for the object georeferencing (e.g. WGS84, WGS84 UTM32, etc.).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">sistema di riferimento</rdfs:label>
         <rdfs:label xml:lang="en">spatial reference system</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -2822,6 +2828,12 @@ WHERE {
     <!-- http://dati.beniculturali.it/cis/Site -->
 
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/Site"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/construction-description/WaterSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/construction-description/WaterSystem"/>
     
 
 
@@ -2949,7 +2961,7 @@ WHERE {
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;altitudine, ovvero l&apos;altezza di un oggetto rispetto al livello del mare, che può essere specificata da un&apos;altitudine massima, minima, relativa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the altitude, that is the height of an object above the sea level, which can be specified as maximum, minimum and relative altitude.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Altitude</rdfs:label>
         <rdfs:label xml:lang="it">Altitudine</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -2988,7 +3000,7 @@ WHERE {
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la base cartografica eventualmente utilizzata nelle attività di georeferenziazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the base map possibly used for georeferencing activities.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Base cartografica</rdfs:label>
         <rdfs:label xml:lang="en">Base map</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3010,7 +3022,7 @@ WHERE {
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;entità catastale, intesa come un oggetto che può avere una rappresentazione spaziale, relativamente alla ripartizione catastale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a cadastral entity, which is intended as an object that can have a spatial representation related to the cadastral allocation.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastral Entity</rdfs:label>
         <rdfs:label xml:lang="it">Entità catastale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3032,7 +3044,7 @@ WHERE {
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un foglio di mappa catastale, in cui ricadono una o più particelle.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a folio of a cadastral map, which contains one or more cadastral parcels.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastral map folio</rdfs:label>
         <rdfs:label xml:lang="it">Foglio di mappa catastale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3099,7 +3111,7 @@ resource:CadastralIdentity/1400055239-1
         a-loc:hasCadastralEntity resource:CadastralUnitCollection/1400055239-207 , resource:CadastralFolio/1400055239-8 .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;identità catastale di un&apos;entità, intesa come l&apos;insieme delle informazioni di localizzazione che riguardano il bene con riferimento alla ripartizione catastale nazionale. L&apos;identità catastale di un&apos;entità può avere un riferimento cronologico, che indica l&apos;epoca alla quale risalgono i dati catastali.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the cadastral identity of an entity, which is intended as a set of location information concerning the property with reference to the national cadastral allocation. The cadastral identity can have a chronological reference indicating the dating of cadastral data.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastral identity</rdfs:label>
         <rdfs:label xml:lang="it">Identità catastale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3117,7 +3129,7 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/CadastralEntity"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un subalterno catastale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a cadastral subordinate.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastral subordinate</rdfs:label>
         <rdfs:label xml:lang="it">Subalterno catastale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3138,7 +3150,7 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una o più particelle catastali.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one or more cadastral parcels.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastral unit collection</rdfs:label>
         <rdfs:label xml:lang="it">Collezione di particelle catastali</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3160,7 +3172,7 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il catasto di una città</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the cadastre of a city</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastre</rdfs:label>
         <rdfs:label xml:lang="it">Catasto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3182,7 +3194,7 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di catasto (ad es. catasto terreni, catasto fabbricati, catasto misto).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of cadastre (e.g. land cadastre, building cadastre, mixed cadastre).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastre type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di catasto</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3206,7 +3218,7 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la cronostratigrafia del contesto in cui il bene si trovava prima di essere raccolto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the chronostratigraphic class of the context from which the cp was taken.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Chronostratigraphic class</rdfs:label>
         <rdfs:label xml:lang="it">Classe cronostratigrafica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3224,7 +3236,7 @@ ICCD Normativa BNPE: IRG</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità cronostratigrafica della serie.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the chronostratigraphic unit &quot;series&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Chronostratigraphic series</rdfs:label>
         <rdfs:label xml:lang="it">Serie cronostratigrafica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3242,7 +3254,7 @@ ICCD Normativa BNPE: IRG/IRGO</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità cronostratigrafica fondamentale del piano.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the chronostratigraphic fundamental unit &quot;stage&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Chronostratigraphic stage</rdfs:label>
         <rdfs:label xml:lang="it">Piano cronostratigrafico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3260,7 +3272,7 @@ ICCD Normativa BNPE: IRG/IRGT</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
         <rdfs:comment xml:lang="it">Questaclasse rappresenta l&apos;unità cronostratigrafica del sottopiano.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the chronostratigraphic unit &quot;substage&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Chrnonostratigraphic substage</rdfs:label>
         <rdfs:label xml:lang="it">Sottopiano cronostratigrafico</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGS
@@ -3276,7 +3288,7 @@ ICCD Normativa BNPE: IRG/IRGS</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità cronostratigrafica &quot;sistema&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the chronostratigraphic unit &quot;system&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Chronostratigraphic system</rdfs:label>
         <rdfs:label xml:lang="it">Sistema cronostratigrafico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3294,7 +3306,7 @@ ICCD Normativa BNPE: IRG/IRGP</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità cronostratigrafica &quot;cronozona&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the chronostratigraphic unit &quot;chronozone&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Chronozone</rdfs:label>
         <rdfs:label xml:lang="en">Cronozona</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3323,7 +3335,7 @@ ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Questa classe rappresenta la situazione climatica</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents class situation</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Climate situation</rdfs:label>
         <rdfs:label xml:lang="it">Situazione climatica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3345,7 +3357,7 @@ ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un Continente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a Continent.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Continent</rdfs:label>
         <rdfs:label xml:lang="it">Continente</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3384,7 +3396,7 @@ ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme delle coordinate, geografiche o proiettate, che permettono la georeferenziazione di un oggetto. Per la georeferenziazione puntuale sarà presente soltanto una coppia di coordinate; per la georeferenziazione lineare e areale saranno presenti più coppie di coordinate che individuano i punti che definiscono la linea o l&apos;area che rappresenta il bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the set of coordinates, geographic or projected, which allows the georeferencing of an object. For the punctual georeferencing there is only a pair of coordinates. For the linear and areal georeferencing there are more pairs of coordinates identifying those points of the line or area representing the object.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Coordinate</rdfs:label>
         <rdfs:label xml:lang="en">Coordinates</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3400,7 +3412,7 @@ ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la definizione della tipologia di un contenitore giuridico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type definition of a cultural insititute or site.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cultural Institute or Site Definition</rdfs:label>
         <rdfs:label xml:lang="it">Definizione di Contenitore Giuridico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3416,7 +3428,7 @@ ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la specificazione della tipologia di un contenitore giuridico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type specification of a cultural insititute or site.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cultural Institute or Site Specification</rdfs:label>
         <rdfs:label xml:lang="it">Specificazione di Contenitore Giuridico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3432,7 +3444,7 @@ ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tipologia di un contenitore giuridico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of a cultural insititute or site.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cultural Institute or Site type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di Contenitore Giuridico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3456,7 +3468,7 @@ ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità cronostratigrafica di rango più alto dell&apos;eonotema. L&apos;unità geocronologica corrispondente è l&apos;Eon.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the cronostratigraphic unit &quot;Eontem&quot;, corrisponding to the chronostratigraphic &quot;Eon&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Eonotema</rdfs:label>
         <rdfs:label xml:lang="en">Eontem</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3474,7 +3486,7 @@ ICCD Normativa BNPE: IRG/IRGE</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ChronostratigraphicClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità cronostratigrafica era.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the cronostratigraphic class &quot;erathem&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Eratema</rdfs:label>
         <rdfs:label xml:lang="en">Erathem</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3492,7 +3504,7 @@ ICCD Normativa BNPE: IRG/IRGR</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;idrodinamismo (moto ondoso) di un ambiente naturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the fluid dynamism of a natural environment.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Fluid dynamism</rdfs:label>
         <rdfs:label xml:lang="it">Idrodinamismo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3516,7 +3528,7 @@ ICCD Normativa BNPE: IRG/IRGR</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una classe geocronologica usata per descrivere il contesto in cui si trovava un bene prima di essere raccolto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the geochronological class of the context of a cp before its harvesting.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Classe geocronologica</rdfs:label>
         <rdfs:label xml:lang="en">Geochronological class</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG
@@ -3532,7 +3544,7 @@ ICCD Normativa BNPE: IRG</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica epoca.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the geochronological class &quot;epoch&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Epoca geocronologica</rdfs:label>
         <rdfs:label xml:lang="en">Geochronological epoch</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3550,7 +3562,7 @@ ICCD Normativa BNPE: IRG/IRGO</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica era.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the geochronological class &quot;era&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Era geocronologica</rdfs:label>
         <rdfs:label xml:lang="en">Geochronological era</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3568,7 +3580,7 @@ ICCD Normativa BNPE: IRG/IRGR</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica periodo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the geochronological class &quot;period&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Geochronological period</rdfs:label>
         <rdfs:label xml:lang="it">Periodo geocronologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3586,7 +3598,7 @@ ICCD Normativa BNPE: IRG/IRGP</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/GeochronologicalClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità geocronologica sottoetà.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the geochronological class &quot;subage&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Geochronological subage</rdfs:label>
         <rdfs:label xml:lang="it">Sottoerà geocronologica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3622,7 +3634,7 @@ ICCD Normativa BNPE: IRG/IRGS</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il contesto geologico da cui proviene il bene catalogato.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the geological context from which the cp originates.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto geologico</rdfs:label>
         <rdfs:label xml:lang="en">Geological context</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3640,7 +3652,7 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una carta geografica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a geological map.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Geological map</rdfs:label>
         <rdfs:label xml:lang="it">Mappa geologica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3686,7 +3698,7 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la geometria associabile a una entità spaziale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the geometry of a spatial entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Geometria</rdfs:label>
         <rdfs:label xml:lang="en">Geometry</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3708,7 +3720,7 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/location/GeometryTechnique"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il metodo utilizzato per il posizionamento (esatto, approssimato, con rappresentazione simbolica).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the method used for the object positioning (i.e. exact, approximate, with a symbolic representation).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Geometry method</rdfs:label>
         <rdfs:label xml:lang="it">Metodo di posizionamento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3730,7 +3742,7 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tecnica di georeferenziazione, utilizzata per l&apos;acquisizione delle coordinate (rilievo da cartografia con sopralluogo, rilievo da cartografia senza sopralluogo, rilievo da foto aerea con sopralluogo, rilievo da foto aerea senza sopralluogo, rilievo da satellite, rilievo tradizionale, rilievo tramite GPS, rilievo tramite punti d&apos;appoggio fiduciali o trigonometrici, stereofotogrammetria).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the technique of georeferencing, used for the acquisition of coordinates (i.e. survey from cartography with or without inspection, survey from aerial photos with or without inspection, satellite survey, traditional survey, survey via GPS, etc.).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Geometry technique</rdfs:label>
         <rdfs:label xml:lang="it">Tecnica di georeferenziazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3766,7 +3778,7 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l indirizzo storico, inteso come il contesto topografico e amministrativo storico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the historical address, as the topographical and administrative historical context.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Historical address</rdfs:label>
         <rdfs:label xml:lang="it">Indirizzo storico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3782,7 +3794,7 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;inclinazione (qualitativa) del substrato di raccolta del campione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the (qualitative) incline of a substrate.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Inclinazione</rdfs:label>
         <rdfs:label xml:lang="en">Incline</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3798,7 +3810,7 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una carta utilizzazione dei suoli.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a land use map.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Land use map</rdfs:label>
         <rdfs:label xml:lang="it">Mappa utilizzazione dei suoli</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3814,7 +3826,7 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità litostratigrafica letto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the lithostratigraphic class &quot;bed&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Letto litostratigrafico</rdfs:label>
         <rdfs:label xml:lang="en">Lithostratigraphic bed</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3832,7 +3844,7 @@ ICCD Normativa BNPE: IRL/IRLL</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una classe litostratigrafica, per descrivere l&apos;unità stratigrafica a cui il bene appartiene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a lithostratigraphic class, a lithostratigraphic unit to which the cp belongs.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Classe litostratigrafica</rdfs:label>
         <rdfs:label xml:lang="en">Lithostratigraphic class</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3850,7 +3862,7 @@ ICCD Normativa BNPE: IRL</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità litostratigrafica complesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the lithostratigraphic class &quot;complex&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Complesso litostratigrafico</rdfs:label>
         <rdfs:label xml:lang="en">Lithostratigraphic complex</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3868,7 +3880,7 @@ ICCD Normativa BNPE: IRL/IRLC</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità litostratigrafica formazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the lithostratigraphic class &quot;formation&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Formazione litostratigrafico</rdfs:label>
         <rdfs:label xml:lang="en">Lithostratigraphic formation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3886,7 +3898,7 @@ ICCD Normativa BNPE: IRL/IRLF</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità litostratigrafica gruppo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the lithostratigraphic class &quot;group&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Gruppo litostratigrafico</rdfs:label>
         <rdfs:label xml:lang="en">Lithostratigraphic group</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3904,7 +3916,7 @@ ICCD Normativa BNPE: IRL/IRLG</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità litostratigrafica membro.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the lithostratigraphic class &quot;member&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Lithostratigraphic member</rdfs:label>
         <rdfs:label xml:lang="it">Membro litostratigrafico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3922,7 +3934,7 @@ ICCD Normativa BNPE: IRL/IRLM</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/LithostratigraphicClass"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità litostratigrafica supergruppo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the lithostratigraphic class &quot;supergroup&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Lithostratigraphic supergroup</rdfs:label>
         <rdfs:label xml:lang="it">Supergruppo litostratigrafico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3946,7 +3958,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di localizzazione di un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of location of a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Location type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di localizzazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3962,7 +3974,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una mappa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a map.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Map</rdfs:label>
         <rdfs:label xml:lang="it">Mappa</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3977,7 +3989,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/ZoogeographicRegion"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una regione zoogeografica marina.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a marine biogeographic realm.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Marine biogeographic realm</rdfs:label>
         <rdfs:label xml:lang="it">Regione zoogeografica marina</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3993,7 +4005,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/MineralDeposit"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una miniera.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a mine.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Mine</rdfs:label>
         <rdfs:label xml:lang="it">Miniera</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4014,7 +4026,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un deposito minerario.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a mineral deposit.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Deposito minerario</rdfs:label>
         <rdfs:label xml:lang="en">Mineral deposit</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4029,7 +4041,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo di deposito minerario.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a type of mineral deposit.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Mineral deposit type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di deposito minerario</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4042,6 +4054,12 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/NaturalEnvironment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/construction-description/hasWaterSystem"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/construction-description/WaterSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
@@ -4080,13 +4098,25 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasSoil"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/Soil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasSubstrate"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/Substrate"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/isNaturalEnvironmentOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente naturale collegato a un oggetto</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the natural environment related to a thing</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Ambiente naturale</rdfs:label>
         <rdfs:label xml:lang="en">Natural environment</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4102,7 +4132,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo di ambiente naturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a type of natural environment.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Natural environment type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di ambiente naturale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4117,7 +4147,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/CadastralEntity"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le entità spaziali (particelle, strade, corsi d&apos;acqua, ecc.) confinanti con una o più particelle catastali.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents spatial entities (i.e. roads, waterways, etc.) that border one or more cadastral parcels.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Elemento di confine</rdfs:label>
         <rdfs:label xml:lang="en">Neighbouring cadastral entity</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4139,7 +4169,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni che descrivono il centro storico in cui si trova il bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the information describing the old town where the cultural property is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Centro storico</rdfs:label>
         <rdfs:label xml:lang="en">Old town</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4161,7 +4191,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni che precisano il carattere amministrativo del centro storico, che può essere: un capoluogo, una frazione, un centro inglobato o una località.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the information clarifying the administrative character of the old town, which may be: a chief town, a town fraction, an incorporated area or a locality.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Old town administrative type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di carattere amministrativo del centro storico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4189,7 +4219,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;affioramento in cui è stato rinvenuto il campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the outcrop where the specimen was found</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Affioramento</rdfs:label>
         <rdfs:label xml:lang="en">Outcrop</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4205,7 +4235,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di affioramento.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the outcrop type</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Outcrop type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di affioramento</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4221,7 +4251,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/Map"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una carta pedologica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a pedological map.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Mappa pedologica</rdfs:label>
         <rdfs:label xml:lang="en">Pedological map</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4237,7 +4267,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la situazione luminosa di un ambiente naturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the shade tolerance of a natural environment.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Shade tolerance</rdfs:label>
         <rdfs:label xml:lang="it">Situazione luminosa</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4259,7 +4289,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la definizione della tipologia di un contenitore fisico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type definition of a physical container.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Definizione di Contenitore Fisico</rdfs:label>
         <rdfs:label xml:lang="en">Site Definition</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4281,7 +4311,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta specifiche sulla qualificazione del contenitore fisico, cioè l&apos;aggettivo o la locuzione che, rispetto alla Site Definition, precisa, integra o caratterizza il contenitore fisico dal punto di vista della condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents specifications about the physical container, i.e. the adjective or the phrase that with respect to the Site Definition specifies, integrates or characterizes the physical container from the point of view of the legal-administrative or functional condition.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Qualificazione del Contenitore Fisico</rdfs:label>
         <rdfs:label xml:lang="en">Site Specification</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4315,7 +4345,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di contenitore fisico, cioè la tipologia del contenitore fisico ed eventuali aggettivi o locuzioni che precisano, integrano o caratterizzano il contenitore fisico dal punto di vista della condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of a physical container, i.e. it contains adjectives or phrases that specify, integrate or characterize the physical container from the point of view of the legal-administrative or functional condition.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Site type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di Contenitore Fisico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4343,7 +4373,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il suolo</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the soil</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Soil</rdfs:label>
         <rdfs:label xml:lang="it">Suolo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4374,7 +4404,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
     </owl:Class>
     
 
@@ -4397,7 +4427,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il substrato su cui è stato raccolto un campione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the substrate on which the sample is taken.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Substrate</rdfs:label>
         <rdfs:label xml:lang="it">Substrato</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4413,7 +4443,7 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di substrato.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represent the type of substrate.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Substrate type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di substrato</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4478,7 +4508,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         tiapit:atTime resource:TimeInterval/2002 .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una localizzazione di un bene culturale, inserita in un arco temporale e qualificata in base al ruolo che la localizzazione riveste nei confronti del bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a localization of a cultural property, within a timeframe and qualified according to the role that the localization plays in relation to the cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Localizzazione tipizzata nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">Time Indexed Typed Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4506,7 +4536,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta eventuali altre denominazioni del luogo, che cambiano nel tempo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents other place&apos;s designations changing over time.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Toponimo nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">Toponym in time</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4528,7 +4558,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di contesto in cui si trova un bene culturale, che può essere urbano, suburbano, extraurbano, territoriale, subacqueo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of geographical context where the cultural property is located: i.e. urban, suburban, extra-urban, territorial, underwater.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Tipo di contesto geografico</rdfs:label>
         <rdfs:label xml:lang="en">Type of geographic context</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4545,7 +4575,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <owl:disjointWith rdf:resource="https://w3id.org/italia/onto/CLV/District"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni relative alla denominazione della zona urbana che fa parte del centro storico dove si trova il bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the informations on the denomination of the urban area that is part of the old town where the cultural property is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Urban area</rdfs:label>
         <rdfs:label xml:lang="it">Zona urbana</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4561,7 +4591,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una regione zoogeografica (i.e. la regione dove è stato raccolto un bene.)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a zoogeographic region (i.e. where the cp was harvested.)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Regione zoogeografica</rdfs:label>
         <rdfs:label xml:lang="en">Zoogeographic region</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4729,7 +4759,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero la localizzazione di archivio.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of location, that is the archival location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Archival location</rdfs:label>
         <rdfs:label xml:lang="it">Localizzazione di archivio</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4743,7 +4773,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/BuildingAndLandCadastre">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/CadastreType"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Building and land cadastre</rdfs:label>
         <rdfs:label xml:lang="it">Catasto dei fabbricati e dei terreni</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4756,7 +4786,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/BuildingCadastre">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/CadastreType"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Building cadastre</rdfs:label>
         <rdfs:label xml:lang="it">Catasto dei fabbricati</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4771,7 +4801,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/OldTownAdmistrativeType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di riferimento amministrativo che caratterizza un centro storico, ovvero il capoluogo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of administrative reference that characterizes an old town, that is the chief town.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Capoluogo</rdfs:label>
         <rdfs:label xml:lang="en">Chief town</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4799,7 +4829,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero la localizzazione fisica attuale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the current physical location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Current Physical Location</rdfs:label>
         <rdfs:label xml:lang="it">Localizzazione fisica attuale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4814,7 +4844,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero il luogo di esposizione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the exhibition location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Exhibition Location</rdfs:label>
         <rdfs:label xml:lang="it">Luogo di esposizione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4829,7 +4859,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di contesto, ovvero il contesto extraurbano dove si trova il bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of context, that is the extra-urban context where the cultural property is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto extraurbano</rdfs:label>
         <rdfs:label xml:lang="en">Extra-urban context</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4845,7 +4875,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero il luogo di ritrovamento.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the finding location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Finding Location</rdfs:label>
         <rdfs:label xml:lang="it">Luogo di reperimento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4860,7 +4890,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero la localizzazione storica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the historical location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Historical Location</rdfs:label>
         <rdfs:label xml:lang="it">Localizzazione storica</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4875,7 +4905,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/OldTownAdmistrativeType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di riferimento amministrativo che caratterizza un centro storico, ovvero la denominazione di &apos;centro inglobato&apos;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of administrative reference that characterizes the old town, that is the denomination of &apos;incorporated area&apos;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Centro inglobato</rdfs:label>
         <rdfs:label xml:lang="en">Incorporated area</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4889,7 +4919,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/LandCadastre">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/CadastreType"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Catasto dei terreni</rdfs:label>
         <rdfs:label xml:lang="en">Land cadastre</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -4905,7 +4935,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero il luogo di provenienza o collocazione precedente.</rdfs:comment>
         <rdfs:comment xml:lang="en">Replaced by https://w3id.org/arco/ontology/location/PreviousLocation</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of location, that is the place of origin or last location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Luogo di provenienza / Collocazione precedente</rdfs:label>
         <rdfs:label xml:lang="en">Place of Origin / Last Location</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -4929,7 +4959,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/OldTownAdmistrativeType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di riferimento amministrativo che caratterizza il centro storico, ovvero la località.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of administrative reference that characterizes the old town, that is the locality.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Locality</rdfs:label>
         <rdfs:label xml:lang="it">Località</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4945,7 +4975,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero il luogo di rilevamento.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of location, that is the location of observation.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Luogo di rilevamento</rdfs:label>
         <rdfs:label xml:lang="en">Observation Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4966,7 +4996,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero il luogo di provenienza o collocazione precedente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of location, that is the place of origin or previous location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Luogo di provenienza / Collocazione precedente</rdfs:label>
         <rdfs:label xml:lang="en">Place of Origin / Previous Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4981,7 +5011,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta un tipo specifico di posizione, ovvero il luogo di produzione o realizzazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of location, that is the production or realization location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Luogo di produzione / realizzazione</rdfs:label>
         <rdfs:label xml:lang="en">Production or Realization Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5007,7 +5037,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta un tipo specifico di posizione, ovvero il luogo della registrazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the recording location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Luogo della registrazione</rdfs:label>
         <rdfs:label xml:lang="en">Recording Location</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -5022,7 +5052,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta un tipo specifico di posizione, ovvero il luogo della ripresa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the shooting location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Luogo della ripresa</rdfs:label>
         <rdfs:label xml:lang="en">Shooting Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5037,7 +5067,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta un tipo specifico di localizzazione, ovvero il luogo di deposito.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the storage location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Luogo di deposito</rdfs:label>
         <rdfs:label xml:lang="en">Storage Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5058,7 +5088,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta un tipo specifico di localizzazione, ovvero l&apos;area rappresentata.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the subject location.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Area rappresentata</rdfs:label>
         <rdfs:label xml:lang="en">Subject Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5073,7 +5103,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di contesto geografico, ovvero un contesto suburbano che si trova nella zona intermedia tra il contesto urbano e quello extraurbano.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of geographical context, that is a suburban context, which is located in the intermediate area between the urban and extraurban context.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto suburbano</rdfs:label>
         <rdfs:label xml:lang="en">Suburban context</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5089,7 +5119,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di contesto, ovvero il contesto territoriale in cui si trova il bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of context, i.e. the territorial context where the cultural property is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto territoriale</rdfs:label>
         <rdfs:label xml:lang="en">Territorial context</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5105,7 +5135,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/OldTownAdmistrativeType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di riferimento amministrativo che caratterizza centro storico, ovvero la frazione cittadina.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of administrative reference that characterizes the old town, i.e. the town fraction.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Frazione del centro urbano</rdfs:label>
         <rdfs:label xml:lang="en">Town fraction</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5121,7 +5151,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta un particolare tipo di contesto, ovvero il contesto subacqueo nel quale si trova il bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of context, that is the underwater context where the cultural property is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto subacqueo</rdfs:label>
         <rdfs:label xml:lang="en">Underwater context</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5137,7 +5167,7 @@ WHERE {
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di contesto, ovvero il contesto urbano nel quale si trova il bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of context, that is the urban context where the cultural asset is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto urbano</rdfs:label>
         <rdfs:label xml:lang="en">Urban context</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>

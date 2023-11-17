@@ -2032,7 +2032,7 @@ WHERE {
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta in identificativo.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un identificativo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents identifier.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">Identificativo</rdfs:label>
