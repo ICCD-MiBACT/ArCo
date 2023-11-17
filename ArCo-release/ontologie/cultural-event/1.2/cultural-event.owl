@@ -159,6 +159,12 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasSurvey -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSurvey"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isAgentRelatedTo -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
@@ -456,6 +462,28 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasTraditionBearer -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasTraditionBearer">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isTraditionBearerOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/IntangibleCulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/TraditionBearer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasTransmissionMode -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasTransmissionMode">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isTransmissionModeOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/IntangibleCulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/TransmissionMode"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/cultural-event/hasUnifyingFactor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasUnifyingFactor">
@@ -635,6 +663,26 @@ WHERE {
         <rdfs:label xml:lang="it">è unità di misura di periodo di tempo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/isTraditionBearerOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isTraditionBearerOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentRoleOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/TraditionBearer"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/IntangibleCulturalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/isTransmissionModeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isTransmissionModeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/TransmissionMode"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/IntangibleCulturalEntity"/>
     </owl:ObjectProperty>
     
 
@@ -990,6 +1038,12 @@ cultualheritageobject:Il_Pescatorello
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/ObservationSurvey -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ObservationSurvey"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/AgentRole -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/AgentRole"/>
@@ -1083,6 +1137,42 @@ cultualheritageobject:Il_Pescatorello
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale e altre normative di versione 4.00: se MS/MST/MSTI= &quot;mostra&quot;</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/FormalTransmissionMode -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/FormalTransmissionMode">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/TransmissionMode"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/InformalTransmissionMode -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/InformalTransmissionMode">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/TransmissionMode"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/IntangibleCulturalEntity -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/IntangibleCulturalEntity">
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurvey"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurvey"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDescription"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1215,6 +1305,36 @@ cultualheritageobject:Il_Pescatorello
         <rdfs:label xml:lang="it">Unità di misura del periodo di tempo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/TraditionBearer -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/TraditionBearer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/TransmissionMode -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/TransmissionMode">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/cultural-event/TransmissionModeType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/TransmissionModeType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/TransmissionModeType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
     </owl:Class>
     
 
