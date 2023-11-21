@@ -1500,7 +1500,7 @@
 				<xsl:for-each select="record/metadata/schede/*/AU/AAF">
 					<arco-cd:hasResponsibility>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'AlternativeOrOutdatedResponsibility/', $itemURI, '-', position())" />
+							<xsl:value-of select="concat($NS, 'AlternativeResponsibility/', $itemURI, '-', position())" />
 						</xsl:attribute>
 					</arco-cd:hasResponsibility>
 				</xsl:for-each>
