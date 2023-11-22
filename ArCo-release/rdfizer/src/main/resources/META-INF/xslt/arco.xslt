@@ -23785,7 +23785,7 @@
 						<xsl:if test="./AUTK">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS, 'AuthorIdentifier/', arco-fn:arcofy(./AUTK))" />
+									<xsl:value-of select="concat($NS, 'AuthorIdentifier/', $itemURI, arco-fn:arcofy(./AUTK))" />
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -23819,7 +23819,7 @@
 						<xsl:if test="./NCUN">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS, 'AuthorIdentifier/', arco-fn:arcofy(./NCUN))" />
+									<xsl:value-of select="concat($NS, 'AuthorIdentifier/', $itemURI, arco-fn:arcofy(./NCUN))" />
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -23853,7 +23853,7 @@
 						<xsl:if test="./NUCN">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'AuthorIdentifier/', arco-fn:arcofy(./NUCN))" />
+								<xsl:value-of select="concat($NS, 'AuthorIdentifier/', $itemURI, arco-fn:arcofy(./NUCN))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
