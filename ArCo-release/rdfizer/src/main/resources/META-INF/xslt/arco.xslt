@@ -935,6 +935,11 @@
                             <xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
                         </xsl:attribute>
 					</arco-catalogue:isCatalogueRecordVersionOf>
+					<arco-catalogue:isRecordVersionOf>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
+                        </xsl:attribute>
+					</arco-catalogue:isRecordVersionOf>
 					<!-- Catalogue record version Role in Time -->
 					<xsl:for-each select="record/metadata/schede/*/CM/CMP/CMPN">
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
