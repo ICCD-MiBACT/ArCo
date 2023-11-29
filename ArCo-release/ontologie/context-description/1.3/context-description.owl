@@ -8329,22 +8329,6 @@ WHERE {
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/alternativeOrOutdatedResponsibility -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/alternativeOrOutdatedResponsibility">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment xml:lang="it">Questa properietà indica se la responsabilità di un agente rispetto a un&apos;entotà culturale è alternativa o sorpassata/obsoleta.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property indicates whether an agent&apos;s responsibility for a cultural entity is alternative or outdated.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="en">alternative or outdated responsibility</rdfs:label>
-        <rdfs:label xml:lang="it">responsabilità alternativa o sorpassata</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/alternativeTitle -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/alternativeTitle">
@@ -9560,23 +9544,6 @@ WHERE
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/mainResponsibility -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/mainResponsibility">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment xml:lang="it">Questa proprietà indica la responsabilità principale, la più accreditata o convincente, di un agente su un bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property indicates the main, most credited or convincing, responsibility of an agent for a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="en">main responsibility</rdfs:label>
-        <rdfs:label xml:lang="it">responsabilità principale</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale: AU/AUT</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/methodOfInsertion -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/methodOfInsertion">
@@ -9835,7 +9802,6 @@ WHERE {
 WHERE {
 ?sit a-cd:mainResponsibility ?bool .
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/mainResponsibility"/>
     </owl:DatatypeProperty>
     
 
@@ -14507,18 +14473,6 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/mainResponsibility"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/alternativeOrOutdatedResponsibility"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/informationSource"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
@@ -14540,23 +14494,14 @@ ICCD Normative F e FF: PD/PDF</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ResponsibilityType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di responsabilità individuata relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici (es.: stampatori, ritoccatori, coloritori, ecc.).</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of responsibility related to the production and dissemination of photographic heritage (e.g.: printer, editor)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di responsabilità di un agente (es: autore, editore, ecc) nei confronti di un lavoro (es: un&apos;opera d&apos;arte, un libro, ecc ).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of responsibility of an agent related to its contribution to a work (e.g.: author, printer, editor...)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Responsibility type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di responsabilità</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative F e FF: PD/PDF/PDFR</a-cat:iccdNormTag>
-        <core:constructQuery>CONSTRUCT {
-?respo a-cd:hasInterventionRole ?x .
-}
-
-WHERE {
-?respo a-cd:hasResponsibilityType ?x .
-}</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: AU/AUT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -15971,6 +15916,19 @@ a-cd:hasEdition ?ed .
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/AlternativeOrObsoleteResponsibility -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AlternativeOrObsoleteResponsibility">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/ResponsibilityType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la responsabilità alternativa o superata di un agente su un&apos;opera.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the alternative or outdated responsibility of an agent on a work.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Alternative or outdated responsibility</rdfs:label>
+        <rdfs:label xml:lang="it">Responsabilità alternativa o sorpassata</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/AlternativeTitle -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AlternativeTitle">
@@ -16133,6 +16091,19 @@ WHERE {
 a-cd:hasEdition ?ed .
 ?bibCat a a-cd:ComparativeBibliography .
 }</core:constructQuery>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/CoordinatedResponsibility -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/CoordinatedResponsibility">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/ResponsibilityType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/onology/context-description"/>
+        <rdfs:isDefinedBy xml:lang="it">Questo individuo rappresenta la responsabilità coordinata che condividono più agenti su una stessa opera. Nello standard UNIMARC viene denominata &quot;alternative responsibility&quot;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">This individual represents a coordinated responsibility of multiple agents that they share on the same work. In the UNIMARC standard it is called &quot;alternative responsibility&quot;.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Coordinated responsibility</rdfs:label>
+        <rdfs:label xml:lang="it">Responsabilità coordinata</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -16644,6 +16615,19 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/PrimaryResponsibility -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/PrimaryResponsibility">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/ResponsibilityType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la responsabilità principale di un agente su un&apos;opera.</rdfs:comment>
+        <rdfs:comment xml:lang="it">This individual represents the primary responsibility of an agent on a work.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Primary responsibility</rdfs:label>
+        <rdfs:label xml:lang="it">Responsabilità principale</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/ProperTitle -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ProperTitle">
@@ -16701,6 +16685,19 @@ WHERE {
         <rdfs:comment xml:lang="en">This individual represents an aerial photograph</rdfs:comment>
         <rdfs:label xml:lang="it">Fotografia satellitare</rdfs:label>
         <rdfs:label xml:lang="en">Satellite photograph</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/SecondaryResponsibility -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/SecondaryResponsibility">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/ResponsibilityType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la responsabilità secondaria di un agente verso un&apos;opera.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the secondary responsibility of an agent on a work.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Responsabilità secondaria</rdfs:label>
+        <rdfs:label xml:lang="en">Secondary responsibility</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -16885,14 +16882,14 @@ a-cd:hasEdition ?ed .
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <core:constructQuery>CONSTRUCT {
 ?use a a-cd:Use .
 }
