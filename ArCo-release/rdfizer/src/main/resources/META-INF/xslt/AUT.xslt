@@ -215,6 +215,11 @@
 							<xsl:value-of select="concat($NS, 'CatalogueRecordVersion/', $idAuthor, '-compilation')" />
 						</xsl:attribute>
 					</arco-catalogue:hasCatalogueRecordVersion>
+					<arco-catalogue:hasRecordVersion>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'CatalogueRecordVersion/', $idAuthor, '-compilation')" />
+                        </xsl:attribute>
+					</arco-catalogue:hasRecordVersion>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/AN/OSS">
 					<arco-core:note>
@@ -250,11 +255,6 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</rdfs:label>
-					<arco-catalogue:isCatalogueRecordVersionOf>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $idAuthor)" />
-						</xsl:attribute>
-					</arco-catalogue:isCatalogueRecordVersionOf>
 					<xsl:for-each select="record/metadata/schede/*/CM/CMP/CMPN">
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 							<arco-catalogue:hasCatalogueRecordVersionRiT>
@@ -262,11 +262,16 @@
 									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-compilation-', arco-fn:arcofy(.))" />
 								</xsl:attribute>
 							</arco-catalogue:hasCatalogueRecordVersionRiT>
-							<arco-catalogue:hasResponsibleResearchAndCompilation>
+							<arco-core:hasAgentRole>
+								<xsl:attribute name="rdf:resource">
+	                                <xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-compilation-', arco-fn:arcofy(.))" />
+	                            </xsl:attribute>
+							</arco-core:hasAgentRole>
+							<arco-lite:hasResponsibleResearchAndCompilation>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 								</xsl:attribute>
-							</arco-catalogue:hasResponsibleResearchAndCompilation>
+							</arco-lite:hasResponsibleResearchAndCompilation>
 						</xsl:if>
 					</xsl:for-each>
 					<xsl:if test="record/metadata/schede/*/CM/CMP/CMPD and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CM/CMP/CMPD)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CM/CMP/CMPD)), 'n.r')))">
@@ -284,11 +289,16 @@
 									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
 								</xsl:attribute>
 							</arco-catalogue:hasCatalogueRecordVersionRiT>
-							<arco-catalogue:hasScientificDirector>
+							<arco-core:hasAgentRole>
+								<xsl:attribute name="rdf:resource">
+	                                <xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
+	                            </xsl:attribute>
+							</arco-core:hasAgentRole>
+							<arco-lite:hasScientificDirector>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 								</xsl:attribute>
-							</arco-catalogue:hasScientificDirector>
+							</arco-lite:hasScientificDirector>
 						</xsl:if>
 					</xsl:for-each>
 						<!-- Funzionario responsabile -->
@@ -299,11 +309,16 @@
 									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
 								</xsl:attribute>
 							</arco-catalogue:hasCatalogueRecordVersionRiT>
-							<arco-catalogue:hasOfficialInCharge>
+							<arco-core:hasAgentRole>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
+								</xsl:attribute>
+							</arco-core:hasAgentRole>
+							<arco-lite:hasOfficialInCharge>
 								<xsl:attribute name="rdf:resource">	
 									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 								</xsl:attribute>
-							</arco-catalogue:hasOfficialInCharge>
+							</arco-lite:hasOfficialInCharge>
 						</xsl:if>
 					</xsl:for-each>
 				</rdf:Description>
@@ -320,6 +335,12 @@
 								<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
 							</xsl:attribute>
 						</rdf:type>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:sameAs>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-compilation-', arco-fn:arcofy(.))" />
+							</xsl:attribute>
+						</owl:sameAs>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="concat('Compilation by ', normalize-space(.))" />
 						</rdfs:label>
@@ -336,6 +357,32 @@
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 							</xsl:attribute>
 						</roapit:isRoleInTimeOf>
+					</rdf:Description>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-compilation-', arco-fn:arcofy(.))" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								 <xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+							</xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Compilation by ', normalize-space(.))" />
+						</rdfs:label>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat('Compilazione da ', normalize-space(.))" />
+						</rdfs:label>
+						<arco-core:hasRole>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Role/ResponsibleCompilation')" />
+							</xsl:attribute>
+						</arco-core:hasRole>
+						<arco-core:hasAgent>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+							</xsl:attribute>
+						</arco-core:hasAgent>
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
@@ -411,6 +458,12 @@
 		                          <xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
 							</xsl:attribute>
 						</rdf:type>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:sameAs>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
+							</xsl:attribute>
+						</owl:sameAs>
 						<rdfs:label xml:lang="it">
 							<xsl:value-of select="concat(./@hint, ': ', normalize-space(.))" />
 						</rdfs:label>
@@ -427,6 +480,32 @@
 	                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 	                        </xsl:attribute>
 						</roapit:isRoleInTimeOf>
+					</rdf:Description>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+		                       <xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
+		                </xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+		                          <xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+							</xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat(./@hint, ': ', normalize-space(.))" />
+						</rdfs:label>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Scientific director', ': ', normalize-space(.))" />
+						</rdfs:label>
+						<arco-core:hasRole>
+							<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of select="concat($NS, 'Role/ScientificDirector')" />
+	                        </xsl:attribute>
+						</arco-core:hasRole>
+						<arco-core:hasAgent>
+							<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	                        </xsl:attribute>
+						</arco-core:hasAgent>
 					</rdf:Description>
 					<!-- Agent: Referente verifica scientifica -->
 					<rdf:Description>
@@ -473,6 +552,12 @@
 								<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
 		                    </xsl:attribute>
 						</rdf:type>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:sameAs>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
+							</xsl:attribute>
+						</owl:sameAs>
 						<rdfs:label xml:lang="it">
 							<xsl:value-of select="concat(./@hint, ': ', normalize-space(.))" />
 						</rdfs:label>
@@ -489,6 +574,32 @@
 	                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 		                     </xsl:attribute>
 						</roapit:isRoleInTimeOf>
+					</rdf:Description>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+		                       <xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
+		                </xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+		                    </xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat(./@hint, ': ', normalize-space(.))" />
+						</rdfs:label>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Official in charge', ': ', normalize-space(.))" />
+						</rdfs:label>
+						<arco-core:hasRole>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Role/OfficialInCharge')" />
+		                    </xsl:attribute>
+						</arco-core:hasRole>
+						<arco-core:hasAgent>
+							<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+		                     </xsl:attribute>
+						</arco-core:hasAgent>
 					</rdf:Description>
 						<!-- Agent: Funzionario responsabile -->
 					<rdf:Description>
@@ -616,6 +727,21 @@
 						<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $idAuthor)" />
 	                </xsl:attribute>
 				</arco-catalogue:isDescribedByCatalogueRecord>
+				<arco-core:isDescribedBy>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $idAuthor)" />
+	                </xsl:attribute>
+				</arco-core:isDescribedBy>
+				<dc:source>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $idAuthor)" />
+					</xsl:attribute>
+				</dc:source>
+				<dcterms:isReferencedBy>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $idAuthor)" />
+					</xsl:attribute>
+				</dcterms:isReferencedBy>
 				<rdfs:label>
 					<xsl:value-of select="$nameAuthor" />
 				</rdfs:label>

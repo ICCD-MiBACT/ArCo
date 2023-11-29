@@ -935,6 +935,11 @@
                             <xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
                         </xsl:attribute>
 					</arco-catalogue:isCatalogueRecordVersionOf>
+					<arco-catalogue:isRecordVersionOf>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
+                        </xsl:attribute>
+					</arco-catalogue:isRecordVersionOf>
 					<!-- Catalogue record version Role in Time -->
 					<xsl:for-each select="record/metadata/schede/*/CM/CMP/CMPN">
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
@@ -4170,9 +4175,6 @@
 									</xsl:when>
 									<xsl:when test="lower-case(normalize-space(./CRFP))='e'">
 										<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
-									</xsl:when>
-									<xsl:when test="./CRFN">
-										<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
 									</xsl:when>
 									<xsl:when test="./CRFB">
 										<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
@@ -16160,9 +16162,11 @@
 							<l0:name xml:lang="en">
 								<xsl:value-of select="concat('Author of affixed element on cultural property: ', $itemURI)" />
 							</l0:name>
-							<arco-cd:mainResponsibility>
-								<xsl:value-of select="true()" />
-							</arco-cd:mainResponsibility>
+							<arco-core:hasType>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/PrimaryResponsibility'" />    
+								</xsl:attribute>
+							</arco-core:hasType>
 							<arco-cd:hasAgentWithResponsibility>
 								<xsl:attribute name="rdf:resource">
                             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./ISEA))" />    
@@ -16519,9 +16523,11 @@
 							<l0:name xml:lang="en">
 								<xsl:value-of select="concat('Author of affixed element on cultural property: ', $itemURI)" />
 							</l0:name>
-							<arco-cd:mainResponsibility>
-								<xsl:value-of select="true()" />
-							</arco-cd:mainResponsibility>
+							<arco-core:hasType>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/PrimaryResponsibility'" />    
+								</xsl:attribute>
+							</arco-core:hasType>
 							<arco-cd:hasAgentWithResponsibility>
 								<xsl:attribute name="rdf:resource">
                             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./ISRA))" />    
@@ -23528,9 +23534,11 @@
 							<l0:name xml:lang="en">
 								<xsl:value-of select="concat('Preferred responsibility on cultural property: ', $itemURI)" />
 							</l0:name>
-							<arco-cd:mainResponsibility>
-								<xsl:value-of select="true()" />
-							</arco-cd:mainResponsibility>
+							<arco-core:hasType>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/PrimaryResponsibility'" />    
+								</xsl:attribute>
+							</arco-core:hasType>
 							<arco-cd:hasAgentWithResponsibility>
 								<xsl:attribute name="rdf:resource">
                             		<xsl:variable name="author">
@@ -23633,16 +23641,6 @@
 										</xsl:when>
 										<xsl:when test="lower-case(normalize-space(./AUTP))='e'">
 											<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
-										</xsl:when>
-										<xsl:when test="./AUTN">
-											<xsl:choose>
-												<xsl:when test="$sheetType='EVE'">
-													<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
-												</xsl:otherwise>
-											</xsl:choose>
 										</xsl:when>
 										<xsl:when test="./AUTB">
 											<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
@@ -23792,7 +23790,7 @@
 						<xsl:if test="./AUTK">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS, 'AuthorIdentifier/', arco-fn:arcofy(./AUTK))" />
+									<xsl:value-of select="concat($NS, 'AuthorIdentifier/', $itemURI, arco-fn:arcofy(./AUTK))" />
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -23826,7 +23824,7 @@
 						<xsl:if test="./NCUN">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS, 'AuthorIdentifier/', arco-fn:arcofy(./NCUN))" />
+									<xsl:value-of select="concat($NS, 'AuthorIdentifier/', $itemURI, arco-fn:arcofy(./NCUN))" />
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -23860,7 +23858,7 @@
 						<xsl:if test="./NUCN">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'AuthorIdentifier/', arco-fn:arcofy(./NUCN))" />
+								<xsl:value-of select="concat($NS, 'AuthorIdentifier/', $itemURI, arco-fn:arcofy(./NUCN))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -24026,9 +24024,11 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Preferred responsibility on cultural property: ', $itemURI)" />
 						</l0:name>
-						<arco-cd:mainResponsibility>
-							<xsl:value-of select="true()" />
-						</arco-cd:mainResponsibility>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+                            	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/PrimaryResponsibility'" />    
+							</xsl:attribute>
+						</arco-core:hasType>
 						<xsl:if test="./AAUN and (not(starts-with(lower-case(normalize-space(./AAUN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AAUN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AAUN)), '-')))">
 							<arco-cd:hasAgentWithResponsibility>
 								<xsl:attribute name="rdf:resource">
@@ -24530,11 +24530,6 @@
                             	</xsl:attribute>
 							</arco-core:informationSource>
 						</xsl:for-each>
-						<xsl:if test="contains((./AFBD), '?')">
-							<arco-cd:uncertainData>
-								<xsl:value-of select="true()" />
-							</arco-cd:uncertainData>
-						</xsl:if>
 					</rdf:Description>
 					<!-- We add the cultural scope as an individual. -->
 					<xsl:if test="./AFBD and not(lower-case(normalize-space(./AFBD))='nr' or lower-case(normalize-space(./AFBD))='n.r.' or lower-case(normalize-space(./AFBD))='nr (recupero pregresso)')">
@@ -24618,6 +24613,11 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Alternative responsibility on cultural property: ', $itemURI)" />
 						</l0:name>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+                            	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeOrOutdatedResponsibility'" />    
+							</xsl:attribute>
+						</arco-core:hasType>
 						<arco-cd:hasAgentWithResponsibility>
 							<xsl:attribute name="rdf:resource">
         	                	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
@@ -24673,9 +24673,11 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Preferred responsibility on cultural property: ', $itemURI)" />
 						</l0:name>
-						<arco-cd:mainResponsibility>
-							<xsl:value-of select="true()" />
-						</arco-cd:mainResponsibility>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+                           		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/PrimaryResponsibility'" />    
+							</xsl:attribute>
+						</arco-core:hasType>
 						<arco-cd:hasAgentWithResponsibility>
 							<xsl:attribute name="rdf:resource">
                            		<xsl:variable name="author">
@@ -24803,7 +24805,7 @@
         				</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeResponsibility'" />
+            					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Responsibility'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
@@ -24818,6 +24820,11 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Alternative responsibility on cultural property: ', $itemURI)" />
 						</l0:name>
+						<arco-core:hasType>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeOrOutdatedResponsibility'" />    
+								</xsl:attribute>
+							</arco-core:hasType>
 						<arco-cd:hasAgentWithResponsibility>
 							<xsl:attribute name="rdf:resource">
         	                	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
@@ -24868,6 +24875,11 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Alternative responsibility on cultural property: ', $itemURI)" />
 						</l0:name>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+                           		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeOrOutdatedResponsibility'" />    
+							</xsl:attribute>
+						</arco-core:hasType>
 						<arco-cd:hasAgentWithResponsibility>
 							<xsl:attribute name="rdf:resource">
         	                	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AATN))" />
@@ -24980,6 +24992,11 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Alternative responsibility on cultural property: ', $itemURI)" />
 						</l0:name>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+                            	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeOrOutdatedResponsibility'" />    
+							</xsl:attribute>
+						</arco-core:hasType>
 						<arco-cd:hasAgentWithResponsibility>
 							<xsl:attribute name="rdf:resource">
         	                	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy($author))" />
