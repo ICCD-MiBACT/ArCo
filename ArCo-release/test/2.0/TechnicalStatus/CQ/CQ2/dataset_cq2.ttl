@@ -5,4 +5,4 @@
 @prefix core: <https://w3id.org/arco/ontology/core/> .
 
 ex:cp1 a-dd:hasTechnicalStatus ex:TechnicalStatus1 .
-ex:TechnicalStatus1 core:current "true".
+ex:TechnicalStatus1 core:current "true" . 
