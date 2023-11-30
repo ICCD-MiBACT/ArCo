@@ -1,23 +1,24 @@
 **CQ1**
 
-Quali sono gli accessori associati al bene x?
+Quando è stato classificato il bene x?
 
-What are accessories associated to the cultural property x?
+When cultural property x was classified by agent Y?
 
-SELECT DISTINCT ?accessory WHERE{
-?x a-dd:hasAccessory ?accessory.
+select ?time where {
+?x core:hasClassificationInTime ?class .
+?class <https://w3id.org/italia/onto/TI/hasTemporalEntity> ?time ;
+core:involvesAgent ?agent . 
 }
-limit 100
+
 
 **CQ2**
 
-Di che tipo sono gli accessori collegati ai beni musicali?
+Secondo quale sistema di classificazione è stato classificato il bene x?
 
-What type of accessories are related to musical instruments?
+According to which classification system was cultural property x classified?
 
-SELECT DISTINCT ?type WHERE{
-?entity a arco:MusicalHeritage;
-a-dd:hasAccessory ?accessory.
-?accessory arco-core:hasType ?type.
+select ?time ?syst where {
+?x core:hasClassificationInTime ?class .
+?class core:hasConcept ?concept .
+?concept core:isDefinedByClassificationSystem ?syst .
 }
-limit 100
