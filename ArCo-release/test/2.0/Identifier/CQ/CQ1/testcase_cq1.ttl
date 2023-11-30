@@ -7,7 +7,7 @@
 
 test:testcase_cq1.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Which identifier type is connected to cultural property x?" ;
-	owlunit:hasSPARQLUnitTest "prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Identifier/CQ/CQ1/dataset_cq1.ttl/> prefix core: <https://w3id.org/arco/ontology/core/> SELECT DISTINCT ?type { ex:cp1 core:hasIdentifier ?id . ?id core:hasType ?type }" ;
+	owlunit:hasSPARQLUnitTest "prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Identifier/CQ/CQ1/dataset_cq1.ttl/> prefix core: <https://w3id.org/arco/ontology/core/> SELECT DISTINCT ?type { ?cp core:hasIdentifier ?id . ?id core:hasType ?type }" ;
 	owlunit:hasInputData <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Identifier/CQ/CQ1/dataset_cq1.ttl> ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
