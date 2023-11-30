@@ -1,0 +1,20 @@
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Identifier/CQ/CQ1/dataset_cq1.ttl/> .
+@prefix test: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Identifier/CQ/CQ1/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+
+test:testcase_cq1.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "Which identifier type is connected to cultural property x?" ;
+	owlunit:hasSPARQLUnitTest "prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Identifier/CQ/CQ1/dataset_cq1.ttl/> prefix core: <https://w3id.org/arco/ontology/core/> SELECT DISTINCT ?type { ex:cp1 core:hasIdentifier ?id . ?id core:hasType ?type }" ;
+	owlunit:hasInputData <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/CQ/CQ1/dataset_cq1.ttl> ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "type" ;
+					  rs:size            "1"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     core:NationalIdentifier ;
+									     rs:variable  "type"
+									   ]
+                                 ]
+					] ;
+	owlunit:testsOntology <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Identifier/Identifier.ttl> .
