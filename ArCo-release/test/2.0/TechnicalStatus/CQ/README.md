@@ -1,41 +1,54 @@
 **CQ1**
 
-Di quale materiale è fatto il bene x?
+Chi è l’autore dell’opera x?
 
-What material is cultural property x made of?
+Who is the author of cultural property x?
 
-SELECT DISTINCT ?entity ?material WHERE{
-?entity a-dd:hasTechnicalStatus ?Status.
-?Status a-dd:includesTechnicalCharacteristic ?material.
-?material a-dd:isCharacteristicClassifiedBy a-dd:Material
+select distinct ?cp ?aut  where {
+?cp a-lite:hasAuthor ?aut
 }
-limit 100
-
+LIMIT 100
 or
-
-select distinct ?entity ?material Where {
-?entity a-lite:hasMaterial ?material .
+select distinct ?cp ?aut  where {
+?cp a-cd:hasResponsibility ?resp.
+?resp a-cd:hasInterventionRole ?role ;
+a-cd:hasAgentWithResponsibility ?aut .
+FILTER regex(?role, “autore”, “i”)
 }
+
+LIMIT 100
+
 
 
 **CQ2**
 
-Quale è lo stato tecnico attuale del bene culturale x?
+Quali sono le opere di Y?
 
-What is the current technical state of cultural property x?
+What are Y's works?
 
-SELECT DISTINCT * WHERE{
-?entity a-dd:hasTechnicalStatus ?Status.
-?Status a-dd:current "true"
+select distinct ?cp ?aut  where {
+?cp a-lite:hasAuthor ?aut
 }
-limit 100
+LIMIT 100
+
+or
+
+select distinct ?cp ?aut  where {
+?cp a-cd:hasResponsibility ?resp.
+?resp a-cd:hasInterventionRole ?role ;
+a-cd:hasAgentWithResponsibility ?aut .
+FILTER regex(?role, “autore”, “i”)
+}
+
+LIMIT 100
+
 
 
 **CQ3**
 
-In quale periodo di tempo è stato valido lo stato tecnico del bene x?
+Quale è la responsabilità alternativa dell’opera x? In base a quale fonte? 
 
-In what period of time was the technical state of good x valid?
+What is the alternative responsibility of the cultural property x? According to what source?
 
 SELECT DISTINCT * WHERE{
 ?entity a-dd:hasTechnicalStatus ?Status.

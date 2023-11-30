@@ -136,8 +136,45 @@ ICCD Normative F e FF: PD/PDF/PDFR""" .
                                                                          <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa F: PD/PDF" .
 
 
+###  https://w3id.org/arco/ontology/core/hasConcept
+<https://w3id.org/arco/ontology/core/hasConcept> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasConcept> ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range <https://w3id.org/arco/ontology/core/Type> ;
+                                              rdfs:comment "La object property che associa un qualunque oggetto a un tipo."@it ,
+                                                           "The object property that associates any object with a type."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "ha tipo"@it ,
+                                                         "has type"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
 ###  https://w3id.org/arco/ontology/core/involves
 <https://w3id.org/arco/ontology/core/involves> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isConceptOf
+<https://w3id.org/arco/ontology/core/isConceptOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isTypeOf
+<https://w3id.org/arco/ontology/core/isTypeOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isConceptOf> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/Type> ;
+                                               rdfs:range owl:Thing ;
+                                               rdfs:comment "La object property che associa un tipo a un qualunque oggetto."@it ,
+                                                            "The object property that associates a type to any object."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "is type of"@en ,
+                                                          "è tipo di"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
 
 
 ###  https://w3id.org/italia/onto/TI/atTime
@@ -155,18 +192,6 @@ ICCD Normative F e FF: PD/PDF/PDFR""" .
 #################################################################
 #    Data properties
 #################################################################
-
-###  https://w3id.org/arco/ontology/context-description/alternativeOrOutdatedResponsibility
-<https://w3id.org/arco/ontology/context-description/alternativeOrOutdatedResponsibility> rdf:type owl:DatatypeProperty ;
-                                                                                         rdfs:domain <https://w3id.org/arco/ontology/context-description/Responsibility> ;
-                                                                                         rdfs:range xsd:boolean .
-
-
-###  https://w3id.org/arco/ontology/context-description/mainResponsibility
-<https://w3id.org/arco/ontology/context-description/mainResponsibility> rdf:type owl:DatatypeProperty ;
-                                                                        rdfs:domain <https://w3id.org/arco/ontology/context-description/Responsibility> ;
-                                                                        rdfs:range xsd:boolean .
-
 
 ###  https://w3id.org/arco/ontology/core/informationSource
 <https://w3id.org/arco/ontology/core/informationSource> rdf:type owl:DatatypeProperty ;
@@ -201,8 +226,40 @@ ICCD Normative F e FF: PD/PDF/PDFR""" .
                                   owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
 
 
+###  https://w3id.org/arco/ontology/context-description/AcquisitionType
+<https://w3id.org/arco/ontology/context-description/AcquisitionType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/AlternativeDatingType
+<https://w3id.org/arco/ontology/context-description/AlternativeDatingType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/AnomalyType
+<https://w3id.org/arco/ontology/context-description/AnomalyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType
+<https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType
+<https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType> rdf:type owl:Class .
+
+
 ###  https://w3id.org/arco/ontology/context-description/AuthorshipAttribution
 <https://w3id.org/arco/ontology/context-description/AuthorshipAttribution> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/BibliographyType
+<https://w3id.org/arco/ontology/context-description/BibliographyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType
+<https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/CircumstanceType
+<https://w3id.org/arco/ontology/context-description/CircumstanceType> rdf:type owl:Class .
 
 
 ###  https://w3id.org/arco/ontology/context-description/Commission
@@ -230,12 +287,36 @@ ICCD Normative F e FF: PD/PDF/PDFR""" .
 <https://w3id.org/arco/ontology/context-description/Dating> rdf:type owl:Class .
 
 
+###  https://w3id.org/arco/ontology/context-description/DerivatedWorkType
+<https://w3id.org/arco/ontology/context-description/DerivatedWorkType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/DocumentationType
+<https://w3id.org/arco/ontology/context-description/DocumentationType> rdf:type owl:Class .
+
+
 ###  https://w3id.org/arco/ontology/context-description/Estimate
 <https://w3id.org/arco/ontology/context-description/Estimate> rdf:type owl:Class .
 
 
+###  https://w3id.org/arco/ontology/context-description/ExportImportCertificationType
+<https://w3id.org/arco/ontology/context-description/ExportImportCertificationType> rdf:type owl:Class .
+
+
 ###  https://w3id.org/arco/ontology/context-description/Fruition
 <https://w3id.org/arco/ontology/context-description/Fruition> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/InterventionType
+<https://w3id.org/arco/ontology/context-description/InterventionType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/LaboratoryTestType
+<https://w3id.org/arco/ontology/context-description/LaboratoryTestType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ObservationSurveyType
+<https://w3id.org/arco/ontology/context-description/ObservationSurveyType> rdf:type owl:Class .
 
 
 ###  https://w3id.org/arco/ontology/context-description/Responsibility
@@ -256,10 +337,6 @@ ICCD Normative F e FF: PD/PDF/PDFR""" .
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty <https://w3id.org/arco/ontology/context-description/hasCulturalScope> ;
                                                                                       owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/CulturalScope>
-                                                                                    ] ,
-                                                                                    [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <https://w3id.org/arco/ontology/context-description/mainResponsibility> ;
-                                                                                      owl:someValuesFrom xsd:boolean
                                                                                     ] ;
                                                                     rdfs:comment "Questa classe rappresenta l'individuazione di una responsabilità attribuibile a un agente relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici, quindi alle diverse personalità responsabili, a vario titolo, del ciclo produttivo del bene in esame, oltre che della sua circolazione, divulgazione, commercializzazione e promozione (committenti, stampatori, ritoccatori, coloritori, editori, distributori, sponsor, curatori e responsabili di edizioni e di serie, dedicanti e dedicatari, responsabili di collezioni e di collazioni, ecc.)."@it ,
                                                                                  "This class represents the attribution of a responsibility to an agent, relating to the activities of production and dissemination of photographic heritage (e.g.: committent, editor, printer, dedicatee, etc.)"@en ;
@@ -269,6 +346,39 @@ ICCD Normative F e FF: PD/PDF/PDFR""" .
                                                                     owl:versionInfo "stabile"@it ,
                                                                                     "stable"@en ;
                                                                     <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normative F e FF: PD/PDF" .
+
+
+###  https://w3id.org/arco/ontology/context-description/ResponsibilityType
+<https://w3id.org/arco/ontology/context-description/ResponsibilityType> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ;
+                                                                        rdfs:comment "Questa classe rappresenta il tipo di responsabilità di un agente (es: autore, editore, ecc) nei confronti di un lavoro (es: un'opera d'arte, un libro, ecc )."@it ,
+                                                                                     "This class represents the type of responsibility of an agent related to its contribution to a work (e.g.: author, printer, editor...)"@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description/> ;
+                                                                        rdfs:label "Responsibility type"@en ,
+                                                                                   "Tipo di responsabilità"@it ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: AU/AUT" .
+
+
+###  https://w3id.org/arco/ontology/context-description/SurveyImageType
+<https://w3id.org/arco/ontology/context-description/SurveyImageType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/TitleType
+<https://w3id.org/arco/ontology/context-description/TitleType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/UseType
+<https://w3id.org/arco/ontology/context-description/UseType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/UseTypeSpecification
+<https://w3id.org/arco/ontology/context-description/UseTypeSpecification> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/Concept
+<https://w3id.org/arco/ontology/core/Concept> rdf:type owl:Class .
 
 
 ###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
@@ -291,6 +401,18 @@ ICCD Normative F e FF: PD/PDF/PDFR""" .
                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
                                                              rdfs:label "Event or situation in time"@en ,
                                                                         "Evento o situazione nel tempo"@it .
+
+
+###  https://w3id.org/arco/ontology/core/Type
+<https://w3id.org/arco/ontology/core/Type> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/arco/ontology/core/Concept> ;
+                                           rdfs:comment "Classe che rappresenta il concetto di tipo."@it ,
+                                                        "The class representing the concept of type."@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                           rdfs:label "Tipo"@it ,
+                                                      "Type"@en ;
+                                           owl:versionInfo "stabile"@it ,
+                                                           "stable"@en .
 
 
 ###  https://w3id.org/italia/onto/RO/Role
@@ -344,8 +466,76 @@ ICCD Normative F e FF: PD/PDF/PDFR""" .
 
 
 #################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/AlternativeOrObsoleteResponsibility
+<https://w3id.org/arco/ontology/context-description/AlternativeOrObsoleteResponsibility> rdf:type owl:NamedIndividual ,
+                                                                                                  <https://w3id.org/arco/ontology/context-description/ResponsibilityType> ;
+                                                                                         rdfs:comment "Questo individuo rappresenta la responsabilità alternativa o superata di un agente su un'opera."@it ,
+                                                                                                      "This individual represents the alternative or outdated responsibility of an agent on a work."@en ;
+                                                                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                                         rdfs:label "Alternative or outdated responsibility"@en ,
+                                                                                                    "Responsabilità alternativa o sorpassata"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/CoordinatedResponsibility
+<https://w3id.org/arco/ontology/context-description/CoordinatedResponsibility> rdf:type owl:NamedIndividual ,
+                                                                                        <https://w3id.org/arco/ontology/context-description/ResponsibilityType> ;
+                                                                               rdfs:isDefinedBy <https://w3id.org/arco/onology/context-description> ,
+                                                                                                "Questo individuo rappresenta la responsabilità coordinata che condividono più agenti su una stessa opera. Nello standard UNIMARC viene denominata \"alternative responsibility\"."@it ,
+                                                                                                "This individual represents a coordinated responsibility of multiple agents that they share on the same work. In the UNIMARC standard it is called \"alternative responsibility\"."@en ;
+                                                                               rdfs:label "Coordinated responsibility"@en ,
+                                                                                          "Responsabilità coordinata"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/PrimaryResponsibility
+<https://w3id.org/arco/ontology/context-description/PrimaryResponsibility> rdf:type owl:NamedIndividual ,
+                                                                                    <https://w3id.org/arco/ontology/context-description/ResponsibilityType> ;
+                                                                           rdfs:comment "Questo individuo rappresenta la responsabilità principale di un agente su un'opera."@it ,
+                                                                                        "This individual represents the primary responsibility of an agent on a work."@it ;
+                                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                           rdfs:label "Primary responsibility"@en ,
+                                                                                      "Responsabilità principale"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/SecondaryResponsibility
+<https://w3id.org/arco/ontology/context-description/SecondaryResponsibility> rdf:type owl:NamedIndividual ,
+                                                                                      <https://w3id.org/arco/ontology/context-description/ResponsibilityType> ;
+                                                                             rdfs:comment "Questo individuo rappresenta la responsabilità secondaria di un agente verso un'opera."@it ,
+                                                                                          "This individual represents the secondary responsibility of an agent on a work."@en ;
+                                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                             rdfs:label "Responsabilità secondaria"@it ,
+                                                                                        "Secondary responsibility"@en .
+
+
+#################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/AcquisitionType>
+                <https://w3id.org/arco/ontology/context-description/AlternativeDatingType>
+                <https://w3id.org/arco/ontology/context-description/AnomalyType>
+                <https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType>
+                <https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType>
+                <https://w3id.org/arco/ontology/context-description/BibliographyType>
+                <https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType>
+                <https://w3id.org/arco/ontology/context-description/CircumstanceType>
+                <https://w3id.org/arco/ontology/context-description/DerivatedWorkType>
+                <https://w3id.org/arco/ontology/context-description/DocumentationType>
+                <https://w3id.org/arco/ontology/context-description/ExportImportCertificationType>
+                <https://w3id.org/arco/ontology/context-description/InterventionType>
+                <https://w3id.org/arco/ontology/context-description/LaboratoryTestType>
+                <https://w3id.org/arco/ontology/context-description/ObservationSurveyType>
+                <https://w3id.org/arco/ontology/context-description/ResponsibilityType>
+                <https://w3id.org/arco/ontology/context-description/SurveyImageType>
+                <https://w3id.org/arco/ontology/context-description/TitleType>
+                <https://w3id.org/arco/ontology/context-description/UseType>
+                <https://w3id.org/arco/ontology/context-description/UseTypeSpecification>
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( <https://w3id.org/arco/ontology/context-description/AuthorshipAttribution>

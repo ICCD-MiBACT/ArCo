@@ -1,45 +1,39 @@
 **CQ1**
 
-Di quale materiale è fatto il bene x?
+Chi è l'autore del bene x?
 
-What material is cultural property x made of?
+Who is the author of cultural property x?
 
-SELECT DISTINCT ?entity ?material WHERE{
-?entity a-dd:hasTechnicalStatus ?Status.
-?Status a-dd:includesTechnicalCharacteristic ?material.
-?material a-dd:isCharacteristicClassifiedBy a-dd:Material
-}
-limit 100
-
-or
-
-select distinct ?entity ?material Where {
-?entity a-lite:hasMaterial ?material .
+select distinct ?cp ?aut  where {
+?cp a-cd:hasResponsibility ?resp.
+?resp a-cd:hasInterventionRole ?role ;
+a-cd:hasAgentWithResponsibility ?aut .
+FILTER regex(?role, “autore”, “i”)
 }
 
 
 **CQ2**
 
-Quale è lo stato tecnico attuale del bene culturale x?
+Che ruolo ha avuto Y nella realizzazione dell'opera x?
 
-What is the current technical state of cultural property x?
+What role did Y play in the realization of work x?
 
-SELECT DISTINCT * WHERE{
-?entity a-dd:hasTechnicalStatus ?Status.
-?Status a-dd:currentTechnicalStatus "true"
+select distinct ?x ?y ?role where {
+?x a-cd:hasResponsibility ?resp.
+?resp a-cd:hasAgentWithResponsibility ?y;
+a-cd:hasInterventionRole ?role
 }
-limit 100
 
 
 **CQ3**
 
-In quale periodo di tempo è stato valido lo stato tecnico del bene x?
+Qual è la fonte d'informazione che attribuisce la responsabilità alternativa a Y per la realizzazione dell'opera x?
 
-In what period of time was the technical state of good x valid?
+What is the source of information that attributes alternative responsibility to Y for the realization of work x?
 
-SELECT DISTINCT * WHERE{
-?entity a-dd:hasTechnicalStatus ?Status.
-?Status ti:hasTemporalEntity ?time
+select distinct ?source where {
+?x a-cd:hasResponsibility ?resp.
+?resp core:hasType a-cd:AlternativeOrOutdatedResponsibility;
+core:informationSource ?source .
 }
-limit 100
-
+LIMIT 100
