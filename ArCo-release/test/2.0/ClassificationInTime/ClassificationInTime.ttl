@@ -208,6 +208,10 @@
 <https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/italia/onto/TI/hasTemporalEntity
+<https://w3id.org/italia/onto/TI/hasTemporalEntity> rdf:type owl:ObjectProperty .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -335,6 +339,10 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
                                                              rdfs:label "Event or situation in time"@en ,
                                                                         "Evento o situazione nel tempo"@it .
+
+
+###  https://w3id.org/italia/onto/TI/TemporalEntity
+<https://w3id.org/italia/onto/TI/TemporalEntity> rdf:type owl:Class .
 
 
 ###  https://w3id.org/italia/onto/TI/TimeInterval
