@@ -18,7 +18,7 @@ Che ruolo ha avuto Y nella realizzazione dell'opera x?
 
 What role did Y play in the realization of work x?
 
-select distinct ?x ?y ?role where {
+select distinct ?role where {
 ?x a-cd:hasResponsibility ?resp.
 ?resp a-cd:hasAgentWithResponsibility ?y;
 a-cd:hasInterventionRole ?role

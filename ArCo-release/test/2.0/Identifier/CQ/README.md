@@ -29,3 +29,8 @@ select ?org {
 Quali id ha rilasciato l'organizzazione X?
 
 Which IDs has organization X issued?  
+
+select ?org ?id {
+?identifier core:issuedBy ?org;
+core:identifier ?id .
+}
