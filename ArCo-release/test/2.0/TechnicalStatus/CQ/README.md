@@ -26,7 +26,7 @@ What is the current technical state of cultural property x?
 
 SELECT DISTINCT * WHERE{
 ?entity a-dd:hasTechnicalStatus ?Status.
-?Status a-dd:currentTechnicalStatus "true"
+?Status a-dd:current "true"
 }
 limit 100
 
