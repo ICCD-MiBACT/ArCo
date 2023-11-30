@@ -4,9 +4,9 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
 
-test:testcase_cq1.ttl a owlunit:CompetencyQuestionVerification ;
+test:testcase_cq2.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "What is the current technical status of cultural property x?" ;
-	owlunit:hasSPARQLUnitTest "prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/TechnicalStatus/CQ/CQ2/dataset_cq2.ttl/> prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> prefix core: <https://w3id.org/arco/ontology/core/> SELECT DISTINCT ?status WHERE{ ?entity a-dd:hasTechnicalStatus ?status. ?status core:current "true". }" ;
+	owlunit:hasSPARQLUnitTest "prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/TechnicalStatus/CQ/CQ2/dataset_cq2.ttl/> prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> prefix core: <https://w3id.org/arco/ontology/core/> SELECT DISTINCT ?status WHERE{ ?entity a-dd:hasTechnicalStatus ?status . ?status core:current "true" . }" ;
 	owlunit:hasInputData <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/TechnicalStatus/CQ/CQ2/dataset_cq2.ttl> ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
