@@ -6,6 +6,6 @@
 @prefix core: <https://w3id.org/arco/ontology/core/> .
 
 ex:cp1 a-cd:hasSubject ex:subj1 .
-ex:subj1 a-cd:subjectDescription ex:desc.
+ex:subj1 a-cd:subjectDescription "description1".
 
 }
