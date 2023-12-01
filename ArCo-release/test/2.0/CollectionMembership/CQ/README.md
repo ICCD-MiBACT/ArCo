@@ -1,23 +1,27 @@
 **CQ1**
 
-Quali sono gli accessori associati al bene x?
+In che periodo il bene ha fatto parte della collezione x?
 
-What are accessories associated to the cultural property x?
+In what period was the cultural property a member of collection x?
 
-SELECT DISTINCT ?accessory WHERE{
-?x a-dd:hasAccessory ?accessory.
+SELECT DISTINCT ?entity ?time ?Collection WHERE{
+?entity a-cd:isMemberOfCollectionOf ?collectionmemb.
+?collectionmemb <https://w3id.org/italia/onto/TI/hasTemporalEntity> ?time;
+a-cd:hasCollection ?Collection
 }
 limit 100
+
 
 **CQ2**
 
-Di che tipo sono gli accessori collegati ai beni musicali?
+Per quale motivo il bene culturale ha lasciato la collezione y?
 
-What type of accessories are related to musical instruments?
+Why did cultural property x leave the collection y?
 
-SELECT DISTINCT ?type WHERE{
-?entity a arco:MusicalHeritage;
-a-dd:hasAccessory ?accessory.
-?accessory arco-core:hasType ?type.
+SELECT DISTINCT ?entity ?reason ?Collection WHERE{
+?entity a-cd:isMemberOfCollectionOf ?collectionmemb.
+?collectionmemb a-cd:collectionLeavingReason ?reason;
+a-cd:hasCollection ?Collection
 }
 limit 100
+
