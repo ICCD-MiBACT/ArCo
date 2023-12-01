@@ -5,4 +5,4 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> .
 
-ex:class1 rdf:type a-dd:ClassificationInTime.
+ex:class1 rdf:type core:ClassificationInTime.
