@@ -24,6 +24,30 @@
     
 
 
+    <!-- http://rs.tdwg.org/dwc/iri/georeferenceProtocol -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/georeferenceProtocol">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/location/hasGeometryMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/georeferenceSources -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/georeferenceSources">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/location/hasBaseMap"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/continent -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/continent">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/location/hasContinent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting -->
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
@@ -41,6 +65,24 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/atLocation">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasBaseMap -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasBaseMap"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasContinent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasContinent"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasGeometryMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasGeometryMethod"/>
     
 
 
@@ -87,11 +129,100 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/decimalLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/decimalLatitude">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/location/lat"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/decimalLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/decimalLongitude">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/location/long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/maximumElevationInMeters -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/maximumElevationInMeters">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/location/maxAlt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/minimumElevationInMeters -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/minimumElevationInMeters">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/location/minAlt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/verbatimLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/verbatimLatitude">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/location/lat"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/verbatimLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/verbatimLongitude">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/location/long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/lat -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/lat"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/long -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/long"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/maxAlt -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/maxAlt"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/minAlt -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/minAlt"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/StratigraphicTerm -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/StratigraphicTerm"/>
     
 
 
@@ -127,6 +258,22 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/CadastralIdentity">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/ChronostratigraphicClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ChronostratigraphicClass">
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/abcd/terms/StratigraphicTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/LithostratigraphicClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/LithostratigraphicClass">
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/abcd/terms/StratigraphicTerm"/>
     </owl:Class>
     
 

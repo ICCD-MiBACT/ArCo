@@ -27,13 +27,9 @@
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
-        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Margherita Porena  (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Letizia Mancinelli (MiBACT, ICCD)</dc:creator>
-        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
         <dc:description xml:lang="it">Questo modulo modella le informazioni relative al Catalogo Generale dei Beni Culturali (ICCD-MiBAC) e alle schede di catalogo che descrivono un bene culturale.</dc:description>
         <dc:description xml:lang="en">The Catalogue module allows the description of concepts related to the Italian General Catalogue of Cultural Heritage (ICCD-MiBAC), and in particular catalogue records, that is XML files recording all data gathered by a cataloguer on a particular cultural property.</dc:description>
@@ -199,13 +195,13 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:constructQuery>CONSTRUCT {
-?x core:describesCulturalProperty ?thing .
+?x core:describes ?thing .
 }
 
 WHERE {
-?x a-cat:describes ?thing .
+?x a-cat:describesCulturalProperty ?thing .
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/describes"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/describes"/>
     </owl:ObjectProperty>
     
 
@@ -336,9 +332,18 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha altro codice identificativo</rdfs:label>
         <rdfs:label xml:lang="en">has alternative identifier</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: AC/ACC</iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?thing core:hasIdentifier ?id .
+}
+
+WHERE {
+?thing a-cat:hasAlternativeIdentifier ?id 
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
     </owl:ObjectProperty>
     
 
@@ -668,6 +673,7 @@ core:hasAgent ?agent .
         <rdfs:label xml:lang="en">has version</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag>CM/CMP; CM/RVM; CM/AGG</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -962,8 +968,10 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is alternative identifier of</rdfs:label>
         <rdfs:label xml:lang="it">è altro codice identificativo di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isIdentifierOf"/>
     </owl:ObjectProperty>
     
 
@@ -1105,7 +1113,7 @@ WHERE {
 WHERE {
 ?x a-cat:isDescribedByCatalogueRecord ?thing .
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/isDescribedBy"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isDescribedBy"/>
     </owl:ObjectProperty>
     
 
@@ -1307,9 +1315,18 @@ core:isAgentRoleOf ?thing .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is related to additional form</rdfs:label>
         <rdfs:label xml:lang="it">è collegato a modulo di approfondimento</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP</iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?thing core:isDescribedBy ?form .
+}
+
+WHERE {
+?thing a-cat:isRelatedToAdditionalForm ?form 
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isDescribedBy"/>
     </owl:ObjectProperty>
     
 
@@ -1324,9 +1341,18 @@ core:isAgentRoleOf ?thing .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is related to information form</rdfs:label>
         <rdfs:label xml:lang="it">è collegato a modulo informativo</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasvesale 4.00: AC/MOD</iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?thing core:isDescribedBy ?form .
+}
+
+WHERE {
+?thing a-cat:isRelatedToInformationForm ?form 
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/isDescribedBy"/>
     </owl:ObjectProperty>
     
 
@@ -1681,7 +1707,7 @@ CONSTRUCT {
 WHERE {
 ?thing a-cat:ICCDIdentifier ?id .
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/ICCDIdentifier"/>
     </owl:DatatypeProperty>
     
 
@@ -1977,6 +2003,13 @@ WHERE {
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta un suffisso di due lettere che può essere aggiunto all&apos;identificativo delle schede di catalogo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents a two-character suffix that might be added to the catalogue record number.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="it">suffisso</rdfs:label>
+        <rdfs:label xml:lang="en">suffix</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTS</iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2562,6 +2595,38 @@ resource:CatalogueRecordS/0500212038
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordMINP -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordMINP">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda MINP-Modulo per l&apos;inventariazione patrimoniale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the MINP catalogue record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">MINP catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Modulo per l&apos;inventariazione patrimoniale</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda MINP</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordMINV -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordMINV">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda MINV-Modulo per l&apos;inventariazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the MINV catalogue record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">MINV catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Modulo per l&apos;inventariazione</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda MINV</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordMODI -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordMODI">
@@ -2569,6 +2634,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda MODI-Modulo informativo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the MODI catalogue record.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">Information form</rdfs:label>
         <rdfs:label xml:lang="en">MODI catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Modulo informativo</rdfs:label>
         <rdfs:label xml:lang="it">Scheda MODI</rdfs:label>
@@ -2694,6 +2760,22 @@ resource:CatalogueRecordS/0500212038
         <rdfs:label xml:lang="en">Stratigraphic records catalogue record</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordSCAN -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordSCAN">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda SCAN-Scheda anagrafica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents SCAn catalogue record</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">SCAN Catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda SCAN</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda anagrafica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2825,22 +2907,6 @@ resource:CatalogueRecordS/0500212038
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <iccdNormTag>CM/CMO, RVM, AGG</iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/catalogue/CataloguerecordSCAN -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CataloguerecordSCAN">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda SCAN-Scheda anagrafica</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents SCAn catalogue record</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <rdfs:label xml:lang="en">SCAN Catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda SCAN</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda anagrafica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -3171,6 +3237,7 @@ WHERE{
         <rdfs:label xml:lang="it">Livello di Catalogo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale: CD/LIR</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3179,6 +3246,10 @@ WHERE{
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/Compiling">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la redazione e verifica scientifica di una scheda di catalogo.</rdfs:comment>
+        <rdfs:label xml:lang="en">Compiling</rdfs:label>
+        <rdfs:label xml:lang="it">Redazione e verifica scientifica</rdfs:label>
+        <iccdNormTag>CM/CMP</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3187,6 +3258,9 @@ WHERE{
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/DigitalTranscription">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
+        <rdfs:label xml:lang="en">Digital Transcription</rdfs:label>
+        <rdfs:label xml:lang="it">Trascrizione per informatizzazione</rdfs:label>
+        <iccdNormTag>CM/RVM</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3209,6 +3283,7 @@ WHERE{
         <rdfs:label xml:lang="en">Minimum Level</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale: CD/LIR</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3219,6 +3294,7 @@ WHERE{
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
         <rdfs:label xml:lang="it">Livello alto di riservatezza</rdfs:label>
         <rdfs:label xml:lang="en">Maximum privacy</rdfs:label>
+        <iccdNormTag>ICCD Normativa Trasversale: AD/ADS/ADSP</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3229,6 +3305,7 @@ WHERE{
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
         <rdfs:label xml:lang="it">Livello medio di riservatezza</rdfs:label>
         <rdfs:label xml:lang="en">Medium privacy</rdfs:label>
+        <iccdNormTag>ICCD Normativa Trasversale: AD/ADS/ADSP</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3239,6 +3316,7 @@ WHERE{
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
         <rdfs:label xml:lang="it">Livello basso di riservatezza</rdfs:label>
         <rdfs:label xml:lang="en">Minimum privacy</rdfs:label>
+        <iccdNormTag>ICCD Normativa Trasversale: AD/ADS/ADSP</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3251,6 +3329,7 @@ WHERE{
         <rdfs:label xml:lang="en">Medium Level</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale: CD/LIR</iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -3269,6 +3348,9 @@ WHERE{
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/Updating">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersionType"/>
+        <rdfs:label xml:lang="it">Aggiornamento/Revisione</rdfs:label>
+        <rdfs:label xml:lang="en">Updating</rdfs:label>
+        <iccdNormTag>CM/AGG</iccdNormTag>
     </owl:NamedIndividual>
     
 

@@ -125,9 +125,9 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/musical-instrument/isAccompanyingInstrumentInvolvedIn">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale di accompagnamento con un&apos;entità</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an accompanying musical instrument with an entity</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
-        <rdfs:label xml:lang="it">Questa proprietà collega uno strumento musicale di accompagnamento con un&apos;entità</rdfs:label>
-        <rdfs:label xml:lang="it">This property relates an accompanying musical instrument with an entity</rdfs:label>
         <rdfs:label xml:lang="en">is accompanying instrument involved in</rdfs:label>
         <rdfs:label xml:lang="it">è strumento musicale di accompagnamento coinvolto in</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -149,6 +149,7 @@
         <rdfs:label xml:lang="it">è prodotta da strumento musicale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SM 3.01: AA/AAN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -197,6 +198,7 @@
         <rdfs:label xml:lang="en">produces musical note</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SM 3.01: AA/AAN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -328,33 +330,11 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClass">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClassificationSystem"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una classe della classificazione Hornbostel-Sachs per gli strumenti musicali</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the Hornbostel-Sachs class</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="it">Classe Hornbostel-Sachs</rdfs:label>
         <rdfs:label xml:lang="en">Hornbostel-Sachs class</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa SM 4.00: CL/CHS</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClassificationSystem -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/HornbostelSachsClassificationSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema di classificazione Hornbostel-Sachs per strumenti musicali.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the Hornbostel-Sachs classification system for musical instruments.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
-        <rdfs:label xml:lang="en">Hornbostel-Sachs classification system</rdfs:label>
-        <rdfs:label xml:lang="it">Sistema di classificazione Hornbostel-Sachs</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: CL/CHS</a-cat:iccdNormTag>
@@ -402,28 +382,6 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentClass -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentClass">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/classifies"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrument"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la classificazione di strumenti musicali</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the classification of musical instrument</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
-        <rdfs:label xml:lang="it">Classificazione di strumenti musicali</rdfs:label>
-        <rdfs:label xml:lang="en">Musical instrument class</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa SM 4.00: CL/CLA/CLAT</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentTaxon -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/musical-instrument/MusicalInstrumentTaxon">
@@ -437,6 +395,7 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta il taxon, ovvero il concetto che appartiene a una classificazione gerarchizzata degli strumenti musicali.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the taxon, that is a concept related to a hierarchical classification system of musical instruments.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">Classe degli strumenti musicali</rdfs:label>
         <rdfs:label xml:lang="en">Musical instrument taxon</rdfs:label>
         <rdfs:label xml:lang="it">Taxon degli strumenti musicali</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -472,7 +431,6 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">ICCD Normativa SM 4.00: AA/AAL</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa entità rappresenta la corda di uno strumento musicale cordofono</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the string of a chordophone musical instrument</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
@@ -480,6 +438,7 @@
         <rdfs:label xml:lang="en">String</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAL</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -565,8 +524,8 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la lunghezza vibrante di uno strumento, in particolare di un cordofono.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a musical instrument vibrating length, in particular a chordophone.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument/"/>
-        <rdfs:label xml:lang="en">Lunghezza vibrante</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
+        <rdfs:label xml:lang="it">Lunghezza vibrante</rdfs:label>
         <rdfs:label xml:lang="en">Vibrating length</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>

@@ -159,6 +159,12 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasSurvey -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSurvey"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isAgentRelatedTo -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
@@ -228,6 +234,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha agente collegato a evento culturale</rdfs:label>
         <rdfs:label xml:lang="en">has agent related to cultural event</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -251,10 +258,21 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasComponentEvent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasComponentEvent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isComponentEventOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/cultural-event/hasEventOrganiser -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasEventOrganiser">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasAgentRelatedToCulturalEvent"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isEventOrganiserOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
@@ -263,9 +281,18 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha ente o soggetto organizzatore</rdfs:label>
         <rdfs:label xml:lang="en">has event organiser</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">Versioni 4.00 e ICCD Normativa Trasversale: MS/MST/MSTE - Versioni precedenti a 4.00: DO/MST/MSTO</a-cat:iccdNormTag>
+        <core:constructQuery>CONSTRUCT {
+?x a-ce:hasEventOrganiser ?y .
+}
+
+WHERE {
+?x arco-lite:hasOrganiser ?y .
+}</core:constructQuery>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOrganiser"/>
     </owl:ObjectProperty>
     
 
@@ -385,6 +412,17 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="en">has recurrent time period</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>SCAN: BI/DTC/DTCP</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasRelatedEvent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasRelatedEvent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
     </owl:ObjectProperty>
     
 
@@ -420,6 +458,28 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="en">has time period measurement unit</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasTraditionBearer -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasTraditionBearer">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isTraditionBearerOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/IntangibleCulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/TraditionBearer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasTransmissionMode -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasTransmissionMode">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isTransmissionModeOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/IntangibleCulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/TransmissionMode"/>
     </owl:ObjectProperty>
     
 
@@ -486,6 +546,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="en">is agent related to cultural event of</rdfs:label>
         <rdfs:label xml:lang="it">è agente collegato a evento culturale</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -508,10 +569,20 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/cultural-event/isComponentEventOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isComponentEventOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/cultural-event/isEventOrganiserOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isEventOrganiserOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isAgentRelatedToCulturalEventOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha ente o soggetto organizzatore&quot;.</rdfs:comment>
@@ -519,8 +590,10 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="en">is event organiser of</rdfs:label>
         <rdfs:label xml:lang="it">è organizzatore di evento</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/isOrganiserOf"/>
     </owl:ObjectProperty>
     
 
@@ -537,6 +610,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="it">è periodo di tempo di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>SCAN: BI/DTC/DTCP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -547,9 +621,9 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isMemberOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un evento, membro di un evento ricorrente inteso come una collezione di eventi, all&apos;evento ricorrente di cui è membro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an event, member of a recurrent event as a collection of events, to the recurrent event that is member of.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
-        <rdfs:isDefinedBy xml:lang="it">Questa proprietà collega un evento, membro di un evento ricorrente inteso come una collezione di eventi, all&apos;evento ricorrente di cui è membro.</rdfs:isDefinedBy>
-        <rdfs:isDefinedBy xml:lang="en">This property relates an event, member of a recurrent event as a collection of events, to the recurrent event that is member of.</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">is event member of</rdfs:label>
         <rdfs:label xml:lang="en">is situation member of</rdfs:label>
         <rdfs:label xml:lang="it">è evento membro di</rdfs:label>
@@ -589,6 +663,26 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="it">è unità di misura di periodo di tempo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/isTraditionBearerOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isTraditionBearerOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentRoleOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/TraditionBearer"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/IntangibleCulturalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/isTransmissionModeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isTransmissionModeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/TransmissionMode"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/IntangibleCulturalEntity"/>
     </owl:ObjectProperty>
     
 
@@ -664,9 +758,7 @@ In this module are used as template the following Ontology Design Patterns:
 
     <!-- https://w3id.org/italia/onto/l0/isMemberOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/isMemberOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/isMemberOf"/>
     
 
 
@@ -781,11 +873,10 @@ In this module are used as template the following Ontology Design Patterns:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/hasTemporalEntity"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TemporalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://dati.beniculturali.it/cis/NameInTime"/>
         <dc:description xml:lang="en">An example of usage of the class cis:CulturalEvent is the following:
 
 &lt;pre&gt;
@@ -947,6 +1038,12 @@ cultualheritageobject:Il_Pescatorello
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/ObservationSurvey -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ObservationSurvey"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/AgentRole -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/AgentRole"/>
@@ -1044,6 +1141,42 @@ cultualheritageobject:Il_Pescatorello
     
 
 
+    <!-- https://w3id.org/arco/ontology/cultural-event/FormalTransmissionMode -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/FormalTransmissionMode">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/TransmissionMode"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/InformalTransmissionMode -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/InformalTransmissionMode">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/TransmissionMode"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/IntangibleCulturalEntity -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/IntangibleCulturalEntity">
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurvey"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurvey"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasDescription"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/RecurrentSituationSeries">
@@ -1134,6 +1267,7 @@ cultualheritageobject:Il_Pescatorello
         <rdfs:label xml:lang="en">Recurrent time period</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>SCAN: BI/DTC/DTCP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1147,6 +1281,7 @@ cultualheritageobject:Il_Pescatorello
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">Periodo di tempo</rdfs:label>
         <rdfs:label xml:lang="en">Time period</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
@@ -1170,6 +1305,36 @@ cultualheritageobject:Il_Pescatorello
         <rdfs:label xml:lang="it">Unità di misura del periodo di tempo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/TraditionBearer -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/TraditionBearer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/TransmissionMode -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/TransmissionMode">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/cultural-event/TransmissionModeType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/TransmissionModeType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/TransmissionModeType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
     </owl:Class>
     
 
@@ -1221,49 +1386,37 @@ WHERE {
 
     <!-- https://w3id.org/italia/onto/MU/MeasurementUnit -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/MU/MeasurementUnit">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/MU/MeasurementUnit"/>
     
 
 
     <!-- https://w3id.org/italia/onto/TI/TimeInterval -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/TI/TimeInterval">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/TI/TimeInterval"/>
     
 
 
     <!-- https://w3id.org/italia/onto/l0/Agent -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Agent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Agent"/>
     
 
 
     <!-- https://w3id.org/italia/onto/l0/Characteristic -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
     
 
 
     <!-- https://w3id.org/italia/onto/l0/Collection -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Collection">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Collection"/>
     
 
 
     <!-- https://w3id.org/italia/onto/l0/Description -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Description">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Description"/>
     
 
 
@@ -1275,25 +1428,19 @@ WHERE {
 
     <!-- https://w3id.org/italia/onto/l0/EventOrSituation -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/EventOrSituation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/EventOrSituation"/>
     
 
 
     <!-- https://w3id.org/italia/onto/l0/Location -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Location">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Location"/>
     
 
 
     <!-- https://w3id.org/italia/onto/l0/Object -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object"/>
     
 
 

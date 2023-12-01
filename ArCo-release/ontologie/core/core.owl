@@ -23,6 +23,7 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/core">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/core/1.3"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/1.0"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/0.8"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
@@ -31,14 +32,9 @@
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
-        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Luigi Asprino (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
-        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
         <dc:description xml:lang="it">Questo modulo rappresenta concetti trasversali a tutta la network, che sono quindi importati da tutti gli altri moduli ontologici (es.: relazione parte-tutto, classificazione).</dc:description>
         <dc:description xml:lang="en">The Core module represents general-purpose concepts orthogonal to the whole network, which are imported by all other ontology modules (e.g. part-whole relation, classification).</dc:description>
@@ -169,6 +165,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/italia/onto/ADMS/hasTask -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasTask"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -177,6 +179,12 @@ In this module the following Ontology Design Patterns have been used:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://dati.beniculturali.it/cis/isInvolvedInCulturalEvent -->
+
+    <owl:ObjectProperty rdf:about="http://dati.beniculturali.it/cis/isInvolvedInCulturalEvent"/>
     
 
 
@@ -193,6 +201,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">classifies</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: */SGT/SGTI, DA/AID/AIDI, RO/ROF/ROFS, */THS/THSD. VeAC: OG/OGT/OGTV. SM: CL/CHS/CHSN, CL/CLA/CLAT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -202,7 +211,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/definesConcept">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega sistema di classificazione al concetto</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a classification system to a concept</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -210,6 +219,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">definisce concetto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale e normative precedenti 4.00: SG/CLF/CLFT. SM: CL/CLA/CLAA. Normativa BNM: SM/SMS/SMSX, SMSC, SMSD, RM/RMS/RMSX, RMSK</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -227,6 +237,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">descrive</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Tutte le schede di catalogo descrivono un bene. ICCD Normativa Tr: AC/ACS, AC/MOD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -237,7 +248,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente all&apos;agente che lo ricopre.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a situation in which an agent holds a role to that agent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -245,6 +256,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has agent</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE. UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa SM: CL/CLA/CLAA. Normativa BNB: SB/NAA/NAAG, NAAI, NAAE, NAAC, SB/NAT/NATG, NATI, NATE, NATC, RB/RBR/RBNG, RBNI, RBNE, RBNC, LR/LRD/LRDA, DB/DBR/DBRA, DB/DBC/DBCA, DB/DBX/DBXT, DB/DBP/DBPA, DB/DBS/DBSR. Normativa BNM: LR/LRI/LRIL, LRIZ, LRIG, LRIX,. Normativa BNP: SP/SPS/SPSA, SPSD. Normativa BNZ: SZ/SZS/SZSE, SZSD. Normativa ATOG/OGS/OGSA, IN/INI/INIL, INIO. Normativa BNPL: SP/SPN/SPNS, SPNM. Versioni 4.00 e ICCD Normativa Trasversale: MS/MST/MSTE - Versioni precedenti a 4.00: DO/MST/MSTO</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -262,6 +274,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has agent role</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE. UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa SM: CL/CLA/CLAA. Normativa BNB: SB/NAA/NAAG, NAAI, NAAE, NAAC, SB/NAT/NATG, NATI, NATE, NATC, RB/RBR/RBNG, RBNI, RBNE, RBNC, LR/LRD/LRDA, DB/DBR/DBRA, DB/DBC/DBCA, DB/DBX/DBXT, DB/DBP/DBPA, DB/DBS/DBSR. Normativa BNM: LR/LRI/LRIL, LRIZ, LRIG, LRIX,. Normativa BNP: SP/SPS/SPSA, SPSD. Normativa BNZ: SZ/SZS/SZSE, SZSD. Normativa ATOG/OGS/OGSA, IN/INI/INIL, INIO. Normativa BNPL: SP/SPN/SPNS, SPNM. Versioni 4.00 e ICCD Normativa Trasversale: MS/MST/MSTE - Versioni precedenti a 4.00: DO/MST/MSTO</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -280,6 +293,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has category</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/CTG -  Normativa AT: OG/OGT/OGTP - Normativa RA: OG/CLS - Normative CA e MA e Normativa VeAC: OG/OGT/OGTC, Normativa BDM: OG/OGT/OGTG. ICCD Normativa TMA: MA/MAC/MACC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -289,7 +303,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasCharacteristic">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Characteristic"/>
         <rdfs:comment xml:lang="it">La object property che collega un&apos;entità a una sua caratteristica.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that links an entity to one of its characteristics.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -314,6 +328,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">ha classificazione</rdfs:label>
         <rdfs:label xml:lang="en">has classification</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -327,11 +343,12 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità ad una classificazione nel tempo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity to a classification in time</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/core</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">ha classificazione nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has classification in time</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -346,9 +363,9 @@ In this module the following Ontology Design Patterns have been used:
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasConcept"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
         </owl:propertyChainAxiom>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione nel tempo ad un sistema di classificazione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a classification in time to a classification system</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/core</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione ad un sistema di classificazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a classification to a classification system</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">ha sistema di classificazione</rdfs:label>
         <rdfs:label xml:lang="en">has classification system</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -390,6 +407,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has concept</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF/CLFS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -407,6 +425,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has consequence</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: RB/RBR/RBRN, RB/RBN.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -426,6 +445,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has constituent</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNPE: SR/SRM/SRMP, SRMA; SR/SRL/SRLP. Normativa BNPL: SP/SPM/SPMO, SPMP, SPML, SPMM, SPMS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -454,6 +474,31 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isDepictionOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Depiction"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua raffigurazione/foto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its depiction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha foto</rdfs:label>
+        <rdfs:label xml:lang="it">ha raffigurazione</rdfs:label>
+        <rdfs:label xml:lang="en">has depiction</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasDescription -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasDescription">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isDescriptionOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Description"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità con la sua descrizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its description.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha descrizione</rdfs:label>
+        <rdfs:label xml:lang="en">has description</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -472,6 +517,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has direct higher rank</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF. Normativa BNB: SB/NBN, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN. Normativa BNP: SP/SPS. Normativa BNZ: SZ/SZS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN, RR/RRN. Normativa BNPL: SP/SPN, RP/RPN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -489,6 +535,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has direct lower rank</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF. Normativa BNB: SB/NBN, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN. Normativa BNP: SP/SPS. Normativa BNZ: SZ/SZS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN, RR/RRN. Normativa BNPL: SP/SPN, RP/RPN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -498,6 +545,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasEventOrSituationInTime">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
         <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <rdfs:comment xml:lang="it">La proprietà che collega un qualsiasi oggetto a una situazione indicizzata nel tempo.</rdfs:comment>
         <rdfs:comment xml:lang="en">The property that links any object to a time indexed situation.</rdfs:comment>
@@ -524,6 +572,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has higher rank</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF. Normativa BNB: SB/NBN, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN. Normativa BNP: SP/SPS. Normativa BNZ: SZ/SZS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN, RR/RRN. Normativa BNPL: SP/SPN, RP/RPN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -541,6 +590,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/NTC, AC/ACC, ACI, ACS/ACSC, AC/MOD/MODI; OG/OGT/OGTI; RO/ROF/ROFX, RO/CRF/CRFH, DO/BIB/BIBH, BIBK, NCUN, RE/RCG/RCGK, NCUN, NUCN, RCGH, RE/DSC/DSCK, NUCN, NCUN, DSCH, RE/FOI/FOID; AU/AUT/AUTH, AUTK, NUCN, NCUN; AU/AUF/AUFH, NUCN, NCUN; PD/PDF/PDFH; UB/INP/INPS: LC/LDC/LDCK, LDCG; LA/PRC/PRCK; MC/CMN/CMNN. MODI: CD/CDR, CDM. Normativa BDI: DU/DUC, DU/DUO/DUOC, DU/DUM/DUMC, DV/DVC, DV/DVO/DVOC, DV/DVM/DVMC, DF/DFC, DF/DFO/DFOC, DF/DFM/DFMC, AI/AIC, AI/AIO/AIOC, AI/AIM/AIMC, VI/VIC, VI/VIO/VIOC, VI/VIM/VIMC, FI/FIC, FI/FIO/FIOC, FI/FIM/FIMC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -550,7 +600,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasLocation">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isLocationOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Location"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
         <rdfs:comment xml:lang="it">La object property che collega un&apos;entità a un luogo in cui si trova.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that associates an entity to a location.</rdfs:comment>
@@ -575,6 +625,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has lower rank</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF. Normativa BNB: SB/NBN, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN. Normativa BNP: SP/SPS. Normativa BNZ: SZ/SZS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN, RR/RRN. Normativa BNPL: SP/SPN, RP/RPN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -582,7 +633,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/hasMethod -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasMethod">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasDescription"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isMethodOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
@@ -631,7 +682,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has role</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative F e FF: PD/PDF/PDFR</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE. UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa SM: CL/CLA/CLAA. Normativa BNB: SB/NAA/NAAG, NAAI, NAAE, NAAC, SB/NAT/NATG, NATI, NATE, NATC, RB/RBR/RBNG, RBNI, RBNE, RBNC, LR/LRD/LRDA, DB/DBR/DBRA, DB/DBC/DBCA, DB/DBX/DBXT, DB/DBP/DBPA, DB/DBS/DBSR. Normativa BNM: LR/LRI/LRIL, LRIZ, LRIG, LRIX,. Normativa BNP: SP/SPS/SPSA, SPSD. Normativa BNZ: SZ/SZS/SZSE, SZSD. Normativa ATOG/OGS/OGSA, IN/INI/INIL, INIO. Normativa BNPL: SP/SPN/SPNS, SPNM. Versioni 4.00 e ICCD Normativa Trasversale: MS/MST/MSTE - Versioni precedenti a 4.00: DO/MST/MSTO</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -649,6 +700,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">ha situazione</rdfs:label>
         <rdfs:label xml:lang="en">has situation</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -667,7 +720,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has taxon</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. BNB: SB/SBS/SBSA, SB/NBN/NBNA, SB/NAA, SB/TBI/TBIN, SB/NAT, RB/RBR/RBRN, RB/RBN</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa BNB: SB/NBN, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN. Normativa BNP: SP/SPS. Normativa BNZ: SZ/SZS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN, RR/RRN. Normativa BNPL: SP/SPN, RP/RPN</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasTopic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasTopic">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isTopicOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;argomento corrispondente.</rdfs:comment>
+        <rdfs:comment xml:lang="it">This property relates an entity with its topic.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha argomento</rdfs:label>
+        <rdfs:label xml:lang="en">has topic</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -712,8 +782,8 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/involvesAgent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/involves"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la partecipazione di un agente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents an agent partecipation</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -721,6 +791,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">involves agent</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: SB/DBV/DBVA, RB/RBR/RBRA, SB/ABC/ABCA, TB/TBI/TBIA. Normativa BNM: SM/SMT/SMTA, RM/RMT/RMTA. Normativa BNP: SP/SPS/SPSL. Normativa BNZ: SZ/SZS/SZSL. Normativa BNPE: RR/RRD/RRDA, SR/SRT/SRTA, RR/RRT/RRTA. Normativa BNPL: SP/SPT/SPTA, RP/RPT/RPTA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -729,8 +800,8 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentInvolvedIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isInvolvedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la partecipazione di un agente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents an agent partecipation</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -738,6 +809,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è agente coinvolto in</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: SB/DBV/DBVA, RB/RBR/RBRA, SB/ABC/ABCA, TB/TBI/TBIA. Normativa BNM: SM/SMT/SMTA, RM/RMT/RMTA. Normativa BNP: SP/SPS/SPSL. Normativa BNZ: SZ/SZS/SZSL. Normativa BNPE: RR/RRD/RRDA, SR/SRT/SRTA, RR/RRT/RRTA. Normativa BNPL: SP/SPT/SPTA, RP/RPT/RPTA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -745,7 +817,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isAgentOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentOf">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha agente&quot;, collega un agente alla situazione in cui l&apos;agente ha ricoperto un ruolo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an agent to a situation in which that agent holds a role.</rdfs:comment>
@@ -754,6 +826,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è agente in</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE. UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa SM: CL/CLA/CLAA. Normativa BNB: SB/NAA/NAAG, NAAI, NAAE, NAAC, SB/NAT/NATG, NATI, NATE, NATC, RB/RBR/RBNG, RBNI, RBNE, RBNC, LR/LRD/LRDA, DB/DBR/DBRA, DB/DBC/DBCA, DB/DBX/DBXT, DB/DBP/DBPA, DB/DBS/DBSR. Normativa BNM: LR/LRI/LRIL, LRIZ, LRIG, LRIX,. Normativa BNP: SP/SPS/SPSA, SPSD. Normativa BNZ: SZ/SZS/SZSE, SZSD. Normativa ATOG/OGS/OGSA, IN/INI/INIL, INIO. Normativa BNPL: SP/SPN/SPNS, SPNM. Versioni 4.00 e ICCD Normativa Trasversale: MS/MST/MSTE - Versioni precedenti a 4.00: DO/MST/MSTO</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -770,6 +843,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è ruolo ricoperto da agente di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE. UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa SM: CL/CLA/CLAA. Normativa BNB: SB/NAA/NAAG, NAAI, NAAE, NAAC, SB/NAT/NATG, NATI, NATE, NATC, RB/RBR/RBNG, RBNI, RBNE, RBNC, LR/LRD/LRDA, DB/DBR/DBRA, DB/DBC/DBCA, DB/DBX/DBXT, DB/DBP/DBPA, DB/DBS/DBSR. Normativa BNM: LR/LRI/LRIL, LRIZ, LRIG, LRIX,. Normativa BNP: SP/SPS/SPSA, SPSD. Normativa BNZ: SZ/SZS/SZSE, SZSD. Normativa ATOG/OGS/OGSA, IN/INI/INIL, INIO. Normativa BNPL: SP/SPN/SPNS, SPNM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -787,6 +861,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è categoria di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/CTG -  Normativa AT: OG/OGT/OGTP - Normativa RA: OG/CLS - Normative CA e MA e Normativa VeAC: OG/OGT/OGTC, Normativa BDM: OG/OGT/OGTG. ICCD Normativa TMA: MA/MAC/MACC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -794,7 +869,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isCharacteristicOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isCharacteristicOf">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Characteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">La object property che collega una caratteristica di un&apos;entità all&apos;entità stessa.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that links an entity characteristic to the entity.</rdfs:comment>
@@ -815,11 +890,12 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione nel tempo ad un&apos;entità</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a classification in time to an entity</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/core</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">is classification in time of</rdfs:label>
         <rdfs:label xml:lang="it">è classificazione nel tempo di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -854,6 +930,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è sistema di classificazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: SG/CLF/CLFT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -870,6 +947,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è classificato da</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: */SGT/SGTI, DA/AID/AIDI, RO/ROF/ROFS, */THS/THSD. VeAC: OG/OGT/OGTV. SM: CL/CHS/CHSN, CL/CLA/CLAT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -905,6 +983,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è concetto di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: SG/CLF/CLFS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -921,6 +1000,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è conseguenza di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: RB/RBR/RBRN, RB/RBN.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -939,6 +1019,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è costituente di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNPE: SR/SRM/SRMP, SRMA; SR/SRL/SRLP. Normativa BNPL: SP/SPM/SPMO, SPMP, SPML, SPMM, SPMS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -963,7 +1044,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
         <rdfs:comment xml:lang="it">La object property che collega un concetto al sistema di classificazione.</rdfs:comment>
         <rdfs:comment xml:lang="it">The object property that links a concept to a classification system.</rdfs:comment>
@@ -972,6 +1053,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è definito da sistema di classificazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale e normative precedenti 4.00: SG/CLF/CLFT. SM: CL/CLA/CLAA. Normativa BNM: SM/SMS/SMSX, SMSC, SMSD, RM/RMS/RMSX, RMSK</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -981,6 +1063,14 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDepictionOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Depiction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Questa proprietà collega la raffigurazione/foto di un&apos;entità all&apos;entità stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the depiction of an entity to the entity itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is depiction of</rdfs:label>
+        <rdfs:label xml:lang="it">è foto di</rdfs:label>
+        <rdfs:label xml:lang="it">è raffigurazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -997,6 +1087,23 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è descritto da</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Tutte le schede di catalogo descrivono un bene. ICCD Normativa Tr: AC/ACS, AC/MOD</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDescriptionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una descrizione all&apos;entità che descrive.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property the description of an entity to the entity itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is description of</rdfs:label>
+        <rdfs:label xml:lang="it">è descrizione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1004,6 +1111,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <rdfs:comment xml:lang="it">La proprietà che collega una situazione indicizzata nel tempo ad un qualsiasi oggetto. La proprietà è modellata come proprietà inversa di hasTimeIndexedSituation.</rdfs:comment>
@@ -1030,6 +1138,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è identificativo di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/NTC, AC/ACC, ACI, ACS/ACSC, AC/MOD/MODI; OG/OGT/OGTI; RO/ROF/ROFX, RO/CRF/CRFH, DO/BIB/BIBH, BIBK, NCUN, RE/RCG/RCGK, NCUN, NUCN, RCGH, RE/DSC/DSCK, NUCN, NCUN, DSCH, RE/FOI/FOID; AU/AUT/AUTH, AUTK, NUCN, NCUN; AU/AUF/AUFH, NUCN, NCUN; PD/PDF/PDFH; UB/INP/INPS: LC/LDC/LDCK, LDCG; LA/PRC/PRCK; MC/CMN/CMNN. MODI: CD/CDR, CDM. Normativa BDI: DU/DUC, DU/DUO/DUOC, DU/DUM/DUMC, DV/DVC, DV/DVO/DVOC, DV/DVM/DVMC, DF/DFC, DF/DFO/DFOC, DF/DFM/DFMC, AI/AIC, AI/AIO/AIOC, AI/AIM/AIMC, VI/VIC, VI/VIO/VIOC, VI/VIM/VIMC, FI/FIC, FI/FIO/FIOC, FI/FIM/FIMC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1053,7 +1162,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isLocationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isLocationOf">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Location"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
         <rdfs:comment xml:lang="it">La object property che collega un luogo a un&apos;entità che si trova in quel luogo.</rdfs:comment>
@@ -1070,7 +1179,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/isMethodOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isMethodOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isDescriptionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">L&apos;object property che collega un metodo a un&apos;entità.</rdfs:comment>
@@ -1115,6 +1224,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è ruolo in</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE. UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa SM: CL/CLA/CLAA. Normativa BNB: SB/NAA/NAAG, NAAI, NAAE, NAAC, SB/NAT/NATG, NATI, NATE, NATC, RB/RBR/RBNG, RBNI, RBNE, RBNC, LR/LRD/LRDA, DB/DBR/DBRA, DB/DBC/DBCA, DB/DBX/DBXT, DB/DBP/DBPA, DB/DBS/DBSR. Normativa BNM: LR/LRI/LRIL, LRIZ, LRIG, LRIX,. Normativa BNP: SP/SPS/SPSA, SPSD. Normativa BNZ: SZ/SZS/SZSE, SZSD. Normativa ATOG/OGS/OGSA, IN/INI/INIL, INIO. Normativa BNPL: SP/SPN/SPNS, SPNM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1150,6 +1260,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è taxon di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: SB/NBN, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN. Normativa BNP: SP/SPS. Normativa BNZ: SZ/SZS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN, RR/RRN. Normativa BNPL: SP/SPN, RP/RPN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1166,6 +1277,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">is time interval valid for</rdfs:label>
         <rdfs:label xml:lang="it">è intervallo di tempo valido per</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isTopicOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTopicOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un argomento ad un&apos;entità collegata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a topic with its related entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is topic of</rdfs:label>
+        <rdfs:label xml:lang="it">è argomento di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1212,6 +1339,14 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/issues"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un identificativo con l&apos;organizzazione che l&apos;ha emesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an identifier to the organization that has issued it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">issued by</rdfs:label>
+        <rdfs:label xml:lang="it">rilasciato da</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>AC/ACC/ACCE. Usato per tutti gli identificativi emessi da ICCD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1221,7 +1356,45 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/issues">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;organizzazione con  l&apos;identificativo che ha rilasciato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an issuing organization with an identifier.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">emette</rdfs:label>
+        <rdfs:label xml:lang="en">issues</rdfs:label>
+        <rdfs:label xml:lang="it">rilascia</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>AC/ACC/ACCE. Usato per tutti gli identificativi emessi da ICCD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/identifies -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/identifies">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+        <rdfs:comment xml:lang="it">Questa proprietà mette in relazione un taxon con lo specimen che identifica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a taxon to the specimen it identifies.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="it">identifica</rdfs:label>
+        <rdfs:label xml:lang="en">identifies</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/isIdentificationInTimeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isIdentificationInTimeOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isIdentifiedBy"/>
     
 
 
@@ -1255,30 +1428,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/italia/onto/l0/hasDescription -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasDescription"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/hasTopic -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasTopic"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/isDescriptionOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/isTopicOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/isTopicOf"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1295,6 +1444,14 @@ In this module the following Ontology Design Patterns have been used:
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/abstract">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;abstract di un testo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the abstract of an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">abstract</rdfs:label>
+        <rdfs:label xml:lang="it">abstract</rdfs:label>
+        <rdfs:label xml:lang="it">riassunto</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -1334,6 +1491,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/identifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/identifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al suo codice identificativo.</rdfs:comment>
@@ -1360,6 +1518,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>AU/CMM/CMMF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale e precedenti: *SGT/SGTL, RO/ROF/ROFM,, DT/DTM/DTMM, DT/ADT/ADTM, RE/REN/RENF, AU/DDC/DDCF, AU/FRU/FRUF, AU/ATB/ATBM, AU/AUT/AUTM, AU/AUF/AUFM, AU/AUI/AUIM, AU/AFB/AFBM, AU/AAT/AATM, AUAAFAAFM, PD/PDF/PDFM, UB/INP/INPA, UB/INV/INVS, UB/STI/STIM, AU/CMM/CMMF, LS/LTS/LTSF, LS/LVS/LVSF. Normativa BDI: AT/ATT/ATTE; AI/AIF/AIFH, VI/VIF/VIFH, FI/FIF/FIFH. Normativa SM: MU/MUT/MUTE. Normativa AT: DA/STS/STSC, DA/SEM/SEMC. Normativa BNPE: SR/SRRSRRM, RR/RRR/RRRM. Normativa BNPL: SP/SPD/SPDR, SPDS, SPDU, SPDD, SPDP, SPDH, SPDN, SPDA, SPDC, SPDB, SPDL</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1461,8 +1620,27 @@ In this module the following Ontology Design Patterns have been used:
     <!-- http://dati.beniculturali.it/cis/CulturalEntity -->
 
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://dati.beniculturali.it/cis/isInvolvedInCulturalEvent"/>
+                <owl:allValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Class that provides a generalization of three classes; that is , cultural institute or site, collection and cultural heritage object. It does not correspond to a concept used typically in the cultural domain but it is used in order to model properties and property restrictions that are common to all the these three classes. The class will never be directly instanziated.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Classe che fornisce una generalizzazione per le tre classi di istituto e luogo della cultura,  collezione e oggetto culturale. Non corrisponde ad un concetto usato normalmente nel linguaggio del dominio, ma risponde all&apos;esigenza di modellare proprietà e assiomi di property-restriction comuni ad ognuna di queste tre classi. La classe CulturalEntity non sarà mai istanziata direttamente</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://dati.beniculturali.it/cis/"/>
+        <rdfs:label xml:lang="en">Cultural Entity</rdfs:label>
+        <rdfs:label xml:lang="it">Entità culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
+    
+
+
+    <!-- http://dati.beniculturali.it/cis/CulturalEvent -->
+
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEvent"/>
     
 
 
@@ -1475,7 +1653,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- http://dati.gov.it/onto/dcatapit#Agent -->
 
     <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Agent">
-        <owl:equivalentClass rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
     </owl:Class>
     
 
@@ -1484,7 +1662,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Organization">
         <owl:equivalentClass rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
     </owl:Class>
     
 
@@ -1492,7 +1670,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- http://www.w3.org/2006/vcard/ns#Organization -->
 
     <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Organization">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
     </owl:Class>
     
 
@@ -1500,7 +1678,22 @@ In this module the following Ontology Design Patterns have been used:
     <!-- http://xmlns.com/foaf/0.1/Agent -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
-        <owl:equivalentClass rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Agent -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Agent">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un agente, fisico (e.g. una persona) o sociale (e.g. un&apos;organizzazione).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an agent, either physical (e.g. a person) or social (e.g. an orgamization).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+        <rdfs:label xml:lang="it">Agente</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; AU/EDT/EDTN; PD/EDI/EDIR, TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, AU/NMC/NMCN, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; DA/STM/STMI; DA/ISE/ISEO, ISEA; DA/ISR/ISRA; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE, AU/AUT/AUTN,  AUTB, AU/AAU/AAUN, AU/AUF/AUFN, AUFB; AU/AAF/AAFN, AU/AUI/AUIN, AUIB, AU/AAT/AATN, AU/AAT, AU/AAF/AAFN, AAFB; PD/PDF/PDFN, PDFB, UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; CON/CONA, CON/CONZ; MS/MST/MSTE, MSTO; MS/PRM/PRME; UB/COL/COLN. Normativa SCAN: BI/RIL/RILR, RILA. Normativa BDI: AT/ATT/ATTN; TCTCD; DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa MODI: RI/ATI/ATID, RI/ATC/ATCD. Normativa SM: MU/MUT/MUTN, OS/OSD, CL/CLA/CLAA. Versioni 4.00 e ICCD Normativa Trasversale: MS/MST/MSTE - Versioni precedenti a 4.00: DO/MST/MSTO</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1508,23 +1701,17 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/AgentRole -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/AgentRole">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasRole"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
@@ -1535,6 +1722,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Ruolo ricoperto da agente</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/ESC, CD/EPR, CD/ECP CM/CMP/CMPN, CM/CMC, CM/CMR, CM/RSR, CM/FUR, CM/RVM/RVMN, RVME, CM/AGG/AGGN, AGGR,AGGE, AGGF, AC/ACS/ACSE; RO/ROF/ROFA, RO/COP/COPA, RO/CRF/CRFN, CRFB, RO/ADL/ADLA, ADLE; AU/EDT/EDTN; PD/EDI/EDIR, TU/ACQ/ACQN, DO/DCM/DCMA, DCME, DO/FTA/FTAA, FTAE, DO/DRA/DRAA, DRAE; DO/VDC/VDCR, VDCE, DO/REG/REGA, REGE; DO/FNT/FNTA, FNTN, FNTE, DO/ADM/ADMA, ADME, DO/CTF/CTFC, DO/BIB/BIBA, DO/BSE/BSEA, TU/CDG/CDGS, TU/ESP/ESPU, TU/NVC/NVCA, TU/STU/STUE, AU/NMC/NMCN, RE/IND/INDE, INDR, INDN, RE/RCG/RCGA, RCGR, RCGF, RCGJ, RE/DSC/DSCA, DSCF, DSCR, DSCJ; CM/ISP/ISPN; */ALB/ALBO, ALBE; */FOI/FOIS, FOIE, FOIR, RE/AIN/AINR; DA/STM/STMI; DA/ISE/ISEO, ISEA; DA/ISR/ISRA; AU/DDC/DDCN, DDCM; TU/CPR/CPRN, DA/AUE/AUEE, AUEZ, AAUES, DA/ZEC, AU/EDT/EDTN, EDTA, EDTZ; UT/UTN, , UT/UTN/UTNN, AU/FRU/FRUN, */ACC/ACCE, AU/AUT/AUTN,  AUTB, AU/AAU/AAUN, AU/AUF/AUFN, AUFB; AU/AAF/AAFN, AU/AUI/AUIN, AUIB, AU/AAT/AATN, AU/AAT, AU/AAF/AAFN, AAFB; PD/PDF/PDFN, PDFBM UB/INP/INPE; AU/CMM/CMMN, CMME; */RST/RSTE, RSTR, RSTN; DA/CON, CONZ/CONA; MS/MST/MSTE, MSTO; MS/PRM/PRME. Normativa BDI: AT/ATT/ATTN; TCTCD; DR/DRV/DRVE, DRVR, DR/DRV, DRL, DRO, DRG, DRF, DRR; DU/DUY/DUYN, DU/DUX/DUXE, DUXC, DU/DUZ/DUZS, DU/DUQ/DUQN; DV/DVY/DVYN, DV/DVX/DVXE, DVXC, DV/DVZ/DVZS, DV/DVQ/DVQN; DF/DFY/DFYN, DF/DFX/DFXE, DFXC, DF/DFZ/DFZS, DF/DFQ/DFQN; AI/AIY/AIYN, AI/AIX/AIXE, AIXC, AI/AIZ/AIZS, AI/AIQ/AIQN, AI/AIF/AIFN, AI/AIE/AIED; VI/VIY/VIYN, VI/VIX/VIXE, VIXC, VI/VIZ/VIZS, VI/VIQ/VIQN, VI/VIF/VIFN, VI/VIE/VIED; FI/FIY/FIYN, FI/FIX/FIXE, FIXC, FI/FIZ/FIZS, FI/FIQ/FIQN, FI/FIF/FIFN, FI/FIE/FIED. Normativa MODI: RI/ATI/ATID, RI/ATC/ATCD. Normativa SM: MU/MUT/MUTN, OS/OSD, CL/CLA/CLAA. Normativa BNB: SB/DBV/DBVA, SB/NAA/NAAG, NAAI, NAAE, NAAC, SB/NAT/NATG, NATI, NATE, NATC, SB/ABC/ABCA, RB/RBR/RBRA, RB/RBR/RBNG, RBNI, RBNE, RBNC, LR/LRD/LRDA, DB/DBR/DBRA, DB/DBC/DBCA, DB/DBX/DBXT, DB/DBP/DBPA, DB/DBS/DBSR, SB/TBI/TBIA. Normativa BNM: LR/LRI/LRIL, LRIZ, LRIG, LRIX, SM/SMT/SMTA, RM/RMT/RMTA. Normativa BNP: SP/SPS/SPSL, SPSA, SPSD. Normativa BNZ: SZ/SZS/SZSL, SZSE, SZSD. Normativa ATOG/OGS/OGSA, IN/INI/INIL, INIO. Normativa BNPE: RR/RRD/RRDA, RR/RRT/RRTA, SR/SRT/SRTA. Normativa BNPL: SP/SPN/SPNS, SPNM, SP/SPT/SPTA, RP/RPT/RPTA. Versioni 4.00 e ICCD Normativa Trasversale: MS/MST/MSTE - Versioni precedenti a 4.00: DO/MST/MSTO</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1550,6 +1738,21 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Category</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Characteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Characteristic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">Caratteristica</rdfs:label>
+        <rdfs:label xml:lang="en">Characteristic</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <ADMS:hasTask xml:lang="it">Questa classe rappresenta la caratteristica che appartiene a un&apos;entità.</ADMS:hasTask>
+        <ADMS:hasTask xml:lang="en">This class represents the characteristic of an entity.</ADMS:hasTask>
     </owl:Class>
     
 
@@ -1590,20 +1793,13 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasClassificationSystem"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1629,7 +1825,7 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
     <!-- https://w3id.org/arco/ontology/core/ClassificationSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/System"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/definesConcept"/>
@@ -1657,8 +1853,7 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
     <!-- https://w3id.org/arco/ontology/core/Concept -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Concept">
-        <owl:equivalentClass rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedclassification.owl"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta un concetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing a concept.</rdfs:comment>
@@ -1667,6 +1862,7 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
         <rdfs:label xml:lang="it">Concetto</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: */SGT/SGTI, DA/DES/DESU, DA/AID/AIDI, RO/ROF/ROFS, */THS/THSD. VeAC: OG/OGT/OGTV. SM: CL/CHS/CHSN, CL/CLA/CLAT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1674,7 +1870,7 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
     <!-- https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Characteristic"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta una caratteristica di un&apos;entità di carattere culturale come ad esempio un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing the characteristic of a cultural entity (e.g. a cultural property).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1723,10 +1919,55 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/Description -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Description">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una descrizione, una concettualizzazione utilizzata per definire concetti a partire da un insieme di dati o osservazioni.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a description, a conceptualization used for defining concepts out of a set of data or observations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <rdfs:label xml:lang="it">Descrizione</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Entity -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Entity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;entità, qualsiasi cosa reale o immaginaria.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an entity, anything real, possible, or imaginary.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Entity</rdfs:label>
+        <rdfs:label xml:lang="it">Entità</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/EventOrSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/EventOrSituation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un evento o una situazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an event or a situation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Event or situation</rdfs:label>
+        <rdfs:label xml:lang="it">Evento o situazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/EventOrSituationInTime -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/EventOrSituationInTime">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/involves"/>
@@ -1735,14 +1976,14 @@ WHERE {
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/hasTemporalEntity"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TemporalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/hasTemporalEntity"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TemporalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">La classe che rappresenta una situazione o un evento nel tempo.</rdfs:comment>
@@ -1750,6 +1991,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">Event or situation in time</rdfs:label>
         <rdfs:label xml:lang="it">Evento o situazione nel tempo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1757,7 +2000,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/core/Identifier -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Identifier">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Characteristic"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/issuedBy"/>
@@ -1789,7 +2032,7 @@ WHERE {
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta in identificativo.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un identificativo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents identifier.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">Identificativo</rdfs:label>
@@ -1797,6 +2040,7 @@ WHERE {
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>NC/NCT, AC/ACC/ACCC, AC/ACS/ACSC, AC/MOD/MODI. ICCD Normativa Trasversale 4.00: UB/INP/INPS. ICCD Normativa FF: PA/PAC/PACI; PA/PAC/PACA. ICCD Normativa Trasversale 4.00: DO/FTA/FTAN; DO/DRA/DRAN; DO/VDC/VDCN; DO/REG/REGN; DO/FNT/FNTI. ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFX. ICCD Normativa Trasversale 4.00: RE/FOI/FOID. UB/COL/COLI.</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/NTC, AC/ACC, ACI, ACS/ACSC, AC/MOD/MODI; OG/OGT/OGTI; RO/ROF/ROFX, RO/CRF/CRFH, DO/BIB/BIBH, BIBK, NCUN, RE/RCG/RCGK, NCUN, NUCN, RCGH, RE/DSC/DSCK, NUCN, NCUN, DSCH, RE/FOI/FOID; AU/AUT/AUTH, AUTK, NUCN, NCUN; AU/AUF/AUFH, NUCN, NCUN; PD/PDF/PDFH; UB/INP/INPS: LC/LDC/LDCK, LDCG; LA/PRC/PRCK; MC/CMN/CMNN. MODI: CD/CDR, CDM. Normativa BDI: DU/DUC, DU/DUO/DUOC, DU/DUM/DUMC, DV/DVC, DV/DVO/DVOC, DV/DVM/DVMC, DF/DFC, DF/DFO/DFOC, DF/DFM/DFMC, AI/AIC, AI/AIO/AIOC, AI/AIM/AIMC, VI/VIC, VI/VIO/VIOC, VI/VIM/VIMC, FI/FIC, FI/FIO/FIOC, FI/FIM/FIMC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1810,6 +2054,23 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="en">Identifier type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di identificativo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa trasversale: CD/NTC, AC/ACC, ACI, ACS/ACSC, AC/MOD/MODI; OG/OGT/OGTI; RO/ROF/ROFX, RO/CRF/CRFH, DO/BIB/BIBH, BIBK, NCUN, RE/RCG/RCGK, NCUN, NUCN, RCGH, RE/DSC/DSCK, NUCN, NCUN, DSCH, RE/FOI/FOID; AU/AUT/AUTH, AUTK, NUCN, NCUN; AU/AUF/AUFH, NUCN, NCUN; PD/PDF/PDFH; UB/INP/INPS: LC/LDC/LDCK, LDCG; LA/PRC/PRCK; MC/CMN/CMNN. MODI: CD/CDR, CDM. Normativa BDI: DU/DUC, DU/DUO/DUOC, DU/DUM/DUMC, DV/DVC, DV/DVO/DVOC, DV/DVM/DVMC, DF/DFC, DF/DFO/DFOC, DF/DFM/DFMC, AI/AIC, AI/AIO/AIOC, AI/AIM/AIMC, VI/VIC, VI/VIO/VIOC, VI/VIM/VIMC, FI/FIC, FI/FIO/FIOC, FI/FIM/FIMC</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Location -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Location">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la posizione (e.g. di un &apos;entità culturale).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the location of an entity (e.g. of a cultural entity).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+        <rdfs:label xml:lang="it">Luogo</rdfs:label>
+        <rdfs:label xml:lang="it">Posizione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -1834,7 +2095,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/core/Situation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Situation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta il generico concetto di situazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing the generic concept of situation.</rdfs:comment>
@@ -1847,10 +2108,31 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/System -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/System">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/System"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un sistema.</rdfs:comment>
+        <rdfs:comment xml:lang="en">System</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">Sistema</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Taxon -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Taxon">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/classifies"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
@@ -1861,6 +2143,25 @@ WHERE {
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isTaxonOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/identifies"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1895,6 +2196,65 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/Sample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituationInTime"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasTaxon"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isIdentificationInTimeOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasTaxon"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Taxon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/current"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;identificazione nel tempo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an identification in time</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
+        <rdfs:label xml:lang="en">Identification in time</rdfs:label>
+        <rdfs:label xml:lang="it">Identificazione nel tempo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: SB/NBN/NBNA, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN.
+Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normativa BNPL:  SP/SPN. Normativa BNZ: SZ/SZS</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Specimen -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Specimen"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/CLV/Identifier -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Identifier"/>
@@ -1913,45 +2273,6 @@ WHERE {
     
 
 
-    <!-- https://w3id.org/italia/onto/RO/TimeIndexedRole -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/RO/TimeIndexedRole">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/forEntity"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/withRole"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/hasTemporalEntity"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TemporalEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Rappresentazione di un ruolo associato ad un intervallo temporale determinato.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Representation of Role with a clearly defined time extension.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/RO"/>
-        <rdfs:label xml:lang="it">Ruolo nel tempo</rdfs:label>
-        <rdfs:label xml:lang="en">Time indexed role</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/italia/onto/TI/TemporalEntity -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/TI/TemporalEntity"/>
@@ -1964,12 +2285,6 @@ WHERE {
     
 
 
-    <!-- https://w3id.org/italia/onto/l0/Agent -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Agent"/>
-    
-
-
     <!-- https://w3id.org/italia/onto/l0/Characteristic -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
@@ -1978,9 +2293,7 @@ WHERE {
 
     <!-- https://w3id.org/italia/onto/l0/Concept -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Concept">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Concept"/>
     
 
 
@@ -2049,6 +2362,7 @@ WHERE {
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/LocalIdentifier">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">Identificativo locale</rdfs:label>
         <rdfs:label xml:lang="en">Local identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -2061,8 +2375,24 @@ WHERE {
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/NationalIdentifier">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">Identificativo nazionale</rdfs:label>
         <rdfs:label xml:lang="en">National identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/SystemIdentifier -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/SystemIdentifier">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;identificativo dato dal sistema alla scheda di catalogo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the id given by the IT system to the catalogue record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">Identificativo del sistema</rdfs:label>
+        <rdfs:label xml:lang="en">System identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -2074,9 +2404,10 @@ WHERE {
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/core/UniqueIdentifier">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/IdentifierType"/>
         <rdfs:comment xml:lang="it">Instabile</rdfs:comment>
-        <rdfs:comment xml:lang="en">Unstable</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
         <rdfs:label xml:lang="it">Identificativo univoco</rdfs:label>
         <rdfs:label xml:lang="en">Unique identifier</rdfs:label>
+        <owl:versionInfo xml:lang="en">Unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">Normativa trasversale: CD/NCT/NCTR + CD/NCT/NCTN + CD/NCT/NCTS</a-cat:iccdNormTag>
     </owl:NamedIndividual>
 </rdf:RDF>

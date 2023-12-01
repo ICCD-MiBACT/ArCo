@@ -10,6 +10,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:abcd="http://rs.tdwg.org/abcd/terms/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
      xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -20,7 +21,6 @@
      xmlns:denotative="https://w3id.org/arco/ontology/denotative-description/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/denotative-description-aligns/">
         <owl:imports rdf:resource="http://id.loc.gov/ontologies/bibframe-2-0-1/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <dc:creator>STLab (ISTC-CNR)</dc:creator>
         <rdfs:label xml:lang="it">Questi sono gli allineamenti del moduloDenotative Description (ArCo ontology network) verso ontologie esterne del Web semantico standard e ampiamente utilizzate.</rdfs:label>
         <rdfs:label xml:lang="en">These are the alignments of Denotative Description module (ArCo ontology network) to external ontologies widely used and available at the state of the art.</rdfs:label>
@@ -53,6 +53,30 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasMark -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasMark">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasAffixedElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/measurementValue -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/measurementValue">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/sampleSizeValue -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/sampleSizeValue">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasValue"/>
+    </owl:ObjectProperty>
     
 
 
@@ -98,6 +122,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasAffixedElement -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasAffixedElement"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/hasConservationStatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasConservationStatus">
@@ -127,6 +157,12 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasValue -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasValue"/>
     
 
 
@@ -197,11 +233,64 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/accuracy -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/abcd/terms/accuracy">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/accuracy"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/individualCount -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/individualCount">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/numberOfElements"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/accuracy -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/accuracy"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfElements -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfElements"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/Mark -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/Mark">
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/MeasurementOrFact -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/MeasurementOrFact"/>
     
 
 
@@ -239,9 +328,7 @@
 
     <!-- https://w3id.org/arco/ontology/denotative-description/AffixedElement -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/AffixedElement">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E37_Mark"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
     
 
 
@@ -264,6 +351,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/Measurement -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Measurement">
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/abcd/terms/MeasurementOrFact"/>
         <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/dwc/terms/MeasurementOrFact"/>
     </owl:Class>
     
@@ -278,6 +366,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/abcd/terms/MeasurementOrFact"/>
         <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/dwc/terms/MeasurementOrFact"/>
     </owl:Class>
 </rdf:RDF>
