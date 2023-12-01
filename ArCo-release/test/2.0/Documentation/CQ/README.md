@@ -1,23 +1,25 @@
 **CQ1**
 
-Quali sono gli accessori associati al bene x?
+Qual è il formato del documento x collegato al bene y?
 
-What are accessories associated to the cultural property x?
+What’s the documentation file format of cultural property y?
 
-SELECT DISTINCT ?accessory WHERE{
-?x a-dd:hasAccessory ?accessory.
-}
-limit 100
+SELECT DISTINCT ?format where {
+?x a-cd:hasDocumentation ?doc .
+?doc a-dd:hasFormat ?format .
+} 
+LIMIT 100
+
 
 **CQ2**
 
-Di che tipo sono gli accessori collegati ai beni musicali?
+Secondo quale licenza posso usare la foto x?
 
-What type of accessories are related to musical instruments?
+Under what license can photo x be used?
 
-SELECT DISTINCT ?type WHERE{
-?entity a arco:MusicalHeritage;
-a-dd:hasAccessory ?accessory.
-?accessory arco-core:hasType ?type.
+SELECT DISTINCT ?license where {
+?x a a-cd:PhotographicDocumentation ;
+a-cd:hasLicense ?license .
 }
-limit 100
+LIMIT 100
+
