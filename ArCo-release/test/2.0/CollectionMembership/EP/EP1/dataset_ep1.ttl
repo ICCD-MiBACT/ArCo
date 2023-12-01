@@ -5,6 +5,6 @@
 @prefix arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix core: <https://w3id.org/arco/ontology/core/> .
 
-ex:cp1 a-dd:hasAccessory ex:accessory1 .
-ex:accessory1 core:hasType ex:accessoryType1 .
-ex:accessoryType1 a a-dd:AffixedElementType .
+ex:collmembcp1 a a-cd:CollectionMembership ;
+a-cd:isMeMberInvolvedIn ex:coll1 .
+
