@@ -1,23 +1,29 @@
 **CQ1**
 
-Quali sono gli accessori associati al bene x?
+Quale è il supporto dell’iscrizione x?
 
-What are accessories associated to the cultural property x?
+What is the support of inscription x?
 
-SELECT DISTINCT ?accessory WHERE{
-?x a-dd:hasAccessory ?accessory.
+SELECT DISTINCT ?entity ?support WHERE{
+?entity a a-dd:AffixedElement;
+core:hasType a-dd:Inscription;
+a-dd:hasSupport ?support.
 }
 limit 100
+
 
 **CQ2**
 
-Di che tipo sono gli accessori collegati ai beni musicali?
+Di quale materiale è fatto l’emblema x?
 
-What type of accessories are related to musical instruments?
+What material is emblem x made of?
 
-SELECT DISTINCT ?type WHERE{
-?entity a arco:MusicalHeritage;
-a-dd:hasAccessory ?accessory.
-?accessory arco-core:hasType ?type.
+SELECT DISTINCT ?material WHERE{
+?entity a a-dd:AffixedElement;
+core:hasType a-dd:Emblem;
+a-dd:hasTechnicalStatus ?TS.
+?TS a-dd:includesTechnicalCharacteristic ?material.
+?material a-dd:isCharacteristicClassifiedBy a-dd:Material
 }
 limit 100
+
