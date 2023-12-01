@@ -146,6 +146,10 @@ ICCD Normativa F: PD/SFI; PD/SSI""" .
 <https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/italia/onto/TI/hasTemporalEntity
+<https://w3id.org/italia/onto/TI/hasTemporalEntity> rdf:type owl:ObjectProperty .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -271,6 +275,10 @@ Normativa BDI: DURD, DUST,  AIRD, AIST, VIRD, VIVT, DURD""" .
 
 ###  https://w3id.org/italia/onto/RO/TimeIndexedRole
 <https://w3id.org/italia/onto/RO/TimeIndexedRole> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TemporalEntity
+<https://w3id.org/italia/onto/TI/TemporalEntity> rdf:type owl:Class .
 
 
 ###  https://w3id.org/italia/onto/TI/TimeInterval
