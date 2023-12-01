@@ -1,13 +1,11 @@
-@prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Accessory/CQ/CQ2/dataset_cq2.ttl/> .
+@prefix ex: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/test/2.0/Subject/CQ/CQ2/dataset_cq2.ttl/> .
 @prefix l0: <https://w3id.org/italia/onto/l0/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
 @prefix arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix core: <https://w3id.org/arco/ontology/core/> .
 
-ex:cp1 a arco:MusicHeritage ;
-a-dd:hasAccessory ex:accessory1 .
-ex:accessory1 core:hasType ex:accessoryType1 .
-ex:cp2 a arco:NaturalHeritage ;
-a-dd:hasAccessory ex:accessory2 .
-ex:accessory2 core:hasType ex:accessoryType2 .
+ex:cp1 a-cd:hasSubject ex:subj1 .
+ex:subj1 a-cd:subjectDescription ex:desc.
+
+}

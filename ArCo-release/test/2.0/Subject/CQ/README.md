@@ -1,23 +1,25 @@
 **CQ1**
 
-Quali sono gli accessori associati al bene x?
+Quali sono i soggetti rappresentati nel bene x?
 
-What are accessories associated to the cultural property x?
+What are the subjects represented in cultural property x?
 
-SELECT DISTINCT ?accessory WHERE{
-?x a-dd:hasAccessory ?accessory.
+SELECT DISTINCT ?concept WHERE{
+?x a-cd:hasSubject ?subject .
+?subject core:isClassifiedBy ?concept .
 }
 limit 100
 
+
 **CQ2**
 
-Di che tipo sono gli accessori collegati ai beni musicali?
+Quali sono le informazioni descrittive del soggetto rappresentato nel bene x??
 
-What type of accessories are related to musical instruments?
+What are the descriptive information of the cultural property x subject?
 
-SELECT DISTINCT ?type WHERE{
-?entity a arco:MusicalHeritage;
-a-dd:hasAccessory ?accessory.
-?accessory arco-core:hasType ?type.
+SELECT DISTINCT ?desc WHERE{
+?x a-cd:hasSubject ?subject .
+?subject a-cd:subjectDescription ?desc.
+
 }
 limit 100
