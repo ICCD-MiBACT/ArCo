@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/denotative-description-aligns/"
+     xml:base="https://w3id.org/arco/ontology/denotative-description-aligns/"
+     xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:abcd="http://rs.tdwg.org/abcd/terms/"
+     xmlns:core="https://w3id.org/arco/ontology/core/"
+     xmlns:opla="http://ontologydesignpatterns.org/opla/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:denotative="https://w3id.org/arco/ontology/denotative-description/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/denotative-description-aligns/">
+        <owl:imports rdf:resource="http://id.loc.gov/ontologies/bibframe-2-0-1/"/>
+        <dc:creator>STLab (ISTC-CNR)</dc:creator>
+        <rdfs:label xml:lang="it">Questi sono gli allineamenti del moduloDenotative Description (ArCo ontology network) verso ontologie esterne del Web semantico standard e ampiamente utilizzate.</rdfs:label>
+        <rdfs:label xml:lang="en">These are the alignments of Denotative Description module (ArCo ontology network) to external ontologies widely used and available at the state of the art.</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasMark -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasMark">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasAffixedElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/measurementValue -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/measurementValue">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/sampleSizeValue -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/sampleSizeValue">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P44_has_condition -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P44_has_condition"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConceptUsedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConceptUsedIn"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#usesConcept -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#usesConcept"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasAffixedElement -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasAffixedElement"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasConservationStatus -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasConservationStatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P44_has_condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasDesignationInTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasDesignationInTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasLocationSubject -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasLocationSubject">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasValue -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasValue"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalConceptUsedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalConceptUsedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConceptUsedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalDescriptionSatisfiedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalDescriptionSatisfiedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusValidAt -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusValidAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/satisfiesTechnicalDescription -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/satisfiesTechnicalDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/usesTechnicalConcept -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/usesTechnicalConcept">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#usesConcept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/accuracy -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/abcd/terms/accuracy">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/accuracy"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/individualCount -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/individualCount">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/numberOfElements"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/accuracy -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/accuracy"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfElements -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfElements"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/Mark -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/Mark">
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/MeasurementOrFact -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/abcd/terms/MeasurementOrFact"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/MaterialSample -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/dwc/terms/MaterialSample">
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/MeasurementOrFact -->
+
+    <owl:Class rdf:about="http://rs.tdwg.org/dwc/terms/MeasurementOrFact"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E34_Inscription -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E34_Inscription"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E37_Mark -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E37_Mark"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/AffixedElement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/ConservationStatus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ConservationStatus">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Inscription -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Inscription">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E34_Inscription"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Measurement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Measurement">
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/abcd/terms/MeasurementOrFact"/>
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/dwc/terms/MeasurementOrFact"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Sample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Sample"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/abcd/terms/MeasurementOrFact"/>
+        <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/dwc/terms/MeasurementOrFact"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
