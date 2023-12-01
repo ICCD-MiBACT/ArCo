@@ -2,6 +2,7 @@
 @prefix l0: <https://w3id.org/italia/onto/l0/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix core: <https://w3id.org/arco/ontology/core/> .
 
 ex:ae1 a a-dd:AffixedElement ;
     core:hasType a-dd:Inscription ;
