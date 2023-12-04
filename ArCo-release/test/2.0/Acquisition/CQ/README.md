@@ -4,7 +4,7 @@ Chi è stato il precedente proprietario del bene?
 
 Who was the transferor of the cultural property?
 
-SELECT DISTINCT ?entity ?transferor WHERE{
+SELECT DISTINCT ?transferor WHERE{
 ?entity a-cd:hasAcquisition ?acq.
 ?acq core:hasAgentRole ?agentrole.
 ?agentrole core:hasAgent ?transferor;
