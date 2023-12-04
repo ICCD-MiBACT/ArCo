@@ -24,9 +24,9 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:a-archive="https://w3id.org/arco/ontology/archive/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/archive">
-        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/archive/0.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/2.0"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/2.0"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/archive/1.0"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <dc:creator>Alessandro Russo (CNR-ISTC, STLab)</dc:creator>
         <dc:creator>Giorgia Lodi (CNR-ISTC, STLab)</dc:creator>
         <dc:creator>Margherita Porena (CNR-ISTC, STLab)</dc:creator>
@@ -48,8 +48,8 @@
         <rdfs:comment xml:lang="en">The ArCo module on archives was created in the context of the CNR Portal of the sources for the history of the Italian Republic project. The aim of the project is to create a Portal that offers to a wide and diversified audience a collection of sources for national political and institutional history (in the period 1943-1953), integrating the information and documental heritage, including the documental heritage, of the Institutions and some foundations and institutes belonging to the AICI.</rdfs:comment>
         <rdfs:label xml:lang="en">Archive Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia degli archivi (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 0.1 - it can be subject to further changes according to the needs of the CNR project.</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 0.1 - alcuni elementi potrebbero subire ulteriori cambiamenti rispetto ai requisiti che emergeranno nel contesto del progetto Portale delle Fonti del CNR.</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.0 - it can be subject to further changes according to the needs of the CNR project.</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.0 - alcuni elementi potrebbero subire ulteriori cambiamenti rispetto ai requisiti che emergeranno nel contesto del progetto Portale delle Fonti del CNR.</owl:versionInfo>
     </owl:Ontology>
 
 
