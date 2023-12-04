@@ -144,8 +144,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="it">ha corda</rdfs:label>
         <rdfs:label xml:lang="en">has string</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 3.01: AA/AAL</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -162,7 +162,7 @@
         <rdfs:label xml:lang="it">comprende strumento di accompagnamento</rdfs:label>
         <rdfs:label xml:lang="en">involves accompanying instrument</rdfs:label>
         <owl:versionInfo xml:lang="it">instable</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -177,8 +177,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="it">coinvolge strumento solista</rdfs:label>
         <rdfs:label xml:lang="en">involves solo instrument</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -192,8 +192,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="en">is accompanying instrument involved in</rdfs:label>
         <rdfs:label xml:lang="it">è strumento musicale di accompagnamento coinvolto in</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -209,8 +209,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="en">is produced by musical instrument</rdfs:label>
         <rdfs:label xml:lang="it">è prodotta da strumento musicale</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 3.01: AA/AAN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -225,8 +225,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="en">is solo instrument involved in</rdfs:label>
         <rdfs:label xml:lang="it">è strumento musicale solista coinvolto in</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -241,8 +241,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="en">is string of</rdfs:label>
         <rdfs:label xml:lang="it">è corda di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 3.01: AA/AAL</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -258,8 +258,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="it">produce nota musicale</rdfs:label>
         <rdfs:label xml:lang="en">produces musical note</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 3.01: AA/AAN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -286,8 +286,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="en">Hornbostel-Sachs definition</rdfs:label>
         <rdfs:label xml:lang="it">definizione Hornbostel-Sachs</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: CL/CHS/CHSD</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -303,8 +303,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="en">Hornbostel-Sachs edition</rdfs:label>
         <rdfs:label xml:lang="it">edizione Hornbostel-Sachs</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: CL/CHS/CHSE</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -321,8 +321,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="en">Hornbostel-Sachs number</rdfs:label>
         <rdfs:label xml:lang="it">codice numerico Hornbostel-Sachs</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: CL/CHS/CHSN</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -415,8 +415,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="it">Classe Hornbostel-Sachs</rdfs:label>
         <rdfs:label xml:lang="en">Hornbostel-Sachs class</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: CL/CHS</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -455,8 +455,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="en">Musical instrument</rdfs:label>
         <rdfs:label xml:lang="it">Strumento musicale</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BDI 4.00: CU/CUS/CUSS-CUSA</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -478,8 +478,8 @@
         <rdfs:label xml:lang="it">Classe degli strumenti musicali</rdfs:label>
         <rdfs:label xml:lang="en">Musical instrument taxon</rdfs:label>
         <rdfs:label xml:lang="it">Taxon degli strumenti musicali</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: CL/CLA/CLAT</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -494,8 +494,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="en">Musical note</rdfs:label>
         <rdfs:label xml:lang="it">Nota musicale</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAN</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -516,8 +516,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="it">Corda</rdfs:label>
         <rdfs:label xml:lang="en">String</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAL</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -549,8 +549,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="it">Corista</rdfs:label>
         <rdfs:label xml:lang="en">Diapason</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="en">ICCD Normativa SM 4.00: AA/AAC</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -565,8 +565,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="it">Estensione</rdfs:label>
         <rdfs:label xml:lang="en">Extension</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAE</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -581,8 +581,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="en">Temperament</rdfs:label>
         <rdfs:label xml:lang="it">Temperamento</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAP</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -597,8 +597,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="it">Accordatura</rdfs:label>
         <rdfs:label xml:lang="en">Tuning</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAA</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -613,8 +613,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/musical-instrument"/>
         <rdfs:label xml:lang="it">Lunghezza vibrante</rdfs:label>
         <rdfs:label xml:lang="en">Vibrating length</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SM 4.00: AA/AAL</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     

@@ -51,10 +51,10 @@
         <owl:versionInfo xml:lang="en">Version 1.0 - it can be subject to further changes according to the needs of the CNR project.</owl:versionInfo>
         <owl:versionInfo xml:lang="it">Versione 1.0 - alcuni elementi potrebbero subire ulteriori cambiamenti rispetto ai requisiti che emergeranno nel contesto del progetto Portale delle Fonti del CNR.</owl:versionInfo>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -62,16 +62,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -79,7 +79,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/hasFundingAid -->
@@ -94,72 +94,89 @@
         <rdfs:comment xml:lang="en">has funding aid</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive"/>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
+    
 
+
+    <!-- https://w3id.org/arco/ontology/archive/hasSortingCriterion -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/archive/hasSortingCriterion">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/archive/SortingCriterion"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità (e.g. un bene complesso, un fondo fotografico) con il criterio di ordinamento delle sue componenti.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity (e.g. a complex cultural property, a photographic record set) with the sorting criterion of its inner components.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive/"/>
+        <rdfs:label xml:lang="it">ha criterio di ordinamento</rdfs:label>
+        <rdfs:label xml:lang="en">has sorting criterion</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa FF: OG/OGT/OGTO</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasAuthor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCollectionMember -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCollectionMember"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasHolder -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasHolder"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/core/classifies -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/classifies"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/core/hasClassificationInTime -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasClassificationInTime"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/core/isDescribedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDescribedBy"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -167,7 +184,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/arrangementSystem -->
@@ -181,7 +198,7 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/extent -->
@@ -197,7 +214,7 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/linearShelfSpace -->
@@ -211,10 +228,10 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -222,7 +239,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/ArchivalCollection -->
@@ -330,7 +347,7 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF. Normativa F: PD/SFI, SSI. Normativa FF: PAC</a-cat:iccdNormTag>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/ArchivalResource -->
@@ -460,7 +477,7 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/ArchivalResourceType -->
@@ -477,7 +494,7 @@
 ICCD Normativa F: UB/UBF/UBFU-UBFT-UBFS-UBFF-UBFP,
 PA/SSI, PA/SFI</a-cat:iccdNormTag>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/FundingAid -->
@@ -492,58 +509,66 @@ PA/SSI, PA/SFI</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/SortingCriterion -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/archive/SortingCriterion">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/archive/SortingCriterion">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/description"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </rdf:Description>
-
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il criterio di ordinamento di un fondo, una serie, etc</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the sorting criterion of a series, fond, etc</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive/"/>
+        <rdfs:label xml:lang="it">Criterio di ordinamento</rdfs:label>
+        <rdfs:label xml:lang="en">Sorting criterion</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa FF: OG/OGT/OGTO</a-cat:iccdNormTag>
+    </owl:Class>
+    
 
 
     <!-- https://w3id.org/arco/ontology/catalogue/Record -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/Record"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/core/ClassificationInTime -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/core/ClassificationSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
+    
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/CommunicationMedium -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/MeasurementCollection -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalConcept -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
-
 </rdf:RDF>
 
 
 
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->

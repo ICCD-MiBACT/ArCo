@@ -1535,8 +1535,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">archaeologic material concentration</rdfs:label>
         <rdfs:label xml:lang="it">densità di concentrazione del materiale archeologico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SI: DA/MTP/MTPS</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1634,8 +1634,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">collezione completa</rdfs:label>
         <rdfs:label xml:lang="en">completed collection</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD normative F, MI, S: OG/QNT/QNTC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1650,8 +1650,8 @@ WHERE {
         <rdfs:label xml:lang="it">codice sequenza</rdfs:label>
         <rdfs:label xml:lang="en">container sequence</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: AC/ACZ</a-cat:iccdNormTag>
         <core:constructQuery>CONSTRUCT {
 ?x &lt;https://w3id.org/arco/ontology/natural-specimen-description/containerSequence&gt; ?y .
@@ -1855,8 +1855,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">number of elements</rdfs:label>
         <rdfs:label xml:lang="it">numero di elementi</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/QNT/QNTI; OG/QNT/QNTS</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1928,8 +1928,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">numero d&apos;ordine</rdfs:label>
         <rdfs:label xml:lang="en">position in sequence</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD normative F, MI, OAC, S: OG/QNT/QNTO</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1946,8 +1946,8 @@ WHERE {
         <rdfs:label xml:lang="it">identificativo precedente</rdfs:label>
         <rdfs:label xml:lang="en">previous identifier</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">Instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
     </owl:DatatypeProperty>
@@ -2353,8 +2353,8 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Bene Botanico</rdfs:label>
         <rdfs:label xml:lang="en">Botanical Heritage</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3114,8 +3114,8 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Bene Minerale</rdfs:label>
         <rdfs:label xml:lang="en">Mineral Heritage</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3301,8 +3301,8 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Bene Paleontologico</rdfs:label>
         <rdfs:label xml:lang="en">Palaeontological Heritage</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNP</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3317,8 +3317,8 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Bene Petrologico</rdfs:label>
         <rdfs:label xml:lang="en">Pertologic Heritage</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNPE</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3415,8 +3415,8 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">Physical Anthropology Heritage</rdfs:label>
         <rdfs:label xml:lang="it">Reperto Atropologico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3431,8 +3431,8 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Bene della Scienza Planetaria</rdfs:label>
         <rdfs:label xml:lang="en">Planetary Science Heritage</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNPL</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3549,8 +3549,8 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Bene Zoologico</rdfs:label>
         <rdfs:label xml:lang="en">Zoological Heritage</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNZ</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -4080,8 +4080,8 @@ ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/historicalBiographicalInformation">
         <rdfs:label xml:lang="en">historical biographic information</rdfs:label>
         <rdfs:label xml:lang="it">informazioni biografiche storiche</rdfs:label>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/PDF/PDFB 
 ICCD Normativa AUT: AU/NSC</a-cat:iccdNormTag>
     </rdf:Description>

@@ -342,8 +342,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">contains cadastral identity</rdfs:label>
         <rdfs:label xml:lang="it">contiene identità catastale</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -516,8 +516,8 @@ a-loc:hasCadastreType ?type.
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha situazione clumatica</rdfs:label>
         <rdfs:label xml:lang="en">has climate situation</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -569,8 +569,8 @@ a-loc:hasCadastreType ?type.
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha luogo o istituto della cultura</rdfs:label>
         <rdfs:label xml:lang="en">has cultural institute or site</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -586,8 +586,8 @@ a-loc:hasCadastreType ?type.
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha definizione del contenitore giuridico</rdfs:label>
         <rdfs:label xml:lang="en">has cultiral institute or site definition</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -604,8 +604,8 @@ a-loc:hasCadastreType ?type.
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha qualificazione del contenitore giuridico</rdfs:label>
         <rdfs:label xml:lang="en">has cultural institute or site specification</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGQ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -624,8 +624,8 @@ a-loc:hasCadastreType ?type.
         <rdfs:label xml:lang="it">ha tipo di contenitore giuridico</rdfs:label>
         <rdfs:label xml:lang="en">has cultural institute or site type</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGT; CG/CGQ</a-cat:iccdNormTag>
         <core:constructQuery>prefix cis: &lt;https://dati.benicutlurali.it/cis/&gt;
 
@@ -699,8 +699,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha idrodinamismo</rdfs:label>
         <rdfs:label xml:lang="en">has flyuid dynamism</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB, BNP, BNZ: LR/LRI/LRID</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -724,8 +724,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha contesto geologico</rdfs:label>
         <rdfs:label xml:lang="en">has geological context</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative Beni naturalistici: IM/IMA/IMAC; ET/ETA/ETA, IM/IMG, , IMIML; IR/IRG, IR/IRL, ET/ETG, ET/ETL, IR/IRA/*</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -797,8 +797,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha indirizzo storico</rdfs:label>
         <rdfs:label xml:lang="en">has historical address</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>LS/LCS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -843,8 +843,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha inclinazione</rdfs:label>
         <rdfs:label xml:lang="en">has incline</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRII</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -880,8 +880,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha mappa</rdfs:label>
         <rdfs:label xml:lang="en">has map</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -897,8 +897,8 @@ WHERE {
         <rdfs:comment xml:lang="en">This property connects a natural environment with its marine biogeographic realm.</rdfs:comment>
         <rdfs:label xml:lang="it">ha regione biogeografica marina</rdfs:label>
         <rdfs:label xml:lang="en">has marine biogeographic realm</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNZ: LR/LRM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -922,8 +922,8 @@ WHERE {
         <rdfs:label xml:lang="en">This property relates a thing to its natural environment</rdfs:label>
         <rdfs:label xml:lang="it">ha ambiente naturale</rdfs:label>
         <rdfs:label xml:lang="en">has natual environment</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -975,8 +975,8 @@ a-loc:hasOldTownAdministrativeType ?type.
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha situazione luminosa</rdfs:label>
         <rdfs:label xml:lang="en">has shade tolerance</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB, BNP, BNZ: LR/LRI/LRIS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1061,8 +1061,8 @@ a-loc:hasSiteType ?type.
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha suolo</rdfs:label>
         <rdfs:label xml:lang="en">has soil</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1280,8 +1280,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha regione zoogeografica</rdfs:label>
         <rdfs:label xml:lang="en">has zoogeographic region</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative beni naturalistici: LR/LRV/LRVZ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1432,8 +1432,8 @@ WHERE       {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is climate situation of</rdfs:label>
         <rdfs:label xml:lang="it">è situazione climatica di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1448,8 +1448,8 @@ WHERE       {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is contained in cadastre</rdfs:label>
         <rdfs:label xml:lang="it">è contenuta nel catasto</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>LS/CSS/CSSD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1481,8 +1481,8 @@ WHERE       {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is cultural institute or site definition of</rdfs:label>
         <rdfs:label xml:lang="it">è definizione del contenitore giuridico di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1497,8 +1497,8 @@ WHERE       {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is cultural institute or site of</rdfs:label>
         <rdfs:label xml:lang="it">è luogo o istituto della cultura di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1513,8 +1513,8 @@ WHERE       {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is cultural institute or site specification of</rdfs:label>
         <rdfs:label xml:lang="it">è specificazione di contenitore giuridico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1531,8 +1531,8 @@ WHERE       {
         <rdfs:label xml:lang="en">is cultural institute or site type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di contenitore giuridico di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:constructQuery>prefix cis: &lt;http://dati.beniculturali.it/cis/&gt;
 
 CONSTRUCT   { 
@@ -1594,8 +1594,8 @@ WHERE {
         <rdfs:label xml:lang="en">is wave movement of</rdfs:label>
         <rdfs:label xml:lang="it">è idrodinamismo di</rdfs:label>
         <rdfs:label xml:lang="it">è moto ondoso di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB; BNP; BNZ: LR/LRI/LRID</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1618,8 +1618,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is geological context of</rdfs:label>
         <rdfs:label xml:lang="it">è contesto geologico di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative Beni naturalistici: IM/IMA/IMAC; ET/ETA/ETA, IM/IMG, , IMIML; IR/IRG, IR/IRL, ET/ETG, ET/ETL, IR/IRA/*</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1684,8 +1684,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is historical address</rdfs:label>
         <rdfs:label xml:lang="it">è indirizzo storico di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1725,8 +1725,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is incline of</rdfs:label>
         <rdfs:label xml:lang="it">è inclinazione di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1774,8 +1774,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is map of</rdfs:label>
         <rdfs:label xml:lang="it">è mappa di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1791,8 +1791,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is marine biogeographical realm of</rdfs:label>
         <rdfs:label xml:lang="it">è regione zoogeografica marina di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNZ: LR/LRM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1815,8 +1815,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is natural environment of</rdfs:label>
         <rdfs:label xml:lang="it">è ambiente naturale di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1865,8 +1865,8 @@ WHERE       {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is shade tolerance of</rdfs:label>
         <rdfs:label xml:lang="it">è situazione luminosa di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB, BNP, BNZ: LR/LRI/LRIS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1961,8 +1961,8 @@ WHERE       {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is soil of</rdfs:label>
         <rdfs:label xml:lang="it">è suolo di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2152,8 +2152,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is zoogeographic region of</rdfs:label>
         <rdfs:label xml:lang="it">è regione zoogeografica di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative beni naturalistici: LR/LRV/LRVZ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -2393,8 +2393,8 @@ core:hasType ?type .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">descrizione geografica</rdfs:label>
         <rdfs:label xml:lang="en">geographical description</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/GEF/GEFD-GEFI</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2411,8 +2411,8 @@ core:hasType ?type .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">descrizione geologica</rdfs:label>
         <rdfs:label xml:lang="en">geological description</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/GELD
 ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
@@ -2430,8 +2430,8 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">descizione geomorfologica</rdfs:label>
         <rdfs:label xml:lang="en">geomorphological description</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/GEO/GEOD</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2448,8 +2448,8 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">descrizione del contesto ambientale storico</rdfs:label>
         <rdfs:label xml:lang="en">historical environment context description</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/CAS (CASD+CASF+CASA)</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2555,8 +2555,8 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">descrizione morfologica</rdfs:label>
         <rdfs:label xml:lang="en">morphological description</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa PG 3.00: CA/CAM</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2572,8 +2572,8 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">assetto delle acque naturali</rdfs:label>
         <rdfs:label xml:lang="en">natural water arrangement</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -2589,8 +2589,8 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">descrizione pedologica</rdfs:label>
         <rdfs:label xml:lang="en">pedological description</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/PED/PEDD+PEDE</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2642,8 +2642,8 @@ ICCD Normativa PG 3.00: CA/CAG/CAGG, CAGP</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">mare o oceano</rdfs:label>
         <rdfs:label xml:lang="en">sea or ocean</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM 3.01: LT/MAO</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2696,8 +2696,8 @@ core:hasType core:NationalIdentifier .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">soil use</rdfs:label>
         <rdfs:label xml:lang="it">uso del suolo</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/USD</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -3127,8 +3127,8 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastral subordinate</rdfs:label>
         <rdfs:label xml:lang="it">Subalterno catastale</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -3170,8 +3170,8 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastre</rdfs:label>
         <rdfs:label xml:lang="it">Catasto</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: LS/CSS/CSSD</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3216,8 +3216,8 @@ Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Chronostratigraphic class</rdfs:label>
         <rdfs:label xml:lang="it">Classe cronostratigrafica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG
 ICCD Normativa BNP: ETG
 ICCD Normativa BNPE: IRG</a-cat:iccdNormTag>
@@ -3234,8 +3234,8 @@ ICCD Normativa BNPE: IRG</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Chronostratigraphic series</rdfs:label>
         <rdfs:label xml:lang="it">Serie cronostratigrafica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGO
 ICCD Normativa BNP: ETG/ETGO
 ICCD Normativa BNPE: IRG/IRGO</a-cat:iccdNormTag>
@@ -3252,8 +3252,8 @@ ICCD Normativa BNPE: IRG/IRGO</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Chronostratigraphic stage</rdfs:label>
         <rdfs:label xml:lang="it">Piano cronostratigrafico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGT
 ICCD Normativa BNP: ETG/ETGT
 ICCD Normativa BNPE: IRG/IRGT</a-cat:iccdNormTag>
@@ -3286,8 +3286,8 @@ ICCD Normativa BNPE: IRG/IRGS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Chronostratigraphic system</rdfs:label>
         <rdfs:label xml:lang="it">Sistema cronostratigrafico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGP
 ICCD Normativa BNP: ETG/ETGP
 ICCD Normativa BNPE: IRG/IRGP</a-cat:iccdNormTag>
@@ -3304,8 +3304,8 @@ ICCD Normativa BNPE: IRG/IRGP</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Chronozone</rdfs:label>
         <rdfs:label xml:lang="en">Cronozona</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGC
 ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
     </owl:Class>
@@ -3333,8 +3333,8 @@ ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Climate situation</rdfs:label>
         <rdfs:label xml:lang="it">Situazione climatica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa PG: CA/CLM, CA/CAT. Normativa MODI: CA/CAT. Normativa BNB: LR/LRI/LRIH</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3410,8 +3410,8 @@ ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cultural Institute or Site Definition</rdfs:label>
         <rdfs:label xml:lang="it">Definizione di Contenitore Giuridico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGT</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3426,8 +3426,8 @@ ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cultural Institute or Site Specification</rdfs:label>
         <rdfs:label xml:lang="it">Specificazione di Contenitore Giuridico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGQ</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3442,8 +3442,8 @@ ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cultural Institute or Site type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di Contenitore Giuridico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGT, CG/CGQ</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3466,8 +3466,8 @@ ICCD Normativa BNPE: IRG/IRGC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Eonotema</rdfs:label>
         <rdfs:label xml:lang="en">Eontem</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGE
 ICCD Normativa BNP: ETG/ETGE
 ICCD Normativa BNPE: IRG/IRGE</a-cat:iccdNormTag>
@@ -3484,8 +3484,8 @@ ICCD Normativa BNPE: IRG/IRGE</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Eratema</rdfs:label>
         <rdfs:label xml:lang="en">Erathem</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGR
 ICCD Normativa BNP: ETG/ETGR
 ICCD Normativa BNPE: IRG/IRGR</a-cat:iccdNormTag>
@@ -3502,8 +3502,8 @@ ICCD Normativa BNPE: IRG/IRGR</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Fluid dynamism</rdfs:label>
         <rdfs:label xml:lang="it">Idrodinamismo</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB, BNP, BNZ: LR/LRI/LRID</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3542,8 +3542,8 @@ ICCD Normativa BNPE: IRG</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Epoca geocronologica</rdfs:label>
         <rdfs:label xml:lang="en">Geochronological epoch</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGO
 ICCD Normativa BNP: ETG/ETGO
 ICCD Normativa BNPE: IRG/IRGO</a-cat:iccdNormTag>
@@ -3560,8 +3560,8 @@ ICCD Normativa BNPE: IRG/IRGO</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Era geocronologica</rdfs:label>
         <rdfs:label xml:lang="en">Geochronological era</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGR
 ICCD Normativa BNP: ETG/ETGR
 ICCD Normativa BNPE: IRG/IRGR</a-cat:iccdNormTag>
@@ -3578,8 +3578,8 @@ ICCD Normativa BNPE: IRG/IRGR</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Geochronological period</rdfs:label>
         <rdfs:label xml:lang="it">Periodo geocronologico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGP
 ICCD Normativa BNP: ETG/ETGP
 ICCD Normativa BNPE: IRG/IRGP</a-cat:iccdNormTag>
@@ -3596,8 +3596,8 @@ ICCD Normativa BNPE: IRG/IRGP</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Geochronological subage</rdfs:label>
         <rdfs:label xml:lang="it">Sottoerà geocronologica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMG/IMGS
 ICCD Normativa BNP: ETG/ETGS
 ICCD Normativa BNPE: IRG/IRGS</a-cat:iccdNormTag>
@@ -3632,8 +3632,8 @@ ICCD Normativa BNPE: IRG/IRGS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto geologico</rdfs:label>
         <rdfs:label xml:lang="en">Geological context</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IMAC
 ICCD Normativa BNP: ET/ETA/ETAC
 ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
@@ -3650,8 +3650,8 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Geological map</rdfs:label>
         <rdfs:label xml:lang="it">Mappa geologica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/GEL/GELC</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3696,8 +3696,8 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Geometria</rdfs:label>
         <rdfs:label xml:lang="en">Geometry</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -3776,8 +3776,8 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Historical address</rdfs:label>
         <rdfs:label xml:lang="it">Indirizzo storico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa trasversale: LS/LCS</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3792,8 +3792,8 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Inclinazione</rdfs:label>
         <rdfs:label xml:lang="en">Incline</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRII</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3808,8 +3808,8 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Land use map</rdfs:label>
         <rdfs:label xml:lang="it">Mappa utilizzazione dei suoli</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/USD/USDC</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -3824,8 +3824,8 @@ ICCD Normativa BNPE: IR/IRA/IRAC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Letto litostratigrafico</rdfs:label>
         <rdfs:label xml:lang="en">Lithostratigraphic bed</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNP: ETL/ETLL
 ICCD Normativa BNM: IML/IMLL
 ICCD Normativa BNPE: IRL/IRLL</a-cat:iccdNormTag>
@@ -3842,8 +3842,8 @@ ICCD Normativa BNPE: IRL/IRLL</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Classe litostratigrafica</rdfs:label>
         <rdfs:label xml:lang="en">Lithostratigraphic class</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNP: ETL
 ICCD Normativa BNM: IML
 ICCD Normativa BNPE: IRL</a-cat:iccdNormTag>
@@ -3860,8 +3860,8 @@ ICCD Normativa BNPE: IRL</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Complesso litostratigrafico</rdfs:label>
         <rdfs:label xml:lang="en">Lithostratigraphic complex</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNP: ETL/ETLC
 ICCD Normativa BNM: IML/IMLC
 ICCD Normativa BNPE: IRL/IRLC</a-cat:iccdNormTag>
@@ -3878,8 +3878,8 @@ ICCD Normativa BNPE: IRL/IRLC</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Formazione litostratigrafico</rdfs:label>
         <rdfs:label xml:lang="en">Lithostratigraphic formation</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNP: ETL/ETLF
 ICCD Normativa BNM: IML/IMLF
 ICCD Normativa BNPE: IRL/IRLF</a-cat:iccdNormTag>
@@ -3896,8 +3896,8 @@ ICCD Normativa BNPE: IRL/IRLF</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Gruppo litostratigrafico</rdfs:label>
         <rdfs:label xml:lang="en">Lithostratigraphic group</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNP: ETL/ETLG
 ICCD Normativa BNM: IML/IMLG
 ICCD Normativa BNPE: IRL/IRLG</a-cat:iccdNormTag>
@@ -3914,8 +3914,8 @@ ICCD Normativa BNPE: IRL/IRLG</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Lithostratigraphic member</rdfs:label>
         <rdfs:label xml:lang="it">Membro litostratigrafico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNP: ETL/ETLM
 ICCD Normativa BNM: IML/IMLM
 ICCD Normativa BNPE: IRL/IRLM</a-cat:iccdNormTag>
@@ -3932,8 +3932,8 @@ ICCD Normativa BNPE: IRL/IRLM</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Lithostratigraphic supergroup</rdfs:label>
         <rdfs:label xml:lang="it">Supergruppo litostratigrafico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNP: ETL/ETLS
 ICCD Normativa BNM: IML/IMLS
 ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
@@ -3972,8 +3972,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Map</rdfs:label>
         <rdfs:label xml:lang="it">Mappa</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -3987,8 +3987,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Marine biogeographic realm</rdfs:label>
         <rdfs:label xml:lang="it">Regione zoogeografica marina</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNZ: LR/LRM</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -4003,8 +4003,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Mine</rdfs:label>
         <rdfs:label xml:lang="it">Miniera</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -4024,8 +4024,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Deposito minerario</rdfs:label>
         <rdfs:label xml:lang="en">Mineral deposit</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -4039,8 +4039,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Mineral deposit type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di deposito minerario</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -4114,8 +4114,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Ambiente naturale</rdfs:label>
         <rdfs:label xml:lang="en">Natural environment</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa PG: CA. Beni naturalistici: LR/LRI</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -4130,8 +4130,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Natural environment type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di ambiente naturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -4217,8 +4217,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Affioramento</rdfs:label>
         <rdfs:label xml:lang="en">Outcrop</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa beni naturalistici: IM/IMA/IMAF, IMAD, IMAG, ET/ETA/ETAF, ETAD</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -4233,8 +4233,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Outcrop type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di affioramento</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa beni naturalistici: IM/IMA/IMAF, ET/ETA/ETAF</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -4249,8 +4249,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Mappa pedologica</rdfs:label>
         <rdfs:label xml:lang="en">Pedological map</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SI 3.00: CA/PED/PEDC</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -4265,8 +4265,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Shade tolerance</rdfs:label>
         <rdfs:label xml:lang="it">Situazione luminosa</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BN 3.01: LR/LRI/LRIS</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -4371,8 +4371,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Soil</rdfs:label>
         <rdfs:label xml:lang="it">Suolo</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -4425,8 +4425,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Substrate</rdfs:label>
         <rdfs:label xml:lang="it">Substrato</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIR</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -4441,8 +4441,8 @@ ICCD Normativa BNPE: IRL/IRLS</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Substrate type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di substrato</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIJ</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -4589,8 +4589,8 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Regione zoogeografica</rdfs:label>
         <rdfs:label xml:lang="en">Zoogeographic region</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNZ: LR/LRVZ</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -4771,8 +4771,8 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Building and land cadastre</rdfs:label>
         <rdfs:label xml:lang="it">Catasto dei fabbricati e dei terreni</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -4784,8 +4784,8 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Building cadastre</rdfs:label>
         <rdfs:label xml:lang="it">Catasto dei fabbricati</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -4812,8 +4812,8 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:label xml:lang="en">Collecting location</rdfs:label>
         <rdfs:label xml:lang="it">Luogo di raccolta</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -4917,8 +4917,8 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Catasto dei terreni</rdfs:label>
         <rdfs:label xml:lang="en">Land cadastre</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -5035,8 +5035,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Luogo della registrazione</rdfs:label>
         <rdfs:label xml:lang="en">Recording Location</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
     
 

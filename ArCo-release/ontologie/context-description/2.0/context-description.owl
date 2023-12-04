@@ -367,8 +367,8 @@ core:hasAgent ?agent .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha età</rdfs:label>
         <rdfs:label xml:lang="en">has age</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -413,8 +413,8 @@ WHERE {
         <rdfs:label xml:lang="it">ha tipo di età</rdfs:label>
         <rdfs:label xml:lang="en">has age type</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:constructQuery>CONSTRUCT   { ?age a a-cd:Age;
 core:hasType ?type.
  }
@@ -661,8 +661,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha documentazione allegata</rdfs:label>
         <rdfs:label xml:lang="en">has attached documentation</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: FTAX, DRAX, VDCX,  REGX, FNTX, ADMX (solo v. 3.00 e 3.01)</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1162,8 +1162,8 @@ core:hasAgent ?agent .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha fonte bibliografica di confronto</rdfs:label>
         <rdfs:label xml:lang="en">has comparison bibliographic entry</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB/BIBX</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1190,8 +1190,8 @@ WHERE {
 ?cp a-cd:hasConstructionCompany ?agent .
 }</owl:deprecated>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasConstructionCompany"/>
         <core:replacingQuery>select * where {
 ?x core:hasAgentRole ?NEWagentRole .
@@ -1214,8 +1214,8 @@ core:hasAgent ?agent .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha fonte bibliografica di contesto</rdfs:label>
         <rdfs:label xml:lang="en">has context bibliographic source</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB/BIBX</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1563,8 +1563,8 @@ a-cd:hasDocumentationType ?type.
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha domicilio</rdfs:label>
         <rdfs:label xml:lang="en">has domicile</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BDI: AT/DML. Normativa SM: MU/DML.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1886,8 +1886,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha scopo funzionale</rdfs:label>
         <rdfs:label xml:lang="en">has functional purpose</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -2093,8 +2093,8 @@ core:hasAgent ?agent .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha situazione inventariale</rdfs:label>
         <rdfs:label xml:lang="en">has inventory situation</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">UB/INV; ICCD Normativa Trasversale: UB/INP.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -2262,8 +2262,8 @@ a-cd:hasLaboratoryTestType ?type.
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha licenza</rdfs:label>
         <rdfs:label xml:lang="en">has license</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SCAN: DO/DCM/DCML</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -2838,8 +2838,8 @@ core:hasAgent ?agent .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha registrazione</rdfs:label>
         <rdfs:label xml:lang="en">has recording</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: DU</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -2953,8 +2953,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di relazione</rdfs:label>
         <rdfs:label xml:lang="en">has relationship type</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: ROFF
 ICCD Normativa VeAC: AU/AUT/AUTO</a-cat:iccdNormTag>
     </owl:ObjectProperty>
@@ -3161,8 +3161,8 @@ core:hasAgent ?agent .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha revisione</rdfs:label>
         <rdfs:label xml:lang="en">has review</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativia BNB: RB/RBR. Normativa BNM: RM. Normativa BNPL: RP. Normativa BNPE: RR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -3283,8 +3283,8 @@ core:hasAgent ?agent .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha sesso</rdfs:label>
         <rdfs:label xml:lang="en">has sex</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: DA/STS. Normativa BDI: AT/ATT/ATTS, AI/AIF/AIFO, VI/VIF/VIFO, FI/FIF/FIFO. Normativa SM: MU/MUT/MUTS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -3348,8 +3348,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha specifica fonte bibliografica specifica</rdfs:label>
         <rdfs:label xml:lang="en">has specific bibliographic source</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB/BIBX</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -3366,8 +3366,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha supporto di memorizzazione</rdfs:label>
         <rdfs:label xml:lang="en">has storage medium</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: DU/DUO, DU/DUM, DV/DVM, DV/DVO, AI/AIO, AI/AIM, VI/VIO, VI/VIM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -3662,8 +3662,8 @@ core:hasAgent ?agent .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha intervallo di tempo</rdfs:label>
         <rdfs:label xml:lang="en">has time interval</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -3967,8 +3967,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">coinvolge collezione</rdfs:label>
         <rdfs:label xml:lang="en">involves collection</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>UB/COL/COLD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -3987,8 +3987,8 @@ WHERE {
         <rdfs:label xml:lang="it">coinvolge elemento</rdfs:label>
         <rdfs:label xml:lang="en">involves element</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:constructQuery>CONSTRUCT {
 ?x &lt;https://w3id.org/arco/ontology/denotative-description/involvesElement&gt; ?y.
 }
@@ -4022,8 +4022,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">coinvolge membro</rdfs:label>
         <rdfs:label xml:lang="en">involves member</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>UB/COL. Normativa F: UB/UBF. Normativa NU: OG/OGT/OGTR. Normativa BN: OG/OGT/OGTC. Normativa MI e S: OG/SGT/SGTS. Normativa BDI: DU/DUR, SF/SFI, SS/SSI, DU/DUS, AI/AIR,AI/ AIS, VI/VIR,VI/VIV, DU/DUR.
 ICCD Normativa F: PD/SFI; PD/SSI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
@@ -4204,8 +4204,8 @@ core:isAgentRoleOf ?thing .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">è interpretazione dell&apos;età di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRL/SRLE, SR/SRR/SRRE</a-cat:iccdNormTag>
         <core:constructQuery>CONSTRUCT {
 ?cultent a-cd:isAgeOf ?age .
@@ -4229,8 +4229,8 @@ WHERE {
         <rdfs:label xml:lang="it">Questa proprietà collega l&apos;età di un&apos;entità con l&apos;entità stessa.</rdfs:label>
         <rdfs:label xml:lang="en">is age of</rdfs:label>
         <rdfs:label xml:lang="it">è età di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4272,8 +4272,8 @@ WHERE {
         <rdfs:label xml:lang="en">is age type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di età di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:constructQuery>CONSTRUCT {
 ?type core:isTypeOf ?thing .
 }
@@ -4519,8 +4519,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is attached documentation of</rdfs:label>
         <rdfs:label xml:lang="it">è documentazione allegata di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>FTAX, DRAX, VDCX, REGX, FNTX, ADMX (solo v. 3.00 e 3.01)</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -4685,8 +4685,8 @@ WHERE {
         <rdfs:label xml:lang="en">is bibliography of</rdfs:label>
         <rdfs:label xml:lang="it">è bibliografia di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag></a-cat:iccdNormTag>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB; RE/RCG/RCGS</a-cat:iccdNormTag>
         <core:replacingQuery>select * {
@@ -4995,8 +4995,8 @@ core:isAgentRoleOf ?thing .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is comparative bibliographic source of</rdfs:label>
         <rdfs:label xml:lang="it">è fonte bibliografica di confronto di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -5012,8 +5012,8 @@ core:isAgentRoleOf ?thing .
         <rdfs:label xml:lang="en">is construction company of</rdfs:label>
         <rdfs:label xml:lang="it">è ditta costruttrice di</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:constructQuery>PREFIX &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
 
 CONSTRUCT {
@@ -5046,8 +5046,8 @@ core:isAgentRoleOf ?y  .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is context bibliographic source of</rdfs:label>
         <rdfs:label xml:lang="it">è fonte bibliografica di contesto di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -5367,8 +5367,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is domicile of</rdfs:label>
         <rdfs:label xml:lang="it">è domicilio di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: AT/DML. Normativa SM: MU/DML.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -5435,8 +5435,8 @@ core:isAgentRoleOf ?thing .
         <rdfs:label xml:lang="en">is element involved in</rdfs:label>
         <rdfs:label xml:lang="it">è elemento coinvolto in</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:constructQuery>CONSTRUCT {
 ?x &lt;https://w3id.org/arco/ontology/denotative-description/isElementInvolvedIn&gt; ?y.
 }
@@ -5706,8 +5706,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is functional purpose of</rdfs:label>
         <rdfs:label xml:lang="it">è scopo funzionale di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -5898,8 +5898,8 @@ core:isAgentRoleOf ?thing .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is inventory situation of</rdfs:label>
         <rdfs:label xml:lang="it">è situazione inventariale di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>UB/INV; ICCD Normativa Trasversale: UB/INP.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -6087,8 +6087,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is license of</rdfs:label>
         <rdfs:label xml:lang="it">è licenza di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SCAN: DO/DCM/DCML</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -6163,8 +6163,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is member involved in</rdfs:label>
         <rdfs:label xml:lang="it">è membro coinvolto in</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -6728,8 +6728,8 @@ core:isAgentRoleOf ?thing .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is recording of</rdfs:label>
         <rdfs:label xml:lang="it">è registrazione di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: DU</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -6823,8 +6823,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is relationship type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di relazione di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: ROFF
 ICCD Normativa VeAC: AU/AUT/AUTO</a-cat:iccdNormTag>
     </owl:ObjectProperty>
@@ -7066,8 +7066,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is review of</rdfs:label>
         <rdfs:label xml:lang="it">è revisione di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativia BNB: RB/RBR. Normativa BNM: RM. Normativa BNPL: RP. Normativa BNPE: RR</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -7172,8 +7172,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is sex of</rdfs:label>
         <rdfs:label xml:lang="it">è sesso di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -7212,8 +7212,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is specific bibliographic source of</rdfs:label>
         <rdfs:label xml:lang="it">è fonte bibliografica specifica di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -7228,8 +7228,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is storage medium of</rdfs:label>
         <rdfs:label xml:lang="it">è supporto di memoria di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: DU/DUO, DU/DUM, DV/DVM, DV/DVO, AI/AIO, AI/AIM, VI/VIO, VI/VIM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -7508,7 +7508,7 @@ core:isAgentRoleOf ?thing .
         <rdfs:label xml:lang="en">is time interval for</rdfs:label>
         <rdfs:label xml:lang="it">è intervallo di tempo per</rdfs:label>
         <owl:versionInfo xml:lang="it">intabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -7722,8 +7722,8 @@ core:isAgentRoleOf a-cd:Use .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is user social category of</rdfs:label>
         <rdfs:label xml:lang="it">è categoria sociale dell&apos;utente di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative BDM 2.00: UT/UTN/UTNC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -8144,8 +8144,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">acquisition cost</rdfs:label>
         <rdfs:label xml:lang="it">costo di acquisizione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -8178,8 +8178,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">activity place and period</rdfs:label>
         <rdfs:label xml:lang="it">luogo e periodo di attività</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTG</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -8262,8 +8262,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">age</rdfs:label>
         <rdfs:label xml:lang="it">età</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>DA/SEM/SEME</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -8318,8 +8318,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">alternative name</rdfs:label>
         <rdfs:label xml:lang="it">variante del nome</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTE, AUTV. AU/AUV</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -8570,6 +8570,7 @@ l0:identifier ?id .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">archival record set title</rdfs:label>
         <rdfs:label xml:lang="it">titolo di unità archivistica complessa</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF/UBFU</a-cat:iccdNormTag>
@@ -8696,8 +8697,8 @@ WHERE {
         <rdfs:label xml:lang="it">autore del riferimento bibliografico</rdfs:label>
         <rdfs:label xml:lang="en">bibliographic reference author</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>DO/BIB/BIBA</a-cat:iccdNormTag>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
         <core:replacingQuery>select * where {
@@ -8720,8 +8721,8 @@ core:hasAgent ?agent .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">bibliographic reference date</rdfs:label>
         <rdfs:label xml:lang="it">data del riferimento bibliografico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>DO/BIB/BIBD</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -8805,8 +8806,8 @@ l0:identifier ?id .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">bibliographic reference</rdfs:label>
         <rdfs:label xml:lang="it">riferimento bibliografico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>DO/BIB/BIBA e DO/BIB/BIBD</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -8997,8 +8998,8 @@ WHERE {
         <rdfs:label xml:lang="en">depiction</rdfs:label>
         <rdfs:label xml:lang="it">rappresentazione</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:constructQuery>prefix a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
 
 CONSTRUCT {
@@ -9242,8 +9243,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">expired</rdfs:label>
         <rdfs:label xml:lang="it">scaduto</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -9345,8 +9346,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">historical biographical information</rdfs:label>
         <rdfs:label xml:lang="it">profilo storico biografico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa FF: PD/PDF/PDFB</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -9377,8 +9378,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">historical interest</rdfs:label>
         <rdfs:label xml:lang="it">interesse storico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -9428,8 +9429,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">data di inserimento</rdfs:label>
         <rdfs:label xml:lang="en">insertion date</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: UB/INP/INPR, UN/INV/INVD</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -9490,8 +9491,8 @@ WHERE
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">codice d&apos;inventario</rdfs:label>
         <rdfs:label xml:lang="en">inventory number</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INV/INVN - UB/INP/INPC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -9567,8 +9568,8 @@ WHERE
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">method of intervention and digitization</rdfs:label>
         <rdfs:label xml:lang="it">metodo di intervento e digitalizzazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa FF: DA/MTI</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -9583,8 +9584,8 @@ WHERE
         <rdfs:comment xml:lang="en">This property represents the manufacturing method of a cultural entity.</rdfs:comment>
         <rdfs:label xml:lang="en">method of manufacturing</rdfs:label>
         <rdfs:label xml:lang="it">modalità fabbricazione/esecuzione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>BDM: MT/MOF</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -9671,8 +9672,8 @@ WHERE
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">original storage medium</rdfs:label>
         <rdfs:label xml:lang="it">supporto di memoria originale</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: DU/DUO, DV/DVO, AI/AIO, VI/VIO</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -9772,7 +9773,7 @@ WHERE {
         <rdfs:label xml:lang="it">numero dell&apos;item all&apos;interno della sottoserie fotografica</rdfs:label>
         <rdfs:label xml:lang="en">photographic subseries item number</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/SSI/SSIN</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -9789,8 +9790,8 @@ WHERE {
         <rdfs:label xml:lang="it">attribuzione di autore preferita</rdfs:label>
         <rdfs:label xml:lang="en">preferred authorship attibution</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:constructQuery>CONSTRUCT {
 ?sit a-cd:preferredAuthorshipAttribution ?bool .
 }
@@ -9812,8 +9813,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">documentazione primaria</rdfs:label>
         <rdfs:label xml:lang="en">primary document</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI 4.00: DU, DV, DF</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -9858,8 +9859,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">proposed intervention</rdfs:label>
         <rdfs:label xml:lang="it">proposta di intervento</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa NT 4.00: CO/STP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -9893,8 +9894,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">pseudonimo</rdfs:label>
         <rdfs:label xml:lang="en">pseudonym</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -9910,8 +9911,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">attrezzatura tecnica</rdfs:label>
         <rdfs:label xml:lang="en">recording equipment</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: DU/DUO/DUOA</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -9927,8 +9928,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">luogo di registrazione</rdfs:label>
         <rdfs:label xml:lang="en">recording location</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: DUOQL, DVQL, DFQL, AIQL, VIQL, FIQL</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -10142,8 +10143,8 @@ l0:identifier ?id .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">sesso</rdfs:label>
         <rdfs:label xml:lang="en">sex</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa AT: DA/STS/STSS. Normativa BDI: AT/ATT/ATTS</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -10160,8 +10161,8 @@ l0:identifier ?id .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">firma</rdfs:label>
         <rdfs:label xml:lang="en">signature</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTF</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -10217,8 +10218,8 @@ l0:identifier ?id .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">descrizione del soggetto</rdfs:label>
         <rdfs:label xml:lang="en">subject description</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="en">Normativa D e F: OG/SGT/SGTD, SG/SGT/SGTD</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -10317,8 +10318,8 @@ select * {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">risultati dell&apos;analisi</rdfs:label>
         <rdfs:label xml:lang="en">test results</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">RS/ALB/ALBR. CO/ALB/ALBR</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -10334,8 +10335,8 @@ select * {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">denominazione thesaurus</rdfs:label>
         <rdfs:label xml:lang="en">thesaurus</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: SG/THS/THST</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -10652,8 +10653,8 @@ resource:AgentRole/1200865053-1-transferor
         <rdfs:comment xml:lang="en">This class represents the age of an entity (animal, vegetal, mineral).</rdfs:comment>
         <rdfs:label xml:lang="en">Age</rdfs:label>
         <rdfs:label xml:lang="it">Età</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRL/SRLE, SR/SRR/SRRE. ICCD Normativa AT: DA/SEM, BDI: AT/ATT/ATTE, AI/AIF/AIFH, VI/VIF/VIFH, FI/FIF/FIFH. Normativa SM: MU/MUT/MUTE</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -10688,8 +10689,8 @@ resource:AgentRole/1200865053-1-transferor
         <rdfs:label xml:lang="en">Age interpretation</rdfs:label>
         <rdfs:label xml:lang="it">Interpretazione dell&apos;età</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRL/SRLE, SR/SRR/SRRE. ICCD Normativa AT: DA/SEM</a-cat:iccdNormTag>
         <core:constructQuery>CONSTRUCT {
 ?x a a-cd:Age .
@@ -10763,8 +10764,8 @@ core:informationSource ?info .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Age type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di età</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -10881,7 +10882,7 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Anomaly classification</rdfs:label>
         <rdfs:label xml:lang="it">Classificazione di anomalia</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIF</a-cat:iccdNormTag>
     </owl:Class>
@@ -11257,8 +11258,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Archival resource</rdfs:label>
         <rdfs:label xml:lang="it">Risorsa archivistica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF. Normativa F: PD/SFI, SSI. Normativa FF: PAC</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -11377,8 +11378,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Audio recording</rdfs:label>
         <rdfs:label xml:lang="it">Registrazione audio</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: DU, AI</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -11479,8 +11480,8 @@ a-cd:alternativeOrOutdatedResponsibility, a-cd:mainResponsibility ?bool .
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Bibliographic work</rdfs:label>
         <rdfs:label xml:lang="it">Opera bibliografica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -11692,8 +11693,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Certification</rdfs:label>
         <rdfs:label xml:lang="it">Certificazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: CD/CTF</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -11707,8 +11708,8 @@ WHERE {
         <rdfs:comment xml:lang="en">This class represents the type of certification of a cultural property .</rdfs:comment>
         <rdfs:label xml:lang="en">Certification type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di certificazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale BNM: DO/CTF/CTFT</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -12225,8 +12226,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Dating type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di cronologia</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DT/DTN-DTS-DTZ &quot;preferred&quot; 
 ICCD Normativa Trasversale 4.00: DT/ADT/ADTT &quot;alternative/obsolete/different&quot;</a-cat:iccdNormTag>
     </owl:Class>
@@ -12318,8 +12319,8 @@ Per la normativa FF, la classe rappresenta nello specifico la denominazione o il
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Denominazione nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">Designation In Time</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>OG/OGT/OGTN. ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC. - Normativa NU: OG/OGT/OGTO. - Normativa CA, MA: OG/OGT/OGTU. Normativa SI: OG/OGT/OGTY. VeAC: OG/OGT/OGTS. - Normativa PG e A v.2: OG/OGT/OGTD</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -13005,8 +13006,8 @@ WHERE {
         <rdfs:label xml:lang="it">Erbario</rdfs:label>
         <rdfs:label xml:lang="en">Herbarium</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa BNB: OG/OGT/OGTE</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -13300,8 +13301,8 @@ resource:Intervention/0800640527-10-intervention-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Inventory situation</rdfs:label>
         <rdfs:label xml:lang="it">Situazione inventariale</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: UB/INV</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -13426,7 +13427,7 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Legal situation type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di situazione legale</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
         <a-cat:iccdNormTag>TU/CDG/CDGG. Normativa BDM:  DU/DUZ/DUZG, DV/DVZ/DVZG, DF/DFZ/DFZG, AI/AIZ/AIZG,  VI/VIZ/VIZG, FI/FIZ/FIZG</a-cat:iccdNormTag>
     </owl:Class>
@@ -13442,8 +13443,8 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">License</rdfs:label>
         <rdfs:label xml:lang="it">Licenza</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa SCAN: DO/DCM/DCML</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -13556,8 +13557,8 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:label xml:lang="it">Appartenenza a serie numismatica</rdfs:label>
         <rdfs:label xml:lang="en">Numismatic series membership</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa NU: OG/OGT/OGTR</a-cat:iccdNormTag>
         <core:constructQuery>CONSTRUCT {
 ?x a a-cd:CollectionMembership .
@@ -13732,8 +13733,8 @@ WHERE {
         <rdfs:label xml:lang="it">Fondo fotografico</rdfs:label>
         <rdfs:label xml:lang="en">Photographic fonds</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD F:UB/UBF/UBFP </a-cat:iccdNormTag>
         <core:constructQuery>CONSTRUCT {
 ?prs a a-cd:PhotographicRecordSet ;
@@ -13785,8 +13786,8 @@ a-cd:hasComponent ?y ;
         <rdfs:label xml:lang="en">Photographic record set</rdfs:label>
         <rdfs:label xml:lang="it">Unità archivistica fotografica complessa</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD F:UB/UBF </a-cat:iccdNormTag>
         <a-cat:iccdNormTag>Normativa F: PD/SFI, SSI</a-cat:iccdNormTag>
     </owl:Class>
@@ -13802,8 +13803,8 @@ a-cd:hasComponent ?y ;
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Photographic recording</rdfs:label>
         <rdfs:label xml:lang="it">Registrazione fotografica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: DF, FI</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -14070,8 +14071,8 @@ resource:PreparatoryOrFinalWork/0500212038-disegno
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Printing plates series</rdfs:label>
         <rdfs:label xml:lang="it">Serie di matrici incise</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MI: OG/SGT/SGTS</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -14181,7 +14182,7 @@ PA/SSI, PA/SFI</rdfs:comment>
         <rdfs:label>Record set type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di unità archivistica complessa</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unsable</owl:versionInfo>
     </owl:Class>
     
@@ -14232,8 +14233,8 @@ PA/SSI, PA/SFI</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Recording</rdfs:label>
         <rdfs:label xml:lang="it">Registrazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: DU</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -14248,8 +14249,8 @@ PA/SSI, PA/SFI</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Recording type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di registrazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: DU/DUO/DUOT, DU/DUM/DUMT, DV/DVO/DVOT, DV/DVM/DVMT, AI/AIO/AIOT, VI/VIO/VIOT</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -14555,8 +14556,8 @@ ICCD Normative F e FF: PD/PDF</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Review</rdfs:label>
         <rdfs:label xml:lang="it">Revisione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativia BNB: RB/RBR. Normativa BNM: RM. Normativa BNPL: RP. Normativa BNPE: RR</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -14577,8 +14578,8 @@ ICCD Normative F e FF: PD/PDF</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Review type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di revisione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa BNM: RM/RMD/RMDT. Normativa BNB: RB/RBR/RBRT. Normativa BNPL: RP/RPV/RPVT. Normativa BNPE: RR/RRD/RRDT</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -14726,8 +14727,8 @@ WHERE {
         <rdfs:comment xml:lang="en">This class represents the sex of an entity.</rdfs:comment>
         <rdfs:label xml:lang="it">Sesso</rdfs:label>
         <rdfs:label xml:lang="en">Sex</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: DA/STS. Normativa BDI: AT/ATT/ATTS, AI/AIF/AIFO, VI/VIF/VIFO, FI/FIF/FIFO. Normativa SM: MU/MUT/MUTS. Normativa AUT: AU/AUT/AUTZ</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -14852,8 +14853,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Collezione di esemplari</rdfs:label>
         <rdfs:label xml:lang="en">Specimen collection</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normative BN: OG/OGT/OGTC</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -14879,8 +14880,8 @@ WHERE {
         <rdfs:comment xml:lang="en">This class represents the storage medium of a cultural entity.</rdfs:comment>
         <rdfs:label xml:lang="en">Storage medium</rdfs:label>
         <rdfs:label xml:lang="it">Supporto di memoria</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: DU/DUO, DU/DUM, DV/DVM, DV/DVO, AI/AIO, AI/AIM, VI/VIO, VI/VIM</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -15222,8 +15223,8 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Ititnerario tematico</rdfs:label>
         <rdfs:label xml:lang="en">Thematic path</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -15237,8 +15238,8 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Thematic Path type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di itineario</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -15370,8 +15371,8 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Tipo di strumento urbanistico-territoriale</rdfs:label>
         <rdfs:label xml:lang="en">Urban planning instrument type</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/STU/STUT</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -15520,8 +15521,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Registrazione video</rdfs:label>
         <rdfs:label xml:lang="en">Video recording</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: DV, VI</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -15658,8 +15659,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Identification in time</rdfs:label>
         <rdfs:label xml:lang="it">Identificazione nel tempo</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa BNB: SB/NBN/NBNA, SB/NAA, RB/RBR/RBRN, RB/RBN. Normativa BNM: SM/SMN, RM/RMN.
 Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normativa BNPL:  SP/SPN. Normativa BNZ: SZ/SZS</a-cat:iccdNormTag>
     </owl:Class>
@@ -15905,8 +15906,8 @@ a-cd:hasEdition ?ed .
         <rdfs:comment xml:lang="en">This individual represents an alternative denomination.</rdfs:comment>
         <rdfs:label xml:lang="en">Alvernative designation</rdfs:label>
         <rdfs:label xml:lang="it">Designazione alternativa</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -16112,8 +16113,8 @@ a-cd:hasEdition ?ed .
         <rdfs:comment xml:lang="en">This individual represents the cosmic ray exposure age (CREA).</rdfs:comment>
         <rdfs:label xml:lang="en">Cosmic ray exposure age</rdfs:label>
         <rdfs:label xml:lang="it">Età di esposizione ai raggi cosmici</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative BNPL: SP/SPD/SPDX</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -16365,8 +16366,8 @@ WHERE {
         <rdfs:comment xml:lang="en">This individual represents the igneous age of a rock, i.e. the time elapsed since the solidification of the progenitor melt.</rdfs:comment>
         <rdfs:label xml:lang="it">Età dalla solidificazione del fuso progenitore</rdfs:label>
         <rdfs:label xml:lang="en">Igneous age</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative BNPL: SP/SPD/SPDE</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -16719,8 +16720,8 @@ WHERE {
         <rdfs:comment xml:lang="en">This individual represents the age of the metamorphic shock event suffered by a meteorite.</rdfs:comment>
         <rdfs:label xml:lang="it">Età dell&apos;evento metamorfico di shock</rdfs:label>
         <rdfs:label xml:lang="en">Shock age</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative BNPL: SP/SPD/SPDG</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -16789,8 +16790,8 @@ a-cd:hasEdition ?ed .
         <rdfs:comment xml:lang="en">This individual represents the temporary export license of a cultural entity.</rdfs:comment>
         <rdfs:label xml:lang="it">Licenza di esportazione temporanea</rdfs:label>
         <rdfs:label xml:lang="en">Temporary export license</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="en">ICCD Normativa Trasversale 4.00: TU/ESP/ESPT</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -16819,8 +16820,8 @@ a-cd:hasEdition ?ed .
         <rdfs:comment xml:lang="en">This individual represents the terrestrial age of a meteorite, i.e. the measure of residence time of the meteorite on Earth.</rdfs:comment>
         <rdfs:label xml:lang="it">Età di permanenza sulla terra</rdfs:label>
         <rdfs:label xml:lang="en">Terrestrial age</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative BNPL: SP/SPD/SPDT</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
