@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/arco-lite-aligns/"
+     xml:base="https://w3id.org/arco/ontology/arco-lite-aligns/"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:lite="https://w3id.org/arco/ontology/arco-lite/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco-lite-aligns/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasAssemblage -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasAssemblage">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasAuthor">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasCreator -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasCreator">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasLastEditor -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasLastEditor">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasOwner -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasOwner">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasOwner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/hasPreparationAgent -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/hasPreparationAgent">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/wasAcquiredFrom -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/abcd/terms/wasAcquiredFrom">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasPreviousOwner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/recordedBy -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/iri/recordedBy">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCataloguingAgent"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasOwner -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasOwner"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasPreviousOwner -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasPreviousOwner"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/abcd/terms/age -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/abcd/terms/age">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/age"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/iri/fieldNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/iri/fieldNumber">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/localIdentifier"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/associatedReferences -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/associatedReferences">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/bibliographicReference"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/catalogNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/catalogNumber">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/localIdentifier"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/georeferenceSources -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/georeferenceSources">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/bibliographicReference"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/identificationReferences -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/identificationReferences">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/bibliographicReference"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/locationID -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/locationID">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/localIdentifier"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/namePublishedIn -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/namePublishedIn">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/bibliographicReference"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/occurrenceID -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/occurrenceID">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/otherCatalogNumbers -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/otherCatalogNumbers">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/localIdentifier"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/recordNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/recordNumber">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/systemIdentifier"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/recordedByID -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/recordedByID">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/age -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/age"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/bibliographicReference -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/bibliographicReference"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/localIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/localIdentifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/systemIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/systemIdentifier"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/uniqueIdentifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
