@@ -1,0 +1,726 @@
+@prefix : <https://w3id.org/arco/test/2.0/Agent#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/Agent> .
+
+<https://w3id.org/arco/test/2.0/Agent> rdf:type owl:Ontology ;
+                                        owl:versionIRI <https://w3id.org/arco/test/2.0/Agent> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasInfluencedBy
+<http://www.w3.org/ns/prov#wasInfluencedBy> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/hasAge
+<https://w3id.org/arco/ontology/context-description/hasAge> rdf:type owl:ObjectProperty ;
+                                                            rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                            owl:inverseOf <https://w3id.org/arco/ontology/context-description/isAgeOf> ;
+                                                            rdfs:domain owl:Thing ;
+                                                            rdfs:range <https://w3id.org/arco/ontology/context-description/Age> .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasDomicile
+<https://w3id.org/arco/ontology/context-description/hasDomicile> rdf:type owl:ObjectProperty ;
+                                                                 owl:inverseOf <https://w3id.org/arco/ontology/context-description/isDomicileOf> ;
+                                                                 rdfs:domain <https://w3id.org/italia/onto/l0/Agent> ;
+                                                                 rdfs:range <https://w3id.org/italia/onto/l0/Location> ;
+                                                                 rdfs:comment "Questa proprietà collega un'agente al suo domicilio."@it ,
+                                                                              "This property relates an agent to the domicile."@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                 rdfs:label "ha domicilio"@it ,
+                                                                            "has domicile"@en ;
+                                                                 owl:versionInfo "instabile"@it ,
+                                                                                 "unstable"@en ;
+                                                                 <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BDI: AT/DML. Normativa SM: MU/DML."@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasProfession
+<https://w3id.org/arco/ontology/context-description/hasProfession> rdf:type owl:ObjectProperty ;
+                                                                   owl:inverseOf <https://w3id.org/arco/ontology/context-description/isProfessionOf> ;
+                                                                   rdfs:domain <https://w3id.org/italia/onto/CPV/Person> ;
+                                                                   rdfs:range <https://w3id.org/arco/ontology/context-description/Profession> ;
+                                                                   rdfs:comment "Questa proprietà collega un agente al suo mestiere o professione, per esempio l'utente del bene oppure il responsabile della fabbricazione di un bene con il suo mestiere o la sua professione."@it ,
+                                                                                "This property relates an agent to its job. For example the agent responsible of the production of a cultual entity."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                   rdfs:label "ha professione"@it ,
+                                                                              "has profession"@en ;
+                                                                   owl:versionInfo "stabile"@it ,
+                                                                                   "stable"@en ;
+                                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BDM 2.00: UT/UTN/UTNM - ICCD Normativa BDM 4.00: AU/AUT/AUTE"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasSex
+<https://w3id.org/arco/ontology/context-description/hasSex> rdf:type owl:ObjectProperty ;
+                                                            rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                            owl:inverseOf <https://w3id.org/arco/ontology/context-description/isSexOf> ;
+                                                            rdfs:domain owl:Thing ;
+                                                            rdfs:range <https://w3id.org/arco/ontology/context-description/Sex> ;
+                                                            rdfs:comment "Questa proprietà collega un'entità al sesso."@it ,
+                                                                         "This property relates an entity to its sex."@en ;
+                                                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                            rdfs:label "ha sesso"@it ,
+                                                                       "has sex"@en ;
+                                                            owl:versionInfo "instabile"@it ,
+                                                                            "unstable"@en ;
+                                                            <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa AT: DA/STS. Normativa BDI: AT/ATT/ATTS, AI/AIF/AIFO, VI/VIF/VIFO, FI/FIF/FIFO. Normativa SM: MU/MUT/MUTS" .
+
+
+###  https://w3id.org/arco/ontology/context-description/isAgeOf
+<https://w3id.org/arco/ontology/context-description/isAgeOf> rdf:type owl:ObjectProperty ;
+                                                             rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> ;
+                                                             rdfs:domain <https://w3id.org/arco/ontology/context-description/Age> ;
+                                                             rdfs:range owl:Thing .
+
+
+###  https://w3id.org/arco/ontology/context-description/isDomicileOf
+<https://w3id.org/arco/ontology/context-description/isDomicileOf> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <https://w3id.org/italia/onto/l0/Location> ;
+                                                                  rdfs:range <https://w3id.org/italia/onto/l0/Agent> ;
+                                                                  rdfs:comment "Questa proprietà collega il domicilio all'agente."@it ,
+                                                                               "This property relates a domicile to the agent."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                  rdfs:label "is domicile of"@en ,
+                                                                             "è domicilio di"@it ;
+                                                                  owl:versionInfo "instabile"@it ,
+                                                                                  "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/context-description/isProfessionOf
+<https://w3id.org/arco/ontology/context-description/isProfessionOf> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <https://w3id.org/arco/ontology/context-description/Profession> ;
+                                                                    rdfs:range <https://w3id.org/italia/onto/l0/Agent> ;
+                                                                    rdfs:comment "Questa è la proprietà inversa di \"ha professione\"."@it ,
+                                                                                 "This is the inverse property of \"has profession\"."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                    rdfs:label "is profession of"@en ,
+                                                                               "è professione di"@it ;
+                                                                    owl:versionInfo "stabile"@it ,
+                                                                                    "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/context-description/isSexOf
+<https://w3id.org/arco/ontology/context-description/isSexOf> rdf:type owl:ObjectProperty ;
+                                                             rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> ;
+                                                             rdfs:domain <https://w3id.org/arco/ontology/context-description/Sex> ;
+                                                             rdfs:range owl:Thing ;
+                                                             rdfs:comment "Questa proprietà collega il sesso di un'entità all'entità stessa."@it ,
+                                                                          "This property relates the sex to the entity."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                             rdfs:label "is sex of"@en ,
+                                                                        "è sesso di"@it ;
+                                                             owl:versionInfo "instabile"@it ,
+                                                                             "unstable"@it .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgent
+<https://w3id.org/arco/ontology/core/hasAgent> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/italia/onto/RO/isRoleInTimeOf> ;
+                                               owl:inverseOf <https://w3id.org/arco/ontology/core/isAgentOf> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                               rdfs:range <https://w3id.org/italia/onto/l0/Agent> ;
+                                               rdfs:comment "Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente all'agente che lo ricopre."@it ,
+                                                            "This property relates a situation in which an agent holds a role to that agent."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "ha agente"@it ,
+                                                          "has agent"@en ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgentRole
+<https://w3id.org/arco/ontology/core/hasAgentRole> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://w3id.org/arco/ontology/core/isAgentRoleOf> ;
+                                                   rdfs:domain owl:Thing ;
+                                                   rdfs:range <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                                   rdfs:comment "Questa proprietà collega un'entità a una situazione in cui un agente ricopre un ruolo."@it ,
+                                                                "This property relates an entity to a situation in which an agent holds a role connected to that entity."@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                   rdfs:label "ha ruolo ricoperto da agente"@it ,
+                                                              "has agent role"@en ;
+                                                   owl:versionInfo "stabile"@it ,
+                                                                   "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasEventOrSituationInTime
+<https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasRole
+<https://w3id.org/arco/ontology/core/hasRole> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/italia/onto/RO/withRole> ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isRoleOf> ;
+                                              rdfs:domain <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                              rdfs:range <https://w3id.org/italia/onto/RO/Role> ;
+                                              rdfs:comment "Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente al ruolo stesso."@it ,
+                                                           "This property relates a situation in which an agent holds a role to that role."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "ha ruolo"@it ,
+                                                         "has role"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en ;
+                                              <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normative F e FF: PD/PDF/PDFR" .
+
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isAgentOf
+<https://w3id.org/arco/ontology/core/isAgentOf> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/italia/onto/l0/Agent> ;
+                                                rdfs:range <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                                rdfs:comment "Questa proprietà, inversa a \"ha agente\", collega un agente alla situazione in cui l'agente ha ricoperto un ruolo."@it ,
+                                                             "This property relates an agent to a situation in which that agent holds a role."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                rdfs:label "is agent of"@en ,
+                                                           "è agente in"@it ;
+                                                owl:versionInfo "stabile"@it ,
+                                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isAgentRoleOf
+<https://w3id.org/arco/ontology/core/isAgentRoleOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf
+<https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isRoleOf
+<https://w3id.org/arco/ontology/core/isRoleOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <https://w3id.org/italia/onto/RO/Role> ;
+                                               rdfs:range <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                               rdfs:comment "Questa proprietà collega un ruolo a una situazione in cui il ruolo viene ricoperto da un agente."@it ,
+                                                            "This property relates a role to a situation in which an agent holds that role."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "is role of"@en ,
+                                                          "è ruolo in"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CLV/hasGeometry
+<https://w3id.org/italia/onto/CLV/hasGeometry> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasSOValidity
+<https://w3id.org/italia/onto/CLV/hasSOValidity> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CPV/hasBirthPlace
+<https://w3id.org/italia/onto/CPV/hasBirthPlace> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <https://w3id.org/italia/onto/CPV/isBirthPlaceOf> ;
+                                                 rdfs:domain <https://w3id.org/italia/onto/CPV/Person> ;
+                                                 rdfs:range <https://w3id.org/italia/onto/l0/Location> ;
+                                                 rdfs:comment "La relazione che permette di asserire che una persona è nata in un certo luogo."@it ,
+                                                              "The relation asserts that a person has a certain place of birth."@en ;
+                                                 rdfs:isDefinedBy <https://w3id.org/italia/onto/CPV> ;
+                                                 rdfs:label "birth place"@en ,
+                                                            "luogo di nascita"@it ;
+                                                 owl:versionInfo "stabile"@it ,
+                                                                 "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CPV/hasDeathPlace
+<https://w3id.org/italia/onto/CPV/hasDeathPlace> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <https://w3id.org/italia/onto/CPV/isDeathPlaceOf> ;
+                                                 rdfs:domain <https://w3id.org/italia/onto/CPV/Dead> ;
+                                                 rdfs:range <https://w3id.org/italia/onto/l0/Location> ;
+                                                 rdfs:comment "La relazione che lega una persona morta al luogo di morte."@it ,
+                                                              "The relation that links a person who is dead to its place of death."@en ;
+                                                 rdfs:isDefinedBy <https://w3id.org/italia/onto/CPV> ;
+                                                 rdfs:label "death place"@en ,
+                                                            "luogo di morte"@it ;
+                                                 owl:versionInfo "stabile"@it ,
+                                                                 "unstable"@en .
+
+
+###  https://w3id.org/italia/onto/CPV/isBirthPlaceOf
+<https://w3id.org/italia/onto/CPV/isBirthPlaceOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CPV/isDeathPlaceOf
+<https://w3id.org/italia/onto/CPV/isDeathPlaceOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/RO/isRoleInTimeOf
+<https://w3id.org/italia/onto/RO/isRoleInTimeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/RO/withRole
+<https://w3id.org/italia/onto/RO/withRole> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/activityPlaceAndPeriod
+<https://w3id.org/arco/ontology/context-description/activityPlaceAndPeriod> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <https://w3id.org/italia/onto/l0/Agent> ;
+                                                                            rdfs:range rdfs:Literal ;
+                                                                            rdfs:comment "Questa proprietà rappresenta il luogo e il periodo di attvità di un autore."@it ,
+                                                                                         "This property represents the place and the period of activity of an author."@en ;
+                                                                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                            rdfs:label "activity place and period"@en ,
+                                                                                       "luogo e periodo di attività"@it ;
+                                                                            owl:versionInfo "instabile"@it ,
+                                                                                            "unstable"@en ;
+                                                                            <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa AUT: AU/AUT/AUTG" .
+
+
+###  https://w3id.org/arco/ontology/context-description/ageValue
+<https://w3id.org/arco/ontology/context-description/ageValue> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/alternativeName
+<https://w3id.org/arco/ontology/context-description/alternativeName> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf <https://w3id.org/italia/onto/l0/name> ;
+                                                                     rdfs:domain <https://w3id.org/italia/onto/l0/Agent> ;
+                                                                     rdfs:range rdfs:Literal ;
+                                                                     rdfs:comment "Questa proprietà rappresenta una variante del nome di un agente."@it ,
+                                                                                  "This property represents an alternative name of an agent."@en ;
+                                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                     rdfs:label "alternative name"@en ,
+                                                                                "variante del nome"@it ;
+                                                                     owl:versionInfo "instabile"@it ,
+                                                                                     "unstable"@en ;
+                                                                     <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa AUT: AU/AUT/AUTE, AUTV. AU/AUV" .
+
+
+###  https://w3id.org/arco/ontology/context-description/contacts
+<https://w3id.org/arco/ontology/context-description/contacts> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <https://w3id.org/italia/onto/l0/Agent> ;
+                                                              rdfs:range rdfs:Literal ;
+                                                              rdfs:comment "Questa proprietà rappresenta i contatti di riferimento di un agente (persona, organizzazione), es. indirizzo, numeri di telefono e di fax, indirizzi di posta elettronica, ecc."@it ,
+                                                                           "This property represents contacts of an agent (i.e. email, telephone number...)"@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                              rdfs:label "contacts"@en ,
+                                                                         "contatti"@it ;
+                                                              owl:versionInfo "stabile"@it ,
+                                                                              "stable"@en ;
+                                                              <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa SM 4.00: OS/OSE" .
+
+
+###  https://w3id.org/arco/ontology/context-description/nationality
+<https://w3id.org/arco/ontology/context-description/nationality> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <https://w3id.org/italia/onto/CPV/Person> ;
+                                                                 rdfs:range rdfs:Literal ;
+                                                                 rdfs:comment "Questa proprietà rappresenta la nazionalità di una persona"@it ,
+                                                                              "This property represents the nationality of a person"@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                 rdfs:label "nationality"@en ,
+                                                                            "nazionalità"@it ;
+                                                                 <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Norm AUT: AU/AUT/AUTF, AUTY. BDI and BDM: AT/ATT/ATTZ, AI/AIF/AIFZ, VI/VIF/VIFZ, FI/FIF/FIFZ. Normativa SM: MU/MUT/MUTZ." .
+
+
+###  https://w3id.org/arco/ontology/context-description/pseudonym
+<https://w3id.org/arco/ontology/context-description/pseudonym> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <https://w3id.org/italia/onto/l0/name> ;
+                                                               rdfs:domain <https://w3id.org/italia/onto/CPV/Person> ;
+                                                               rdfs:range rdfs:Literal ;
+                                                               rdfs:comment "Questa proprietà rappresenta uno pseudonimo"@it ,
+                                                                            "This property represents pseudonym"@en ;
+                                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                               rdfs:label "pseudonimo"@it ,
+                                                                          "pseudonym"@en ;
+                                                               owl:versionInfo "instabile"@it ,
+                                                                               "unstable"@en ;
+                                                               <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa AUT: AU/AUT/AUTP" .
+
+
+###  https://w3id.org/arco/ontology/context-description/sex
+<https://w3id.org/arco/ontology/context-description/sex> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/signature
+<https://w3id.org/arco/ontology/context-description/signature> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <https://w3id.org/italia/onto/l0/name> ;
+                                                               rdfs:domain <https://w3id.org/italia/onto/CPV/Person> ;
+                                                               rdfs:range rdfs:Literal ;
+                                                               rdfs:comment "Questa proprietà rappresenta la firma o il monogramma"@it ,
+                                                                            "This property represents the signature"@en ;
+                                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                               rdfs:label "firma"@it ,
+                                                                          "signature"@en ;
+                                                               owl:versionInfo "instabile"@it ,
+                                                                               "unstable"@en ;
+                                                               <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa AUT: AU/AUT/AUTF" .
+
+
+###  https://w3id.org/arco/ontology/core/informationSource
+<https://w3id.org/arco/ontology/core/informationSource> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/arco/ontology/core/note
+<https://w3id.org/arco/ontology/core/note> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain owl:Thing ;
+                                           rdfs:range rdfs:Literal ;
+                                           rdfs:comment "Questa proprietà rappresenta eventuali note, relative a una certa informazione."@it ,
+                                                        "This property represents notes associated to a piece of information."@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                           rdfs:label "note"@en ,
+                                                      "note"@it ;
+                                           owl:versionInfo "stabile"@it ,
+                                                           "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CPV/dateOfBirth
+<https://w3id.org/italia/onto/CPV/dateOfBirth> rdf:type owl:DatatypeProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:domain <https://w3id.org/italia/onto/CPV/Person> ;
+                                               rdfs:range xsd:dateTime ;
+                                               rdfs:comment "La data di nascita della persona naturale"@it ,
+                                                            "The date of birth of the natural person"@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/italia/onto/CPV> ;
+                                               rdfs:label "data di nascita"@it ,
+                                                          "date of birth"@en ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CPV/dateOfDeath
+<https://w3id.org/italia/onto/CPV/dateOfDeath> rdf:type owl:DatatypeProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:domain <https://w3id.org/italia/onto/CPV/Dead> ;
+                                               rdfs:range xsd:dateTime ;
+                                               rdfs:comment "La data di morte della persona naturale. Es: 2002-10-04"@it ,
+                                                            "The date of birth of the natural person"@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/italia/onto/CPV> ;
+                                               rdfs:label "data di morte"@it ,
+                                                          "date of death"@en ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CPV/familyName
+<https://w3id.org/italia/onto/CPV/familyName> rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/italia/onto/l0/name> ;
+                                              rdfs:domain <https://w3id.org/italia/onto/CPV/Person> ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:comment "Il cognome di una persona. Ex. 'Rossi' è il cognome della persona 'Mario Rossi'"@it ,
+                                                           "The family name of a person. E.g. 'Rossi' is the family name of the person 'Mario Rossi'."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/italia/onto/CPV> ;
+                                              rdfs:label "cognome"@it ,
+                                                         "family name"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CPV/givenName
+<https://w3id.org/italia/onto/CPV/givenName> rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf <https://w3id.org/italia/onto/l0/name> ;
+                                             rdfs:domain <https://w3id.org/italia/onto/CPV/Person> ;
+                                             rdfs:range xsd:string ;
+                                             rdfs:comment "Il nome di una persona. Ex. 'Mario' è il nome della persona 'Mario Rossi'."@it ,
+                                                          "The given name of a person. E.g. 'Mario' is the given name of the person 'Mario Rossi'."@en ;
+                                             rdfs:isDefinedBy <https://w3id.org/italia/onto/CPV> ;
+                                             rdfs:label "given name"@en ,
+                                                        "nome proprio"@it ;
+                                             owl:versionInfo "stabile"@it ,
+                                                             "stable"@en .
+
+
+###  https://w3id.org/italia/onto/TI/modified
+<https://w3id.org/italia/onto/TI/modified> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/italia/onto/l0/name
+<https://w3id.org/italia/onto/l0/name> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.gov.it/onto/dcatapit#Agent
+<http://dati.gov.it/onto/dcatapit#Agent> rdf:type owl:Class ;
+                                         owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  https://w3id.org/arco/ontology/context-description/Age
+<https://w3id.org/arco/ontology/context-description/Age> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                           owl:someValuesFrom <https://w3id.org/arco/ontology/context-description/AgeType>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/context-description/isAgeOf> ;
+                                                                           owl:allValuesFrom owl:Thing
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/context-description/ageValue> ;
+                                                                           owl:someValuesFrom rdfs:Literal
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/core/informationSource> ;
+                                                                           owl:allValuesFrom rdfs:Literal
+                                                                         ] ;
+                                                         rdfs:comment "Questa classe rappresenta l'età di un 'entità (animale, vegetale, minerale)."@it ,
+                                                                      "This class represents the age of an entity (animal, vegetal, mineral)."@en ;
+                                                         rdfs:label "Age"@en ,
+                                                                    "Età"@it ;
+                                                         owl:versionInfo "instabile"@it ,
+                                                                         "unstable"@en ;
+                                                         <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNPE: SR/SRL/SRLE, SR/SRR/SRRE. ICCD Normativa AT: DA/SEM, BDI: AT/ATT/ATTE, AI/AIF/AIFH, VI/VIF/VIFH, FI/FIF/FIFH. Normativa SM: MU/MUT/MUTE" .
+
+
+###  https://w3id.org/arco/ontology/context-description/AgeType
+<https://w3id.org/arco/ontology/context-description/AgeType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Profession
+<https://w3id.org/arco/ontology/context-description/Profession> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <https://w3id.org/italia/onto/RO/Role> ;
+                                                                owl:disjointWith <https://w3id.org/arco/ontology/context-description/UseFunction> ;
+                                                                rdfs:comment "Questa classe rappresenta il mestiere o la professione dell'utente del bene."@it ,
+                                                                             "This class represents the role of a cultural entity's user."@en ;
+                                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                rdfs:label "Profession"@en ,
+                                                                           "Professione"@it ;
+                                                                owl:versionInfo "stabile"@it ,
+                                                                                "stable"@en ;
+                                                                <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BDM 2: UT/UTN/UTNM, BDM 4: AU/AUT/AUTE. BDI: AT/ATT/ATTM, AI/AIF/AIFM, VI/VIF/VIFM, FI/FIF/FIFM. SM: MU/MUT/MUTM" .
+
+
+###  https://w3id.org/arco/ontology/context-description/Sex
+<https://w3id.org/arco/ontology/context-description/Sex> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/context-description/isSexOf> ;
+                                                                           owl:allValuesFrom owl:Thing
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/context-description/sex> ;
+                                                                           owl:allValuesFrom rdfs:Literal
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/arco/ontology/core/informationSource> ;
+                                                                           owl:allValuesFrom rdfs:Literal
+                                                                         ] ;
+                                                         rdfs:comment "Questa classe rappresenta il sesso di un entità."@it ,
+                                                                      "This class represents the sex of an entity."@en ;
+                                                         rdfs:label "Sesso"@it ,
+                                                                    "Sex"@en ;
+                                                         owl:versionInfo "instabile"@it ,
+                                                                         "unstable"@en ;
+                                                         <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa AT: DA/STS. Normativa BDI: AT/ATT/ATTS, AI/AIF/AIFO, VI/VIF/VIFO, FI/FIF/FIFO. Normativa SM: MU/MUT/MUTS. Normativa AUT: AU/AUT/AUTZ" .
+
+
+###  https://w3id.org/arco/ontology/context-description/UseFunction
+<https://w3id.org/arco/ontology/context-description/UseFunction> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/AgentRole
+<https://w3id.org/arco/ontology/core/AgentRole> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/italia/onto/RO/TimeIndexedRole> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasAgent> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/l0/Agent>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasRole> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/RO/Role>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                ] ;
+                                                owl:disjointWith <https://w3id.org/arco/ontology/core/Classification> ;
+                                                rdfs:comment "Questa classe rappresenta una situazione relativa a un agente che ricopre un ruolo, senza la specificazione della dimensione tempo."@it ,
+                                                             "This class represents a situation in which an agent holds a role, regardless of the timing."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                rdfs:label "Agent Role"@en ,
+                                                           "Ruolo ricoperto da agente"@it ;
+                                                owl:versionInfo "stabile"@it ,
+                                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/Classification
+<https://w3id.org/arco/ontology/core/Classification> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/Feature
+<https://w3id.org/italia/onto/CLV/Feature> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/italia/onto/CLV/SpatialObject> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasGeometry> ;
+                                                             owl:allValuesFrom <https://w3id.org/italia/onto/CLV/Geometry>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasSOValidity> ;
+                                                             owl:allValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/TI/modified> ;
+                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                             owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                                               owl:unionOf ( xsd:date
+                                                                                             xsd:dateTime
+                                                                                             xsd:time
+                                                                                           )
+                                                                             ]
+                                                           ] ;
+                                           owl:disjointWith <https://w3id.org/italia/onto/CLV/Geometry> ;
+                                           rdfs:comment "Questa classe è utilizzata per rappresentare un'entittà geografica o localizzazione."@it ,
+                                                        "This class is used to represent any geographical entity."@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                           rdfs:label "Feature (Location)"@en ,
+                                                      "Luogo"@it ;
+                                           owl:versionInfo "stabile"@it ,
+                                                           "stable"@en ;
+                                           <http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.opengis.net/ont/geosparql#Feature> ;
+                                           <http://www.w3.org/ns/prov#wasInfluencedBy> <http://https://www.w3.org/ns/locn#Location> ,
+                                                                                       <http://www.geonames.org/ontology#Feature> .
+
+
+###  https://w3id.org/italia/onto/CLV/Geometry
+<https://w3id.org/italia/onto/CLV/Geometry> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/SpatialObject
+<https://w3id.org/italia/onto/CLV/SpatialObject> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/COV/Group
+<https://w3id.org/italia/onto/COV/Group> rdf:type owl:Class ;
+                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <https://w3id.org/arco/ontology/context-description/contacts> ;
+                                                           owl:allValuesFrom rdfs:Literal
+                                                         ] .
+
+
+###  https://w3id.org/italia/onto/CPV/Dead
+<https://w3id.org/italia/onto/CPV/Dead> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CPV/Person
+<https://w3id.org/italia/onto/CPV/Person> rdf:type owl:Class ;
+                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/arco/ontology/context-description/hasAge> ;
+                                                            owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/Age>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/arco/ontology/context-description/hasProfession> ;
+                                                            owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/Profession>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/arco/ontology/context-description/hasSex> ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass <https://w3id.org/arco/ontology/context-description/Sex>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/arco/ontology/context-description/activityPlaceAndPeriod> ;
+                                                            owl:allValuesFrom rdfs:Literal
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/arco/ontology/context-description/alternativeName> ;
+                                                            owl:allValuesFrom rdfs:Literal
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/arco/ontology/context-description/nationality> ;
+                                                            owl:allValuesFrom rdfs:Literal
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/arco/ontology/context-description/pseudonym> ;
+                                                            owl:allValuesFrom rdfs:Literal
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/arco/ontology/context-description/signature> ;
+                                                            owl:allValuesFrom rdfs:Literal
+                                                          ] .
+
+
+###  https://w3id.org/italia/onto/RO/Role
+<https://w3id.org/italia/onto/RO/Role> rdf:type owl:Class ;
+                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normative F e FF: PD/PDF/PDFR" .
+
+
+###  https://w3id.org/italia/onto/RO/TimeIndexedRole
+<https://w3id.org/italia/onto/RO/TimeIndexedRole> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Agent
+<https://w3id.org/italia/onto/l0/Agent> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ;
+                                        owl:disjointWith <https://w3id.org/italia/onto/l0/Concept> ,
+                                                         <https://w3id.org/italia/onto/l0/Description> ,
+                                                         <https://w3id.org/italia/onto/l0/EventOrSituation> ;
+                                        rdfs:comment "Any agentive Object , either physical (e.g. a person, a robot, an oak), or social (e.g. a corporation, an institution, a community)."@en ,
+                                                     "Un agente, sia fisico (ex. una persona, un robot, una quercia), o sociale (ex. una società, un'istituzione, una comunità)."@it ;
+                                        rdfs:isDefinedBy <https://w3id.org/italia/onto/l0> ;
+                                        rdfs:label "Agent"@en ,
+                                                   "Agente"@it ;
+                                        owl:versionInfo "stabile"@it ,
+                                                        "stable"@en .
+
+
+###  https://w3id.org/italia/onto/l0/Concept
+<https://w3id.org/italia/onto/l0/Concept> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Description
+<https://w3id.org/italia/onto/l0/Description> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/EventOrSituation
+<https://w3id.org/italia/onto/l0/EventOrSituation> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Location
+<https://w3id.org/italia/onto/l0/Location> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Object
+<https://w3id.org/italia/onto/l0/Object> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

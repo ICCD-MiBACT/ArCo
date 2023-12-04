@@ -1,0 +1,25 @@
+Acronimo,Definizione,
+DU,DOCUMENTO AUDIO,
+DUY,DIRITTI D'AUTORE,a-cd:Copyright
+DUYN,Nome,a-cd:Copyright a-lite:hasRightsHolder l0:Agent
+DUYD,Data evento,a-cd:Copyright a-cd:expiryDate Literal
+DV,DOCUMENTO VIDEO-CINEMATOGRAFICO,
+DVY,DIRITTI D'AUTORE,a-cd:Copyright
+DVYN,Nome,a-cd:Copyright a-lite:hasRightsHolder l0:Agent
+DVYD,Data evento,a-cd:Copyright a-cd:expiryDate Literal
+DF,DOCUMENTO FOTOGRAFICO,
+DFY,DIRITTI D'AUTORE,a-cd:Copyright
+DFYN,Nome,a-cd:Copyright a-lite:hasRightsHolder l0:Agent
+DFYD,Data evento,a-cd:Copyright a-cd:expiryDate Literal
+AI,DOCUMENTO AUDIO INTEGRATIVO,
+AIY,DIRITTI D'AUTORE,a-cd:Copyright
+AIYN,Nome,a-cd:Copyright a-lite:hasRightsHolder l0:Agent
+AIYD,Data evento,a-cd:Copyright a-cd:expiryDate Literal
+VI,DOCUMENTO VIDEO-CINEMATOGRAFICO INTEGRATIVO,
+VIY,DIRITTI D'AUTORE,a-cd:Copyright
+VIYN,Nome,a-cd:Copyright a-lite:hasRightsHolder l0:Agent
+VIYD,Data evento,a-cd:Copyright a-cd:expiryDate Literal
+FI,DOCUMENTO FOTOGRAFICO INTEGRATIVO,
+FIY,DIRITTI D'AUTORE,a-cd:Copyright
+FIYN,Nome,a-cd:Copyright a-lite:hasRightsHolder l0:Agent
+FIYD,Data evento,a-cd:Copyright a-cd:expiryDate Literal

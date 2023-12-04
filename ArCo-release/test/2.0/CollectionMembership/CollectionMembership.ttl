@@ -1,0 +1,324 @@
+@prefix : <https://w3id.org/arco/test/2.0/MeasurementCollection#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/CollectionMembership> .
+
+<https://w3id.org/arco/test/2.0/CollectionMembership> rdf:type owl:Ontology ;
+                                                       owl:versionIRI <https://w3id.org/arco/test/2.0/CollectionMembership> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/involvesCollection
+<https://w3id.org/arco/ontology/context-description/involvesCollection> rdf:type owl:ObjectProperty ;
+                                                                        owl:inverseOf <https://w3id.org/arco/ontology/context-description/isCollectionIn> ;
+                                                                        rdfs:domain <https://w3id.org/arco/ontology/context-description/CollectionMembership> ;
+                                                                        rdfs:range <http://dati.beniculturali.it/cis/CollectionCulEnt> ;
+                                                                        rdfs:comment "Questa proprietà collega l'appartenenza di un bene culturale a una collezione in un intervallo di tempo alla collezione coinvolta nella relazione"@it ,
+                                                                                     "This property relates a cultural property to the collection to which it belongs in a time span."@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                        rdfs:label "coinvolge collezione"@it ,
+                                                                                   "involves collection"@en ;
+                                                                        owl:versionInfo "instabile"@it ,
+                                                                                        "unstable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "UB/COL/COLD" .
+
+
+###  https://w3id.org/arco/ontology/context-description/involvesMember
+<https://w3id.org/arco/ontology/context-description/involvesMember> rdf:type owl:ObjectProperty ;
+                                                                    owl:inverseOf <https://w3id.org/arco/ontology/context-description/isMemberInvolvedIn> ;
+                                                                    rdfs:domain <https://w3id.org/arco/ontology/context-description/CollectionMembership> ;
+                                                                    rdfs:range owl:Thing ;
+                                                                    rdfs:comment "Questa proprietà collega l'appartenenza a una collezione in un certo intervallo di tempo al bene culturale mobile coinvolto nella relazione."@it ,
+                                                                                 "This property relates the membership of a movable cultural entity to a collection in a time interval."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                    rdfs:label "coinvolge membro"@it ,
+                                                                               "involves member"@en ;
+                                                                    owl:versionInfo "instabile"@it ,
+                                                                                    "unstable"@en ;
+                                                                    <https://w3id.org/arco/ontology/catalogue/iccdNormTag> """UB/COL. Normativa F: UB/UBF. Normativa NU: OG/OGT/OGTR. Normativa BN: OG/OGT/OGTC. Normativa MI e S: OG/SGT/SGTS. Normativa BDI: DU/DUR, SF/SFI, SS/SSI, DU/DUS, AI/AIR,AI/ AIS, VI/VIR,VI/VIV, DU/DUR.
+ICCD Normativa F: PD/SFI; PD/SSI""" .
+
+
+###  https://w3id.org/arco/ontology/context-description/isCollectionIn
+<https://w3id.org/arco/ontology/context-description/isCollectionIn> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <https://w3id.org/italia/onto/l0/Collection> ;
+                                                                    rdfs:range <https://w3id.org/arco/ontology/context-description/CollectionMembership> ;
+                                                                    rdfs:comment "Questa proprietà, inversa a \"ha collezione\", rappresenta la partecipazione di una collezione nel rapporto tra una collezione e un bene culturale che ne fa parte, in un certo intervallo di tempo."@it ,
+                                                                                 "This property relates a collection to the relationship (membership) between the collection itself and a cultural property that is member of it."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                    rdfs:label "is collection in"@en ,
+                                                                               "è collezione in"@it ;
+                                                                    owl:versionInfo "stabile"@it ,
+                                                                                    "stable"@en ;
+                                                                    <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "UB/COL/COLD" .
+
+
+###  https://w3id.org/arco/ontology/context-description/isMemberInvolvedIn
+<https://w3id.org/arco/ontology/context-description/isMemberInvolvedIn> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:domain owl:Thing ;
+                                                                        rdfs:range <https://w3id.org/arco/ontology/context-description/CollectionMembership> ;
+                                                                        rdfs:comment "Questa proprietà collega un bene culturale mobile alla classe che rappresenta l'appartenenza del bene culturale a una collezione in un certo intervallo di tempo."@it ,
+                                                                                     "This property relates a cultural property to the class that represents the membership relation between this cultural property and a collection."@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                        rdfs:label "is member involved in"@en ,
+                                                                                   "è membro coinvolto in"@it .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgent
+<https://w3id.org/arco/ontology/core/hasAgent> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/italia/onto/RO/isRoleInTimeOf> ;
+                                               owl:inverseOf <https://w3id.org/arco/ontology/core/isAgentOf> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                               rdfs:range <https://w3id.org/italia/onto/l0/Agent> ;
+                                               rdfs:comment "Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente all'agente che lo ricopre."@it ,
+                                                            "This property relates a situation in which an agent holds a role to that agent."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "ha agente"@it ,
+                                                          "has agent"@en ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgentRole
+<https://w3id.org/arco/ontology/core/hasAgentRole> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://w3id.org/arco/ontology/core/isAgentRoleOf> ;
+                                                   rdfs:domain owl:Thing ;
+                                                   rdfs:range <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                                   rdfs:comment "Questa proprietà collega un'entità a una situazione in cui un agente ricopre un ruolo."@it ,
+                                                                "This property relates an entity to a situation in which an agent holds a role connected to that entity."@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                   rdfs:label "ha ruolo ricoperto da agente"@it ,
+                                                              "has agent role"@en ;
+                                                   owl:versionInfo "stabile"@it ,
+                                                                   "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasRole
+<https://w3id.org/arco/ontology/core/hasRole> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/italia/onto/RO/withRole> ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isRoleOf> ;
+                                              rdfs:domain <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                              rdfs:range <https://w3id.org/italia/onto/RO/Role> ;
+                                              rdfs:comment "Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente al ruolo stesso."@it ,
+                                                           "This property relates a situation in which an agent holds a role to that role."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "ha ruolo"@it ,
+                                                         "has role"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en ;
+                                              <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normative F e FF: PD/PDF/PDFR" .
+
+
+###  https://w3id.org/arco/ontology/core/isAgentOf
+<https://w3id.org/arco/ontology/core/isAgentOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isAgentRoleOf
+<https://w3id.org/arco/ontology/core/isAgentRoleOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isRoleOf
+<https://w3id.org/arco/ontology/core/isRoleOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/RO/isRoleInTimeOf
+<https://w3id.org/italia/onto/RO/isRoleInTimeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/RO/withRole
+<https://w3id.org/italia/onto/RO/withRole> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/TI/hasTemporalEntity
+<https://w3id.org/italia/onto/TI/hasTemporalEntity> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/collectionLeavingReason
+<https://w3id.org/arco/ontology/context-description/collectionLeavingReason> rdf:type owl:DatatypeProperty ;
+                                                                             rdfs:domain <https://w3id.org/arco/ontology/context-description/CollectionMembership> ;
+                                                                             rdfs:range rdfs:Literal ;
+                                                                             rdfs:comment "Questa proprietà rappresenta il motivo che ha determinato l'uscita da una collezione di un bene culturale."@it ,
+                                                                                          "This property represents the reason that led a cultural entity to the exit from a collection."@en ;
+                                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                             rdfs:label "collection leaving reason"@en ,
+                                                                                        "motivo di uscita dalla collezione"@it ;
+                                                                             owl:versionInfo "stabile"@it ,
+                                                                                             "stable"@en ;
+                                                                             <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "UB/COL/COLM" .
+
+
+###  https://w3id.org/italia/onto/l0/positionInSequence
+<https://w3id.org/italia/onto/l0/positionInSequence> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain owl:Thing ;
+                                                     rdfs:range xsd:int ;
+                                                     rdfs:comment "It represents the position of an item within a sequence"@en ,
+                                                                  "Rappresenta la posizione di un elemento in una sequenza"@it ;
+                                                     rdfs:isDefinedBy <https://w3id.org/italia/onto/l0> ;
+                                                     rdfs:label "position in sequence"@en ,
+                                                                "posizione nella sequenza"@it ;
+                                                     owl:versionInfo "stabile - proprietà aggiunta il 16 aprile 2020 alla versione dell'ontologia 0.8"@it ,
+                                                                     "stable - property added on April 16th 2020 to version 0.8 of the ontology"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.beniculturali.it/cis/CollectionCulEnt
+<http://dati.beniculturali.it/cis/CollectionCulEnt> rdf:type owl:Class ;
+                                                    <https://w3id.org/arco/ontology/catalogue/iccdNormTag> """UBF/UBFP,UBFS, UBFT. OG/SGT/SGTS, 
+Normativa BDI: DURD, DUST,  AIRD, AIST, VIRD, VIVT, DURD""" .
+
+
+###  http://dati.beniculturali.it/cis/CulturalEntity
+<http://dati.beniculturali.it/cis/CulturalEntity> rdf:type owl:Class ;
+                                                  rdfs:subClassOf owl:Thing .
+
+
+###  http://dati.gov.it/onto/dcatapit#Agent
+<http://dati.gov.it/onto/dcatapit#Agent> rdf:type owl:Class ;
+                                         owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  https://w3id.org/arco/ontology/context-description/CollectionMembership
+<https://w3id.org/arco/ontology/context-description/CollectionMembership> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <https://w3id.org/arco/ontology/context-description/Membership> ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <https://w3id.org/arco/ontology/context-description/involvesMember> ;
+                                                                                            owl:someValuesFrom <http://dati.beniculturali.it/cis/CulturalEntity>
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <https://w3id.org/arco/ontology/context-description/involvesCollection> ;
+                                                                                            owl:allValuesFrom <http://dati.beniculturali.it/cis/CollectionCulEnt>
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <https://w3id.org/arco/ontology/context-description/collectionLeavingReason> ;
+                                                                                            owl:allValuesFrom rdfs:Literal
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <https://w3id.org/italia/onto/l0/positionInSequence> ;
+                                                                                            owl:allValuesFrom rdfs:Literal
+                                                                                          ] ;
+                                                                          rdfs:comment "Questa classe rappresenta l'appartenenza di un bene culturale a una collezione, in un certo intervallo di tempo. Uno stesso bene culturale può aver fatto parte di più collezioni nel corso del tempo."@it ,
+                                                                                       "This class represents the membership of a cultural property in a collection."@en ;
+                                                                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                          rdfs:label "Appartenenza a Collezione"@it ,
+                                                                                     "Collection Membership"@en ;
+                                                                          owl:versionInfo "stabile"@it ,
+                                                                                          "stable"@en ;
+                                                                          <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "UB/COL. ICCD Normativa F: UB/UBF. ICCD Normativa NU: OG/OGT/OGTR. ICCD Normativa F: PD/SFI; PD/SSI. Normativa BDI: DU/DUR, DU/DUS, VI/VIR, VI/VIV, AI/AIR, AI/AIS" .
+
+
+###  https://w3id.org/arco/ontology/context-description/Membership
+<https://w3id.org/arco/ontology/context-description/Membership> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/AgentRole
+<https://w3id.org/arco/ontology/core/AgentRole> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/italia/onto/RO/TimeIndexedRole> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasAgent> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/l0/Agent>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasRole> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/RO/Role>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                ] ;
+                                                owl:disjointWith <https://w3id.org/arco/ontology/core/Classification> ;
+                                                rdfs:comment "Questa classe rappresenta una situazione relativa a un agente che ricopre un ruolo, senza la specificazione della dimensione tempo."@it ,
+                                                             "This class represents a situation in which an agent holds a role, regardless of the timing."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                rdfs:label "Agent Role"@en ,
+                                                           "Ruolo ricoperto da agente"@it ;
+                                                owl:versionInfo "stabile"@it ,
+                                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/Classification
+<https://w3id.org/arco/ontology/core/Classification> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/RO/Role
+<https://w3id.org/italia/onto/RO/Role> rdf:type owl:Class ;
+                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normative F e FF: PD/PDF/PDFR" .
+
+
+###  https://w3id.org/italia/onto/RO/TimeIndexedRole
+<https://w3id.org/italia/onto/RO/TimeIndexedRole> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TemporalEntity
+<https://w3id.org/italia/onto/TI/TemporalEntity> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class ;
+                                               rdfs:isDefinedBy <https://w3id.org/italia/onto/TI/> .
+
+
+###  https://w3id.org/italia/onto/l0/Agent
+<https://w3id.org/italia/onto/l0/Agent> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ;
+                                        owl:disjointWith <https://w3id.org/italia/onto/l0/Concept> ,
+                                                         <https://w3id.org/italia/onto/l0/Description> ,
+                                                         <https://w3id.org/italia/onto/l0/EventOrSituation> ;
+                                        rdfs:comment "Any agentive Object , either physical (e.g. a person, a robot, an oak), or social (e.g. a corporation, an institution, a community)."@en ,
+                                                     "Un agente, sia fisico (ex. una persona, un robot, una quercia), o sociale (ex. una società, un'istituzione, una comunità)."@it ;
+                                        rdfs:isDefinedBy <https://w3id.org/italia/onto/l0> ;
+                                        rdfs:label "Agent"@en ,
+                                                   "Agente"@it ;
+                                        owl:versionInfo "stabile"@it ,
+                                                        "stable"@en .
+
+
+###  https://w3id.org/italia/onto/l0/Collection
+<https://w3id.org/italia/onto/l0/Collection> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Concept
+<https://w3id.org/italia/onto/l0/Concept> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Description
+<https://w3id.org/italia/onto/l0/Description> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/EventOrSituation
+<https://w3id.org/italia/onto/l0/EventOrSituation> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Object
+<https://w3id.org/italia/onto/l0/Object> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,338 @@
+@prefix : <https://w3id.org/arco/test/2.0/ClimateSituation#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/ClimateSituation> .
+
+<https://w3id.org/arco/test/2.0/ClimateSituation> rdf:type owl:Ontology ;
+                                                   owl:versionIRI <https://w3id.org/arco/test/2.0/ClimateSituation> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ontologydesignpatterns.org/opla/isNativeTo
+<http://ontologydesignpatterns.org/opla/isNativeTo> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/hasEventOrSituationInTime
+<https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf
+<https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isTypeOf
+<https://w3id.org/arco/ontology/core/isTypeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasMeasurement
+<https://w3id.org/arco/ontology/denotative-description/hasMeasurement> rdf:type owl:ObjectProperty ;
+                                                                       owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isMeasurementIn> ;
+                                                                       rdfs:domain <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> ;
+                                                                       rdfs:range <https://w3id.org/arco/ontology/denotative-description/Measurement> ;
+                                                                       <http://ontologydesignpatterns.org/opla/isNativeTo> <https://w3id.org/arco/pattern/object-collection/> ;
+                                                                       rdfs:comment "Questa proprietà collega un insieme di misure osservate per un oggetto a una delle misure."@it ,
+                                                                                    "This property connects a set of observed measures on an object to one of those measures."@en ;
+                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                       rdfs:label "ha misura"@it ,
+                                                                                  "has measurement"@en ;
+                                                                       owl:versionInfo "stabile"@it ,
+                                                                                       "stable"@en ;
+                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "MT/MIS - Normativa VeAC: anche MT/MIM"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection
+<https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> rdf:type owl:ObjectProperty ;
+                                                                                 owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf> .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf
+<https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> ;
+                                                                                  rdfs:range owl:Thing ;
+                                                                                  rdfs:comment "Questa è la proprietà inversa di \"ha collezione di misure\"."@it ,
+                                                                                               "This is the inverse property of \"has measurement collection\"."@en ;
+                                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description/> ;
+                                                                                  rdfs:label "is measurement collection of"@en ,
+                                                                                             "è collezione di misure di"@it ;
+                                                                                  owl:versionInfo "stabile"@it ,
+                                                                                                  "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isMeasurementIn
+<https://w3id.org/arco/ontology/denotative-description/isMeasurementIn> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:domain <https://w3id.org/arco/ontology/denotative-description/Measurement> ;
+                                                                        rdfs:range <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> ;
+                                                                        <http://ontologydesignpatterns.org/opla/isNativeTo> <https://w3id.org/arco/pattern/object-collection/> ;
+                                                                        rdfs:comment "Questa proprietà, inversa a \"ha misura\", collega una misura di un oggetto all'insieme di misure osservate per l'oggetto."@it ,
+                                                                                     "This property connects an object's measure to the observed measures' collection of that object. It is the inverse property of hasMeasurement."@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                        rdfs:label "is measurement in collection"@en ,
+                                                                                   "è misura in collezione"@it ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "MT/MIS - Normativa VeAC: anche MT/MIM"@it .
+
+
+###  https://w3id.org/arco/ontology/location/hasClimateSituation
+<https://w3id.org/arco/ontology/location/hasClimateSituation> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                              owl:inverseOf <https://w3id.org/arco/ontology/location/isClimateSituationOf> ;
+                                                              rdfs:domain owl:Thing ;
+                                                              rdfs:range <https://w3id.org/arco/ontology/location/ClimateSituation> ;
+                                                              rdfs:comment "Questa proprietà collega l'ambiente alla situazione climatica"@it ,
+                                                                           "This property relates the ambient to the climate situation"@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                              rdfs:label "ha situazione clumatica"@it ,
+                                                                         "has climate situation"@en ;
+                                                              owl:versionInfo "instabile"@it ,
+                                                                              "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/hasFluidDynamism
+<https://w3id.org/arco/ontology/location/hasFluidDynamism> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasMarineBiogeographicRealm
+<https://w3id.org/arco/ontology/location/hasMarineBiogeographicRealm> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasShadeTolerance
+<https://w3id.org/arco/ontology/location/hasShadeTolerance> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasSubstrate
+<https://w3id.org/arco/ontology/location/hasSubstrate> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/isClimateSituationOf
+<https://w3id.org/arco/ontology/location/isClimateSituationOf> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> ;
+                                                               rdfs:domain <https://w3id.org/arco/ontology/location/ClimateSituation> ;
+                                                               rdfs:range owl:Thing ;
+                                                               rdfs:comment "Questa proprietà collega la situazione climatica all'ambiente"@it ,
+                                                                            "This property relates the climate situation to the ambient"@en ;
+                                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                               rdfs:label "is climate situation of"@en ,
+                                                                          "è situazione climatica di"@it ;
+                                                               owl:versionInfo "instabile"@it ,
+                                                                               "unstable"@en .
+
+
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/Type
+<https://w3id.org/arco/ontology/core/Type> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/AffixedElementType
+<https://w3id.org/arco/ontology/denotative-description/AffixedElementType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType
+<https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/ConservationStatusType
+<https://w3id.org/arco/ontology/denotative-description/ConservationStatusType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType
+<https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/DesignationType
+<https://w3id.org/arco/ontology/denotative-description/DesignationType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType
+<https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Measurement
+<https://w3id.org/arco/ontology/denotative-description/Measurement> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/MeasurementCollection
+<https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/MeasurementType
+<https://w3id.org/arco/ontology/denotative-description/MeasurementType> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ;
+                                                                        rdfs:comment "Questa classe rappresenta il tipo di misura osservata (larghezza, altezza, diametro, etc.)"@it ,
+                                                                                     "This class represents the observed measurement type (width, height, diameter, etc)."@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                        rdfs:label "Measurement Type"@en ,
+                                                                                   "Tipo di Misura"@it ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/SampleCollectedType
+<https://w3id.org/arco/ontology/denotative-description/SampleCollectedType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/ClimateSituation
+<https://w3id.org/arco/ontology/location/ClimateSituation> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> ;
+                                                                             owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/arco/ontology/location/isClimateSituationOf> ;
+                                                                             owl:someValuesFrom <https://w3id.org/arco/ontology/location/NaturalEnvironment>
+                                                                           ] ;
+                                                           rdfs:comment "Questa classe rappresenta la situazione climatica"@en ,
+                                                                        "This class represents class situation"@en ;
+                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                           rdfs:label "Climate situation"@en ,
+                                                                      "Situazione climatica"@en ;
+                                                           owl:versionInfo "instabile"@it ,
+                                                                           "unstable"@en ;
+                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "Normativa PG: CA/CLM, CA/CAT. Normativa MODI: CA/CAT. Normativa BNB: LR/LRI/LRIH" .
+
+
+###  https://w3id.org/arco/ontology/location/FluidDynamism
+<https://w3id.org/arco/ontology/location/FluidDynamism> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/MarineBiogeographicRealm
+<https://w3id.org/arco/ontology/location/MarineBiogeographicRealm> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/NaturalEnvironment
+<https://w3id.org/arco/ontology/location/NaturalEnvironment> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/location/NaturalEnvironmentType>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/location/hasClimateSituation> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/location/ClimateSituation>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/location/hasFluidDynamism> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/location/FluidDynamism>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/location/hasMarineBiogeographicRealm> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/location/MarineBiogeographicRealm>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/location/hasShadeTolerance> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/location/ShadeTolerance>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/location/hasSubstrate> ;
+                                                                               owl:allValuesFrom <https://w3id.org/arco/ontology/location/Substrate>
+                                                                             ] ;
+                                                             rdfs:comment "Questa classe rappresenta l'ambiente naturale collegato a un oggetto"@it ,
+                                                                          "This class represents the natural environment related to a thing"@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                             rdfs:label "Ambiente naturale"@it ,
+                                                                        "Natural environment"@en ;
+                                                             owl:versionInfo "instabile"@it ,
+                                                                             "unstable"@en ;
+                                                             <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa PG: CA"@it .
+
+
+###  https://w3id.org/arco/ontology/location/NaturalEnvironmentType
+<https://w3id.org/arco/ontology/location/NaturalEnvironmentType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/ShadeTolerance
+<https://w3id.org/arco/ontology/location/ShadeTolerance> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/Substrate
+<https://w3id.org/arco/ontology/location/Substrate> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/arco/ontology/denotative-description/MaximumTemperature
+<https://w3id.org/arco/ontology/denotative-description/MaximumTemperature> rdf:type owl:NamedIndividual ,
+                                                                                    <https://w3id.org/arco/ontology/denotative-description/MeasurementType> ;
+                                                                           rdfs:label "Maximum temperature"@en ,
+                                                                                      "Temperatura massima"@it ;
+                                                                           owl:versionInfo "instabile"@it ,
+                                                                                           "unstable"@en ;
+                                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "Normativa PG: CA/CLM/CLMC" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/MinimumTemperature
+<https://w3id.org/arco/ontology/denotative-description/MinimumTemperature> rdf:type owl:NamedIndividual ,
+                                                                                    <https://w3id.org/arco/ontology/denotative-description/MeasurementType> ;
+                                                                           rdfs:label "Minimum temperature"@en ,
+                                                                                      "Temperatura minima"@it ;
+                                                                           owl:versionInfo "instabile"@it ,
+                                                                                           "unstable"@en ;
+                                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "Normativa PG: CA/CLM/CLMF" .
+
+
+###  https://w3id.org/arco/ontology/location/Rainfall
+<https://w3id.org/arco/ontology/location/Rainfall> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/arco/ontology/denotative-description/MeasurementType> ;
+                                                   rdfs:label "Precipitazioni"@it ,
+                                                              "Rainfall"@en ;
+                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "Normativa PG: CA/CLM/CLMP" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/denotative-description/AffixedElementType>
+                <https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType>
+                <https://w3id.org/arco/ontology/denotative-description/ConservationStatusType>
+                <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType>
+                <https://w3id.org/arco/ontology/denotative-description/DesignationType>
+                <https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType>
+                <https://w3id.org/arco/ontology/denotative-description/MeasurementType>
+                <https://w3id.org/arco/ontology/denotative-description/SampleCollectedType>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

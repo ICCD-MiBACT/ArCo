@@ -1,0 +1,13 @@
+,,,A,AT,BDI,BDM,BNB,BNM,BNP,BNPE,BNPL,BNZ,CA,D,F,FF,MA,MI,MODI,NT,NU,OA,OAC,PG,PST,RA,S,SAS,SCAN,SI,SM,SMO,TMA,VEAC
+TU,CONDIZIONE GIURIDICA E VINCOLI,,x (no per v 2.00,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x (no per v 2.00,x,x,x,x,,x,x,x,x,x
+ACQ,ACQUISIZIONE,l0:Object cd:hasAcquisition cd:Acquisition,x (no per v 2.00,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x (no per v 2.00,x,x,x,x,,x,x,x,x,x
+ACQP,Riferimento intero bene/ parte,cis:CulturalEntity core:hasPart cos:CulturalEntity,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,x,,
+ACQT,Tipo acquisizione,cd:Acquisition core:hasType cd:AcquisitionType,x (no per v 2.00,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x (no per v 2.00,x,x,x,x,,x,x,x,x,x
+ACQN,Nome,"cd:Acquisition core:hasAgentRole core:AgentRole.
+core:AgentRole core:hasAgent ACQD;
+core:hasRole resource:Transferor",x (no per v 2.00,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x (no per v 2.00,x,x,x,x,,x,x,x,x,x
+ACQD,Data acquisizione,cd:Acquisition ti:atTime ti:TimeInterval,x (no per v 2.00,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x (no per v 2.00,x,x,x,x,,x,x,x,x,x
+ACQL,Luogo acquisizione,cd:Acquisition cd:AcquisitionLocation ACQL,x (no per v 2.00,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x (no per v 2.00,x,x,x,x,,x,x,x,x,x
+ACQE,Note,cd:Acquisition core:note ACQE,,,,x (no per v. 3.01),,,,,,,,,,x,,,,x,,,,,,,,,,,x,,,
+ACQC,Costo acquisizione,cd:Acquisition cd:acquisitionCost ACQC,,,,,,,,,,,,,,,,,,,,,x,,,,,,,,,,,
+,,,,,"acquisizone è per i campi DU, DV, DF, AI, VI, FI",,,,,,,,,,,,,,,,,,,,,,,,,,,,,

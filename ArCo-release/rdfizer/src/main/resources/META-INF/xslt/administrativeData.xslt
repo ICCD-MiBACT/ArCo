@@ -4,6 +4,7 @@
 	xmlns:arco-core="https://w3id.org/arco/ontology/core/"
 	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
 	xmlns:arco-cc="https://w3id.org/arco/ontology/cataloguing-campaign/"
+	xmlns:arco-lite="https://w3id.org/arco/ontology/arco-lite/"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
 	xmlns:cis="http://dati.beniculturali.it/cis/"
@@ -145,9 +146,9 @@
 				</arco-catalogue:catalogueRecordIdentifier>
 			</xsl:if>
 				<!-- proprietà per avere sempre un collegamento col nome del file xml "ICCD..." -->
-			<arco-catalogue:systemRecordCode>
+			<arco-lite:systemIdentifier>
 				<xsl:value-of select="administrativeDataRecord/metadata/ente/id" />
-			</arco-catalogue:systemRecordCode>
+			</arco-lite:systemIdentifier>
 			<xsl:if test="administrativeDataRecord/metadata/ente/tipoEnte">
 				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource">

@@ -1,0 +1,79 @@
+Acronimo,,,A,AT,BDI,BDM,BNB,BNM,BNP,BNPE,BNPL,BNZ,CA,D,F,FF,MA,MI,MODI,NT,NU,OA,OAC,PG,PST,RA,S,SAS,SCAN,SI,SM,SMO,TMA,VEAC,,
+TU,CONDIZIONE GIURIDICA E VINCOLI,,,,,,,,,,,,,,,,,,,,,,,,,,,,MT,,,,,,,
+CDG,CONDIZIONE GIURIDICA,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x non strutt,x,x,x,x,x,,
+CDGG,Indicazione generica,a-cd:LegalSituation core:hasType a-cd:LegalSituationType,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,,
+CDGS,Indicazione specifica,"a-cd:LegalSituation core:hasAgentRole core:AgentRole
+core:AgentRole core:hasAgent l0:Agent;
+core:hasRole resource:Owner",x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,,
+CDGI,Indirizzo,l0:Agent a-cd:address Literal,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,,
+CDGN,Note,a-cd:LegalSituation core:note literal,,,,v4,,,,,,,,,v4,x,,,x,x,,,,,v4,,,,,,x,,,,,
+ACQ,ACQUISIZIONE,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,x (no per v 2.00,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x (no per v 2.00,x,x,x,x,,x,x,x,x,x,,
+ACQN,Nome,"a-cd:LegalSituation core:hasAgentRole core:AgentRole
+core:AgentRole core:hasAgent l0:Agent;
+core:hasRole resource:Owner",x (no per v 2.00,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x (no per v 2.00,x,x,x,x,,x,x,x,x,x,,
+CS,UBICAZIONE,CP loc:hasCadastralIdentity loc:CadastralIdentity,x (versione 2.00: UB),x,,x (no v.3.01),,,,,,,x,,,,x,,x,x,x,,,x (versione 2.00: UB),x (no v.4.00),x (no v.2.00),,x,,x,,,,x,,
+CTSP,Proprietari,loc:CadastralUnitCollection lite:hasOwner l0:Agent,"x (v2.00: non esiste, CTSP sono le particelle)",,,x (no v.2),,,,,,,x,,,,x,,x,x,,,,"x (v2.00: non esiste, CTSP sono le particelle)",,x (no v.2.00),,x,,x,,,,,,
+LS,LOCALIZZAZIONE STORICA,CP loc:hasCadastralIdentity loc:CadastralIdentity,x,,,,,,,,,,x,,,,x,,,x,,,,x,,,,,,x,,,,,,
+CSSP,Proprietari,loc:CadastralUnitCollection lite:hasOwner l0:Agent,x,,,,,,,,,,x,,,,x,,,x,,,,x,,,,,,x,,,,,,
+RP,REPERIMENTO,CP loc:hasCadastralIdentity loc:CadastralIdentity,,,,,,,,,,,,,,,,,,,,,,,,x (solo v.2.00),,,,,,,,,,
+LGCO,Proprietari,loc:CadastralUnitCollection lite:hasOwner l0:Agent,,,,,,,,,,,,,,,,,,,,,,,,x,,,,,,,,,,
+DU,,,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DUZ,CONDIZIONE GIURIDICA DEL SUPPORTO AUDIO,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DUZG,Indicazione generica,a-cd:LegalSituation core:hasType a-cd:LegalSituationType,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DUZS,Indicazione specifica,owl:Thing lite:hasOwner l0:Agent,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DUZI,Indirizzo,l0:Agent a-cd:address Literal,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DUZE,Note,a-cd:LegalSituation core:note literal,,,v4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DUQ,Aquisizione,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DUQN,Nome,"a-cd:LegalSituation core:hasAgentRole core:AgentRole
+core:AgentRole core:hasAgent l0:Agent;
+core:hasRole resource:Owner",,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DV,,,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DVZ,CONDIZIONE GIURIDICA DEL SUPPORTO VIDEO,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DVZG,Indicazione generica,a-cd:LegalSituation core:hasType a-cd:LegalSituationType,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DVZS,Indicazione specifica,owl:Thing lite:hasOwner l0:Agent,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DVZI,Indirizzo,l0:Agent a-cd:address Literal,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DVZE,Note,a-cd:LegalSituation core:note literal,,,v4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DVQ,Aquisizione,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DVQN,Nome,"a-cd:LegalSituation core:hasAgentRole core:AgentRole
+core:AgentRole core:hasAgent l0:Agent;
+core:hasRole resource:Owner",,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DF,,,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DFZ,CONDIZIONE GIURIDICA DELLA FOTOGRAFIA,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DFZG,Indicazione generica,a-cd:LegalSituation core:hasType a-cd:LegalSituationType,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DFZS,Indicazione specifica,owl:Thing lite:hasOwner l0:Agent,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DFZI,Indirizzo,l0:Agent a-cd:address Literal,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DFZE,Note,a-cd:LegalSituation core:note literal,,,v4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DFQ,Aquisizione,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DFQN,Nome,"a-cd:LegalSituation core:hasAgentRole core:AgentRole
+core:AgentRole core:hasAgent l0:Agent;
+core:hasRole resource:Owner",,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+AI,,,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+AIZ,CONDIZIONE GIURIDICA DEL SUPPORTO AUDIO,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+AIZG,Indicazione generica,a-cd:LegalSituation core:hasType a-cd:LegalSituationType,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+AIZS,Indicazione specifica,owl:Thing lite:hasOwner l0:Agent,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+AIZI,Indirizzo,l0:Agent a-cd:address Literal,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+AIZE,Note,a-cd:LegalSituation core:note literal,,,v4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+AIQ,Aquisizione,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+AIQN,Nome,"a-cd:LegalSituation core:hasAgentRole core:AgentRole
+core:AgentRole core:hasAgent l0:Agent;
+core:hasRole resource:Owner",,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VI,DOCUMENTO VIDEO-CINEMATOGRAFICO INTEGRATIVO,,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VIZ,CONDIZIONE GIURIDICA DEL SUPPORTO VIDEO,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VIZG,Indicazione generica,a-cd:LegalSituation core:hasType a-cd:LegalSituationType,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VIZS,Indicazione specifica,owl:Thing lite:hasOwner l0:Agent,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VIZI,Indirizzo,l0:Agent a-cd:address Literal,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VIZE,Note,a-cd:LegalSituation core:note literal,,,v4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VIQ,Aquisizione,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VIQN,Nome,"a-cd:LegalSituation core:hasAgentRole core:AgentRole
+core:AgentRole core:hasAgent l0:Agent;
+core:hasRole resource:Owner",,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+FI,DOCUMENTO FOTOGRAFICO INTEGRATIVO,,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+FIZ,CONDIZIONE GIURIDICA DELLA FOTOGRAFIA,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+FIZG,Indicazione generica,a-cd:LegalSituation core:hasType a-cd:LegalSituationType,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+FIZS,Indicazione specifica,owl:Thing lite:hasOwner l0:Agent,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+FIZI,Indirizzo,l0:Agent a-cd:address Literal,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+FIZE,Note,a-cd:LegalSituation core:note literal,,,v4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+FIQ,Aquisizione,owl:Thing a-cd:hasLegalSituation a-cd:LegalSituation,,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+FIQN,Nome,"a-cd:LegalSituation core:hasAgentRole core:AgentRole
+core:AgentRole core:hasAgent l0:Agent;
+core:hasRole resource:Owner",,,x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

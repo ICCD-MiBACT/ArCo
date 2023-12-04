@@ -1,0 +1,705 @@
+@prefix : <https://w3id.org/arco/test/2.0/CadastralIdentity#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/CadastralIdentity> .
+
+<https://w3id.org/arco/test/2.0/CadastralIdentity> rdf:type owl:Ontology ;
+                                                    owl:versionIRI <https://w3id.org/arco/test/2.0/CadastralIdentity> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasRankOrder
+<https://w3id.org/italia/onto/CLV/hasRankOrder> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/italia/onto/l0/controlledVocabulary
+<https://w3id.org/italia/onto/l0/controlledVocabulary> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/hasLegalSituation
+<https://w3id.org/arco/ontology/context-description/hasLegalSituation> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                                       owl:inverseOf <https://w3id.org/arco/ontology/context-description/isLegalSituationOf> ;
+                                                                       rdfs:domain owl:Thing ;
+                                                                       rdfs:range <https://w3id.org/arco/ontology/context-description/LegalSituation> ;
+                                                                       rdfs:comment "Questa proprietà collega un'entità, per esempio un bene culturale, alla sua condizione giuridica."@it ,
+                                                                                    "This property relates an entity, for example a cultural entity, to its legal situation."@en ;
+                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                       rdfs:label "ha condizione giuridica"@it ,
+                                                                                  "has legal situation"@en ;
+                                                                       owl:versionInfo "stabile"@it ,
+                                                                                       "stable"@en ;
+                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: TU/CDG. - RP/LGC/LGCO. LS/CSS/CSSP. - CS/CTS/CTSP" .
+
+
+###  https://w3id.org/arco/ontology/context-description/isLegalSituationOf
+<https://w3id.org/arco/ontology/context-description/isLegalSituationOf> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> ;
+                                                                        rdfs:domain <https://w3id.org/arco/ontology/context-description/LegalSituation> ;
+                                                                        rdfs:range owl:Thing ;
+                                                                        rdfs:comment "Questa proprietà collega una condizione giuridica a un'entità che si trova in quella condizione."@it ,
+                                                                                     "This property relates a legal situation to an entity that is in that situation."@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                        rdfs:label "is legal situation of"@en ,
+                                                                                   "è condizione giuridica di"@it ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgentRole
+<https://w3id.org/arco/ontology/core/hasAgentRole> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasConcept
+<https://w3id.org/arco/ontology/core/hasConcept> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasEventOrSituationInTime
+<https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasConcept> ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range <https://w3id.org/arco/ontology/core/Type> ;
+                                              rdfs:comment "La object property che associa un qualunque oggetto a un tipo."@it ,
+                                                           "The object property that associates any object with a type."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "ha tipo"@it ,
+                                                         "has type"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isConceptOf
+<https://w3id.org/arco/ontology/core/isConceptOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf
+<https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isTypeOf
+<https://w3id.org/arco/ontology/core/isTypeOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isConceptOf> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/Type> ;
+                                               rdfs:range owl:Thing ;
+                                               rdfs:comment "La object property che associa un tipo a un qualunque oggetto."@it ,
+                                                            "The object property that associates a type to any object."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "is type of"@en ,
+                                                          "è tipo di"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/containsCadastralIdentity
+<https://w3id.org/arco/ontology/location/containsCadastralIdentity> rdf:type owl:ObjectProperty ;
+                                                                    owl:inverseOf <https://w3id.org/arco/ontology/location/isContainedInCadastre> ;
+                                                                    rdfs:domain <https://w3id.org/arco/ontology/location/Cadastre> ;
+                                                                    rdfs:range <https://w3id.org/arco/ontology/location/CadastralIdentity> ;
+                                                                    rdfs:comment "Questa proprietà collega il catasto all identità catastale contenuta in esso."@it ,
+                                                                                 "This property links a cadastre to the cadastral identity containded in it."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                    rdfs:label "contains cadastral identity"@en ,
+                                                                               "contiene identità catastale"@it ;
+                                                                    owl:versionInfo "instabile"@it ,
+                                                                                    "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/hasCadastralCity
+<https://w3id.org/arco/ontology/location/hasCadastralCity> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf <https://w3id.org/arco/ontology/location/hasCadastralEntity> ;
+                                                           owl:inverseOf <https://w3id.org/arco/ontology/location/isCadastralCityOf> ;
+                                                           rdfs:domain <https://w3id.org/arco/ontology/location/CadastralIdentity> ;
+                                                           rdfs:range <https://w3id.org/italia/onto/CLV/City> ;
+                                                           rdfs:comment "Questa proprietà collega un'identità catastale di un'entità al comune a cui è intestato il foglio di mappa catastale, riportato nella forma attestata nel catasto."@it ,
+                                                                        "This property links a cadastral identity of an entity to the municipality to which the cadastral map is registered, as attested by the cadastre."@en ;
+                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                           rdfs:label "ha città catastale"@it ,
+                                                                      "has cadastral city"@en ;
+                                                           owl:versionInfo "stabile"@it ,
+                                                                           "stable"@en ;
+                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: CS/CTS/CTSC. - Normativa RA v.2: RP/LGC/LGCC"@it .
+
+
+###  https://w3id.org/arco/ontology/location/hasCadastralEntity
+<https://w3id.org/arco/ontology/location/hasCadastralEntity> rdf:type owl:ObjectProperty ;
+                                                             owl:inverseOf <https://w3id.org/arco/ontology/location/isCadastralEntityOf> ;
+                                                             rdfs:domain <https://w3id.org/arco/ontology/location/CadastralIdentity> ;
+                                                             rdfs:range <https://w3id.org/arco/ontology/location/CadastralEntity> ;
+                                                             rdfs:comment "Questa proprietà collega un'identità catastale di un'entità a una delle entità catastali, intese come oggetti spaziali, che la definiscono."@it ,
+                                                                          "This property links a cadastral identity of an entity to one of the cadastral entities, understood as spatial objects, that define it."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                             rdfs:label "ha entità catastale"@it ,
+                                                                        "has cadastral entity"@en ;
+                                                             owl:versionInfo "stabile"@it ,
+                                                                             "stable"@en ;
+                                                             <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Traversale 4.00: CS/CTS, CS/CTS/CTSF, CTSN; LS/CSS. LG/LGC" .
+
+
+###  https://w3id.org/arco/ontology/location/hasCadastralIdentity
+<https://w3id.org/arco/ontology/location/hasCadastralIdentity> rdf:type owl:ObjectProperty ;
+                                                               owl:inverseOf <https://w3id.org/arco/ontology/location/isCadastralIdentityOf> ;
+                                                               rdfs:domain owl:Thing ;
+                                                               rdfs:range <https://w3id.org/arco/ontology/location/CadastralIdentity> ;
+                                                               rdfs:comment "Questa proprietà collega un bene culturale all'insieme delle informazioni catastali che lo riguardano, relativamente a una delle sue localizzazioni (storica, attuale, di rinvenimento, ecc.)"@it ,
+                                                                            "This property links a cultural property to all its cadastral information related to one of its locations: i.e. historical location, current location, finding location, etc."@en ;
+                                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                               rdfs:label "ha identità catastale"@it ,
+                                                                          "has cadastral identity"@en ;
+                                                               owl:versionInfo "stabile"@it ,
+                                                                               "stable"@en ;
+                                                               <https://w3id.org/arco/ontology/catalogue/iccdNormTag> """ICCD Normativa Traversale 4.00: CS; LS.
+Normativa A e PG v.2.: UB
+Normativa RA v.2: RP/LGC""" .
+
+
+###  https://w3id.org/arco/ontology/location/hasLocationType
+<https://w3id.org/arco/ontology/location/hasLocationType> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasType> ;
+                                                          owl:inverseOf <https://w3id.org/arco/ontology/location/isLocationTypeOf> ;
+                                                          rdfs:domain owl:Thing ;
+                                                          rdfs:range <https://w3id.org/arco/ontology/location/LocationType> ;
+                                                          rdfs:comment "Questa proprietà collega un'entità, per esempio un situazione in cui un luogo riveste un certo ruolo nei confronti di un bene culturale in un intervallo di tempo, o una georeferenziazione, o un'identità catastale al ruolo della localizzazione (fisica attuale, precedente, di rinvenimento, ecc.) cui si riferisce."@it ,
+                                                                       "This property links an entity (e.g. a situation in which a place plays a certain role in relation to a cultural property in a time frame, or a georeferencing, or a cadastral identity) to the role of the localization referring to it (i.e current physical location, previous location, finding location, etc.)."@en ;
+                                                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                          rdfs:label "ha tipo di localizzazione cui si riferisce"@it ,
+                                                                     "has referred location type"@en ;
+                                                          owl:versionInfo "stabile"@it ,
+                                                                          "stable"@en ;
+                                                          <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: GE/GEL; LA/TLC; LA/TCL; LC (CurrentPhysicalLocation) - Normativa F: anche LR (ShotLocation) - Normative di versioni precedenti: GP/GPL; GA/GAL; GL/GLL. - CS/CTL"@it .
+
+
+###  https://w3id.org/arco/ontology/location/isCadastralCityOf
+<https://w3id.org/arco/ontology/location/isCadastralCityOf> rdf:type owl:ObjectProperty ;
+                                                            rdfs:subPropertyOf <https://w3id.org/arco/ontology/location/isCadastralEntityOf> ;
+                                                            rdfs:domain <https://w3id.org/italia/onto/CLV/City> ;
+                                                            rdfs:range <https://w3id.org/arco/ontology/location/CadastralIdentity> ;
+                                                            rdfs:comment "Questa proprietà collega il comune a cui è intestato il foglio di mappa catastale, riportato nella forma attestata nel catasto all'identità catastale di un'entità."@it ,
+                                                                         "This property links the municipality to which the cadastral map is registered, as attested by the cadastre, to a cadastral identity of an entity."@en ;
+                                                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                            rdfs:label "is cadastral city of"@en ,
+                                                                       "è città catastale di"@it ;
+                                                            owl:versionInfo "stabile"@it ,
+                                                                            "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/isCadastralEntityOf
+<https://w3id.org/arco/ontology/location/isCadastralEntityOf> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <https://w3id.org/arco/ontology/location/CadastralEntity> ;
+                                                              rdfs:range <https://w3id.org/arco/ontology/location/CadastralIdentity> ;
+                                                              rdfs:comment "Questa proprietà collega un'entità catastale, intesa come oggetti spaziali, a alla sua identità catastale."@it ,
+                                                                           "This property links a cadastral entity, understood as spatial object, to its cadastral identity."@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                              rdfs:label "is cadastral entity of"@en ,
+                                                                         "è entità catastale di"@it ;
+                                                              owl:versionInfo "stabile"@it ,
+                                                                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/isCadastralIdentityOf
+<https://w3id.org/arco/ontology/location/isCadastralIdentityOf> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <https://w3id.org/arco/ontology/location/CadastralIdentity> ;
+                                                                rdfs:range owl:Thing ;
+                                                                rdfs:comment "Questa proprietà collega l'insieme delle informazioni catastali, relative a una delle sue localizzazioni (storica, attuale, di rinvenimento, ecc.), a un bene culturale."@it ,
+                                                                             "This property links all the cadastral information related to one of its locations: i.e. historical location, current location, finding location, etc., to a cultural property."@en ;
+                                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                rdfs:label "is cadastral identity of"@en ,
+                                                                           "è identitià catastale di"@it ;
+                                                                owl:versionInfo "stabile"@it ,
+                                                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/isContainedInCadastre
+<https://w3id.org/arco/ontology/location/isContainedInCadastre> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <https://w3id.org/arco/ontology/location/CadastralIdentity> ;
+                                                                rdfs:range <https://w3id.org/arco/ontology/location/Cadastre> ;
+                                                                rdfs:comment "Questa proprietà collega una identità catastale al catasto in cui è registrata."@it ,
+                                                                             "This property links a cadastral identity to the cadastre in which it is registered."@en ;
+                                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                rdfs:label "is contained in cadastre"@en ,
+                                                                           "è contenuta nel catasto"@it ;
+                                                                owl:versionInfo "instabile"@it ,
+                                                                                "unstable"@en ;
+                                                                <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "LS/CSS/CSSD" .
+
+
+###  https://w3id.org/arco/ontology/location/isLocationTypeOf
+<https://w3id.org/arco/ontology/location/isLocationTypeOf> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                                           rdfs:domain <https://w3id.org/arco/ontology/location/LocationType> ;
+                                                           rdfs:range owl:Thing ;
+                                                           rdfs:comment "Questa proprietà collega il ruolo della localizzazione (fisica attuale, precedente, di rinvenimento, ecc.) all'entità cui si riferisce, per esempio un situazione in cui un luogo riveste un certo ruolo nei confronti di un bene culturale in un intervallo di tempo, o una georeferenziazione, o un'identità catastale."@it ,
+                                                                        "This property links the role of a localization (i.e current physical location, previous location, finding location, etc.) to an entity referring to it (e.g. a situation in which a place plays a certain role in relation to a cultural property in a time frame, or a georeferencing, or a cadastral identity)."@en ;
+                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                           rdfs:label "is referred location type of"@en ,
+                                                                      "è tipo di localizzazione cui si riferisce"@it ;
+                                                           owl:versionInfo "stabile"@it ,
+                                                                           "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CLV/hasDirectHigherRank
+<https://w3id.org/italia/onto/CLV/hasDirectHigherRank> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasDirectLowerRank
+<https://w3id.org/italia/onto/CLV/hasDirectLowerRank> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasHigherRank
+<https://w3id.org/italia/onto/CLV/hasHigherRank> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/italia/onto/TI/time
+<https://w3id.org/italia/onto/TI/time> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.beniculturali.it/cis/CulturalEntity
+<http://dati.beniculturali.it/cis/CulturalEntity> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Acquisition
+<https://w3id.org/arco/ontology/context-description/Acquisition> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Anomaly
+<https://w3id.org/arco/ontology/context-description/Anomaly> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ChangeOfAvailability
+<https://w3id.org/arco/ontology/context-description/ChangeOfAvailability> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Circumstance
+<https://w3id.org/arco/ontology/context-description/Circumstance> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/CoinIssuance
+<https://w3id.org/arco/ontology/context-description/CoinIssuance> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ExportImportCertification
+<https://w3id.org/arco/ontology/context-description/ExportImportCertification> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/LegalSituation
+<https://w3id.org/arco/ontology/context-description/LegalSituation> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/context-description/isLegalSituationOf> ;
+                                                                                      owl:someValuesFrom <http://dati.beniculturali.it/cis/CulturalEntity>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/core/hasAgentRole> ;
+                                                                                      owl:someValuesFrom <https://w3id.org/arco/ontology/core/AgentRole>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/core/hasAgentRole> ;
+                                                                                      owl:allValuesFrom <https://w3id.org/arco/ontology/core/AgentRole>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                                      owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/LegalSituationType>
+                                                                                    ] ;
+                                                                    <http://purl.org/dc/elements/1.1/description> """An example of usage of the class \"Legal situation\" is the following:
+resource:LegalSituation/1400054721-legal-situation-proprieta-stato
+        a  cd:LegalSituation ;
+        rdfs:label  \"Legal situation of cultural property 1400054721: State property\"@en ;
+        cd:hasOwner resource:Agent/ministero-beni-culturali ."""@en ,
+                                                                                                                  """Un esempio d'uso della classe \"Condizione giuridica\" è il seguente:
+resource:LegalSituation/1400054721-legal-situation-proprieta-stato
+        a  cd:LegalSituation ;
+        rdfs:label  \"Condizione giuridica del bene culturale 1400054721: proprietà Stato\"@it ;
+        cd:hasOwner resource:Agent/ministero-beni-culturali ."""@it ;
+                                                                    rdfs:comment "Questa classe rappresenta la condizione giuridica di un bene culturale, con riferimenti al proprietario, detentore o possessore."@it ,
+                                                                                 "This class represents the legal situation of a cultural property, related to the owner."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                    rdfs:label "Legal situation"@en ,
+                                                                               "Situazione giuridica"@it ;
+                                                                    owl:versionInfo "stabile"@it ,
+                                                                                    "stable"@en ;
+                                                                    <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: TU/CDG. - RP/LGC/LGCO. LS/CSS/CSSP. - CS/CTS/CTSP. DO/DCM/DCME" .
+
+
+###  https://w3id.org/arco/ontology/context-description/LegalSituationType
+<https://w3id.org/arco/ontology/context-description/LegalSituationType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Membership
+<https://w3id.org/arco/ontology/context-description/Membership> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/RelatedWorkSituation
+<https://w3id.org/arco/ontology/context-description/RelatedWorkSituation> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/AgentRole
+<https://w3id.org/arco/ontology/core/AgentRole> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/Type
+<https://w3id.org/arco/ontology/core/Type> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/CadastralEntity
+<https://w3id.org/arco/ontology/location/CadastralEntity> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <https://w3id.org/italia/onto/CLV/SpatialObject> ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <https://w3id.org/arco/ontology/location/isCadastralEntityOf> ;
+                                                                            owl:allValuesFrom <https://w3id.org/arco/ontology/location/CadastralIdentity>
+                                                                          ] ;
+                                                          rdfs:comment "Questa classe rappresenta un'entità catastale, intesa come un oggetto che può avere una rappresentazione spaziale, relativamente alla ripartizione catastale."@it ,
+                                                                       "This class represents a cadastral entity, which is intended as an object that can have a spatial representation related to the cadastral allocation."@en ;
+                                                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                          rdfs:label "Cadastral Entity"@en ,
+                                                                     "Entità catastale"@it ;
+                                                          owl:versionInfo "stabile"@it ,
+                                                                          "stable"@en ;
+                                                          <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Traversale 4.00: CS/CTS; LS/CSS"@it .
+
+
+###  https://w3id.org/arco/ontology/location/CadastralFolio
+<https://w3id.org/arco/ontology/location/CadastralFolio> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/arco/ontology/location/CadastralEntity> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/italia/onto/TI/time> ;
+                                                                           owl:allValuesFrom rdfs:Literal
+                                                                         ] ;
+                                                         rdfs:comment "Questa classe rappresenta un foglio di mappa catastale, in cui ricadono una o più particelle."@it ,
+                                                                      "This class represents a folio of a cadastral map, which contains one or more cadastral parcels."@en ;
+                                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                         rdfs:label "Cadastral map folio"@en ,
+                                                                    "Foglio di mappa catastale"@it ;
+                                                         owl:versionInfo "stabile"@it ,
+                                                                         "stable"@en ;
+                                                         <https://w3id.org/arco/ontology/catalogue/iccdNormTag> """ICCD Normativa Trasversale 4.00: CS/CTS/CTSF ; LS/CSS/CSSF. - Normativa RA v.2: RP/LGC/LGCM+LGCA.
+Normativa A e PG v.2: UB/CTS/CTSF+CTSD""" .
+
+
+###  https://w3id.org/arco/ontology/location/CadastralIdentity
+<https://w3id.org/arco/ontology/location/CadastralIdentity> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/location/hasCadastralCity> ;
+                                                                              owl:someValuesFrom <https://w3id.org/italia/onto/CLV/City>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/location/hasCadastralEntity> ;
+                                                                              owl:someValuesFrom <https://w3id.org/arco/ontology/location/CadastralEntity>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/location/hasLocationType> ;
+                                                                              owl:someValuesFrom <https://w3id.org/arco/ontology/location/LocationType>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/location/isContainedInCadastre> ;
+                                                                              owl:someValuesFrom <https://w3id.org/arco/ontology/location/Cadastre>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                              owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/location/isContainedInCadastre> ;
+                                                                              owl:allValuesFrom <https://w3id.org/arco/ontology/location/Cadastre>
+                                                                            ] ;
+                                                            <http://purl.org/dc/elements/1.1/description> """An example of usage of the class 'Cadastral Identity' is the following:
+resource:CadastralIdentity/1400055239-1
+        a a-loc:CadastralIdentity ;
+        rdfs:label  \"Cadastral identity 1 of cultural property: 1400055239\"@en ;
+        a-cd:hasLegalSituation resource:LegalSituation/1400055239-cadastral-legal-situation-1 ;
+        a-loc:hasCadastralCity resource:City/s-martino-in-pensilis ;
+        a-loc:hasCadastralEntity resource:CadastralUnitCollection/1400055239-207 , resource:CadastralFolio/1400055239-8 ."""@en ,
+                                                                                                          """Un esempio d'uso della classe \"Identità catastale\" è il seguente:
+resource:CadastralIdentity/1400055239-1
+        a a-loc:CadastralIdentity ;
+        rdfs:label  \"Identità catastale 1 del bene culturale: 1400055239\"@en ;
+        a-cd:hasLegalSituation resource:LegalSituation/1400055239-cadastral-legal-situation-1 ;
+        a-loc:hasCadastralCity resource:City/s-martino-in-pensilis ;
+        a-loc:hasCadastralEntity resource:CadastralUnitCollection/1400055239-207 , resource:CadastralFolio/1400055239-8 ."""@it ;
+                                                            rdfs:comment "Questa classe rappresenta l'identità catastale di un'entità, intesa come l'insieme delle informazioni di localizzazione che riguardano il bene con riferimento alla ripartizione catastale nazionale. L'identità catastale di un'entità può avere un riferimento cronologico, che indica l'epoca alla quale risalgono i dati catastali."@it ,
+                                                                         "This class represents the cadastral identity of an entity, which is intended as a set of location information concerning the property with reference to the national cadastral allocation. The cadastral identity can have a chronological reference indicating the dating of cadastral data."@en ;
+                                                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                            rdfs:label "Cadastral identity"@en ,
+                                                                       "Identità catastale"@it ;
+                                                            owl:versionInfo "stabile"@it ,
+                                                                            "stable"@en ;
+                                                            <https://w3id.org/arco/ontology/catalogue/iccdNormTag> """ICCD Normativa Traversale 4.00: CS; LS.
+Normativa A e PG v.2.: UB
+Normativa RA v.2: RP/LGC""" .
+
+
+###  https://w3id.org/arco/ontology/location/CadastralUnitCollection
+<https://w3id.org/arco/ontology/location/CadastralUnitCollection> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <https://w3id.org/arco/ontology/location/CadastralEntity> ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/arco/ontology/context-description/hasLegalSituation> ;
+                                                                                    owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/LegalSituation>
+                                                                                  ] ;
+                                                                  rdfs:comment "Questa classe rappresenta una o più particelle catastali."@it ,
+                                                                               "This class represents one or more cadastral parcels."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                  rdfs:label "Cadastral unit collection"@en ,
+                                                                             "Collezione di particelle catastali"@it ;
+                                                                  owl:versionInfo "stabile"@it ,
+                                                                                  "stable"@en ;
+                                                                  <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Traversale 4.00: CS/CTS/CTSN; LS/CSS/CSSN. - Normativa RA v.2: RP/LGC/LGCR" .
+
+
+###  https://w3id.org/arco/ontology/location/Cadastre
+<https://w3id.org/arco/ontology/location/Cadastre> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                     owl:allValuesFrom <https://w3id.org/arco/ontology/location/CadastreType>
+                                                                   ] ;
+                                                   rdfs:comment "Questa classe rappresenta il catasto di una città"@it ,
+                                                                "This class represents the cadastre of a city"@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                   rdfs:label "Cadastre"@en ,
+                                                              "Catasto"@it ;
+                                                   owl:versionInfo "instabile"@it ,
+                                                                   "unstable"@en ;
+                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: LS/CSS/CSSD" .
+
+
+###  https://w3id.org/arco/ontology/location/CadastreType
+<https://w3id.org/arco/ontology/location/CadastreType> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                                                         owl:someValuesFrom <https://w3id.org/arco/ontology/location/CadastralIdentity>
+                                                                       ] ;
+                                                       rdfs:comment "Questa classe rappresenta il tipo di catasto (ad es. catasto terreni, catasto fabbricati, catasto misto)."@it ,
+                                                                    "This class represents the type of cadastre (e.g. land cadastre, building cadastre, mixed cadastre)."@en ;
+                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                       rdfs:label "Cadastre type"@en ,
+                                                                  "Tipo di catasto"@it ;
+                                                       owl:versionInfo "stabile"@it ,
+                                                                       "stable"@en ;
+                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: CS/CTS/CTST" .
+
+
+###  https://w3id.org/arco/ontology/location/LocationType
+<https://w3id.org/arco/ontology/location/LocationType> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <https://w3id.org/arco/ontology/location/isLocationTypeOf> ;
+                                                                         owl:someValuesFrom owl:Thing
+                                                                       ] ;
+                                                       rdfs:comment "Questa classe rappresenta il tipo di localizzazione di un bene culturale."@it ,
+                                                                    "This class represents the type of location of a cultural property."@en ;
+                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                       rdfs:label "Location Type"@en ,
+                                                                  "Tipo di localizzazione"@it ;
+                                                       owl:versionInfo "stabile"@it ,
+                                                                       "stable"@en ;
+                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: LA/TLC; LA/TCL; LC (CurrentPhysicalLocation) - Normativa F: anche LR (ShotLocation). - CS/CTL. - GE/GEL; GP/GPL; GL/GLL; GA/GAL" .
+
+
+###  https://w3id.org/arco/ontology/location/NeighbouringCadastralEntity
+<https://w3id.org/arco/ontology/location/NeighbouringCadastralEntity> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <https://w3id.org/arco/ontology/location/CadastralEntity> ;
+                                                                      rdfs:comment "Questa classe rappresenta le entità spaziali (particelle, strade, corsi d'acqua, ecc.) confinanti con una o più particelle catastali."@it ,
+                                                                                   "This class represents spatial entities (i.e. roads, waterways, etc.) that border one or more cadastral parcels."@en ;
+                                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                      rdfs:label "Elemento di confine"@it ,
+                                                                                 "Neighbouring cadastral entity"@en ;
+                                                                      owl:versionInfo "stabile"@it ,
+                                                                                      "stable"@en ;
+                                                                      <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: CS/CTE. - CS/CTS/CTSE. - LC/CSS/CSSE" .
+
+
+###  https://w3id.org/italia/onto/CLV/AdminUnitComponent
+<https://w3id.org/italia/onto/CLV/AdminUnitComponent> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/City
+<https://w3id.org/italia/onto/CLV/City> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/italia/onto/CLV/AdminUnitComponent> ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/italia/onto/CLV/hasDirectLowerRank> ;
+                                                          owl:allValuesFrom <https://w3id.org/italia/onto/CLV/District>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/italia/onto/CLV/hasHigherRank> ;
+                                                          owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                              owl:unionOf ( <https://w3id.org/italia/onto/CLV/Country>
+                                                                                            <https://w3id.org/italia/onto/CLV/Province>
+                                                                                            <https://w3id.org/italia/onto/CLV/Region>
+                                                                                          )
+                                                                            ]
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/italia/onto/CLV/hasDirectHigherRank> ;
+                                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass <https://w3id.org/italia/onto/CLV/Province>
+                                                        ] ;
+                                        rdfs:comment "Questa classe rappresenta la città (Comune)"@it ,
+                                                     "This class represents the city"@en ;
+                                        rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                        rdfs:label "Città"@it ,
+                                                   "City"@en ,
+                                                   "Comune"@it ;
+                                        owl:versionInfo "stabile"@it ,
+                                                        "stable"@en ;
+                                        <http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                        <https://w3id.org/italia/onto/CLV/hasRankOrder> 4 ;
+                                        <https://w3id.org/italia/onto/l0/controlledVocabulary> <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities> .
+
+
+###  https://w3id.org/italia/onto/CLV/Country
+<https://w3id.org/italia/onto/CLV/Country> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/District
+<https://w3id.org/italia/onto/CLV/District> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/Province
+<https://w3id.org/italia/onto/CLV/Province> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/Region
+<https://w3id.org/italia/onto/CLV/Region> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/SpatialObject
+<https://w3id.org/italia/onto/CLV/SpatialObject> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class ;
+                                               rdfs:isDefinedBy <https://w3id.org/italia/onto/TI/> .
+
+
+###  https://w3id.org/italia/onto/l0/Object
+<https://w3id.org/italia/onto/l0/Object> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/arco/ontology/location/BuildingAndLandCadastre
+<https://w3id.org/arco/ontology/location/BuildingAndLandCadastre> rdf:type owl:NamedIndividual ,
+                                                                           <https://w3id.org/arco/ontology/location/CadastreType> .
+
+
+###  https://w3id.org/arco/ontology/location/BuildingCadastre
+<https://w3id.org/arco/ontology/location/BuildingCadastre> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/arco/ontology/location/CadastreType> .
+
+
+###  https://w3id.org/arco/ontology/location/CurrentPhysicalLocation
+<https://w3id.org/arco/ontology/location/CurrentPhysicalLocation> rdf:type owl:NamedIndividual ,
+                                                                           <https://w3id.org/arco/ontology/location/LocationType> ;
+                                                                  rdfs:comment "Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero la localizzazione fisica attuale."@it ,
+                                                                               "This individual represents a specific type of localization, that is the current physical location."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                  rdfs:label "Current Physical Location"@en ,
+                                                                             "Localizzazione fisica attuale"@it ;
+                                                                  owl:versionInfo "stabile"@it ,
+                                                                                  "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/FindingLocation
+<https://w3id.org/arco/ontology/location/FindingLocation> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/arco/ontology/location/LocationType> ;
+                                                          rdfs:comment "Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero il luogo di ritrovamento."@it ,
+                                                                       "This individual represents a specific type of localization, that is the finding location."@en ;
+                                                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                          rdfs:label "Finding Location"@en ,
+                                                                     "Luogo di reperimento"@it ;
+                                                          owl:versionInfo "stabile"@it ,
+                                                                          "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/HistoricalLocation
+<https://w3id.org/arco/ontology/location/HistoricalLocation> rdf:type owl:NamedIndividual ,
+                                                                      <https://w3id.org/arco/ontology/location/LocationType> ;
+                                                             rdfs:comment "Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero la localizzazione storica."@it ,
+                                                                          "This individual represents a specific type of localization, that is the historical location."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                             rdfs:label "Historical Location"@en ,
+                                                                        "Localizzazione storica"@it ;
+                                                             owl:versionInfo "stabile"@it ,
+                                                                             "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/LandCadastre
+<https://w3id.org/arco/ontology/location/LandCadastre> rdf:type owl:NamedIndividual ,
+                                                                <https://w3id.org/arco/ontology/location/CadastreType> .
+
+
+###  https://w3id.org/arco/ontology/location/PreviousLocation
+<https://w3id.org/arco/ontology/location/PreviousLocation> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/arco/ontology/location/LocationType> ;
+                                                           rdfs:comment "Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero il luogo di provenienza o collocazione precedente."@it ,
+                                                                        "This individual represents a specific type of location, that is the place of origin or previous location."@en ;
+                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                           rdfs:label "Luogo di provenienza / Collocazione precedente"@it ,
+                                                                      "Place of Origin / Previous Location"@en ;
+                                                           owl:versionInfo "stabile"@it ,
+                                                                           "stable"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/Acquisition>
+                <https://w3id.org/arco/ontology/context-description/Anomaly>
+                <https://w3id.org/arco/ontology/context-description/ChangeOfAvailability>
+                <https://w3id.org/arco/ontology/context-description/Circumstance>
+                <https://w3id.org/arco/ontology/context-description/CoinIssuance>
+                <https://w3id.org/arco/ontology/context-description/ExportImportCertification>
+                <https://w3id.org/arco/ontology/context-description/LegalSituation>
+                <https://w3id.org/arco/ontology/context-description/Membership>
+                <https://w3id.org/arco/ontology/context-description/RelatedWorkSituation>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

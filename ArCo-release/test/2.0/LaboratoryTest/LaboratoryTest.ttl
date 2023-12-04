@@ -1,0 +1,495 @@
+@prefix : <https://w3id.org/arco/test/2.0/LaboratoryTest#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/LaboratoryTest> .
+
+<https://w3id.org/arco/test/2.0/LaboratoryTest> rdf:type owl:Ontology ;
+                                                 owl:versionIRI <https://w3id.org/arco/test/2.0/LaboratoryTest> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/hasSurvey
+<https://w3id.org/arco/ontology/context-description/hasSurvey> rdf:type owl:ObjectProperty ;
+                                                               owl:inverseOf <https://w3id.org/arco/ontology/context-description/isSurveyOn> ;
+                                                               rdfs:domain owl:Thing ;
+                                                               rdfs:range <https://w3id.org/arco/ontology/context-description/Survey> ;
+                                                               rdfs:comment "Questa proprietà collega un bene culturale a un'indagine effettuata sul bene stesso, per la sua individuazione, per il suo studio e per l'approfondimento delle sue caratteristiche tecniche."@it ,
+                                                                            "This property relates a cultural entity's acquisition to its acquisition type."@en ;
+                                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                               rdfs:label "ha indagine"@it ,
+                                                                          "has survey"@en ;
+                                                               owl:versionInfo "stabile"@it ,
+                                                                               "stable"@en ;
+                                                               <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: RE; CM/ISP - ICCD Normative NU, RA, BNB, MA, CA: RS/ALB - ICCD Normativa AT 3.00: IN/INI - Normativa BDM e SM 4.00: DR" .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasSurveyMethod
+<https://w3id.org/arco/ontology/context-description/hasSurveyMethod> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasSurveyMotivation
+<https://w3id.org/arco/ontology/context-description/hasSurveyMotivation> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/isSurveyOn
+<https://w3id.org/arco/ontology/context-description/isSurveyOn> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <https://w3id.org/arco/ontology/context-description/Survey> ;
+                                                                rdfs:range owl:Thing ;
+                                                                rdfs:comment "Questa proprietà collega un'indagine effettuata su un bene culturale al bene stesso."@it ,
+                                                                             "This property relates a cultural entity's survey to the cultural entity."@en ;
+                                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                rdfs:label "is survey on"@en ,
+                                                                           "è indagine su"@it ;
+                                                                owl:versionInfo "stabile"@it ,
+                                                                                "stable"@en ;
+                                                                <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: RE; CM/ISP - ICCD Normative NU, RA, BNB, MA, CA: RS/ALB - ICCD Normativa AT 3.00: IN/INI - Normativa BDM e SM 4.00: DR" .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgentRole
+<https://w3id.org/arco/ontology/core/hasAgentRole> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasConcept
+<https://w3id.org/arco/ontology/core/hasConcept> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasConsequence
+<https://w3id.org/arco/ontology/core/hasConsequence> rdf:type owl:ObjectProperty ;
+                                                     owl:inverseOf <https://w3id.org/arco/ontology/core/isConsequenceOf> ;
+                                                     rdfs:domain owl:Thing ;
+                                                     rdfs:range owl:Thing ;
+                                                     rdfs:comment "Questa proprietà rappresenta la conseguenza di qualcosa"@it ,
+                                                                  "This property represents the consequence of something"@en ;
+                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                     rdfs:label "ha conseguenza"@it ,
+                                                                "has consequence"@en ;
+                                                     owl:versionInfo "instabile"@it ,
+                                                                     "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasConcept> ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range <https://w3id.org/arco/ontology/core/Type> ;
+                                              rdfs:comment "La object property che associa un qualunque oggetto a un tipo."@it ,
+                                                           "The object property that associates any object with a type."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "ha tipo"@it ,
+                                                         "has type"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isConceptOf
+<https://w3id.org/arco/ontology/core/isConceptOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isConsequenceOf
+<https://w3id.org/arco/ontology/core/isConsequenceOf> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain owl:Thing ;
+                                                      rdfs:range owl:Thing ;
+                                                      rdfs:comment "Questa proprietà rappresenta la conseguenza di qualcosa"@it ,
+                                                                   "This property represents the consequence of something"@en ;
+                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                      rdfs:label "is consequence of"@en ,
+                                                                 "è conseguenza di"@it ;
+                                                      owl:versionInfo "instabile"@it ,
+                                                                      "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isTypeOf
+<https://w3id.org/arco/ontology/core/isTypeOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isConceptOf> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/Type> ;
+                                               rdfs:range owl:Thing ;
+                                               rdfs:comment "La object property che associa un tipo a un qualunque oggetto."@it ,
+                                                            "The object property that associates a type to any object."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "is type of"@en ,
+                                                          "è tipo di"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/claySpecifications
+<https://w3id.org/arco/ontology/context-description/claySpecifications> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/specifications> ;
+                                                                        rdfs:domain <https://w3id.org/arco/ontology/context-description/LaboratoryTest> ;
+                                                                        rdfs:range rdfs:Literal ;
+                                                                        rdfs:comment "Questa proprietà rappresenta le specifiche su eventuali componenti significativi per lo studio del bene, nel caso di analisi su reperti in argilla."@it ,
+                                                                                     "This property represents specifications on any significant components for the study of the entity, in case of analysis on clay findings."@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                        rdfs:label "clay specifications"@en ,
+                                                                                   "specifiche su pasta/argilla"@it ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "RS/ALB/ALBA. CO/ALB/ALBA" .
+
+
+###  https://w3id.org/arco/ontology/context-description/report
+<https://w3id.org/arco/ontology/context-description/report> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/technicalDocumentation
+<https://w3id.org/arco/ontology/context-description/technicalDocumentation> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/testResults
+<https://w3id.org/arco/ontology/context-description/testResults> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <https://w3id.org/arco/ontology/context-description/LaboratoryTest> ;
+                                                                 rdfs:range rdfs:Literal ;
+                                                                 rdfs:comment "Questa proprietà descrive i risultati dell'attività di analisi"@it ,
+                                                                              "This property represents the results of a test activity"@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                 rdfs:label "risultati dell'analisi"@it ,
+                                                                            "test results"@en ;
+                                                                 owl:versionInfo "instabile"@it ,
+                                                                                 "unstable"@en ;
+                                                                 <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "RS/ALB/ALBR. CO/ALB/ALBR"@it .
+
+
+###  https://w3id.org/arco/ontology/core/informationSource
+<https://w3id.org/arco/ontology/core/informationSource> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain owl:Thing ;
+                                                        rdfs:range rdfs:Literal ;
+                                                        rdfs:comment "Questa proprietà rappresenta la fonte da cui vengono prese le informazioni."@it ,
+                                                                     "This property represents the source of information."@en ;
+                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                        rdfs:label "fonte dell'informazione"@it ,
+                                                                   "information source"@en ;
+                                                        owl:versionInfo "instabile"@it ,
+                                                                        "unstable"@en ;
+                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "AU/CMM/CMMF" .
+
+
+###  https://w3id.org/arco/ontology/core/specifications
+<https://w3id.org/arco/ontology/core/specifications> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/AcquisitionType
+<https://w3id.org/arco/ontology/context-description/AcquisitionType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/AlternativeDatingType
+<https://w3id.org/arco/ontology/context-description/AlternativeDatingType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/AnomalyType
+<https://w3id.org/arco/ontology/context-description/AnomalyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation
+<https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ArchaeologicalFieldSurvey
+<https://w3id.org/arco/ontology/context-description/ArchaeologicalFieldSurvey> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurvey
+<https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurvey> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType
+<https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurvey
+<https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurvey> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType
+<https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/BibliographyType
+<https://w3id.org/arco/ontology/context-description/BibliographyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType
+<https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/CircumstanceType
+<https://w3id.org/arco/ontology/context-description/CircumstanceType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/DerivatedWorkType
+<https://w3id.org/arco/ontology/context-description/DerivatedWorkType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/DocumentationType
+<https://w3id.org/arco/ontology/context-description/DocumentationType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ExportImportCertificationType
+<https://w3id.org/arco/ontology/context-description/ExportImportCertificationType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Inspection
+<https://w3id.org/arco/ontology/context-description/Inspection> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Intervention
+<https://w3id.org/arco/ontology/context-description/Intervention> rdf:type owl:Class ;
+                                                                  owl:disjointWith <https://w3id.org/arco/ontology/context-description/Survey> .
+
+
+###  https://w3id.org/arco/ontology/context-description/InterventionType
+<https://w3id.org/arco/ontology/context-description/InterventionType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/LaboratoryTest
+<https://w3id.org/arco/ontology/context-description/LaboratoryTest> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://w3id.org/arco/ontology/context-description/Survey> ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                                      owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/LaboratoryTestType>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/context-description/claySpecifications> ;
+                                                                                      owl:allValuesFrom rdfs:Literal
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/context-description/testResults> ;
+                                                                                      owl:allValuesFrom rdfs:Literal
+                                                                                    ] ;
+                                                                    rdfs:comment "Questa classe rappresenta un tipo particolare di indagine su bene culturale, ovvero un'analisi di laboratorio."@it ,
+                                                                                 "This class represents a particular type of survey on a cultural property, that is a laboratory test."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                    rdfs:label "Analisi di laboratorio"@it ,
+                                                                               "Laboratory test"@en ;
+                                                                    owl:versionInfo "stabile"@it ,
+                                                                                    "stable"@en ;
+                                                                    <https://w3id.org/arco/ontology/catalogue/iccdNormTag> """ICCD Normative NU, RA, BNB, MA, CA: RS/ALB.
+Normativa BNB: RB""" .
+
+
+###  https://w3id.org/arco/ontology/context-description/LaboratoryTestType
+<https://w3id.org/arco/ontology/context-description/LaboratoryTestType> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <https://w3id.org/arco/ontology/context-description/SurveyType> ;
+                                                                        rdfs:comment "Questa classe rappresenta il tipo di analisi di laboratorio (es.: analisi metallurgica, analisi chimica, etc.)"@it ,
+                                                                                     "This class represents the type of laboratory test (es.: chemical analysis)"@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                        rdfs:label "Laboratory test type"@en ,
+                                                                                   "Tipo di analisi di laboratorio"@it ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> """ICCD Normative NU, RA, BNB, MA, CA: RS/ALB/ALBT.
+BNB: RB/RBR/RBRT""" .
+
+
+###  https://w3id.org/arco/ontology/context-description/ObservationSurvey
+<https://w3id.org/arco/ontology/context-description/ObservationSurvey> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ObservationSurveyType
+<https://w3id.org/arco/ontology/context-description/ObservationSurveyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/PaleopathologySurvey
+<https://w3id.org/arco/ontology/context-description/PaleopathologySurvey> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/PhotoInterpretationRendering
+<https://w3id.org/arco/ontology/context-description/PhotoInterpretationRendering> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Research
+<https://w3id.org/arco/ontology/context-description/Research> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ResponsibilityType
+<https://w3id.org/arco/ontology/context-description/ResponsibilityType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Survey
+<https://w3id.org/arco/ontology/context-description/Survey> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://w3id.org/italia/onto/l0/Activity> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                              owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/context-description/hasSurveyMethod> ;
+                                                                              owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/SurveyMethod>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/context-description/hasSurveyMotivation> ;
+                                                                              owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/SurveyMotivation>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/core/hasAgentRole> ;
+                                                                              owl:allValuesFrom <https://w3id.org/arco/ontology/core/AgentRole>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                              owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/SurveyType>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                              owl:allValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/context-description/report> ;
+                                                                              owl:someValuesFrom rdfs:Literal
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/context-description/technicalDocumentation> ;
+                                                                              owl:someValuesFrom rdfs:Literal
+                                                                            ] ;
+                                                            <http://purl.org/dc/elements/1.1/description> """An example of usage of one of the subclasses of the class 'Survey' is the following:
+resource:ArchaeologicalExcavation/0500590557-survey-1
+        a           cd:ArchaeologicalExcavation ;
+        rdfs:label  \"Archaeological excavation 1 of cultural property 0500590557: Monselice, via Valli\"@en ;
+        cd:hasActivityResponsible resource:Agent/sba ;
+        cd:hasStratigraphicUnit resource:StratigraphicUnit/325 ;
+        cd:hasSurveyMethod resource:SurveyMethod/scavo-stratigrafico ;
+        cd:hasSurveyMotivation resource:SurveyMotivation/opere-pubbliche ; cd:hasSurveyScientificDirector resource:Agent/bianchin-citton-elodia ;
+        core:hasAgentRole resource:AgentRole/0500590557-archaeological-excavation-1-activity-responsible , resource:AgentRole/0500590557-archaeological-excavation-1-scientific-director ;
+        tiapit:time \"2004\" ."""@en ,
+                                                                                                          """Un esempio d'uso di una delle sottoclassi della classe \"Indagine\" è il seguente:
+resource:ArchaeologicalExcavation/0500590557-survey-1
+        a           cd:ArchaeologicalExcavation ;
+        rdfs:label  \"Scavo archeologico 1 del bene 0500590557: Monselice, via Valli\"@it ;
+        cd:hasActivityResponsible resource:Agent/sba ;
+        cd:hasStratigraphicUnit resource:StratigraphicUnit/325 ;
+        cd:hasSurveyMethod resource:SurveyMethod/scavo-stratigrafico ;
+        cd:hasSurveyMotivation resource:SurveyMotivation/opere-pubbliche ; cd:hasSurveyScientificDirector resource:Agent/bianchin-citton-elodia ;
+        core:hasAgentRole resource:AgentRole/0500590557-archaeological-excavation-1-activity-responsible , resource:AgentRole/0500590557-archaeological-excavation-1-scientific-director ;
+        tiapit:time \"2004\" ."""@it ;
+                                                            rdfs:comment "Questa classe rappresenta un'indagine effettuata su un bene culturale. Per indagine, si intende un'attività che riguarda il bene, effettuata per la sua individuazione (nel caso dei beni archeologici), per il suo studio e per l'approfondimento delle sue caratteristiche tecniche (indagini di scavo, di ricognizione, indagini geognostiche, analisi di vario genere e tipo, etc.). Questa classe viene specializzata in sottoclassi, per la rappresentazione di tipologie di indagini specifiche."@it ,
+                                                                         "This class represents a survey carried out on a cultural property, that is an activity related to a cultural property and carried out for its identification, study or observation of its technical characteristics."@en ;
+                                                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                            rdfs:label "Indagine"@it ,
+                                                                       "Survey"@en ;
+                                                            owl:versionInfo "stabile"@it ,
+                                                                            "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/context-description/SurveyImageType
+<https://w3id.org/arco/ontology/context-description/SurveyImageType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/SurveyMethod
+<https://w3id.org/arco/ontology/context-description/SurveyMethod> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/SurveyMotivation
+<https://w3id.org/arco/ontology/context-description/SurveyMotivation> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/SurveyType
+<https://w3id.org/arco/ontology/context-description/SurveyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/TitleType
+<https://w3id.org/arco/ontology/context-description/TitleType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/UseType
+<https://w3id.org/arco/ontology/context-description/UseType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/UseTypeSpecification
+<https://w3id.org/arco/ontology/context-description/UseTypeSpecification> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/AgentRole
+<https://w3id.org/arco/ontology/core/AgentRole> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/Type
+<https://w3id.org/arco/ontology/core/Type> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Activity
+<https://w3id.org/italia/onto/l0/Activity> rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/AcquisitionType>
+                <https://w3id.org/arco/ontology/context-description/AlternativeDatingType>
+                <https://w3id.org/arco/ontology/context-description/AnomalyType>
+                <https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType>
+                <https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType>
+                <https://w3id.org/arco/ontology/context-description/BibliographyType>
+                <https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType>
+                <https://w3id.org/arco/ontology/context-description/CircumstanceType>
+                <https://w3id.org/arco/ontology/context-description/DerivatedWorkType>
+                <https://w3id.org/arco/ontology/context-description/DocumentationType>
+                <https://w3id.org/arco/ontology/context-description/ExportImportCertificationType>
+                <https://w3id.org/arco/ontology/context-description/InterventionType>
+                <https://w3id.org/arco/ontology/context-description/LaboratoryTestType>
+                <https://w3id.org/arco/ontology/context-description/ObservationSurveyType>
+                <https://w3id.org/arco/ontology/context-description/ResponsibilityType>
+                <https://w3id.org/arco/ontology/context-description/SurveyImageType>
+                <https://w3id.org/arco/ontology/context-description/TitleType>
+                <https://w3id.org/arco/ontology/context-description/UseType>
+                <https://w3id.org/arco/ontology/context-description/UseTypeSpecification>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation>
+                <https://w3id.org/arco/ontology/context-description/ArchaeologicalFieldSurvey>
+                <https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurvey>
+                <https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurvey>
+                <https://w3id.org/arco/ontology/context-description/Inspection>
+                <https://w3id.org/arco/ontology/context-description/LaboratoryTest>
+                <https://w3id.org/arco/ontology/context-description/ObservationSurvey>
+                <https://w3id.org/arco/ontology/context-description/PaleopathologySurvey>
+                <https://w3id.org/arco/ontology/context-description/PhotoInterpretationRendering>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/Intervention>
+                <https://w3id.org/arco/ontology/context-description/Research>
+                <https://w3id.org/arco/ontology/context-description/Survey>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

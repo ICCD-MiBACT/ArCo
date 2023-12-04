@@ -1,0 +1,355 @@
+@prefix : <https://w3id.org/arco/test/2.0/Estimate#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/Estimate> .
+
+<https://w3id.org/arco/test/2.0/Estimate> rdf:type owl:Ontology ;
+                                           owl:versionIRI <https://w3id.org/arco/test/2.0/Estimate> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/hasEstimate
+<https://w3id.org/arco/ontology/context-description/hasEstimate> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                                 owl:inverseOf <https://w3id.org/arco/ontology/context-description/isEstimateOf> ;
+                                                                 rdfs:domain owl:Thing ;
+                                                                 rdfs:range <https://w3id.org/arco/ontology/context-description/Estimate> ;
+                                                                 rdfs:comment "Questa proprietà collega un'entità a una sua stima."@it ,
+                                                                              "This property relates an entity to its estimate."@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                 rdfs:label "ha stima"@it ,
+                                                                            "has estimate"@en ;
+                                                                 owl:versionInfo "stabile"@it ,
+                                                                                 "stable"@en ;
+                                                                 <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: UB/STI - ICCD Normative di versione 2.00: UB/INV/INVS" .
+
+
+###  https://w3id.org/arco/ontology/context-description/isEstimateOf
+<https://w3id.org/arco/ontology/context-description/isEstimateOf> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> ;
+                                                                  rdfs:domain <https://w3id.org/arco/ontology/context-description/Estimate> ;
+                                                                  rdfs:range owl:Thing ;
+                                                                  rdfs:comment "Questa proprietà collega una stima di un'entità all'entità stimata."@it ,
+                                                                               "This property relates an estimate of an entity to that entity."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                  rdfs:label "is estimate of"@en ,
+                                                                             "è stima di"@it ;
+                                                                  owl:versionInfo "stabile"@it ,
+                                                                                  "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgent
+<https://w3id.org/arco/ontology/core/hasAgent> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/italia/onto/RO/isRoleInTimeOf> ;
+                                               owl:inverseOf <https://w3id.org/arco/ontology/core/isAgentOf> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                               rdfs:range <https://w3id.org/italia/onto/l0/Agent> ;
+                                               rdfs:comment "Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente all'agente che lo ricopre."@it ,
+                                                            "This property relates a situation in which an agent holds a role to that agent."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "ha agente"@it ,
+                                                          "has agent"@en ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgentRole
+<https://w3id.org/arco/ontology/core/hasAgentRole> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://w3id.org/arco/ontology/core/isAgentRoleOf> ;
+                                                   rdfs:domain owl:Thing ;
+                                                   rdfs:range <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                                   rdfs:comment "Questa proprietà collega un'entità a una situazione in cui un agente ricopre un ruolo."@it ,
+                                                                "This property relates an entity to a situation in which an agent holds a role connected to that entity."@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                   rdfs:label "ha ruolo ricoperto da agente"@it ,
+                                                              "has agent role"@en ;
+                                                   owl:versionInfo "stabile"@it ,
+                                                                   "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasEventOrSituationInTime
+<https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasRole
+<https://w3id.org/arco/ontology/core/hasRole> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/italia/onto/RO/withRole> ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isRoleOf> ;
+                                              rdfs:domain <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                              rdfs:range <https://w3id.org/italia/onto/RO/Role> ;
+                                              rdfs:comment "Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente al ruolo stesso."@it ,
+                                                           "This property relates a situation in which an agent holds a role to that role."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "ha ruolo"@it ,
+                                                         "has role"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en ;
+                                              <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normative F e FF: PD/PDF/PDFR" .
+
+
+###  https://w3id.org/arco/ontology/core/isAgentOf
+<https://w3id.org/arco/ontology/core/isAgentOf> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/italia/onto/l0/Agent> ;
+                                                rdfs:range <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                                rdfs:comment "Questa proprietà, inversa a \"ha agente\", collega un agente alla situazione in cui l'agente ha ricoperto un ruolo."@it ,
+                                                             "This property relates an agent to a situation in which that agent holds a role."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                rdfs:label "is agent of"@en ,
+                                                           "è agente in"@it ;
+                                                owl:versionInfo "stabile"@it ,
+                                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isAgentRoleOf
+<https://w3id.org/arco/ontology/core/isAgentRoleOf> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                                    rdfs:range owl:Thing ;
+                                                    rdfs:comment "Questa proprietà collega una situazione in cui un agente ricopre un ruolo relativo a un'entità all'entità."@it ,
+                                                                 "This property relates a situation in which an agent holds a role connected to an entity to that entity."@en ;
+                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                    rdfs:label "is agent role of"@en ,
+                                                               "è ruolo ricoperto da agente di"@it ;
+                                                    owl:versionInfo "stabile"@it ,
+                                                                    "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf
+<https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isRoleOf
+<https://w3id.org/arco/ontology/core/isRoleOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <https://w3id.org/italia/onto/RO/Role> ;
+                                               rdfs:range <https://w3id.org/arco/ontology/core/AgentRole> ;
+                                               rdfs:comment "Questa proprietà collega un ruolo a una situazione in cui il ruolo viene ricoperto da un agente."@it ,
+                                                            "This property relates a role to a situation in which an agent holds that role."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "is role of"@en ,
+                                                          "è ruolo in"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/italia/onto/RO/isRoleInTimeOf
+<https://w3id.org/italia/onto/RO/isRoleInTimeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/RO/withRole
+<https://w3id.org/italia/onto/RO/withRole> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/estimatedValue
+<https://w3id.org/arco/ontology/context-description/estimatedValue> rdf:type owl:DatatypeProperty ,
+                                                                             owl:FunctionalProperty ;
+                                                                    rdfs:domain <https://w3id.org/arco/ontology/context-description/Estimate> ;
+                                                                    rdfs:range rdfs:Literal ;
+                                                                    rdfs:comment "Questa proprietà rappresenta il valore stimato durante il processo di stima di un'entità."@it ,
+                                                                                 "This property represents the value estimated in the context of an estimate process."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                    rdfs:label "estimated value"@en ,
+                                                                               "valore stimato"@it ;
+                                                                    owl:versionInfo "stabile"@it ,
+                                                                                    "stable"@en ;
+                                                                    <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: UB/COL/COLV; UB/INP/INP/INPA; UB/STI" .
+
+
+###  https://w3id.org/arco/ontology/core/current
+<https://w3id.org/arco/ontology/core/current> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range xsd:boolean ;
+                                              rdfs:comment "Questa porprietà indica se i dati relativi all'istanza di un pattern sono attuali o no."@it ,
+                                                           "This property indicates if data releated to an instance of a pattern is current or not"@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "attuale"@it ,
+                                                         "current"@en ;
+                                              owl:versionInfo "instabile"@it ,
+                                                              "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/informationSource
+<https://w3id.org/arco/ontology/core/informationSource> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.gov.it/onto/dcatapit#Agent
+<http://dati.gov.it/onto/dcatapit#Agent> rdf:type owl:Class ;
+                                         owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  https://w3id.org/arco/ontology/context-description/AuthorshipAttribution
+<https://w3id.org/arco/ontology/context-description/AuthorshipAttribution> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Commission
+<https://w3id.org/arco/ontology/context-description/Commission> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Dating
+<https://w3id.org/arco/ontology/context-description/Dating> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Estimate
+<https://w3id.org/arco/ontology/context-description/Estimate> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <https://w3id.org/arco/ontology/core/hasAgentRole> ;
+                                                                                owl:allValuesFrom <https://w3id.org/arco/ontology/core/AgentRole>
+                                                                              ] ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <https://w3id.org/arco/ontology/context-description/isEstimateOf> ;
+                                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                              ] ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <https://w3id.org/arco/ontology/core/informationSource> ;
+                                                                                owl:allValuesFrom rdfs:Literal
+                                                                              ] ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <https://w3id.org/arco/ontology/context-description/estimatedValue> ;
+                                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                              ] ;
+                                                              rdfs:comment "Questa classe rappresenta il concetto di stima di un'entità."@it ,
+                                                                           "This class represents the concept of estimate."@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                              rdfs:label "Estimate"@en ,
+                                                                         "Stima"@it ;
+                                                              owl:versionInfo "stabile"@it ,
+                                                                              "stable"@en ;
+                                                              <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: UB/STI, UB/INPA. Versioni precedenti: UB/CO/COLV,  UB/INV/INVS, TU/ACQ/ACQC" .
+
+
+###  https://w3id.org/arco/ontology/context-description/Fruition
+<https://w3id.org/arco/ontology/context-description/Fruition> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Responsibility
+<https://w3id.org/arco/ontology/context-description/Responsibility> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/AgentRole
+<https://w3id.org/arco/ontology/core/AgentRole> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/italia/onto/RO/TimeIndexedRole> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasAgent> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/l0/Agent>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/arco/ontology/core/hasRole> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/RO/Role>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                  owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                ] ;
+                                                owl:disjointWith <https://w3id.org/arco/ontology/core/Classification> ;
+                                                rdfs:comment "Questa classe rappresenta una situazione relativa a un agente che ricopre un ruolo, senza la specificazione della dimensione tempo."@it ,
+                                                             "This class represents a situation in which an agent holds a role, regardless of the timing."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                rdfs:label "Agent Role"@en ,
+                                                           "Ruolo ricoperto da agente"@it ;
+                                                owl:versionInfo "stabile"@it ,
+                                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/Classification
+<https://w3id.org/arco/ontology/core/Classification> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/RO/Role
+<https://w3id.org/italia/onto/RO/Role> rdf:type owl:Class ;
+                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normative F e FF: PD/PDF/PDFR" .
+
+
+###  https://w3id.org/italia/onto/RO/TimeIndexedRole
+<https://w3id.org/italia/onto/RO/TimeIndexedRole> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class ;
+                                               rdfs:isDefinedBy <https://w3id.org/italia/onto/TI/> .
+
+
+###  https://w3id.org/italia/onto/l0/Agent
+<https://w3id.org/italia/onto/l0/Agent> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/italia/onto/l0/Entity> ,
+                                                        <https://w3id.org/italia/onto/l0/Object> ;
+                                        owl:disjointWith <https://w3id.org/italia/onto/l0/Concept> ,
+                                                         <https://w3id.org/italia/onto/l0/Description> ,
+                                                         <https://w3id.org/italia/onto/l0/EventOrSituation> ;
+                                        rdfs:comment "Any agentive Object , either physical (e.g. a person, a robot, an oak), or social (e.g. a corporation, an institution, a community)."@en ,
+                                                     "Un agente, sia fisico (ex. una persona, un robot, una quercia), o sociale (ex. una società, un'istituzione, una comunità)."@it ;
+                                        rdfs:isDefinedBy <https://w3id.org/italia/onto/l0> ;
+                                        rdfs:label "Agent"@en ,
+                                                   "Agente"@it ;
+                                        owl:versionInfo "stabile"@it ,
+                                                        "stable"@en .
+
+
+###  https://w3id.org/italia/onto/l0/Concept
+<https://w3id.org/italia/onto/l0/Concept> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Description
+<https://w3id.org/italia/onto/l0/Description> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Entity
+<https://w3id.org/italia/onto/l0/Entity> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/EventOrSituation
+<https://w3id.org/italia/onto/l0/EventOrSituation> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Object
+<https://w3id.org/italia/onto/l0/Object> rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/AuthorshipAttribution>
+                <https://w3id.org/arco/ontology/context-description/Commission>
+                <https://w3id.org/arco/ontology/context-description/Dating>
+                <https://w3id.org/arco/ontology/context-description/Estimate>
+                <https://w3id.org/arco/ontology/context-description/Fruition>
+                <https://w3id.org/arco/ontology/context-description/Responsibility>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

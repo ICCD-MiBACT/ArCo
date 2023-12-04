@@ -1,0 +1,347 @@
+@prefix : <https://w3id.org/arco/test/2.0/MeasuerementCollection#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/MeasuerementCollection> .
+
+<https://w3id.org/arco/test/2.0/MeasuerementCollection> rdf:type owl:Ontology ;
+                                                         owl:versionIRI <https://w3id.org/arco/test/2.0/MeasuerementCollection> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ontologydesignpatterns.org/opla/isNativeTo
+<http://ontologydesignpatterns.org/opla/isNativeTo> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/hasConcept
+<https://w3id.org/arco/ontology/core/hasConcept> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasConcept> ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range <https://w3id.org/arco/ontology/core/Type> ;
+                                              rdfs:comment "La object property che associa un qualunque oggetto a un tipo."@it ,
+                                                           "The object property that associates any object with a type."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "ha tipo"@it ,
+                                                         "has type"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isConceptOf
+<https://w3id.org/arco/ontology/core/isConceptOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isTypeOf
+<https://w3id.org/arco/ontology/core/isTypeOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isConceptOf> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/Type> ;
+                                               rdfs:range owl:Thing ;
+                                               rdfs:comment "La object property che associa un tipo a un qualunque oggetto."@it ,
+                                                            "The object property that associates a type to any object."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "is type of"@en ,
+                                                          "è tipo di"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isValidAt
+<https://w3id.org/arco/ontology/core/isValidAt> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasMeasurement
+<https://w3id.org/arco/ontology/denotative-description/hasMeasurement> rdf:type owl:ObjectProperty ;
+                                                                       owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isMeasurementIn> ;
+                                                                       rdfs:domain <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> ;
+                                                                       rdfs:range <https://w3id.org/arco/ontology/denotative-description/Measurement> ;
+                                                                       <http://ontologydesignpatterns.org/opla/isNativeTo> <https://w3id.org/arco/pattern/object-collection/> ;
+                                                                       rdfs:comment "Questa proprietà collega un insieme di misure osservate per un oggetto a una delle misure."@it ,
+                                                                                    "This property connects a set of observed measures on an object to one of those measures."@en ;
+                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                       rdfs:label "ha misura"@it ,
+                                                                                  "has measurement"@en ;
+                                                                       owl:versionInfo "stabile"@it ,
+                                                                                       "stable"@en ;
+                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "MT/MIS - Normativa VeAC: anche MT/MIM"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection
+<https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> rdf:type owl:ObjectProperty ;
+                                                                                 owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf> ;
+                                                                                 rdfs:domain owl:Thing ;
+                                                                                 rdfs:range <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> ;
+                                                                                 rdfs:comment "Questa proprietà collega un oggetto all'insieme delle misure osservate per quell'oggetto."@it ,
+                                                                                              "This property connects an object to the collection of observed measures on it."@en ;
+                                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                 rdfs:label "ha collezione di misure"@it ,
+                                                                                            "has measurement collection"@en ;
+                                                                                 owl:versionInfo "stabile"@it ,
+                                                                                                 "stable"@en ;
+                                                                                 <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM - Normativa BNB: LR/LRI/LRIT, LRIH, LRIO)"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasValue
+<https://w3id.org/arco/ontology/denotative-description/hasValue> rdf:type owl:ObjectProperty ;
+                                                                 owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isValueOf> ;
+                                                                 rdfs:domain <https://w3id.org/arco/ontology/denotative-description/Measurement> ;
+                                                                 rdfs:range <https://w3id.org/italia/onto/MU/Value> ;
+                                                                 rdfs:comment "Questa proprietà collega una misura al suo valore."@it ,
+                                                                              "This property relates a measurement to its value."@en ;
+                                                                 rdfs:label "ha valore"@it ,
+                                                                            "has value"@en ;
+                                                                 owl:versionInfo "stabile"@it ,
+                                                                                 "stable"@en ;
+                                                                 <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "MT/MIS/MISM" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf
+<https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> ;
+                                                                                  rdfs:range owl:Thing ;
+                                                                                  rdfs:comment "Questa è la proprietà inversa di \"ha collezione di misure\"."@it ,
+                                                                                               "This is the inverse property of \"has measurement collection\"."@en ;
+                                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description/> ;
+                                                                                  rdfs:label "is measurement collection of"@en ,
+                                                                                             "è collezione di misure di"@it ;
+                                                                                  owl:versionInfo "stabile"@it ,
+                                                                                                  "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isMeasurementIn
+<https://w3id.org/arco/ontology/denotative-description/isMeasurementIn> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:domain <https://w3id.org/arco/ontology/denotative-description/Measurement> ;
+                                                                        rdfs:range <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> ;
+                                                                        <http://ontologydesignpatterns.org/opla/isNativeTo> <https://w3id.org/arco/pattern/object-collection/> ;
+                                                                        rdfs:comment "Questa proprietà, inversa a \"ha misura\", collega una misura di un oggetto all'insieme di misure osservate per l'oggetto."@it ,
+                                                                                     "This property connects an object's measure to the observed measures' collection of that object. It is the inverse property of hasMeasurement."@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                        rdfs:label "is measurement in collection"@en ,
+                                                                                   "è misura in collezione"@it ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "MT/MIS - Normativa VeAC: anche MT/MIM"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isValueOf
+<https://w3id.org/arco/ontology/denotative-description/isValueOf> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <https://w3id.org/italia/onto/MU/Value> ;
+                                                                  rdfs:range <https://w3id.org/arco/ontology/denotative-description/Measurement> ;
+                                                                  rdfs:comment "Questa è la proprietà inversa di \"ha valore\"."@it ,
+                                                                               "This is the inverse property of \"has value\"."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                  rdfs:label "is value of"@en ,
+                                                                             "è valore di"@it ;
+                                                                  owl:versionInfo "stabile"@it ,
+                                                                                  "stable"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/current
+<https://w3id.org/arco/ontology/core/current> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range xsd:boolean ;
+                                              rdfs:comment "Questa porprietà indica se i dati relativi all'istanza di un pattern sono attuali o no."@it ,
+                                                           "This property indicates if data releated to an instance of a pattern is current or not"@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "attuale"@it ,
+                                                         "current"@en ;
+                                              owl:versionInfo "instabile"@it ,
+                                                              "unstable"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/Type
+<https://w3id.org/arco/ontology/core/Type> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/AffixedElementType
+<https://w3id.org/arco/ontology/denotative-description/AffixedElementType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType
+<https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/ConservationStatusType
+<https://w3id.org/arco/ontology/denotative-description/ConservationStatusType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType
+<https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/DesignationType
+<https://w3id.org/arco/ontology/denotative-description/DesignationType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType
+<https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Measurement
+<https://w3id.org/arco/ontology/denotative-description/Measurement> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://w3id.org/italia/onto/l0/Characteristic> ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                                      owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/MeasurementType>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasValue> ;
+                                                                                      owl:someValuesFrom <https://w3id.org/italia/onto/MU/Value>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isMeasurementIn> ;
+                                                                                      owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                                      owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/MeasurementType>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasValue> ;
+                                                                                      owl:allValuesFrom <https://w3id.org/italia/onto/MU/Value>
+                                                                                    ] ;
+                                                                    <http://purl.org/dc/elements/1.1/description> """An example of usage of the class 'Measurement' is the following:
+resource:Measurement/0500212021-1-height
+        a  dd:Measurement ;
+        rdfs:label  \"Measurement of cultural property 0500212021: 795mm.\"@en ;
+        core:hasType dd:Height ;
+        dd:hasValue resource:Value/0500212021-1-height-795 ;
+        mu:hasMeasurementUnit
+resource:Unit/meters ."""@en ,
+                                                                                                                  """Un esempio d'uso della classe \"Misura\" è il seguente:
+resource:Measurement/0500212021-1-height
+        a  dd:Measurement ;
+        rdfs:label  \"Measurement of cultural property 0500212021: 795mm.\"@en ;
+        core:hasType dd:Height ;
+        dd:hasValue resource:Value/0500212021-1-height-795 ;
+        mu:hasMeasurementUnit
+resource:Unit/meters ."""@it ;
+                                                                    rdfs:comment "Questa classe rappresenta una misura osservata per un oggetto. Le misure sono relative alle dimensioni del bene in esame. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all'ingombro per l'immagazzinaggio; alla base (individuano l'oggetto e la conformazione fisica del proprietario e sono fondamentali per l'allestimento museale, per individuare i tipi di supporti necessari per l'esposizione); alle maniche."@it ,
+                                                                                 "This class represents a measurement of an object. Measurements realte to the cultural property's dimensions."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                    rdfs:label "Measurement"@en ,
+                                                                               "Misura"@it ;
+                                                                    owl:versionInfo "stabile"@it ,
+                                                                                    "stable"@en ;
+                                                                    <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "MT/MIS"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/MeasurementCollection
+<https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <https://w3id.org/italia/onto/l0/Collection> ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://w3id.org/arco/ontology/core/isValidAt> ;
+                                                                                                owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> ;
+                                                                                                owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/Measurement>
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf> ;
+                                                                                                owl:someValuesFrom owl:Thing
+                                                                                              ] ;
+                                                                              <http://ontologydesignpatterns.org/opla/isNativeTo> <https://w3id.org/arco/pattern/object-collection/> ;
+                                                                              <http://purl.org/dc/elements/1.1/description> """An example of usage of the class 'Measurement collection' is the following:
+resource:MeasurementCollection/1200865132-1
+        a  dd:MeasurementCollection ;
+        rdfs:label \"Measurements of cultural property 1200865132 7\"@en ;
+        dd:hasMeasurement resource:Measurement/1200865132-1-width , resource:Measurement/1200865132-1-height , resource:Measurement/1200865132-1-depth ."""@en ,
+                                                                                                                            """Un esempio d'uso della classe \"Collezione di misure\" è il seguente:
+resource:MeasurementCollection/1200865132-1
+        a  dd:MeasurementCollection ;
+        rdfs:label \"Misure del bene culturale 1200865132 7\"@it ;
+        dd:hasMeasurement resource:Measurement/1200865132-1-width , resource:Measurement/1200865132-1-height , resource:Measurement/1200865132-1-depth ."""@it ;
+                                                                              rdfs:comment "Questa classe rappresenta l'insieme delle misurazioni osservate per un oggetto. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all'ingombro per l'immagazzinaggio; alla base (individuano l'oggetto e la conformazione fisica del proprietario e sono fondamentali per l'allestimento museale, per individuare i tipi di supporti necessari per l'esposizione); alle maniche."@it ,
+                                                                                           "This class represents the set of measurments observed for an object."@en ;
+                                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                              rdfs:label "Collezione di misure"@it ,
+                                                                                         "Measurement collection"@en ;
+                                                                              owl:versionInfo "stabile"@it ,
+                                                                                              "stable"@en ;
+                                                                              <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/MeasurementType
+<https://w3id.org/arco/ontology/denotative-description/MeasurementType> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/Measurement>
+                                                                                        ] ;
+                                                                        rdfs:comment "Questa classe rappresenta il tipo di misura osservata (larghezza, altezza, diametro, etc.)"@it ,
+                                                                                     "This class represents the observed measurement type (width, height, diameter, etc)."@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                        rdfs:label "Measurement Type"@en ,
+                                                                                   "Tipo di Misura"@it ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/SampleCollectedType
+<https://w3id.org/arco/ontology/denotative-description/SampleCollectedType> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/MU/Value
+<https://w3id.org/italia/onto/MU/Value> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Characteristic
+<https://w3id.org/italia/onto/l0/Characteristic> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Collection
+<https://w3id.org/italia/onto/l0/Collection> rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/denotative-description/AffixedElementType>
+                <https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType>
+                <https://w3id.org/arco/ontology/denotative-description/ConservationStatusType>
+                <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType>
+                <https://w3id.org/arco/ontology/denotative-description/DesignationType>
+                <https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType>
+                <https://w3id.org/arco/ontology/denotative-description/MeasurementType>
+                <https://w3id.org/arco/ontology/denotative-description/SampleCollectedType>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

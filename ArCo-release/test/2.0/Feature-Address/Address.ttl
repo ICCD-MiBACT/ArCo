@@ -1,0 +1,920 @@
+@prefix : <https://w3id.org/arco/test/2.0/Address#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/Address> .
+
+<https://w3id.org/arco/test/2.0/Address> rdf:type owl:Ontology ;
+                                          owl:versionIRI <https://w3id.org/arco/test/2.0/Address> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasInfluencedBy
+<http://www.w3.org/ns/prov#wasInfluencedBy> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasRankOrder
+<https://w3id.org/italia/onto/CLV/hasRankOrder> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/italia/onto/l0/controlledVocabulary
+<https://w3id.org/italia/onto/l0/controlledVocabulary> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/atLocation
+<https://w3id.org/arco/ontology/location/atLocation> rdf:type owl:ObjectProperty ;
+                                                     owl:inverseOf <https://w3id.org/arco/ontology/location/isLocationIn> ;
+                                                     rdfs:domain <https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation> ;
+                                                     rdfs:range <https://w3id.org/italia/onto/CLV/Feature> ;
+                                                     rdfs:comment "Questa proprietà collega una localizzazione tipizzata nel tempo al luogo cui si riferisce."@it ,
+                                                                  "This property links a typed location over time to its related geographical entity."@en ;
+                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                     rdfs:label "at location"@en ,
+                                                                "presso luogo"@it ;
+                                                     owl:versionInfo "stabile"@it ,
+                                                                     "stable"@en ;
+                                                     <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: se LC senza sottoelemento LDC; se LA senza sottoelemento PRC."@it .
+
+
+###  https://w3id.org/arco/ontology/location/atSite
+<https://w3id.org/arco/ontology/location/atSite> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasCadastralIdentity
+<https://w3id.org/arco/ontology/location/hasCadastralIdentity> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasClericalAdministrativeArea
+<https://w3id.org/arco/ontology/location/hasClericalAdministrativeArea> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:subPropertyOf <https://w3id.org/italia/onto/CLV/hasAddressComponent> ;
+                                                                        owl:inverseOf <https://w3id.org/arco/ontology/location/isClericalAdministrativeAreaOf> ;
+                                                                        rdfs:domain <https://w3id.org/italia/onto/CLV/Address> ;
+                                                                        rdfs:range <http://dati.beniculturali.it/cis/ClericalAdministrativeArea> ;
+                                                                        rdfs:comment "Questa proprietà collega un indirizzo a un'area amministrativa ecclesiastica (ad es. una diocesi)."@it ,
+                                                                                     "This property relates an address to a clerical administrative area (e.g. a diocese)."@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                        rdfs:label "ha area amministrativa ecclesiastica"@it ,
+                                                                                   "has clerical administrative area"@en ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: LC/PVE; LA/PRE" .
+
+
+###  https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSite
+<https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSite> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasGeologicalContext
+<https://w3id.org/arco/ontology/location/hasGeologicalContext> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasGovernmentalAdministrativeArea
+<https://w3id.org/arco/ontology/location/hasGovernmentalAdministrativeArea> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:subPropertyOf <https://w3id.org/italia/onto/CLV/hasAddressComponent> ;
+                                                                            owl:inverseOf <https://w3id.org/arco/ontology/location/isGovernmentalAdministrativeAreaOf> ;
+                                                                            rdfs:domain <https://w3id.org/arco/ontology/location/HistoricalAddress> ;
+                                                                            rdfs:comment "Questa proprietà collega un indirizzo a un'area di appartenenza amministrativa."@it ,
+                                                                                         "This property links an address to a governmental administrative area."@en ;
+                                                                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                            rdfs:label "ha area di appartenenza amministrativa"@it ,
+                                                                                       "has governamental administrative area"@en ;
+                                                                            owl:versionInfo "stabile"@it ,
+                                                                                            "stable"@en ;
+                                                                            <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: LS/LCS/LCSA" .
+
+
+###  https://w3id.org/arco/ontology/location/hasHistoricalAddress
+<https://w3id.org/arco/ontology/location/hasHistoricalAddress> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <https://w3id.org/italia/onto/CLV/hasAddress> ;
+                                                               owl:inverseOf <https://w3id.org/arco/ontology/location/isHistoricalAddressFor> ;
+                                                               rdfs:domain <https://w3id.org/italia/onto/CLV/Feature> ;
+                                                               rdfs:range <https://w3id.org/arco/ontology/location/HistoricalAddress> ;
+                                                               rdfs:comment "Questa proprietà rappresenta l'indirizzo storico di una localizzazione"@it ,
+                                                                            "This property represents the historical address of a Location"@en ;
+                                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                               rdfs:label "ha indirizzo storico"@it ,
+                                                                          "has historical address"@en ;
+                                                               owl:versionInfo "instabile"@it ,
+                                                                               "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/hasLocationType
+<https://w3id.org/arco/ontology/location/hasLocationType> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/hasTerritorialArea
+<https://w3id.org/arco/ontology/location/hasTerritorialArea> rdf:type owl:ObjectProperty ;
+                                                             rdfs:subPropertyOf <https://w3id.org/italia/onto/CLV/hasAddressComponent> ;
+                                                             owl:inverseOf <https://w3id.org/arco/ontology/location/isTerritorialAreaOf> ;
+                                                             rdfs:domain <https://w3id.org/arco/ontology/location/HistoricalAddress> ;
+                                                             rdfs:range <https://w3id.org/italia/onto/CLV/Feature> ;
+                                                             rdfs:comment "Questa proprietà collega un indirizzo a un'area di appartenenza territoriale, che può non coincidere con l'area amministrativa."@it ,
+                                                                          "This property links an address to a territorial area, which may not coincide with the administrative area, to which a cultural property belongs."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                             rdfs:label "ha area di appartenenza territoriale"@it ,
+                                                                        "has territorial area"@en ;
+                                                             owl:versionInfo "stabile"@it ,
+                                                                             "stable"@en ;
+                                                             <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: LS/LCS/LCSR, LS/LCS/LCST, LS/LCS/LCSI. ICCD" .
+
+
+###  https://w3id.org/arco/ontology/location/hasTypeOfContext
+<https://w3id.org/arco/ontology/location/hasTypeOfContext> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/isClericalAdministrativeAreaOf
+<https://w3id.org/arco/ontology/location/isClericalAdministrativeAreaOf> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:subPropertyOf <https://w3id.org/italia/onto/CLV/isAddressComponentOf> ;
+                                                                         rdfs:domain <http://dati.beniculturali.it/cis/ClericalAdministrativeArea> ;
+                                                                         rdfs:range <https://w3id.org/italia/onto/CLV/Address> ;
+                                                                         rdfs:comment "Questa proprietà collega un'area amministrativa ecclesiastica (ad es. una diocesi) al suo indirizzo."@it ,
+                                                                                      "This property relates a clerical administrative area (e.g. a diocese) to its address."@en ;
+                                                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                         rdfs:label "is clerical administrative area of"@en ,
+                                                                                    "è area amministrativa ecclesiastica di"@it ;
+                                                                         owl:versionInfo "stabile"@it ,
+                                                                                         "stable"@en ;
+                                                                         <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "Normativa trasversale: LA/PRE, LC/PVE" .
+
+
+###  https://w3id.org/arco/ontology/location/isGovernmentalAdministrativeAreaOf
+<https://w3id.org/arco/ontology/location/isGovernmentalAdministrativeAreaOf> rdf:type owl:ObjectProperty ;
+                                                                             rdfs:subPropertyOf <https://w3id.org/italia/onto/CLV/isAddressComponentOf> ;
+                                                                             rdfs:range <https://w3id.org/arco/ontology/location/HistoricalAddress> ;
+                                                                             rdfs:comment "Questa proprietà collega un'area di appartenenza amministrativa al suo indirizzo."@it ,
+                                                                                          "This property links a governmental administrative area to its address."@en ;
+                                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                             rdfs:label "is governmental administrative area of"@en ,
+                                                                                        "è area di appartenenza amministrativa di"@it ;
+                                                                             owl:versionInfo "stabile"@it ,
+                                                                                             "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/isHistoricalAddressFor
+<https://w3id.org/arco/ontology/location/isHistoricalAddressFor> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:subPropertyOf <https://w3id.org/italia/onto/CLV/isAddressFor> ;
+                                                                 rdfs:domain <https://w3id.org/arco/ontology/location/HistoricalAddress> ;
+                                                                 rdfs:range <https://w3id.org/italia/onto/CLV/Feature> ;
+                                                                 rdfs:comment "Questa è la proprietà inversa di \"ha indirizzo storico\""@it ,
+                                                                              "This is the inverse property of \"has historical address\"."@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                 rdfs:label "is historical address"@en ,
+                                                                            "è indirizzo storico di"@it ;
+                                                                 owl:versionInfo "instabile"@it ,
+                                                                                 "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/isLocationIn
+<https://w3id.org/arco/ontology/location/isLocationIn> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/location/isTerritorialAreaOf
+<https://w3id.org/arco/ontology/location/isTerritorialAreaOf> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf <https://w3id.org/italia/onto/CLV/isAddressComponentOf> ;
+                                                              rdfs:domain <https://w3id.org/italia/onto/CLV/Feature> ;
+                                                              rdfs:range <https://w3id.org/arco/ontology/location/HistoricalAddress> ;
+                                                              rdfs:comment "Questa proprietà collega un'area di appartenenza territoriale, che può non coincidere con l'area amministrativa, al suo indirizzo."@it ,
+                                                                           "This property links a territorial area (which may not coincide with the administrative area) to which a cultural property belongs to its address."@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                              rdfs:label "is territorial area of"@en ,
+                                                                         "è area di appartenenza territoriale di"@it ;
+                                                              owl:versionInfo "stabile"@it ,
+                                                                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf
+<https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasAddress
+<https://w3id.org/italia/onto/CLV/hasAddress> rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf <https://w3id.org/italia/onto/CLV/isAddressFor> ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range <https://w3id.org/italia/onto/CLV/Address> ;
+                                              rdfs:comment "Questa proprietà consente di collegare una cosa del dominio da modellare con l'indirizzo attuale, corrente."@it ,
+                                                           "This property is used to link a thing to a current address."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                              rdfs:label "ha indirizzo attuale"@it ,
+                                                         "has current address"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CLV/hasAddressArea
+<https://w3id.org/italia/onto/CLV/hasAddressArea> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <https://w3id.org/italia/onto/CLV/hasAddressComponent> ;
+                                                  rdfs:domain <https://w3id.org/italia/onto/CLV/Address> ;
+                                                  rdfs:range <https://w3id.org/italia/onto/CLV/AddressArea> ;
+                                                  rdfs:comment "Questa proprietà è utilizzata per collegare l'indirizzo a un'area geografica o località che raggruppa diverse areee geografiche."@it ,
+                                                               "This property is used in order to link the address to a geographical area or a locality that groups different addressable objects."@en ;
+                                                  rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                                  rdfs:label "ha area indirizzo"@it ,
+                                                             "ha località"@it ,
+                                                             "has address area"@en ,
+                                                             "has locality"@en ;
+                                                  owl:versionInfo "stabile"@it ,
+                                                                  "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CLV/hasAddressComponent
+<https://w3id.org/italia/onto/CLV/hasAddressComponent> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <https://w3id.org/italia/onto/CLV/Address> ;
+                                                       rdfs:range <https://w3id.org/italia/onto/CLV/AddressComponent> ;
+                                                       rdfs:comment "Normativa A e PG: LC/ZUR/ZURD, LC/CST/CSTD, LC/SET/SETD" ,
+                                                                    "Property that links an address to its components (street, city, province, number, etc.)"@en ,
+                                                                    "Proprietà che lega l'indirizzo alle sue componenti che lo formano (e.g., via, città, provincia, numero civico, ecc.)"@it ;
+                                                       rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                                       rdfs:label "ha componente indirizzo"@it ,
+                                                                  "has address component"@en ;
+                                                       owl:versionInfo "stabile"@it ,
+                                                                       "stable"@en ;
+                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "false"^^xsd:boolean .
+
+
+###  https://w3id.org/italia/onto/CLV/hasAdressinTime
+<https://w3id.org/italia/onto/CLV/hasAdressinTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasCensusSection
+<https://w3id.org/italia/onto/CLV/hasCensusSection> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasCity
+<https://w3id.org/italia/onto/CLV/hasCity> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <https://w3id.org/italia/onto/CLV/hasAddressComponent> ;
+                                           rdfs:domain <https://w3id.org/italia/onto/CLV/Address> ;
+                                           rdfs:range <https://w3id.org/italia/onto/CLV/City> ;
+                                           rdfs:comment "Questa proprietà è usata per collegare l'indirizzo  al comune dello stesso.  Esempio di comune: Roma, Bologna, Palermo, Milano, ecc."@it ,
+                                                        "This property links the address to the city."@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                           rdfs:label "ha città"@it ,
+                                                      "ha comune"@it ,
+                                                      "has city"@en ,
+                                                      "has municipality"@en ;
+                                           owl:versionInfo "stabile"@it ,
+                                                           "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CLV/hasCountry
+<https://w3id.org/italia/onto/CLV/hasCountry> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/italia/onto/CLV/hasAddressComponent> ;
+                                              rdfs:domain <https://w3id.org/italia/onto/CLV/Address> ;
+                                              rdfs:range <https://w3id.org/italia/onto/CLV/Country> ;
+                                              rdfs:comment "La proprietà collega i'indirizzo allo stato,. Esempio: Italia, Francia, ecc."@it ,
+                                                           "This property links the address to the country."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                              rdfs:label "ha paese"@it ,
+                                                         "ha stato"@it ,
+                                                         "has country"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CLV/hasDirectHigherRank
+<https://w3id.org/italia/onto/CLV/hasDirectHigherRank> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasDirectLowerRank
+<https://w3id.org/italia/onto/CLV/hasDirectLowerRank> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasGeometry
+<https://w3id.org/italia/onto/CLV/hasGeometry> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasHigherRank
+<https://w3id.org/italia/onto/CLV/hasHigherRank> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasInternalAccess
+<https://w3id.org/italia/onto/CLV/hasInternalAccess> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasLowerRank
+<https://w3id.org/italia/onto/CLV/hasLowerRank> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasNumber
+<https://w3id.org/italia/onto/CLV/hasNumber> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasProvince
+<https://w3id.org/italia/onto/CLV/hasProvince> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/italia/onto/CLV/hasAddressComponent> ;
+                                               rdfs:domain <https://w3id.org/italia/onto/CLV/Address> ;
+                                               rdfs:range <https://w3id.org/italia/onto/CLV/Province> ;
+                                               rdfs:comment "Questa proprietà collega l'indirizzo alla Provincia. Esempio di Provincia: \"PA\", \"BO\", \"RM\", ecc."@it ,
+                                                            "This property links the address with the Province."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                               rdfs:label "ha provincia"@it ,
+                                                          "has province"@en ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CLV/hasRegion
+<https://w3id.org/italia/onto/CLV/hasRegion> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <https://w3id.org/italia/onto/CLV/hasAddressComponent> ;
+                                             rdfs:domain <https://w3id.org/italia/onto/CLV/Address> ;
+                                             rdfs:range <https://w3id.org/italia/onto/CLV/Region> ;
+                                             rdfs:comment "Questa proprietà collega un luogo/caratteristica con la Regione del paese. Regione; essa può essere  \"Lazio\", \"Emilia Romagna\", ecc."@it ,
+                                                          "This property links the address with the Region of the country."@en ;
+                                             rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                             rdfs:label "ha regione"@it ,
+                                                        "has region"@en ;
+                                             owl:versionInfo "stabile"@it ,
+                                                             "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CLV/hasSOValidity
+<https://w3id.org/italia/onto/CLV/hasSOValidity> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/hasStreetToponym
+<https://w3id.org/italia/onto/CLV/hasStreetToponym> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/isAddressComponentOf
+<https://w3id.org/italia/onto/CLV/isAddressComponentOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/isAddressFor
+<https://w3id.org/italia/onto/CLV/isAddressFor> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/italia/onto/CLV/Address> ;
+                                                rdfs:range owl:Thing ;
+                                                rdfs:comment "Inverse property of has address that links the address to a thing."@en ,
+                                                             "Proprietà inversa di ha indirizzo che collega l'indirizzo a una cosa del dominio da modellare."@it ;
+                                                rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                                rdfs:label "is address for"@en ,
+                                                           "è indirizzo per"@it ;
+                                                owl:versionInfo "stabile"@it ,
+                                                                "stable"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/italia/onto/CLV/acronym
+<https://w3id.org/italia/onto/CLV/acronym> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/italia/onto/CLV/fullAddress
+<https://w3id.org/italia/onto/CLV/fullAddress> rdf:type owl:DatatypeProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:domain <https://w3id.org/italia/onto/CLV/Address> ;
+                                               rdfs:range rdfs:Literal ;
+                                               rdfs:comment "L'indirizzo completo scritto come una stringa. L'uso di questa proprietà  aiuta a comprendere l'indirizzo completo evitando possibili errori derivanti dal frazionamento dello stesso nelle sue rispettive componenti."@it ,
+                                                            "The complete address written as a string, with or without formatting. The use of this property allows one not to incur in any misunderstandings that might arise through the breaking up of an address into its component parts."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                               rdfs:label "full address"@en ,
+                                                          "indirizzo completo"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/italia/onto/CLV/postCode
+<https://w3id.org/italia/onto/CLV/postCode> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/italia/onto/TI/modified
+<https://w3id.org/italia/onto/TI/modified> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/italia/onto/l0/name
+<https://w3id.org/italia/onto/l0/name> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.beniculturali.it/cis/ClericalAdministrativeArea
+<http://dati.beniculturali.it/cis/ClericalAdministrativeArea> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://dati.beniculturali.it/cis/GeographicalFeature> ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <https://w3id.org/arco/ontology/location/isClericalAdministrativeAreaOf> ;
+                                                                                owl:someValuesFrom <https://w3id.org/italia/onto/CLV/Address>
+                                                                              ] .
+
+
+###  http://dati.beniculturali.it/cis/CulturalInstituteOrSite
+<http://dati.beniculturali.it/cis/CulturalInstituteOrSite> rdf:type owl:Class .
+
+
+###  http://dati.beniculturali.it/cis/GeographicalFeature
+<http://dati.beniculturali.it/cis/GeographicalFeature> rdf:type owl:Class .
+
+
+###  http://dati.beniculturali.it/cis/Site
+<http://dati.beniculturali.it/cis/Site> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/CadastralIdentity
+<https://w3id.org/arco/ontology/location/CadastralIdentity> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/GeologicalContext
+<https://w3id.org/arco/ontology/location/GeologicalContext> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/HistoricalAddress
+<https://w3id.org/arco/ontology/location/HistoricalAddress> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://w3id.org/italia/onto/CLV/Address> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/location/hasGovernmentalAdministrativeArea> ;
+                                                                              owl:someValuesFrom <https://w3id.org/italia/onto/CLV/AdminUnitComponent>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/arco/ontology/location/hasTerritorialArea> ;
+                                                                              owl:someValuesFrom <https://w3id.org/italia/onto/CLV/Feature>
+                                                                            ] ;
+                                                            rdfs:comment "Questa classe rappresenta l indirizzo storico, inteso come il contesto topografico e amministrativo storico."@it ,
+                                                                         "This class represents the historical address, as the topographical and administrative historical context."@en ;
+                                                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                            rdfs:label "Historical address"@en ,
+                                                                       "Indirizzo storico"@it ;
+                                                            owl:versionInfo "instabile"@it ,
+                                                                            "unstable"@en ;
+                                                            <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "Normativa trasversale: LS/LCS" .
+
+
+###  https://w3id.org/arco/ontology/location/LocationType
+<https://w3id.org/arco/ontology/location/LocationType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/OldTown
+<https://w3id.org/arco/ontology/location/OldTown> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/italia/onto/CLV/City> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                    owl:allValuesFrom <https://w3id.org/arco/ontology/location/OldTownAdmistrativeType>
+                                                                  ] ;
+                                                  rdfs:comment "Questa classe rappresenta le informazioni che descrivono il centro storico in cui si trova il bene culturale."@it ,
+                                                               "This class represents the information describing the old town where the cultural property is located."@en ;
+                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                  rdfs:label "Centro storico"@it ,
+                                                             "Old town"@en ;
+                                                  owl:versionInfo "stabile"@it ,
+                                                                  "stable"@en ;
+                                                  <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD normative A e PG: LC/CST"@it .
+
+
+###  https://w3id.org/arco/ontology/location/OldTownAdmistrativeType
+<https://w3id.org/arco/ontology/location/OldTownAdmistrativeType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation
+<https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/hasLocationType> ;
+                                                                                     owl:someValuesFrom <https://w3id.org/arco/ontology/location/LocationType>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf> ;
+                                                                                     owl:someValuesFrom owl:Thing
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/atLocation> ;
+                                                                                     owl:allValuesFrom <https://w3id.org/italia/onto/CLV/Feature>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/atSite> ;
+                                                                                     owl:allValuesFrom <http://dati.beniculturali.it/cis/Site>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSite> ;
+                                                                                     owl:allValuesFrom <http://dati.beniculturali.it/cis/CulturalInstituteOrSite>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/location/hasGeologicalContext> ;
+                                                                                     owl:allValuesFrom <https://w3id.org/arco/ontology/location/GeologicalContext>
+                                                                                   ] ;
+                                                                   <http://purl.org/dc/elements/1.1/description> """An example of usage of the class 'Time Indexed Typed Location' is the following:
+resource:TimeIndexedTypedLocation/0800055566-alternative-1
+        a  a-loc:TimeIndexedTypedLocation ;
+        rdfs:label \"Alternative location 1 of cultural property: 0800055566\"@en ;  a-loc:atSite  resource:Site/7761991208459c29ef5c7cee8ff29deb ;
+        a-loc:hasLocationType a-loc:LastLocation ;
+        tiapit:atTime resource:TimeInterval/2002 ."""@en ,
+                                                                                                                 """Un esempio d'uso della classe \"Localizzazione tipizzata nel tempo' è il seguente:
+resource:TimeIndexedTypedLocation/0800055566-alternative-1
+        a           a-loc:TimeIndexedTypedLocation ;
+        rdfs:label \"Altra localizzazione 1 del bene culturale: 0800055566\"@en ;
+       a-loc:atSite  resource:Site/7761991208459c29ef5c7cee8ff29deb ;
+        a-loc:hasLocationType a-loc:LastLocation ;
+        tiapit:atTime resource:TimeInterval/2002 ."""@it ;
+                                                                   rdfs:comment "Questa classe rappresenta una localizzazione di un bene culturale, inserita in un arco temporale e qualificata in base al ruolo che la localizzazione riveste nei confronti del bene culturale."@it ,
+                                                                                "This class represents a localization of a cultural property, within a timeframe and qualified according to the role that the localization plays in relation to the cultural property."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                                   rdfs:label "Localizzazione tipizzata nel tempo"@it ,
+                                                                              "Time Indexed Typed Location"@en ;
+                                                                   owl:versionInfo "stabile"@it ,
+                                                                                   "stable"@en ;
+                                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale: LC; LA; per normativa F: anche LR. Normativa BDI: OC, AT/DML, DU/DUG, DV/DVG, DF/DFG, AI/AIA, AI/AIF, AI/AIG, VI/VIA, VI/VIF, VIG, FI/FIA, FIF, FIG" .
+
+
+###  https://w3id.org/arco/ontology/location/TypeOfContext
+<https://w3id.org/arco/ontology/location/TypeOfContext> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/location/UrbanArea
+<https://w3id.org/arco/ontology/location/UrbanArea> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/italia/onto/CLV/AdminUnitComponent> ;
+                                                    owl:disjointWith <https://w3id.org/italia/onto/CLV/District> ;
+                                                    rdfs:comment "Questa classe rappresenta le informazioni relative alla denominazione della zona urbana che fa parte del centro storico dove si trova il bene culturale."@it ,
+                                                                 "This class represents the informations on the denomination of the urban area that is part of the old town where the cultural property is located."@en ;
+                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/location> ;
+                                                    rdfs:label "Urban area"@en ,
+                                                               "Zona urbana"@it ;
+                                                    owl:versionInfo "stabile"@it ,
+                                                                    "stable"@en ;
+                                                    <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normative A e PG: LC/ZUR/ZURD."@it .
+
+
+###  https://w3id.org/italia/onto/CLV/Address
+<https://w3id.org/italia/onto/CLV/Address> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/italia/onto/CLV/Feature> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasAddressComponent> ;
+                                                             owl:someValuesFrom <https://w3id.org/italia/onto/CLV/AddressComponent>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasInternalAccess> ;
+                                                             owl:allValuesFrom <https://w3id.org/italia/onto/CLV/InternalAccess>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/isAddressFor> ;
+                                                             owl:allValuesFrom owl:Thing
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasNumber> ;
+                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass <https://w3id.org/italia/onto/CLV/CivicNumbering>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasStreetToponym> ;
+                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass <https://w3id.org/italia/onto/CLV/StreetToponym>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasAdressinTime> ;
+                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass <https://w3id.org/italia/onto/CLV/AddressInTime>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasCensusSection> ;
+                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass <https://w3id.org/italia/onto/CLV/CensusSection>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/fullAddress> ;
+                                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/postCode> ;
+                                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                           ] ;
+                                           owl:disjointWith <https://w3id.org/italia/onto/CLV/AddressComponent> ,
+                                                            <https://w3id.org/italia/onto/CLV/CensusSection> ;
+                                           rdfs:comment "Questa classe rappresenta un oggetto spaziale indirizzabile o una rappresentazione indirizzabile. In particolare, nel contesto italiano, essa rappresenta l’accesso esterno da un’area di circolazione a una unità ecografica semplice (abitazioni, uffici, locali in cui sono ubicate attività economiche, ecc.)."@it ,
+                                                        "This class represents an  \"addressable object\" or \"addressable representation\". In most situations the addressable objects are current, real world objects. In the Italian context it represents the external access from a circulation area to a simple unit such as dwellings, offices, premises where economic activities are located, etc."@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                           rdfs:label "Accesso Esterno"@it ,
+                                                      "Address"@en ,
+                                                      "Indirizzo"@it ;
+                                           owl:versionInfo "stabile"@it ,
+                                                           "stable"@en ;
+                                           <http://www.w3.org/ns/prov#wasDerivedFrom> <http://inspire.ec.europa.eu/featureconcept/Address> ,
+                                                                                      <https://www.w3.org/ns/locn#Address> .
+
+
+###  https://w3id.org/italia/onto/CLV/AddressArea
+<https://w3id.org/italia/onto/CLV/AddressArea> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/italia/onto/CLV/AddressComponent> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://w3id.org/italia/onto/l0/name> ;
+                                                                 owl:someValuesFrom rdfs:Literal
+                                                               ] ;
+                                               rdfs:comment "An address component which represents the name of a geographic area or a locality that groups a number of addressable objects for addressing purposes, without being an administrative unit."@en ,
+                                                            "E' una componente dell'indirizzo che rappresenta il nome di un'area geografica o di una località che raggruppa un numero di oggetti indirizzatibili, per scopi di indirizzamento, senza necessariamente essere un'unità amministrativa territoriale. Nell'ambito dell'anagrafe nazionale numeri civici e strade urbane (ANNCSU) la classe può essere usata per rappresentare la LOCALITA’: una porzione più o meno vasta di territorio comunale, sulla quale insistono una o più aree di circolazione (presente se fornita dal Comune)."@it ;
+                                               rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                               rdfs:label "Address Area"@en ,
+                                                          "Area dell'Indirizzo"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en ;
+                                               <http://www.w3.org/ns/prov#wasInfluencedBy> <http://inspire.ec.europa.eu/featureconcept/AddressAreaName> .
+
+
+###  https://w3id.org/italia/onto/CLV/AddressComponent
+<https://w3id.org/italia/onto/CLV/AddressComponent> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/AddressInTime
+<https://w3id.org/italia/onto/CLV/AddressInTime> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/AdminUnitComponent
+<https://w3id.org/italia/onto/CLV/AdminUnitComponent> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://w3id.org/italia/onto/CLV/AddressComponent> ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://w3id.org/italia/onto/l0/name> ;
+                                                                        owl:someValuesFrom rdfs:Literal
+                                                                      ] ;
+                                                      owl:disjointWith <https://w3id.org/italia/onto/CLV/CivicNumbering> ;
+                                                      rdfs:comment "Abstract class used to for modelling reason in order to identify all those administrative unit components of the address."@en ,
+                                                                   "Classe astratta a supporto della modellazione usata per identificare tutte le unità amministrative che compongono l'indirizzo (comune, regione, provincia, stato, municipio)"@it ;
+                                                      rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                                      rdfs:label "Administrative Unit Component"@en ,
+                                                                 "Componente Unità Amministrativa"@it ;
+                                                      owl:versionInfo "stabile"@it ,
+                                                                      "stable"@en ;
+                                                      <http://www.w3.org/ns/prov#wasDerivedFrom> <http://inspire.ec.europa.eu/featureconcept/AdminUnitName> .
+
+
+###  https://w3id.org/italia/onto/CLV/CensusSection
+<https://w3id.org/italia/onto/CLV/CensusSection> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/City
+<https://w3id.org/italia/onto/CLV/City> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/italia/onto/CLV/AdminUnitComponent> ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/italia/onto/CLV/hasDirectLowerRank> ;
+                                                          owl:allValuesFrom <https://w3id.org/italia/onto/CLV/District>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/italia/onto/CLV/hasHigherRank> ;
+                                                          owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                              owl:unionOf ( <https://w3id.org/italia/onto/CLV/Country>
+                                                                                            <https://w3id.org/italia/onto/CLV/Province>
+                                                                                            <https://w3id.org/italia/onto/CLV/Region>
+                                                                                          )
+                                                                            ]
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/italia/onto/CLV/hasDirectHigherRank> ;
+                                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass <https://w3id.org/italia/onto/CLV/Province>
+                                                        ] ;
+                                        rdfs:comment "Questa classe rappresenta la città (Comune)"@it ,
+                                                     "This class represents the city"@en ;
+                                        rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                        rdfs:label "Città"@it ,
+                                                   "City"@en ,
+                                                   "Comune"@it ;
+                                        owl:versionInfo "stabile"@it ,
+                                                        "stable"@en ;
+                                        <http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                        <https://w3id.org/italia/onto/CLV/hasRankOrder> 4 ;
+                                        <https://w3id.org/italia/onto/l0/controlledVocabulary> <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities> .
+
+
+###  https://w3id.org/italia/onto/CLV/CivicNumbering
+<https://w3id.org/italia/onto/CLV/CivicNumbering> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/Country
+<https://w3id.org/italia/onto/CLV/Country> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/italia/onto/CLV/AdminUnitComponent> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasDirectLowerRank> ;
+                                                             owl:allValuesFrom <https://w3id.org/italia/onto/CLV/Region>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasLowerRank> ;
+                                                             owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                 owl:unionOf ( <https://w3id.org/italia/onto/CLV/City>
+                                                                                               <https://w3id.org/italia/onto/CLV/District>
+                                                                                               <https://w3id.org/italia/onto/CLV/Province>
+                                                                                               <https://w3id.org/italia/onto/CLV/Region>
+                                                                                             )
+                                                                               ]
+                                                           ] ;
+                                           rdfs:comment "Questa classe rappresenta lo Stato. Esempio: \"Italia - Italy\" oppure \"United Kingdom\", ecc. E' l'unità amministrativa più alta nella gerarchia di contenimento territoriale dell'indirizzo. Nel Core Location Vocabulary del programma ISA2 essa è modellata con la proprietà dell'indirizzo nominata adminUnit1"@it ,
+                                                        "This class represents the  uppermost administrative unit for the address, almost always a country. \"United Kingdom\", \"Italy\", etc. In the Core Location Vocabulary this is modelled as adminUnit1."@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                           rdfs:label "Country"@en ,
+                                                      "Stato"@it ;
+                                           owl:versionInfo "stabile"@it ,
+                                                           "stable"@en ;
+                                           <http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                           <https://w3id.org/italia/onto/CLV/hasRankOrder> 1 ;
+                                           <https://w3id.org/italia/onto/l0/controlledVocabulary> <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/foreign-countries> ,
+                                                                                                  <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy> .
+
+
+###  https://w3id.org/italia/onto/CLV/District
+<https://w3id.org/italia/onto/CLV/District> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/italia/onto/CLV/AdminUnitComponent> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <https://w3id.org/arco/ontology/location/hasTypeOfContext> ;
+                                                              owl:someValuesFrom <https://w3id.org/arco/ontology/location/TypeOfContext>
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <https://w3id.org/italia/onto/CLV/hasDirectHigherRank> ;
+                                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                              owl:onClass <https://w3id.org/italia/onto/CLV/City>
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <https://w3id.org/italia/onto/CLV/hasHigherRank> ;
+                                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                              owl:onClass [ rdf:type owl:Class ;
+                                                                            owl:unionOf ( <https://w3id.org/italia/onto/CLV/City>
+                                                                                          <https://w3id.org/italia/onto/CLV/Country>
+                                                                                          <https://w3id.org/italia/onto/CLV/Province>
+                                                                                          <https://w3id.org/italia/onto/CLV/Region>
+                                                                                        )
+                                                                          ]
+                                                            ] ;
+                                            rdfs:comment "Questa classe rappresenta un minicipio/quartiere del comune"@it ,
+                                                         "This class represents a district of a city"@en ;
+                                            rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV/> ;
+                                            rdfs:label "District"@en ,
+                                                       "Municipio"@it ,
+                                                       "Quartiere"@it ;
+                                            owl:versionInfo "stabile"@it ,
+                                                            "stable"@en ;
+                                            <http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                            <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "Normativa A e PG: LC/SET/SETD" ;
+                                            <https://w3id.org/italia/onto/CLV/hasRankOrder> 5 .
+
+
+###  https://w3id.org/italia/onto/CLV/Feature
+<https://w3id.org/italia/onto/CLV/Feature> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/italia/onto/CLV/SpatialObject> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/arco/ontology/location/hasCadastralIdentity> ;
+                                                             owl:allValuesFrom <https://w3id.org/arco/ontology/location/CadastralIdentity>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasGeometry> ;
+                                                             owl:allValuesFrom <https://w3id.org/italia/onto/CLV/Geometry>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/CLV/hasSOValidity> ;
+                                                             owl:allValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/italia/onto/TI/modified> ;
+                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                             owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                                               owl:unionOf ( xsd:date
+                                                                                             xsd:dateTime
+                                                                                             xsd:time
+                                                                                           )
+                                                                             ]
+                                                           ] ;
+                                           owl:disjointWith <https://w3id.org/italia/onto/CLV/Geometry> ;
+                                           rdfs:comment "Questa classe è utilizzata per rappresentare un'entittà geografica o localizzazione."@it ,
+                                                        "This class is used to represent any geographical entity."@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                           rdfs:label "Feature (Location)"@en ,
+                                                      "Luogo"@it ;
+                                           owl:versionInfo "stabile"@it ,
+                                                           "stable"@en ;
+                                           <http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.opengis.net/ont/geosparql#Feature> ;
+                                           <http://www.w3.org/ns/prov#wasInfluencedBy> <http://https://www.w3.org/ns/locn#Location> ,
+                                                                                       <http://www.geonames.org/ontology#Feature> .
+
+
+###  https://w3id.org/italia/onto/CLV/Geometry
+<https://w3id.org/italia/onto/CLV/Geometry> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/InternalAccess
+<https://w3id.org/italia/onto/CLV/InternalAccess> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/Province
+<https://w3id.org/italia/onto/CLV/Province> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/italia/onto/CLV/AdminUnitComponent> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <https://w3id.org/italia/onto/CLV/hasDirectLowerRank> ;
+                                                              owl:allValuesFrom <https://w3id.org/italia/onto/CLV/City>
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <https://w3id.org/italia/onto/CLV/hasLowerRank> ;
+                                                              owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                  owl:unionOf ( <https://w3id.org/italia/onto/CLV/City>
+                                                                                                <https://w3id.org/italia/onto/CLV/District>
+                                                                                              )
+                                                                                ]
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <https://w3id.org/italia/onto/CLV/hasDirectHigherRank> ;
+                                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                              owl:onClass <https://w3id.org/italia/onto/CLV/Region>
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <https://w3id.org/italia/onto/CLV/hasHigherRank> ;
+                                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                              owl:onClass [ rdf:type owl:Class ;
+                                                                            owl:unionOf ( <https://w3id.org/italia/onto/CLV/Country>
+                                                                                          <https://w3id.org/italia/onto/CLV/Region>
+                                                                                        )
+                                                                          ]
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <https://w3id.org/italia/onto/CLV/acronym> ;
+                                                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ;
+                                            rdfs:comment "La classe rappresenta la componente Provincia."@it ,
+                                                         "The class represents the Province."@en ;
+                                            rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                            rdfs:label "Città Metropolitana"@it ,
+                                                       "Province"@en ,
+                                                       "Provincia"@it ;
+                                            owl:versionInfo "stabile"@it ,
+                                                            "stable"@en ;
+                                            <http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                            <https://w3id.org/italia/onto/CLV/hasRankOrder> 3 ;
+                                            <https://w3id.org/italia/onto/l0/controlledVocabulary> <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces> .
+
+
+###  https://w3id.org/italia/onto/CLV/Region
+<https://w3id.org/italia/onto/CLV/Region> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/italia/onto/CLV/AdminUnitComponent> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/italia/onto/CLV/hasDirectLowerRank> ;
+                                                            owl:allValuesFrom <https://w3id.org/italia/onto/CLV/Province>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/italia/onto/CLV/hasLowerRank> ;
+                                                            owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                owl:unionOf ( <https://w3id.org/italia/onto/CLV/City>
+                                                                                              <https://w3id.org/italia/onto/CLV/District>
+                                                                                              <https://w3id.org/italia/onto/CLV/Province>
+                                                                                            )
+                                                                              ]
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/italia/onto/CLV/hasDirectHigherRank> ;
+                                                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass <https://w3id.org/italia/onto/CLV/Country>
+                                                          ] ;
+                                          rdfs:comment "Questa classe rappresenta la componente Regione dell'Indirizzo."@it ,
+                                                       "This class represents the Region of the Address."@en ;
+                                          rdfs:isDefinedBy <https://w3id.org/italia/onto/CLV> ;
+                                          rdfs:label "Region"@en ,
+                                                     "Regione"@it ;
+                                          owl:versionInfo "stabile"@it ,
+                                                          "stable"@en ;
+                                          <http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                          <https://w3id.org/italia/onto/CLV/hasRankOrder> 2 ;
+                                          <https://w3id.org/italia/onto/l0/controlledVocabulary> <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions> .
+
+
+###  https://w3id.org/italia/onto/CLV/SpatialObject
+<https://w3id.org/italia/onto/CLV/SpatialObject> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/StreetToponym
+<https://w3id.org/italia/onto/CLV/StreetToponym> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

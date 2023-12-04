@@ -1,0 +1,719 @@
+@prefix : <https://w3id.org/arco/test/2.0/Documentation#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/Documentation> .
+
+<https://w3id.org/arco/test/2.0/Documentation> rdf:type owl:Ontology ;
+                                                owl:versionIRI <https://w3id.org/arco/test/2.0/Documentation> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/hasCopyright
+<https://w3id.org/arco/ontology/context-description/hasCopyright> rdf:type owl:ObjectProperty ;
+                                                                  owl:inverseOf <https://w3id.org/arco/ontology/context-description/isCopyrightOf> ;
+                                                                  rdfs:domain owl:Thing ;
+                                                                  rdfs:range <https://w3id.org/arco/ontology/context-description/Copyright> ;
+                                                                  rdfs:comment "Questa proprietà collega un'entità, per esempio un bene fotografico, ai diritti d'autore detenuti da un agente, o allo stato di \"in pubblico dominio\" relativo all'entità stessa, qualora i diritti siano scaduti."@it ,
+                                                                               "This property relates an entity to copiright held by an agent or its \"public domain\" condition, if it is out of copyright."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                  rdfs:label "ha diritti d'autore"@it ,
+                                                                             "has copyright"@en ;
+                                                                  owl:versionInfo "stabile"@it ,
+                                                                                  "stable"@en ;
+                                                                  <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa F 4.00 e OAC: TU/CPR. ICCD Normativa Trasversale 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, DO/BIB/BIBY - ICCD Normativa MI 3.00: DA/PLC" .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasDocumentation
+<https://w3id.org/arco/ontology/context-description/hasDocumentation> rdf:type owl:ObjectProperty ;
+                                                                      owl:inverseOf <https://w3id.org/arco/ontology/context-description/isDocumentationOf> ;
+                                                                      rdfs:domain owl:Thing ;
+                                                                      rdfs:range <https://w3id.org/arco/ontology/context-description/Documentation> ;
+                                                                      rdfs:comment "Questa proprietà collega un bene culturale alla documentazione che riguarda il bene descritto in una scheda di catalogo."@it ,
+                                                                                   "This property relates a cultural entity to the documentation related to the cultural entity described in a catalogue record."@en ;
+                                                                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                      rdfs:label "ha documentazione"@it ,
+                                                                                 "has documentation"@en ;
+                                                                      owl:versionInfo "stabile"@it ,
+                                                                                      "stable"@en ;
+                                                                      <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: tutti i campi strutturati di DO tranne BIB"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasFormat
+<https://w3id.org/arco/ontology/context-description/hasFormat> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasLicense
+<https://w3id.org/arco/ontology/context-description/hasLicense> rdf:type owl:ObjectProperty ;
+                                                                owl:inverseOf <https://w3id.org/arco/ontology/context-description/isLicenseOf> ;
+                                                                rdfs:domain owl:Thing ;
+                                                                rdfs:range <https://w3id.org/arco/ontology/context-description/License> ;
+                                                                rdfs:comment "Questa proprietà collega un'entità alla sua licenza di utilizzo. La licenza si distingue dal copyright in quanto la prima stabilisce le condizioni di utilizzo, mentre il secondo stabilisce l'agente che detiene i diritti."@it ,
+                                                                             "This property relates an entity to its license. The license differs from copyright in that the former establishes the conditions of use, while the latter establishes the agent who owns the rights."@en ;
+                                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                rdfs:label "ha licenza"@it ,
+                                                                           "has license"@en ;
+                                                                owl:versionInfo "instabile"@it ,
+                                                                                "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasScale
+<https://w3id.org/arco/ontology/context-description/hasScale> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/isCopyrightOf
+<https://w3id.org/arco/ontology/context-description/isCopyrightOf> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <https://w3id.org/arco/ontology/context-description/Copyright> ;
+                                                                   rdfs:range owl:Thing ;
+                                                                   rdfs:comment "Questa è la proprietà inversa di \"ha diritti d'autore\"."@it ,
+                                                                                "This is the inverse property of \"is copyright of\"."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                   rdfs:label "is copyright of"@en ,
+                                                                              "sono diritti d'autore di"@it ;
+                                                                   owl:versionInfo "stabile"@it ,
+                                                                                   "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/context-description/isDocumentationOf
+<https://w3id.org/arco/ontology/context-description/isDocumentationOf> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <https://w3id.org/arco/ontology/context-description/Documentation> ;
+                                                                       rdfs:range owl:Thing ;
+                                                                       rdfs:comment "Questa proprietà collega una documentazione a un'entità che viene documentata. Per esempio, può collega una documentazione che riguarda il bene descritto in una scheda di catalogo al bene stesso."@it ,
+                                                                                    "This property relates a documentation to an entity. For example, it can relates a documentation concerning a cultural property described in a catalogue record to that cultural property."@en ;
+                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                       rdfs:label "is documentation of"@en ,
+                                                                                  "è documentazione di"@it ;
+                                                                       owl:versionInfo "stabile"@it ,
+                                                                                       "stable"@en ;
+                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: tutti i campi strutturati di DO tranne BIB"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/isLicenseOf
+<https://w3id.org/arco/ontology/context-description/isLicenseOf> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <https://w3id.org/arco/ontology/context-description/License> ;
+                                                                 rdfs:range owl:Thing ;
+                                                                 rdfs:comment "Questa proprietà collega una licenza d'uso ad un'entità."@it ,
+                                                                              "This property relates a license to an entity."@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                 rdfs:label "is license of"@en ,
+                                                                            "è licenza di"@it ;
+                                                                 owl:versionInfo "instabile"@it ,
+                                                                                 "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/hasAgentRole
+<https://w3id.org/arco/ontology/core/hasAgentRole> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasConcept
+<https://w3id.org/arco/ontology/core/hasConcept> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasIdentifier
+<https://w3id.org/arco/ontology/core/hasIdentifier> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasType
+<https://w3id.org/arco/ontology/core/hasType> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasConcept> ;
+                                              owl:inverseOf <https://w3id.org/arco/ontology/core/isTypeOf> ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range <https://w3id.org/arco/ontology/core/Type> ;
+                                              rdfs:comment "La object property che associa un qualunque oggetto a un tipo."@it ,
+                                                           "The object property that associates any object with a type."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "ha tipo"@it ,
+                                                         "has type"@en ;
+                                              owl:versionInfo "stabile"@it ,
+                                                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/core/isConceptOf
+<https://w3id.org/arco/ontology/core/isConceptOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isTypeOf
+<https://w3id.org/arco/ontology/core/isTypeOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isConceptOf> ;
+                                               rdfs:domain <https://w3id.org/arco/ontology/core/Type> ;
+                                               rdfs:range owl:Thing ;
+                                               rdfs:comment "La object property che associa un tipo a un qualunque oggetto."@it ,
+                                                            "The object property that associates a type to any object."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                               rdfs:label "is type of"@en ,
+                                                          "è tipo di"@it ;
+                                               owl:versionInfo "stabile"@it ,
+                                                               "stable"@en .
+
+
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/context-description/caption
+<https://w3id.org/arco/ontology/context-description/caption> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain <https://w3id.org/arco/ontology/context-description/PhotographicDocumentation> ;
+                                                             rdfs:range rdfs:Literal ;
+                                                             rdfs:comment "Questa proprietà rappresenta una sintetica didascalia, se presente e utile alla comprensione di quanto documentato."@it ,
+                                                                          "This property represents a synthetic caption, useful for understanding what is documented."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                             rdfs:label "caption"@en ,
+                                                                        "didascalia"@it ;
+                                                             owl:versionInfo "stabile"@it ,
+                                                                             "stable"@en ;
+                                                             <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "FNTN"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/digitalFilename
+<https://w3id.org/arco/ontology/context-description/digitalFilename> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf <https://w3id.org/italia/onto/l0/name> ;
+                                                                     rdfs:domain <https://w3id.org/arco/ontology/context-description/Documentation> ;
+                                                                     rdfs:range rdfs:Literal ;
+                                                                     rdfs:comment "Questa proprietà rappresenta il nome del file digitale che riproduce il documento, nel caso della documentazione allegata alla scheda di catalogo."@it ,
+                                                                                  "This property represents the name of the digital file that reproduces the document."@en ;
+                                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                     rdfs:label "digital filename"@en ,
+                                                                                "nome del file digitale"@it ;
+                                                                     owl:versionInfo "stabile"@it ,
+                                                                                     "stable"@en ;
+                                                                     <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "FTAK, DRAK, VDCK, REGK, FNTK"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/documentationLocation
+<https://w3id.org/arco/ontology/context-description/documentationLocation> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:domain <https://w3id.org/arco/ontology/context-description/Documentation> ;
+                                                                           rdfs:range rdfs:Literal ;
+                                                                           rdfs:comment "Questa proprietà rappresenta la collocazione del documento, che può anche essere espressa per mezzo della collocazione inventariale o dell'identificativo (numerico o alfanumerico) della fonte o del documento."@it ,
+                                                                                        "This property represents document location, which can also be expressed by inventory location or identifier."@en ;
+                                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                           rdfs:label "collocazione della documentazione"@it ,
+                                                                                      "documentation location"@en ;
+                                                                           owl:versionInfo "stabile"@it ,
+                                                                                           "stable"@en ;
+                                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: DO/FTA/FTAC, DO/DRA/DRAC, DO/VDC/VDCC, DO/REG/REGC, DO/FNT/FNTS" .
+
+
+###  https://w3id.org/arco/ontology/context-description/documentationTitle
+<https://w3id.org/arco/ontology/context-description/documentationTitle> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:domain <https://w3id.org/arco/ontology/context-description/Documentation> ;
+                                                                        rdfs:range rdfs:Literal ;
+                                                                        rdfs:comment "Questa proprietà rappresenta il titolo o la denominazione del documento."@it ,
+                                                                                     "This property represents document title or denomination."@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                        rdfs:label "documentation title"@en ,
+                                                                                   "titolo della documentazione"@it ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "FTAM, DRAM, VDCA, REGZ, FNTT"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/expired
+<https://w3id.org/arco/ontology/context-description/expired> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/expiryDate
+<https://w3id.org/arco/ontology/context-description/expiryDate> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/folio
+<https://w3id.org/arco/ontology/context-description/folio> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/stripRunAndFrameNumber
+<https://w3id.org/arco/ontology/context-description/stripRunAndFrameNumber> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/italia/onto/SM/URL
+<https://w3id.org/italia/onto/SM/URL> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/italia/onto/l0/name
+<https://w3id.org/italia/onto/l0/name> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dati.gov.it/onto/dcatapit#Agent
+<http://dati.gov.it/onto/dcatapit#Agent> rdf:type owl:Class ;
+                                         owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  owl:equivalentClass <https://w3id.org/italia/onto/l0/Agent> .
+
+
+###  https://w3id.org/arco/ontology/context-description/AcquisitionType
+<https://w3id.org/arco/ontology/context-description/AcquisitionType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/AlternativeDatingType
+<https://w3id.org/arco/ontology/context-description/AlternativeDatingType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/AnomalyType
+<https://w3id.org/arco/ontology/context-description/AnomalyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType
+<https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType
+<https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ArchivalRecord
+<https://w3id.org/arco/ontology/context-description/ArchivalRecord> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/AudioDocumentation
+<https://w3id.org/arco/ontology/context-description/AudioDocumentation> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <https://w3id.org/arco/ontology/context-description/Documentation> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/arco/ontology/context-description/hasFormat> ;
+                                                                                          owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/arco/ontology/context-description/DocumentationType>
+                                                                                                                                    <https://w3id.org/arco/ontology/context-description/Format>
+                                                                                                                                  ) ;
+                                                                                                               rdf:type owl:Class
+                                                                                                             ]
+                                                                                        ] ;
+                                                                        rdfs:comment "Questa classe rappresenta la documentazione audio relativa a un oggetto, per esempio a un bene culturale."@it ,
+                                                                                     "This class represents the audio documentation of an object, e.g. a cultural property."@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                        rdfs:label "Audio documentation"@en ,
+                                                                                   "Documentazione audio"@it ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "DO/REG"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/BibliographyType
+<https://w3id.org/arco/ontology/context-description/BibliographyType> rdf:type owl:Class ;
+                                                                      owl:disjointWith <https://w3id.org/arco/ontology/context-description/DocumentationType> .
+
+
+###  https://w3id.org/arco/ontology/context-description/Certification
+<https://w3id.org/arco/ontology/context-description/Certification> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://w3id.org/arco/ontology/context-description/Documentation> ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                                     owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/CertificationType>
+                                                                                   ] ;
+                                                                   rdfs:comment "Questa classe rappresenta una certificazione."@it ,
+                                                                                "This class represents certification."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                   rdfs:label "Certification"@en ,
+                                                                              "Certificazione"@it ;
+                                                                   owl:versionInfo "instabile"@it ,
+                                                                                   "unstable"@en ;
+                                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa BNM: CD/CTF" .
+
+
+###  https://w3id.org/arco/ontology/context-description/CertificationType
+<https://w3id.org/arco/ontology/context-description/CertificationType> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ;
+                                                                       rdfs:comment "Questa classe rappresenta il tipo di certificazione di un bene culturale."@it ,
+                                                                                    "This class represents the type of certification of a cultural property ."@en ;
+                                                                       rdfs:label "Certification type"@en ,
+                                                                                  "Tipo di certificazione"@it ;
+                                                                       owl:versionInfo "instabile"@it ,
+                                                                                       "unstable"@en ;
+                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale BNM: DO/CTF/CTFT" .
+
+
+###  https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType
+<https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/CircumstanceType
+<https://w3id.org/arco/ontology/context-description/CircumstanceType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Copyright
+<https://w3id.org/arco/ontology/context-description/Copyright> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <https://w3id.org/arco/ontology/context-description/isCopyrightOf> ;
+                                                                                 owl:someValuesFrom owl:Thing
+                                                                               ] ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <https://w3id.org/arco/ontology/core/hasAgentRole> ;
+                                                                                 owl:someValuesFrom <https://w3id.org/arco/ontology/core/AgentRole>
+                                                                               ] ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <https://w3id.org/arco/ontology/context-description/expiryDate> ;
+                                                                                 owl:someValuesFrom rdfs:Literal
+                                                                               ] ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <https://w3id.org/arco/ontology/context-description/expired> ;
+                                                                                 owl:allValuesFrom xsd:boolean
+                                                                               ] ;
+                                                               rdfs:comment "Questa classe rappresenta i diritti d'autore detenuti da un agente su un oggetto, per esempio un bene culturale."@it ,
+                                                                            "This class represents the copyright of an object, e.g. a cultural property."@en ;
+                                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                               rdfs:label "Copyright"@en ,
+                                                                          "Diritti d'autore"@it ;
+                                                               owl:versionInfo "stabile"@it ,
+                                                                               "stable"@en ;
+                                                               <https://w3id.org/arco/ontology/catalogue/iccdNormTag> """ICCD Normativa F 4.00 e OAC: TU/CPR. Normativa BDI v. 3.01: DU/DUY; DV/DVY, DF/DFY, AI/AIY, VI/VIY, FI/FIY.
+Versioni 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, DO/BIB/BIBY.""" .
+
+
+###  https://w3id.org/arco/ontology/context-description/DerivatedWorkType
+<https://w3id.org/arco/ontology/context-description/DerivatedWorkType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Documentation
+<https://w3id.org/arco/ontology/context-description/Documentation> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/context-description/hasLicense> ;
+                                                                                     owl:someValuesFrom <https://w3id.org/arco/ontology/context-description/License>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/context-description/isDocumentationOf> ;
+                                                                                     owl:someValuesFrom owl:Thing
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/context-description/hasCopyright> ;
+                                                                                     owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/Copyright>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/core/hasIdentifier> ;
+                                                                                     owl:allValuesFrom <https://w3id.org/arco/ontology/core/Identifier>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/core/hasType> ;
+                                                                                     owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/DocumentationType>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                                     owl:allValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/context-description/caption> ;
+                                                                                     owl:allValuesFrom rdfs:Literal
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/context-description/digitalFilename> ;
+                                                                                     owl:allValuesFrom rdfs:Literal
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/context-description/documentationLocation> ;
+                                                                                     owl:allValuesFrom rdfs:Literal
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/arco/ontology/context-description/documentationTitle> ;
+                                                                                     owl:allValuesFrom rdfs:Literal
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/italia/onto/SM/URL> ;
+                                                                                     owl:allValuesFrom xsd:anyURI
+                                                                                   ] ;
+                                                                   <http://purl.org/dc/elements/1.1/description> """An example of usage of one of the subclasses of the class 'Documentation' is the following:
+resource:AudioDocumentation/1200924650-audio-documentation-1
+        a   cd:AudioDocumentation ;
+        rdfs:label  \"Documentazione audio 1 del bene culturale: 1200924650\"@it ;
+        lite:localIdentifier \"New_1401358982589\" ;
+        core:hasType resource:DocumentationType/cassetta-dat ;
+        dd:hasFormat resource:Format/cassetta-dat ;
+        core:hasCategory cd:AttachedDocumentation ."""@en ,
+                                                                                                                 """Un esempio d'uso di una delle sottoclassi della classe 'Documentazione' è il seguente:
+resource:AudioDocumentation/1200924650-audio-documentation-1
+        a   cd:AudioDocumentation ;
+        rdfs:label  \"Documentazione audio 1 del bene culturale: 1200924650\"@it ;
+        lite:localIdentifier \"New_1401358982589\" ;
+        core:hasType resource:DocumentationType/cassetta-dat ;
+        dd:hasFormat resource:Format/cassetta-dat ;
+        core:hasCategory cd:AttachedDocumentation ."""@it ;
+                                                                   rdfs:comment "Classe che rappresenta la documentazione, specializzata nelle sottoclassi che rappresentano tipi specifici di documentazione di corredo (immagini, disegni e rilievi, cartografia, documenti audio e video, fonti e documenti editi e inediti, referenze bibliografiche)."@it ,
+                                                                                "This class represents the documentation, with subclasses for each specific type of documentation (images, drawings, audio, video, etc.)"@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                   rdfs:label "Documentation"@en ,
+                                                                              "Documentazione"@it ;
+                                                                   owl:versionInfo "stabile"@it ,
+                                                                                   "stable"@en ;
+                                                                   <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: DO"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/DocumentationType
+<https://w3id.org/arco/ontology/context-description/DocumentationType> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <https://w3id.org/arco/ontology/core/Type> ;
+                                                                       rdfs:comment "Questa classe rappresenta il tipo di documentazione."@it ,
+                                                                                    "This class represents the type of documentation."@en ;
+                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                       rdfs:label "Documentation type"@en ,
+                                                                                  "Tipo di documentazione"@it ;
+                                                                       owl:versionInfo "stabile"@it ,
+                                                                                       "stable"@en ;
+                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "FTAP, DRAT, FNTP (+VDCP, REGP), ADMP (v. 3.00 e 3.01)"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/ExportImportCertificationType
+<https://w3id.org/arco/ontology/context-description/ExportImportCertificationType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/FilmDocumentation
+<https://w3id.org/arco/ontology/context-description/FilmDocumentation> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <https://w3id.org/arco/ontology/context-description/Documentation> ;
+                                                                       rdfs:comment "Questa classe rappresenta la documentazione video-cinematografica relativa a un oggetto, per esempio a un bene culturale"@it ,
+                                                                                    "This class represents the film documentation of an object, e.g. a cultural property."@en ;
+                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                       rdfs:label "Documentazione video-cinematografica"@it ,
+                                                                                  "Video documentation"@en ;
+                                                                       owl:versionInfo "stabile"@it ,
+                                                                                       "stable"@en ;
+                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "VDC"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/Format
+<https://w3id.org/arco/ontology/context-description/Format> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/GraphicOrCartographicDocumentation
+<https://w3id.org/arco/ontology/context-description/GraphicOrCartographicDocumentation> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <https://w3id.org/arco/ontology/context-description/Documentation> ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <https://w3id.org/arco/ontology/context-description/hasScale> ;
+                                                                                                          owl:allValuesFrom <https://w3id.org/arco/ontology/context-description/Scale>
+                                                                                                        ] ;
+                                                                                        rdfs:comment "Questa classe rappresenta la documentazione grafica e cartografica relativa a un oggetto, per esempio a un bene culturale."@it ,
+                                                                                                     "This class represents the graphic or cartographic documentation of an object, e.g. a cultural property."@en ;
+                                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                                        rdfs:label "Documentazione grafica e cartografica"@it ,
+                                                                                                   "Graphic and cartographic documentation"@en ;
+                                                                                        owl:versionInfo "stabile"@it ,
+                                                                                                        "stable"@en ;
+                                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "DRA"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/InterventionType
+<https://w3id.org/arco/ontology/context-description/InterventionType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/LaboratoryTestType
+<https://w3id.org/arco/ontology/context-description/LaboratoryTestType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/License
+<https://w3id.org/arco/ontology/context-description/License> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/italia/onto/l0/Object> ;
+                                                             rdfs:comment "Questa classe rappresenta una licenza."@it ,
+                                                                          "This class represents a license"@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                             rdfs:label "License"@en ,
+                                                                        "Licenza"@it ;
+                                                             owl:versionInfo "instabile"@it ,
+                                                                             "unstable"@en ;
+                                                             <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "DO/DCM/DCML" .
+
+
+###  https://w3id.org/arco/ontology/context-description/MultimediaDocumentation
+<https://w3id.org/arco/ontology/context-description/MultimediaDocumentation> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <https://w3id.org/arco/ontology/context-description/Documentation> ;
+                                                                             rdfs:comment "Questa classe rappresenta la documentazione multimediale in formato digitale relativa al un oggetto, per esempio un bene culturale. Nel caso delle Normative per la catalogazione dell'ICCD questa classe riguarda la documentazione multimediale realizzata in formati non compresi dalle norme ICCD, allegata alla scheda di catalogo o esistente e depositata presso l'Ente schedatore o in altre raccolte."@it ,
+                                                                                          "This class represents the multimedia documentation of an object, e.g. a cultural property."@en ;
+                                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                             rdfs:label "Altra documentazione multimediale"@it ,
+                                                                                        "Multimedia documentation"@en ;
+                                                                             owl:versionInfo "stabile"@it ,
+                                                                                             "stable"@en ;
+                                                                             <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ADM (solo versioni 3.00 e 3.01)"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/ObservationSurveyType
+<https://w3id.org/arco/ontology/context-description/ObservationSurveyType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/PhotographicDocumentation
+<https://w3id.org/arco/ontology/context-description/PhotographicDocumentation> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <https://w3id.org/arco/ontology/context-description/Documentation> ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <https://w3id.org/arco/ontology/context-description/caption> ;
+                                                                                                 owl:allValuesFrom rdfs:Literal
+                                                                                               ] ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <https://w3id.org/arco/ontology/context-description/stripRunAndFrameNumber> ;
+                                                                                                 owl:allValuesFrom rdfs:Literal
+                                                                                               ] ;
+                                                                               rdfs:comment "Questa classe rappresenta la documentazione fotografica relativa a un oggetto, per esempio a un bene culturale."@it ,
+                                                                                            "This class represents the photographic documentation of an object, e.g. a cultural property."@en ;
+                                                                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                               rdfs:label "Documentazione fotografica"@it ,
+                                                                                          "Photographic documentation"@en ;
+                                                                               owl:versionInfo "stabile"@it ,
+                                                                                               "stable"@en ;
+                                                                               <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: DO/FTA"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/Reproduction
+<https://w3id.org/arco/ontology/context-description/Reproduction> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/ResponsibilityType
+<https://w3id.org/arco/ontology/context-description/ResponsibilityType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Scale
+<https://w3id.org/arco/ontology/context-description/Scale> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/SourceAndDocument
+<https://w3id.org/arco/ontology/context-description/SourceAndDocument> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <https://w3id.org/arco/ontology/context-description/Documentation> ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/arco/ontology/context-description/folio> ;
+                                                                                         owl:allValuesFrom rdfs:Literal
+                                                                                       ] ;
+                                                                       rdfs:comment "Questa classe rappresenta le fonti e i documenti testuali editi e inediti relativi a un oggetto, per esempio a un bene culturale."@it ,
+                                                                                    "This class represents source and document related to an object, e.g. a cultural property."@en ;
+                                                                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/context-description> ;
+                                                                       rdfs:label "Documentazione testuale"@it ,
+                                                                                  "Fonti e documenti"@it ,
+                                                                                  "Source and document"@en ,
+                                                                                  "Textual documentation"@en ;
+                                                                       owl:versionInfo "stabile"@it ,
+                                                                                       "stable"@en ;
+                                                                       <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: DO/FNT"@it .
+
+
+###  https://w3id.org/arco/ontology/context-description/SurveyImageType
+<https://w3id.org/arco/ontology/context-description/SurveyImageType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Title
+<https://w3id.org/arco/ontology/context-description/Title> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/TitleType
+<https://w3id.org/arco/ontology/context-description/TitleType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/Tomb
+<https://w3id.org/arco/ontology/context-description/Tomb> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/UseType
+<https://w3id.org/arco/ontology/context-description/UseType> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/UseTypeSpecification
+<https://w3id.org/arco/ontology/context-description/UseTypeSpecification> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/AgentRole
+<https://w3id.org/arco/ontology/core/AgentRole> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/Identifier
+<https://w3id.org/arco/ontology/core/Identifier> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/core/Type
+<https://w3id.org/arco/ontology/core/Type> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class ;
+                                               rdfs:isDefinedBy <https://w3id.org/italia/onto/TI/> .
+
+
+###  https://w3id.org/italia/onto/l0/Agent
+<https://w3id.org/italia/onto/l0/Agent> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/italia/onto/l0/Entity> ,
+                                                        <https://w3id.org/italia/onto/l0/Object> ;
+                                        owl:disjointWith <https://w3id.org/italia/onto/l0/Concept> ,
+                                                         <https://w3id.org/italia/onto/l0/Description> ,
+                                                         <https://w3id.org/italia/onto/l0/EventOrSituation> ;
+                                        rdfs:comment "Any agentive Object , either physical (e.g. a person, a robot, an oak), or social (e.g. a corporation, an institution, a community)."@en ,
+                                                     "Un agente, sia fisico (ex. una persona, un robot, una quercia), o sociale (ex. una società, un'istituzione, una comunità)."@it ;
+                                        rdfs:isDefinedBy <https://w3id.org/italia/onto/l0> ;
+                                        rdfs:label "Agent"@en ,
+                                                   "Agente"@it ;
+                                        owl:versionInfo "stabile"@it ,
+                                                        "stable"@en .
+
+
+###  https://w3id.org/italia/onto/l0/Concept
+<https://w3id.org/italia/onto/l0/Concept> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Description
+<https://w3id.org/italia/onto/l0/Description> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Entity
+<https://w3id.org/italia/onto/l0/Entity> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/EventOrSituation
+<https://w3id.org/italia/onto/l0/EventOrSituation> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Object
+<https://w3id.org/italia/onto/l0/Object> rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/AcquisitionType>
+                <https://w3id.org/arco/ontology/context-description/AlternativeDatingType>
+                <https://w3id.org/arco/ontology/context-description/AnomalyType>
+                <https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType>
+                <https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType>
+                <https://w3id.org/arco/ontology/context-description/BibliographyType>
+                <https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType>
+                <https://w3id.org/arco/ontology/context-description/CircumstanceType>
+                <https://w3id.org/arco/ontology/context-description/DerivatedWorkType>
+                <https://w3id.org/arco/ontology/context-description/DocumentationType>
+                <https://w3id.org/arco/ontology/context-description/ExportImportCertificationType>
+                <https://w3id.org/arco/ontology/context-description/InterventionType>
+                <https://w3id.org/arco/ontology/context-description/LaboratoryTestType>
+                <https://w3id.org/arco/ontology/context-description/ObservationSurveyType>
+                <https://w3id.org/arco/ontology/context-description/ResponsibilityType>
+                <https://w3id.org/arco/ontology/context-description/SurveyImageType>
+                <https://w3id.org/arco/ontology/context-description/TitleType>
+                <https://w3id.org/arco/ontology/context-description/UseType>
+                <https://w3id.org/arco/ontology/context-description/UseTypeSpecification>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/arco/ontology/context-description/ArchivalRecord>
+                <https://w3id.org/arco/ontology/context-description/Copyright>
+                <https://w3id.org/arco/ontology/context-description/Reproduction>
+                <https://w3id.org/arco/ontology/context-description/Scale>
+                <https://w3id.org/arco/ontology/context-description/Title>
+                <https://w3id.org/arco/ontology/context-description/Tomb>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

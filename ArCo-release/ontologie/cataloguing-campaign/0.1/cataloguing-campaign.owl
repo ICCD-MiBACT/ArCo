@@ -22,7 +22,6 @@
      xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/0.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/COV"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/TI"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -58,6 +57,35 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -72,6 +100,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/isActivityOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CataloguingOrDigitizationCampaign"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CataloguingActivity"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una campagna all&apos;attività di catalogazione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a campaign to a cataloguing activity</rdfs:comment>
         <rdfs:label xml:lang="it">ha attività</rdfs:label>
@@ -91,6 +120,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Protocol"/>
         <owl:propertyDisjointWith rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/hasIccdProtocol"/>
         <owl:propertyDisjointWith rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/isIccdProtocolOf"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una richiesta di assegnazione dei numeri di catalogo al numero di protocollo assegnato dall&apos;ente richiedente</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cataloguing number assignment to the protocol assigned by the applicant organization</rdfs:comment>
         <rdfs:label xml:lang="it">ha protocollo dell&apos;ente richiedente</rdfs:label>
@@ -108,6 +138,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/isApplicantAgencyFor"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CatalogueNumbersAssignment"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il processo di assegnazione dei numeri di catalogo all&apos;ente richiedente</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates  the catalogue numbers assignment to the applicant agency</rdfs:comment>
         <rdfs:label xml:lang="it">ha ente richiedente</rdfs:label>
@@ -124,6 +155,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/isApplicationOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CatalogueNumbersAssignment"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Application"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il processo di assegnazione dei numeri di catalogo alla richiesta</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the catalogue numbers assignment to the application</rdfs:comment>
         <rdfs:label xml:lang="it">ha richiesta</rdfs:label>
@@ -140,6 +172,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/isCatalogueNumberAssignmentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CataloguingOrDigitizationCampaign"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CatalogueNumbersAssignment"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una campagna al procedimento di assegnazione dei numeri di catalogo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a campaign to  the catalogue numbers assignment</rdfs:comment>
         <rdfs:label xml:lang="it">ha assegnazione dei numeri di catalogo</rdfs:label>
@@ -157,6 +190,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Application"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Protocol"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una richiesta di assegnazione dei numeri di catalogo al numero di protocollo assegnato dall&apos;ICCD</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cataloguing number assignment to the protocol assigned by ICCD</rdfs:comment>
         <rdfs:label xml:lang="it">ha protocollo ICCD</rdfs:label>
@@ -180,6 +214,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Status"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una cosa al suo status giuridico o temporale</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a thing to its juridical or temporal status</rdfs:comment>
         <rdfs:label xml:lang="it">ha status</rdfs:label>
@@ -195,6 +230,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign/isActivityOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CataloguingActivity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CataloguingOrDigitizationCampaign"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;attività di catalogazione alla campagna</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cataloguing activity to a campaign</rdfs:comment>
         <rdfs:label xml:lang="en">is activity of</rdfs:label>
@@ -210,6 +246,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign/isAgencyProtocolOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Protocol"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Application"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il numero di protocollo assegnato dall&apos;ente richiedente ad una richiesta di assegnazione dei numeri di catalogo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the protocol assigned by the applicant organization to a cataloguing number assignment</rdfs:comment>
         <rdfs:label xml:lang="en">is agency protocol of</rdfs:label>
@@ -226,6 +263,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CatalogueNumbersAssignment"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ente richiedente al processo di assegnazione dei numeri di catalogo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the applicant agency to  the catalogue numbers assignment</rdfs:comment>
         <rdfs:label xml:lang="en">is applicant agency for</rdfs:label>
@@ -241,6 +279,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign/isApplicationOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Application"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CatalogueNumbersAssignment"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la richesta di numeri di catalogo al processo di assegnazione dei numeri di catalogo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the application to the catalogue numbers assignment</rdfs:comment>
         <rdfs:label xml:lang="en">is application of</rdfs:label>
@@ -256,6 +295,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign/isCatalogueNumberAssignmentOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CatalogueNumbersAssignment"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CataloguingOrDigitizationCampaign"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il procedimento di assegnazione dei numeri di catalogo alla campagna</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the catalogue numbers assignment to a campaign</rdfs:comment>
         <rdfs:label xml:lang="en">is catalogue numebrs assignment of</rdfs:label>
@@ -271,6 +311,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign/isIccdProtocolOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Protocol"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Application"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il numero di protocollo assegnato dall&apos;ICCD ad una richiesta di assegnazione dei numeri di catalogo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the protocol assigned by ICCD to a cataloguing number assignment</rdfs:comment>
         <rdfs:label xml:lang="en">is iccd protocol of</rdfs:label>
@@ -286,6 +327,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign/isStatusOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Status"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno status giuridico o temporale ad una cosa</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates  a juridical or temporal status to a thing</rdfs:comment>
         <rdfs:label xml:lang="en">is status of</rdfs:label>
@@ -308,6 +350,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/hasType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasType"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/involvesAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/involvesAgent"/>
@@ -317,6 +365,12 @@
     <!-- https://w3id.org/arco/ontology/core/isAgentInvolvedIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isAgentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentOf"/>
     
 
 
@@ -348,6 +402,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign/acronym">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un acronimo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents an acronym</rdfs:comment>
         <rdfs:label xml:lang="it">acronimo</rdfs:label>
@@ -364,6 +419,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/TI/date"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Application"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una richiesta alla data in cui è stata creata</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an application to the date of its creation</rdfs:comment>
         <rdfs:label xml:lang="en">application date</rdfs:label>
@@ -380,6 +436,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/TI/date"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Application"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una richiesta alla data di approvazione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an application to the date of its approval</rdfs:comment>
         <rdfs:label xml:lang="en">approval date</rdfs:label>
@@ -395,6 +452,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign/firstNumberAssigned">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CatalogueNumbersAssignment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il primo numero catalogo assegnato da ICCD all&apos;ente richiedente</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the first catalogue number assigned by ICCD to the applicant agency</rdfs:comment>
         <rdfs:label xml:lang="en">first number assigned</rdfs:label>
@@ -410,6 +468,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign/lastNumberAssigned">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CatalogueNumbersAssignment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;ultimo numero catalogo assegnato da ICCD all&apos;ente richiedente</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the last catalogue number assigned by ICCD to the applicant agency</rdfs:comment>
         <rdfs:label xml:lang="en">last number assigned</rdfs:label>
@@ -425,6 +484,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign/totalOfAssignedNumber">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/CatalogueNumbersAssignment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero totale di numeri di catalogo assegnati da ICCD all&apos;ente richiedente</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the total number of catalogue number assigned by ICCD to the applicant agency</rdfs:comment>
         <rdfs:label xml:lang="it">numero totale di numeri assegnati</rdfs:label>
@@ -507,6 +567,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Status"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato associato ad un&apos;attività</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the status related to an activity</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Activity status</rdfs:label>
         <rdfs:label xml:lang="it">Stato dell&apos;attività</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -550,6 +611,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la richiesta dei numeri identificativi univoci da parte dell&apos;ente schedatore</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the application of unique identifier by a cataloguing agency</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Application</rdfs:label>
         <rdfs:label xml:lang="it">Richiesta</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -564,6 +626,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Status"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato associato alla assegnazione di numeri di catalogo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the status related to a catalogue numbers assignment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Application status</rdfs:label>
         <rdfs:label xml:lang="it">Stato della richiesta</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -578,6 +641,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/Status"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato associato asd una campagna</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the status related to a campaign</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Campaign status</rdfs:label>
         <rdfs:label xml:lang="it">Stato della campagna</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -592,6 +656,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di campagna (es. campagna di catalogazione, campagna di digitalizzazione)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of a campaign (e.g. cataloguing campaign, digitization campaign)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Campaign type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di campagna</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -618,6 +683,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il processo di assegnazione dei numeri di catalogo univoci agli enti richiedenti</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the process to assign unique identifiers to an applicant agency.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="it">Assegnazione dei numeri di catalogo</rdfs:label>
         <rdfs:label xml:lang="en">Catalogue Numbers Assignment</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -650,6 +716,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;attività di catalogazione o digitalizzazione collegata ad una campagna</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents cataloguing activity related to a campaign.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="it">Attività di catalogazione</rdfs:label>
         <rdfs:label xml:lang="en">Cataloguing activity</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -700,6 +767,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la campagna di catalogazione o di digitalizzazione pianificata e organizzata dall&apos;ente schedatore</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents cataloguing or digitization campaign, organized by a cataloguing agency.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="it">Campagna di catalogazione o digitalizzazione</rdfs:label>
         <rdfs:label xml:lang="en">Cataloguing or Digitization Campaign</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -714,6 +782,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tipologia di ente (Ministeri e Presidenza del Consiglio, Universita&apos; ed Istituti di Istruzione, etc).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of an organization.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Organization type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di ente</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -740,6 +809,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il protocollo associato a una cosa</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the protocol related to a thing</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Protocol</rdfs:label>
         <rdfs:label xml:lang="it">Protocollo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -754,11 +824,30 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la condizione giuridica o temporale di una cosa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the juridical or temporal status of a Thing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign"/>
         <rdfs:label xml:lang="en">Status</rdfs:label>
         <rdfs:label xml:lang="it">Status</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/AgentRole -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/AgentRole"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Situation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Situation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Type -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Type"/>
     
 
 

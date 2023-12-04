@@ -1,0 +1,179 @@
+SM,Definizione,triple
+CL,CLASSIFICAZIONE,
+CHS,CLASSIFICAZIONE HORNBOSTEL-SACHS,a-mi:MusicalInstrument core:isClassifiedBy a-mi:HornbostelSachsClass . a-mi:HornbostelSachsClass core:refersToClassificationSystem a-mi:HornbostelSachsClassificationSystem .
+CHSN,Codice numerico Hornbostel-Sachs,a-mi:HornbostelSachsClass a-lite:HSNumber Literal
+CHSD,Definizione Hornbostel-Sachs,a-mi:HornbostelSachsClass a-mi:HSDefinition Literal
+CHSE,Edizione Hornbostel-Sachs,a-mi:HornbostelSachsClass a-mi:HSEdition Literal
+CHSS,Note,a-mi:HornbostelSachsClass core:note Literal
+CLA,ALTRA CLASSIFICAZIONE,
+CLAA,Autore,core:ClassificationSystem lite:hasAuthor Agent
+CLAR,Referenza bibliografica,core:ClassificationSystem cd:hasBibliography cd:Bibliography
+CLAT,Taxon,a-mi:MusicalInstrument core:isClassifiedBy mi:MusicalInstrumentTaxon
+CLAO,Note,mi:MusicalInstrumentTaxon core:note rdfs:Literal
+CLN,Classificazione non applicabile,
+,,
+AT,Definizione,
+OG,OGGETTO,
+OGS,DEFINIZIONE TASSONOMICA,spe:Specimen core:hasClassificationInTime core:ClassificationInTime
+OGSG,Genere,core:ClassificationInTime core:hasTaxon spe:BiologicalGenus
+OGSN,Specie,core:ClassificationInTime core:hasTaxon spe:BiologicalSpecies
+OGSA,Autore e anno specie,spe:BiologicalSpecies lite:hasAuthor l0:Agent
+OGST,Sottospecie,core:ClassificationInTime core:hasTaxon spe:BiologicalSubspecies
+OGSS,Note,spe:BiologicalTaxon core:note literal
+,,
+BNB,Definizione,
+SB,SISTEMATICA-BOTANICA,
+SBS,SISTEMATICA,
+SBSF,Famiglia,
+SBSN,Numero genere,spe:BiologicalTaxon spe:taxonNumber Literal
+SBSC,Schema sistematico di riferimento,core:Taxon core:refersToClassificationSystem ClassificationSystem
+SBSA,Altro rango tassonomico,
+SBSG,Altro numero tassonomico,"spe:BiologicalTaxon lite:taxonNumber Literal
+spe:BiologicalTaxon core:hasIdentifier core:Identifier"
+NBN,NOMENCLATURA,
+NBNA,Specie nome completo,"core:ClassificationInTime core:hasTaxon core:Taxon
+spe:Specimen lite:isClassifiedByOriginalTaxon core:Taxon"
+NAA,NOMENCLATURA ATOMIZZATA,
+NAAA,Genere,spe:BiologicalSpecies spe:hasDirectHighterRank spe:BiologicalGenus
+NAAB,Specie nome,spe:Specimen core:isClassifiedBy spe:BiologicalSpecies
+NAAC,Specie autore,spe:BiologicalSpecies lite:hasAuthor l0:Agent
+NAAD,Sottospecie nome,spe:BiologicalSpecies spe:hasDirectLowerRank spe:BiologicalSubspecies
+NAAE,Sottospecie autore,spe:BiologicalSubSpecies lite:hasAuthor l0:Agent
+NAAF,Varietà nome,spe:ClassificationInTime spe:hasTaxon spe:BiologicalVariety
+NAAG,Varietà autore,spe:hasTaxonSpecification lite:hasAuthor l0:Agent
+NAAH,Forma nome,spe:ClassificationInTime spe:hasTaxon spe:BotanicalForm
+NAAI,Forma autore,spe:BotanicalForm lite:hasAuthor l0:Agent
+NAAL,Cultivar,spe:ClassificationInTime spe:hasTaxon spe:Cultivar
+Acronimo,Definizione,
+RB,REVISIONI-BOTANICA,
+RBR,DATI REVISIONE,core:ClassificationInTime core:isConsequenceOf a-cd:Review
+RBRT,Tipologia,a-cd:Review core:hasType a-cd:ReviewType
+RBRA,Autore,a-cd:Review a-cd:hasAgentRole a-cd:AgentRole
+RBRN,Nome da revisione,core:ClassificationInTime core:hasTaxon spe:BiologicalTaxon
+RBRB,Bibliografia,spe:BiologicalTaxon a-cd:hasBibliography a-cd:Bibliography
+RBN,NOMENCLATURA ATOMIZZATA,
+RBNA,Genere,spe:BiologicalSpecies spe:hasDirectHighterRank spe:BiologicalGenus
+RBNB,Specie nome,spe:Specimen core:isClassifiedBy spe:BiologicalSpecies
+RBNC,Specie autore,spe:BiologicalSpecies lite:hasAuthor l0:Agent
+RBND,Sottospecie nome,spe:BiologicalSpecies spe:hasDirectLowerRank spe:BiologicalSubspecies
+RBNE,Sottospecie autore,spe:BiologicalSubSpecies lite:hasAuthor l0:Agent
+RBNF,Varietà nome,spe:Taxon spe:hasTaxonSpecification spe:Variety
+RBNG,Varietà autore,spe:TaxonSpecification lite:hasAuthor l0:Agent
+RBNH,Forma nome,spe:ClassificationInTime spe:hasTaxon spe:BotanicalForm
+RBNI,Forma autore,spe:BotanicalForm lite:hasAuthor l0:Agent
+RBNL,Cultivar,spe:ClassificationInTime spe:hasTaxon spe:Cultivar
+RBA,Note,core:Taxon core:note rdfs:Literal 
+RBD,DATA REVISIONE,a-cd:Review ti:atTime ti:TimeInterval
+RBDB,Da,a-cd:Review ti:atTime ti:TimeInterval
+RBDC,Validità,a-cd:Review ti:atTime ti:TimeInterval
+RBDD,A,a-cd:Review ti:atTime ti:TimeInterval
+RBDE,Validità,a-cd:Review ti:atTime ti:TimeInterval
+RBDF,Data esatta,a-cd:Review ti:atTime ti:TimeInterval
+,,
+BNM,Definizione,
+SM,SISTEMATICA MINERALI,
+SMN,NOMENCLATURA,spe:Specimen core:hasClassificationInTime core:ClassificationInTime
+SMNA,Specie (nome italiano),core:ClassificationInTime core:hasTaxon spe:MineralSpecies
+SMNI,Specie (I.M.A.),core:ClassificationInTime core:hasTaxon spe:MineralSpecies
+SMNP,Politipo,spe:MineralTaxon spe:polytype Literal
+SMNV,Varietà,spe:MineralTaxon spe:hasTaxonSpecification spe:TaxonSpecification
+SMNS,Sinonimie,spe:MineralTaxon a-cd:synonym Literal
+SMS,SISTEMATICA,
+SMSD,Classe (New Dana),spe:Specimen core:isClassifiedBy spe:MineralClass
+SMSK,Codice (New Dana),spe:MineralClass spe:NewDanaCode Literal
+SMSC,Classe (Strunz),spe:Specimen core:isClassifiedBy spe:MineralClass
+SMSS,Sottoclasse (Strunz),spe:Specimen core:isClassifiedBy spe:MineralSubclass
+SMSX,Codice (Strunz),spe:MineralClass spe:StrunzCode Literal
+SMSG,Gruppo (I.M.A.),spe:MineralSpecies spe:IMACode Literal
+RM,ALTRE ATTRIBUZIONI,
+RMD,DATI,
+RMDT,Tipologia,
+RMDA,Autore,core:ClassificationInTime core:InvolvesAgent l0:Agent
+RMN,NOMENCLATURA,
+RMNA,Specie (nome italiano),spe:Specimen core:isClassifiedBy spe:MineralSpecies
+RMNI,Specie (I.M.A.),spe:Specimen core:isClassifiedBy spe:MineralSpecies
+RMNV,Varietà,spe:MineralTaxon spe:hasTaxonSpecification spe:TaxonSpecification
+RMNP,Politipo,spe:MineralTaxon spe:polytype Literal
+RMNS,Sinonimie,spe:MineralTaxon a-cd:synonym Literal
+RMS,SISTEMATICA,
+RMSD,Classe (New Dana),spe:Specimen core:isClassifiedBy spe:MineralClass
+RMSK,Codice (New Dana),spe:MineralClass spe:NewDanaCode Literal
+RMSC,Classe (Strunz),spe:Specimen core:isClassifiedBy spe:MineralClass
+RMSS,Sottoclasse (Strunz),spe:Specimen core:isClassifiedBy spe:MineralSubclass
+RMSX,Codice (Strunz),spe:MineralClass spe:StrunzCode Literal
+RMSG,Gruppo (I.M.A.),spe:MineralSpecies spe:IMACode Literal
+,,
+BNP,Definizione,
+SP,SISTEMATICA - PALEONTOLOGIA,
+SPS,SISTEMATICA,
+SPSP,Regno,core:ClassificationInTime core:hasTaxon spe:BiologicalKingdom
+SPSH,Phylum/ Divisione,spe:BiologicalKingdom core:hasDirectLowerRank spe:BiologicalPhylum
+SPSB,Classe,spe:BiologicalPhylum core:hasDirectLowerRank spe:BiologicalClass
+SPSO,Ordine,spe:BiologicalClass core:hasDirectLowerRank spe:BiologicalOrder
+SPSF,Famiglia,spe:BiologicalOrder core:hasDirectLowerRank spe:BiologicalFamily
+SPSR,Genere,spe:BiologicalFamily core:hasDirectLowerRank spe:BiologicalGenus
+SPSS,Specie,spe:BiologicalGenus core:hasDirectLowerRank spe:BiologicalSpecies
+SPSD,Autore e anno specie,spe:BiologicalSpecies lite:hasAuthor l0:Agent; ti:atTime ti:TimeInterval
+SPST,Sottospecie,spe:BiologicalSpecies core:hasDirectLowerRank spe:BiologicalSubspecies
+SPSA,Autore e anno sottospecie,spe:BiologicalSubspecies lite:hasAuthor l0:Agent; ti:atTime ti:TimeInterval
+SPSL,Determinatore/ Revisore,core:ClassificationInTime core:involvesAgent l0:Agent
+SPSC,Data determinazione/ Revisione,core:ClassificationInTime ti:atTime ti:TimeInterval
+SPV,Nome volgare,spe:BiologicalTaxon core:synonym SPV
+,,
+BNPE,Definizione,
+SR,SISTEMATICA-PETROLOGIA,
+SRN,CLASSIFICAZIONE,spe:Specimen core:hasClassificationInTime core:ClassificationInTime
+SRNT,Tipo litologico,core:ClassificationInTime core:hasTaxon spe:LithologicType
+SRNP,Nome petrografico,spe:LithologicType core:hasDirectLowerRank spe:RockType (en)
+SRNR,Nome petrografico (IUGS),spe:LithologicType core:hasDirectLowerRank spe:RockType (it)
+SRNV,Varietà,spe:PetralogicTaxon spe:hasTaxonSpecification spe:Variety
+SRNC,Nome commerciale,spe:PetrologicTaxon core:synonym SRNC
+SRNN,Altro nome,spe:PetrologicTaxon core:synonym SRNN
+RR,ALTRE ATTRIBUZIONI,
+RRD,DATI,
+RRDT,Tipologia,
+RRDA,Autore,spe:PetrologicTaxon lite:hasAuthor l0:Agent
+RRN,CLASSIFICAZIONE,core:ClassificationInTime core:hasTaxon spe:PetrologicTaxon
+RRNT,Tipo litologico,core:ClassificationInTime core:hasTaxon spe:LithologicType
+RRNP,Nome petrografico,spe:LithologicType core:hasDirectLowerRank spe:RockType (en)
+RRNR,Nome petrografico (IUGS),spe:LithologicType core:hasDirectLowerRank spe:RockType (it)
+RRNV,Varietà,spe:PetralogicTaxon core:hasTaxonSpecification core:TaxonSpecification
+RRNC,Nome commerciale,spe:PetrologicTaxon core:synonym RRNC
+RRNN,Altro nome,spe:PetrologicTaxon core:synonym RRNN
+,,
+BNPL,Definizione,
+SP,SISTEMATICA METEORITI,
+SPN,NOMENCLATURA,spe:Specimen core:hasClassificationInTime core:ClassificationInTime
+SPNN,Nome,core:ClassificationInTime core:hasTaxon spe:PlanetologicSpecies
+SPNE,Genere,core:ClassificationInTime core:hasTaxon spe:PlanetologicGenus
+SPNC,Classe,spe:PlanetologicGenus core:hasDirectLowerRank spe:PlanetologicClass
+SPNG,Gruppo,spe:PlanetologicClass core:hasDirectLowerRank spe:PlanetologicGroup
+SPNT,Tipo petrologico,
+RP,ALTRE ATTRIBUZIONI,
+RPV,DATI REVISIONE,
+RPVT,Tipologia,
+RPVA,Autore,spe:PlanetologicTaxon lite:hasAuthor l0:Agent
+RPN,NOMENCLATURA,spe:Specimen core:hasClassificationInTime core:ClassificationInTime
+RPNN,Nome,core:ClassificationInTime core:hasTaxon spe:PlanetologicSpecies
+RPNE,Genere,core:ClassificationInTime core:hasTaxon spe:PlanetologicGenus
+RPNC,Classe,spe:PlanetologicGenus core:hasDirectLowerRank spe:PlanetologicClass
+RPNG,Gruppo,spe:PlanetologicClass core:hasDirectLowerRank spe:PlanetologicGroup
+RPNT,Tipo petrologico,
+,,
+BNZ,Definizione,
+SZ,SISTEMATICA - ZOOLOGIA,
+SZS,SISTEMATICA,
+SZSP,Phylum,core:ClassificationInTime core:hasTaxon spe:BiologicalPhylum
+SZSB,Classe,spe:BiologicalPhyum core:hasDirectLowerRank spe:BiologicalClass
+SZSO,Ordine,spe:BiologicalClass core:hasDirectLowerRank spe:BiologicalOrder
+SZSF,Famiglia,spe:BiologicalOrder core:hasDirectLowerRank spe:BiologicalFamily
+SZSR,Genere,spe:BiologicalFamily core:hasDirectLowerRank spe:BiologicalGenus
+SZSS,Specie,spe:BiologicalGenus core:hasDirectLowerRank spe:BiologicalSpecies
+SZSD,Autore e anno specie,spe:BiologicalSpecies lite:hasAuthor l0:Agent
+SZSX,Subspecie,spe:BiologicalSpecies core:hasDirectLowerRank spe:BiologicalSubspecies
+SZSE,Autore e anno subspecie,spe:BiologicalSubspecies lite:hasAuthor l0:Author
+SZSA,Altri taxa,spe:ClassificationInTime core:hasTaxon spe:BiologicalTaxon
+SZSG,Grado di indeterminazione,
+SZSL,Determinatore/ Revisore,
+SZSC,Data determinazione/ Revisione,
+SZSN,Sinonimie,spe:BiologicalTaxon core:synonym SZSN

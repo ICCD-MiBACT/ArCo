@@ -1,0 +1,297 @@
+@prefix : <https://w3id.org/arco/test/2.0/TechnicalStatus#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/arco/test/2.0/TechnicalStatus> .
+
+<https://w3id.org/arco/test/2.0/TechnicalStatus> rdf:type owl:Ontology ;
+                                                  owl:versionIRI <https://w3id.org/arco/test/2.0/TechnicalStatus> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ontologydesignpatterns.org/opla/isNativeTo
+<http://ontologydesignpatterns.org/opla/isNativeTo> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+<https://w3id.org/arco/ontology/catalogue/iccdNormTag> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/hasConcept
+<https://w3id.org/arco/ontology/core/hasConcept> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/hasEventOrSituationInTime
+<https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/involves
+<https://w3id.org/arco/ontology/core/involves> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isConceptOf
+<https://w3id.org/arco/ontology/core/isConceptOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf
+<https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/classifiesCharacteristic
+<https://w3id.org/arco/ontology/denotative-description/classifiesCharacteristic> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isConceptOf> ;
+                                                                                 owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isCharacteristicClassifiedBy> ;
+                                                                                 rdfs:domain <https://w3id.org/arco/ontology/denotative-description/TechnicalConcept> ;
+                                                                                 rdfs:range <https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic> ;
+                                                                                 <http://ontologydesignpatterns.org/opla/isNativeTo> <https://w3id.org/arco/pattern/technical-characteristic/> ;
+                                                                                 rdfs:comment "Questa proprietà, inversa a \"è caratteristica classificata da\", collega un concetto tecnico a una caratteristica tecnica di un'entità - come un bene culturale."@it ,
+                                                                                              "This property connects a techical concept to an entity's technical characteristic. It is the inverse property of isCharacteristicClassifiedBy."@en ;
+                                                                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                 rdfs:label "classifica caratteristica tecnica"@it ,
+                                                                                            "classifies technical characteristic"@en ;
+                                                                                 owl:versionInfo "stabile"@it ,
+                                                                                                 "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus
+<https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus> rdf:type owl:ObjectProperty ;
+                                                                           rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasEventOrSituationInTime> ;
+                                                                           owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf> ;
+                                                                           rdfs:domain owl:Thing ;
+                                                                           rdfs:range <https://w3id.org/arco/ontology/denotative-description/TechnicalStatus> ;
+                                                                           rdfs:comment "Questa proprietà collega un'entità culturale al suo stato tecnico, valido fino a determinato momento, che è rappresentato dalle caratteristiche tecniche che il bene culturale ha in quel momento."@it ,
+                                                                                        "This property connects a cultural entity to its technical status, valid until a specific moment, that is represented by the technical characteristics that a cultural entity has in that moment."@en ;
+                                                                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                           rdfs:label "ha stato tecnico"@it ,
+                                                                                      "has technical status"@en ;
+                                                                           owl:versionInfo "stabile"@it ,
+                                                                                           "stable"@en ;
+                                                                           <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; DA/APF/APFE" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic
+<https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic> rdf:type owl:ObjectProperty ;
+                                                                                        owl:inverseOf <https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus> ;
+                                                                                        rdfs:domain <https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus> ;
+                                                                                        rdfs:range <https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic> ;
+                                                                                        <http://ontologydesignpatterns.org/opla/isNativeTo> <https://w3id.org/arco/pattern/technical-characteristic/> ;
+                                                                                        rdfs:comment "Questa proprietà collega lo stato tecnico di un'entità culturale a una delle caratteristiche tecniche dell'entità relativamente a quello stato."@it ,
+                                                                                                     "This property connects a technical status, with respect to a specific entity (as a cultural entity) to one of the technical characteristics related to that status."@en ;
+                                                                                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                        rdfs:label "include caratteristica tecnica"@it ,
+                                                                                                   "includes technical characteristic"@en ;
+                                                                                        owl:versionInfo "stabile"@it ,
+                                                                                                        "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isCharacteristicClassifiedBy
+<https://w3id.org/arco/ontology/denotative-description/isCharacteristicClassifiedBy> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasConcept> ;
+                                                                                     rdfs:domain <https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic> ;
+                                                                                     rdfs:range <https://w3id.org/arco/ontology/denotative-description/TechnicalConcept> ;
+                                                                                     <http://ontologydesignpatterns.org/opla/isNativeTo> <https://w3id.org/arco/pattern/technical-characteristic/> ;
+                                                                                     rdfs:comment "Questa proprietà collega una caratteristica tecnica di un'entità - come un bene culturale - a un concetto tecnico, che la classifica."@it ,
+                                                                                                  "This property connects an entity's techincal characteristic to a technical concept, which classifies that characteristic."@en ;
+                                                                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                     rdfs:label "is technical characteristic classified by"@en ,
+                                                                                                "è caratteristica tecnica classificata da"@it ;
+                                                                                     owl:versionInfo "stabile"@it ,
+                                                                                                     "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus
+<https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus> rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:domain <https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic> ;
+                                                                                    rdfs:range <https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus> ;
+                                                                                    <http://ontologydesignpatterns.org/opla/isNativeTo> <https://w3id.org/arco/pattern/technical-characteristic/> ;
+                                                                                    rdfs:comment "Questa proprietà, inversa a \"include caratteristica tecnica\", collega una caratteristica tecnica specifica (es.: marmo) allo stato di un'entità culturale che ha quella caratteristica."@it ,
+                                                                                                 "This property relates a technical characteristic (e.g. marble) to the status of a cultural entity that includes that characteristic."@en ;
+                                                                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                    rdfs:label "is included in technical status"@en ,
+                                                                                               "è inclusa in stato tecnico"@it ;
+                                                                                    owl:versionInfo "stabile"@it ,
+                                                                                                    "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf
+<https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/isEventOrSituationInTimeOf> ;
+                                                                            rdfs:domain <https://w3id.org/arco/ontology/denotative-description/TechnicalStatus> ;
+                                                                            rdfs:range owl:Thing ;
+                                                                            rdfs:comment "Questa proprietà collega uno stato tecnico di un'entità culturale a un'entità culturale. Lo stato è valido fino a determinato momento ed è rappresentato dalle caratteristiche tecniche che il bene culturale ha in quel momento."@it ,
+                                                                                         "This property connects a technical status to a cultural entity. This status is valid until a specific moment and is represented by the technical characteristics that a cultural entity has in that moment."@en ;
+                                                                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                            rdfs:label "is technical status of"@en ,
+                                                                                       "è stato tecnico di"@it ;
+                                                                            owl:versionInfo "stabile"@it ,
+                                                                                            "stable"@en .
+
+
+###  https://w3id.org/italia/onto/TI/atTime
+<https://w3id.org/italia/onto/TI/atTime> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/italia/onto/TI/hasTemporalEntity
+<https://w3id.org/italia/onto/TI/hasTemporalEntity> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/current
+<https://w3id.org/arco/ontology/core/current> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain owl:Thing ;
+                                              rdfs:range xsd:boolean ;
+                                              rdfs:comment "Questa porprietà indica se i dati relativi all'istanza di un pattern sono attuali o no."@it ,
+                                                           "This property indicates if data releated to an instance of a pattern is current or not"@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                              rdfs:label "attuale"@it ,
+                                                         "current"@en ;
+                                              owl:versionInfo "instabile"@it ,
+                                                              "unstable"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/arco/ontology/core/EventOrSituationInTime
+<https://w3id.org/arco/ontology/core/EventOrSituationInTime> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/italia/onto/l0/EventOrSituation> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/arco/ontology/core/involves> ;
+                                                                               owl:someValuesFrom owl:Thing
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                               owl:someValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/italia/onto/TI/atTime> ;
+                                                                               owl:allValuesFrom <https://w3id.org/italia/onto/TI/TimeInterval>
+                                                                             ] ;
+                                                             rdfs:comment "La classe che rappresenta una situazione o un evento nel tempo."@it ,
+                                                                          "The class that models a situation or an event in time."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/core> ;
+                                                             rdfs:label "Event or situation in time"@en ,
+                                                                        "Evento o situazione nel tempo"@it .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus
+<https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic
+<https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <https://w3id.org/italia/onto/l0/Characteristic> ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isCharacteristicClassifiedBy> ;
+                                                                                                  owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/TechnicalConcept>
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus> ;
+                                                                                                  owl:allValuesFrom <https://w3id.org/arco/ontology/denotative-description/TechnicalStatus>
+                                                                                                ] ;
+                                                                                <http://ontologydesignpatterns.org/opla/isNativeTo> <https://w3id.org/arco/pattern/technical-characteristic/> ;
+                                                                                rdfs:comment "Questa classe rappresenta una caratteristica tecnica relativa a un bene culturale. Per esempio, può rappresentare una particolare materia di cui è composto, la tecnica con cui è stato realizzato, la sua forma, il suo colore. Ogni caratteristica tecnica utilizza è definito da un concetto (es.: \"terracotta\" è una caratteristica tecnica definita dal concetto \"materia\", relativamente a un bene culturale). Per ogni tipologia di bene culturale possono essere rilevati e registrate caratteristiche tecnice specifiche."@it ,
+                                                                                             "This class represents a characteristic of a cultural property. For example it can represent a cultural property's particular costituent material or the technique with which it was made or its shape or color. Each technical characteristic is classified by a concept (i.e. \"clay\" is a techical characteristic classified by the technical concept \"material\" related to a cultural property). For each cultural property typology can be registered some specific technical characteristics."@en ;
+                                                                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/denotative-description> ;
+                                                                                rdfs:label "Caratteristica tecnica"@it ,
+                                                                                           "Technical Characteristic"@en ;
+                                                                                owl:versionInfo "stabile"@it ,
+                                                                                                "stable"@en ;
+                                                                                <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;" .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/TechnicalConcept
+<https://w3id.org/arco/ontology/denotative-description/TechnicalConcept> rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/TechnicalStatus
+<https://w3id.org/arco/ontology/denotative-description/TechnicalStatus> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <https://w3id.org/arco/ontology/core/EventOrSituationInTime> ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic>
+                                                                                        ] ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusOf> ;
+                                                                                          owl:someValuesFrom owl:Thing
+                                                                                        ] ;
+                                                                        <http://purl.org/dc/elements/1.1/description> """An example of usage of the class 'Technical status' is the following:
+resource:TechnicalStatus/0900281817-4
+        a           a-dd:TechnicalStatus ;
+        rdfs:label  \"Technical status of cultural property 0900281817-4\"@en ;
+        a-dd:includesTechnicalCharacteristic
+                resource:TechnicalCharacteristic/centinato, resource:TechnicalCharacteristic/stone-sculpture .
+
+resource:TechnicalCharacteristic/stone-sculpture
+        a                    a-dd:TechnicalCharacteristic ;
+        rdfs:label           \"stone/ sculpture\" ;
+        a-dd:isCharacteristicClassifiedBy  a-dd:MaterialOrTechnique ."""@en ,
+                                                                                                                      """Un esempio d'uso della classe \"Stato tecnico\" è il seguente:
+resource:TechnicalStatus/0900281817-4
+        a           a-dd:TechnicalStatus ;
+        rdfs:label  \"Technical status of cultural property 0900281817-4\"@en ;
+        a-dd:includesTechnicalCharacteristic
+                resource:TechnicalCharacteristic/centinato, resource:TechnicalCharacteristic/stone-sculpture .
+
+resource:TechnicalCharacteristic/stone-sculpture
+        a                    a-dd:TechnicalCharacteristic ;
+        rdfs:label           \"stone/ sculpture\" ;
+        a-dd:isCharacteristicClassifiedBy  a-dd:MaterialOrTechnique ."""@it ;
+                                                                        rdfs:comment "Questa classe rappresenta lo stato tecnico di un'entità, cioè una situazione in cui un'entità ha associate una serie di caratteristiche tecniche. Lo stato di un'entità ha associata una validità temporale, relativa al momento in cui quelle caratteristiche sono state rilevate."@it ,
+                                                                                     "This class represents the technical status of an entity, that is a situation in which the entity is associated to technical characteristics. The technical status has a temporal validity, related to the moment when the characteristics were observed."@en ;
+                                                                        rdfs:label "Stato tecnico"@it ,
+                                                                                   "Technical status"@en ;
+                                                                        owl:versionInfo "stabile"@it ,
+                                                                                        "stable"@en ;
+                                                                        <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; DA/APF/APFE" .
+
+
+###  https://w3id.org/italia/onto/TI/TemporalEntity
+<https://w3id.org/italia/onto/TI/TemporalEntity> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeInterval
+<https://w3id.org/italia/onto/TI/TimeInterval> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/Characteristic
+<https://w3id.org/italia/onto/l0/Characteristic> rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/l0/EventOrSituation
+<https://w3id.org/italia/onto/l0/EventOrSituation> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/arco/ontology/denotative-description/Material
+<https://w3id.org/arco/ontology/denotative-description/Material> rdf:type owl:NamedIndividual ,
+                                                                          <https://w3id.org/arco/ontology/denotative-description/TechnicalConcept> ;
+                                                                 rdfs:comment "Questo individuo rappresenta la materia con cui è realizzato un oggetto, per esempio un bene culturale."@it ,
+                                                                              "This individual represents the material through which an object has been realized, e.g. a cultural entity."@en ;
+                                                                 rdfs:label "Materia"@it ,
+                                                                            "Material"@en ;
+                                                                 owl:versionInfo "stabile"@it ,
+                                                                                 "stable"@en ;
+                                                                 <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; ICCD Normativa VeAC: MT/MTC/MTCF" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,21 @@
+Acronimo,Definizione,
+AI,DOCUMENTO AUDIO INTEGRATIVO,
+AIR,RACCOLTA,cis:CulturalEntity a-cd:isMemberInvolvedIn a-cd:CollectionMembership
+AIRD,Denominazione,a-cd:CollectionMembership a-cd:hasCollection cis:CollectionCultEnt
+AIRN,Catena numerica,a-cd:CollectionMembership l0:positionInSequence rdfs:Literal
+AIS,DISCO,cis:CulturalEntity a-cd:isMemberInvolvedIn a-cd:CollectionMembership
+AIST,Titolo,a-cd:CollectionMembership a-cd:hasCollection cis:CollectionCultEnt
+AISN,Numero del brano,a-cd:CollectionMembership l0:positionInSequence rdfs:Literal
+DU,DOCUMENTO AUDIO,
+DUR,RACCOLTA,cis:CulturalEntity a-cd:isMemberInvolvedIn a-cd:CollectionMembership
+DURD,Denominazione,a-cd:CollectionMembership a-cd:hasCollection cis:CollectionCultEnt
+DURN,Catena numerica,a-cd:CollectionMembership l0:positionInSequence rdfs:Literal
+DUS,DISCO,cis:CulturalEntity a-cd:isMemberInvolvedIn a-cd:CollectionMembership
+DUST,Titolo,a-cd:CollectionMembership a-cd:hasCollection cis:CollectionCultEnt
+DUSN,Numero del brano,a-cd:CollectionMembership l0:positionInSequence rdfs:Literal
+VI,DOCUMENTO VIDEO-CINEMATOGRAFICO INTEGRATIVO,
+VIR,RACCOLTA,cis:CulturalEntity a-cd:isMemberInvolvedIn a-cd:CollectionMembership
+VIRD,Denominazione,a-cd:CollectionMembership a-cd:hasCollection cis:CollectionCultEnt
+VIRN,Catena numerica,a-cd:CollectionMembership l0:positionInSequence rdfs:Literal
+VIV,PRODOTTO VIDEO-CINEMATOGRAFICO,cis:CulturalEntity a-cd:isMemberInvolvedIn a-cd:CollectionMembership
+VIVT,Titolo,a-cd:CollectionMembership a-cd:hasCollection cis:CollectionCultEnt
