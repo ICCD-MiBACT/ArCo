@@ -41,9 +41,14 @@
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedclassification.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
+        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Luigi Asprino (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Letizia Mancinelli (MiBAC, ICCD)</dc:creator>
+        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
         <dc:description xml:lang="it">Questo è il modulo della descrizione dei campioni naturalistici. Qui si modellano informazioni specifiche relative alla descrizione di campioni naturalistici.</dc:description>
         <dc:description xml:lang="en">The Natural Specimen Description module is the ontology describing information about natural specimens.</dc:description>
@@ -55,7 +60,7 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
         <terms:modified>2023-12-06</terms:modified>
-        <rdfs:comment xml:lang="it">Questo è il modulo dei Beni naturalistici. Qui si modellano informazioni specifiche relative ai campioni naturalistici.
+        <rdfs:comment xml:lang="it">Questo è il modulo dei Beni Mobili. Qui si modellano informazioni specifiche relative ai beni mobili.
 In questo modulo sono riusati come template i seguenti Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/partof.owl
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl
