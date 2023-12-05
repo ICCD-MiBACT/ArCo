@@ -10,7 +10,7 @@ Folders contain:
 ## Cross-domain patterns
 The cross-domain patterns documentation is attached in the testing folder, available at 
 
-[<img src="https://dabuttonfactory.com/button.png?t=Pattern+documentation&f=Open+Sans-Bold&ts=16&tc=000&hp=15&vp=10&c=11&bgt=unicolored&bgc=f3f3f3&bs=1&bc=fff">](ArCo-release/test/2.0)
+[<img src="https://dabuttonfactory.com/button.png?t=Pattern+documentation&f=Open+Sans-Bold&ts=16&tc=000&hp=15&vp=10&c=11&bgt=unicolored&bgc=f3f3f3&bs=1&bc=fff">](https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/2.0)
 
 Folders contain: 
 - updated ontology pattern diagrams
