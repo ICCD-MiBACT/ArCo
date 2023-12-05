@@ -8,4 +8,4 @@
 ex:acquisizionex core:hasAgentRole ex:agentrole1 .
 ex:agentrole1 core:hasAgent ex:agentx ;
 core:hasRole ex:acquirente .
-}
+
