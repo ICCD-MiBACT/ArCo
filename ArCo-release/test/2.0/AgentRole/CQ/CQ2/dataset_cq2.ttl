@@ -5,9 +5,7 @@
 @prefix arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix core: <https://w3id.org/arco/ontology/core/> .
 
-ex:cp1 a arco:MusicHeritage ;
-a-dd:hasAccessory ex:accessory1 .
-ex:accessory1 core:hasType ex:accessoryType1 .
-ex:cp2 a arco:NaturalHeritage ;
-a-dd:hasAccessory ex:accessory2 .
-ex:accessory2 core:hasType ex:accessoryType2 .
+ex:acquisizionex core:hasAgentRole ex:agentrole1 .
+ex:agentrole1 core:hasAgent ex:agentx ;
+core:hasRole ex:acquirente .
+}
