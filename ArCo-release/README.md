@@ -5,7 +5,7 @@ ArCo is an initiative of ICCD (Istituto Centrale per il Catalogo e la Documentaz
 Notice: this release mainly contains documentation in Italian. In the future we will also add the English version.
 
 # Documentation
-The ontology network documentation focusing on patterns can be found here [<kbd> <br> CHECK THE DOCUMENTATION <br> </kbd>](https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/Documentation)
+The ontology network documentation focusing on patterns can be found here: [ontology patterns documentation](https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/Documentation)
 
 # Release
 This release is a package containing:
