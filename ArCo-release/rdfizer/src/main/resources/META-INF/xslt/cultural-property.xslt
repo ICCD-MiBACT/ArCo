@@ -306,8 +306,7 @@
                 </xsl:attribute>
 				<arco-core:describes>
 					<xsl:attribute name="rdf:resource">
-                        <xsl:value-of
-						select="$culturalProperty" />
+                        <xsl:value-of select="$culturalProperty" />
                     </xsl:attribute>
 				</arco-core:describes>
 				<arco-catalogue:lastUpdateDate>
@@ -2694,12 +2693,12 @@
 					<xsl:when test="record/metadata/schede/harvesting/enteCompetente">
 						<arco-core:hasAgentRole>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
 							</xsl:attribute>
 						</arco-core:hasAgentRole>
 						<arco-cd:hasResponsibility>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
 							</xsl:attribute>
 						</arco-cd:hasResponsibility>
 						<arco-lite:hasHeritageProtectionAgency>
@@ -2713,12 +2712,12 @@
 							<xsl:if test=".">
 								<arco-core:hasAgentRole>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
 									</xsl:attribute>
 								</arco-core:hasAgentRole>
 								<arco-cd:hasResponsibility>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
 									</xsl:attribute>
 								</arco-cd:hasResponsibility>
 								<arco-lite:hasHeritageProtectionAgency>
@@ -3147,6 +3146,9 @@
 							<xsl:when test="./BIBA and ./BIBD">
 								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:arcofy(normalize-space(./BIBA)), arco-fn:arcofy(normalize-space(./BIBD)))" />
 							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:arcofy(normalize-space(.)))" />
+							</xsl:otherwise>
 	                	</xsl:choose>
 					</xsl:variable>
 					<arco-cd:hasBibliographicSource>
@@ -4929,17 +4931,7 @@
 					<xsl:for-each select="record/metadata/schede/*/RE/RCG">
 						<arco-cd:hasSurvey>
 							<xsl:attribute name="rdf:resource">
-							<xsl:choose>
-								<xsl:when test="./RCGJ">
-                					<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', 'rcg-', arco-fn:urify(./RCGJ), '-', arco-fn:urify(./RCGH))" />
-                				</xsl:when>
-								<xsl:when test="./RCGH">
-                					<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', 'rcg-', arco-fn:urify($esc), '-', arco-fn:urify(./RCGH))" />
-                				</xsl:when>
-                				<xsl:otherwise>
-                					<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', $itemURI, '-survey-rcg-', position())" />
-                				</xsl:otherwise>
-                			</xsl:choose>
+								<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', $itemURI, '-survey-', position())" />
                 			</xsl:attribute>
                 		</arco-cd:hasSurvey>
 					</xsl:for-each>

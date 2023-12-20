@@ -800,6 +800,14 @@
 								</arco-location:hasCadastralEntity>
 							</xsl:for-each>
 						</xsl:if>
+						<!-- Legal situation of cadastral identity -->
+						<xsl:if test="./CSSP and (not(starts-with(lower-case(normalize-space(./CSSP)), 'nr')) and not(starts-with(lower-case(normalize-space(./CSSP)), 'n.r')))">
+							<arco-cd:hasLegalSituation>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'LegalSituation/', $itemURI, '-cadastral-historical-legal-situation-', position())" />
+								</xsl:attribute>
+							</arco-cd:hasLegalSituation>
+						</xsl:if>
 						<!-- Note -->
 						<xsl:if test="./CSSS and (not(starts-with(lower-case(normalize-space(./CSSS)), 'nr')) and not(starts-with(lower-case(normalize-space(./CSSS)), 'n.r')))">
 							<arco-core:note>
@@ -1084,6 +1092,14 @@
 								<xsl:value-of select="concat($NS, 'CadastralUnitCollection/', $itemURI, '-', arco-fn:urify(./LGCR))" />
 							</xsl:attribute>
 						</arco-location:hasCadastralEntity>
+					</xsl:if>
+					<!-- Legal situation of cadastral identity -->
+					<xsl:if test="./LGCO">
+						<arco-cd:hasLegalSituation>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'LegalSituation/', $itemURI, '-cadastral-legal-situation-', $parentPosition)" />
+							</xsl:attribute>
+						</arco-cd:hasLegalSituation>
 					</xsl:if>
 				</rdf:Description>
 				<!-- City and cadastre -->

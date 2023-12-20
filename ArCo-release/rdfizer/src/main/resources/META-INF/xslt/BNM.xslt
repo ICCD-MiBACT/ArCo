@@ -4394,6 +4394,12 @@
 				<arco-lite:bibliographicReference>
 					<xsl:value-of select="normalize-space(.)" />
 				</arco-lite:bibliographicReference>
+				<!-- deprecated -->
+				<arco-cd:hasBibliography>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-geological-context-bibliography-', position())" />
+					</xsl:attribute>
+				</arco-cd:hasBibliography>
 			</xsl:for-each>
 			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC">
 				<arco-core:description>
@@ -4452,6 +4458,12 @@
 				<arco-lite:bibliographicReference>
 					<xsl:value-of select="normalize-space(.)" />
 				</arco-lite:bibliographicReference>
+				<!-- deprecated -->
+				<arco-cd:hasBibliography>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-geological-context-bibliography-', position())" />
+					</xsl:attribute>
+				</arco-cd:hasBibliography>
 			</xsl:for-each>
 			<xsl:if test="record/metadata/schede/*/ET/ETA/ETAC">
 				<arco-core:description>
@@ -5998,12 +6010,12 @@
 			</l0:name>
 			<arco-dd:hasMeasurement>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IM/IMA/IMAS))" />
+					<xsl:value-of select="concat($NS, 'Measurement/Stratum/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAS))" />
 				</xsl:attribute>
 			</arco-dd:hasMeasurement>
 		</rdf:Description>
 		<rdf:Description>
-			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IM/IMA/IMAS))" />
+			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Stratum/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAS))" />
 			<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="concat('Measurement of stratum: ', $itemURI)" />
@@ -6086,12 +6098,12 @@
 			</l0:name>
 			<arco-dd:hasMeasurement>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IR/IRA/IRAS))" />
+					<xsl:value-of select="concat($NS, 'Measurement/Stratum/', arco-fn:urify(record/metadata/schede/*/IR/IRA/IRAS))" />
 				</xsl:attribute>
 			</arco-dd:hasMeasurement>
 		</rdf:Description>
 		<rdf:Description>
-			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IR/IRA/IRAS))" />
+			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Stratum/', arco-fn:urify(record/metadata/schede/*/IR/IRA/IRAS))" />
 			<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="concat('Measurement of stratum: ', (record/metadata/schede/*/IR/IRA/IRAS))" />

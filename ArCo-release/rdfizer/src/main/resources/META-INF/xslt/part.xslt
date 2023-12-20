@@ -156,6 +156,8 @@
 							 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 							 	</xsl:attribute>
 								<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+								<!-- deprecated -->
+								<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 								<arco-dd:hasConservationStatus>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="$conservationStatus" />
@@ -192,6 +194,8 @@
 						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-dd:hasConservationStatus>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="$conservationStatus" />
@@ -255,6 +259,8 @@
 							<xsl:value-of select="$part" />
 						</xsl:attribute>
 						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+						<!-- deprecated -->
+						<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 						<rdfs:label>
 							<xsl:value-of select="$partLabel" />
 						</rdfs:label>
@@ -388,6 +394,8 @@
 								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-dd:hasProtectiveMeasure>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="$protectiveMeasure" />
@@ -429,6 +437,8 @@
 								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-dd:hasProtectiveMeasure>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="$protectiveMeasure" />
@@ -461,6 +471,8 @@
 						<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MTCP)))" />
 					</xsl:attribute>
 					<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+					<!-- deprecated -->
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(./MTCP)" />
 					</rdfs:label>
@@ -667,6 +679,8 @@
 							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-', arco-fn:urify(normalize-space(./INVP)))" />
 						</xsl:attribute>
 						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+						<!-- deprecated -->
+						<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./INVP)" />
 						</rdfs:label>
@@ -700,6 +714,8 @@
 						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-cd:hasDating>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', $parentPosition)" />
@@ -810,6 +826,8 @@
 								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-cd:hasIntervention>
 								<xsl:choose>
 									<xsl:when test="contains(normalize-space(lower-case(../RSTI)), 'consolidamento') or contains(normalize-space(lower-case(../RSTI)), 'controllo microclimatico') or contains(normalize-space(lower-case(../RSTI)), 'trattamento biocida-disinfestazione') or contains(normalize-space(lower-case(../RSTI)), 'rimozione di elementi non originali') or contains(normalize-space(lower-case(../RSTI)), 'pulitura meccanica') or contains(normalize-space(lower-case(../RSTI)), 'pulitura chimica') or contains(normalize-space(lower-case(../RSTI)), 'protezione finale') or contains(normalize-space(lower-case(../RSTI)), 'riadesione parti') or contains(normalize-space(lower-case(../RSTI)), 'trattamento parti metalliche')">
@@ -850,6 +868,8 @@
 								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-cd:hasIntervention>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'ConservationIntervention/', $itemURI, '-conservation-intervention-', $parentPosition)" />
@@ -889,6 +909,8 @@
 								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-cd:hasUse>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="$use" />
@@ -927,6 +949,8 @@
 								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-cd:hasUse>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="$use" />
@@ -973,6 +997,8 @@
 								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MISP)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-cd:hasMeasurementCollection>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="$measurementCollection" />
@@ -998,6 +1024,8 @@
 								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MISO)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-cd:hasMeasurementCollection>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="$measurementCollection" />
@@ -1131,6 +1159,8 @@
 								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-cd:hasDating>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', $parentPosition)" />
@@ -1222,6 +1252,8 @@
 								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-cd:hasUse>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="$reuse" />
@@ -1253,6 +1285,8 @@
 						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-dd:hasAffixedElement>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="$element" />
@@ -1384,6 +1418,8 @@
 						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./INDP)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+							<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-cd:hasSurvey>
 								<xsl:attribute name="rdf:resource">
         		        			<xsl:value-of select="concat($NS, 'ArchaeometricDiagnosticSurvey/', $itemURI, '-survey-', position())" />
@@ -1401,6 +1437,8 @@
 							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./DECU)))" />
 						</xsl:attribute>
 						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+						<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./DECU)" />
 						</rdfs:label>
@@ -1423,6 +1461,8 @@
 							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./AIDA)))" />
 						</xsl:attribute>
 						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+						<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./AIDA)" />
 						</rdfs:label>
@@ -1486,6 +1526,8 @@
 							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./PRME)))" />
 						</xsl:attribute>
 						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+						<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./PRME)" />
 						</rdfs:label>
@@ -1514,6 +1556,8 @@
 							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./PRIP)))" />
 						</xsl:attribute>
 						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+						<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./PRIP)" />
 						</rdfs:label>
@@ -1535,6 +1579,8 @@
 							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./PRFP)))" />
 						</xsl:attribute>
 						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+						<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./PRFP)" />
 						</rdfs:label>
@@ -1556,6 +1602,8 @@
 							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./PTCE)))" />
 						</xsl:attribute>
 						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+						<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./PTCE)" />
 						</rdfs:label>
@@ -1577,6 +1625,8 @@
 							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./INIE)))" />
 						</xsl:attribute>
 						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+						<!-- deprecated -->
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./INIE)" />
 						</rdfs:label>

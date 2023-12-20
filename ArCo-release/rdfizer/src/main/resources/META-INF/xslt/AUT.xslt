@@ -257,6 +257,7 @@
 					</rdfs:label>
 					<xsl:for-each select="record/metadata/schede/*/CM/CMP/CMPN">
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
+							<!-- deprecated -->
 							<arco-catalogue:hasCatalogueRecordVersionRiT>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-compilation-', arco-fn:arcofy(.))" />
@@ -284,6 +285,7 @@
 						<!-- Referente verifica scientifica -->
 					<xsl:for-each select="record/metadata/schede/*/CM/RSR">
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
+							<!-- deprecated -->
 							<arco-catalogue:hasCatalogueRecordVersionRiT>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
@@ -304,6 +306,7 @@
 						<!-- Funzionario responsabile -->
 					<xsl:for-each select="record/metadata/schede/*/CM/FUR">
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
+							<!-- deprecated -->
 							<arco-catalogue:hasCatalogueRecordVersionRiT>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
@@ -810,6 +813,10 @@
 					<arco-cd:historicalBiographicalInformation>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/NSC)" />
 					</arco-cd:historicalBiographicalInformation>
+					<!-- deprecated -->
+					<arco-cd:historicalInformation>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/NSC)" />
+					</arco-cd:historicalInformation>
 				</xsl:if>
 				<xsl:if test="string-length($sex)">
 					<arco-lite:sexInformation>
@@ -832,6 +839,12 @@
 					<cpv:hasBirthPlace>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'Feature/', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTL))" />
+						</xsl:attribute>
+					</cpv:hasBirthPlace>
+					<!-- deprecated -->
+					<cpv:hasBirthPlace>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Location/', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTL))" />
 						</xsl:attribute>
 					</cpv:hasBirthPlace>
 				</xsl:if>

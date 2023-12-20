@@ -2631,7 +2631,26 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./PRMP)" />
 					</l0:name>
-			</rdf:Description>
+				</rdf:Description>
+				<!-- deprecated -->
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'Position/', arco-fn:urify(normalize-space(./PRFM)))" />
+					</xsl:attribute>
+					<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+				<owl:sameAs>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Arrangement/', arco-fn:urify(normalize-space(./PRMP)))" />
+					</xsl:attribute>
+				</owl:sameAs>
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Position" />
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./PRFM)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./PRFM)" />
+					</l0:name>
+				</rdf:Description>
 			</xsl:if>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/AT/PR/PRI">
@@ -2745,6 +2764,12 @@
 							<xsl:value-of select="concat($NS, 'Arrangement/', arco-fn:urify(normalize-space(./PRFM)))" />
 						</xsl:attribute>
 					</arco-dd:hasArrangement>
+					<!-- deprecated -->
+					<arco-dd:hasPosition>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Position/', arco-fn:urify(normalize-space(./PRFM)))" />
+						</xsl:attribute>
+					</arco-dd:hasPosition>
 				</xsl:if>
 				<xsl:if test="./PRFT">
 					<arco-core:hasType>
@@ -3152,6 +3177,12 @@
 					<arco-lite:bibliographicReference>
 						<xsl:value-of select="normalize-space(./PTCZ)" />
 					</arco-lite:bibliographicReference>
+					<!-- deprecated -->
+					<arco-cd:hasBibliography>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-paleopathology-survey-', position())" />
+						</xsl:attribute>
+					</arco-cd:hasBibliography>
 				</xsl:if>
 				<xsl:if test="./PTCD">
 					<arco-spe:diagnosis>
@@ -3246,6 +3277,12 @@
 					<arco-lite:bibliographicReference>
 						<xsl:value-of select="normalize-space(./INIZ)" />
 					</arco-lite:bibliographicReference>
+					<!-- deprecated -->
+					<arco-cd:hasBibliography>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-survey-', position())" />
+						</xsl:attribute>
+					</arco-cd:hasBibliography>
 				</xsl:if>
 				<xsl:if test="./INID">
 					<tiapit:atTime>

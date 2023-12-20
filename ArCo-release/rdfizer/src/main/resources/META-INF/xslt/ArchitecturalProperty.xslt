@@ -409,6 +409,14 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:for-each>
+			<!-- deprecated -->
+			<xsl:if test="record/metadata/schede/A/FN/FNA">
+				<arco-con:laysOnSoil>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Soil/', $itemURI)" />
+					</xsl:attribute>
+				</arco-con:laysOnSoil>
+			</xsl:if>
 			<!-- Foundation -->
 			<xsl:for-each select="record/metadata/schede/A/FN/FNS">
 				<xsl:choose>	
@@ -876,6 +884,12 @@
 	            			<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 	            		</xsl:attribute>
 	 				</arco-lite:hasMaterial>
+	 				<!-- deprecated -->
+	 				<arco-dd:hasMaterial>
+	 	                <xsl:attribute name="rdf:resource">
+	            			<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+	            		</xsl:attribute>
+	 				</arco-dd:hasMaterial>
 				</xsl:for-each>
 				<xsl:if test="./FNSC">
 					<arco-lite:hasTechnique>
@@ -883,6 +897,12 @@
 			 	   			<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./FNSC)))" />
 						</xsl:attribute>
 	            	</arco-lite:hasTechnique>
+	            	<!-- deprecated -->
+	            	<arco-dd:hasTechnique>
+						<xsl:attribute name="rdf:resource">
+			 	   			<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./FNSC)))" />
+						</xsl:attribute>
+	            	</arco-dd:hasTechnique>
 	            	<arco-dd:hasTechnicalStatus>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'TechnicalStatus/Foundation', $itemURI)" />
@@ -1145,6 +1165,12 @@
 							<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 						</xsl:attribute>
 					</arco-lite:hasMaterial>
+					<!-- deprecated -->
+					<arco-dd:hasMaterial>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+						</xsl:attribute>
+					</arco-dd:hasMaterial>
 				</xsl:for-each>
 				<xsl:if test="./SVCC">
 					<xsl:choose>
@@ -1154,6 +1180,12 @@
 								<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat($svcc, '-', $svcq)))" />
 							</xsl:attribute>
 							</arco-lite:hasTechnique>
+							<!-- deprecated -->
+							<arco-dd:hasTechnique>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat($svcc, '-', $svcq)))" />
+							</xsl:attribute>
+							</arco-dd:hasTechnique>
 						</xsl:when>
 						<xsl:otherwise>
 							<arco-lite:hasTechnique>
@@ -1161,6 +1193,12 @@
 								<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify($svcc))" />
 							</xsl:attribute>
 							</arco-lite:hasTechnique>
+							<!-- deprecated -->
+							<arco-dd:hasTechnique>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify($svcc))" />
+							</xsl:attribute>
+							</arco-dd:hasTechnique>
 						</xsl:otherwise>		
 					</xsl:choose>
 				</xsl:if>
@@ -1357,6 +1395,12 @@
 								<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat($soff, '-', $sofq)))" />
 							</xsl:attribute>
 							</arco-lite:hasShape>
+							<!-- deprecated -->
+							<arco-dd:hasShape>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat($soff, '-', $sofq)))" />
+							</xsl:attribute>
+							</arco-dd:hasShape>
 						</xsl:when>
 						<xsl:otherwise>
 							<arco-lite:hasShape>
@@ -1364,6 +1408,12 @@
 								<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify($soff))" />
 							</xsl:attribute>
 							</arco-lite:hasShape>
+							<!-- deprecated -->
+							<arco-dd:hasShape>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify($soff))" />
+							</xsl:attribute>
+							</arco-dd:hasShape>
 						</xsl:otherwise>		
 					</xsl:choose>
 				</xsl:if>
@@ -1405,6 +1455,19 @@
 									</xsl:choose>
 								</xsl:attribute>
 							</arco-lite:hasTechnique>
+							<!-- deprecated -->
+							<arco-dd:hasTechnique>
+								<xsl:attribute name="rdf:resource">
+									<xsl:choose>
+										<xsl:when test="./SOE/SOES[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'non ') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+											<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(concat(string-join(./SOE/SOEC,'-'), '-', string-join(./SOE/SOES,'-')))))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(string-join(./SOE/SOEC,'-'))))" />
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:attribute>
+							</arco-dd:hasTechnique>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:if test="./SOE/SOER">
@@ -1456,6 +1519,21 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</arco-lite:hasTechnique>
+							<!-- deprecated -->
+							<arco-dd:hasTechnique>
+								<xsl:choose>
+									<xsl:when test="./SOE/SOES[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'non ') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(concat(string-join(./SOE/SOEC,'-'), '-', string-join(./SOE/SOES,'-')))))" />
+										</xsl:attribute>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(string-join(./SOE/SOEC,'-'))))" />
+										</xsl:attribute>
+									</xsl:otherwise>
+								</xsl:choose>
+							</arco-dd:hasTechnique>
 						</xsl:if>
 					</rdf:Description>
 					<!-- Technical Status as individual -->
@@ -1680,7 +1758,13 @@
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat(normalize-space(./CPF/CPFF), '-', normalize-space(./CPF/CPFQ))))" />
 									</xsl:attribute>
-								</arco-lite:hasShape>	
+								</arco-lite:hasShape>
+								<!-- deprecated -->	
+								<arco-dd:hasShape>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat(normalize-space(./CPF/CPFF), '-', normalize-space(./CPF/CPFQ))))" />
+									</xsl:attribute>
+								</arco-dd:hasShape>
 							</xsl:when>
 							<xsl:otherwise>
 								<arco-lite:hasShape>
@@ -1688,6 +1772,12 @@
 										<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./CPF/CPFF)))" />
 									</xsl:attribute>
 								</arco-lite:hasShape>
+								<!-- deprecated -->
+								<arco-dd:hasShape>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./CPF/CPFF)))" />
+									</xsl:attribute>
+								</arco-dd:hasShape>
 							</xsl:otherwise>		
 						</xsl:choose>
 					</xsl:if>
@@ -1914,6 +2004,12 @@
 								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 							</xsl:attribute>
 						</arco-lite:hasMaterial>
+						<!-- deprecated -->
+						<arco-dd:hasMaterial>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+							</xsl:attribute>
+						</arco-dd:hasMaterial>
 					</xsl:for-each>
 					<xsl:if test="./CPM/CPMT">
 						<xsl:choose>	
@@ -2177,6 +2273,12 @@
 							<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SCL/SCLF)))" />
 						</xsl:attribute>
 					</arco-lite:hasShape>
+					<!-- deprecated -->
+					<arco-dd:hasShape>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SCL/SCLF)))" />
+						</xsl:attribute>
+					</arco-dd:hasShape>
 					<arco-dd:hasTechnicalStatus>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'TechnicalStatus/Stairs', $itemURI, '-', $parentPosition)" />
@@ -2216,6 +2318,12 @@
 										<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 									</xsl:attribute>
 								</arco-lite:hasTechnique>
+								<!-- deprecated -->
+								<arco-dd:hasTechnique>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+									</xsl:attribute>
+								</arco-dd:hasTechnique>
 								<arco-dd:hasTechnicalStatus>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'TechnicalStatus/Stairs', $itemURI, '-', $parentPosition)" />
@@ -2228,6 +2336,12 @@
 										<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 									</xsl:attribute>
 								</arco-lite:hasMaterial>
+								<!-- deprecated -->
+								<arco-dd:hasMaterial>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+									</xsl:attribute>
+								</arco-dd:hasMaterial>
 								<arco-dd:hasTechnicalStatus>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'TechnicalStatus/Stairs', $itemURI, '-', $parentPosition)" />
@@ -2277,6 +2391,12 @@
 								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 							</xsl:attribute>
 						</arco-lite:hasTechnique>
+						<!-- deprecated -->
+						<arco-dd:hasTechnique>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+							</xsl:attribute>
+						</arco-dd:hasTechnique>
 					</xsl:for-each>
 					<xsl:for-each select="./SCS/SCSM">
 						<arco-dd:hasTechnicalStatus>
@@ -2289,6 +2409,12 @@
 								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 							</xsl:attribute>
 						</arco-lite:hasMaterial>
+						<!-- deprecated -->
+						<arco-dd:hasMaterial>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+							</xsl:attribute>
+						</arco-dd:hasMaterial>
 					</xsl:for-each>
 				</rdf:Description>
 			</xsl:if>
@@ -3709,6 +3835,12 @@
 							<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./FOTC)))" />
 						</xsl:attribute>
 					</arco-lite:hasTechnique>
+					<!-- deprecated -->
+					<arco-dd:hasTechnique>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./FOTC)))" />
+						</xsl:attribute>
+					</arco-dd:hasTechnique>
 				</xsl:if>
 				<xsl:for-each select="./FOTM"><!-- e.g.ICCD14284441  -->
 					<arco-lite:hasMaterial>
@@ -3716,6 +3848,12 @@
 							<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 						</xsl:attribute>
 					</arco-lite:hasMaterial>
+					<!-- deprecated -->
+					<arco-dd:hasMaterial>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+						</xsl:attribute>
+					</arco-dd:hasMaterial>
 				</xsl:for-each>
 				<xsl:if test="./FOTT or ./FOTG">
 					<arco-core:hasType>
@@ -4222,6 +4360,12 @@
 								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./FVPF)))" />
 							</xsl:attribute>
 						</arco-lite:hasShape>
+						<!-- deprecated -->
+						<arco-dd:hasShape>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./FVPF)))" />
+							</xsl:attribute>
+						</arco-dd:hasShape>
 					</xsl:if>
 					<xsl:if test="./FVPS">
 						<arco-con:hasMeasurementCollection>
