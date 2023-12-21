@@ -2457,7 +2457,7 @@
 						<xsl:for-each select="../DESI[not(lower-case(normalize-space())='nr' or lower-case(normalize-space())='n.r.' or lower-case(normalize-space())='nr (recupero pregresso)'  or lower-case(normalize-space())='n.p'  or lower-case(normalize-space())='n.p.' or lower-case(normalize-space())='n. p')]">
 							<arco-core:isClassifiedBy>
 								<xsl:attribute name="rdf:resource">
-        	       					<xsl:value-of select="concat($NS, 'Concept/', arco-fn:arcofy(.))" />
+        	       					<xsl:value-of select="concat($NS, 'Concept/Iconclass-', arco-fn:arcofy(.))" />
 		            	   		</xsl:attribute>
 							</arco-core:isClassifiedBy>
 						</xsl:for-each>
