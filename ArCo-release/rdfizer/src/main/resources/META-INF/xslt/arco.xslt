@@ -23605,14 +23605,21 @@
 						</xsl:if>
 						<xsl:variable name="author">
 							<xsl:choose>
+								<xsl:when test="./AUTB and (not(starts-with(lower-case(normalize-space(./AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTB)), 'n.r')))">
+									<xsl:choose>
+										<xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+											<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTB, '-', ./AUTA)))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUTB))" />
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:when>
 								<xsl:when test="./AUTS and (not(starts-with(lower-case(normalize-space(./AUTS)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTS)), 'n.r')))">
 									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTN, '-', ./AUTS)))" />
 								</xsl:when>
 								<xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
 									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTN, '-', ./AUTA)))" />
-								</xsl:when>
-								 <xsl:when test="./AUTB and (not(starts-with(lower-case(normalize-space(./AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTB)), 'n.r')))">
-									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTN, '-', ./AUTB)))" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUTN))" />
@@ -23653,6 +23660,20 @@
 							</rdf:type>
 							<rdfs:label>
 								<xsl:choose>
+									<xsl:when test="./AUTB and (not(starts-with(lower-case(normalize-space(./AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTB)), 'n.r')))">
+										<xsl:choose>
+											<xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+												<xsl:call-template name="CamelCase">
+													<xsl:with-param name="text" select="concat(./AUTB, ' (', normalize-space(./AUTA), ')')" />
+												</xsl:call-template>
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:call-template name="CamelCase">
+													<xsl:with-param name="text" select="./AUTB" />
+												</xsl:call-template>
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:when>
 									<xsl:when test="./AUTS and (not(starts-with(lower-case(normalize-space(./AUTS)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTS)), 'n.r')))">
 										<xsl:call-template name="CamelCase">
 											<xsl:with-param name="text" select="concat(./AUTN, ' (', normalize-space(./AUTS), ')')" />
@@ -23662,11 +23683,6 @@
 										<xsl:call-template name="CamelCase">
 											<xsl:with-param name="text" select="concat(./AUTN, ' (', normalize-space(./AUTA), ')')" />
 										</xsl:call-template>	
-									</xsl:when>
-									<xsl:when test="./AUTB and (not(starts-with(lower-case(normalize-space(./AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTB)), 'n.r')))">
-										<xsl:call-template name="CamelCase">
-											<xsl:with-param name="text" select="concat(./AUTN, ' (', normalize-space(./AUTB), ')')" />
-										</xsl:call-template>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:call-template name="CamelCase">
@@ -23705,6 +23721,16 @@
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUTN))" />
 								</xsl:attribute>
 							</owl:sameAs>
+							</xsl:if>
+							<xsl:if test="./AUTB">
+								<arco-lite:primaryName>
+									<xsl:value-of select="normalize-space(./AUTB)" />
+								</arco-lite:primaryName>
+							</xsl:if>
+							<xsl:if test="./AUTN">
+								<arco-lite:primaryName>
+									<xsl:value-of select="normalize-space(./AUTN)" />
+								</arco-lite:primaryName>
 							</xsl:if>
 							<xsl:if test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
 								<arco-cd:agentDate>
