@@ -117,7 +117,7 @@
 	<xsl:template match="/">
 	<rdf:RDF>
 		<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
-		<xsl:if test="$sheetType='AUT' and record/metadata/schede/*/AU/AUT/AUTN" >
+		<xsl:if test="$sheetType='AUT'" >
 		
 			<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version" />
 			<xsl:variable name="idCG" select="record/metadata/schede/CG/CD/CCG" />
@@ -157,11 +157,18 @@
 			</xsl:variable>
 			<xsl:variable name="nameAuthor">
 				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTB and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'n.r')))">
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/AU/AUT/AUTA and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'n.r')))">
+								<xsl:value-of select="concat(record/metadata/schede/*/AU/AUT/AUTB, ' - ', record/metadata/schede/*/AU/AUT/AUTA)" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTB" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:when>
 					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTA and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'n.r')))">
 						<xsl:value-of select="concat(record/metadata/schede/*/AU/AUT/AUTN, ' - ', record/metadata/schede/*/AU/AUT/AUTA)" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTB and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'n.r')))">
-						<xsl:value-of select="concat(record/metadata/schede/*/AU/AUT/AUTN, ' ', record/metadata/schede/*/AU/AUT/AUTB)" />
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTN" />
@@ -170,11 +177,18 @@
 			</xsl:variable>
 			<xsl:variable name="idAuthor">
 				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTB and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'n.r')))">
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/AU/AUT/AUTA and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'n.r')))">
+								<xsl:value-of select="arco-fn:arcofy(concat(record/metadata/schede/*/AU/AUT/AUTB, '-', record/metadata/schede/*/AU/AUT/AUTA))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTB)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:when>
 					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTA and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTA)), 'n.r')))">
 						<xsl:value-of select="arco-fn:arcofy(concat(record/metadata/schede/*/AU/AUT/AUTN, '-', record/metadata/schede/*/AU/AUT/AUTA))" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/AU/AUT/AUTB and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTB)), 'n.r')))">
-						<xsl:value-of select="arco-fn:arcofy(concat(record/metadata/schede/*/AU/AUT/AUTN, '-', record/metadata/schede/*/AU/AUT/AUTB))" />
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTN)" />
@@ -185,7 +199,7 @@
 			
 			<xsl:variable name="sex">
 			 <xsl:choose>
-				<xsl:when test="$sheetVersion='4.00_ICCD0'"><xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTE"/></xsl:when>
+				<xsl:when test="not($sheetVersion='4.00_ICCD0')"><xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTE"/></xsl:when>
 				<xsl:otherwise><xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTZ"/></xsl:otherwise>
 			 </xsl:choose>
 			</xsl:variable>
@@ -717,6 +731,12 @@
 						<xsl:when test="($sheetVersion='4.00' or $sheetVersion='4.00_ICCD0') and lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTP))='e'">
 							<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
 						</xsl:when>
+						<xsl:when test="($sheetVersion='3.01' or $sheetVersion='3.01_ICCD0') and (record/metadata/schede/*/AU/AUT/AUTB)">
+							<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+						</xsl:when>
+						<xsl:when test="($sheetVersion='3.01' or $sheetVersion='3.01_ICCD0') and (record/metadata/schede/*/AU/AUT/AUTN)">
+							<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
 						</xsl:otherwise>
@@ -763,6 +783,22 @@
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTO)" />
 					</cpv:givenName>
 				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTB">
+					<arco-lite:primaryName>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTB)" />
+					</arco-lite:primaryName>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTN">
+					<arco-lite:primaryName>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTN)" />
+					</arco-lite:primaryName>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTP and not($sheetVersion='4.00' or $sheetVersion='4.00_ICCD0')">
+					<arco-lite:pseudonym>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTP)" />
+					</arco-lite:pseudonym>
+				</xsl:if>
+				<!-- deprecated -->
 				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTP and not($sheetVersion='4.00' or $sheetVersion='4.00_ICCD0')">
 					<arco-cd:pseudonym>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTP)" />
@@ -784,11 +820,32 @@
 					</arco-cd:nationality>
 				</xsl:if>
 				<xsl:if test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00_ICCD0') and record/metadata/schede/*/AU/AUT/AUTE">
+					<arco-lite:alternativeName>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTE)" />
+					</arco-lite:alternativeName>
+				</xsl:if>
+				<xsl:for-each select="record/metadata/schede/*/AU/AUV">
+					<arco-lite:alternativeName>
+						<xsl:value-of select="normalize-space(.)" />
+					</arco-lite:alternativeName>
+				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/AU/AUT/AUTV">
+					<arco-lite:alternativeName>
+						<xsl:value-of select="normalize-space(.)" />
+					</arco-lite:alternativeName>
+				</xsl:for-each>
+				<!-- deprecated -->
+				<xsl:if test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00_ICCD0') and record/metadata/schede/*/AU/AUT/AUTE">
 					<arco-cd:alternativeName>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTE)" />
 					</arco-cd:alternativeName>
 				</xsl:if>
 				<xsl:for-each select="record/metadata/schede/*/AU/AUV">
+					<arco-cd:alternativeName>
+						<xsl:value-of select="normalize-space(.)" />
+					</arco-cd:alternativeName>
+				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/AU/AUT/AUTV">
 					<arco-cd:alternativeName>
 						<xsl:value-of select="normalize-space(.)" />
 					</arco-cd:alternativeName>
@@ -800,11 +857,7 @@
 						</xsl:attribute>
 					</arco-cd:hasProfession>
 				</xsl:for-each>
-				<xsl:for-each select="record/metadata/schede/*/AU/AUT/AUTV">
-					<arco-cd:alternativeName>
-						<xsl:value-of select="normalize-space(.)" />
-					</arco-cd:alternativeName>
-				</xsl:for-each>
+				
 				<!-- historical information -->
 				<xsl:if test="record/metadata/schede/*/AU/NSC">
 					<arco-cd:historicalBiographicalInformation>
