@@ -38,8 +38,6 @@
         <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV"/>
         <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dc:creator>
-        <rdfs:label xml:lang="en">Arco Lite Ontology (ArCo network)</rdfs:label>
-        <rdfs:label xml:lang="it">Ontologia Arco Leggera (ArCo network)</rdfs:label>
         <dc:description xml:lang="it">Questo è il modulo ArCo Lite. Qui si modellano proiezioni binarie di pattern ennari.</dc:description>
         <dc:description xml:lang="en">The Arco Lite module is the ontology describing binary relations representing enary patterns.</dc:description>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
@@ -53,10 +51,10 @@
         <rdfs:comment xml:lang="it">Questo è il modulo ArCo Lite. Qui si modellano proiezioni binarie di pattern ennari.</rdfs:comment>
         <rdfs:comment xml:lang="en">The Arco Lite module is the ontology describing binary relations representing enary patterns.</rdfs:comment>
         <rdfs:label xml:lang="en">Arco Lite Ontology (ArCo network)</rdfs:label>
+        <rdfs:label xml:lang="it">Ontologia Arco Leggera (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia Lite di Arco (ArCo network)</rdfs:label>
         <owl:versionInfo xml:lang="en">Version 1.0</owl:versionInfo>
         <owl:versionInfo xml:lang="it">Versione 1.0</owl:versionInfo>
-
     </owl:Ontology>
     
 
@@ -427,7 +425,7 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCrystallographicCharacteristic"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCrystalSystemOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/UnitCell"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco-lite/CrystallographicCharacteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/CrystallographicCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una cella al sistema cristallino</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a unit cell to the crystal system</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
@@ -899,7 +897,6 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasIssuer">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isIssuerOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco-lite/CoinIssuance"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;emissione della moneta al soggetto emittente. Questa proprietà, esprimendo il significato della relazione nel nome, dà una rappresentazione semplificata della relazione che lega questa entità e l&apos;agente; la stessa relazione è rappresentata attraverso una n-ary relation, arco-core:AgentRole, che permette di collegare l&apos;agente al ruolo che riveste nei confronti dell&apos;entità.</rdfs:comment>
@@ -1732,8 +1729,8 @@ E.g. an estimate on a cultural property to the estimation responsible agent.</rd
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="it">ha responsabile ricerca e redazione</rdfs:label>
         <rdfs:label xml:lang="en">has responsible research and compilation</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <a-cat:iccdNormTag>CM/CMP/CMPN
 CM/AGG/AGGN</a-cat:iccdNormTag>
         <a-cat:iccdNormTag>ICCD Normativa trasversale e precendenti: CM/CMP/CMPN, CM/CMC, CMCMR, CM/AGG/AGGN</a-cat:iccdNormTag>
@@ -3908,8 +3905,8 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="en">is responsible research and compilation of</rdfs:label>
         <rdfs:label xml:lang="it">è responsabile ricerca e redazione di</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4713,6 +4710,24 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/alternativeName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/alternativeName">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/name"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta una variante del nome di un agente.</rdfs:comment>
+        <rdfs:comment>This property represents an alternative name of an agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">alternative name</rdfs:label>
+        <rdfs:label xml:lang="it">variante del nome</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag rdf:resource="https://w3id.org/arco/ontology/arco-lite/"/>
+        <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTE, AUTV. AU/AUV</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/alternativeTitle -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/alternativeTitle">
@@ -4760,8 +4775,8 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
         <rdfs:label xml:lang="en">attributed title</rdfs:label>
         <rdfs:label xml:lang="it">titolo attribuito</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa F: SG/SGL/SGLA</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -5069,6 +5084,24 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/primaryName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/primaryName">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/name"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietá rappresenta il nome primario di un agente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the primary name of an agent.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite"/>
+        <rdfs:label xml:lang="it">nome primario</rdfs:label>
+        <rdfs:label xml:lang="en">primary name</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Scheda AUT: AU/AUT/AUTN, AU/AUT/AUTB</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/properTitle -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/properTitle">
@@ -5083,6 +5116,24 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normative S e MI: OG/SGT/SGTP - Normativa F: SG/SGL/SGLT</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/pseudonym -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/pseudonym">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/name"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta uno pseudonimo</rdfs:comment>
+        <rdfs:comment>This property represents the pseudonym of an agent.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/"/>
+        <rdfs:label xml:lang="it">pseudonimo</rdfs:label>
+        <rdfs:label xml:lang="en">pseudonym</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -5471,5 +5522,5 @@ ICCD Normativa BNM 4.00: AU/CMM/CMMME</a-cat:iccdNormTag>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
 
