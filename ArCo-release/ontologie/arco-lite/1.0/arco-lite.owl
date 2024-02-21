@@ -42,8 +42,6 @@
         <dc:description xml:lang="en">The Arco Lite module is the ontology describing binary relations representing enary patterns.</dc:description>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
-        <dc:title xml:lang="en">Natural Specimen Description Ontology (ArCo network)</dc:title>
-        <dc:title xml:lang="it">Ontologia della descrizione dei campioni naturalistici (ArCo network)</dc:title>
         <terms:issued>2021-05-12</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
