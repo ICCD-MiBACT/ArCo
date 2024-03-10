@@ -1078,6 +1078,9 @@
 					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/OC/OCD)" />
 					</arco-arco:endTime>
+					<tiapit:time>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/OC/OCD)" />
+					</tiapit:time>
 				</rdf:Description>
 			</xsl:if>
 			<!-- feature for BDM < version 4.00 -->
@@ -1901,6 +1904,9 @@
 					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DR/DRV/DRVD)" />
 					</arco-arco:endTime>
+					<tiapit:time>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/DR/DRV/DRVD)" />
+					</tiapit:time>
 				</rdf:Description>
 			</xsl:if>
 			<xsl:for-each select="record/metadata/schede/*/DR/DRD[not(()='0000/00/00' or ()='/')]">
@@ -1925,6 +1931,9 @@
 					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space(.)" />
 					</arco-arco:endTime>
+					<tiapit:time>
+						<xsl:value-of select="normalize-space(.)" />
+					</tiapit:time>
 				</rdf:Description>
 			</xsl:for-each>
 			<!-- Activity responsible as an individual -->
@@ -6023,6 +6032,9 @@
 						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUQ/DUQD)" />
 						</arco-arco:endTime>
+						<tiapit:time>
+							<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUQ/DUQD)" />
+						</tiapit:time>
 					</rdf:Description>
 				</xsl:if>
 				<!-- acquisition type as an individual -->
@@ -7593,6 +7605,9 @@
 						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUQ/DUQD)" />
 						</arco-arco:endTime>
+						<tiapit:time>
+							<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUQ/DUQD)" />
+						</tiapit:time>
 					</rdf:Description>
 				</xsl:if>
 				<!-- acquisition type as an individual -->
@@ -9319,6 +9334,9 @@
 						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUQ/DUQD)" />
 						</arco-arco:endTime>
+						<tiapit:time>
+							<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUQ/DUQD)" />
+						</tiapit:time>
 					</rdf:Description>
 				</xsl:if>
 				<!-- acquisition type as an individual -->
@@ -12596,6 +12614,9 @@
 						<arco-arco:endTime>
 							<xsl:value-of select="normalize-space(./AIQ/AIQD)" />
 						</arco-arco:endTime>
+						<tiapit:time>
+							<xsl:value-of select="normalize-space(./AIQ/AIQD)" />
+						</tiapit:time>
 					</rdf:Description>
 				</xsl:if>
 				<!-- acquisition type as an individual -->
@@ -15728,6 +15749,9 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(./VIQ/VIQD)" />
 						</l0:name>
+						<tiapit:time>
+							<xsl:value-of select="normalize-space(./VIQ/VIQD)" />
+						</tiapit:time>
 						<arco-arco:startTime>
 							<xsl:value-of select="normalize-space(./VIQ/VIQD)" />
 						</arco-arco:startTime>
@@ -19604,6 +19628,9 @@
 					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space(.)" />
 					</arco-arco:endTime>
+					<tiapit:time>
+						<xsl:value-of select="normalize-space(.)" />
+					</tiapit:time>
 				</rdf:Description>
 			</xsl:for-each>
 			<!-- Activity operator as an individual -->
@@ -20481,6 +20508,15 @@
 				<l0:name>
 					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/DTC/DTCD)" />
 				</l0:name>
+				<arco-arco:startTime>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/DTC/DTCD)" />
+				</arco-arco:startTime>
+					<arco-arco:endTime>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/DTC/DTCD)" />
+				</arco-arco:endTime>
+				<tiapit:time>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/DTC/DTCD)" />
+				</tiapit:time>
 			</rdf:Description>
 		</xsl:if>
 		<!-- duration -->
@@ -20972,7 +21008,7 @@
 				<xsl:if test="./AVED">
 					<tiapit:atTime>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(AVED)))" />
+							<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./AVED)))" />
 						</xsl:attribute>
 					</tiapit:atTime>
 				</xsl:if>
@@ -21159,6 +21195,15 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./AVED)" />
 					</l0:name>
+					<arco-arco:startTime>
+						<xsl:value-of select="normalize-space(./AVED)" />
+					</arco-arco:startTime>
+					<arco-arco:endTime>
+						<xsl:value-of select="normalize-space(./AVED)" />
+					</arco-arco:endTime>
+					<tiapit:time>
+						<xsl:value-of select="normalize-space(./AVED)" />
+					</tiapit:time>
 				</rdf:Description>
 			</xsl:if>
 		</xsl:for-each>

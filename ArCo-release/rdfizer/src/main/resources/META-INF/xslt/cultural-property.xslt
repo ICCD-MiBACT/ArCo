@@ -4318,6 +4318,20 @@
 				</xsl:for-each>
 				<!-- Use of cultural property -->
 				<xsl:if test="not(record/metadata/schede/A/UT or record/metadata/schede/PG/UT)">
+					<xsl:for-each select="record/metadata/schede/*/UT/UTU">
+						<arco-cd:hasUse>
+							<xsl:attribute name="rdf:resource">
+	                			<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-use-', position())" />
+	                		</xsl:attribute>
+						</arco-cd:hasUse>
+						<xsl:for-each select="(./UTUF)[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+							<arco-lite:hasCulturalEntityUseFunction>
+								<xsl:attribute name="rdf:resource">
+		        					<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(.))" />
+								</xsl:attribute>
+							</arco-lite:hasCulturalEntityUseFunction>
+						</xsl:for-each>
+					</xsl:for-each>
 					<xsl:for-each select="record/metadata/schede/*/UT">
 						<arco-cd:hasUse>
 							<xsl:attribute name="rdf:resource">

@@ -3470,7 +3470,7 @@
 			<xsl:if test="record/metadata/schede/*/LR/LRI/LRIY">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
-	               		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/BNB/LR/LRI/LRIY, '-',  record/metadata/schede/BNB/LR/LRI/LRIY)))" />
+	               		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/BNB/LR/LRI/LRIY))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -5998,12 +5998,12 @@
 			</l0:name>
 			<arco-dd:hasMeasurement>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IM/IMA/IMAS))" />
+					<xsl:value-of select="concat($NS, 'Measurement/Stratum/', $itemURI, '-thickness')" />
 				</xsl:attribute>
 			</arco-dd:hasMeasurement>
 		</rdf:Description>
 		<rdf:Description>
-			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IM/IMA/IMAS))" />
+			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Stratum/', $itemURI, '-thickness')" />
 			<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="concat('Measurement of stratum: ', $itemURI)" />
@@ -6086,12 +6086,12 @@
 			</l0:name>
 			<arco-dd:hasMeasurement>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IR/IRA/IRAS))" />
+					<xsl:value-of select="concat($NS, 'Measurement/Stratum/', $itemURI, '-thickness')" />
 				</xsl:attribute>
 			</arco-dd:hasMeasurement>
 		</rdf:Description>
 		<rdf:Description>
-			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Stratum/', (record/metadata/schede/*/IR/IRA/IRAS))" />
+			<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Stratum/', $itemURI, '-thickness')" />
 			<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="concat('Measurement of stratum: ', (record/metadata/schede/*/IR/IRA/IRAS))" />
@@ -6156,7 +6156,7 @@
 			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAD">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/*/IM/IMA/IMAD, '-',  record/metadata/schede/*/IM/IMA/IMAD)))" />
+		        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAD))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -6201,7 +6201,7 @@
 			<xsl:if test="record/metadata/schede/*/ET/ETA/ETAD">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/*/ET/ETA/ETAD, '-',  record/metadata/schede/*/ET/ETA/ETAD)))" />
+		        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/*/ET/ETA/ETAD))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -6248,7 +6248,7 @@
 	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAD">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/*/IM/IMA/IMAD, '-',  record/metadata/schede/*/IM/IMA/IMAD)))" />
+		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/*/IM/IMA/IMAD))" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -6256,11 +6256,14 @@
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="concat(record/metadata/schede/*/IM/IMA/IMAD, ' - ', record/metadata/schede/*/IM/IMA/IMAD)" />
+				<xsl:value-of select="record/metadata/schede/*/IM/IMA/IMAD" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="concat(record/metadata/schede/*/IM/IMA/IMAD, ' - ', record/metadata/schede/*/IM/IMA/IMAD)" />
+				<xsl:value-of select="record/metadata/schede/*/IM/IMA/IMAD" />
 			</l0:name>
+			<tiapit:time>
+				<xsl:value-of select="record/metadata/schede/*/IM/IMA/IMAD" />
+			</tiapit:time>
 			<arco-arco:startTime>
 				<xsl:value-of select="record/metadata/schede/*/IM/IMA/IMAD" />
 			</arco-arco:startTime>
@@ -6272,7 +6275,7 @@
 	<xsl:if test="record/metadata/schede/*/ET/ETA/ETAD">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/*/ET/ETA/ETAD, '-',  record/metadata/schede/*/ET/ETA/ETAD)))" />
+		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/*/ET/ETA/ETAD))" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -6280,10 +6283,10 @@
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="concat(record/metadata/schede/*/ET/ETA/ETAD, ' - ', record/metadata/schede/*/ET/ETA/ETAD)" />
+				<xsl:value-of select="record/metadata/schede/*/ET/ETA/ETAD" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="concat(record/metadata/schede/*/ET/ETA/ETAD, ' - ', record/metadata/schede/*/ET/ETA/ETAD)" />
+				<xsl:value-of select="record/metadata/schede/*/ET/ETA/ETAD" />
 			</l0:name>
 			<arco-arco:startTime>
 				<xsl:value-of select="record/metadata/schede/*/ET/ETA/ETAD" />
@@ -9222,7 +9225,7 @@
 		<xsl:if test="record/metadata/schede/*/LR/LRI/LRIY">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./LRIY, '-',  ./LRIY)))" />
+		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(./LRIY))" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -9230,10 +9233,10 @@
 		        </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="concat(./LRIY, ' - ', ./LRIY)" />
+				<xsl:value-of select="./LRIY" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="concat(./LRIY, ' - ', ./LRIY)" />
+				<xsl:value-of select="./LRIY" />
 			</l0:name>
 			<arco-arco:startTime>
 				<xsl:value-of select="./LRIY" />
@@ -9241,6 +9244,9 @@
 			<arco-arco:endTime>
 				<xsl:value-of select="./LRIY" />
 			</arco-arco:endTime>
+			<tiapit:time>
+				<xsl:value-of select="./LRIY" />
+			</tiapit:time>
 		</rdf:Description>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/*/LR/LRI/LRIK">

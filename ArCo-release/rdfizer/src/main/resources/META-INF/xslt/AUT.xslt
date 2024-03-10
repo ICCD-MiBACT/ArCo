@@ -137,6 +137,16 @@
 					</xsl:otherwise>
 				</xsl:choose>
 				</xsl:when>
+				<xsl:when test="record/metadata/schede/*/CD/NCU">
+					<xsl:choose>
+						<xsl:when test="record/metadata/schede/*/CD/NCU/NCUN">
+							<xsl:value-of select="record/metadata/schede/*/CD/NCU/NCUN" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="record/metadata/schede/*/CD/NCU/NCU" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:when>
 				<xsl:otherwise>
 					<xsl:variable name="accc-space" select="record/metadata/schede/*/AC/ACC[1]/ACCC" />
 					<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
@@ -224,6 +234,7 @@
 					<xsl:value-of select="$item" />
 				</arco-lite:systemIdentifier>
 				<xsl:if test="record/metadata/schede/*/CM/CMP or record/metadata/schede/*/CM/RSR or record/metadata/schede/*/CM/FUR">
+					<!-- deprecated -->
 					<arco-catalogue:hasCatalogueRecordVersion>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'CatalogueRecordVersion/', $idAuthor, '-compilation')" />
@@ -271,6 +282,7 @@
 					</rdfs:label>
 					<xsl:for-each select="record/metadata/schede/*/CM/CMP/CMPN">
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
+							<!-- deprecated -->
 							<arco-catalogue:hasCatalogueRecordVersionRiT>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-compilation-', arco-fn:arcofy(.))" />
@@ -298,6 +310,7 @@
 						<!-- Referente verifica scientifica -->
 					<xsl:for-each select="record/metadata/schede/*/CM/RSR">
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
+							<!-- deprecated -->
 							<arco-catalogue:hasCatalogueRecordVersionRiT>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
@@ -318,6 +331,7 @@
 						<!-- Funzionario responsabile -->
 					<xsl:for-each select="record/metadata/schede/*/CM/FUR">
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
+							<!-- deprecated -->
 							<arco-catalogue:hasCatalogueRecordVersionRiT>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
@@ -340,6 +354,7 @@
 			<!-- Participant role - Compilation -->
 			<xsl:for-each select="record/metadata/schede/*/CM/CMP/CMPN">
 				<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
+					<!-- deprecated -->
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-compilation-', arco-fn:arcofy(.))" />
@@ -463,6 +478,7 @@
 			<!-- Referente verifica scientifica -->
 			<xsl:for-each select="record/metadata/schede/*/CM/RSR">
 				<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
+					<!-- deprecated -->
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 		                       <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
@@ -557,6 +573,7 @@
 				<!-- Funzionario responsabile -->
 			<xsl:for-each select="record/metadata/schede/*/CM/FUR">
 				<xsl:if test="(not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
+					<!-- deprecated -->
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 		                       <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />

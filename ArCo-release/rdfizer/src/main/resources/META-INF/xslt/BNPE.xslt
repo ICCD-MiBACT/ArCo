@@ -1230,7 +1230,7 @@
 				<xsl:if test="record/metadata/schede/*/IR/IRA/IRAD">
 					<tiapit:atTime>
 						<xsl:attribute name="rdf:resource">
-			        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/*/IR/IRA/IRAD, '-',  record/metadata/schede/*/IR/IRA/IRAD)))" />
+			        		<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/*/IR/IRA/IRAD))" />
 						</xsl:attribute>
 					</tiapit:atTime>
 				</xsl:if>
@@ -1266,7 +1266,7 @@
 		<xsl:if test="record/metadata/schede/*/IR/IRA/IRAD">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-			    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/*/IR/IRA/IRAD, '-',  record/metadata/schede/*/IR/IRA/IRAD)))" />
+			    	<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(record/metadata/schede/*/IR/IRA/IRAD))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -1274,10 +1274,10 @@
 					</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
-					<xsl:value-of select="concat(record/metadata/schede/*/IR/IRA/IRAD, ' - ', record/metadata/schede/*/IR/IRA/IRAD)" />
+					<xsl:value-of select="record/metadata/schede/*/IR/IRA/IRAD" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="concat(record/metadata/schede/*/IR/IRA/IRAD, ' - ', record/metadata/schede/*/IR/IRA/IRAD)" />
+					<xsl:value-of select="record/metadata/schede/*/IR/IRA/IRAD" />
 				</l0:name>
 				<arco-arco:startTime>
 					<xsl:value-of select="record/metadata/schede/*/IR/IRA/IRAD" />
@@ -1285,6 +1285,9 @@
 				<arco-arco:endTime>
 					<xsl:value-of select="record/metadata/schede/*/IR/IRA/IRAD" />
 				</arco-arco:endTime>
+				<tiapit:time>
+					<xsl:value-of select="record/metadata/schede/*/IR/IRA/IRAD" />
+				</tiapit:time>
 			</rdf:Description>
 		</xsl:if>
 		<!-- Bibliography as individual -->					

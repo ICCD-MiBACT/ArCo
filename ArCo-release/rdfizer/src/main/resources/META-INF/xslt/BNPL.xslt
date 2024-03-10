@@ -3202,7 +3202,7 @@
 	<xsl:if test="record/metadata/schede/BNPL/SP/SPC/SPCC">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'CondrulePresence/', $itemURI)" />
+				<xsl:value-of select="concat($NS, 'ChondrulePresence/', $itemURI)" />
 			</xsl:attribute>		
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">

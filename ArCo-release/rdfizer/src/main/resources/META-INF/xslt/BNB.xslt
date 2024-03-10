@@ -2535,6 +2535,9 @@
 			<arco-arco:endTime>
 				<xsl:value-of select="record/metadata/schede/BNB/SB/DBV/DBVF" />
 			</arco-arco:endTime>
+			<tiapit:time>
+				<xsl:value-of select="record/metadata/schede/BNB/SB/DBV/DBVF" />
+			</tiapit:time>
 		</rdf:Description>
 	</xsl:if>
 	<!-- accession as individual  -->
@@ -2700,6 +2703,9 @@
 				<arco-arco:endTime>
 					<xsl:value-of select="record/metadata/schede/BNB/SB/ABC/ABCF" />
 				</arco-arco:endTime>
+				<tiapit:time>
+					<xsl:value-of select="record/metadata/schede/BNB/SB/ABC/ABCF" />
+				</tiapit:time>
 			</rdf:Description>
 		</xsl:if>
 	</xsl:if>			
@@ -2938,6 +2944,9 @@
 			<arco-arco:endTime>
 				<xsl:value-of select="record/metadata/schede/BNB/LR/LRD/LRDF" />
 			</arco-arco:endTime>
+			<tiapit:time>
+				<xsl:value-of select="record/metadata/schede/BNB/LR/LRD/LRDF" />
+			</tiapit:time>
 		</rdf:Description>
 	</xsl:if>	
 	<!-- TimeIndexedTypedLocation as individual -->
@@ -3974,7 +3983,7 @@
 		<xsl:if test="./RBD/RBDF">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./RBD/RBDF, '-',  ./RBD/RBDF)))" />
+					<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(./RBD/RBDF))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -3982,10 +3991,10 @@
 					</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
-					<xsl:value-of select="concat(./RBD/RBDF, ' - ', ./RBD/RBDF)" />
+					<xsl:value-of select="./RBD/RBDF" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="concat(./RBD/RBDF, ' - ', ./RBD/RBDF)" />
+					<xsl:value-of select="./RBD/RBDF" />
 				</l0:name>
 				<arco-arco:startTime>
 					<xsl:value-of select="./RBD/RBDF" />
@@ -3993,6 +4002,9 @@
 				<arco-arco:endTime>
 					<xsl:value-of select="./RBD/RBDF" />
 				</arco-arco:endTime>
+				<tiapit:time>
+					<xsl:value-of select="./RBD/RBDF" />
+				</tiapit:time>
 			</rdf:Description>
 		</xsl:if>
 	</xsl:for-each>
@@ -4716,6 +4728,9 @@
 				<arco-arco:endTime>
 					<xsl:value-of select="record/metadata/schede/BNB/SB/TBI/TBIF" />
 				</arco-arco:endTime>
+				<tiapit:time>
+					<xsl:value-of select="record/metadata/schede/BNB/SB/TBI/TBIF" />
+				</tiapit:time>
 			</rdf:Description>														
 		</xsl:if>								
 	</xsl:if>							

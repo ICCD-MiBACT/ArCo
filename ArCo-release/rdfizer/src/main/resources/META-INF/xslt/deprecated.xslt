@@ -4874,7 +4874,7 @@
 	<xsl:if test="record/metadata/schede/*/CM/RVM">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'CatalogueRecordVersion/', $itemURI, '-rvm')" />
+				<xsl:value-of select="concat($NS, 'CatalogueRecordVersion/', $itemURI, '-rvm', position())" />
 			</xsl:attribute>
 			<arco-catalogue:isCatalogueRecordVersionOf>
 				<xsl:attribute name="rdf:resource">

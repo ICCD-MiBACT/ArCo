@@ -830,6 +830,9 @@
 							<arco-arco:endTime>
 								<xsl:value-of select="normalize-space(./CSST)" />
 							</arco-arco:endTime>
+							<tiapit:time>
+								<xsl:value-of select="normalize-space(./CSST)" />
+							</tiapit:time>
 						</rdf:Description>
 					</xsl:if>
 					<!-- cadastre as an individual -->

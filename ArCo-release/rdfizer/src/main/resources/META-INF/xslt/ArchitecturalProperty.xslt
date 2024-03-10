@@ -1300,7 +1300,7 @@
 			<xsl:if test="./SVCT">
 				<rdf:Description>
 	 				<xsl:attribute name="rdf:about">
-	        	    	<xsl:value-of select="concat($NS, 'VerticalElementType/', arco-fn:urify(normalize-space(.)))" />
+	        	    	<xsl:value-of select="concat($NS, 'VerticalElementType/', arco-fn:urify(normalize-space(./SVCT)))" />
 	            	</xsl:attribute>
 		 	        <rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -1308,10 +1308,10 @@
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
-						<xsl:value-of select="normalize-space(.)" />
+						<xsl:value-of select="normalize-space(./SVCT)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="normalize-space(.)" />
+						<xsl:value-of select="normalize-space(./SVCT)" />
 					</l0:name>
 				</rdf:Description>
 			</xsl:if>		

@@ -470,7 +470,7 @@
 			<xsl:if test="./SPSC">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./SPSC, '-',  ./SPSC)))" />
+		        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(./SPSC))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -517,7 +517,7 @@
 			<xsl:if test="./SPSC">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./SPSC, '-',  ./SPSC)))" />
+		        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(./SPSC))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -812,7 +812,7 @@
 		<xsl:if test ="./SPSC">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./SPSC, '-',  ./SPSC)))" />
+		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(./SPSC))" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -820,10 +820,10 @@
 		        </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="concat(./SPSC, ' - ', ./SPSC)" />
+				<xsl:value-of select="./SPSC" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="concat(./SPSC, ' - ', ./SPSC)" />
+				<xsl:value-of select="./SPSC" />
 			</l0:name>
 			<arco-arco:startTime>
 				<xsl:value-of select="./SPSC" />
@@ -831,6 +831,9 @@
 			<arco-arco:endTime>
 				<xsl:value-of select="./SPSC" />
 			</arco-arco:endTime>
+			<tiapit:time>
+				<xsl:value-of select="./SPSC" />
+			</tiapit:time>
 		</rdf:Description>
 		</xsl:if>
 	</xsl:for-each>			
@@ -1350,7 +1353,7 @@
 			<xsl:if test="./SZSC">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./SZSC, '-',  ./SZSC)))" />
+		        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(./SZSC))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -1397,7 +1400,7 @@
 			<xsl:if test="./SZSC">
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
-		        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./SZSC, '-',  ./SZSC)))" />
+		        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(./SZSC))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -1626,7 +1629,7 @@
 		<xsl:if test ="./SZSC">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./SZSC, '-',  ./SZSC)))" />
+		    	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(./SZSC))" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -1634,10 +1637,10 @@
 		        </xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
-				<xsl:value-of select="concat(./SZSC, ' - ', ./SZSC)" />
+				<xsl:value-of select="./SZSC" />
 			</rdfs:label>
 			<l0:name>
-				<xsl:value-of select="concat(./SZSC, ' - ', ./SZSC)" />
+				<xsl:value-of select="./SZSC" />
 			</l0:name>
 			<arco-arco:startTime>
 				<xsl:value-of select="./SZSC" />
@@ -1645,6 +1648,9 @@
 			<arco-arco:endTime>
 				<xsl:value-of select="./SZSC" />
 			</arco-arco:endTime>
+			<tiapit:time>
+				<xsl:value-of select="./SZSC" />
+			</tiapit:time>
 		</rdf:Description>
 		</xsl:if>
 	</xsl:for-each>			
@@ -3318,6 +3324,9 @@
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(./INID)" />
 					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./INID)" />
+					</l0:name>
 					<tiapit:time>
 						<xsl:value-of select="normalize-space(./INID)" />
 					</tiapit:time>

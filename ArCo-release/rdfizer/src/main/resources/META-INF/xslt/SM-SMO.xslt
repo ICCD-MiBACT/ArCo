@@ -600,6 +600,9 @@
 					<arco-arco:endTime>
 						<xsl:value-of select="normalize-space(.)" />
 					</arco-arco:endTime>
+					<tiapit:time>
+						<xsl:value-of select="normalize-space(.)" />
+					</tiapit:time>
 				</rdf:Description>
 			</xsl:for-each>
 			<!-- Activity responsible as an individual -->
