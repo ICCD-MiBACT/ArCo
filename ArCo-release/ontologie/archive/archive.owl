@@ -24,7 +24,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:a-archive="https://w3id.org/arco/ontology/archive/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/archive">
-        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/archive/0.1"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/archive/0.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/2.0"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/2.0"/>
         <dc:creator>Alessandro Russo (CNR-ISTC, STLab)</dc:creator>
@@ -48,13 +48,13 @@
         <rdfs:comment xml:lang="en">The ArCo module on archives was created in the context of the CNR Portal of the sources for the history of the Italian Republic project. The aim of the project is to create a Portal that offers to a wide and diversified audience a collection of sources for national political and institutional history (in the period 1943-1953), integrating the information and documental heritage, including the documental heritage, of the Institutions and some foundations and institutes belonging to the AICI.</rdfs:comment>
         <rdfs:label xml:lang="en">Archive Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia degli archivi (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 0.1 - it can be subject to further changes according to the needs of the CNR project.</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 0.1 - alcuni elementi potrebbero subire ulteriori cambiamenti rispetto ai requisiti che emergeranno nel contesto del progetto Portale delle Fonti del CNR.</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 0.2 - Introduced property hasArchivalResourceLevel, replacing core:hasType and renamed the class ArchivalResourceType in ArchivalResourceLevel. This change has been suggested by Francesca Tomasi during the ArCo public event taken place in Bologna last Decembre 2023. The ontology is to be considered still unstable and it can be subject to further changes according to the needs of the CNR project.</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 0.2 - È stata introdotta la proprietà ha livello risorsa archivistica, sostituendo la proprietà di core ha tipo ed è stata rinominata la classe Tipo di Risorsa Archivistica in Livello Risorsa Archivistica. Il cambiamento nasce per meglio catturare la terminologia propria archivistica ed è stato suggerito da Francesca Tomasi durante l&apos;evento ArCo tenutosi a Bologna lo scorso Dicemnbre 2023. L&apos;ontologia è da ritenersi ancora in stato bozza perché potrebbe subire ulteriori cambiamenti rispetto ai requisiti che emergeranno nel contesto del progetto Portale delle Fonti del CNR.</owl:versionInfo>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -62,16 +62,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -79,7 +79,36 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
+
+    <!-- http://dati.beniculturali/cis/hasMemberColCultEnt -->
+
+    <owl:ObjectProperty rdf:about="http://dati.beniculturali/cis/hasMemberColCultEnt"/>
+    
+
+
+    <!-- http://dati.beniculturali/cis/isMemberOfColCultEnt -->
+
+    <owl:ObjectProperty rdf:about="http://dati.beniculturali/cis/isMemberOfColCultEnt"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/archive/hasArchivalResourceLevel -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/archive/hasArchivalResourceLevel">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResource"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResourceLevel"/>
+        <rdfs:comment xml:lang="en">Property that links the archival resource to the archival hierarchy level (e.g., fonds, series, item, file, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Proprietà che collega la risorsa archivistica al livello della gerarchia archivistica (e.g., fondo, serie, unità archivistica, unità documentaria, ecc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive"/>
+        <rdfs:label xml:lang="it">ha livello risorsa archivistica</rdfs:label>
+        <rdfs:label xml:lang="en">has archival resource level</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/hasFundingAid -->
@@ -96,70 +125,76 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
+    
 
+
+    <!-- https://w3id.org/arco/ontology/archive/hasSortingCriterion -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/archive/hasSortingCriterion"/>
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasAuthor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasCollectionMember -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCollectionMember"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/hasHolder -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasHolder"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/core/classifies -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/classifies"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/core/hasClassificationInTime -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasClassificationInTime"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/core/isDescribedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDescribedBy"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -167,7 +202,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/arrangementSystem -->
@@ -181,7 +216,7 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/extent -->
@@ -197,7 +232,7 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/linearShelfSpace -->
@@ -211,10 +246,10 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -222,7 +257,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/ArchivalCollection -->
@@ -231,8 +266,20 @@
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResourceType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/archive/hasArchivalResourceLevel"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResourceLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://dati.beniculturali/cis/hasMemberColCultEnt"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/archive/hasArchivalResourceLevel"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResourceLevel"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -261,12 +308,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResourceType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isDescribedBy"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
             </owl:Restriction>
@@ -275,13 +316,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCollectionMember"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResource"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -330,13 +364,31 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF. Normativa F: PD/SFI, SSI. Normativa FF: PAC</a-cat:iccdNormTag>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/ArchivalResource -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/archive/ArchivalResource">
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/archive/hasArchivalResourceLevel"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResourceLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://dati.beniculturali/cis/isMemberOfColCultEnt"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/archive/hasArchivalResourceLevel"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResourceLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/archive/hasFundingAid"/>
@@ -393,6 +445,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSubject"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTitle"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Title"/>
             </owl:Restriction>
@@ -401,12 +459,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResourceType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -426,13 +478,6 @@
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasHolder"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalCollection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -460,24 +505,24 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
+    
 
 
+    <!-- https://w3id.org/arco/ontology/archive/ArchivalResourceLevel -->
 
-    <!-- https://w3id.org/arco/ontology/archive/ArchivalResourceType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/archive/ArchivalResourceType">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/archive/ArchivalResourceLevel">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di risorsa archivistica. Esempi inclusono: unità archivistica, Fondo, Serie, ecc.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of an archival resource. Examples include: archival unit, fonds, series, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">Archival resource type</rdfs:label>
-        <rdfs:label xml:lang="it">Tipo di risorsa archivistica</rdfs:label>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il livello gerarchico delle risorse archivistiche. Esempi inclusono: unità archivistica, Fondo, Serie, ecc. Nel contesto del progetto portale delle fonti della repubblica italiana, si sta lavorando per predisporre un vocabolario controllato i cui concetti sono le istanze di questa classe. Il vocabolario utilizzerà sicuramente la gerarchia definita in ISAD e sarà allineato ad altri vocabolari analoghi come per esempio il vocabolario di XDAMS e quello RIC-O</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the archival hierarchy level of an archival resource. Examples include: archival unit, fonds, series, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Archival resource level</rdfs:label>
+        <rdfs:label xml:lang="it">Livello della risorsa archivistica</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa FF: PA/PAC/PACT
 ICCD Normativa F: UB/UBF/UBFU-UBFT-UBFS-UBFF-UBFP,
 PA/SSI, PA/SFI</a-cat:iccdNormTag>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/FundingAid -->
@@ -492,58 +537,58 @@ PA/SSI, PA/SFI</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/archive/SortingCriterion -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/archive/SortingCriterion">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/archive/SortingCriterion">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/description"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </rdf:Description>
-
+    </owl:Class>
+    
 
 
     <!-- https://w3id.org/arco/ontology/catalogue/Record -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/Record"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/core/ClassificationInTime -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/core/ClassificationSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
+    
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/CommunicationMedium -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/MeasurementCollection -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalConcept -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
-
 </rdf:RDF>
 
 
 
-
 <!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
