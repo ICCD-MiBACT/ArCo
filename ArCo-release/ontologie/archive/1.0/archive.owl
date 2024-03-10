@@ -1,574 +1,839 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/ontology/archive/"
-     xml:base="https://w3id.org/arco/ontology/archive/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:l0="https://w3id.org/italia/onto/l0/"
-     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
-     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/arco/ontology/archive"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:ADMS="https://w3id.org/italia/onto/ADMS/"
-     xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
-     xmlns:a-dd="https://w3id.org/arco/ontology/denotative-description/"
-     xmlns:a-mi="https://w3id.org/arco/ontology/musical-instrument/"
-     xmlns:core="https://w3id.org/arco/ontology/core/"
-     xmlns:dcat="http://www.w3.org/ns/dcat#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
-     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
-     xmlns:opla1="http://ontologydesignpatterns.org/opla/"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:a-archive="https://w3id.org/arco/ontology/archive/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/archive">
-        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/archive/1.0"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <dc:creator>Alessandro Russo (CNR-ISTC, STLab)</dc:creator>
-        <dc:creator>Giorgia Lodi (CNR-ISTC, STLab)</dc:creator>
-        <dc:creator>Margherita Porena (CNR-ISTC, STLab)</dc:creator>
-        <dc:description xml:lang="it">Il modulo ArCo sugli archivi nasce nel contesto del progetto CNR Portale delle Fonti per la storia della Repubblica italiana. L&apos;obiettivo del progetto è quello di creare un Portale che offra a un pubblico ampio e diversificato una raccolta di fonti per la storia politica e istituzionale nazionale (nel periodo 1943-1953), integrando il patrimonio informativo, incluso quello documentale, delle Istituzioni e di alcune fondazioni e istituti afferenti all’AICI.</dc:description>
-        <dc:description xml:lang="en">The ArCo module on archives was created in the context of the CNR Portal of the sources for the history of the Italian Republic project. The aim of the project is to create a Portal that offers to a wide and diversified audience a collection of sources for national political and institutional history (in the period 1943-1953), integrating the information heritage, including the documental heritage, of the Institutions and some foundations and institutes belonging to the AICI.</dc:description>
-        <dc:title xml:lang="en">Archive Ontology (ArCo network)</dc:title>
-        <dc:title xml:lang="it">Ontologia degli archivi (ArCo network)</dc:title>
-        <terms:contributor>Eleonora Lattanzi (CNR-ILIESI)</terms:contributor>
-        <terms:contributor>Gianluca Rossi (CNR-IMATI)</terms:contributor>
-        <terms:contributor>Herbert Natta (CNR-IMATI)</terms:contributor>
-        <terms:contributor>Michela Tardella (CNR-ILIESI)</terms:contributor>
-        <terms:contributor>Paola Ciandrini (CNR-IMATI)</terms:contributor>
-        <terms:contributor>Riccardo Albertoni (CNR-IMATI)</terms:contributor>
-        <terms:contributor>Roberta Maggi (CNR-IMATI)</terms:contributor>
-        <terms:contributor>Tiziana Pasciuto (CNR-IMATI)</terms:contributor>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-03</terms:modified>
-        <rdfs:comment xml:lang="it">Il modulo ArCo sugli archivi nasce nel contesto del progetto CNR Portale delle Fonti per la storia della Repubblica italiana. L&apos;obiettivo del progetto è quello di creare un Portale che offra a un pubblico ampio e diversificato una raccolta di fonti per la storia politica e istituzionale nazionale (nel periodo 1943-1953), integrando il patrimonio informativo, incluso quello documentale, delle Istituzioni e di alcune fondazioni e istituti afferenti all’AICI.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The ArCo module on archives was created in the context of the CNR Portal of the sources for the history of the Italian Republic project. The aim of the project is to create a Portal that offers to a wide and diversified audience a collection of sources for national political and institutional history (in the period 1943-1953), integrating the information and documental heritage, including the documental heritage, of the Institutions and some foundations and institutes belonging to the AICI.</rdfs:comment>
-        <rdfs:label xml:lang="en">Archive Ontology (ArCo network)</rdfs:label>
-        <rdfs:label xml:lang="it">Ontologia degli archivi (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.0 - it can be subject to further changes according to the needs of the CNR project.</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.0 - alcuni elementi potrebbero subire ulteriori cambiamenti rispetto ai requisiti che emergeranno nel contesto del progetto Portale delle Fonti del CNR.</owl:versionInfo>
-    </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/terms/contributor -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/arco/ontology/archive/hasFundingAid -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/archive/hasFundingAid">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResource"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/archive/FundingAid"/>
-        <rdfs:comment xml:lang="en">Property that links an archival resource to its funding aid.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Proprietà che lega una risorsa archivistica a un aiuto di finanziamento</rdfs:comment>
-        <rdfs:comment xml:lang="it">ha aiuti di finanziamento</rdfs:comment>
-        <rdfs:comment xml:lang="en">has funding aid</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive"/>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/archive/hasSortingCriterion -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/archive/hasSortingCriterion">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/archive/SortingCriterion"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità (e.g. un bene complesso, un fondo fotografico) con il criterio di ordinamento delle sue componenti.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity (e.g. a complex cultural property, a photographic record set) with the sorting criterion of its inner components.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive/"/>
-        <rdfs:label xml:lang="it">ha criterio di ordinamento</rdfs:label>
-        <rdfs:label xml:lang="en">has sorting criterion</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa FF: OG/OGT/OGTO</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/arco-lite/hasAuthor -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/arco-lite/hasCollectionMember -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCollectionMember"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/arco-lite/hasHolder -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasHolder"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/core/classifies -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/classifies"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/core/hasClassificationInTime -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasClassificationInTime"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDefinedByClassificationSystem"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/core/isDescribedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isDescribedBy"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/arco/ontology/archive/arrangementSystem -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/archive/arrangementSystem">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalCollection"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive"/>
-        <rdfs:label xml:lang="en">arrangement system</rdfs:label>
-        <rdfs:label xml:lang="it">sistema di disposizione</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/archive/extent -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/archive/extent">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResource"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="en">This property indicates the number and type of elements that compose the archival resource</rdfs:comment>
-        <rdfs:comment xml:lang="it">questa proprietà indica il numero e il tipo di elementi che compongono la risorsa archivistica</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive"/>
-        <rdfs:label xml:lang="it">consistenza</rdfs:label>
-        <rdfs:label xml:lang="en">extent</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/archive/linearShelfSpace -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/archive/linearShelfSpace">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalCollection"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive"/>
-        <rdfs:label xml:lang="en">linear shelf space</rdfs:label>
-        <rdfs:label xml:lang="it">spazio lineare per scaffali</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/arco/ontology/archive/ArchivalCollection -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/archive/ArchivalCollection">
-        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResourceType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/archive/hasSortingCriterion"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/SortingCriterion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isCollectionIn"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResourceType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isDescribedBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasCollectionMember"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResource"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasHolder"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/description"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/archive/arrangementSystem"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/archive/linearShelfSpace"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/numberOfElements"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una collezione archivistica, cioè un&apos;unione di risorse archivistiche legate da un vincolo archivistico</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents an archival collection, which is a combination of archival resources linked by an archival bond.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive"/>
-        <rdfs:label xml:lang="en">Archival collection</rdfs:label>
-        <rdfs:label xml:lang="it">Collezione archivistica</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF. Normativa F: PD/SFI, SSI. Normativa FF: PAC</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/archive/ArchivalResource -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/archive/ArchivalResource">
-        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/archive/hasFundingAid"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/FundingAid"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAcquisition"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Acquisition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDating"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Dating"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDesignationInTime"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/DesignationInTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasIntervention"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Intervention"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasInventorySituation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasResponsibility"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTitle"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Title"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasIdentifier"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Identifier"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResourceType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isDescribedBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/Record"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasHolder"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalCollection"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/archive/extent"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/historicalInformation"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/description"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">This class represents an archival resource</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive"/>
-        <rdfs:label xml:lang="en">Archival resource</rdfs:label>
-        <rdfs:label xml:lang="it">Risorsa archivistica</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/archive/ArchivalResourceType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/archive/ArchivalResourceType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di risorsa archivistica. Esempi inclusono: unità archivistica, Fondo, Serie, ecc.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of an archival resource. Examples include: archival unit, fonds, series, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">Archival resource type</rdfs:label>
-        <rdfs:label xml:lang="it">Tipo di risorsa archivistica</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa FF: PA/PAC/PACT
+     ontologyIRI="https://w3id.org/arco/ontology/archive"
+     versionIRI="https://w3id.org/arco/ontology/archive/0.2">
+    <Prefix name="" IRI="https://w3id.org/arco/ontology/archive/"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="l0" IRI="https://w3id.org/italia/onto/l0/"/>
+    <Prefix name="ns" IRI="http://www.w3.org/2006/vcard/ns#"/>
+    <Prefix name="CLV" IRI="https://w3id.org/italia/onto/CLV/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="ADMS" IRI="https://w3id.org/italia/onto/ADMS/"/>
+    <Prefix name="a-cd" IRI="https://w3id.org/arco/ontology/context-description/"/>
+    <Prefix name="a-dd" IRI="https://w3id.org/arco/ontology/denotative-description/"/>
+    <Prefix name="a-mi" IRI="https://w3id.org/arco/ontology/musical-instrument/"/>
+    <Prefix name="core" IRI="https://w3id.org/arco/ontology/core/"/>
+    <Prefix name="dcat" IRI="http://www.w3.org/ns/dcat#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="opla" IRI="http://www.ontologydesignpatterns.org/opla/"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="a-cat" IRI="https://w3id.org/arco/ontology/catalogue/"/>
+    <Prefix name="opla1" IRI="http://ontologydesignpatterns.org/opla/"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="a-archive" IRI="https://w3id.org/arco/ontology/archive/"/>
+    <Import>https://w3id.org/arco/ontology/context-description/2.0</Import>
+    <Import>https://w3id.org/arco/ontology/denotative-description/2.0</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Alessandro Russo (CNR-ISTC, STLab)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Giorgia Lodi (CNR-ISTC, STLab)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Margherita Porena (CNR-ISTC, STLab)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal xml:lang="it">Il modulo ArCo sugli archivi nasce nel contesto del progetto CNR Portale delle Fonti per la storia della Repubblica italiana. L&apos;obiettivo del progetto è quello di creare un Portale che offra a un pubblico ampio e diversificato una raccolta di fonti per la storia politica e istituzionale nazionale (nel periodo 1943-1953), integrando il patrimonio informativo, incluso quello documentale, delle Istituzioni e di alcune fondazioni e istituti afferenti all’AICI.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal xml:lang="en">The ArCo module on archives was created in the context of the CNR Portal of the sources for the history of the Italian Republic project. The aim of the project is to create a Portal that offers to a wide and diversified audience a collection of sources for national political and institutional history (in the period 1943-1953), integrating the information heritage, including the documental heritage, of the Institutions and some foundations and institutes belonging to the AICI.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal xml:lang="en">Archive Ontology (ArCo network)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal xml:lang="it">Ontologia degli archivi (ArCo network)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Eleonora Lattanzi (CNR-ILIESI)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Gianluca Rossi (CNR-IMATI)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Herbert Natta (CNR-IMATI)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Michela Tardella (CNR-ILIESI)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Paola Ciandrini (CNR-IMATI)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Riccardo Albertoni (CNR-IMATI)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Roberta Maggi (CNR-IMATI)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Tiziana Pasciuto (CNR-IMATI)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:license"/>
+        <IRI>https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-12-03</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="it">Il modulo ArCo sugli archivi nasce nel contesto del progetto CNR Portale delle Fonti per la storia della Repubblica italiana. L&apos;obiettivo del progetto è quello di creare un Portale che offra a un pubblico ampio e diversificato una raccolta di fonti per la storia politica e istituzionale nazionale (nel periodo 1943-1953), integrando il patrimonio informativo, incluso quello documentale, delle Istituzioni e di alcune fondazioni e istituti afferenti all’AICI.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">The ArCo module on archives was created in the context of the CNR Portal of the sources for the history of the Italian Republic project. The aim of the project is to create a Portal that offers to a wide and diversified audience a collection of sources for national political and institutional history (in the period 1943-1953), integrating the information and documental heritage, including the documental heritage, of the Institutions and some foundations and institutes belonging to the AICI.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">Archive Ontology (ArCo network)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="it">Ontologia degli archivi (ArCo network)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">Version 0.2 - Introduced property hasArchivalResourceLevel, replacing core:hasType and renamed the class ArchivalResourceType in ArchivalResourceLevel. This change has been suggested by Francesca Tomasi during the ArCo public event taken place in Bologna last Decembre 2023. The ontology is to be considered still unstable and it can be subject to further changes according to the needs of the CNR project.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="it">Versione 0.2 - È stata introdotta la proprietà ha livello risorsa archivistica, sostituendo la proprietà di core ha tipo ed è stata rinominata la classe Tipo di Risorsa Archivistica in Livello Risorsa Archivistica. Il cambiamento nasce per meglio catturare la terminologia propria archivistica ed è stato suggerito da Francesca Tomasi durante l&apos;evento ArCo tenutosi a Bologna lo scorso Dicemnbre 2023. L&apos;ontologia è da ritenersi ancora in stato bozza perché potrebbe subire ulteriori cambiamenti rispetto ai requisiti che emergeranno nel contesto del progetto Portale delle Fonti del CNR.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="/ArchivalCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ArchivalResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ArchivalResourceLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/FundingAid"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="a-cat:Record"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:ClassificationInTime"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:ClassificationSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="a-dd:CommunicationMedium"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="a-dd:MeasurementCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="a-dd:TechnicalConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://dati.beniculturali/cis/hasMemberColCultEnt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://dati.beniculturali/cis/isMemberOfColCultEnt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasArchivalResourceLevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasFundingAid"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/arco/ontology/arco-lite/hasCollectionMember"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/arco/ontology/arco-lite/hasHolder"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/arco/ontology/arco-lite/isCollectionMemberOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="core:classifies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="core:hasClassificationInTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="core:isDefinedByClassificationSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="core:isDescribedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="a-dd:hasMeasurementCollection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/arrangementSystem"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/extent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/linearShelfSpace"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/SortingCriterion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasSortingCriterion"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <Class IRI="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/hasArchivalResourceLevel"/>
+            <Class IRI="/ArchivalResourceLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://dati.beniculturali/cis/hasMemberColCultEnt"/>
+            <Class IRI="/ArchivalResource"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/hasArchivalResourceLevel"/>
+            <Class IRI="/ArchivalResourceLevel"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/hasSortingCriterion"/>
+            <Class IRI="/SortingCriterion"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+            <Class abbreviatedIRI="l0:Agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="a-cd:isCollectionIn"/>
+            <Class abbreviatedIRI="a-cd:CollectionMembership"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:hasIdentifier"/>
+            <Class abbreviatedIRI="core:Identifier"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:isDescribedBy"/>
+            <Class abbreviatedIRI="a-cat:Record"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
+            <Class IRI="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="https://w3id.org/arco/ontology/arco-lite/hasHolder"/>
+            <Class abbreviatedIRI="l0:Agent"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="core:description"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="l0:identifier"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/arrangementSystem"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/linearShelfSpace"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalCollection"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="a-dd:numberOfElements"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <Class IRI="http://dati.beniculturali.it/cis/CulturalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/hasArchivalResourceLevel"/>
+            <Class IRI="/ArchivalResourceLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://dati.beniculturali/cis/isMemberOfColCultEnt"/>
+            <Class IRI="/ArchivalCollection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/hasArchivalResourceLevel"/>
+            <Class IRI="/ArchivalResourceLevel"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/hasFundingAid"/>
+            <Class IRI="/FundingAid"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/arco/ontology/arco-lite/hasAuthor"/>
+            <Class abbreviatedIRI="l0:Agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="a-cd:hasAcquisition"/>
+            <Class abbreviatedIRI="a-cd:Acquisition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="a-cd:hasDating"/>
+            <Class abbreviatedIRI="a-cd:Dating"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="a-cd:hasDesignationInTime"/>
+            <Class abbreviatedIRI="a-cd:DesignationInTime"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="a-cd:hasIntervention"/>
+            <Class abbreviatedIRI="a-cd:Intervention"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="a-cd:hasInventorySituation"/>
+            <Class abbreviatedIRI="a-cd:InventorySituation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="a-cd:hasLegalSituation"/>
+            <Class abbreviatedIRI="a-cd:LegalSituation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="a-cd:hasResponsibility"/>
+            <Class abbreviatedIRI="a-cd:Responsibility"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="a-cd:hasSubject"/>
+            <Class abbreviatedIRI="l0:Topic"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="a-cd:hasTitle"/>
+            <Class abbreviatedIRI="a-cd:Title"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:hasIdentifier"/>
+            <Class abbreviatedIRI="core:Identifier"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:isDescribedBy"/>
+            <Class abbreviatedIRI="a-cat:Record"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
+            <Class IRI="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="https://w3id.org/arco/ontology/arco-lite/hasHolder"/>
+            <Class abbreviatedIRI="l0:Agent"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/extent"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="a-cd:historicalInformation"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResource"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="core:description"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ArchivalResourceLevel"/>
+        <Class abbreviatedIRI="core:Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FundingAid"/>
+        <Class abbreviatedIRI="core:Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/SortingCriterion"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="core:description"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasArchivalResourceLevel"/>
+        <ObjectProperty abbreviatedIRI="core:hasType"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasFundingAid"/>
+        <ObjectProperty abbreviatedIRI="core:hasConcept"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasArchivalResourceLevel"/>
+        <Class IRI="/ArchivalResource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasFundingAid"/>
+        <Class IRI="/ArchivalResource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasArchivalResourceLevel"/>
+        <Class IRI="/ArchivalResourceLevel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasFundingAid"/>
+        <Class IRI="/FundingAid"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="/arrangementSystem"/>
+        <Class IRI="/ArchivalCollection"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/extent"/>
+        <Class IRI="/ArchivalResource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/linearShelfSpace"/>
+        <Class IRI="/ArchivalCollection"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="/arrangementSystem"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/extent"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/linearShelfSpace"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ArchivalCollection</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta una collezione archivistica, cioè un&apos;unione di risorse archivistiche legate da un vincolo archivistico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ArchivalCollection</IRI>
+        <Literal xml:lang="en">This class represents an archival collection, which is a combination of archival resources linked by an archival bond.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ArchivalCollection</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ArchivalCollection</IRI>
+        <Literal xml:lang="en">Archival collection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ArchivalCollection</IRI>
+        <Literal xml:lang="it">Collezione archivistica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ArchivalCollection</IRI>
+        <Literal xml:lang="it">stabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ArchivalCollection</IRI>
+        <Literal xml:lang="en">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="a-cat:iccdNormTag"/>
+        <IRI>/ArchivalCollection</IRI>
+        <Literal>ICCD Normativa F: UB/UBF. Normativa F: PD/SFI, SSI. Normativa FF: PAC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ArchivalResource</IRI>
+        <Literal xml:lang="en">This class represents an archival resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ArchivalResource</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ArchivalResource</IRI>
+        <Literal xml:lang="en">Archival resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ArchivalResource</IRI>
+        <Literal xml:lang="it">Risorsa archivistica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ArchivalResource</IRI>
+        <Literal xml:lang="it">stabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ArchivalResource</IRI>
+        <Literal xml:lang="en">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ArchivalResourceLevel</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta il livello gerarchico delle risorse archivistiche. Esempi inclusono: unità archivistica, Fondo, Serie, ecc. Nel contesto del progetto portale delle fonti della repubblica italiana, si sta lavorando per predisporre un vocabolario controllato i cui concetti sono le istanze di questa classe. Il vocabolario utilizzerà sicuramente la gerarchia definita in ISAD e sarà allineato ad altri vocabolari analoghi come per esempio il vocabolario di XDAMS e quello RIC-O</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ArchivalResourceLevel</IRI>
+        <Literal xml:lang="en">This class represents the archival hierarchy level of an archival resource. Examples include: archival unit, fonds, series, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ArchivalResourceLevel</IRI>
+        <Literal xml:lang="en">Archival resource level</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ArchivalResourceLevel</IRI>
+        <Literal xml:lang="it">Livello della risorsa archivistica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ArchivalResourceLevel</IRI>
+        <Literal xml:lang="it">stabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/ArchivalResourceLevel</IRI>
+        <Literal xml:lang="en">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="a-cat:iccdNormTag"/>
+        <IRI>/ArchivalResourceLevel</IRI>
+        <Literal>ICCD Normativa FF: PA/PAC/PACT
 ICCD Normativa F: UB/UBF/UBFU-UBFT-UBFS-UBFF-UBFP,
-PA/SSI, PA/SFI</a-cat:iccdNormTag>
-    </owl:Class>
-    
+PA/SSI, PA/SFI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/FundingAid</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta programmi di aiuti per il finanziamento utili per finanziare archivi.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/FundingAid</IRI>
+        <Literal xml:lang="en">This class represents funding aids useful to fund archival resources.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/FundingAid</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/FundingAid</IRI>
+        <Literal xml:lang="it">Aiuto di Finanziamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/FundingAid</IRI>
+        <Literal xml:lang="en">Funding Aid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/FundingAid</IRI>
+        <Literal xml:lang="it">stabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/FundingAid</IRI>
+        <Literal xml:lang="en">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/arrangementSystem</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/arrangementSystem</IRI>
+        <Literal xml:lang="en">arrangement system</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/arrangementSystem</IRI>
+        <Literal xml:lang="it">sistema di disposizione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/arrangementSystem</IRI>
+        <Literal xml:lang="it">provvisoria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/arrangementSystem</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/extent</IRI>
+        <Literal xml:lang="en">This property indicates the number and type of elements that compose the archival resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/extent</IRI>
+        <Literal xml:lang="it">questa proprietà indica il numero e il tipo di elementi che compongono la risorsa archivistica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/extent</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/extent</IRI>
+        <Literal xml:lang="it">consistenza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/extent</IRI>
+        <Literal xml:lang="en">extent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/extent</IRI>
+        <Literal xml:lang="it">stabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/extent</IRI>
+        <Literal xml:lang="en">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasArchivalResourceLevel</IRI>
+        <Literal xml:lang="en">Property that links the archival resource to the archival hierarchy level (e.g., fonds, series, item, file, etc.)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasArchivalResourceLevel</IRI>
+        <Literal xml:lang="it">Proprietà che collega la risorsa archivistica al livello della gerarchia archivistica (e.g., fondo, serie, unità archivistica, unità documentaria, ecc.)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasArchivalResourceLevel</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasArchivalResourceLevel</IRI>
+        <Literal xml:lang="it">ha livello risorsa archivistica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasArchivalResourceLevel</IRI>
+        <Literal xml:lang="en">has archival resource level</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/hasArchivalResourceLevel</IRI>
+        <Literal xml:lang="it">stabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/hasArchivalResourceLevel</IRI>
+        <Literal xml:lang="en">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasFundingAid</IRI>
+        <Literal xml:lang="en">Property that links an archival resource to its funding aid.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasFundingAid</IRI>
+        <Literal xml:lang="it">Proprietà che lega una risorsa archivistica a un aiuto di finanziamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasFundingAid</IRI>
+        <Literal xml:lang="it">ha aiuti di finanziamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasFundingAid</IRI>
+        <Literal xml:lang="en">has funding aid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasFundingAid</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/hasFundingAid</IRI>
+        <Literal xml:lang="it">stabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/hasFundingAid</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/linearShelfSpace</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/linearShelfSpace</IRI>
+        <Literal xml:lang="en">linear shelf space</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/linearShelfSpace</IRI>
+        <Literal xml:lang="it">spazio lineare per scaffali</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/linearShelfSpace</IRI>
+        <Literal xml:lang="it">provvisoria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>/linearShelfSpace</IRI>
+        <Literal xml:lang="en">unstable</Literal>
+    </AnnotationAssertion>
+</Ontology>
 
 
-    <!-- https://w3id.org/arco/ontology/archive/FundingAid -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/archive/FundingAid">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta programmi di aiuti per il finanziamento utili per finanziare archivi.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents funding aids useful to fund archival resources.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive"/>
-        <rdfs:label xml:lang="it">Aiuto di Finanziamento</rdfs:label>
-        <rdfs:label xml:lang="en">Funding Aid</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/archive/SortingCriterion -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/archive/SortingCriterion">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/description"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il criterio di ordinamento di un fondo, una serie, etc</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the sorting criterion of a series, fond, etc</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive/"/>
-        <rdfs:label xml:lang="it">Criterio di ordinamento</rdfs:label>
-        <rdfs:label xml:lang="en">Sorting criterion</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa FF: OG/OGT/OGTO</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/catalogue/Record -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/Record"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/core/ClassificationInTime -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/core/ClassificationSystem -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/CommunicationMedium -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/MeasurementCollection -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalConcept -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 
