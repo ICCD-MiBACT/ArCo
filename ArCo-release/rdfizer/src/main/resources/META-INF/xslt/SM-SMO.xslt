@@ -374,7 +374,7 @@
 	   			</l0:name>
 	   			<arco-core:isDefinedByClassificationSystem>
 					<xsl:attribute name="rdf:resource">
-			    		<xsl:value-of select="concat($NS,'ClassificationSystem/Hornbosel-SachsClassificationSystem')" />
+			    		<xsl:value-of select="concat($NS,'ClassificationSystem/Hornbostel-SachsClassificationSystem')" />
 			    	</xsl:attribute>
 				</arco-core:isDefinedByClassificationSystem>
 	   			<arco-lite:HSNumber>
@@ -398,7 +398,7 @@
 		   </rdf:Description>
 		    <rdf:Description>
 				<xsl:attribute name="rdf:about">
-		    		<xsl:value-of select="concat($NS,'ClassificationSystem/Hornbosel-SachsClassificationSystem')" />
+		    		<xsl:value-of select="concat($NS,'ClassificationSystem/Hornbostel-SachsClassificationSystem')" />
 			    </xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -406,16 +406,16 @@
             		</xsl:attribute>
 				</rdf:type>
 				<rdfs:label xml:lang="en">
-	   				<xsl:value-of select="'Hornbosel-Sachs classification system'" />
+	   				<xsl:value-of select="'Hornbostel-Sachs classification system'" />
 		   		</rdfs:label>
 		   		<rdfs:label xml:lang="it">
-	   				<xsl:value-of select="'Sistema di classificazione Hornbosel-Sachs'" />
+	   				<xsl:value-of select="'Sistema di classificazione Hornbostel-Sachs'" />
 		   		</rdfs:label>
 				<l0:name xml:lang="en">
-					<xsl:value-of select="'Hornbosel-Sachs classification system'" />
+					<xsl:value-of select="'Hornbostel-Sachs classification system'" />
 	   			</l0:name >
 	   			<l0:name xml:lang="it">
-					<xsl:value-of select="'Sistema di classificazione Hornbosel-Sachs'" />
+					<xsl:value-of select="'Sistema di classificazione Hornbostel-Sachs'" />
 	   			</l0:name >
 				<arco-core:definesConcept>
 					<xsl:attribute name="rdf:resource">
