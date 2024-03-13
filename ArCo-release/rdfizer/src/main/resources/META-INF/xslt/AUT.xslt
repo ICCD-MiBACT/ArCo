@@ -929,11 +929,11 @@
 				</xsl:if>
 				<!-- Bibliography of cultural property -->
 				<xsl:for-each select="record/metadata/schede/*/DO/BIB">
-					<arco-cd:hasBibliography>
+					<arco-cd:hasBibliographicSource>
 						<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="concat($NS, 'Bibliography/', $idAuthor, '-bibliography-', position())" />
+							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBM)))" />
 	                	</xsl:attribute>
-					</arco-cd:hasBibliography>
+					</arco-cd:hasBibliographicSource>
 				</xsl:for-each>
 				<xsl:if test="record/metadata/schede/*/AU/AUT/AUTH and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)), 'n.r')))">
 					<arco-lite:localIdentifier>
@@ -1073,34 +1073,26 @@
 			<xsl:for-each select="record/metadata/schede/*/DO/BIB">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'Bibliography/', $idAuthor, '-bibliography-', position())" />
+            			<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBM)))" />
             		</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Bibliography'" />
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
             			</xsl:attribute>
 					</rdf:type>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Bibliography ', position())" />
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./BIBM)" />
 					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Bibliography ', position())" />
+					<l0:name>
+						<xsl:value-of select="normalize-space(./BIBM)" />
 					</l0:name>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Bibliografia ', position())" />
-					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Bibliografia ', position())" />
-					</l0:name>
+					<arco-cd:completeBibliographicReference>
+						<xsl:value-of select="normalize-space(./BIBM)" />
+					</arco-cd:completeBibliographicReference>
 					<xsl:if test="./BIBR and (not(starts-with(lower-case(normalize-space(./BIBR)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBR)), 'n.r')))">
 						<arco-cd:abbreviation>
 							<xsl:value-of select="normalize-space(./BIBR)" />
 						</arco-cd:abbreviation>
-					</xsl:if>
-					<xsl:if test="./BIBM and (not(starts-with(lower-case(normalize-space(./BIBM)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBM)), 'n.r')))">
-						<arco-cd:completeBibliographicReference>
-							<xsl:value-of select="normalize-space()" />
-						</arco-cd:completeBibliographicReference>
 					</xsl:if>
 					<xsl:if test="./BIBN and (not(starts-with(lower-case(normalize-space(./BIBN)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBN)), 'n.r')))">
 						<arco-core:note>
