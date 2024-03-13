@@ -29028,6 +29028,11 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</l0:name>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeDesignation'" />
+							</xsl:attribute>
+						</arco-core:hasType>
 						<xsl:if test="./PVLR">
 							<tiapit:atTime>
 								<xsl:attribute name="rdf:resource">
@@ -29923,6 +29928,11 @@
 								<l0:name>
 									<xsl:value-of select="normalize-space(./LTST)" />
 								</l0:name>
+								<arco-core:hasType>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeDesignation'" />
+									</xsl:attribute>
+								</arco-core:hasType>
 								<xsl:if test="./LTSD">
 									<tiapit:atTime>
 										<xsl:attribute name="rdf:resource">
@@ -29980,6 +29990,11 @@
 								<l0:name>
 									<xsl:value-of select="normalize-space(./LVSD)" />
 								</l0:name>
+								<arco-core:hasType>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeDesignation'" />
+									</xsl:attribute>
+								</arco-core:hasType>
 								<xsl:if test="./LVST">
 									<tiapit:atTime>
 										<xsl:attribute name="rdf:resource">
@@ -30647,6 +30662,11 @@
                                 <xsl:value-of select="'https://w3id.org/arco/ontology/location/ToponymInTime'" />
                             </xsl:attribute>
 						</rdf:type>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeDesignation'" />
+							</xsl:attribute>
+						</arco-core:hasType>
 						<rdfs:label>
 							<xsl:choose>
  	                        	<xsl:when test="./PVLT">
@@ -31858,6 +31878,11 @@
 										</xsl:otherwise>
 									</xsl:choose>
 								</l0:name>
+								<arco-core:hasType>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeDesignation'" />
+									</xsl:attribute>
+								</arco-core:hasType>
 								<xsl:if test="./PRLR">
 									<tiapit:atTime>
 										<xsl:attribute name="rdf:resource">
@@ -32953,6 +32978,11 @@
 								<xsl:value-of select="'https://w3id.org/arco/ontology/location/ToponymInTime'" />
 							</xsl:attribute>
 						</rdf:type>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeDesignation'" />
+							</xsl:attribute>
+						</arco-core:hasType>
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(record/metadata/schede/F/LR/LRL)" />
 						</rdfs:label>
