@@ -7885,6 +7885,7 @@
 		<xsl:if test="$sheetType='A' or $sheetType='PG'">
 			<xsl:choose>
 				<xsl:when test="$sheetVersion='3.00' or $sheetVersion='3.00_ICCD0'">
+				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                     	<xsl:choose>
 							<xsl:when test="./OGTQ">
@@ -7942,8 +7943,10 @@
 							</xsl:attribute>
 						</arco-dd:hasCulturalPropertySpecification>
 					</xsl:if>
+					</rdf:Description>
 				</xsl:when>
 				<xsl:when test="$sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')">
+				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 						<xsl:choose>
 							<xsl:when test="./OGTQ">
@@ -8001,6 +8004,7 @@
 							</xsl:attribute>
 						</arco-dd:hasCulturalPropertySpecification>
 					</xsl:if>
+				</rdf:Description>
 				</xsl:when>
 			</xsl:choose>
 		</xsl:if>
