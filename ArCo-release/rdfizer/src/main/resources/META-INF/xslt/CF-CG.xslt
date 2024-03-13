@@ -1008,6 +1008,22 @@
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/CF/CFN)" />
 					</l0:name>
 				</xsl:when>
+				<xsl:when test="record/metadata/schede/*/CF/CFQ">
+					<rdfs:label>
+						<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/CF/CFT), ' ', normalize-space(record/metadata/schede/*/CF/CFQ))" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/CF/CFT), ' ', normalize-space(record/metadata/schede/*/CF/CFQ))" />
+					</l0:name>
+				</xsl:when>
+				<xsl:when test="record/metadata/schede/*/CF/CFT">
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/CF/CFT)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/CF/CFT)" />
+					</l0:name>
+				</xsl:when>
 				<xsl:otherwise>
 					<rdfs:label xml:lang="it">Contenitore fisico</rdfs:label>
 					<l0:name xml:lang="it">Contenitore fisico</l0:name>

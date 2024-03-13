@@ -23483,6 +23483,11 @@
 							<arco-core:informationSource>
 								<xsl:value-of select="normalize-space()" />
 							</arco-core:informationSource>
+							<arco-cd:hasAttributionMotivation>
+								<xsl:attribute name="rdf:resource">
+				            		<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					            </xsl:attribute>
+							</arco-cd:hasAttributionMotivation>
 						</xsl:for-each>
 						<xsl:if test="contains((./ATBD), '?')">
 							<arco-cd:uncertainData>
@@ -23490,6 +23495,25 @@
 							</arco-cd:uncertainData>
 						</xsl:if>
 					</rdf:Description>
+					<!-- attribution motivation as individual -->
+					<xsl:for-each select="./ATBM[not(lower-case(normalize-space())='nr' or lower-case(normalize-space())='nr (recupero pregresso)' or lower-case(normalize-space())='n.r.')]">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		            			<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					        </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		    			        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AttributionMotivation'" />
+		        			    </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:for-each>
 					<!-- We add the cultural scope attribution role as an individual. -->
 					<xsl:if test="./ATBR and (not(starts-with(lower-case(normalize-space(./ATBR)), 'nr')) and not(starts-with(lower-case(normalize-space(./ATBR)), 'n.r')))">
 						<rdf:Description>
@@ -23720,8 +23744,32 @@
 								<arco-core:informationSource>
 									<xsl:value-of select="normalize-space()" />
 								</arco-core:informationSource>
+								<arco-cd:hasAttributionMotivation>
+								<xsl:attribute name="rdf:resource">
+				            		<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					            </xsl:attribute>
+							</arco-cd:hasAttributionMotivation>
 							</xsl:for-each>
 						</rdf:Description>
+						<!-- attribution motivation as individual -->
+						<xsl:for-each select="./AUTM[not(lower-case(normalize-space())='nr' or lower-case(normalize-space())='nr (recupero pregresso)' or lower-case(normalize-space())='n.r.')]">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		            			<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					        </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		    			        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AttributionMotivation'" />
+		        			    </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+						</xsl:for-each>
 						<xsl:if test="./AUTR and not(lower-case(normalize-space(./AUTR))='nr' or lower-case(normalize-space(./AUTR))='nr (recupero pregresso)' or lower-case(normalize-space(./AUTR))='n.r.' or lower-case(normalize-space(./AUTR))='nr [non rilevabile]' or lower-case(normalize-space(./AUTR))='n.r. (non rilevabile)')">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
@@ -24313,6 +24361,11 @@
                                 	<xsl:value-of select="(normalize-space())" />
                             	</xsl:attribute>
 							</arco-core:informationSource>
+							<arco-cd:hasAttributionMotivation>
+								<xsl:attribute name="rdf:resource">
+				            		<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					            </xsl:attribute>
+							</arco-cd:hasAttributionMotivation>
 						</xsl:for-each>
 						<xsl:if test="contains((./AUFN), '?')">
 							<arco-cd:uncertainData>
@@ -24332,6 +24385,25 @@
 							</arco-cd:hasInterventionRole>
 						</xsl:if>
 					</rdf:Description>
+					<!-- attribution motivation as individual -->
+					<xsl:for-each select="./AUFM[not(lower-case(normalize-space())='nr' or lower-case(normalize-space())='nr (recupero pregresso)' or lower-case(normalize-space())='n.r.')]">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		            			<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					        </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		    			        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AttributionMotivation'" />
+		        			    </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:for-each>
 					<xsl:if test="./AUFR and not(lower-case(normalize-space(./AUFR))='nr' or lower-case(normalize-space(./AUFR))='nr (recupero pregresso)' or lower-case(normalize-space(./AUFR))='n.r.' or lower-case(normalize-space(./AUFR))='nr [non rilevabile]' or lower-case(normalize-space(./AUFR))='n.r. (non rilevabile)')">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
@@ -24692,8 +24764,32 @@
                                 	<xsl:value-of select="(normalize-space())" />
                             	</xsl:attribute>
 							</arco-core:informationSource>
+							<arco-cd:hasAttributionMotivation>
+								<xsl:attribute name="rdf:resource">
+				            		<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					            </xsl:attribute>
+							</arco-cd:hasAttributionMotivation>
 						</xsl:for-each>
 					</rdf:Description>
+					<!-- attribution motivation as individual -->
+					<xsl:for-each select="./AFBM[not(lower-case(normalize-space())='nr' or lower-case(normalize-space())='nr (recupero pregresso)' or lower-case(normalize-space())='n.r.')]">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		            			<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					        </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		    			        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AttributionMotivation'" />
+		        			    </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:for-each>
 					<!-- We add the cultural scope as an individual. -->
 					<xsl:if test="./AFBD and not(lower-case(normalize-space(./AFBD))='nr' or lower-case(normalize-space(./AFBD))='n.r.' or lower-case(normalize-space(./AFBD))='nr (recupero pregresso)')">
 						<rdf:Description>
@@ -24882,8 +24978,32 @@
                                 	<xsl:value-of select="(normalize-space())" />
                             	</xsl:attribute>
 							</arco-core:informationSource>
+							<arco-cd:hasAttributionMotivation>
+								<xsl:attribute name="rdf:resource">
+				            		<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					            </xsl:attribute>
+							</arco-cd:hasAttributionMotivation>
 						</xsl:for-each>
-					</rdf:Description>
+					</rdf:Description>			
+					<!-- attribution motivation as individual -->
+					<xsl:for-each select="./AUIM[not(lower-case(normalize-space())='nr' or lower-case(normalize-space())='nr (recupero pregresso)' or lower-case(normalize-space())='n.r.')]">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		            			<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					        </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		    			        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AttributionMotivation'" />
+		        			    </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:for-each>
 					<xsl:if test="./AUIR and not(lower-case(normalize-space(./AUIR))='nr' or lower-case(normalize-space(./AUIR))='nr (recupero pregresso)' or lower-case(normalize-space(./AUIR))='n.r.' or lower-case(normalize-space(./AUIR))='nr [non rilevabile]' or lower-case(normalize-space(./AUIR))='n.r. (non rilevabile)')">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
@@ -25062,6 +25182,11 @@
 							<arco-core:informationSource>
 								<xsl:value-of select="normalize-space(.)" />
 							</arco-core:informationSource>
+							<arco-cd:hasAttributionMotivation>
+								<xsl:attribute name="rdf:resource">
+				            		<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					            </xsl:attribute>
+							</arco-cd:hasAttributionMotivation>
 						</xsl:for-each>
 					</rdf:Description>
 					<rdf:Description>
@@ -25119,6 +25244,25 @@
 							</arco-cd:agentDate>
 						</xsl:if>
 					</rdf:Description>
+					<!-- attribution motivation as individual -->
+					<xsl:for-each select="./AATM[not(lower-case(normalize-space())='nr' or lower-case(normalize-space())='nr (recupero pregresso)' or lower-case(normalize-space())='n.r.')]">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		            			<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					        </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		    			        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AttributionMotivation'" />
+		        			    </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/*/AU/AAF">
@@ -25179,6 +25323,11 @@
 							<arco-core:informationSource>
 								<xsl:value-of select="normalize-space(.)" />
 							</arco-core:informationSource>
+							<arco-cd:hasAttributionMotivation>
+								<xsl:attribute name="rdf:resource">
+				            		<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					            </xsl:attribute>
+							</arco-cd:hasAttributionMotivation>
 						</xsl:for-each>
 					</rdf:Description>
 					<rdf:Description>
@@ -25215,6 +25364,25 @@
 							</xsl:choose>
 						</l0:name>
 					</rdf:Description>
+					<!-- attribution motivation as individual -->
+					<xsl:for-each select="./AAFM[not(lower-case(normalize-space())='nr' or lower-case(normalize-space())='nr (recupero pregresso)' or lower-case(normalize-space())='n.r.')]">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		            			<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					        </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		    			        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AttributionMotivation'" />
+		        			    </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>			
 			<!-- responsibility for cultural property (F and FF) -->
@@ -25281,8 +25449,33 @@
                            		<xsl:value-of select="normalize-space()" />
                             </xsl:attribute>
 						</arco-core:informationSource>
+						<arco-cd:hasAttributionMotivation>
+								<xsl:attribute name="rdf:resource">
+				            		<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					            </xsl:attribute>
+							</arco-cd:hasAttributionMotivation>
+						
 					</xsl:for-each>
 				</rdf:Description>
+				<!-- attribution motivation as individual -->
+					<xsl:for-each select="./PDFM[not(lower-case(normalize-space())='nr' or lower-case(normalize-space())='nr (recupero pregresso)' or lower-case(normalize-space())='n.r.')]">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		            			<xsl:value-of select="concat($NS, 'AttributionMotivation/', arco-fn:urify(normalize-space()))" />
+					        </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		    			        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AttributionMotivation'" />
+		        			    </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:for-each>
 				<xsl:if test="./PDFL and (not(starts-with(lower-case(normalize-space(./PDFL)), 'nr')) and not(starts-with(lower-case(normalize-space(./PDFL)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
