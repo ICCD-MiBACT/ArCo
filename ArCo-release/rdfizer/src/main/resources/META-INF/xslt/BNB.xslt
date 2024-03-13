@@ -2838,6 +2838,7 @@
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIE">
 				<arco-core:note>
+				
 					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/LR/LRI/LRIE)" />
 				</arco-core:note>
 			</xsl:if>			
@@ -2875,6 +2876,22 @@
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
+			<xsl:for-each select="record/metadata/schede/*/LR/LRV">
+				<clvapit:hasSpatialCoverage>
+					<xsl:choose>
+						<xsl:when test="./LRVS and not(lower-case(normalize-space(./LRVS))='italia')">
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVS), normalize-space(./LRVP), normalize-space(./LRVR), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
+							</xsl:attribute>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVP), normalize-space(./LRVC), normalize-space(./LRVL))))" />
+							</xsl:attribute>
+						</xsl:otherwise>
+					</xsl:choose>
+				</clvapit:hasSpatialCoverage>
+			</xsl:for-each>
 		</rdf:Description>
 	</xsl:if>
 	<!-- Time Interval as individual -->

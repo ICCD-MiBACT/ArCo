@@ -671,7 +671,7 @@
 				</xsl:attribute>
 			</arco-dd:hasAffixedElement>			
 		</xsl:for-each>
-		<xsl:if test="not($sheetType='F' or $sheetType='MIDF' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">
+		<xsl:if test="not($sheetType='F' or $sheetType='MIDF' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB' or $sheetType='BNP')">
 			<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM  or record/metadata/schede/*/IR or record/metadata/schede/*/ET">
 				<arco-spe:hasSpecimenHarvesting>
 					<xsl:attribute name="rdf:resource">
@@ -3410,7 +3410,7 @@
 	</xsl:for-each>
 
 								<!-- Specimen Harvesting as individual -->
-	<xsl:if test="not($sheetType='F' or $sheetType='MIDF' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">
+	<xsl:if test="not($sheetType='F' or $sheetType='MIDF' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB' or $sheetType='BNP')">
 	<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM or record/metadata/schede/*/IR or record/metadata/schede/*/ET">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -3439,33 +3439,33 @@
 				<xsl:variable name="lirl" select="translate($lril-novirgola, '/', ',')" />
 				<xsl:variable name="authorssplit" select="arco-fn:split($lirl)" />
 				<xsl:for-each select="$authorssplit">
-					<arco-spe:hasHarvestingOperator>
+					<arco-lite:hasOperator>
 						<xsl:attribute name="rdf:resource">
         					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 						</xsl:attribute>
-					</arco-spe:hasHarvestingOperator>
+					</arco-lite:hasOperator>
 				</xsl:for-each>
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/*/LR/LRI/LRIZ">
-					<arco-spe:hasHarvestingResponsible>
+					<arco-lite:hasResponsibleAgent>
 						<xsl:attribute name="rdf:resource">
         					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 						</xsl:attribute>
-					</arco-spe:hasHarvestingResponsible>
+					</arco-lite:hasResponsibleAgent>
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/*/LR/LRI/LRIG">
-					<arco-spe:hasHarvestingResponsible>
+					<arco-lite:hasResponsibleAgent>
 						<xsl:attribute name="rdf:resource">
         					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 						</xsl:attribute>
-					</arco-spe:hasHarvestingResponsible>
+					</arco-lite:hasResponsibleAgent>
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/*/LR/LRI/LRIX">
-					<arco-spe:hasHarvestingSponsor>
+					<arco-lite:hasSponsor>
 						<xsl:attribute name="rdf:resource">
         					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 						</xsl:attribute>
-					</arco-spe:hasHarvestingSponsor>
+					</arco-lite:hasSponsor>
 			</xsl:for-each>
 			<xsl:if test="record/metadata/schede/*/LR/LRI/LRIY">
 				<tiapit:atTime>
@@ -3478,6 +3478,13 @@
 				<tiapit:atTime>
 					<xsl:attribute name="rdf:resource">
 	               		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(record/metadata/schede/*/LR/LRI/LRIK, '-',  record/metadata/schede/BNB/LR/LRI/LRIN, '-',  record/metadata/schede/BNB/LR/LRI/LRIC,'-',  record/metadata/schede/BNB/LR/LRI/LRIQ)))" />
+					</xsl:attribute>
+				</tiapit:atTime>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/LR/LRI/LRIF">
+				<tiapit:atTime>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(record/metadata/schede/*/LR/LRI/LRIF)))" />
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
@@ -3516,207 +3523,192 @@
 					</xsl:attribute>
 				</arco-location:hasHarvestingMotivation>
 			</xsl:if>
-			<xsl:if test="record/metadata/schede/*/LR/LRI/LRIF">
-				<tiapit:atTime>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(record/metadata/schede/*/LR/LRI/LRIF)))" />
-					</xsl:attribute>
-				</tiapit:atTime>
-			</xsl:if>
 		</rdf:Description>
-	</xsl:if>				
-	<!-- Time interval as individual -->
-	<xsl:if test="record/metadata/schede/*/LR/LRI/LRIF">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(record/metadata/schede/*/LR/LRI/LRIF)))" />
+				<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-collecting-location')" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+	    	    	<xsl:value-of select="'https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation'" />
 				</xsl:attribute>
 			</rdf:type>
-			<rdfs:label>
-				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Localizzazione della raccolta del bene ', $itemURI)" />
 			</rdfs:label>
-			<l0:name>
-				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Localizzazione della raccolta del bene ', $itemURI)" />
 			</l0:name>
-			<tiapit:time>
-				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
-			</tiapit:time>
-			<arco-arco:startTime>
-				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
-			</arco-arco:startTime>
-			<arco-arco:endTime>
-				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
-			</arco-arco:endTime>
-		</rdf:Description>
-	</xsl:if>
-	<!-- Harvesting Method as individual -->
-	<xsl:if test="record/metadata/schede/*/LR/LRI/LRIW">
-		<rdf:Description>
-			<xsl:attribute name="rdf:about">
-	            <xsl:value-of 	select="concat($NS, 'HarvestingMethod/', arco-fn:urify(record/metadata/schede/*/LR/LRI/LRIW))" />
-	        </xsl:attribute>
-			<rdf:type>
+			<rdfs:label xml:lang="en">
+			<xsl:value-of select="concat('Collecting location of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Collecting location of cultural property ', $itemURI)" />
+			</l0:name>
+			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
+				<arco-location:hasGeologicalContext>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasGeologicalContext>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/ET/ETA/ETAC or record/metadata/schede/*/ET/ETA/ETAP or record/metadata/schede/*/ET/ETA/ETAD or record/metadata/schede/*/ET/ETA/ETAF">
+				<arco-location:hasGeologicalContext>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasGeologicalContext>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/IM/IMG">
+				<arco-location:hasGeologicalContext>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasGeologicalContext>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/IM/IML">
+				<arco-location:hasGeologicalContext>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasGeologicalContext>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/IR/IRG">
+				<arco-location:hasGeologicalContext>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasGeologicalContext>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/IR/IRL">
+				<arco-location:hasGeologicalContext>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasGeologicalContext>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/ET/ETG">
+				<arco-location:hasGeologicalContext>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasGeologicalContext>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/ET/ETL">
+				<arco-location:hasGeologicalContext>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasGeologicalContext>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/IR/IRA/IRAC or record/metadata/schede/*/IR/IRA/IRAE or record/metadata/schede/*/IR/IRA/IRAP or record/metadata/schede/*/IR/IRA/IRAD or record/metadata/schede/*/IR/IRA/IRAF or record/metadata/schede/*/IR/IRA/IRAG">
+				<arco-location:hasGeologicalContext>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasGeologicalContext>
+			</xsl:if>
+			<arco-location:hasLocationType>
 				<xsl:attribute name="rdf:resource">
-	            	<xsl:value-of	select="'https://w3id.org/arco/ontology/natural-specimen-description/HarvestingMethod'" />
-	            </xsl:attribute>
-			</rdf:type>
-			<rdfs:label>
-				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIW)" />
-			</rdfs:label>
-			<l0:name>
-				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIW)" />
-			</l0:name>
+           			<xsl:value-of select="'https://w3id.org/arco/ontology/location/CollectingLocation'" />
+            	</xsl:attribute>
+			</arco-location:hasLocationType>
+			<xsl:if test="record/metadata/schede/*/LR/LRI/LRIR">
+				<arco-location:hasNaturalEnvironment>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'NaturalEnvironment/', $itemURI)" />
+					</xsl:attribute>
+				</arco-location:hasNaturalEnvironment>
+			</xsl:if>	
+			<!-- at location -->
+			<xsl:for-each select="./LRV">
+				<arco-location:atLocation>
+					<xsl:choose>
+						<xsl:when test="./LRVS and not(lower-case(normalize-space(./LRVS))='italia')">
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVK), normalize-space(./LRVS), normalize-space(./LRVP), normalize-space(./LRVR), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
+							</xsl:attribute>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVP), normalize-space(./LRVC), normalize-space(./LRVL))))" />
+							</xsl:attribute>
+						</xsl:otherwise>
+					</xsl:choose>
+				</arco-location:atLocation>
+			</xsl:for-each>	
 		</rdf:Description>
-	</xsl:if>
-	<!-- Harvesting Motivation as individual -->
-	<xsl:if test="record/metadata/schede/*/LR/LRI/LRIU and not($sheetType='F')">
-		<rdf:Description>
-			<xsl:attribute name="rdf:about">
-	            <xsl:value-of select="concat($NS, 'HarvestingMotivation/', arco-fn:urify(record/metadata/schede/*/LR/LRI/LRIU))" />
-	        </xsl:attribute>
-			<rdf:type>
-				<xsl:attribute name="rdf:resource">
-	            	<xsl:value-of	select="'https://w3id.org/arco/ontology/natural-specimen-description/HarvestingMotivation'" />
-	            </xsl:attribute>
-			</rdf:type>
-			<rdfs:label>
-				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIU)" />
-			</rdfs:label>
-			<l0:name>
-				<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIU)" />
-			</l0:name>
-		</rdf:Description>
-	</xsl:if>				
-	<!-- Time indexed typed location as individual -->
-	<xsl:if test="not($sheetType='F' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">
-		<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM or record/metadata/schede/*/IR or record/metadata/schede/*/ET">
+		<!-- Time interval as individual -->
+		<xsl:if test="record/metadata/schede/*/LR/LRI/LRIF">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-collecting-location')" />
+					<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(record/metadata/schede/*/LR/LRI/LRIF)))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-		    	    	<xsl:value-of select="'https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation'" />
+						<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
 					</xsl:attribute>
 				</rdf:type>
-				<rdfs:label xml:lang="it">
-					<xsl:value-of select="concat('Localizzazione della raccolta del bene ', $itemURI)" />
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
 				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:value-of select="concat('Localizzazione della raccolta del bene ', $itemURI)" />
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
 				</l0:name>
-				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Collecting location of cultural property ', $itemURI)" />
-				</rdfs:label>
-				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Collecting location of cultural property ', $itemURI)" />
-				</l0:name>
-				<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
-					<arco-location:hasGeologicalContext>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
-						</xsl:attribute>
-					</arco-location:hasGeologicalContext>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/ET/ETA/ETAC or record/metadata/schede/*/ET/ETA/ETAP or record/metadata/schede/*/ET/ETA/ETAD or record/metadata/schede/*/ET/ETA/ETAF">
-					<arco-location:hasGeologicalContext>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
-						</xsl:attribute>
-					</arco-location:hasGeologicalContext>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/IM/IMG">
-					<arco-location:hasGeologicalContext>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
-						</xsl:attribute>
-					</arco-location:hasGeologicalContext>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/IM/IML">
-					<arco-location:hasGeologicalContext>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
-						</xsl:attribute>
-					</arco-location:hasGeologicalContext>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/IR/IRG">
-					<arco-location:hasGeologicalContext>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
-						</xsl:attribute>
-					</arco-location:hasGeologicalContext>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/IR/IRL">
-					<arco-location:hasGeologicalContext>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
-						</xsl:attribute>
-					</arco-location:hasGeologicalContext>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/ET/ETG">
-					<arco-location:hasGeologicalContext>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
-						</xsl:attribute>
-					</arco-location:hasGeologicalContext>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/ET/ETL">
-					<arco-location:hasGeologicalContext>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
-						</xsl:attribute>
-					</arco-location:hasGeologicalContext>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/IR/IRA/IRAC or record/metadata/schede/*/IR/IRA/IRAE or record/metadata/schede/*/IR/IRA/IRAP or record/metadata/schede/*/IR/IRA/IRAD or record/metadata/schede/*/IR/IRA/IRAF or record/metadata/schede/*/IR/IRA/IRAG">
-					<arco-location:hasGeologicalContext>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
-						</xsl:attribute>
-					</arco-location:hasGeologicalContext>
-				</xsl:if>
-				<arco-location:hasLocationType>
-					<xsl:attribute name="rdf:resource">
-            			<xsl:value-of select="'https://w3id.org/arco/ontology/location/CollectingLocation'" />
-	            	</xsl:attribute>
-				</arco-location:hasLocationType>
-				<xsl:for-each select="record/metadata/schede/*/LR">
-					<xsl:if test="./LRI/LRIR">
-						<arco-location:hasNaturalEnvironment>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'NaturalEnvironment/', $itemURI)" />
-							</xsl:attribute>
-						</arco-location:hasNaturalEnvironment>
-					</xsl:if>	
-					<!-- at location -->
-					<xsl:for-each select="./LRV">
-					<arco-location:atLocation>
-						<xsl:choose>
-							<xsl:when test="./LRVS and not(lower-case(normalize-space(./LRVS))='italia')">
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVK), normalize-space(./LRVS), normalize-space(./LRVP), normalize-space(./LRVR), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
-								</xsl:attribute>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVP), normalize-space(./LRVC), normalize-space(./LRVL))))" />
-								</xsl:attribute>
-							</xsl:otherwise>
-						</xsl:choose>
-					</arco-location:atLocation>
-					</xsl:for-each>
-				</xsl:for-each>	
+				<tiapit:time>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
+				</tiapit:time>
+				<arco-arco:startTime>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
+				</arco-arco:startTime>
+				<arco-arco:endTime>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIF)" />
+				</arco-arco:endTime>
 			</rdf:Description>
 		</xsl:if>
-		<xsl:for-each select="record/metadata/schede/*/LR">
-		<!-- NaturalEnvironment as individual -->	
-		<xsl:if test="./LRI/LRIR">
+		<!-- Harvesting Method as individual -->
+		<xsl:if test="record/metadata/schede/*/LR/LRI/LRIW">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-        			<xsl:value-of select="concat($NS, 'NaturalEnvironment/', $itemURI)" />
+	    	        <xsl:value-of 	select="concat($NS, 'HarvestingMethod/', arco-fn:urify(record/metadata/schede/*/LR/LRI/LRIW))" />
+	        	</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+	    	        	<xsl:value-of	select="'https://w3id.org/arco/ontology/natural-specimen-description/HarvestingMethod'" />
+	        	    </xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIW)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIW)" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<!-- Harvesting Motivation as individual -->
+		<xsl:if test="record/metadata/schede/*/LR/LRI/LRIU">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+	        	    <xsl:value-of select="concat($NS, 'HarvestingMotivation/', arco-fn:urify(record/metadata/schede/*/LR/LRI/LRIU))" />
+		        </xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+	        	    	<xsl:value-of	select="'https://w3id.org/arco/ontology/natural-specimen-description/HarvestingMotivation'" />
+	            	</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIU)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/LR/LRI/LRIU)" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>				
+		<!-- NaturalEnvironment as individual -->	
+		<xsl:if test="record/metadata/schede/*/LR/LRI/LRIR">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+       				<xsl:value-of select="concat($NS, 'NaturalEnvironment/', $itemURI)" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -3736,17 +3728,17 @@
 					<xsl:value-of select="concat('Natural environment of collecting location of cultural property ', $itemURI)" />
 				</l0:name>
 				<rdfs:label>
-					<xsl:value-of select="./LRI/LRIR" />
+					<xsl:value-of select="record/metadata/schede/*/LR/LRI/LRIR" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="./LRI/LRIR" />
+					<xsl:value-of select="record/metadata/schede/*/LR/LRI/LRIR" />
 				</l0:name>
 				<arco-core:hasType>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'NaturalEnvironmentType/', arco-fn:urify(./LRI/LRIR))" />
+						<xsl:value-of select="concat($NS, 'NaturalEnvironmentType/', arco-fn:urify(record/metadata/schede/*/LR/LRI/LRIR))" />
 					</xsl:attribute>
 				</arco-core:hasType>
-				<xsl:if test="./LRI/LRIO">
+				<xsl:if test="record/metadata/schede/*/LR/LRI/LRIO">
 					<arco-dd:hasMeasurementCollection>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-natural-environment-measurement-collection')" />
@@ -3756,7 +3748,7 @@
 			</rdf:Description>
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-        			<xsl:value-of select="concat($NS, 'NaturalEnvironmentType/', arco-fn:urify(./LRI/LRIR))" />
+        			<xsl:value-of select="concat($NS, 'NaturalEnvironmentType/', arco-fn:urify(record/metadata/schede/*/LR/LRI/LRIR))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -3764,13 +3756,13 @@
 					</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
-					<xsl:value-of select="./LRI/LRIR" />
+					<xsl:value-of select="record/metadata/schede/*/LR/LRI/LRIR" />
 				</rdfs:label>
 				<l0:name>
-					<xsl:value-of select="./LRI/LRIR" />
+					<xsl:value-of select="record/metadata/schede/*/LR/LRI/LRIR" />
 				</l0:name>		
 			</rdf:Description>
-			<xsl:if test="./LRI/LRIO">
+			<xsl:if test="record/metadata/schede/*/LR/LRI/LRIO">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-natural-environment-measurement-collection')" />
@@ -3792,7 +3784,7 @@
 					<l0:name xml:lang="en">
 						<xsl:value-of select="'Measuerements of collecting location'" />
 					</l0:name>
-					<xsl:if test="./LRI/LRIO">
+					<xsl:if test="record/metadata/schede/*/LR/LRI/LRIO">
 						<arco-dd:hasMeasurement>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Measurement/NaturalEnvironment/', $itemURI, '-depth')" />
@@ -3804,49 +3796,47 @@
 					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/NaturalEnvironment/', $itemURI, '-depth')" />
 					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Measurement of collecting location of ', $itemURI, ': ', ./LRI/LRIO)" />
+						<xsl:value-of select="concat('Measurement of collecting location of ', $itemURI, ': ', record/metadata/schede/*/LR/LRI/LRIO)" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Measurement of collecting location of ', $itemURI, ': ', ./LRI/LRIO)" />
+						<xsl:value-of select="concat('Measurement of collecting location of ', $itemURI, ': ', record/metadata/schede/*/LR/LRI/LRIO)" />
 					</l0:name>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Misura del luogo di raccolta di ', $itemURI, ': ', ./LRI/LRIO)" />
+						<xsl:value-of select="concat('Misura del luogo di raccolta di ', $itemURI, ': ', record/metadata/schede/*/LR/LRI/LRIO)" />
 					</rdfs:label>
 					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Misura del luogo di raccolta di ', $itemURI, ': ', ./LRI/LRIO)" />
+						<xsl:value-of select="concat('Misura del luogo di raccolta di ', $itemURI, ': ', record/metadata/schede/*/LR/LRI/LRIO)" />
 					</l0:name>
 					<arco-core:hasType>
 						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Depth')" />
 					</arco-core:hasType>
 					<arco-dd:hasValue>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(./LRI/LRIO))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:extract-value(record/metadata/schede/*/LR/LRI/LRIO))" />
 					</arco-dd:hasValue>
 					<mu:hasMeasurementUnit>
-						<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(./LRI/LRIO))" />
+						<xsl:attribute name="rdf:resource" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(record/metadata/schede/*/LR/LRI/LRIO))" />
 					</mu:hasMeasurementUnit>
 				</rdf:Description>
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:extract-value(./LRI/LRIO))" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', arco-fn:extract-value(record/metadata/schede/*/LR/LRI/LRIO))" />
 					<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 					<rdfs:label xml:lang="en">
-						<xsl:value-of select="arco-fn:extract-value(./LRI/LRIO)" />
+						<xsl:value-of select="arco-fn:extract-value(record/metadata/schede/*/LR/LRI/LRIO)" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
-						<xsl:value-of select="arco-fn:extract-value(./LRI/LRIO)" />
+						<xsl:value-of select="arco-fn:extract-value(record/metadata/schede/*/LR/LRI/LRIO)" />
 					</l0:name>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="arco-fn:extract-value(./LRI/LRIO)" />
+						<xsl:value-of select="arco-fn:extract-value(record/metadata/schede/*/LR/LRI/LRIO)" />
 					</rdfs:label>
 					<l0:name xml:lang="it">
-						<xsl:value-of select="arco-fn:extract-value(./LRI/LRIO)" />
+						<xsl:value-of select="arco-fn:extract-value(record/metadata/schede/*/LR/LRI/LRIO)" />
 					</l0:name>
 				</rdf:Description>
 			</xsl:if>
 		</xsl:if>
-	</xsl:for-each>
-	</xsl:if>		
-	<!-- Feature as individual -->
-	<xsl:for-each select="record/metadata/schede/*/LR/LRV">
+		<!-- Feature as individual -->
+		<xsl:for-each select="record/metadata/schede/*/LR/LRV">
 	<xsl:variable name="lrvk">
 		<xsl:choose>
 			<xsl:when test="./LRVK and (not(starts-with(lower-case(normalize-space(./LRVK)), 'nr')) and not(starts-with(lower-case(normalize-space(./LRVK)), 'n.r')))">
@@ -4293,46 +4283,10 @@
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>
-	</xsl:for-each>		
-	</xsl:if>				
-	<!-- Address Area -->
-	<xsl:if test="not($sheetType='F' or $sheetType='MIDF' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">
-	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAR">
-		<xsl:call-template name="address-area">
-			<xsl:with-param name="ctx" select="record/metadata/schede/*/IM/IMA/IMAR"/>
-		</xsl:call-template>
+		</xsl:for-each>		
 	</xsl:if>
-	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAM">
-		<xsl:call-template name="address-area">
-			<xsl:with-param name="ctx" select="record/metadata/schede/*/IM/IMA/IMAM"/>
-		</xsl:call-template>
-	</xsl:if>
-	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAT">
-		<xsl:call-template name="address-area">
-			<xsl:with-param name="ctx" select="record/metadata/schede/*/IM/IMA/IMAT"/>
-		</xsl:call-template>
-	</xsl:if>
-	<xsl:if test="record/metadata/schede/*/IR/IRA/IRAR">
-		<xsl:call-template name="address-area">
-			<xsl:with-param name="ctx" select="record/metadata/schede/*/IR/IRA/IRAR"/>
-		</xsl:call-template>	
-	</xsl:if>
-	<xsl:if test="record/metadata/schede/*/IR/IRA/IRAM">
-		<xsl:call-template name="address-area">
-			<xsl:with-param name="ctx" select="record/metadata/schede/*/IR/IRA/IRAM"/>
-		</xsl:call-template>
-	</xsl:if>
-	<xsl:if test="record/metadata/schede/*/IR/IRA/IRAT">
-		<xsl:call-template name="address-area">
-			<xsl:with-param name="ctx" select="record/metadata/schede/*/IR/IRA/IRAT"/>
-		</xsl:call-template>
-	</xsl:if>	
-	<xsl:if test="record/metadata/schede/*/ET/ETA/ETAT">
-		<xsl:call-template name="address-area">
-			<xsl:with-param name="ctx" select="record/metadata/schede/*/ET/ETA/ETAT"/>
-		</xsl:call-template>
 	</xsl:if>			
-	</xsl:if>
+
 	<!-- Geological context as individual -->
 	<xsl:if test="not($sheetType='F' or $sheetType='MIDF' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">					
 	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAS or record/metadata/schede/*/IR/IRA/IRAS or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
@@ -9173,7 +9127,7 @@
                 </xsl:attribute>
 	            <rdf:type>
 					<xsl:attribute name="rdf:resource">
-	    	        	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	    	        	<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
 					</xsl:attribute>
 				</rdf:type>   
 				<rdfs:label>
