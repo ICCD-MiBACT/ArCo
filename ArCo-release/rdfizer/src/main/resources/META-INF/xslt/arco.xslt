@@ -8389,6 +8389,9 @@
 								</l0:name>
 							</xsl:otherwise>
 						</xsl:choose>
+						<arco-lite:nationalIdentifier>
+							<xsl:value-of select="." />
+						</arco-lite:nationalIdentifier>
 					</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -8611,6 +8614,9 @@
 									</l0:name>
 								</xsl:otherwise>
 							</xsl:choose>
+							<arco-lite:nationalIdentifier>
+								<xsl:value-of select="." />
+							</arco-lite:nationalIdentifier>
 						</rdf:Description>
 					</xsl:for-each>
 				</xsl:otherwise>

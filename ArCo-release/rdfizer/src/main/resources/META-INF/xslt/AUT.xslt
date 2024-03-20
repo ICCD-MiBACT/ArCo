@@ -233,6 +233,62 @@
 				<arco-lite:systemIdentifier>
 					<xsl:value-of select="$item" />
 				</arco-lite:systemIdentifier>
+				<!-- heritage protection agency -->
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/harvesting/enteCompetente">
+						<arco-core:hasAgentRole>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+							</xsl:attribute>
+						</arco-core:hasAgentRole>
+						<arco-cd:hasResponsibility>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+							</xsl:attribute>
+						</arco-cd:hasResponsibility>
+						<arco-lite:hasHeritageProtectionAgency>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/harvesting/enteCompetente))" />
+							</xsl:attribute>
+						</arco-lite:hasHeritageProtectionAgency>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:for-each select="record/metadata/schede/*/CD/ECP">
+							<xsl:if test=".">
+								<arco-core:hasAgentRole>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+									</xsl:attribute>
+								</arco-core:hasAgentRole>
+								<arco-cd:hasResponsibility>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+									</xsl:attribute>
+								</arco-cd:hasResponsibility>
+								<arco-lite:hasHeritageProtectionAgency>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+									</xsl:attribute>
+								</arco-lite:hasHeritageProtectionAgency>
+							</xsl:if>
+						</xsl:for-each>
+					</xsl:otherwise>
+				</xsl:choose>
+				<!-- cataloguing agency -->
+				<xsl:for-each select="record/metadata/schede/*/CD/ESC">
+					<xsl:if test=".">
+						<arco-core:hasAgentRole>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
+							</xsl:attribute>
+						</arco-core:hasAgentRole>
+						<arco-lite:hasCataloguingAgency>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+							</xsl:attribute>
+						</arco-lite:hasCataloguingAgency>
+					</xsl:if>
+				</xsl:for-each>
 				<xsl:if test="record/metadata/schede/*/CM/CMP or record/metadata/schede/*/CM/RSR or record/metadata/schede/*/CM/FUR">
 					<!-- deprecated -->
 					<arco-catalogue:hasCatalogueRecordVersion>
@@ -260,6 +316,292 @@
 					</arco-catalogue:hasAccessProfile>
 				</xsl:if>
 			</rdf:Description>
+			<!-- Cataloguing Agency - Agent Role CD/ESC -->
+			<xsl:if test="(not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CD/ESC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CD/ESC)), 'n.r')))">
+				<xsl:for-each select="record/metadata/schede/*/CD/ESC">
+					<xsl:variable name="getName">
+						<xsl:value-of select="arco-fn:get-nome-ente-from-codice(.)" />
+					</xsl:variable>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
+                    </xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+                        </xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat('Ente schedatore del bene ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
+						</rdfs:label>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Cataloguing agency for cultural property ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of select="concat('Ente schedatore del bene ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
+						</l0:name>
+						<l0:name xml:lang="en">
+							<xsl:value-of select="concat('Cataloguing agency for cultural property ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
+						</l0:name>
+						<arco-core:hasRole>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
+                        </xsl:attribute>
+						</arco-core:hasRole>
+						<arco-core:hasAgent>
+							<xsl:attribute name="rdf:resource">
+                            	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+                        </xsl:attribute>
+						</arco-core:hasAgent>
+					</rdf:Description>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-record-responsible-agent')" />
+                    </xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+                        </xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat('Ente responsabile della scheda del bene ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
+						</rdfs:label>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Agency responsible for record of cultural property ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
+						</rdfs:label>
+						<arco-core:hasRole>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Role/ResponsibleAgent')" />
+                        </xsl:attribute>
+						</arco-core:hasRole>
+						<arco-core:hasAgent>
+							<xsl:attribute name="rdf:resource">
+                            	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+                        </xsl:attribute>
+						</arco-core:hasAgent>
+					</rdf:Description>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+                        	<xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
+                    </xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+                        </xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="'Ente schedatore'" />
+						</rdfs:label>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="'Cataloguing agency'" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of select="'Ente schedatore'" />
+						</l0:name>
+						<l0:name xml:lang="en">
+							<xsl:value-of select="'Cataloguing agency'" />
+						</l0:name>
+						<arco-core:isRoleOf>
+							<xsl:attribute name="rdf:resource">
+                            	<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
+                        </xsl:attribute>
+						</arco-core:isRoleOf>
+					</rdf:Description>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+    	                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	                    </xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+                	       </xsl:attribute>
+						</rdf:type>
+						<xsl:choose>
+							<xsl:when test="string-length($getName)>0">
+								<rdfs:label>
+									<xsl:value-of select="arco-fn:get-nome-ente-from-codice(.)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="arco-fn:get-nome-ente-from-codice(.)" />
+								</l0:name>
+							</xsl:when>
+							<xsl:otherwise>
+								<rdfs:label>
+									<xsl:value-of select="." />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="." />
+								</l0:name>
+							</xsl:otherwise>
+						</xsl:choose>
+						<arco-lite:nationalIdentifier>
+							<xsl:value-of select="." />
+						</arco-lite:nationalIdentifier>
+					</rdf:Description>
+				</xsl:for-each>
+			</xsl:if>
+			<!-- Heritage Protection Agency - Agent Role CD/ECP -->
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/harvesting/enteCompetente">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+	                        <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
+	                    </xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+	                        </xsl:attribute>
+						</rdf:type>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Responsibility'" />
+	                        </xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat('Ente competente per tutela del bene ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(record/metadata/schede/harvesting/enteCompetente))" />
+						</rdfs:label>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Heritage protection agency for cultural property ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(record/metadata/schede/harvesting/enteCompetente))" />
+						</rdfs:label>
+						<arco-core:hasRole>
+							<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of select="concat($NS, 'Role/HeritageProtectionAgency')" />
+	                        </xsl:attribute>
+						</arco-core:hasRole>
+						<arco-cd:hasInterventionRole>
+							<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of select="concat($NS, 'Role/HeritageProtectionAgency')" />
+	                        </xsl:attribute>
+						</arco-cd:hasInterventionRole>
+						<arco-core:hasAgent>
+							<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/harvesting/enteCompetente))" />
+	                        </xsl:attribute>
+						</arco-core:hasAgent>
+						<arco-cd:hasAgentWithResponsibility>
+							<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/harvesting/enteCompetente))" />
+	                        </xsl:attribute>
+						</arco-cd:hasAgentWithResponsibility>
+					</rdf:Description>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+	                        <xsl:value-of select="concat($NS, 'Role/HeritageProtectionAgency')" />
+	                    </xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+	                        </xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="'Ente competente per tutela'" />
+						</rdfs:label>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="'Heritage Protection Agency'" />
+						</rdfs:label>
+					</rdf:Description>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:for-each select="record/metadata/schede/*/CD/ECP">
+						<xsl:variable name="getName">
+							<xsl:value-of select="arco-fn:get-nome-ente-from-codice(.)" />
+						</xsl:variable>
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+	            	            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
+	                   		</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	            	                <xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+	                       		</xsl:attribute>
+							</rdf:type>
+							<rdf:type>
+							<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Responsibility'" />
+	                        </xsl:attribute>
+						</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Ente competente per tutela del bene ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
+							</rdfs:label>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Heritage protection agency for cultural property ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
+							</rdfs:label>
+							<arco-core:hasRole>
+								<xsl:attribute name="rdf:resource">
+	                   		        <xsl:value-of select="concat($NS, 'Role/HeritageProtectionAgency')" />
+	                       		</xsl:attribute>
+							</arco-core:hasRole>
+							<arco-cd:hasInterventionRole>
+								<xsl:attribute name="rdf:resource">
+	                   		        <xsl:value-of select="concat($NS, 'Role/HeritageProtectionAgency')" />
+	                       		</xsl:attribute>
+							</arco-cd:hasInterventionRole>
+							<arco-core:hasAgent>
+								<xsl:attribute name="rdf:resource">
+	                   		        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	                       		</xsl:attribute>
+							</arco-core:hasAgent>
+							<arco-core:hasAgentWithResponsibility>
+								<xsl:attribute name="rdf:resource">
+	                   		        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	                       		</xsl:attribute>
+							</arco-core:hasAgentWithResponsibility>
+						</rdf:Description>
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+			                       <xsl:value-of select="concat($NS, 'Role/HeritageProtectionAgency')" />
+			                   </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	                   		        <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+			                       </xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="'Ente competente per tutela'" />
+							</rdfs:label>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="'Heritage Protection Agency'" />
+							</rdfs:label>
+							<arco-core:isRoleOf>
+								<xsl:attribute name="rdf:resource">
+	            	                <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
+			                       </xsl:attribute>
+							</arco-core:isRoleOf>
+						</rdf:Description>
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+	            	            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+			                   </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	                   		        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+			                       </xsl:attribute>
+							</rdf:type>
+							<xsl:choose>
+								<xsl:when test="string-length($getName)>0">
+									<rdfs:label>
+										<xsl:value-of select="arco-fn:get-nome-ente-from-codice(.)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="arco-fn:get-nome-ente-from-codice(.)" />
+									</l0:name>
+								</xsl:when>
+								<xsl:otherwise>
+									<rdfs:label>
+										<xsl:value-of select="." />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="." />
+									</l0:name>
+								</xsl:otherwise>
+							</xsl:choose>
+							<arco-lite:nationalIdentifier>
+								<xsl:value-of select="." />
+							</arco-lite:nationalIdentifier>
+						</rdf:Description>
+					</xsl:for-each>
+				</xsl:otherwise>
+			</xsl:choose>
 			<xsl:if test="record/metadata/schede/*/CM/CMP or record/metadata/schede/*/CM/RSR or record/metadata/schede/*/CM/FUR">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
