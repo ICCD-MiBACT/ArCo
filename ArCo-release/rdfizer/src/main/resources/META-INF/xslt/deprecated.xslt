@@ -3722,6 +3722,7 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:attribute>
+				<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
 				<xsl:if test="./EDTE and (not(starts-with(lower-case(normalize-space(./EDTE)), 'nr')) and not(starts-with(lower-case(normalize-space(./EDTE)), 'n.r')))">
 					<tiapit:time>
 						<xsl:value-of select="normalize-space(./EDTE)" />

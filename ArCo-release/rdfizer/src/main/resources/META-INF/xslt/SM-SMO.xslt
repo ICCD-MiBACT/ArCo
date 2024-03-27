@@ -216,16 +216,12 @@
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/SM/CL/CLA/CLAO">
 				<arco-core:note>
-					<xsl:attribute name="rdf:resource">
 		    			<xsl:value-of select="concat('Nota relativa alla classe dello strumeto musicale. ', normalize-space(.))" />
-		    		</xsl:attribute>
 				</arco-core:note>
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/SM/CL/CHS/CHSS">
 				<arco-core:note>
-					<xsl:attribute name="rdf:resource">
 		    			<xsl:value-of select="concat('Nota relativa alla classe dello strumeto musicale. ', normalize-space(.))" />
-		    		</xsl:attribute>
 				</arco-core:note>
 			</xsl:for-each>
 			<xsl:if test="record/metadata/schede/*/DR/*">
