@@ -3128,6 +3128,7 @@
 				</xsl:for-each>
 				<!-- Bibliography of cultural property -->
 				<xsl:for-each select="record/metadata/schede/*/DO/BIB">
+					<xsl:if test="(./*)">
 					<xsl:variable name="edition">
 						<xsl:choose>
 							<xsl:when test="./NCUN">
@@ -3233,6 +3234,17 @@
 								</arco-lite:comparativeBibliographicReference>
 							</xsl:when>
 						</xsl:choose>
+					</xsl:if>
+					</xsl:if>
+					<xsl:if test="not (./*)">
+					<arco-cd:hasBibliographicSource>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:arcofy(normalize-space(.)))" />
+	                	</xsl:attribute>
+					</arco-cd:hasBibliographicSource>
+					<arco-lite:bibliographicReference>
+						<xsl:value-of select="normalize-space(.)" />
+					</arco-lite:bibliographicReference> 
 					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/DO/BSE">

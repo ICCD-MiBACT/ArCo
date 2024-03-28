@@ -916,7 +916,7 @@
 				</arco-cd:hasSubject>
 			</xsl:if>
 		</xsl:for-each>
-		<xsl:for-each select="record/metadata/schede/*/DO/BIB">
+		<xsl:for-each select="record/metadata/schede/*/DO/BIB/*">
 			<arco-cd:hasBibliography> <!-- forse proprietà da deprecare e lasciare solo Bibliographic Source? -->
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-bibliography-', position())" />
@@ -9264,7 +9264,7 @@
 			</xsl:if>
 			</xsl:if>
 	<!-- Bibliography of cultural property as an individual -->
-	<xsl:for-each select="record/metadata/schede/*/DO/BIB">
+	<xsl:for-each select="record/metadata/schede/*/DO/BIB/*">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-bibliography-', position())" />

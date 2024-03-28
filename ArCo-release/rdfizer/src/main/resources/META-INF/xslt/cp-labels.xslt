@@ -130,6 +130,9 @@
 					</xsl:when>
 				</xsl:choose>
 			</xsl:when>
+			<xsl:when test="$sheetType='MIDF'">
+				<xsl:value-of select="concat($NS, 'PhotographicHeritage/', $itemURI)" />
+			</xsl:when>
 			<xsl:when test="$sheetType='MINP'">
 				<xsl:value-of select="concat($NS, 'ArchaeologicalProperty/', $itemURI)" />
 			</xsl:when>
@@ -615,12 +618,34 @@
 	</xsl:variable>
 	
 	<xsl:template name="label">
-							<!-- labels of cultural property -->		
+							<!-- labels of cultural property -->
+		<!-- MIDF -->
+		<xsl:if test="$sheetType='MIDF'">
+			<xsl:variable name="tmp-label">
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/OG/OGN">
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGN)" />
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/*/OG/OGT">
+						<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/OG/OGD), ' ', normalize-space(record/metadata/schede/*/OG/OGT))" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGD)" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<rdfs:label xml:lang="it">									
+				<xsl:value-of select="concat($tmp-label, ', ', $date-string)" />
+			</rdfs:label>
+			<rdfs:label xml:lang="en">			
+				<xsl:value-of select="concat($tmp-label, ', ', $date-string)" />
+			</rdfs:label>
+		</xsl:if>		
 		<!-- MINP -->
 		<xsl:if test="$sheetType='MINP'">
 			<xsl:variable name="tmp-label">
 				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/OG/OGT[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))] and record/metadata/schede/*/OG/SGT/SGTI[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+					<xsl:when test="record/metadata/schede/*/OG/OGT[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/OG/OGD), ' ', normalize-space(record/metadata/schede/*/OG/OGT))" />
 					</xsl:when>
 					<xsl:otherwise>
