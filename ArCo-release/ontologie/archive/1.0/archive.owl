@@ -65,9 +65,51 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#maxCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxCardinality"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/iccdNormTag -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
     
 
 
@@ -116,7 +158,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/archive/hasFundingAid">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/archive/ArchivalResource"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/archive/FundingAid"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/archive/FindingAid"/>
         <rdfs:comment xml:lang="en">Property that links an archival resource to its funding aid.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà che lega una risorsa archivistica a un aiuto di finanziamento</rdfs:comment>
         <rdfs:comment xml:lang="it">ha aiuti di finanziamento</rdfs:comment>
@@ -158,6 +200,66 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasAcquisition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAcquisition"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasDating -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDating"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasDesignationInTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDesignationInTime"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasIntervention -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasIntervention"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasInventorySituation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasInventorySituation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasLegalSituation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasResponsibility -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasResponsibility"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasSubject -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSubject"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasTitle -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasTitle"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isCollectionIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCollectionIn"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/classifies -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/classifies"/>
@@ -167,6 +269,24 @@
     <!-- https://w3id.org/arco/ontology/core/hasClassificationInTime -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasClassificationInTime"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasConcept -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasConcept"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasIdentifier"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasType"/>
     
 
 
@@ -249,6 +369,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/historicalInformation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/historicalInformation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/description -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/description"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/identifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/identifier"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -260,10 +398,29 @@
     
 
 
+    <!-- http://dati.beniculturali.it/cis/CollectionCulEnt -->
+
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+    
+
+
+    <!-- http://dati.beniculturali.it/cis/CulturalEntity -->
+
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/archive/ArchivalCollection -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/archive/ArchivalCollection">
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/archive/hasArchivalResourceLevel"/>
@@ -349,12 +506,6 @@
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/numberOfElements"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una collezione archivistica, cioè un&apos;unione di risorse archivistiche legate da un vincolo archivistico</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an archival collection, which is a combination of archival resources linked by an archival bond.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive"/>
@@ -392,7 +543,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/archive/hasFundingAid"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/FundingAid"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/archive/FindingAid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -525,15 +676,15 @@ PA/SSI, PA/SFI</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/archive/FundingAid -->
+    <!-- https://w3id.org/arco/ontology/archive/FindingAid -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/archive/FundingAid">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/archive/FindingAid">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta programmi di aiuti per il finanziamento utili per finanziare archivi.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents funding aids useful to fund archival resources.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents finding aids useful to fund archival resources.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/archive"/>
         <rdfs:label xml:lang="it">Aiuto di Finanziamento</rdfs:label>
-        <rdfs:label xml:lang="en">Funding Aid</rdfs:label>
+        <rdfs:label xml:lang="en">Finding Aid</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
@@ -559,6 +710,60 @@ PA/SSI, PA/SFI</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Acquisition -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Acquisition"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/CollectionMembership -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Dating -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Dating"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/DesignationInTime -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/DesignationInTime"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Intervention -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Intervention"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/InventorySituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/InventorySituation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/LegalSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Responsibility -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Responsibility"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Title -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Title"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/ClassificationInTime -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
@@ -568,6 +773,24 @@ PA/SSI, PA/SFI</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/core/ClassificationSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/ClassificationSystem"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Concept -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Concept"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Identifier -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Identifier"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Type -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Type"/>
     
 
 
@@ -586,9 +809,30 @@ PA/SSI, PA/SFI</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalConcept -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Agent -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Agent"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Topic -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Topic"/>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
