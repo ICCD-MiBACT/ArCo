@@ -30194,6 +30194,11 @@
 								<xsl:value-of select="'http://dati.beniculturali.it/cis/CulturalInstituteOrSite'" />
 							</xsl:attribute>
 						</rdf:type>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+							</xsl:attribute>
+						</rdf:type>
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/LDC/LDCM)" />
 						</rdfs:label>
@@ -31148,6 +31153,11 @@
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'http://dati.beniculturali.it/cis/CulturalInstituteOrSite'" />
+									</xsl:attribute>
+								</rdf:type>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
 									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
