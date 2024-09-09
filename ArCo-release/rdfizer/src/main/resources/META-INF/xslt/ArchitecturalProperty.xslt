@@ -228,7 +228,7 @@
 			<xsl:if test="$sheetType='PG'">
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="'https://w3id.org/arco/ontology/construction-description/OpenSpace'" />
+						<xsl:value-of select="'https://w3id.org/arco/ontology/construction-description/OutdoorSpace'" />
 					</xsl:attribute>
 				</rdf:type>
 			</xsl:if>

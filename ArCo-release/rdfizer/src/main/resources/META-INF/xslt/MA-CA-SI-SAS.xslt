@@ -386,7 +386,7 @@
 						<xsl:value-of select="record/metadata/schede/*/CA/AGR" />
 					</arco-core:description>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/CA/CAS">
+				<xsl:if test="record/metadata/schede/*/CA/CAS and not($sheetType='AR')">
 					<arco-location:historicalEnvironmentContextDescription>
 						<xsl:value-of select="concat(record/metadata/schede/*/CA/CAS/CASD, '. ', record/metadata/schede/*/CA/CAS/CASF, '. ', record/metadata/schede/*/CA/CAS/CASA)" />
 					</arco-location:historicalEnvironmentContextDescription>
