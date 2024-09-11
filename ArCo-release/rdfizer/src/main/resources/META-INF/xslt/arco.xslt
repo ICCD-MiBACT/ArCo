@@ -1028,11 +1028,13 @@
 	                                <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat('-referente-verifica-scientifica-', ./RSR)))" />
 	                            </xsl:attribute>
 							</arco-core:hasAgentRole>
-							<arco-lite:hasScientificDirector>
-								<xsl:attribute name="rdf:resource">
-	                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RSR))" />
-	                            </xsl:attribute>
-							</arco-lite:hasScientificDirector>
+							<xsl:if test="ecord/metadata/schede/*/CM/RSR">
+								<arco-lite:hasScientificDirector>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RSR))" />
+									</xsl:attribute>
+								</arco-lite:hasScientificDirector>
+							</xsl:if>
 						</xsl:if>
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))) and $sheetType='AR'">
 							<arco-core:hasAgentRole>
