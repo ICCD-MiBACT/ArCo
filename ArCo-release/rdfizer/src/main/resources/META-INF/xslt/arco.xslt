@@ -11151,10 +11151,17 @@
 							<xsl:value-of select="concat('Edition/', arco-fn:urify(normalize-space(./BIBK)))" />
 						</xsl:when>
 						<xsl:when test="./BIBM">
-							<xsl:value-of select="concat('Edition/', arco-fn:urify(normalize-space(./BIBM)))" />
+							<xsl:value-of select="concat('Edition/', arco-fn:arcofy(normalize-space(./BIBM)))" />
 						</xsl:when>
 						<xsl:when test="./BIBH">
-							<xsl:value-of select="concat('Edition/', arco-fn:urify(normalize-space(./BIBH)), 'local')" />
+							<xsl:choose>	
+								<xsl:when test="./BIBJ">
+									<xsl:value-of select="concat($NS, 'Edition/bib-', arco-fn:urify(./BIBJ), '-', arco-fn:urify(./BIBH))" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat($NS, 'Edition/bib-', arco-fn:urify($esc), '-', arco-fn:urify(./BIBH))" />
+								</xsl:otherwise>
+							</xsl:choose>
 						</xsl:when>
 						<xsl:when test="./BIBA and ./BIBD">
 							<xsl:value-of select="concat('Edition/', arco-fn:arcofy(normalize-space(./BIBA)), arco-fn:arcofy(normalize-space(./BIBD)))" />
@@ -11174,7 +11181,7 @@
 								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBK)))" />
 							</xsl:when>
 							<xsl:when test="./BIBM">
-								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBM)))" />
+								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:arcofy(normalize-space(./BIBM)))" />
 							</xsl:when>
 							<xsl:when test="./BIBH">
 								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBH)), 'local')" />
