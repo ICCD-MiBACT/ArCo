@@ -1025,16 +1025,14 @@
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))) and not($sheetType='AR')">
 							<arco-core:hasAgentRole>
 								<xsl:attribute name="rdf:resource">
-	                                <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat('-referente-verifica-scientifica-', ./RSR)))" />
+	                                <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat('-referente-verifica-scientifica-', .)))" />
 	                            </xsl:attribute>
 							</arco-core:hasAgentRole>
-							<!--<xsl:if test="record/metadata/schede/*/CM/RSR">-->
-								<arco-lite:hasScientificDirector>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
-									</xsl:attribute>
-								</arco-lite:hasScientificDirector>
-							<!--</xsl:if>-->
+							<arco-lite:hasScientificDirector>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RSR))" />
+								</xsl:attribute>
+							</arco-lite:hasScientificDirector>
 						</xsl:if>
 						<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))) and $sheetType='AR'">
 							<arco-core:hasAgentRole>
@@ -8313,7 +8311,7 @@
 					</rdf:Description>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-                        	<xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
+                        	<xsl:value-of select="concat($NS, 'Role/CataloguingAgency')" />
                     </xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
