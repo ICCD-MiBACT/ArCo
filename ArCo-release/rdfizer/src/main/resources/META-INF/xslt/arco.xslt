@@ -1325,10 +1325,10 @@
                         </xsl:attribute>
 					</arco-core:hasType>
 					<rdfs:label>
-						<xsl:value-of select="concat(./@hint, ' - ', normalize-space(./RVMD))" />
+						<xsl:value-of select="concat('Trascrizione digitale - ', normalize-space(./RVMD))" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="concat(./@hint, ' - ', normalize-space(./RVMD))" />
+						<xsl:value-of select="concat('Trascrizione digitale - ', normalize-space(./RVMD))" />
 					</l0:name>
 					<arco-catalogue:isRecordVersionOf>
 						<xsl:attribute name="rdf:resource">
@@ -1570,7 +1570,7 @@
                         </xsl:attribute>
 					</arco-core:hasType>
 					<rdfs:label>
-						<xsl:value-of select="concat(./@hint, ' - ', normalize-space(.))" />
+						<xsl:value-of select="concat('Aggiornamento - ', normalize-space(.))" />
 					</rdfs:label>
 					<arco-catalogue:isRecordVersionOf>
 						<xsl:attribute name="rdf:resource">
@@ -1633,7 +1633,7 @@
 						<xsl:if test=". and not(lower-case(normalize-space(.))='nr' or lower-case(normalize-space(.))='n.r.' or lower-case(normalize-space(.))='nr (recupero pregresso)')">
 							<arco-core:hasAgentRole>
 								<xsl:attribute name="rdf:resource">
-	                                <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
+	                                <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat('funzionario responsabile-', .)))" />
 	                            </xsl:attribute>
 							</arco-core:hasAgentRole>
 							<arco-lite:hasOfficialInCharge>
@@ -1872,7 +1872,7 @@
 				<xsl:if test="(not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-	                        <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
+	                        <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat('funzionario responsabile-', .)))" />
 	                    </xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -1949,7 +1949,7 @@
 				<xsl:if test=". and not(lower-case(normalize-space(.))='nr' or lower-case(normalize-space(.))='n.r.' or lower-case(normalize-space(.))='nr (recupero pregresso)')">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
+							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat('funzionario responsabile-', .)))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -1957,7 +1957,7 @@
                         	</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat(./AGGF/@hint, ' di aggiornamento: ', normalize-space(.))" />
+							<xsl:value-of select="concat('Funzionario responsabile di aggiornamento: ', normalize-space(.))" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="concat('Update official in charge', ': ', normalize-space(.))" />
@@ -2001,7 +2001,7 @@
 	                        </xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="normalize-space(./@hint)" />
+							<xsl:value-of select="'Funzionario responsabile'" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Official in charge'" />
@@ -2140,7 +2140,7 @@
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat(record/metadata/schede/*/CM/RVM/@hint, ' da ', normalize-space(.))" />
+						<xsl:value-of select="concat('Trascrizione per informatizzazione da ', normalize-space(.))" />
 					</rdfs:label>
 					<rdfs:label xml:lang="en">
 						<xsl:value-of select="concat('Digital transcription', ' by ', normalize-space(.))" />
@@ -2203,7 +2203,7 @@
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat(../@hint, ' da ', normalize-space(.))" />
+						<xsl:value-of select="concat('Trascrizione per informatizzazione da ', normalize-space(.))" />
 					</rdfs:label>
 					<rdfs:label xml:lang="en">
 						<xsl:value-of select="concat('Digital transcription', ' by ', normalize-space(.))" />
