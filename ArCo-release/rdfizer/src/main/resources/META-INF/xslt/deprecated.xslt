@@ -1239,6 +1239,7 @@
 		</xsl:if>
 	</rdf:Description>
 	</xsl:if>
+	</xsl:if>
 	<!-- AUT -->
 	<xsl:if test="$sheetType='AUT' and record/metadata/schede/*/AU/AUT/AUTN" >
 		<xsl:variable name="sex">
@@ -1345,7 +1346,6 @@
 			</xsl:if>
 		</xsl:if>
 	</xsl:for-each>
-	</xsl:if>
 	<!-- Acquisition -->
 	<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG') and not(administrativeDataRecord/metadata)" >
 	<xsl:for-each select="record/metadata/schede/*/TU/ACQ">
@@ -9264,6 +9264,7 @@
 			</xsl:if>
 			</xsl:if>
 	<!-- Bibliography of cultural property as an individual -->
+	<xsl:if test="not($sheetType='MINV' or $sheetType='MIDF' or $sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='DSC' or $sheetType='BIB' or $sheetType='RCG' or $sheetType='EVE') and not(administrativeDataRecord/metadata)" >
 	<xsl:for-each select="record/metadata/schede/*/DO/BIB/*">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -9450,6 +9451,7 @@
 			</rdf:Description>
 		</xsl:if>
 	</xsl:for-each>          
+	</xsl:if>
 	</rdf:RDF>
 </xsl:template>								
 </xsl:stylesheet>
