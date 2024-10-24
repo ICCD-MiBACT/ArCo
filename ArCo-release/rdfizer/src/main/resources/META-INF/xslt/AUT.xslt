@@ -209,7 +209,7 @@
 			
 			<xsl:variable name="sex">
 			 <xsl:choose>
-				<xsl:when test="not($sheetVersion='4.00_ICCD0')"><xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTE"/></xsl:when>
+				<xsl:when test="not($sheetVersion='4.00' or $sheetVersion='4.00_ICCD0')"><xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTE"/></xsl:when>
 				<xsl:otherwise><xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTZ"/></xsl:otherwise>
 			 </xsl:choose>
 			</xsl:variable>
