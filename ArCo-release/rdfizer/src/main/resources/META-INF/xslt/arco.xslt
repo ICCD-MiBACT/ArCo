@@ -31386,7 +31386,7 @@
                             </xsl:attribute>
 						</arco-location:hasLocationType>
 					</xsl:if>
-					<xsl:if test="./PRD and (not(starts-with(lower-case(normalize-space(./PRD)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRD)), 'n.r')))">
+					<xsl:if test="./PRD/* and (not(starts-with(lower-case(normalize-space(./PRD)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRD)), 'n.r')))">
 						<tiapit:atTime>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./PRD)))" />
@@ -31467,7 +31467,7 @@
 					</rdf:Description>
 				</xsl:if>
 				<!-- Time Interval for Alternative Location and shot location (F) -->
-				<xsl:if test="./PRD and (not(starts-with(lower-case(normalize-space(./PRD)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRD)), 'n.r')))">
+				<xsl:if test="./PRD/* and (not(starts-with(lower-case(normalize-space(./PRD)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRD)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
                             <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./PRD)))" />

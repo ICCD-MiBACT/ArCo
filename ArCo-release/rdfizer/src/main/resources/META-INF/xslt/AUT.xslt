@@ -209,8 +209,12 @@
 			
 			<xsl:variable name="sex">
 			 <xsl:choose>
-				<xsl:when test="not($sheetVersion='4.00' or $sheetVersion='4.00_ICCD0')"><xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTE"/></xsl:when>
-				<xsl:otherwise><xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTZ"/></xsl:otherwise>
+				<xsl:when test="$sheetVersion='4.00' or $sheetVersion='4.00_ICCD0'">
+					<xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTE"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTZ"/>
+				</xsl:otherwise>
 			 </xsl:choose>
 			</xsl:variable>
 		
@@ -1168,7 +1172,7 @@
 						<xsl:value-of select="record/metadata/schede/*/AU/AUT/AUTY" />
 					</arco-cd:nationality>
 				</xsl:if>
-				<xsl:if test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00_ICCD0') and record/metadata/schede/*/AU/AUT/AUTE">
+				<xsl:if test="not($sheetVersion='4.00' or $sheetVersion='4.00_ICCD0') and record/metadata/schede/*/AU/AUT/AUTE">
 					<arco-lite:alternativeName>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTE)" />
 					</arco-lite:alternativeName>
@@ -1184,7 +1188,7 @@
 					</arco-lite:alternativeName>
 				</xsl:for-each>
 				<!-- deprecated -->
-				<xsl:if test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00_ICCD0') and record/metadata/schede/*/AU/AUT/AUTE">
+				<xsl:if test="not($sheetVersion='4.00' or $sheetVersion='4.00_ICCD0') and record/metadata/schede/*/AU/AUT/AUTE">
 					<arco-cd:alternativeName>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/AU/AUT/AUTE)" />
 					</arco-cd:alternativeName>
