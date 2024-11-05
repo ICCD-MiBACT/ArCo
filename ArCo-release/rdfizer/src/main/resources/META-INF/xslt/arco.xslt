@@ -1030,7 +1030,7 @@
 							</arco-core:hasAgentRole>
 							<arco-lite:hasScientificDirector>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RSR))" />
+									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 								</xsl:attribute>
 							</arco-lite:hasScientificDirector>
 						</xsl:if>
@@ -13120,8 +13120,8 @@
 				</xsl:for-each>
 			</xsl:if>
 			<!-- Archaeological field survey of cultural property -->
-			<xsl:if test="not(record/metadata/schede/*/RE/RCG/RCGD='0000/00/00' or record/metadata/schede/*/RE/RCG/RCGD='/') and record/metadata/schede/*/*/RCG/*">
-				<xsl:for-each select="record/metadata/schede/*/*/RCG">
+			<xsl:for-each select="record/metadata/schede/*/*/RCG">
+				<xsl:if test="not(./RCGD='0000/00/00' or ./RCGD='/') and ./*">
 					<xsl:variable name="survey-position">
 						<xsl:value-of select="position()" />
 					</xsl:variable>
@@ -13835,14 +13835,17 @@
 							</l0:name>
 						</rdf:Description>
 					</xsl:if>
-				</xsl:for-each>
-			</xsl:if>
+				</xsl:if>
+			</xsl:for-each>
 			<!-- Archaeological excavation of cultural property -->
 			<xsl:variable name="scan">
 				<xsl:value-of select="record/metadata/schede/DSC/SC/SCA/SCAN" />
 			</xsl:variable>
+			<xsl:variable name="scad">
+				<xsl:value-of select="record/metadata/schede/DSC/SC/SCA/SCAD" />
+			</xsl:variable>
 			<xsl:for-each select="record/metadata/schede/*/*/DSC">
-				<xsl:if test="not(record/metadata/schede/*/*/DSC/DSCD='0000/00/00' or record/metadata/schede/*/*/DSC/DSCD='/') and record/metadata/schede/*/*/DSC/*">
+				<xsl:if test="not(./DSCD='0000/00/00' or ./DSCD='/') and ./*">
 					<xsl:variable name="survey-position">
 						<xsl:value-of select="position()" />
 					</xsl:variable>
@@ -13936,6 +13939,11 @@
 								<xsl:value-of select="normalize-space(./DSCV)" />
 							</arco-lite:currentDesigantion>
 						</xsl:if>
+						<xsl:if test="$scad">
+							<arco-core:description>
+									<xsl:value-of select="$scad" />
+							</arco-core:description> 
+						</xsl:if> 
 						<xsl:choose>
 							<xsl:when test="not($sheetType='DSC')">
 								<xsl:if test="./DSCN">
@@ -13945,14 +13953,16 @@
 								</xsl:if>
 							</xsl:when>
 							<xsl:otherwise>
-								<arco-cd:hasDesignationInTime>
-									<xsl:attribute name="rdf:resource">
-                			        	<xsl:value-of select="concat($NS,'DesignationInTime/ArchaeologicalExcavation', $itemURI, '-', arco-fn:urify(normalize-space(./DSCN)))" />                      	                            
-			                        </xsl:attribute>
-								</arco-cd:hasDesignationInTime>
-								<arco-lite:alternativeDesignation>
-									<xsl:value-of select="normalize-space(./DSCN)" />
-								</arco-lite:alternativeDesignation>
+								<xsl:for-each select="./DSCN">
+									<arco-cd:hasDesignationInTime>
+										<xsl:attribute name="rdf:resource">
+        	        			        	<xsl:value-of select="concat($NS,'DesignationInTime/ArchaeologicalExcavation', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />                      	                            
+				                        </xsl:attribute>
+									</arco-cd:hasDesignationInTime>
+									<arco-lite:alternativeDesignation>
+										<xsl:value-of select="normalize-space(.)" />
+									</arco-lite:alternativeDesignation>
+								</xsl:for-each>
 							</xsl:otherwise>
 						</xsl:choose>
 						<xsl:if test="./DSCD and (not(starts-with(lower-case(normalize-space(./DSCD)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCD)), 'n.r')))">
@@ -14015,13 +14025,13 @@
 							</arco-cd:hasBibliographicSource>
 						</xsl:for-each>
 						<!-- bibliography in RA 2.00 -->
-						<xsl:if test="./DSCB and (not(starts-with(lower-case(normalize-space(./DSCB)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCB)), 'n.r')))">
+						<xsl:for-each select="./DSCB[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<arco-cd:hasBibliographicSource>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./DSCB)))" />
+									<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(.)))" />
 	                			</xsl:attribute>
 							</arco-cd:hasBibliographicSource>
-						</xsl:if>
+						</xsl:for-each>
 						<xsl:if test="./DSCI and (not(starts-with(lower-case(normalize-space(./DSCI)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCI)), 'n.r')))">
 							<arco-lite:currentInventoryNumber>
 								<xsl:value-of select="normalize-space(./DSCI)" />
@@ -14148,10 +14158,10 @@
 							</arco-core:current>
 						</rdf:Description>
 					</xsl:if>
-					<xsl:if test="./DSCN">
+					<xsl:for-each select="./DSCN">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS,'DesignationInTime/ArchaeologicalExcavation', $itemURI, '-', arco-fn:urify(normalize-space(./DSCN)))" />
+								<xsl:value-of select="concat($NS,'DesignationInTime/ArchaeologicalExcavation', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -14159,10 +14169,10 @@
 								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(./DSCN)" />
+								<xsl:value-of select="normalize-space(.)" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(./DSCN)" />
+								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
 							<arco-core:hasType>
 								<xsl:attribute name="rdf:resource">
@@ -14170,7 +14180,7 @@
 								</xsl:attribute>
 							</arco-core:hasType>
 						</rdf:Description>
-					</xsl:if>
+					</xsl:for-each>
 					<!-- documentation identifier -->
 					<xsl:if test="./DSCK">
 						<rdf:Description>
@@ -14385,10 +14395,10 @@
 						</rdf:Description>
 					</xsl:for-each>
 					<!-- bibliography of survey as an individual (RA 2.00) -->
-					<xsl:if test="./DSCB and (not(starts-with(lower-case(normalize-space(./DSCB)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCB)), 'n.r')))">
+					<xsl:for-each select="./DSCB[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-		                		<xsl:value-of select="concat($NS, 'Edition/', arco-fn:arcofy(normalize-space(./DSCB)))" />
+		                		<xsl:value-of select="concat($NS, 'Edition/', arco-fn:arcofy(normalize-space(.)))" />
 	                		</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -14396,16 +14406,16 @@
 	                			</xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(./DSCB)" />
+								<xsl:value-of select="normalize-space(.)" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(./DSCB)" />
+								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
 							<arco-cd:completeBibliographicReference>
-								<xsl:value-of select="normalize-space(./DSCB)" />
+								<xsl:value-of select="normalize-space(.)" />
 							</arco-cd:completeBibliographicReference>
 						</rdf:Description>
-					</xsl:if>
+					</xsl:for-each>
 					<!-- method of survey as an individual -->
 					<xsl:if test="./DSCM and (not(starts-with(lower-case(normalize-space(./DSCM)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCM)), 'n.r')))">
 						<rdf:Description>
