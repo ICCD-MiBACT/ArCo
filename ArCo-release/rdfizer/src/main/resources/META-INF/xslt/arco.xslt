@@ -131,9 +131,17 @@
 		<!-- xsl:variable name="sheetType" select="record/metadata/schede/*/CD/TSK/text()"></xsl:variable -->
 		<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
 		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT' or $sheetType='BIB') and not(administrativeDataRecord/metadata) and not(root)" >
-				
+			<xsl:variable name="esc">
+				<xsl:value-of select="record/metadata/schede/*/CD/ESC" />
+			</xsl:variable>				
 			<xsl:variable name="itemURI">
 				<xsl:choose>
+					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
+						<xsl:value-of select="arco-fn:urify(concat('dsc-', record/metadata/schede/DSC/CD/ESC,'-', record/metadata/schede/DSC/*/*/DSCH))" />
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/RCG/*/*/RCGH">
+						<xsl:value-of select="arco-fn:urify(concat('rcg-', record/metadata/schede/RCG/CD/ESC,'-', record/metadata/schede/RCG/*/*/RCGH))" />
+					</xsl:when>
 					<xsl:when test="record/metadata/schede/*/CD/NCU">
 						<xsl:choose>
 							<xsl:when test="record/metadata/schede/*/CD/NCU/NCUN">
@@ -146,12 +154,6 @@
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/EVE/EV/EVE/EVEH">
 						<xsl:value-of select="arco-fn:urify(concat('eve-', record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH))" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
-						<xsl:value-of select="arco-fn:urify(concat('dsc-', record/metadata/schede/DSC/CD/ESC,'-', record/metadata/schede/DSC/*/*/DSCH))" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/RCG/*/*/RCGH">
-						<xsl:value-of select="arco-fn:urify(concat('rcg-', record/metadata/schede/RCG/CD/ESC,'-', record/metadata/schede/RCG/*/*/RCGH))" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
 						<xsl:choose>
@@ -209,9 +211,7 @@
 				</xsl:choose>
 			</xsl:variable>
 			<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version" />
-			<xsl:variable name="esc">
-				<xsl:value-of select="record/metadata/schede/*/CD/ESC" />
-			</xsl:variable>
+
 			<xsl:variable name="culturalProperty">
 				<xsl:choose>
 					<xsl:when test="$sheetType='EVE'">
@@ -13128,6 +13128,9 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:choose>
+								<xsl:when test="$sheetType='RCG'">
+									<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', 'rcg-', arco-fn:urify($esc), '-', arco-fn:urify(./RCGH))" />
+								</xsl:when>
 								<xsl:when test="./RCGJ">
                 					<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', 'rcg-', arco-fn:urify(./RCGJ), '-', arco-fn:urify(./RCGH))" />
                 				</xsl:when>
@@ -28885,11 +28888,6 @@
                             <xsl:value-of select="'https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation'" />
                         </xsl:attribute>
 					</rdf:type>
-					<arco-location:isTimeIndexedTypedLocationOf>
-						<xsl:attribute name="rdf:resource"> 
-							<xsl:value-of select="$culturalProperty" /> 
-						</xsl:attribute>
-					</arco-location:isTimeIndexedTypedLocationOf>
 					<rdfs:label xml:lang="it">
 						<xsl:value-of select="concat('Localizzazione fisica attuale del bene: ', $itemURI)" />
 					</rdfs:label>
@@ -31331,11 +31329,6 @@
                             <xsl:value-of select="'https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation'" />
 						</xsl:attribute>
 					</rdf:type>
-					<arco-location:isTimeIndexedTypedLocationOf>
-						<xsl:attribute name="rdf:resource"> 
-							<xsl:value-of select="$culturalProperty" /> 
-						</xsl:attribute>
-					</arco-location:isTimeIndexedTypedLocationOf>
 					<rdfs:label xml:lang="it">
 						<xsl:value-of select="concat('Altra localizzazione ', position(), ' del bene: ', $itemURI)" />
 					</rdfs:label>
@@ -32914,11 +32907,6 @@
                             <xsl:value-of select="'https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation'" />
                         </xsl:attribute>
 					</rdf:type>
-					<arco-location:isTimeIndexedTypedLocationOf>
-						<xsl:attribute name="rdf:resource"> 
-							<xsl:value-of select="$culturalProperty" /> 
-						</xsl:attribute>
-					</arco-location:isTimeIndexedTypedLocationOf>
 					<rdfs:label xml:lang="it">
 						<xsl:value-of select="concat('Localizzazione di ripresa del bene: ', $itemURI)" />
 					</rdfs:label>

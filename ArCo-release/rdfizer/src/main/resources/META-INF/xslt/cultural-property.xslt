@@ -60,17 +60,24 @@
 			</xsl:variable>
 			<xsl:variable name="itemURI">
 				<xsl:choose>
-					<xsl:when test="record/metadata/schede/EVE/CD/NCU">
-						<xsl:value-of select="arco-fn:urify(record/metadata/schede/EVE/CD/NCU)" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/EVE/EV/EVE/EVEH">
-						<xsl:value-of select="arco-fn:urify(concat('eve-', record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH))" />
-					</xsl:when>
 					<xsl:when test="record/metadata/schede/DSC/*/*/DSCH">
 						<xsl:value-of select="arco-fn:urify(concat('dsc-', record/metadata/schede/DSC/CD/ESC,'-', record/metadata/schede/DSC/*/*/DSCH))" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/RCG/*/*/RCGH">
 						<xsl:value-of select="arco-fn:urify(concat('rcg-', record/metadata/schede/RCG/CD/ESC,'-', record/metadata/schede/RCG/*/*/RCGH))" />
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/*/CD/NCU">
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/CD/NCU/NCUN">
+								<xsl:value-of select="record/metadata/schede/*/CD/NCU/NCUN" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="record/metadata/schede/*/CD/NCU/NCU" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/EVE/EV/EVE/EVEH">
+						<xsl:value-of select="arco-fn:urify(concat('eve-', record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH))" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
 						<xsl:choose>
@@ -107,7 +114,7 @@
 								<xsl:value-of select="record/metadata/schede/*/CD/ACC[1]/ACCC" />
 							</xsl:otherwise>
 						</xsl:choose>
-					</xsl:variable>	
+					</xsl:variable>
 					<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
 					<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
 					<xsl:variable name="acc-space" select="record/metadata/schede/*/*/ACC[1]" />
@@ -126,7 +133,7 @@
 						</xsl:choose>
 					</xsl:otherwise>
 				</xsl:choose>
-			</xsl:variable>	    
+			</xsl:variable>
 		    <xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version" />
 		    <xsl:variable name="cp-name" select="''" />
 			<!-- variable culturalPropertyComponent -->	
