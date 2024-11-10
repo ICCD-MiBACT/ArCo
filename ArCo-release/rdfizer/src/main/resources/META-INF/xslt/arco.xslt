@@ -13868,7 +13868,7 @@
                 				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation'" />
                 			</xsl:attribute>
 						</rdf:type>
-						<rdfs:label xml:lang="it">
+						<rdfs:label>
 							<xsl:choose>
 								<xsl:when test="./DSCV">
 									<xsl:value-of select="normalize-space(./DSCV)" />
@@ -13877,14 +13877,14 @@
 									<xsl:value-of select="$scan" />
 								</xsl:when>
 								<xsl:when test="./SCAN">
-									<xsl:value-of select="concat('Scavo archeologico ', position(), ' del bene ', $itemURI, ': ', normalize-space(./SCAN))" />
+									<xsl:value-of select="normalize-space(./SCAN)" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="concat('Scavo archeologico ' , position(), ' del bene ', $itemURI)" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</rdfs:label>
-						<l0:name xml:lang="it">
+						<l0:name>
 							<xsl:choose>
 								<xsl:when test="./DSCV">
 									<xsl:value-of select="normalize-space(./DSCV)" />
@@ -13893,42 +13893,10 @@
 									<xsl:value-of select="$scan" />
 								</xsl:when>
 								<xsl:when test="./SCAN">
-									<xsl:value-of select="concat('Scavo archeologico ', position(), ' del bene ', $itemURI, ': ', normalize-space(./SCAN))" />
+									<xsl:value-of select="normalize-space(./SCAN)" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="concat('Scavo archeologico ' , position(), ' del bene ', $itemURI)" />
-								</xsl:otherwise>
-							</xsl:choose>
-						</l0:name>
-						<rdfs:label xml:lang="en">
-							<xsl:choose>
-								<xsl:when test="./DSCV">
-									<xsl:value-of select="normalize-space(./DSCV)" />
-								</xsl:when>
-								<xsl:when test="$scan">
-									<xsl:value-of select="$scan" />
-								</xsl:when>
-								<xsl:when test="./SCAN">
-									<xsl:value-of select="concat('Archaeological excavation ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./SCAN))" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="concat('Archaeological excavation ' , position(), ' of cultural property ', $itemURI)" />
-								</xsl:otherwise>
-							</xsl:choose>
-						</rdfs:label>
-						<l0:name xml:lang="en">
-							<xsl:choose>
-								<xsl:when test="./DSCV">
-									<xsl:value-of select="normalize-space(./DSCV)" />
-								</xsl:when>
-								<xsl:when test="$scan">
-									<xsl:value-of select="$scan" />
-								</xsl:when>
-								<xsl:when test="./SCAN">
-									<xsl:value-of select="concat('Archaeological excavation ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./SCAN))" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="concat('Archaeological excavation ' , position(), ' of cultural property ', $itemURI)" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</l0:name>
