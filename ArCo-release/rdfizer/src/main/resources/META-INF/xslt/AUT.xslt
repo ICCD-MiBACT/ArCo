@@ -1455,7 +1455,7 @@
 							<xsl:value-of select="arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBM))" />
 						</xsl:when>
 						<xsl:when test="record/metadata/schede/BIB/BI/BIB/BIBH">
-							<xsl:value-of select="concat(arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH)), 'local')" />
+							<xsl:value-of select="arco-fn:urify(concat('bib-', record/metadata/schede/BIB/CD/ESC,'-', record/metadata/schede/BIB/*/*/BIBH))" />
 						</xsl:when>
 						<xsl:when test="record/metadata/schede/BIB/BI/BIB/BIBA and record/metadata/schede/BIB/BI/BIB/BIBD">
 							<xsl:value-of select="concat(arco-fn:arcofy(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBA)), arco-fn:arcofy(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBD)))" />
@@ -1850,7 +1850,7 @@
 								<xsl:value-of select="normalize-space(record/metadata/schede/BIB/BI/BIB//BIBM)" />
 							</xsl:when>
 							<xsl:when test="record/metadata/schede/BIB/BI/BIB//BIBH">
-								<xsl:value-of select="normalize-space(record/metadata/schede/BIB/BI/BIB//BIBH)" />
+								<xsl:value-of select="concat('bib-', record/metadata/schede/BIB/CD/ESC,'-', record/metadata/schede/BIB/*/*/BIBH)" />
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="concat((normalize-space(record/metadata/schede/BIB/BI/BIB//BIBA)), ', ', normalize-space(record/metadata/schede/BIB/BI/BIB//BIBD))" />
@@ -1869,7 +1869,7 @@
 								<xsl:value-of select="normalize-space(record/metadata/schede/BIB/BI/BIB/BIBM)" />
 							</xsl:when>
 							<xsl:when test="record/metadata/schede/BIB/BI/BIB/BIBH">
-								<xsl:value-of select="normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH)" />
+								<xsl:value-of select="concat('bib-', record/metadata/schede/BIB/CD/ESC,'-', record/metadata/schede/BIB/*/*/BIBH)" />
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="concat((normalize-space(record/metadata/schede/BIB/BI/BIB/BIBA)), ', ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBD))" />
@@ -2063,11 +2063,11 @@
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBH and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH)), 'n.r')))">
 						<arco-lite:localIdentifier>
-							<xsl:value-of select="normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH)" />
+							<xsl:value-of select="concat('bib-', record/metadata/schede/BIB/CD/ESC,'-', record/metadata/schede/BIB/*/*/BIBH)" />
 						</arco-lite:localIdentifier>
 						<arco-core:hasIdentifier>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', arco-fn:arcofy(record/metadata/schede/BIB/BI/BIB/BIBH), '-local')" />
+								<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', 'bib-', record/metadata/schede/BIB/CD/ESC,'-', arco-fn:arcofy(record/metadata/schede/BIB/BI/BIB/BIBH), '-local')" />
 							</xsl:attribute>
 						</arco-core:hasIdentifier>
 					</xsl:if>
@@ -2115,7 +2115,7 @@
 				<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBH">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', arco-fn:arcofy(record/metadata/schede/BIB/BI/BIB/BIBH), '-local')" />
+							<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', 'bib-', record/metadata/schede/BIB/CD/ESC,'-', arco-fn:arcofy(record/metadata/schede/BIB/BI/BIB/BIBH), '-local')" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -2128,13 +2128,13 @@
 				    	    </xsl:attribute>
 						</arco-core:hasType>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH)" />
+							<xsl:value-of select="concat('bib-', record/metadata/schede/BIB/CD/ESC,'-', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH))" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH)" />
+							<xsl:value-of select="concat('bib-', record/metadata/schede/BIB/CD/ESC,'-', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH))" />
 						</l0:name>
 						<arco-core:identifier>
-							<xsl:value-of select="normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH)" />
+							<xsl:value-of select="concat('bib-', record/metadata/schede/BIB/CD/ESC,'-', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH))" />
 						</arco-core:identifier>
 						<arco-core:current>
 							<xsl:value-of select="true()" />
