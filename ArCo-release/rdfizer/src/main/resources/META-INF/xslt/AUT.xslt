@@ -1267,7 +1267,7 @@
 				<xsl:for-each select="record/metadata/schede/*/DO/BIB">
 					<arco-cd:hasBibliographicSource>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:arcofy(normalize-space(./BIBM)))" />
+							<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./BIBM)))" />
 	                	</xsl:attribute>
 					</arco-cd:hasBibliographicSource>
 				</xsl:for-each>
@@ -1409,11 +1409,11 @@
 			<xsl:for-each select="record/metadata/schede/*/DO/BIB">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'Edition/', arco-fn:arcofy(normalize-space(./BIBM)))" />
+            			<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./BIBM)))" />
             		</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
             			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
@@ -1472,10 +1472,10 @@
 						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Catalogue Record of edition ', $idEdition)" />
+						<xsl:value-of select="concat('Catalogue Record of publication ', $idEdition)" />
 					</rdfs:label>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Scheda catalografica dell edizione ', $idEdition)" />
+						<xsl:value-of select="concat('Scheda catalografica della pubblicazione ', $idEdition)" />
 					</rdfs:label>
 						<!-- proprietà per avere sempre un collegamento col nome del file xml "ICCD..." -->
 					<arco-lite:systemIdentifier>
@@ -1770,16 +1770,16 @@
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Profilo d''accesso ai dati della scheda catalografica dell edizione ', $idEdition, ': ', normalize-space(record/metadata/schede/*/AD/ADS/ADSP))" />
+							<xsl:value-of select="concat('Profilo d''accesso ai dati della scheda catalografica della pubblicazione ', $idEdition, ': ', normalize-space(record/metadata/schede/*/AD/ADS/ADSP))" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Profilo d''accesso alla scheda catalografica dell edizione ', $idEdition, ': ', normalize-space(record/metadata/schede/*/AD/ADS/ADSP))" />
+							<xsl:value-of select="concat('Profilo d''accesso alla scheda catalografica della pubblicazione ', $idEdition, ': ', normalize-space(record/metadata/schede/*/AD/ADS/ADSP))" />
 						</l0:name>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Access profile to catalogue record of edition ', $idEdition, ': ', normalize-space(record/metadata/schede/*/AD/ADS/ADSP))" />
+							<xsl:value-of select="concat('Access profile to catalogue record of publication ', $idEdition, ': ', normalize-space(record/metadata/schede/*/AD/ADS/ADSP))" />
 						</rdfs:label>
 						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Access profile to catalogue record of edition ', $idEdition, ': ', normalize-space(record/metadata/schede/*/AD/ADS/ADSP))" />
+							<xsl:value-of select="concat('Access profile to catalogue record of publication ', $idEdition, ': ', normalize-space(record/metadata/schede/*/AD/ADS/ADSP))" />
 						</l0:name>
 						<arco-catalogue:hasPrivacyLevel>
 							<xsl:attribute name="rdf:resource">
@@ -1831,11 +1831,11 @@
 				
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'Edition/', $idEdition)" />
+            			<xsl:value-of select="concat($NS, 'Publication/', $idEdition)" />
             		</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
             			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
@@ -2057,7 +2057,7 @@
 					<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBG and (record/metadata/schede/BIB/BI/BIB/BIBT)">
 						<arco-core:isPartOf>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Edition/', $idEdition, '-main-work' )" />
+								<xsl:value-of select="concat($NS, 'Publication/', $idEdition, '-main-work' )" />
 							</xsl:attribute>
 						</arco-core:isPartOf>
 					</xsl:if>
@@ -2187,16 +2187,16 @@
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Autore ', position(), ' dell edizione: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBA))" />
+							<xsl:value-of select="concat('Autore ', position(), ' della pubbicazione: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBA))" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Author ', position(), ' of edition: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBA))" />
+							<xsl:value-of select="concat('Author ', position(), ' of publication: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBA))" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Autore ', position(), ' dell edizione: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBA))" />
+							<xsl:value-of select="concat('Autore ', position(), ' della pubbicazione: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBA))" />
 						</l0:name>
 						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Author ', position(), ' of edition: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBA))" />
+							<xsl:value-of select="concat('Author ', position(), ' of publication: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBA))" />
 						</l0:name>
 						<arco-core:hasRole>
 							<xsl:attribute name="rdf:resource">
@@ -2252,16 +2252,16 @@
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Curatore ', position(), ' dell edizione: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBC))" />
+							<xsl:value-of select="concat('Curatore ', position(), ' della pubblicazione: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBC))" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Curator ', position(), ' of edition: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBC))" />
+							<xsl:value-of select="concat('Curator ', position(), ' of publication: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBC))" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Curatore ', position(), ' dell edizione: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBC))" />
+							<xsl:value-of select="concat('Curatore ', position(), ' della pubblicazione: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBC))" />
 						</l0:name>
 						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Curator ', position(), ' of edition: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBC))" />
+							<xsl:value-of select="concat('Curator ', position(), ' of publication: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBC))" />
 						</l0:name>
 						<arco-core:hasRole>
 							<xsl:attribute name="rdf:resource">
@@ -2317,16 +2317,16 @@
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Editore ', position(), ' dell edizione: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBZ))" />
+							<xsl:value-of select="concat('Editore ', position(), ' della pubblicazione: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBZ))" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Editor ', position(), ' of edition: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBZ))" />
+							<xsl:value-of select="concat('Editor ', position(), ' of publication: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBZ))" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Editore ', position(), ' dell edizione: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBZ))" />
+							<xsl:value-of select="concat('Editore ', position(), ' della pubblicazione: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBZ))" />
 						</l0:name>
 						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Editor ', position(), ' of edition: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBZ))" />
+							<xsl:value-of select="concat('Editor ', position(), ' of publication: ', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBZ))" />
 						</l0:name>
 						<arco-core:hasRole>
 							<xsl:attribute name="rdf:resource">
@@ -2432,11 +2432,11 @@
 				<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBG and (record/metadata/schede/BIB/BI/BIB/BIBT)">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-    	        			<xsl:value-of select="concat($NS, 'Edition/', $idEdition, '-main-work' )" />
+    	        			<xsl:value-of select="concat($NS, 'Publication/', $idEdition, '-main-work' )" />
         	    		</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
             				</xsl:attribute>
 						</rdf:type>
 						<rdfs:label>

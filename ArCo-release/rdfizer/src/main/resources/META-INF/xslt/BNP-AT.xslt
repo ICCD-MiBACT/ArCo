@@ -3847,7 +3847,7 @@
 				<xsl:if test="./PTCZ">
 					<arco-cd:hasBibliographicSource>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./PTCZ)))" />
+							<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./PTCZ)))" />
 	                	</xsl:attribute>
 					</arco-cd:hasBibliographicSource>
 					<arco-lite:bibliographicReference>
@@ -3889,11 +3889,11 @@
 			<xsl:if test="./PTCZ">
 				<rdf:Description>
 				<xsl:attribute name="rdf:about">
-            		<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./PTCZ)))" />
+            		<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./PTCZ)))" />
             	</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
             		</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
@@ -3941,7 +3941,7 @@
 				<xsl:if test="./INIZ">
 					<arco-cd:hasBibliographicSource>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./INIZ)))" />
+							<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./INIZ)))" />
 	                	</xsl:attribute>
 					</arco-cd:hasBibliographicSource>
 					<arco-lite:bibliographicReference>
@@ -4178,11 +4178,11 @@
 			<xsl:if test="./INIZ">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-    	        		<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./INIZ)))" />
+    	        		<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./INIZ)))" />
         	    	</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
 	            		</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>

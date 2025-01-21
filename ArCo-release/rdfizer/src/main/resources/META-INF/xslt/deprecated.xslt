@@ -3723,16 +3723,11 @@
 					</xsl:choose>
 				</xsl:attribute>
 				<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-				<xsl:if test="./EDTE and (not(starts-with(lower-case(normalize-space(./EDTE)), 'nr')) and not(starts-with(lower-case(normalize-space(./EDTE)), 'n.r')))">
-					<tiapit:time>
-						<xsl:value-of select="normalize-space(./EDTE)" />
-					</tiapit:time>
-				</xsl:if>
-				<xsl:if test="./EDTL and (not(starts-with(lower-case(normalize-space(./EDTL)), 'nr')) and not(starts-with(lower-case(normalize-space(./EDTL)), 'n.r')))">
-					<arco-cd:editionLocation>
-						<xsl:value-of select="normalize-space(./EDTL)" />
-					</arco-cd:editionLocation>
-				</xsl:if>
+				<owl:sameAs>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Publication/', $itemURI, '-', position())" />
+					</xsl:attribute>
+				</owl:sameAs>
 			</rdf:Description>
 		</xsl:if>
 	</xsl:for-each>
@@ -6591,13 +6586,12 @@
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS, 'Edition/', $itemURI, '-', arco-fn:urify(normalize-space(./EDIT)))" />
 			</xsl:attribute>
-			<xsl:if test="./EDIR and (not(starts-with(lower-case(normalize-space(./EDIR)), 'nr')) and not(starts-with(lower-case(normalize-space(./EDIR)), 'n.r')))">
-				<arco-cd:hasEditor>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./EDIR))" />
-	    			</xsl:attribute>
-				</arco-cd:hasEditor>
-			</xsl:if>
+			<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+			<owl:sameAs>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'Edition/', $itemURI, '-', arco-fn:arcofy(normalize-space(./EDIT)))" />
+				</xsl:attribute>
+			</owl:sameAs>
 		</rdf:Description>
 				<!-- title as an individual -->
 				<xsl:if test="./EDIT and (not(starts-with(lower-case(normalize-space(./EDIT)), 'nr')) and not(starts-with(lower-case(normalize-space(./EDIT)), 'n.r')))">

@@ -1092,7 +1092,7 @@
 				<xsl:for-each select="record/metadata/schede/*/IR/IRA/IRAB">
 					<arco-cd:hasBibliographicSource>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(.)))" />
+							<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(.)))" />
 	                	</xsl:attribute>
 					</arco-cd:hasBibliographicSource>
 					<arco-lite:bibliographicReference>
@@ -1294,11 +1294,11 @@
 		<xsl:for-each select="record/metadata/schede/*/IR/IRA/IRAB">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-            		<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(.)))" />
+            		<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(.)))" />
             	</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
             		</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
@@ -3610,7 +3610,7 @@
 				<xsl:if test="record/metadata/schede/BNPE/SR/SRT/SRTB">	
 					<arco-cd:hasBibliographicSource>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRT/SRTB)))" />
+							<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRT/SRTB)))" />
 	                	</xsl:attribute>
 					</arco-cd:hasBibliographicSource>
 					<arco-lite:bibliographicReference>
@@ -3651,11 +3651,11 @@
 			<xsl:if test="record/metadata/schede/BNPE/SR/SRT/SRTB">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRT/SRTB)))" />
+            			<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRT/SRTB)))" />
         	    	</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
             			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
@@ -3753,7 +3753,7 @@
 				<xsl:if test="./RRT/RRTB">	
 					<arco-cd:hasBibliographicSource>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./RRT/RRTB)))" />
+							<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./RRT/RRTB)))" />
 	                	</xsl:attribute>
 					</arco-cd:hasBibliographicSource>
 					<arco-lite:bibliographicReference>
@@ -3794,11 +3794,11 @@
 			<xsl:if test="./RRT/RRTB">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./RRT/RRTB)))" />
+            			<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./RRT/RRTB)))" />
         	    	</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
             			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>

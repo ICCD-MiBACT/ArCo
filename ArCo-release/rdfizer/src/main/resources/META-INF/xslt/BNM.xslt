@@ -4342,7 +4342,7 @@
 			<xsl:for-each select="record/metadata/schede/*/IM/IMA/IMAB">
 				<arco-cd:hasBibliographicSource>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(.)))" />
+						<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(.)))" />
 	                </xsl:attribute>
 				</arco-cd:hasBibliographicSource>
 				<arco-lite:bibliographicReference>
@@ -4400,7 +4400,7 @@
 			<xsl:for-each select="record/metadata/schede/*/ET/ETA/ETAB">
 				<arco-cd:hasBibliographicSource>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(.)))" />
+						<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(.)))" />
 	                </xsl:attribute>
 				</arco-cd:hasBibliographicSource>
 				<arco-lite:bibliographicReference>
@@ -6280,7 +6280,7 @@
 			<xsl:if test="record/metadata/schede/BNM/SM/SMT/SMTB">	
 				<arco-cd:hasBibliographicSource>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMT/SMTB)))" />
+						<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMT/SMTB)))" />
 	                </xsl:attribute>
 				</arco-cd:hasBibliographicSource>
 				<arco-lite:bibliographicReference>
@@ -6325,11 +6325,11 @@
 		<xsl:if test="record/metadata/schede/BNM/SM/SMT/SMTB">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-            		<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMT/SMTB)))" />
+            		<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMT/SMTB)))" />
             	</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
             		</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
@@ -6389,11 +6389,11 @@
 		<xsl:for-each select="record/metadata/schede/*/IM/IMA/IMAB">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-            		<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(.)))" />
+            		<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(.)))" />
             	</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
             		</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>
@@ -6448,7 +6448,7 @@
 			<xsl:if test="./RMT/RMTB">	
 				<arco-cd:hasBibliographicSource>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./RMT/RMTB)))" />
+						<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./RMT/RMTB)))" />
 	               	</xsl:attribute>
 				</arco-cd:hasBibliographicSource>
 				<arco-lite:bibliographicReference>
@@ -6510,11 +6510,11 @@
 		<xsl:if test="./RMT/RMTB">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-            		<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./RMT/RMTB)))" />
+            		<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./RMT/RMTB)))" />
             	</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
             		</xsl:attribute>
 				</rdf:type>
 				<rdfs:label>

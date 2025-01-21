@@ -4795,37 +4795,37 @@
 							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-lite:hasCollectionMember>
-					<!-- Edition -->
+					<!-- Publication -->
 					<xsl:if test="record/metadata/schede/*/DU/DUX">
-						<arco-cd:hasEdition>
+						<arco-cd:hasPublication>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Edition/', $itemURI)" />
+								<xsl:value-of select="concat($NS, 'Publication/', $itemURI)" />
 							</xsl:attribute>
-						</arco-cd:hasEdition>
+						</arco-cd:hasPublication>
 					</xsl:if>
 				</rdf:Description>
-				<!-- Edition as an individual -->
+				<!-- Publication as an individual -->
 				<xsl:if test="record/metadata/schede/*/DU/DUX">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-            				<xsl:value-of select="concat($NS, 'Edition/', $itemURI)" />
+            				<xsl:value-of select="concat($NS, 'Publication/', $itemURI)" />
             			</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
 	            			</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Edizione del documento audio del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Publicazione relativa al documento audio del bene ', $itemURI)" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Edizione del documento audio del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Publicazione relativa al documento audio del bene ', $itemURI)" />
 						</l0:name>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Edition of audio documentation of cultural property ', $itemURI)" />
+							<xsl:value-of select="concat('Publication related to audio documentation of cultural property ', $itemURI)" />
 						</rdfs:label>
 						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Edition of audio documentation of cultural property ', $itemURI)" />
+							<xsl:value-of select="concat('Publication related to audio documentation of cultural property ', $itemURI)" />
 						</l0:name>
 						<!-- editor -->
 						<xsl:if test="record/metadata/schede/*/DU/DUX/DUXE">
@@ -4912,16 +4912,16 @@
 	                	       </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella edizione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXE))" />
+								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXE))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella edizione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXE))" />
+								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXE))" />
 							</l0:name>
 							<rdfs:label xml:lang="en">
-								<xsl:value-of select="concat('Role in edition ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXE))" />
+								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXE))" />
 							</rdfs:label>
 							<l0:name xml:lang="en">
-								<xsl:value-of select="concat('Role in edition ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXE))" />
+								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXE))" />
 							</l0:name>
 							<arco-core:hasRole>
 								<xsl:attribute name="rdf:resource">
@@ -4980,16 +4980,16 @@
 	                	       </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella edizione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXC))" />
+								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXC))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella edizione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXC))" />
+								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXC))" />
 							</l0:name>
 							<rdfs:label xml:lang="en">
-								<xsl:value-of select="concat('Role in edition ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXC))" />
+								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXC))" />
 							</rdfs:label>
 							<l0:name xml:lang="en">
-								<xsl:value-of select="concat('Role in edition ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXC))" />
+								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXC))" />
 							</l0:name>
 							<arco-core:hasRole>
 								<xsl:attribute name="rdf:resource">
@@ -10327,37 +10327,37 @@
 							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-lite:hasCollectionMember>
-					<!-- Edition -->
+					<!-- publication -->
 					<xsl:if test="./AIX">
-						<arco-cd:hasEdition>
+						<arco-cd:hasPublication>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Edition/', $itemURI)" />
+								<xsl:value-of select="concat($NS, 'Publication/', $itemURI)" />
 							</xsl:attribute>
-						</arco-cd:hasEdition>
+						</arco-cd:hasPublication>
 					</xsl:if>
 				</rdf:Description>
-				<!-- Edition as an individual -->
+				<!-- Publication as an individual -->
 				<xsl:if test="./AIX">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-            				<xsl:value-of select="concat($NS, 'Edition/', $itemURI)" />
+            				<xsl:value-of select="concat($NS, 'Publication/', $itemURI)" />
             			</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
 	            			</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Edizione del documento audio del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Publicazione del documento audio del bene ', $itemURI)" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Edizione del documento audio del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Publicazione del documento audio del bene ', $itemURI)" />
 						</l0:name>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Edition of audio documentation of cultural property ', $itemURI)" />
+							<xsl:value-of select="concat('Publication of audio documentation of cultural property ', $itemURI)" />
 						</rdfs:label>
 						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Edition of audio documentation of cultural property ', $itemURI)" />
+							<xsl:value-of select="concat('Publication of audio documentation of cultural property ', $itemURI)" />
 						</l0:name>
 						<!-- editor -->
 						<xsl:if test="./AIX/AIXE">
@@ -10444,16 +10444,16 @@
 	                	       </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella edizione ', position(), ': ', normalize-space(./AIX/AIXE))" />
+								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./AIX/AIXE))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella edizione ', position(), ': ', normalize-space(./AIX/AIXE))" />
+								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./AIX/AIXE))" />
 							</l0:name>
 							<rdfs:label xml:lang="en">
-								<xsl:value-of select="concat('Role in edition ', position(), ': ', normalize-space(./AIX/AIXE))" />
+								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(./AIX/AIXE))" />
 							</rdfs:label>
 							<l0:name xml:lang="en">
-								<xsl:value-of select="concat('Role in edition ', position(), ': ', normalize-space(./AIX/AIXE))" />
+								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(./AIX/AIXE))" />
 							</l0:name>
 							<arco-core:hasRole>
 								<xsl:attribute name="rdf:resource">
@@ -10512,16 +10512,16 @@
 	                	       </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella edizione ', position(), ': ', normalize-space(./AIX/AIXC))" />
+								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./AIX/AIXC))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella edizione ', position(), ': ', normalize-space(./AIX/AIXC))" />
+								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./AIX/AIXC))" />
 							</l0:name>
 							<rdfs:label xml:lang="en">
-								<xsl:value-of select="concat('Role in edition ', position(), ': ', normalize-space(./AIX/AIXC))" />
+								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(./AIX/AIXC))" />
 							</rdfs:label>
 							<l0:name xml:lang="en">
-								<xsl:value-of select="concat('Role in edition ', position(), ': ', normalize-space(./AIX/AIXC))" />
+								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(./AIX/AIXC))" />
 							</l0:name>
 							<arco-core:hasRole>
 								<xsl:attribute name="rdf:resource">
@@ -13394,37 +13394,37 @@
 							<xsl:value-of select="$objectOfDescription" />
 						</xsl:attribute>
 					</arco-lite:hasCollectionMember>
-					<!-- Edition -->
+					<!-- Publication -->
 					<xsl:if test="./VIX">
-						<arco-cd:hasEdition>
+						<arco-cd:hasPublication>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Edition/', $itemURI)" />
+								<xsl:value-of select="concat($NS, 'Publication/', $itemURI)" />
 							</xsl:attribute>
-						</arco-cd:hasEdition>
+						</arco-cd:hasPublication>
 					</xsl:if>
 				</rdf:Description>
-				<!-- Edition as an individual -->
+				<!-- Publication as an individual -->
 				<xsl:if test="./VIX">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-            				<xsl:value-of select="concat($NS, 'Edition/', $itemURI)" />
+            				<xsl:value-of select="concat($NS, 'Publication/', $itemURI)" />
             			</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Edition'" />
+            					<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Publication'" />
 	            			</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Edizione del documento audio del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Publicazione relativa al documento audio del bene ', $itemURI)" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Edizione del documento audio del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Publicazione relativa al audio del bene ', $itemURI)" />
 						</l0:name>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Edition of audio documentation of cultural property ', $itemURI)" />
+							<xsl:value-of select="concat('Publication related to audio documentation of cultural property ', $itemURI)" />
 						</rdfs:label>
 						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Edition of audio documentation of cultural property ', $itemURI)" />
+							<xsl:value-of select="concat('Publication related to audio documentation of cultural property ', $itemURI)" />
 						</l0:name>
 						<!-- editor -->
 						<xsl:if test="./VIX/VIXE">
@@ -13511,16 +13511,16 @@
 	                	       </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella edizione ', position(), ': ', normalize-space(./VIX/VIXE))" />
+								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./VIX/VIXE))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella edizione ', position(), ': ', normalize-space(./VIX/VIXE))" />
+								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./VIX/VIXE))" />
 							</l0:name>
 							<rdfs:label xml:lang="en">
-								<xsl:value-of select="concat('Role in edition ', position(), ': ', normalize-space(./VIX/VIXE))" />
+								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(./VIX/VIXE))" />
 							</rdfs:label>
 							<l0:name xml:lang="en">
-								<xsl:value-of select="concat('Role in edition ', position(), ': ', normalize-space(./VIX/VIXE))" />
+								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(./VIX/VIXE))" />
 							</l0:name>
 							<arco-core:hasRole>
 								<xsl:attribute name="rdf:resource">
@@ -13579,16 +13579,16 @@
 	                	       </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella edizione ', position(), ': ', normalize-space(./VIX/VIXC))" />
+								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./VIX/VIXC))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella edizione ', position(), ': ', normalize-space(./VIX/VIXC))" />
+								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./VIX/VIXC))" />
 							</l0:name>
 							<rdfs:label xml:lang="en">
-								<xsl:value-of select="concat('Role in edition ', position(), ': ', normalize-space(./VIX/VIXC))" />
+								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(./VIX/VIXC))" />
 							</rdfs:label>
 							<l0:name xml:lang="en">
-								<xsl:value-of select="concat('Role in edition ', position(), ': ', normalize-space(./VIX/VIXC))" />
+								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(./VIX/VIXC))" />
 							</l0:name>
 							<arco-core:hasRole>
 								<xsl:attribute name="rdf:resource">
@@ -20339,31 +20339,31 @@
 			</xsl:for-each>
 			<!-- bibliography -->
 			<xsl:for-each select="record/metadata/schede/*/DO/BIB">
-					<xsl:variable name="edition">
+					<xsl:variable name="Publication">
 						<xsl:choose>
 							<xsl:when test="./NCUN">
-								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./NCUN)))" />
+								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./NCUN)))" />
 							</xsl:when>
 							<xsl:when test="./NUCN">
-								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./NUCN)))" />
+								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./NUCN)))" />
 							</xsl:when>
 							<xsl:when test="./BIBK">
-								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBK)))" />
+								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./BIBK)))" />
 							</xsl:when>
 							<xsl:when test="./BIBM">
-								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBM)))" />
+								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./BIBM)))" />
 							</xsl:when>
 							<xsl:when test="./BIBH">
-								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:urify(normalize-space(./BIBH)), 'local')" />
+								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./BIBH)), 'local')" />
 							</xsl:when>
 							<xsl:when test="./BIBA and ./BIBD">
-								<xsl:value-of select="concat($NS, 'Edition/', arco-fn:arcofy(normalize-space(./BIBA)), arco-fn:arcofy(normalize-space(./BIBD)))" />
+								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./BIBA)), arco-fn:arcofy(normalize-space(./BIBD)))" />
 							</xsl:when>
 	                	</xsl:choose>
 					</xsl:variable>
 					<arco-cd:hasBibliographicSource>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$edition" />
+							<xsl:value-of select="$Publication" />
 	                	</xsl:attribute>
 					</arco-cd:hasBibliographicSource>
 					<xsl:choose>
@@ -20386,7 +20386,7 @@
 					<xsl:if test="contains(normalize-space(lower-case(./BIBX)), 'specifica')">
 						<arco-cd:hasSpecificBibliographicSource>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="$edition" />
+								<xsl:value-of select="$Publication" />
 	        	        	</xsl:attribute>
 						</arco-cd:hasSpecificBibliographicSource>
 						<xsl:choose>
@@ -20405,7 +20405,7 @@
 					<xsl:if test="contains(normalize-space(lower-case(./BIBX)), 'corredo') or contains(normalize-space(lower-case(./BIBX)), 'contesto')">
 						<arco-cd:hasContextBibliographicSource>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="$edition" />
+								<xsl:value-of select="$Publication" />
 	        	        	</xsl:attribute>
 						</arco-cd:hasContextBibliographicSource>
 						<xsl:choose>
@@ -20424,7 +20424,7 @@
 					<xsl:if test="contains(normalize-space(lower-case(./BIBX)), 'confront')">
 						<arco-cd:hasComparativeBibliographicSource>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="$edition" />
+								<xsl:value-of select="$Publication" />
 	        	        	</xsl:attribute>
 						</arco-cd:hasComparativeBibliographicSource>
 						<xsl:choose>
