@@ -23965,6 +23965,11 @@
 									<xsl:value-of select="true()" />
 								</arco-cd:uncertainData>
 							</xsl:if>
+							<xsl:if test="./AUTS and (starts-with(lower-case(normalize-space(./AUTS)), 'attribuito'))">
+								<arco-cd:uncertainData>
+									<xsl:value-of select="true()" />
+								</arco-cd:uncertainData>
+							</xsl:if>
 							<xsl:if test="./AUTR and not(lower-case(normalize-space(./AUTR))='nr' or lower-case(normalize-space(./AUTR))='nr (recupero pregresso)' or lower-case(normalize-space(./AUTR))='n.r.' or lower-case(normalize-space(./AUTR))='nr [non rilevabile]' or lower-case(normalize-space(./AUTR))='n.r. (non rilevabile)')">
 								<arco-cd:hasInterventionRole>
 									<xsl:attribute name="rdf:resource">
@@ -24075,6 +24080,9 @@
 										</xsl:when>
 										<xsl:when test="lower-case(normalize-space(./AUTP))='e'">
 											<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+										</xsl:when>
+										<xsl:when test="./AUTS and not(starts-with(lower-case(normalize-space(./AUTS)), 'attribuito'))">
+											<xsl:value-of select="'https://w3id.org/italia/onto/COV/Group'" />
 										</xsl:when>
 										<xsl:when test="./AUTB">
 											<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
@@ -24617,6 +24625,11 @@
 								<xsl:value-of select="true()" />
 							</arco-cd:uncertainData>
 						</xsl:if>
+						<xsl:if test="./AUFS and (starts-with(lower-case(normalize-space(./AUFS)), 'attribuito'))">
+								<arco-cd:uncertainData>
+									<xsl:value-of select="true()" />
+								</arco-cd:uncertainData>
+							</xsl:if>
 						<xsl:if test="./AUFR and not(lower-case(normalize-space(./AUFR))='nr' or lower-case(normalize-space(./AUFR))='nr (recupero pregresso)' or lower-case(normalize-space(./AUFR))='n.r.' or lower-case(normalize-space(./AUFR))='nr [non rilevabile]' or lower-case(normalize-space(./AUFR))='n.r. (non rilevabile)')">
 							<arco-cd:hasInterventionRole>
 								<xsl:attribute name="rdf:resource">
@@ -24671,8 +24684,8 @@
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:choose>
-	                                    	<xsl:when test="./AUFN">
-	                                        	<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+											<xsl:when test="./AUFS and not(starts-with(lower-case(normalize-space(./AUFS)), 'attribuito'))">
+												<xsl:value-of select="'https://w3id.org/italia/onto/COV/Group'" />
 											</xsl:when>
 											<xsl:when test="./AUFB">
 												<xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
