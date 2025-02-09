@@ -1818,11 +1818,11 @@
 				<!-- edition -->
 				<xsl:if test="record/metadata/schede/*/AU/EDT">
 					<xsl:if test="$sheetType='OAC' or $sheetType='S' or $sheetType='MI'">
-						<arco-cd:hasEdition>
+						<arco-cd:hasPublication>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Publication/', $itemURI, '-', position())" />
 							</xsl:attribute>
-						</arco-cd:hasEdition>
+						</arco-cd:hasPublication>
 						<xsl:for-each select="record/metadata/schede/*/AU/EDT">
 							<xsl:if test="./EDTN and (not(starts-with(lower-case(normalize-space(./EDTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./EDTN)), 'n.r')))">
 								<arco-lite:hasEditor>

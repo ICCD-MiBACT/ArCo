@@ -5423,10 +5423,10 @@
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Responsabilità della publicazione relativa bene ', $itemURI)" />
+							<xsl:value-of select="concat('Responsabilità della edizione relativa bene ', $itemURI)" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Responsibility of publication related to cultural property ', $itemURI)" />
+							<xsl:value-of select="concat('Responsibility of edition related to cultural property ', $itemURI)" />
 						</rdfs:label>
 						<arco-cd:hasAgentWithResponsibility>
 							<xsl:attribute name="rdf:resource">

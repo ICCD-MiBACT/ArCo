@@ -811,7 +811,7 @@ WHERE {
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBibliographicSource">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Publication"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua bibliografia. Per esempio, nell&apos;ambito del Catalogo Generale, collega un bene culturale alla bibliografia che riguarda il bene stesso, descritto in una scheda di catalogo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity to its bibliography.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -1156,7 +1156,7 @@ core:hasAgent ?agent .
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isComparisonBibliographicSourceOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Publication"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;edizione dell&apos;opera parte della bibliografia di confronto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity with the edition of the involved comparison bibliographic work.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -1208,7 +1208,7 @@ core:hasAgent ?agent .
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isContextBibliographicSourceOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Publication"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;edizione dell&apos;opera parte della bibliografica di contesto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity with the edition of the involved contextual bibliographic work.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -1583,7 +1583,6 @@ a-cd:hasDocumentationType ?type.
         <rdfs:label xml:lang="en">has edition</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normative VeAC e AT 3.01: DO/BSE/BSEN - Normativa S 3.00: RO/ADL/ADLE.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2827,6 +2826,23 @@ core:hasAgent ?agent .
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasPublication -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPublication">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isPublicationOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Publication"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una sua publicazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its publication.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha publicazione</rdfs:label>
+        <rdfs:label xml:lang="en">has publication</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasRecording -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRecording">
@@ -3342,7 +3358,7 @@ WHERE {
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographicSource"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSpecificBibliographicSourceOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Publication"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;edizione dell&apos;opera parte della bibliografica specifica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity with the edition of the involved specific bibliographic work.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -4661,7 +4677,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una bibliografia all&apos;entità alla quale si riferisce.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a bibliography to the entity which is referred to.</rdfs:comment>
@@ -4988,7 +5004,7 @@ core:isAgentRoleOf ?thing .
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isComparisonBibliographicSourceOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;edizione dell&apos;opera parte della bibliografia di confronto con l&apos;entità di cui è bibliografia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the edition of the work part of the comparative bibliography to the involved entity.</rdfs:comment>
@@ -5039,7 +5055,7 @@ core:isAgentRoleOf ?y  .
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isContextBibliographicSourceOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;edizione dell&apos;opera parte della bibliografia di contesto con l&apos;entità di cui è bibliografia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the edition of the work part of the context bibliography to the involved entity.</rdfs:comment>
@@ -5386,7 +5402,6 @@ WHERE {
         <rdfs:label xml:lang="it">è edizione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normative VeAC e AT 3.01: DO/BSE/BSEN - Normativa S 3.00: RO/ADL/ADLE.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -6718,6 +6733,22 @@ core:isAgentRoleOf ?thing .
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isPublicationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isPublicationOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una publicazione di un&apos;entità all&apos;entità stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity&apos;s publication to the entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is publication of</rdfs:label>
+        <rdfs:label xml:lang="it">è publicazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isRecordingOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isRecordingOf">
@@ -7205,7 +7236,7 @@ WHERE {
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isSpecificBibliographicSourceOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographicSourceOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;edizione dell&apos;opera parte della bibliografia specifica con l&apos;entità di cui è bibliografia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the edition of the work part of the specific bibliography to the involved entity.</rdfs:comment>
@@ -8318,9 +8349,11 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">alternative name</rdfs:label>
         <rdfs:label xml:lang="it">variante del nome</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTE, AUTV. AU/AUV</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/alternativeName"/>
     </owl:DatatypeProperty>
     
 
@@ -9894,9 +9927,11 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">pseudonimo</rdfs:label>
         <rdfs:label xml:lang="en">pseudonym</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AUT: AU/AUT/AUTP</a-cat:iccdNormTag>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/pseudonym"/>
     </owl:DatatypeProperty>
     
 
@@ -10882,8 +10917,8 @@ WHERE {
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Anomaly classification</rdfs:label>
         <rdfs:label xml:lang="it">Classificazione di anomalia</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIF</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -12518,7 +12553,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/Edition -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Edition">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Publication"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isEditionOf"/>
@@ -12555,8 +12590,8 @@ WHERE {
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;edizione di un&apos;entità. Per esempio, l&apos;edizione cartacea o digitale di un bene culturale o di un&apos;opera collegata a un bene culturale (ad es. una pubblicazione contenente una stampa).</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the edition of an entity (e.g. the print edition of a cultural property).</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;edizione di un&apos;immagine o di una serie di immagini, caratterizzate da una destinazione specifica o da interventi selettivi rispetto ad altre serie tratte dagli stessi negativi.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the edition of an image or series of images, characterized by a specific purpose or by selective interventions compared to other series derived from the same negatives.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description"/>
         <rdfs:label xml:lang="en">Edition</rdfs:label>
         <rdfs:label xml:lang="it">Edizione</rdfs:label>
@@ -13427,8 +13462,8 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Legal situation type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di situazione legale</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">instable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <a-cat:iccdNormTag>TU/CDG/CDGG. Normativa BDM:  DU/DUZ/DUZG, DV/DVZ/DVZG, DF/DFZ/DFZG, AI/AIZ/AIZG,  VI/VIZ/VIZG, FI/FIZ/FIZG</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -14165,6 +14200,51 @@ resource:PreparatoryOrFinalWork/0500212038-disegno
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Publication -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Publication">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTitle"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Title"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/editionLocation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una pubblicazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a publication</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication</rdfs:label>
+        <rdfs:label xml:lang="it">Publicazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB; RE/RCG/RCGS. OAC: AU/EDT.  ICCD Normative VeAC e AT 3.01: DO/BSE/BSEN - Normativa MI, S 3.00: RO/ADL/ADLE.</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -16612,6 +16692,19 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/PrimaryName -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/PrimaryName">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DesignationType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il nome primario di un agente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the primary name of an agent.</rdfs:comment>
+        <rdfs:label xml:lang="it">Nome principale</rdfs:label>
+        <rdfs:label xml:lang="en">Primary name</rdfs:label>
+        <a-cat:iccdNormTag>Scheda AUT: AU/AUT/AUTN, AU/AUT/AUTB</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/PrimaryResponsibility -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/PrimaryResponsibility">
@@ -16871,8 +16964,8 @@ a-cd:hasEdition ?ed .
         <rdfs:label xml:lang="it">Datazione alternativa</rdfs:label>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT.</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents an alternative dating of a cultural property (e.g.: an obsolete dating, a dating based on another method of dating).</rdfs:comment>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una eventuale altra datazione che può riguardare un bene culturale (es.: datazione tradizionale, altro metodo di datazione).</rdfs:comment>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una eventuale altra datazione che può riguardare un bene culturale (es.: datazione tradizionale, altro metodo di datazione).</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
