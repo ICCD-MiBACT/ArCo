@@ -1058,6 +1058,11 @@
 								<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVK), normalize-space(./LRVS), normalize-space(./LRVP), normalize-space(./LRVR), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
 							</xsl:attribute>
 						</xsl:when>
+						<xsl:when test="not (./LRVS)">
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVK),normalize-space(./LRVP), normalize-space(./LRVR), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
+							</xsl:attribute>
+						</xsl:when>
 						<xsl:otherwise>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVP), normalize-space(./LRVC), normalize-space(./LRVL))))" />
@@ -1088,6 +1093,11 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Collecting location ', position(), ' of cultural property ', $itemURI)" />
 			</l0:name>
+			<arco-location:hasLocationType>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/location/CollectingLocation'" />
+				</xsl:attribute>
+			</arco-location:hasLocationType>
 			<xsl:if test="./LRI/LRIR">
 				<arco-location:hasNaturalEnvironment>
 					<xsl:attribute name="rdf:resource">
@@ -1102,6 +1112,11 @@
 						<xsl:when test="./LRVS and not(lower-case(normalize-space(./LRVS))='italia')">
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVK), normalize-space(./LRVS), normalize-space(./LRVP), normalize-space(./LRVR), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
+							</xsl:attribute>
+						</xsl:when>
+						<xsl:when test="not(./LRVS)">
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVK),normalize-space(./LRVP), normalize-space(./LRVR), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
 							</xsl:attribute>
 						</xsl:when>
 						<xsl:otherwise>
@@ -1266,7 +1281,7 @@
 			</xsl:if>
 		</xsl:if>		
 		<!-- Feature as individual -->
-		<xsl:for-each select="record/metadata/schede/*/LR/LRV">
+		<xsl:for-each select="./LRV">
 		<xsl:variable name="lrvk">
 		<xsl:choose>
 			<xsl:when test="./LRVK and (not(starts-with(lower-case(normalize-space(./LRVK)), 'nr')) and not(starts-with(lower-case(normalize-space(./LRVK)), 'n.r')))">
@@ -1345,6 +1360,11 @@
 				<xsl:when test="./LRVS and not(lower-case(normalize-space(./LRVS))='italia')">
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVK), normalize-space(./LRVS), normalize-space(./LRVP), normalize-space(./LRVR), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
+					</xsl:attribute>
+				</xsl:when>
+				<xsl:when test="not (./LRVS)">
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVK),normalize-space(./LRVP), normalize-space(./LRVR), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
 					</xsl:attribute>
 				</xsl:when>
 				<xsl:otherwise>

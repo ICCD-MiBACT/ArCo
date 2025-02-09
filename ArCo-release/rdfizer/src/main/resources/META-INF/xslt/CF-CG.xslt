@@ -1056,9 +1056,9 @@
                        	<xsl:value-of select="concat($NS,'DesignationInTime/', $idCF, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/CF/CFN)))" />                      	                            
 					</xsl:attribute>
 				</arco-cd:hasDesignationInTime>
-				<arco-lite:currentDesigantion>
+				<arco-lite:currentDesignation>
 					<xsl:value-of select="normalize-space(record/metadata/schede/*/CF/CFN)" />
-				</arco-lite:currentDesigantion>
+				</arco-lite:currentDesignation>
 			</xsl:if>
 			<xsl:for-each select="record/metadata/schede/*/CF/CFA">
 				<arco-cd:hasDesignationInTime>
@@ -2527,9 +2527,9 @@
                        	<xsl:value-of select="concat($NS,'DesignationInTime/', $idCG, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/CG/CGN)))" />                      	                            
 					</xsl:attribute>
 				</arco-cd:hasDesignationInTime>
-				<arco-lite:currentDesigantion>
+				<arco-lite:currentDesignation>
 					<xsl:value-of select="normalize-space(record/metadata/schede/*/CG/CGN)" />
-				</arco-lite:currentDesigantion>
+				</arco-lite:currentDesignation>
 			</xsl:if>
 			<xsl:for-each select="record/metadata/schede/*/CG/CGA">
 				<arco-cd:hasDesignationInTime>

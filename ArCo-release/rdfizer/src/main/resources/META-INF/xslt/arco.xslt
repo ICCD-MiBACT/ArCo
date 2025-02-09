@@ -32858,7 +32858,7 @@
 					</rdf:Description>
 				</xsl:if>
 			</xsl:if>
-			<xsl:if test="record/metadata/schede/*/LR">
+			<xsl:if test="record/metadata/schede/*/LR and not(($sheetType='BNB') or ($sheetType='BNP') or ($sheetType='BNM') or ($sheetType='BNPE') or ($sheetType='BNPL') or  ($sheetType='AT'))">
 				<xsl:variable name="location">
 					<xsl:choose>
 						<xsl:when test="record/metadata/schede/*/LR/LRC/LRCS and not(lower-case(normalize-space(record/metadata/schede/*/LR/LRC/LRCS))='italia')">
@@ -32880,6 +32880,11 @@
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-shot')" />
 					</xsl:attribute>
+					<arco-location:hasLocationType>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/arco/ontology/location/ShootingLocation'" />
+                        </xsl:attribute>
+					</arco-location:hasLocationType>
 					<arco-location:atLocation>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="$location" />
@@ -36900,6 +36905,11 @@
 				<xsl:attribute name="rdf:about">
 	    	   		<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" />
 				</xsl:attribute>
+				<arco-location:hasLocationType>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/location/CurrentPhysicalLocation'" />
+					</xsl:attribute>
+				</arco-location:hasLocationType>
 				<arco-location:hasNaturalEnvironment>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'NaturalEnvironment/', $itemURI)" />
@@ -37290,6 +37300,11 @@
 					<xsl:attribute name="rdf:about">
 	    		   		<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" />
 					</xsl:attribute>
+					<arco-location:hasLocationType>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/arco/ontology/location/CurrentPhysicalLocation'" />
+                        </xsl:attribute>
+					</arco-location:hasLocationType>
 					<arco-location:hasNaturalEnvironment>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'NaturalEnvironment/', $itemURI)" />
