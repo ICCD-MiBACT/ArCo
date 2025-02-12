@@ -11312,7 +11312,6 @@
 				<xsl:if test="./BIBH">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', arco-fn:arcofy(./BIBH), '-local')" />
 							<xsl:value-of select="concat($NS, 'PublicationIdentifier/', arco-fn:arcofy(./BIBH), '-local')" />
 						</xsl:attribute>
 						<rdf:type>
@@ -25960,6 +25959,11 @@
 						<arco-core:current>
             				<xsl:value-of select="true()" />
           	  			</arco-core:current>
+          	  			<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+                            	<xsl:value-of select="concat($NS, 'InventoryType/inventario-patrimoniale')" />
+                        	</xsl:attribute>
+						</arco-core:hasType>
 						<xsl:if test="./INPV and (not(starts-with(lower-case(normalize-space(./INPV)), 'nr')) and not(starts-with(lower-case(normalize-space(./INPV)), 'n.r')))">
 							<arco-core:note>
 								<xsl:value-of select="normalize-space(./INPV)" />
@@ -26020,6 +26024,22 @@
                         		</xsl:attribute>
 							</arco-lite:hasResponsibleAgent>
 						</xsl:if>
+					</rdf:Description>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+		    	        	<xsl:value-of select="concat($NS, 'InventoryType/inventario-patrimoniale')" />
+		        	    </xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+                           		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InventoryType'" />
+	                       	</xsl:attribute>
+						</rdf:type>
+						<rdfs:label>
+							<xsl:value-of select="'inventario patrimoniale'" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="'inventario patrimoniale'" />
+						</l0:name>		
 					</rdf:Description>
 					<!-- SECCategory -->
 					<xsl:if test="./INPZ and (not(starts-with(lower-case(normalize-space(./INPZ)), 'nr')) and not(starts-with(lower-case(normalize-space(./INPZ)), 'n.r')))">
@@ -26170,6 +26190,11 @@
 						<arco-core:current>
             				<xsl:value-of select="true()" />
           	  			</arco-core:current>
+          	  			<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+                            	<xsl:value-of select="concat($NS, 'InventoryType/inventario-patrimoniale')" />
+                        	</xsl:attribute>
+						</arco-core:hasType>
 						<xsl:if test="./INPV and (not(starts-with(lower-case(normalize-space(./INPV)), 'nr')) and not(starts-with(lower-case(normalize-space(./INPV)), 'n.r')))">
 							<arco-core:note>
 								<xsl:value-of select="normalize-space(./INPV)" />
@@ -26231,6 +26256,22 @@
 							</arco-lite:hasResponsibleAgent>
 						</xsl:if>
 					</rdf:Description>
+					<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		    	        		<xsl:value-of select="concat($NS, 'InventoryType/inventario-patrimoniale')" />
+		        	    	</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InventoryType'" />
+	                        	</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="'inventario patrimoniale'" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="'inventario patrimoniale'" />
+							</l0:name>		
+						</rdf:Description>
 					<!-- SECCategory -->
 					<xsl:if test="./INPZ and (not(starts-with(lower-case(normalize-space(./INPZ)), 'nr')) and not(starts-with(lower-case(normalize-space(./INPZ)), 'n.r')))">
 						<rdf:Description>
