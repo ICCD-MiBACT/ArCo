@@ -30658,7 +30658,7 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:variable>
-				<xsl:if test="record/metadata/schede/*/LC/LDC/LDCM and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'n.r')))">
+				<xsl:if test="not(record/metadata/schede/harvesting/idContenitoreGiuridico) and record/metadata/schede/*/LC/LDC/LDCM and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="$cis" />
