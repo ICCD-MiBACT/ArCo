@@ -11096,7 +11096,7 @@
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
-			<!-- Bibliography of cultural property as an individual -->
+			<!-- publication of cultural property as an individual -->
 			<xsl:for-each select="record/metadata/schede/*/DO/BIB">
 				<xsl:if test="(./*)">
 				<xsl:variable name="edition">
@@ -11242,7 +11242,7 @@
 						</arco-lite:localIdentifier>
 						<arco-core:hasIdentifier>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', arco-fn:arcofy(./BIBH), '-local')" />
+								<xsl:value-of select="concat($NS, 'PublicationIdentifier/', arco-fn:arcofy(./BIBH), '-local')" />
 							</xsl:attribute>
 						</arco-core:hasIdentifier>
 					</xsl:if>
@@ -11261,10 +11261,10 @@
 							<xsl:attribute name="rdf:resource">
 								<xsl:choose>
 									<xsl:when test="./BIBK">
-										<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', arco-fn:arcofy(./BIBK))" />
+										<xsl:value-of select="concat($NS, 'PublicationIdentifier/', arco-fn:arcofy(./BIBK))" />
 									</xsl:when>
 									<xsl:when test="./NCUN">
-										<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', arco-fn:arcofy(./NCUN))" />
+										<xsl:value-of select="concat($NS, 'PublicationIdentifier/', arco-fn:arcofy(./NCUN))" />
 									</xsl:when>
 								</xsl:choose>
 							</xsl:attribute>
@@ -11313,6 +11313,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', arco-fn:arcofy(./BIBH), '-local')" />
+							<xsl:value-of select="concat($NS, 'PublicationIdentifier/', arco-fn:arcofy(./BIBH), '-local')" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -11343,10 +11344,10 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:choose>
 									<xsl:when test="./BIBK">
-										<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', arco-fn:arcofy(./BIBK))" />
+										<xsl:value-of select="concat($NS, 'PublicationIdentifier/', arco-fn:arcofy(./BIBK))" />
 									</xsl:when>
 									<xsl:when test="./NCUN">
-										<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', arco-fn:arcofy(./NCUN))" />
+										<xsl:value-of select="concat($NS, 'PublicationIdentifier/', arco-fn:arcofy(./NCUN))" />
 									</xsl:when>
 								</xsl:choose>
 						</xsl:attribute>
@@ -11503,13 +11504,13 @@
 							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
 						</rdf:type>
 						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Copyright ', position(), ' of cultural property bibliography ', $itemURI)" />
+							<xsl:value-of select="concat('Copyright ', position(), ' of cultural property publication ', $itemURI)" />
 						</rdfs:label>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Diritti d''autore ', position(), ' della bibliografia del bene culturale ', $itemURI)" />
+							<xsl:value-of select="concat('Diritti d''autore ', position(), ' della publicazione del bene culturale ', $itemURI)" />
 						</rdfs:label>
 						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Copyright ', position(), ' of cultural property bibliography ', $itemURI)" />
+							<xsl:value-of select="concat('Copyright ', position(), ' of cultural property Publication ', $itemURI)" />
 						</l0:name>
 						<l0:name xml:lang="it">
 							<xsl:value-of select="concat('Diritti d''autore ', position(), ' della bibliografia del bene culturale ', $itemURI)" />
@@ -11519,7 +11520,7 @@
 						</arco-core:specifications>
 					</rdf:Description>
 				</xsl:if>
-				<!-- bibliography type as an individual -->
+				<!-- Publication type as an individual -->
 				<xsl:if test="./BIBF and (not(starts-with(lower-case(normalize-space(./BIBF)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBF)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
@@ -13458,7 +13459,7 @@
 							</tiapit:time>
 						</rdf:Description>
 					</xsl:if>
-					<!-- bibliography of survey as an individual -->
+					<!-- Publication of survey as an individual -->
 					<xsl:for-each select="./RCGS[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
@@ -13955,7 +13956,7 @@
 	                			</xsl:attribute>
 							</arco-cd:hasBibliographicSource>
 						</xsl:for-each>
-						<!-- bibliography in RA 2.00 -->
+						<!-- Publication in RA 2.00 -->
 						<xsl:for-each select="./DSCB[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<arco-cd:hasBibliographicSource>
 								<xsl:attribute name="rdf:resource">
@@ -14303,7 +14304,7 @@
 							</tiapit:time>
 						</rdf:Description>
 					</xsl:if>
-					<!-- bibliography of survey as an individual -->
+					<!-- Publication of survey as an individual -->
 					<xsl:for-each select="./DSCZ[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
@@ -14325,7 +14326,7 @@
 							</arco-cd:completeBibliographicReference>
 						</rdf:Description>
 					</xsl:for-each>
-					<!-- bibliography of survey as an individual (RA 2.00) -->
+					<!-- Publication of survey as an individual (RA 2.00) -->
 					<xsl:for-each select="./DSCB[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
@@ -15309,7 +15310,7 @@
 								<xsl:value-of select="concat('Anomaly about photo interpretation and rendering of cultural property ', $itemURI)" />
 							</rdfs:label>
 							<l0:name xml:lang="en">
-								<xsl:value-of select="concat('Bibliography about photo interpretation and rendering of cultural property ', $itemURI)" />
+								<xsl:value-of select="concat('Publication about photo interpretation and rendering of cultural property ', $itemURI)" />
 							</l0:name>
 							<xsl:if test="./FOIA">
 								<arco-cd:hasAnomalyOrigin>

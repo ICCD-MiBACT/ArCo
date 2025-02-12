@@ -3177,7 +3177,7 @@
 	                	</xsl:attribute>
 					</arco-cd:hasDocumentation>
 				</xsl:for-each>
-				<!-- Bibliography of cultural property -->
+				<!-- publication of cultural property -->
 				<xsl:for-each select="record/metadata/schede/*/DO/BIB">
 					<xsl:if test="(./*)">
 					<xsl:variable name="edition">

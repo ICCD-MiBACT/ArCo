@@ -2067,7 +2067,7 @@
 						</arco-lite:localIdentifier>
 						<arco-core:hasIdentifier>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', 'bib-', record/metadata/schede/BIB/CD/ESC,'-', arco-fn:arcofy(record/metadata/schede/BIB/BI/BIB/BIBH), '-local')" />
+								<xsl:value-of select="concat($NS, 'PublicationIdentifier/', 'bib-', arco-fn:urify(record/metadata/schede/BIB/CD/ESC),'-', arco-fn:urify(record/metadata/schede/BIB/BI/BIB/BIBH), '-local')" />
 							</xsl:attribute>
 						</arco-core:hasIdentifier>
 					</xsl:if>
@@ -2077,7 +2077,7 @@
 						</arco-lite:ICCDIdentifier>
 						<arco-core:hasIdentifier>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', arco-fn:arcofy(record/metadata/schede/BIB/CD/NCU/NCUN))" />
+								<xsl:value-of select="concat($NS, 'PublicationIdentifier/', arco-fn:arcofy(record/metadata/schede/BIB/CD/NCU/NCUN))" />
 							</xsl:attribute>
 						</arco-core:hasIdentifier>
 					</xsl:if>
@@ -2115,7 +2115,7 @@
 				<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBH">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', 'bib-', record/metadata/schede/BIB/CD/ESC,'-', arco-fn:arcofy(record/metadata/schede/BIB/BI/BIB/BIBH), '-local')" />
+							<xsl:value-of select="concat($NS, 'PublicationIdentifier/', 'bib-', arco-fn:urify(record/metadata/schede/BIB/CD/ESC),'-', arco-fn:arcofy(record/metadata/schede/BIB/BI/BIB/BIBH), '-local')" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -2144,7 +2144,7 @@
 				<xsl:if test="normalize-space(record/metadata/schede/BIB/CD/NCU/NCUN)">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'BibliographyIdentifier/', arco-fn:arcofy(record/metadata/schede/BIB/CD/NCU/NCUN))" />
+							<xsl:value-of select="concat($NS, 'PublicationIdentifier/', arco-fn:arcofy(record/metadata/schede/BIB/CD/NCU/NCUN))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
