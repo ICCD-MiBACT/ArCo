@@ -16689,6 +16689,9 @@
 									<xsl:value-of select="concat($NS, 'Measurement/Inscription/', (.))" />
 								</xsl:attribute>
 							</arco-dd:hasMeasurement>
+							<arco-core:current>
+		            			<xsl:value-of select="true()" />
+        		    		</arco-core:current>
 						</rdf:Description>
 						<rdf:Description>
 							<xsl:attribute name="rdf:about"   select="concat($NS, 'Measurement/Inscription/', (.))" />
@@ -20490,6 +20493,9 @@
 								<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-resolution')" />
 							</xsl:attribute>
 						</arco-dd:hasMeasurement>
+						<arco-core:current>
+		            		<xsl:value-of select="true()" />
+        		    	</arco-core:current>
 					</rdf:Description>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-resolution')" />
@@ -20556,6 +20562,9 @@
 							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-pixel-dimension')" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
+					<arco-core:current>
+		            	<xsl:value-of select="true()" />
+        		    </arco-core:current>
 				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-pixel-dimension')" />
@@ -34196,6 +34205,9 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</l0:name>
+					<arco-core:current>
+		            	<xsl:value-of select="true()" />
+        		    </arco-core:current>
 					<xsl:if test="./MISV and not($sheetType='VeAC')">
 						<arco-core:note>
 							<xsl:value-of select="normalize-space(string-join(./MISV, ', '))" /><!-- multiple values eg:ICCD11937406  -->
@@ -34723,6 +34735,9 @@
 							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-area')" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
+					<arco-core:current>
+		            	<xsl:value-of select="true()" />
+        		    </arco-core:current>
 				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
@@ -34862,6 +34877,9 @@
 							</xsl:attribute>
 						</arco-dd:hasMeasurement>
 					</xsl:if>
+					<arco-core:current>
+		            	<xsl:value-of select="true()" />
+        		    </arco-core:current>
 				</rdf:Description>
 				<xsl:variable name="parent-id" select="position()" />
 				<xsl:for-each select="./*">
