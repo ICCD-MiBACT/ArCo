@@ -24414,9 +24414,6 @@
 										</xsl:otherwise>
 									</xsl:choose>
 								</arco-core:identifier>
-								<arco-core:current>
-									<xsl:value-of select="true()" />
-								</arco-core:current>
 							</rdf:Description>
 						</xsl:if>
 						<!-- profession -->
