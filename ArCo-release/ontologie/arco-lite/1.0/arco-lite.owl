@@ -140,6 +140,22 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasArchivalCreator -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasArchivalCreator">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasArchivalHolder -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasArchivalHolder">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isRelatedAgentOf"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasArea -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasArea">
@@ -375,6 +391,12 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasCopy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasCopy"/>
     
 
 
@@ -731,6 +753,12 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasExternalDocumentation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasExternalDocumentation"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco-lite/hasFinalist -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasFinalist">
@@ -878,6 +906,12 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: CD/ECP</a-cat:iccdNormTag>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasInternalDocumentation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasInternalDocumentation"/>
     
 
 
@@ -1298,6 +1332,12 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normative precedenti a trasversale: */MST/MSTE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasOriginal -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasOriginal"/>
     
 
 
