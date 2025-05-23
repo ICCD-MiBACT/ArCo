@@ -6110,7 +6110,7 @@
 						<xsl:choose>
 							<xsl:when test="./REN/RENS and (not(starts-with(lower-case(normalize-space(./REN/RENS)), 'nr')) and not(starts-with(lower-case(normalize-space(./REN/RENS)), 'n.r')))">
 								<xsl:attribute name="rdf:resource">
-                                    <xsl:value-of select="concat($NS, 'Event/', $itemURI, arco-fn:urify(normalize-space(./REN/RENS)))" />
+                                    <xsl:value-of select="concat($NS, 'Event/', $itemURI, '-', arco-fn:urify(normalize-space(./REN/RENS)))" />
                                 </xsl:attribute>
 							</xsl:when>
 							<xsl:otherwise>
