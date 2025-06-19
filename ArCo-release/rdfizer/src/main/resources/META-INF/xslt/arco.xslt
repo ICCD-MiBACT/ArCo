@@ -9825,8 +9825,7 @@
             			</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of
-								select="'https://w3id.org/italia/onto/l0/Agent'" />
+            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
             				</xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
@@ -10140,8 +10139,7 @@
             			</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of
-								select="'https://w3id.org/italia/onto/l0/Agent'" />
+            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
             				</xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
@@ -10895,8 +10893,7 @@
             			</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of
-								select="'https://w3id.org/italia/onto/l0/Agent'" />
+            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
             				</xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
@@ -15010,7 +15007,7 @@
         	        	</xsl:attribute>
 		    	        <rdf:type>
 							<xsl:attribute name="rdf:resource">
-    			    	    	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+    			    	    	<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
 							</xsl:attribute>
 						</rdf:type>   
 						<rdfs:label>
@@ -15079,7 +15076,7 @@
         	        	</xsl:attribute>
 		    	        <rdf:type>
 							<xsl:attribute name="rdf:resource">
-    			    	    	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+    			    	    	<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
 							</xsl:attribute>
 						</rdf:type>   
 						<rdfs:label>
@@ -19390,11 +19387,11 @@
  	                		</xsl:attribute>
 						</arco-cd:hasUse>
 						<xsl:if test="./USAD and (not(starts-with(lower-case(normalize-space(./USAD)), 'nr')) and not(starts-with(lower-case(normalize-space(./USAD)), 'n.r')))">
-							<arco-cd:hasUseFunction>
+							<arco-lite:hasCulturalEntityUseFunction>
 								<xsl:attribute name="rdf:resource">
 			        				<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(./USAD))" />
 								</xsl:attribute>
-							</arco-cd:hasUseFunction>
+							</arco-lite:hasCulturalEntityUseFunction>
 						</xsl:if>
 					</rdf:Description>
 				</xsl:if>
