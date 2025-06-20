@@ -4960,10 +4960,10 @@
 	                       	</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Rapporto ', position(), ' tra la stampa ', $itemURI, ' e publicazione contenente la stampa')" />
+							<xsl:value-of select="concat('Rapporto ', position(), ' tra la stampa ', $itemURI, ' e pubblicazione contenente la stampa')" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Rapporto ', position(), ' tra la stampa ', $itemURI, ' e publicazione contenente la stampa')" />
+							<xsl:value-of select="concat('Rapporto ', position(), ' tra la stampa ', $itemURI, ' e pubblicazione contenente la stampa')" />
 						</l0:name>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="concat('Relation ', position(), ' between the print ', $itemURI, ' and publication with print')" />
@@ -5125,10 +5125,10 @@
                             </xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of select="concat('Publicazione del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Pubblicazione del bene ', $itemURI)" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="concat('Publicazione del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Pubblicazione del bene ', $itemURI)" />
 						</l0:name>
 						<xsl:for-each select="record/metadata/schede/*/AU/EDT">
 							<xsl:if test="./EDTL and (not(starts-with(lower-case(normalize-space(./EDTL)), 'nr')) and not(starts-with(lower-case(normalize-space(./EDTL)), 'n.r')))">
@@ -5195,7 +5195,7 @@
 											<xsl:value-of select="concat(normalize-space(./EDTR), ' del bene ', $itemURI)" />
 										</xsl:when>
 										<xsl:otherwise>
-											<xsl:value-of select="concat('Responsabilità della publicazione relativa al bene ', $itemURI)" />
+											<xsl:value-of select="concat('Responsabilità della pubblicazione relativa al bene ', $itemURI)" />
 										</xsl:otherwise>
 									</xsl:choose>
 								</rdfs:label>
@@ -11409,13 +11409,13 @@
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Autore ', position(), ' della publicazione: ', normalize-space(./BIBA))" />
+							<xsl:value-of select="concat('Autore ', position(), ' della pubblicazione: ', normalize-space(./BIBA))" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="concat('Author ', position(), ' of publication: ', normalize-space(./BIBA))" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Autore ', position(), ' della publicazione: ', normalize-space(./BIBA))" />
+							<xsl:value-of select="concat('Autore ', position(), ' della pubblicazione: ', normalize-space(./BIBA))" />
 						</l0:name>
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Author ', position(), ' of publication: ', normalize-space(./BIBA))" />
@@ -11503,7 +11503,7 @@
 							<xsl:value-of select="concat('Copyright ', position(), ' of cultural property publication ', $itemURI)" />
 						</rdfs:label>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Diritti d''autore ', position(), ' della publicazione del bene culturale ', $itemURI)" />
+							<xsl:value-of select="concat('Diritti d''autore ', position(), ' della pubblicazione del bene culturale ', $itemURI)" />
 						</rdfs:label>
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Copyright ', position(), ' of cultural property Publication ', $itemURI)" />
