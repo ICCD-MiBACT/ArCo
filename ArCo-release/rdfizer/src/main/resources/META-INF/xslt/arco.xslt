@@ -11099,24 +11099,24 @@
 				<xsl:variable name="edition">
 					<xsl:choose>
 						<xsl:when test="./NCUN">
-							<xsl:value-of select="concat('Publication/', arco-fn:urify(normalize-space(./NCUN)))" />
+							<xsl:value-of select="arco-fn:urify(normalize-space(./NCUN))" />
 						</xsl:when>
 						<xsl:when test="./NUCN">
-							<xsl:value-of select="concat('Publication/', arco-fn:urify(normalize-space(./NUCN)))" />
+							<xsl:value-of select="arco-fn:urify(normalize-space(./NUCN))" />
 						</xsl:when>
 						<xsl:when test="./BIBK">
-							<xsl:value-of select="concat('Publication/', arco-fn:urify(normalize-space(./BIBK)))" />
+							<xsl:value-of select="arco-fn:urify(normalize-space(./BIBK))" />
 						</xsl:when>
 						<xsl:when test="./BIBM">
-							<xsl:value-of select="concat('Publication/', arco-fn:arcofy(normalize-space(./BIBM)))" />
+							<xsl:value-of select="arco-fn:arcofy(normalize-space(./BIBM))" />
 						</xsl:when>
 						<xsl:when test="./BIBH">
 							<xsl:choose>	
 								<xsl:when test="./BIBJ">
-									<xsl:value-of select="concat($NS, 'Publication/bib-', arco-fn:urify(./BIBJ), '-', arco-fn:urify(./BIBH))" />
+									<xsl:value-of select="concat(arco-fn:urify(./BIBJ), '-', arco-fn:urify(./BIBH))" />
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="concat($NS, 'Publication/bib-', arco-fn:urify($esc), '-', arco-fn:urify(./BIBH))" />
+									<xsl:value-of select="concat(arco-fn:urify($esc), '-', arco-fn:urify(./BIBH))" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:when>
