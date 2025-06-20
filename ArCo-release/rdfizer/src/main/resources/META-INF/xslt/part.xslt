@@ -1280,7 +1280,7 @@
 					</xsl:variable>
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./LSIU)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
 							<arco-dd:hasAffixedElement>
@@ -1289,10 +1289,10 @@
 								</xsl:attribute>
 							</arco-dd:hasAffixedElement>
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
+								<xsl:value-of select="normalize-space(./LSIU)" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
+								<xsl:value-of select="normalize-space(./LSIU)" />
 							</l0:name>
 						</rdf:Description>
 					</xsl:if>
