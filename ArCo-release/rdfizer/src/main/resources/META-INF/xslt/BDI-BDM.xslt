@@ -4816,10 +4816,10 @@
 	            			</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Publicazione relativa al documento audio del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Pubblicazione relativa al documento audio del bene ', $itemURI)" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Publicazione relativa al documento audio del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Pubblicazione relativa al documento audio del bene ', $itemURI)" />
 						</l0:name>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="concat('Publication related to audio documentation of cultural property ', $itemURI)" />
@@ -4912,10 +4912,10 @@
 	                	       </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXE))" />
+								<xsl:value-of select="concat('Ruolo nella pubblicazione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXE))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXE))" />
+								<xsl:value-of select="concat('Ruolo nella pubblicazione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXE))" />
 							</l0:name>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXE))" />
@@ -4980,10 +4980,10 @@
 	                	       </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXC))" />
+								<xsl:value-of select="concat('Ruolo nella pubblicazione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXC))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXC))" />
+								<xsl:value-of select="concat('Ruolo nella pubblicazione ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXC))" />
 							</l0:name>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(record/metadata/schede/*/DU/DUX/DUXC))" />
@@ -10348,10 +10348,10 @@
 	            			</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Publicazione del documento audio del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Pubblicazione del documento audio del bene ', $itemURI)" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Publicazione del documento audio del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Pubblicazione del documento audio del bene ', $itemURI)" />
 						</l0:name>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="concat('Publication of audio documentation of cultural property ', $itemURI)" />
@@ -10444,10 +10444,10 @@
 	                	       </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./AIX/AIXE))" />
+								<xsl:value-of select="concat('Ruolo nella pubblicazione ', position(), ': ', normalize-space(./AIX/AIXE))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./AIX/AIXE))" />
+								<xsl:value-of select="concat('Ruolo nella pubblicazione ', position(), ': ', normalize-space(./AIX/AIXE))" />
 							</l0:name>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(./AIX/AIXE))" />
@@ -10512,10 +10512,10 @@
 	                	       </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./AIX/AIXC))" />
+								<xsl:value-of select="concat('Ruolo nella pubblicazione ', position(), ': ', normalize-space(./AIX/AIXC))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./AIX/AIXC))" />
+								<xsl:value-of select="concat('Ruolo nella pubblicazione ', position(), ': ', normalize-space(./AIX/AIXC))" />
 							</l0:name>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(./AIX/AIXC))" />
@@ -13415,10 +13415,10 @@
 	            			</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Publicazione relativa al documento audio del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Pubblicazione relativa al documento audio del bene ', $itemURI)" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
-							<xsl:value-of select="concat('Publicazione relativa al audio del bene ', $itemURI)" />
+							<xsl:value-of select="concat('Pubblicazione relativa al audio del bene ', $itemURI)" />
 						</l0:name>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="concat('Publication related to audio documentation of cultural property ', $itemURI)" />
@@ -13511,10 +13511,10 @@
 	                	       </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./VIX/VIXE))" />
+								<xsl:value-of select="concat('Ruolo nella pubblicazione ', position(), ': ', normalize-space(./VIX/VIXE))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./VIX/VIXE))" />
+								<xsl:value-of select="concat('Ruolo nella pubblicazione ', position(), ': ', normalize-space(./VIX/VIXE))" />
 							</l0:name>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(./VIX/VIXE))" />
@@ -13579,10 +13579,10 @@
 	                	       </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./VIX/VIXC))" />
+								<xsl:value-of select="concat('Ruolo nella pubblicazione ', position(), ': ', normalize-space(./VIX/VIXC))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
-								<xsl:value-of select="concat('Ruolo nella publicazione ', position(), ': ', normalize-space(./VIX/VIXC))" />
+								<xsl:value-of select="concat('Ruolo nella pubblicazione ', position(), ': ', normalize-space(./VIX/VIXC))" />
 							</l0:name>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="concat('Role in publication ', position(), ': ', normalize-space(./VIX/VIXC))" />
