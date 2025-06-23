@@ -15747,45 +15747,34 @@
 								<xsl:value-of select="normalize-space(./STMP)" />
 							</arco-dd:positionOnCulturalProperty>
 						</xsl:if>
-						<arco-core:hasType>
+							<!-- AffixedElement (core:hasType) [STMC] [STMQ] -->
+							<xsl:variable name="AffixedElementSTMC" select="lower-case(normalize-space(./STMC))" />
+							<xsl:variable name="AffixedElementSTMQ" select="lower-case(normalize-space(./STMQ))" />
+							<!-- Se presenti entrambi i campi, istanzia hasType con entrambi -->
+							<xsl:if test="./STMQ and not(starts-with($AffixedElementSTMQ, 'nr')) and not(starts-with($AffixedElementSTMQ, 'n.r'))">
+								<arco-core:hasType rdf:resource="{concat($NS, 'AffixedElementType/', arco-fn:urify($AffixedElementSTMC), '-', arco-fn:urify($AffixedElementSTMQ))}" />
+							</xsl:if>
+							<!-- Se STMC fa match con uno di questi, usa l'entità categoriale. Altrimenti, usa quello dentro il campo -->
 							<xsl:choose>
-								<xsl:when test="./STMQ and (not(starts-with(lower-case(normalize-space(./STMQ)), 'nr')) and not(starts-with(lower-case(normalize-space(./STMQ)), 'n.r')))">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'AffixedElementType/', arco-fn:urify(normalize-space(./STMC)), '-', arco-fn:urify(normalize-space(./STMQ)))" />
-									</xsl:attribute>
-								</xsl:when>	
-								<xsl:when test="lower-case(normalize-space(./STMC))='timbro'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Stamp'" />
-									</xsl:attribute>
+								<xsl:when test="contains($AffixedElementSTMC, 'timbro')">
+									<arco-core:hasType rdf:resource="https://w3id.org/arco/ontology/denotative-description/Stamp" />
 								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./STMC))='stemma'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CoatOfArms'" />
-									</xsl:attribute>
+								<xsl:when test="contains($AffixedElementSTMC, 'stemma')">
+									<arco-core:hasType rdf:resource="https://w3id.org/arco/ontology/denotative-description/CoatOfArms" />
 								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./STMC))='emblema'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Emblem'" />
-									</xsl:attribute>
+								<xsl:when test="contains($AffixedElementSTMC, 'emblema')">
+									<arco-core:hasType rdf:resource="https://w3id.org/arco/ontology/denotative-description/Emblem" />
 								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./STMC))='marchio'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Brand'" />
-									</xsl:attribute>
+								<xsl:when test="contains($AffixedElementSTMC, 'marchio')">
+									<arco-core:hasType rdf:resource="https://w3id.org/arco/ontology/denotative-description/Brand" />
 								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./STMC))='logo'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Logo'" />
-									</xsl:attribute>
+								<xsl:when test="contains($AffixedElementSTMC, 'logo')">
+									<arco-core:hasType rdf:resource="https://w3id.org/arco/ontology/denotative-description/Logo" />
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'AffixedElementType/', arco-fn:urify(normalize-space(./STMC)))" />
-									</xsl:attribute>
+									<arco-core:hasType rdf:resource="{concat($NS, 'AffixedElementType/', arco-fn:urify(normalize-space(./STMC)))}" />
 								</xsl:otherwise>
 							</xsl:choose>
-						</arco-core:hasType>
 						<xsl:if test="./STMI and (not(starts-with(lower-case(normalize-space(./STMI)), 'nr')) and not(starts-with(lower-case(normalize-space(./STMI)), 'n.r')))">
 							<arco-dd:refersToAgent>
 								<xsl:attribute name="rdf:resource">
