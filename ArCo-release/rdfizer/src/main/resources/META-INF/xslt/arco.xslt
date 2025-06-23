@@ -20711,7 +20711,7 @@
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Geometry'" />
+            					<xsl:value-of select="'https://w3id.org/arco/ontology/location/Geometry'" />
             				</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="en">
@@ -20992,7 +20992,7 @@
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Geometry'" />
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/location/Geometry'" />
             			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="en">
@@ -21086,7 +21086,7 @@
             		</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Geometry'" />
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/location/Geometry'" />
             			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="en">
@@ -21323,7 +21323,7 @@
             		</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Geometry'" />
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/location/Geometry'" />
             			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="en">
@@ -21367,7 +21367,7 @@
             		</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Geometry'" />
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/location/Geometry'" />
             			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="en">
@@ -21451,7 +21451,7 @@
             		</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Geometry'" />
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/location/Geometry'" />
             			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="en">
@@ -21508,7 +21508,7 @@
             		</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Geometry'" />
+            					<xsl:value-of select="'https://w3id.org/arco/ontology/location/Geometry'" />
             			</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="en">
@@ -21741,7 +21741,7 @@
             			</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Geometry'" />
+            					<xsl:value-of select="'https://w3id.org/arco/ontology/location/Geometry'" />
 	            			</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="en">
