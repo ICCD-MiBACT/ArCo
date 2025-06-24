@@ -21586,7 +21586,7 @@
 									<xsl:variable name="prefix" select="'LINESTRING ('" />
 									<xsl:variable name="suffix" select="')'" />
 									<xsl:variable name="coords">
-										<xsl:for-each select=".GLD/GLDP">
+										<xsl:for-each select="./GLD/GLDP">
 											<xsl:variable name="x" select="normalize-space(GLDPX)" />
 											<xsl:variable name="y" select="normalize-space(GLDPY)" />
 											<xsl:if test="$x != '' and $y != '' 
