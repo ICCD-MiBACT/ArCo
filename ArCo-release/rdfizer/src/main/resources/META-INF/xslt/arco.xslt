@@ -20709,44 +20709,43 @@
 						<xsl:attribute name="rdf:about">
             				<xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-', position())" />
 						</xsl:attribute>
-						<rdf:type>
-							<xsl:attribute name="rdf:resource">
-            					<xsl:value-of select="'https://w3id.org/arco/ontology/location/Geometry'" />
-            				</xsl:attribute>
-						</rdf:type>
-						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Geometry ', position(), ' of cultural property: ', $itemURI)" />
-						</rdfs:label>
-						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Geometry ', position(), ' of cultural property: ', $itemURI)" />
-						</l0:name>
-						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Georeferenziazione ', position(), ' del bene culturale: ', $itemURI)" />
-						</rdfs:label>
-						<l0:name xml:lang="en">
-							<xsl:value-of select="concat('Georeferenziazione ', position(), ' del bene culturale: ', $itemURI)" />
-						</l0:name>
-						<xsl:if test="./GEC/GECS">
-							<arco-core:note><!-- context lost  -->
-								<xsl:value-of select="normalize-space(string-join(./GEC/GECS, '; '))" />
-							</arco-core:note>
-						</xsl:if>
-						<xsl:if test="./GEN and $sheetType='AR'">
-							<arco-core:note>
-								<xsl:value-of select="normalize-space(string-join(./GEN))" />
-							</arco-core:note>
-						</xsl:if>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/location/Geometry'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Geometry ', position(), ' of cultural property: ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Geometry ', position(), ' of cultural property: ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Georeferenziazione ', position(), ' del bene culturale: ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Georeferenziazione ', position(), ' del bene culturale: ', $itemURI)" />
+					</l0:name>
+					<xsl:if test="./GEC/GECS">
+						<arco-core:note>							<!-- context lost  -->
+							<xsl:value-of select="normalize-space(string-join(./GEC/GECS, '; '))" />
+						</arco-core:note>
+					</xsl:if>
+					<xsl:if test="./GEN and $sheetType='AR'">
+						<arco-core:note>
+							<xsl:value-of select="normalize-space(string-join(./GEN))" />
+						</arco-core:note>
 						<xsl:if test="./GET and (not(starts-with(lower-case(normalize-space(./GET)), 'nr')) and not(starts-with(lower-case(normalize-space(./GET)), 'n.r')))">
 							<clvapit:hasGeometryType>
 								<xsl:attribute name="rdf:resource">
 									<xsl:choose>
-		                                <xsl:when test="./GET='georeferenziazione puntuale'">
+										<xsl:when test="./GET='georeferenziazione puntuale'">
 											<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Point'" />
 										</xsl:when>
-                    		            <xsl:when test="./GET='georeferenziazione areale'">
+										<xsl:when test="./GET='georeferenziazione areale'">
 											<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Polygon'" />
 										</xsl:when>
-        		                        <xsl:when test="./GET='georeferenziazione lineare'">
+										<xsl:when test="./GET='georeferenziazione lineare'">
 											<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Line'" />
 										</xsl:when>
 										<xsl:otherwise>
@@ -20756,6 +20755,57 @@
 								</xsl:attribute>
 							</clvapit:hasGeometryType>
 						</xsl:if>
+					<!-- serialization of Geometry LINE or POLYGON clvapit:serialization (literal) [GEC] [GECX] [GECY] -->
+					<xsl:choose>
+						<xsl:when test="./GET='georeferenziazione areale'">	
+								<clvapit:serialization rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">
+									<xsl:variable name="prefix" select="'POLYGON (('" />
+									<xsl:variable name="suffix" select="'))'" />
+									<xsl:variable name="coords">
+										<xsl:for-each select="./GEC">
+											<xsl:variable name="x" select="normalize-space(GECX)" />
+											<xsl:variable name="y" select="normalize-space(GECY)" />
+											<xsl:if test="$x != '' and $y != '' 
+														and not(starts-with(lower-case($x), 'nr'))
+														and not(starts-with(lower-case($x), 'n.r'))
+														and not(starts-with(lower-case($y), 'nr'))
+														and not(starts-with(lower-case($y), 'n.r'))">
+												<xsl:value-of select="concat($x, ' ', $y)" />
+												<xsl:if test="not(position() = last())">
+													<xsl:text>, </xsl:text>
+												</xsl:if>
+											</xsl:if>
+										</xsl:for-each>
+									</xsl:variable>
+									<xsl:value-of select="concat($prefix, normalize-space($coords), $suffix)" />
+								</clvapit:serialization>
+						</xsl:when>
+						<xsl:when test="./GET='georeferenziazione lineare'">
+								<clvapit:serialization rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">
+									<xsl:variable name="prefix" select="'LINESTRING ('" />
+									<xsl:variable name="suffix" select="')'" />
+									<xsl:variable name="coords">
+										<xsl:for-each select="./GEC">
+											<xsl:variable name="x" select="normalize-space(GECX)" />
+											<xsl:variable name="y" select="normalize-space(GECY)" />
+											<xsl:if test="$x != '' and $y != '' 
+														and not(starts-with(lower-case($x), 'nr'))
+														and not(starts-with(lower-case($x), 'n.r'))
+														and not(starts-with(lower-case($y), 'nr'))
+														and not(starts-with(lower-case($y), 'n.r'))">
+												<xsl:value-of select="concat($x, ' ', $y)" />
+												<xsl:if test="not(position() = last())">
+													<xsl:text>, </xsl:text>
+												</xsl:if>
+											</xsl:if>
+										</xsl:for-each>
+									</xsl:variable>
+									<xsl:value-of select="concat($prefix, normalize-space($coords), $suffix)" />
+								</clvapit:serialization>
+						</xsl:when>
+					</xsl:choose>|
+					<!-- working on this -->
+					</xsl:if>
 						<xsl:for-each select="./GEC">
 							<xsl:if test="./GECX and (not(starts-with(lower-case(normalize-space(./GECX)), 'nr')) and not(starts-with(lower-case(normalize-space(./GECX)), 'n.r'))) or ./GECY and (not(starts-with(lower-case(normalize-space(./GECY)), 'nr')) and not(starts-with(lower-case(normalize-space(./GECY)), 'n.r'))) or ./GECZ">
 								<arco-location:hasCoordinates>
@@ -20766,9 +20816,9 @@
 							</xsl:if>
 						</xsl:for-each>
 						<xsl:if test="./GEP and (not(starts-with(lower-case(normalize-space(./GEP)), 'nr')) and not(starts-with(lower-case(normalize-space(./GEP)), 'n.r')))">
-							<arco-location:spatialReferenceSystem>
+							<clvapit:coordinateSystem>
 								<xsl:value-of select="normalize-space(./GEP)" />
-							</arco-location:spatialReferenceSystem>
+							</clvapit:coordinateSystem>
 						</xsl:if>
 						<xsl:if test="./GPT and (not(starts-with(lower-case(normalize-space(./GPT)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPT)), 'n.r')))">
 							<arco-location:hasGeometryTechnique>
@@ -21114,9 +21164,9 @@
 						</arco-location:hasCoordinates>
 					</xsl:for-each>
 					<xsl:if test="./GPP and (not(starts-with(lower-case(normalize-space(./GPP)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPP)), 'n.r')))">
-						<arco-location:spatialReferenceSystem>
+						<clvapit:coordinateSystem>
 							<xsl:value-of select="normalize-space(./GPP)" />
-						</arco-location:spatialReferenceSystem>
+						</clvapit:coordinateSystem>
 					</xsl:if>
 					<xsl:if test="./GPC/GPCT and (not(starts-with(lower-case(normalize-space(./GPC/GPCT)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPC/GPCT)), 'n.r')))">
 						<arco-location:pointType>
@@ -21492,9 +21542,9 @@
 							</clvapit:alt>
 						</xsl:if>
 					<xsl:if test="record/metadata/schede/*/CR/CRD/CRDR and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CR/CRD/CRDR)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CR/CRD/CRDR)), 'n.r')))">
-						<arco-location:spatialReferenceSystem>
+						<clvapit:coordinateSystem>
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/CR/CRD/CRDR)" />
-						</arco-location:spatialReferenceSystem>
+						</clvapit:coordinateSystem>
 					</xsl:if>
 				</rdf:Description>
 			</xsl:if>
@@ -21532,6 +21582,27 @@
 							<xsl:attribute name="rdf:resource">
                             	<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Line'" />
                         </xsl:attribute>
+						<clvapit:serialization rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">
+									<xsl:variable name="prefix" select="'LINESTRING ('" />
+									<xsl:variable name="suffix" select="')'" />
+									<xsl:variable name="coords">
+										<xsl:for-each select=".GLD/GLDP">
+											<xsl:variable name="x" select="normalize-space(GLDPX)" />
+											<xsl:variable name="y" select="normalize-space(GLDPY)" />
+											<xsl:if test="$x != '' and $y != '' 
+														and not(starts-with(lower-case($x), 'nr'))
+														and not(starts-with(lower-case($x), 'n.r'))
+														and not(starts-with(lower-case($y), 'nr'))
+														and not(starts-with(lower-case($y), 'n.r'))">
+												<xsl:value-of select="concat($x, ' ', $y)" />
+												<xsl:if test="not(position() = last())">
+													<xsl:text>, </xsl:text>
+												</xsl:if>
+											</xsl:if>
+										</xsl:for-each>
+									</xsl:variable>
+									<xsl:value-of select="concat($prefix, normalize-space($coords), $suffix)" />
+								</clvapit:serialization>
 						</clvapit:hasGeometryType>
 						<xsl:for-each select="./GLD/GLDP">
 							<arco-location:hasCoordinates>
@@ -21541,9 +21612,9 @@
 							</arco-location:hasCoordinates>
 						</xsl:for-each>
 						<xsl:if test="./GLP and (not(starts-with(lower-case(normalize-space(./GLP)), 'nr')) and not(starts-with(lower-case(normalize-space(./GLP)), 'n.r')))">
-							<arco-location:spatialReferenceSystem>
+							<clvapit:coordinateSystem>
 								<xsl:value-of select="normalize-space(./GLP)" />
-							</arco-location:spatialReferenceSystem>
+							</clvapit:coordinateSystem>
 						</xsl:if>
 						<xsl:if test="./GLT and (not(starts-with(lower-case(normalize-space(./GLT)), 'nr')) and not(starts-with(lower-case(normalize-space(./GLT)), 'n.r')))">
 							<arco-location:hasGeometryTechnique>
@@ -21766,6 +21837,28 @@
                         	    <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Polygon'" />
                         	</xsl:attribute>
 						</clvapit:hasGeometryType>
+						<!-- serialization of Geometry POLYGON clvapit:serialization (literal) [GAD] [GADP] [GADPX] [GADPY] -->
+						<clvapit:serialization rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">
+									<xsl:variable name="prefix" select="'POLYGON (('" />
+									<xsl:variable name="suffix" select="'))'" />
+									<xsl:variable name="coords">
+										<xsl:for-each select="./GAD/GADP">
+											<xsl:variable name="x" select="normalize-space(GADPX)" />
+											<xsl:variable name="y" select="normalize-space(GADPY)" />
+											<xsl:if test="$x != '' and $y != '' 
+														and not(starts-with(lower-case($x), 'nr'))
+														and not(starts-with(lower-case($x), 'n.r'))
+														and not(starts-with(lower-case($y), 'nr'))
+														and not(starts-with(lower-case($y), 'n.r'))">
+												<xsl:value-of select="concat($x, ' ', $y)" />
+												<xsl:if test="not(position() = last())">
+													<xsl:text>, </xsl:text>
+												</xsl:if>
+											</xsl:if>
+										</xsl:for-each>
+									</xsl:variable>
+									<xsl:value-of select="concat($prefix, normalize-space($coords), $suffix)" />
+						</clvapit:serialization>
 						<xsl:for-each select="./GAD/GADP">
 							<arco-location:hasCoordinates>
 								<xsl:attribute name="rdf:resource">
@@ -21774,9 +21867,9 @@
 							</arco-location:hasCoordinates>
 						</xsl:for-each>
 						<xsl:if test="./GAP and (not(starts-with(lower-case(normalize-space(./GAP)), 'nr')) and not(starts-with(lower-case(normalize-space(./GAP)), 'n.r')))">
-							<arco-location:spatialReferenceSystem>
+							<clvapit:coordinateSystem>
 								<xsl:value-of select="normalize-space(./GAP)" />
-							</arco-location:spatialReferenceSystem>
+							</clvapit:coordinateSystem>
 						</xsl:if>
 						<xsl:if test="./GAT and (not(starts-with(lower-case(normalize-space(./GAT)), 'nr')) and not(starts-with(lower-case(normalize-space(./GAT)), 'n.r')))">
 							<arco-location:hasGeometryTechnique>

@@ -1352,7 +1352,7 @@
             		</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Geometry'" />
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/location/Geometry'" />
             			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="en">
@@ -1387,6 +1387,55 @@
                         	</xsl:attribute>
 						</clvapit:hasGeometryType>
 					</xsl:if>
+					<!-- serialization of Geometry LINE or POLYGON clvapit:serialization (literal) [GAD] [GADP] [GADPX] [GADPY] -->
+					<xsl:choose>
+						<xsl:when test="./GET='georeferenziazione areale'">	
+								<clvapit:serialization rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">
+									<xsl:variable name="prefix" select="'POLYGON (('" />
+									<xsl:variable name="suffix" select="'))'" />
+									<xsl:variable name="coords">
+										<xsl:for-each select="./GEC">
+											<xsl:variable name="x" select="normalize-space(GECX)" />
+											<xsl:variable name="y" select="normalize-space(GECY)" />
+											<xsl:if test="$x != '' and $y != '' 
+														and not(starts-with(lower-case($x), 'nr'))
+														and not(starts-with(lower-case($x), 'n.r'))
+														and not(starts-with(lower-case($y), 'nr'))
+														and not(starts-with(lower-case($y), 'n.r'))">
+												<xsl:value-of select="concat($x, ' ', $y)" />
+												<xsl:if test="not(position() = last())">
+													<xsl:text>, </xsl:text>
+												</xsl:if>
+											</xsl:if>
+										</xsl:for-each>
+									</xsl:variable>
+									<xsl:value-of select="concat($prefix, normalize-space($coords), $suffix)" />
+								</clvapit:serialization>
+						</xsl:when>
+						<xsl:when test="./GET='georeferenziazione lineare'">
+								<clvapit:serialization rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">
+									<xsl:variable name="prefix" select="'LINESTRING ('" />
+									<xsl:variable name="suffix" select="')'" />
+									<xsl:variable name="coords">
+										<xsl:for-each select="./GEC">
+											<xsl:variable name="x" select="normalize-space(GECX)" />
+											<xsl:variable name="y" select="normalize-space(GECY)" />
+											<xsl:if test="$x != '' and $y != '' 
+														and not(starts-with(lower-case($x), 'nr'))
+														and not(starts-with(lower-case($x), 'n.r'))
+														and not(starts-with(lower-case($y), 'nr'))
+														and not(starts-with(lower-case($y), 'n.r'))">
+												<xsl:value-of select="concat($x, ' ', $y)" />
+												<xsl:if test="not(position() = last())">
+													<xsl:text>, </xsl:text>
+												</xsl:if>
+											</xsl:if>
+										</xsl:for-each>
+									</xsl:variable>
+									<xsl:value-of select="concat($prefix, normalize-space($coords), $suffix)" />
+								</clvapit:serialization>
+						</xsl:when>
+					</xsl:choose>|
 					<xsl:for-each select="./GEC">
 						<xsl:if test="./GECX and (not(starts-with(lower-case(normalize-space(./GECX)), 'nr')) and not(starts-with(lower-case(normalize-space(./GECX)), 'n.r'))) or ./GECY and (not(starts-with(lower-case(normalize-space(./GECY)), 'nr')) and not(starts-with(lower-case(normalize-space(./GECY)), 'n.r'))) or ./GECZ">
 							<arco-location:hasCoordinates>
@@ -1397,9 +1446,9 @@
 						</xsl:if>
 					</xsl:for-each>
 					<xsl:if test="./GEP and (not(starts-with(lower-case(normalize-space(./GEP)), 'nr')) and not(starts-with(lower-case(normalize-space(./GEP)), 'n.r')))">
-						<arco-location:spacialReferenceSystem>
+						<clvapit:coordinateSystem>
 							<xsl:value-of select="normalize-space(./GEP)" />
-						</arco-location:spacialReferenceSystem>
+						</clvapit:coordinateSystem>
 					</xsl:if>
 					<xsl:if test="./GPT and (not(starts-with(lower-case(normalize-space(./GPT)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPT)), 'n.r')))">
 						<arco-location:hasGeometryTechnique>
@@ -1661,7 +1710,7 @@
 		        <rdf:type>
 		            <xsl:attribute name="rdf:resource">
 		                <xsl:value-of
-		                select="'https://w3id.org/italia/onto/CLV/Geometry'" />
+		                select="'https://w3id.org/arco/ontology/location/Geometry'" />
 		            </xsl:attribute>
 		        </rdf:type>
 		        <rdfs:label xml:lang="en">
