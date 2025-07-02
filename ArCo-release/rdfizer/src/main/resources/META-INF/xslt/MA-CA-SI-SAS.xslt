@@ -269,7 +269,7 @@
 					<xsl:when test="not(./SCAP) or ./SCAP='intero bene' or ./SCAP='integrale' or ./SCAP='tutta' or ./SCAP='totale' or ./SCAP='carattere generale' or (starts-with(lower-case(normalize-space(./SCAP)), 'nr')) or (starts-with(lower-case(normalize-space(./SCAP)), 'n.r')) or (starts-with(lower-case(normalize-space(./SCAP)), 'intero')) or (starts-with(lower-case(normalize-space(./SCAP)), 'intera')) or (starts-with(lower-case(normalize-space(./SCAP)), 'esemplar'))">
 						<arco-con:hasVerticalConnection>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Stair/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
+							<xsl:value-of select="concat($NS, 'Stairs/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
 						</xsl:attribute>
 						</arco-con:hasVerticalConnection>
 					</xsl:when>
@@ -1394,7 +1394,7 @@
 		<xsl:for-each select="record/metadata/schede/*/DA/SCA">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-	        		<xsl:value-of select="concat($NS, 'Stair/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
+	        		<xsl:value-of select="concat($NS, 'Stairs/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -1820,7 +1820,7 @@
 					</arco-core:isPartOf>
 					<arco-con:hasVerticalConnection>
 						<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Stair/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
+								<xsl:value-of select="concat($NS, 'Stairs/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
 						</xsl:attribute>
 					</arco-con:hasVerticalConnection>
 				</rdf:Description>
