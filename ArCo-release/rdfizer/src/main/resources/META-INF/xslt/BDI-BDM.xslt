@@ -2634,7 +2634,7 @@
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/LifeCylceCircumstance'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/LifeCycleCircumstance'" />
     	                </xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
@@ -2832,7 +2832,7 @@
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/LifeCylceCircumstance'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/LifeCycleCircumstance'" />
     	                </xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
