@@ -35167,7 +35167,7 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'PrintCollection/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/MI/OG/SGT/SGTS)))" />
 						</xsl:attribute>
-						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CollectionCultEnt" />
+						<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt" />
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/SGT/SGTS)" />
 						</rdfs:label>
