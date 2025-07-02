@@ -798,11 +798,11 @@
 			</arco-spe:hasPseudomorhosis>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAS" >
-			<arco-spe:hasParamorhosis>
+			<arco-spe:hasParamorphosis>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'Paramorhosis/', $itemURI)" />
+					<xsl:value-of select="concat($NS,'Paramorphosis/', $itemURI)" />
 				</xsl:attribute>
-			</arco-spe:hasParamorhosis>
+			</arco-spe:hasParamorphosis>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAG" >
 			<arco-spe:hasCrystalTwinning>
@@ -6763,11 +6763,11 @@
 	<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAS" >
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-	       		<xsl:value-of select="concat($NS,'Paramorhosis/', $itemURI)" />
+	       		<xsl:value-of select="concat($NS,'Paramorphosis/', $itemURI)" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Paramorhosis'" />
+					<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Paramorphosis'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
