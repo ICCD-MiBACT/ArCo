@@ -2657,7 +2657,7 @@
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SeasonCylceCircumstance'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SeasonCycleCircumstance'" />
     	                </xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
@@ -2855,7 +2855,7 @@
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SeasonCylceCircumstance'" />
+							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SeasonCycleCircumstance'" />
     	                </xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
