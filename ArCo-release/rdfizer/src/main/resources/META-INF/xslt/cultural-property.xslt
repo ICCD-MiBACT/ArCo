@@ -1681,7 +1681,7 @@
 						<xsl:if test="record/metadata/schede/MIDF/IS/INP">
 							<arco-cd:hasInventorySituation>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'InventorySistuation/', $itemURI, '-current')" />
+									<xsl:value-of select="concat($NS, 'InventorySituation/', $itemURI, '-current')" />
 								</xsl:attribute>
 							</arco-cd:hasInventorySituation>
 							<xsl:if test="record/metadata/schede/MIDF/IS/INP/INPC">
@@ -1693,7 +1693,7 @@
 						<xsl:if test="record/metadata/schede/SCAN/CD/INP">
 							<arco-cd:hasInventorySituation>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'InventorySistuation/', $itemURI, '-current')" />
+									<xsl:value-of select="concat($NS, 'InventorySituation/', $itemURI, '-current')" />
 								</xsl:attribute>
 							</arco-cd:hasInventorySituation>
 							<arco-lite:currentInventoryNumber>

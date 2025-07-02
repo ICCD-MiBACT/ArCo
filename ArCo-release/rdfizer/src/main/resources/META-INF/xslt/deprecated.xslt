@@ -4251,7 +4251,7 @@
 		<xsl:if test="./*">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'InventorySistuation/', $itemURI, '-current')" />
+					<xsl:value-of select="concat($NS, 'InventorySituation/', $itemURI, '-current')" />
 				</xsl:attribute>
 				<xsl:if test="./INPD and (not(starts-with(lower-case(normalize-space(./INPD)), 'nr')) and not(starts-with(lower-case(normalize-space(./INPD)), 'n.r')))">
 					<arco-cd:culturalPropertyInventoryDescription>
