@@ -20734,7 +20734,8 @@
 					<xsl:if test="./GEN and $sheetType='AR'">
 						<arco-core:note>
 							<xsl:value-of select="normalize-space(string-join(./GEN))" />
-						</arco-core:note>
+						</arco-core:note>						
+					</xsl:if>
 						<xsl:if test="./GET and (not(starts-with(lower-case(normalize-space(./GET)), 'nr')) and not(starts-with(lower-case(normalize-space(./GET)), 'n.r')))">
 							<clvapit:hasGeometryType>
 								<xsl:attribute name="rdf:resource">
@@ -20756,8 +20757,7 @@
 							</clvapit:hasGeometryType>
 						</xsl:if>
 					<!-- serialization of Geometry LINE or POLYGON clvapit:serialization (literal) [GEC] [GECX] [GECY] -->
-					<xsl:choose>
-						<xsl:when test="./GET='georeferenziazione areale'">	
+					<xsl:if test="./GET='georeferenziazione areale'">	
 								<clvapit:serialization rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">
 									<xsl:variable name="prefix" select="'POLYGON (('" />
 									<xsl:variable name="suffix" select="'))'" />
@@ -20779,8 +20779,8 @@
 									</xsl:variable>
 									<xsl:value-of select="concat($prefix, normalize-space($coords), $suffix)" />
 								</clvapit:serialization>
-						</xsl:when>
-						<xsl:when test="./GET='georeferenziazione lineare'">
+						</xsl:if>
+						<xsl:if test="./GET='georeferenziazione lineare'">
 								<clvapit:serialization rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">
 									<xsl:variable name="prefix" select="'LINESTRING ('" />
 									<xsl:variable name="suffix" select="')'" />
@@ -20802,10 +20802,7 @@
 									</xsl:variable>
 									<xsl:value-of select="concat($prefix, normalize-space($coords), $suffix)" />
 								</clvapit:serialization>
-						</xsl:when>
-					</xsl:choose>|
-					<!-- working on this -->
-					</xsl:if>
+						</xsl:if>
 						<xsl:for-each select="./GEC">
 							<xsl:if test="./GECX and (not(starts-with(lower-case(normalize-space(./GECX)), 'nr')) and not(starts-with(lower-case(normalize-space(./GECX)), 'n.r'))) or ./GECY and (not(starts-with(lower-case(normalize-space(./GECY)), 'nr')) and not(starts-with(lower-case(normalize-space(./GECY)), 'n.r'))) or ./GECZ">
 								<arco-location:hasCoordinates>
