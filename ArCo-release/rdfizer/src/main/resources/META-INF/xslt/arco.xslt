@@ -20670,7 +20670,6 @@
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/*/MT/MTX)))" />
             			</xsl:attribute>
 					</arco-dd:includesTechnicalCharacteristic>
-
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -30117,6 +30116,61 @@
                                     <xsl:value-of select="$location" />
                                 </xsl:attribute>
 							</arco-location:atLocation>
+							<!-- geometry was added here -->
+							<xsl:choose>
+								<xsl:when test="record/metadata/schede/harvesting/*[name()='geocoding' or name()='puntoPrincipale']/*">
+									<clvapit:
+									>
+										<xsl:attribute name="rdf:resource">
+			    				            <xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-point')" />
+							            </xsl:attribute>
+									</clvapit:hasGeometry>
+								</xsl:when>
+								<xsl:when test="record/metadata/schede/*/GE/*/*">
+									<xsl:for-each select="record/metadata/schede/*/GE">
+										<xsl:if test="lower-case(normalize-space(./GEL))='localizzazione fisica'">
+											<clvapit:hasGeometry>
+												<xsl:attribute name="rdf:resource">
+					                				<xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-', position())" />
+	            				    			</xsl:attribute>
+											</clvapit:hasGeometry>
+										</xsl:if>
+									</xsl:for-each>
+								</xsl:when>
+								<xsl:when test="record/metadata/schede/*/GP/*/*">
+									<xsl:for-each select="record/metadata/schede/*/GP">
+									<xsl:if test="lower-case(normalize-space(./GPL))='localizzazione fisica'">
+									<clvapit:hasGeometry>
+										<xsl:attribute name="rdf:resource">
+					                		<xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-point-', position())" />
+	            				    	</xsl:attribute>
+									</clvapit:hasGeometry>
+									</xsl:if>
+									</xsl:for-each>
+								</xsl:when>
+								<xsl:when test="record/metadata/schede/*/GL/*/*">
+									<xsl:for-each select="record/metadata/schede/*/GL">
+									<xsl:if test="lower-case(normalize-space(./GLL))='localizzazione fisica'">
+									<clvapit:hasGeometry>
+										<xsl:attribute name="rdf:resource">
+					                		<xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-line-', position())" />
+	            				    	</xsl:attribute>
+									</clvapit:hasGeometry>
+									</xsl:if>
+									</xsl:for-each>
+								</xsl:when>
+								<xsl:when test="record/metadata/schede/*/GA/*/*">
+									<xsl:for-each select="record/metadata/schede/*/GA">
+									<xsl:if test="lower-case(normalize-space(./GAL))='localizzazione fisica'">
+									<clvapit:hasGeometry>
+										<xsl:attribute name="rdf:resource">
+					                		<xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-polygon-', position())" />
+	            				    	</xsl:attribute>
+									</clvapit:hasGeometry>
+									</xsl:if>
+									</xsl:for-each>
+								</xsl:when>
+							</xsl:choose>
 						</rdf:Description>
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
@@ -30174,59 +30228,7 @@
 									<xsl:value-of select="(normalize-space(./LVSD))" />
 								</arco-lite:toponym>
 							</xsl:for-each>
-							<xsl:choose>
-								<xsl:when test="record/metadata/schede/harvesting/*[name()='geocoding' or name()='puntoPrincipale']/*">
-									<clvapit:hasGeometry>
-										<xsl:attribute name="rdf:resource">
-			    				            <xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-point')" />
-							            </xsl:attribute>
-									</clvapit:hasGeometry>
-								</xsl:when>
-								<xsl:when test="record/metadata/schede/*/GE/*/*">
-									<xsl:for-each select="record/metadata/schede/*/GE">
-										<xsl:if test="lower-case(normalize-space(./GEL))='localizzazione fisica'">
-											<clvapit:hasGeometry>
-												<xsl:attribute name="rdf:resource">
-					                				<xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-', position())" />
-	            				    			</xsl:attribute>
-											</clvapit:hasGeometry>
-										</xsl:if>
-									</xsl:for-each>
-								</xsl:when>
-								<xsl:when test="record/metadata/schede/*/GP/*/*">
-									<xsl:for-each select="record/metadata/schede/*/GP">
-									<xsl:if test="lower-case(normalize-space(./GPL))='localizzazione fisica'">
-									<clvapit:hasGeometry>
-										<xsl:attribute name="rdf:resource">
-					                		<xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-point-', position())" />
-	            				    	</xsl:attribute>
-									</clvapit:hasGeometry>
-									</xsl:if>
-									</xsl:for-each>
-								</xsl:when>
-								<xsl:when test="record/metadata/schede/*/GL/*/*">
-									<xsl:for-each select="record/metadata/schede/*/GL">
-									<xsl:if test="lower-case(normalize-space(./GLL))='localizzazione fisica'">
-									<clvapit:hasGeometry>
-										<xsl:attribute name="rdf:resource">
-					                		<xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-line-', position())" />
-	            				    	</xsl:attribute>
-									</clvapit:hasGeometry>
-									</xsl:if>
-									</xsl:for-each>
-								</xsl:when>
-								<xsl:when test="record/metadata/schede/*/GA/*/*">
-									<xsl:for-each select="record/metadata/schede/*/GA">
-									<xsl:if test="lower-case(normalize-space(./GAL))='localizzazione fisica'">
-									<clvapit:hasGeometry>
-										<xsl:attribute name="rdf:resource">
-					                		<xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-polygon-', position())" />
-	            				    	</xsl:attribute>
-									</clvapit:hasGeometry>
-									</xsl:if>
-									</xsl:for-each>
-								</xsl:when>
-							</xsl:choose>
+							<!-- geometry was here -->
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/*/CS">
 									<xsl:for-each select="record/metadata/schede/*/CS">
