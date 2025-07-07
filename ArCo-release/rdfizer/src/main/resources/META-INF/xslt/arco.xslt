@@ -310,6 +310,11 @@
 						<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCG)" />
 					</xsl:when>
 					<xsl:when test="record/metadata/schede/harvesting/idContenitoreFisico and not(record/metadata/schede/harvesting/idContenitoreGiuridico)">
+					<xsl:variable name="CF" select="record/metadata/schede/harvesting/idContenitoreFisico" />
+					<xsl:variable name="idCF">
+						<xsl:value-of select="arco-fn:find-cf($CF)"/>
+					</xsl:variable>
+						<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCF)" />
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:choose>
@@ -30119,8 +30124,7 @@
 							<!-- geometry was added here -->
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/harvesting/*[name()='geocoding' or name()='puntoPrincipale']/*">
-									<clvapit:
-									>
+									<clvapit:hasGeometry>
 										<xsl:attribute name="rdf:resource">
 			    				            <xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-point')" />
 							            </xsl:attribute>
