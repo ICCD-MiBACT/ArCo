@@ -302,19 +302,14 @@
 			<xsl:variable name="cp-name" select="''" />
 			<xsl:variable name="cis">	
 				<xsl:choose>
-					<xsl:when test="record/metadata/schede/harvesting/idContenitoreGiuridico">
-					<xsl:variable name="CG" select="record/metadata/schede/harvesting/idContenitoreGiuridico" />
-					<xsl:variable name="idCG">
-						<xsl:value-of select="arco-fn:find-cg($CG)"/>
-					</xsl:variable>
+					<!-- Check if idContenitoreGiuridico exists AND its ID is not empty -->
+					<xsl:when test="record/metadata/schede/harvesting/idContenitoreGiuridico and normalize-space(arco-fn:find-cg(record/metadata/schede/harvesting/idContenitoreGiuridico)) != ''">
+						<xsl:variable name="idCG" select="arco-fn:find-cg(record/metadata/schede/harvesting/idContenitoreGiuridico)" />
 						<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCG)" />
 					</xsl:when>
-					<!-- cmcs edit idContenitoreFisico adattato dalla logica sopra -->	
-					<xsl:when test="record/metadata/schede/harvesting/idContenitoreFisico and not(record/metadata/schede/harvesting/idContenitoreGiuridico)">
-					<xsl:variable name="CF" select="record/metadata/schede/harvesting/idContenitoreFisico" />
-					<xsl:variable name="idCF">
-						<xsl:value-of select="arco-fn:find-cf($CF)"/>
-					</xsl:variable>
+					<!-- Check if idContenitoreFisico exists AND its ID is not empty, and idContenitoreGiuridico is NOT present -->
+					<xsl:when test="record/metadata/schede/harvesting/idContenitoreFisico and not(record/metadata/schede/harvesting/idContenitoreGiuridico) and normalize-space(arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)) != ''">
+						<xsl:variable name="idCF" select="arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)" />
 						<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCF)" />
 					</xsl:when>
 					<!-- edit -->

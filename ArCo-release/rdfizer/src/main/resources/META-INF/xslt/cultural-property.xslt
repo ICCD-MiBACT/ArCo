@@ -731,20 +731,17 @@
 							</xsl:attribute>
 						</arco-core:isDescribedBy>
 						<!-- Cultural institute or site -->
-						<xsl:choose>
-							<xsl:when test="record/metadata/schede/harvesting/idContenitoreGiuridico">
-								<xsl:variable name="CG" select="record/metadata/schede/harvesting/idContenitoreGiuridico" />
-								<xsl:variable name="idCG">
-									<xsl:value-of select="arco-fn:find-cg($CG)"/>
-								</xsl:variable>
-								<arco-location:hasCulturalInstituteOrSite>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCG)" />
-									</xsl:attribute>
-								</arco-location:hasCulturalInstituteOrSite>
-							</xsl:when>
-							<xsl:when test="record/metadata/schede/harvesting/idContenitoreFisico and not(record/metadata/schede/harvesting/idContenitoreGiuridico)">
-							</xsl:when>
+					<xsl:choose>
+					<!-- Check if idContenitoreGiuridico exists AND its ID is not empty -->
+					<xsl:when test="record/metadata/schede/harvesting/idContenitoreGiuridico and normalize-space(arco-fn:find-cg(record/metadata/schede/harvesting/idContenitoreGiuridico)) != ''">
+						<xsl:variable name="idCG" select="arco-fn:find-cg(record/metadata/schede/harvesting/idContenitoreGiuridico)" />
+						<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCG)" />
+					</xsl:when>
+					<!-- Check if idContenitoreFisico exists AND its ID is not empty, and idContenitoreGiuridico is NOT present -->
+					<xsl:when test="record/metadata/schede/harvesting/idContenitoreFisico and not(record/metadata/schede/harvesting/idContenitoreGiuridico) and normalize-space(arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)) != ''">
+						<xsl:variable name="idCF" select="arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)" />
+						<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCF)" />
+					</xsl:when>
 							<xsl:otherwise>
 								<xsl:choose>
 									<xsl:when test="record/metadata/schede/*/LC/LDC/LDCM and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'n.r')))">
