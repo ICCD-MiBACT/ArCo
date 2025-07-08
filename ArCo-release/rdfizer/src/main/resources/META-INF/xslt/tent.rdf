@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:arco-core="https://w3id.org/arco/ontology/core/" xmlns:arco-arco="https://w3id.org/arco/ontology/arco/" xmlns:arco-fn="https://w3id.org/arco/saxon-extension" xmlns:arco-lite="https://w3id.org/arco/ontology/arco-lite/" xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/" xmlns:cis="http://dati.beniculturali.it/cis/" xmlns:clvapit="https://w3id.org/italia/onto/CLV/" xmlns:smapit="https://w3id.org/italia/onto/SM/" xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/" xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/" xmlns:arco-ce="https://w3id.org/arco/ontology/cultural-event/" xmlns:dcterms="http://purl.org/dc/terms/creator" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:pico="http://data.cochrane.org/ontologies/pico/" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:frbr="http://purl.org/vocab/frbr/core#" xmlns:l0="https://w3id.org/italia/onto/l0/" xmlns:arco-location="https://w3id.org/arco/ontology/location/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:php="http://php.net/xsl" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:roapit="https://w3id.org/italia/onto/RO/" xmlns:tiapit="https://w3id.org/italia/onto/TI/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mu="https://w3id.org/italia/onto/MU/" xmlns:language="https://w3id.org/italia/onto/Language/" xmlns:ar-agentrole="https://w3id.org/arco/resource/AgentRole/" xmlns:ar-agent="https://w3id.org/arco/resource/Agent/" xmlns:ar-role="https://w3id.org/arco/resource/Role/" xmlns:ar-privacyReason="https://w3id.org/arco/resource/PrivacyReason/" xmlns:COV="https://w3id.org/italia/onto/COV/" xmlns:CPV="https://w3id.org/italia/onto/CPV/" xmlns:ar-archeologicalProperty="https://w3id.org/arco/resource/ArchaeologicalProperty/" xmlns:ar-TimeInterval="https://w3id.org/arco/resource/TimeInterval/" xmlns:ar-city="https://w3id.org/arco/resource/City/" xmlns:ar-geometry="https://w3id.org/arco/resource/Geometry/" xmlns:ar-event="https://w3id.org/arco/resource/Event/" xmlns:ar-country="https://w3id.org/arco/resource/Country/" xmlns:ar-timeIndexedTypedLocation="https://w3id.org/arco/resource/TimeIndexedTypedLocation/" xmlns:ar-feature="https://w3id.org/arco/resource/Feature/" xmlns:ar-timeIndexedRole="https://w3id.org/arco/resource/TimeIndexedRole/" xmlns:ar-catalogueRecordSI="https://w3id.org/arco/resource/CatalogueRecordSI/" xmlns:ar-detectionMethod="https://w3id.org/arco/resource/DetectionMethod/" xmlns:ar-interpretationCriterion="https://w3id.org/arco/resource/InterpretationCriterion/" xmlns:ar-bibliography="https://w3id.org/arco/resource/Bibliography/" xmlns:ar-culturalPropertyDefinition="https://w3id.org/arco/resource/CulturalPropertyDefinition/" xmlns:ar-legalSituation="https://w3id.org/arco/resource/LegalSituation/" xmlns:ar-province="https://w3id.org/arco/resource/Province/" xmlns:ar-culturalPropertySpecification="https://w3id.org/arco/resource/CulturalPropertySpecification/" xmlns:ar-addressArea="https://w3id.org/arco/resource/AddressArea/" xmlns:ar-designationInTime="https://w3id.org/arco/resource/DesignationInTime/" xmlns:ar-accessProfile="https://w3id.org/arco/resource/AccessProfile/" xmlns:ar-documentType="https://w3id.org/arco/resource/DocumentationType/" xmlns:ar-address="https://w3id.org/arco/resource/Address/" xmlns:ar-culturalPropertyType="https://w3id.org/arco/resource/CulturalPropertyType/" xmlns:ar-photograpyDocumentation="https://w3id.org/arco/resource/PhotographicDocumentation/" xmlns:ar-docutmentationType="https://w3id.org/arco/resource/DocumentationType/" xmlns:ar-dating="https://w3id.org/arco/resource/Dating/" xmlns:ar-archeologicalFieldSurvey="https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/" xmlns:ar-region="https://w3id.org/arco/resource/Region/" xmlns:ar-catalogueRecordVersion="https://w3id.org/arco/resource/CatalogueRecordVersion/" xmlns:ar-HistoricOrArtisticProperty="https://w3id.org/arco/resource/HistoricOrArtisticProperty/" xmlns:ar-CulturalPropertyCataloguingCategory="https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/" xmlns:ar-RelatedWorkSituation="https://w3id.org/arco/resource/RelatedWorkSituation/" xmlns:ar-TechnicalStatus="https://w3id.org/arco/resource/TechnicalStatus/" xmlns:ar-Value="https://w3id.org/arco/resource/Value/" xmlns:ar-PreferredAuthorshipAttribution="https://w3id.org/arco/resource/PreferredAuthorshipAttribution/" xmlns:ar-CatalogueRecordOA="https://w3id.org/arco/resource/CatalogueRecordOA/" xmlns:ar-TechnicalCharacteristic="https://w3id.org/arco/resource/TechnicalCharacteristic/" xmlns:ar-Site="https://w3id.org/arco/resource/Site/" xmlns:ar-SiteType="https://w3id.org/arco/resource/SiteType/" xmlns:ar-ConservationStatus="https://w3id.org/arco/resource/ConservationStatus/" xmlns:ar-Subject="https://w3id.org/arco/resource/Subject/" xmlns:ar-SourceAndDocument="https://w3id.org/arco/resource/SourceAndDocument/" xmlns:ar-cis="https://w3id.org/arco/resource/CulturalInstituteOrSite/" xmlns:ar-SiteDefinition="https://w3id.org/arco/resource/SiteDefinition/" xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/" xmlns:ar-CISNameInTime="https://w3id.org/arco/resource/CISNameInTime/" xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Address/47571a075b221330d26bb98ee8a0449a">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
+        <rdfs:label>ITALIA, Marche, PU, Sassocorvaro, via Crescentini, 43</rdfs:label>
+        <clvapit:fullAddress>via Crescentini, 43</clvapit:fullAddress>
+        <clvapit:hasCountry rdf:resource="https://w3id.org/arco/resource/Country/italia"/>
+        <clvapit:hasRegion rdf:resource="https://w3id.org/arco/resource/Region/marche"/>
+        <clvapit:hasProvince rdf:resource="https://w3id.org/arco/resource/Province/pu"/>
+        <clvapit:hasCity rdf:resource="https://w3id.org/arco/resource/City/sassocorvaro"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Country/italia">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/CLV/Country"/>
+        <rdfs:label>ITALIA</rdfs:label>
+        <l0:name>ITALIA</l0:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Region/marche">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/CLV/Region"/>
+        <rdfs:label>Marche</rdfs:label>
+        <l0:name>Marche</l0:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Province/pu">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/CLV/Province"/>
+        <rdfs:label>PU</rdfs:label>
+        <l0:name>PU</l0:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/City/sassocorvaro">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/CLV/City"/>
+        <rdfs:label>Sassocorvaro</rdfs:label>
+        <l0:name>Sassocorvaro</l0:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/CatalogueRecordCF/1472488362489">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordCF"/>
+        <rdfs:label xml:lang="en">Catalogue Record of site n: 1472488362489</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda catalografica del contenitore fisico n: 1472488362489</rdfs:label>
+        <arco-catalogue:hasCataloguingLevel rdf:resource="https://w3id.org/arco/ontology/catalogue/I"/>
+        <arco-lite:nationalIdentifier>1472488362489</arco-lite:nationalIdentifier>
+        <arco-lite:systemIdentifier>contenitore</arco-lite:systemIdentifier>
+        <arco-catalogue:hasCatalogueRecordVersion rdf:resource="https://w3id.org/arco/resource/CatalogueRecordVersion/1472488362489-compilation"/>
+        <arco-core:note>Nota ICCD: contenitore creato in automatico e revisionato</arco-core:note>
+        <arco-catalogue:hasAccessProfile rdf:resource="https://w3id.org/arco/resource/AccessProfile/1472488362489-1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/CatalogueRecordVersion/1472488362489-compilation">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+        <rdfs:label>REDAZIONE E VERIFICA SCIENTIFICA - 2017 ICCD Maranesi, Giacomo</rdfs:label>
+        <arco-catalogue:isCatalogueRecordVersionOf rdf:resource="https://w3id.org/arco/resource/CatalogueRecordCF/1472488362489"/>
+        <arco-catalogue:hasCatalogueRecordVersionRiT rdf:resource="https://w3id.org/arco/resource/TimeIndexedRole/1472488362489-compilation-050ae5d29fc291b682bcf51f1250ca75"/>
+        <arco-catalogue:hasResponsibleResearchAndCompilation rdf:resource="https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75"/>
+        <arco-catalogue:hasCatalogueRecordVersionRiT rdf:resource="https://w3id.org/arco/resource/TimeIndexedRole/1472488362489-compilation-9c5fcf81e95c0e77d13ef35833929366"/>
+        <arco-catalogue:hasResponsibleResearchAndCompilation rdf:resource="https://w3id.org/arco/resource/Agent/9c5fcf81e95c0e77d13ef35833929366"/>
+        <arco-catalogue:editedAtTime rdf:resource="https://w3id.org/arco/resource/TimeInterval/2017"/>
+        <arco-catalogue:hasCatalogueRecordVersionRiT rdf:resource="https://w3id.org/arco/resource/TimeIndexedRole/1472488362489-22b086b74a1798ef419dce8496df4f3c"/>
+        <arco-catalogue:hasScientificDirector rdf:resource="https://w3id.org/arco/resource/Agent/ae19f5022faaf4f68f014bd0ba2212b9"/>
+        <arco-catalogue:hasCatalogueRecordVersionRiT rdf:resource="https://w3id.org/arco/resource/TimeIndexedRole/1472488362489-e24e6920e473b0ec9f32d885747a3f16"/>
+        <arco-catalogue:hasOfficialInCharge rdf:resource="https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/TimeIndexedRole/1472488362489-compilation-050ae5d29fc291b682bcf51f1250ca75">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
+        <rdfs:label xml:lang="en">Compilation by ICCD</rdfs:label>
+        <rdfs:label xml:lang="it">Compilazione da ICCD</rdfs:label>
+        <roapit:withRole rdf:resource="https://w3id.org/arco/resource/Role/ResponsibleCompilation"/>
+        <roapit:isRoleInTimeOf rdf:resource="https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/TimeIndexedRole/1472488362489-compilation-9c5fcf81e95c0e77d13ef35833929366">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
+        <rdfs:label xml:lang="en">Compilation by Maranesi, Giacomo</rdfs:label>
+        <rdfs:label xml:lang="it">Compilazione da Maranesi, Giacomo</rdfs:label>
+        <roapit:withRole rdf:resource="https://w3id.org/arco/resource/Role/ResponsibleCompilation"/>
+        <roapit:isRoleInTimeOf rdf:resource="https://w3id.org/arco/resource/Agent/9c5fcf81e95c0e77d13ef35833929366"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:label>ICCD</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Role/ResponsibleCompilation">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
+        <rdfs:label xml:lang="en">Responsible research and compilation</rdfs:label>
+        <rdfs:label xml:lang="it">Responsabile ricerca e redazione</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Agent/9c5fcf81e95c0e77d13ef35833929366">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:label>Maranesi, Giacomo</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Role/ResponsibleCompilation">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
+        <rdfs:label xml:lang="en">Responsible research and compilation</rdfs:label>
+        <rdfs:label xml:lang="it">Responsabile ricerca e redazione</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/TimeInterval/2017">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+        <rdfs:label>2017</rdfs:label>
+        <tiapit:time>2017</tiapit:time>
+        <arco-arco:startTime>2017</arco-arco:startTime>
+        <arco-arco:endTime>2017</arco-arco:endTime>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/TimeIndexedRole/1472488362489-22b086b74a1798ef419dce8496df4f3c">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
+        <rdfs:label xml:lang="it">Referente verifica scientifica: Giangiacomi, Serenella</rdfs:label>
+        <rdfs:label xml:lang="en">Scientific director: Giangiacomi, Serenella</rdfs:label>
+        <roapit:withRole rdf:resource="https://w3id.org/arco/resource/Role/ScientificDirector"/>
+        <roapit:isRoleInTimeOf rdf:resource="https://w3id.org/arco/resource/Agent/ae19f5022faaf4f68f014bd0ba2212b9"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Agent/ae19f5022faaf4f68f014bd0ba2212b9">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:label>Giangiacomi, Serenella</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Role/ScientificDirector">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
+        <rdfs:label xml:lang="it">Referente verifica scientifica</rdfs:label>
+        <rdfs:label xml:lang="en">Scientific Director</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/TimeIndexedRole/1472488362489-e24e6920e473b0ec9f32d885747a3f16">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
+        <rdfs:label xml:lang="it">Funzionario responsabile: ICCD</rdfs:label>
+        <rdfs:label xml:lang="en">Official in charge: ICCD</rdfs:label>
+        <roapit:withRole rdf:resource="https://w3id.org/arco/resource/Role/OfficialInCharge"/>
+        <roapit:isRoleInTimeOf rdf:resource="https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:label>ICCD</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Role/OfficialInCharge">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
+        <rdfs:label xml:lang="it">Funzionario responsabile</rdfs:label>
+        <rdfs:label xml:lang="en">Official in charge</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/I">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CataloguingLevel"/>
+        <rdfs:label>I</rdfs:label>
+        <l0:name>I</l0:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://dati.beniculturali.it/iccd/cf/resource/CulturalInstituteOrSite/1472488362489">
+        <rdf:type rdf:resource="http://dati.beniculturali.it/cis/Site"/>
+        <arco-core:isDescribedBy rdf:resource="https://w3id.org/arco/resource/CatalogueRecordCF/1472488362489"/>
+        <rdfs:label>Palazzo Battelli</rdfs:label>
+        <l0:name>Palazzo Battelli</l0:name>
+        <arco-cd:hasDesignationInTime rdf:resource="https://w3id.org/arco/resource/DesignationInTime/1472488362489-palazzo-battelli"/>
+        <arco-lite:currentDesignation>Palazzo Battelli</arco-lite:currentDesignation>
+        <clvapit:hasGeometry rdf:resource="https://w3id.org/arco/resource/Geometry/1472488362489-geometry-1"/>
+        <clvapit:hasGeometry rdf:resource="https://w3id.org/arco/resource/Geometry/1472488362489-geometry-point"/>
+        <arco-cd:hasDocumentation rdf:resource="https://w3id.org/arco/resource/PhotographicDocumentation/1472488362489-photographic-documentation-1"/>
+        <foaf:depiction rdf:resource="http://www.sigecweb.beniculturali.it/images/fullsize/ICCD1060381/ICCD13834318_sassocorvaro%2D9.jpg"/>
+        <pico:preview rdf:resource="http://www.sigecweb.beniculturali.it/images/fullsize/ICCD1060381/ICCD13834318_sassocorvaro%2D9.jpg"/>
+        <cis:siteAddress rdf:resource="https://w3id.org/arco/resource/Address/47571a075b221330d26bb98ee8a0449a"/>
+        <arco-core:hasType rdf:resource="https://w3id.org/arco/resource/SiteType/palazzo"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/SiteType/palazzo">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/SiteType"/>
+        <rdfs:label xml:lang="it">Tipo di contenitore fisico: palazzo</rdfs:label>
+        <l0:name xml:lang="it">Tipo di contenitore fisico: palazzo</l0:name>
+        <rdfs:label xml:lang="en">Site type: palazzo</rdfs:label>
+        <l0:name xml:lang="en">Site type: palazzo</l0:name>
+        <arco-location:hasSiteDefinition rdf:resource="https://w3id.org/arco/resource/SiteDefinition/palazzo"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/SiteDefinition/palazzo">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/SiteDefinition"/>
+        <rdfs:label>palazzo</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Geometry/1472488362489-geometry-1">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/Geometry"/>
+        <rdfs:label xml:lang="en">Geometry 1 of site: 1472488362489</rdfs:label>
+        <l0:name xml:lang="en">Geometry 1 of site: 1472488362489</l0:name>
+        <rdfs:label xml:lang="it">Georeferenziazione 1 del contenitore fisico: 1472488362489</rdfs:label>
+        <l0:name xml:lang="en">Georeferenziazione 1 del contenitore fisico: 1472488362489</l0:name>
+        <clvapit:hasGeometryType rdf:resource="https://w3id.org/italia/onto/CLV/Point"/>|
+        
+        <arco-location:hasCoordinates rdf:resource="https://w3id.org/arco/resource/Coordinates/1472488362489-geometry-1-coordinates-1"/>
+        <clvapit:coordinateSystem>WGS84</clvapit:coordinateSystem>
+        <arco-location:hasGeometryTechnique rdf:resource="https://w3id.org/arco/resource/GeometryTechnique/rilievo-da-cartografia-senza-sopralluogo"/>
+        <arco-location:hasGeometryMethod rdf:resource="https://w3id.org/arco/resource/GeometryMethod/posizionamento-approssimato"/>
+        <arco-location:hasBaseMap rdf:resource="https://w3id.org/arco/resource/BaseMap/1472488362489-geometry-1-base-map"/>
+        <arco-location:hasLocationType rdf:resource="https://w3id.org/arco/ontology/location/CurrentPhysicalLocation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/LocationType/localizzazione-fisica">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+        <rdfs:label>localizzazione fisica</rdfs:label>
+        <l0:name>localizzazione fisica</l0:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Coordinates/1472488362489-geometry-1-coordinates-1">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/Coordinates"/>
+        <rdfs:label xml:lang="en">Coordinates 1 of site: 1472488362489</rdfs:label>
+        <l0:name xml:lang="en">Coordinates 1 of site: 1472488362489</l0:name>
+        <rdfs:label xml:lang="it">Coordinate 1 del contenitore fisico: 1472488362489</rdfs:label>
+        <l0:name xml:lang="it">Coordinate 1 del contenitore fisico: 1472488362489</l0:name>
+        <arco-location:long>12.495137</arco-location:long>
+        <arco-location:lat>43.782059</arco-location:lat>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/GeometryTechnique/rilievo-da-cartografia-senza-sopralluogo">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/GeometryTechnique"/>
+        <rdfs:label>rilievo da cartografia senza sopralluogo</rdfs:label>
+        <l0:name>rilievo da cartografia senza sopralluogo</l0:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/GeometryMethod/posizionamento-approssimato">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/GeometryMethod"/>
+        <rdfs:label>posizionamento approssimato</rdfs:label>
+        <l0:name>posizionamento approssimato</l0:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/BaseMap/1472488362489-geometry-1-base-map">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/BaseMap"/>
+        <rdfs:label xml:lang="it">Base cartografica del contenitore fisico: 1472488362489</rdfs:label>
+        <l0:name xml:lang="it">Base cartografica del contenitore fisico: 1472488362489</l0:name>
+        <rdfs:label xml:lang="en">Base map of site: 1472488362489</rdfs:label>
+        <l0:name xml:lang="en">Base map of site: 1472488362489</l0:name>
+        <arco-core:description>google maps</arco-core:description>
+        <tiapit:time>2017</tiapit:time>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Geometry/1472488362489-geometry-point">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/Geometry"/>
+        <rdfs:label xml:lang="en">Geometry (point) of site: 1472488362489</rdfs:label>
+        <l0:name xml:lang="en">Geometry (point) of site: 1472488362489</l0:name>
+        <rdfs:label xml:lang="it">Georeferenziazione (puntuale) del contenitore fisico: 1472488362489</rdfs:label>
+        <l0:name xml:lang="it">Georeferenziazione (puntuale) del contenitore fisico: 1472488362489</l0:name>
+        <clvapit:isGeometryFor rdf:resource="http://dati.beniculturali.it/iccd/cf/resource/CulturalInstituteOrSite/1472488362489"/>
+        <clvapit:hasGeometryType rdf:resource="https://w3id.org/italia/onto/CLV/Point"/>
+        <clvapit:serialization rdf:datatype="http://www.openlinksw.com/schemas/virtrdf#Geometry">
+            <![CDATA[POINT(12.495137 43.782059)]]>
+        </clvapit:serialization>
+        <arco-location:hasCoordinates rdf:resource="https://w3id.org/arco/resource/Coordinates/1472488362489-geometry-coordinates"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/Coordinates/1472488362489-geometry-coordinates">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/Coordinates"/>
+        <rdfs:label xml:lang="en">Coordinates of site: 1472488362489</rdfs:label>
+        <l0:name xml:lang="en">Coordinates of site: 1472488362489</l0:name>
+        <rdfs:label xml:lang="it">Coordinate del contenitore fisico: 1472488362489</rdfs:label>
+        <l0:name xml:lang="it">Coordinate del contenitore fisico: 1472488362489</l0:name>
+        <arco-location:long>12.495137</arco-location:long>
+        <arco-location:lat>43.782059</arco-location:lat>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/PhotographicDocumentation/1472488362489-photographic-documentation-1">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicDocumentation"/>
+        <rdfs:label xml:lang="en">Photographic documentation 1 of site: 1472488362489</rdfs:label>
+        <l0:name xml:lang="en">Photographic documentation 1 of site: 1472488362489</l0:name>
+        <rdfs:label xml:lang="it">Documentazione fotografica 1 del contenitore fisico: 1472488362489</rdfs:label>
+        <l0:name xml:lang="it">Documentazione fotografica 1 del contenitore fisico: 1472488362489</l0:name>
+        <arco-cd:documentationIdentifier>sassocorvaro-9</arco-cd:documentationIdentifier>
+        <foaf:depiction rdf:resource="http://www.sigecweb.beniculturali.it/images/fullsize/ICCD1060381/ICCD13834318_sassocorvaro%2D9.jpg"/>
+        <arco-cd:digitalFileName>sassocorvaro-9.jpg</arco-cd:digitalFileName>
+        <arco-core:note>Immagine creata da Google Street View</arco-core:note>
+        <arco-core:hasCategory rdf:resource="https://w3id.org/arco/ontology/context-description/AttachedDocumentation"/>
+        <arco-cd:hasDocumentationType rdf:resource="https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationType"/>
+        <rdfs:label>fotografia digitale (file)</rdfs:label>
+        <l0:name>fotografia digitale (file)</l0:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/AccessProfile/1472488362489-1">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
+        <rdfs:label xml:lang="it">Profilo d'accesso ai dati della scheda catalografica del contenitore fisico 1472488362489: 1</rdfs:label>
+        <l0:name xml:lang="it">Profilo d'accesso alla scheda catalografica del contenitore fisico 1472488362489: 1</l0:name>
+        <rdfs:label xml:lang="en">Access profile to catalogue record of site 1472488362489: 1</rdfs:label>
+        <l0:name xml:lang="en">Access profile to catalogue record of site 1472488362489: 1</l0:name>
+        <arco-catalogue:hasPrivacyLevel rdf:resource="https://w3id.org/arco/ontology/catalogue/MinimumPrivacy"/>
+        <arco-catalogue:hasPrivacyReason rdf:resource="https://w3id.org/arco/resource/PrivacyReason/scheda-contenente-dati-liberamente-accessibili"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/PrivacyReason/scheda-contenente-dati-liberamente-accessibili">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyReason"/>
+        <rdfs:label>scheda contenente dati liberamente accessibili</rdfs:label>
+        <l0:name>scheda contenente dati liberamente accessibili</l0:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/arco/resource/DesignationInTime/1472488362489-palazzo-battelli">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DesignationInTime"/>
+        <rdfs:label>Palazzo Battelli</rdfs:label>
+        <l0:name>Palazzo Battelli</l0:name>
+        <arco-core:current>true</arco-core:current>
+    </rdf:Description>
+</rdf:RDF>

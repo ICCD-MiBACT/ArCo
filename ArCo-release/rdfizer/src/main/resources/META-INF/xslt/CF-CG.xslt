@@ -1435,7 +1435,7 @@
 									<xsl:value-of select="concat($prefix, normalize-space($coords), $suffix)" />
 								</clvapit:serialization>
 						</xsl:when>
-					</xsl:choose>|
+					</xsl:choose>
 					<xsl:for-each select="./GEC">
 						<xsl:if test="./GECX and (not(starts-with(lower-case(normalize-space(./GECX)), 'nr')) and not(starts-with(lower-case(normalize-space(./GECX)), 'n.r'))) or ./GECY and (not(starts-with(lower-case(normalize-space(./GECY)), 'nr')) and not(starts-with(lower-case(normalize-space(./GECY)), 'n.r'))) or ./GECZ">
 							<arco-location:hasCoordinates>

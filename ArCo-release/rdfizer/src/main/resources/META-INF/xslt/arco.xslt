@@ -309,6 +309,7 @@
 					</xsl:variable>
 						<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCG)" />
 					</xsl:when>
+					<!-- cmcs edit idContenitoreFisico adattato dalla logica sopra -->	
 					<xsl:when test="record/metadata/schede/harvesting/idContenitoreFisico and not(record/metadata/schede/harvesting/idContenitoreGiuridico)">
 					<xsl:variable name="CF" select="record/metadata/schede/harvesting/idContenitoreFisico" />
 					<xsl:variable name="idCF">
@@ -316,6 +317,7 @@
 					</xsl:variable>
 						<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCF)" />
 					</xsl:when>
+					<!-- edit -->
 					<xsl:otherwise>
 						<xsl:choose>
 							<xsl:when test="record/metadata/schede/*/LC/LDC/LDCM and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'n.r')))">
