@@ -1077,6 +1077,7 @@
 					<xsl:value-of select="$author" />
 				</xsl:attribute>
 				<rdf:type>
+				<xsl:attribute name="rdf:resource">
 					<xsl:choose>
 						<xsl:when test="($sheetVersion='4.00' or $sheetVersion='4.00_ICCD0') and lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTP))='p'">
 							<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
@@ -1094,6 +1095,7 @@
 							<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
 						</xsl:otherwise>
 						</xsl:choose>
+						</xsl:attribute>
 					</rdf:type>
 				<arco-catalogue:isDescribedByCatalogueRecord>
 					<xsl:attribute name="rdf:resource">
