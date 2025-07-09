@@ -1841,7 +1841,9 @@
 							</arco-cd:hasEdition>
 							<xsl:if test="./EDIR and (not(starts-with(lower-case(normalize-space(./EDIR)), 'nr')) and not(starts-with(lower-case(normalize-space(./EDIR)), 'n.r')))">
 								<arco-lite:hasEditor>
-									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./EDIR))" />
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./EDIR))" />
+									</xsl:attribute>
 								</arco-lite:hasEditor>
 							</xsl:if>
 						</xsl:for-each>
