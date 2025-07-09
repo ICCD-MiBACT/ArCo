@@ -15901,45 +15901,30 @@
 						<l0:name xml:lang="it">
 							<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI)" />
 						</l0:name>
-						<arco-core:hasType>
-							<xsl:choose>
-								<xsl:when test="lower-case(normalize-space(./LSIG))='timbro'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Stamp'" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./LSIG))='stemma'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CoatOfArms'" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./LSIG))='emblema'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Emblem'" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./LSIG))='marchio'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Brand'" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./LSIG))='logo'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Logo'" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./LSIG))='lapide'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/HistoricalPlaque'" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./LSIG))='iscrizione'">
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Inscription'" />
-									</xsl:attribute>
-								</xsl:when>
-							</xsl:choose>
-						</arco-core:hasType>
+						<xsl:choose>
+							<!-- cmcs: now core:hasType is instantiated only when LSIG is found -->
+							<xsl:when test="lower-case(normalize-space(./LSIG)) = 'timbro'">
+								<arco-core:hasType rdf:resource="https://w3id.org/arco/ontology/denotative-description/Stamp"/>
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./LSIG)) = 'stemma'">
+								<arco-core:hasType rdf:resource="https://w3id.org/arco/ontology/denotative-description/CoatOfArms"/>
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./LSIG)) = 'emblema'">
+								<arco-core:hasType rdf:resource="https://w3id.org/arco/ontology/denotative-description/Emblem"/>
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./LSIG)) = 'marchio'">
+								<arco-core:hasType rdf:resource="https://w3id.org/arco/ontology/denotative-description/Brand"/>
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./LSIG)) = 'logo'">
+								<arco-core:hasType rdf:resource="https://w3id.org/arco/ontology/denotative-description/Logo"/>
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./LSIG)) = 'lapide'">
+								<arco-core:hasType rdf:resource="https://w3id.org/arco/ontology/denotative-description/HistoricalPlaque"/>
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./LSIG)) = 'iscrizione'">
+								<arco-core:hasType rdf:resource="https://w3id.org/arco/ontology/denotative-description/Inscription"/>
+							</xsl:when>
+						</xsl:choose>
 						<xsl:if test="./LSIT and (not(starts-with(lower-case(normalize-space(./LSIT)), 'nr')) and not(starts-with(lower-case(normalize-space(./LSIT)), 'n.r')))">
 							<arco-core:description>
 								<xsl:value-of select="normalize-space(./LSIT)" />
