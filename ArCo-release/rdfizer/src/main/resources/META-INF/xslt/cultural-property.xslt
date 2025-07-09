@@ -693,7 +693,9 @@
 							<xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
 							<xsl:for-each select="$url">
 								<arco-lite:depiction>
+								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="." />
+								</xsl:attribute>
 								</arco-lite:depiction>
 								<pico:preview>
 									<xsl:attribute name="rdf:resource">
@@ -708,7 +710,9 @@
 									<xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
 									<xsl:for-each select="$url">
 										<arco-lite:depiction>
+										<xsl:attribute name="rdf:resource">
 											<xsl:value-of select="." />
+										</xsl:attribute>
 										</arco-lite:depiction>
 										<foaf:depiction>
 											<xsl:attribute name="rdf:resource">
@@ -5569,7 +5573,8 @@
 									</xsl:attribute>
 								</arco-cd:isMemberInvolvedIn>
 								<arco-lite:isCollectionMemberOf>
-									<xsl:choose>
+									<xsl:attribute name="rdf:resource">
+										<xsl:choose>
 										<xsl:when test="./COLD and (not(starts-with(lower-case(normalize-space(./COLD)), 'nr')) and not(starts-with(lower-case(normalize-space(./COLD)), 'n.r')))">
 											<xsl:value-of select="concat($NS, 'CollectionCulEnt/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(./COLD)))" />
 										</xsl:when>
@@ -5577,6 +5582,7 @@
 											<xsl:value-of select="concat($NS, 'CollectionCulEnt/', $ldcm, '-', $pvcc, '-',  $collection-membership-position)" />
 										</xsl:otherwise>
 									</xsl:choose>
+									</xsl:attribute>
 								</arco-lite:isCollectionMemberOf>
 							</xsl:if>
 						</xsl:for-each>
