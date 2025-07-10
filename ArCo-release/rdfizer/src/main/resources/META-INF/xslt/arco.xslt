@@ -307,6 +307,7 @@
 						<arco-location:hasCulturalInstituteOrSite>
 						<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCF)" />
 						</arco-location:hasCulturalInstituteOrSite>
+					</xsl:when>
 						<xsl:otherwise>
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/*/LC/LDC/LDCM and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'n.r')))">
