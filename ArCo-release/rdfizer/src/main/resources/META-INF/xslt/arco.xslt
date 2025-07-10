@@ -28029,7 +28029,7 @@
 					<xsl:for-each select="./RSTT">
 						<arco-core:hasType>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'InterventionType/', arco-fn:urify(normalize-space(.)))" />
+								<xsl:value-of select="concat($NS, 'InterventionType/', arco-fn:arcofy(normalize-space(.)))" />
 							</xsl:attribute>
 						</arco-core:hasType>
 					</xsl:for-each>
@@ -28084,7 +28084,7 @@
 				<xsl:for-each select="./RSTT">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'InterventionType/', arco-fn:urify(normalize-space(.)))" />
+							<xsl:value-of select="concat($NS, 'InterventionType/', arco-fn:arcofy(normalize-space(.)))" />
 						</xsl:attribute>
 							<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType" />
 						<rdfs:label>
