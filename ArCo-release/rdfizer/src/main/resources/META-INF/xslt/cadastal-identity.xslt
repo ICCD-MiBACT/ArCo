@@ -207,7 +207,14 @@
 								</arco-location:isContainedInCadastre>
 							</xsl:if>
 							<!-- cadastral city -->
-							<xsl:for-each select="./CTSC[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+							<xsl:for-each select="./CTSC[
+							not(
+								starts-with(lower-case(normalize-space()), 'nr') or 
+								starts-with(lower-case(normalize-space()), 'n.r') or
+								lower-case(normalize-space()) = '-' or 
+								lower-case(normalize-space()) = 'non id'
+							)
+							]">
 								<arco-location:hasCadastralCity>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'City/', arco-fn:urify(normalize-space()))" />
@@ -574,7 +581,14 @@
 								</arco-location:isContainedInCadastre>
 							</xsl:if>
 							<!-- cadastral city -->
-							<xsl:for-each select="./CTSC[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+							<xsl:for-each select="./CTSC[
+							not(
+								starts-with(lower-case(normalize-space()), 'nr') or 
+								starts-with(lower-case(normalize-space()), 'n.r') or
+								lower-case(normalize-space()) = '-' or 
+								lower-case(normalize-space()) = 'non id'
+							)
+							]">
 								<arco-location:hasCadastralCity>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'City/', arco-fn:urify(normalize-space()))" />
@@ -955,7 +969,14 @@
 	    						</xsl:attribute>
 							</arco-location:hasLocationType>
 						</xsl:if>
-						<xsl:for-each select="./CTS/CTSC[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+						<xsl:for-each select="./CTS/CTSC[
+						not(
+							starts-with(lower-case(normalize-space()), 'nr') or 
+							starts-with(lower-case(normalize-space()), 'n.r') or 
+							lower-case(normalize-space()) = '-' or 
+							lower-case(normalize-space()) = 'non id'
+						)
+						]">
 							<arco-location:hasCadastralCity>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'City/', arco-fn:urify(normalize-space()))" />
@@ -1430,7 +1451,13 @@
 							<xsl:value-of select="'https://w3id.org/arco/ontology/location/FindingLocation'" />
 						</xsl:attribute>
 					</arco-location:hasLocationType>
-					<xsl:if test="./LGCC and (not(starts-with(lower-case(normalize-space(./LGCC)), 'nr')) and not(starts-with(lower-case(normalize-space(./LGCC)), 'n.r')))">
+					<xsl:if test="./LGCC and 
+					not(
+						starts-with(lower-case(normalize-space(./LGCC)), 'nr') or 
+						starts-with(lower-case(normalize-space(./LGCC)), 'n.r') or 
+						lower-case(normalize-space(./LGCC)) = 'non id' or 
+						lower-case(normalize-space(./LGCC)) = '-'
+					)">
 						<arco-location:isContainedInCadastre>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Cadastre/', arco-fn:urify(normalize-space(./LGCC)))" />
