@@ -296,15 +296,17 @@
 					<xsl:choose>
 						<!-- Check if idContenitoreGiuridico exists AND its ID is not empty -->
 						<xsl:when test="record/metadata/schede/harvesting/idContenitoreGiuridico and normalize-space(arco-fn:find-cg(record/metadata/schede/harvesting/idContenitoreGiuridico)) != ''">
-							<xsl:variable name="idCG" select="arco-fn:find-cg(record/metadata/schede/harvesting/idContenitoreGiuridico)" />
+						<xsl:variable name="idCG" select="arco-fn:find-cg(record/metadata/schede/harvesting/idContenitoreGiuridico)" />
+						<arco-location:hasCulturalInstituteOrSite>
 							<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCG)" />
-						</xsl:when>
-						<!-- Check if idContenitoreFisico exists AND its ID is not empty, and idContenitoreGiuridico is NOT present -->
-						<xsl:when test="record/metadata/schede/harvesting/idContenitoreFisico and not(record/metadata/schede/harvesting/idContenitoreGiuridico) and normalize-space(arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)) != ''">
-							<xsl:variable name="idCF" select="arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)" />
-							<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCF)" />
-						</xsl:when>
-						<!-- edit -->
+						</arco-location:hasCulturalInstituteOrSite>
+					</xsl:when>
+					<!-- Check if idContenitoreFisico exists AND its ID is not empty, and idContenitoreGiuridico is NOT present -->
+					<xsl:when test="record/metadata/schede/harvesting/idContenitoreFisico and not(record/metadata/schede/harvesting/idContenitoreGiuridico) and normalize-space(arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)) != ''">
+						<xsl:variable name="idCF" select="arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)" />
+						<arco-location:hasCulturalInstituteOrSite>
+						<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCF)" />
+						</arco-location:hasCulturalInstituteOrSite>
 						<xsl:otherwise>
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/*/LC/LDC/LDCM and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'n.r')))">
@@ -29700,9 +29702,7 @@
 									<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" />
 								</xsl:attribute>
 								<xsl:variable name="CF" select="record/metadata/schede/harvesting/idContenitoreFisico" />
-								<xsl:variable name="idCF">
-									<xsl:value-of select="arco-fn:find-cf($CF)"/>
-								</xsl:variable>
+								<xsl:variable name="idCF" select="arco-fn:find-cf($CF)" />
 								<xsl:variable name="idCFisico">
 									<xsl:choose>
 										<xsl:when test="$idCF and contains($idCF, 'DBunico')">
@@ -30739,36 +30739,36 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="$cis" />
-								<!-- 
-							<xsl:choose>
-								<xsl:when test="record/metadata/schede/*/LC/PVC/PVCS and not(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCS))='italia')">
-									<xsl:choose>	
-										<xsl:when test="record/metadata/schede/*/LC/LDC/LDCN">
-											<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCS)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCE)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCM)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCN)))))" />
-										</xsl:when>
-										<xsl:when test="record/metadata/schede/*/LC/LDC/LDCC">
-											<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCS)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCE)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCM)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCC)))))" />
-										</xsl:when>
-										<xsl:otherwise>
-											<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCS)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCE)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCM)))))" />
-										</xsl:otherwise>
-									</xsl:choose>
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:choose>	
-										<xsl:when test="record/metadata/schede/*/LC/LDC/LDCN">
-											<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCP)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCC)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCF)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCL)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCM)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCN)))))" />
-										</xsl:when>
-										<xsl:when test="record/metadata/schede/*/LC/LDC/LDCC">
-											<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCP)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCC)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCF)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCL)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCM)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCC)))))" />
-										</xsl:when>
-										<xsl:otherwise>
-											<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCP)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCC)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCF)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCL)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCM)))))" />
-										</xsl:otherwise>
-									</xsl:choose>								
-								</xsl:otherwise>
-							</xsl:choose>  -->
 							</xsl:attribute>
+									<!-- 
+									<xsl:choose>
+										<xsl:when test="record/metadata/schede/*/LC/PVC/PVCS and not(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCS))='italia')">
+											<xsl:choose>	
+												<xsl:when test="record/metadata/schede/*/LC/LDC/LDCN">
+													<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCS)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCE)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCM)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCN)))))" />
+												</xsl:when>
+												<xsl:when test="record/metadata/schede/*/LC/LDC/LDCC">
+													<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCS)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCE)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCM)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCC)))))" />
+												</xsl:when>
+												<xsl:otherwise>
+													<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCS)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCE)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCM)))))" />
+												</xsl:otherwise>
+											</xsl:choose>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:choose>	
+												<xsl:when test="record/metadata/schede/*/LC/LDC/LDCN">
+													<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCP)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCC)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCF)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCL)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCM)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCN)))))" />
+												</xsl:when>
+												<xsl:when test="record/metadata/schede/*/LC/LDC/LDCC">
+													<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCP)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCC)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCF)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCL)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCM)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCC)))))" />
+												</xsl:when>
+												<xsl:otherwise>
+													<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCP)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCC)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCF)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCL)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCM)))))" />
+												</xsl:otherwise>
+											</xsl:choose>								
+										</xsl:otherwise>
+									</xsl:choose>  -->
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'http://dati.beniculturali.it/cis/CulturalInstituteOrSite'" />
