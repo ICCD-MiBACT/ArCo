@@ -1094,7 +1094,7 @@
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-            	 <xsl:value-of select="concat('Classificazione nel tempo  del bene culturale ', $itemURI)" />
+            	 <xsl:value-of select="concat('Classificazione nel tempo del bene culturale ', $itemURI)" />
             </rdfs:label>
             <l0:name xml:lang="it">
             	<xsl:value-of select="concat('Classificazione nel tempo del bene culturale ', $itemURI)" />

@@ -293,7 +293,7 @@
 			</arco-spe:hasIdentificationInTime>
 			<arco-core:hasClassificationInTime>
 				<xsl:attribute name="rdf:resource">
-		    		<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-identification-', position())" />
+		    		<xsl:value-of select="concat($NS, 'ClassificationInTime/', $itemURI, '-identification-', position())" />
 				</xsl:attribute>
 			</arco-core:hasClassificationInTime>
 		</xsl:for-each> 
