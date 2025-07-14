@@ -4206,7 +4206,7 @@ ICCD Normativa BNZ: SZEI</a-cat:iccdNormTag>
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/DevelopmentStage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/EventOrSituation"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stadio di sviluppo di un campione paleonotologico</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the stage of development of a paleontological specimen</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the stage of development of a palaeontological specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">Development stage</rdfs:label>
         <rdfs:label xml:lang="it">Stadio di sviluppo</rdfs:label>
@@ -5248,15 +5248,15 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
     
 
 
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/PaleopatologySurvey -->
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/PalaeopatologySurvey -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PaleopatologySurvey">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/PalaeopatologySurvey">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;indagine, intesa come attività, in cui viene elaborata una diagnosi di una paleopatologia di un reperto antropologico.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a particular type of survey on a cultural property, that is a survey in which is possible to make a diagnosis of a paleopathology of an anthropological material.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a particular type of survey on a cultural property, that is a survey in which is possible to make a diagnosis of a palaeopathology of an anthropological material.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Indagine su paleopatologia</rdfs:label>
-        <rdfs:label xml:lang="en">Paleopathology survey</rdfs:label>
+        <rdfs:label xml:lang="en">Palaeopathology survey</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: PT</a-cat:iccdNormTag>
@@ -6872,11 +6872,11 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Paleomagnetism -->
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/Palaeomagnetism -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/Paleomagnetism">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="en">Paleomagnetism</rdfs:label>
+        <rdfs:label xml:lang="en">Palaeomagnetism</rdfs:label>
         <rdfs:label xml:lang="it">Paleomagnetismo</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRF/SRFP</a-cat:iccdNormTag>
     </owl:NamedIndividual>
