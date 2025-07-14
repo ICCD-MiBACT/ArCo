@@ -1538,7 +1538,7 @@
 						</l0:name>
 						<arco-cd:hasSurvey>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS,'PaleopathologySurvey/', $itemURI, '-', position())" />
+								<xsl:value-of select="concat($NS,'PalaeopathologySurvey/', $itemURI, '-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasSurvey>
 					</rdf:Description>

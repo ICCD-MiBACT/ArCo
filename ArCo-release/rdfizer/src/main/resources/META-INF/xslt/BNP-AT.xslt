@@ -199,7 +199,7 @@
 		</xsl:attribute>
 		<rdf:type>
 			<xsl:attribute name="rdf:resource">
-				<xsl:value-of select="'https://w3id.org/arco/ontology/arco/PaleontologicalHeritage'" />
+				<xsl:value-of select="'https://w3id.org/arco/ontology/arco/PalaeontologicalHeritage'" />
 			</xsl:attribute>
 		</rdf:type>
 		<!-- identifier -->
@@ -2816,13 +2816,13 @@
 					</xsl:attribute>
 				</arco-core:hasPart>
 			</xsl:for-each>
-			<!-- PaleopathologySurvey -->
+			<!-- PalaeopathologySurvey -->
 			<xsl:for-each select="record/metadata/schede/AT/PT/PTC">
 				<xsl:choose>	
 					<xsl:when test="not(./PTCE) or ./PTCE='intero bene' or ./PTCE='integrale' or ./PTCE='tutta' or ./PTCE='totale' or ./PTCE='carattere generale' or (starts-with(lower-case(normalize-space(./PTCE)), 'nr')) or (starts-with(lower-case(normalize-space(./PTCE)), 'n.r')) or (starts-with(lower-case(normalize-space(./PTCE)), 'intero')) or (starts-with(lower-case(normalize-space(./PTCE)), 'intera')) or (starts-with(lower-case(normalize-space(./PTCE)), 'esemplar'))">
 						<arco-cd:hasSurvey>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS,'PaleopathologySurvey/', $itemURI, '-', position())" />
+								<xsl:value-of select="concat($NS,'PalaeopathologySurvey/', $itemURI, '-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasSurvey>
 					</xsl:when>
@@ -3834,25 +3834,25 @@
 				</rdf:Description>
 			</xsl:if>
 		</xsl:for-each>
-		<!-- Paleopathology survey -->
+		<!-- Palaeopathology survey -->
 		<xsl:for-each select="record/metadata/schede/AT/PT/PTC">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS,'PaleopathologySurvey/', $itemURI, '-', position())" />
+					<xsl:value-of select="concat($NS,'PalaeopathologySurvey/', $itemURI, '-', position())" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/PaleopathologySurvey'" />
+						<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/PalaeopathologySurvey'" />
 					</xsl:attribute>
 				</rdf:type>
 				<rdfs:label xml:lang="en">
-					<xsl:value-of select="concat('Paleopathology survey ', position(), ' on cultural property ', $itemURI)" />
+					<xsl:value-of select="concat('Palaeopathology survey ', position(), ' on cultural property ', $itemURI)" />
 				</rdfs:label>
 				<rdfs:label xml:lang="it">
 					<xsl:value-of select="concat('Indagine su paleopatologia ', position(), ' sul bene culturale ', $itemURI)" />
 				</rdfs:label>
 				<l0:name xml:lang="en">
-					<xsl:value-of select="concat('Paleopathology survey ', position(), ' on cultural property ', $itemURI)" />
+					<xsl:value-of select="concat('Palaeopathology survey ', position(), ' on cultural property ', $itemURI)" />
 				</l0:name>
 				<l0:name xml:lang="it">
 						<xsl:value-of select="concat('Indagine su paleopatologia ', position(), ' sul bene culturale ', $itemURI)" />
