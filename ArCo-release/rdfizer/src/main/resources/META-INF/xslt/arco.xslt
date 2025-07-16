@@ -526,7 +526,7 @@
 					</xsl:if>
 					<!-- alternative identifier (AC/ACC) -->
 					<xsl:if test="record/metadata/schede/*/*/ACC">
-						<xsl:for-each select="record/metadata/schede/*/*/ACC/ACC">
+						<xsl:for-each select="record/metadata/schede/*/*/ACC/ACCC">
 							<arco-lite:alternativeIdentifier>
 								<xsl:choose>
 									<xsl:when test="./*">
@@ -23493,7 +23493,7 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</rdfs:label>
-							<l0:name >
+							<l0:name>
 								<xsl:choose>
 									<xsl:when test="./*">
 										<xsl:value-of select="normalize-space(./ACCC)" />
