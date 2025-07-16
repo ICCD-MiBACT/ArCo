@@ -296,18 +296,18 @@
 					<xsl:choose>
 						<!-- Check if idContenitoreGiuridico exists AND its ID is not empty -->
 						<xsl:when test="record/metadata/schede/harvesting/idContenitoreGiuridico and normalize-space(arco-fn:find-cg(record/metadata/schede/harvesting/idContenitoreGiuridico)) != ''">
-						<xsl:variable name="idCG" select="arco-fn:find-cg(record/metadata/schede/harvesting/idContenitoreGiuridico)" />
-						<arco-location:hasCulturalInstituteOrSite>
-							<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCG)" />
-						</arco-location:hasCulturalInstituteOrSite>
-					</xsl:when>
-					<!-- Check if idContenitoreFisico exists AND its ID is not empty, and idContenitoreGiuridico is NOT present -->
-					<xsl:when test="record/metadata/schede/harvesting/idContenitoreFisico and not(record/metadata/schede/harvesting/idContenitoreGiuridico) and normalize-space(arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)) != ''">
-						<xsl:variable name="idCF" select="arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)" />
-						<arco-location:hasCulturalInstituteOrSite>
-						<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCF)" />
-						</arco-location:hasCulturalInstituteOrSite>
-					</xsl:when>
+							<xsl:variable name="idCG" select="arco-fn:find-cg(record/metadata/schede/harvesting/idContenitoreGiuridico)" />
+							<arco-location:hasCulturalInstituteOrSite>
+								<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCG)" />
+							</arco-location:hasCulturalInstituteOrSite>
+						</xsl:when>
+						<!-- Check if idContenitoreFisico exists AND its ID is not empty, and idContenitoreGiuridico is NOT present -->
+						<xsl:when test="record/metadata/schede/harvesting/idContenitoreFisico and not(record/metadata/schede/harvesting/idContenitoreGiuridico) and normalize-space(arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)) != ''">
+							<xsl:variable name="idCF" select="arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)" />
+							<arco-location:hasCulturalInstituteOrSite>
+								<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCF)" />
+							</arco-location:hasCulturalInstituteOrSite>
+						</xsl:when>
 						<xsl:otherwise>
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/*/LC/LDC/LDCM and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCM)), 'n.r')))">
@@ -30741,7 +30741,7 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="$cis" />
 							</xsl:attribute>
-									<!-- 
+							<!-- 
 									<xsl:choose>
 										<xsl:when test="record/metadata/schede/*/LC/PVC/PVCS and not(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCS))='italia')">
 											<xsl:choose>	
@@ -34044,134 +34044,162 @@
 							</arco-cd:hasRelationshipType>
 						</rdf:Description>
 						<!-- relationship type -->
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'RelationshipType/luogo-di-collocazione')" />
-							</xsl:attribute>
-							<rdf:type>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
-								</xsl:attribute>
-							</rdf:type>
-							<l0:name>
-								<xsl:value-of select="'Luogo di collocazione'" />
-							</l0:name>
-							<rdfs:label>
-								<xsl:value-of select="'Luogo di collocazione'" />
-							</rdfs:label>
-						</rdf:Description>
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'RelationshipType/sede-di-provenienza')" />
-							</xsl:attribute>
-							<rdf:type>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
-								</xsl:attribute>
-							</rdf:type>
-							<l0:name>
-								<xsl:value-of select="'Luogo di provenienza'" />
-							</l0:name>
-							<rdfs:label>
-								<xsl:value-of select="'Luogo di provenienza'" />
-							</rdfs:label>
-						</rdf:Description>
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'RelationshipType/esecuzione')" />
-							</xsl:attribute>
-							<rdf:type>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
-								</xsl:attribute>
-							</rdf:type>
-							<l0:name>
-								<xsl:value-of select="'Luogo di esecuzione'" />
-							</l0:name>
-							<rdfs:label>
-								<xsl:value-of select="'Luogo di esecuzione'" />
-							</rdfs:label>
-						</rdf:Description>
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'RelationshipType/sede-di-realizzazione')" />
-							</xsl:attribute>
-							<rdf:type>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
-								</xsl:attribute>
-							</rdf:type>
-							<l0:name>
-								<xsl:value-of select="'Sede di realizzazione'" />
-							</l0:name>
-							<rdfs:label>
-								<xsl:value-of select="'Sede di realizzazione'" />
-							</rdfs:label>
-						</rdf:Description>
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'RelationshipType/riuso')" />
-							</xsl:attribute>
-							<rdf:type>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
-								</xsl:attribute>
-							</rdf:type>
-							<l0:name>
-								<xsl:value-of select="'Riuso'" />
-							</l0:name>
-							<rdfs:label>
-								<xsl:value-of select="'Riuso'" />
-							</rdfs:label>
-						</rdf:Description>
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'RelationshipType/fonte-di-rappresentazione')" />
-							</xsl:attribute>
-							<rdf:type>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
-								</xsl:attribute>
-							</rdf:type>
-							<l0:name>
-								<xsl:value-of select="'Fonte di rappresentazione'" />
-							</l0:name>
-							<rdfs:label>
-								<xsl:value-of select="'Fonte di rappresentazione'" />
-							</rdfs:label>
-						</rdf:Description>
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'RelationshipType/relazione-urbanistico-ambientale')" />
-							</xsl:attribute>
-							<rdf:type>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
-								</xsl:attribute>
-							</rdf:type>
-							<l0:name>
-								<xsl:value-of select="'Relazione urbanistico ambientale'" />
-							</l0:name>
-							<rdfs:label>
-								<xsl:value-of select="'Relazione urbanistico ambientale'" />
-							</rdfs:label>
-						</rdf:Description>
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'RelationshipType/sede-di-rinvenimento')" />
-							</xsl:attribute>
-							<rdf:type>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
-								</xsl:attribute>
-							</rdf:type>
-							<l0:name>
-								<xsl:value-of select="'Sede di rinvenimento'" />
-							</l0:name>
-							<rdfs:label>
-								<xsl:value-of select="'Sede di rinvenimento'" />
-							</rdfs:label>
-						</rdf:Description>
+						<xsl:choose>
+							<xsl:when test="(lower-case(normalize-space(./RSER))='è contenuto in' 
+												or lower-case(normalize-space(./RSER))='luogo di collocazione/localizzazione'
+												or lower-case(normalize-space(./RSER))='scheda contenitore')">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'RelationshipType/luogo-di-collocazione')" />
+									</xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
+										</xsl:attribute>
+									</rdf:type>
+									<l0:name>
+										<xsl:value-of select="'Luogo di collocazione'" />
+									</l0:name>
+									<rdfs:label>
+										<xsl:value-of select="'Luogo di collocazione'" />
+									</rdfs:label>
+								</rdf:Description>
+							</xsl:when>
+							<xsl:when test="(lower-case(normalize-space(./RSER))='era contenuto in' 
+												or lower-case(normalize-space(./RSER))='luogo di provenienza'
+												or lower-case(normalize-space(./RSER))='sede di provenienza')">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'RelationshipType/sede-di-provenienza')" />
+									</xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
+										</xsl:attribute>
+									</rdf:type>
+									<l0:name>
+										<xsl:value-of select="'Luogo di provenienza'" />
+									</l0:name>
+									<rdfs:label>
+										<xsl:value-of select="'Luogo di provenienza'" />
+									</rdfs:label>
+								</rdf:Description>
+							</xsl:when>
+							<xsl:when test="(lower-case(normalize-space(./RSER))='esecuzione/evento di riferimento' 
+													or lower-case(normalize-space(./RSER))='è coinvolto in')">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'RelationshipType/esecuzione')" />
+									</xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
+										</xsl:attribute>
+									</rdf:type>
+									<l0:name>
+										<xsl:value-of select="'Luogo di esecuzione'" />
+									</l0:name>
+									<rdfs:label>
+										<xsl:value-of select="'Luogo di esecuzione'" />
+									</rdfs:label>
+								</rdf:Description>
+							</xsl:when>
+							<xsl:when test="(lower-case(normalize-space(./RSER))='sede di realizzazione' 
+												or lower-case(normalize-space(./RSER))='è stato realizzato in')">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'RelationshipType/sede-di-realizzazione')" />
+									</xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
+										</xsl:attribute>
+									</rdf:type>
+									<l0:name>
+										<xsl:value-of select="'Sede di realizzazione'" />
+									</l0:name>
+									<rdfs:label>
+										<xsl:value-of select="'Sede di realizzazione'" />
+									</rdfs:label>
+								</rdf:Description>
+							</xsl:when>
+							<xsl:when test="(lower-case(normalize-space(./RSER))='bene composto' 
+												or lower-case(normalize-space(./RSER))='è compreso in')">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'RelationshipType/riuso')" />
+									</xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
+										</xsl:attribute>
+									</rdf:type>
+									<l0:name>
+										<xsl:value-of select="'Riuso'" />
+									</l0:name>
+									<rdfs:label>
+										<xsl:value-of select="'Riuso'" />
+									</rdfs:label>
+								</rdf:Description>
+							</xsl:when>
+							<xsl:when test="(lower-case(normalize-space(./RSER))='fonte di rappresentazione' 
+												or lower-case(normalize-space(./RSER))='è rappresentato in')">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'RelationshipType/fonte-di-rappresentazione')" />
+									</xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
+										</xsl:attribute>
+									</rdf:type>
+									<l0:name>
+										<xsl:value-of select="'Fonte di rappresentazione'" />
+									</l0:name>
+									<rdfs:label>
+										<xsl:value-of select="'Fonte di rappresentazione'" />
+									</rdfs:label>
+								</rdf:Description>
+							</xsl:when>
+							<xsl:when test="(lower-case(normalize-space(./RSER))='relazione urbanistico ambientale' 
+												or lower-case(normalize-space(./RSER))='è in relazione urbanistico - ambientale con')">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'RelationshipType/relazione-urbanistico-ambientale')" />
+									</xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
+										</xsl:attribute>
+									</rdf:type>
+									<l0:name>
+										<xsl:value-of select="'Relazione urbanistico ambientale'" />
+									</l0:name>
+									<rdfs:label>
+										<xsl:value-of select="'Relazione urbanistico ambientale'" />
+									</rdfs:label>
+								</rdf:Description>
+							</xsl:when>
+							<xsl:when test="(lower-case(normalize-space(./RSER))='sede di rinvenimento' 
+												or lower-case(normalize-space(./RSER))='è stato rinvenuto in')">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'RelationshipType/sede-di-rinvenimento')" />
+									</xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelationshipType'" />
+										</xsl:attribute>
+									</rdf:type>
+									<l0:name>
+										<xsl:value-of select="'Sede di rinvenimento'" />
+									</l0:name>
+									<rdfs:label>
+										<xsl:value-of select="'Sede di rinvenimento'" />
+									</rdfs:label>
+								</rdf:Description>
+							</xsl:when>
+						</xsl:choose>
 					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/RV/ROZ">
