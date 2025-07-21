@@ -320,7 +320,7 @@
 						</xsl:choose>
 					</xsl:for-each>
 					<xsl:if test="record/metadata/schede/*/MT/POS">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="concat('Posizione saggio: area ', record/metadata/schede/*/MT/POS/POSN, '. ',  record/metadata/schede/*/MT/POS/POSD)" />
 						</arco-core:description>
 					</xsl:if>
@@ -378,7 +378,7 @@
 							</arco-location:hasSoil>
 						</xsl:if>
 						<xsl:if test="record/metadata/schede/*/CA/AGR">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="record/metadata/schede/*/CA/AGR" />
 							</arco-core:description>
 						</xsl:if>
@@ -449,7 +449,7 @@
 							<xsl:value-of select="concat('Suolo del bene culturale: ', $itemURI)" />
 						</l0:name>
 						<xsl:if test="record/metadata/schede/*/CA/USD/USDT">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="record/metadata/schede/*/CA/USD/USDT" />
 							</arco-core:description>
 						</xsl:if>
@@ -597,7 +597,7 @@
 							</xsl:choose>
 						</xsl:if>
 						<xsl:if test="./FNSD">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="./FNSD" />
 							</arco-core:description>
 						</xsl:if>
@@ -873,17 +873,17 @@
 							</arco-core:hasType>
 						</xsl:if>
 						<xsl:if test="./ELED">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="./ELED" />
 							</arco-core:description>
 						</xsl:if>
 						<xsl:if test="./ELEE">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="./ELEE" />
 							</arco-core:description>
 						</xsl:if>
 						<xsl:if test="./ELEM">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="./ELEM" />
 							</arco-core:description>
 						</xsl:if>
@@ -1037,7 +1037,7 @@
 								</xsl:attribute>
 							</arco-dd:isCharacteristicClassifiedBy>
 							<xsl:if test="./ELEC">
-								<arco-core:description>
+								<arco-core:description xml:lang="it">
 									<xsl:value-of select="./ELEC" />
 								</arco-core:description>
 							</xsl:if>
@@ -1153,17 +1153,17 @@
 							</arco-dd:hasTechnique>
 						</xsl:if>
 						<xsl:if test="./SOLD">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="./SOLD" />
 							</arco-core:description>
 						</xsl:if>
 						<xsl:if test="./SOLE">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Configurazione esterna: ', ./SOLE)" />
 							</arco-core:description>
 						</xsl:if>
 						<xsl:if test="./SOLI">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Configurazione interna: ', ./SOLI)" />
 							</arco-core:description>
 						</xsl:if>
@@ -1290,17 +1290,17 @@
 							</arco-dd:hasTechnique>
 						</xsl:if>
 						<xsl:if test="./CPUD">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="./CPUD" />
 							</arco-core:description>
 						</xsl:if>
 						<xsl:if test="./CPUE">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Configurazione esterna: ', ./CPUE)" />
 							</arco-core:description>
 						</xsl:if>
 						<xsl:if test="./CPUI">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Configurazione interna: ', ./CPUI)" />
 							</arco-core:description>
 						</xsl:if>
@@ -1422,7 +1422,7 @@
 							</arco-dd:hasTechnique>
 						</xsl:if>
 						<xsl:if test="./SCAD">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of 	select="normalize-space(./SCAD)" />
 							</arco-core:description>
 						</xsl:if>
@@ -1519,7 +1519,7 @@
 							</arco-dd:hasTechnique>
 						</xsl:for-each>
 						<xsl:if test="./SPAD">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of 	select="normalize-space(./SPAD)" />
 							</arco-core:description>
 						</xsl:if>
@@ -1652,7 +1652,7 @@
 							</xsl:for-each>
 						</xsl:for-each>
 						<xsl:if test="./PNTO">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of 	select="normalize-space(./PNTO)" />
 							</arco-core:description>
 						</xsl:if>

@@ -338,7 +338,7 @@
 							</arco-core:hasType>
 						</xsl:if>
 						<xsl:if test="record/metadata/schede/*/CA/CAA">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="record/metadata/schede/*/CA/CAA" />
 							</arco-core:description>
 						</xsl:if>
@@ -418,7 +418,7 @@
 						<l0:name xml:lang="it">
 							<xsl:value-of select="concat('Situazione climatica ', position(), ' del bene culturale: ', $itemURI)" />
 						</l0:name>
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="record/metadata/schede/*/CA/CAT" />
 						</arco-core:description>
 					</rdf:Description>
@@ -450,7 +450,7 @@
 									<xsl:value-of select="concat($NS, 'EnvironmentalDamageType/', arco-fn:urify(./IQAT))" />
 								</arco-core:hasType>
 								<xsl:if test="./IQAD">
-									<arco-core:description>
+									<arco-core:description xml:lang="it">
 										<xsl:value-of select="./IQAD" />
 									</arco-core:description>
 								</xsl:if>
@@ -485,7 +485,7 @@
 									<xsl:value-of select="concat($NS, 'EnvironmentalDamageType/', arco-fn:urify(./DSIT))" />
 								</arco-core:hasType>
 								<xsl:if test="./DSIT">
-									<arco-core:description>
+									<arco-core:description xml:lang="it">
 										<xsl:value-of select="./DSIT" />
 									</arco-core:description>
 								</xsl:if>
@@ -727,7 +727,7 @@
 							</xsl:choose>
 						</xsl:if>
 						<xsl:if test="record/metadata/schede/VeAC/DA/EDA/EDAM">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Forma-materia della decorazione: ', normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAM))" />
 							</arco-core:description>
 						</xsl:if>
@@ -1716,7 +1716,7 @@
 							</arco-core:hasType>
 						</xsl:if>
 						<xsl:if test="record/metadata/schede/VeAC/DA/SRM/SRMS">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Struttura: ', normalize-space(record/metadata/schede/VeAC/DA/SRM/SRMS))" />
 							</arco-core:description>
 						</xsl:if>
@@ -1951,7 +1951,7 @@
 							</arco-core:hasType>
 						</xsl:if>
 						<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREM">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Forma-materia del bottone: ', normalize-space(record/metadata/schede/VeAC/DA/SRE/SREM))" />
 							</arco-core:description>
 						</xsl:if>

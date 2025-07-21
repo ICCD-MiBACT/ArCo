@@ -201,42 +201,42 @@
 						</arco-clo:intendedUser>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/VeAC/DA/STS/STSU">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="concat('Struttura oggetti bidimensionali: ', normalize-space(record/metadata/schede/VeAC/DA/STS/STSU))" />
 						</arco-core:description>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/VeAC/DA/STS/STSD">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="concat('Parte anteriore indumenti tridimensionali semplici: ', normalize-space(record/metadata/schede/VeAC/DA/STS/STSD))" />
 						</arco-core:description>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/VeAC/DA/STS/STSV">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="concat('Parte posteriore indumenti tridimensionali semplici: ', normalize-space(record/metadata/schede/VeAC/DA/STS/STSV))" />
 						</arco-core:description>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/VeAC/DA/SRC/SRCR">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="concat('Parte superiore davanti abiti complessi: ', normalize-space(record/metadata/schede/VeAC/DA/SRC/SRCR))" />
 						</arco-core:description>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/VeAC/DA/SRC/SRCV">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="concat('Parte superiore retro abiti complessi: ', normalize-space(record/metadata/schede/VeAC/DA/SRC/SRCV))" />
 						</arco-core:description>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/VeAC/DA/SRC/SRCI">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="concat('Parte inferiore davanti abiti complessi: ', normalize-space(record/metadata/schede/VeAC/DA/SRC/SRCI))" />
 						</arco-core:description>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/VeAC/DA/SRC/SRCD">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="concat('Parte inferiore retro abiti complessi: ', normalize-space(record/metadata/schede/VeAC/DA/SRC/SRCD))" />
 						</arco-core:description>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREU">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="concat('Cuciture: ', normalize-space(record/metadata/schede/VeAC/DA/SRE/SREU))" />
 						</arco-core:description>
 					</xsl:if>
@@ -618,7 +618,7 @@
 							</xsl:choose>
 						</xsl:if>
 						<xsl:if test="record/metadata/schede/VeAC/DA/EDA/EDAM">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Forma-materia della decorazione: ', normalize-space(record/metadata/schede/VeAC/DA/EDA/EDAM))" />
 							</arco-core:description>
 						</xsl:if>
@@ -1607,7 +1607,7 @@
 							</arco-core:hasType>
 						</xsl:if>
 						<xsl:if test="record/metadata/schede/VeAC/DA/SRM/SRMS">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Struttura: ', normalize-space(record/metadata/schede/VeAC/DA/SRM/SRMS))" />
 							</arco-core:description>
 						</xsl:if>
@@ -1842,7 +1842,7 @@
 							</arco-core:hasType>
 						</xsl:if>
 						<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREM">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Forma-materia del bottone: ', normalize-space(record/metadata/schede/VeAC/DA/SRE/SREM))" />
 							</arco-core:description>
 						</xsl:if>

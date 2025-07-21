@@ -287,7 +287,7 @@
 				</xsl:attribute>
 			</rdf:type>
 			<xsl:if test="record/metadata/schede/*/DA/DRS">
-				<arco-core:description>
+				<arco-core:description xml:lang="it">
 					<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/DRS)" />
 				</arco-core:description>
 			</xsl:if>
@@ -3382,12 +3382,12 @@
 					</arco-dd:numberOfMaleParticipants>
 				</xsl:if>
 				<xsl:if test="./CUCC">
-					<arco-core:description>
+					<arco-core:description xml:lang="it">
 						<xsl:value-of select="normalize-space(./CUCC)" />
 					</arco-core:description>
 				</xsl:if>
 				<xsl:if test="./CUCG">
-					<arco-core:description>
+					<arco-core:description xml:lang="it">
 						<xsl:value-of select="normalize-space(./CUCG)" />
 					</arco-core:description>
 				</xsl:if>
@@ -3458,7 +3458,7 @@
 					</arco-dd:numberOfMaleParticipants>
 				</xsl:if>
 				<xsl:if test="./CUPD">
-					<arco-core:description>
+					<arco-core:description xml:lang="it">
 						<xsl:value-of select="normalize-space(./CUPD)" />
 					</arco-core:description>
 				</xsl:if>
@@ -5078,7 +5078,7 @@
 						<xsl:value-of select="true()" />
 					</arco-cd:originalStorageMedium>
 					<xsl:if test="./DUOD[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 								<xsl:value-of select="./DUOD" />
 						</arco-core:description>
 					</xsl:if>
@@ -5369,7 +5369,7 @@
 						</arco-core:hasType>
 					</xsl:if>
 					<xsl:if test="./DUMD">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="./DUMD" />
 						</arco-core:description>
 					</xsl:if>
@@ -6800,7 +6800,7 @@
 						</arco-core:hasType>
 					</xsl:if>
 					<xsl:if test="./DVOD">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 								<xsl:value-of select="./DVOD" />
 						</arco-core:description>
 					</xsl:if>
@@ -6950,7 +6950,7 @@
 						</arco-core:hasType>
 					</xsl:if>
 					<xsl:if test="./DVMD">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 								<xsl:value-of select="./DVMD" />
 						</arco-core:description>
 					</xsl:if>
@@ -11771,7 +11771,7 @@
 						<xsl:value-of select="true()" />
 					</arco-cd:originalStorageMedium>
 					<xsl:if test="./AIOD[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 								<xsl:value-of select="./AIOD" />
 						</arco-core:description>
 					</xsl:if>
@@ -11944,7 +11944,7 @@
 						<xsl:value-of select="false()" />
 					</arco-cd:originalStorageMedium>
 					<xsl:if test="./AIMD[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 								<xsl:value-of select="./AIMD" />
 						</arco-core:description>
 					</xsl:if>
@@ -14926,7 +14926,7 @@
 						<xsl:value-of select="true()" />
 					</arco-cd:originalStorageMedium>
 					<xsl:if test="./VIOD[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 								<xsl:value-of select="./VIOD" />
 						</arco-core:description>
 					</xsl:if>
@@ -15092,7 +15092,7 @@
 						<xsl:value-of select="false()" />
 					</arco-cd:originalStorageMedium>
 					<xsl:if test="./VIMD[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 								<xsl:value-of select="./VIMD" />
 						</arco-core:description>
 					</xsl:if>
@@ -20072,7 +20072,7 @@
 				<xsl:value-of select="concat(record/metadata/schede/*/EV/EVE/EVEF, ' ', record/metadata/schede/*/EV/EVE/EVET)" />
 			</l0:name>
 			<xsl:if test="record/metadata/schede/*/EV/DAD/DADD">
-				<arco-core:description>
+				<arco-core:description xml:lang="it">
 					<xsl:value-of select="normalize-space(record/metadata/schede/*/EV/DAD/DADD)" />
 				</arco-core:description>
 			</xsl:if>

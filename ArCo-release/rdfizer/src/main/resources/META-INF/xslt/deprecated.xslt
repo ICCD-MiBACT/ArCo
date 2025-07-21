@@ -1565,7 +1565,7 @@
 								</xsl:choose>
 							</rdfs:label>
 							<xsl:if test="./STMD and (not(starts-with(lower-case(normalize-space(./STMD)), 'nr')) and not(starts-with(lower-case(normalize-space(./STMD)), 'n.r')))">
-								<arco-core:description>
+								<arco-core:description xml:lang="it">
 									<xsl:value-of select="normalize-space(./STMD)" />
 								</arco-core:description>
 							</xsl:if>
@@ -1751,7 +1751,7 @@
 								</xsl:choose>
 							</rdfs:label>
 							<xsl:if test="./LSIT and (not(starts-with(lower-case(normalize-space(./LSIT)), 'nr')) and not(starts-with(lower-case(normalize-space(./LSIT)), 'n.r')))">
-								<arco-core:description>
+								<arco-core:description xml:lang="it">
 									<xsl:value-of select="normalize-space(./LSIT)" />
 								</arco-core:description>
 							</xsl:if>
@@ -1979,12 +1979,12 @@
 								</xsl:choose>
 							</rdfs:label>
 							<xsl:if test="./ISEN and (not(starts-with(lower-case(normalize-space(./ISEN)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISEN)), 'n.r')))">
-								<arco-core:description>
+								<arco-core:description xml:lang="it">
 									<xsl:value-of select="normalize-space(./ISEN)" />
 								</arco-core:description>
 							</xsl:if>
 							<xsl:if test="./ISEZ and (not(starts-with(lower-case(normalize-space(./ISEZ)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISEZ)), 'n.r')))">
-								<arco-core:description>
+								<arco-core:description xml:lang="it">
 									<xsl:value-of select="normalize-space(./ISEZ)" />
 								</arco-core:description>
 							</xsl:if>
@@ -2321,12 +2321,12 @@
 							</arco-cd:hasCoinIssuance>
 						</xsl:if>
 						<xsl:if test="./COND">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Dritto: ', ./COND)" />
 							</arco-core:description>
 						</xsl:if>
 						<xsl:if test="./CONR">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Rovescio: ', ./CONR)" />
 							</arco-core:description>
 						</xsl:if>

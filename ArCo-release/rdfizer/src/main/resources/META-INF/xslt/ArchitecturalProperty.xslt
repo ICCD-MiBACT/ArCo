@@ -263,12 +263,12 @@
 						</arco-con:hasConstructionElement>
 					</xsl:for-each>
 					<xsl:if test="record/metadata/schede/A/IS/IST">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="record/metadata/schede/A/IS/IST" />
 						</arco-core:description>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/A/IS/ISP">
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="record/metadata/schede/A/IS/ISP" />
 						</arco-core:description>
 					</xsl:if>
@@ -1103,7 +1103,7 @@
 						<l0:name xml:lang="it">
 							<xsl:value-of select="concat('Suolo del bene culturale: ', $itemURI)" />
 						</l0:name>
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="record/metadata/schede/A/FN/FNA" />
 						</arco-core:description>
 					</rdf:Description>
@@ -3107,7 +3107,7 @@
 							<xsl:value-of select="concat('Ambiente del bene culturale: ', $itemURI)" />
 						</l0:name>
 						<xsl:if test="record/metadata/schede/PG/UT/RAM">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="record/metadata/schede/PG/UT/RAM" />
 							</arco-core:description>
 						</xsl:if>
@@ -3518,7 +3518,7 @@
 							<xsl:value-of select="concat('Sistema delle acque del bene culturale: ', $itemURI)" />
 						</l0:name>
 						<xsl:if test="record/metadata/schede/PG/CA/CAI">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="record/metadata/schede/PG/CA/CAI" />
 							</arco-core:description>
 						</xsl:if>
@@ -4034,7 +4034,7 @@
 						<l0:name xml:lang="it">
 							<xsl:value-of select="concat('Elemento di connessione ', position(), ' del bene culturale: ', $itemURI)" />
 						</l0:name>
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="normalize-space(./MPCS)" />
 						</arco-core:description>
 					</rdf:Description>
@@ -4426,7 +4426,7 @@
 							</arco-cd:hasUseFunction>
 						</xsl:if>
 						<xsl:if test="./URAD">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="normalize-space(./URAD)" />
 							</arco-core:description>
 						</xsl:if>

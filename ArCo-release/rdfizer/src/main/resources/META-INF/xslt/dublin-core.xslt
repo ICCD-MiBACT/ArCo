@@ -711,7 +711,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 					<!-- dc:description -->
 					<xsl:if test="record/metadata/schede/*/DA/DES/DESO[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<xsl:variable name="deso" select="normalize-space(record/metadata/schede/*/DA/DES/DESO)"/>
-						<dc:description>
+						<dc:description xml:lang="it">
 							<!-- multiple values (SPS,LRV) eg: ICCD12087343 ICCD12085339 -->
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/BNM/DA/DES/DESO">
@@ -811,12 +811,12 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 						</dc:description>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/F/DA/DSO">
-						<dc:description>
+						<dc:description xml:lang="it">
 							<xsl:value-of select="normalize-space(record/metadata/schede/F/DA/DSO)" />
 						</dc:description>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/BDI/DA/DRS">
-						<dc:description>
+						<dc:description xml:lang="it">
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/BDI/DA/DRS">
 									<xsl:value-of select="normalize-space(record/metadata/schede/BDI/DA/DRS)" />
@@ -828,12 +828,12 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 						</dc:description>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/PG/OG/OGT/OGTD">
-						<dc:description>
+						<dc:description xml:lang="it">
 							<xsl:value-of select="concat(normalize-space(record/metadata/schede/PG/OG/OGT/OGTD), ' ', normalize-space(record/metadata/schede/PG/OG/OGT/OGTQ))" />
 						</dc:description>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/A/IS">
-						<dc:description>
+						<dc:description xml:lang="it">
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/A/IS/ISP">
 									<xsl:value-of select="normalize-space(record/metadata/schede/A/IS/ISP)" />
@@ -848,26 +848,26 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 						<xsl:choose>
 							<xsl:when test="record/metadata/schede/*/DA/DES/DESO and not($sheetType='NU')">
 								<xsl:if test="not(lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESO))='nr' or lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESO))='n.r.' or lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESO))='nr (recupero pregresso)')">
-									<dc:description>
+									<dc:description xml:lang="it">
 										<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/DES/DESO)" />
 									</dc:description>
 								</xsl:if>
 							</xsl:when>
 							<xsl:when test="record/metadata/schede/NU/DA/DES/DESA and not(record/metadata/schede/NU/DA/DES/DESO)">
-								<dc:description>
+								<dc:description xml:lang="it">
 									<xsl:value-of select="concat('Dritto: ', normalize-space(record/metadata/schede/NU/DA/DES/DESA), '. Rovescio: ', normalize-space(record/metadata/schede/NU/DA/DES/DESM))"/>
 								</dc:description>
 							</xsl:when>
 							<xsl:when test="record/metadata/schede/*/DA/DES/DESS[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))] and not(record/metadata/schede/*/DA/DES/DESO)">
 								<xsl:for-each select="record/metadata/schede/*/DA/DES/DESS[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 									<!-- allow multiple values es: ICCD11389099 -->
-									<dc:description>
+									<dc:description xml:lang="it">
 										<xsl:value-of select="normalize-space()"/>
 									</dc:description>
 								</xsl:for-each>
 							</xsl:when>
 							<xsl:when test="not(record/metadata/schede/*/DA/DES/*)">
-								<dc:description>
+								<dc:description xml:lang="it">
 									<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/DES)" />
 								</dc:description>
 							</xsl:when>

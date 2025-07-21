@@ -3403,7 +3403,7 @@
 							<xsl:value-of select="concat('Iconographic or decorative apparatus ', position(), ' of the cultural property ', $itemURI)" />
 						</l0:name>
 						<xsl:if test="not(./*)">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="normalize-space(.)" />
 							</arco-core:description>
 						</xsl:if>
@@ -3415,12 +3415,12 @@
 							</arco-cd:hasSubject>
 						</xsl:if>
 						<xsl:if test="./AIDD">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="normalize-space(./AIDD)" />
 							</arco-core:description>
 						</xsl:if>
 						<xsl:if test="$sheetType='SCAN'">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="normalize-space(.)" />
 							</arco-core:description>
 						</xsl:if>
@@ -5631,7 +5631,7 @@
 							</xsl:choose>
 						</l0:name>
 						<xsl:if test="./DTN/DTNN">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="normalize-space(./DTN/DTNN)" />
 							</arco-core:description>
 						</xsl:if>
@@ -6331,7 +6331,7 @@
 							</xsl:choose>
 						</l0:name>
 						<xsl:if test="./REN/RENN">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="normalize-space(./REN/RENN)" />
 							</arco-core:description>
 						</xsl:if>
@@ -12379,7 +12379,7 @@
 							<l0:name xml:lang="it">
 								<xsl:value-of select="concat('Provvedimento di tutela ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
 							</l0:name>
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="normalize-space(.)" />
 							</arco-core:description>
 						</rdf:Description>
@@ -12410,7 +12410,7 @@
 						<l0:name xml:lang="it">
 							<xsl:value-of select="concat('Provvedimento di tutela ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
 						</l0:name>
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="normalize-space(.)" />
 						</arco-core:description>
 					</rdf:Description>
@@ -13867,7 +13867,7 @@
 								</arco-lite:currentDesigantion>
 							</xsl:if>
 							<xsl:if test="$scad">
-								<arco-core:description>
+								<arco-core:description xml:lang="it">
 									<xsl:value-of select="$scad" />
 								</arco-core:description>
 							</xsl:if>
@@ -15735,7 +15735,7 @@
 								<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI)" />
 							</l0:name>
 							<xsl:if test="./STMD and (not(starts-with(lower-case(normalize-space(./STMD)), 'nr')) and not(starts-with(lower-case(normalize-space(./STMD)), 'n.r')))">
-								<arco-core:description>
+								<arco-core:description xml:lang="it">
 									<xsl:value-of select="normalize-space(./STMD)" />
 								</arco-core:description>
 							</xsl:if>
@@ -15924,7 +15924,7 @@
 								</xsl:when>
 							</xsl:choose>
 							<xsl:if test="./LSIT and (not(starts-with(lower-case(normalize-space(./LSIT)), 'nr')) and not(starts-with(lower-case(normalize-space(./LSIT)), 'n.r')))">
-								<arco-core:description>
+								<arco-core:description xml:lang="it">
 									<xsl:value-of select="normalize-space(./LSIT)" />
 								</arco-core:description>
 							</xsl:if>
@@ -16079,17 +16079,17 @@
 								<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI)" />
 							</l0:name>
 							<xsl:if test="./ISEN and (not(starts-with(lower-case(normalize-space(./ISEN)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISEN)), 'n.r')))">
-								<arco-core:description>
+								<arco-core:description xml:lang="it">
 									<xsl:value-of select="normalize-space(./ISEN)" />
 								</arco-core:description>
 							</xsl:if>
 							<xsl:if test="$sheetType='MIDF'">
-								<arco-core:description>
+								<arco-core:description xml:lang="it">
 									<xsl:value-of select="normalize-space(.)" />
 								</arco-core:description>
 							</xsl:if>
 							<xsl:if test="./ISEZ and (not(starts-with(lower-case(normalize-space(./ISEZ)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISEZ)), 'n.r')))">
-								<arco-core:description>
+								<arco-core:description xml:lang="it">
 									<xsl:value-of select="normalize-space(./ISEZ)" />
 								</arco-core:description>
 							</xsl:if>
@@ -17218,7 +17218,7 @@
 						<rdfs:label xml:lang="it">
 							<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI)" />
 						</rdfs:label>
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/ELR)" />
 						</arco-core:description>
 					</rdf:Description>
@@ -19072,7 +19072,7 @@
 							</tiapit:atTime>
 						</xsl:for-each>
 						<xsl:if test="record/metadata/schede/*/DA/UTF">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="record/metadata/schede/*/DA/UTF" />
 							</arco-core:description>
 						</xsl:if>
@@ -19425,7 +19425,7 @@
 								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CoinDesign'" />
 							</xsl:attribute>
 						</arco-core:hasType>
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="normalize-space(record/metadata/schede/NU/DA/DES/DESA)" />
 						</arco-core:description>
 						<rdfs:label xml:lang="it">
@@ -19584,7 +19584,7 @@
 								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CoinDesign'" />
 							</xsl:attribute>
 						</arco-core:hasType>
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="normalize-space(record/metadata/schede/NU/DA/DES/DESM)" />
 						</arco-core:description>
 						<rdfs:label xml:lang="it">
@@ -19714,7 +19714,7 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Edge of numismatic property ', $itemURI)" />
 						</l0:name>
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/NU/DA/DES/DESV">
 									<xsl:value-of select="record/metadata/schede/NU/DA/DES/DESV" />
@@ -21458,7 +21458,7 @@
 							<xsl:value-of select="concat('Base map of cultural property: ', $itemURI)" />
 						</l0:name>
 						<xsl:if test="record/metadata/schede/*/RP/LGI/LGIT or record/metadata/schede/*/RP/LGI/LGIN or record/metadata/schede/*/RP/LGI/LGIQ">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:choose>
 									<xsl:when test="record/metadata/schede/*/RP/LGI/LGIT and record/metadata/schede/*/RP/LGI/LGIN and record/metadata/schede/*/RP/LGI/LGIQ">
 										<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/RP/LGI/LGIT), ' | ', normalize-space(record/metadata/schede/*/RP/LGI/LGIN), ' | ', normalize-space(record/metadata/schede/*/RP/LGI/LGIQ))" />
@@ -23066,7 +23066,7 @@
 							<xsl:value-of select="concat('Archaeological material ', position(), ' of cultural property ', $itemURI)" />
 						</l0:name>
 						<xsl:if test="./MTPD">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="normalize-space(string-join(./MTPD,' ; '))" />
 							</arco-core:description>
 						</xsl:if>
@@ -26054,7 +26054,7 @@
 								</arco-cd:insertionDate>
 							</xsl:if>
 							<xsl:if test="./INPD and (not(starts-with(lower-case(normalize-space(./INPD)), 'nr')) and not(starts-with(lower-case(normalize-space(./INPD)), 'n.r')))">
-								<arco-core:description>
+								<arco-core:description xml:lang="it">
 									<xsl:value-of select="normalize-space(./INPD)" />
 								</arco-core:description>
 							</xsl:if>
@@ -26290,7 +26290,7 @@
 							</arco-cd:insertionDate>
 						</xsl:if>
 						<xsl:if test="./INPD and (not(starts-with(lower-case(normalize-space(./INPD)), 'nr')) and not(starts-with(lower-case(normalize-space(./INPD)), 'n.r')))">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="normalize-space(./INPD)" />
 							</arco-core:description>
 						</xsl:if>
@@ -26515,7 +26515,7 @@
 							</arco-cd:insertionDate>
 						</xsl:if>
 						<xsl:if test="./INPD and (not(starts-with(lower-case(normalize-space(./INPD)), 'nr')) and not(starts-with(lower-case(normalize-space(./INPD)), 'n.r')))">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="normalize-space(./INPD)" />
 							</arco-core:description>
 						</xsl:if>
@@ -27697,7 +27697,7 @@
 									</arco-cd:framework>
 								</xsl:if>
 								<xsl:if test="./RSTT">
-									<arco-core:description>
+									<arco-core:description xml:lang="it">
 										<xsl:value-of select="concat('Intervento su ', normalize-space(./RSTT))" />
 									</arco-core:description>
 								</xsl:if>
@@ -28147,7 +28147,7 @@
 						<l0:name xml:lang="it">
 							<xsl:value-of select="concat('Intervento ', position(), ' sul bene culturale ', $itemURI)" />
 						</l0:name>
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="concat('Intervento su ', normalize-space(record/metadata/schede/MIDF/*/RST))" />
 						</arco-core:description>
 					</rdf:Description>
@@ -28250,7 +28250,7 @@
 						<l0:name xml:lang="it">
 							<xsl:value-of select="concat('Intervento ', position(), ' sul bene culturale ', $itemURI)" />
 						</l0:name>
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="record/metadata/schede/*/MT/RST" />
 						</arco-core:description>
 					</rdf:Description>
@@ -28278,7 +28278,7 @@
 							<xsl:value-of select="concat('Intervento ', position(), ' sul bene culturale ', $itemURI)" />
 						</l0:name>
 						<xsl:if test="./RIAM">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="./RIAM" />
 							</arco-core:description>
 						</xsl:if>
@@ -28563,7 +28563,7 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Conservation status ', position(), ' of cultural property: ', $itemURI)" />
 						</l0:name>
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/MT/STC)" />
 						</arco-core:description>
 					</rdf:Description>
@@ -28651,12 +28651,12 @@
 							</xsl:if>
 						</xsl:if>
 						<xsl:if test="./COND">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Dritto: ', ./COND)" />
 							</arco-core:description>
 						</xsl:if>
 						<xsl:if test="./CONR">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="concat('Rovescio: ', ./CONR)" />
 							</arco-core:description>
 						</xsl:if>
@@ -33454,7 +33454,7 @@
 							<rdfs:label>
 								<xsl:value-of select="'mostra'" />
 							</rdfs:label>
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="normalize-space(.)" />
 							</arco-core:description>
 						</xsl:if>
@@ -35415,7 +35415,7 @@
 								</arco-cd:hasDating>
 							</xsl:if>
 							<xsl:if test="./ASSE">
-								<arco-core:description>
+								<arco-core:description xml:lang="it">
 									<xsl:value-of select="normalize-space(./ASSE)" />
 								</arco-core:description>
 							</xsl:if>
@@ -37095,7 +37095,7 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Natural environment of cultural property ', $itemURI)" />
 						</l0:name>
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="normalize-space(record/metadata/schede/SCAN/DA/CAM)" />
 						</arco-core:description>
 					</rdf:Description>
@@ -37510,7 +37510,7 @@
 						<l0:name xml:lang="it">
 							<xsl:value-of select="concat('Situazione climatica ', position(), ' del bene culturale: ', $itemURI)" />
 						</l0:name>
-						<arco-core:description>
+						<arco-core:description xml:lang="it">
 							<xsl:value-of select="record/metadata/schede/MODI/CA/CAT" />
 						</arco-core:description>
 					</rdf:Description>

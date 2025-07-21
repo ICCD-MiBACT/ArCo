@@ -1100,7 +1100,7 @@
 					</arco-lite:bibliographicReference>
 				</xsl:for-each>
 				<xsl:if test="record/metadata/schede/*/IR/IRA/IRAC">
-					<arco-core:description>
+					<arco-core:description xml:lang="it">
 						<xsl:value-of select="record/metadata/schede/*/IR/IRA/IRAC" />
 					</arco-core:description>
 				</xsl:if>

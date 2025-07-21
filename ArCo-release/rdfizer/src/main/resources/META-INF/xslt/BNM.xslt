@@ -4350,7 +4350,7 @@
 				</arco-lite:bibliographicReference>
 			</xsl:for-each>
 			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC">
-				<arco-core:description>
+				<arco-core:description xml:lang="it">
 					<xsl:value-of select="record/metadata/schede/*/IM/IMA/IMAC" />
 				</arco-core:description>
 			</xsl:if>
@@ -4408,7 +4408,7 @@
 				</arco-lite:bibliographicReference>
 			</xsl:for-each>
 			<xsl:if test="record/metadata/schede/*/ET/ETA/ETAC">
-				<arco-core:description>
+				<arco-core:description xml:lang="it">
 					<xsl:value-of select="record/metadata/schede/*/ET/ETA/ETAC" />
 				</arco-core:description>
 			</xsl:if>

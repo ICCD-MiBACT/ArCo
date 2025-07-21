@@ -4074,7 +4074,7 @@
 				</arco-spe:manufacturingDate>
 			</xsl:if>
 			<xsl:if test="./DBRS">
-				<arco-core:description>
+				<arco-core:description xml:lang="it">
 					<xsl:value-of select="normalize-space(./DBRS)" />
 				</arco-core:description>
 			</xsl:if>				

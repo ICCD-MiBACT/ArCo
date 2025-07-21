@@ -1032,7 +1032,7 @@
 				</xsl:otherwise>
 			</xsl:choose>
 			<xsl:if test="record/metadata/schede/*/CF/CFD">
-				<arco-core:description>
+				<arco-core:description xml:lang="it">
 					<xsl:value-of select="normalize-space(record/metadata/schede/*/CF/CFD)" />
 				</arco-core:description>
 			</xsl:if>
@@ -1650,7 +1650,7 @@
 							<xsl:value-of select="concat('Base map of site: ', $idCF)" />
 						</l0:name>
 						<xsl:if test="./GPB/GPBB">
-							<arco-core:description>
+							<arco-core:description xml:lang="it">
 								<xsl:value-of select="normalize-space(./GPB/GPBB)" />
 							</arco-core:description>
 						</xsl:if>
@@ -2617,7 +2617,7 @@
 				</arco-lite:nationalIdentifier>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/*/CG/CGD">
-				<arco-core:description>
+				<arco-core:description xml:lang="it">
 					<xsl:value-of select="normalize-space(record/metadata/schede/*/CG/CGD)" />
 				</arco-core:description>
 			</xsl:if>
