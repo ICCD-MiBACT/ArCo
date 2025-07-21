@@ -2096,7 +2096,7 @@
 						</arco-cd:hasCopyright>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBW">
-						<smapit:URL>
+						<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 								<xsl:value-of select="record/metadata/schede/BIB/BI/BIB/BIBW" />
 						</smapit:URL>
 					</xsl:if>

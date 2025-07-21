@@ -3502,7 +3502,7 @@
 								</arco-catalogue:referenceProject>
 							</xsl:if>
 							<xsl:if test="./ACSW and (not(starts-with(lower-case(normalize-space(./ACSW)), 'nr')) and not(starts-with(lower-case(normalize-space(./ACSW)), 'n.r')))">
-								<smapit:URL>
+								<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 									<xsl:value-of select="./ACSW" />
 								</smapit:URL>
 							</xsl:if>
@@ -9059,13 +9059,13 @@
 							<!-- xslt2 multiple nodes normalize-space exception  -->
 							<xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
 							<xsl:for-each select="$url">
-								<smapit:URL>
+								<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 									<xsl:value-of select="." />
 								</smapit:URL>
 							</xsl:for-each>
 						</xsl:for-each>
 						<xsl:if test="./DCMW and (not(starts-with(lower-case(normalize-space(./DCMW)), 'nr')) and not(starts-with(lower-case(normalize-space(./DCMW)), 'n.r')))">
-							<smapit:URL>
+							<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 								<xsl:value-of select="./DCMW" />
 							</smapit:URL>
 						</xsl:if>
@@ -9272,13 +9272,13 @@
 							<!-- xslt2 multiple nodes normalize-space exception  -->
 							<xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
 							<xsl:for-each select="$url">
-								<smapit:URL>
+								<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 									<xsl:value-of select="." />
 								</smapit:URL>
 							</xsl:for-each>
 						</xsl:for-each>
 						<xsl:if test="./FTAW and (not(starts-with(lower-case(normalize-space(./FTAW)), 'nr')) and not(starts-with(lower-case(normalize-space(./FTAW)), 'n.r')))">
-							<smapit:URL>
+							<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 								<xsl:value-of select="./FTAW" />
 							</smapit:URL>
 						</xsl:if>
@@ -9614,7 +9614,7 @@
 							<xsl:for-each select="./DRAN">
 								<xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
 								<xsl:for-each select="$url">
-									<smapit:URL>
+									<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 										<xsl:value-of select="." />
 									</smapit:URL>
 								</xsl:for-each>
@@ -9648,7 +9648,7 @@
 							</arco-core:note>
 						</xsl:if>
 						<xsl:if test="./DRAW">
-							<smapit:URL>
+							<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 								<xsl:value-of select="./DRAW" />
 							</smapit:URL>
 						</xsl:if>
@@ -9944,7 +9944,7 @@
 							<xsl:for-each select="./VDCN">
 								<xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
 								<xsl:for-each select="$url">
-									<smapit:URL>
+									<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 										<xsl:value-of select="." />
 									</smapit:URL>
 								</xsl:for-each>
@@ -9981,7 +9981,7 @@
 						</xsl:if>
 						<xsl:if
 						test="./VDCW and (not(starts-with(lower-case(normalize-space(./VDCW)), 'nr')) and not(starts-with(lower-case(normalize-space(./VDCW)), 'n.r')))">
-							<smapit:URL>
+							<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 								<xsl:value-of select="./VDCW" />
 							</smapit:URL>
 						</xsl:if>
@@ -10205,7 +10205,7 @@
 							<xsl:for-each select="./REGN">
 								<xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
 								<xsl:for-each select="$url">
-									<smapit:URL>
+									<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 										<xsl:value-of select="." />
 									</smapit:URL>
 								</xsl:for-each>
@@ -10248,7 +10248,7 @@
 						</xsl:if>
 						<xsl:if
 						test="./REGW and (not(starts-with(lower-case(normalize-space(./REGW)), 'nr')) and not(starts-with(lower-case(normalize-space(./REGW)), 'n.r')))">
-							<smapit:URL>
+							<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 								<xsl:value-of select="./REGW" />
 							</smapit:URL>
 						</xsl:if>
@@ -10462,7 +10462,7 @@
 							<xsl:for-each select="./FNTI">
 								<xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
 								<xsl:for-each select="$url">
-									<smapit:URL>
+									<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 										<xsl:value-of select="." />
 									</smapit:URL>
 								</xsl:for-each>
@@ -10522,7 +10522,7 @@
 							</arco-core:note>
 						</xsl:if>
 						<xsl:if test="./FNTW and (not(starts-with(lower-case(normalize-space(./FNTW)), 'nr')) and not(starts-with(lower-case(normalize-space(./FNTW)), 'n.r')))">
-							<smapit:URL>
+							<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 								<xsl:value-of select="./FNTW" />
 							</smapit:URL>
 						</xsl:if>
@@ -11292,7 +11292,7 @@
 								</arco-core:note>
 							</xsl:if>
 							<xsl:if test="./BIBW">
-								<smapit:URL>
+								<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 									<xsl:value-of select="./BIBW" />
 								</smapit:URL>
 							</xsl:if>
@@ -11637,7 +11637,7 @@
 								</arco-core:note>
 							</xsl:if>
 							<xsl:if test="./BSEI">
-								<smapit:URL>
+								<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 									<xsl:value-of select="./BSEI" />
 								</smapit:URL>
 							</xsl:if>
@@ -12264,7 +12264,7 @@
 								</arco-cd:noticeDate>
 							</xsl:if>
 							<xsl:if test="./NVCW and (not(starts-with(lower-case(normalize-space(./NVCW)), 'nr')) and not(starts-with(lower-case(normalize-space(./NVCW)), 'n.r')))">
-								<smapit:URL>
+								<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 									<xsl:value-of select="./NVCW" />
 								</smapit:URL>
 							</xsl:if>
@@ -12515,7 +12515,7 @@
 							</arco-core:hasType>
 						</xsl:if>
 						<xsl:if test="./STUW and (not(starts-with(lower-case(normalize-space(./STUW)), 'nr')) and not(starts-with(lower-case(normalize-space(./STUW)), 'n.r')))">
-							<smapit:URL>
+							<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 								<xsl:value-of select="./STUW" />
 							</smapit:URL>
 						</xsl:if>
@@ -20983,7 +20983,7 @@
 									</tiapit:date>
 								</xsl:if>
 								<xsl:if test="./GPB/GPBU and (not(starts-with(lower-case(normalize-space(./GPB/GPBU)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPB/GPBU)), 'n.r')))">
-									<smapit:URL>
+									<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 										<xsl:value-of select="./GPB/GPBU" />
 									</smapit:URL>
 								</xsl:if>
@@ -23524,7 +23524,7 @@
 								</arco-catalogue:referenceProject>
 							</xsl:if>
 							<xsl:if test="./ACCW and (not(starts-with(lower-case(normalize-space(./ACCW)), 'nr')) and not(starts-with(lower-case(normalize-space(./ACCW)), 'n.r')))">
-								<smapit:URL>
+								<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 									<xsl:value-of select="./ACCW" />
 								</smapit:URL>
 							</xsl:if>

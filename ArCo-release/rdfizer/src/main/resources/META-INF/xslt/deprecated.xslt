@@ -3943,7 +3943,7 @@
 								</arco-catalogue:referenceProject>
 							</xsl:if>
 							<xsl:if test="./ACCW and (not(starts-with(lower-case(normalize-space(./ACCW)), 'nr')) and not(starts-with(lower-case(normalize-space(./ACCW)), 'n.r')))">
-								<smapit:URL>
+								<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 									<xsl:value-of select="normalize-space(./ACCW)" />
 								</smapit:URL>
 							</xsl:if>
@@ -9381,7 +9381,7 @@
 							</arco-core:note>
 						</xsl:if>
 						<xsl:if test="./BIBW">
-							<smapit:URL>
+							<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 								<xsl:value-of select="normalize-space(./BIBW)" />
 							</smapit:URL>
 						</xsl:if>

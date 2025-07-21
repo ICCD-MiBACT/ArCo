@@ -1660,9 +1660,9 @@
 							</tiapit:time>
 						</xsl:if>
 						<xsl:if test="./GPB/GPBU and (not(starts-with(lower-case(normalize-space(./GPB/GPBU)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPB/GPBU)), 'n.r')))">
-							<smapit:url>
+							<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 								<xsl:value-of select="normalize-space(./GPB/GPBU)" />
-							</smapit:url>
+							</smapit:URL>
 						</xsl:if>
 						<xsl:if test="./GPB/GPBO">
 							<arco-core:note>

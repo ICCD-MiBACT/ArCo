@@ -362,10 +362,8 @@
 									</arco-cd:documentationTitle>
 								</xsl:if>
 								<xsl:if test="./@href">
-									<smapit:URL>
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="./@href" />
-										</xsl:attribute>
+									<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">											<xsl:value-of select="./@href" />
+										
 									</smapit:URL>
 								</xsl:if>
 							</rdf:Description>
@@ -405,10 +403,8 @@
 									</arco-cd:caption>
 								</xsl:if>
 								<xsl:if test="./@href">
-									<smapit:URL>
-										<xsl:attribute name="rdf:resource">
+									<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 											<xsl:value-of select="./@href" />
-										</xsl:attribute>
 									</smapit:URL>
 								</xsl:if>
 							</rdf:Description>
@@ -443,10 +439,8 @@
 									</arco-cd:documentationTitle>
 								</xsl:if>
 								<xsl:if test="./@href">
-									<smapit:URL>
-										<xsl:attribute name="rdf:resource">
+									<smapit:URL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
 											<xsl:value-of select="./@href" />
-										</xsl:attribute>
 									</smapit:URL>
 								</xsl:if>
 							</rdf:Description>
