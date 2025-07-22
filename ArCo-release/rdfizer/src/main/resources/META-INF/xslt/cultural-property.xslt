@@ -687,10 +687,8 @@
 							<!-- xslt2 multiple nodes normalize-space exception  -->
 							<xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
 							<xsl:for-each select="$url">
-								<arco-lite:depiction>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="." />
-									</xsl:attribute>
+								<arco-lite:depiction rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
+									<xsl:value-of select="." />
 								</arco-lite:depiction>
 								<pico:preview>
 									<xsl:attribute name="rdf:resource">
@@ -706,10 +704,8 @@
 									<!-- xslt2 multiple nodes normalize-space exception  -->
 									<xsl:variable name="url" select="arco-fn:find-link-emm(.)" />
 									<xsl:for-each select="$url">
-										<arco-lite:depiction>
-											<xsl:attribute name="rdf:resource">
-												<xsl:value-of select="." />
-											</xsl:attribute>
+										<arco-lite:depiction rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">
+											<xsl:value-of select="." />
 										</arco-lite:depiction>
 										<foaf:depiction>
 											<xsl:attribute name="rdf:resource">
