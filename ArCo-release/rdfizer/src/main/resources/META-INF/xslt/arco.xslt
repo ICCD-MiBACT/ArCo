@@ -3538,9 +3538,6 @@
 								<rdfs:label>
 									<xsl:value-of select="normalize-space(./ACSC)" />
 								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(./ACSC)" />
-								</l0:name>
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./ACSC)" />
 								</arco-core:identifier>
@@ -3685,8 +3682,6 @@
 									<xsl:value-of select="normalize-space(./MODI)" />
 								</rdfs:label>
 								<l0:name>
-									<xsl:value-of select="normalize-space(./MODI)" />
-								</l0:name>
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./MODI)" />
 								</arco-core:identifier>
@@ -23491,16 +23486,6 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</rdfs:label>
-							<l0:name>
-								<xsl:choose>
-									<xsl:when test="./*">
-										<xsl:value-of select="normalize-space(./ACCC)" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="normalize-space(.)" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</l0:name>
 							<arco-core:identifier>
 								<xsl:choose>
 									<xsl:when test="./*">

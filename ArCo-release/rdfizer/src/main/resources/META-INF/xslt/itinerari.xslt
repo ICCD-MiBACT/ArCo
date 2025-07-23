@@ -288,9 +288,6 @@
 						<rdfs:label>
 							<xsl:value-of select="$id" />
 						</rdfs:label>
-						<l0:name>
-							<xsl:value-of select="$id" />
-						</l0:name>
 						<l0:identifier>
 							<xsl:value-of select="$id" />
 						</l0:identifier>

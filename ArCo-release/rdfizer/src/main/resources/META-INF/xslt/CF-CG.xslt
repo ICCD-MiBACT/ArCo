@@ -849,16 +849,6 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:choose>
-						<xsl:when test="./*">
-							<xsl:value-of select="concat('Codice alternativo ', normalize-space(./ACCC), ' del contenitore fisico: ', $idCF)" />
-						</xsl:when>
-						<xsl:otherwise> 
-							<xsl:value-of select="concat('Codice alternativo ', normalize-space(.), ' del contenitore fisico: ', $idCF)" />
-						</xsl:otherwise>
-					</xsl:choose>
-				</l0:name>
 				<rdfs:label xml:lang="en">
 					<xsl:choose>
 						<xsl:when test="./*">
@@ -2402,16 +2392,6 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</rdfs:label>
-				<l0:name xml:lang="it">
-					<xsl:choose>
-						<xsl:when test="./*">
-							<xsl:value-of select="concat('Codice alternativo ', normalize-space(./ACCC), ' del contenitore giuridico: ', $idCG)" />
-						</xsl:when>
-						<xsl:otherwise> 
-							<xsl:value-of select="concat('Codice alternativo ', normalize-space(.), ' del contenitore giuridico: ', $idCG)" />
-						</xsl:otherwise>
-					</xsl:choose>
-				</l0:name>
 				<rdfs:label xml:lang="en">
 					<xsl:choose>
 						<xsl:when test="./*">
