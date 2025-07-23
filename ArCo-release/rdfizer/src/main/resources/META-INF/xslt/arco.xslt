@@ -3681,7 +3681,6 @@
 								<rdfs:label>
 									<xsl:value-of select="normalize-space(./MODI)" />
 								</rdfs:label>
-								<l0:name>
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./MODI)" />
 								</arco-core:identifier>
