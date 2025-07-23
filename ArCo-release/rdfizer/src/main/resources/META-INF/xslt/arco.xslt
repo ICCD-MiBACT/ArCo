@@ -10450,7 +10450,7 @@
 						<rdfs:label xml:lang="it">
 							<xsl:value-of select="concat('Fonti e documenti ', position(), ' del bene culturale: ', $itemURI)" />
 						</rdfs:label>
-						<l0:name xml:lang="en">
+						<l0:name xml:lang="it">
 							<xsl:value-of select="concat('Fonti e documenti ', position(), ' del bene culturale: ', $itemURI)" />
 						</l0:name>
 						<xsl:if test="./FNTI and (not(starts-with(lower-case(normalize-space(./FNTI)), 'nr')) and not(starts-with(lower-case(normalize-space(./FNTI)), 'n.r')))">
