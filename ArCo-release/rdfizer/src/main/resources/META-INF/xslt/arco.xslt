@@ -698,16 +698,6 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</rdfs:label>
-						<l0:name>
-							<xsl:choose>
-								<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
-									<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', record/metadata/schede/*/RV/RVE/RVEL)" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
-								</xsl:otherwise>
-							</xsl:choose>
-						</l0:name>
 						<arco-core:identifier>
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
@@ -759,9 +749,6 @@
 						<rdfs:label>
 							<xsl:value-of select="concat(record/metadata/schede/*/CD/CDR, '-', record/metadata/schede/*/CD/CDM)" />
 						</rdfs:label>
-						<l0:name>
-							<xsl:value-of select="concat(record/metadata/schede/*/CD/CDR, '-', record/metadata/schede/*/CD/CDM)" />
-						</l0:name>
 						<arco-core:identifier>
 							<xsl:value-of select="concat(record/metadata/schede/*/CD/CDR, '-', record/metadata/schede/*/CD/CDM)" />
 						</arco-core:identifier>
@@ -788,9 +775,6 @@
 					<rdfs:label>
 						<xsl:value-of select="$item" />
 					</rdfs:label>
-					<l0:name>
-						<xsl:value-of select="$item" />
-					</l0:name>
 					<arco-core:identifier>
 						<xsl:value-of select="$item" />
 					</arco-core:identifier>
@@ -2274,9 +2258,6 @@
 						<rdfs:label>
 							<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
 						</rdfs:label>
-						<l0:name>
-							<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
-						</l0:name>
 						<arco-core:identifier>
 							<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
 						</arco-core:identifier>
@@ -4071,9 +4052,6 @@
 								<rdfs:label>
 									<xsl:value-of select="normalize-space(./ROFX)" />
 								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(./ROFX)" />
-								</l0:name>
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./ROFX)" />
 								</arco-core:identifier>
