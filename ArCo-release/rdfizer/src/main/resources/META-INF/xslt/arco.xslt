@@ -29776,18 +29776,18 @@
 									<xsl:when test="record/metadata/schede/*/LC/LDC/LDCT and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCT)), 'n.r')))">
 										<xsl:choose>
 											<xsl:when test="record/metadata/schede/*/LC/LDC/LDCQ and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCQ)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCQ)), 'n.r')))">
-												<rdfs:label>
+												<rdfs:label xml:lang="it">
 													<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/LC/LDC/LDCT), ' ', normalize-space(record/metadata/schede/*/LC/LDC/LDCQ))" />
 												</rdfs:label>
-												<l0:name>
+												<l0:name xml:lang="it">
 													<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/LC/LDC/LDCT), ' ', normalize-space(record/metadata/schede/*/LC/LDC/LDCQ))" />
 												</l0:name>
 											</xsl:when>
 											<xsl:otherwise>
-												<rdfs:label>
+												<rdfs:label xml:lang="it">
 													<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/LDC/LDCT)" />
 												</rdfs:label>
-												<l0:name>
+												<l0:name xml:lang="it">
 													<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/LDC/LDCT)" />
 												</l0:name>
 											</xsl:otherwise>
@@ -30021,9 +30021,12 @@
 											<xsl:value-of select="'https://w3id.org/arco/ontology/location/SiteDefinition'" />
 										</xsl:attribute>
 									</rdf:type>
-									<rdfs:label>
+									<rdfs:label xml:lang="it">
 										<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/LDC/LDCT)" />
 									</rdfs:label>
+									<l0:name xml:lang="it">
+										<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/LDC/LDCT)" />
+									</l0:name>
 								</rdf:Description>
 							</xsl:if>
 							<!-- Site Specification as an individual -->
@@ -31854,9 +31857,12 @@
 											<xsl:value-of select="'https://w3id.org/arco/ontology/location/SiteDefinition'" />
 										</xsl:attribute>
 									</rdf:type>
-									<rdfs:label>
+									<rdfs:label xml:lang="it">
 										<xsl:value-of select="normalize-space(./PRC/PRCT)" />
 									</rdfs:label>
+									<l0:name xml:lang="it">
+										<xsl:value-of select="normalize-space(./PRC/PRCT)" />
+									</l0:name>
 								</rdf:Description>
 							</xsl:if>
 							<!-- Site Specification as an individual -->

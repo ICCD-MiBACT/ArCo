@@ -1255,9 +1255,12 @@
 						<xsl:value-of select="'https://w3id.org/arco/ontology/location/SiteDefinition'" />
 					</xsl:attribute>
 				</rdf:type>
-				<rdfs:label>
+				<rdfs:label xml:lang="it">
 					<xsl:value-of select="normalize-space(record/metadata/schede/*/CF/CFT)" />
 				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/CF/CFT)" />
+				</l0:name>
 			</rdf:Description>
 		</xsl:if>
 						<!-- Site Specification as an individual -->
