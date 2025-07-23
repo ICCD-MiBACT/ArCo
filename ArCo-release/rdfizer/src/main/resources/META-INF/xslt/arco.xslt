@@ -736,7 +736,7 @@
 								<xsl:value-of select="." />
 							</arco-catalogue:suffix>
 						</xsl:for-each>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -765,7 +765,7 @@
 						<arco-core:identifier>
 							<xsl:value-of select="concat(record/metadata/schede/*/CD/CDR, '-', record/metadata/schede/*/CD/CDM)" />
 						</arco-core:identifier>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -794,7 +794,7 @@
 					<arco-core:identifier>
 						<xsl:value-of select="$item" />
 					</arco-core:identifier>
-					<arco-core:current>
+					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
 				</rdf:Description>
@@ -824,7 +824,7 @@
 							<arco-core:identifier>
 								<xsl:value-of select="normalize-space(record/metadata/schede/*/AC/ACI)" />
 							</arco-core:identifier>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>
@@ -855,7 +855,7 @@
 						<arco-core:identifier>
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTI)" />
 						</arco-core:identifier>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -2285,7 +2285,7 @@
 								<xsl:value-of select="'https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75'" />
 							</xsl:attribute>
 						</arco-core:issuedBy>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -3185,7 +3185,7 @@
 										<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./APFE)))" />
 									</xsl:attribute>
 								</arco-dd:includesTechnicalCharacteristic>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 							</rdf:Description>
@@ -3333,7 +3333,7 @@
 							<l0:name xml:lang="en">
 								<xsl:value-of select="concat('Technical status of decorative apparatus ', position(), ' of cultural property ', $itemURI)" />
 							</l0:name>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 							<xsl:for-each select="./DECM">
@@ -3544,7 +3544,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./ACSC)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="false()" />
 								</arco-core:current>
 							</rdf:Description>
@@ -3690,7 +3690,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./MODI)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 							</rdf:Description>
@@ -3981,7 +3981,7 @@
 								<arco-cd:inventoryNumber>
 									<xsl:value-of select="normalize-space(./ROFI)" />
 								</arco-cd:inventoryNumber>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 							</rdf:Description>
@@ -4083,7 +4083,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./ROFX)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 							</rdf:Description>
@@ -4436,7 +4436,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./CRFH)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 							</rdf:Description>
@@ -11329,7 +11329,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./BIBH)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 							</rdf:Description>
@@ -11386,7 +11386,7 @@
 										</xsl:when>
 									</xsl:choose>
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 								<arco-core:issuedBy>
@@ -13319,7 +13319,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./RCGK)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 								<arco-core:issuedBy>
@@ -13353,7 +13353,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./NCUN)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 								<arco-core:issuedBy>
@@ -13387,7 +13387,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./NUCN)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 								<arco-core:issuedBy>
@@ -13421,7 +13421,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./RCGH)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 							</rdf:Description>
@@ -14080,7 +14080,7 @@
 								<l0:name>
 									<xsl:value-of select="normalize-space(./DSCV)" />
 								</l0:name>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 							</rdf:Description>
@@ -14133,7 +14133,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./DSCK)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 								<arco-core:issuedBy>
@@ -14167,7 +14167,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./NCUN)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 								<arco-core:issuedBy>
@@ -14201,7 +14201,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./NUCN)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 								<arco-core:issuedBy>
@@ -14235,7 +14235,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(./DSCH)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 							</rdf:Description>
@@ -14266,7 +14266,7 @@
 								<arco-cd:inventoryNumber>
 									<xsl:value-of select="normalize-space(./DSCI)" />
 								</arco-cd:inventoryNumber>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 							</rdf:Description>
@@ -15964,7 +15964,7 @@
 										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 									</xsl:attribute>
 								</rdf:type>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 								<rdfs:label xml:lang="it">
@@ -16471,7 +16471,7 @@
 											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 										</xsl:attribute>
 									</rdf:type>
-									<arco-core:current>
+									<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-core:current>
 									<rdfs:label xml:lang="it">
@@ -16662,7 +16662,7 @@
 										<xsl:value-of select="concat($NS, 'Measurement/Inscription/', (.))" />
 									</xsl:attribute>
 								</arco-dd:hasMeasurement>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 							</rdf:Description>
@@ -16807,7 +16807,7 @@
 											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 										</xsl:attribute>
 									</rdf:type>
-									<arco-core:current>
+									<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-core:current>
 									<rdfs:label xml:lang="it">
@@ -16822,7 +16822,7 @@
 									<l0:name xml:lang="en">
 										<xsl:value-of select="concat('Technical status of inscription ', $parentPosition, ' of cultural property ', $itemURI)" />
 									</l0:name>
-									<arco-core:current>
+									<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-core:current>
 									<xsl:for-each select="./ISRS">
@@ -19738,7 +19738,7 @@
 											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 										</xsl:attribute>
 									</rdf:type>
-									<arco-core:current>
+									<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-core:current>
 									<rdfs:label xml:lang="it">
@@ -19806,7 +19806,7 @@
 										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 									</xsl:attribute>
 								</rdf:type>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 								<rdfs:label xml:lang="it">
@@ -20037,7 +20037,7 @@
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 								</xsl:attribute>
 							</rdf:type>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 							<rdfs:label xml:lang="it">
@@ -20082,7 +20082,7 @@
 									</xsl:attribute>
 								</skos:relatedMatch>
 							</xsl:if>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>
@@ -20134,7 +20134,7 @@
 							<l0:name xml:lang="en">
 								<xsl:value-of select="concat('Technical status of cultural property ', $itemURI)" />
 							</l0:name>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 							<xsl:if test="./MTWS">
@@ -20189,7 +20189,7 @@
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 								</xsl:attribute>
 							</rdf:type>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 							<rdfs:label xml:lang="it">
@@ -20271,7 +20271,7 @@
 								<xsl:value-of select="record/metadata/schede/F/MT/FVC/FVCN" />
 							</arco-core:note>
 						</xsl:if>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -20308,7 +20308,7 @@
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 								</xsl:attribute>
 							</rdf:type>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 							<rdfs:label xml:lang="it">
@@ -20397,7 +20397,7 @@
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 								</xsl:attribute>
 							</rdf:type>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 							<rdfs:label xml:lang="it">
@@ -20471,7 +20471,7 @@
 									<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-resolution')" />
 								</xsl:attribute>
 							</arco-dd:hasMeasurement>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>
@@ -20540,7 +20540,7 @@
 								<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-pixel-dimension')" />
 							</xsl:attribute>
 						</arco-dd:hasMeasurement>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -20641,7 +20641,7 @@
 									select="'https://w3id.org/arco/ontology/denotative-description/TechnicalStatus'" />
 								</xsl:attribute>
 							</rdf:type>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 							<rdfs:label xml:lang="it">
@@ -22132,7 +22132,7 @@
 								</xsl:choose>
 							</xsl:if>
 							<xsl:if test="contains(normalize-space(lower-case(./OGDT)), 'attuale') or contains(normalize-space(lower-case(./OGDT)), 'corrente')">
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 							</xsl:if>
@@ -22190,7 +22190,7 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>
@@ -22214,7 +22214,7 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>
@@ -22236,7 +22236,7 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(string-join(./OGAD,', '))" />
 						</l0:name>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="false()" />
 						</arco-core:current>
 						<xsl:if test="./OGAG and (not(starts-with(lower-case(normalize-space(./OGAG)), 'nr')) and not(starts-with(lower-case(normalize-space(./OGAG)), 'n.r')))">
@@ -22357,7 +22357,7 @@
 								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/OriginalDesignation'" />
 							</xsl:attribute>
 						</arco-core:hasType>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -22384,7 +22384,7 @@
 								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/HistoricalDesignation'" />
 							</xsl:attribute>
 						</arco-core:hasType>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="false()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -22407,7 +22407,7 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTD)" />
 							</l0:name>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>
@@ -22436,7 +22436,7 @@
 									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/HistoricalDesignation'" />
 								</xsl:attribute>
 							</arco-core:hasType>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="false()" />
 							</arco-core:current>
 						</rdf:Description>
@@ -22464,7 +22464,7 @@
 								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/HistoricalDesignation'" />
 							</xsl:attribute>
 						</arco-core:hasType>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="false()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -22486,7 +22486,7 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(record/metadata/schede/BNB/OG/OGT/OGTE)" />
 						</l0:name>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -22507,7 +22507,7 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(record/metadata/schede/BNB/OG/OGT/OGTC)" />
 						</l0:name>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -24351,7 +24351,7 @@
 										<arco-core:identifier>
 											<xsl:value-of select="normalize-space(./AUTK)" />
 										</arco-core:identifier>
-										<arco-core:current>
+										<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 											<xsl:value-of select="true()" />
 										</arco-core:current>
 										<arco-core:issuedBy>
@@ -24385,7 +24385,7 @@
 										<arco-core:identifier>
 											<xsl:value-of select="normalize-space(./NCUN)" />
 										</arco-core:identifier>
-										<arco-core:current>
+										<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 											<xsl:value-of select="true()" />
 										</arco-core:current>
 										<arco-core:issuedBy>
@@ -24419,7 +24419,7 @@
 										<arco-core:identifier>
 											<xsl:value-of select="normalize-space(./NUCN)" />
 										</arco-core:identifier>
-										<arco-core:current>
+										<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 											<xsl:value-of select="true()" />
 										</arco-core:current>
 										<arco-core:issuedBy>
@@ -24916,7 +24916,7 @@
 										<arco-core:identifier>
 											<xsl:value-of select="normalize-space(./NCUN)" />
 										</arco-core:identifier>
-										<arco-core:current>
+										<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 											<xsl:value-of select="true()" />
 										</arco-core:current>
 										<arco-core:issuedBy>
@@ -24950,7 +24950,7 @@
 										<arco-core:identifier>
 											<xsl:value-of select="normalize-space(./NUCN)" />
 										</arco-core:identifier>
-										<arco-core:current>
+										<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 											<xsl:value-of select="true()" />
 										</arco-core:current>
 										<arco-core:issuedBy>
@@ -25024,7 +25024,7 @@
 												</xsl:otherwise>
 											</xsl:choose>
 										</arco-core:identifier>
-										<arco-core:current>
+										<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 											<xsl:value-of select="true()" />
 										</arco-core:current>
 									</rdf:Description>
@@ -26003,7 +26003,7 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</arco-core:identifier>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>
@@ -26033,7 +26033,7 @@
 							<l0:name xml:lang="en">
 								<xsl:value-of select="concat('Inventory situation of cultural property: ', $itemURI)" />
 							</l0:name>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 							<arco-core:hasType>
@@ -26264,7 +26264,7 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Inventory situation of cultural property: ', $itemURI)" />
 						</l0:name>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 						<arco-core:hasType>
@@ -26494,7 +26494,7 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Inventory situation of cultural property: ', $itemURI)" />
 						</l0:name>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 						<xsl:if test="./INPV and (not(starts-with(lower-case(normalize-space(./INPV)), 'nr')) and not(starts-with(lower-case(normalize-space(./INPV)), 'n.r')))">
@@ -27034,7 +27034,7 @@
 						<arco-core:informationSource>
 							<xsl:value-of select="'inventario patrimoniale'" />
 						</arco-core:informationSource>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -27096,7 +27096,7 @@
 						<arco-core:informationSource>
 							<xsl:value-of select="'inventario patrimoniale'" />
 						</arco-core:informationSource>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -27129,7 +27129,7 @@
 						<arco-core:informationSource>
 							<xsl:value-of select="'inventario patrimoniale'" />
 						</arco-core:informationSource>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -29885,7 +29885,7 @@
 									<arco-core:identifier>
 										<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/LDC/LDCK)" />
 									</arco-core:identifier>
-									<arco-core:current>
+									<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-core:current>
 								</rdf:Description>
@@ -30834,7 +30834,7 @@
 								<arco-core:identifier>
 									<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/LDC/LDCG)" />
 								</arco-core:identifier>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 							</rdf:Description>
@@ -31666,7 +31666,7 @@
 									<arco-core:identifier>
 										<xsl:value-of select="normalize-space(./PRC/PRCK)" />
 									</arco-core:identifier>
-									<arco-core:current>
+									<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-core:current>
 								</rdf:Description>
@@ -34310,7 +34310,7 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</l0:name>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 						<xsl:if test="./MISV and not($sheetType='VeAC')">
@@ -34841,7 +34841,7 @@
 								<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-area')" />
 							</xsl:attribute>
 						</arco-dd:hasMeasurement>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -34983,7 +34983,7 @@
 								</xsl:attribute>
 							</arco-dd:hasMeasurement>
 						</xsl:if>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -35340,7 +35340,7 @@
 							<arco-core:identifier>
 								<xsl:value-of select="normalize-space(./CMNN)" />
 							</arco-core:identifier>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>

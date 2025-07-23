@@ -1402,7 +1402,7 @@
 					<l0:identifier>
 						<xsl:value-of select="concat('aut-', lower-case(normalize-space(record/metadata/schede/*/CD/ESC)), '-', lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)))" />
 					</l0:identifier>
-					<arco-core:current>
+					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
 				</rdf:Description>
@@ -2138,7 +2138,7 @@
 						<arco-core:identifier>
 							<xsl:value-of select="concat('bib-', record/metadata/schede/BIB/CD/ESC,'-', normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH))" />
 						</arco-core:identifier>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
@@ -2167,7 +2167,7 @@
 						<arco-core:identifier>
 							<xsl:value-of select="normalize-space(record/metadata/schede/BIB/CD/NCU/NCUN)" />
 						</arco-core:identifier>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 						<arco-core:issuedBy>

@@ -1106,7 +1106,7 @@
 				<arco-core:identifier>
 					<xsl:value-of select="." />
 				</arco-core:identifier>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -1241,7 +1241,7 @@
 						</xsl:attribute>
 					</arco-dd:includesTechnicalCharacteristic>
 				</xsl:if>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -1369,7 +1369,7 @@
 						</xsl:attribute>
 					</arco-dd:includesTechnicalCharacteristic>
 				</xsl:if>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="false()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -2070,7 +2070,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 
@@ -2410,7 +2410,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of collecting location'" />
 			</l0:name>
-			 <arco-core:current>
+			 <arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<xsl:if test="./RMFV">
@@ -3175,7 +3175,7 @@
             <l0:name xml:lang="en">
             	 <xsl:value-of select="concat('Classification of cultural property ', $itemURI)" />
             </l0:name>
-            <arco-core:current>
+            <arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-core:hasTaxon>
@@ -3214,7 +3214,7 @@
             <l0:name xml:lang="en">
             	 <xsl:value-of select="concat('Identification of cultural property ', $itemURI)" />
             </l0:name>
-            <arco-core:current>
+            <arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-core:hasTaxon>
@@ -3265,7 +3265,7 @@
             <l0:name xml:lang="en">
             	 <xsl:value-of select="concat('Classification ', position(), ' of cultural property ', $itemURI)" />
             </l0:name>
-            <arco-core:current>
+            <arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<arco-core:hasTaxon>
@@ -3304,7 +3304,7 @@
             <l0:name xml:lang="en">
             	 <xsl:value-of select="concat('Identification ', position(), ' of cultural property ', $itemURI)" />
             </l0:name>
-            <arco-core:current>
+            <arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<arco-core:hasTaxon>
@@ -3361,7 +3361,7 @@
 					<xsl:value-of select="normalize-space(./SMEI)" />
 				</arco-spe:headingTranscript>
 			</xsl:if>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>		
 		</rdf:Description>
@@ -3403,7 +3403,7 @@
 					<xsl:value-of select="normalize-space(./RMEI)" />
 				</arco-spe:headingTranscript>
 			</xsl:if>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>		
 		</rdf:Description>
@@ -6274,7 +6274,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMT/SMTB">	
@@ -6442,7 +6442,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<xsl:if test="./RMT/RMTB">	
@@ -6955,7 +6955,7 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="concat('Measuerements of cell of mineral ', $itemURI)" />
 				</l0:name>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
     	        	<xsl:value-of select="true()" />
         	    </arco-core:current>
 				<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCA">
@@ -7310,7 +7310,7 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="concat('Technical status of unit cell ', position(), ' of cultural property ', $itemURI)" />
 				</l0:name>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
          	   		<xsl:value-of select="true()" />
             	</arco-core:current>
 				<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCS">
@@ -7341,7 +7341,7 @@
             			</xsl:attribute>
 					</arco-dd:includesTechnicalCharacteristic>
 				</xsl:if>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -7499,7 +7499,7 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="'Measuerements of cell of mineral ', $itemURI" />
 				</l0:name>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
     	        	<xsl:value-of select="false()" />
         	    </arco-core:current>
 				<xsl:if test="./RMC/RMCA">
@@ -7856,7 +7856,7 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="concat('Technical status of unit cell ', position(), ' of cultural property ', $itemURI)" />
 				</l0:name>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
          	   		<xsl:value-of select="false()" />
             	</arco-core:current>
 				<xsl:if test="./RMC/RMCS">
@@ -7887,7 +7887,7 @@
             			</xsl:attribute>
 					</arco-dd:includesTechnicalCharacteristic>
 				</xsl:if>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="false()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -8037,7 +8037,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of reflectance of mineral ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
        	    </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMM/SMMF">
@@ -8174,7 +8174,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of reflectance of mineral ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
        	    </arco-core:current>
 			<xsl:if test="./RMMF">
@@ -8313,7 +8313,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of refraction of mineral ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
     	       	<xsl:value-of select="true()" />
             </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOI">
@@ -8738,7 +8738,7 @@
 				<l0:name xml:lang="en">
 					<xsl:value-of select="'Measuerements of refraction of mineral ', $itemURI" />
 				</l0:name>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
     	        	<xsl:value-of select="false()" />
         	    </arco-core:current>
 				<xsl:if test="./RMO/RMOI">
@@ -9327,7 +9327,7 @@
 				<arco-core:identifier>
 					<xsl:value-of select="." />
 				</arco-core:identifier>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>

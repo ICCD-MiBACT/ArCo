@@ -823,7 +823,7 @@
 				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACE" />
 				</arco-core:identifier>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -854,7 +854,7 @@
 				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACI" />
 				</arco-core:identifier>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -885,7 +885,7 @@
 				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACO" />
 				</arco-core:identifier>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -916,7 +916,7 @@
 				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACJ" />
 				</arco-core:identifier>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -947,7 +947,7 @@
 				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACK" />
 				</arco-core:identifier>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -978,7 +978,7 @@
 				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNB/AC/ACN" />
 				</arco-core:identifier>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -1009,12 +1009,12 @@
             </l0:name>
 			<xsl:choose>
 				<xsl:when test="record/metadata/schede/BNB/RB/RBR/RBRN or record/metadata/schede/BNB/RB/RBN">  
-		            <arco-core:current>
+		            <arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
         		    	<xsl:value-of select="false()" />
             		</arco-core:current>
             	</xsl:when>
             	<xsl:otherwise>
-            		<arco-core:current>
+            		<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             		</arco-core:current>
             	</xsl:otherwise>
@@ -1107,12 +1107,12 @@
             </l0:name>
 			<xsl:choose>
 				<xsl:when test="record/metadata/schede/BNB/RB/RBR/RBRN or record/metadata/schede/BNB/RB/RBN">  
-		            <arco-core:current>
+		            <arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
         		    	<xsl:value-of select="false()" />
             		</arco-core:current>
             	</xsl:when>
             	<xsl:otherwise>
-            		<arco-core:current>
+            		<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             		</arco-core:current>
             	</xsl:otherwise>

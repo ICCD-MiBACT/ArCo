@@ -698,7 +698,7 @@
             <l0:name xml:lang="en">
             	 <xsl:value-of select="concat('Classification of cultural property ', $itemURI)" />
             </l0:name>
-            <arco-core:current>
+            <arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-core:hasTaxon>
@@ -730,7 +730,7 @@
             <l0:name xml:lang="en">
             	 <xsl:value-of select="concat('Classification ', position(), ' of cultural property ', $itemURI)" />
             </l0:name>
-            <arco-core:current>
+            <arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<arco-core:hasTaxon>
@@ -763,7 +763,7 @@
             <l0:name xml:lang="en">
             	 <xsl:value-of select="concat('Identification of cultural property ', $itemURI)" />
             </l0:name>
-            <arco-core:current>
+            <arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-core:hasTaxon>
@@ -793,7 +793,7 @@
             <l0:name xml:lang="en">
             	 <xsl:value-of select="concat('Classification of cultural property ', $itemURI)" />
             </l0:name>
-            <arco-core:current>
+            <arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-core:hasTaxon>
@@ -825,7 +825,7 @@
             <l0:name xml:lang="en">
             	 <xsl:value-of select="concat('Identification ', position(), ' of cultural property ', $itemURI)" />
             </l0:name>
-            <arco-core:current>
+            <arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<arco-core:hasTaxon>
@@ -855,7 +855,7 @@
             <l0:name xml:lang="en">
             	 <xsl:value-of select="concat('Classification ', position(), ' of cultural property ', $itemURI)" />
             </l0:name>
-            <arco-core:current>
+            <arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<arco-core:hasTaxon>
@@ -903,7 +903,7 @@
 					<xsl:value-of select="normalize-space(./SPEI)" />
 				</arco-spe:headingTranscript>
 			</xsl:if>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>		
 		</rdf:Description>
@@ -945,7 +945,7 @@
 					<xsl:value-of select="normalize-space(./RPEI)" />
 				</arco-spe:headingTranscript>
 			</xsl:if>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>		
 		</rdf:Description>
@@ -973,7 +973,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPD/SPDR">
@@ -1385,7 +1385,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPO/SPOB">
@@ -1494,7 +1494,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPC/SPCS">
@@ -1563,7 +1563,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPN/SPNP">
@@ -1632,7 +1632,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<xsl:if test="./RPOB">
@@ -1741,7 +1741,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<xsl:if test=".">
@@ -1811,7 +1811,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="'Measuerements of cultural property ', $itemURI" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<xsl:if test=".">
@@ -2460,7 +2460,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Texture of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPC/SPCT">
@@ -2574,7 +2574,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Texture of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<xsl:if test="./RPCT">
@@ -2689,7 +2689,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Olivine presence presence in cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-spe:involvesMineral>
@@ -2743,7 +2743,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Pyroxene presence presence in cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-spe:involvesMineral>
@@ -2797,7 +2797,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Plagioclase presence presence in cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-spe:involvesMineral>
@@ -2851,7 +2851,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Metal presence presence in cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-spe:involvesMineral>
@@ -2902,7 +2902,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Sulphides presence presence in cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-spe:involvesMineral>
@@ -2954,7 +2954,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Olivine presence presence in cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-spe:involvesMineral>
@@ -3008,7 +3008,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Pyroxene presence presence in cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-spe:involvesMineral>
@@ -3062,7 +3062,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Plagioclase presence presence in cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-spe:involvesMineral>
@@ -3116,7 +3116,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Metal presence presence in cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-spe:involvesMineral>
@@ -3167,7 +3167,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Sulphides presence presence in cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-spe:involvesMineral>
@@ -3221,7 +3221,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Chondrule presence presence in cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-spe:involvesChondrule>
@@ -3254,7 +3254,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-cd:ageValue>
@@ -3304,7 +3304,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-cd:ageValue>
@@ -3349,7 +3349,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-cd:ageValue>
@@ -3399,7 +3399,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<arco-cd:ageValue>
@@ -3450,7 +3450,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<arco-cd:ageValue>
@@ -3485,7 +3485,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<arco-cd:ageValue>
@@ -3520,7 +3520,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<arco-cd:ageValue>
@@ -3555,7 +3555,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Age of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<arco-cd:ageValue>
@@ -3592,7 +3592,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
             </arco-core:current>
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPT/SPTB">	
@@ -3708,7 +3708,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of 	select="concat('Typification of cultural property ', $itemURI)" />
 			</l0:name>
-			<arco-core:current>
+			<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="false()" />
             </arco-core:current>
 			<xsl:if test="./RPT/RPTB">	

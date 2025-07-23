@@ -651,7 +651,7 @@
 								<l0:name xml:lang="en">
 									<xsl:value-of select="concat('Technical status of decorative apparatus ', position(), ' of cultural property ', $itemURI)" />
 								</l0:name>
-								<arco-core:current>
+								<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-core:current>
 								<arco-dd:includesTechnicalCharacteristic>
@@ -812,7 +812,7 @@
 							<l0:name xml:lang="en">
 								<xsl:value-of select="concat('Technical status of decorative apparatus ', position(), ' of cultural property ', $itemURI)" />
 							</l0:name>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 							<arco-dd:includesTechnicalCharacteristic>
@@ -959,7 +959,7 @@
 							<l0:name xml:lang="en">
 								<xsl:value-of select="concat('Technical status of interior element ', position(), ' of cultural property ', $itemURI)" />
 							</l0:name>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 							<xsl:if test="./MTFF">

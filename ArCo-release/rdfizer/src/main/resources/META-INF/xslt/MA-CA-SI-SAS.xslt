@@ -707,7 +707,7 @@
 									</xsl:attribute>
 								</arco-dd:includesTechnicalCharacteristic>
 							</xsl:for-each>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>
@@ -946,7 +946,7 @@
 									</xsl:attribute>
 								</arco-dd:includesTechnicalCharacteristic>
 							</xsl:if>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>
@@ -1218,7 +1218,7 @@
 									<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SOLT)))" />
 								</xsl:attribute>
 							</arco-dd:includesTechnicalCharacteristic>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>
@@ -1356,7 +1356,7 @@
 									</xsl:attribute>
 								</arco-dd:includesTechnicalCharacteristic>
 							</xsl:if>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>
@@ -1459,7 +1459,7 @@
 									</xsl:attribute>
 								</arco-dd:includesTechnicalCharacteristic>
 							</xsl:if>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>
@@ -1556,7 +1556,7 @@
 									</xsl:attribute>
 								</arco-dd:includesTechnicalCharacteristic>
 							</xsl:for-each>
-							<arco-core:current>
+							<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:current>
 						</rdf:Description>

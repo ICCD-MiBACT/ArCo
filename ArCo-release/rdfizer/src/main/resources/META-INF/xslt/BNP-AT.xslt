@@ -395,7 +395,7 @@
 				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNP/AC/ACO" />
 				</arco-core:identifier>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -426,7 +426,7 @@
 				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNP/AC/ACK" />
 				</arco-core:identifier>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -1041,12 +1041,12 @@
 				</tiapit:atTime>
 			</xsl:if>
 			<xsl:if test="contains(normalize-space(lower-case(./LRT)), 'aggiornati')">
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 		            	<xsl:value-of select="true()" />
         		    </arco-core:current>	
 			</xsl:if>
 			<xsl:if test="contains(normalize-space(lower-case(./LRT)), 'storici')">
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 		            	<xsl:value-of select="false()" />
         		    </arco-core:current>	
 			</xsl:if>
@@ -1959,7 +1959,7 @@
 				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNZ/AC/ACO" />
 				</arco-core:identifier>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -1990,7 +1990,7 @@
 				<arco-core:identifier>
 					<xsl:value-of select="record/metadata/schede/BNZ/AC/ACK" />
 				</arco-core:identifier>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>

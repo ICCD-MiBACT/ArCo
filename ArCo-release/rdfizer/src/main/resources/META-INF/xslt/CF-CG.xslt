@@ -1988,7 +1988,7 @@
 				<l0:name>
 					<xsl:value-of select="normalize-space(record/metadata/schede/*/CF/CFN)" />
 				</l0:name>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>
@@ -2832,7 +2832,7 @@
 				<l0:name>
 					<xsl:value-of select="normalize-space(record/metadata/schede/*/CG/CGN)" />
 				</l0:name>
-				<arco-core:current>
+				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-core:current>
 			</rdf:Description>

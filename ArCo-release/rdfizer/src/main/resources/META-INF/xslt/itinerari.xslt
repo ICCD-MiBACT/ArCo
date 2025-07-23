@@ -294,7 +294,7 @@
 						<l0:identifier>
 							<xsl:value-of select="$id" />
 						</l0:identifier>
-						<arco-core:current>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
 					</rdf:Description>
