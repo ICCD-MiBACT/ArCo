@@ -773,7 +773,7 @@
 							<xsl:value-of select="concat('Design of cultural property ', $itemURI)" />
 						</rdfs:label>
 						<l0:name  xml:lang="en">
-							<xsl:value-of select="concat('Design  of cultural property ', $itemURI)" />
+							<xsl:value-of select="concat('Design of cultural property ', $itemURI)" />
 						</l0:name>
 						<rdfs:label  xml:lang="it">
 							<xsl:value-of select="concat('Design del bene culturale ', $itemURI)" />
