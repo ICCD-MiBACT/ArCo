@@ -1464,41 +1464,7 @@
             				</xsl:attribute>
 						</arco-location:hasBaseMap>
 					</xsl:if>
-					<xsl:if test="./GEL and not(./GEL='.' or ./GEL='-' or ./GEL='/') and (not(starts-with(lower-case(normalize-space(./GEL)), 'nr')) and not(starts-with(lower-case(normalize-space(./GEL)), 'n.r')))">
-						<arco-location:hasLocationType>
-							<xsl:attribute name="rdf:resource">
-								<xsl:choose>
-									<xsl:when test="lower-case(normalize-space(./GEL))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./GEL))='luogo di provenienza' or lower-case(normalize-space(./GEL))='sede di provenienza' or lower-case(normalize-space(./GEL))='provenienza' or lower-case(normalize-space(./GEL))='provenienza'">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/location/PreviousLocation'" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./GEL))='luogo di produzione/realizzazione' or lower-case(normalize-space(./GEL))='luogo di esecuzione/fabbricazione'">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/location/ProductionRealizationLocation'" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./GEL))='luogo di reperimento' or lower-case(normalize-space(./GEL))='luogo di reperimento' or lower-case(normalize-space(./GEL))='reperimento' or lower-case(normalize-space(./GEL))='reperimento'">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/location/FindingLocation'" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./GEL))='luogo di deposito' or lower-case(normalize-space(./GEL))='luogo di deposito' or lower-case(normalize-space(./GEL))='deposito temporaneo' or lower-case(normalize-space(./GEL))='deposito temporaneo' or lower-case(normalize-space(./GEL))='deposito' or lower-case(normalize-space(./GEL))='deposito'">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/location/StorageLocation'" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./GEL))='luogo di esposizione' or lower-case(normalize-space(./GEL))='luogo di esposizione' or lower-case(normalize-space(./GEL))='espositiva' or lower-case(normalize-space(./GEL))='espositiva' or lower-case(normalize-space(./GEL))='espositivo' or lower-case(normalize-space(./GEL))='espositivo' or lower-case(normalize-space(./GEL))='esposizione' or lower-case(normalize-space(./GEL))='esposizione'">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/location/ExhibitionLocation'" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./GEL))='luogo di rilevamento' or lower-case(normalize-space(./GEL))='luogo di rilevamento' or lower-case(normalize-space(./GEL))='di rilevamento' or lower-case(normalize-space(./GEL))='di rilevamento' or lower-case(normalize-space(./GEL))='localizzazione di rilevamento' or lower-case(normalize-space(./GEL))='localizzazione di rilevamento'">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/location/ObservationLocation'" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./GEL))='area rappresentata' or lower-case(normalize-space(./GEL))='area rappresentata'">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/location/SubjectLocation'" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./GEL))='localizzazione fisica'">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/location/CurrentPhysicalLocation'" />
-									</xsl:when>
-									<xsl:when test="./GEL">
-										<xsl:value-of select="concat($NS, 'LocationType/', arco-fn:urify(normalize-space(./GEL)))" />
-									</xsl:when>
-								</xsl:choose>
-							</xsl:attribute>
-						</arco-location:hasLocationType>
-					</xsl:if>
+				<!-- cmcs <arco-location:hasLocationType> was removed from here -->						
 				</rdf:Description>
 					<!-- referred location type for GE as an individual -->
 				<xsl:if test="./GEL and not(./GEL='.' or ./GEL='-' or ./GEL='/') and (not(starts-with(lower-case(normalize-space(./GEL)), 'nr')) and not(starts-with(lower-case(normalize-space(./GEL)), 'n.r')))">

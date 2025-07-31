@@ -931,44 +931,7 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Cadastral identity ', position(), ' of cultural property: ', $itemURI)" />
 						</l0:name>
-						<xsl:if test="./CTL and not(./CTL='.' or ./CTL='-' or ./CTL='/') and (not(starts-with(lower-case(normalize-space(./CTL)), 'nr')) and not(starts-with(lower-case(normalize-space(./CTL)), 'n.r')))">
-							<arco-location:hasLocationType>
-								<xsl:attribute name="rdf:resource">
-	            					<xsl:choose>
-	                					<xsl:when test="lower-case(normalize-space(./CTL))='localizzazione fisica'">
-	                    					<xsl:value-of select="'https://w3id.org/arco/ontology/location/CurrentPhysicalLocation'" />
-	                        			</xsl:when>
-	                            		<xsl:when test="contains(normalize-space(lower-case(./CTL)), 'successiva') or contains(normalize-space(lower-case(./CTL)), 'successivo') or contains(normalize-space(lower-case(./CTL)), 'provenienza') or contains(normalize-space(lower-case(./CTL)), 'provanienza') or contains(normalize-space(lower-case(./CTL)), 'proenienza') or contains(normalize-space(lower-case(./CTL)), 'provenianza') or contains(normalize-space(lower-case(./CTL)), 'proivenienza')">
-	                                		<xsl:value-of select="'https://w3id.org/arco/ontology/location/PreviousLocation'" />
-										</xsl:when>
-										<xsl:when test="lower-case(normalize-space(./CTL))='di archivio'">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/location/ArchivalLocation'" />
-	    								</xsl:when>
-	        							<xsl:when test="contains(normalize-space(lower-case(./CTL)), 'produzione') or contains(normalize-space(lower-case(./CTL)), 'fabbricazione') or contains(normalize-space(lower-case(./CTL)), 'esecuzione') ">
-	            							<xsl:value-of select="'https://w3id.org/arco/ontology/location/ProductionRealizationLocation'" />
-	                					</xsl:when>
-	                    				<xsl:when test="contains(normalize-space(lower-case(./CTL)), 'reperimento') or contains(normalize-space(lower-case(./CTL)), 'eperimento') or contains(normalize-space(lower-case(./CTL)), 'reprimento')">
-	                        				<xsl:value-of select="'https://w3id.org/arco/ontology/location/FindingLocation'" />
-	                            		</xsl:when>
-	                                	<xsl:when test="lower-case(normalize-space(./CTL))='luogo di deposito' or lower-case(normalize-space(./CTL))='deposito temporaneo' or lower-case(normalize-space(./CTL))='deposito'">
-	                                    	<xsl:value-of select="'https://w3id.org/arco/ontology/location/StorageLocation'" />
-										</xsl:when>
-										<xsl:when test="contains(normalize-space(lower-case(./CTL)), 'esposizione') or contains(normalize-space(lower-case(./CTL)), 'espositiva') or contains(normalize-space(lower-case(./CTL)), 'espositivo')">
-	    									<xsl:value-of select="'https://w3id.org/arco/ontology/location/ExhibitionLocation'" />
-	        							</xsl:when>
-	            						<xsl:when test="lower-case(normalize-space(./CTL))='luogo di rilevamento' or lower-case(normalize-space(./CTL))='di rilevamento' or lower-case(normalize-space(./CTL))='localizzazione di rilevamento'">
-	                						<xsl:value-of select="'https://w3id.org/arco/ontology/location/ObservationLocation'" />
-	                    				</xsl:when>
-	                        			<xsl:when test="lower-case(normalize-space(./CTL))='area rappresentata'">
-	                            			<xsl:value-of select="'https://w3id.org/arco/ontology/location/SubjectLocation'" />
-	                                	</xsl:when>
-	                                    <xsl:otherwise>
-	                                		<xsl:value-of select="'https://w3id.org/arco/ontology/location/UndefinedLocation'" />
-	                                	</xsl:otherwise>
-									</xsl:choose>
-	    						</xsl:attribute>
-							</arco-location:hasLocationType>
-						</xsl:if>
+						<!-- cmcs <arco-location:hasLocationType> was removed from here -->
 						<xsl:for-each select="./CTS/CTSC[
 						not(
 							starts-with(lower-case(normalize-space()), 'nr') or 
