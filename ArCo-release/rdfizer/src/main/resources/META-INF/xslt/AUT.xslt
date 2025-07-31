@@ -700,7 +700,9 @@
 								<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
 							</xsl:attribute>
 						</rdf:type>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-compilation-', arco-fn:arcofy(.))" />
@@ -824,7 +826,9 @@
 		                          <xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
 							</xsl:attribute>
 						</rdf:type>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
@@ -919,7 +923,9 @@
 								<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
 		                    </xsl:attribute>
 						</rdf:type>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />

@@ -1488,7 +1488,9 @@
 									</xsl:attribute>
 								</xsl:when>
 							</xsl:choose>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
@@ -1600,7 +1602,9 @@
 									<xsl:value-of select="concat($NS, 'AffixedElementType/', arco-fn:urify(normalize-space(./STMQ)))" />
 								</xsl:attribute>
 								<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType" />
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdfs:label>
 									<xsl:value-of select="normalize-space(./STMQ)" />
 								</rdfs:label>
@@ -1694,7 +1698,9 @@
 									</xsl:when>
 								</xsl:choose>
 							</rdf:type>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
@@ -1793,7 +1799,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-affixed-element-', $parentPosition)" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -1826,7 +1834,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-affixed-element-', $parentPosition)" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -1894,7 +1904,9 @@
 									</xsl:attribute>
 								</xsl:when>
 							</xsl:choose>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
@@ -2089,7 +2101,9 @@
 									<xsl:value-of select="concat($NS, 'AffixedElementType/', arco-fn:urify(normalize-space(./ISEE)))" />
 								</xsl:attribute>
 								<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType" />
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdfs:label>
 									<xsl:value-of select="normalize-space(./ISEE)" />
 								</rdfs:label>
@@ -2106,7 +2120,9 @@
 									<xsl:attribute name="rdf:about">
 										<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-affixed-element-', $parentPosition)" />
 									</xsl:attribute>
-									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 									<rdf:type>
 										<xsl:attribute name="rdf:resource">
 											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -2140,7 +2156,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'FunctionalPurpose/', arco-fn:urify(normalize-space()))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose" />
 								<rdfs:label>
 									<xsl:value-of select="normalize-space()" />
@@ -2162,7 +2180,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'Inscription/', $itemURI, '-inscription-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-inscription-', position())" />
@@ -2245,7 +2265,9 @@
 									<xsl:attribute name="rdf:about">
 										<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-inscription-', $parentPosition)" />
 									</xsl:attribute>
-									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 									<rdf:type>
 										<xsl:attribute name="rdf:resource">
 											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -2294,7 +2316,9 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'Counterstamp/', $itemURI, '-counterstamp-', position())" />
 						</xsl:attribute>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-counterstamp-', position())" />
@@ -2369,7 +2393,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'Dedication/', $itemURI, '-dedication-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-dedication-', position())" />
@@ -2782,7 +2808,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'CollectionMembership/', $itemURI, '-collection-membership-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'CollectionMembership/', $itemURI, position())" />
@@ -2899,7 +2927,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'PrintingPlatesSeries/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/SGT/SGTS)))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'PrintingPlatesSeries/', $ldcm, '-', $pvcc, '-', arco-fn:urify(normalize-space(record/metadata/schede/MI/OG/SGT/SGTS)))" />
@@ -2956,7 +2986,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space()))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
@@ -3086,7 +3118,9 @@
 									<xsl:attribute name="rdf:about">
 										<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./FTAX)))" />
 									</xsl:attribute>
-									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 									<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationCategory" />
 									<rdfs:label>
 										<xsl:value-of select="normalize-space(./FTAX)" />
@@ -3171,7 +3205,9 @@
 									<xsl:attribute name="rdf:about">
 										<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./DRAX)))" />
 									</xsl:attribute>
-									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 									<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationCategory" />
 									<rdfs:label>
 										<xsl:value-of select="normalize-space(./DRAX)" />
@@ -3256,7 +3292,9 @@
 									<xsl:attribute name="rdf:about">
 										<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./VDCX)))" />
 									</xsl:attribute>
-									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 									<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationCategory" />
 									<rdfs:label>
 										<xsl:value-of select="normalize-space(./VDCX)" />
@@ -3336,7 +3374,9 @@
 									<xsl:attribute name="rdf:about">
 										<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./REGX)))" />
 									</xsl:attribute>
-									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 									<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationCategory" />
 									<rdfs:label>
 										<xsl:value-of select="normalize-space(./REGX)" />
@@ -3458,7 +3498,9 @@
 									<xsl:attribute name="rdf:about">
 										<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./FNTX)))" />
 									</xsl:attribute>
-									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 									<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationCategory" />
 									<rdfs:label>
 										<xsl:value-of select="normalize-space(./FNTX)" />
@@ -3653,7 +3695,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, position(), '-copyright-holder')" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, position(), '-rights-holder')" />
@@ -3692,7 +3736,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'Role/CopyrightHolder')" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Role/RightsHolder')" />
@@ -3737,7 +3783,9 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Publication/', $itemURI, '-', position())" />
@@ -3864,7 +3912,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'AlternativeIdentifier/', $itemURI, '-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:choose>
@@ -3960,7 +4010,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-catalogue-record-responsible')" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
@@ -3993,7 +4045,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'Role/CatalogueRecordResponsible')" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
@@ -4116,7 +4170,9 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'CulturalPropertyInventoryCategory/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTS)))" />
 						</xsl:attribute>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'ReferenceCatalogue/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTS)))" />
@@ -4140,7 +4196,9 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'CulturalPropertyInventoryCategory/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGS)))" />
 						</xsl:attribute>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'ReferenceCatalogue/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGS)))" />
@@ -4201,7 +4259,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'PhotographicHeritageClassificationType/', arco-fn:urify(normalize-space(./CLFT)))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/arco/PhotographicHeritageClassificationType'" />
@@ -4223,7 +4283,9 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'NumismaticPropertyFunctionalCategory/', arco-fn:urify(normalize-space(record/metadata/schede/NU/OG/OGT/OGTH)))" />
 						</xsl:attribute>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="'https://w3id.org/arco/ontology/arco/NumismaticPropertyFunctionalCategory'" />
@@ -4242,7 +4304,9 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'NumismaticPropertyTypologicalCategory/', arco-fn:urify(normalize-space(record/metadata/schede/NU/OG/OGT/OGTT)))" />
 						</xsl:attribute>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Concept/', arco-fn:arcofy(record/metadata/schede/NU/OG/OGT/OGTT))" />
@@ -4297,7 +4361,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-inventory-identifier-responsible')" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<owl:sameAs>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-inventory-number-responsible')" />
@@ -4329,7 +4395,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'Role/InventoryIdentifierResponsible')" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<owl:sameAs>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Role/ResponsibleAgent')" />
@@ -4478,7 +4546,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -4511,7 +4581,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -4543,7 +4615,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -4581,7 +4655,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -4620,7 +4696,9 @@
 								<xsl:value-of
 							select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -4657,7 +4735,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -4696,7 +4776,9 @@
 								<xsl:value-of
 							select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -4735,7 +4817,9 @@
 								<xsl:value-of
 							select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -4772,7 +4856,9 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 						</xsl:attribute>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -5036,7 +5122,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:arcofy(.))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
@@ -5068,7 +5156,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:arcofy(.))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
@@ -5101,7 +5191,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
@@ -5132,7 +5224,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-compilation-', arco-fn:arcofy(.))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
@@ -5190,7 +5284,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'CulturalScopeAttribution/', $itemURI, '-cultural-scope-attribution-', position())" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<owl:sameAs>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Responsibility/', $itemURI, '-cultural-scope-', position())" />
@@ -5258,7 +5354,9 @@
 									<xsl:attribute name="rdf:about">
 										<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space()))" />
 									</xsl:attribute>
-									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 									<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/InterpretationCriterion" />
 									<rdfs:label>
 										<xsl:value-of select="normalize-space()" />
@@ -5277,7 +5375,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<owl:sameAs>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'PreferredResponsibility/', $itemURI, '-', position())" />
@@ -5362,7 +5462,9 @@
 									<xsl:attribute name="rdf:about">
 										<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space()))" />
 									</xsl:attribute>
-									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 									<rdf:type>
 										<xsl:attribute name="rdf:resource">
 											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
@@ -5386,7 +5488,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'PreferredResponsibility/', $itemURI, '-', position())" />
@@ -5459,7 +5563,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-photographer-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'PreferredResponsibility/', $itemURI, '-', position())" />
@@ -5545,7 +5651,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space()))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
@@ -5568,7 +5676,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'CulturalScopeAttribution/', $itemURI, '-cultural-scope-attribution-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Responsibility'" />
@@ -5627,7 +5737,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space()))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/InterpretationCriterion" />
 								<rdfs:label>
 									<xsl:value-of select="normalize-space()" />
@@ -5645,7 +5757,9 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'AlternativeAuthorshipAttribution/', $itemURI, '-', position())" />
 						</xsl:attribute>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AlternativeResponsibility/', $itemURI, '-', position())" />
@@ -5692,7 +5806,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'AlternativeAuthorshipAttribution/', $itemURI, '-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AlternativeResponsibility/', $itemURI, '-', position())" />
@@ -5739,7 +5855,9 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'SexInterpretation/', $itemURI)" />
 						</xsl:attribute>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS,'Sex/', $itemURI)" />
@@ -5778,7 +5896,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(record/metadata/schede/AT/DA/STS/STSC)))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
@@ -5799,7 +5919,9 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'AgeOfDeathInterpretation/', $itemURI)" />
 						</xsl:attribute>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Age/', $itemURI)" />
@@ -5838,7 +5960,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(record/metadata/schede/AT/DA/SEM/SEMC)))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
@@ -5862,7 +5986,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<owl:sameAs>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Concept/', arco-fn:arcofy(.))" />
@@ -5903,7 +6029,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Concept/', arco-fn:arcofy(.))" />
@@ -5938,7 +6066,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Concept/', arco-fn:arcofy(.))" />
@@ -5973,7 +6103,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Concept/', arco-fn:arcofy(.))" />
@@ -6128,7 +6260,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-decorative-', position())" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -6159,7 +6293,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'FunctionalPurpose/', arco-fn:urify(normalize-space(./APFF)))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose" />
 								<rdfs:label>
 									<xsl:value-of select="normalize-space(./APFF)" />
@@ -6210,7 +6346,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-decorative-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -6291,7 +6429,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'CulturalPropertyStage/', arco-fn:urify(normalize-space(./ROFF)))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CulturalPropertyStage'" />
@@ -6344,7 +6484,9 @@
 										<xsl:attribute name="rdf:about">
 											<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space()))" />
 										</xsl:attribute>
-										<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+										<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 										<rdf:type>
 											<xsl:attribute name="rdf:resource">
 												<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
@@ -6438,7 +6580,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-reuse-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/RelatedWorkSituation'" />
@@ -6477,7 +6621,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'Reuse/', $itemURI, '-reuse-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Reuse'" />
@@ -6533,7 +6679,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'DerivatedWorkType/', arco-fn:urify(normalize-space()))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DerivatedWorkType'" />
@@ -6602,7 +6750,9 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'Edition/', $itemURI, '-', arco-fn:urify(normalize-space(./EDIT)))" />
 						</xsl:attribute>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Edition/', $itemURI, '-', arco-fn:arcofy(normalize-space(./EDIT)))" />
@@ -6696,7 +6846,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/*/MT/FIL)))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Filigree/', arco-fn:urify(normalize-space(record/metadata/schede/*/MT/FIL)))" />
@@ -6727,7 +6879,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/F/MT/FVC/FVCF)))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Format/', arco-fn:urify(normalize-space(record/metadata/schede/F/MT/FVC/FVCF)))" />
@@ -6758,7 +6912,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/F/MT/FVC/FVCP)))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Software/', arco-fn:urify(normalize-space(record/metadata/schede/F/MT/FVC/FVCP)))" />
@@ -6789,7 +6945,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/F/MT/FVC/FVCU)))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-resolution')" />
@@ -6819,7 +6977,9 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 						</xsl:attribute>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-pixel-dimension')" />
@@ -6873,7 +7033,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'EligibleIntervention/', arco-fn:urify(normalize-space(./STUN)))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'InterventionType/', arco-fn:urify(normalize-space(./STUN)))" />
@@ -6931,7 +7093,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'Role/ReearchScientificResponsible')" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
@@ -6994,7 +7158,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', $itemURI, '-survey-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:choose>
@@ -7065,7 +7231,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-archaeological-field-survey-bibliography-', position())" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Bibliography'" />
@@ -7095,7 +7263,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'Role/ActivityResponsible')" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
@@ -7120,7 +7290,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'Role/AuthorityFileCataloguingAgency')" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
@@ -7232,7 +7404,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-archaeological-excavation-bibliography')" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Bibliography'" />
@@ -7261,7 +7435,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-archaeological-excavation-bibliography')" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Bibliography'" />
@@ -7373,7 +7549,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'SurveyImage/', $itemURI, '-', $survey-position)" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SurveyImage'" />
@@ -7591,7 +7769,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'Fruition/', $itemURI, '-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-clothing-use-', position())" />
@@ -7648,7 +7828,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./FRUF)))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
@@ -8134,7 +8316,9 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
@@ -8189,7 +8373,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space()))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
@@ -8201,7 +8387,9 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space()" />
 							</l0:name>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						</rdf:Description>
 					</xsl:for-each>
 				</xsl:for-each>
@@ -8232,7 +8420,9 @@
 										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
 									</xsl:attribute>
 								</rdf:type>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdfs:label>
 									<xsl:value-of select="normalize-space()" />
 								</rdfs:label>
@@ -8268,7 +8458,9 @@
 										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
 									</xsl:attribute>
 								</rdf:type>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdfs:label>
 									<xsl:value-of select="normalize-space(../SGTL)" />
 								</rdfs:label>
@@ -8299,7 +8491,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(../SGTL)))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
@@ -8399,7 +8593,9 @@
 										<l0:name>
 											<xsl:value-of select="normalize-space(./OGDT)" />
 										</l0:name>
-										<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+										<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 									</rdf:Description>
 								</xsl:when>
 							</xsl:choose>
@@ -8488,7 +8684,9 @@
 									<l0:name>
 										<xsl:value-of select="normalize-space(./OGAG)" />
 									</l0:name>
-									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								</rdf:Description>
 							</xsl:when>
 						</xsl:choose>
@@ -8632,7 +8830,9 @@
 						<xsl:value-of
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 					</xsl:attribute>
-					<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+					<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of
@@ -8730,7 +8930,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-issuance-', $issuancePosition, '-issuer-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
@@ -8768,7 +8970,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-issuance-', $issuancePosition, '-issuing-state-', position())" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/core/AgentRole'" />
@@ -9041,7 +9245,9 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
 							</xsl:attribute>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
@@ -9111,7 +9317,9 @@
 									<xsl:value-of
 									select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of
@@ -9183,7 +9391,9 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="$site" />
 						</xsl:attribute>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="$contenitoreFisico" />
@@ -9200,7 +9410,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUTN))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							</rdf:Description>
 						</xsl:if>
 						<xsl:if test="./AUTB and (not(starts-with(lower-case(normalize-space(./AUTB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTB)), 'n.r')))">
@@ -9208,7 +9420,9 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUTN))" />
 								</xsl:attribute>
-								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 							</rdf:Description>
 						</xsl:if>
 					</xsl:if>
@@ -9233,7 +9447,9 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:attribute>
-					<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+					<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 				</rdf:Description>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/harvesting/idContenitoreGiuridico">
@@ -9269,7 +9485,9 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:attribute>
-						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+  <xsl:value-of select="true()" />
+</owl:deprecated>
 					</rdf:Description>
 				</xsl:if>
 			</xsl:if>
