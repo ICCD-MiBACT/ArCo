@@ -2405,24 +2405,19 @@
 								<arco-arco:hasMibacScopeOfProtection>
 									<xsl:attribute name="rdf:resource">
 										<xsl:choose>
-											<xsl:when test="lower-case(normalize-space(.))='archeologico'">
-												<xsl:value-of select="'https://w3id.org/arco/ontology/arco/ArchaeologicalScope'" />
+											<xsl:when test="contains(lower-case(normalize-space(.)), 'archeologic')">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/arco/ArchaeologicalScope'" />
 											</xsl:when>
-											<xsl:when test="lower-case(normalize-space(.))='architettonico e paesaggistico'">
+											<xsl:when test="contains(lower-case(normalize-space(.)), 'architettonic') or contains(lower-case(normalize-space(.)), 'paesaggistic')">
 												<xsl:value-of select="'https://w3id.org/arco/ontology/arco/ArchitecturalLandscapeScope'" />
 											</xsl:when>
-											<xsl:when test="lower-case(normalize-space(.))='etnoantropologico'">
+											<xsl:when test="contains(lower-case(normalize-space(.)), 'etnoantropologic') or contains(lower-case(normalize-space(.)), 'demoetnoantropologic')">
 												<xsl:value-of select="'https://w3id.org/arco/ontology/arco/EthnoAnthropologicalScope'" />
 											</xsl:when>
-											<xsl:when test="lower-case(normalize-space(.))='demoetnoantropologico'">
-												<xsl:value-of select="'https://w3id.org/arco/ontology/arco/EthnoAnthropologicalScope'" />
-											</xsl:when>
-											<xsl:when test="lower-case(normalize-space(.))='storico artistico'">
+											<xsl:when test="contains(lower-case(normalize-space(.)), 'storic') and contains(lower-case(normalize-space(.)), 'artistic')">
 												<xsl:value-of select="'https://w3id.org/arco/ontology/arco/HistoricalArtisticScope'" />
 											</xsl:when>
-											<xsl:when test="lower-case(normalize-space(.))='storico e artistico'">
-												<xsl:value-of select="'https://w3id.org/arco/ontology/arco/HistoricalArtisticScope'" />
-											</xsl:when>
+
 										</xsl:choose>
 									</xsl:attribute>
 								</arco-arco:hasMibacScopeOfProtection>
