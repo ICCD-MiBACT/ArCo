@@ -195,7 +195,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/AMB))='archeologico'">
 									<xsl:value-of select="concat($NS, 'ArchaeologicalProperty/', $itemURI)" />
 								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/AMB))='demoetnoantopologico'">
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/AMB))='demoetnoantropologico'">
 									<xsl:value-of select="concat($NS, 'DemoEthnoAnthropologicalHeritage/', $itemURI)" />
 								</xsl:when>
 							</xsl:choose>

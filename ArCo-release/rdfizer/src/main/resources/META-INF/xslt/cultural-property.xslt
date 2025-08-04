@@ -191,7 +191,7 @@
 								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/AMB))='archeologico'">
 									<xsl:value-of select="concat($NS, 'ArchaeologicalProperty/', $itemURI)" />
 								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/AMB))='demoetnoantopologico'">
+								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/AMB))='demoetnoantropologico'">
 									<xsl:value-of select="concat($NS, 'DemoEthnoAnthropologicalHeritage/', $itemURI)" />
 								</xsl:when>
 							</xsl:choose>
@@ -2417,7 +2417,6 @@
 											<xsl:when test="contains(lower-case(normalize-space(.)), 'storic') and contains(lower-case(normalize-space(.)), 'artistic')">
 												<xsl:value-of select="'https://w3id.org/arco/ontology/arco/HistoricalArtisticScope'" />
 											</xsl:when>
-
 										</xsl:choose>
 									</xsl:attribute>
 								</arco-arco:hasMibacScopeOfProtection>
