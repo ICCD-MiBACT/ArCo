@@ -189,13 +189,13 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 						</xsl:when>
 						<xsl:when test="$sheetType='MINV'">
 							<xsl:choose>
-								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/AMB))='storico artistico'">
+								<xsl:when test="contains(lower-case(normalize-space(record/metadata/schede/*/OG/AMB)), 'storic') and contains(lower-case(normalize-space(record/metadata/schede/*/OG/AMB)), 'artistic')">
 									<xsl:value-of select="concat($NS, 'HistoricOrArtisticProperty/', $itemURI)" />
 								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/AMB))='archeologico'">
+								<xsl:when test="contains(lower-case(normalize-space(record/metadata/schede/*/OG/AMB)), 'archeologic')">
 									<xsl:value-of select="concat($NS, 'ArchaeologicalProperty/', $itemURI)" />
 								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/OG/AMB))='demoetnoantropologico'">
+								<xsl:when test="contains(lower-case(normalize-space(record/metadata/schede/*/OG/AMB)), 'etno') or contains(lower-case(normalize-space(record/metadata/schede/*/OG/AMB)), 'demo')">
 									<xsl:value-of select="concat($NS, 'DemoEthnoAnthropologicalHeritage/', $itemURI)" />
 								</xsl:when>
 							</xsl:choose>
