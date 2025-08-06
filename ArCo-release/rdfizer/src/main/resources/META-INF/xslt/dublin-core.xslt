@@ -997,39 +997,40 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 							</xsl:attribute>
 						</dc:format>
 					</xsl:for-each>
-					<!-- pico:materialAndTechnique -->
+					<!-- pico:materialAndTechnique 
 					<xsl:if test="not(record/metadata/schede/*/MT/MTC/*)">
 						<xsl:for-each select="record/metadata/schede/*/MT/MTC[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
-							<!-- allow multiple values es: ICCD14711365 -->
-							<!-- <pico:materialAndTechnique>
+							allow multiple values es: ICCD14711365 
+							<pico:materialAndTechnique>
 								<xsl:value-of select="." />
-							</pico:materialAndTechnique> -->
+							</pico:materialAndTechnique> 
 						</xsl:for-each>
 					</xsl:if>
 					<xsl:for-each select="record/metadata/schede/OAC/MT/MTC/MTCI[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
-						<!-- allow multiple values es: ICCD11324966 -->
-						<!-- <pico:materialAndTechnique>
+						 allow multiple values es: ICCD11324966
+						 <pico:materialAndTechnique>
 							<xsl:value-of select="." />
-						</pico:materialAndTechnique> -->
+						</pico:materialAndTechnique> 
 					</xsl:for-each>
 					<xsl:for-each select="record/metadata/schede/*/MT/MTC/MTCM[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r')) and not(../MTCP[.='intero bene' or .='integrale' or .='tutta' or .='totale' or starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r') or starts-with(lower-case(normalize-space()), 'intero') or starts-with(lower-case(normalize-space()), 'intera') or starts-with(lower-case(normalize-space()), 'esemplar')])]">
-						<!-- allow multiple values es: ICCD13689315 -->
-						<!-- <pico:materialAndTechnique>
+						 allow multiple values es: ICCD13689315
+						 <pico:materialAndTechnique>
 							<xsl:value-of select="." />
-						</pico:materialAndTechnique> -->
+						</pico:materialAndTechnique> 
 					</xsl:for-each>
 					<xsl:for-each select="record/metadata/schede/VeAC/MT/MTC/MTCF[not(starts-with(lower-case(normalize-space()), 'nr'))]">
-						<!-- allow multiple values es: ICCD11268160 -->
-						<!-- <pico:materialAndTechnique>
+						allow multiple values es: ICCD11268160 
+						 <pico:materialAndTechnique>
 							<xsl:value-of select="." />
-						</pico:materialAndTechnique> -->
+						</pico:materialAndTechnique> 
 					</xsl:for-each>
 					<xsl:for-each select="record/metadata/schede/*/MT/MTC/MTCT[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
-						<!-- allow multiple values es: ICCD13689315 -->
-						<!-- <pico:materialAndTechnique>
+					allow multiple values es: ICCD13689315 
+						<pico:materialAndTechnique>
 							<xsl:value-of select="." />
-						</pico:materialAndTechnique> -->
-					</xsl:for-each>
+						</pico:materialAndTechnique> 
+					</xsl:for-each> 
+					-->
 					<!-- subject con Pico -->
 					<xsl:if test="not($sheetType='MODI' or $sheetType='RCG'  or $sheetType='DSC'  or $sheetType='SCAN')">
 						<xsl:if test="$sheetType='RA'">
@@ -1123,11 +1124,11 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 					<!-- pico:preview
 	<xsl:variable name="image-link" select="arco-fn:find-image($item)" />
 	<xsl:if test="$image-link != ''">
-		<!-- <pico:preview>
+		<pico:preview>
         	<xsl:attribute name="rdf:resource">
             	<xsl:value-of	select="$image-link" />
 			</xsl:attribute>
-		</pico:preview> -->
+		</pico:preview> 
 	</xsl:if>
 							
 					
