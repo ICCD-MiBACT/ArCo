@@ -288,7 +288,7 @@
 								</xsl:choose>
 							</xsl:attribute>
 						</dc:creator>
-						<pico:author>
+						<!-- <pico:author>
 							<xsl:attribute name="rdf:resource">
 								<xsl:choose>
 									<xsl:when test="./AUTS">
@@ -302,7 +302,7 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:attribute>
-						</pico:author>
+						</pico:author> -->
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>

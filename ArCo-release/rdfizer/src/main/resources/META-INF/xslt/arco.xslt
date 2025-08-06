@@ -15222,11 +15222,11 @@
 												<xsl:value-of select="." />
 											</xsl:attribute>
 										</arco-lite:depiction>
-										<pico:preview>
+										<!-- <pico:preview>
 											<xsl:attribute name="rdf:resource">
 												<xsl:value-of select="." />
 											</xsl:attribute>
-										</pico:preview>
+										</pico:preview> -->
 									</xsl:for-each>
 								</xsl:for-each>
 							</xsl:if>
@@ -16960,11 +16960,11 @@
 										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(normalize-space(.)))" />
 									</xsl:attribute>
 								</dc:creator>
-								<pico:author>
+								<!-- <pico:author>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(normalize-space(.)))" />
 									</xsl:attribute>
-								</pico:author>
+								</pico:author> -->
 							</xsl:for-each>
 							<xsl:for-each select="./DDCM[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 								<arco-lite:hasDedicatee>

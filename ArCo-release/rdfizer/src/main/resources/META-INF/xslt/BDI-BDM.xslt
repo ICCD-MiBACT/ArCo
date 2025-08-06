@@ -20143,11 +20143,11 @@
 					                <xsl:value-of select="." />
 					            </xsl:attribute>
 				    	    </foaf:depiction>
-				        	<pico:preview>
+				        	<!-- <pico:preview>
 				            	<xsl:attribute name="rdf:resource">
 				                	<xsl:value-of select="." />
 					            </xsl:attribute>
-					        </pico:preview>
+					        </pico:preview> -->
 					    </xsl:for-each>
 					</xsl:for-each>
 				</xsl:if>

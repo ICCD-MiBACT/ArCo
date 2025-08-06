@@ -692,11 +692,11 @@
 										<xsl:value-of select="." />
 									</xsl:attribute>
 								</arco-lite:depiction>
-								<pico:preview>
+								<!-- <pico:preview>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="." />
 									</xsl:attribute>
-								</pico:preview>
+								</pico:preview> -->
 							</xsl:for-each>
 						</xsl:for-each>
 						<xsl:for-each select="record/metadata/schede/*/DO/DCM">
@@ -716,11 +716,11 @@
 												<xsl:value-of select="." />
 											</xsl:attribute>
 										</foaf:depiction>
-										<pico:preview>
+										<!-- <pico:preview>
 											<xsl:attribute name="rdf:resource">
 												<xsl:value-of select="." />
 											</xsl:attribute>
-										</pico:preview>
+										</pico:preview> -->
 									</xsl:for-each>
 								</xsl:for-each>
 							</xsl:if>
@@ -1353,7 +1353,7 @@
 													<xsl:value-of select="$author" />
 												</xsl:attribute>
 											</dc:creator>
-											<pico:author>
+											<!-- <pico:author>
 												<xsl:attribute name="rdf:resource">
 													<xsl:variable name="author">
 														<xsl:choose>
@@ -1373,7 +1373,7 @@
 													</xsl:variable>
 													<xsl:value-of select="$author" />
 												</xsl:attribute>
-											</pico:author>
+											</pico:author> -->
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:if test="./AUTW and not(lower-case(normalize-space(./AUTW))='integrale') and not(lower-case(normalize-space(./AUTW))='tutta') and not(lower-case(normalize-space(./AUTW))='totale') and (not(starts-with(lower-case(normalize-space(./AUTW)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'intero')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'intera')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'esemplar')))">
@@ -1411,11 +1411,11 @@
 										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AAUN))" />
 									</xsl:attribute>
 								</dc:creator>
-								<pico:author>
+								<!-- <pico:author>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AAUN))" />
 									</xsl:attribute>
-								</pico:author>
+								</pico:author> -->
 							</xsl:if>
 						</xsl:for-each>
 						<!--  authorship attribution AU/AUF (F version 2.00, 3.00 and BDM) -->
@@ -1513,7 +1513,7 @@
 										</xsl:choose>
 									</xsl:attribute>
 								</dc:creator>
-								<pico:author>
+								<!-- <pico:author>
 									<xsl:attribute name="rdf:resource">
 										<xsl:variable name="author">
 											<xsl:choose>
@@ -1540,7 +1540,7 @@
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:attribute>
-								</pico:author>
+								</pico:author> -->
 							</xsl:if>
 						</xsl:for-each>
 						<!-- authorship attribution  AU/AFB (F version 2.00, 3.00) -->
