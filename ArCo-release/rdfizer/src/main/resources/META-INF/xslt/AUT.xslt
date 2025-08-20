@@ -1904,7 +1904,7 @@
 					<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBT">
 						<arco-cd:hasTitle>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Title/', $idEdition, arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBT)))" />
+								<xsl:value-of select="concat($NS, 'Title/', arco-fn:arcofy(concat($idEdition, normalize-space(record/metadata/schede/BIB/BI/BIB/BIBT))))" />
 							</xsl:attribute>
 						</arco-cd:hasTitle>
 					</xsl:if>
@@ -1937,10 +1937,10 @@
 							<xsl:attribute name="rdf:resource">
 								<xsl:choose>
 									<xsl:when test="record/metadata/schede/BIB/BI/BIB/BIBV">
-										<xsl:value-of select="concat($NS, 'Title/', $idEdition, arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG)), '-', arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBV)))" />
+										<xsl:value-of select="concat($NS, 'Title/', arco-fn:arcofy(concat($idEdition, normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG), normalize-space(record/metadata/schede/BIB/BI/BIB/BIBV))))" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="concat($NS, 'Title/', $idEdition, arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG)))" />
+										<xsl:value-of select="concat($NS, 'Title/', arco-fn:arcofy(concat($idEdition, normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG))))" />
 									</xsl:otherwise>
 								</xsl:choose>				
 							</xsl:attribute>
@@ -2014,10 +2014,10 @@
 							<xsl:attribute name="rdf:resource">
 								<xsl:choose>
 									<xsl:when test="record/metadata/schede/BIB/BI/BIB/BIBV">
-										<xsl:value-of select="concat($NS, 'Title/', $idEdition, arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG)), '-', arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBV)))" />
+										<xsl:value-of select="concat($NS, 'Title/', arco-fn:arcofy(concat($idEdition, normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG), normalize-space(record/metadata/schede/BIB/BI/BIB/BIBV))))" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="concat($NS, 'Title/', $idEdition, arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG)))" />
+										<xsl:value-of select="concat($NS, 'Title/', arco-fn:arcofy(concat($idEdition, normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG))))" />
 									</xsl:otherwise>
 								</xsl:choose>				
 							</xsl:attribute>
@@ -2382,7 +2382,7 @@
 				<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBT">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'Title/', $idEdition, arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBT)))" />
+							<xsl:value-of select="concat($NS, 'Title/', arco-fn:arcofy(concat($idEdition, normalize-space(record/metadata/schede/BIB/BI/BIB/BIBT))))" />
 					        </xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -2402,10 +2402,10 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/BIB/BI/BIB/BIBV">
-									<xsl:value-of select="concat($NS, 'Title/', $idEdition, arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG)), '-', arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBV)))" />
+									<xsl:value-of select="concat($NS, 'Title/', arco-fn:arcofy(concat($idEdition, normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG), normalize-space(record/metadata/schede/BIB/BI/BIB/BIBV))))" />
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="concat($NS, 'Title/', $idEdition, arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG)))" />
+									<xsl:value-of select="concat($NS, 'Title/', arco-fn:arcofy(concat($idEdition, normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG))))" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:attribute>
@@ -2495,10 +2495,10 @@
 							<xsl:attribute name="rdf:resource">
 								<xsl:choose>
 									<xsl:when test="record/metadata/schede/BIB/BI/BIB/BIBV">
-										<xsl:value-of select="concat($NS, 'Title/', $idEdition, arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG)), '-', arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBV)))" />
+										<xsl:value-of select="concat($NS, 'Title/', arco-fn:arcofy(concat($idEdition, normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG), normalize-space(record/metadata/schede/BIB/BI/BIB/BIBV))))" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="concat($NS, 'Title/', $idEdition, arco-fn:urify(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG)))" />
+										<xsl:value-of select="concat($NS, 'Title/', arco-fn:arcofy(concat($idEdition, normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG))))" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:attribute>
