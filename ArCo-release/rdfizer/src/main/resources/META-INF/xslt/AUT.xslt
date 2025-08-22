@@ -1907,6 +1907,9 @@
 								<xsl:value-of select="concat($NS, 'Title/', arco-fn:arcofy(concat($idEdition, normalize-space(record/metadata/schede/BIB/BI/BIB/BIBT))))" />
 							</xsl:attribute>
 						</arco-cd:hasTitle>
+						<arco-lite:title>
+							<xsl:value-of select="normalize-space(record/metadata/schede/BIB/BI/BIB/BIBT)" />
+						</arco-lite:title>
 					</xsl:if>
 					<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBG and not(record/metadata/schede/BIB/BI/BIB/BIBT)">
 						<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBC">
@@ -1944,7 +1947,17 @@
 									</xsl:otherwise>
 								</xsl:choose>				
 							</xsl:attribute>
-						</arco-cd:hasTitle>					
+						</arco-cd:hasTitle>	
+						<arco-lite:title>
+							<xsl:choose>
+								<xsl:when test="record/metadata/schede/BIB/BI/BIB/BIBV">
+									<xsl:value-of select="concat(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG), '. ', (normalize-space(record/metadata/schede/BIB/BI/BIB/BIBV)))" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG)" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</arco-lite:title>			
 						<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBL">
 							<arco-cd:editionLocation>
 								<xsl:value-of select="record/metadata/schede/BIB/BI/BIB/BIBL" />
@@ -2021,7 +2034,17 @@
 									</xsl:otherwise>
 								</xsl:choose>				
 							</xsl:attribute>
-						</arco-cd:hasTitle>					
+						</arco-cd:hasTitle>
+						<arco-lite:title>
+							<xsl:choose>
+								<xsl:when test="record/metadata/schede/BIB/BI/BIB/BIBV">
+									<xsl:value-of select="concat(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG), '. ', (normalize-space(record/metadata/schede/BIB/BI/BIB/BIBV)))" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG)" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</arco-lite:title>			
 						<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBL">
 							<arco-cd:editionLocation>
 								<xsl:value-of select="record/metadata/schede/BIB/BI/BIB/BIBL" />
@@ -2502,7 +2525,17 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:attribute>
-						</arco-cd:hasTitle>					
+						</arco-cd:hasTitle>
+						<arco-lite:title>
+							<xsl:choose>
+								<xsl:when test="record/metadata/schede/BIB/BI/BIB/BIBV">
+									<xsl:value-of select="concat(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG), '. ', (normalize-space(record/metadata/schede/BIB/BI/BIB/BIBV)))" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="normalize-space(record/metadata/schede/BIB/BI/BIB/BIBG)" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</arco-lite:title>				
 						<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBL">
 							<arco-cd:editionLocation>
 								<xsl:value-of select="record/metadata/schede/BIB/BI/BIB/BIBL" />
