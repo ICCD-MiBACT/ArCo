@@ -234,9 +234,9 @@
 		</xsl:for-each>
 	</xsl:variable>
 	<xsl:variable name="acm">
-		<xsl:if test="record/metadata/schede/*/AC/ACM">
+		<xsl:for-each select="record/metadata/schede/*/AC/ACM">
 			<xsl:value-of select="arco-fn:urify(.)" />
-		</xsl:if>
+		</xsl:for-each>
 	</xsl:variable>
 	<xsl:variable name="ldcm" select="arco-fn:urify(record/metadata/schede/*/LC/LDC/LDCM)"></xsl:variable>
 	<xsl:variable name="pvcc" select="arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC)"></xsl:variable>
@@ -9278,16 +9278,16 @@
 				<xsl:otherwise>
 					<xsl:for-each select="record/metadata/schede/*/AC/ACO">
 					<rdfs:label xml:lang="en">
-						<xsl:value-of select="concat('Specimen collection ', .)" />
+						<xsl:value-of select="concat('Specimen collection: ', .)" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
-						<xsl:value-of select="concat('Specimen collection ', .)" />
+						<xsl:value-of select="concat('Specimen collection: ', .)" />
 					</l0:name>
 					<rdfs:label xml:lang="it">
-						<xsl:value-of select="concat('Collezione di beni naturalistici ', .)" />
+						<xsl:value-of select="concat('Collezione di beni naturalistici: ', .)" />
 					</rdfs:label>
 					<l0:name xml:lang="it">
-						<xsl:value-of select="concat('Collezione di beni naturalistici ', .)" />
+						<xsl:value-of select="concat('Collezione di beni naturalistici: ', .)" />
 					</l0:name>
 					</xsl:for-each>
 				</xsl:otherwise>
