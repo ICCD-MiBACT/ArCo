@@ -3598,7 +3598,7 @@
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPT/SPTB">	
 				<arco-cd:hasBibliographicSource>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPT/SPTB)))" />
+						<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(record/metadata/schede/BNPL/SP/SPT/SPTB)))" />
 	                </xsl:attribute>
 				</arco-cd:hasBibliographicSource>
 				<arco-lite:bibliographicReference>
@@ -3630,7 +3630,7 @@
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPT/SPTB">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-            		<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPT/SPTB)))" />
+            		<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(record/metadata/schede/BNPL/SP/SPT/SPTB)))" />
             	</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -3714,7 +3714,7 @@
 			<xsl:if test="./RPT/RPTB">	
 				<arco-cd:hasBibliographicSource>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./RPT/RPTB)))" />
+						<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./RPT/RPTB)))" />
 	               	</xsl:attribute>
 				</arco-cd:hasBibliographicSource>
 				<arco-lite:bibliographicReference>
@@ -3755,7 +3755,7 @@
 		<xsl:if test="./RPT/RPTB">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-            		<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./RPT/RPTB)))" />
+            		<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./RPT/RPTB)))" />
             	</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">

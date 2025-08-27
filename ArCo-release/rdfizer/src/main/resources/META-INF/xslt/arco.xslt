@@ -4899,7 +4899,7 @@
 					<xsl:variable name="adla">
 						<xsl:choose>
 							<xsl:when test="./ADLA">
-								<xsl:value-of select="arco-fn:arcofy(./ADLA)" />
+								<xsl:value-of select="arco-fn:urify(normalize-space(./ADLA))" />
 							</xsl:when>
 							<xsl:otherwise></xsl:otherwise>
 						</xsl:choose>
@@ -4907,7 +4907,7 @@
 					<xsl:variable name="adlt">
 						<xsl:choose>
 							<xsl:when test="./ADLT">
-								<xsl:value-of select="arco-fn:arcofy(./ADLT)" />
+								<xsl:value-of select="arco-fn:urify(normalize-space(./ADLT))" />
 							</xsl:when>
 							<xsl:otherwise></xsl:otherwise>
 						</xsl:choose>
@@ -4915,7 +4915,7 @@
 					<xsl:variable name="adle">
 						<xsl:choose>
 							<xsl:when test="./ADLE">
-								<xsl:value-of select="arco-fn:arcofy(./ADLE)" />
+								<xsl:value-of select="arco-fn:urify(normalize-space(./ADLE))" />
 							</xsl:when>
 							<xsl:otherwise></xsl:otherwise>
 						</xsl:choose>
@@ -4943,7 +4943,7 @@
 						</l0:name>
 						<arco-cd:involvesRelatedWork>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Publication/', $adla, $adlt, $adle)" />
+								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(concat($adla, $adlt, $adle)))" />
 							</xsl:attribute>
 						</arco-cd:involvesRelatedWork>
 						<xsl:if test="./ADLP">
@@ -4989,7 +4989,7 @@
 					</xsl:variable>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'Publication/', $adla, $adlt, $adle)" />
+							<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(concat($adla, $adlt, $adle)))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -11092,7 +11092,7 @@
 									</xsl:choose>
 								</xsl:when>
 								<xsl:when test="./BIBA and ./BIBD">
-									<xsl:value-of select="concat('Publication/', arco-fn:arcofy(normalize-space(./BIBA)), arco-fn:arcofy(normalize-space(./BIBD)))" />
+									<xsl:value-of select="concat('Publication/', arco-fn:arcofy(concat(normalize-space(./BIBA), normalize-space(./BIBD))))" />
 								</xsl:when>
 							</xsl:choose>
 						</xsl:variable>
@@ -11115,7 +11115,7 @@
 										<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./BIBH)), 'local')" />
 									</xsl:when>
 									<xsl:when test="./BIBA and ./BIBD">
-										<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./BIBA)), arco-fn:arcofy(normalize-space(./BIBD)))" />
+										<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(concat(normalize-space(./BIBA), normalize-space(./BIBD))))" />
 									</xsl:when>
 								</xsl:choose>
 							</xsl:attribute>
@@ -11534,10 +11534,10 @@
 						<xsl:variable name="edition">
 							<xsl:choose>
 								<xsl:when test="./BSEA and ./BSED">
-									<xsl:value-of select="concat('Publication/', arco-fn:arcofy(normalize-space(./BSET)), arco-fn:arcofy(normalize-space(./BSEA)), arco-fn:arcofy(normalize-space(./BSED)))" />
+									<xsl:value-of select="concat('Publication/', arco-fn:arcofy(concat(normalize-space(./BSET), normalize-space(./BSEA), normalize-space(./BSED))))" />
 								</xsl:when>
 								<xsl:when test="./BSED">
-									<xsl:value-of select="concat('Publication/', arco-fn:arcofy(normalize-space(./BSET)), arco-fn:arcofy(normalize-space(./BSED)))" />
+									<xsl:value-of select="concat('Publication/', arco-fn:arcofy(concat(normalize-space(./BSET), normalize-space(./BSED))))" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="concat('Publication/', arco-fn:arcofy(normalize-space(./BSET)))" />
@@ -11548,10 +11548,10 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:choose>
 									<xsl:when test="./BSEA and ./BSED">
-										<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./BSET)), arco-fn:arcofy(normalize-space(./BSEA)), arco-fn:arcofy(normalize-space(./BSED)))" />
+										<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(concat(normalize-space(./BSET), normalize-space(./BSEA), normalize-space(./BSED))))" />
 									</xsl:when>
 									<xsl:when test="./BSED and not(./BSEA)">
-										<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./BSET)), arco-fn:arcofy(normalize-space(./BSED)))" />
+										<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(concat(normalize-space(./BSET), normalize-space(./BSED))))" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./BSET)))" />
@@ -13927,7 +13927,7 @@
 							<xsl:for-each select="./DSCB[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 								<arco-cd:hasBibliographicSource>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(.)))" />
+										<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(.)))" />
 									</xsl:attribute>
 								</arco-cd:hasBibliographicSource>
 							</xsl:for-each>

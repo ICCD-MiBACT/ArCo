@@ -3234,7 +3234,7 @@
 											</xsl:choose>
 										</xsl:when>
 										<xsl:when test="./BIBA and ./BIBD">
-											<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./BIBA)), arco-fn:arcofy(normalize-space(./BIBD)))" />
+											<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(concat(normalize-space(./BIBA), normalize-space(./BIBD))))" />
 										</xsl:when>
 									</xsl:choose>
 								</xsl:variable>
@@ -3339,10 +3339,10 @@
 								<xsl:variable name="edition">
 									<xsl:choose>
 										<xsl:when test="./BSEA and ./BSED">
-											<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./BSET)), arco-fn:arcofy(normalize-space(./BSEA)), arco-fn:arcofy(normalize-space(./BSED)))" />
+											<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(concat(normalize-space(./BSET), normalize-space(./BSEA), normalize-space(./BSED))))" />
 										</xsl:when>
 										<xsl:when test="./BSED">
-											<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./BSET)), arco-fn:arcofy(normalize-space(./BSED)))" />
+											<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(concat(normalize-space(./BSET), normalize-space(./BSED))))" />
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./BSET)))" />

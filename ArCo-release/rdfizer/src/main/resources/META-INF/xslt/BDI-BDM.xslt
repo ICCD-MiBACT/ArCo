@@ -20351,13 +20351,13 @@
 								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./BIBK)))" />
 							</xsl:when>
 							<xsl:when test="./BIBM">
-								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./BIBM)))" />
+								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./BIBM)))" />
 							</xsl:when>
 							<xsl:when test="./BIBH">
 								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:urify(normalize-space(./BIBH)), 'local')" />
 							</xsl:when>
 							<xsl:when test="./BIBA and ./BIBD">
-								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(normalize-space(./BIBA)), arco-fn:arcofy(normalize-space(./BIBD)))" />
+								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(concat(normalize-space(./BIBA), normalize-space(./BIBD))))" />
 							</xsl:when>
 	                	</xsl:choose>
 					</xsl:variable>
