@@ -1884,6 +1884,11 @@
 							</xsl:otherwise>
 	                	</xsl:choose>
 					</l0:name>
+					<arco-core:isDescribedBy>
+						<xsl:attribute name="rdf:resource">
+	    	            	<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $idEdition)" />
+						</xsl:attribute>
+					</arco-core:isDescribedBy>
 					<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBM">
 						<arco-cd:completeBibliographicReference>
 							<xsl:value-of select="normalize-space(record/metadata/schede/BIB/BI/BIB/BIBM)" />
