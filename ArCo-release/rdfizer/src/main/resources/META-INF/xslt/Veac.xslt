@@ -291,14 +291,14 @@
 					<xsl:if test="record/metadata/schede/VeAC/DA/EDA">
 						<arco-dd:hasIconographicOrDecorativeApparatus>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatus/', $itemURI, '-', position())" />
+								<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatus/', $itemURI, position())" />
 							</xsl:attribute>
 						</arco-dd:hasIconographicOrDecorativeApparatus>
 					</xsl:if>
 					<xsl:for-each select="record/metadata/schede/VeAC/MT/MTF">
 						<arco-clo:hasClothingElement>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'InteriorElement/', $itemURI, '-', position())" />
+								<xsl:value-of select="concat($NS, 'InteriorElement/', $itemURI, position())" />
 							</xsl:attribute>
 						</arco-clo:hasClothingElement>
 					</xsl:for-each>
@@ -580,7 +580,7 @@
 				<xsl:if test="record/metadata/schede/VeAC/DA/EDA">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatus/', $itemURI, '-', position())" />
+							<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatus/', $itemURI, position())" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -740,7 +740,7 @@
 				<xsl:for-each select="record/metadata/schede/VeAC/MT/MTF">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'InteriorElement/', $itemURI, '-', position())" />
+							<xsl:value-of select="concat($NS, 'InteriorElement/', $itemURI, position())" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -816,7 +816,7 @@
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/clothing-description/InteriorElementType'" />
+									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/InteriorElementType'" />
 								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
@@ -1614,7 +1614,7 @@
 						<xsl:if test="record/metadata/schede/VeAC/DA/SRM/SRMF">
 							<arco-core:hasPart>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'Cuff/', $itemURI)" />
+									<xsl:value-of select="concat($NS, 'Cuff/', $itemURI, arco-fn:urify(record/metadata/schede/VeAC/DA/SRM/SRMF))" />
 								</xsl:attribute>
 							</arco-core:hasPart>
 						</xsl:if>
@@ -1640,7 +1640,7 @@
 					<xsl:if test="record/metadata/schede/VeAC/DA/SRM/SRMF">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'Cuff/', $itemURI)" />
+								<xsl:value-of select="concat($NS, 'Cuff/', $itemURI, arco-fn:urify(record/metadata/schede/VeAC/DA/SRM/SRMF))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -1679,18 +1679,15 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="concat('Neck of cultural property ', $itemURI)" />
 						</l0:name>
-						<arco-core:description>
-							<xsl:value-of select="record/metadata/schede/VeAC/DA/SRE/SREC" />
-						</arco-core:description> 
 						<arco-core:hasType>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'NeckType/', arco-fn:arcofy(arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SREC)))" />
+								<xsl:value-of select="concat($NS, 'NeckType/', arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SREC))" />
 							</xsl:attribute>
-						</arco-core:hasType> 
+						</arco-core:hasType>
 					</rdf:Description>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'NeckType/', arco-fn:arcofy(arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SREC)))" />
+							<xsl:value-of select="concat($NS, 'NeckType/', arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SREC))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -1702,8 +1699,8 @@
 						</rdfs:label>
 						<l0:name>
 							<xsl:value-of select="record/metadata/schede/VeAC/DA/SRE/SREC" />
-						</l0:name> 
-					</rdf:Description> 
+						</l0:name>
+					</rdf:Description>
 				</xsl:if>
 				<!-- Pocket  as individual -->
 				<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SRET or record/metadata/schede/VeAC/DA/SRE/SREP">
@@ -1731,12 +1728,9 @@
 						<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SRET">
 							<arco-core:hasType>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'PocketType/', arco-fn:arcofy(arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SRET)))" />
+									<xsl:value-of select="concat($NS, 'PocketType/', arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SRET))" />
 								</xsl:attribute>
 							</arco-core:hasType>
-							<arco-core:description>
-								<xsl:value-of select="record/metadata/schede/VeAC/DA/SRE/SRET" />
-							</arco-core:description> 
 						</xsl:if>
 						<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREP">
 							<arco-dd:positionOnCulturalProperty>
@@ -1747,7 +1741,7 @@
 					<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SRET">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'PocketType/', arco-fn:arcofy(arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SRET)))" />
+								<xsl:value-of select="concat($NS, 'PocketType/', arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SRET))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -1789,12 +1783,9 @@
 						<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREA">
 							<arco-core:hasType>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'FastenerType/', arco-fn:arcofy(arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SREA)))" />
+									<xsl:value-of select="concat($NS, 'FastenerType/', arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SREA))" />
 								</xsl:attribute>
 							</arco-core:hasType>
-							<arco-core:description>
-								<xsl:value-of select="record/metadata/schede/VeAC/DA/SRE/SREA" />
-							</arco-core:description> 
 						</xsl:if>
 						<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREZ">
 							<arco-dd:positionOnCulturalProperty>
@@ -1805,7 +1796,7 @@
 					<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREA">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'FastenerType/', arco-fn:arcofy(arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SREA)))" />
+								<xsl:value-of select="concat($NS, 'FastenerType/', arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SREA))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -1846,12 +1837,9 @@
 						<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREB">
 							<arco-core:hasType>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'FastenerType/', arco-fn:arcofy(arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SREB)))" />
+									<xsl:value-of select="concat($NS, 'FastenerType/', arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SREB))" />
 								</xsl:attribute>
 							</arco-core:hasType>
-							<arco-core:description>
-								<xsl:value-of select="record/metadata/schede/VeAC/DA/SRE/SREB" />
-							</arco-core:description> 
 						</xsl:if>
 						<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREM">
 							<arco-core:description xml:lang="it">
@@ -1862,7 +1850,7 @@
 					<xsl:if test="record/metadata/schede/VeAC/DA/SRE/SREB">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'FastenerType/', arco-fn:arcofy(arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SREB)))" />
+								<xsl:value-of select="concat($NS, 'FastenerType/', arco-fn:urify(record/metadata/schede/VeAC/DA/SRE/SREB))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
