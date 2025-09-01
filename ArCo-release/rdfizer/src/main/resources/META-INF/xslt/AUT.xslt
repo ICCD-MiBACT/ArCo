@@ -1489,6 +1489,27 @@
 					<arco-lite:systemIdentifier>
 						<xsl:value-of select="$item" />
 					</arco-lite:systemIdentifier>
+					<!-- Publication identifiers -->
+					<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBH and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BIB/BI/BIB/BIBH)), 'n.r')))">
+						<arco-lite:localIdentifier>
+							<xsl:value-of select="concat('bib-', record/metadata/schede/BIB/CD/ESC,'-', record/metadata/schede/BIB/*/*/BIBH)" />
+						</arco-lite:localIdentifier>
+						<arco-core:hasIdentifier>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'PublicationIdentifier/', 'bib-', arco-fn:urify(record/metadata/schede/BIB/CD/ESC),'-', arco-fn:urify(record/metadata/schede/BIB/BI/BIB/BIBH), '-local')" />
+							</xsl:attribute>
+						</arco-core:hasIdentifier>
+					</xsl:if>
+					<xsl:if test="record/metadata/schede/BIB/CD/NCU/NCUN">
+						<arco-lite:ICCDIdentifier>
+							<xsl:value-of select="normalize-space(record/metadata/schede/BIB/CD/NCU/NCUN)" />
+						</arco-lite:ICCDIdentifier>
+						<arco-core:hasIdentifier>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'PublicationIdentifier/', arco-fn:arcofy(record/metadata/schede/BIB/CD/NCU/NCUN))" />
+							</xsl:attribute>
+						</arco-core:hasIdentifier>
+					</xsl:if>
 					<!-- heritage protection agency -->
 					<xsl:choose>
 						<xsl:when test="record/metadata/schede/harvesting/enteCompetente">
@@ -2151,7 +2172,7 @@
 				<xsl:if test="record/metadata/schede/BIB/BI/BIB/BIBH">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'PublicationIdentifier/', 'bib-', arco-fn:urify(record/metadata/schede/BIB/CD/ESC),'-', arco-fn:arcofy(record/metadata/schede/BIB/BI/BIB/BIBH), '-local')" />
+							<xsl:value-of select="concat($NS, 'PublicationIdentifier/', 'bib-', arco-fn:urify(record/metadata/schede/BIB/CD/ESC),'-', arco-fn:urify(record/metadata/schede/BIB/BI/BIB/BIBH), '-local')" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
