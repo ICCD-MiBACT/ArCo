@@ -13801,11 +13801,11 @@
 									<xsl:when test="./DSCV">
 										<xsl:value-of select="normalize-space(./DSCV)" />
 									</xsl:when>
+									<xsl:when test="./SCAN and not($sheetType='DSC')">
+										<xsl:value-of select="./SCAN" />
+									</xsl:when>
 									<xsl:when test="$scan">
 										<xsl:value-of select="$scan" />
-									</xsl:when>
-									<xsl:when test="./SCAN">
-										<xsl:value-of select="normalize-space(./SCAN)" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="concat('Scavo archeologico ' , position(), ' del bene ', $itemURI)" />
@@ -13817,11 +13817,11 @@
 									<xsl:when test="./DSCV">
 										<xsl:value-of select="normalize-space(./DSCV)" />
 									</xsl:when>
+									<xsl:when test="./SCAN and not($sheetType='DSC')">
+										<xsl:value-of select="./SCAN" />
+									</xsl:when>
 									<xsl:when test="$scan">
 										<xsl:value-of select="$scan" />
-									</xsl:when>
-									<xsl:when test="./SCAN">
-										<xsl:value-of select="normalize-space(./SCAN)" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="concat('Scavo archeologico ' , position(), ' del bene ', $itemURI)" />
@@ -13831,14 +13831,14 @@
 							<xsl:if test="./DSCV">
 								<arco-cd:hasDesignationInTime>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS,'DesignationInTime/ArchaeologicalExcavation', $itemURI, '-', arco-fn:urify(normalize-space(./DSCV)))" />
+										<xsl:value-of select="concat($NS,'DesignationInTime/ArchaeologicalExcavation', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(./DSCV))))" />
 									</xsl:attribute>
 								</arco-cd:hasDesignationInTime>
 								<arco-lite:currentDesigantion>
 									<xsl:value-of select="normalize-space(./DSCV)" />
 								</arco-lite:currentDesigantion>
 							</xsl:if>
-							<xsl:if test="$scad">
+							<xsl:if test="./SCAD">
 								<arco-core:description xml:lang="it">
 									<xsl:value-of select="$scad" />
 								</arco-core:description>
@@ -13855,7 +13855,7 @@
 									<xsl:for-each select="./DSCN">
 										<arco-cd:hasDesignationInTime>
 											<xsl:attribute name="rdf:resource">
-												<xsl:value-of select="concat($NS,'DesignationInTime/ArchaeologicalExcavation', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+												<xsl:value-of select="concat($NS,'DesignationInTime/ArchaeologicalExcavation', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
 											</xsl:attribute>
 										</arco-cd:hasDesignationInTime>
 										<arco-lite:alternativeDesignation>
@@ -14039,7 +14039,7 @@
 						<xsl:if test="./DSCV">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS,'DesignationInTime/ArchaeologicalExcavation', $itemURI, '-', arco-fn:urify(normalize-space(./DSCV)))" />
+									<xsl:value-of select="concat($NS,'DesignationInTime/ArchaeologicalExcavation', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(./DSCV))))" />
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -14057,29 +14057,31 @@
 								</arco-core:current>
 							</rdf:Description>
 						</xsl:if>
-						<xsl:for-each select="./DSCN">
-							<rdf:Description>
-								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS,'DesignationInTime/ArchaeologicalExcavation', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
-								</xsl:attribute>
-								<rdf:type>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DesignationInTime'" />
+						<xsl:if test="$sheetType='DSC'">
+							<xsl:for-each select="./DSCN">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS,'DesignationInTime/ArchaeologicalExcavation', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
 									</xsl:attribute>
-								</rdf:type>
-								<rdfs:label>
-									<xsl:value-of select="normalize-space(.)" />
-								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(.)" />
-								</l0:name>
-								<arco-core:hasType>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeDesignation'" />
-									</xsl:attribute>
-								</arco-core:hasType>
-							</rdf:Description>
-						</xsl:for-each>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DesignationInTime'" />
+										</xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(.)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(.)" />
+									</l0:name>
+									<arco-core:hasType>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AlternativeDesignation'" />
+										</xsl:attribute>
+									</arco-core:hasType>
+								</rdf:Description>
+							</xsl:for-each>
+						</xsl:if>
 						<!-- documentation identifier -->
 						<xsl:if test="./DSCK">
 							<rdf:Description>
@@ -16185,11 +16187,11 @@
 										</xsl:attribute>
 									</arco-dd:hasTechnicalStatus>
 									<xsl:for-each select="./ISEM">
-										<arco-dd:hasMaterialOrTechnique>
+										<arco-lite:hasMaterialOrTechnique>
 											<xsl:attribute name="rdf:resource">
 												<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 											</xsl:attribute>
-										</arco-dd:hasMaterialOrTechnique>
+										</arco-lite:hasMaterialOrTechnique>
 									</xsl:for-each>
 								</xsl:if>
 							</xsl:if>
@@ -21872,7 +21874,7 @@
 					<xsl:for-each select="record/metadata/schede/*/*/OGD">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(./OGDN)))" />
+								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(./OGDN))))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -22023,7 +22025,7 @@
 					<xsl:for-each select="record/metadata/schede/*/OG/OGN">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -22045,7 +22047,7 @@
 				<xsl:for-each select="record/metadata/schede/*/OG/OGA">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(string-join(./OGAD,'-'))))" />
+							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(string-join(./OGAD,'-')))))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -22161,7 +22163,7 @@
 				<xsl:if test="record/metadata/schede/NU/OG/OGT/OGTO">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/NU/OG/OGT/OGTO)))" />
+							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/NU/OG/OGT/OGTO))))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -22188,7 +22190,7 @@
 				<xsl:if test="record/metadata/schede/VeAC/OG/OGT/OGTS">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(rrecord/metadata/schede/VeAC/OG/OGT/OGTS)))" />
+							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(rrecord/metadata/schede/VeAC/OG/OGT/OGTS))))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -22216,7 +22218,7 @@
 					<xsl:if test="record/metadata/schede/*/OG/OGT/OGTD">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTD)))" />
+								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTD))))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -22240,7 +22242,7 @@
 					<xsl:if test="not($sheetType='FF')">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space()))" />
+								<xsl:value-of select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space())))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -22268,7 +22270,7 @@
 				<xsl:if test="record/metadata/schede/SI/OG/OGT/OGTY">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTY)))" />
+							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTY))))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -22295,7 +22297,7 @@
 				<xsl:if test="record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'erbario')">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTE)))" />
+							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTE))))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -22316,7 +22318,7 @@
 				<xsl:if test="record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'collezione')">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTC)))" />
+							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTC))))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
