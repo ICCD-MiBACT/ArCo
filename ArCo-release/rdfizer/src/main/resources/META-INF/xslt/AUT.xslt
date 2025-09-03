@@ -701,8 +701,8 @@
 							</xsl:attribute>
 						</rdf:type>
 						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
-  <xsl:value-of select="true()" />
-</owl:deprecated>
+  							<xsl:value-of select="true()" />
+						</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-compilation-', arco-fn:arcofy(.))" />
