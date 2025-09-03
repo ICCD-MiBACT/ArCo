@@ -565,18 +565,18 @@
 							</arco-dd:hasTechnicalStatus>
 						</xsl:if>
 						<xsl:for-each select="./FNSM">
-							<arco-dd:hasMaterial>
+							<arco-lite:hasMaterial>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 								</xsl:attribute>
-							</arco-dd:hasMaterial>
+							</arco-lite:hasMaterial>
 						</xsl:for-each>
 						<xsl:if test="./FNSC">
-							<arco-dd:hasTechnique>
+							<arco-lite:hasTechnique>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./FNSC)))" />
 								</xsl:attribute>
-							</arco-dd:hasTechnique>
+							</arco-lite:hasTechnique>
 						</xsl:if>
 						<xsl:if test="./FNST">
 							<xsl:choose>
@@ -833,7 +833,7 @@
 						<xsl:if test="./ELEX or ./ELET or ./ELEL or ./ELER">
 							<arco-dd:hasTechnicalStatus>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'TechnicalStatus/VericalElement', $itemURI, '-', position())" />
+									<xsl:value-of select="concat($NS, 'TechnicalStatus/VerticalElement', $itemURI, '-', position())" />
 								</xsl:attribute>
 							</arco-dd:hasTechnicalStatus>
 						</xsl:if>
@@ -859,11 +859,11 @@
 							</arco-lite:hasMaterial>
 						</xsl:for-each>
 						<xsl:for-each select="./ELET">
-							<arco-dd:hasTechnique>
+							<arco-lite:hasTechnique>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 								</xsl:attribute>
-							</arco-dd:hasTechnique>
+							</arco-lite:hasTechnique>
 						</xsl:for-each>
 						<xsl:if test="./ELEN">
 							<arco-core:hasType>
@@ -1146,11 +1146,11 @@
 									<xsl:value-of select="concat($NS, 'TechnicalStatus/HorizontalElement', $itemURI, '-', position())" />
 								</xsl:attribute>
 							</arco-dd:hasTechnicalStatus>
-							<arco-dd:hasTechnique>
+							<arco-lite:hasTechnique>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SOLT)))" />
 								</xsl:attribute>
-							</arco-dd:hasTechnique>
+							</arco-lite:hasTechnique>
 						</xsl:if>
 						<xsl:if test="./SOLD">
 							<arco-core:description xml:lang="it">
@@ -1283,11 +1283,11 @@
 									<xsl:value-of select="concat($NS, 'TechnicalStatus/Roof', $itemURI, '-', position())" />
 								</xsl:attribute>
 							</arco-dd:hasTechnicalStatus>
-							<arco-dd:hasTechnique>
+							<arco-lite:hasTechnique>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./CPUC)))" />
 								</xsl:attribute>
-							</arco-dd:hasTechnique>
+							</arco-lite:hasTechnique>
 						</xsl:if>
 						<xsl:if test="./CPUD">
 							<arco-core:description xml:lang="it">
@@ -1415,11 +1415,11 @@
 									<xsl:value-of select="concat($NS, 'TechnicalStatus/Stair', $itemURI, '-', position())" />
 								</xsl:attribute>
 							</arco-dd:hasTechnicalStatus>
-							<arco-dd:hasTechnique>
+							<arco-lite:hasTechnique>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SCAT)))" />
 								</xsl:attribute>
-							</arco-dd:hasTechnique>
+							</arco-lite:hasTechnique>
 						</xsl:if>
 						<xsl:if test="./SCAD">
 							<arco-core:description xml:lang="it">
@@ -1512,11 +1512,11 @@
 									<xsl:value-of select="concat($NS, 'TechnicalStatus/OpenSpace', $itemURI, '-', position())" />
 								</xsl:attribute>
 							</arco-dd:hasTechnicalStatus>
-							<arco-dd:hasTechnique>
+							<arco-lite:hasTechnique>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 								</xsl:attribute>
-							</arco-dd:hasTechnique>
+							</arco-lite:hasTechnique>
 						</xsl:for-each>
 						<xsl:if test="./SPAD">
 							<arco-core:description xml:lang="it">
@@ -1712,7 +1712,7 @@
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
-				<!-- CulturalPropertyPart when there is ELEP (VericalElement) -->
+				<!-- CulturalPropertyPart when there is ELEP (VerticalElement) -->
 				<xsl:for-each select="record/metadata/schede/*/DA/ELE">
 					<xsl:if test="./ELEP and not(./ELEP='intero bene' or ./ELEP='integrale' or ./ELEP='tutta' or ./ELEP='totale' or ./ELEP='carattere generale' or (starts-with(lower-case(normalize-space(./ELEP)), 'nr')) or (starts-with(lower-case(normalize-space(./ELEP)), 'n.r')) or (starts-with(lower-case(normalize-space(./ELEP)), 'intero')) or (starts-with(lower-case(normalize-space(./ELEP)), 'intera')) or (starts-with(lower-case(normalize-space(./ELEP)), 'esemplar')))">
 						<rdf:Description>
