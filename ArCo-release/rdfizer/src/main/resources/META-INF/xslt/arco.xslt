@@ -22382,7 +22382,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of
-						select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space()))" />
+						select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space())))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -22410,7 +22410,7 @@
 					<xsl:for-each select="$split">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space()))" />
+								<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space())))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -22430,7 +22430,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of
-						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/*/CT/CTG)))" />
+						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/*/CT/CTG))))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -22453,7 +22453,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of
-						select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/RA/OG/CLS)))" />
+						select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/RA/OG/CLS))))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -22489,7 +22489,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of
-						select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/MA/OG/OGT/OGTC)))" />
+						select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/MA/OG/OGT/OGTC))))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -22506,7 +22506,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of
-						select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/CA/OG/OGT/OGTC)))" />
+						select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/CA/OG/OGT/OGTC))))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -22524,7 +22524,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of
-						select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/OG/OGT/OGTC)))" />
+						select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/VeAC/OG/OGT/OGTC))))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -22542,7 +22542,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of
-						select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/AT/OG/OGT/OGTP)))" />
+						select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/AT/OG/OGT/OGTP))))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -22562,10 +22562,10 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:choose>
 									<xsl:when test="./OGTE">
-										<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(./OGTG)), '-', arco-fn:urify(normalize-space(./OGTE)))" />
+										<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(concat(arco-fn:urify(normalize-space(./OGTG)), arco-fn:urify(normalize-space(./OGTE)))))" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(./OGTG)))" />
+										<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space(./OGTG))))" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:attribute>

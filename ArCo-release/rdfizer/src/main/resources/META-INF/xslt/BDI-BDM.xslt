@@ -357,7 +357,7 @@
 			<xsl:if test="record/metadata/schede/BDM/OG/OGT/OGTG">
 				<arco-arco:hasCulturalPropertyCategory>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTG)))" />
+						<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTG))))" />
 					</xsl:attribute>
 				</arco-arco:hasCulturalPropertyCategory>
 			</xsl:if>
@@ -1735,7 +1735,7 @@
 		<xsl:if test="record/metadata/schede/BDM/OG/OGT/OGTG">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/BDM/OG/OGT/OGTG)))" />
+					<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/BDM/OG/OGT/OGTG))))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -20289,7 +20289,7 @@
 			<xsl:for-each select="record/metadata/schede/*/EV/EVE/EVEC">
 				<arco-core:hasCategory>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space()))" />
+						<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space())))" />
 					</xsl:attribute>
 				</arco-core:hasCategory>
 			</xsl:for-each>
@@ -20297,7 +20297,7 @@
 			<xsl:for-each select="record/metadata/schede/*/EV/OGD">
 				<arco-cd:hasDesignationInTime>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(./OGDN)))" />                      	                            
+						<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(./OGDN))))" />                      	                            
 			  	   	</xsl:attribute>
 				</arco-cd:hasDesignationInTime>
 				<xsl:if test="contains(normalize-space(lower-case(./OGDT)), 'attuale') or contains(normalize-space(lower-case(./OGDT)), 'corrente')">
@@ -20785,7 +20785,7 @@
 		<xsl:for-each select="record/metadata/schede/*/EV/EVE/EVEC">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space()))" />
+					<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space())))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -20974,7 +20974,7 @@
 				<xsl:for-each select="./AVEC">
 					<arco-core:hasCategory>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space()))" />
+							<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space())))" />
 						</xsl:attribute>
 					</arco-core:hasCategory>
 				</xsl:for-each>
@@ -20982,7 +20982,7 @@
 				<xsl:for-each select="./AVEN">
 					<arco-cd:hasDesignationInTime>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS,'DesignationInTime/', arco-fn:urify(../AVEH), '-', arco-fn:urify(normalize-space(.)))" />                      	                            
+							<xsl:value-of select="concat($NS,'DesignationInTime/', arco-fn:urify(../AVEH), '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />                      	                            
 				  	   	</xsl:attribute>
 					</arco-cd:hasDesignationInTime>
 					<arco-lite:currentDesignation>
@@ -21047,7 +21047,7 @@
 			<xsl:for-each select="./AVEC">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space()))" />
+						<xsl:value-of select="concat($NS,'CulturalPropertyCategory/', arco-fn:arcofy(arco-fn:urify(normalize-space())))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -21066,7 +21066,7 @@
 			<xsl:for-each select="./AVEN">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS,'DesignationInTime/', arco-fn:urify(../AVEH), '-', arco-fn:urify(normalize-space(.)))" />
+                        <xsl:value-of select="concat($NS,'DesignationInTime/', arco-fn:urify(../AVEH), '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">

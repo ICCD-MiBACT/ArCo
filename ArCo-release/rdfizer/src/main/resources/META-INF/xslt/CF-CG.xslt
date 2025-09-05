@@ -1043,7 +1043,7 @@
 			<xsl:if test="record/metadata/schede/*/CF/CFN">
 				<arco-cd:hasDesignationInTime>
 					<xsl:attribute name="rdf:resource">
-                       	<xsl:value-of select="concat($NS,'DesignationInTime/', $idCF, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/CF/CFN)))" />                      	                            
+                       	<xsl:value-of select="concat($NS,'DesignationInTime/', $idCF, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/*/CF/CFN))))" />                      	                            
 					</xsl:attribute>
 				</arco-cd:hasDesignationInTime>
 				<arco-lite:currentDesignation>
@@ -1053,7 +1053,7 @@
 			<xsl:for-each select="record/metadata/schede/*/CF/CFA">
 				<arco-cd:hasDesignationInTime>
 					<xsl:attribute name="rdf:resource">
-                       	<xsl:value-of select="concat($NS,'DesignationInTime/', $idCF, '-', arco-fn:urify(normalize-space(.)))" />                      	                            
+                       	<xsl:value-of select="concat($NS,'DesignationInTime/', $idCF, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />                      	                            
 					</xsl:attribute>
 				</arco-cd:hasDesignationInTime>
 				<arco-lite:alternativeDesigantion>
@@ -1931,7 +1931,7 @@
 		<xsl:if test="record/metadata/schede/*/CF/CFN">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS,'DesignationInTime/', $idCF, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/CF/CFN)))" />
+					<xsl:value-of select="concat($NS,'DesignationInTime/', $idCF, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/*/CF/CFN))))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -1952,7 +1952,7 @@
 		<xsl:for-each select="record/metadata/schede/*/CF/CFA">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS,'DesignationInTime/', $idCF, '-', arco-fn:urify(normalize-space(.)))" />
+					<xsl:value-of select="concat($NS,'DesignationInTime/', $idCF, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -2522,7 +2522,7 @@
 			<xsl:if test="record/metadata/schede/*/CG/CGN">
 				<arco-cd:hasDesignationInTime>
 					<xsl:attribute name="rdf:resource">
-                       	<xsl:value-of select="concat($NS,'DesignationInTime/', $idCG, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/CG/CGN)))" />                      	                            
+                       	<xsl:value-of select="concat($NS,'DesignationInTime/', $idCG, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/*/CG/CGN))))" />                      	                            
 					</xsl:attribute>
 				</arco-cd:hasDesignationInTime>
 				<arco-lite:currentDesignation>
@@ -2532,7 +2532,7 @@
 			<xsl:for-each select="record/metadata/schede/*/CG/CGA">
 				<arco-cd:hasDesignationInTime>
 					<xsl:attribute name="rdf:resource">
-                       	<xsl:value-of select="concat($NS,'DesignationInTime/', $idCG, '-', arco-fn:urify(normalize-space(.)))" />                      	                            
+                       	<xsl:value-of select="concat($NS,'DesignationInTime/', $idCG, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />                      	                            
 					</xsl:attribute>
 				</arco-cd:hasDesignationInTime>
 				<arco-lite:alternativeDesigantion>
@@ -2765,7 +2765,7 @@
 		<xsl:if test="record/metadata/schede/*/CG/CGN">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS,'DesignationInTime/', $idCG, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/CG/CGN)))" />
+					<xsl:value-of select="concat($NS,'DesignationInTime/', $idCG, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/*/CG/CGN))))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -2786,7 +2786,7 @@
 		<xsl:for-each select="record/metadata/schede/*/CG/CGA">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS,'DesignationInTime/', $idCG, '-', arco-fn:urify(normalize-space(.)))" />
+					<xsl:value-of select="concat($NS,'DesignationInTime/', $idCG, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
