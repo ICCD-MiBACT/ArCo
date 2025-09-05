@@ -764,14 +764,18 @@
 							<xsl:when test="record/metadata/schede/harvesting/idContenitoreGiuridico and normalize-space(arco-fn:find-cg(record/metadata/schede/harvesting/idContenitoreGiuridico)) != ''">
 								<xsl:variable name="idCG" select="arco-fn:find-cg(record/metadata/schede/harvesting/idContenitoreGiuridico)" />
 								<arco-location:hasCulturalInstituteOrSite>
-									<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCG)" />
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCG)" />
+									</xsl:attribute>
 								</arco-location:hasCulturalInstituteOrSite>
 							</xsl:when>
 							<!-- Check if idContenitoreFisico exists AND its ID is not empty, and idContenitoreGiuridico is NOT present -->
 							<xsl:when test="record/metadata/schede/harvesting/idContenitoreFisico and not(record/metadata/schede/harvesting/idContenitoreGiuridico) and normalize-space(arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)) != ''">
 								<xsl:variable name="idCF" select="arco-fn:find-cf(record/metadata/schede/harvesting/idContenitoreFisico)" />
 								<arco-location:hasCulturalInstituteOrSite>
-									<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCF)" />
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', $idCF)" />
+									</xsl:attribute>
 								</arco-location:hasCulturalInstituteOrSite>
 							</xsl:when>
 							<xsl:otherwise>

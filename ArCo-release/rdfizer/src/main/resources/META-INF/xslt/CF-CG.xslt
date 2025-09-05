@@ -2682,7 +2682,7 @@
 				<xsl:if test="record/metadata/schede/*/CG/CGQ">
 					<arco-location:hasCulturalInstituteOrSiteSpecification>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS,'hasCulturalInstituteOrSiteSpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/CG/CGQ)))" />
+							<xsl:value-of select="concat($NS,'CulturalInstituteOrSiteSpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/CG/CGQ)))" />
 						</xsl:attribute>
 					</arco-location:hasCulturalInstituteOrSiteSpecification>
 				</xsl:if>
@@ -2692,7 +2692,7 @@
 		<xsl:if test="record/metadata/schede/*/CG/CGT">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS,'hasCulturalInstituteOrSiteDefinition/', arco-fn:urify(normalize-space(record/metadata/schede/*/CG/CGT)))" />
+					<xsl:value-of select="concat($NS,'CulturalInstituteOrSiteDefinition/', arco-fn:urify(normalize-space(record/metadata/schede/*/CG/CGT)))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">

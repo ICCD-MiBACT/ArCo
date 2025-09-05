@@ -9359,7 +9359,7 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:variable>
-				<xsl:variable name="contenitoreFisico" select="concat('http://dati.beniculturali.it/iccd/cf/resource/CulturalInstituteOrSite', $idCFisico)" />
+				<xsl:variable name="contenitoreFisico" select="concat('http://dati.beniculturali.it/iccd/cf/resource/CulturalInstituteOrSite/', $idCFisico)" />
 				<xsl:if test="record/metadata/schede/*/LC/LDC/*">
 					<xsl:variable name="site">
 						<xsl:choose>
