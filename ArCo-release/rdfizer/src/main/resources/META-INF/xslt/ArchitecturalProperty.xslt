@@ -3693,7 +3693,7 @@
 						<xsl:if test="./FOTD">
 							<arco-cd:hasDesignationInTime>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS,'DesignationInTime/WaterElement', '-', arco-fn:urify(normalize-space(./FOTD)))" />
+									<xsl:value-of select="concat($NS,'DesignationInTime/WaterElement', '-', arco-fn:arcofy(arco-fn:urify(normalize-space(./FOTD))))" />
 								</xsl:attribute>
 							</arco-cd:hasDesignationInTime>
 						</xsl:if>
@@ -3831,7 +3831,7 @@
 					<xsl:if test="./FOTD">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS,'DesignationInTime/WaterElement', '-', arco-fn:urify(normalize-space(./FOTD)))" />
+								<xsl:value-of select="concat($NS,'DesignationInTime/WaterElement', '-', arco-fn:arcofy(arco-fn:urify(normalize-space(./FOTD))))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
