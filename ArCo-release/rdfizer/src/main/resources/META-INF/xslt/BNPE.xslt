@@ -477,7 +477,7 @@
 			<xsl:if test="record/metadata/schede/BNPE/SR/SRL/SRLP">
 				<arco-core:hasConstituent>
 					<xsl:attribute name="rdf:resource">
-	                	<xsl:value-of select="concat($NS, 'Fossil/',  arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRL/SRLP)))" />
+	                	<xsl:value-of select="concat($NS, 'Fossil/',  arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRL/SRLP))))" />
 	 				</xsl:attribute>
 				</arco-core:hasConstituent>
 			</xsl:if>
@@ -3411,7 +3411,7 @@
 		<xsl:if test="record/metadata/schede/BNPE/SR/SRL/SRLP">	
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'Fossil/',  arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRL/SRLP)))" />
+					<xsl:value-of select="concat($NS, 'Fossil/',  arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/BNPE/SR/SRL/SRLP))))" />
 				</xsl:attribute>		
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
