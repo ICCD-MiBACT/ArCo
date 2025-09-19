@@ -21289,7 +21289,7 @@
 						</clvapit:hasGeometryType>
 						<!-- http://www.openlinksw.com/schemas/virtrdf#Geometry virtuoso datatype for geometry -->
 						<!-- http://www.opengis.net/ont/geosparql#wktLiteral virtuoso datatype for geometry -->
-						<clvapit:serialization rdf:datatype= "http://www.openlinksw.com/schemas/virtrdf#Geometry">
+						<clvapit:serialization rdf:datatype= "http://www.openlinksw.com/schemas/virtrdf#wktLiteral">
 							<!-- xsl:text disable-output-escaping="yes">&lt;![CDATA[ &lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; </xsl:text-->
 							<xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
 							<xsl:value-of select="normalize-space(concat('POINT(', $xy/x, ' ', $xy/y, ')'))" />
@@ -22005,7 +22005,7 @@
 					<xsl:for-each select="record/metadata/schede/*/OG/OGT/OGTN">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fin:arcofy(arco-fn:urify(normalize-space(.))))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
