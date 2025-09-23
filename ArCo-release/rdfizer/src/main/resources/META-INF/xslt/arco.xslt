@@ -22005,7 +22005,7 @@
 					<xsl:for-each select="record/metadata/schede/*/OG/OGT/OGTN">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fin:arcofy(arco-fn:urify(normalize-space(.))))" />
+								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
