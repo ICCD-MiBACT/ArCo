@@ -8744,7 +8744,7 @@
 									</xsl:attribute>
 								</arco-core:hasAgent>
 								<xsl:if test="contains((.), '?')">
-									<arco-core:uncertainData>
+									<arco-core:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-core:uncertainData>
 								</xsl:if>
@@ -8799,7 +8799,7 @@
 									</xsl:attribute>
 								</arco-core:hasAgent>
 								<xsl:if test="contains((.), '?')">
-									<arco-core:uncertainData>
+									<arco-core:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-core:uncertainData>
 								</xsl:if>
@@ -16352,9 +16352,9 @@
 									</xsl:attribute>
 								</arco-cd:hasAgentWithResponsibility>
 								<xsl:if test="contains((./ISEA), '?')">
-									<arco-cd:uncertainData>
+									<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
-									</arco-cd:uncertainData>
+									</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								</xsl:if>
 								<arco-cd:hasInterventionRole>
 									<xsl:attribute name="rdf:resource">
@@ -16717,9 +16717,9 @@
 									</xsl:attribute>
 								</arco-cd:hasAgentWithResponsibility>
 								<xsl:if test="contains((./ISRA), '?')">
-									<arco-cd:uncertainData>
+									<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
-									</arco-cd:uncertainData>
+									</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								</xsl:if>
 								<arco-cd:hasInterventionRole>
 									<xsl:attribute name="rdf:resource">
@@ -17467,7 +17467,7 @@
 						<xsl:if test="./CPRD">
 							<xsl:choose>
 								<xsl:when test="lower-case(normalize-space(./CPRD))='scaduti' or lower-case(normalize-space(./CPRD))='diritti scaduti' or lower-case(normalize-space(./CPRD))='in pubblico dominio'">
-									<arco-cd:expired>
+									<arco-cd:expired rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-cd:expired>
 								</xsl:when>
@@ -23628,9 +23628,9 @@
 									</arco-cd:hasAttributionMotivation>
 								</xsl:for-each>
 								<xsl:if test="contains((./ATBD), '?')">
-									<arco-cd:uncertainData>
+									<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
-									</arco-cd:uncertainData>
+									</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								</xsl:if>
 							</rdf:Description>
 							<!-- attribution motivation as individual -->
@@ -23857,14 +23857,14 @@
 										</xsl:attribute>
 									</arco-cd:hasAgentWithResponsibility>
 									<xsl:if test="contains((./AUTN), '?')">
-										<arco-cd:uncertainData>
+										<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 											<xsl:value-of select="true()" />
-										</arco-cd:uncertainData>
+										</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									</xsl:if>
 									<xsl:if test="./AUTS and (starts-with(lower-case(normalize-space(./AUTS)), 'attribuito'))">
-										<arco-cd:uncertainData>
+										<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 											<xsl:value-of select="true()" />
-										</arco-cd:uncertainData>
+										</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									</xsl:if>
 									<xsl:if test="./AUTR and not(lower-case(normalize-space(./AUTR))='nr' or lower-case(normalize-space(./AUTR))='nr (recupero pregresso)' or lower-case(normalize-space(./AUTR))='n.r.' or lower-case(normalize-space(./AUTR))='nr [non rilevabile]' or lower-case(normalize-space(./AUTR))='n.r. (non rilevabile)')">
 										<arco-cd:hasInterventionRole>
@@ -24392,9 +24392,9 @@
 								</arco-cd:hasAgentWithResponsibility>
 							</xsl:if>
 							<xsl:if test="contains((./AUUN), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
-								</arco-cd:uncertainData>
+								</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							</xsl:if>
 							<xsl:if test="./AAUR and not(lower-case(normalize-space(./AAUR))='nr' or lower-case(normalize-space(./AAUR))='nr (recupero pregresso)' or lower-case(normalize-space(./AAUR))='n.r.' or lower-case(normalize-space(./AAUR))='nr [non rilevabile]' or lower-case(normalize-space(./AAUR))='n.r. (non rilevabile)')">
 								<arco-cd:hasInterventionRole>
@@ -24510,19 +24510,19 @@
 								</arco-cd:hasAttributionMotivation>
 							</xsl:for-each>
 							<xsl:if test="contains((./AUFN), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
-								</arco-cd:uncertainData>
+								</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							</xsl:if>
 							<xsl:if test="contains((./AUFB), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
-								</arco-cd:uncertainData>
+								</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							</xsl:if>
 							<xsl:if test="./AUFS and (starts-with(lower-case(normalize-space(./AUFS)), 'attribuito'))">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
-								</arco-cd:uncertainData>
+								</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							</xsl:if>
 							<xsl:if test="./AUFR and not(lower-case(normalize-space(./AUFR))='nr' or lower-case(normalize-space(./AUFR))='nr (recupero pregresso)' or lower-case(normalize-space(./AUFR))='n.r.' or lower-case(normalize-space(./AUFR))='nr [non rilevabile]' or lower-case(normalize-space(./AUFR))='n.r. (non rilevabile)')">
 								<arco-cd:hasInterventionRole>
@@ -24901,9 +24901,9 @@
 								</arco-cd:hasCulturalScope>
 							</xsl:if>
 							<xsl:if test="contains((./AFBD), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
-								</arco-cd:uncertainData>
+								</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							</xsl:if>
 							<xsl:for-each select="./AFBM[not(lower-case(normalize-space())='nr' or lower-case(normalize-space())='nr (recupero pregresso)' or lower-case(normalize-space())='n.r.')]">
 								<arco-core:informationSource>
@@ -25028,9 +25028,9 @@
 							</xsl:attribute>
 						</arco-cd:hasAgentWithResponsibility>
 						<xsl:if test="contains((./AAF), '?')">
-							<arco-cd:uncertainData>
+							<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
-							</arco-cd:uncertainData>
+							</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						</xsl:if>
 					</rdf:Description>
 					<rdf:Description>
@@ -25101,9 +25101,9 @@
 								</xsl:attribute>
 							</arco-cd:hasAgentWithResponsibility>
 							<xsl:if test="contains((./AUIN), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
-								</arco-cd:uncertainData>
+								</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							</xsl:if>
 							<xsl:if test="./AUIR and not(lower-case(normalize-space(./AUIR))='nr' or lower-case(normalize-space(./AUIR))='nr (recupero pregresso)' or lower-case(normalize-space(./AUIR))='n.r.' or lower-case(normalize-space(./AUIR))='nr [non rilevabile]' or lower-case(normalize-space(./AUIR))='n.r. (non rilevabile)')">
 								<arco-cd:hasInterventionRole>
@@ -25258,9 +25258,9 @@
 								</xsl:attribute>
 							</arco-cd:hasAgentWithResponsibility>
 							<xsl:if test="contains((.), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
-								</arco-cd:uncertainData>
+								</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							</xsl:if>
 						</rdf:Description>
 						<rdf:Description>
@@ -25313,9 +25313,9 @@
 								</xsl:attribute>
 							</arco-cd:hasAgentWithResponsibility>
 							<xsl:if test="contains((./AATN), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
-								</arco-cd:uncertainData>
+								</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							</xsl:if>
 							<xsl:if test="./AATY">
 								<arco-core:note>
@@ -25454,14 +25454,14 @@
 								</xsl:attribute>
 							</arco-cd:hasAgentWithResponsibility>
 							<xsl:if test="contains((./AAFN), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
-								</arco-cd:uncertainData>
+								</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							</xsl:if>
 							<xsl:if test="contains((./AAFB), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
-								</arco-cd:uncertainData>
+								</arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							</xsl:if>
 							<xsl:for-each select="./AAFM [not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 								<arco-core:informationSource>

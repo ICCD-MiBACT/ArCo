@@ -2752,7 +2752,7 @@
 							</arco-dd:explanationNote>
 						</xsl:if>
 						<xsl:if test="lower-case(normalize-space(record/metadata/schede/SCAN/MT/INT))='bene di interesse culturale dichiarato'">
-							<arco-arco:culturalInterestDeclaration>
+							<arco-arco:culturalInterestDeclaration rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-arco:culturalInterestDeclaration>
 						</xsl:if>
