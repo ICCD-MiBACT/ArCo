@@ -22207,7 +22207,7 @@
 				<xsl:if test="record/metadata/schede/VeAC/OG/OGT/OGTS">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(rrecord/metadata/schede/VeAC/OG/OGT/OGTS))))" />
+							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/VeAC/OG/OGT/OGTS))))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
