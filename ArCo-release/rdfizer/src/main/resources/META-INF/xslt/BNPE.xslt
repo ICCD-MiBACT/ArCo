@@ -75,7 +75,7 @@
 	xmlns:ar-SiteType="https://w3id.org/arco/resource/SiteType/"
 	xmlns:ar-ConservationStatus="https://w3id.org/arco/resource/ConservationStatus/"
 	xmlns:ar-Subject="https://w3id.org/arco/resource/Subject/"
-	xmlns:ar-SourceAndDocument="https://w3id.org/arco/resource/SourceAndDocument/"
+	xmlns:ar-SourceOrDocument="https://w3id.org/arco/resource/SourceOrDocument/"
 	xmlns:ar-cis="https://w3id.org/arco/resource/CulturalInstituteOrSite/"
 	xmlns:ar-SiteDefinition="https://w3id.org/arco/resource/SiteDefinition/"
 	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
@@ -367,7 +367,7 @@
 				</xsl:if>
 			</xsl:for-each>
 			<xsl:if test="record/metadata/schede/BNPE/SR/SRF/SRFR and (starts-with(lower-case(normalize-space(record/metadata/schede/BNPE/SR/SRF/SRFR)), 'presente'))">
-				<arco-spe:radioactivity>
+				<arco-spe:radioactivity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 	            	<xsl:value-of select="true()" />
 				</arco-spe:radioactivity>
 			</xsl:if>
@@ -3228,7 +3228,7 @@
 				<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 	            	<xsl:value-of select="true()" />
 	            </arco-core:current>
-	            <arco-spe:mainMineral>
+	            <arco-spe:mainMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 	            	<xsl:value-of select="true()" />
 	            </arco-spe:mainMineral>
 				<arco-spe:involvesMineral>

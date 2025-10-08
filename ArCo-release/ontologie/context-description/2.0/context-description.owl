@@ -618,7 +618,7 @@ WHERE {
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasArchive">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isArchivedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SourceAndDocument"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SourceOrDocument"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una documentazione costituita da fonti e documenti all&apos;archivio e/o istituzione conservativa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the documentation made of sources and documents to the archive or conservative institution.</rdfs:comment>
@@ -1882,8 +1882,8 @@ WHERE {
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -4522,7 +4522,7 @@ WHERE {
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isArchivedIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SourceAndDocument"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SourceOrDocument"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;archivio e/o istituzione conservativa con la relativa documentazione costituita da fonti e documenti.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the archive or conservative institution to the documentation made of sources and documents.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -5726,8 +5726,8 @@ WHERE {
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -9057,7 +9057,6 @@ CONSTRUCT {
 WHERE {
 ?thing a-cd:depiction ?uri .
 }</core:constructQuery>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/arco-lite/depiction"/>
     </owl:DatatypeProperty>
     
 
@@ -9353,7 +9352,7 @@ WHERE {
     <!-- https://w3id.org/arco/ontology/context-description/folio -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/folio">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SourceAndDocument"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SourceOrDocument"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà codifica il numero di foglio o di carta del documento per la classe di documentazione Fonti e documenti.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represent document&apos;s folio number.</rdfs:comment>
@@ -14882,9 +14881,9 @@ a-cd:informationSource ?info .
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/SourceAndDocument -->
+    <!-- https://w3id.org/arco/ontology/context-description/SourceOrDocument -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SourceAndDocument">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SourceOrDocument">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -15715,6 +15714,18 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/AffixedElement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/IdentificationInTime">
@@ -15989,7 +16000,9 @@ a-cd:hasEdition ?ed .
 
     <!-- https://w3id.org/arco/ontology/context-description/AlternativeDating -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AlternativeDating"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AlternativeDating">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DatingType"/>
+    </owl:NamedIndividual>
     
 
 
@@ -16692,6 +16705,21 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/PreferredDating -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/PreferredDating">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DatingType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il tipo di cronologia preferita di un&apos;entità (e.g. un bene culturale).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the preferred dating of an entity (e.g. a cultural property).</rdfs:comment>
+        <rdfs:label xml:lang="it">Cronologia preferita</rdfs:label>
+        <rdfs:label xml:lang="en">Preferred dating</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa trasversale: DT/DTS, DTZ</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/PreviousUse -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/PreviousUse">
@@ -16972,12 +17000,11 @@ a-cd:hasEdition ?ed .
      -->
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/AlternativeDating">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una eventuale altra datazione che può riguardare un bene culturale (es.: datazione tradizionale, altro metodo di datazione).</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents an alternative dating of a cultural property (e.g.: an obsolete dating, a dating based on another method of dating).</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il tipo di datazione alternativa che può riguardare un&apos;entità (es.: un bene culturale).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an alternative dating of an entity (e.g.: a cultural property).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Alternative dating</rdfs:label>
         <rdfs:label xml:lang="it">Datazione alternativa</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT.</a-cat:iccdNormTag>

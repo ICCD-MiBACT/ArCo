@@ -78,7 +78,7 @@
 	xmlns:ar-SiteType="https://w3id.org/arco/resource/SiteType/"
 	xmlns:ar-ConservationStatus="https://w3id.org/arco/resource/ConservationStatus/"
 	xmlns:ar-Subject="https://w3id.org/arco/resource/Subject/"
-	xmlns:ar-SourceAndDocument="https://w3id.org/arco/resource/SourceAndDocument/"
+	xmlns:ar-SourceOrDocument="https://w3id.org/arco/resource/SourceOrDocument/"
 	xmlns:ar-cis="https://w3id.org/arco/resource/CulturalInstituteOrSite/"
 	xmlns:ar-SiteDefinition="https://w3id.org/arco/resource/SiteDefinition/"
 	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
@@ -454,7 +454,20 @@
 					<xsl:for-each select="record/metadata/schede/*/CD/LIR">
 						<arco-catalogue:hasCataloguingLevel>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat('https://w3id.org/arco/ontology/catalogue/', upper-case(arco-fn:urify(.)))" />
+								<xsl:choose>
+									<xsl:when test="upper-case(.)='P'">
+										<xsl:value-of select="'https://w3id.org/arco/ontology/catalogue/P'" />
+									</xsl:when>
+									<xsl:when test="upper-case(.)='C'">
+										<xsl:value-of select="'https://w3id.org/arco/ontology/catalogue/C'" />
+									</xsl:when>
+									<xsl:when test="upper-case(.)='I'">
+										<xsl:value-of select="'https://w3id.org/arco/ontology/catalogue/I'" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('https://w3id.org/arco/ontology/catalogue/', upper-case(arco-fn:urify(.)))" />
+									</xsl:otherwise>
+								</xsl:choose>
 							</xsl:attribute>
 						</arco-catalogue:hasCataloguingLevel>
 					</xsl:for-each>
@@ -8744,7 +8757,7 @@
 									</xsl:attribute>
 								</arco-core:hasAgent>
 								<xsl:if test="contains((.), '?')">
-									<arco-core:uncertainData>
+									<arco-core:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-core:uncertainData>
 								</xsl:if>
@@ -8799,7 +8812,7 @@
 									</xsl:attribute>
 								</arco-core:hasAgent>
 								<xsl:if test="contains((.), '?')">
-									<arco-core:uncertainData>
+									<arco-core:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-core:uncertainData>
 								</xsl:if>
@@ -10410,11 +10423,11 @@
 					</xsl:variable>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'SourceAndDocument/', $itemURI, '-source-document-', position())" />
+							<xsl:value-of select="concat($NS, 'SourceOrDocument/', $itemURI, '-source-document-', position())" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SourceAndDocument'" />
+								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SourceOrDocument'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="en">
@@ -16352,7 +16365,7 @@
 									</xsl:attribute>
 								</arco-cd:hasAgentWithResponsibility>
 								<xsl:if test="contains((./ISEA), '?')">
-									<arco-cd:uncertainData>
+									<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-cd:uncertainData>
 								</xsl:if>
@@ -16717,7 +16730,7 @@
 									</xsl:attribute>
 								</arco-cd:hasAgentWithResponsibility>
 								<xsl:if test="contains((./ISRA), '?')">
-									<arco-cd:uncertainData>
+									<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-cd:uncertainData>
 								</xsl:if>
@@ -17467,7 +17480,7 @@
 						<xsl:if test="./CPRD">
 							<xsl:choose>
 								<xsl:when test="lower-case(normalize-space(./CPRD))='scaduti' or lower-case(normalize-space(./CPRD))='diritti scaduti' or lower-case(normalize-space(./CPRD))='in pubblico dominio'">
-									<arco-cd:expired>
+									<arco-cd:expired rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-cd:expired>
 								</xsl:when>
@@ -23628,7 +23641,7 @@
 									</arco-cd:hasAttributionMotivation>
 								</xsl:for-each>
 								<xsl:if test="contains((./ATBD), '?')">
-									<arco-cd:uncertainData>
+									<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-cd:uncertainData>
 								</xsl:if>
@@ -23857,12 +23870,12 @@
 										</xsl:attribute>
 									</arco-cd:hasAgentWithResponsibility>
 									<xsl:if test="contains((./AUTN), '?')">
-										<arco-cd:uncertainData>
+										<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 											<xsl:value-of select="true()" />
 										</arco-cd:uncertainData>
 									</xsl:if>
 									<xsl:if test="./AUTS and (starts-with(lower-case(normalize-space(./AUTS)), 'attribuito'))">
-										<arco-cd:uncertainData>
+										<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 											<xsl:value-of select="true()" />
 										</arco-cd:uncertainData>
 									</xsl:if>
@@ -24392,7 +24405,7 @@
 								</arco-cd:hasAgentWithResponsibility>
 							</xsl:if>
 							<xsl:if test="contains((./AUUN), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-cd:uncertainData>
 							</xsl:if>
@@ -24510,17 +24523,17 @@
 								</arco-cd:hasAttributionMotivation>
 							</xsl:for-each>
 							<xsl:if test="contains((./AUFN), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-cd:uncertainData>
 							</xsl:if>
 							<xsl:if test="contains((./AUFB), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-cd:uncertainData>
 							</xsl:if>
 							<xsl:if test="./AUFS and (starts-with(lower-case(normalize-space(./AUFS)), 'attribuito'))">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-cd:uncertainData>
 							</xsl:if>
@@ -24901,7 +24914,7 @@
 								</arco-cd:hasCulturalScope>
 							</xsl:if>
 							<xsl:if test="contains((./AFBD), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-cd:uncertainData>
 							</xsl:if>
@@ -25028,7 +25041,7 @@
 							</xsl:attribute>
 						</arco-cd:hasAgentWithResponsibility>
 						<xsl:if test="contains((./AAF), '?')">
-							<arco-cd:uncertainData>
+							<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-cd:uncertainData>
 						</xsl:if>
@@ -25101,7 +25114,7 @@
 								</xsl:attribute>
 							</arco-cd:hasAgentWithResponsibility>
 							<xsl:if test="contains((./AUIN), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-cd:uncertainData>
 							</xsl:if>
@@ -25258,7 +25271,7 @@
 								</xsl:attribute>
 							</arco-cd:hasAgentWithResponsibility>
 							<xsl:if test="contains((.), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-cd:uncertainData>
 							</xsl:if>
@@ -25313,7 +25326,7 @@
 								</xsl:attribute>
 							</arco-cd:hasAgentWithResponsibility>
 							<xsl:if test="contains((./AATN), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-cd:uncertainData>
 							</xsl:if>
@@ -25454,12 +25467,12 @@
 								</xsl:attribute>
 							</arco-cd:hasAgentWithResponsibility>
 							<xsl:if test="contains((./AAFN), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-cd:uncertainData>
 							</xsl:if>
 							<xsl:if test="contains((./AAFB), '?')">
-								<arco-cd:uncertainData>
+								<arco-cd:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 									<xsl:value-of select="true()" />
 								</arco-cd:uncertainData>
 							</xsl:if>
@@ -35043,18 +35056,20 @@
 				</xsl:if>
 				<!-- Cataloguing level as individual -->
 				<xsl:for-each select="record/metadata/schede/*/CD/LIR">
-					<rdf:Description>
-						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat('https://w3id.org/arco/ontology/catalogue/', upper-case(arco-fn:urify(.)))" />
-						</xsl:attribute>
-						<rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CataloguingLevel" />
-						<rdfs:label>
-							<xsl:value-of select="normalize-space(.)" />
-						</rdfs:label>
-						<l0:name>
-							<xsl:value-of select="normalize-space(.)" />
-						</l0:name>
-					</rdf:Description>
+					<xsl:if test="not(upper-case(.)='P' or upper-case(.)='C' or upper-case(.)='I')">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat('https://w3id.org/arco/ontology/catalogue/', upper-case(arco-fn:urify(.)))" />
+							</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CataloguingLevel" />
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:if>
 				</xsl:for-each>
 				<!-- Sample Collected (CMN) -->
 				<xsl:for-each select="record/metadata/schede/*/MC/CMN">

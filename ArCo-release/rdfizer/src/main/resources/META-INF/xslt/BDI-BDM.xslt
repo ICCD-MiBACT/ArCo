@@ -77,7 +77,7 @@
 	xmlns:ar-SiteType="https://w3id.org/arco/resource/SiteType/"
 	xmlns:ar-ConservationStatus="https://w3id.org/arco/resource/ConservationStatus/"
 	xmlns:ar-Subject="https://w3id.org/arco/resource/Subject/"
-	xmlns:ar-SourceAndDocument="https://w3id.org/arco/resource/SourceAndDocument/"
+	xmlns:ar-SourceOrDocument="https://w3id.org/arco/resource/SourceOrDocument/"
 	xmlns:ar-cis="https://w3id.org/arco/resource/CulturalInstituteOrSite/"
 	xmlns:ar-SiteDefinition="https://w3id.org/arco/resource/SiteDefinition/"
 	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
@@ -5074,7 +5074,7 @@
 							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./DUOC))" />
 						</xsl:attribute>
 					</arco-core:hasIdentifier>
-					<arco-cd:originalStorageMedium>
+					<arco-cd:originalStorageMedium rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-cd:originalStorageMedium>
 					<xsl:if test="./DUOD[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
@@ -5358,7 +5358,7 @@
 							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./DUMC))" />
 						</xsl:attribute>
 					</arco-core:hasIdentifier>
-					<arco-cd:originalStorageMedium>
+					<arco-cd:originalStorageMedium rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="false()" />
 					</arco-cd:originalStorageMedium>
 					<xsl:if test="./DUMF">
@@ -6119,7 +6119,7 @@
 							</xsl:attribute>
 						</arco-core:hasAgent>
 						<xsl:if test="contains((.), '?')">
-							<arco-core:uncertainData>
+							<arco-core:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:uncertainData>
 						</xsl:if>
@@ -6939,7 +6939,7 @@
 							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./DVMC))" />
 						</xsl:attribute>
 					</arco-core:hasIdentifier>
-					<arco-cd:originalStorageMedium>
+					<arco-cd:originalStorageMedium rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="false()" />
 					</arco-cd:originalStorageMedium>
 					<xsl:if test="./DVMF">
@@ -7692,7 +7692,7 @@
 							</xsl:attribute>
 						</arco-core:hasAgent>
 						<xsl:if test="contains((.), '?')">
-							<arco-core:uncertainData>
+							<arco-core:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:uncertainData>
 						</xsl:if>
@@ -8009,7 +8009,7 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Registrazione fotografica del bene culturale ', $itemURI)" />
 				</l0:name>
-				<arco-cd:primaryDocument>
+				<arco-cd:primaryDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="true()" />
 				</arco-cd:primaryDocument>
 				<xsl:for-each select="./DFO/DFOG">
@@ -9421,7 +9421,7 @@
 							</xsl:attribute>
 						</arco-core:hasAgent>
 						<xsl:if test="contains((.), '?')">
-							<arco-core:uncertainData>
+							<arco-core:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:uncertainData>
 						</xsl:if>
@@ -9738,7 +9738,7 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Registrazione audio ', position(), ' del bene culturale ', $itemURI)" />
 				</l0:name>
-				<arco-cd:primaryDocument>
+				<arco-cd:primaryDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="false()" />
 				</arco-cd:primaryDocument>
 				<xsl:if test="./AIC">
@@ -11767,7 +11767,7 @@
 							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./AIOC))" />
 						</xsl:attribute>
 					</arco-core:hasIdentifier>
-					<arco-cd:originalStorageMedium>
+					<arco-cd:originalStorageMedium rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-cd:originalStorageMedium>
 					<xsl:if test="./AIOD[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
@@ -11940,7 +11940,7 @@
 							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./AIMC))" />
 						</xsl:attribute>
 					</arco-core:hasIdentifier>
-					<arco-cd:originalStorageMedium>
+					<arco-cd:originalStorageMedium rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="false()" />
 					</arco-cd:originalStorageMedium>
 					<xsl:if test="./AIMD[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
@@ -12701,7 +12701,7 @@
 							</xsl:attribute>
 						</arco-core:hasAgent>
 						<xsl:if test="contains((.), '?')">
-							<arco-core:uncertainData>
+							<arco-core:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:uncertainData>
 						</xsl:if>
@@ -13018,7 +13018,7 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Registrazione video ', position(), ' del bene culturale ', $itemURI)" />
 				</l0:name>
-				<arco-cd:primaryDocument>
+				<arco-cd:primaryDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="false()" />
 				</arco-cd:primaryDocument>
 				<xsl:if test="./VIC">
@@ -14922,7 +14922,7 @@
 							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./VIOC))" />
 						</xsl:attribute>
 					</arco-core:hasIdentifier>
-					<arco-cd:originalStorageMedium>
+					<arco-cd:originalStorageMedium rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-cd:originalStorageMedium>
 					<xsl:if test="./VIOD[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
@@ -15088,7 +15088,7 @@
 							<xsl:value-of select="concat($NS, 'StorageMediumIdentifier/', $itemURI, arco-fn:arcofy(./VIMC))" />
 						</xsl:attribute>
 					</arco-core:hasIdentifier>
-					<arco-cd:originalStorageMedium>
+					<arco-cd:originalStorageMedium rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="false()" />
 					</arco-cd:originalStorageMedium>
 					<xsl:if test="./VIMD[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
@@ -15842,7 +15842,7 @@
 							</xsl:attribute>
 						</arco-core:hasAgent>
 						<xsl:if test="contains((.), '?')">
-							<arco-core:uncertainData>
+							<arco-core:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:uncertainData>
 						</xsl:if>
@@ -16162,7 +16162,7 @@
 				<l0:name xml:lang="it">
 					<xsl:value-of select="concat('Registrazione photographic ', position(), ' del bene culturale ', $itemURI)" />
 				</l0:name>
-				<arco-cd:primaryDocument>
+				<arco-cd:primaryDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 					<xsl:value-of select="false()" />
 				</arco-cd:primaryDocument>
 				<xsl:for-each select="./FIO/FIOG">
@@ -19184,7 +19184,7 @@
 							</xsl:attribute>
 						</arco-core:hasAgent>
 						<xsl:if test="contains((.), '?')">
-							<arco-core:uncertainData>
+							<arco-core:uncertainData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-core:uncertainData>
 						</xsl:if>

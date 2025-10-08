@@ -75,7 +75,7 @@
 	xmlns:ar-SiteType="https://w3id.org/arco/resource/SiteType/"
 	xmlns:ar-ConservationStatus="https://w3id.org/arco/resource/ConservationStatus/"
 	xmlns:ar-Subject="https://w3id.org/arco/resource/Subject/"
-	xmlns:ar-SourceAndDocument="https://w3id.org/arco/resource/SourceAndDocument/"
+	xmlns:ar-SourceOrDocument="https://w3id.org/arco/resource/SourceOrDocument/"
 	xmlns:ar-cis="https://w3id.org/arco/resource/CulturalInstituteOrSite/"
 	xmlns:ar-SiteDefinition="https://w3id.org/arco/resource/SiteDefinition/"
 	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
@@ -756,23 +756,23 @@
 		</xsl:for-each>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMA">
 		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAZ and starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMA/SMAZ)), 'presente')">
-			<arco-spe:zoning>
+			<arco-spe:zoning rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
 			</arco-spe:zoning>
 		</xsl:if>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMF/SMFR and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMF/SMFR)), 'non rilevata'))">
-			<arco-spe:radioactivity>
+			<arco-spe:radioactivity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
 			</arco-spe:radioactivity>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAP and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMA/SMAP)), 'non rilevata'))">
-			<arco-spe:pseudomorph>
+			<arco-spe:pseudomorph rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
 			</arco-spe:pseudomorph>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAS and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMA/SMAS)), 'non rilevata'))">
-			<arco-spe:paramorph>
+			<arco-spe:paramorph rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             	<xsl:value-of select="true()" />
 			</arco-spe:paramorph>
 		</xsl:if>
@@ -1042,7 +1042,7 @@
 				</arco-spe:hasReflectance>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMM/SMMR">
-				<arco-spe:internalReflection>
+				<arco-spe:internalReflection rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
             		<xsl:value-of select="true()" />
 				</arco-spe:internalReflection>
 			</xsl:if>
@@ -3545,6 +3545,11 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Collecting location of cultural property ', $itemURI)" />
 			</l0:name>
+			<arco-location:hasLocationType>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/location/CollectingLocation'" />
+				</xsl:attribute>
+			</arco-location:hasLocationType>
 			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
 				<arco-location:hasGeologicalContext>
 					<xsl:attribute name="rdf:resource">

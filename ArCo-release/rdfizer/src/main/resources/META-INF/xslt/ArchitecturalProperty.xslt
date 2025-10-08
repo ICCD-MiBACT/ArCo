@@ -74,7 +74,7 @@
 	xmlns:ar-SiteType="https://w3id.org/arco/resource/SiteType/"
 	xmlns:ar-ConservationStatus="https://w3id.org/arco/resource/ConservationStatus/"
 	xmlns:ar-Subject="https://w3id.org/arco/resource/Subject/"
-	xmlns:ar-SourceAndDocument="https://w3id.org/arco/resource/SourceAndDocument/"
+	xmlns:ar-SourceOrDocument="https://w3id.org/arco/resource/SourceOrDocument/"
 	xmlns:ar-cis="https://w3id.org/arco/resource/CulturalInstituteOrSite/"
 	xmlns:ar-SiteDefinition="https://w3id.org/arco/resource/SiteDefinition/"
 	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
@@ -624,7 +624,7 @@
 							<xsl:value-of select="concat('Facade ', position(), ' of cultural property: ', $itemURI)" />
 						</l0:name>
 						<xsl:if test="./UBVA and starts-with(lower-case(normalize-space(./UBVA)), 'principale')">
-							<arco-con:mainFacade>
+							<arco-con:mainFacade rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-con:mainFacade>
 						</xsl:if>
@@ -743,7 +743,7 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(./ISST)" />
 						</l0:name>
-						<arco-con:auxiliaryStructuralElement>
+						<arco-con:auxiliaryStructuralElement rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-con:auxiliaryStructuralElement>
 					</rdf:Description>
@@ -2691,7 +2691,7 @@
 							</l0:name>
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/A/FN/FNS/FNSR='fnp' or record/metadata/schede/A/FN/FNS/FNSR='FNP' or record/metadata/schede/A/FN/FNS/FNSR='f.n.p.' or record/metadata/schede/A/FN/FNS/FNSR='F.N.P.' ">
-									<arco-con:withoutFoundation>
+									<arco-con:withoutFoundation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 										<xsl:value-of select="true()" />
 									</arco-con:withoutFoundation>
 								</xsl:when>
@@ -4006,7 +4006,7 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(./MPAT)" />
 						</l0:name>
-						<arco-con:scenografic>
+						<arco-con:scenografic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-con:scenografic>
 					</rdf:Description>

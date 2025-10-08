@@ -2752,7 +2752,7 @@
 							</arco-dd:explanationNote>
 						</xsl:if>
 						<xsl:if test="lower-case(normalize-space(record/metadata/schede/SCAN/MT/INT))='bene di interesse culturale dichiarato'">
-							<arco-arco:culturalInterestDeclaration>
+							<arco-arco:culturalInterestDeclaration rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 								<xsl:value-of select="true()" />
 							</arco-arco:culturalInterestDeclaration>
 						</xsl:if>
@@ -3099,7 +3099,7 @@
 											<xsl:value-of select="concat($NS, 'FilmDocumentation/', $itemURI, '-documentation-', position())" />
 										</xsl:when>
 										<xsl:when test="contains((./DCMP), 'fonti e documenti testuali')">
-											<xsl:value-of select="concat($NS, 'SourceAndDocument/', $itemURI, '-documentation-', position())" />
+											<xsl:value-of select="concat($NS, 'SourceOrDocument/', $itemURI, '-documentation-', position())" />
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:value-of select="concat($NS, 'Documentation/', $itemURI, '-documentation-', position())" />
@@ -3171,13 +3171,13 @@
 						<xsl:for-each select="record/metadata/schede/*/DO/FNT">
 							<arco-cd:hasDocumentation>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'SourceAndDocument/', $itemURI, '-source-document-', position())" />
+									<xsl:value-of select="concat($NS, 'SourceOrDocument/', $itemURI, '-source-document-', position())" />
 								</xsl:attribute>
 							</arco-cd:hasDocumentation>
 							<xsl:if test="contains((./FNTX), 'allegat')">
 								<arco-cd:hasAttachedDocumentation>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'SourceAndDocument/', $itemURI, '-source-document-', position())" />
+										<xsl:value-of select="concat($NS, 'SourceOrDocument/', $itemURI, '-source-document-', position())" />
 									</xsl:attribute>
 								</arco-cd:hasAttachedDocumentation>
 							</xsl:if>

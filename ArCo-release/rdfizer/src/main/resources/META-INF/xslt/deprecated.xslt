@@ -77,7 +77,7 @@
 	xmlns:ar-SiteType="https://w3id.org/arco/resource/SiteType/"
 	xmlns:ar-ConservationStatus="https://w3id.org/arco/resource/ConservationStatus/"
 	xmlns:ar-Subject="https://w3id.org/arco/resource/Subject/"
-	xmlns:ar-SourceAndDocument="https://w3id.org/arco/resource/SourceAndDocument/"
+	xmlns:ar-SourceOrDocument="https://w3id.org/arco/resource/SourceOrDocument/"
 	xmlns:ar-cis="https://w3id.org/arco/resource/CulturalInstituteOrSite/"
 	xmlns:ar-SiteDefinition="https://w3id.org/arco/resource/SiteDefinition/"
 	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
@@ -3395,7 +3395,7 @@
 					</xsl:variable>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'SourceAndDocument/', $itemURI, '-source-document-', position())" />
+							<xsl:value-of select="concat($NS, 'SourceOrDocument/', $itemURI, '-source-document-', position())" />
 						</xsl:attribute>
 						<xsl:if test="./FNTY and (not(starts-with(lower-case(normalize-space(./FNTY)), 'nr')) and not(starts-with(lower-case(normalize-space(./FNTY)), 'n.r')))">
 							<arco-cd:rights>
@@ -8521,6 +8521,14 @@
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/DesignationInTime'" />
 								</xsl:attribute>
 							</rdf:type>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+								<xsl:value-of select="true()" />
+							</owl:deprecated>
+							<owl:sameAs>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(./OGDN))))" />
+								</xsl:attribute>
+							</owl:sameAs>
 							<xsl:if test="./OGDT and (not(starts-with(lower-case(normalize-space(./OGDT)), 'nr')) and not(starts-with(lower-case(normalize-space(./OGDT)), 'n.r')))">
 								<arco-dd:hasDesignationType>
 									<xsl:attribute name="rdf:resource">
@@ -8594,8 +8602,8 @@
 											<xsl:value-of select="normalize-space(./OGDT)" />
 										</l0:name>
 										<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
-  <xsl:value-of select="true()" />
-</owl:deprecated>
+										<xsl:value-of select="true()" />
+										</owl:deprecated>
 									</rdf:Description>
 								</xsl:when>
 							</xsl:choose>
@@ -8707,18 +8715,34 @@
 								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Original'" />
 							</xsl:attribute>
 						</arco-dd:hasDesignationInTimeType>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+								<xsl:value-of select="true()" />
+						</owl:deprecated>
+						<owl:sameAs>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/NU/OG/OGT/OGTO))))" />
+							</xsl:attribute>
+						</owl:sameAs>
 					</rdf:Description>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/VeAC/OG/OGT/OGTS">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(rrecord/metadata/schede/VeAC/OG/OGT/OGTS)))" />
+							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/OG/OGT/OGTS)))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/DesignationInTime'" />
 							</xsl:attribute>
 						</rdf:type>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+								<xsl:value-of select="true()" />
+						</owl:deprecated>
+						<owl:sameAs>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/VeAC/OG/OGT/OGTS))))" />
+							</xsl:attribute>
+						</owl:sameAs>
 					</rdf:Description>
 				</xsl:if>
 				<xsl:if test="($sheetType='A' or $sheetType='PG') and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')">
@@ -8732,6 +8756,14 @@
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/DesignationInTime'" />
 								</xsl:attribute>
 							</rdf:type>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+								<xsl:value-of select="true()" />
+							</owl:deprecated>
+							<owl:sameAs>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTD))))" />
+								</xsl:attribute>
+							</owl:sameAs>
 						</rdf:Description>
 					</xsl:if>
 				</xsl:if>
@@ -8751,6 +8783,14 @@
 									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/HistoricalDesignation'" />
 								</xsl:attribute>
 							</arco-dd:hasDesignationType>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+								<xsl:value-of select="true()" />
+							</owl:deprecated>
+							<owl:sameAs>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space())))" />
+								</xsl:attribute>
+							</owl:sameAs>
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
@@ -8769,6 +8809,14 @@
 								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/HistoricalDesignation'" />
 							</xsl:attribute>
 						</arco-dd:hasDesignationType>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+								<xsl:value-of select="true()" />
+						</owl:deprecated>
+						<owl:sameAs>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTY))))" />
+							</xsl:attribute>
+						</owl:sameAs>
 					</rdf:Description>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'erbario')">
@@ -8781,6 +8829,14 @@
 								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/DesignationInTime'" />
 							</xsl:attribute>
 						</rdf:type>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+							<xsl:value-of select="true()" />
+						</owl:deprecated>
+						<owl:sameAs>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTE))))" />
+							</xsl:attribute>
+						</owl:sameAs>
 					</rdf:Description>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'collezione')">
@@ -8793,8 +8849,34 @@
 								<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/DesignationInTime'" />
 							</xsl:attribute>
 						</rdf:type>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+							<xsl:value-of select="true()" />
+						</owl:deprecated>
+						<owl:sameAs>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTC))))" />
+							</xsl:attribute>
+						</owl:sameAs>
 					</rdf:Description>
 				</xsl:if>
+				<xsl:for-each select="record/metadata/schede/*/OG/OGT/OGTN">	
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DesignationInTime'" />
+							</xsl:attribute>
+						</rdf:type>
+						<owl:deprecated>
+							<xsl:value-of select="true()" />
+						</owl:deprecated>
+						<owl:sameAs>
+							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
+						</owl:sameAs>
+					</rdf:Description>
+				</xsl:for-each>
 				<xsl:if test="$sheetType='BNM'">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
