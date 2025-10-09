@@ -13473,7 +13473,7 @@
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SurveyMethod'" />
+										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SurveyMotivation'" />
 									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
