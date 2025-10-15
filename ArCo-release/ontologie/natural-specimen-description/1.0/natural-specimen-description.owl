@@ -6839,12 +6839,12 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/natural-specimen-description/NormativeMineralogy -->
+    <!-- https://w3id.org/arco/ontology/natural-specimen-description/MineralComposition -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/NormativeMineralogy">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/MineralComposition">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
-        <rdfs:label xml:lang="it">MIneralogia normativa</rdfs:label>
-        <rdfs:label xml:lang="en">Normative mineralogy</rdfs:label>
+        <rdfs:label xml:lang="it">Composizione mineralogica</rdfs:label>
+        <rdfs:label xml:lang="en">Mineral composition</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNPE: SR/SRM/SRMN</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
