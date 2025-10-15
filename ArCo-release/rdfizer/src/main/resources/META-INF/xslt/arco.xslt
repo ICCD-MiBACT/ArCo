@@ -13473,7 +13473,7 @@
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SurveyMotivation'" />
+										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SurveyMethod'" />
 									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
@@ -35605,7 +35605,7 @@
 						</xsl:if>
 					</xsl:if>
 				</xsl:for-each>
-				<!-- archivalrecordset membership -->
+				<!-- archivalresourceset membership -->
 				<xsl:if test="record/metadata/schede/*/UB/UBF/*">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
@@ -35670,12 +35670,12 @@
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalCollection'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalUnit'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalResource'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
 							</xsl:attribute>
 						</rdf:type>
 						<arco-core:hasType>
@@ -35818,12 +35818,12 @@
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalCollection'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResourceSet'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalResource'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
 							</xsl:attribute>
 						</rdf:type>
 						<arco-core:hasType>
@@ -35946,12 +35946,12 @@
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalCollection'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResourceSet'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalResource'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
 							</xsl:attribute>
 						</rdf:type>
 						<arco-core:hasType>
@@ -36047,12 +36047,12 @@
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalCollection'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResourceSet'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalResource'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
 							</xsl:attribute>
 						</rdf:type>
 						<arco-core:hasType>
@@ -36149,12 +36149,12 @@
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalCollection'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalUnit'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalResource'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
 							</xsl:attribute>
 						</rdf:type>
 						<arco-core:hasType>
@@ -36297,12 +36297,12 @@
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalCollection'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResourceSet'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalResource'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
 							</xsl:attribute>
 						</rdf:type>
 						<arco-core:hasType>
@@ -36425,12 +36425,12 @@
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalCollection'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResourceSet'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalResource'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
 							</xsl:attribute>
 						</rdf:type>
 						<arco-core:hasType>
@@ -36526,12 +36526,12 @@
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalCollection'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResourceSet'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalResource'" />
+								<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
 							</xsl:attribute>
 						</rdf:type>
 						<arco-core:hasType>
@@ -36639,12 +36639,12 @@
 							</xsl:choose>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalCollection'" />
+									<xsl:value-of select="'w3id.org/arco/archives/ontology/archival-resource/ArchivalResourceSte'" />
 								</xsl:attribute>
 							</rdf:type>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalResource'" />
+									<xsl:value-of select="'w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
 								</xsl:attribute>
 							</rdf:type>
 							<arco-core:hasType>
@@ -36780,12 +36780,12 @@
 							</xsl:choose>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalCollection'" />
+									<xsl:value-of select="'w3id.org/arco/archives/ontology/archival-resource/ArchivalResourceSet'" />
 								</xsl:attribute>
 							</rdf:type>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchivalResource'" />
+									<xsl:value-of select="'w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
 								</xsl:attribute>
 							</rdf:type>
 							<arco-core:hasType>
