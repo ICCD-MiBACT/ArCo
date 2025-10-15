@@ -8874,7 +8874,7 @@
 						</owl:deprecated>
 						<owl:sameAs>
 							<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
+								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
 							</xsl:attribute>
 						</owl:sameAs>
 					</rdf:Description>
