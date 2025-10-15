@@ -9319,7 +9319,9 @@
 								<xsl:value-of select="concat($NS, 'Copyright/', $itemURI, '-copyright-photographicdocumentation-', position())" />
 							</xsl:attribute>
 							<rdf:type>
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="concat('Copyright ', position(), ' of cultural property documentation ', $itemURI)" />
@@ -9696,7 +9698,9 @@
 								<xsl:value-of select="concat($NS, 'Copyright/', $itemURI, '-copyright-graphicdocumentation-', position())" />
 							</xsl:attribute>
 							<rdf:type>
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="concat('Copyright ', position(), ' of cultural property documentation ', $itemURI)" />
@@ -10027,7 +10031,9 @@
 								<xsl:value-of select="concat($NS, 'Copyright/', $itemURI, '-copyright-filmdocumentation-', position())" />
 							</xsl:attribute>
 							<rdf:type>
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="concat('Copyright ', position(), ' of cultural property documentation ', $itemURI)" />
@@ -10203,7 +10209,7 @@
 						<xsl:if test="./REGY and (not(starts-with(lower-case(normalize-space(./REGY)), 'nr')) and not(starts-with(lower-case(normalize-space(./REGY)), 'n.r')))">
 							<arco-cd:hasCopyright>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'Copyright/', $itemURI, '-copyright-photographicdocumentation-', position())" />
+									<xsl:value-of select="concat($NS, 'Copyright/', $itemURI, '-copyright-documentation-', position())" />
 								</xsl:attribute>
 							</arco-cd:hasCopyright>
 						</xsl:if>
@@ -10285,7 +10291,9 @@
 								<xsl:value-of select="concat($NS, 'Copyright/', $itemURI, '-copyright-documentation-', position())" />
 							</xsl:attribute>
 							<rdf:type>
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="concat('Copyright ', position(), ' of cultural property documentation ', $itemURI)" />
@@ -10574,7 +10582,9 @@
 								<xsl:value-of select="concat($NS, 'Copyright/', $itemURI, '-copyright-documentation-', position())" />
 							</xsl:attribute>
 							<rdf:type>
-								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="concat('Copyright ', position(), ' of cultural property documentation ', $itemURI)" />
@@ -11485,7 +11495,9 @@
 									<xsl:value-of select="concat($NS, 'Copyright/', $itemURI, '-copyright-bibliography-', position())" />
 								</xsl:attribute>
 								<rdf:type>
-									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label xml:lang="en">
 									<xsl:value-of select="concat('Copyright ', position(), ' of cultural property publication ', $itemURI)" />
@@ -16104,50 +16116,52 @@
 									<xsl:value-of select="normalize-space(./ISEP)" />
 								</arco-dd:positionOnCulturalProperty>
 							</xsl:if>
-							<arco-core:hasType>
-								<xsl:choose>
-									<xsl:when test="./ISEE and (not(starts-with(lower-case(normalize-space(./ISEE)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISEE)), 'n.r')))">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'AffixedElementType/', arco-fn:urify(normalize-space(./ISED)), arco-fn:urify(normalize-space(./ISEE)))" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Stamp'" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='stemma'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CoatOfArms'" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='emblema'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Emblem'" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='marchio'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Brand'" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='logo'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Logo'" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='iscrizione'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Inscription'" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'AffixedElementType/', arco-fn:urify(normalize-space(./ISED)))" />
-										</xsl:attribute>
-									</xsl:otherwise>
-								</xsl:choose>
-							</arco-core:hasType>
+							<xsl:if test="./ISEE">
+								<arco-core:hasType>
+									<xsl:choose>
+										<xsl:when test="./ISEE and (not(starts-with(lower-case(normalize-space(./ISEE)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISEE)), 'n.r')))">
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="concat($NS, 'AffixedElementType/', arco-fn:urify(normalize-space(./ISED)), arco-fn:urify(normalize-space(./ISEE)))" />
+											</xsl:attribute>
+										</xsl:when>
+										<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Stamp'" />
+											</xsl:attribute>
+										</xsl:when>
+										<xsl:when test="lower-case(normalize-space(./ISED))='stemma'">
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CoatOfArms'" />
+											</xsl:attribute>
+										</xsl:when>
+										<xsl:when test="lower-case(normalize-space(./ISED))='emblema'">
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Emblem'" />
+											</xsl:attribute>
+										</xsl:when>
+										<xsl:when test="lower-case(normalize-space(./ISED))='marchio'">
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Brand'" />
+											</xsl:attribute>
+										</xsl:when>
+										<xsl:when test="lower-case(normalize-space(./ISED))='logo'">
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Logo'" />
+											</xsl:attribute>
+										</xsl:when>
+										<xsl:when test="lower-case(normalize-space(./ISED))='iscrizione'">
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Inscription'" />
+											</xsl:attribute>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="concat($NS, 'AffixedElementType/', arco-fn:urify(normalize-space(./ISED)))" />
+											</xsl:attribute>
+										</xsl:otherwise>
+									</xsl:choose>
+								</arco-core:hasType>
+							</xsl:if>
 							<xsl:if test="./ISEO and (not(starts-with(lower-case(normalize-space(./ISEO)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISEO)), 'n.r')))">
 								<arco-dd:refersToAgent>
 									<xsl:attribute name="rdf:resource">
