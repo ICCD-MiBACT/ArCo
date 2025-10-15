@@ -622,6 +622,22 @@
 									<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
 								</xsl:attribute>
 							</arco-dd:hasDesignationInTime>
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+									<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+								</xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DesignationInTime'" />
+									</xsl:attribute>
+								</rdf:type>
+								<owl:deprecated>
+									<xsl:value-of select="true()" />
+								</owl:deprecated>
+								<owl:sameAs>
+									<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
+								</owl:sameAs>
+							</rdf:Description>
 						</xsl:for-each>
 						<xsl:for-each select="record/metadata/schede/*/OG/OGT/OGTU">
 							<arco-dd:hasDesignationInTime>
@@ -1873,123 +1889,132 @@
 						</xsl:variable>
 						<rdf:Description>
 							<xsl:choose>
-								<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">
-									<xsl:attribute name="rdf:about">
-										<xsl:value-of select="concat($NS, 'Stamp/', $itemURI, '-affixed-element-', position())" />
-									</xsl:attribute>
+								<xsl:when test="record/metadata/schede/*/DA/ISE/ISED">
+									<xsl:choose>
+										<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">
+											<xsl:attribute name="rdf:about">
+												<xsl:value-of select="concat($NS, 'Stamp/', $itemURI, '-affixed-element-', position())" />
+											</xsl:attribute>
+										</xsl:when>
+										<xsl:when test="lower-case(normalize-space(./ISED))='stemma'">
+											<xsl:attribute name="rdf:about">
+												<xsl:value-of select="concat($NS, 'CoatOfArms/', $itemURI, '-affixed-element-', position())" />
+											</xsl:attribute>
+										</xsl:when>
+										<xsl:when test="lower-case(normalize-space(./ISED))='emblema'">
+											<xsl:attribute name="rdf:about">
+												<xsl:value-of select="concat($NS, 'Emblem/', $itemURI, '-affixed-element-', position())" />
+											</xsl:attribute>
+										</xsl:when>
+										<xsl:when test="lower-case(normalize-space(./ISED))='marchio'">
+											<xsl:attribute name="rdf:about">
+												<xsl:value-of select="concat($NS, 'Brand/', $itemURI, '-affixed-element-', position())" />
+											</xsl:attribute>
+										</xsl:when>
+										<xsl:when test="lower-case(normalize-space(./ISED))='logo'">
+											<xsl:attribute name="rdf:about">
+												<xsl:value-of select="concat($NS, 'Logo/', $itemURI, '-affixed-element-', position())" />
+											</xsl:attribute>
+										</xsl:when>
+										<xsl:when test="lower-case(normalize-space(./ISED))='iscrizione'">
+											<xsl:attribute name="rdf:about">
+												<xsl:value-of select="concat($NS, 'Inscription/', $itemURI, '-affixed-element-', position())" />
+											</xsl:attribute>
+										</xsl:when>
+									</xsl:choose>
+									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+										<xsl:value-of select="true()" />
+									</owl:deprecated>
+									<owl:sameAs>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
+										</xsl:attribute>
+									</owl:sameAs>
+									<rdf:type>
+										<xsl:choose>
+											<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">
+												<xsl:attribute name="rdf:resource">
+													<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Stamp'" />
+												</xsl:attribute>
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='stemma'">
+												<xsl:attribute name="rdf:resource">
+													<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CoatOfArms'" />
+												</xsl:attribute>
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='emblema'">
+												<xsl:attribute name="rdf:resource">
+													<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Emblem'" />
+												</xsl:attribute>
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='marchio'">
+												<xsl:attribute name="rdf:resource">
+													<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Brand'" />
+												</xsl:attribute>
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='logo'">
+												<xsl:attribute name="rdf:resource">
+													<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Logo'" />
+												</xsl:attribute>
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='iscrizione'">
+												<xsl:attribute name="rdf:resource">
+													<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Inscription'" />
+												</xsl:attribute>
+											</xsl:when>
+										</xsl:choose>
+									</rdf:type>
+									<rdfs:label xml:lang="en">
+										<xsl:choose>
+											<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">
+												<xsl:value-of select="concat('Element ', position(), ' affixed to cultural property ', $itemURI, ': stamp')" />
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='stemma'">
+												<xsl:value-of select="concat('Element ', position(), ' affixed to cultural property ', $itemURI, ': coat of arms')" />
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='emblema'">
+												<xsl:value-of select="concat('Element ', position(), ' affixed to cultural property ', $itemURI, ': emblem')" />
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='marchio'">
+												<xsl:value-of select="concat('Element ', position(), ' affixed to cultural property ', $itemURI, ': brand')" />
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='logo'">
+												<xsl:value-of select="concat('Element ', position(), ' affixed to cultural property ', $itemURI, ': logo')" />
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='iscrizione'">
+												<xsl:value-of select="concat('Element ', position(), ' affixed to cultural property ', $itemURI, ': inscription')" />
+											</xsl:when>
+										</xsl:choose>
+									</rdfs:label>
+									<rdfs:label xml:lang="it">
+										<xsl:choose>
+											<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">
+												<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI, ': timbro')" />
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='stemma'">
+												<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI, ': stemma')" />
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='emblema'">
+												<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI, ': emblema')" />
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='marchio'">
+												<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI, ': marchio')" />
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='logo'">
+												<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI, ': logo')" />
+											</xsl:when>
+											<xsl:when test="lower-case(normalize-space(./ISED))='iscrizione'">
+												<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI, ': iscrizione')" />
+											</xsl:when>
+										</xsl:choose>
+									</rdfs:label>
 								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./ISED))='stemma'">
+								<xsl:otherwise>
 									<xsl:attribute name="rdf:about">
-										<xsl:value-of select="concat($NS, 'CoatOfArms/', $itemURI, '-affixed-element-', position())" />
+											<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
 									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./ISED))='emblema'">
-									<xsl:attribute name="rdf:about">
-										<xsl:value-of select="concat($NS, 'Emblem/', $itemURI, '-affixed-element-', position())" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./ISED))='marchio'">
-									<xsl:attribute name="rdf:about">
-										<xsl:value-of select="concat($NS, 'Brand/', $itemURI, '-affixed-element-', position())" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./ISED))='logo'">
-									<xsl:attribute name="rdf:about">
-										<xsl:value-of select="concat($NS, 'Logo/', $itemURI, '-affixed-element-', position())" />
-									</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="lower-case(normalize-space(./ISED))='iscrizione'">
-									<xsl:attribute name="rdf:about">
-										<xsl:value-of select="concat($NS, 'Inscription/', $itemURI, '-affixed-element-', position())" />
-									</xsl:attribute>
-								</xsl:when>
+								</xsl:otherwise>
 							</xsl:choose>
-							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
-  <xsl:value-of select="true()" />
-</owl:deprecated>
-							<owl:sameAs>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
-								</xsl:attribute>
-							</owl:sameAs>
-							<rdf:type>
-								<xsl:choose>
-									<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Stamp'" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='stemma'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CoatOfArms'" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='emblema'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Emblem'" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='marchio'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Brand'" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='logo'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Logo'" />
-										</xsl:attribute>
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='iscrizione'">
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Inscription'" />
-										</xsl:attribute>
-									</xsl:when>
-								</xsl:choose>
-							</rdf:type>
-							<rdfs:label xml:lang="en">
-								<xsl:choose>
-									<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">
-										<xsl:value-of select="concat('Element ', position(), ' affixed to cultural property ', $itemURI, ': stamp')" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='stemma'">
-										<xsl:value-of select="concat('Element ', position(), ' affixed to cultural property ', $itemURI, ': coat of arms')" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='emblema'">
-										<xsl:value-of select="concat('Element ', position(), ' affixed to cultural property ', $itemURI, ': emblem')" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='marchio'">
-										<xsl:value-of select="concat('Element ', position(), ' affixed to cultural property ', $itemURI, ': brand')" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='logo'">
-										<xsl:value-of select="concat('Element ', position(), ' affixed to cultural property ', $itemURI, ': logo')" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='iscrizione'">
-										<xsl:value-of select="concat('Element ', position(), ' affixed to cultural property ', $itemURI, ': inscription')" />
-									</xsl:when>
-								</xsl:choose>
-							</rdfs:label>
-							<rdfs:label xml:lang="it">
-								<xsl:choose>
-									<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">
-										<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI, ': timbro')" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='stemma'">
-										<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI, ': stemma')" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='emblema'">
-										<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI, ': emblema')" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='marchio'">
-										<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI, ': marchio')" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='logo'">
-										<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI, ': logo')" />
-									</xsl:when>
-									<xsl:when test="lower-case(normalize-space(./ISED))='iscrizione'">
-										<xsl:value-of select="concat('Elemento ', position(), ' apposto sul bene ', $itemURI, ': iscrizione')" />
-									</xsl:when>
-								</xsl:choose>
-							</rdfs:label>
 							<xsl:if test="./ISEN and (not(starts-with(lower-case(normalize-space(./ISEN)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISEN)), 'n.r')))">
 								<arco-core:description xml:lang="it">
 									<xsl:value-of select="normalize-space(./ISEN)" />
@@ -8873,9 +8898,7 @@
 							<xsl:value-of select="true()" />
 						</owl:deprecated>
 						<owl:sameAs>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
-							</xsl:attribute>
+							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
 						</owl:sameAs>
 					</rdf:Description>
 				</xsl:for-each>
