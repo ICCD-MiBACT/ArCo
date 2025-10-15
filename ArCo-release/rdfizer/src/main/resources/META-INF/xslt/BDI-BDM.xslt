@@ -650,7 +650,7 @@
 			<xsl:for-each select="record/metadata/schede/*/TC">
 				<arco-core:hasAgentRole>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-main-agent-group', position())" />
+						<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-main-agent-group-', position())" />
 					</xsl:attribute>
 				</arco-core:hasAgentRole>
 				<arco-lite:involvesMainAgent>
@@ -2453,7 +2453,7 @@
 		                       </xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="'Responsabile scientifico della ricerca'" />
+							<xsl:value-of select="'Responsabile scientifico'" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Scientific Director'" />
@@ -19551,7 +19551,7 @@
 			<xsl:for-each select="record/metadata/schede/*/RI/ATC">
 				<arco-core:hasAgentRole>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-main-agent-group', position())" />
+						<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-main-agent-group-', position())" />
 					</xsl:attribute>
 				</arco-core:hasAgentRole>
 				<arco-lite:involvesMainAgent>

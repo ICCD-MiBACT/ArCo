@@ -2769,12 +2769,12 @@
 							<xsl:when test="record/metadata/schede/harvesting/enteCompetente">
 								<arco-core:hasAgentRole>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
 									</xsl:attribute>
 								</arco-core:hasAgentRole>
 								<arco-cd:hasResponsibility>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
 									</xsl:attribute>
 								</arco-cd:hasResponsibility>
 								<arco-lite:hasHeritageProtectionAgency>
@@ -2788,12 +2788,12 @@
 									<xsl:if test=".">
 										<arco-core:hasAgentRole>
 											<xsl:attribute name="rdf:resource">
-												<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+												<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
 											</xsl:attribute>
 										</arco-core:hasAgentRole>
 										<arco-cd:hasResponsibility>
 											<xsl:attribute name="rdf:resource">
-												<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agent')" />
+												<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
 											</xsl:attribute>
 										</arco-cd:hasResponsibility>
 										<arco-lite:hasHeritageProtectionAgency>
@@ -5762,7 +5762,7 @@
 						<xsl:for-each select="record/metadata/schede/SCAN/BI/RIL/RILA">
 							<arco-core:hasAgentRole>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-main-agent-group', position())" />
+									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-main-agent-group-', position())" />
 								</xsl:attribute>
 							</arco-core:hasAgentRole>
 							<arco-lite:involvesMainAgent>

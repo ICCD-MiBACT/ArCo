@@ -242,7 +242,7 @@
 					<xsl:when test="record/metadata/schede/harvesting/enteCompetente">
 						<arco-core:hasAgentRole>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-heritage-protection-agent')" />
+								<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-heritage-protection-agency')" />
 							</xsl:attribute>
 						</arco-core:hasAgentRole>
 						<arco-lite:hasHeritageProtectionAgency>
@@ -256,7 +256,7 @@
 							<xsl:if test=".">
 								<arco-core:hasAgentRole>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-heritage-protection-agent')" />
+										<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-heritage-protection-agency')" />
 									</xsl:attribute>
 								</arco-core:hasAgentRole>
 								<arco-lite:hasHeritageProtectionAgency>
@@ -835,7 +835,7 @@
 							</xsl:attribute>
 						</owl:sameAs>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat(./@hint, ': ', normalize-space(.))" />
+							<xsl:value-of select="concat('Responsabile scientifico', ': ', normalize-space(.))" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="concat('Scientific director', ': ', normalize-space(.))" />
@@ -861,7 +861,7 @@
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat(./@hint, ': ', normalize-space(.))" />
+							<xsl:value-of select="concat('Responsabile scientifico', ': ', normalize-space(.))" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="concat('Scientific director', ': ', normalize-space(.))" />
@@ -902,7 +902,7 @@
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="normalize-space(./@hint)" />
+							<xsl:value-of select="'Responsabile scientifico'" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Scientific Director'" />
@@ -1515,7 +1515,7 @@
 						<xsl:when test="record/metadata/schede/harvesting/enteCompetente">
 							<arco-core:hasAgentRole>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'AgentRole/', $idEdition, '-heritage-protection-agent')" />
+									<xsl:value-of select="concat($NS, 'AgentRole/', $idEdition, '-heritage-protection-agency')" />
 								</xsl:attribute>
 							</arco-core:hasAgentRole>
 							<arco-lite:hasHeritageProtectionAgency>
@@ -1529,7 +1529,7 @@
 								<xsl:if test=".">
 									<arco-core:hasAgentRole>
 										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'AgentRole/', $idEdition, '-heritage-protection-agent')" />
+											<xsl:value-of select="concat($NS, 'AgentRole/', $idEdition, '-heritage-protection-agency')" />
 										</xsl:attribute>
 									</arco-core:hasAgentRole>
 									<arco-lite:hasHeritageProtectionAgency>
@@ -1676,7 +1676,7 @@
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat(./@hint, ': ', normalize-space(.))" />
+							<xsl:value-of select="concat('Responsabile scientifico', ': ', normalize-space(.))" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="concat('Scientific director', ': ', normalize-space(.))" />
@@ -1717,7 +1717,7 @@
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
-							<xsl:value-of select="normalize-space(./@hint)" />
+							<xsl:value-of select="'Responsabile scientifico'" />
 						</rdfs:label>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Scientific Director'" />
