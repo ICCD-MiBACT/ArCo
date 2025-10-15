@@ -2638,7 +2638,9 @@
 							<xsl:value-of select="concat($NS, 'Copyright/', $idEdition, '-copyright-bibliography-', position())" />
 						</xsl:attribute>
 						<rdf:type>
-							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Copyright'" />
+							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="concat('Copyright ', position(), ' of cultural property bibliography ', $idEdition)" />
