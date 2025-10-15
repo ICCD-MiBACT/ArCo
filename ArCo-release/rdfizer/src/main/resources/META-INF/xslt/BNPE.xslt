@@ -1744,7 +1744,7 @@
 				<xsl:for-each select="record/metadata/schede/BNPE/SR/SRM/SRMN">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-normative-mineralogy')" />
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-mineral-composition')" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:for-each>
@@ -2098,7 +2098,7 @@
 			</xsl:if>
 			<xsl:for-each select="record/metadata/schede/BNPE/SR/SRM/SRMN">
 				<rdf:Description>
-					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-normative-mineralogy')" />
+					<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-mineral-composition')" />
 					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 					<rdfs:label xml:lang="en">
 						<xsl:value-of select="concat('Measurement of cultural property ', $itemURI, ': ', .)" />
@@ -2113,7 +2113,7 @@
 						<xsl:value-of select="concat('Misura del bene culturale ', $itemURI, ': ', .)" />
 					</l0:name>
 					<arco-core:hasType>
-						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'NormativeMineralogy')" />
+						<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/natural-specimen-description/', 'MineralComposition')" />
 					</arco-core:hasType>
 					<arco-dd:hasValue>
 						<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', arco-fn:urify(normalize-space(.)))" />
