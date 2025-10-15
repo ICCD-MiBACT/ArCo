@@ -244,6 +244,13 @@
 								</arco-location:hasCadastralEntity>
 							</xsl:for-each>
 						</xsl:for-each>
+						<xsl:for-each select="./CTE[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+							<arco-location:hasCadastralEntity>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'NeighbouringCadastralEntity/', $itemURI, '-', $parentPosition, '-', position())" />
+								</xsl:attribute>
+							</arco-location:hasCadastralEntity>
+						</xsl:for-each>
 					</rdf:Description>
 					<xsl:for-each select="./CTS">
 						<!-- cadastral city as an individual -->
@@ -464,14 +471,11 @@
 									<xsl:value-of select="concat('Elemento di confine del bene culturale ', $itemURI, ': ', normalize-space(.))" />
 								</rdfs:label>
 								<l0:name xml:lang="it">
-									<xsl:value-of select="concat('Elemento di confine del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+									<xsl:value-of select="normalize-space(.)" />
 								</l0:name>
 								<rdfs:label xml:lang="en">
 									<xsl:value-of select="concat('Neighbouring cadastral identity of cultural property ', $itemURI, ': ', normalize-space(.))" />
 								</rdfs:label>
-								<l0:name xml:lang="en">
-									<xsl:value-of select="concat('Neighbouring cadastral identity of cultural property ', $itemURI, ': ', normalize-space(.))" />
-								</l0:name>
 							</rdf:Description>
 					</xsl:for-each>
 					<!-- cadastre as an individual -->
