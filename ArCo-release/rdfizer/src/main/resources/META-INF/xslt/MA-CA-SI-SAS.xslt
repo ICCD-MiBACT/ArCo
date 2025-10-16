@@ -109,11 +109,15 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:when>
-						<xsl:when test="record/metadata/schede/MODI/CD/CDM">
-							<xsl:value-of select="concat(arco-fn:urify(record/metadata/schede/*/CD/CDR), arco-fn:urify(record/metadata/schede/*/CD/CDM))" />
-						</xsl:when>
-						<xsl:when test="record/metadata/schede/*/CD/CBC">
-							<xsl:value-of select="record/metadata/schede/*/CD/CBC" />
+						<xsl:when test="record/metadata/schede/*/CD/CDM">
+							<xsl:choose>
+								<xsl:when test="record/metadata/schede/*/CD/CDR">
+									<xsl:value-of select="concat(arco-fn:urify(record/metadata/schede/*/CD/CDR), arco-fn:urify(record/metadata/schede/*/CD/CDM))" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/CD/CDM)" />
+								</xsl:otherwise>
+							</xsl:choose>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:variable name="accc-space">
@@ -336,6 +340,23 @@
 								<xsl:value-of select="concat($NS, 'NaturalEnvironment/', $itemURI)" />
 							</xsl:attribute>
 						</arco-location:hasNaturalEnvironment>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat('Localizzazione fisica attuale del bene: ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of select="concat('Localizzazione fisica attuale del bene: ', $itemURI)" />
+						</l0:name>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Current physical location of cultural property: ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:value-of select="concat('Current physical location of cultural property: ', $itemURI)" />
+						</l0:name>
+						<arco-location:hasLocationType>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/location/CurrentPhysicalLocation'" />
+							</xsl:attribute>
+						</arco-location:hasLocationType>
 					</rdf:Description>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
@@ -382,7 +403,7 @@
 								<xsl:value-of select="record/metadata/schede/*/CA/AGR" />
 							</arco-core:description>
 						</xsl:if>
-						<xsl:if test="record/metadata/schede/*/CA/CAS and not($sheetType='AR')">
+						<xsl:if test="record/metadata/schede/*/CA/CAS and not($sheetType='AR') and not($sheetType='MODI')">
 							<arco-location:historicalEnvironmentContextDescription>
 								<xsl:value-of select="concat(record/metadata/schede/*/CA/CAS/CASD, '. ', record/metadata/schede/*/CA/CAS/CASF, '. ', record/metadata/schede/*/CA/CAS/CASA)" />
 							</arco-location:historicalEnvironmentContextDescription>
