@@ -87,9 +87,6 @@
 						</xsl:when>
 						<xsl:when test="record/metadata/schede/*/CD/CDM">
 							<xsl:choose>
-								<xsl:when test="record/metadata/schede/*/CD/CBC">
-									<xsl:value-of select="arco-fn:urify(record/metadata/schede/*/CD/CBC)" />
-								</xsl:when>
 								<xsl:when test="record/metadata/schede/*/CD/CDR">
 									<xsl:value-of select="concat(arco-fn:urify(record/metadata/schede/*/CD/CDR), arco-fn:urify(record/metadata/schede/*/CD/CDM))" />
 								</xsl:when>
@@ -548,6 +545,14 @@
 								</arco-cd:hasRelatedWorkSituation>
 							</xsl:if>
 						</xsl:for-each>
+						<!-- MODI link to same cultural property described by other catalogue record -->
+						<xsl:if test="record/metadata/schede/MODI/CD/CBC">
+							<owl:sameAs>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)), '/', arco-fn:urify(record/metadata/schede/MODI/CD/CBC))" />
+								</xsl:attribute>
+							</owl:sameAs>
+						</xsl:if>
 						<!-- cultural property component -->
 						<xsl:if test="record/metadata/schede/*/RV/RVE/RVER">
 							<xsl:if test="record/metadata/schede/*/RV/RVE/RVEL and not (record/metadata/schede/*/RV/RVE/RVEL='0' or record/metadata/schede/*/RV/RVE/RVEL='bene complesso' or record/metadata/schede/*/RV/RVE/RVEL='bene individuo')">
@@ -2806,20 +2811,40 @@
 							</xsl:otherwise>
 						</xsl:choose>
 						<!-- cataloguing agency -->
-						<xsl:for-each select="record/metadata/schede/*/CD/ESC">
-							<xsl:if test=".">
-								<arco-core:hasAgentRole>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
-									</xsl:attribute>
-								</arco-core:hasAgentRole>
-								<arco-lite:hasCataloguingAgency>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
-									</xsl:attribute>
-								</arco-lite:hasCataloguingAgency>
-							</xsl:if>
-						</xsl:for-each>
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/CD/ESC">
+								<xsl:for-each select="record/metadata/schede/*/CD/ESC">
+									<xsl:if test=".">
+										<arco-core:hasAgentRole>
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
+											</xsl:attribute>
+										</arco-core:hasAgentRole>
+										<arco-lite:hasCataloguingAgency>
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+											</xsl:attribute>
+										</arco-lite:hasCataloguingAgency>
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:for-each select="record/metadata/schede/*/CD/ACC/ACCE">
+									<xsl:if test=".">
+										<arco-core:hasAgentRole>
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
+											</xsl:attribute>
+										</arco-core:hasAgentRole>
+										<arco-lite:hasCataloguingAgency>
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+											</xsl:attribute>
+										</arco-lite:hasCataloguingAgency>
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:otherwise>
+						</xsl:choose>
 						<!-- proponent agency -->
 						<xsl:for-each select="record/metadata/schede/*/CD/EPR">
 							<xsl:if test=".">
