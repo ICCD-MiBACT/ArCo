@@ -23,6 +23,7 @@ public class SpecificCulturalPropertyType {
 		sheetPropertyTypeMap.put("architettonico e paesaggistico", NAMESPACE + "ArchitecturalOrLandscapeHeritage");
 		sheetPropertyTypeMap.put("etnoantropologico", NAMESPACE + "DemoEthnoAnthropologicalHeritage");
 		sheetPropertyTypeMap.put("storico artistico", NAMESPACE + "HistoricOrArtisticProperty");
+		sheetPropertyTypeMap.put("storico e artistico", NAMESPACE + "HistoricOrArtisticProperty");
 		sheetPropertyTypeMap.put("non individuabile", NAMESPACE + "CulturalProperty");
 		
 		/*
