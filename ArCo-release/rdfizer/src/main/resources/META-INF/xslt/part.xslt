@@ -694,9 +694,18 @@
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
 							<arco-core:isPartOf>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
-								</xsl:attribute>
+								<xsl:choose>
+									<xsl:when test="$sheetType='MODI'">
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(/record/metadata/schede/MODI/OG/AMB)), '/', $itemURI)" />
+										</xsl:attribute>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+										</xsl:attribute>
+									</xsl:otherwise>
+								</xsl:choose>
 							</arco-core:isPartOf>
 							<xsl:if test="not(../DTN/DTNS)">
 								<arco-lite:hasRealizationDate>
@@ -927,7 +936,7 @@
 			<xsl:for-each select="record/metadata/schede/*/MT/MIS">
 				<xsl:variable name="measurementCollection">
 					<xsl:choose>
-						<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP" >
+						<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP and not(lower-case(normalize-space(./MISP))='intero bene' or lower-case(normalize-space(./MISP))='integrale' or lower-case(normalize-space(./MISP))='intero' or lower-case(normalize-space(./MISP))='tutta' or lower-case(normalize-space(./MISP))='totale' or (starts-with(lower-case(normalize-space(./MISP)), 'nr')) or (starts-with(lower-case(normalize-space(./MISP)), 'n.r')))" >
 							<xsl:value-of
 									select="concat($NS, 'MeasurementCollection/', $itemURI, '-', arco-fn:urify(normalize-space(./MISP)))" />
 						</xsl:when>
