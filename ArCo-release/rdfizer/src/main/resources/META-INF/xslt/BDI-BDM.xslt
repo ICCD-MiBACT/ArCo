@@ -20235,6 +20235,37 @@
 					</arco-lite:hasCataloguingAgency>
 				</xsl:if>
 			</xsl:for-each>
+			<!-- Heritageprotection agency -->
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/harvesting/enteCompetente">
+					<arco-core:hasAgentRole>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
+						</xsl:attribute>
+					</arco-core:hasAgentRole>
+					<arco-lite:hasHeritageProtectionAgency>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/harvesting/enteCompetente))" />
+						</xsl:attribute>
+					</arco-lite:hasHeritageProtectionAgency>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:for-each select="record/metadata/schede/*/CD/ECP">
+						<xsl:if test=".">
+							<arco-core:hasAgentRole>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
+								</xsl:attribute>
+							</arco-core:hasAgentRole>
+							<arco-lite:hasHeritageProtectionAgency>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+								</xsl:attribute>
+							</arco-lite:hasHeritageProtectionAgency>
+						</xsl:if>
+					</xsl:for-each>
+				</xsl:otherwise>
+			</xsl:choose>
 			<!-- Type of context for LC and LA-->
 			<xsl:for-each select="record/metadata/schede/*/LC/PVZ">
 				<arco-location:hasTypeOfContext>
