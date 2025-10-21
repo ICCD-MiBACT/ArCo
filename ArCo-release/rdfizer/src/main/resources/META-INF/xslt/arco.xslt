@@ -136,6 +136,12 @@
 						<xsl:when test="record/metadata/schede/RCG/*/*/RCGH">
 							<xsl:value-of select="arco-fn:urify(concat('rcg-', record/metadata/schede/RCG/CD/ESC,'-', record/metadata/schede/RCG/*/*/RCGH))" />
 						</xsl:when>
+						<xsl:when test="record/metadata/schede/EVE/CD/NCU">
+							<xsl:value-of select="arco-fn:urify(record/metadata/schede/EVE/CD/NCU)" />
+						</xsl:when>
+						<xsl:when test="record/metadata/schede/EVE/EV/EVE/EVEH">
+							<xsl:value-of select="arco-fn:urify(concat('eve-', record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH))" />
+						</xsl:when>
 						<xsl:when test="record/metadata/schede/*/CD/NCU">
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/*/CD/NCU/NCUN">
@@ -145,9 +151,6 @@
 									<xsl:value-of select="record/metadata/schede/*/CD/NCU/NCU" />
 								</xsl:otherwise>
 							</xsl:choose>
-						</xsl:when>
-						<xsl:when test="record/metadata/schede/EVE/EV/EVE/EVEH">
-							<xsl:value-of select="arco-fn:urify(concat('eve-', record/metadata/schede/EVE/CD/ESC, '-', record/metadata/schede/EVE/EV/EVE/EVEH))" />
 						</xsl:when>
 						<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
 							<xsl:choose>
@@ -1870,7 +1873,7 @@
 					<xsl:if test="(not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat('funzionario responsabile-', .)))" />
+								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat('-funzionario-responsabile-', .)))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -34172,7 +34175,7 @@
 					<rdf:Description>
 						<xsl:variable name="measurement-collection">
 							<xsl:choose>
-								<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP">
+								<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP and not(lower-case(normalize-space(./MISP))='intero bene' or lower-case(normalize-space(./MISP))='integrale' or lower-case(normalize-space(./MISP))='intero' or lower-case(normalize-space(./MISP))='tutta' or lower-case(normalize-space(./MISP))='totale' or (starts-with(lower-case(normalize-space(./MISP)), 'nr')) or (starts-with(lower-case(normalize-space(./MISP)), 'n.r')))">
 									<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-', arco-fn:urify(normalize-space(./MISP)))" />
 								</xsl:when>
 								<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and not(./MISP)">
