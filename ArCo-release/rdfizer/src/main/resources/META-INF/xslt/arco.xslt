@@ -18834,7 +18834,7 @@
 						<xsl:for-each select="(./UTF)[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(.))" />
+									<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(./UTF))" />
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -18842,10 +18842,10 @@
 									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
-									<xsl:value-of select="normalize-space(.)" />
+									<xsl:value-of select="normalize-space(./UTF)" />
 								</rdfs:label>
 								<l0:name>
-									<xsl:value-of select="normalize-space(.)" />
+									<xsl:value-of select="normalize-space(./UTF)" />
 								</l0:name>
 							</rdf:Description>
 						</xsl:for-each>
