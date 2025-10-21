@@ -619,22 +619,6 @@
 									<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
 								</xsl:attribute>
 							</arco-dd:hasDesignationInTime>
-							<rdf:Description>
-								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
-								</xsl:attribute>
-								<rdf:type>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DesignationInTime'" />
-									</xsl:attribute>
-								</rdf:type>
-								<owl:deprecated>
-									<xsl:value-of select="true()" />
-								</owl:deprecated>
-								<owl:sameAs>
-									<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
-								</owl:sameAs>
-							</rdf:Description>
 						</xsl:for-each>
 						<xsl:for-each select="record/metadata/schede/*/OG/OGT/OGTU">
 							<arco-dd:hasDesignationInTime>
@@ -1312,6 +1296,39 @@
 								<xsl:value-of select="concat($NS, 'Sex/', $idAuthor)" />
 							</xsl:attribute>
 						</cpv:hasSex>
+					</rdf:Description>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'Sex/', $idAuthor)" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Sex'" />
+							</xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat('Sesso di ', $nameAuthor)" />
+						</rdfs:label>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Sex of ', $nameAuthor)" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of select="concat('Sesso di ', $nameAuthor)" />
+						</l0:name>
+						<l0:name xml:lang="en">
+							<xsl:value-of select="concat('Sex of ', $nameAuthor)" />
+						</l0:name>
+						<cpv:sexID>
+							<xsl:value-of select="$sex" />
+						</cpv:sexID>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+							<xsl:value-of select="true()" />
+						</owl:deprecated>
+						<owl:sameAs>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Sex/', arco-fn:arcofy($sex))" />
+							</xsl:attribute>
+						</owl:sameAs>
 					</rdf:Description>
 				</xsl:if>
 			</xsl:if>
@@ -5145,8 +5162,8 @@
 									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:arcofy(.))" />
 								</xsl:attribute>
 								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
-  <xsl:value-of select="true()" />
-</owl:deprecated>
+  									<xsl:value-of select="true()" />
+								</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
@@ -5179,13 +5196,18 @@
 									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:arcofy(.))" />
 								</xsl:attribute>
 								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
-  <xsl:value-of select="true()" />
-</owl:deprecated>
+								<xsl:value-of select="true()" />
+								</owl:deprecated>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
 									</xsl:attribute>
 								</rdf:type>
+								<owl:sameAs>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-agg-', position(), '-', arco-fn:arcofy(.))" />
+									</xsl:attribute>
+								</owl:sameAs>
 								<rdfs:label xml:lang="it">
 									<xsl:value-of select="concat('Ente responsabile di aggiornamento ', normalize-space(.))" />
 								</rdfs:label>
@@ -5214,8 +5236,13 @@
 								<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
 							</xsl:attribute>
 							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
-  <xsl:value-of select="true()" />
-</owl:deprecated>
+								<xsl:value-of select="true()" />
+							</owl:deprecated>
+							<owl:sameAs>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
+								</xsl:attribute>
+							</owl:sameAs>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
@@ -5240,6 +5267,45 @@
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
+				<!-- Funzionario responsabile RiT -->
+				<xsl:for-each select="record/metadata/schede/*/CM/FUR">
+					<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
+							</xsl:attribute>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+								<xsl:value-of select="true()" />
+							</owl:deprecated>
+							<owl:sameAs>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-', arco-fn:arcofy(concat('-funzionario-responsabile-', .)))" />
+								</xsl:attribute>
+							</owl:sameAs>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat(./@hint, ': ', normalize-space(.))" />
+							</rdfs:label>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Official in charge', ': ', normalize-space(.))" />
+							</rdfs:label>
+							<roapit:withRole>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Role/OfficialInCharge')" />
+								</xsl:attribute>
+							</roapit:withRole>
+							<roapit:isRoleInTimeOf>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+								</xsl:attribute>
+							</roapit:isRoleInTimeOf>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/CM/CMP/CMPN">
 					<xsl:if test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 						<rdf:Description>
@@ -5247,8 +5313,8 @@
 								<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-compilation-', arco-fn:arcofy(.))" />
 							</xsl:attribute>
 							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
-  <xsl:value-of select="true()" />
-</owl:deprecated>
+								<xsl:value-of select="true()" />
+							</owl:deprecated>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
@@ -5270,6 +5336,11 @@
 									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 								</xsl:attribute>
 							</roapit:isRoleInTimeOf>
+							<owl:sameAs>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-compilation-', arco-fn:arcofy(.))" />
+								</xsl:attribute>
+							</owl:sameAs>
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
@@ -8895,7 +8966,9 @@
 							<xsl:value-of select="true()" />
 						</owl:deprecated>
 						<owl:sameAs>
-							<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:arcofy(arco-fn:urify(normalize-space(.))))" />
+							</xsl:attribute>
 						</owl:sameAs>
 					</rdf:Description>
 				</xsl:for-each>
