@@ -276,6 +276,11 @@
 								<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-cataloguing-agency')" />
 							</xsl:attribute>
 						</arco-core:hasAgentRole>
+						<arco-core:hasAgentRole>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-record-responsible-agent')" />
+							</xsl:attribute>
+						</arco-core:hasAgentRole>
 						<arco-lite:hasCataloguingAgency>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
@@ -675,7 +680,7 @@
 							</arco-catalogue:hasCatalogueRecordVersionRiT>
 							<arco-core:hasAgentRole>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'TimeIndexedRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
+									<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-', arco-fn:arcofy(concat(./@hint, '-', .)))" />
 								</xsl:attribute>
 							</arco-core:hasAgentRole>
 							<arco-lite:hasOfficialInCharge>
