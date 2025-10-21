@@ -788,7 +788,7 @@
 						<xsl:if test="./PNTS or ./PNTF">
 							<arco-con:hasLayout>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'PlanLayout/', $itemURI, '-', arco-fn:urify(concat(normalize-space(./PNTS), '-', normalize-space(./PNTF))))" />
+									<xsl:value-of select="$layout" />
 								</xsl:attribute>
 							</arco-con:hasLayout>
 						</xsl:if>
@@ -1415,7 +1415,7 @@
 									<xsl:if test="./SOE/SOER">
 										<arco-core:hasPart>
 											<xsl:attribute name="rdf:resource">
-												<xsl:value-of select="concat($NS, 'HorizontalElementPart/', $itemURI, '-part-', arco-fn:arcofy(normalize-space(./SOE)))" />
+												<xsl:value-of select="concat($NS, 'HorizontalElementPart/', $itemURI, '-part-', arco-fn:arcofy(normalize-space(./SOE/SOER)))" />
 											</xsl:attribute>
 										</arco-core:hasPart>
 									</xsl:if>
