@@ -1829,6 +1829,11 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-affixed-element-', $parentPosition)" />
 								</xsl:attribute>
+								<owl:sameAs>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI, '-affixed-element-', $parentPosition)" />
+									</xsl:attribute>
+									</owl:sameAs>
 								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
   <xsl:value-of select="true()" />
 </owl:deprecated>
@@ -1864,6 +1869,11 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-affixed-element-', $parentPosition)" />
 								</xsl:attribute>
+								<owl:sameAs>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI, '-affixed-element-', $parentPosition)" />
+									</xsl:attribute>
+									</owl:sameAs>
 								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
   <xsl:value-of select="true()" />
 </owl:deprecated>
@@ -2167,6 +2177,11 @@
 											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
 										</xsl:attribute>
 									</rdf:type>
+									<owl:sameAs>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI, '-affixed-element-', $parentPosition)" />
+									</xsl:attribute>
+									</owl:sameAs>
 									<rdfs:label xml:lang="it">
 										<xsl:value-of select="concat('Stato tecnico dell''elemento ', $parentPosition, ' apposto sul bene culturale ', $itemURI)" />
 									</rdfs:label>
@@ -2304,6 +2319,11 @@
 									<xsl:attribute name="rdf:about">
 										<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-inscription-', $parentPosition)" />
 									</xsl:attribute>
+									<owl:sameAs>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI, '-inscription-', $parentPosition)" />
+									</xsl:attribute>
+									</owl:sameAs>
 									<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
   <xsl:value-of select="true()" />
 </owl:deprecated>
@@ -4585,6 +4605,11 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
+							<owl:sameAs>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+									</xsl:attribute>
+									</owl:sameAs>
 							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
   <xsl:value-of select="true()" />
 </owl:deprecated>
@@ -4620,6 +4645,11 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
+							<owl:sameAs>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+									</xsl:attribute>
+									</owl:sameAs>
 							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
   <xsl:value-of select="true()" />
 </owl:deprecated>
@@ -4654,6 +4684,11 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
+							<owl:sameAs>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+									</xsl:attribute>
+									</owl:sameAs>
 							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
   <xsl:value-of select="true()" />
 </owl:deprecated>
@@ -4702,6 +4737,11 @@
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
 								</xsl:attribute>
 							</rdf:type>
+							<owl:sameAs>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+									</xsl:attribute>
+									</owl:sameAs>
 							<rdfs:label xml:lang="it">
 								<xsl:value-of
 									select="concat('Stato tecnico del bene culturale ', $itemURI)" />
@@ -4735,6 +4775,11 @@
 								<xsl:value-of
 							select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
+							<owl:sameAs>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+								</xsl:attribute>
+							</owl:sameAs>
 							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
   <xsl:value-of select="true()" />
 </owl:deprecated>
@@ -4782,6 +4827,11 @@
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
 								</xsl:attribute>
 							</rdf:type>
+							<owl:sameAs>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+									</xsl:attribute>
+									</owl:sameAs>
 							<rdfs:label xml:lang="it">
 								<xsl:value-of
 									select="concat('Stato tecnico del bene culturale ', $itemURI)" />
@@ -4815,6 +4865,11 @@
 								<xsl:value-of
 							select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
+							<owl:sameAs>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+									</xsl:attribute>
+									</owl:sameAs>
 							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
   <xsl:value-of select="true()" />
 </owl:deprecated>
@@ -4856,6 +4911,11 @@
 								<xsl:value-of
 							select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 							</xsl:attribute>
+							<owl:sameAs>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+								</xsl:attribute>
+							</owl:sameAs>
 							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
   <xsl:value-of select="true()" />
 </owl:deprecated>
@@ -4895,6 +4955,11 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 						</xsl:attribute>
+						<owl:sameAs>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+							</xsl:attribute>
+						</owl:sameAs>
 						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
   <xsl:value-of select="true()" />
 </owl:deprecated>
@@ -6353,6 +6418,11 @@
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-decorative-', position())" />
 								</xsl:attribute>
+								<owl:sameAs>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI, '-decorative-', position())" />
+									</xsl:attribute>
+								</owl:sameAs>
 								<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
   <xsl:value-of select="true()" />
 </owl:deprecated>
@@ -6410,10 +6480,14 @@
 								<xsl:when test="./DECT">
 									<xsl:choose>
 										<xsl:when test="./DECQ">
-											<xsl:value-of select="concat($NS, 'DecorativeApparatusType/', $itemURI, arco-fn:urify(normalize-space(concat(./DECT, '-', string-join(./DECQ, '-')))))" />
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="concat($NS, 'DecorativeApparatusType/', $itemURI, arco-fn:urify(normalize-space(concat(./DECT, '-', string-join(./DECQ, '-')))))" />
+											</xsl:attribute>
 										</xsl:when>
 										<xsl:otherwise>
-											<xsl:value-of select="concat($NS, 'DecorativeApparatusType/', $itemURI, arco-fn:urify(normalize-space(./DECT)))" />
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="concat($NS, 'DecorativeApparatusType/', $itemURI, arco-fn:urify(normalize-space(./DECT)))" />
+											</xsl:attribute>
 										</xsl:otherwise>
 									</xsl:choose>
 								</xsl:when>
@@ -6440,8 +6514,13 @@
 								<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-decorative-', position())" />
 							</xsl:attribute>
 							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
-  <xsl:value-of select="true()" />
-</owl:deprecated>
+								<xsl:value-of select="true()" />
+							</owl:deprecated>
+							<owl:sameAs>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI, '-decorative-', position())" />
+								</xsl:attribute>
+							</owl:sameAs>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus'" />
@@ -6792,6 +6871,30 @@
 				</xsl:if>
 				<!-- relation with a particular type of derivated work: print in publication  (S) -->
 				<xsl:for-each select="record/metadata/schede/*/RO/ADL">
+					<xsl:variable name="adla">
+						<xsl:choose>
+							<xsl:when test="./ADLA">
+								<xsl:value-of select="arco-fn:urify(normalize-space(./ADLA))" />
+							</xsl:when>
+							<xsl:otherwise></xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="adlt">
+						<xsl:choose>
+							<xsl:when test="./ADLT">
+								<xsl:value-of select="arco-fn:urify(normalize-space(./ADLT))" />
+							</xsl:when>
+							<xsl:otherwise></xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="adle">
+						<xsl:choose>
+							<xsl:when test="./ADLE">
+								<xsl:value-of select="arco-fn:urify(normalize-space(./ADLE))" />
+							</xsl:when>
+							<xsl:otherwise></xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'PrintInPublication/', $itemURI, '-print-in-publication-', position())" />
@@ -6803,6 +6906,11 @@
 								</xsl:attribute>
 							</arco-cd:hasDerivatedWorkType>
 						</xsl:if>
+						<owl:sameAs>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(concat($adla, $adlt, $adle)))" />
+							</xsl:attribute>
+						</owl:sameAs>
 					</rdf:Description>
 				</xsl:for-each>
 				<!-- edition as individual -->
@@ -7794,7 +7902,8 @@
 						</rdf:Description>
 					</xsl:for-each>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/DA/UTM or record/metadata/schede/*/DA/UTF or record/metadata/schede/*/DA/UTS">
+				<!-- Non serve questa materializzazione-->
+				<!--<xsl:if test="record/metadata/schede/*/DA/UTM or record/metadata/schede/*/DA/UTF or record/metadata/schede/*/DA/UTS">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-use')" />
@@ -7810,7 +7919,7 @@
 							</arco-cd:useConditions>
 						</xsl:if>
 					</rdf:Description>
-				</xsl:if>
+				</xsl:if>-->
 				<xsl:for-each select="record/metadata/schede/*/US/USO">
 					<xsl:if test="./*">
 						<rdf:Description>
@@ -9028,6 +9137,11 @@
 					<l0:name xml:lang="en">
 						<xsl:value-of select="concat('Technical status of cultural property ', $itemURI)" />
 					</l0:name>
+					<owl:sameAs>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'TechnicalStatus/', $itemURI)" />
+						</xsl:attribute>
+					</owl:sameAs>
 					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of
