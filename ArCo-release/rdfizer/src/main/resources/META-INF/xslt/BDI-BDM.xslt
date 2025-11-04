@@ -2599,6 +2599,9 @@
                 	<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/CA/CAC))='si'">
                 		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CivilCircumstance'" />
                 	</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="false()" />
+				</xsl:otherwise>
                 </xsl:choose>
 			</xsl:variable>
 			<xsl:if test="record/metadata/schede/*/CA/CAA">			
@@ -2617,11 +2620,13 @@
 					<l0:name>
 						<xsl:value-of select="record/metadata/schede/*/CA/CAA" />
 					</l0:name>
-					<arco-core:hasType>
-						<xsl:attribute name="rdf:resource">
-                			<xsl:value-of select="$religiousorcivilicircumstance" />
-	                	</xsl:attribute>
-					</arco-core:hasType>
+					<xsl:if test="record/metadata/schede/*/CA/CAR or record/metadata/schede/*/CA/CAC">
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="$religiousorcivilicircumstance" />
+							</xsl:attribute>
+						</arco-core:hasType>
+					</xsl:if>
 				</rdf:Description>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/*/CA/CAV">			
@@ -2762,16 +2767,25 @@
 					</arco-core:hasType>
 				</rdf:Description>
 			</xsl:if>
-			<xsl:if test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 			<xsl:if test="record/metadata/schede/*/CA/CAO">			
 				<rdf:Description>
+					<xsl:variable name="religiousorcivilicircumstance">
+				<xsl:choose>
+                	<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/CA/CAR))='si'">
+                		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ReligiousCircumstance'" />
+                	</xsl:when>
+                	<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/CA/CAC))='si'">
+                		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CivilCircumstance'" />
+                	</xsl:when>
+                </xsl:choose>
+			</xsl:variable>
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of select="concat($NS, 'Circumstance/', $itemURI, arco-fn:urify(record/metadata/schede/*/CA/CAO))" />
 					</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Circumstance'" />
-    	                </xsl:attribute>
+						</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
 						<xsl:value-of select="record/metadata/schede/*/CA/CAO" />
@@ -2779,13 +2793,14 @@
 					<l0:name>
 						<xsl:value-of select="record/metadata/schede/*/CA/CAO" />
 					</l0:name>
-					<arco-core:hasType>
-						<xsl:attribute name="rdf:resource">
-                			<xsl:value-of select="$religiousorcivilicircumstance" />
-	                	</xsl:attribute>
-					</arco-core:hasType>
+					<xsl:if test="CAR or CAC">
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="$religiousorcivilicircumstance" />
+							</xsl:attribute>
+						</arco-core:hasType>
+					</xsl:if>
 				</rdf:Description>
-			</xsl:if>
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="$sheetVersion='4.00_ICCD0' or $sheetVersion='4.00'">
@@ -5054,7 +5069,7 @@
 			<xsl:for-each select="record/metadata/schede/*/DU/DUO">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-                		<xsl:value-of select="concat($NS, 'StorageMedium/', $itemURI, '-original-', arco-fn:urify(normalize-space(./DUOC)), position())" />
+                		<xsl:value-of select="concat($NS, 'StorageMedium/', $itemURI, '-original-', position())" />
                		</xsl:attribute>
 					<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/StorageMedium" />
 					<rdfs:label>
