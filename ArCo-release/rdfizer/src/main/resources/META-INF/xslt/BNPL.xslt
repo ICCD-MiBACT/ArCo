@@ -1925,7 +1925,7 @@
 			<xsl:if test="record/metadata/schede/BNPL/SP/SPN/SPNM or record/metadata/schede/BNPL/SP/SPN/SPNK">
 				<arco-core:hasPart>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-main-mass')" />
+						<xsl:value-of select="concat($NS, 'MainMass/Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-main-mass')" />
 					</xsl:attribute>
 				</arco-core:hasPart>
 			</xsl:if>
@@ -1933,7 +1933,7 @@
 				<xsl:if test="record/metadata/schede/BNPL/SP/SPN/SPNS or record/metadata/schede/BNPL/SP/SPN/SPNP">
 					<arco-core:hasPart>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-typespecimen')" />
+							<xsl:value-of select="concat($NS, 'TypeSpecimen/Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)))" />
 						</xsl:attribute>
 					</arco-core:hasPart>
 				</xsl:if>
@@ -1948,7 +1948,7 @@
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPN/SPNS or record/metadata/schede/BNPL/SP/SPN/SPNP">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-typespecimen')" />
+					<xsl:value-of select="concat($NS, 'TypeSpecimen/Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)))" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -2219,7 +2219,7 @@
 		<xsl:if test="record/metadata/schede/BNPL/SP/SPN/SPNM or record/metadata/schede/BNPL/SP/SPN/SPNK">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-main-mass')" />
+					<xsl:value-of select="concat($NS, 'MainMass/Meteorite-', arco-fn:urify(normalize-space(record/metadata/schede/BNPL/SP/SPN/SPNN)), '-main-mass')" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
