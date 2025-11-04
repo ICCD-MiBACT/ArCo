@@ -460,9 +460,29 @@
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
-				<!-- decoration -->
+				<!-- decoration part -->
 				<xsl:for-each select="record/metadata/schede/VeAC/MT/MTC">
 					<xsl:if test="./MTCD or ./MTCN">
+						<xsl:if test="./MTCP and not((starts-with(lower-case(normalize-space(./MTCP)), 'integrale')) or (starts-with(lower-case(normalize-space(./MTCP)), 'tutto')) or (starts-with(lower-case(normalize-space(./MTCP)), 'tutta')) or (starts-with(lower-case(normalize-space(./MTCP)), 'totale')) or (starts-with(lower-case(normalize-space(./MTCP)), 'nr')) or (starts-with(lower-case(normalize-space(./MTCP)), 'n.r')) or (starts-with(lower-case(normalize-space(./MTCP)), 'intero')) or (starts-with(lower-case(normalize-space(./MTCP)), 'intera')) or (starts-with(lower-case(normalize-space(./MTCP)), 'esemplar')))">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+									<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MTCP)))" />
+								</xsl:attribute>
+								<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./MTCP)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./MTCP)" />
+								</l0:name>
+								<arco-dd:hasIconographicOrDecorativeApparatus>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatus/', $itemURI, '-decorative-', position())" />
+									</xsl:attribute>
+								</arco-dd:hasIconographicOrDecorativeApparatus>
+							</rdf:Description>
+						</xsl:if>
+						<!-- decoration -->
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'IconographicOrDecorativeApparatus/', $itemURI, '-decorative-', position())" />
