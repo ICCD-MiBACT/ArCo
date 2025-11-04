@@ -3012,7 +3012,7 @@
 							<xsl:when test="not(./FOTU) or ./FOTU='intero bene' or ./FOTU='integrale' or ./FOTU='tutta' or ./FOTU='totale' or ./FOTU='carattere generale' or (starts-with(lower-case(normalize-space(./FOTU)), 'nr')) or (starts-with(lower-case(normalize-space(./FOTU)), 'n.r')) or (starts-with(lower-case(normalize-space(./FOTU)), 'intero')) or (starts-with(lower-case(normalize-space(./FOTU)), 'intera')) or (starts-with(lower-case(normalize-space(./FOTU)), 'esemplar'))">
 								<arco-con:hasWaterElement>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'WaterElement/Fountain', $itemURI, position())" />
+										<xsl:value-of select="concat($NS, 'WaterElement/Fountain-', $itemURI, position())" />
 									</xsl:attribute>
 								</arco-con:hasWaterElement>
 							</xsl:when>
@@ -3553,7 +3553,7 @@
 							</l0:name>
 							<arco-con:hasWaterElement>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'WaterElement/Fountain', $itemURI, '-', position())" />
+									<xsl:value-of select="concat($NS, 'WaterElement/Fountain-', $itemURI, '-', position())" />
 								</xsl:attribute>
 							</arco-con:hasWaterElement>
 						</rdf:Description>
@@ -3658,7 +3658,7 @@
 					<xsl:variable name="fotg" select="normalize-space(./FOTG)" />
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'WaterElement/Fountain', $itemURI, '-', position())" />
+							<xsl:value-of select="concat($NS, 'WaterElement/Fountain-', $itemURI, '-', position())" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -3874,7 +3874,7 @@
 							</arco-core:isPartOf>
 							<arco-con:hasWaterElement>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'WaterElement/', $itemURI, '-', position())" />
+									<xsl:value-of select="concat($NS, 'WaterElement/Fountain-', $itemURI, '-', position())" />
 								</xsl:attribute>
 							</arco-con:hasWaterElement>
 							<arco-con:hasWaterSystem>
@@ -3906,7 +3906,7 @@
 							</l0:name>
 							<arco-con:hasWaterElement>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'WaterElement/', $itemURI, '-', position())" />
+									<xsl:value-of select="concat($NS, 'WaterElement/Fountain-', $itemURI, '-', position())" />
 								</xsl:attribute>
 							</arco-con:hasWaterElement>
 						</rdf:Description>
@@ -4100,7 +4100,7 @@
 								<xsl:for-each select="record/metadata/schede/PG/FO/FOT">
 									<arco-con:hasWaterElement>
 										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'WaterElement/Fountain', $itemURI, '-', position())" />
+											<xsl:value-of select="concat($NS, 'WaterElement/Fountain-', $itemURI, '-', position())" />
 										</xsl:attribute>
 									</arco-con:hasWaterElement>
 								</xsl:for-each>
