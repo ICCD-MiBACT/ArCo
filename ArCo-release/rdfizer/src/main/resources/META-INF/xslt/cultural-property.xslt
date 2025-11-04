@@ -532,11 +532,13 @@
 						</xsl:for-each>
 						<!-- create a related work situation every time for RSE (non solo quando il tipo di relazione è specificato) -->
 						<xsl:for-each select="record/metadata/schede/*/*/RSE">
-							<arco-cd:hasRelatedWorkSituation>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-related-cultural-property-1-', position())" />
-								</xsl:attribute>
-							</arco-cd:hasRelatedWorkSituation>
+							<xsl:if test="./RSEC and not(lower-case(normalize-space(./RSER))='scheda storica')">
+								<arco-cd:hasRelatedWorkSituation>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-related-cultural-property-1-', position())" />
+									</xsl:attribute>
+								</arco-cd:hasRelatedWorkSituation>
+							</xsl:if>
 						</xsl:for-each>
 						<xsl:for-each select="record/metadata/schede/*/RV/ROZ">
 							<xsl:variable name="rel-work" select="arco-fn:related-property(normalize-space(.), '')" />
@@ -1980,6 +1982,13 @@
 						<xsl:for-each select="record/metadata/schede/*/DT/ADT">
 							<xsl:choose>
 								<xsl:when test="./* and (not(./DTP) or ./DTP='intero bene' or ./DTP='carattere generale' or ./DTP='integrale' or ./DTP='tutta' or ./DTP='totale') or (starts-with(lower-case(normalize-space(./DTP)), 'nr')) or (starts-with(lower-case(normalize-space(./DTP)), 'n.r')) or (starts-with(lower-case(normalize-space(./DTP)), 'intero')) or (starts-with(lower-case(normalize-space(./DTP)), 'intera')) or (starts-with(lower-case(normalize-space(./DTP)), 'esemplar'))">
+									<arco-cd:hasDating>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'AlternativeDating/', $itemURI, '-', position())" />
+										</xsl:attribute>
+									</arco-cd:hasDating>
+								</xsl:when>
+								<xsl:when test="not(./*) and (not(./DTP) or ./DTP='intero bene' or ./DTP='carattere generale' or ./DTP='integrale' or ./DTP='tutta' or ./DTP='totale') or (starts-with(lower-case(normalize-space(./DTP)), 'nr')) or (starts-with(lower-case(normalize-space(./DTP)), 'n.r')) or (starts-with(lower-case(normalize-space(./DTP)), 'intero')) or (starts-with(lower-case(normalize-space(./DTP)), 'intera')) or (starts-with(lower-case(normalize-space(./DTP)), 'esemplar'))">
 									<arco-cd:hasDating>
 										<xsl:attribute name="rdf:resource">
 											<xsl:value-of select="concat($NS, 'AlternativeDating/', $itemURI, '-', position())" />
