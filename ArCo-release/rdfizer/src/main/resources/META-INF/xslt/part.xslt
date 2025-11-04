@@ -749,18 +749,20 @@
 							</xsl:if>
 						</rdf:Description>
 					</xsl:for-each>
-					<xsl:for-each select="./ADT">
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
-							</xsl:attribute>
-							<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
-							<arco-cd:hasDating>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'AlternativeDating/', $itemURI, '-', position())" />
+					<xsl:for-each select="./ADT/*">
+						<xsl:if test="./DTP and (./DTP or not(./DTP='intero bene') or not(./DTP='carattere generale') or not(./DTP='integrale') or not(./DTP='tutta') or not(./DTP='totale')) or not(starts-with(lower-case(normalize-space(./DTP)), 'nr')) or not(starts-with(lower-case(normalize-space(./DTP)), 'n.r')) or not(starts-with(lower-case(normalize-space(./DTP)), 'intero')) or not(starts-with(lower-case(normalize-space(./DTP)), 'intera')) or not(starts-with(lower-case(normalize-space(./DTP)), 'esemplar'))">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+									<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 								</xsl:attribute>
-							</arco-cd:hasDating>
-						</rdf:Description>
+								<rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity" />
+								<arco-cd:hasDating>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'AlternativeDating/', $itemURI, '-', position())" />
+									</xsl:attribute>
+								</arco-cd:hasDating>
+							</rdf:Description>
+						</xsl:if>
 					</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
