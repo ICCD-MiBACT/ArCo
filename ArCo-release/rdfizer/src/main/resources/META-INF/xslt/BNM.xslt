@@ -477,7 +477,7 @@
 				</xsl:attribute>
 			</arco-lite:isCollectionMemberOf>
 		</xsl:if>
-		<xsl:if test="not($sheetType='F' or $sheetType='MIDF' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB')">
+		<xsl:if test="not($sheetType='F' or $sheetType='MIDF' or $sheetType='PG' or $sheetType='A' or $sheetType='BNB' or $sheetType='BNP')">
 			<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM or record/metadata/schede/*/IR or record/metadata/schede/*/ET">
 				<arco-location:hasTimeIndexedTypedLocation>
 					<xsl:attribute name="rdf:resource">
