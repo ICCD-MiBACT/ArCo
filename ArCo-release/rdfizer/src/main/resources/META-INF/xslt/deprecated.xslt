@@ -6843,6 +6843,11 @@
 										<xsl:value-of select="concat($NS, 'DerivatedWorkType/', arco-fn:urify(normalize-space()))" />
 									</xsl:attribute>
 								</arco-cd:hasDerivatedWorkType>
+								<owl:sameAs>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-reuse-', position())" />
+									</xsl:attribute>
+								</owl:sameAs>
 							</xsl:for-each>
 						</rdf:Description>
 						<!-- derivated work type as an individual -->
@@ -7359,6 +7364,11 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', $itemURI, '-survey-', position())" />
 							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchaeologicalFieldSurvey'" />
+								</xsl:attribute>
+							</rdf:type>
 							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
   <xsl:value-of select="true()" />
 </owl:deprecated>
