@@ -316,7 +316,7 @@
 								<xsl:for-each select="./PNTQ">
 									<arco-con:hasConstructionSpace>
 										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'Floor/', $itemURI, arco-fn:urify(normalize-space(.)))" />
+											<xsl:value-of select="concat($NS, 'Floor/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
 										</xsl:attribute>
 									</arco-con:hasConstructionSpace>
 								</xsl:for-each>
@@ -330,7 +330,7 @@
 					</xsl:if>
 				</rdf:Description>
 				<!-- NaturalEnvironment as individual -->
-				<xsl:if test="record/metadata/schede/*/CA">
+				<xsl:if test="record/metadata/schede/*/CA and contains(normalize-space(lower-case(record/metadata/schede/*/CA/@hint)), 'ambiental')">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" />
@@ -1612,7 +1612,7 @@
 					<xsl:if test="./PNTQ and not (./PNTQ='intero bene' or ./PNTQ='integrale' or ./PNTQ='tutta' or ./PNTQ='totale' or ./PNTQ='carattere generale' or (starts-with(lower-case(normalize-space(./PNTQ)), 'nr')) or (starts-with(lower-case(normalize-space(./PNTQ)), 'n.r')) or (starts-with(lower-case(normalize-space(./PNTQ)), 'intero')) or (starts-with(lower-case(normalize-space(./PNTQ)), 'intera')) or (starts-with(lower-case(normalize-space(./PNTQ)), 'esemplar')))" >
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'Floor/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
+								<xsl:value-of select="concat($NS, 'Floor/', $itemURI, '-', arco-fn:urify(normalize-space(./PNTQ)))" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
