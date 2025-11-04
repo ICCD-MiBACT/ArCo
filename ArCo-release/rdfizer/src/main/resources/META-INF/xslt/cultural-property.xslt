@@ -1196,11 +1196,26 @@
 						<!-- cadastral identity -->
 						<xsl:if test="not($sheetType='AR')">
 							<xsl:for-each select="record/metadata/schede/*/CS">
-								<arco-location:hasCadastralIdentity>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-', position())" />
-									</xsl:attribute>
-								</arco-location:hasCadastralIdentity>
+								<xsl:if test="./CTS/CTSC and 
+									(not(starts-with(lower-case(normalize-space(./CTS/CTSC)), 'nr')) and 
+									not(starts-with(lower-case(normalize-space(./CTS/CTSC)), 'n.r')) and 
+									not(lower-case(normalize-space(./CTS/CTSC)) = 'non id') and 
+									not(lower-case(normalize-space(./CTS/CTSC)) = '-') and
+									not(lower-case(normalize-space(./CTS/CTSC)) = '&amp;') and 
+									not(lower-case(normalize-space(./CTS/CTSC)) = '?')) and
+									./CTS/CTSF and 
+									(not(starts-with(lower-case(normalize-space(./CTS/CTSF)), 'nr')) and 
+									not(starts-with(lower-case(normalize-space(./CTS/CTSF)), 'n.r')) and 
+									not(lower-case(normalize-space(./CTS/CTSF)) = 'non id') and 
+									not(lower-case(normalize-space(./CTS/CTSF)) = '-') and
+									not(lower-case(normalize-space(./CTS/CTSF)) = '&amp;') and 
+									not(lower-case(normalize-space(./CTS/CTSF)) = '?'))">
+									<arco-location:hasCadastralIdentity>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-', position())" />
+										</xsl:attribute>
+									</arco-location:hasCadastralIdentity>
+								</xsl:if>
 							</xsl:for-each>
 						</xsl:if>
 						<xsl:if test="$sheetType='AR'">
@@ -1223,18 +1238,41 @@
 							</xsl:for-each>
 						</xsl:if>
 						<xsl:for-each select="record/metadata/schede/*/UB[CTS]">
-							<arco-location:hasCadastralIdentity>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-', position())" />
-								</xsl:attribute>
-							</arco-location:hasCadastralIdentity>
+							<xsl:if test="./CTS/CTSF and 
+								(not(starts-with(lower-case(normalize-space(./CTS/CTSF)), 'nr')) and 
+								not(starts-with(lower-case(normalize-space(./CTS/CTSF)), 'n.r')) and 
+								not(lower-case(normalize-space(./CTS/CTSF)) = 'non id') and 
+								not(lower-case(normalize-space(./CTS/CTSF)) = '-') and
+								not(lower-case(normalize-space(./CTS/CTSF)) = '&amp;') and 
+								not(lower-case(normalize-space(./CTS/CTSF)) = '?'))">
+								<arco-location:hasCadastralIdentity>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-', position())" />
+									</xsl:attribute>
+								</arco-location:hasCadastralIdentity>
+							</xsl:if>
 						</xsl:for-each>
 						<xsl:for-each select="record/metadata/schede/*/RP/LGC">
-							<arco-location:hasCadastralIdentity>
-								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-', position())" />
-								</xsl:attribute>
-							</arco-location:hasCadastralIdentity>
+							<xsl:if test="./LGCC and 
+								(not(starts-with(lower-case(normalize-space(./LGCC)), 'nr')) and 
+								not(starts-with(lower-case(normalize-space(./LGCC)), 'n.r')) and 
+								not(lower-case(normalize-space(./LGCC)) = 'non id') and 
+								not(lower-case(normalize-space(./LGCC)) = '-') and
+								not(lower-case(normalize-space(./LGCC)) = '&amp;') and 
+								not(lower-case(normalize-space(./LGCC)) = '?')) and
+								./LGCM and 
+								(not(starts-with(lower-case(normalize-space(./LGCM)), 'nr')) and 
+								not(starts-with(lower-case(normalize-space(./LGCM)), 'n.r')) and 
+								not(lower-case(normalize-space(./LGCM)) = 'non id') and 
+								not(lower-case(normalize-space(./LGCM)) = '-') and
+								not(lower-case(normalize-space(./LGCM)) = '&amp;') and 
+								not(lower-case(normalize-space(./LGCM)) = '?'))">
+								<arco-location:hasCadastralIdentity>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-', position())" />
+									</xsl:attribute>
+								</arco-location:hasCadastralIdentity>
+							</xsl:if>
 						</xsl:for-each>
 						<!-- support for S -->
 						<xsl:for-each select="record/metadata/schede/MI/MT/MIF">
