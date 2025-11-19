@@ -3594,11 +3594,12 @@
 								<rdfs:label xml:lang="en">
 									<xsl:value-of select="'Record responsible agent'" />
 								</rdfs:label>
+								<!-- inverse cleaning 
 								<arco-core:isRoleOf>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-record-', position(), '-responsible-agent')" />
 									</xsl:attribute>
-								</arco-core:isRoleOf>
+								</arco-core:isRoleOf>-->
 							</rdf:Description>
 							<!-- agent as an individual -->
 							<rdf:Description>
@@ -3616,11 +3617,12 @@
 								<l0:name>
 									<xsl:value-of select="arco-fn:name-cleaner(./ACSE)" />
 								</l0:name>
+								<!-- inverse cleaning 
 								<arco-core:isAgentOf>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-record-', position(), '-responsible-agent')" />
 									</xsl:attribute>
-								</arco-core:isAgentOf>
+								</arco-core:isAgentOf>-->
 							</rdf:Description>
 						</xsl:if>
 					</xsl:if>
@@ -5511,10 +5513,27 @@
 									<xsl:attribute name="rdf:resource">
 										<xsl:choose>
 											<xsl:when test="./DTZ/DTZS">
-												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-',  arco-fn:urify(normalize-space(./DTZ/DTZS)))" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTZ/DTZS)), '?') or contains(normalize-space(lower-case(./DTZ/DTZS)), 'ca')">
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-uncertain')" />
+													</xsl:when>
+													<xsl:when test="contains(normalize-space(lower-case(./DTZ/DTZG)), '?') or contains(lower-case(./DTZ/DTZG), ' ca')">
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-', arco-fn:urify(normalize-space(./DTZ/DTZS)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-',  arco-fn:urify(normalize-space(./DTZ/DTZS)))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:when>
 											<xsl:otherwise>
-												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)))" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTZ/DTZG)), '?') or contains(lower-case(./DTZ/DTZG), ' ca')">
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:attribute>
@@ -5525,10 +5544,27 @@
 									<xsl:attribute name="rdf:resource">
 										<xsl:choose>
 											<xsl:when test="./DTG">
-												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)), '-',  arco-fn:urify(normalize-space(./DTG)))" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTG)), '?') or contains(normalize-space(lower-case(./DTG)), 'ca')">
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)), '-uncertain')" />
+													</xsl:when>
+													<xsl:when test="contains(normalize-space(lower-case(./DTR)), '?') or contains(lower-case(./DTR), ' ca')">
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)), '-', arco-fn:urify(normalize-space(./DTG)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)), '-',  arco-fn:urify(normalize-space(./DTG)))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:when>
 											<xsl:otherwise>
-												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)))" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTR)), '?') or contains(lower-case(./DTR), ' ca')">
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:attribute>
@@ -5539,20 +5575,54 @@
 									<xsl:variable name="startDate">
 										<xsl:choose>
 											<xsl:when test="./DTS/DTSV">
-												<xsl:value-of select="concat(normalize-space(./DTS/DTSV), ' ', normalize-space(./DTS/DTSI))" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSV)), '?') or contains(normalize-space(lower-case(./DTS/DTSV)), 'ca')">
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-uncertain')" />
+													</xsl:when>
+													<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSI)), '?') or contains(lower-case(./DTS/DTSI), ' ca')">
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-', arco-fn:urify(normalize-space(./DTS/DTSV)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-',  arco-fn:urify(normalize-space(./DTS/DTSV)))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:when>
 											<xsl:otherwise>
-												<xsl:value-of select="normalize-space(./DTS/DTSI)" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSI)), '?') or contains(lower-case(./DTS/DTSI), ' ca')">
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="arco-fn:urify(normalize-space(./DTS/DTSI))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:variable>
 									<xsl:variable name="endDate">
 										<xsl:choose>
 											<xsl:when test="./DTS/DTSL">
-												<xsl:value-of select="concat(normalize-space(./DTS/DTSL), ' ', normalize-space(./DTS/DTSF))" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSL)), '?') or contains(normalize-space(lower-case(./DTS/DTSL)), 'ca')">
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-uncertain')" />
+													</xsl:when>
+													<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSF)), '?') or contains(normalize-space(lower-case(./DTS/DTSF)), 'ca')">
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-', arco-fn:urify(normalize-space(./DTS/DTSL)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-',  arco-fn:urify(normalize-space(./DTS/DTSL)))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:when>
 											<xsl:otherwise>
-												<xsl:value-of select="normalize-space(./DTS/DTSF)" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSF)), '?') or contains(lower-case(./DTS/DTSF), ' ca')">
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="arco-fn:urify(normalize-space(./DTS/DTSF))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:variable>
@@ -5630,10 +5700,27 @@
 									<xsl:attribute name="rdf:resource">
 										<xsl:choose>
 											<xsl:when test="./DTZ/DTZS">
-												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-',  arco-fn:urify(normalize-space(./DTZ/DTZS)))" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTZ/DTZS)), '?') or contains(normalize-space(lower-case(./DTZ/DTZS)), 'ca')">
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-uncertain')" />
+													</xsl:when>
+													<xsl:when test="contains(normalize-space(lower-case(./DTZ/DTZG)), '?') or contains(lower-case(./DTZ/DTZG), ' ca')">
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-', arco-fn:urify(normalize-space(./DTZ/DTZS)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-',  arco-fn:urify(normalize-space(./DTZ/DTZS)))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:when>
 											<xsl:otherwise>
-												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)))" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTZ/DTZG)), '?') or contains(lower-case(./DTZ/DTZG), ' ca')">
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:attribute>
@@ -5644,10 +5731,27 @@
 									<xsl:attribute name="rdf:resource">
 										<xsl:choose>
 											<xsl:when test="./DTG">
-												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)), '-',  arco-fn:urify(normalize-space(./DTG)))" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTG)), '?') or contains(normalize-space(lower-case(./DTG)), 'ca')">
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)), '-uncertain')" />
+													</xsl:when>
+													<xsl:when test="contains(normalize-space(lower-case(./DTR)), '?') or contains(lower-case(./DTR), ' ca')">
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)), '-', arco-fn:urify(normalize-space(./DTG)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)), '-',  arco-fn:urify(normalize-space(./DTG)))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:when>
 											<xsl:otherwise>
-												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)))" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTR)), '?') or contains(lower-case(./DTR), ' ca')">
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:attribute>
@@ -5658,20 +5762,54 @@
 									<xsl:variable name="startDate">
 										<xsl:choose>
 											<xsl:when test="./DTS/DTSV">
-												<xsl:value-of select="concat(normalize-space(./DTS/DTSV), ' ', normalize-space(./DTS/DTSI))" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSV)), '?') or contains(normalize-space(lower-case(./DTS/DTSV)), 'ca')">
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-uncertain')" />
+													</xsl:when>
+													<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSI)), '?') or contains(lower-case(./DTS/DTSI), ' ca')">
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-', arco-fn:urify(normalize-space(./DTS/DTSV)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-',  arco-fn:urify(normalize-space(./DTS/DTSV)))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:when>
 											<xsl:otherwise>
-												<xsl:value-of select="normalize-space(./DTS/DTSI)" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSI)), '?') or contains(lower-case(./DTS/DTSI), ' ca')">
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="arco-fn:urify(normalize-space(./DTS/DTSI))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:variable>
 									<xsl:variable name="endDate">
 										<xsl:choose>
 											<xsl:when test="./DTS/DTSL">
-												<xsl:value-of select="concat(normalize-space(./DTS/DTSL), ' ', normalize-space(./DTS/DTSF))" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSL)), '?') or contains(normalize-space(lower-case(./DTS/DTSL)), 'ca')">
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-uncertain')" />
+													</xsl:when>
+													<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSF)), '?') or contains(normalize-space(lower-case(./DTS/DTSF)), 'ca')">
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-', arco-fn:urify(normalize-space(./DTS/DTSL)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-',  arco-fn:urify(normalize-space(./DTS/DTSL)))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:when>
 											<xsl:otherwise>
-												<xsl:value-of select="normalize-space(./DTS/DTSF)" />
+												<xsl:choose>
+													<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSF)), '?') or contains(lower-case(./DTS/DTSF), ' ca')">
+														<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-uncertain')" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="arco-fn:urify(normalize-space(./DTS/DTSF))" />
+													</xsl:otherwise>
+												</xsl:choose>
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:variable>
@@ -5704,10 +5842,27 @@
 										<xsl:attribute name="rdf:resource">
 											<xsl:choose>
 												<xsl:when test="./DTZ/DTZS">
-													<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-',  arco-fn:urify(normalize-space(./DTZ/DTZS)))" />
+													<xsl:choose>
+														<xsl:when test="contains(normalize-space(lower-case(./DTZ/DTZS)), '?') or contains(normalize-space(lower-case(./DTZ/DTZS)), 'ca')">
+															<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-uncertain')" />
+														</xsl:when>
+														<xsl:when test="contains(normalize-space(lower-case(./DTZ/DTZG)), '?') or contains(lower-case(./DTZ/DTZG), ' ca')">
+															<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-', arco-fn:urify(normalize-space(./DTZ/DTZS)), '-uncertain')" />
+														</xsl:when>
+														<xsl:otherwise>
+															<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-',  arco-fn:urify(normalize-space(./DTZ/DTZS)))" />
+														</xsl:otherwise>
+													</xsl:choose>
 												</xsl:when>
 												<xsl:otherwise>
-													<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)))" />
+													<xsl:choose>
+														<xsl:when test="contains(normalize-space(lower-case(./DTZ/DTZG)), '?') or contains(lower-case(./DTZ/DTZG), ' ca')">
+															<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-uncertain')" />
+														</xsl:when>
+														<xsl:otherwise>
+															<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)))" />
+														</xsl:otherwise>
+													</xsl:choose>
 												</xsl:otherwise>
 											</xsl:choose>
 										</xsl:attribute>
@@ -5718,20 +5873,54 @@
 										<xsl:variable name="startDate">
 											<xsl:choose>
 												<xsl:when test="./DTS/DTSV">
-													<xsl:value-of select="concat(normalize-space(./DTS/DTSV), ' ', normalize-space(./DTS/DTSI))" />
+													<xsl:choose>
+														<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSV)), '?') or contains(normalize-space(lower-case(./DTS/DTSV)), 'ca')">
+															<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-uncertain')" />
+														</xsl:when>
+														<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSI)), '?') or contains(lower-case(./DTS/DTSI), ' ca')">
+															<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-', arco-fn:urify(normalize-space(./DTS/DTSV)), '-uncertain')" />
+														</xsl:when>
+														<xsl:otherwise>
+															<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-',  arco-fn:urify(normalize-space(./DTS/DTSV)))" />
+														</xsl:otherwise>
+													</xsl:choose>
 												</xsl:when>
 												<xsl:otherwise>
-													<xsl:value-of select="normalize-space(./DTS/DTSI)" />
+													<xsl:choose>
+														<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSI)), '?') or contains(lower-case(./DTS/DTSI), ' ca')">
+															<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-uncertain')" />
+														</xsl:when>
+														<xsl:otherwise>
+															<xsl:value-of select="arco-fn:urify(normalize-space(./DTS/DTSI))" />
+														</xsl:otherwise>
+													</xsl:choose>
 												</xsl:otherwise>
 											</xsl:choose>
 										</xsl:variable>
 										<xsl:variable name="endDate">
 											<xsl:choose>
 												<xsl:when test="./DTS/DTSL">
-													<xsl:value-of select="concat(normalize-space(./DTS/DTSL), ' ', normalize-space(./DTS/DTSF))" />
+													<xsl:choose>
+														<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSL)), '?') or contains(normalize-space(lower-case(./DTS/DTSL)), 'ca')">
+															<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-uncertain')" />
+														</xsl:when>
+														<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSF)), '?') or contains(normalize-space(lower-case(./DTS/DTSF)), 'ca')">
+															<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-', arco-fn:urify(normalize-space(./DTS/DTSL)), '-uncertain')" />
+														</xsl:when>
+														<xsl:otherwise>
+															<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-',  arco-fn:urify(normalize-space(./DTS/DTSL)))" />
+														</xsl:otherwise>
+													</xsl:choose>
 												</xsl:when>
 												<xsl:otherwise>
-													<xsl:value-of select="normalize-space(./DTS/DTSF)" />
+													<xsl:choose>
+														<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSF)), '?') or contains(lower-case(./DTS/DTSF), ' ca')">
+															<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-uncertain')" />
+														</xsl:when>
+														<xsl:otherwise>
+															<xsl:value-of select="arco-fn:urify(normalize-space(./DTS/DTSF))" />
+														</xsl:otherwise>
+													</xsl:choose>
 												</xsl:otherwise>
 											</xsl:choose>
 										</xsl:variable>
@@ -5750,10 +5939,27 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:choose>
 									<xsl:when test="./DTZ/DTZS">
-										<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-',  arco-fn:urify(normalize-space(./DTZ/DTZS)))" />
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./DTZ/DTZS)), '?') or contains(normalize-space(lower-case(./DTZ/DTZS)), 'ca')">
+												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-uncertain')" />
+											</xsl:when>
+											<xsl:when test="contains(normalize-space(lower-case(./DTZ/DTZG)), '?') or contains(lower-case(./DTZ/DTZG), ' ca')">
+												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-', arco-fn:urify(normalize-space(./DTZ/DTZS)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-',  arco-fn:urify(normalize-space(./DTZ/DTZS)))" />
+											</xsl:otherwise>
+										</xsl:choose>
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)))" />
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./DTZ/DTZG)), '?') or contains(lower-case(./DTZ/DTZG), ' ca')">
+												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)))" />
+											</xsl:otherwise>
+										</xsl:choose>
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:attribute>
@@ -5793,7 +5999,7 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</tiapit:time>
-							<arco-arco:startTime>
+							<!--<arco-arco:startTime>
 								<xsl:choose>
 									<xsl:when test="./DTZ/DTZS">
 										<xsl:value-of select="concat(normalize-space(./DTZ/DTZG), ' ', normalize-space(./DTZ/DTZS))" />
@@ -5812,7 +6018,7 @@
 										<xsl:value-of select="normalize-space(./DTZ/DTZG)" />
 									</xsl:otherwise>
 								</xsl:choose>
-							</arco-arco:endTime>
+							</arco-arco:endTime>-->
 						</rdf:Description>
 						</xsl:if>
 						<xsl:if test="./DTR">
@@ -5820,10 +6026,27 @@
 							<xsl:attribute name="rdf:about">
 								<xsl:choose>
 									<xsl:when test="./DTG">
-										<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)), '-',  arco-fn:urify(normalize-space(./DTG)))" />
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./DTG)), '?') or contains(normalize-space(lower-case(./DTG)), 'ca')">
+												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)), '-uncertain')" />
+											</xsl:when>
+											<xsl:when test="contains(normalize-space(lower-case(./DTR)), '?') or contains(lower-case(./DTR), ' ca')">
+												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)), '-', arco-fn:urify(normalize-space(./DTG)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)), '-',  arco-fn:urify(normalize-space(./DTG)))" />
+											</xsl:otherwise>
+										</xsl:choose>
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)))" />
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./DTR)), '?') or contains(lower-case(./DTR), ' ca')">
+												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTZ/DTZG)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./DTR)))" />
+											</xsl:otherwise>
+										</xsl:choose>
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:attribute>
@@ -5862,7 +6085,7 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</tiapit:time>
-							<arco-arco:startTime>
+							<!--<arco-arco:startTime>
 								<xsl:choose>
 									<xsl:when test="./DTG">
 										<xsl:value-of select="concat(normalize-space(./DTR), ' ', normalize-space(./DTG))" />
@@ -5881,13 +6104,67 @@
 										<xsl:value-of select="normalize-space(./DTR)" />
 									</xsl:otherwise>
 								</xsl:choose>
-							</arco-arco:endTime>
+							</arco-arco:endTime>-->
 						</rdf:Description>
 						</xsl:if>
 						<!-- Time interval with start time and end time -->
 						<xsl:if test="./DTS">
-						<xsl:if test="./DTS/DTSI or ./DTS/DTSF">
+							<xsl:if test="./DTS/DTSI or ./DTS/DTSF">
 							<xsl:variable name="startDate">
+								<xsl:choose>
+									<xsl:when test="./DTS/DTSV">
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSV)), '?') or contains(normalize-space(lower-case(./DTS/DTSV)), 'ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-uncertain')" />
+											</xsl:when>
+											<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSI)), '?') or contains(lower-case(./DTS/DTSI), ' ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-', arco-fn:urify(normalize-space(./DTS/DTSV)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-',  arco-fn:urify(normalize-space(./DTS/DTSV)))" />
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSI)), '?') or contains(lower-case(./DTS/DTSI), ' ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSI)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="arco-fn:urify(normalize-space(./DTS/DTSI))" />
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+							<xsl:variable name="endDate">
+								<xsl:choose>
+									<xsl:when test="./DTS/DTSL">
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSL)), '?') or contains(normalize-space(lower-case(./DTS/DTSL)), 'ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-uncertain')" />
+											</xsl:when>
+											<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSF)), '?') or contains(normalize-space(lower-case(./DTS/DTSF)), 'ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-', arco-fn:urify(normalize-space(./DTS/DTSL)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-',  arco-fn:urify(normalize-space(./DTS/DTSL)))" />
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./DTS/DTSF)), '?') or contains(lower-case(./DTS/DTSF), ' ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./DTS/DTSF)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="arco-fn:urify(normalize-space(./DTS/DTSF))" />
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+							<xsl:variable name="labStartDate">
 								<xsl:choose>
 									<xsl:when test="./DTS/DTSV">
 										<xsl:value-of select="concat(normalize-space(./DTS/DTSV), ' ', normalize-space(./DTS/DTSI))" />
@@ -5897,7 +6174,7 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:variable>
-							<xsl:variable name="endDate">
+							<xsl:variable name="labEndDate">
 								<xsl:choose>
 									<xsl:when test="./DTS/DTSL">
 										<xsl:value-of select="concat(normalize-space(./DTS/DTSL), ' ', normalize-space(./DTS/DTSF))" />
@@ -5917,21 +6194,21 @@
 									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
-									<xsl:value-of select="concat($startDate, ' - ', $endDate)" />
+									<xsl:value-of select="concat($labStartDate, ' - ', $labEndDate)" />
 								</rdfs:label>
 								<l0:name>
-									<xsl:value-of select="concat($startDate, ' - ', $endDate)" />
+									<xsl:value-of select="concat($labStartDate, ' - ', $labEndDate)" />
 								</l0:name>
 								<xsl:if test="./DTS">
 									<arco-arco:startTime>
-										<xsl:value-of select="$startDate" />
+										<xsl:value-of select="$labStartDate" />
 									</arco-arco:startTime>
 									<arco-arco:endTime>
-										<xsl:value-of select="$endDate" />
+										<xsl:value-of select="$labEndDate" />
 									</arco-arco:endTime>
 								</xsl:if>
 							</rdf:Description>
-						</xsl:if>
+							</xsl:if>
 						</xsl:if>
 					</xsl:if>	
 				</xsl:for-each>
@@ -6041,12 +6318,12 @@
 								<l0:name>
 									<xsl:value-of select="normalize-space(./ADTD)" />
 								</l0:name>
-								<arco-arco:startTime>
+								<!--<arco-arco:startTime>
 									<xsl:value-of select="normalize-space(./ADTD)" />
 								</arco-arco:startTime>
 								<arco-arco:endTime>
 									<xsl:value-of select="normalize-space(./ADTD)" />
-								</arco-arco:endTime>
+								</arco-arco:endTime>-->
 								<tiapit:time>
 									<xsl:value-of select="normalize-space(./ADTD)" />
 								</tiapit:time>
@@ -6068,12 +6345,12 @@
 								<l0:name>
 									<xsl:value-of select="normalize-space(./ADTA)" />
 								</l0:name>
-								<arco-arco:startTime>
+								<!--<arco-arco:startTime>
 									<xsl:value-of select="normalize-space(./ADTA)" />
 								</arco-arco:startTime>
 								<arco-arco:endTime>
 									<xsl:value-of select="normalize-space(./ADTA)" />
-								</arco-arco:endTime>
+								</arco-arco:endTime>-->
 								<tiapit:time>
 									<xsl:value-of select="normalize-space(./ADTA)" />
 								</tiapit:time>
@@ -6173,7 +6450,10 @@
 						<arco-cd:hasTimeInterval>
 							<xsl:variable name="relv">
 								<xsl:choose>
-									<xsl:when test="./REL/RELV">
+									<xsl:when test="./REL/RELV and contains(normalize-space(lower-case(./REL/RELV)), '?') or contains(lower-case(./REL/RELV), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REL/RELV and not(contains(normalize-space(lower-case(./REL/RELV)), '?') or contains(lower-case(./REL/RELV), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELV)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6183,7 +6463,10 @@
 							</xsl:variable>
 							<xsl:variable name="relw">
 								<xsl:choose>
-									<xsl:when test="./REL/RELW">
+									<xsl:when test="./REL/RELW and contains(normalize-space(lower-case(./REL/RELW)), '?') or contains(lower-case(./REL/RELW), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REL/RELW and not(contains(normalize-space(lower-case(./REL/RELW)), '?') or contains(lower-case(./REL/RELW), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELW)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6203,8 +6486,11 @@
 							</xsl:variable>
 							<xsl:variable name="revv">
 								<xsl:choose>
-									<xsl:when test="./REV/REVV">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVV)), '-')" />
+									<xsl:when test="./REV/REVV and contains(normalize-space(lower-case(./REV/REVV)), '?') or contains(lower-case(./REV/REVV), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REV/REVV and not(contains(normalize-space(lower-case(./REV/REVV)), '?') or contains(lower-case(./REV/REVV), 'ca'))">
+										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./RREVEL/REVV)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="''" />
@@ -6213,7 +6499,10 @@
 							</xsl:variable>
 							<xsl:variable name="revw">
 								<xsl:choose>
-									<xsl:when test="./REV/REVW">
+									<xsl:when test="./REV/REVW and contains(normalize-space(lower-case(./REV/REVW)), '?') or contains(lower-case(./REV/REVW), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REV/REVW and not(contains(normalize-space(lower-case(./REV/REVW)), '?') or contains(lower-case(./REV/REVW), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVW)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6253,7 +6542,10 @@
 							</xsl:variable>
 							<xsl:variable name="relx">
 								<xsl:choose>
-									<xsl:when test="./REL/RELX">
+									<xsl:when test="./REL/RELX and contains(normalize-space(lower-case(./REL/RELX)), '?') or contains(lower-case(./REL/RELX), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REL/RELX and not(contains(normalize-space(lower-case(./REL/RELX)), '?') or contains(lower-case(./REL/RELX), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELX)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6263,7 +6555,10 @@
 							</xsl:variable>
 							<xsl:variable name="revx">
 								<xsl:choose>
-									<xsl:when test="./REV/REVX">
+									<xsl:when test="./REV/REVX and contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(lower-case(./REV/REVX), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REV/REVX and not(contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(lower-case(./REX/REVX), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVX)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6288,7 +6583,7 @@
 						<!-- specific time -->
 						<xsl:if test="./REV/REVI or ./REL/RELI">
 							<xsl:variable name="startDate">
-								<xsl:choose>
+								<!--<xsl:choose>
 									<xsl:when test="./REL/RELX">
 										<xsl:value-of
 										select="concat(normalize-space(./REL/RELI), ' ', normalize-space(./REL/RELX))" />
@@ -6296,16 +6591,57 @@
 									<xsl:otherwise>
 										<xsl:value-of select="normalize-space(./REL/RELI)" />
 									</xsl:otherwise>
+								</xsl:choose>-->
+								<xsl:choose>
+									<xsl:when test="./REL/RELX">
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./REL/RELX)), '?') or contains(normalize-space(lower-case(./REL/RELX)), 'ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELI)), '-uncertain')" />
+											</xsl:when>
+											<xsl:when test="contains(normalize-space(lower-case(./REL/RELI)), '?') or contains(lower-case(./REL/RELI), ' ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELI)), '-', arco-fn:urify(normalize-space(./REL/RELX)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELI)), '-',  arco-fn:urify(normalize-space(./REL/RELX)))" />
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./REL/RELI)), '?') or contains(lower-case(./REL/RELI), ' ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELI)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="arco-fn:urify(normalize-space(./REL/RELI))" />
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:variable>
 							<xsl:variable name="endDate">
 								<xsl:choose>
 									<xsl:when test="./REV/REVX">
-										<xsl:value-of
-										select="concat(normalize-space(./REV/REVI), ' ', normalize-space(./REV/REVX))" />
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(normalize-space(lower-case(./REV/REVX)), 'ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVI)), '-uncertain')" />
+											</xsl:when>
+											<xsl:when test="contains(normalize-space(lower-case(./REV/REVI)), '?') or contains(lower-case(./REV/REVI), ' ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVI)), '-', arco-fn:urify(normalize-space(./REV/REVX)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVI)), '-',  arco-fn:urify(normalize-space(./REV/REVX)))" />
+											</xsl:otherwise>
+										</xsl:choose>
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="normalize-space(./REV/REVI)" />
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./REL/REVI)), '?') or contains(lower-case(./REV/REVI), ' ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVI)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="arco-fn:urify(normalize-space(./REL/REVI))" />
+											</xsl:otherwise>
+										</xsl:choose>
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:variable>
@@ -6389,7 +6725,10 @@
 						<tiapit:atTime>
 							<xsl:variable name="relv">
 								<xsl:choose>
-									<xsl:when test="./REL/RELV">
+									<xsl:when test="./REL/RELV and contains(normalize-space(lower-case(./REL/RELV)), '?') or contains(lower-case(./REL/RELV), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REL/RELV and not(contains(normalize-space(lower-case(./REL/RELV)), '?') or contains(lower-case(./REL/RELV), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELV)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6399,7 +6738,10 @@
 							</xsl:variable>
 							<xsl:variable name="relw">
 								<xsl:choose>
-									<xsl:when test="./REL/RELW">
+									<xsl:when test="./REL/RELW and contains(normalize-space(lower-case(./REL/RELW)), '?') or contains(lower-case(./REL/RELW), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REL/RELW and not(contains(normalize-space(lower-case(./REL/RELW)), '?') or contains(lower-case(./REL/RELW), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELW)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6419,8 +6761,11 @@
 							</xsl:variable>
 							<xsl:variable name="revv">
 								<xsl:choose>
-									<xsl:when test="./REV/REVV">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVV)), '-')" />
+									<xsl:when test="./REV/REVV and contains(normalize-space(lower-case(./REV/REVV)), '?') or contains(lower-case(./REV/REVV), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REV/REVV and not(contains(normalize-space(lower-case(./REV/REVV)), '?') or contains(lower-case(./REV/REVV), 'ca'))">
+										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./RREVEL/REVV)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="''" />
@@ -6429,7 +6774,10 @@
 							</xsl:variable>
 							<xsl:variable name="revw">
 								<xsl:choose>
-									<xsl:when test="./REV/REVW">
+									<xsl:when test="./REV/REVW and contains(normalize-space(lower-case(./REV/REVW)), '?') or contains(lower-case(./REV/REVW), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REV/REVW and not(contains(normalize-space(lower-case(./REV/REVW)), '?') or contains(lower-case(./REV/REVW), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVW)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6469,7 +6817,10 @@
 							</xsl:variable>
 							<xsl:variable name="relx">
 								<xsl:choose>
-									<xsl:when test="./REL/RELX">
+									<xsl:when test="./REL/RELX and contains(normalize-space(lower-case(./REL/RELX)), '?') or contains(lower-case(./REL/RELX), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REL/RELX and not(contains(normalize-space(lower-case(./REL/RELX)), '?') or contains(lower-case(./REL/RELX), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELX)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6479,7 +6830,10 @@
 							</xsl:variable>
 							<xsl:variable name="revx">
 								<xsl:choose>
-									<xsl:when test="./REV/REVX">
+									<xsl:when test="./REV/REVX and contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(lower-case(./REV/REVX), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REV/REVX and not(contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(lower-case(./REX/REVX), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVX)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6506,22 +6860,54 @@
 							<xsl:variable name="startDate">
 								<xsl:choose>
 									<xsl:when test="./REL/RELX">
-										<xsl:value-of
-										select="concat(normalize-space(./REL/RELI), ' ', normalize-space(./REL/RELX))" />
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./REL/RELX)), '?') or contains(normalize-space(lower-case(./REL/RELX)), 'ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELI)), '-uncertain')" />
+											</xsl:when>
+											<xsl:when test="contains(normalize-space(lower-case(./REL/RELI)), '?') or contains(lower-case(./REL/RELI), ' ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELI)), '-', arco-fn:urify(normalize-space(./REL/RELX)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELI)), '-',  arco-fn:urify(normalize-space(./REL/RELX)))" />
+											</xsl:otherwise>
+										</xsl:choose>
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="normalize-space(./REL/RELI)" />
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./REL/RELI)), '?') or contains(lower-case(./REL/RELI), ' ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELI)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="arco-fn:urify(normalize-space(./REL/RELI))" />
+											</xsl:otherwise>
+										</xsl:choose>
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:variable>
 							<xsl:variable name="endDate">
 								<xsl:choose>
 									<xsl:when test="./REV/REVX">
-										<xsl:value-of
-										select="concat(normalize-space(./REV/REVI), ' ', normalize-space(./REV/REVX))" />
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(normalize-space(lower-case(./REV/REVX)), 'ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVI)), '-uncertain')" />
+											</xsl:when>
+											<xsl:when test="contains(normalize-space(lower-case(./REV/REVI)), '?') or contains(lower-case(./REV/REVI), ' ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVI)), '-', arco-fn:urify(normalize-space(./REV/REVX)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVI)), '-',  arco-fn:urify(normalize-space(./REV/REVX)))" />
+											</xsl:otherwise>
+										</xsl:choose>
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="normalize-space(./REV/REVI)" />
+										<xsl:choose>
+											<xsl:when test="contains(normalize-space(lower-case(./REL/REVI)), '?') or contains(lower-case(./REV/REVI), ' ca')">
+												<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVI)), '-uncertain')" />
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="arco-fn:urify(normalize-space(./REL/REVI))" />
+											</xsl:otherwise>
+										</xsl:choose>
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:variable>
@@ -6538,7 +6924,10 @@
 						<xsl:attribute name="rdf:about">
 							<xsl:variable name="relv">
 								<xsl:choose>
-									<xsl:when test="./REL/RELV">
+									<xsl:when test="./REL/RELV and contains(normalize-space(lower-case(./REL/RELV)), '?') or contains(lower-case(./REL/RELV), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REL/RELV and not(contains(normalize-space(lower-case(./REL/RELV)), '?') or contains(lower-case(./REL/RELV), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELV)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6548,7 +6937,10 @@
 							</xsl:variable>
 							<xsl:variable name="relw">
 								<xsl:choose>
-									<xsl:when test="./REL/RELW">
+									<xsl:when test="./REL/RELW and contains(normalize-space(lower-case(./REL/RELW)), '?') or contains(lower-case(./REL/RELW), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REL/RELW and not(contains(normalize-space(lower-case(./REL/RELW)), '?') or contains(lower-case(./REL/RELW), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELW)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6568,8 +6960,11 @@
 							</xsl:variable>
 							<xsl:variable name="revv">
 								<xsl:choose>
-									<xsl:when test="./REV/REVV">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVV)), '-')" />
+									<xsl:when test="./REV/REVV and contains(normalize-space(lower-case(./REV/REVV)), '?') or contains(lower-case(./REV/REVV), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REV/REVV and not(contains(normalize-space(lower-case(./REV/REVV)), '?') or contains(lower-case(./REV/REVV), 'ca'))">
+										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./RREVEL/REVV)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="''" />
@@ -6578,7 +6973,10 @@
 							</xsl:variable>
 							<xsl:variable name="revw">
 								<xsl:choose>
-									<xsl:when test="./REV/REVW">
+									<xsl:when test="./REV/REVW and contains(normalize-space(lower-case(./REV/REVW)), '?') or contains(lower-case(./REV/REVW), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REV/REVW and not(contains(normalize-space(lower-case(./REV/REVW)), '?') or contains(lower-case(./REV/REVW), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVW)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6619,7 +7017,10 @@
 							</xsl:variable>
 							<xsl:variable name="relx">
 								<xsl:choose>
-									<xsl:when test="./REL/RELX">
+									<xsl:when test="./REL/RELX and contains(normalize-space(lower-case(./REL/RELX)), '?') or contains(lower-case(./REL/RELX), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REL/RELX and not(contains(normalize-space(lower-case(./REL/RELX)), '?') or contains(lower-case(./REL/RELX), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELX)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6629,7 +7030,10 @@
 							</xsl:variable>
 							<xsl:variable name="revx">
 								<xsl:choose>
-									<xsl:when test="./REV/REVX">
+									<xsl:when test="./REV/REVX and contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(lower-case(./REV/REVX), 'ca')">
+										<xsl:value-of select="'uncertain-'" />
+									</xsl:when>
+									<xsl:when test="./REV/REVX and not(contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(lower-case(./REX/REVX), 'ca'))">
 										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVX)), '-')" />
 									</xsl:when>
 									<xsl:otherwise>
@@ -6708,7 +7112,7 @@
 							<xsl:variable name="revf">
 								<xsl:choose>
 									<xsl:when test="./REV/REVF">
-										<xsl:value-of select="concat(normalize-space(./REV/REVF), '-')" />
+										<xsl:value-of select="concat(normalize-space(./REV/REVF), ' ')" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="''" />
@@ -6821,7 +7225,7 @@
 							<xsl:variable name="revf">
 								<xsl:choose>
 									<xsl:when test="./REV/REVF">
-										<xsl:value-of select="concat(normalize-space(./REV/REVF), '-')" />
+										<xsl:value-of select="concat(normalize-space(./REV/REVF), ' ')" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="''" />
@@ -6934,7 +7338,7 @@
 							<xsl:variable name="revf">
 								<xsl:choose>
 									<xsl:when test="./REV/REVF">
-										<xsl:value-of select="concat(normalize-space(./REV/REVF), '-')" />
+										<xsl:value-of select="concat(normalize-space(./REV/REVF), ' ')" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="''" />
@@ -7047,7 +7451,7 @@
 							<xsl:variable name="revf">
 								<xsl:choose>
 									<xsl:when test="./REV/REVF">
-										<xsl:value-of select="concat(normalize-space(./REV/REVF), '-')" />
+										<xsl:value-of select="concat(normalize-space(./REV/REVF), ' ')" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="''" />
@@ -7160,7 +7564,7 @@
 							<xsl:variable name="revf">
 								<xsl:choose>
 									<xsl:when test="./REV/REVF">
-										<xsl:value-of select="concat(normalize-space(./REV/REVF), '-')" />
+										<xsl:value-of select="concat(normalize-space(./REV/REVF), ' ')" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="''" />
@@ -7225,20 +7629,54 @@
 						<xsl:variable name="startDate">
 							<xsl:choose>
 								<xsl:when test="./REL/RELX">
-									<xsl:value-of select="concat(normalize-space(./REL/RELI), ' ', normalize-space(./REL/RELX))" />
+									<xsl:choose>
+										<xsl:when test="contains(normalize-space(lower-case(./REL/RELX)), '?') or contains(normalize-space(lower-case(./REL/RELX)), 'ca')">
+											<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELI)), '-uncertain')" />
+										</xsl:when>
+										<xsl:when test="contains(normalize-space(lower-case(./REL/RELI)), '?') or contains(lower-case(./REL/RELI), ' ca')">
+											<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELI)), '-', arco-fn:urify(normalize-space(./REL/RELX)), '-uncertain')" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELI)), '-',  arco-fn:urify(normalize-space(./REL/RELX)))" />
+										</xsl:otherwise>
+									</xsl:choose>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="normalize-space(./REL/RELI)" />
+									<xsl:choose>
+										<xsl:when test="contains(normalize-space(lower-case(./REL/RELI)), '?') or contains(lower-case(./REL/RELI), ' ca')">
+											<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELI)), '-uncertain')" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="arco-fn:urify(normalize-space(./REL/RELI))" />
+										</xsl:otherwise>
+									</xsl:choose>
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:variable>
 						<xsl:variable name="endDate">
 							<xsl:choose>
 								<xsl:when test="./REV/REVX">
-									<xsl:value-of select="concat(normalize-space(./REV/REVI), ' ', normalize-space(./REV/REVX))" />
+									<xsl:choose>
+										<xsl:when test="contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(normalize-space(lower-case(./REV/REVX)), 'ca')">
+											<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVI)), '-uncertain')" />
+										</xsl:when>
+										<xsl:when test="contains(normalize-space(lower-case(./REV/REVI)), '?') or contains(lower-case(./REV/REVI), ' ca')">
+											<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVI)), '-', arco-fn:urify(normalize-space(./REV/REVX)), '-uncertain')" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVI)), '-',  arco-fn:urify(normalize-space(./REV/REVX)))" />
+										</xsl:otherwise>
+									</xsl:choose>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="normalize-space(./REV/REVI)" />
+									<xsl:choose>
+										<xsl:when test="contains(normalize-space(lower-case(./REL/REVI)), '?') or contains(lower-case(./REV/REVI), ' ca')">
+											<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVI)), '-uncertain')" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="arco-fn:urify(normalize-space(./REL/REVI))" />
+										</xsl:otherwise>
+									</xsl:choose>
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:variable>
@@ -7251,17 +7689,37 @@
 									<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
 								</xsl:attribute>
 							</rdf:type>
+							<xsl:variable name="labStartDate">
+								<xsl:choose>
+									<xsl:when test="./REL/RELX">
+										<xsl:value-of select="concat(normalize-space(./REL/RELI), ' ', normalize-space(./REL/RELX))" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="normalize-space(./REL/RELI)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+							<xsl:variable name="labEndDate">
+								<xsl:choose>
+									<xsl:when test="./REV/REVX">
+										<xsl:value-of select="concat(normalize-space(./REV/REVI), ' ', normalize-space(./REV/REVX))" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="normalize-space(./REV/REVI)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
 							<rdfs:label>
-								<xsl:value-of select="concat($startDate, ' - ', $endDate)" />
+								<xsl:value-of select="concat($labStartDate, ' - ', $labEndDate)" />
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="concat($startDate, ' - ', $endDate)" />
+								<xsl:value-of select="concat($labStartDate, ' - ', $labEndDate)" />
 							</l0:name>
 							<arco-arco:startTime>
-								<xsl:value-of select="$startDate" />
+								<xsl:value-of select="$labStartDate" />
 							</arco-arco:startTime>
 							<arco-arco:endTime>
-								<xsl:value-of select="$endDate" />
+								<xsl:value-of select="$labEndDate" />
 							</arco-arco:endTime>
 						</rdf:Description>
 					</xsl:if>
@@ -8335,11 +8793,12 @@
 								<l0:name xml:lang="en">
 									<xsl:value-of select="'Cataloguing agency'" />
 								</l0:name>
+								<!-- inverse cleaning 
 								<arco-core:isRoleOf>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
 									</xsl:attribute>
-								</arco-core:isRoleOf>
+								</arco-core:isRoleOf>-->
 							</rdf:Description>
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
@@ -8458,11 +8917,12 @@
 								<l0:name xml:lang="en">
 									<xsl:value-of select="'Cataloguing agency'" />
 								</l0:name>
+								<!-- inverse cleaning 
 								<arco-core:isRoleOf>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
 									</xsl:attribute>
-								</arco-core:isRoleOf>
+								</arco-core:isRoleOf>-->
 							</rdf:Description>
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
@@ -8707,11 +9167,12 @@
 								<rdfs:label xml:lang="en">
 									<xsl:value-of select="'Heritage Protection Agency'" />
 								</rdfs:label>
+								<!-- inverse cleaning 
 								<arco-core:isRoleOf>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
 									</xsl:attribute>
-								</arco-core:isRoleOf>
+								</arco-core:isRoleOf>-->
 							</rdf:Description>
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
@@ -11976,11 +12437,12 @@
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="'Owner'" />
 							</rdfs:label>
+							<!-- inverse cleaning 
 							<arco-core:isRoleOf>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner', position())" />
 								</xsl:attribute>
-							</arco-core:isRoleOf>
+							</arco-core:isRoleOf>-->
 						</rdf:Description>
 						<!-- agent as an indiviual -->
 						<rdf:Description>
@@ -12116,11 +12578,12 @@
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="'Owner'" />
 							</rdfs:label>
+							<!-- inverse cleaning 
 							<arco-core:isRoleOf>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner', position())" />
 								</xsl:attribute>
-							</arco-core:isRoleOf>
+							</arco-core:isRoleOf>-->
 						</rdf:Description>
 						<!-- agent as an indiviual -->
 						<rdf:Description>
@@ -12359,11 +12822,12 @@
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="'Export Office'" />
 							</rdfs:label>
+							<!-- inverse cleaning 
 							<arco-core:isRoleOf>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-export-import-certification-', $exp-position, '-export-office')" />
 								</xsl:attribute>
-							</arco-core:isRoleOf>
+							</arco-core:isRoleOf>-->
 						</rdf:Description>
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
@@ -12380,11 +12844,12 @@
 							<l0:name>
 								<xsl:value-of select="arco-fn:name-cleaner(./ESPU)" />
 							</l0:name>
+							<!-- inverse cleaning 
 							<arco-core:isAgentOf>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-export-import-certification-', $exp-position, '-export-office')" />
 								</xsl:attribute>
-							</arco-core:isAgentOf>
+							</arco-core:isAgentOf>-->
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
@@ -12779,11 +13244,12 @@
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="'Issuing Agency'" />
 							</rdfs:label>
+							<!-- inverse cleaning 
 							<arco-core:isRoleOf>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-urban-planning-instrument-', $upinstrument-position, '-issuing-agency')" />
 								</xsl:attribute>
-							</arco-core:isRoleOf>
+							</arco-core:isRoleOf>-->
 						</rdf:Description>
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
@@ -12800,11 +13266,12 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./STUE)" />
 							</l0:name>
+							<!-- inverse cleaning 
 							<arco-core:isAgentOf>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-urban-planning-instrument-', $upinstrument-position, '-issuing-agency')" />
 								</xsl:attribute>
-							</arco-core:isAgentOf>
+							</arco-core:isAgentOf>-->
 						</rdf:Description>
 					</xsl:if>
 					<!-- eligible intervention of u.p.instrument as an individual -->
@@ -26249,11 +26716,12 @@
 								<l0:name>
 									<xsl:value-of select="arco-fn:name-cleaner(./INPE)" />
 								</l0:name>
+								<!-- inverse cleaning 
 								<arco-core:isAgentOf>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-inventory-number-responsible')" />
 									</xsl:attribute>
-								</arco-core:isAgentOf>
+								</arco-core:isAgentOf>-->
 							</rdf:Description>
 						</xsl:if>
 					</xsl:if>
@@ -26480,11 +26948,12 @@
 							<l0:name>
 								<xsl:value-of select="arco-fn:name-cleaner(./INPE)" />
 							</l0:name>
+							<!-- inverse cleaning 
 							<arco-core:isAgentOf>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-inventory-number-responsible')" />
 								</xsl:attribute>
-							</arco-core:isAgentOf>
+							</arco-core:isAgentOf>-->
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
@@ -26689,11 +27158,12 @@
 							<l0:name>
 								<xsl:value-of select="arco-fn:name-cleaner(./INPE)" />
 							</l0:name>
+							<!-- inverse cleaning 
 							<arco-core:isAgentOf>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-inventory-number-responsible')" />
 								</xsl:attribute>
-							</arco-core:isAgentOf>
+							</arco-core:isAgentOf>-->
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
@@ -36902,12 +37372,12 @@
 							</xsl:choose>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'w3id.org/arco/archives/ontology/archival-resource/ArchivalResourceSte'" />
+									<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResourceSet'" />
 								</xsl:attribute>
 							</rdf:type>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
+									<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
 								</xsl:attribute>
 							</rdf:type>
 							<arco-core:hasType>
@@ -37043,12 +37513,12 @@
 							</xsl:choose>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'w3id.org/arco/archives/ontology/archival-resource/ArchivalResourceSet'" />
+									<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResourceSet'" />
 								</xsl:attribute>
 							</rdf:type>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
+									<xsl:value-of select="'https://w3id.org/arco/archives/ontology/archival-resource/ArchivalResource'" />
 								</xsl:attribute>
 							</rdf:type>
 							<arco-core:hasType>
