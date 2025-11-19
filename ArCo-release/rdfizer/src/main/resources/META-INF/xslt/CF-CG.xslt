@@ -950,11 +950,12 @@
 					<rdfs:label xml:lang="en">
 						<xsl:value-of select="'Responsible agency for catalogue record'" />
 					</rdfs:label>
+					<!-- inverse cleaning 
 					<arco-core:isRoleOf>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AgentRole/', $idCF, '-catalogue-record-responsible')" />
 						</xsl:attribute>
-					</arco-core:isRoleOf>
+					</arco-core:isRoleOf>-->
 				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
@@ -971,11 +972,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./ACCE)" />
 					</l0:name>
+					<!-- inverse cleaning 
 					<arco-core:isAgentOf>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AgentRole/', $idCF, '-catalogue-record-responsible')" />
 						</xsl:attribute>
-					</arco-core:isAgentOf>
+					</arco-core:isAgentOf>-->
 				</rdf:Description>
 			</xsl:if>
 		</xsl:for-each>
@@ -2459,11 +2461,12 @@
 					<rdfs:label xml:lang="en">
 						<xsl:value-of select="'Responsible agency for catalogue record'" />
 					</rdfs:label>
+					<!-- inverse cleaning 
 					<arco-core:isRoleOf>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AgentRole/', $idCG, '-catalogue-record-responsible')" />
 						</xsl:attribute>
-					</arco-core:isRoleOf>
+					</arco-core:isRoleOf>-->
 				</rdf:Description>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
@@ -2480,11 +2483,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./ACCE)" />
 					</l0:name>
+					<!-- inverse cleaning 
 					<arco-core:isAgentOf>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AgentRole/', $idCG, '-catalogue-record-responsible')" />
 						</xsl:attribute>
-					</arco-core:isAgentOf>
+					</arco-core:isAgentOf>-->
 				</rdf:Description>
 			</xsl:if>
 		</xsl:for-each>
