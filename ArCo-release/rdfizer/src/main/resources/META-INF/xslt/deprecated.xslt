@@ -3814,11 +3814,12 @@
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="'Copyright Holder'" />
 							</rdfs:label>
+							<!-- inverse cleaning 
 							<arco-core:isRoleOf>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./CPRN))" />
 								</xsl:attribute>
-							</arco-core:isRoleOf>
+							</arco-core:isRoleOf>-->
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
@@ -4118,11 +4119,12 @@
 								<rdfs:label xml:lang="en">
 									<xsl:value-of select="'Responsible agency for catalogue record'" />
 								</rdfs:label>
+								<!-- inverse cleaning 
 								<arco-core:isRoleOf>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-catalogue-record-responsible')" />
 									</xsl:attribute>
-								</arco-core:isRoleOf>
+								</arco-core:isRoleOf>-->
 							</rdf:Description>
 						</xsl:if>
 					</xsl:for-each>
@@ -4473,11 +4475,12 @@
 								<rdfs:label xml:lang="en">
 									<xsl:value-of select="'Inventory Identifier Responsible'" />
 								</rdfs:label>
+								<!-- inverse cleaning 
 								<arco-core:isRoleOf>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-inventory-identifier-responsible')" />
 									</xsl:attribute>
-								</arco-core:isRoleOf>
+								</arco-core:isRoleOf>-->
 							</rdf:Description>
 						</xsl:if>
 					</xsl:if>
@@ -7488,11 +7491,12 @@
 								<rdfs:label xml:lang="en">
 									<xsl:value-of select="'Activity Responsible'" />
 								</rdfs:label>
+								<!-- inverse cleaning 
 								<arco-core:isRoleOf>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-archaeological-field-survey-', $survey-position, '-activity-responsible')" />
 									</xsl:attribute>
-								</arco-core:isRoleOf>
+								</arco-core:isRoleOf>-->
 							</rdf:Description>
 						</xsl:for-each>
 						<!-- agent role of authority file cataloguing agency as an individual -->
@@ -7515,11 +7519,12 @@
 								<rdfs:label xml:lang="en">
 									<xsl:value-of select="'Authority File Cataloguing Agency'" />
 								</rdfs:label>
+								<!-- inverse cleaning 
 								<arco-core:isRoleOf>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-archaeological-field-survey-', $survey-position, '-cataloguing-agency')" />
 									</xsl:attribute>
-								</arco-core:isRoleOf>
+								</arco-core:isRoleOf>-->
 							</rdf:Description>
 						</xsl:if>
 					</xsl:for-each>
