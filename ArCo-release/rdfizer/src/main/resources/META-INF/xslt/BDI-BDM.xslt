@@ -4716,11 +4716,11 @@
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUR/DURN)" />
 						</arco-cd:collectionUnitNumber>
 					</xsl:if>
-					<arco-cd:hasCollection>
+					<arco-cd:involvesCollection>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AudioCollection/', arco-fn:urify(normalize-space(record/metadata/schede/*/DU/DUR/DURD)))" />
 						</xsl:attribute>
-					</arco-cd:hasCollection>
+					</arco-cd:involvesCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="$objectOfDescription" />
@@ -4776,11 +4776,11 @@
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUS/DUSN)" />
 						</arco-cd:collectionUnitNumber>
 					</xsl:if>
-					<arco-cd:hasCollection>
+					<arco-cd:involvesCollection>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AudioCollection/', arco-fn:urify(normalize-space(record/metadata/schede/*/DU/DUS/DUST)))" />
 						</xsl:attribute>
-					</arco-cd:hasCollection>
+					</arco-cd:involvesCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="$objectOfDescription" />
@@ -5933,11 +5933,12 @@
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Owner'" />
 						</rdfs:label>
+						<!-- inverse cleaning 
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner', position())" />
 							</xsl:attribute>
-						</arco-core:isRoleOf>
+						</arco-core:isRoleOf>-->
 					</rdf:Description>
 					<!-- agent as an indiviual -->
 					<rdf:Description>
@@ -6399,11 +6400,12 @@
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Rights Holder'" />
 						</rdfs:label>
+						<!-- inverse cleaning 
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(record/metadata/schede/*/DU/DUYN))" />
 							</xsl:attribute>
-						</arco-core:isRoleOf>
+						</arco-core:isRoleOf>-->
 					</rdf:Description>
 					<!-- agent as an individual -->
 					<rdf:Description>
@@ -6676,11 +6678,11 @@
 							<xsl:value-of select="normalize-space(record/metadata/schede/*/DV/DVR/DVRN)" />
 						</arco-cd:collectionUnitNumber>
 					</xsl:if>
-					<arco-cd:hasCollection>
+					<arco-cd:involvesCollection>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'VideoCollection/', arco-fn:urify(normalize-space(record/metadata/schede/*/DV/DVR/DVRD)))" />
 						</xsl:attribute>
-					</arco-cd:hasCollection>
+					</arco-cd:involvesCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="$objectOfDescription" />
@@ -6731,11 +6733,11 @@
 					<l0:name xml:lang="en">
 						<xsl:value-of select="concat('Video collection membership of recording of cultural property: ', $itemURI)" />
 					</l0:name>
-					<arco-cd:hasCollection>
+					<arco-cd:involvesCollection>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'VideoCollection/', arco-fn:urify(normalize-space(record/metadata/schede/*/DV/DVV/DVVT)))" />
 						</xsl:attribute>
-					</arco-cd:hasCollection>
+					</arco-cd:involvesCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="$objectOfDescription" />
@@ -7507,11 +7509,12 @@
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Owner'" />
 						</rdfs:label>
+						<!-- inverse cleaning 
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner', position())" />
 							</xsl:attribute>
-						</arco-core:isRoleOf>
+						</arco-core:isRoleOf>-->
 					</rdf:Description>
 					<!-- agent as an indiviual -->
 					<rdf:Description>
@@ -7972,11 +7975,12 @@
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Rights Holder'" />
 						</rdfs:label>
+						<!-- inverse cleaning 
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./DVYN))" />
 							</xsl:attribute>
-						</arco-core:isRoleOf>
+						</arco-core:isRoleOf>-->
 					</rdf:Description>
 					<!-- agent as an individual -->
 					<rdf:Description>
@@ -9238,11 +9242,12 @@
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Owner'" />
 						</rdfs:label>
+						<!-- inverse cleaning 
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner', position())" />
 							</xsl:attribute>
-						</arco-core:isRoleOf>
+						</arco-core:isRoleOf>-->
 					</rdf:Description>
 					<!-- agent as an indiviual -->
 					<rdf:Description>
@@ -9701,11 +9706,12 @@
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Rights Holder'" />
 						</rdfs:label>
+						<!-- inverse cleaning 
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./DFYN))" />
 							</xsl:attribute>
-						</arco-core:isRoleOf>
+						</arco-core:isRoleOf>-->
 					</rdf:Description>
 					<!-- agent as an individual -->
 					<rdf:Description>
@@ -10248,11 +10254,11 @@
 							<xsl:value-of select="normalize-space(./AIR/AIRN)" />
 						</arco-cd:collectionUnitNumber>
 					</xsl:if>
-					<arco-cd:hasCollection>
+					<arco-cd:involvesCollection>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AudioCollection/', arco-fn:urify(normalize-space(./AIR/AIRD)))" />
 						</xsl:attribute>
-					</arco-cd:hasCollection>
+					</arco-cd:involvesCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="$objectOfDescription" />
@@ -10308,11 +10314,11 @@
 							<xsl:value-of select="normalize-space(./AIS/AISN)" />
 						</arco-cd:collectionUnitNumber>
 					</xsl:if>
-					<arco-cd:hasCollection>
+					<arco-cd:involvesCollection>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AudioCollection/', arco-fn:urify(normalize-space(./AIS/AIST)))" />
 						</xsl:attribute>
-					</arco-cd:hasCollection>
+					</arco-cd:involvesCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="$objectOfDescription" />
@@ -12515,11 +12521,12 @@
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Owner'" />
 						</rdfs:label>
+						<!-- inverse cleaning 
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner', position())" />
 							</xsl:attribute>
-						</arco-core:isRoleOf>
+						</arco-core:isRoleOf>-->
 					</rdf:Description>
 					<!-- agent as an indiviual -->
 					<rdf:Description>
@@ -12981,11 +12988,12 @@
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Rights Holder'" />
 						</rdfs:label>
+						<!-- inverse cleaning 
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AIYN))" />
 							</xsl:attribute>
-						</arco-core:isRoleOf>
+						</arco-core:isRoleOf>-->
 					</rdf:Description>
 					<!-- agent as an individual -->
 					<rdf:Description>
@@ -13313,11 +13321,11 @@
 							<xsl:value-of select="normalize-space(./VIR/VIRN)" />
 						</arco-cd:collectionUnitNumber>
 					</xsl:if>
-					<arco-cd:hasCollection>
+					<arco-cd:involvesCollection>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'VideoCollection/', arco-fn:urify(normalize-space(./VIR/VIRD)))" />
 						</xsl:attribute>
-					</arco-cd:hasCollection>
+					</arco-cd:involvesCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="$objectOfDescription" />
@@ -13374,11 +13382,11 @@
 							<xsl:value-of select="normalize-space(./VIV/VIVT)" />
 						</arco-cd:collectionUnitNumber>
 					</xsl:if>
-					<arco-cd:hasCollection>
+					<arco-cd:involvesCollection>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'VideoCollection/', arco-fn:urify(normalize-space(./VIV/VIVT)))" />
 						</xsl:attribute>
-					</arco-cd:hasCollection>
+					</arco-cd:involvesCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="$objectOfDescription" />
@@ -13677,11 +13685,11 @@
 						</arco-cd:collectionUnitNumber>
 					</xsl:if>
 					<!-- has collection -->
-					<arco-cd:hasCollection>
+					<arco-cd:involvesCollection>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'VideoCollection/', arco-fn:urify(normalize-space(./VIS/VIST)))" />
 						</xsl:attribute>
-					</arco-cd:hasCollection>
+					</arco-cd:involvesCollection>
 					<arco-cd:involvesMember>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="$objectOfDescription" />
@@ -15656,11 +15664,12 @@
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Owner'" />
 						</rdfs:label>
+						<!-- inverse cleaning 
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner', position())" />
 							</xsl:attribute>
-						</arco-core:isRoleOf>
+						</arco-core:isRoleOf>-->
 					</rdf:Description>
 					<!-- agent as an indiviual -->
 					<rdf:Description>
@@ -16122,11 +16131,12 @@
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Rights Holder'" />
 						</rdfs:label>
+						<!-- inverse cleaning 
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./VIYN))" />
 							</xsl:attribute>
-						</arco-core:isRoleOf>
+						</arco-core:isRoleOf>-->
 					</rdf:Description>
 					<!-- agent as an individual -->
 					<rdf:Description>
@@ -19001,11 +19011,12 @@
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Owner'" />
 						</rdfs:label>
+						<!-- inverse cleaning 
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner', position())" />
 							</xsl:attribute>
-						</arco-core:isRoleOf>
+						</arco-core:isRoleOf>-->
 					</rdf:Description>
 					<!-- agent as an indiviual -->
 					<rdf:Description>
