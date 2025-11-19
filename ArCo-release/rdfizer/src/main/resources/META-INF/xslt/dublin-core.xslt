@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet
 xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:language="https://w3id.org/italia/onto/Language/"
 xmlns:dc="http://purl.org/dc/elements/1.1/"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -242,8 +243,15 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 						<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
 					</xsl:attribute>
 					<dc:language>
-						<xsl:text>italiano</xsl:text>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'http://publications.europa.eu/resource/authority/language/ITA'"/>
+						</xsl:attribute>
 					</dc:language>
+					<language:hasLanguage>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'http://publications.europa.eu/resource/authority/language/ITA'"/>
+						</xsl:attribute>
+					</language:hasLanguage>
 					<dc:publisher>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="'https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75'"/>
@@ -977,7 +985,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
 					<xsl:for-each select="record/metadata/schede/*/MT/MIS">
 						<xsl:variable name="measurement-collection">
 							<xsl:choose>
-								<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP and not(lower-case(normalize-space(./MISP))='intero bene' or lower-case(normalize-space(./MISP))='integrale' or lower-case(normalize-space(./MISP))='intero' or lower-case(normalize-space(./MISP))='tutta' or lower-case(normalize-space(./MISP))='totale' or (starts-with(lower-case(normalize-space(./MISP)), 'nr')) or (starts-with(lower-case(normalize-space(./MISP)), 'n.r')))" >
+								<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP" >
 									<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-', arco-fn:urify(normalize-space(./MISP)))" />
 								</xsl:when>
 								<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and not(./MISP)" >
