@@ -400,11 +400,12 @@
 						<l0:name xml:lang="en">
 							<xsl:value-of select="'Cataloguing agency'" />
 						</l0:name>
+						<!-- inverse cleaning 
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
                             	<xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-cataloguing-agency')" />
                         </xsl:attribute>
-						</arco-core:isRoleOf>
+						</arco-core:isRoleOf>-->
 					</rdf:Description>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
@@ -561,11 +562,12 @@
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="'Heritage Protection Agency'" />
 							</rdfs:label>
+							<!-- inverse cleaning 
 							<arco-core:isRoleOf>
 								<xsl:attribute name="rdf:resource">
 	            	                <xsl:value-of select="concat($NS, 'AgentRole/', $idAuthor, '-heritage-protection-agency')" />
 			                       </xsl:attribute>
-							</arco-core:isRoleOf>
+							</arco-core:isRoleOf>-->
 						</rdf:Description>
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
