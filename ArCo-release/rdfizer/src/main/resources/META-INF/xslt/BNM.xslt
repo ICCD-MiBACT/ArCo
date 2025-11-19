@@ -9375,11 +9375,11 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Specimen membership of cultural property: ', $itemURI)" />
 			</l0:name>
-			<arco-cd:hasCollection>
+			<arco-cd:involvesCollection>
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="$specimencollection" />
 				</xsl:attribute>
-			</arco-cd:hasCollection>
+			</arco-cd:involvesCollection>
 		</rdf:Description>
 	</xsl:if>
 	</rdf:RDF>
