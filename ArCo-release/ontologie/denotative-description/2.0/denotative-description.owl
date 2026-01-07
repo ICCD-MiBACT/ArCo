@@ -1866,7 +1866,7 @@ WHERE {?type a-dd:isAffixedElementTypeOf ?class.}</core:constructQuery>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isAgentReferredToBy">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/refersToAgent"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;si riferisce ad agente&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;refers to agent&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
@@ -3228,9 +3228,64 @@ WHERE {?char a-dd:isVibratingLenghtOf ?class. }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/refersToAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/refersToAgent">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un uno stemma, un emblema, un timbro, etc., presente su un bene culturale, all&apos;agente (la famiglia, la fabbrica, la cava, l&apos;argentiere, etc.) a cui si riferisce l&apos;elemento.</rdfs:comment>
+        <dc:description xml:lang="it">Due esempi d&apos;uso della relazione &quot;refersToAgent&quot; sono i seguenti.
+
+AffixedElement pattern: 
+resource:Inscription/1200865151-inscription-1
+        a   dd:AffixedElement ;
+        rdfs:label &quot;Inscription 1 of cultural property 1200865151&quot;@en ;
+        dd:hasFontStyle resource:FontStyle/lettere-capitali ;
+        dd:positionOnCulturalProperty &quot;in the middle&quot; ;
+        dd:transcript &quot;PAVLVS VENETVS PAPA SECVNDVS SVIS IMPENSIS FIERI FECIT ANNO CRISTI MCCCCLXVII&quot; ;
+        a-dd:refersToAgent resource:Agent/PapaPaoloII ;
+        language:hasLanguage resource:Language/latino ;
+        dd:hasType resource:AffixedElement/IscrizioneMilitare .
+resource:AffixedElement/IscrizioneMilitare skos:broader dd:Inscription .
+
+Responsibility pattern:
+resource:PreferredResponsibility/0900747264-1 
+         a a-cd:Responsibility ;
+         rdfs:label &quot;Preferred responsibility on cultural property: 0900747264&quot;@en ;
+         a-cd:hasAgentWithResponsibility resource:Agent/5070eea397d7a5e78af3ec4a613dbf2f ;
+         a-cd:hasInterventionRole resource:Role/disegnatore .
+resource:Agent/5070eea397d7a5e78af3ec4a613dbf2f a cov:Group ;
+         rdfs:label &quot;Buonarroti Michelangelo (bottega)&quot; ;
+         a-dd:refersToAgent resource:Agent/56d8ee32618291c12ae4f357db49c221 ;
+         a-cd:hasSpecification resource:GroupSpecification/GS1 . 
+resource:Agent/56d8ee32618291c12ae4f357db49c221 
+         a cpv:Person ;
+         rdfs:label &quot;Buonarroti Michelangelo (1475 - 1564)&quot;@it .</dc:description>
+        <dc:description xml:lang="en">Two practical examples of the &quot;refersToAgent&quot; property application.
+
+AffixedElement pattern: 
+resource:Inscription/1200865151-inscription-1
+        a   dd:AffixedElement ;
+        rdfs:label &quot;Inscription 1 of cultural property 1200865151&quot;@en ;
+        dd:hasFontStyle resource:FontStyle/lettere-capitali ;
+        dd:positionOnCulturalProperty &quot;in the middle&quot; ;
+        dd:transcript &quot;PAVLVS VENETVS PAPA SECVNDVS SVIS IMPENSIS FIERI FECIT ANNO CRISTI MCCCCLXVII&quot; ;
+        a-dd:refersToAgent resource:Agent/PapaPaoloII ;
+        language:hasLanguage resource:Language/latino ;
+        dd:hasType resource:AffixedElement/IscrizioneMilitare .
+resource:AffixedElement/IscrizioneMilitare skos:broader dd:Inscription .
+
+Responsibility pattern:
+resource:PreferredResponsibility/0900747264-1 
+         a a-cd:Responsibility ;
+         rdfs:label &quot;Preferred responsibility on cultural property: 0900747264&quot;@en ;
+         a-cd:hasAgentWithResponsibility resource:Agent/5070eea397d7a5e78af3ec4a613dbf2f ;
+         a-cd:hasInterventionRole resource:Role/disegnatore .
+resource:Agent/5070eea397d7a5e78af3ec4a613dbf2f a cov:Group ;
+         rdfs:label &quot;Buonarroti Michelangelo (bottega)&quot; ;
+         a-dd:refersToAgent resource:Agent/56d8ee32618291c12ae4f357db49c221 ;
+         a-cd:hasSpecification resource:GroupSpecification/GS1 . 
+resource:Agent/56d8ee32618291c12ae4f357db49c221 
+         a cpv:Person ;
+         rdfs:label &quot;Buonarroti Michelangelo (1475 - 1564)&quot;@it .</dc:description>
+        <rdfs:comment xml:lang="it">Questa proprietà indica un riferimento o una relazione tra un&apos;entità e un agente specifico. Può essere utilizzata per riferire uno stemma, un emblema, un timbro, etc., presente su un bene culturale, all&apos;agente (la famiglia, la fabbrica, la cava, l&apos;argentiere, etc.).
+Può essere impegata anche nel pattern a-cd:Responsibility, per collegare un agente collettivo (es: bottega di Michelangelo) o singolo (es: allievo di Canova) alla persona di riferimento (Michelangelo o Canova stessi).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a crest, emblem, postmark etc., located on a cultural entity to the agent (e.g. family, factory, cave, silversmith) to which it refers.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">refers to agent</rdfs:label>
