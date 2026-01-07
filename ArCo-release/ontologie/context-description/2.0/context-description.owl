@@ -3379,6 +3379,30 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasSpecification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSpecification">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSpecificationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/GroupSpecification"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/PersonSpecification"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una persona o un gruppo alla propria specifica. Per esempio: l&apos;istanza dell&apos;agente &quot;Allievo di Canova&quot; viene messa in relazione al concetto di &quot;Allievo&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a person or group to its specific attribute. For example: the agent instance ‘Canova&apos;s pupil’ is linked to the concept of ‘Pupil’.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha specifica</rdfs:label>
+        <rdfs:label xml:lang="en">has specification</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasStorageMedium -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasStorageMedium">
@@ -7260,6 +7284,29 @@ WHERE {
         <rdfs:label xml:lang="it">è fonte bibliografica specifica di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isSpecificationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isSpecificationOf">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/GroupSpecification"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/PersonSpecification"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha specifica&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse relation of &quot;has specification&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is specification of</rdfs:label>
+        <rdfs:label xml:lang="it">è specifica di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -13045,6 +13092,25 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/GroupSpecification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/GroupSpecification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la specifica di un gruppo che si riferisce a un agente singolo, definendone la tipologia.
+Per esempio: la bottega di Michelangelo, la cerchia di Botticelli.
+Le istanze di questa classe sono rappresentate come concetti dello standard skos di un vocabolario controllato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the specification of a group that refers to a single agent, defining its type.
+For example: Michelangelo&apos;s studio, Botticelli&apos;s circle.
+The instances of this class are modelled as skos concepts of a controlled vocabulary.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Group Specification</rdfs:label>
+        <rdfs:label xml:lang="it">Specifica del Gruppo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Herbarium -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Herbarium">
@@ -13665,6 +13731,23 @@ WHERE {
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/OrganizationType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/OrganizationType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la tipologia di organizzazione. Per esempio: stabilimento, laboratorio, officina, ditta, ecc.
+Le istanze di questa classe sono rappresentate come concetti dello standard skos di un vocabolario controllato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of organisation. For example: factory, laboratory, studio, company, etc.
+The instances of this class are represented as concepts of the skos standard of a controlled vocabulary.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Organization Type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di Organizzazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/PaleopathologySurvey -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PaleopathologySurvey">
@@ -13700,6 +13783,25 @@ WHERE {
 ?x a a-cd:PaleopathologySurvey .
 }</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/PaleopathologySurvey"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/PersonSpecification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PersonSpecification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la specifica di una persona che si riferisce a un agente singolo, definendone il ruolo.
+Per esempio: allievo di Canova, assistente di Botticelli.
+Le istanze di questa classe sono rappresentate come concetti dello standard skos di un vocabolario controllato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the specification of a person referring to a single agent, defining their role.
+For example: pupil of Canova, assistant to Botticelli.
+The instances of this class are represented as concepts of the skos standard of a controlled vocabulary.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Person Specification</rdfs:label>
+        <rdfs:label xml:lang="it">Specifica della Persona</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -16012,7 +16114,7 @@ a-cd:hasEdition ?ed .
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DesignationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione alternativa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents an alternative denomination.</rdfs:comment>
-        <rdfs:label xml:lang="en">Alvernative designation</rdfs:label>
+        <rdfs:label xml:lang="en">Alternative designation</rdfs:label>
         <rdfs:label xml:lang="it">Designazione alternativa</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
