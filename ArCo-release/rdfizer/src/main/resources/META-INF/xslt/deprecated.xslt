@@ -1490,13 +1490,6 @@
 				<!-- affixed element (DA/STM) -->
 				<xsl:if test="record/metadata/schede/*/DA/STM/*">
 					<xsl:for-each select="record/metadata/schede/*/DA/STM">
-						<xsl:if test="./STMC[
-							lower-case(normalize-space(.))='timbro'  or
-							lower-case(normalize-space(.))='stemma'  or
-							lower-case(normalize-space(.))='emblema' or
-							lower-case(normalize-space(.))='marchio' or
-							lower-case(normalize-space(.))='logo'   
-						]">
 						<rdf:Description>
 							<xsl:choose>
 								<xsl:when test="lower-case(normalize-space(./STMC))='timbro'">
@@ -1650,7 +1643,6 @@
 								</l0:name>
 							</rdf:Description>
 						</xsl:if>
-						</xsl:if>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- affixed element (*/LSI) -->
@@ -1659,15 +1651,6 @@
 						<xsl:variable name="parentPosition">
 							<xsl:value-of select="position()" />
 						</xsl:variable>
-						<xsl:if test="./LSIG[
-							lower-case(normalize-space(.))='timbro'     or
-							lower-case(normalize-space(.))='stemma'     or
-							lower-case(normalize-space(.))='emblema'    or
-							lower-case(normalize-space(.))='marchio'    or
-							lower-case(normalize-space(.))='logo'       or
-							lower-case(normalize-space(.))='lapide'     or
-							lower-case(normalize-space(.))='iscrizione' 
-						]">
 						<rdf:Description>
 							<xsl:choose>
 								<xsl:when test="lower-case(normalize-space(./LSIG))='timbro'">
@@ -1920,7 +1903,6 @@
 								</xsl:for-each>
 							</rdf:Description>
 						</xsl:if>
-						</xsl:if>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- affixed element (DA/ISE) -->
@@ -1931,14 +1913,7 @@
 						</xsl:variable>
 						<rdf:Description>
 							<xsl:choose>
-								<xsl:when test="./ISED[
-									lower-case(normalize-space(.))='timbro'    or
-									lower-case(normalize-space(.))='stemma'    or
-									lower-case(normalize-space(.))='emblema'   or
-									lower-case(normalize-space(.))='marchio'   or
-									lower-case(normalize-space(.))='logo'      or
-									lower-case(normalize-space(.))='iscrizione'
-								]">
+								<xsl:when test="record/metadata/schede/*/DA/ISE/ISED">
 									<xsl:choose>
 										<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">
 											<xsl:attribute name="rdf:about">
