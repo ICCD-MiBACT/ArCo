@@ -2585,18 +2585,7 @@
 				</xsl:for-each>
 				<!-- CulturalPropertyPart when there is PNR (Design) -->
 				<xsl:for-each select="record/metadata/schede/A/PN">
-					<xsl:if test="./PNR[not(
-      .='intero bene'        or
-      .='integrale'          or
-      .='tutta'              or
-      .='totale'             or
-      .='carattere generale' or
-      (starts-with(lower-case(normalize-space(.)), 'nr'      )) or
-      (starts-with(lower-case(normalize-space(.)), 'n.r'     )) or
-      (starts-with(lower-case(normalize-space(.)), 'intero'  )) or
-      (starts-with(lower-case(normalize-space(.)), 'intera'  )) or
-      (starts-with(lower-case(normalize-space(.)), 'esemplar'))
-     )] or ./PNT/PNTQ">
+					<xsl:if test="./PNR or ./PNT/PNTQ">
 						<rdf:Description>
 							<xsl:choose>
 								<xsl:when test="(./PNT/PNTQ) and(not(./PNR) or ./PNR='intero bene' or ./PNR='integrale' or ./PNR='tutta' or ./PNR='totale' or ./PNR='carattere generale' or (starts-with(lower-case(normalize-space(./PNR)), 'nr')) or (starts-with(lower-case(normalize-space(./PNR)), 'n.r')) or (starts-with(lower-case(normalize-space(./PNR)), 'intero')) or (starts-with(lower-case(normalize-space(./PNR)), 'intera')) or (starts-with(lower-case(normalize-space(./PNR)), 'esemplar')))">
