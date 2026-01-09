@@ -1168,7 +1168,7 @@ WHERE {?class a-dd:hasMaterialOrTechnique ?char. }</core:constructQuery>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMeasurementType">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una misura al tipo di misura (altezza, larghezza, diametro, etc.)</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a measurement to its type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
@@ -4965,6 +4965,30 @@ WHERE {?class a a-dd:FunctionalPurpose .}</core:constructQuery>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/MeasurableProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di misura osservata (larghezza, altezza, diametro, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the observed measurement type (width, height, diameter, etc).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">Measurable property</rdfs:label>
+        <rdfs:label xml:lang="it">Proprietà misurabile</rdfs:label>
+        <owl:versionInfo xml:lang="it">Questa classe è stata rifattorizzata da a-dd:MeasurementType a a-dd:MeasurableProperty</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">This class has been refactorized from a-dd:MeasurementType a a-dd:MeasurableProperty</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Measurement -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Measurement">
@@ -4972,7 +4996,7 @@ WHERE {?class a a-dd:FunctionalPurpose .}</core:constructQuery>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4990,7 +5014,7 @@ WHERE {?class a a-dd:FunctionalPurpose .}</core:constructQuery>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5074,28 +5098,6 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/MeasurementType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di misura osservata (larghezza, altezza, diametro, etc.)</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the observed measurement type (width, height, diameter, etc).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <rdfs:label xml:lang="en">Measurement Type</rdfs:label>
-        <rdfs:label xml:lang="it">Tipo di Misura</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -5648,7 +5650,7 @@ resource:TechnicalCharacteristic/stone-sculpture
     <!-- https://w3id.org/arco/ontology/denotative-description/Area -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Area">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Area</rdfs:label>
         <rdfs:label xml:lang="it">Area</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5707,7 +5709,7 @@ WHERE {?x a a-dd:AssignedDesignation . }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/BackTotalLength -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/BackTotalLength">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Back total length</rdfs:label>
         <rdfs:label xml:lang="it">Lunghezza totale parte posteriore</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -5723,7 +5725,7 @@ WHERE {?x a a-dd:BackTotalLength .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/BackWidth -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/BackWidth">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Back Width</rdfs:label>
         <rdfs:label xml:lang="it">Larghezza dorso</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -5766,7 +5768,7 @@ WHERE {?x a a-dd:BackWidth .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Capacity -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Capacity">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Capacity</rdfs:label>
         <rdfs:label xml:lang="it">Capacità</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5779,7 +5781,7 @@ WHERE {?x a a-dd:BackWidth .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/ChestCircumference -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/ChestCircumference">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Chest Circumference</rdfs:label>
         <rdfs:label xml:lang="it">Circonferenza petto</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -5795,7 +5797,7 @@ WHERE {?x a a-dd:ChestCircumference .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Circumference -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Circumference">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Circonferenza</rdfs:label>
         <rdfs:label xml:lang="en">Circumference</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5882,7 +5884,7 @@ WHERE {?x a a-dd:ChestCircumference .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/CoveredArea -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/CoveredArea">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Area coperta</rdfs:label>
         <rdfs:label xml:lang="en">Covered area</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5970,7 +5972,7 @@ WHERE {?x a a-dd:CustomaryDesignation . }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Depth -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Depth">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Depth</rdfs:label>
         <rdfs:label xml:lang="it">Profondità</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5983,7 +5985,7 @@ WHERE {?x a a-dd:CustomaryDesignation . }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/DepthOrHeight -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/DepthOrHeight">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Depth / Height</rdfs:label>
         <rdfs:label xml:lang="it">Profondità / Altezza</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6017,7 +6019,7 @@ WHERE {?x a a-dd:DialectalDesignation . }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Diameter -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Diameter">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Diameter</rdfs:label>
         <rdfs:label xml:lang="it">Diametro</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6048,7 +6050,7 @@ WHERE {?x a a-dd:Diapason .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Duration -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Duration">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Durata temporale</rdfs:label>
         <rdfs:label xml:lang="en">Duration</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6061,7 +6063,7 @@ WHERE {?x a a-dd:Diapason .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/EdgeCircumference -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/EdgeCircumference">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Circonferenza orlo</rdfs:label>
         <rdfs:label xml:lang="en">Edge circumference</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6120,7 +6122,7 @@ WHERE {?x a a-dd:Extension .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/ExternalInternalLength -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/ExternalInternalLength">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">External / Internal length</rdfs:label>
         <rdfs:label xml:lang="it">Lunghezza esterna / interna</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6156,7 +6158,7 @@ WHERE {?x a a-dd:ExternalInternalLength .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/FileSize -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/FileSize">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Dimensione del file</rdfs:label>
         <rdfs:label xml:lang="en">File size</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6169,7 +6171,7 @@ WHERE {?x a a-dd:ExternalInternalLength .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/FrontTotalLength -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/FrontTotalLength">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Front total length</rdfs:label>
         <rdfs:label xml:lang="it">Lunghezza totale parte anteriore</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6249,7 +6251,7 @@ WHERE {?x a a-dd:GarmentColour .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Height -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Height">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Altezza</rdfs:label>
         <rdfs:label xml:lang="en">Height</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6262,7 +6264,7 @@ WHERE {?x a a-dd:GarmentColour .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/HeightAboveGroundLevel -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/HeightAboveGroundLevel">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Altezza relativa</rdfs:label>
         <rdfs:label xml:lang="en">Height above ground level</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6274,7 +6276,7 @@ WHERE {?x a a-dd:GarmentColour .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/HeightLength -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/HeightLength">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Altezza x Lunghezza</rdfs:label>
         <rdfs:label xml:lang="en">Height x Length</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6286,7 +6288,7 @@ WHERE {?x a a-dd:GarmentColour .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/HeightLengthWidth -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/HeightLengthWidth">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Altezza x Lunghezza x Larghezza</rdfs:label>
         <rdfs:label xml:lang="en">Height x Length x Width</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6298,7 +6300,7 @@ WHERE {?x a a-dd:GarmentColour .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/HeightWidthThickness -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/HeightWidthThickness">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Altezza x Larghezza x Spessore</rdfs:label>
         <rdfs:label xml:lang="en">Height x Width x Thickness</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6310,7 +6312,7 @@ WHERE {?x a a-dd:GarmentColour .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/HipCircumference -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/HipCircumference">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Circonferenza fianchi</rdfs:label>
         <rdfs:label xml:lang="en">Hip circumference</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6452,7 +6454,7 @@ WHERE {?x a a-dd:IdiomaticDesignation . }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Length -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Length">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Length</rdfs:label>
         <rdfs:label xml:lang="it">Lunghezza</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6557,7 +6559,7 @@ core:hasType ?type .
     <!-- https://w3id.org/arco/ontology/denotative-description/MaximumMinimumWidth -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/MaximumMinimumWidth">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Larghezza massima / minima</rdfs:label>
         <rdfs:label xml:lang="en">Maximum / minimum width</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6573,7 +6575,7 @@ WHERE {?x a a-dd:MaximumMinimumWidth .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/MaximumTemperature -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/MaximumTemperature">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Maximum temperature</rdfs:label>
         <rdfs:label xml:lang="it">Temperatura massima</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6586,7 +6588,7 @@ WHERE {?x a a-dd:MaximumMinimumWidth .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/MaximumTotalLength -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/MaximumTotalLength">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Lunghezza totale massima</rdfs:label>
         <rdfs:label xml:lang="en">Maximum total length</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6602,7 +6604,7 @@ WHERE {?x a a-dd:MaximumTotalLength .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/MaximumTotalWidth -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/MaximumTotalWidth">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Larghezza totale massima</rdfs:label>
         <rdfs:label xml:lang="en">Maximum total width</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6632,7 +6634,7 @@ WHERE {?x a a-dd:MaximumTotalWidth .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/MinimumTemperature -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/MinimumTemperature">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Minimum temperature</rdfs:label>
         <rdfs:label xml:lang="it">Temperatura minima</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6657,7 +6659,7 @@ WHERE {?x a a-dd:MaximumTotalWidth .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/OccupiedStorageSpace -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/OccupiedStorageSpace">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Memoria occupata</rdfs:label>
         <rdfs:label xml:lang="en">Occupied storage space</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6717,7 +6719,7 @@ WHERE {?x a a-dd:OtherLanguageDesignation . }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Perimeter -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Perimeter">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Perimeter</rdfs:label>
         <rdfs:label xml:lang="it">Perimetro</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6730,7 +6732,7 @@ WHERE {?x a a-dd:OtherLanguageDesignation . }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Ph -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Ph">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Ph</rdfs:label>
         <rdfs:label xml:lang="it">Ph</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6790,7 +6792,7 @@ WHERE {?x a a-dd:OtherLanguageDesignation . }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/PixelDimension -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/PixelDimension">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le dimensioni, in pixel, di una fotografia digitale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a digital photograph size in pixels.</rdfs:comment>
         <rdfs:label xml:lang="it">Dimensioni in pixel</rdfs:label>
@@ -6805,7 +6807,7 @@ WHERE {?x a a-dd:OtherLanguageDesignation . }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Power -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Power">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Potenza</rdfs:label>
         <rdfs:label xml:lang="en">Power</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6857,7 +6859,7 @@ WHERE {?x a a-dd:OtherLanguageDesignation . }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Rainfall -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Rainfall">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Precipitazioni</rdfs:label>
         <rdfs:label xml:lang="en">Rainfall</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -6879,7 +6881,7 @@ core:hasType ?rainfalltype .
     <!-- https://w3id.org/arco/ontology/denotative-description/RecordingSpeed -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/RecordingSpeed">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Recording speed</rdfs:label>
         <rdfs:label xml:lang="it">Velocità di registrazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6891,7 +6893,7 @@ core:hasType ?rainfalltype .
     <!-- https://w3id.org/arco/ontology/denotative-description/Resolution -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Resolution">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la risoluzione e il valore specifico utilizzati per la memorizzazione di una fotografia digitale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents the specific value and resolution used for storing a digital photograph.</rdfs:comment>
         <rdfs:label xml:lang="en">Resolution</rdfs:label>
@@ -6918,7 +6920,7 @@ core:hasType ?rainfalltype .
     <!-- https://w3id.org/arco/ontology/denotative-description/Size -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Size">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Dimensione del file</rdfs:label>
         <rdfs:label xml:lang="en">File size</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -6949,7 +6951,7 @@ WHERE {?x a a-dd:SlangDesignation . }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Slope -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Slope">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Pendenza</rdfs:label>
         <rdfs:label xml:lang="en">Slope</rdfs:label>
         <owl:deprecated></owl:deprecated>
@@ -6976,7 +6978,7 @@ WHERE {?x a a-dd:SlangDesignation . }</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/StorageCapacity -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/StorageCapacity">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Capacità di memoria</rdfs:label>
         <rdfs:label xml:lang="en">Storage capacity</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -7037,7 +7039,7 @@ WHERE {?x a a-dd:Temperament .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Temperature -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Temperature">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Temperatura</rdfs:label>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -7049,7 +7051,7 @@ WHERE {?x a a-dd:Temperament .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Thickness -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Thickness">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Spessore</rdfs:label>
         <rdfs:label xml:lang="en">Thickness</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -7092,7 +7094,7 @@ WHERE {?x a a-dd:Tuning .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/UndetectedMeasurements -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/UndetectedMeasurements">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Misure non rilevate</rdfs:label>
         <rdfs:label xml:lang="en">Undetected measurements</rdfs:label>
         <owl:versionInfo xml:lang="en">Undetected Measurements</owl:versionInfo>
@@ -7105,7 +7107,7 @@ WHERE {?x a a-dd:Tuning .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/VariousMeasurements -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/VariousMeasurements">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Misure varie</rdfs:label>
         <rdfs:label xml:lang="en">Various misurements</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -7161,7 +7163,7 @@ WHERE {?x a a-dd:Tuning .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Volume -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Volume">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="en">Volume</rdfs:label>
         <rdfs:label xml:lang="it">Volume</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -7173,7 +7175,7 @@ WHERE {?x a a-dd:Tuning .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/WaistCircumference -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/WaistCircumference">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Circonferenza vita</rdfs:label>
         <rdfs:label xml:lang="en">Waist Circumference</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -7189,7 +7191,7 @@ WHERE {?x a a-dd:WaistCircumference .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Weight -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Weight">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Peso</rdfs:label>
         <rdfs:label xml:lang="en">Weight</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -7202,7 +7204,7 @@ WHERE {?x a a-dd:WaistCircumference .}</core:constructQuery>
     <!-- https://w3id.org/arco/ontology/denotative-description/Width -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Width">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
         <rdfs:label xml:lang="it">Larghezza</rdfs:label>
         <rdfs:label xml:lang="en">Width</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -7247,7 +7249,7 @@ WHERE {?x a a-dd:WaistCircumference .}</core:constructQuery>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/SampleCollectedType"/>
         </owl:members>
     </rdf:Description>
