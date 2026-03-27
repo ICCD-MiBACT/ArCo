@@ -16123,9 +16123,9 @@ a-cd:hasEdition ?ed .
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/AlternativeOrObsoleteResponsibility -->
+    <!-- https://w3id.org/arco/ontology/context-description/AlternativeOrOutdatedResponsibility -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AlternativeOrObsoleteResponsibility">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AlternativeOrOutdatedResponsibility">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/ResponsibilityType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la responsabilità alternativa o superata di un agente su un&apos;opera.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents the alternative or outdated responsibility of an agent on a work.</rdfs:comment>
