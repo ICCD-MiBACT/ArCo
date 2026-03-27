@@ -1126,28 +1126,10 @@ WHERE {?class a-dd:hasMaterialOrTechnique ?char. }</core:constructQuery>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/hasMeasurement -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMeasurement">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
-        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una delle misure.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property connects a set of observed measures on an object to one of those measures.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <rdfs:label xml:lang="it">ha misura</rdfs:label>
-        <rdfs:label xml:lang="en">has measurement</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/hasMeasurableProperty -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMeasurableProperty">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurablePropertyOf"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/issMeasurablePropertyOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
@@ -1161,26 +1143,7 @@ WHERE {?class a-dd:hasMaterialOrTechnique ?char. }</core:constructQuery>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/isMeasurablePropertyOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMeasurablePropertyOf">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurableProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
-        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una delle misure.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property connects a set of observed measures on an object to one of those measures.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <rdfs:label xml:lang="it">è proprietà misurata di</rdfs:label>
-        <rdfs:label xml:lang="en">is measurable property of</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/hasMeasure -->
@@ -1199,26 +1162,26 @@ WHERE {?class a-dd:hasMaterialOrTechnique ?char. }</core:constructQuery>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
+    
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasMeasurement -->
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/isMeasureOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMeasureOf">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasure"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasureType"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMeasurement">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una delle misure.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a set of observed measures on an object to one of those measures.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <rdfs:label xml:lang="it">è proprietà misurata di</rdfs:label>
-        <rdfs:label xml:lang="en">is measurable property of</rdfs:label>
+        <rdfs:label xml:lang="it">ha misura</rdfs:label>
+        <rdfs:label xml:lang="en">has measurement</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection -->
@@ -2685,6 +2648,42 @@ WHERE {?char a-dd:isMaterialOrTechniqueOf ?class. }</core:constructQuery>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isMeasurablePropertyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMeasurablePropertyOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una delle misure.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a set of observed measures on an object to one of those measures.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is measurable property of</rdfs:label>
+        <rdfs:label xml:lang="it">è proprietà misurata di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isMeasureOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMeasureOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasureType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurableProperty"/>
+        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una delle misure.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a set of observed measures on an object to one of those measures.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is measurable property of</rdfs:label>
+        <rdfs:label xml:lang="it">è proprietà misurata di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf">
@@ -3301,6 +3300,12 @@ WHERE {?char a-dd:isVibratingLenghtOf ?class. }</core:constructQuery>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/issMeasurablePropertyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/issMeasurablePropertyOf"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/refersToAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/refersToAgent">
@@ -3425,6 +3430,29 @@ Può essere impegata anche nel pattern a-cd:Responsibility, per collegare un age
     <!-- https://w3id.org/arco/ontology/natural-specimen-description/hasPreservationType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasPreservationType"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/MU/hasMeasurementUnit -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/MU/hasMeasurementUnit">
+        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/MU/isMeasurementUnitOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit"/>
+        <rdfs:comment xml:lang="en">Property that links an object that can be measured to its Measurement Unit.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Proprietà che lega un valore osservato o un parametro di misurazione con la sua unità di misura.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/MU"/>
+        <rdfs:label xml:lang="it">ha unità di misura</rdfs:label>
+        <rdfs:label xml:lang="en">has measurement unit</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/italia/onto/MU/isMeasurementUnitOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/MU/isMeasurementUnitOf"/>
     
 
 
@@ -5065,6 +5093,12 @@ WHERE {?class a a-dd:FunctionalPurpose .}</core:constructQuery>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/MeasureType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasureType"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Measurement -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Measurement">
@@ -5085,6 +5119,12 @@ WHERE {?class a a-dd:FunctionalPurpose .}</core:constructQuery>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementIn"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/MU/hasMeasurementUnit"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5632,6 +5672,12 @@ resource:TechnicalCharacteristic/stone-sculpture
     <!-- https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/MU/MeasurementUnit -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/MU/MeasurementUnit"/>
     
 
 
@@ -7333,4 +7379,5 @@ WHERE {?x a a-dd:WaistCircumference .}</core:constructQuery>
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
