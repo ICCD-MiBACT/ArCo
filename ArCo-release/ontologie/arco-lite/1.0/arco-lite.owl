@@ -1104,9 +1104,9 @@ ICCD Normativa NU 3.00: DA/AUE/AUEE</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco-lite/hasMaterialOrTechnicque -->
+    <!-- https://w3id.org/arco/ontology/arco-lite/hasMaterialOrTechnique -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasMaterialOrTechnicque">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco-lite/hasMaterialOrTechnique">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/hasTechnicalCharacteristic"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco-lite/isMaterialOrTechniqueOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
