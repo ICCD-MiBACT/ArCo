@@ -5758,9 +5758,10 @@ resource:TechnicalCharacteristic/stone-sculpture
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/AccessibleWithAutorisation -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/AccessibleWithAuthorisation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/AccessibleWithAutorisation">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/AccessibleWithAuthorisation">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility"/>
         <rdfs:label xml:lang="it">Accessibile su autorizzazione</rdfs:label>
         <rdfs:label xml:lang="en">Accessible with authorization</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
