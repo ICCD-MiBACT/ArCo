@@ -4037,7 +4037,7 @@
 											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/PartiallyAccessible'" />
 										</xsl:when>
 										<xsl:when test="lower-case(normalize-space(record/metadata/schede/*/UT/CNU/CNUV))='accessibile con permesso'">
-											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/AccessibleWithAuthorisation'" />
+											<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/AccessibleWithAutorisation'" />
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:value-of select="concat($NS, 'CulturalPropertyAccessibility/', arco-fn:urify(normalize-space(record/metadata/schede/*/UT/CNU/CNUV)))" />
