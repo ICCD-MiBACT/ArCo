@@ -2622,7 +2622,7 @@
 								<xsl:for-each select="../DESI[not(lower-case(normalize-space())='nr' or lower-case(normalize-space())='n.r.' or lower-case(normalize-space())='nr (recupero pregresso)'  or lower-case(normalize-space())='n.p'  or lower-case(normalize-space())='n.p.' or lower-case(normalize-space())='n. p')]">
 									<arco-core:isClassifiedBy>
 										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'Concept/', arco-fn:arcofy(.))" />
+											<xsl:value-of select="concat($NS, 'Concept/Iconclass-', arco-fn:arcofy(.))" />
 										</xsl:attribute>
 									</arco-core:isClassifiedBy>
 								</xsl:for-each>
@@ -4146,7 +4146,7 @@
 									</xsl:attribute>
 									<rdf:type>
 										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/italia/onto/l0/EventOrSituation'" />
+											<xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
 										</xsl:attribute>
 									</rdf:type>
 									<rdfs:label xml:lang="it">
@@ -5667,7 +5667,7 @@
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/italia/onto/l0/EventOrSituation'" />
+									<xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
 								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
@@ -5828,7 +5828,7 @@
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/italia/onto/l0/EventOrSituation'" />
+										<xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
 									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
@@ -6384,7 +6384,7 @@
 									</xsl:attribute>
 									<rdf:type>
 										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/italia/onto/l0/EventOrSituation'" />
+											<xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
 										</xsl:attribute>
 									</rdf:type>
 									<rdfs:label xml:lang="it">
@@ -6673,7 +6673,7 @@
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/italia/onto/l0/EventOrSituation'" />
+								<xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
@@ -18910,9 +18910,9 @@
 								</tiapit:atTime>
 							</xsl:for-each>
 							<xsl:if test="(./UTUM)">
-								<arco-cd:useCondition>
+								<arco-cd:useConditions>
 									<xsl:value-of select="normalize-space(./UTUM)"/>
-								</arco-cd:useCondition>
+								</arco-cd:useConditions>
 							</xsl:if>
 							<xsl:for-each select="./UTUT[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r') or .='.' or .='-' or .='/')]">
 								<!-- allow multiple values eg:ICCD14298501 (context is lost) -->
@@ -19126,9 +19126,9 @@
 								</arco-cd:hasUseFunction>
 							</xsl:for-each>
 							<xsl:for-each select="(./UTM)[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
-								<arco-cd:useCondition>
+								<arco-cd:useConditions>
 									<xsl:value-of select="normalize-space(.)"/>
-								</arco-cd:useCondition>
+								</arco-cd:useConditions>
 							</xsl:for-each>
 							<xsl:if test="(./UTO)[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 								<arco-cd:hasCircumstance>
@@ -19360,7 +19360,7 @@
 						<xsl:for-each select="(./UTF)[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(./UTF))" />
+									<xsl:value-of select="concat($NS, 'UseFunction/', arco-fn:urify(.))" />
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -19368,10 +19368,10 @@
 									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
-									<xsl:value-of select="normalize-space(./UTF)" />
+									<xsl:value-of select="normalize-space(.)" />
 								</rdfs:label>
 								<l0:name>
-									<xsl:value-of select="normalize-space(./UTF)" />
+									<xsl:value-of select="normalize-space(.)" />
 								</l0:name>
 							</rdf:Description>
 						</xsl:for-each>
@@ -19720,9 +19720,9 @@
 							</arco-core:description>
 						</xsl:if>
 						<xsl:for-each select="(record/metadata/schede/*/DA/UTM)[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
-							<arco-cd:useCondition>
+							<arco-cd:useConditions>
 								<xsl:value-of select="normalize-space()"/>
-							</arco-cd:useCondition>
+							</arco-cd:useConditions>
 						</xsl:for-each>
 					</rdf:Description>
 					<xsl:for-each select="(record/metadata/schede/*/DA/UTS)[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
@@ -35952,7 +35952,7 @@
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/italia/onto/l0/EventOrSituation'" />
+										<xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
 									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label xml:lang="it">
