@@ -1898,15 +1898,15 @@
 			</arco-dd:hasAffixedElement>			
 		</xsl:for-each>
 		<!-- sex -->
-		<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZAS">
-			<xsl:if test="./SZAS">
+		<xsl:for-each select="record/metadata/schede/BNZ/SZ/SZA/SZAS">
+			<xsl:if test=".">
 				<arco-cd:hasSex>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS,'Sex/', $itemURI, '-revised-', position())" />
 					</xsl:attribute>
 				</arco-cd:hasSex>
 				<arco-lite:sexInformation>
-					<xsl:value-of select="normalize-space(./SZAS)" />
+					<xsl:value-of select="normalize-space(.)" />
 				</arco-lite:sexInformation>
 			</xsl:if>		
 		</xsl:for-each>
@@ -2247,7 +2247,9 @@
 	            	</arco-spe:hasDirectHigherRank>
 	            </xsl:if>
     	        <rdf:type>
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />      
+					<xsl:attribute name="rdf:resource">
+        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />   
+			</xsl:attribute>   
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SZSR" />
@@ -2270,7 +2272,9 @@
 	            	</arco-spe:hasDirectHigherRank>
 	            </xsl:if>
     	        <rdf:type>
+					<xsl:attribute name="rdf:resource">
         	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Family'" />      
+			</xsl:attribute>
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SZSF" />
@@ -2293,7 +2297,9 @@
 	            	</arco-spe:hasDirectHigherRank>
 	            </xsl:if>
     	        <rdf:type>
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Order'" />      
+					<xsl:attribute name="rdf:resource">
+        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Order'" />   
+			</xsl:attribute>   
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SZSO" />
@@ -2316,7 +2322,9 @@
 	            	</arco-spe:hasDirectHigherRank>
 	            </xsl:if>
     	        <rdf:type>
+					<xsl:attribute name="rdf:resource">
         	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Class'" />      
+			</xsl:attribute>
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SZSB" />
@@ -2332,7 +2340,9 @@
             	   <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./SZSP))" />
 	            </xsl:attribute>
     	        <rdf:type>
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Phylum'" />      
+					<xsl:attribute name="rdf:resource">
+        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Phylum'" /> 
+			</xsl:attribute>     
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SZSP" />
