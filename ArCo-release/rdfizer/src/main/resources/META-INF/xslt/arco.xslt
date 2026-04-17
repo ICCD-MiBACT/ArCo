@@ -543,7 +543,7 @@
 					</xsl:if>
 					<!-- alternative identifier (AC/ACC) -->
 					<xsl:if test="record/metadata/schede/*/*/ACC">
-						<xsl:for-each select="record/metadata/schede/*/*/ACC/ACCC">
+						<xsl:for-each select="record/metadata/schede/*/*/ACC">
 							<arco-lite:alternativeIdentifier>
 								<xsl:choose>
 									<xsl:when test="./*">
@@ -23974,6 +23974,11 @@
 									<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
 								</xsl:attribute>
 							</rdf:type>
+							<arco-core:hasType>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/ontology/core/AlternativeIdentifier'" />
+								</xsl:attribute>
+							</arco-core:hasType>
 							<rdfs:label>
 								<xsl:choose>
 									<xsl:when test="./*">

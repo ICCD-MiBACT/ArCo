@@ -743,7 +743,7 @@
 						</arco-core:isDescribedBy>
 						<!-- alternativeIdentifier cmcs -->
 						<xsl:if test="record/metadata/schede/*/*/ACC">
-							<xsl:for-each select="record/metadata/schede/*/*/ACC/ACCC">
+							<xsl:for-each select="record/metadata/schede/*/*/ACC">
 								<arco-lite:alternativeIdentifier>
 									<xsl:choose>
 										<xsl:when test="./*">
