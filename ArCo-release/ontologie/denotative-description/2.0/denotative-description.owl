@@ -1221,7 +1221,23 @@ WHERE {?class a-dd:hasMaterialOrTechnique ?char. }</core:constructQuery>
 WHERE {?class a-dd:hasMeasurementType ?type.}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
     </owl:ObjectProperty>
-    
+
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasObservedConservationStatus -->
+
+   <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasObservedConservationStatus">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ObservedConservationStatus"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto al suo stato di conservazione osservato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects an object to its observed conservation status.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="it">ha stato di conservazione osservato</rdfs:label>
+        <rdfs:label xml:lang="en">has observed conservation status</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/hasOrientation -->
@@ -5066,7 +5082,23 @@ WHERE {?class a a-dd:FunctionalPurpose .}</core:constructQuery>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa NU: CO/STC/STCL</a-cat:iccdNormTag>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Material -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Material">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di materia di cui è composto bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of material that the cultural property is composed of.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">Materia</rdfs:label>
+        <rdfs:label xml:lang="it">Material</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MTC/MTCM</a-cat:iccdNormTag>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/MeasurableProperty -->
@@ -5266,6 +5298,21 @@ WHERE {?class a a-dd:NaturalEnvironment .}</core:constructQuery>
         <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/location/NaturalEnvironment"/>
     </owl:Class>
     
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/ObservedConservationStatus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ObservedConservationStatus">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato di conservazione osservato in un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the observed conservation status in a cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">Stato di conservazione ossevato</rdfs:label>
+        <rdfs:label xml:lang="it">Observed conservation status</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/Orientation -->
@@ -5644,7 +5691,23 @@ resource:TechnicalCharacteristic/stone-sculpture
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; DA/APF/APFE</a-cat:iccdNormTag>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Technique -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Technique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la tecnica di realizzazione del bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the technique of creating the cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">Tecnica</rdfs:label>
+        <rdfs:label xml:lang="it">Technique</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MTC/MTCT</a-cat:iccdNormTag>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/arco/ontology/denotative-description/WritingSystem -->
