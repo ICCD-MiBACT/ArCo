@@ -141,6 +141,11 @@
 							<xsl:value-of select="administrativeDataRecord/metadata/ente/id" />
 						</arco-catalogue:catalogueRecordIdentifier>
 					</xsl:if>
+					<xsl:if test="administrativeDataRecord/metadata/ente/siglaEnte">
+						<COV:orgAcronym>
+							<xsl:value-of select="administrativeDataRecord/metadata/ente/siglaEnte" />
+						</COV:orgAcronym>
+					</xsl:if>
 					<!-- proprietà per avere sempre un collegamento col nome del file xml "ICCD..." -->
 					<arco-lite:systemIdentifier>
 						<xsl:value-of select="administrativeDataRecord/metadata/ente/id" />
