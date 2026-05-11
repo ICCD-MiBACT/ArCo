@@ -873,7 +873,7 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:choose>
 						<xsl:when test="./*">
 							<xsl:value-of select="./ACCC" />
@@ -882,7 +882,7 @@
 							<xsl:value-of select="normalize-space(.)" />
 						</xsl:otherwise>
 					</xsl:choose>
-				</l0:identifier>
+				</arco-core:identifier>
 				<xsl:if test="./ACCS">
 					<arco-core:note>
 						<xsl:value-of select="normalize-space(./ACCS)" />
@@ -2384,7 +2384,7 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</l0:name>
-				<l0:identifier>
+				<arco-core:identifier>
 					<xsl:choose>
 						<xsl:when test="./*">
 							<xsl:value-of select="./ACCC" />
@@ -2393,7 +2393,7 @@
 							<xsl:value-of select="normalize-space(.)" />
 						</xsl:otherwise>
 					</xsl:choose>
-				</l0:identifier>
+				</arco-core:identifier>
 				<xsl:if test="./ACCS">
 					<arco-core:note>
 						<xsl:value-of select="normalize-space(./ACCS)" />
