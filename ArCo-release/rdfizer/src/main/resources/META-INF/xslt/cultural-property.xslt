@@ -4192,7 +4192,7 @@
 								<xsl:variable name="adla">
 									<xsl:choose>
 										<xsl:when test="./ADLA">
-											<xsl:value-of select="arco-fn:arcofy(./ADLA)" />
+											<xsl:value-of select="arco-fn:urify(normalize-space(./ADLA))" />
 										</xsl:when>
 										<xsl:otherwise></xsl:otherwise>
 									</xsl:choose>
@@ -4200,7 +4200,7 @@
 								<xsl:variable name="adlt">
 									<xsl:choose>
 										<xsl:when test="./ADLT">
-											<xsl:value-of select="arco-fn:arcofy(./ADLT)" />
+											<xsl:value-of select="arco-fn:urify(normalize-space(./ADLT))" />
 										</xsl:when>
 										<xsl:otherwise></xsl:otherwise>
 									</xsl:choose>
@@ -4208,14 +4208,14 @@
 								<xsl:variable name="adle">
 									<xsl:choose>
 										<xsl:when test="./ADLE">
-											<xsl:value-of select="arco-fn:arcofy(./ADLE)" />
+											<xsl:value-of select="arco-fn:urify(normalize-space(./ADLE))" />
 										</xsl:when>
 										<xsl:otherwise></xsl:otherwise>
 									</xsl:choose>
 								</xsl:variable>
 								<arco-lite:isPrintIncludedIn>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Publication/', $adla, $adlt, $adle)" />
+										<xsl:value-of select="concat($NS, 'Publication/', arco-fn:arcofy(concat($adla, $adlt, $adle)))" />
 									</xsl:attribute>
 								</arco-lite:isPrintIncludedIn>
 								<arco-cd:hasRelatedWorkSituation>
