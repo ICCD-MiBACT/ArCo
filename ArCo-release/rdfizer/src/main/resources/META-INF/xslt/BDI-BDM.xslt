@@ -4600,9 +4600,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUC)" />
 					</l0:name>
-					<l0:identifier>
+					<core:identifier>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUC)" />
-					</l0:identifier>
+				</core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -5214,9 +5214,9 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(.)" />
 						</l0:name>
-						<l0:identifier>
+						<core:identifier>
 							<xsl:value-of select="normalize-space(.)" />
-						</l0:identifier>
+						</core:identifier>
 						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
@@ -5426,9 +5426,9 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(./DUMC)" />
 						</l0:name>
-						<l0:identifier>
+						<arco-core:identifier>
 							<xsl:value-of select="normalize-space(./DUMC)" />
-						</l0:identifier>
+						</arco-core:identifier>
 						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
@@ -5956,12 +5956,32 @@
 								<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
 							</xsl:attribute>
 						</rdf:type>
-						<xsl:if test="record/metadata/schede/*/DU/DUZI ">
-							<arco-cd:address>
-								<xsl:value-of select="normalize-space(string-join(record/metadata/schede/*/DU/DUZI,' ; '))" />
-							</arco-cd:address>
+						<xsl:if test="record/metadata/schede/*/DU/DUZI">
+							<clvapit:hasPrimaryAddress>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/DU/DUZI))))" />
+								</xsl:attribute>
+							</clvapit:hasPrimaryAddress>
 						</xsl:if>
 					</rdf:Description>
+					<xsl:if test="record/metadata/schede/*/DU/DUZI">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/DU/DUZI))))" />
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUZI)" />
+							</rdfs:label>
+							<clvapit:fullAddress>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUZI)" />
+							</clvapit:fullAddress>
+						</rdf:Description>
+					</xsl:if>
 				</xsl:for-each>
 			</xsl:if>
 			<!-- Acquisition of cultural property as an individual -->
@@ -6420,11 +6440,31 @@
 							<xsl:value-of select="arco-fn:name-cleaner(record/metadata/schede/*/DU/DUYN)" />
 						</l0:name>
 						<xsl:if test="record/metadata/schede/*/DU/DUYI">
-							<arco-cd:address>
-								<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUYI)" />
-							</arco-cd:address>
+							<clvapit:hasPrimaryAddress>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/DU/DUYI))))" />
+								</xsl:attribute>
+							</clvapit:hasPrimaryAddress>
 						</xsl:if>
 					</rdf:Description>
+					<xsl:if test="record/metadata/schede/*/DU/DUYI">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/DU/DUYI))))" />
+								</xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+									</xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUYI)" />
+								</rdfs:label>
+								<clvapit:fullAddress>
+									<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUYI)" />
+								</clvapit:fullAddress>
+							</rdf:Description>
+						</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
 		</xsl:if>
@@ -6565,9 +6605,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DV/DVC)" />
 					</l0:name>
-					<l0:identifier>
+					<arco-core:identifier>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DV/DVC)" />
-					</l0:identifier>
+					</arco-core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -6924,9 +6964,9 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(./DVOC)" />
 						</l0:name>
-						<l0:identifier>
+						<arco-core:identifier>
 							<xsl:value-of select="normalize-space(./DVOC)" />
-						</l0:identifier>
+						</arco-core:identifier>
 						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
@@ -7001,9 +7041,9 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(./DVMC)" />
 						</l0:name>
-						<l0:identifier>
+						<arco-core:identifier>
 							<xsl:value-of select="normalize-space(./DVMC)" />
-						</l0:identifier>
+						</arco-core:identifier>
 						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
@@ -7532,12 +7572,32 @@
 								<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
 							</xsl:attribute>
 						</rdf:type>
-						<xsl:if test="../DVZI ">
-							<arco-cd:address>
-								<xsl:value-of select="normalize-space(string-join(../DVZI,' ; '))" />
-							</arco-cd:address>
+						<xsl:if test="../DVZI">
+							<clvapit:hasPrimaryAddress>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(../DVZI))))" />
+								</xsl:attribute>
+							</clvapit:hasPrimaryAddress>
 						</xsl:if>
 					</rdf:Description>
+					<xsl:if test="../DVZI">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(../DVZI))))" />
+								</xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+									</xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(../DVZI)" />
+								</rdfs:label>
+								<clvapit:fullAddress>
+									<xsl:value-of select="normalize-space(../DVZI)" />
+								</clvapit:fullAddress>
+							</rdf:Description>
+						</xsl:if>
 				</xsl:for-each>
 			</xsl:if>
 			<!-- Acquisition of cultural property as an individual -->
@@ -7995,11 +8055,31 @@
 							<xsl:value-of select="arco-fn:name-cleaner(./DVYN)" />
 						</l0:name>
 						<xsl:if test="./DVYI">
-							<arco-cd:address>
-								<xsl:value-of select="normalize-space(./DVYI)" />
-							</arco-cd:address>
-						</xsl:if>
+							<clvapit:hasPrimaryAddress>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./DVYI))))" />
+								</xsl:attribute>
+							</clvapit:hasPrimaryAddress>
+							</xsl:if>
 					</rdf:Description>
+					<xsl:if test="./DVYI">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./DVYI))))" />
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./DVYI)" />
+							</rdfs:label>
+							<clvapit:fullAddress>
+								<xsl:value-of select="normalize-space(./DVYI)" />
+							</clvapit:fullAddress>
+						</rdf:Description>
+					</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
 		</xsl:if>
@@ -8272,9 +8352,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./DFO/DFOG)" />
 					</l0:name>
-					<l0:identifier>
+					<arco-core:identifier>
 						<xsl:value-of select="normalize-space(./DFO/DFOG)" />
-					</l0:identifier>
+					</arco-core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -8301,9 +8381,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./DFO/DFOE)" />
 					</l0:name>
-					<l0:identifier>
+					<arco-core:identifier>
 						<xsl:value-of select="normalize-space(./DFO/DFOE)" />
-					</l0:identifier>
+					</arco-core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -8330,9 +8410,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./DFC/DFCC)" />
 					</l0:name>
-					<l0:identifier>
+					<arco-core:identifier>
 						<xsl:value-of select="normalize-space(./DFC/DFCC)" />
-					</l0:identifier>
+					</arco-core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -8359,9 +8439,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./DFA/DFAC)" />
 					</l0:name>
-					<l0:identifier>
+					<arco-core:identifier>
 						<xsl:value-of select="normalize-space(./DFA/DFAC)" />
-					</l0:identifier>
+					</arco-core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -9265,12 +9345,32 @@
 								<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
 							</xsl:attribute>
 						</rdf:type>
-						<xsl:if test="../DFZI ">
-							<arco-cd:address>
-								<xsl:value-of select="normalize-space(string-join(../DFZI,' ; '))" />
-							</arco-cd:address>
+						<xsl:if test="../DFZI">
+							<clvapit:hasPrimaryAddress>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(../DFZI))))" />
+								</xsl:attribute>
+							</clvapit:hasPrimaryAddress>
 						</xsl:if>
 					</rdf:Description>
+					<xsl:if test="../DFZI">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(../DFZI))))" />
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(../DFZI)" />
+							</rdfs:label>
+							<clvapit:fullAddress>
+								<xsl:value-of select="normalize-space(../DFZI)" />
+							</clvapit:fullAddress>
+						</rdf:Description>
+					</xsl:if>
 				</xsl:for-each>
 			</xsl:if>
 			<!-- Acquisition of cultural property as an individual -->
@@ -9726,11 +9826,31 @@
 							<xsl:value-of select="arco-fn:name-cleaner(./DFYN)" />
 						</l0:name>
 						<xsl:if test="./DFYI">
-							<arco-cd:address>
-								<xsl:value-of select="normalize-space(./DFYI)" />
-							</arco-cd:address>
+							<clvapit:hasPrimaryAddress>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./DFYI))))" />
+								</xsl:attribute>
+							</clvapit:hasPrimaryAddress>
 						</xsl:if>
 					</rdf:Description>
+					<xsl:if test="./DFYI">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./DFYI))))" />
+								</xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+									</xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./DFYI)" />
+								</rdfs:label>
+								<clvapit:fullAddress>
+									<xsl:value-of select="normalize-space(./DFYI)" />
+								</clvapit:fullAddress>
+							</rdf:Description>
+						</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
 		</xsl:if>		
@@ -9918,9 +10038,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./AIC)" />
 					</l0:name>
-					<l0:identifier>
+					<arco-core:identifier>
 						<xsl:value-of select="normalize-space(./AIC)" />
-					</l0:identifier>
+					</arco-core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -11910,9 +12030,9 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(./AIOC)" />
 						</l0:name>
-						<l0:identifier>
+						<arco-core:identifier>
 							<xsl:value-of select="normalize-space(./AIOC)" />
-						</l0:identifier>
+						</arco-core:identifier>
 						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
@@ -12013,9 +12133,9 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(./AIMC)" />
 						</l0:name>
-						<l0:identifier>
+						<arco-core:identifier>
 							<xsl:value-of select="normalize-space(./AIMC)" />
-						</l0:identifier>
+						</arco-core:identifier>
 						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
@@ -12544,12 +12664,32 @@
 								<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
 							</xsl:attribute>
 						</rdf:type>
-						<xsl:if test="./AIZI ">
-							<arco-cd:address>
-								<xsl:value-of select="normalize-space(string-join(./AIZI,' ; '))" />
-							</arco-cd:address>
+						<xsl:if test="./AIZI">
+							<clvapit:hasPrimaryAddress>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./AIZI))))" />
+								</xsl:attribute>
+							</clvapit:hasPrimaryAddress>
 						</xsl:if>
 					</rdf:Description>
+					<xsl:if test="./AIZI">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./AIZI))))" />
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./AIZI)" />
+							</rdfs:label>
+							<clvapit:fullAddress>
+								<xsl:value-of select="normalize-space(./AIZI)" />
+							</clvapit:fullAddress>
+						</rdf:Description>
+					</xsl:if>
 				</xsl:for-each>
 			</xsl:if>
 			<!-- Acquisition of cultural property as an individual -->
@@ -13008,11 +13148,31 @@
 							<xsl:value-of select="arco-fn:name-cleaner(./AIYN)" />
 						</l0:name>
 						<xsl:if test="./AIYI">
-							<arco-cd:address>
-								<xsl:value-of select="normalize-space(./AIYI)" />
-							</arco-cd:address>
+							<clvapit:hasPrimaryAddress>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./AIYI))))" />
+								</xsl:attribute>
+							</clvapit:hasPrimaryAddress>
 						</xsl:if>
 					</rdf:Description>
+					<xsl:if test="./AIYI">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./AIYI))))" />
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./AIYI)" />
+							</rdfs:label>
+							<clvapit:fullAddress>
+								<xsl:value-of select="normalize-space(./AIYI)" />
+							</clvapit:fullAddress>
+						</rdf:Description>
+					</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
 		</xsl:for-each>
@@ -13207,9 +13367,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(./VIC)" />
 					</l0:name>
-					<l0:identifier>
+					<arco-core:identifier>
 						<xsl:value-of select="normalize-space(./VIC)" />
-					</l0:identifier>
+					</arco-core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -15060,9 +15220,9 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(./VIOC)" />
 						</l0:name>
-						<l0:identifier>
+						<arco-core:identifier>
 							<xsl:value-of select="normalize-space(./VIOC)" />
-						</l0:identifier>
+						</arco-core:identifier>
 						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
@@ -15156,9 +15316,9 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(./VIMC)" />
 						</l0:name>
-						<l0:identifier>
+						<arco-core:identifier>
 							<xsl:value-of select="normalize-space(./VIMC)" />
-						</l0:identifier>
+						</arco-core:identifier>
 						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
@@ -15688,11 +15848,31 @@
 							</xsl:attribute>
 						</rdf:type>
 						<xsl:if test="./VIZI ">
-							<arco-cd:address>
-								<xsl:value-of select="normalize-space(string-join(./VIZI,' ; '))" />
-							</arco-cd:address>
+							<clvapit:hasPrimaryAddress>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./VIZI))))" />
+								</xsl:attribute>
+							</clvapit:hasPrimaryAddress>
 						</xsl:if>
 					</rdf:Description>
+					<xsl:if test="./VIZI">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./VIZI))))" />
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./VIZI)" />
+							</rdfs:label>
+							<clvapit:fullAddress>
+								<xsl:value-of select="normalize-space(./VIZI)" />
+							</clvapit:fullAddress>
+						</rdf:Description>
+					</xsl:if>
 				</xsl:for-each>
 			</xsl:if>
 			<!-- Acquisition of cultural property as an individual -->
@@ -16151,11 +16331,31 @@
 							<xsl:value-of select="arco-fn:name-cleaner(./VIYN)" />
 						</l0:name>
 						<xsl:if test="./VIYI">
-							<arco-cd:address>
-								<xsl:value-of select="normalize-space(./VIYI)" />
-							</arco-cd:address>
+							<clvapit:hasPrimaryAddress>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./VIYI))))" />
+								</xsl:attribute>
+							</clvapit:hasPrimaryAddress>
 						</xsl:if>
 					</rdf:Description>
+					<xsl:if test="./VIYI">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./VIYI))))" />
+							</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+								</xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./VIYI)" />
+							</rdfs:label>
+							<clvapit:fullAddress>
+								<xsl:value-of select="normalize-space(./VIYI)" />
+							</clvapit:fullAddress>
+						</rdf:Description>
+					</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
 		</xsl:for-each>		
@@ -16464,9 +16664,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
-					<l0:identifier>
+					<arco-core:identifier>
 						<xsl:value-of select="normalize-space(.)" />
-					</l0:identifier>
+					</arco-core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -16493,9 +16693,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
-					<l0:identifier>
+					<arco-core:identifier>
 						<xsl:value-of select="normalize-space(.)" />
-					</l0:identifier>
+					</arco-core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -16522,9 +16722,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
-					<l0:identifier>
+					<arco-core:identifier>
 						<xsl:value-of select="normalize-space(.)" />
-					</l0:identifier>
+					</arco-core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -16552,9 +16752,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
-					<l0:identifier>
+					<arco-core:identifier>
 						<xsl:value-of select="normalize-space(.)" />
-					</l0:identifier>
+					</arco-core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -16582,9 +16782,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
-					<l0:identifier>
+					<arco-core:identifier>
 						<xsl:value-of select="normalize-space(.)" />
-					</l0:identifier>
+					</arco-core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -19034,12 +19234,32 @@
 								<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
 							</xsl:attribute>
 						</rdf:type>
-						<xsl:if test="./FIZI ">
-							<arco-cd:address>
-								<xsl:value-of select="normalize-space(string-join(./FIZI,' ; '))" />
-							</arco-cd:address>
+						<xsl:if test="./FIZI">
+								<clvapit:hasPrimaryAddress>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./FIZI))))" />
+									</xsl:attribute>
+								</clvapit:hasPrimaryAddress>
+							</xsl:if>
+						</rdf:Description>
+						<xsl:if test="./FIZI">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./FIZI))))" />
+								</xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+									</xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./FIZI)" />
+								</rdfs:label>
+								<clvapit:fullAddress>
+									<xsl:value-of select="normalize-space(./FIZI)" />
+								</clvapit:fullAddress>
+							</rdf:Description>
 						</xsl:if>
-					</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
 			<!-- Acquisition of cultural property as an individual -->
@@ -19475,11 +19695,12 @@
 						<rdfs:label xml:lang="en">
 							<xsl:value-of select="'Rights Holder'" />
 						</rdfs:label>
+						<!-- inverse cleaning
 						<arco-core:isRoleOf>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./FIYN))" />
 							</xsl:attribute>
-						</arco-core:isRoleOf>
+						</arco-core:isRoleOf> -->
 					</rdf:Description>
 					<!-- agent as an individual -->
 					<rdf:Description>
@@ -19494,11 +19715,31 @@
 							<xsl:value-of select="arco-fn:name-cleaner(./FIYN)" />
 						</l0:name>
 						<xsl:if test="./FIYI">
-							<arco-cd:address>
-								<xsl:value-of select="normalize-space(./FIYI)" />
-							</arco-cd:address>
+							<clvapit:hasPrimaryAddress>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./FIYI))))" />
+								</xsl:attribute>
+							</clvapit:hasPrimaryAddress>
 						</xsl:if>
-					</rdf:Description>
+						</rdf:Description>
+						<xsl:if test="./FIYI">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./FIYI))))" />
+								</xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+									</xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./FIYI)" />
+								</rdfs:label>
+								<clvapit:fullAddress>
+									<xsl:value-of select="normalize-space(./FIYI)" />
+								</clvapit:fullAddress>
+							</rdf:Description>
+						</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
 		</xsl:for-each>
@@ -20087,6 +20328,11 @@
     					</xsl:attribute>
 					</xsl:otherwise>
 				</xsl:choose>	
+			</rdf:type>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'http://dati.beniculturali.it/cis/CulturalEntity'" />
+				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
 				<xsl:value-of select="concat(record/metadata/schede/*/EV/EVE/EVEF, ' ', record/metadata/schede/*/EV/EVE/EVET)" />
