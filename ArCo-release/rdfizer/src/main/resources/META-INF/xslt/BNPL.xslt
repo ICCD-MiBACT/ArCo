@@ -2063,12 +2063,12 @@
 					</rdfs:label>
 					<rdfs:label xml:lang="en">
 						<xsl:value-of select="'Owner'" />
-					</rdfs:label>
+					</rdfs:label><!-- inverse cleaning
 					<arco-core:isRoleOf>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner')" />
 						</xsl:attribute>
-					</arco-core:isRoleOf>
+					</arco-core:isRoleOf> -->
 				</rdf:Description>
 				<!-- agent as an indiviual -->
 				<rdf:Description>
@@ -2335,11 +2335,12 @@
 					<rdfs:label xml:lang="en">
 						<xsl:value-of select="'Owner'" />
 					</rdfs:label>
+					<!-- inverse cleaning
 					<arco-core:isRoleOf>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-owner')" />
 						</xsl:attribute>
-					</arco-core:isRoleOf>
+					</arco-core:isRoleOf> -->
 				</rdf:Description>
 				<!-- agent as an indiviual -->
 				<rdf:Description>
