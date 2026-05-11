@@ -596,24 +596,12 @@
 									<xsl:value-of
 										select="concat('Heritage protection agency for cultural property ', $idAuthor, ': ', arco-fn:get-nome-ente-from-codice(.))" />
 								</rdfs:label>
-								<arco-core:hasRole>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of
-											select="concat($NS, 'Role/HeritageProtectionAgency')" />
-									</xsl:attribute>
-								</arco-core:hasRole>
 								<arco-cd:hasInterventionRole>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of
 											select="concat($NS, 'Role/HeritageProtectionAgency')" />
 									</xsl:attribute>
 								</arco-cd:hasInterventionRole>
-								<arco-core:hasAgent>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of
-											select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
-									</xsl:attribute>
-								</arco-core:hasAgent>
 								<arco-core:hasAgentWithResponsibility>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of
@@ -1451,7 +1439,7 @@
 						<cpv:hasDeathPlace>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of
-									select="concat($NS, 'Location/', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTX))" />
+									select="concat($NS, 'Feature/', arco-fn:arcofy(record/metadata/schede/*/AU/AUT/AUTX))" />
 							</xsl:attribute>
 						</cpv:hasDeathPlace>
 					</xsl:if>
@@ -1627,10 +1615,10 @@
 							<xsl:value-of
 								select="concat('aut-', lower-case(normalize-space(record/metadata/schede/*/CD/ESC)), '-', lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)))" />
 						</l0:name>
-						<l0:identifier>
+						<arco-core:identifier>
 							<xsl:value-of
 								select="concat('aut-', lower-case(normalize-space(record/metadata/schede/*/CD/ESC)), '-', lower-case(normalize-space(record/metadata/schede/*/AU/AUT/AUTH)))" />
-						</l0:identifier>
+					</arco-core:identifier>
 						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
