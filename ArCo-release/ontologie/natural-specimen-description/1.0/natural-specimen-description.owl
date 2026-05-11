@@ -542,10 +542,10 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasChemicalFormula">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isChemicalFormulaOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecies"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecimen"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChemicalFormula"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica alla formula chimica</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the mineral species to the chemical formula.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il campione mineralogico alla formula chimica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the mineral specimen to the chemical formula.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha formula chimica</rdfs:label>
         <rdfs:label xml:lang="en">has chemical formula</rdfs:label>
@@ -597,10 +597,10 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasCleavage">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isCleavageOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecies"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecimen"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Cleavage"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica alla sfaldatura</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the mineral species to the cleavage.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il campione mineralogico alla sfaldatura</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the mineral specimen to the cleavage.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha sfaldatura</rdfs:label>
         <rdfs:label xml:lang="en">has cleavage</rdfs:label>
@@ -1430,10 +1430,10 @@ WHERE {
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/hasUnitCell">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/isUnitCellOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecies"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecimen"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/UnitCell"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica alla cella</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the mineral species to the cell.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il campione mineralogico alla cella.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the mineral specimen to the cell.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">ha cella</rdfs:label>
         <rdfs:label xml:lang="en">has unit cell</rdfs:label>
@@ -1582,9 +1582,9 @@ WHERE {
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isChemicalFormulaOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChemicalFormula"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecies"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la formula chimica alla specie mineralogica</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the chemical formula to the mineral species.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la formula chimica al campione mineralogico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the chemical formula to the mineral specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is chemical formula of</rdfs:label>
         <rdfs:label xml:lang="it">è formula chimica di</rdfs:label>
@@ -1670,9 +1670,9 @@ WHERE {
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isCleavageOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Cleavage"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecies"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la sfaldatura alla specie mineralogica</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the cleavage to the mineral species.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la sfaldatura alla campione mineralogico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the cleavage to the mineral specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is cleavage of</rdfs:label>
         <rdfs:label xml:lang="it">è sfaldatura di</rdfs:label>
@@ -2455,8 +2455,8 @@ WHERE {
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/natural-specimen-description/isUnitCellOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/UnitCell"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecies"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la cella al minerale</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralSpecimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la cella al minerale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the unit cella to the mineral.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="en">is unit cell of</rdfs:label>
@@ -5014,26 +5014,8 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/MineralTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasChemicalFormula"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChemicalFormula"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasCleavage"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Cleavage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasCrystal"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Crystal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasUnitCell"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/UnitCell"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5078,6 +5060,24 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasChemicalFormula"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/ChemicalFormula"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasCleavage"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Cleavage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasUnitCell"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/UnitCell"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/hasCrystal"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Crystal"/>
             </owl:Restriction>
@@ -5088,8 +5088,8 @@ Normativa  BNP: SPS/SPSPS. Normativa AT: OG/OGS. Normativa BNPE: SR/SRN. Normati
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description/Inclusion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un campione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a specimen.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un campione mineralogico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a mineral specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/natural-specimen-description"/>
         <rdfs:label xml:lang="it">Campione mineralogico</rdfs:label>
         <rdfs:label xml:lang="en">Mineral specimen</rdfs:label>
@@ -7292,4 +7292,3 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
