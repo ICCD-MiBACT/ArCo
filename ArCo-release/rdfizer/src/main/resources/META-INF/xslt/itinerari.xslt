@@ -288,9 +288,9 @@
 						<rdfs:label>
 							<xsl:value-of select="$id" />
 						</rdfs:label>
-						<l0:identifier>
+						<arco-core:identifier>
 							<xsl:value-of select="$id" />
-						</l0:identifier>
+						</arco-core:identifier>
 						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
