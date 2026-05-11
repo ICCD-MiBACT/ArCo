@@ -3875,6 +3875,9 @@
 								<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
 							</xsl:attribute>
 						</rdf:type>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+							<xsl:value-of select="true()" />
+						</owl:deprecated>
 						<rdfs:label xml:lang="it">
 							<xsl:value-of select="'Inventario patrimoniale'" />
 						</rdfs:label>
@@ -3910,6 +3913,9 @@
 									<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterion'" />
 								</xsl:attribute>
 							</rdf:type>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+								<xsl:value-of select="true()" />
+							</owl:deprecated>
 							<rdfs:label xml:lang="it">
 								<xsl:value-of select="'Inventario patrimoniale'" />
 							</rdfs:label>
@@ -3953,6 +3959,9 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(./STIM)" />
 						</l0:name>
+						<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+							<xsl:value-of select="true()" />
+						</owl:deprecated>
 					</rdf:Description>
 				</xsl:for-each>
 				<!-- Catalogue record - Alternative identifier -->
@@ -7045,6 +7054,9 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./DTFM)" />
 							</l0:name>
+							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+								<xsl:value-of select="true()" />
+							</owl:deprecated>
 						</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
@@ -7056,8 +7068,8 @@
 								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/*/MT/FIL)))" />
 							</xsl:attribute>
 							<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
-  <xsl:value-of select="true()" />
-</owl:deprecated>
+								<xsl:value-of select="true()" />
+							</owl:deprecated>
 							<owl:sameAs>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Filigree/', arco-fn:urify(normalize-space(record/metadata/schede/*/MT/FIL)))" />
