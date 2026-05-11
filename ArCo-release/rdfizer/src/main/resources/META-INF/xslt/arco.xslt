@@ -9131,21 +9131,11 @@
 								<rdfs:label xml:lang="en">
 									<xsl:value-of select="concat('Heritage protection agency for cultural property ', $itemURI, ': ', arco-fn:get-nome-ente-from-codice(.))" />
 								</rdfs:label>
-								<arco-core:hasRole>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Role/HeritageProtectionAgency')" />
-									</xsl:attribute>
-								</arco-core:hasRole>
 								<arco-cd:hasInterventionRole>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Role/HeritageProtectionAgency')" />
 									</xsl:attribute>
 								</arco-cd:hasInterventionRole>
-								<arco-core:hasAgent>
-									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
-									</xsl:attribute>
-								</arco-core:hasAgent>
 								<arco-core:hasAgentWithResponsibility>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
@@ -18220,11 +18210,31 @@
 								<xsl:value-of select="arco-fn:name-cleaner(./CPRN)" />
 							</l0:name>
 							<xsl:if test="./CPRI">
-								<arco-cd:address>
-									<xsl:value-of select="normalize-space(./CPRI)" />
-								</arco-cd:address>
+								<clvapit:hasPrimaryAddress>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./CPRI))))" />
+									</xsl:attribute>
+								</clvapit:hasPrimaryAddress>
 							</xsl:if>
 						</rdf:Description>
+						<xsl:if test="./CPRI">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+									<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(lower-case(./CPRI))))" />
+								</xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
+									</xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./CPRI)" />
+								</rdfs:label>
+								<clvapit:fullAddress>
+									<xsl:value-of select="normalize-space(./CPRI)" />
+								</clvapit:fullAddress>
+							</rdf:Description>
+						</xsl:if>
 					</xsl:if>
 				</xsl:for-each>
 				<!-- coin issuance (NU) -->
@@ -34273,15 +34283,11 @@
 							<!-- Event time -->
 							<xsl:if test="./MSTD[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 								<xsl:for-each select="./MSTD">
-									<tiapit:time>
-										<xsl:value-of select="normalize-space(.)" />
-									</tiapit:time>
-									<arco-arco:startTime>
-										<xsl:value-of select="normalize-space(.)" />
-									</arco-arco:startTime>
-									<arco-arco:endTime>
-										<xsl:value-of select="normalize-space(.)" />
-									</arco-arco:endTime>
+									<tiapit:atTime>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(.)))" />
+										</xsl:attribute>
+									</tiapit:atTime>
 								</xsl:for-each>
 							</xsl:if>
 							<!-- specifications -->
@@ -34320,6 +34326,30 @@
 								</xsl:for-each>
 							</xsl:if>
 						</rdf:Description>
+						<!-- Time Interval as individual -->
+						<xsl:if test="./MSTD[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+							<xsl:for-each select="./MSTD">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(.)))" />
+									</xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+										</xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(.)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(.)" />
+									</l0:name>
+									<tiapit:time>
+										<xsl:value-of select="normalize-space(.)" />
+									</tiapit:time>
+								</rdf:Description>
+							</xsl:for-each>
+						</xsl:if>
 						<!-- Event site -->
 						<xsl:if test="(not(starts-with(lower-case(normalize-space(./MSTS)), 'nr')) and not(starts-with(lower-case(normalize-space(./MSTS)), 'n.r')) and not($sheetVersion='3.01_ICCD0') and not($sheetVersion='3.01'))">
 							<xsl:for-each select="./MSTS">
