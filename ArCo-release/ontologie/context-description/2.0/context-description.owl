@@ -10904,20 +10904,6 @@ WHERE {
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/AlternativeDating -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AlternativeDating">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Dating"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAlternativeDatingType"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/AlternativeDatingType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/AlternativeDatingType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AlternativeDatingType">
@@ -10931,7 +10917,7 @@ WHERE {
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT/ADTT.</a-cat:iccdNormTag>
-        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <core:replacedBy rdf:resource="https://w3id.org/arco/ontology/core/DatingType"/>
     </owl:Class>
     
 
@@ -16789,6 +16775,7 @@ WHERE {
         <rdfs:label xml:lang="en">Other method of dating</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT/ADTT.</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -17152,6 +17139,7 @@ a-cd:hasEdition ?ed .
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT.</a-cat:iccdNormTag>
     </rdf:Description>
+
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
