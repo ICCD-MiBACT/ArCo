@@ -4146,7 +4146,7 @@
 									</xsl:attribute>
 									<rdf:type>
 										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
+											<xsl:value-of select="'https://w3id.org/italia/onto/l0/EventOrSituation'" />
 										</xsl:attribute>
 									</rdf:type>
 									<rdfs:label xml:lang="it">
@@ -5667,7 +5667,7 @@
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
+									<xsl:value-of select="'https://w3id.org/italia/onto/l0/EventOrSituation'" />
 								</xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
@@ -5828,7 +5828,7 @@
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
+										<xsl:value-of select="'https://w3id.org/italia/onto/l0/EventOrSituation'" />
 									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
@@ -6384,7 +6384,7 @@
 									</xsl:attribute>
 									<rdf:type>
 										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
+											<xsl:value-of select="'https://w3id.org/italia/onto/l0/EventOrSituation'" />
 										</xsl:attribute>
 									</rdf:type>
 									<rdfs:label xml:lang="it">
@@ -6673,7 +6673,7 @@
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
+								<xsl:value-of select="'https://w3id.org/italia/onto/l0/EventOrSituation'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
@@ -35987,7 +35987,7 @@
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
+										<xsl:value-of select="'https://w3id.org/italia/onto/l0/EventOrSituation'" />
 									</xsl:attribute>
 								</rdf:type>
 								<rdfs:label xml:lang="it">
