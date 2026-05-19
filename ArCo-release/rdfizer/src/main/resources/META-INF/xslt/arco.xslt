@@ -32963,7 +32963,7 @@
 										<xsl:if test="./PRT/PRTK and (not(starts-with(lower-case(normalize-space(./PRT/PRTK)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRT/PRTK)), 'n.r')))">
 											<arco-location:hasContinent>
 												<xsl:attribute name="rdf:resource">
-													<xsl:value-of select="concat($NS, 'Continent/', arco-fn:arcofy(normalize-space(./PRT/PRTK)))" />
+													<xsl:value-of select="concat($NS, 'Continent/', arco-fn:urify(normalize-space(./PRT/PRTK)))" />
 												</xsl:attribute>
 											</arco-location:hasContinent>
 										</xsl:if>
@@ -33013,7 +33013,7 @@
 									<xsl:if test="./PRT/PRTK and (not(starts-with(lower-case(normalize-space(./PRT/PRTK)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRT/PRTK)), 'n.r')))">
 										<rdf:Description>
 											<xsl:attribute name="rdf:about">
-												<xsl:value-of select="concat($NS, 'Continent/', arco-fn:arcofy(normalize-space(./PRT/PRTK)))" />
+												<xsl:value-of select="concat($NS, 'Continent/', arco-fn:urify(normalize-space(./PRT/PRTK)))" />
 											</xsl:attribute>
 											<rdf:type>
 												<xsl:attribute name="rdf:resource">
