@@ -5105,6 +5105,21 @@ WHERE {
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ - Normative A e PG: LC/SET/SETT (sigla SU anomalo)</a-cat:iccdNormTag>
     </owl:NamedIndividual>
+
+
+<!-- https://w3id.org/arco/ontology/location/RuralContext -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/RuralContext">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di contesto geografico, ovvero un contesto rurale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a specific type of geographical context, that is a rural context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
+        <rdfs:label xml:lang="it">Contesto rurale</rdfs:label>
+        <rdfs:label xml:lang="en">Rural context</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ - Normative A e PG: LC/SET/SETT (sigla SU anomalo)</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
     
 
 
