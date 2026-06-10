@@ -4600,9 +4600,9 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUC)" />
 					</l0:name>
-					<core:identifier>
+					<arco-core:identifier>
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DU/DUC)" />
-				</core:identifier>
+				</arco-core:identifier>
 					<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 						<xsl:value-of select="true()" />
 					</arco-core:current>
@@ -5214,9 +5214,9 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(.)" />
 						</l0:name>
-						<core:identifier>
+						<arco-core:identifier>
 							<xsl:value-of select="normalize-space(.)" />
-						</core:identifier>
+						</arco-core:identifier>
 						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
 							<xsl:value-of select="true()" />
 						</arco-core:current>
