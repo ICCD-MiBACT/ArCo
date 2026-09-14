@@ -20,6 +20,7 @@ public class TopLevelCultruralPropertyType {
 		sheetPropertyTypeMap.put("SI", NAMESPACE + "ImmovableCulturalProperty");
 		sheetPropertyTypeMap.put("TMA", NAMESPACE + "MovableCulturalProperty");
 		sheetPropertyTypeMap.put("A", NAMESPACE + "ImmovableCulturalProperty");
+		sheetPropertyTypeMap.put("AR", NAMESPACE + "ImmovableCulturalProperty");
 		sheetPropertyTypeMap.put("CNS", NAMESPACE + "ImmovableCulturalProperty");
 		sheetPropertyTypeMap.put("PG", NAMESPACE + "ImmovableCulturalProperty");
 		sheetPropertyTypeMap.put("BDI", NAMESPACE + "IntangibleCulturalProperty");
