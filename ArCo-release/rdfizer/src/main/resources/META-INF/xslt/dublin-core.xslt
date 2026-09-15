@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:language="https://w3id.org/italia/onto/Language/"
-xmlns:dc="http://purl.org/dc/elements/1.1/"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
-xmlns:pico="http://data.cochrane.org/ontologies/pico/"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
+<xsl:stylesheet version="2.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
+	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
+	xmlns:language="https://w3id.org/italia/onto/Language/">
 	<xsl:param name="item" />
 	<xsl:param name="NS" />
 	<!-- xsl:variable name="NS" select="'https://w3id.org/arco/resource/'" /-->

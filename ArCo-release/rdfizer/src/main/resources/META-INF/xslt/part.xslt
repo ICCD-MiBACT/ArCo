@@ -1,21 +1,18 @@
 <?xml version="1.0"?>
 <xsl:stylesheet version="2.0"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl"
-	xmlns:arco-fn="https://w3id.org/arco/saxon-extension" xmlns:arco-core="https://w3id.org/arco/ontology/core/"
-	xmlns:arco-event="https://w3id.org/arco/ontology/cultural-event/" xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
+	xmlns:arco-core="https://w3id.org/arco/ontology/core/"
+	xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
 	xmlns:arco-lite="https://w3id.org/arco/ontology/arco-lite/"
 	xmlns:arco-con="https://w3id.org/arco/ontology/construction-description/"
-	xmlns:cis="http://dati.beniculturali.it/cis/" xmlns:l0="https://w3id.org/italia/onto/l0/"
-	xmlns:clvapit="https://w3id.org/italia/onto/CLV/" xmlns:tiapit="https://w3id.org/italia/onto/TI/"
-	xmlns:roapit="https://w3id.org/italia/onto/RO/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
-	xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:language="https://w3id.org/italia/onto/Language/"
-	xmlns:frbr="http://purl.org/vocab/frbr/core#"
-	exclude-result-prefixes="xsl php">
+	xmlns:l0="https://w3id.org/italia/onto/l0/"
+	xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
+	xmlns:pico="http://data.cochrane.org/ontologies/pico/">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 	<xsl:param name="item" />
 	<!-- xsl:template match="record/metadata/schede/*/MT/MTA"> <xsl:for-each select="MTAP"> 

@@ -1,22 +1,13 @@
 <?xml version="1.0"?>
 <xsl:stylesheet version="2.0"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension" 
 	xmlns:arco-core="https://w3id.org/arco/ontology/core/"
-	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
-	xmlns:arco-ce="https://w3id.org/arco/ontology/cultural-event/"
-	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
-	xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/" xmlns:cis="http://dati.beniculturali.it/cis/"
-	xmlns:l0="https://w3id.org/italia/onto/l0/" xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
-	xmlns:tiapit="https://w3id.org/italia/onto/TI/" xmlns:roapit="https://w3id.org/italia/onto/RO/"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dcterms="http://purl.org/dc/terms/"
-	xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:frbr="http://purl.org/vocab/frbr/core#"
-	xmlns:arco-location="https://w3id.org/arco/ontology/location/" xmlns:language="https://w3id.org/italia/onto/Language/"
-	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
-	xmlns:mu="https://w3id.org/italia/onto/MU/"
-	exclude-result-prefixes="xsl php">
+	xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
+	xmlns:l0="https://w3id.org/italia/onto/l0/"
+	xmlns:mu="https://w3id.org/italia/onto/MU/">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 	<xsl:param name="item" />
 	<xsl:variable name="itemURI">
