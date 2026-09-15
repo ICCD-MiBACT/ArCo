@@ -14,7 +14,7 @@
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
 	xmlns:arco-ce="https://w3id.org/arco/ontology/cultural-event/"
 	xmlns:arco-con="https://w3id.org/arco/ontology/construction-description/"
-	xmlns:dcterms="http://purl.org/dc/terms/creator"
+	xmlns:dcterms="http://purl.org/dc/terms/"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
@@ -2958,7 +2958,7 @@
 					</rdf:Description>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/OG/SGT/SGTP">
-					<xsl:if test="not($sheetType='PST' or 'SMO')">
+					<xsl:if test="not($sheetType='PST' or $sheetType='SMO')">
 						<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
@@ -8737,7 +8737,7 @@
 								</l0:name>
 								<arco-core:hasRole>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
+										<xsl:value-of select="concat($NS, 'Role/CataloguingAgency')" />
 									</xsl:attribute>
 								</arco-core:hasRole>
 								<arco-core:hasAgent>
@@ -8861,7 +8861,7 @@
 								</l0:name>
 								<arco-core:hasRole>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
+										<xsl:value-of select="concat($NS, 'Role/CataloguingAgency')" />
 									</xsl:attribute>
 								</arco-core:hasRole>
 								<arco-core:hasAgent>
@@ -12908,7 +12908,7 @@
 								</arco-lite:hasProponentAgent>
 								<arco-core:hasAgentRole>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-protective-meausure-', $measure-position, '-proponent-agency')" />
+										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-protective-measure-', $measure-position, '-proponent-agency')" />
 									</xsl:attribute>
 								</arco-core:hasAgentRole>
 							</xsl:for-each>
@@ -12917,7 +12917,7 @@
 						<xsl:for-each select="./NVCA[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-protective-meausure-', $measure-position, '-proponent-agency')" />
+									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-protective-measure-', $measure-position, '-proponent-agency')" />
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -24404,7 +24404,7 @@
 							</xsl:if>
 						</xsl:if>
 					</xsl:for-each>
-					<xsl:if test="$sheetType='SCAN' or 'MINV'">
+					<xsl:if test="$sheetType='SCAN' or $sheetType='MINV'">
 						<xsl:for-each select="record/metadata/schede/*/DT/ATB">
 							<xsl:if test="(not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 								<rdf:Description>
@@ -37446,7 +37446,7 @@
 							</xsl:choose>
 							<xsl:if test="./SFIP">
 								<arco-core:specifications>
-									<xsl:value-of select="concat('Titolo prallelo: ', ./SFIP)" />
+									<xsl:value-of select="concat('Titolo parallelo: ', ./SFIP)" />
 								</arco-core:specifications>
 							</xsl:if>
 							<xsl:if test="./SFIS">
@@ -37592,12 +37592,12 @@
 							</arco-lite:hasCollectionMember>
 							<xsl:if test="./SSIP">
 								<arco-core:specifications>
-									<xsl:value-of select="concat('Titolo prallelo: ', ./SSIP)" />
+									<xsl:value-of select="concat('Titolo parallelo: ', ./SSIP)" />
 								</arco-core:specifications>
 							</xsl:if>
 							<xsl:if test="./SSIS">
 								<arco-core:specifications>
-									<xsl:value-of select="concat('Titolo prallelo: ', ./SSIS)" />
+									<xsl:value-of select="concat('Titolo parallelo: ', ./SSIS)" />
 								</arco-core:specifications>
 							</xsl:if>
 						</rdf:Description>

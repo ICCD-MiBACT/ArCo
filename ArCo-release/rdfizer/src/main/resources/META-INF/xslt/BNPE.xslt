@@ -13,7 +13,7 @@
 	xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
 	xmlns:arco-ce="https://w3id.org/arco/ontology/cultural-event/"
-	xmlns:dcterms="http://purl.org/dc/terms/creator"
+	xmlns:dcterms="http://purl.org/dc/terms/"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:frbr="http://purl.org/vocab/frbr/core#"
@@ -81,7 +81,7 @@
 	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
 	xmlns:ar-CISNameInTime="https://w3id.org/arco/resource/CISNameInTime/"
 	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
-	xmlns:arco-ip="https://w3id.org/arco/ontology/imnatural-specimen-description/"
+	xmlns:arco-ip="https://w3id.org/arco/ontology/natural-specimen-description/"
 
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0"
 	exclude-result-prefixes="xsl php">

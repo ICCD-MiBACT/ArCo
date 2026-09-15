@@ -13,7 +13,7 @@
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
 	xmlns:arco-ce="https://w3id.org/arco/ontology/cultural-event/"
 	xmlns:arco-mp="https://w3id.org/arco/ontology/movable-property/"
-	xmlns:dcterms="http://purl.org/dc/terms/creator"
+	xmlns:dcterms="http://purl.org/dc/terms/"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
@@ -2970,7 +2970,7 @@
 					</xsl:if>
 				</xsl:for-each>
 				<!-- Printing Plates Series -->
-				<xsl:if test="$sheetType='MI' or 'S'">
+				<xsl:if test="$sheetType='MI' or $sheetType='S'">
 					<xsl:if test="record/metadata/schede/*/OG/SGT/SGTS">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
@@ -6149,7 +6149,7 @@
 				</xsl:if>
 				<!-- subject -->
 				<xsl:for-each select="record/metadata/schede/*/*/SGT">
-					<xsl:if test="$sheetType='PST' or 'SMO'">
+					<xsl:if test="$sheetType='PST' or $sheetType='SMO'">
 						<xsl:for-each select="./SGTI[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<!-- allow multiple values es: ICCD13074493 -->
 							<rdf:Description>
@@ -6337,7 +6337,7 @@
 					</rdf:Description>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/OG/SGT/SGTP">
-					<xsl:if test="not($sheetType='PST' or 'SMO')">
+					<xsl:if test="not($sheetType='PST' or $sheetType='SMO')">
 						<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
@@ -9830,7 +9830,7 @@
 						<rdfs:label xml:lang="it">
 							<xsl:value-of select="concat('Bibliografia ', position(), ' del bene culturale: ', $itemURI)" />
 						</rdfs:label>
-						<l0:name xml:lang="en">
+						<l0:name xml:lang="it">
 							<xsl:value-of select="concat('Bibliografia ', position(), ' del bene culturale: ', $itemURI)" />
 						</l0:name>
 						<arco-cd:isBibliographyOf>

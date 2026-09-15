@@ -21,7 +21,7 @@
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
-	xmlns:dcterms="http://purl.org/dc/terms/creator"
+	xmlns:dcterms="http://purl.org/dc/terms/"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:frbr="http://purl.org/vocab/frbr/core#"
 	xmlns:arco-location="https://w3id.org/arco/ontology/location/"
@@ -3850,7 +3850,7 @@
 						<xsl:if test="not($sheetType='PST' or $sheetType='SMO')">
 							<xsl:for-each select="record/metadata/schede/*/*/SGT/SGTP">
 								<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
-									<xsl:if test="$sheetType='MI' or 'S'">
+									<xsl:if test="$sheetType='MI' or $sheetType='S'">
 										<arco-lite:properTitle>
 											<xsl:value-of select="normalize-space(.)" />
 										</arco-lite:properTitle>

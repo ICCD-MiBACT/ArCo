@@ -15,7 +15,7 @@
 	xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
 	xmlns:arco-ce="https://w3id.org/arco/ontology/cultural-event/"
-	xmlns:dcterms="http://purl.org/dc/terms/creator"
+	xmlns:dcterms="http://purl.org/dc/terms/"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:frbr="http://purl.org/vocab/frbr/core#"

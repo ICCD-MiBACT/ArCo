@@ -13,7 +13,7 @@
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
-	xmlns:dcterms="http://purl.org/dc/terms/creator" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:language="https://w3id.org/italia/onto/Language/"
+	xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:language="https://w3id.org/italia/onto/Language/"
 	xmlns:frbr="http://purl.org/vocab/frbr/core#"
 	exclude-result-prefixes="xsl php">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />

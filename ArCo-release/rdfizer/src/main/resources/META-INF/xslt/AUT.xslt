@@ -13,7 +13,7 @@
 	xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
 	xmlns:arco-ce="https://w3id.org/arco/ontology/cultural-event/"
-	xmlns:dcterms="http://purl.org/dc/terms/creator"
+	xmlns:dcterms="http://purl.org/dc/terms/"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
@@ -83,7 +83,8 @@
 	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
 	xmlns:ar-CISNameInTime="https://w3id.org/arco/resource/CISNameInTime/"
 	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0">
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0"
+	exclude-result-prefixes="xsl php">
 
 	<xsl:param name="item" />
 	<xsl:param name="NS" />
@@ -395,7 +396,7 @@
 							</l0:name>
 							<arco-core:hasRole>
 								<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
+									<xsl:value-of select="concat($NS, 'Role/CataloguingAgency')" />
 								</xsl:attribute>
 							</arco-core:hasRole>
 							<arco-core:hasAgent>
@@ -436,7 +437,7 @@
 						</rdf:Description>
 					<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
+								<xsl:value-of select="concat($NS, 'Role/CataloguingAgency')" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -1854,7 +1855,7 @@
 						</l0:name>
 						<arco-core:hasRole>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
+								<xsl:value-of select="concat($NS, 'Role/CataloguingAgency')" />
 							</xsl:attribute>
 						</arco-core:hasRole>
 						<arco-core:hasAgent>
@@ -1895,7 +1896,7 @@
 						</rdf:Description>
 					<rdf:Description>
 							<xsl:attribute name="rdf:about">
-								<xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
+								<xsl:value-of select="concat($NS, 'Role/CataloguingAgency')" />
 							</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
