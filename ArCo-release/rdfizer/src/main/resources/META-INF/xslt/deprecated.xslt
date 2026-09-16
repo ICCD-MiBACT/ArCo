@@ -23,6 +23,8 @@
 	xmlns:tiapit="https://w3id.org/italia/onto/TI/"
 	xmlns:language="https://w3id.org/italia/onto/Language/">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
+	<xsl:include href="commons/camel-case.xslt" />
+
 	<!-- xsl:variable name="NS" select="'https://w3id.org/arco/resource/'" /-->
 	<xsl:param name="item" />
 	<xsl:param name="NS" />
@@ -70,30 +72,7 @@
 			</l0:name>
 		</xsl:element>
 	</xsl:template>
-	<xsl:template name="CamelCase">
-		<xsl:param name="text" />
-		<xsl:choose>
-			<xsl:when test="contains($text,' ')">
-				<xsl:call-template name="CamelCaseWord">
-					<xsl:with-param name="text" select="substring-before($text,' ')" />
-				</xsl:call-template>
-				<xsl:text> </xsl:text>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="substring-after($text,' ')" />
-				</xsl:call-template>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:call-template name="CamelCaseWord">
-					<xsl:with-param name="text" select="$text" />
-				</xsl:call-template>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template>
-	<xsl:template name="CamelCaseWord">
-		<xsl:param name="text" />
-		<xsl:value-of select="translate(substring($text,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
-		<xsl:value-of select="translate(substring($text,2,string-length($text)-1),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
-	</xsl:template>
+
 	<xsl:template match="/">
 		<rdf:RDF>
 			<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />

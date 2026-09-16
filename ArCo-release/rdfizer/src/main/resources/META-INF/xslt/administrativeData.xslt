@@ -19,30 +19,6 @@
 	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)" />
 	<xsl:variable name="idCG" select="record/metadata/schede/CG/CD/CCG" />
 	<xsl:variable name="cp-name" select="''" />
-	<xsl:template name="CamelCase">
-		<xsl:param name="text" />
-		<xsl:choose>
-			<xsl:when test="contains($text,' ')">
-				<xsl:call-template name="CamelCaseWord">
-					<xsl:with-param name="text" select="substring-before($text,' ')" />
-				</xsl:call-template>
-				<xsl:text> </xsl:text>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="substring-after($text,' ')" />
-				</xsl:call-template>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:call-template name="CamelCaseWord">
-					<xsl:with-param name="text" select="$text" />
-				</xsl:call-template>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template>
-	<xsl:template name="CamelCaseWord">
-		<xsl:param name="text" />
-		<xsl:value-of select="translate(substring($text,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
-		<xsl:value-of select="translate(substring($text,2,string-length($text)-1),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
-	</xsl:template>
 	<xsl:template match="/">
 		<rdf:RDF>
 			<xsl:if test="administrativeDataRecord/metadata/ente" >

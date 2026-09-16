@@ -16,38 +16,12 @@
 	xmlns:mu="https://w3id.org/italia/onto/MU/"
 	xmlns:CPV="https://w3id.org/italia/onto/CPV/">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
+	<xsl:include href="commons/camel-case.xslt" />
+
 	<xsl:template match="@*|node()">
 		<xsl:copy>
 			<xsl:apply-templates select="@*|node()"/>
 		</xsl:copy>
-	</xsl:template>
-	<xsl:template name="CamelCase">
-		<xsl:param name="text" />
-		<xsl:choose>
-			<xsl:when test="contains($text,' ')">
-				<xsl:call-template name="CamelCaseWord">
-					<xsl:with-param name="text" select="substring-before($text,' ')" />
-				</xsl:call-template>
-				<xsl:text> </xsl:text>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="substring-after($text,' ')" />
-				</xsl:call-template>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:call-template name="CamelCaseWord">
-					<xsl:with-param name="text" select="$text" />
-				</xsl:call-template>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template>
-	<xsl:template name="CamelCaseWord">
-		<xsl:param name="text" />
-		<xsl:value-of select="translate(substring($text,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
-		<xsl:value-of select="translate(substring($text,2,string-length($text)-1),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
-	</xsl:template>
-	<xsl:template name="CamelCase1">
-		<xsl:param name="text" />
-		<xsl:value-of select="translate(($text),'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')" />
 	</xsl:template>
 	<!-- xsl:variable name="NS"	select="$NS,''" /-->
 	<xsl:param name="NS" />
