@@ -18,7 +18,7 @@ public class Utilities {
 	public static String getSpecificPropertyType(String arg) {
 		arg = SpecificCulturalPropertyType.getPropertyType(arg);
         
-        if(arg == null) arg = "http://www.w3id.org/arco/core/CulturalProperty";
+        if(arg == null) arg = "https://w3id.org/arco/ontology/arco/CulturalProperty";
         
         return arg;
 	}
