@@ -52,7 +52,7 @@
 					<xsl:value-of select="'uncertain-'" />
 				</xsl:when>
 				<xsl:when test="./REV/REVV and not(contains(normalize-space(lower-case(./REV/REVV)), '?') or contains(lower-case(./REV/REVV), 'ca'))">
-					<xsl:value-of select="concat(arco-fn:urify(normalize-space(./RREVEL/REVV)), '-')" />
+					<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVV)), '-')" />
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:value-of select="''" />
@@ -126,7 +126,7 @@
 				<xsl:when test="./REV/REVX and contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(lower-case(./REV/REVX), 'ca')">
 					<xsl:value-of select="'uncertain-'" />
 				</xsl:when>
-				<xsl:when test="./REV/REVX and not(contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(lower-case(./REX/REVX), 'ca'))">
+				<xsl:when test="./REV/REVX and not(contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(lower-case(./REV/REVX), 'ca'))">
 					<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVX)), '-')" />
 				</xsl:when>
 				<xsl:otherwise>
