@@ -5472,7 +5472,7 @@
 				</xsl:for-each>
 				<!-- dating of cultural property -->
 				<xsl:for-each select="record/metadata/schede/*/DT">
-					<xsl:if test="record/metadata/schede/*/DT/* or $sheetType='MODI'">
+					<xsl:if test="./* or $sheetType='MODI'">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', position())" />
