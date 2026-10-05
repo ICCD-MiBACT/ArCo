@@ -966,6 +966,11 @@
 								<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/QNT)" />
 							</arco-arco:numberOfElements>
 						</xsl:if>
+						<xsl:if test="record/metadata/schede/SCAN/OG/TBC">
+							<arco-core:note>
+								<xsl:value-of select="concat('Tipo bene culturale: ', normalize-space(record/metadata/schede/SCAN/OG/TBC))" />
+							</arco-core:note>
+						</xsl:if>
 						<xsl:if test="record/metadata/schede/MIDF/OG/QNT">
 							<arco-arco:numberOfElements>
 								<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/QNT)" />
