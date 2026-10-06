@@ -1,121 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet
+<xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:arco-core="https://w3id.org/arco/ontology/core/"
 	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
-	xmlns:arco-spe="https://w3id.org/arco/ontology/natural-specimen-description/"
-	xmlns:cis="http://dati.beniculturali.it/cis/"
 	xmlns:arco-lite="https://w3id.org/arco/ontology/arco-lite/"
-	xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
-	xmlns:smapit="https://w3id.org/italia/onto/SM/"
 	xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
 	xmlns:arco-ce="https://w3id.org/arco/ontology/cultural-event/"
 	xmlns:arco-con="https://w3id.org/arco/ontology/construction-description/"
-	xmlns:dcterms="http://purl.org/dc/terms/creator"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
-	xmlns:fn="http://www.w3.org/2005/xpath-functions"
-	xmlns:foaf="http://xmlns.com/foaf/0.1/"
-	xmlns:frbr="http://purl.org/vocab/frbr/core#"
-	xmlns:l0="https://w3id.org/italia/onto/l0/"
 	xmlns:arco-location="https://w3id.org/arco/ontology/location/"
-	xmlns:owl="http://www.w3.org/2002/07/owl#"
-	xmlns:php="http://php.net/xsl"
-	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-	xmlns:roapit="https://w3id.org/italia/onto/RO/"
+	xmlns:cis="http://dati.beniculturali.it/cis/"
+	xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
+	xmlns:smapit="https://w3id.org/italia/onto/SM/"
+	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
+	xmlns:l0="https://w3id.org/italia/onto/l0/"
 	xmlns:tiapit="https://w3id.org/italia/onto/TI/"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:mu="https://w3id.org/italia/onto/MU/"
-	xmlns:language="https://w3id.org/italia/onto/Language/"
-	xmlns:ar-agentrole="https://w3id.org/arco/resource/AgentRole/"
-	xmlns:ar-agent="https://w3id.org/arco/resource/Agent/"
-	xmlns:ar-role="https://w3id.org/arco/resource/Role/"
-	xmlns:ar-privacyReason="https://w3id.org/arco/resource/PrivacyReason/"
-	xmlns:COV="https://w3id.org/italia/onto/COV/"
-	xmlns:CPV="https://w3id.org/italia/onto/CPV/"
-	xmlns:ar-archeologicalProperty="https://w3id.org/arco/resource/ArchaeologicalProperty/"
-	xmlns:ar-TimeInterval="https://w3id.org/arco/resource/TimeInterval/"
-	xmlns:ar-city="https://w3id.org/arco/resource/City/"
-	xmlns:ar-geometry="https://w3id.org/arco/resource/Geometry/"
-	xmlns:ar-event="https://w3id.org/arco/resource/Event/"
-	xmlns:ar-country="https://w3id.org/arco/resource/Country/"
-	xmlns:ar-timeIndexedTypedLocation="https://w3id.org/arco/resource/TimeIndexedTypedLocation/"
-	xmlns:ar-feature="https://w3id.org/arco/resource/Feature/"
-	xmlns:ar-timeIndexedRole="https://w3id.org/arco/resource/TimeIndexedRole/"
-	xmlns:ar-catalogueRecordSI="https://w3id.org/arco/resource/CatalogueRecordSI/"
-	xmlns:ar-detectionMethod="https://w3id.org/arco/resource/DetectionMethod/"
-	xmlns:ar-interpretationCriterion="https://w3id.org/arco/resource/InterpretationCriterion/"
-	xmlns:ar-bibliography="https://w3id.org/arco/resource/Bibliography/"
-	xmlns:ar-culturalPropertyDefinition="https://w3id.org/arco/resource/CulturalPropertyDefinition/"
-	xmlns:ar-legalSituation="https://w3id.org/arco/resource/LegalSituation/"
-	xmlns:ar-province="https://w3id.org/arco/resource/Province/"
-	xmlns:ar-culturalPropertySpecification="https://w3id.org/arco/resource/CulturalPropertySpecification/"
-	xmlns:ar-addressArea="https://w3id.org/arco/resource/AddressArea/"
-	xmlns:ar-designationInTime="https://w3id.org/arco/resource/DesignationInTime/"
-	xmlns:ar-accessProfile="https://w3id.org/arco/resource/AccessProfile/"
-	xmlns:ar-documentType="https://w3id.org/arco/resource/DocumentationType/"
-	xmlns:ar-address="https://w3id.org/arco/resource/Address/"
-	xmlns:ar-culturalPropertyType="https://w3id.org/arco/resource/CulturalPropertyType/"
-	xmlns:ar-photograpyDocumentation="https://w3id.org/arco/resource/PhotographicDocumentation/"
-	xmlns:ar-docutmentationType="https://w3id.org/arco/resource/DocumentationType/"
-	xmlns:ar-dating="https://w3id.org/arco/resource/Dating/"
-	xmlns:ar-archeologicalFieldSurvey="https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/"
-	xmlns:ar-region="https://w3id.org/arco/resource/Region/"
-	xmlns:ar-catalogueRecordVersion="https://w3id.org/arco/resource/CatalogueRecordVersion/"
-	xmlns:ar-HistoricOrArtisticProperty="https://w3id.org/arco/resource/HistoricOrArtisticProperty/"
-	xmlns:ar-CulturalPropertyCataloguingCategory="https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/"
-	xmlns:ar-RelatedWorkSituation="https://w3id.org/arco/resource/RelatedWorkSituation/"
-	xmlns:ar-TechnicalStatus="https://w3id.org/arco/resource/TechnicalStatus/"
-	xmlns:ar-Value="https://w3id.org/arco/resource/Value/"
-	xmlns:ar-PreferredAuthorshipAttribution="https://w3id.org/arco/resource/PreferredAuthorshipAttribution/"
-	xmlns:ar-CatalogueRecordOA="https://w3id.org/arco/resource/CatalogueRecordOA/"
-	xmlns:ar-TechnicalCharacteristic="https://w3id.org/arco/resource/TechnicalCharacteristic/"
-	xmlns:ar-Site="https://w3id.org/arco/resource/Site/"
-	xmlns:ar-SiteType="https://w3id.org/arco/resource/SiteType/"
-	xmlns:ar-ConservationStatus="https://w3id.org/arco/resource/ConservationStatus/"
-	xmlns:ar-Subject="https://w3id.org/arco/resource/Subject/"
-	xmlns:ar-SourceOrDocument="https://w3id.org/arco/resource/SourceOrDocument/"
-	xmlns:ar-cis="https://w3id.org/arco/resource/CulturalInstituteOrSite/"
-	xmlns:ar-SiteDefinition="https://w3id.org/arco/resource/SiteDefinition/"
-	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
-	xmlns:ar-CISNameInTime="https://w3id.org/arco/resource/CISNameInTime/"
-	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
-
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0"
-	exclude-result-prefixes="xsl php">
+	xmlns:language="https://w3id.org/italia/onto/Language/">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
-	<xsl:template name="CamelCase">
-		<xsl:param name="text" />
-		<xsl:choose>
-			<xsl:when test="contains($text,' ')">
-				<xsl:call-template name="CamelCaseWord">
-					<xsl:with-param name="text" select="substring-before($text,' ')" />
-				</xsl:call-template>
-				<xsl:text> </xsl:text>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="substring-after($text,' ')" />
-				</xsl:call-template>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:call-template name="CamelCaseWord">
-					<xsl:with-param name="text" select="$text" />
-				</xsl:call-template>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template>
-	<xsl:template name="CamelCaseWord">
-		<xsl:param name="text" />
-		<xsl:value-of select="translate(substring($text,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
-		<xsl:value-of select="translate(substring($text,2,string-length($text)-1),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
-	</xsl:template>
-	<xsl:template name="CamelCase1">
-		<xsl:param name="text" />
-		<xsl:value-of select="translate(($text),'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')" />
-	</xsl:template>
+	<xsl:include href="commons/camel-case.xslt" />
+	<xsl:include href="commons/time-interval.xslt" />
+
 	<xsl:param name="item" />
 	<xsl:param name="NS" />
 	<!-- xsl:variable name="NS" select="'https://w3id.org/arco/resource/'" /-->
@@ -2958,7 +2871,7 @@
 					</rdf:Description>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/OG/SGT/SGTP">
-					<xsl:if test="not($sheetType='PST' or 'SMO')">
+					<xsl:if test="not($sheetType='PST' or $sheetType='SMO')">
 						<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
@@ -6448,137 +6361,7 @@
 						</arco-cd:hasDatingEvent>
 						<!-- atTime -->
 						<arco-cd:hasTimeInterval>
-							<xsl:variable name="relv">
-								<xsl:choose>
-									<xsl:when test="./REL/RELV and contains(normalize-space(lower-case(./REL/RELV)), '?') or contains(lower-case(./REL/RELV), 'ca')">
-										<xsl:value-of select="'uncertain-'" />
-									</xsl:when>
-									<xsl:when test="./REL/RELV and not(contains(normalize-space(lower-case(./REL/RELV)), '?') or contains(lower-case(./REL/RELV), 'ca'))">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELV)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relw">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW and contains(normalize-space(lower-case(./REL/RELW)), '?') or contains(lower-case(./REL/RELW), 'ca')">
-										<xsl:value-of select="'uncertain-'" />
-									</xsl:when>
-									<xsl:when test="./REL/RELW and not(contains(normalize-space(lower-case(./REL/RELW)), '?') or contains(lower-case(./REL/RELW), 'ca'))">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELW)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relf">
-								<xsl:choose>
-									<xsl:when test="./REL/RELF">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELF)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revv">
-								<xsl:choose>
-									<xsl:when test="./REV/REVV and contains(normalize-space(lower-case(./REV/REVV)), '?') or contains(lower-case(./REV/REVV), 'ca')">
-										<xsl:value-of select="'uncertain-'" />
-									</xsl:when>
-									<xsl:when test="./REV/REVV and not(contains(normalize-space(lower-case(./REV/REVV)), '?') or contains(lower-case(./REV/REVV), 'ca'))">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./RREVEL/REVV)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revw">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW and contains(normalize-space(lower-case(./REV/REVW)), '?') or contains(lower-case(./REV/REVW), 'ca')">
-										<xsl:value-of select="'uncertain-'" />
-									</xsl:when>
-									<xsl:when test="./REV/REVW and not(contains(normalize-space(lower-case(./REV/REVW)), '?') or contains(lower-case(./REV/REVW), 'ca'))">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVW)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revf">
-								<xsl:choose>
-									<xsl:when test="./REV/REVF">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVF)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="rels">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW">
-										<xsl:value-of select="concat($relw, $relf, arco-fn:urify(normalize-space(./REL/RELS)))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($relv, $relf, arco-fn:urify(normalize-space(./REL/RELS)))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revs">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW">
-										<xsl:value-of select="concat($revw, $revf, arco-fn:urify(normalize-space(./REV/REVS)))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($revv, $revf, arco-fn:urify(normalize-space(./REV/REVS)))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relx">
-								<xsl:choose>
-									<xsl:when test="./REL/RELX and contains(normalize-space(lower-case(./REL/RELX)), '?') or contains(lower-case(./REL/RELX), 'ca')">
-										<xsl:value-of select="'uncertain-'" />
-									</xsl:when>
-									<xsl:when test="./REL/RELX and not(contains(normalize-space(lower-case(./REL/RELX)), '?') or contains(lower-case(./REL/RELX), 'ca'))">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELX)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revx">
-								<xsl:choose>
-									<xsl:when test="./REV/REVX and contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(lower-case(./REV/REVX), 'ca')">
-										<xsl:value-of select="'uncertain-'" />
-									</xsl:when>
-									<xsl:when test="./REV/REVX and not(contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(lower-case(./REX/REVX), 'ca'))">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVX)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:attribute name="rdf:resource">
-								<xsl:choose>
-									<xsl:when test="./REL/RELS and not(./REV/REVS)">
-										<xsl:value-of select="concat($NS, 'TimeInterval/', $rels, '-', $revx, arco-fn:urify(normalize-space(./REV/REVI)))" />
-									</xsl:when>
-									<xsl:when test="./REV/REVS and not(./REL/RELS)">
-										<xsl:value-of select="concat($NS, 'TimeInterval/', $relx, arco-fn:urify(normalize-space(./REL/RELI)), '-', $revs)" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($NS, 'TimeInterval/', $rels, '-', $revs)" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:attribute>
+							<xsl:call-template name="timeIntervalResource" />
 						</arco-cd:hasTimeInterval>
 						<!-- specific time -->
 						<xsl:if test="./REV/REVI or ./REL/RELI">
@@ -6723,137 +6506,7 @@
 						</xsl:if>
 						<!-- atTime -->
 						<tiapit:atTime>
-							<xsl:variable name="relv">
-								<xsl:choose>
-									<xsl:when test="./REL/RELV and contains(normalize-space(lower-case(./REL/RELV)), '?') or contains(lower-case(./REL/RELV), 'ca')">
-										<xsl:value-of select="'uncertain-'" />
-									</xsl:when>
-									<xsl:when test="./REL/RELV and not(contains(normalize-space(lower-case(./REL/RELV)), '?') or contains(lower-case(./REL/RELV), 'ca'))">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELV)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relw">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW and contains(normalize-space(lower-case(./REL/RELW)), '?') or contains(lower-case(./REL/RELW), 'ca')">
-										<xsl:value-of select="'uncertain-'" />
-									</xsl:when>
-									<xsl:when test="./REL/RELW and not(contains(normalize-space(lower-case(./REL/RELW)), '?') or contains(lower-case(./REL/RELW), 'ca'))">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELW)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relf">
-								<xsl:choose>
-									<xsl:when test="./REL/RELF">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELF)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revv">
-								<xsl:choose>
-									<xsl:when test="./REV/REVV and contains(normalize-space(lower-case(./REV/REVV)), '?') or contains(lower-case(./REV/REVV), 'ca')">
-										<xsl:value-of select="'uncertain-'" />
-									</xsl:when>
-									<xsl:when test="./REV/REVV and not(contains(normalize-space(lower-case(./REV/REVV)), '?') or contains(lower-case(./REV/REVV), 'ca'))">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./RREVEL/REVV)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revw">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW and contains(normalize-space(lower-case(./REV/REVW)), '?') or contains(lower-case(./REV/REVW), 'ca')">
-										<xsl:value-of select="'uncertain-'" />
-									</xsl:when>
-									<xsl:when test="./REV/REVW and not(contains(normalize-space(lower-case(./REV/REVW)), '?') or contains(lower-case(./REV/REVW), 'ca'))">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVW)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revf">
-								<xsl:choose>
-									<xsl:when test="./REV/REVF">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVF)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="rels">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW">
-										<xsl:value-of select="concat($relw, $relf, arco-fn:urify(normalize-space(./REL/RELS)))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($relv, $relf, arco-fn:urify(normalize-space(./REL/RELS)))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revs">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW">
-										<xsl:value-of select="concat($revw, $revf, arco-fn:urify(normalize-space(./REV/REVS)))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($revv, $revf, arco-fn:urify(normalize-space(./REV/REVS)))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relx">
-								<xsl:choose>
-									<xsl:when test="./REL/RELX and contains(normalize-space(lower-case(./REL/RELX)), '?') or contains(lower-case(./REL/RELX), 'ca')">
-										<xsl:value-of select="'uncertain-'" />
-									</xsl:when>
-									<xsl:when test="./REL/RELX and not(contains(normalize-space(lower-case(./REL/RELX)), '?') or contains(lower-case(./REL/RELX), 'ca'))">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REL/RELX)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revx">
-								<xsl:choose>
-									<xsl:when test="./REV/REVX and contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(lower-case(./REV/REVX), 'ca')">
-										<xsl:value-of select="'uncertain-'" />
-									</xsl:when>
-									<xsl:when test="./REV/REVX and not(contains(normalize-space(lower-case(./REV/REVX)), '?') or contains(lower-case(./REX/REVX), 'ca'))">
-										<xsl:value-of select="concat(arco-fn:urify(normalize-space(./REV/REVX)), '-')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:attribute name="rdf:resource">
-								<xsl:choose>
-									<xsl:when test="./REL/RELS and not(./REV/REVS)">
-										<xsl:value-of select="concat($NS, 'TimeInterval/', $rels, '-', $revx, arco-fn:urify(normalize-space(./REV/REVI)))" />
-									</xsl:when>
-									<xsl:when test="./REV/REVS and not(./REL/RELS)">
-										<xsl:value-of select="concat($NS, 'TimeInterval/', $relx, arco-fn:urify(normalize-space(./REL/RELI)), '-', $revs)" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($NS, 'TimeInterval/', $rels, '-', $revs)" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:attribute>
+							<xsl:call-template name="timeIntervalResource" />
 						</tiapit:atTime>
 						<!-- specific time -->
 						<xsl:if test="./REV/REVI or ./REL/RELI">
@@ -7059,569 +6712,19 @@
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:variable name="relv">
-								<xsl:choose>
-									<xsl:when test="./REL/RELV">
-										<xsl:value-of select="concat(normalize-space(./REL/RELV), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relw">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW">
-										<xsl:value-of select="concat(normalize-space(./REL/RELW), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relf">
-								<xsl:choose>
-									<xsl:when test="./REL/RELF">
-										<xsl:value-of select="concat(normalize-space(./REL/RELF), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revv">
-								<xsl:choose>
-									<xsl:when test="./REV/REVV">
-										<xsl:value-of select="concat(normalize-space(./REV/REVV), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revw">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW">
-										<xsl:value-of select="concat(normalize-space(./REV/REVW), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revf">
-								<xsl:choose>
-									<xsl:when test="./REV/REVF">
-										<xsl:value-of select="concat(normalize-space(./REV/REVF), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="rels">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW">
-										<xsl:value-of select="concat($relw, $relf, normalize-space(./REL/RELS))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($relv, $relf, normalize-space(./REL/RELS))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revs">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW">
-										<xsl:value-of select="concat($revw, $revf, normalize-space(./REV/REVS))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($revv, $revf, normalize-space(./REV/REVS))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relx">
-								<xsl:choose>
-									<xsl:when test="./REL/RELX">
-										<xsl:value-of select="concat(normalize-space(./REL/RELX), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revx">
-								<xsl:choose>
-									<xsl:when test="./REV/REVX">
-										<xsl:value-of select="concat(normalize-space(./REV/REVX), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:choose>
-								<xsl:when test="./REL/RELS and not(./REV/REVS)">
-									<xsl:value-of select="concat($rels, ' - ', $revx, normalize-space(./REV/REVI))" />
-								</xsl:when>
-								<xsl:when test="./REV/REVS and not(./REL/RELS)">
-									<xsl:value-of select="concat($relx, normalize-space(./REL/RELI), ' - ', $revs)" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="concat($rels, ' - ', $revs)" />
-								</xsl:otherwise>
-							</xsl:choose>
+							<xsl:call-template name="timeIntervalValue" />
 						</rdfs:label>
 						<l0:name>
-							<xsl:variable name="relv">
-								<xsl:choose>
-									<xsl:when test="./REL/RELV">
-										<xsl:value-of select="concat(normalize-space(./REL/RELV), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relw">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW">
-										<xsl:value-of select="concat(normalize-space(./REL/RELW), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relf">
-								<xsl:choose>
-									<xsl:when test="./REL/RELF">
-										<xsl:value-of select="concat(normalize-space(./REL/RELF), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revv">
-								<xsl:choose>
-									<xsl:when test="./REV/REVV">
-										<xsl:value-of select="concat(normalize-space(./REV/REVV), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revw">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW">
-										<xsl:value-of select="concat(normalize-space(./REV/REVW), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revf">
-								<xsl:choose>
-									<xsl:when test="./REV/REVF">
-										<xsl:value-of select="concat(normalize-space(./REV/REVF), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="rels">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW">
-										<xsl:value-of select="concat($relw, $relf, normalize-space(./REL/RELS))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($relv, $relf, normalize-space(./REL/RELS))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revs">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW">
-										<xsl:value-of select="concat($revw, $revf, normalize-space(./REV/REVS))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($revv, $revf, normalize-space(./REV/REVS))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relx">
-								<xsl:choose>
-									<xsl:when test="./REL/RELX">
-										<xsl:value-of select="concat(normalize-space(./REL/RELX), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revx">
-								<xsl:choose>
-									<xsl:when test="./REV/REVX">
-										<xsl:value-of select="concat(normalize-space(./REV/REVX), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:choose>
-								<xsl:when test="./REL/RELS and not(./REV/REVS)">
-									<xsl:value-of select="concat($rels, ' - ', $revx, normalize-space(./REV/REVI))" />
-								</xsl:when>
-								<xsl:when test="./REV/REVS and not(./REL/RELS)">
-									<xsl:value-of select="concat($relx, normalize-space(./REL/RELI), ' - ', $revs)" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="concat($rels, ' - ', $revs)" />
-								</xsl:otherwise>
-							</xsl:choose>
+							<xsl:call-template name="timeIntervalValue" />
 						</l0:name>
 						<tiapit:time>
-							<xsl:variable name="relv">
-								<xsl:choose>
-									<xsl:when test="./REL/RELV">
-										<xsl:value-of select="concat(normalize-space(./REL/RELV), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relw">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW">
-										<xsl:value-of select="concat(normalize-space(./REL/RELW), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relf">
-								<xsl:choose>
-									<xsl:when test="./REL/RELF">
-										<xsl:value-of select="concat(normalize-space(./REL/RELF), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revv">
-								<xsl:choose>
-									<xsl:when test="./REV/REVV">
-										<xsl:value-of select="concat(normalize-space(./REV/REVV), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revw">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW">
-										<xsl:value-of select="concat(normalize-space(./REV/REVW), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revf">
-								<xsl:choose>
-									<xsl:when test="./REV/REVF">
-										<xsl:value-of select="concat(normalize-space(./REV/REVF), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="rels">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW">
-										<xsl:value-of select="concat($relw, $relf, normalize-space(./REL/RELS))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($relv, $relf, normalize-space(./REL/RELS))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revs">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW">
-										<xsl:value-of select="concat($revw, $revf, normalize-space(./REV/REVS))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($revv, $revf, normalize-space(./REV/REVS))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relx">
-								<xsl:choose>
-									<xsl:when test="./REL/RELX">
-										<xsl:value-of select="concat(normalize-space(./REL/RELX), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revx">
-								<xsl:choose>
-									<xsl:when test="./REV/REVX">
-										<xsl:value-of select="concat(normalize-space(./REV/REVX), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:choose>
-								<xsl:when test="./REL/RELS and not(./REV/REVS)">
-									<xsl:value-of select="concat($rels, ' - ', $revx, normalize-space(./REV/REVI))" />
-								</xsl:when>
-								<xsl:when test="./REV/REVS and not(./REL/RELS)">
-									<xsl:value-of select="concat($relx, normalize-space(./REL/RELI), ' - ', $revs)" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="concat($rels, ' - ', $revs)" />
-								</xsl:otherwise>
-							</xsl:choose>
+							<xsl:call-template name="timeIntervalValue" />
 						</tiapit:time>
 						<arco-arco:startTime>
-							<xsl:variable name="relv">
-								<xsl:choose>
-									<xsl:when test="./REL/RELV">
-										<xsl:value-of select="concat(normalize-space(./REL/RELV), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relw">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW">
-										<xsl:value-of select="concat(normalize-space(./REL/RELW), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relf">
-								<xsl:choose>
-									<xsl:when test="./REL/RELF">
-										<xsl:value-of select="concat(normalize-space(./REL/RELF), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revv">
-								<xsl:choose>
-									<xsl:when test="./REV/REVV">
-										<xsl:value-of select="concat(normalize-space(./REV/REVV), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revw">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW">
-										<xsl:value-of select="concat(normalize-space(./REV/REVW), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revf">
-								<xsl:choose>
-									<xsl:when test="./REV/REVF">
-										<xsl:value-of select="concat(normalize-space(./REV/REVF), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="rels">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW">
-										<xsl:value-of select="concat($relw, $relf, normalize-space(./REL/RELS))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($relv, $relf, normalize-space(./REL/RELS))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revs">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW">
-										<xsl:value-of select="concat($revw, $revf, normalize-space(./REV/REVS))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($revv, $revf, normalize-space(./REV/REVS))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relx">
-								<xsl:choose>
-									<xsl:when test="./REL/RELX">
-										<xsl:value-of select="concat(normalize-space(./REL/RELX), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revx">
-								<xsl:choose>
-									<xsl:when test="./REV/REVX">
-										<xsl:value-of select="concat(normalize-space(./REV/REVX), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:choose>
-								<xsl:when test="./REL/RELS and not(./REV/REVS)">
-									<xsl:value-of select="concat($rels, ' - ', $revx, normalize-space(./REV/REVI))" />
-								</xsl:when>
-								<xsl:when test="./REV/REVS and not(./REL/RELS)">
-									<xsl:value-of select="concat($relx, normalize-space(./REL/RELI), ' - ', $revs)" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="concat($rels, ' - ', $revs)" />
-								</xsl:otherwise>
-							</xsl:choose>
+							<xsl:call-template name="timeIntervalValue" />
 						</arco-arco:startTime>
 						<arco-arco:endTime>
-							<xsl:variable name="relv">
-								<xsl:choose>
-									<xsl:when test="./REL/RELV">
-										<xsl:value-of select="concat(normalize-space(./REL/RELV), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relw">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW">
-										<xsl:value-of select="concat(normalize-space(./REL/RELW), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relf">
-								<xsl:choose>
-									<xsl:when test="./REL/RELF">
-										<xsl:value-of select="concat(normalize-space(./REL/RELF), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revv">
-								<xsl:choose>
-									<xsl:when test="./REV/REVV">
-										<xsl:value-of select="concat(normalize-space(./REV/REVV), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revw">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW">
-										<xsl:value-of select="concat(normalize-space(./REV/REVW), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revf">
-								<xsl:choose>
-									<xsl:when test="./REV/REVF">
-										<xsl:value-of select="concat(normalize-space(./REV/REVF), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="rels">
-								<xsl:choose>
-									<xsl:when test="./REL/RELW">
-										<xsl:value-of select="concat($relw, $relf, normalize-space(./REL/RELS))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($relv, $relf, normalize-space(./REL/RELS))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revs">
-								<xsl:choose>
-									<xsl:when test="./REV/REVW">
-										<xsl:value-of select="concat($revw, $revf, normalize-space(./REV/REVS))" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="concat($revv, $revf, normalize-space(./REV/REVS))" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="relx">
-								<xsl:choose>
-									<xsl:when test="./REL/RELX">
-										<xsl:value-of select="concat(normalize-space(./REL/RELX), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:variable name="revx">
-								<xsl:choose>
-									<xsl:when test="./REV/REVX">
-										<xsl:value-of select="concat(normalize-space(./REV/REVX), ' ')" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="''" />
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:variable>
-							<xsl:choose>
-								<xsl:when test="./REL/RELS and not(./REV/REVS)">
-									<xsl:value-of select="concat($rels, ' - ', $revx, normalize-space(./REV/REVI))" />
-								</xsl:when>
-								<xsl:when test="./REV/REVS and not(./REL/RELS)">
-									<xsl:value-of select="concat($relx, normalize-space(./REL/RELI), ' - ', $revs)" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="concat($rels, ' - ', $revs)" />
-								</xsl:otherwise>
-							</xsl:choose>
+							<xsl:call-template name="timeIntervalValue" />
 						</arco-arco:endTime>
 					</rdf:Description>
 					<!-- Time interval with start time and end time -->
@@ -8737,7 +7840,7 @@
 								</l0:name>
 								<arco-core:hasRole>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
+										<xsl:value-of select="concat($NS, 'Role/CataloguingAgency')" />
 									</xsl:attribute>
 								</arco-core:hasRole>
 								<arco-core:hasAgent>
@@ -8861,7 +7964,7 @@
 								</l0:name>
 								<arco-core:hasRole>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
+										<xsl:value-of select="concat($NS, 'Role/CataloguingAgency')" />
 									</xsl:attribute>
 								</arco-core:hasRole>
 								<arco-core:hasAgent>
@@ -12908,7 +12011,7 @@
 								</arco-lite:hasProponentAgent>
 								<arco-core:hasAgentRole>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-protective-meausure-', $measure-position, '-proponent-agency')" />
+										<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-protective-measure-', $measure-position, '-proponent-agency')" />
 									</xsl:attribute>
 								</arco-core:hasAgentRole>
 							</xsl:for-each>
@@ -12917,7 +12020,7 @@
 						<xsl:for-each select="./NVCA[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
-									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-protective-meausure-', $measure-position, '-proponent-agency')" />
+									<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-protective-measure-', $measure-position, '-proponent-agency')" />
 								</xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -24404,7 +23507,7 @@
 							</xsl:if>
 						</xsl:if>
 					</xsl:for-each>
-					<xsl:if test="$sheetType='SCAN' or 'MINV'">
+					<xsl:if test="$sheetType='SCAN' or $sheetType='MINV'">
 						<xsl:for-each select="record/metadata/schede/*/DT/ATB">
 							<xsl:if test="(not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 								<rdf:Description>
@@ -37446,7 +36549,7 @@
 							</xsl:choose>
 							<xsl:if test="./SFIP">
 								<arco-core:specifications>
-									<xsl:value-of select="concat('Titolo prallelo: ', ./SFIP)" />
+									<xsl:value-of select="concat('Titolo parallelo: ', ./SFIP)" />
 								</arco-core:specifications>
 							</xsl:if>
 							<xsl:if test="./SFIS">
@@ -37592,12 +36695,12 @@
 							</arco-lite:hasCollectionMember>
 							<xsl:if test="./SSIP">
 								<arco-core:specifications>
-									<xsl:value-of select="concat('Titolo prallelo: ', ./SSIP)" />
+									<xsl:value-of select="concat('Titolo parallelo: ', ./SSIP)" />
 								</arco-core:specifications>
 							</xsl:if>
 							<xsl:if test="./SSIS">
 								<arco-core:specifications>
-									<xsl:value-of select="concat('Titolo prallelo: ', ./SSIS)" />
+									<xsl:value-of select="concat('Titolo parallelo: ', ./SSIS)" />
 								</arco-core:specifications>
 							</xsl:if>
 						</rdf:Description>
