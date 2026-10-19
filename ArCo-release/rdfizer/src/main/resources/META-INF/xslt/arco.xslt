@@ -774,6 +774,33 @@
 						</arco-core:current>
 					</rdf:Description>
 				</xsl:if>
+				<!-- Local Identifier for sheets w/o NCT-->
+				<xsl:if test="record/metadata/schede/*/CD/CDM">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'LocalIdentifier/', $itemURI)" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/core/Identifier'" />
+							</xsl:attribute>
+						</rdf:type>
+						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/core/LocalIdentifier'" />
+							</xsl:attribute>
+						</arco-core:hasType>
+						<rdfs:label>
+							<xsl:value-of select="record/metadata/schede/*/CD/CDM" />
+						</rdfs:label>
+						<arco-core:identifier>
+							<xsl:value-of select="record/metadata/schede/*/CD/CDM" />
+						</arco-core:identifier>
+						<arco-core:current rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">
+							<xsl:value-of select="true()" />
+						</arco-core:current>
+					</rdf:Description>
+				</xsl:if>
 				<!-- system identifier -->
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
