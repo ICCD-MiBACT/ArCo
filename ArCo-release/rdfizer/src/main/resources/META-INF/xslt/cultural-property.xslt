@@ -4363,6 +4363,17 @@
 								</xsl:attribute>
 							</arco-core:hasIdentifier>
 						</xsl:if>
+						<!-- identifier:localIdentifier for sheetType w/o NCT -->
+						<xsl:if test="record/metadata/schede/*/CD/CDM">
+						    <arco-lite:localIdentifier>
+						        <xsl:value-of select="record/metadata/schede/*/CD/CDM" />
+						    </arco-lite:localIdentifier>
+						    <arco-core:hasIdentifier>
+						        <xsl:attribute name="rdf:resource">
+						            <xsl:value-of select="concat($NS, 'LocalIdentifier/', $itemURI)" />
+						        </xsl:attribute>
+						    </arco-core:hasIdentifier>
+						</xsl:if>
 						<!-- finding note -->
 						<xsl:if test="record/metadata/schede/*/RE/RES">
 							<arco-cd:findingNote>
