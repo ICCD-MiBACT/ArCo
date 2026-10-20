@@ -1,93 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet
+<xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:arco-core="https://w3id.org/arco/ontology/core/"
 	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
 	xmlns:arco-spe="https://w3id.org/arco/ontology/natural-specimen-description/"
-	xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
-	xmlns:cpv="https://w3id.org/italia/onto/CPV/"
-	xmlns:smapit="https://w3id.org/italia/onto/SM/"
 	xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
 	xmlns:arco-ce="https://w3id.org/arco/ontology/cultural-event/"
-	xmlns:arco-mp="https://w3id.org/arco/ontology/movable-property/"
-	xmlns:dcterms="http://purl.org/dc/terms/creator"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
-	xmlns:fn="http://www.w3.org/2005/xpath-functions"
-	xmlns:foaf="http://xmlns.com/foaf/0.1/"
-	xmlns:frbr="http://purl.org/vocab/frbr/core#"
-	xmlns:l0="https://w3id.org/italia/onto/l0/"
 	xmlns:arco-location="https://w3id.org/arco/ontology/location/"
-	xmlns:owl="http://www.w3.org/2002/07/owl#"
-	xmlns:php="http://php.net/xsl"
-	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
+	xmlns:l0="https://w3id.org/italia/onto/l0/"
+	xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
+	xmlns:cpv="https://w3id.org/italia/onto/CPV/"
+	xmlns:smapit="https://w3id.org/italia/onto/SM/"
 	xmlns:roapit="https://w3id.org/italia/onto/RO/"
 	xmlns:tiapit="https://w3id.org/italia/onto/TI/"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:mu="https://w3id.org/italia/onto/MU/"
-	xmlns:language="https://w3id.org/italia/onto/Language/"
-	xmlns:ar-agentrole="https://w3id.org/arco/resource/AgentRole/"
-	xmlns:ar-agent="https://w3id.org/arco/resource/Agent/"
-	xmlns:ar-role="https://w3id.org/arco/resource/Role/"
-	xmlns:ar-privacyReason="https://w3id.org/arco/resource/PrivacyReason/"
-	xmlns:COV="https://w3id.org/italia/onto/COV/"
-	xmlns:CPV="https://w3id.org/italia/onto/CPV/"
-	xmlns:ar-archeologicalProperty="https://w3id.org/arco/resource/ArchaeologicalProperty/"
-	xmlns:ar-TimeInterval="https://w3id.org/arco/resource/TimeInterval/"
-	xmlns:ar-city="https://w3id.org/arco/resource/City/"
-	xmlns:ar-geometry="https://w3id.org/arco/resource/Geometry/"
-	xmlns:ar-event="https://w3id.org/arco/resource/Event/"
-	xmlns:ar-country="https://w3id.org/arco/resource/Country/"
-	xmlns:ar-timeIndexedTypedLocation="https://w3id.org/arco/resource/TimeIndexedTypedLocation/"
-	xmlns:ar-feature="https://w3id.org/arco/resource/Feature/"
-	xmlns:ar-timeIndexedRole="https://w3id.org/arco/resource/TimeIndexedRole/"
-	xmlns:ar-catalogueRecordSI="https://w3id.org/arco/resource/CatalogueRecordSI/"
-	xmlns:ar-detectionMethod="https://w3id.org/arco/resource/DetectionMethod/"
-	xmlns:ar-interpretationCriterion="https://w3id.org/arco/resource/InterpretationCriterion/"
-	xmlns:ar-bibliography="https://w3id.org/arco/resource/Bibliography/"
-	xmlns:ar-culturalPropertyDefinition="https://w3id.org/arco/resource/CulturalPropertyDefinition/"
-	xmlns:ar-legalSituation="https://w3id.org/arco/resource/LegalSituation/"
-	xmlns:ar-province="https://w3id.org/arco/resource/Province/"
-	xmlns:ar-culturalPropertySpecification="https://w3id.org/arco/resource/CulturalPropertySpecification/"
-	xmlns:ar-addressArea="https://w3id.org/arco/resource/AddressArea/"
-	xmlns:ar-designationInTime="https://w3id.org/arco/resource/DesignationInTime/"
-	xmlns:ar-accessProfile="https://w3id.org/arco/resource/AccessProfile/"
-	xmlns:ar-documentType="https://w3id.org/arco/resource/DocumentationType/"
-	xmlns:ar-address="https://w3id.org/arco/resource/Address/"
-	xmlns:ar-culturalPropertyType="https://w3id.org/arco/resource/CulturalPropertyType/"
-	xmlns:ar-photograpyDocumentation="https://w3id.org/arco/resource/PhotographicDocumentation/"
-	xmlns:ar-docutmentationType="https://w3id.org/arco/resource/DocumentationType/"
-	xmlns:ar-dating="https://w3id.org/arco/resource/Dating/"
-	xmlns:ar-archeologicalFieldSurvey="https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/"
-	xmlns:ar-region="https://w3id.org/arco/resource/Region/"
-	xmlns:ar-catalogueRecordVersion="https://w3id.org/arco/resource/CatalogueRecordVersion/"
-	xmlns:ar-HistoricOrArtisticProperty="https://w3id.org/arco/resource/HistoricOrArtisticProperty/"
-	xmlns:ar-CulturalPropertyCataloguingCategory="https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/"
-	xmlns:ar-RelatedWorkSituation="https://w3id.org/arco/resource/RelatedWorkSituation/"
-	xmlns:ar-CulturalEntityTechnicalStatus="https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/"
-	xmlns:ar-Value="https://w3id.org/arco/resource/Value/"
-	xmlns:ar-PreferredAuthorshipAttribution="https://w3id.org/arco/resource/PreferredAuthorshipAttribution/"
-	xmlns:ar-CatalogueRecordOA="https://w3id.org/arco/resource/CatalogueRecordOA/"
-	xmlns:ar-TechnicalCharacteristic="https://w3id.org/arco/resource/TechnicalCharacteristic/"
-	xmlns:ar-Site="https://w3id.org/arco/resource/Site/"
-	xmlns:ar-SiteType="https://w3id.org/arco/resource/SiteType/"
-	xmlns:ar-ConservationStatus="https://w3id.org/arco/resource/ConservationStatus/"
-	xmlns:ar-Subject="https://w3id.org/arco/resource/Subject/"
-	xmlns:ar-SourceOrDocument="https://w3id.org/arco/resource/SourceOrDocument/"
-	xmlns:ar-cis="https://w3id.org/arco/resource/CulturalInstituteOrSite/"
-	xmlns:ar-SiteDefinition="https://w3id.org/arco/resource/SiteDefinition/"
-	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
-	xmlns:ar-CISNameInTime="https://w3id.org/arco/resource/CISNameInTime/"
-	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
-	xmlns:arco-ip="https://w3id.org/arco/ontology/immovable-property/"
-
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0"
-	exclude-result-prefixes="xsl php">
+	xmlns:language="https://w3id.org/italia/onto/Language/">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
+	<xsl:include href="commons/camel-case.xslt" />
+
 	<!-- xsl:variable name="NS" select="'https://w3id.org/arco/resource/'" /-->
 	<xsl:param name="item" />
 	<xsl:param name="NS" />
@@ -135,30 +72,7 @@
 			</l0:name>
 		</xsl:element>
 	</xsl:template>
-	<xsl:template name="CamelCase">
-		<xsl:param name="text" />
-		<xsl:choose>
-			<xsl:when test="contains($text,' ')">
-				<xsl:call-template name="CamelCaseWord">
-					<xsl:with-param name="text" select="substring-before($text,' ')" />
-				</xsl:call-template>
-				<xsl:text> </xsl:text>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text" select="substring-after($text,' ')" />
-				</xsl:call-template>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:call-template name="CamelCaseWord">
-					<xsl:with-param name="text" select="$text" />
-				</xsl:call-template>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template>
-	<xsl:template name="CamelCaseWord">
-		<xsl:param name="text" />
-		<xsl:value-of select="translate(substring($text,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
-		<xsl:value-of select="translate(substring($text,2,string-length($text)-1),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
-	</xsl:template>
+
 	<xsl:template match="/">
 		<rdf:RDF>
 			<xsl:variable name="sheetType" select="name(record/metadata/schede/*[1])" />
@@ -2970,7 +2884,7 @@
 					</xsl:if>
 				</xsl:for-each>
 				<!-- Printing Plates Series -->
-				<xsl:if test="$sheetType='MI' or 'S'">
+				<xsl:if test="$sheetType='MI' or $sheetType='S'">
 					<xsl:if test="record/metadata/schede/*/OG/SGT/SGTS">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
@@ -6149,7 +6063,7 @@
 				</xsl:if>
 				<!-- subject -->
 				<xsl:for-each select="record/metadata/schede/*/*/SGT">
-					<xsl:if test="$sheetType='PST' or 'SMO'">
+					<xsl:if test="$sheetType='PST' or $sheetType='SMO'">
 						<xsl:for-each select="./SGTI[not(starts-with(lower-case(normalize-space()), 'nr')) and not(starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<!-- allow multiple values es: ICCD13074493 -->
 							<rdf:Description>
@@ -6337,7 +6251,7 @@
 					</rdf:Description>
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/OG/SGT/SGTP">
-					<xsl:if test="not($sheetType='PST' or 'SMO')">
+					<xsl:if test="not($sheetType='PST' or $sheetType='SMO')">
 						<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
@@ -9830,7 +9744,7 @@
 						<rdfs:label xml:lang="it">
 							<xsl:value-of select="concat('Bibliografia ', position(), ' del bene culturale: ', $itemURI)" />
 						</rdfs:label>
-						<l0:name xml:lang="en">
+						<l0:name xml:lang="it">
 							<xsl:value-of select="concat('Bibliografia ', position(), ' del bene culturale: ', $itemURI)" />
 						</l0:name>
 						<arco-cd:isBibliographyOf>

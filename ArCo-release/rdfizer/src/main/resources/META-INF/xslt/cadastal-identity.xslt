@@ -1,72 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet
+<xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:arco-core="https://w3id.org/arco/ontology/core/"
 	xmlns:arco-arco="https://w3id.org/arco/ontology/arco/"
 	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
-	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
 	xmlns:arco-lite="https://w3id.org/arco/ontology/arco-lite/"
-	xmlns:cis="http://dati.beniculturali.it/cis/"
-	xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
-	xmlns:smapit="https://w3id.org/italia/onto/SM/"
-	xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
-	xmlns:arco-ce="https://w3id.org/arco/ontology/cultural-event/"
-	xmlns:dcterms="http://purl.org/dc/terms/creator"
-	xmlns:fn="http://www.w3.org/2005/xpath-functions"
-	xmlns:foaf="http://xmlns.com/foaf/0.1/"
-	xmlns:frbr="http://purl.org/vocab/frbr/core#"
-	xmlns:l0="https://w3id.org/italia/onto/l0/"
 	xmlns:arco-location="https://w3id.org/arco/ontology/location/"
-	xmlns:owl="http://www.w3.org/2002/07/owl#"
-	xmlns:php="http://php.net/xsl"
-	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-	xmlns:roapit="https://w3id.org/italia/onto/RO/"
-	xmlns:tiapit="https://w3id.org/italia/onto/TI/"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:mu="https://w3id.org/italia/onto/MU/"
-	xmlns:language="https://w3id.org/italia/onto/Language/"
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="2.0"
-	exclude-result-prefixes="xsl php">
+	xmlns:l0="https://w3id.org/italia/onto/l0/"
+	xmlns:tiapit="https://w3id.org/italia/onto/TI/">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
+	<xsl:include href="commons/camel-case.xslt" />
 	<xsl:param name="item" />
 
-	<xsl:template name="CamelCase">
-		<xsl:param name="text" />
-		<xsl:choose>
-			<xsl:when test="contains($text,' ')">
-				<xsl:call-template name="CamelCaseWord">
-					<xsl:with-param name="text"
-						select="substring-before($text,' ')" />
-				</xsl:call-template>
-				<xsl:text> </xsl:text>
-				<xsl:call-template name="CamelCase">
-					<xsl:with-param name="text"
-						select="substring-after($text,' ')" />
-				</xsl:call-template>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:call-template name="CamelCaseWord">
-					<xsl:with-param name="text" select="$text" />
-				</xsl:call-template>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template>
-
-	<xsl:template name="CamelCaseWord">
-		<xsl:param name="text" />
-		<xsl:value-of
-			select="translate(substring($text,1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
-		<xsl:value-of
-			select="translate(substring($text,2,string-length($text)-1),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
-	</xsl:template>
-	
-	<xsl:template name="CamelCase1">
-		<xsl:param name="text" />
-		<xsl:value-of
-			select="translate(($text),'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')" />
-	</xsl:template>
 	<xsl:variable name="esc">
 		<xsl:value-of select="record/metadata/schede/*/CD/ESC" />
 	</xsl:variable>
