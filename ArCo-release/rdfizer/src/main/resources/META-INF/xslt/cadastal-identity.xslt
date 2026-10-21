@@ -158,20 +158,21 @@
 			<!-- cadastral identity -->
 			<xsl:if test="not($sheetType='AR')">
 				<xsl:for-each select="record/metadata/schede/*/CS">
-					<xsl:if test="./CTS/CTSC and 
-						(not(starts-with(lower-case(normalize-space(./CTS/CTSC)), 'nr')) and 
-						not(starts-with(lower-case(normalize-space(./CTS/CTSC)), 'n.r')) and 
-						not(lower-case(normalize-space(./CTS/CTSC)) = 'non id') and 
-						not(lower-case(normalize-space(./CTS/CTSC)) = '-') and
-						not(lower-case(normalize-space(./CTS/CTSC)) = '&amp;') and 
-						not(lower-case(normalize-space(./CTS/CTSC)) = '?')) and
-						./CTS/CTSF and 
-						(not(starts-with(lower-case(normalize-space(./CTS/CTSF)), 'nr')) and 
-						not(starts-with(lower-case(normalize-space(./CTS/CTSF)), 'n.r')) and 
-						not(lower-case(normalize-space(./CTS/CTSF)) = 'non id') and 
-						not(lower-case(normalize-space(./CTS/CTSF)) = '-') and
-						not(lower-case(normalize-space(./CTS/CTSF)) = '&amp;') and 
-						not(lower-case(normalize-space(./CTS/CTSF)) = '?'))">
+					<xsl:if test="./CTS/CTSC and ./CTS[
+						not(starts-with(lower-case(normalize-space(./CTSC)), 'nr')) and 
+						not(starts-with(lower-case(normalize-space(./CTSC)), 'n.r')) and 
+						not(lower-case(normalize-space(./CTSC)) = 'non id') and 
+						not(lower-case(normalize-space(./CTSC)) = '-') and
+						not(lower-case(normalize-space(./CTSC)) = '&amp;') and 
+						not(lower-case(normalize-space(./CTSC)) = '?')
+					] and ./CTS/CTSF and ./CTS[
+					 not(starts-with(lower-case(normalize-space(./CTSF)), 'nr')) and 
+						not(starts-with(lower-case(normalize-space(./CTSF)), 'n.r')) and 
+						not(lower-case(normalize-space(./CTSF)) = 'non id') and 
+						not(lower-case(normalize-space(./CTSF)) = '-') and
+						not(lower-case(normalize-space(./CTSF)) = '&amp;') and 
+						not(lower-case(normalize-space(./CTSF)) = '?')
+					]">
 						<xsl:variable name="parentPosition">
 							<xsl:value-of select="position()" />
 						</xsl:variable>
