@@ -945,7 +945,7 @@
 								<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/QNT/QNTU)" />
 							</arco-arco:numberOfComponents>
 						</xsl:if>
-						<xsl:if test="record/metadata/schede/AR/OG/OGU">
+						<xsl:if test="record/metadata/schede/AR/OG/OGU and not(starts-with(lower-case(normalize-space(record/metadata/schede/AR/OG/OGU)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/AR/OG/OGU)), 'n.r'))">
 							<arco-arco:numberOfComponents>
 								<xsl:value-of select="normalize-space(record/metadata/schede/AR/OG/OGU)" />
 							</arco-arco:numberOfComponents>
@@ -4027,6 +4027,11 @@
 									</xsl:choose>
 								</xsl:attribute>
 							</arco-dd:hasCulturalPropertyAccessibility>
+							<xsl:if test="record/metadata/schede/*/LC/ACB/ACBL">
+								<arco-core:specification>
+									<xsl:value-of select="concat('Specifiche all''accessibilità: ', normalize-space(record/metadata/schede/*/LC/ACB/ACBL), '. ', normalize-space(record/metadata/schede/*/LC/ACB/ACBS))" />
+								</arco-core:specification>
+							</xsl:if>
 						</xsl:if>
 						<xsl:if test="record/metadata/schede/*/UT/CNU/CNUV">
 							<arco-dd:hasCulturalPropertyAccessibility>
@@ -4365,6 +4370,7 @@
 						</xsl:if>
 						<!-- identifier:localIdentifier for sheetType w/o NCT -->
 						<xsl:if test="record/metadata/schede/*/CD/CDM">
+<<<<<<< Updated upstream
 						    <arco-lite:localIdentifier>
 						        <xsl:value-of select="record/metadata/schede/*/CD/CDM" />
 						    </arco-lite:localIdentifier>
@@ -4373,6 +4379,16 @@
 						            <xsl:value-of select="concat($NS, 'LocalIdentifier/', $itemURI)" />
 						        </xsl:attribute>
 						    </arco-core:hasIdentifier>
+=======
+							<arco-lite:localIdentifier>
+								<xsl:value-of select="record/metadata/schede/*/CD/CDM" />
+							</arco-lite:localIdentifier>
+							<arco-core:hasIdentifier>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'LocalIdentifier/', $itemURI)" />
+								</xsl:attribute>
+							</arco-core:hasIdentifier>
+>>>>>>> Stashed changes
 						</xsl:if>
 						<!-- finding note -->
 						<xsl:if test="record/metadata/schede/*/RE/RES">
