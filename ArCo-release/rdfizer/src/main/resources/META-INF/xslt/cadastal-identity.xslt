@@ -713,7 +713,7 @@
 							<xsl:for-each select="./CTSS[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 								<arco-location:hasCadastralEntity>
 									<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="concat($NS, 'CadastralSubordinate/', $itemURI, '-', $parentPosition, '-', position())" />
+										<xsl:value-of select="concat($NS, 'CadastralSubordinate/', arco-fn:urify(normalize-space(../CTSC)), '-', arco-fn:urify(normalize-space(../CTSF)), '-', arco-fn:urify(normalize-space(../CTSN)), '-', arco-fn:urify(normalize-space(.)))" />
 									</xsl:attribute>
 								</arco-location:hasCadastralEntity>
 							</xsl:for-each>
@@ -898,7 +898,7 @@
 					</xsl:for-each>
 					<!--</xsl:for-each>-->
 					<!-- Neighbouring Cadastral Entity as an individual -->
-					<xsl:for-each select="./CTE[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
+					<xsl:for-each select="../CTE[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
 									<xsl:value-of select="concat($NS, 'NeighbouringCadastralEntity/', $itemURI, '-', $parentPosition, '-', position())" />
@@ -923,7 +923,7 @@
 							</rdf:Description>
 					</xsl:for-each>
 					<!-- cadastre subordinate as an individual -->
-					<xsl:for-each select="./CTSS[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space(./CTSS)), 'n.r'))]">
+					<xsl:for-each select="./CTSS[not(starts-with(lower-case(normalize-space()), 'nr') or starts-with(lower-case(normalize-space()), 'n.r'))]">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of select="concat($NS, 'CadastralSubordinate/', arco-fn:urify(normalize-space(../CTSC)), '-', arco-fn:urify(normalize-space(../CTSF)), '-', arco-fn:urify(normalize-space(../CTSN)), '-', arco-fn:urify(normalize-space(.)))" />
