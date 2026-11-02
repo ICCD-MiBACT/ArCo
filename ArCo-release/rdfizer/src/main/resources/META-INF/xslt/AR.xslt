@@ -532,6 +532,7 @@
 							<xsl:value-of select="record/metadata/schede/*/CA/CAB" />
 						</l0:name>
 					</rdf:Description>
+					<xsl:if test="record/metadata/schede/*/CA/CAT">
 					<!-- Climate Situation as individual-->
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
