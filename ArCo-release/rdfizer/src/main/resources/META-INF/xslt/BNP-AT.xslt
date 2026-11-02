@@ -156,31 +156,24 @@
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:variable name="accc-space" >
-					<xsl:choose>
-						<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
-							<xsl:value-of select="record/metadata/schede/*/AC/ACC[1]/ACCC" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="record/metadata/schede/*/CD/ACC[1]/ACCC" />
-						</xsl:otherwise>
-					</xsl:choose>
-				</xsl:variable>
-				<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
-				<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
-				<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC[1]" />
-				<xsl:variable name="acc-nospace" select="translate($acc-space, ' ', '')" />
-				<xsl:variable name="acc" select="translate($acc-nospace, '/', '_')" />
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
-						<xsl:value-of select="$accc" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/CD/ACC/ACCC">
-						<xsl:value-of select="$accc" />
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:value-of select="$acc" />
-					</xsl:otherwise>
-				</xsl:choose>
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/AC/ACK">
+								<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
+							</xsl:when>
+							<xsl:when test="record/metadata/schede/*/AC/ACJ">
+								<xsl:value-of select="record/metadata/schede/*/AC/ACJ" />
+							</xsl:when>
+							<xsl:when test="record/metadata/schede/*/AC/ACO">
+								<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="record/metadata/schede/*/AC/ACE" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
+					<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
+					<xsl:value-of select="$accc" />
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -188,6 +181,9 @@
 		<xsl:choose>
 			<xsl:when test="$sheetType='MODI'">
 				<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType(record/metadata/schede/MODI/OG/AMB)), '/', $itemURI)" />
+			</xsl:when>
+			<xsl:when test="$sheetType='AR'">
+				<xsl:value-of select="concat($NS, 'ArchitecturalOrLandscapeHeritage/', $itemURI)" />
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
