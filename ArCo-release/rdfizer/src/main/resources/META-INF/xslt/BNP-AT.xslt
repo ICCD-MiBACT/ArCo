@@ -1412,9 +1412,9 @@
 				</arco-location:hasToponymInTime>
 			</xsl:for-each>
 			<xsl:if test="./LRS and (not(starts-with(lower-case(normalize-space(./LRS)), 'nr')) and not(starts-with(lower-case(normalize-space(./LRS)), 'n.r')))">
-				<arco-core:specifications>
+				<arco-core:specification>
 					<xsl:value-of select="normalize-space(./LRS)" />
-				</arco-core:specifications>
+				</arco-core:specification>
 			</xsl:if>	
 		</rdf:Description>
 		<rdf:Description>
@@ -2724,9 +2724,9 @@
 				</arco-arco:numberOfElements>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/AT/DA/NIA/NIAC">
-				<arco-core:specifications>
+				<arco-core:specification>
                		<xsl:value-of select="normalize-space(record/metadata/schede/AT/DA/NIA/NIAC)" />
-				</arco-core:specifications>
+				</arco-core:specification>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/AT/DA/SRM/SRMT and starts-with(lower-case(normalize-space(record/metadata/schede/AT/DA/SRM/SRMT)), 'naturale')">
 				<rdf:type>
@@ -3083,9 +3083,9 @@
 					<xsl:value-of	select="concat('Finding context of cultural property ', $itemURI)" />
 				</l0:name>
 				<xsl:if test="record/metadata/schede/AT/OG/OGC/OGCS">
-					<arco-core:specifications>
+					<arco-core:specification>
 						<xsl:value-of select="normalize-space(record/metadata/schede/AT/OG/OGC/OGCS)" />
-					</arco-core:specifications>
+					</arco-core:specification>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/AT/OG/OGC/OGCN">
 					<arco-core:note>
@@ -3163,9 +3163,9 @@
 					<xsl:value-of	select="concat('Finding context of cultural property ', $itemURI)" />
 				</l0:name>
 				<xsl:if test="record/metadata/schede/AT/DA/SRM/SRMS">
-					<arco-core:specifications>
+					<arco-core:specification>
 						<xsl:value-of select="normalize-space(record/metadata/schede/AT/DA/SRM/SRMS)" />
-					</arco-core:specifications>
+					</arco-core:specification>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/AT/DA/SRM/SRMC">
 					<arco-core:hasType>
@@ -3285,9 +3285,9 @@
 					<xsl:value-of select="normalize-space(./PROD)" />
 				</l0:name>
 				<xsl:if test="./PROS">
-					<arco-core:specifications>
+					<arco-core:specification>
             	   		<xsl:value-of select="normalize-space(./PROS)" />
-					</arco-core:specifications>
+					</arco-core:specification>
 				</xsl:if>
 				<xsl:if test="./PRON">
 					<arco-core:note>
@@ -3393,9 +3393,9 @@
 					</arco-core:note>
 				</xsl:if>
 				<xsl:if test="./PRIS">
-					<arco-core:specifications>
+					<arco-core:specification>
 						<xsl:value-of select="normalize-space(./PRIN)" />
-					</arco-core:specifications>
+					</arco-core:specification>
 				</xsl:if>
 				<xsl:if test="./PRIT">
 					<arco-core:hasType>
@@ -3509,9 +3509,9 @@
 						<xsl:value-of select="concat('Conservation status of bandage', position(), ' of cultural property: ', $itemURI)" />
 					</l0:name>
 					<xsl:if test="./PRFC">
-						<arco-core:specifications>
+						<arco-core:specification>
 							<xsl:value-of select="normalize-space(./PRFC)" />
-						</arco-core:specifications>
+						</arco-core:specification>
 					</xsl:if>
 				</rdf:Description>
 			</xsl:if>
@@ -3686,14 +3686,14 @@
 					</arco-arco:numberOfElements>
 				</xsl:if>
 				<xsl:if test="./ELES">
-					<arco-core:specifications>
+					<arco-core:specification>
             	   		<xsl:value-of select="normalize-space(./ELES)" />
-					</arco-core:specifications>
+					</arco-core:specification>
 				</xsl:if>
 				<xsl:if test="./ELEA">
-					<arco-core:specifications>
+					<arco-core:specification>
             	   		<xsl:value-of select="concat(normalize-space(./ELEA), '. ', normalize-space(./ELER))" />
-					</arco-core:specifications>
+					</arco-core:specification>
 				</xsl:if>
 				<xsl:choose>
 					<xsl:when test="./ELEN and ./ELEZ">
@@ -3810,9 +3810,9 @@
 						</xsl:attribute>
 					</mu:hasMeasurementUnit>
 					<xsl:if test="./VMCD">
-						<arco-core:specifications>
+						<arco-core:specification>
 							<xsl:value-of select="normalize-space(./VMCD)" />
-						</arco-core:specifications>
+						</arco-core:specification>
 					</xsl:if>
 					<xsl:if test="./VMCN">
 						<arco-core:note>

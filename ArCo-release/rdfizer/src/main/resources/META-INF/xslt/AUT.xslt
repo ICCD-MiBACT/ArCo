@@ -3417,10 +3417,10 @@
 							<xsl:value-of
 								select="concat('Diritti d''autore ', position(), ' della bibliografia del bene culturale ', $idEdition)" />
 						</l0:name>
-						<arco-core:specifications>
+						<arco-core:specification>
 							<xsl:value-of
 								select="normalize-space(record/metadata/schede/BIB/BI/BIB/BIBY)" />
-						</arco-core:specifications>
+						</arco-core:specification>
 					</rdf:Description>
 				</xsl:if>
 				<!-- bibliography type as an individual -->

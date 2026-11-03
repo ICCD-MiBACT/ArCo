@@ -5767,9 +5767,9 @@
 								</xsl:attribute>
 							</arco-cd:isAuthorshipAttributionOf>
 							<xsl:if test="./AUFK">
-								<arco-core:specifications>
+								<arco-core:specification>
 									<xsl:value-of select="./AUFK" />
-								</arco-core:specifications>
+								</arco-core:specification>
 							</xsl:if>
 							<xsl:if test="(./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r'))) 
 				or (./AUFB and not(starts-with(lower-case(normalize-space(./AUFB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFB)), 'n.r')))">
@@ -8577,9 +8577,9 @@
 								</xsl:choose>
 							</l0:name>
 							<xsl:if test="./DTMS">
-								<arco-core:specifications>
+								<arco-core:specification>
 									<xsl:value-of select="normalize-space(./DTMS)" />
-								</arco-core:specifications>
+								</arco-core:specification>
 							</xsl:if>
 						</rdf:Description>
 					</xsl:for-each>

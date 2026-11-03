@@ -3995,9 +3995,9 @@
 					</arco-location:hasToponymInTime>
 				</xsl:for-each>
 			<xsl:if test="../LRS and (not(starts-with(lower-case(normalize-space(../LRS)), 'nr')) and not(starts-with(lower-case(normalize-space(../LRS)), 'n.r')))">
-				<arco-core:specifications>
+				<arco-core:specification>
 					<xsl:value-of select="normalize-space(../LRS)" />
-				</arco-core:specifications>
+				</arco-core:specification>
 			</xsl:if>	
 		</rdf:Description>
 		<rdf:Description>
