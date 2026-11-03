@@ -4370,16 +4370,6 @@
 						</xsl:if>
 						<!-- identifier:localIdentifier for sheetType w/o NCT -->
 						<xsl:if test="record/metadata/schede/*/CD/CDM">
-<<<<<<< Updated upstream
-						    <arco-lite:localIdentifier>
-						        <xsl:value-of select="record/metadata/schede/*/CD/CDM" />
-						    </arco-lite:localIdentifier>
-						    <arco-core:hasIdentifier>
-						        <xsl:attribute name="rdf:resource">
-						            <xsl:value-of select="concat($NS, 'LocalIdentifier/', $itemURI)" />
-						        </xsl:attribute>
-						    </arco-core:hasIdentifier>
-=======
 							<arco-lite:localIdentifier>
 								<xsl:value-of select="record/metadata/schede/*/CD/CDM" />
 							</arco-lite:localIdentifier>
@@ -4388,7 +4378,6 @@
 									<xsl:value-of select="concat($NS, 'LocalIdentifier/', $itemURI)" />
 								</xsl:attribute>
 							</arco-core:hasIdentifier>
->>>>>>> Stashed changes
 						</xsl:if>
 						<!-- finding note -->
 						<xsl:if test="record/metadata/schede/*/RE/RES">
@@ -4460,9 +4449,9 @@
 						</xsl:if>
 						<!-- numismatic property specification -->
 						<xsl:for-each select="record/metadata/schede/NU/OG/OGT/OGTS">
-							<arco-core:specifications>
+							<arco-core:specification>
 								<xsl:value-of select="normalize-space(.)" />
-							</arco-core:specifications>
+							</arco-core:specification>
 						</xsl:for-each>
 						<!-- copyright -->
 						<xsl:for-each select="record/metadata/schede/*/TU/CPR">
@@ -5185,7 +5174,7 @@
 									<xsl:value-of select="concat($NS, 'LegalSituation/', $itemURI, '-legal-situation-', arco-fn:urify(normalize-space(record/metadata/schede/*/TU/CDG)))" />
 								</xsl:attribute>
 							</arco-cd:hasLegalSituation>
-							<xsl:for-each select="record/metadata/schede/*/TU/CDS">
+							<xsl:for-each select="record/metadata/schede/*/TU/CDS[not(starts-with(lower-case(normalize-space(.)), 'nr') or starts-with(lower-case(normalize-space(.)), 'n.r')) and not($sheetType='AR')]">
 								<arco-lite:hasOwner>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
