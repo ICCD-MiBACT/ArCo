@@ -1566,15 +1566,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/core/specifications -->
+    <!-- https://w3id.org/arco/ontology/core/specification -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/specifications">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/specification">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta eventuali specifiche, relative a una certa informazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents specifications associated to a piece of information.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
-        <rdfs:label xml:lang="en">specifications</rdfs:label>
+        <rdfs:label xml:lang="en">specification</rdfs:label>
         <rdfs:label xml:lang="it">specifiche</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
