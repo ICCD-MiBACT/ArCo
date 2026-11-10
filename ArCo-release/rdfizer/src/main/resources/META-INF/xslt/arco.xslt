@@ -31910,7 +31910,58 @@
 								<xsl:value-of select="normalize-space(./LAN)" />
 							</arco-core:note>
 						</xsl:if>
-						<!-- cmcs <arco-location:hasLocationType> was removed from here -->
+						<xsl:if test="normalize-space(./TLC) or normalize-space(./TCL)">
+							<xsl:variable name="loc-orig" select="normalize-space((./TLC[normalize-space()], ./TCL[normalize-space()])[1])" />
+							<xsl:variable name="loc" select="lower-case($loc-orig)" />
+							<arco-location:hasLocationType>
+								<xsl:attribute name="rdf:resource">
+									<xsl:choose>
+										<xsl:when test="$loc = (
+												'luogo di provenienza/collocazione precedente',
+												'luogo di provenienza',
+												'sede di provenienza',
+												'provenienza')">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/location/PreviousLocation'" />
+										</xsl:when>
+										<xsl:when test="$loc = (
+												'luogo di produzione/realizzazione',
+												'luogo di esecuzione/fabbricazione')">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/location/ProductionRealizationLocation'" />
+										</xsl:when>
+										<xsl:when test="$loc = (
+												'luogo di reperimento',
+												'reperimento')">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/location/FindingLocation'" />
+										</xsl:when>
+										<xsl:when test="$loc = (
+												'luogo di deposito',
+												'deposito temporaneo',
+												'deposito')">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/location/StorageLocation'" />
+										</xsl:when>
+										<xsl:when test="$loc = (
+												'luogo di esposizione',
+												'espositiva',
+												'espositivo',
+												'esposizione')">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/location/ExhibitionLocation'" />
+										</xsl:when>
+										<xsl:when test="$loc = (
+												'luogo di rilevamento',
+												'di rilevamento',
+												'localizzazione di rilevamento')">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/location/ObservationLocation'" />
+										</xsl:when>
+										<xsl:when test="$loc = 'area rappresentata'">
+											<xsl:value-of select="'https://w3id.org/arco/ontology/location/SubjectLocation'" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'LocationType/', arco-fn:urify($loc-orig))" />
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:attribute>
+							</arco-location:hasLocationType>
+						</xsl:if>
 						<xsl:if test="./PRD/* and (not(starts-with(lower-case(normalize-space(./PRD)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRD)), 'n.r')))">
 							<tiapit:atTime>
 								<xsl:attribute name="rdf:resource">
@@ -31933,43 +31984,35 @@
 							</arco-location:hasCulturalInstituteOrSite>
 						</xsl:if>
 					</rdf:Description>
-					<xsl:if test="./TLC or ./TCL">
+					<xsl:if test="normalize-space(./TLC) or normalize-space(./TCL)">
+						<xsl:variable name="locRaw" select="normalize-space((./TLC[normalize-space()], ./TCL[normalize-space()])[1])" />
+						<xsl:variable name="loc" select="lower-case($locRaw)" />
 						<xsl:choose>
-							<xsl:when test="lower-case(normalize-space(./TLC))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./TCL))='luogo di provenienza' or lower-case(normalize-space(./TLC))='sede di provenienza' or lower-case(normalize-space(./TCL))='sede di provenienza' or lower-case(normalize-space(./TLC))='provenienza' or lower-case(normalize-space(./TCL))='provenienza'" />
-							<xsl:when test="lower-case(normalize-space(./TLC))='luogo di produzione/realizzazione' or lower-case(normalize-space(./TCL))='luogo di esecuzione/fabbricazione'" />
-							<xsl:when test="lower-case(normalize-space(./TLC))='luogo di reperimento' or lower-case(normalize-space(./TCL))='luogo di reperimento' or lower-case(normalize-space(./TLC))='reperimento' or lower-case(normalize-space(./TCL))='reperimento'" />
-							<xsl:when test="lower-case(normalize-space(./TLC))='luogo di deposito' or lower-case(normalize-space(./TCL))='luogo di deposito' or lower-case(normalize-space(./TLC))='deposito temporaneo' or lower-case(normalize-space(./TCL))='deposito temporaneo' or lower-case(normalize-space(./TLC))='deposito' or lower-case(normalize-space(./TCL))='deposito'" />
-							<xsl:when test="lower-case(normalize-space(./TLC))='luogo di esposizione' or lower-case(normalize-space(./TCL))='luogo di esposizione' or lower-case(normalize-space(./TLC))='espositiva' or lower-case(normalize-space(./TCL))='espositiva' or lower-case(normalize-space(./TLC))='espositivo' or lower-case(normalize-space(./TCL))='espositivo' or lower-case(normalize-space(./TLC))='esposizione' or lower-case(normalize-space(./TCL))='esposizione'" />
-							<xsl:when test="lower-case(normalize-space(./TLC))='luogo di rilevamento' or lower-case(normalize-space(./TCL))='luogo di rilevamento' or lower-case(normalize-space(./TCL))='di rilevamento' or lower-case(normalize-space(./TLC))='di rilevamento' or lower-case(normalize-space(./TCL))='localizzazione di rilevamento' or lower-case(normalize-space(./TLC))='localizzazione di rilevamento'" />
-							<xsl:when test="lower-case(normalize-space(./TLC))='area rappresentata' or lower-case(normalize-space(./TCL))='area rappresentata'" />
-							<xsl:when test="./TLC and not(./TLC='.' or ./TLC='-' or ./TLC='/')  and (not(starts-with(lower-case(normalize-space(./TLC)), 'nr')) and not(starts-with(lower-case(normalize-space(./TLC)), 'n.r')))">
-								<rdf:Description>
-									<xsl:attribute name="rdf:about">
-										<xsl:value-of select="concat($NS, 'LocationType/', arco-fn:urify(normalize-space(./TLC)))" />
-									</xsl:attribute>
-									<rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType" />
-									<rdfs:label>
-										<xsl:value-of select="normalize-space(./TLC)" />
-									</rdfs:label>
-									<l0:name>
-										<xsl:value-of select="normalize-space(./TLC)" />
-									</l0:name>
-								</rdf:Description>
-							</xsl:when>
-							<xsl:when test="./TCL and not(./TCL='.' or ./TCL='-' or ./TCL='/') and (not(starts-with(lower-case(normalize-space(./TCL)), 'nr')) and not(starts-with(lower-case(normalize-space(./TCL)), 'n.r')))">
-								<rdf:Description>
-									<xsl:attribute name="rdf:about">
-										<xsl:value-of select="concat($NS, 'LocationType/', arco-fn:urify(normalize-space(./TCL)))" />
-									</xsl:attribute>
-									<rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType" />
-									<rdfs:label>
-										<xsl:value-of select="normalize-space(./TCL)" />
-									</rdfs:label>
-									<l0:name>
-										<xsl:value-of select="normalize-space(./TCL)" />
-									</l0:name>
-								</rdf:Description>
-							</xsl:when>
+							<!-- esclusione valori già mappati -->
+							<xsl:when test="$loc = (
+									'luogo di provenienza/collocazione precedente', 'luogo di provenienza', 'sede di provenienza', 'provenienza',
+									'luogo di produzione/realizzazione', 'luogo di esecuzione/fabbricazione',
+									'luogo di reperimento', 'reperimento',
+									'luogo di deposito', 'deposito temporaneo', 'deposito',
+									'luogo di esposizione', 'espositiva', 'espositivo', 'esposizione',
+									'luogo di rilevamento', 'di rilevamento', 'localizzazione di rilevamento',
+									'area rappresentata')" />
+							<xsl:otherwise>
+								<xsl:if test="not($locRaw = ('.', '-', '/')) and not(starts-with($loc, 'nr')) and not(starts-with($loc, 'n.r'))">
+									<rdf:Description>
+										<xsl:attribute name="rdf:about">
+											<xsl:value-of select="concat($NS, 'LocationType/', arco-fn:urify($locRaw))" />
+										</xsl:attribute>
+										<rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType" />
+										<rdfs:label>
+											<xsl:value-of select="$locRaw" />
+										</rdfs:label>
+										<l0:name>
+											<xsl:value-of select="$locRaw" />
+										</l0:name>
+									</rdf:Description>
+								</xsl:if>
+							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:if>
 					<!-- Monumental Area as individual in the scope of the Site of LA -->
