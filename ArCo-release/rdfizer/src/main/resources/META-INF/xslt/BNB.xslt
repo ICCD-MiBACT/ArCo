@@ -1850,7 +1850,9 @@
             </arco-core:hasDirectHigherRank>
             </xsl:if>
             <rdf:type>
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />      
+				<xsl:attribute name="rdf:resource">
+            		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />     
+				</xsl:attribute> 
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="record/metadata/schede/BNB/SB/NAA/NAAA" />
@@ -1900,7 +1902,9 @@
             </xsl:if>  
             <rdf:type>
 				<xsl:attribute name="rdf:resource">
-    	        	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Family'" />      
+					<xsl:attribute name="rdf:resource">
+    	        		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Family'" />    
+					</xsl:attribute>  
         	    </xsl:attribute>
             </rdf:type>
             <rdfs:label>
@@ -2133,7 +2137,9 @@
             </arco-core:hasDirectHigherRank>
             </xsl:if>
             <rdf:type>
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />      
+				<xsl:attribute name="rdf:resource">
+            		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />      
+				</xsl:attribute>
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="record/metadata/schede/BNB/SB/NAT/NATA" />
@@ -2457,7 +2463,9 @@
             	   <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./RBN/RBNA))" />
 	            </xsl:attribute>
     	        <rdf:type>
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />      
+					<xsl:attribute name="rdf:resource">
+        	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />  
+					</xsl:attribute>    
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./RBN/RBNA" />
