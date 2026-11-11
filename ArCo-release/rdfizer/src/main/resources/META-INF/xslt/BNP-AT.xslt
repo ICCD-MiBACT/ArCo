@@ -155,25 +155,34 @@
 				</xsl:choose>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:variable name="accc-space" >
-						<xsl:choose>
-							<xsl:when test="record/metadata/schede/*/AC/ACK">
-								<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
-							</xsl:when>
-							<xsl:when test="record/metadata/schede/*/AC/ACJ">
-								<xsl:value-of select="record/metadata/schede/*/AC/ACJ" />
-							</xsl:when>
-							<xsl:when test="record/metadata/schede/*/AC/ACO">
-								<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:value-of select="record/metadata/schede/*/AC/ACE" />
-							</xsl:otherwise>
-						</xsl:choose>
-					</xsl:variable>
-					<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
-					<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
-					<xsl:value-of select="$accc" />
+				<xsl:variable name="accc-space">
+					<xsl:choose>
+						<xsl:when test="record/metadata/schede/*/AC/ACC">
+							<xsl:value-of select="record/metadata/schede/*/AC/ACC" />
+						</xsl:when>
+						<xsl:when test="record/metadata/schede/*/AC/ACK">
+							<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
+						</xsl:when>
+						<xsl:when test="record/metadata/schede/*/AC/ACJ">
+							<xsl:value-of select="record/metadata/schede/*/AC/ACJ" />
+						</xsl:when>
+						<xsl:when test="record/metadata/schede/*/AC/ACO">
+							<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
+						</xsl:when>
+						<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
+							<xsl:value-of select="record/metadata/schede/*/AC/ACC/ACCC" />
+						</xsl:when>
+						<xsl:when test="record/metadata/schede/*/CD/ACC">
+							<xsl:value-of select="record/metadata/schede/*/CD/ACC" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="record/metadata/schede/*/AC/ACE" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+				<xsl:variable name="accc-nospace" select="translate(normalize-space($accc-space), ' ', '')" />
+				<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
+				<xsl:value-of select="$accc" />
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -722,7 +731,9 @@
 	            	</arco-spe:hasDirectHigherRank>
 	            </xsl:if>
     	        <rdf:type>
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />      
+					<xsl:attribute name="rdf:resource">
+        	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />   
+					</xsl:attribute>   
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SPSR" />
@@ -745,7 +756,9 @@
 	            	</arco-spe:hasDirectHigherRank>
 	            </xsl:if>
     	        <rdf:type>
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Family'" />      
+					<xsl:attribute name="rdf:resource">
+        	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Family'" />      
+					</xsl:attribute>
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SPSF" />
@@ -768,7 +781,9 @@
 	            	</arco-spe:hasDirectHigherRank>
 	            </xsl:if>
     	        <rdf:type>
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Order'" />      
+					<xsl:attribute name="rdf:resource">
+        	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Order'" />      
+					</xsl:attribute>
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SPSO" />
@@ -791,7 +806,9 @@
 	            	</arco-spe:hasDirectHigherRank>
 	            </xsl:if>
     	        <rdf:type>
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Class'" />      
+					<xsl:attribute name="rdf:resource">
+        	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Class'" />      
+					</xsl:attribute>
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SPSB" />
@@ -814,7 +831,9 @@
 	            	</arco-spe:hasDirectHigherRank>
 	            </xsl:if>
     	        <rdf:type>
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Phylum'" />      
+					<xsl:attribute name="rdf:resource">
+        	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Phylum'" />      
+					</xsl:attribute>
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SPSH" />
@@ -830,7 +849,9 @@
             	   <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(./SPSP))" />
 	            </xsl:attribute>
     	        <rdf:type>
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Kingdom'" />      
+					<xsl:attribute name="rdf:resource">
+        	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Kingdom'" />      
+					</xsl:attribute>
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SPSP" />
@@ -2244,8 +2265,8 @@
 	            </xsl:if>
     	        <rdf:type>
 					<xsl:attribute name="rdf:resource">
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />   
-			</xsl:attribute>   
+        	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />   
+					</xsl:attribute>   
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SZSR" />
@@ -2269,8 +2290,8 @@
 	            </xsl:if>
     	        <rdf:type>
 					<xsl:attribute name="rdf:resource">
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Family'" />      
-			</xsl:attribute>
+        	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Family'" />      
+					</xsl:attribute>
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SZSF" />
@@ -2294,8 +2315,8 @@
 	            </xsl:if>
     	        <rdf:type>
 					<xsl:attribute name="rdf:resource">
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Order'" />   
-			</xsl:attribute>   
+        	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Order'" />   
+					</xsl:attribute>   
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SZSO" />
@@ -2319,8 +2340,8 @@
 	            </xsl:if>
     	        <rdf:type>
 					<xsl:attribute name="rdf:resource">
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Class'" />      
-			</xsl:attribute>
+        	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Class'" />      
+					</xsl:attribute>
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SZSB" />
@@ -2337,8 +2358,8 @@
 	            </xsl:attribute>
     	        <rdf:type>
 					<xsl:attribute name="rdf:resource">
-        	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Phylum'" /> 
-			</xsl:attribute>     
+        	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Phylum'" /> 
+					</xsl:attribute>     
             	</rdf:type>
 	            <rdfs:label>
     	        	 <xsl:value-of select="./SZSP" />
@@ -3048,7 +3069,9 @@
             		   <xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/AT/OG/OGS/OGSG))" />
 	            	</xsl:attribute>
 	    	        <rdf:type>
-    	    	    	<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />      
+						<xsl:attribute name="rdf:resource">
+    	    	    		<xsl:value-of select="'https://w3id.org/arco/ontology/natural-specimen-description/Genus'" />      
+						</xsl:attribute>
         	    	</rdf:type>
 	        	    <rdfs:label>
     	        		 <xsl:value-of select="record/metadata/schede/AT/OG/OGS/OGSG" />
